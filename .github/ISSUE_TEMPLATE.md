@@ -1,5 +1,5 @@
 # First and foremost consider this:
-- Only documentation related issues should be filed here. Not RetroArch bugs, core bugs or game bugs.
+- Only documentation related issues should be filed here. Not RetroArch bugs, or core bugs, or game bugs, or build errors.
 - Before reporting a 404, refresh the doc a few times.
 
 ## Documents
