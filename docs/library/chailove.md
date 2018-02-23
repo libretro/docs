@@ -160,11 +160,11 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 
 ## External Links
 
-- [ChaiLove API Documentation Website](https://robloach.github.io/ChaiLove/)
 - [ChaiScript Website](http://chaiscript.com/)
-- [Libretro ChaiLove Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/chailove_libretro.info)
-- [Official/Libretro ChaiLove Github Repository](https://github.com/libretro/libretro-chailove)
+- [ChaiLove API Documentation Website](https://rawgit.com/libretro/libretro-chailove/docs/)
 - [ChaiLove Github Wiki](https://github.com/libretro/libretro-chailove/wiki)
+- [Libretro ChaiLove Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/chailove_libretro.info)
+- [Libretro ChaiLove Github Repository](https://github.com/libretro/libretro-chailove)
 - [Report Libretro ChaiLove Core Issues Here](https://github.com/libretro/libretro-chailove/issues)
 
 ### See also
