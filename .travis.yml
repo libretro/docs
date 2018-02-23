@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install mkdocs
+  - pip install mkdocs-material
+script:
+  - ./deploy
