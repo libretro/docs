@@ -6,9 +6,7 @@ Awaiting description.
 
 #### How to start the Remote RetroPad core:
 
-- To start the Remote RetroPad core, go to RetroArch's main menu screen. Select 'Load Core', then 'Start Remote RetroPad'.
-
-- Now, select 'Start Core'.
+- To start the Remote RetroPad core, go to RetroArch's main menu screen. Select 'Load Core', then 'Remote RetroPad'.
 
 The content should now start running!
 
