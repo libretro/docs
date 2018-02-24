@@ -598,4 +598,4 @@
 
 - Core info file does not have an author entry.
 
-### [〰️] Yabause
+### [✔] Yabause
