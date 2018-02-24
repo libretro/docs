@@ -308,7 +308,7 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 - [Official higan Upstream Downloads](https://byuu.org/emulation/higan/)
 - [Libretro nSide Balanced Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/higan_sfc_balanced_libretro.info)
 - [Libretro nSide Balanced Github Repository](https://github.com/hex-usr/nSide)
-- [Report Libretro nSide Balanced Core Issues Here](https://github.com/libretro/libretro-meta/issues)
+- [Report Libretro nSide Balanced Core Issues Here](https://github.com/hex-usr/nSide/issues)
 
 ### See also
 
