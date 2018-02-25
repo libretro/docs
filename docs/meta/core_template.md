@@ -166,27 +166,39 @@ The (Core name) core saves/loads to/from these directories.
 
 -**Frontend's Home directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 **Frontend's Save directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 **Frontend's State directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 **Frontend's System directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 **Loaded content's directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 **Appdata directory**
 
-- . ()
+| File         | Description |
+|:------------:|:-----------:|
+| filename.bin | Description |
 
 // Add a list of directories/files the core uses.
 
@@ -195,9 +207,13 @@ The (Core name) core saves/loads to/from these directories.
 
 - The (Core name) core's core provided FPS is (FPS)
 - The (Core name) core's core provided sample rate is (Rate)
+- The (Core name) core's base width is (Base width)
+- The (Core name) core's base height is (Base height)
+- The (Core name) core's max width is (Max width)
+- The (Core name) core's max height is (Max height)
 - The (Core name) core's core provided aspect ratio is (Ratio)
 
-// Fill in the (Core name) and the FPS, sample rate, aspect ratio info.
+// Fill in the (Core name) and the FPS, sample rate, width/height, aspect ratio info.
 
 ## Usage
 // Optional section.
