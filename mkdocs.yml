@@ -93,7 +93,7 @@ pages:
         - 'Rick Dangerous (XRick)': 'library/xrick.md'
         - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - Internal Cores:
-        - 'Dummy core': 'library/dummy.md'
+        - 'Dummy Core': 'library/dummy.md'
         - 'Remote RetroPad': 'library/remote_retropad.md'
         - 'Video Processor': 'library/video_processor.md'
       - Media Cores:
