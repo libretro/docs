@@ -131,7 +131,7 @@ The FFmpeg core supports the following device type(s) in the controls menu, bold
 
 ### Other controllers
 
-- Mouse - The FFmpeg core allows Wheel Up and Wheel Down mouse inputs for seeking. This is completely separate from the device types in the Controls menu and cannot be manually selected.
+- Mouse - The FFmpeg core allows Wheel Up and Wheel Down mouse inputs for seeking. This is always active, completely separate from the device types in the Controls menu and cannot be manually selected.
 
 ### Controller tables
 
@@ -151,12 +151,13 @@ The FFmpeg core supports the following device type(s) in the controls menu, bold
 | RetroMouse Inputs                                   | FFmpeg Core Inputs        |
 |-----------------------------------------------------|---------------------------|
 | Wheel Up                                            | Seek +60 seconds          |
-| Wheel Down                                          | Seek -69 seconds          |
+| Wheel Down                                          | Seek -60 seconds          |
 
 ## External Links
 
 - [Official FFmpeg Website](https://www.ffmpeg.org/)
 - [Official FFmpeg Repositories](https://www.ffmpeg.org/download.html#repositories)
 - [Libretro FFmpeg Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/ffmpeg_libretro.info)
-- [Libretro FFmpeg Github Repository](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
+- [Internal Libretro FFmpeg Github Repository](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
+- [Buildbot Libretro FFmpeg Github repository](https://github.com/libretro/FFmpeg)
 - [Report Libretro FFmpeg Core Issues Here](https://github.com/libretro/RetroArch/issues)
