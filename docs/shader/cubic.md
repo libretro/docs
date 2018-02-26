@@ -5,11 +5,11 @@
 ## Preview Image
 * cubic-gamma-correct
 
-![cubic-gamma-correct](images/cubic/cubic-gamma-correct.png)
+![cubic-gamma-correct](../image/shader/cubic/cubic-gamma-correct.png)
 
 * cubic
 
-![cubic](images/cubic/cubic.png)
+![cubic](../image/shader/cubic/cubic.png)
 
 ## Comments
 

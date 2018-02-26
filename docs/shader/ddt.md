@@ -5,7 +5,7 @@
 ## Preview Image
 * ddt
 
-![ddt](images/ddt/ddt.png)
+![ddt](../image/shader/ddt/ddt.png)
 
 ## Comments
 

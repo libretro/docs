@@ -1,6 +1,7 @@
 # Welcome to the Libretro/RetroArch Documentation Center!
-![Libretro_Banner](images/libretro_banner.png)
-![RetroArch_Banner](images/RetroArch_Banner.png)
+
+![](image/branding/libretro_banner.png)
+![](image/branding/retroarch_banner.png)
 
 RetroArch is a frontend for emulators, game engines and media players.
 

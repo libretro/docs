@@ -10,17 +10,17 @@
 
 You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](images\Cores\all\download.png) </center>
+<center> ![](..\image\core\all\download.png) </center>
 
 - Select 'ChaiLove', then select 'Floppy Bird.chailove'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](images\Cores\chailove\chailove.png) </center>
+<center> ![](..\image\core\chailove\chailove.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
-<center> ![](images\Cores\all\downloads.png) </center>
+<center> ![](..\image\core\all\downloads.png) </center>
 
 - Select 'Floppy Bird.chailove'.
 
@@ -111,20 +111,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enable or disable alpha blending (transparency).
 	
 ??? note "Alpha Blending - On"
-	![](images\Cores\chailove\alpha_on.png)
+	![](..\image\core\chailove\alpha_on.png)
 	
 ??? note "Alpha Blending - Off"
-	![](images\Cores\chailove\alpha_off.png)	
+	![](..\image\core\chailove\alpha_off.png)	
 	
 - **High Quality** [chailove_highquality] (**enabled**|disabled)
 
 	Enable or disable extra visual features.
 	
 ??? note "High Quality - On"
-	![](images\Cores\chailove\quality_on.png)
+	![](..\image\core\chailove\quality_on.png)
 	
 ??? note "High Quality - Off"
-	![](images\Cores\chailove\quality_off.png)
+	![](..\image\core\chailove\quality_off.png)
 
 ## Controllers
 
@@ -143,20 +143,20 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 !!! attention
 	What the buttons do are game specific.
 
-| User 1 - 5 Remap descriptors | RetroPad Inputs                              |
-|------------------------------|----------------------------------------------|
-| B                            | ![](images/RetroPad/Retro_B_Round.png)       |
-| Y                            | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Select                       | ![](images/RetroPad/Retro_Select.png)        |
-| Start                        | ![](images/RetroPad/Retro_Start.png)         |
-| D-Pad Up                     | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down                   | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left                   | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right                  | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| A                            | ![](images/RetroPad/Retro_A_Round.png)       |
-| X                            | ![](images/RetroPad/Retro_X_Round.png)       |
-| L                            | ![](images/RetroPad/Retro_L1.png)            |
-| R                            | ![](images/RetroPad/Retro_R1.png)            |
+| User 1 - 5 Remap descriptors | RetroPad Inputs                                |
+|------------------------------|------------------------------------------------|
+| B                            | ![](../image/retropad/retro_b.png)             |
+| Y                            | ![](../image/retropad/retro_y.png)             |
+| Select                       | ![](../image/retropad/retro_select.png)        |
+| Start                        | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | 
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
+| A                            | ![](../image/retropad/retro_a.png)             |
+| X                            | ![](../image/retropad/retro_x.png)             |
+| L                            | ![](../image/retropad/retro_l1.png)            |
+| R                            | ![](../image/retropad/retro_r1.png)            |
 
 ## External Links
 

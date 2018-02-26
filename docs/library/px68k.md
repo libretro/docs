@@ -18,15 +18,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'Sharp X68000 (PX68k)'.
 
-<center> ![](images\Cores\updater\px68k.png) </center>
+<center> ![](..\image\core\updater\px68k.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -34,7 +34,7 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
@@ -302,55 +302,55 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-| User 1 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                              | 2 Button      | CPSF-MD (8 Buttons) | CPSF-SFC (8 Buttons) |
-|-----------------------------------------------------|----------------------------------------------|---------------|---------------------|----------------------|
-| B                                                   | ![](images/RetroPad/Retro_B_Round.png)       | JOY_TRG2      | JOY_TRG2            | JOY_TRG1             |
-| Y                                                   | ![](images/RetroPad/Retro_Y_Round.png)       | JOY_TRG1      | JOY_TRG3            | JOY_TRG4             |
-| Select                                              | ![](images/RetroPad/Retro_Select.png)        | JOY_LEFT      | JOY_TRG7            | JOY_TRG7             |
-| Start                                               | ![](images/RetroPad/Retro_Start.png)         | JOY_RIGHT     | JOY_TRG6            | JOY_TRG6             |
-| Up                                                  | ![](images/RetroPad/Retro_Dpad_Up.png)       | JOY_UP        | JOY_UP              | JOY_UP               |
-| Down                                                | ![](images/RetroPad/Retro_Dpad_Down.png)     | JOY_DOWN      | JOY_DOWN            | JOY_DOWN             |
-| Left                                                | ![](images/RetroPad/Retro_Dpad_Left.png)     | JOY_LEFT      | JOY_LEFT            | JOY_LEFT             |
-| Right                                               | ![](images/RetroPad/Retro_Dpad_Right.png)    | JOY_RIGHT     | JOY_RIGHT           | JOY_RIGHT            |
-| A                                                   | ![](images/RetroPad/Retro_A_Round.png)       | JOY_TRG1      | JOY_TRG1            | JOY_TRG2             |
-| X                                                   | ![](images/RetroPad/Retro_X_Round.png)       | JOY_TRG2      | JOY_TRG4            | JOY_TRG3             |
-| L                                                   | ![](images/RetroPad/Retro_L1.png)            | JOY_TRG1      | JOY_TRG5            | JOY_TRG8             |
-| R                                                   | ![](images/RetroPad/Retro_R1.png)            | JOY_TRG2      | JOY_TRG8            | JOY_TRG5             |
-| L2 - Menu                                           | ![](images/RetroPad/Retro_L2.png)            | Menu          | Menu                | Menu                 |
-| R2                                                  | ![](images/RetroPad/Retro_R2.png)            |               |                     |                      |
-| L3                                                  | ![](images/RetroPad/Retro_L3.png)            |               |                     |                      |
-| R3                                                  | ![](images/RetroPad/Retro_R3.png)            |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Left_Stick.png) X  |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Left_Stick.png) Y  |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Right_Stick.png) X |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Right_Stick.png) Y |               |                     |                      |
+| User 1 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | 2 Button      | CPSF-MD (8 Buttons) | CPSF-SFC (8 Buttons) |
+|-----------------------------------------------------|------------------------------------------------|---------------|---------------------|----------------------|
+| B                                                   | ![](../image/retropad/retro_b.png)             | JOY_TRG2      | JOY_TRG2            | JOY_TRG1             |
+| Y                                                   | ![](../image/retropad/retro_y.png)             | JOY_TRG1      | JOY_TRG3            | JOY_TRG4             |
+| Select                                              | ![](../image/retropad/retro_select.png)        | JOY_LEFT      | JOY_TRG7            | JOY_TRG7             |
+| Start                                               | ![](../image/retropad/retro_start.png)         | JOY_RIGHT     | JOY_TRG6            | JOY_TRG6             |
+| Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | JOY_UP        | JOY_UP              | JOY_UP               |
+| Down                                                | ![](../image/retropad/retro_dpad_down.png)     | JOY_DOWN      | JOY_DOWN            | JOY_DOWN             |
+| Left                                                | ![](../image/retropad/retro_dpad_left.png)     | JOY_LEFT      | JOY_LEFT            | JOY_LEFT             |
+| Right                                               | ![](../image/retropad/retro_dpad_right.png)    | JOY_RIGHT     | JOY_RIGHT           | JOY_RIGHT            |
+| A                                                   | ![](../image/retropad/retro_a.png)             | JOY_TRG1      | JOY_TRG1            | JOY_TRG2             |
+| X                                                   | ![](../image/retropad/retro_x.png)             | JOY_TRG2      | JOY_TRG4            | JOY_TRG3             |
+| L                                                   | ![](../image/retropad/retro_l1.png)            | JOY_TRG1      | JOY_TRG5            | JOY_TRG8             |
+| R                                                   | ![](../image/retropad/retro_r1.png)            | JOY_TRG2      | JOY_TRG8            | JOY_TRG5             |
+| L2 - Menu                                           | ![](../image/retropad/retro_l2.png)            | Menu          | Menu                | Menu                 |
+| R2                                                  | ![](../image/retropad/retro_r2.png)            |               |                     |                      |
+| L3                                                  | ![](../image/retropad/retro_l3.png)            |               |                     |                      |
+| R3                                                  | ![](../image/retropad/retro_r3.png)            |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_left_stick.png) X  |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_left_stick.png) Y  |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_right_stick.png) X |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_right_stick.png) Y |               |                     |                      |
 
-| User 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                              | 2 Button      | CPSF-MD (8 Buttons) | CPSF-SFC (8 Buttons) |
-|-----------------------------------------------------|----------------------------------------------|---------------|---------------------|----------------------|
-| B                                                   | ![](images/RetroPad/Retro_B_Round.png)       | JOY_TRG2      | JOY_TRG2            | JOY_TRG1             |
-| Y                                                   | ![](images/RetroPad/Retro_Y_Round.png)       | JOY_TRG1      | JOY_TRG3            | JOY_TRG4             |
-| Select                                              | ![](images/RetroPad/Retro_Select.png)        | JOY_LEFT      | JOY_TRG7            | JOY_TRG7             |
-| Start                                               | ![](images/RetroPad/Retro_Start.png)         | JOY_RIGHT     | JOY_TRG6            | JOY_TRG6             |
-| Up                                                  | ![](images/RetroPad/Retro_Dpad_Up.png)       | JOY_UP        | JOY_UP              | JOY_UP               |
-| Down                                                | ![](images/RetroPad/Retro_Dpad_Down.png)     | JOY_DOWN      | JOY_DOWN            | JOY_DOWN             |
-| Left                                                | ![](images/RetroPad/Retro_Dpad_Left.png)     | JOY_LEFT      | JOY_LEFT            | JOY_LEFT             |
-| Right                                               | ![](images/RetroPad/Retro_Dpad_Right.png)    | JOY_RIGHT     | JOY_RIGHT           | JOY_RIGHT            |
-| A                                                   | ![](images/RetroPad/Retro_A_Round.png)       | JOY_TRG1      | JOY_TRG1            | JOY_TRG2             |
-| X                                                   | ![](images/RetroPad/Retro_X_Round.png)       | JOY_TRG2      | JOY_TRG4            | JOY_TRG3             |
-| L                                                   | ![](images/RetroPad/Retro_L1.png)            | JOY_TRG1      | JOY_TRG5            | JOY_TRG8             |
-| R                                                   | ![](images/RetroPad/Retro_R1.png)            | JOY_TRG2      | JOY_TRG8            | JOY_TRG5             |
-| L2                                                  | ![](images/RetroPad/Retro_L2.png)            |               |                     |                      |
-| R2                                                  | ![](images/RetroPad/Retro_R2.png)            |               |                     |                      |
-| L3                                                  | ![](images/RetroPad/Retro_L3.png)            |               |                     |                      |
-| R3                                                  | ![](images/RetroPad/Retro_R3.png)            |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Left_Stick.png) X  |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Left_Stick.png) Y  |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Right_Stick.png) X |               |                     |                      |
-|                                                     | ![](images/RetroPad/Retro_Right_Stick.png) Y |               |                     |                      |
+| User 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | 2 Button      | CPSF-MD (8 Buttons) | CPSF-SFC (8 Buttons) |
+|-----------------------------------------------------|------------------------------------------------|---------------|---------------------|----------------------|
+| B                                                   | ![](../image/retropad/retro_b.png)             | JOY_TRG2      | JOY_TRG2            | JOY_TRG1             |
+| Y                                                   | ![](../image/retropad/retro_y.png)             | JOY_TRG1      | JOY_TRG3            | JOY_TRG4             |
+| Select                                              | ![](../image/retropad/retro_select.png)        | JOY_LEFT      | JOY_TRG7            | JOY_TRG7             |
+| Start                                               | ![](../image/retropad/retro_start.png)         | JOY_RIGHT     | JOY_TRG6            | JOY_TRG6             |
+| Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | JOY_UP        | JOY_UP              | JOY_UP               |
+| Down                                                | ![](../image/retropad/retro_dpad_down.png)     | JOY_DOWN      | JOY_DOWN            | JOY_DOWN             |
+| Left                                                | ![](../image/retropad/retro_dpad_left.png)     | JOY_LEFT      | JOY_LEFT            | JOY_LEFT             |
+| Right                                               | ![](../image/retropad/retro_dpad_right.png)    | JOY_RIGHT     | JOY_RIGHT           | JOY_RIGHT            |
+| A                                                   | ![](../image/retropad/retro_a.png)             | JOY_TRG1      | JOY_TRG1            | JOY_TRG2             |
+| X                                                   | ![](../image/retropad/retro_x.png)             | JOY_TRG2      | JOY_TRG4            | JOY_TRG3             |
+| L                                                   | ![](../image/retropad/retro_l1.png)            | JOY_TRG1      | JOY_TRG5            | JOY_TRG8             |
+| R                                                   | ![](../image/retropad/retro_r1.png)            | JOY_TRG2      | JOY_TRG8            | JOY_TRG5             |
+| L2                                                  | ![](../image/retropad/retro_l2.png)            |               |                     |                      |
+| R2                                                  | ![](../image/retropad/retro_r2.png)            |               |                     |                      |
+| L3                                                  | ![](../image/retropad/retro_l3.png)            |               |                     |                      |
+| R3                                                  | ![](../image/retropad/retro_r3.png)            |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_left_stick.png) X  |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_left_stick.png) Y  |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_right_stick.png) X |               |                     |                      |
+|                                                     | ![](../image/retropad/retro_right_stick.png) Y |               |                     |                      |
 
 #### Keyboard
 
-![](images/Cores/px68k/keyboard.jpg)
+![](../image/core/px68k/keyboard.jpg)
 
 | RetroKeyboard Inputs         | RetroKeyboard |
 |------------------------------|---------------|
@@ -496,9 +496,9 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 
 | RetroMouse Inputs                                   | Mouse              |
 |-----------------------------------------------------|--------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | Mouse Left Button  |
-| ![](images/RetroMouse/Retro_Right.png) Mouse 2      | Mouse Right Button |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
 ## Compatibility
 

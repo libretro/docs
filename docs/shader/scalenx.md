@@ -6,19 +6,19 @@
 
 * scale2x
 
-![scale2x](images/scalenx/scale2x.png)
+![](../image/shader/scalenx/scale2x.png)
 
 * scale2xplus
 
-![scale2xplus](images/scalenx/scale2xplus.png)
+![](../image/shader/scalenx/scale2xplus.png)
 
 * scale2xSFX
 
-![scale2xSFX](images/scalenx/scale2xSFX.png)
+![](../image/shader/scalenx/scale2xSFX.png)
 
 * scale3x
 
-![scale3x](images/scalenx/scale3x.png)
+![](../image/shader/scalenx/scale3x.png)
 
 ## Comments
 

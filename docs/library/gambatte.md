@@ -110,7 +110,7 @@ You can define different palettes for specific games by creating a .pal file in 
 You can also define a palette to be used for all Game Boy games by creating a .pal file in the "palettes" folder named "Default.pal"
 
 ??? note "*Custom palettes can be created from the GUI in standalone Gambatte*"
-    ![](images\Cores\gambatte\tool.png)
+    ![](..\image\core\gambatte\tool.png)
 
 ## Core options
 
@@ -123,69 +123,69 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Colorizes Game Boy games.
 
 ??? note "*GB Colorization - Off*"
-    ![](images\Cores\gambatte\color_off.png)
+    ![](..\image\core\gambatte\color_off.png)
 
 ??? note "*GB Colorization - auto*"
-    ![](images\Cores\gambatte\color_auto.png)
+    ![](..\image\core\gambatte\color_auto.png)
 	
 - **Internal Palette** [gambatte_gb_internal_palette] (**GBC - Blue**|GBC - Brown|GBC - Dark Blue|GBC - Dark Brown|GBC - Dark Green|GBC - Grayscale|GBC - Green|GBC - Inverted|GBC - Orange|GBC - Pastel Mix|GBC - Red|GBC - Yellow|Special 1|Special 2|Special 3)
 
 	Select which internal color palette for GB Colorization is going to be used. GB Colorization must be set to internal.
 
 ??? note "*Internal Palette - GBC - Blue*"
-    ![](images\Cores\gambatte\blue.png)
+    ![](..\image\core\gambatte\blue.png)
 
 ??? note "*Internal Palette - GBC - Brown*"
-    ![](images\Cores\gambatte\brown.png)
+    ![](..\image\core\gambatte\brown.png)
 
 ??? note "*Internal Palette - GBC - Dark Blue*"
-    ![](images\Cores\gambatte\dark_blue.png)
+    ![](..\image\core\gambatte\dark_blue.png)
 
 ??? note "*Internal Palette - GBC - Dark Brown*"
-    ![](images\Cores\gambatte\dark_brown.png)
+    ![](..\image\core\gambatte\dark_brown.png)
 
 ??? note "*Internal Palette - GBC - Dark Green*"
-    ![](images\Cores\gambatte\dark_green.png)
+    ![](..\image\core\gambatte\dark_green.png)
 
 ??? note "*Internal Palette - GBC - Grayscale*"
-    ![](images\Cores\gambatte\grayscale.png)
+    ![](..\image\core\gambatte\grayscale.png)
 
 ??? note "*Internal Palette - GBC - Green*"
-    ![](images\Cores\gambatte\green.png)
+    ![](..\image\core\gambatte\green.png)
 
 ??? note "*Internal Palette - GBC - Inverted*"
-    ![](images\Cores\gambatte\inverted.png)
+    ![](..\image\core\gambatte\inverted.png)
 
 ??? note "*Internal Palette - GBC - Orange*"
-    ![](images\Cores\gambatte\orange.png)
+    ![](..\image\core\gambatte\orange.png)
 
 ??? note "*Internal Palette - GBC - Pastel Mix*"
-    ![](images\Cores\gambatte\pastel.png)
+    ![](..\image\core\gambatte\pastel.png)
 
 ??? note "*Internal Palette - GBC - Red*"
-    ![](images\Cores\gambatte\red.png)
+    ![](..\image\core\gambatte\red.png)
 
 ??? note "*Internal Palette - GBC - Yellow*"
-    ![](images\Cores\gambatte\yellow.png)
+    ![](..\image\core\gambatte\yellow.png)
 
 ??? note "*Internal Palette - GBC - Special 1*"
-    ![](images\Cores\gambatte\special1.png)
+    ![](..\image\core\gambatte\special1.png)
 
 ??? note "*Internal Palette - GBC - Special 2*"
-    ![](images\Cores\gambatte\special2.png)
+    ![](..\image\core\gambatte\special2.png)
 
 ??? note "*Internal Palette - GBC - Special 3*"
-    ![](images\Cores\gambatte\special3.png)
+    ![](..\image\core\gambatte\special3.png)
 	
 - **Color correction** [gambatte_gbc_color_correction] (**enabled**|disabled)
 
 	Darkens Game Boy Color games to match the original hardware output.
 
 ??? note "*Color Correction - On*"
-    ![](images\Cores\gambatte\correct_on.png)
+    ![](..\image\core\gambatte\correct_on.png)
 
 ??? note "*Color Correction - Off*"
-    ![](images\Cores\gambatte\correct_off.png)
+    ![](..\image\core\gambatte\correct_off.png)
 	
 - **Emulated hardware (restart)** [gambatte_gb_hwmode] (**Auto**|GB|GBC|GBA)
 
@@ -196,10 +196,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enables support for using official Game Boy and Game Boy Color bootloaders with startup logos. Check the [BIOS section](https://docs.libretro.com/library/gambatte#bios) to see what files are needed.
 
 ??? note "*Game Boy bootloader*"
-    ![](images\Cores\gambatte\gb_bios.png)
+    ![](..\image\core\gambatte\gb_bios.png)
 
 ??? note "*Game Boy Color bootloader*"
-    ![](images\Cores\gambatte\gbc_bios.png)
+    ![](..\image\core\gambatte\gbc_bios.png)
 	
 - **GameBoy Link Mode** [gambatte_gb_link_mode] (**Not Connected**|Network Server|Network Client)
 
@@ -239,18 +239,18 @@ The Gambatte core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](images/Controllers/gb.png)
+![](../image/controller/gb.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 

@@ -137,10 +137,10 @@ The TyrQuake core has the following option(s) that can be tweaked from the core 
 - **Resolution (restart)** (**320x200**/640x400/960x600/1280x800/1600x1000/1920x1200/320x240/320x480/360x200/360x240/360x400/360x480/400x224/480x272/512x224/512x240/512x384/512x512/640x224/640x240/640x448/640x480/720x576/800x480/800x600/960x720/1024x768/1280x720/1600x900/1920x1080): Configure the resolution.
 
 ??? note "Resolution - 320x240"
-	![](images\Cores\tyrquake\320x240.png)
+	![](..\image\core\tyrquake\320x240.png)
 	
 ??? note "Resolution - 1920x1080"
-	![](images\Cores\tyrquake\1920x1080.png)	
+	![](..\image\core\tyrquake\1920x1080.png)	
 
 - **Rumble** (**Off**/On): Enables or disables rumble functionality. Check the [Rumble section](https://docs.libretro.com/library/tyrquake/#rumble) for more information.
 
@@ -161,51 +161,51 @@ The TyrQuake core supports the following device type(s) in the controls menu, bo
 
 #### Joypad and analog device type table
 
-| User 1 input descriptors (RetroPad (1: New layout)) | **                                           | RetroPad (1: New layout)    |
-|-----------------------------------------------------|----------------------------------------------|-----------------------------|
-| Look right                                          | ![](images/RetroPad/Retro_B_Round.png)       | Cancel/Look right           |
-| Look up                                             | ![](images/RetroPad/Retro_Y_Round.png)       | Look up                     |
-| Toggle console                                      | ![](images/RetroPad/Retro_Select.png)        | Toggle console              |
-| Menu                                                | ![](images/RetroPad/Retro_Start.png)         | Menu                        |
-| D-Pad Up                                            | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up/Move forwards            |
-| D-Pad Down                                          | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down/Move backwards         |
-| D-Pad Left                                          | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left/Move left              |
-| D-Pad Right                                         | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right/Move right            |
-| Look down                                           | ![](images/RetroPad/Retro_A_Round.png)       | Confirm/Look down           |
-| Look left                                           | ![](images/RetroPad/Retro_X_Round.png)       | Look left                   |
-| Previous weapon                                     | ![](images/RetroPad/Retro_L1.png)            | Previous weapon             |
-| Next weapon                                         | ![](images/RetroPad/Retro_R1.png)            | Next weapon                 |
-| Jump                                                | ![](images/RetroPad/Retro_L2.png)            | Jump                        |
-| Fire                                                | ![](images/RetroPad/Retro_R2.png)            | Fire                        |
-| Toggle run mode                                     | ![](images/RetroPad/Retro_L3.png)            | Toggle run mode (for D-Pad) |
-| Swim up                                             | ![](images/RetroPad/Retro_R3.png)            | Swim up                     |
-| **                                                  | ![](images/RetroPad/Retro_Left_Stick.png) X  | Move left/right             |
-| **                                                  | ![](images/RetroPad/Retro_Left_Stick.png) Y  | Move backwards/forwards     |
-| **                                                  | ![](images/RetroPad/Retro_Right_Stick.png) X | Look left/right             |
-| **                                                  | ![](images/RetroPad/Retro_Right_Stick.png) Y | Look up/down                |
+| User 1 Remap descriptors | RetroPad Inputs                                | RetroPad (1: New layout)    |
+|--------------------------|------------------------------------------------|-----------------------------|
+| Look right               | ![](../image/retropad/retro_b.png)             | Cancel/Look right           |
+| Look up                  | ![](../image/retropad/retro_y.png)             | Look up                     |
+| Toggle console           | ![](../image/retropad/retro_select.png)        | Toggle console              |
+| Menu                     | ![](../image/retropad/retro_start.png)         | Menu                        |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       | Up/Move forwards            |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     | Down/Move backwards         |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     | Left/Move left              |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    | Right/Move right            |
+| Look down                | ![](../image/retropad/retro_a.png)             | Confirm/Look down           |
+| Look left                | ![](../image/retropad/retro_x.png)             | Look left                   |
+| Previous weapon          | ![](../image/retropad/retro_l1.png)            | Previous weapon             |
+| Next weapon              | ![](../image/retropad/retro_r1.png)            | Next weapon                 |
+| Jump                     | ![](../image/retropad/retro_l2.png)            | Jump                        |
+| Fire                     | ![](../image/retropad/retro_r2.png)            | Fire                        |
+| Toggle run mode          | ![](../image/retropad/retro_l3.png)            | Toggle run mode (for D-Pad) |
+| Swim up                  | ![](../image/retropad/retro_r3.png)            | Swim up                     |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | Move left/right             |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | Move backwards/forwards     |
+|                          | ![](../image/retropad/retro_right_stick.png) X | Look left/right             |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | Look up/down                |
 
-| User 1 input descriptors (RetroPad (2: Old layout)) | **                        				     | RetroPad (2: Old layout)    |
-|-----------------------------------------------------|----------------------------------------------|-----------------------------|
-| Jump                                                | ![](images/RetroPad/Retro_B_Round.png)       | Cancel/Jump                 |
-| Fire                                                | ![](images/RetroPad/Retro_Y_Round.png)       | Fire                        |
-| Toggle Run Mode                                     | ![](images/RetroPad/Retro_Select.png)        | Toggle run mode (for D-Pad) |
-| Menu                                                | ![](images/RetroPad/Retro_Start.png)         | Menu                        |
-| D-Pad Up                                            | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up/Move forwards            |
-| D-Pad Down                                          | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down/Move backwards         |
-| D-Pad Left                                          | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left/Look left              |
-| D-Pad Right                                         | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right/Look right            |
-| Cycle Weapon                                        | ![](images/RetroPad/Retro_A_Round.png)       | Confirm/Look down           |
-| Freelook                                            | ![](images/RetroPad/Retro_X_Round.png)       | Freelook (for D-Pad)        |
-| Strafe Left                                         | ![](images/RetroPad/Retro_L1.png)            | Strafe Left                 |
-| Strafe Right                                        | ![](images/RetroPad/Retro_R1.png)            | Strafe Right                |
-| Look Up                                             | ![](images/RetroPad/Retro_L2.png)            | Look Up                     |
-| Look Down                                           | ![](images/RetroPad/Retro_R2.png)            | Look Down                   |
-| Swim down                                           | ![](images/RetroPad/Retro_L3.png)            | Swim down                   |
-| Swim up                                             | ![](images/RetroPad/Retro_R3.png)            | Swim up                     |
-| **                           						  | ![](images/RetroPad/Retro_Left_Stick.png) X  | Move left/right             |
-| **                           						  | ![](images/RetroPad/Retro_Left_Stick.png) Y  | Move backwards/forwards     |
-| **                           						  | ![](images/RetroPad/Retro_Right_Stick.png) X | Look left/right             |
-| **                           						  | ![](images/RetroPad/Retro_Right_Stick.png) Y | Look up/down                |
+| User 1 Remap descriptors | RetroPad Inputs                                | RetroPad (2: Old layout)    |
+|--------------------------|------------------------------------------------|-----------------------------|
+| Jump                     | ![](../image/retropad/retro_b.png)             | Cancel/Jump                 |
+| Fire                     | ![](../image/retropad/retro_y.png)             | Fire                        |
+| Toggle Run Mode          | ![](../image/retropad/retro_select.png)        | Toggle Run Mode (for D-Pad) |
+| Menu                     | ![](../image/retropad/retro_start.png)         | Menu                        |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       | Up/Move forwards            |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     | Down/Move backwards         |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     | Left/Look left              |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    | Right/Look right            |
+| Cycle Weapon             | ![](../image/retropad/retro_a.png)             | Confirm/Look down           |
+| Freelook                 | ![](../image/retropad/retro_x.png)             | Freelook (for D-Pad)        |
+| Strafe Left              | ![](../image/retropad/retro_l1.png)            | Strafe Left                 |
+| Strafe Right             | ![](../image/retropad/retro_r1.png)            | Strafe Right                |
+| Look up                  | ![](../image/retropad/retro_l2.png)            | Look up                     |
+| Look down                | ![](../image/retropad/retro_r2.png)            | Look down                   |
+| Swim down                | ![](../image/retropad/retro_l3.png)            | Swim down                   |
+| Swim up                  | ![](../image/retropad/retro_r3.png)            | Swim up                     |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | Move left/right             |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | Move backwards/forwards     |
+|                          | ![](../image/retropad/retro_right_stick.png) X | Look left/right             |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | Look up/down                |
 
 #### Keyboard device type table
 
@@ -259,11 +259,11 @@ The TyrQuake core supports the following device type(s) in the controls menu, bo
 
 #### Mouse device type table
 
-| User # input descriptors      | **                                       | RetroKeyboard/Mouse |
-|-------------------------------|------------------------------------------|-------------------- |
-| **                            | ![](images/RetroMouse/Retro_Mouse.png)   | Look                |
-| **                            | ![](images/RetroMouse/Retro_Left.png)    | Fire                |
-| **                            | ![](images/RetroMouse/Retro_Right.png)   | Move forwards       |
+| RetroMouse Inputs                                     | RetroKeyboard/Mouse |
+|-------------------------------------------------------|---------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Look                |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Fire                |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Move forwards       |
 
 ## External Links
 

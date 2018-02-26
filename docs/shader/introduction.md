@@ -8,7 +8,7 @@ Its structured to reflect the common-shaders and slang-shaders repos and it incl
 When possible, preview shots were created by opening the upscale-test image in RetroArch's built-in image-viewer core at 8x scale. Some shaders require additional settings or images to capture their effects and those are handled on a case-by-case basis. When additional settings are required, notes should be added to the preview comments.
 
 ## Upscale Test Image
-![Base Image](images/upscale-test.png)
+![](../image/shader/upscale-test.png)
 
 ## External Links
 

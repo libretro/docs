@@ -10,17 +10,17 @@ This libretro core is based on BigOrno's [work](http://www.bigorno.net/xrick/).
 
 - To start the XRick core, you need to obtain Rick Dangerous' data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](images\Cores\all\download.png) </center>
+<center> ![](..\image\core\all\download.png) </center>
 
 - Select 'Rick Dangerous', then select 'Rick Dangerous.zip'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](images\Cores\xrick\xrick.png) </center>
+<center> ![](..\image\core\xrick\xrick.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
-<center> ![](images\Cores\all\downloads.png) </center>
+<center> ![](..\image\core\all\downloads.png) </center>
 
 - Select the 'xrick' directory, next select 'data.zip'. Then, select Load Archive.
 
@@ -103,13 +103,13 @@ The XRick core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-| RetroPad Inputs                           | XRick core Inputs |
-|-------------------------------------------|-------------------|
-| ![](images/RetroPad/Retro_Dpad_Up.png)    | Jump              |
-| ![](images/RetroPad/Retro_Dpad_Down.png)  | Crouch            |
-| ![](images/RetroPad/Retro_Dpad_Left.png)  | Left              |
-| ![](images/RetroPad/Retro_Dpad_Right.png) | Right             |
-| ![](images/RetroPad/Retro_A_Round.png)    | Attack            |
+| RetroPad Inputs                                | XRick core inputs |
+|------------------------------------------------|-------------------|
+| ![](../image/retropad/retro_dpad_up.png)       | Jump              |
+| ![](../image/retropad/retro_dpad_down.png)     | Crouch            |
+| ![](../image/retropad/retro_dpad_left.png)     | Left              |
+| ![](../image/retropad/retro_dpad_right.png)    | Right             |
+| ![](../image/retropad/retro_a.png)             | Attack            |
 
 Supported combinations
 

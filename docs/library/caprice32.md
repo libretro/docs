@@ -87,7 +87,7 @@ The Caprice32 core has a virtual keyboard GUI that can be accessed through User 
 
 The mouse cursor can be controlled by RetroPad D-Pad inputs when the RetroPad Select input is pressed.
 
-![](images/Cores/caprice32/vkbd.png)
+![](../image/core/caprice32/vkbd.png)
 
 Here are some actions you can do in page 2 of the virtual keyboard GUI.
 
@@ -131,10 +131,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose between a color display or a monochrome display.
 	
 ??? note "scr_tube - Off"
-	![](images\Cores\caprice32\tube_off.png)
+	![](..\image\core\caprice32\tube_off.png)
 	
 ??? note "scr_tube - On"
-	![](images\Cores\caprice32\tube_on.png)	
+	![](..\image\core\caprice32\tube_on.png)	
 	
 - **scr_intensity** [cap32_scr_intensity] (**5**|6|7|8|9|10|11|12|13|14|15)
 
@@ -144,10 +144,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'scr_intensity' core option screenshots have been taken with the 'scr_tube' core option set to Off.
 
 ??? note "scr_intensity - 5"
-	![](images\Cores\caprice32\5.png)
+	![](..\image\core\caprice32\5.png)
 	
 ??? note "scr_intensity - 15"
-	![](images\Cores\caprice32\15.png)
+	![](..\image\core\caprice32\15.png)
 	
 - **Retro joy0** [cap32_RetroJoy] (**disabled**|enabled)
 
@@ -172,24 +172,24 @@ The Caprice32 core supports the following device type(s) in the controls menu, b
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                           | Amstrad Joystick |
-|--------------------------|-------------------------------------------|------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    | RUN              |
-| Y                        | ![](images/RetroPad/Retro_Y_Round.png)    | VKBD ON/OFF      |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     | MOUSE/JOY in GUI |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      | ENTER/RETURN     |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)    | JOY UP           |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)  | JOY DOWN         |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)  | JOY LEFT         |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png) | JOY RIGHT        |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    | FIRE1/VKBD KEY   |
-| X                        | ![](images/RetroPad/Retro_X_Round.png)    | FIRE2            |
-| L                        | ![](images/RetroPad/Retro_L1.png)         | CAT              |
-| R                        | ![](images/RetroPad/Retro_R1.png)         | RESET            |
-| L2                       | ![](images/RetroPad/Retro_L2.png)         | STATUS ON/OFF    |
-| R2                       | ![](images/RetroPad/Retro_R2.png)         | AUTOLOAD TAPE    |
-| L3                       | ![](images/RetroPad/Retro_L3.png)         |                  |
-| R3                       | ![](images/RetroPad/Retro_R3.png)         |                  |
+| User 1 Remap descriptors | RetroPad Inputs                                | Amstrad Joystick |
+|--------------------------|------------------------------------------------|------------------|
+| B                        | ![](../image/retropad/retro_b.png)             | RUN              |
+| Y                        | ![](../image/retropad/retro_y.png)             | VKBD ON/OFF      |
+| Select                   | ![](../image/retropad/retro_select.png)        | MOUSE/JOY in GUI |
+| Start                    | ![](../image/retropad/retro_start.png)         | ENTER/RETURN     |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       | JOY UP           |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     | JOY DOWN         |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     | JOY LEFT         |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    | JOY RIGHT        |
+| A                        | ![](../image/retropad/retro_a.png)             | FIRE1/VKBD KEY   |
+| X                        | ![](../image/retropad/retro_x.png)             | FIRE2            |
+| L                        | ![](../image/retropad/retro_l1.png)            | CAT              |
+| R                        | ![](../image/retropad/retro_r1.png)            | RESET            |
+| L2                       | ![](../image/retropad/retro_l2.png)            | STATUS ON/OFF    |
+| R2                       | ![](../image/retropad/retro_r2.png)            | AUTOLOAD TAPE    |
+| L3                       | ![](../image/retropad/retro_l3.png)            |                  |
+| R3                       | ![](../image/retropad/retro_r3.png)            |                  |
 
 #### Keyboard
 
@@ -280,10 +280,10 @@ The Caprice32 core supports the following device type(s) in the controls menu, b
 
 #### Mouse
 
-| RetroMouse Inputs                                   | Virtual Keyboard GUI Inputs |
-|-----------------------------------------------------|-----------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | Mouse Cursor                |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | Mouse Left Button           |
+| RetroMouse Inputs                                     | Virtual Keyboard GUI Inputs |
+|-------------------------------------------------------|-----------------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor                |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button           |
 
 ## External Links
 

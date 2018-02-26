@@ -6,19 +6,19 @@ Shaders that include a border to fill the empty space left when rendering a non 
 ## Preview Image
 * bigblur-crt
 
-![bigblur-crt](images/border/bigblur-crt.png)
+![](../image/shader/border/bigblur-crt.png)
 
 * bigblur
 
-![bigblur](images/border/bigblur.png)
+![](../image/shader/border/bigblur.png)
 
 * hexagons
 
-![hexagons](images/border/hexagons.png)
+![](../image/shader/border/hexagons.png)
 
 * imgborder
 
-![imgborder](images/border/imgborder.png)
+![](../image/shader/border/imgborder.png)
 
 
 ## Comments

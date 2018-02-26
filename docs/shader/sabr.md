@@ -6,21 +6,21 @@
 
 * sabr-hybrid-deposterize
 
-![sabr-hybrid-deposterize](images/sabr/sabr-hybrid-deposterize.png)
+![](../image/shader/sabr/sabr-hybrid-deposterize.png)
 
 * sabr-v1.1
 
-![sabr-v1.1](images/sabr/sabr-v1.1.png)
+![](../image/shader/sabr/sabr-v1.1.png)
 
 
 * sabr-v3.0
 
-![sabr-v3.0](images/sabr/sabr-v3.0.png)
+![](../image/shader/sabr/sabr-v3.0.png)
 
 
 * sabr
 
-![sabr](images/sabr/sabr.png)
+![](../image/shader/sabr/sabr.png)
 
 
 

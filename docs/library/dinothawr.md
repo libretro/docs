@@ -8,17 +8,17 @@ Dinothawr is a block pushing puzzle game on slippery surfaces. Our hero is a din
 
 - To start the Dinothawr core, you need to obtain Dinothawr's data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](images\Cores\all\download.png) </center>
+<center> ![](..\image\core\all\download.png) </center>
 
 - Select 'Dinothawr', then select 'Dinothawr.zip'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](images\Cores\dinothawr\dinothawr.png) </center>
+<center> ![](..\image\core\dinothawr\dinothawr.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
-<center> ![](images\Cores\all\downloads.png) </center>
+<center> ![](..\image\core\all\downloads.png) </center>
 
 - Select the 'dinothawr' directory, then select 'dinothawr.game'.
 
@@ -130,15 +130,15 @@ The Dinothawr core supports the following device type(s) in the controls menu, b
 
 ![](http://themaister.net/dinothawr/shield.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| Push                     | ![](images/RetroPad/Retro_B_Round.png)       |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Menu                     | ![](images/RetroPad/Retro_A_Round.png)       |
-| Reset                    | ![](images/RetroPad/Retro_X_Round.png)       |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| Push                     | ![](../image/retropad/retro_b.png)          |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| Menu                     | ![](../image/retropad/retro_a.png)          |
+| Reset                    | ![](../image/retropad/retro_x.png)          |
 
 ## External Links
 

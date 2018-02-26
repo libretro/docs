@@ -22,21 +22,21 @@ Awaiting description.
 
 - To start the (Core name) core, you need to obtain (Core name)'s data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](images\Cores\all\download.png) </center>
+<center> ![](..\image\core\all\download.png) </center>
 
 // Fill in the (Core name).
 
 - Select '(Content directory name)', then select '(Game filename)'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](images\Cores\folder\screenshot_name.png) </center>
+<center> ![](..\image\core\folder\screenshot_name.png) </center>
 
 // Fill in the (Content directory name) and the (Game filename).
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
-<center> ![](images\Cores\all\downloads.png) </center>
+<center> ![](..\image\core\all\downloads.png) </center>
 
 - Select the '(Content directory name)' directory, then select '(Game filename)'.
 
@@ -155,6 +155,8 @@ Frontend-level settings or features that the (Core name) core respects.
 
 ### Directories
 
+The (Core name) core's valid extensions are (Extensions)
+
 The (Core name) core's library name is '(Directory name)'
 
 // Fill in the (Core name) and the (Directory name).
@@ -233,7 +235,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Awaiting description.
 
 ??? note "Core Option - Setting"
-	![](images\Cores\folder\screenshot_name.png)
+	![](..\image\core\folder\screenshot_name.png)
 
 // Fill in core options.
 // Add core option screenshots if needed.
@@ -291,28 +293,28 @@ Rumble only works in the (Core name) core when
 
 #### Joypad
 
-| User # Remap descriptors | RetroPad Inputs                              | (Device name) Inputs      |
-|--------------------------|----------------------------------------------|---------------------------|
-| Action 1                 | ![](images/RetroPad/Retro_B_Round.png)       | -                         |
-| Action 2                 | ![](images/RetroPad/Retro_Y_Round.png)       | -                         |
-| Action 3                 | ![](images/RetroPad/Retro_Select.png)        | -                         |
-| Action 4                 | ![](images/RetroPad/Retro_Start.png)         | -                         |
-| Action 5                 | ![](images/RetroPad/Retro_Dpad_Up.png)       | -                         |
-| Action 6                 | ![](images/RetroPad/Retro_Dpad_Down.png)     | -                         |
-| Action 7                 | ![](images/RetroPad/Retro_Dpad_Left.png)     | -                         |
-| Action 8                 | ![](images/RetroPad/Retro_Dpad_Right.png)    | -                         |
-| Action 9                 | ![](images/RetroPad/Retro_A_Round.png)       | -                         |
-| Action 10                | ![](images/RetroPad/Retro_X_Round.png)       | -                         |
-| Action 11                | ![](images/RetroPad/Retro_L1.png)            | -                         |
-| Action 12                | ![](images/RetroPad/Retro_R1.png)            | -                         |
-| Action 13                | ![](images/RetroPad/Retro_L2.png)            | -                         |
-| Action 14                | ![](images/RetroPad/Retro_R2.png)            | -                         |
-| Action 15                | ![](images/RetroPad/Retro_L3.png)            | -                         |
-| Action 16                | ![](images/RetroPad/Retro_R3.png)            | -                         |
-| Action 17                | ![](images/RetroPad/Retro_Left_Stick.png) X  | -                         |
-| Action 18                | ![](images/RetroPad/Retro_Left_Stick.png) Y  | -                         |
-| Action 19                | ![](images/RetroPad/Retro_Right_Stick.png) X | -                         |
-| Action 20                | ![](images/RetroPad/Retro_Right_Stick.png) Y | -                         |
+| User # Remap descriptors | RetroPad Inputs                                | (Device name) Inputs      |
+|--------------------------|------------------------------------------------|---------------------------|
+| Action 1                 | ![](../image/retropad/retro_b.png)             | -                         |
+| Action 2                 | ![](../image/retropad/retro_y.png)             | -                         |
+| Action 3                 | ![](../image/retropad/retro_select.png)        | -                         |
+| Action 4                 | ![](../image/retropad/retro_start.png)         | -                         |
+| Action 5                 | ![](../image/retropad/retro_dpad_up.png)       | -                         |
+| Action 6                 | ![](../image/retropad/retro_dpad_down.png)     | -                         |
+| Action 7                 | ![](../image/retropad/retro_dpad_left.png)     | -                         |
+| Action 8                 | ![](../image/retropad/retro_dpad_right.png)    | -                         |
+| Action 9                 | ![](../image/retropad/retro_a.png)             | -                         |
+| Action 10                | ![](../image/retropad/retro_x.png)             | -                         |
+| Action 11                | ![](../image/retropad/retro_l1.png)            | -                         |
+| Action 12                | ![](../image/retropad/retro_r1.png)            | -                         |
+| Action 13                | ![](../image/retropad/retro_l2.png)            | -                         |
+| Action 14                | ![](../image/retropad/retro_r2.png)            | -                         |
+| Action 15                | ![](../image/retropad/retro_l3.png)            | -                         |
+| Action 16                | ![](../image/retropad/retro_r3.png)            | -                         |
+| Action 17                | ![](../image/retropad/retro_left_stick.png) X  | -                         |
+| Action 18                | ![](../image/retropad/retro_left_stick.png) Y  | -                         |
+| Action 19                | ![](../image/retropad/retro_right_stick.png) X | -                         |
+| Action 20                | ![](../image/retropad/retro_right_stick.png) Y | -                         |
 
 #### Keyboard
 
@@ -458,42 +460,42 @@ Rumble only works in the (Core name) core when
 
 #### Mouse
 
-| RetroMouse Inputs                                   | (Device name) Inputs      |
-|-----------------------------------------------------|---------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | -                         |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | -                         |
-| ![](images/RetroMouse/Retro_Right.png) Mouse 2      | -                         |
-| ![](images/RetroMouse/Retro_Middle.png) Mouse 3     | -                         |
-| Mouse 4                                             | -                         |
-| Mouse 5                                             | -                         |
-| Wheel Up                                            | -                         |
-| Wheel Down                                          | -                         |
-| Wheel Left                                          | -                         |
-| Wheel Right                                         | -                         |
+| RetroMouse Inputs                                     | (Device name) Inputs      |
+|-------------------------------------------------------|---------------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | -                         |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | -                         |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | -                         |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | -                         |
+| Mouse 4                                               | -                         |
+| Mouse 5                                               | -                         |
+| Wheel Up                                              | -                         |
+| Wheel Down                                            | -                         |
+| Wheel Left                                            | -                         |
+| Wheel Right                                           | -                         |
 
 #### Pointer
 
-| RetroPointer Inputs                                                                                                  | (Device name) Inputs      |
-|----------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) or ![](images/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         | 
-| ![](images/RetroMouse/Retro_Left.png) or ![](images/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | -                         |
+| RetroPointer Inputs                                                                                                      | (Device name) Inputs      |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         | 
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | -                         |
 
 #### Lightgun
 
-| RetroLightgun Inputs                                 | (Device name) Inputs      |
-|------------------------------------------------------|---------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Gun Crosshair | -                         |
-| Gun Trigger                                          | -                         |
-| Gun Reload                                           | -                         |
-| Gun Aux A                                            | -                         |
-| Gun Aux B                                            | -                         |
-| Gun Aux C                                            | -                         |
-| Gun Start                                            | -                         |
-| Gun Select                                           | -                         |
-| Gun D-pad Up                                         | -                         |
-| Gun D-pad Down                                       | -                         |
-| Gun D-pad Left                                       | -                         |
-| Gun D-pad Right                                      | -                         |
+| RetroLightgun Inputs                                   | (Device name) Inputs      |
+|--------------------------------------------------------|---------------------------|
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | -                         |
+| Gun Trigger                                            | -                         |
+| Gun Reload                                             | -                         |
+| Gun Aux A                                              | -                         |
+| Gun Aux B                                              | -                         |
+| Gun Aux C                                              | -                         |
+| Gun Start                                              | -                         |
+| Gun Select                                             | -                         |
+| Gun D-pad Up                                           | -                         |
+| Gun D-pad Down                                         | -                         |
+| Gun D-pad Left                                         | -                         |
+| Gun D-pad Right                                        | -                         |
 
 // Deprecated Lightgun inputs
 

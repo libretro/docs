@@ -92,20 +92,20 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 
 ### Controller tables
 
-![](images/Controllers/nes.png)
-
 #### Joypad
+
+![](../image/controller/nes.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](images/RetroPad/Retro_B_Round.png)    |
-| Select                       | ![](images/RetroPad/Retro_Select.png)     |
-| Start                        | ![](images/RetroPad/Retro_Start.png)      |
-| D-Pad Up                     | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| D-Pad Down                   | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| D-Pad Left                   | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| D-Pad Right                  | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                            | ![](images/RetroPad/Retro_A_Round.png)    |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 

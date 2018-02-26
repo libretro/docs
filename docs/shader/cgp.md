@@ -5,79 +5,79 @@
 ## Preview Image
 * 2x2xscalehq
 
-![2x2xscalehq](images/cgp/2x2xscalehq.png)
+![2x2xscalehq](../image/shader/cgp/2x2xscalehq.png)
 
 * 2xbr-crt-hyllian
 
-![2xbr-crt-hyllian](images/cgp/2xbr-crt-hyllian.png)
+![2xbr-crt-hyllian](../image/shader/cgp/2xbr-crt-hyllian.png)
 
 * 2xbr-hybrid-crt-hyllian
 
-![2xbr-hybrid-crt-hyllian](images/cgp/2xbr-hybrid-crt-hyllian.png)
+![2xbr-hybrid-crt-hyllian](../image/shader/cgp/2xbr-hybrid-crt-hyllian.png)
 
 * 2xbr-jinc2-sharper-hybrid
 
-![2xbr-jinc2-sharper-hybrid](images/cgp/2xbr-jinc2-sharper-hybrid.png)
+![2xbr-jinc2-sharper-hybrid](../image/shader/cgp/2xbr-jinc2-sharper-hybrid.png)
 
 * 2xbr-reverse-aa
 
-![2xbr-reverse-aa](images/cgp/2xbr-reverse-aa.png)
+![2xbr-reverse-aa](../image/shader/cgp/2xbr-reverse-aa.png)
 
 * crt-reverse-aa-ddt
 
-![crt-reverse-aa-ddt](images/cgp/crt-reverse-aa-ddt.png)
+![crt-reverse-aa-ddt](../image/shader/cgp/crt-reverse-aa-ddt.png)
 
 * crt-royale-kurozumi
 
-![crt-royale-kurozumi](images/cgp/crt-royale-kurozumi.png)
+![crt-royale-kurozumi](../image/shader/cgp/crt-royale-kurozumi.png)
 
 * gameboy-colors
 
-![gameboy-colors](images/cgp/gameboy-colors.png)
+![gameboy-colors](../image/shader/cgp/gameboy-colors.png)
 
 * gameboy-scree-n-grid
 
-![gameboy-scree-n-grid](images/cgp/gameboy-scree-n-grid.png)
+![gameboy-scree-n-grid](../image/shader/cgp/gameboy-scree-n-grid.png)
 
 * gameboy-screen-grid+motionblur
 
-![gameboy-screen-grid+motionblur](images/cgp/gameboy-screen-grid+motionblur.png)
+![gameboy-screen-grid+motionblur](../image/shader/cgp/gameboy-screen-grid+motionblur.png)
 
 * lowquality-lcd
 
-![lowquality-lcd](images/cgp/lowquality-lcd.png)
+![lowquality-lcd](../image/shader/cgp/lowquality-lcd.png)
 
 * lowquality-lcd+motionblur
 
-![lowquality-lcd+motionblur](images/cgp/lowquality-lcd+motionblur.png)
+![lowquality-lcd+motionblur](../image/shader/cgp/lowquality-lcd+motionblur.png)
 
 * xbr-dilation-smart-blur-4xsoft
 
-![xbr-dilation-smart-blur-4xsoft](images/cgp/xbr-dilation-smart-blur-4xsoft.png)
+![xbr-dilation-smart-blur-4xsoft](../image/shader/cgp/xbr-dilation-smart-blur-4xsoft.png)
 
 * xbr-dtt-dilation-soft2-aa-gamma
 
-![xbr-dtt-dilation-soft2-aa-gamma](images/cgp/xbr-dtt-dilation-soft2-aa-gamma.png)
+![xbr-dtt-dilation-soft2-aa-gamma](../image/shader/cgp/xbr-dtt-dilation-soft2-aa-gamma.png)
 
 * xbr-hybrid-bicubic
 
-![xbr-hybrid-bicubic](images/cgp/xbr-hybrid-bicubic.png)
+![xbr-hybrid-bicubic](../image/shader/cgp/xbr-hybrid-bicubic.png)
 
 * xbr-hybrid-ddt
 
-![xbr-hybrid-ddt](images/cgp/xbr-hybrid-ddt.png)
+![xbr-hybrid-ddt](../image/shader/cgp/xbr-hybrid-ddt.png)
 
 * xbr-hybrid-lanczos
 
-![xbr-hybrid-lanczos](images/cgp/xbr-hybrid-lanczos.png)
+![xbr-hybrid-lanczos](../image/shader/cgp/xbr-hybrid-lanczos.png)
 
 * xbr-hybrid-sharp-lanczos
 
-![xbr-hybrid-sharp-lanczos](images/cgp/xbr-hybrid-sharp-lanczos.png)
+![xbr-hybrid-sharp-lanczos](../image/shader/cgp/xbr-hybrid-sharp-lanczos.png)
 
 * xbr-smart-blur
 
-![xbr-smart-blur](images/cgp/xbr-smart-blur.png)
+![xbr-smart-blur](../image/shader/cgp/xbr-smart-blur.png)
 
 ## Comments
 

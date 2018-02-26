@@ -22,15 +22,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'Odyssey2 / Videopac+ (O2EM)'.
 
-<center> ![](images\Cores\updater\o2em.png) </center>
+<center> ![](..\image\core\updater\o2em.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -38,13 +38,13 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
 - Select the content that you want to run.
 
-<center> ![](images\Cores\all\screenshot_name.png) </center>
+<center> ![](..\image\core\all\screenshot_name.png) </center>
 
 - If you are asked which core to select, choose 'Odyssey2 / Videopac+ (O2EM)'.
 
@@ -147,21 +147,21 @@ The O2EM core accepts keyboard inputs as well. Look at the Keyboard section belo
 
 #### Joypad and analog device type table
 
-| User 1 Remap descriptors      | RetroPad Inputs                              |
-|-------------------------------|----------------------------------------------|
-| Up                            | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                          | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                          | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                         | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Fire                          | ![](images/RetroPad/Retro_A_Round.png)       |
+| User 1 Remap descriptors | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
+| Fire                     | ![](../image/retropad/retro_a.png)             |
 
-| User 2 Remap descriptors      | RetroPad Inputs                              |
-|-------------------------------|----------------------------------------------|
-| Up                            | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                          | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                          | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                         | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Action                        | ![](images/RetroPad/Retro_A_Round.png)       |
+| User 2 Remap descriptors | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
+| Action                   | ![](../image/retropad/retro_a.png)           |
 
 #### Keyboard device type table
 

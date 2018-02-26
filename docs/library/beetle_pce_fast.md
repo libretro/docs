@@ -241,7 +241,7 @@ The Beetle PCE FAST core supports the following device type(s) in the controls m
 
 #### Joypad
 
-![](images/Controllers/pce.png)
+![](../image/controller/pce.png)
 
 !!! attention
 	Which PCE Joypad button mode is in use can be configured by the Mode Switch input.
@@ -254,29 +254,29 @@ The Beetle PCE FAST core supports the following device type(s) in the controls m
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                              | PCE Joypad 2 button mode  | PCE Joypad 6-button mode |
 |------------------------------|----------------------------------------------|---------------------------|--------------------------|
-| II                           | ![](images/RetroPad/Retro_B_Round.png)       | II                        | II                       |
-| III                          | ![](images/RetroPad/Retro_Y_Round.png)       | II Turbo On/Off           | III                      |
-| Select                       | ![](images/RetroPad/Retro_Select.png)        | Select                    | Select                   |
-| Run                          | ![](images/RetroPad/Retro_Start.png)         | Run                       | Run                      |
-| D-Pad Up                     | ![](images/RetroPad/Retro_Dpad_Up.png)       | D-Pad Up                  | D-Pad Up                 |
-| D-Pad Down                   | ![](images/RetroPad/Retro_Dpad_Down.png)     | D-Pad Down                | D-Pad Down               |
-| D-Pad Left                   | ![](images/RetroPad/Retro_Dpad_Left.png)     | D-Pad Left                | D-Pad Left               |
-| D-Pad Right                  | ![](images/RetroPad/Retro_Dpad_Right.png)    | D-Pad Right               | D-Pad Right              |
-| I                            | ![](images/RetroPad/Retro_A_Round.png)       | I                         | I                        |
-| IV                           | ![](images/RetroPad/Retro_X_Round.png)       | I Turbo On/Off            | IV                       |
-| V                            | ![](images/RetroPad/Retro_L1.png)            |                           | V                        |
-| VI                           | ![](images/RetroPad/Retro_R1.png)            |                           | VI                       |
-| Mode Switch                  | ![](images/RetroPad/Retro_L2.png)            | Mode Switch               | Mode Switch              |
-|                              | ![](images/RetroPad/Retro_L3.png)            | Alternate II Turbo On/Off |                          |
-|                              | ![](images/RetroPad/Retro_R3.png)            | Alternate I Turbo On/Off  |                          |
+| II                           | ![](../image/retropad/retro_b.png)       | II                        | II                       |
+| III                          | ![](../image/retropad/retro_y.png)       | II Turbo On/Off           | III                      |
+| Select                       | ![](../image/retropad/retro_select.png)        | Select                    | Select                   |
+| Run                          | ![](../image/retropad/retro_start.png)         | Run                       | Run                      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                  | D-Pad Up                 |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                | D-Pad Down               |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                | D-Pad Left               |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right               | D-Pad Right              |
+| I                            | ![](../image/retropad/retro_a.png)       | I                         | I                        |
+| IV                           | ![](../image/retropad/retro_x.png)       | I Turbo On/Off            | IV                       |
+| V                            | ![](../image/retropad/retro_l1.png)            |                           | V                        |
+| VI                           | ![](../image/retropad/retro_r1.png)            |                           | VI                       |
+| Mode Switch                  | ![](../image/retropad/retro_l2.png)            | Mode Switch               | Mode Switch              |
+|                              | ![](../image/retropad/retro_l3.png)            | Alternate II Turbo On/Off |                          |
+|                              | ![](../image/retropad/retro_r3.png)            | Alternate I Turbo On/Off  |                          |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | Mouse                     |
 |-----------------------------------------------------|---------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | Mouse Cursor              |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | Mouse Left Button         |
-| ![](images/RetroMouse/Retro_Right.png) Mouse 2      | Mouse Right Button        |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor              |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button         |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button        |
 
 ## External Links
 

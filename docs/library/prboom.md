@@ -70,10 +70,10 @@ PrBoom can load wad or iwad files. The PrBoom core requires data ROM ['prboom.wa
 - **Internal resolution** (**320x200**/640x400/960x600/1280x800/1600x1000/1920x1200): Configure the resolution.
 
 ??? note "Internal resolution - 320x200"
-	![internal_resolution_320x200](images\Cores\prboom\internal_resolution_320x200.png)
+	![](..\image\core\prboom\internal_resolution_320x200.png)
 	
 ??? note "Internal resolution - 1920x1200"
-	![internal_resolution_1920x1200](images\Cores\prboom\internal_resolution_1920x1200.png)	
+	![](..\image\core\prboom\internal_resolution_1920x1200.png)	
 
 - **Mouse active when using Gamepad** (**Off**/On): Allows you to use mouse inputs even when the User 1 Device Type is set to RetroPad.
 
@@ -93,22 +93,22 @@ PrBoom can load wad or iwad files. The PrBoom core requires data ROM ['prboom.wa
 
 ### Controllers graph
 
-| PrBoom         | RetroPad                                                        |
-|-----------------|----------------------------------------------------------------|
-| Strafe          | ![RetroPad_B](images/RetroPad/Retro_B_Round.png)               |
-| Run             | ![RetroPad_Y](images/RetroPad/Retro_Y_Round.png)               |
-| Show/Hide Map   | ![RetroPad_Select](images/RetroPad/Retro_Select.png)           |
-| Settings        | ![RetroPad_Start](images/RetroPad/Retro_Start.png)             |
-| D-Pad Up        | ![RetroPad_Dpad](images/RetroPad/Retro_Dpad_Up.png)            |
-| D-Pad Down      | ![RetroPad_Dpad](images/RetroPad/Retro_Dpad_Down.png)          |
-| D-Pad Left      | ![RetroPad_Dpad](images/RetroPad/Retro_Dpad_Left.png)          |
-| D-Pad Right     | ![RetroPad_Dpad](images/RetroPad/Retro_Dpad_Right.png)         |
-| Use             | ![RetroPad_A](images/RetroPad/Retro_A_Round.png)               |
-| Fire            | ![RetroPad_X](images/RetroPad/Retro_X_Round.png)               |
-| Strafe Left     | ![RetroPad_L1](images/RetroPad/Retro_L1.png)                   |
-| Strafe Right    | ![RetroPad_R1](images/RetroPad/Retro_R1.png)                   |
-| Previous Weapon | ![RetroPad_L2](images/RetroPad/Retro_L2_Temp.png)              |
-| Next Weapon     | ![RetroPad_R2](images/RetroPad/Retro_R2.png)                   |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| Strafe                   | ![](../image/retropad/retro_b.png)          |
+| Run                      | ![](../image/retropad/retro_y.png)          |
+| Show/Hide Map            | ![](../image/retropad/retro_select.png)     |
+| Settings                 | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| Use                      | ![](../image/retropad/retro_a.png)          |
+| Fire                     | ![](../image/retropad/retro_x.png)          |
+| Strafe Left              | ![](../image/retropad/retro_l1.png)         |
+| Strafe Right             | ![](../image/retropad/retro_r1.png)         |
+| Previous Weapon          | ![](../image/retropad/retro_l2.png)         |
+| Next Weapon              | ![](../image/retropad/retro_r2.png)         |
 
 | Weapons  | RetroKeyboard/Mouse |
 |----------|---------------|

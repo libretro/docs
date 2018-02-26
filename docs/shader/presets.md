@@ -6,19 +6,19 @@
 
 * crt-royale-kurozumi
 
-![crt-royale-kurozumi](images/presets/crt-royale-kurozumi.png)
+![](../image/shader/presets/crt-royale-kurozumi.png)
 
 * ntsc-phosphorlut
 
-![ntsc-phosphorlut](images/presets/ntsc-phosphorlut.png)
+![](../image/shader/presets/ntsc-phosphorlut.png)
 
 * scalefx9-aa-blur-hazy-ntsc-sh1nra358
 
-![scalefx9-aa-blur-hazy-ntsc-sh1nra358](images/presets/scalefx9-aa-blur-hazy-ntsc-sh1nra358.png)
+![](../image/shader/presets/scalefx9-aa-blur-hazy-ntsc-sh1nra358.png)
 
 * scalefx9-aa-blur-hazy-vibrance-sh1nra358
 
-![scalefx9-aa-blur-hazy-vibrance-sh1nra358](images/presets/scalefx9-aa-blur-hazy-vibrance-sh1nra358.png)
+![](../image/shader/presets/scalefx9-aa-blur-hazy-vibrance-sh1nra358.png)
 
 ## Comments
 

@@ -6,55 +6,55 @@ Collection of handheld specific shaders.
 ## Preview Image
 * dot
 
-![dot](images/handheld/dot.png)
+![dot](../image/shader/handheld/dot.png)
 
 * gameboy-light
 
-![gameboy-light](images/handheld/gameboy-light.png)
+![gameboy-light](../image/shader/handheld/gameboy-light.png)
 
 * gameboy-pocket
 
-![gameboy-pocket](images/handheld/gameboy-pocket.png)
+![gameboy-pocket](../image/shader/handheld/gameboy-pocket.png)
 
 * gameboy
 
-![gameboy](images/handheld/gameboy.png)
+![gameboy](../image/shader/handheld/gameboy.png)
 
 * gba-color
 
-![gba-color](images/handheld/gba-color.png)
+![gba-color](../image/shader/handheld/gba-color.png)
 
 * lcd-3x
 
-![lcd-3x](images/handheld/lcd-3x.png)
+![lcd-3x](../image/shader/handheld/lcd-3x.png)
 
 * lcd-grid-v2-gba-color-motionblur
 
-![lcd-grid-v2-gba-color-motionblur](images/handheld/lcd-grid-v2-gba-color-motionblur.png)
+![lcd-grid-v2-gba-color-motionblur](../image/shader/handheld/lcd-grid-v2-gba-color-motionblur.png)
 
 * lcd-grid-v2
 
-![lcd-grid-v2](images/handheld/lcd-grid-v2.png)
+![lcd-grid-v2](../image/shader/handheld/lcd-grid-v2.png)
 
 * lcd-grid-v2
 
-![lcd-grid-v2](images/handheld/lcd-grid-v2.png)
+![lcd-grid-v2](../image/shader/handheld/lcd-grid-v2.png)
 
 * nds-color
 
-![nds-color](images/handheld/nds-color.png)
+![nds-color](../image/shader/handheld/nds-color.png)
 
 * psp-color
 
-![psp-color](images/handheld/psp-color.png)
+![psp-color](../image/shader/handheld/psp-color.png)
 
 * vba-color
 
-![vba-color](images/handheld/vba-color.png)
+![vba-color](../image/shader/handheld/vba-color.png)
 
 * zfast-lcd
 
-![zfast-lcd](images/handheld/zfast-lcd.png)
+![zfast-lcd](../image/shader/handheld/zfast-lcd.png)
 
 
 ## Comments

@@ -196,7 +196,7 @@ After that, you can load the `foo.m3u` file in RetroArch with the PCSX ReARMed c
 
 Here's another m3u example done with Valkryie Profile
 
-![](images\Cores\beetle_psx_hw\m3u.png)
+![](..\image\core\beetle_psx_hw\m3u.png)
 
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
@@ -399,14 +399,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 <center>
 
 ??? note "Enable Dithering - On"
-	![](images\Cores\pcsx_rearmed\dither_on.png)
+	![](..\image\core\pcsx_rearmed\dither_on.png)
 	
 </center>
 	
 <center>
 	
 ??? note "Enable Dithering - Off"
-	![](images\Cores\pcsx_rearmed\dither_off.png)
+	![](..\image\core\pcsx_rearmed\dither_off.png)
 	
 </center>	
 
@@ -463,28 +463,30 @@ Activating multitap support in compatible games can be configured by the ['Multi
 
 #### Joypad and analog device type table
 
+![](../image/controller/psx.png)
+
 | User 1 - 8 input descriptors  |                                              | standard    | analog         | negcon |
 |-------------------------------|----------------------------------------------|-------------|----------------|--------|
-| Cross                         | ![](images/RetroPad/Retro_B_Round.png)       | Cross       | Cross          | -      |
-| Square                        | ![](images/RetroPad/Retro_Y_Round.png)       | Square      | Square         | -      |
-| Select                        | ![](images/RetroPad/Retro_Select.png)        | Select      | Select         | -      |
-| Start                         | ![](images/RetroPad/Retro_Start.png)         | Start       | Start          | -      |
-| D-Pad Up                      | ![](images/RetroPad/Retro_Dpad_Up.png)       | D-Pad Up    | D-Pad Up       | -      |
-| D-Pad Down                    | ![](images/RetroPad/Retro_Dpad_Down.png)     | D-Pad Down  | D-Pad Down     | -      |
-| D-Pad Left                    | ![](images/RetroPad/Retro_Dpad_Left.png)     | D-Pad Left  | D-Pad Left     | -      |
-| D-Pad Right                   | ![](images/RetroPad/Retro_Dpad_Right.png)    | D-Pad Right | D-Pad Right    | -      |
-| Circle                        | ![](images/RetroPad/Retro_A_Round.png)       | Circle      | Circle         | -      |
-| Triangle                      | ![](images/RetroPad/Retro_X_Round.png)       | Triangle    | Triangle       | -      |
-| L1                            | ![](images/RetroPad/Retro_L1.png)            | L1          | L1             | -      |
-| R1                            | ![](images/RetroPad/Retro_R1.png)            | R1          | R1             | -      |
-| L2                            | ![](images/RetroPad/Retro_L2.png)            | L2          | L2             | -      |
-| R2                            | ![](images/RetroPad/Retro_R2.png)            | R2          | R2             | -      |
-| L3                            | ![](images/RetroPad/Retro_L3.png)            |             | L3             | -      |
-| R3                            | ![](images/RetroPad/Retro_R3.png)            |             | R3             | -      |
-| Left Analog X                 | ![](images/RetroPad/Retro_Left_Stick.png) X  |             | Left Analog X  | -      |
-| Left Analog Y                 | ![](images/RetroPad/Retro_Left_Stick.png) Y  |             | Left Analog Y  | -      |
-| Right Analog X                | ![](images/RetroPad/Retro_Right_Stick.png) X |             | Right Analog X | -      |
-| Right Analog Y                | ![](images/RetroPad/Retro_Right_Stick.png) Y |             | Right Analog Y | -      |
+| Cross                         | ![](../image/retropad/retro_b.png)       | Cross       | Cross          | -      |
+| Square                        | ![](../image/retropad/retro_y.png)       | Square      | Square         | -      |
+| Select                        | ![](../image/retropad/retro_select.png)        | Select      | Select         | -      |
+| Start                         | ![](../image/retropad/retro_start.png)         | Start       | Start          | -      |
+| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up    | D-Pad Up       | -      |
+| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down  | D-Pad Down     | -      |
+| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left  | D-Pad Left     | -      |
+| D-Pad Right                   | ![](../imags/retropad/retro_dpad_right.png)    | D-Pad Right | D-Pad Right    | -      |
+| Circle                        | ![](../image/retropad/retro_a.png)       | Circle      | Circle         | -      |
+| Triangle                      | ![](../image/retropad/retro_x.png)       | Triangle    | Triangle       | -      |
+| L1                            | ![](../image/retropad/retro_l1.png)            | L1          | L1             | -      |
+| R1                            | ![](../image/retropad/retro_r1.png)            | R1          | R1             | -      |
+| L2                            | ![](../image/retropad/retro_l2.png)            | L2          | L2             | -      |
+| R2                            | ![](../image/retropad/retro_r2.png)            | R2          | R2             | -      |
+| L3                            | ![](../image/retropad/retro_l3.png)            |             | L3             | -      |
+| R3                            | ![](../image/retropad/retro_r3.png)            |             | R3             | -      |
+| Left Analog X                 | ![](../image/retropad/retro_left_stick.png) X  |             | Left Analog X  | -      |
+| Left Analog Y                 | ![](../image/retropad/retro_left_stick.png) Y  |             | Left Analog Y  | -      |
+| Right Analog X                | ![](../image/retropad/retro_right_stick.png) X |             | Right Analog X | -      |
+| Right Analog Y                | ![](../image/retropad/Retro_right_stick.png) Y |             | Right Analog Y | -      |
 
 ## Compatibility
 

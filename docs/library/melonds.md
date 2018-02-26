@@ -125,18 +125,18 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 | User 1 input descriptors      |                                              | Nintendo DS        |
 |-------------------------------|----------------------------------------------|--------------------|
-| N/A                           | ![](images/RetroPad/Retro_B_Round.png)       | B                  |
-| N/A                           | ![](images/RetroPad/Retro_Y_Round.png)       | Y                  |
-| N/A                           | ![](images/RetroPad/Retro_Select.png)        | Select             |
-| N/A                           | ![](images/RetroPad/Retro_Start.png)         | Start              |
-| Up                            | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up                 |
-| Down                          | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down               |
-| Left                          | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left               |
-| Right                         | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right              |
-| N/A                           | ![](images/RetroPad/Retro_A_Round.png)       | A                  |
-| N/A                           | ![](images/RetroPad/Retro_X_Round.png)       | X                  |
-| N/A                           | ![](images/RetroPad/Retro_L1.png)            | L                  |
-| N/A                           | ![](images/RetroPad/Retro_R1.png)            | R                  |
+| N/A                           | ![](../image/retropad/retro_b.png)       | B                  |
+| N/A                           | ![](../image/retropad/retro_y.png)       | Y                  |
+| N/A                           | ![](../image/retropad/retro_select.png)        | Select             |
+| N/A                           | ![](../image/retropad/retro_start.png)         | Start              |
+| Up                            | ![](../image/retropad/retro_dpad_up.png)       | Up                 |
+| Down                          | ![](../image/retropad/retro_dpad_down.png)     | Down               |
+| Left                          | ![](../image/retropad/retro_dpad_left.png)     | Left               |
+| Right                         | ![](../image/retropad/retro_dpad_right.png)    | Right              |
+| N/A                           | ![](../image/retropad/retro_a.png)       | A                  |
+| N/A                           | ![](../image/retropad/retro_x.png)       | X                  |
+| N/A                           | ![](../image/retropad/retro_l1.png)            | L                  |
+| N/A                           | ![](../image/retropad/retro_r1.png)            | R                  |
 
 ## External Links
 

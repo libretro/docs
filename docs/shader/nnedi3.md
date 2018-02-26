@@ -6,31 +6,31 @@
 
 * nnedi3-nns16-2x-luma
 
-![nnedi3-nns16-2x-luma](images/nnedi3/nnedi3-nns16-2x-luma.png)
+![](../image/shader/nnedi3/nnedi3-nns16-2x-luma.png)
 
 * nnedi3-nns16-2x-rgb
 
-![nnedi3-nns16-2x-rgb](images/nnedi3/nnedi3-nns16-2x-rgb.png)
+![](../image/shader/nnedi3/nnedi3-nns16-2x-rgb.png)
 
 * nnedi3-nns16-4x-luma
 
-![nnedi3-nns16-4x-luma](images/nnedi3/nnedi3-nns16-4x-luma.png)
+![](../image/shader/nnedi3/nnedi3-nns16-4x-luma.png)
 
 * nnedi3-nns32-2x-rgb-nns32-4x-luma
 
-![nnedi3-nns32-2x-rgb-nns32-4x-luma](images/nnedi3/nnedi3-nns32-2x-rgb-nns32-4x-luma.png)
+![](../image/shader/nnedi3/nnedi3-nns32-2x-rgb-nns32-4x-luma.png)
 
 * nnedi3-nns32-4x-rgb
 
-![nnedi3-nns32-4x-rgb](images/nnedi3/nnedi3-nns32-4x-rgb.png)
+![](../image/shader/nnedi3/nnedi3-nns32-4x-rgb.png)
 
 * nnedi3-nns64-2x-nns32-4x-nns16-8x-rgb
 
-![nnedi3-nns64-2x-nns32-4x-nns16-8x-rgb](images/nnedi3/nnedi3-nns64-2x-nns32-4x-nns16-8x-rgb.png)
+![](../image/shader/nnedi3/nnedi3-nns64-2x-nns32-4x-nns16-8x-rgb.png)
 
 * nnedi3-nns64-2x-nns32-4x-rgb
 
-![nnedi3-nns64-2x-nns32-4x-rgb](images/nnedi3/nnedi3-nns64-2x-nns32-4x-rgb.png)
+![](../image/shader/nnedi3/nnedi3-nns64-2x-nns32-4x-rgb.png)
 
 
 ## Comments

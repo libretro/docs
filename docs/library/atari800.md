@@ -207,24 +207,24 @@ The Atari800 core supports the following device type(s) in the controls menu, bo
 
 #### Joypad and analog device type table
 
-| User 1 input descriptors      |                                              | ATARI Joystick          |
-|-------------------------------|----------------------------------------------|-------------------------|
-| B                             | ![](images/RetroPad/Retro_B_Round.png)       | KEY RETURN              |
-| Y                             | ![](images/RetroPad/Retro_Y_Round.png)       | VKBD ON/OFF             |
-| Select                        | ![](images/RetroPad/Retro_Select.png)        | CONSOL_SELECT           |
-| Start                         | ![](images/RetroPad/Retro_Start.png)         | CONSOL_START            |
-| Up                            | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up                      |
-| Down                          | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down                    |
-| Left                          | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left                    |
-| Right                         | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right                   |
-| A                             | ![](images/RetroPad/Retro_A_Round.png)       | FIRE1/KEY RETURN IN GUI |
-| X                             | ![](images/RetroPad/Retro_X_Round.png)       | FIRE2/KEY ESCAPE IN GUI |
-| L                             | ![](images/RetroPad/Retro_L1.png)            | CONSOL_OPTION           |
-| R                             | ![](images/RetroPad/Retro_R1.png)            | TOGGLE UI               |
-| L2                            | ![](images/RetroPad/Retro_L2.png)            | KEY SPACE               |
-| R2                            | ![](images/RetroPad/Retro_R2.png)            | KEY ESCAPE              |
-| L3                            | ![](images/RetroPad/Retro_L3.png)            | N/A                     |
-| R3                            | ![](images/RetroPad/Retro_R3.png)            | N/A                     |
+| User 1 Remap descriptors | RetroPad Inputs                                | ATARI Joystick          |
+|--------------------------|------------------------------------------------|-------------------------|
+| B                        | ![](../image/retropad/retro_b.png)             | KEY RETURN              |
+| Y                        | ![](../image/retropad/retro_y.png)             | VKBD ON/OFF             |
+| Select                   | ![](../image/retropad/retro_select.png)        | CONSOL_SELECT           |
+| Start                    | ![](../image/retropad/retro_start.png)         | CONSOL_START            |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                      |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down                    |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left                    |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right                   |
+| A                        | ![](../image/retropad/retro_a.png)             | FIRE1/KEY RETURN IN GUI |
+| X                        | ![](../image/retropad/retro_x.png)             | FIRE2/KEY ESCAPE IN GUI |
+| L                        | ![](../image/retropad/retro_l1.png)            | CONSOLE_OPTION          |
+| R                        | ![](../image/retropad/retro_r1.png)            | TOGGLE_UI               |
+| L2                       | ![](../image/retropad/retro_l2.png)            | KEY SPACE               |
+| R2                       | ![](../image/retropad/retro_r2.png)            | KEY ESCAPE              |
+| L3                       | ![](../image/retropad/retro_l3.png)            |                         |
+| R3                       | ![](../image/retropad/retro_r3.png)            |                         |
 
 #### Keyboard device type table
 

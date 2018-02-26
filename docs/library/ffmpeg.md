@@ -106,10 +106,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Modify the resolution of the music visualizer.
 	
 ??? note "FFT Resolution - 320x180"
-	![320x180](images\Cores\ffmpeg\320x180.png)
+	![](..\image\core\ffmpeg\320x180.png)
 	
 ??? note "FFT Resolution - 3840x2160"
-	![3840x2160](images\Cores\ffmpeg\3840x2160.png)	
+	![](..\image\core\ffmpeg\3840x2160.png)	
 	
 - **FFT Multisample** [ffmpeg_fft_multisample] (**1x**/2x/4x)
 
@@ -137,14 +137,14 @@ The FFmpeg core supports the following device type(s) in the controls menu, bold
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| Seek +60 seconds         | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Seek -60 seconds         | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Seek -10 seconds         | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Seek +10 seconds         | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Cycle Audio Track        | ![](images/RetroPad/Retro_L1.png)            |
-| Cycle Subtitle Track     | ![](images/RetroPad/Retro_R1.png)            |
+| User 1 Remap descriptors | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Seek +60 seconds         | ![](../image/retropad/retro_dpad_up.png)       |
+| Seek -60 seconds         | ![](../image/retropad/retro_dpad_down.png)     |
+| Seek -10 seconds         | ![](../image/retropad/retro_dpad_left.png)     |
+| Seek +10 seconds         | ![](../image/retropad/retro_dpad_right.png)    |
+| Cycle Audio Track        | ![](../image/retropad/retro_l1.png)            |
+| Cycle Subtitle Track     | ![](../image/retropad/retro_r1.png)            |
 
 #### Mouse
 

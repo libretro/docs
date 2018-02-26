@@ -20,15 +20,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'MSX (fMSX)'.
 
-<center> ![](images\Cores\updater\fmsx.png) </center>
+<center> ![](..\image\core\updater\fmsx.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -36,13 +36,13 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
 - Select the content that you want to run.
 
-<center> ![](images\Cores\all\screenshot_name.png) </center>
+<center> ![](..\image\core\all\screenshot_name.png) </center>
 
 - If you are asked which core to select, choose 'MSX (fMSX)'.
 
@@ -190,52 +190,52 @@ The fMSX core supports the following device type(s) in the controls menu, bolded
 
 #### Joypad and analog device type table
 
-| User 1 - 2 Remap descriptors for 'Joystick' device type | RetroPad Inputs                              |                         
-|---------------------------------------------------------|----------------------------------------------|
-| Fire B                                                  | ![](images/RetroPad/Retro_B_Round.png)       |
-| Stick Up                                                | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Stick Down                                              | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Stick Left                                              | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Stick Right                                             | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Fire A                                                  | ![](images/RetroPad/Retro_A_Round.png)       |
+| User 1 - 2 Remap descriptors for 'Joystick device type'| RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Fire B                   | ![](../image/retropad/retro_b.png)             |
+| Stick Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Stick Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| Stick Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| Fire A                   | ![](../image/retropad/retro_a.png)             |
 
-| User 1 Remap descriptors for 'Joystick + Emulated Keyboard' device type | RetroPad Inputs                           |
-|-------------------------------------------------------------------------|-------------------------------------------|
-| Fire B                                                                  | ![](images/RetroPad/Retro_B_Round.png)    |
-| Spacebar                                                                | ![](images/RetroPad/Retro_Y_Round.png)    |
-| F2                                                                      | ![](images/RetroPad/Retro_Select.png)     |
-| F1                                                                      | ![](images/RetroPad/Retro_Start.png)      |
-| Stick Up                                                                | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| Stick Down                                                              | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| Stick Left                                                              | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| Stick Right                                                             | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| Fire A                                                                  | ![](images/RetroPad/Retro_A_Round.png)    |
-| F3                                                                      | ![](images/RetroPad/Retro_X_Round.png)    |
-| F4                                                                      | ![](images/RetroPad/Retro_L1.png)         |
-| F5                                                                      | ![](images/RetroPad/Retro_R1.png)         |
-| Graph                                                                   | ![](images/RetroPad/Retro_L2.png)         |
-| Ctrl                                                                    | ![](images/RetroPad/Retro_R2.png)         |
-| Enter                                                                   | ![](images/RetroPad/Retro_L3.png)         |
-| Escape                                                                  | ![](images/RetroPad/Retro_R3.png)         |
+| User 1 Remap descriptors for 'Joystick + Emulated Keyboard' device type | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Fire B                   | ![](../image/retropad/retro_b.png)             |
+| Spacebar                 | ![](../image/retropad/retro_y.png)             |
+| F2                       | ![](../image/retropad/retro_select.png)        |
+| F1                       | ![](../image/retropad/retro_start.png)         |
+| Stick Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Stick Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| Stick Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| Fire A                   | ![](../image/retropad/retro_a.png)             |
+| F3                       | ![](../image/retropad/retro_x.png)             |
+| F4                       | ![](../image/retropad/retro_l1.png)            |
+| F5                       | ![](../image/retropad/retro_r1.png)            |
+| Graph                    | ![](../image/retropad/retro_l2.png)            |
+| Ctrl                     | ![](../image/retropad/retro_r2.png)            |
+| Enter                    | ![](../image/retropad/retro_l3.png)            |
+| Escape                   | ![](../image/retropad/retro_r3.png)            |
 
-| User 1 Remap descriptors for 'Emulated Keyboard' device type | RetroPad Inputs                           |
-|--------------------------------------------------------------|-------------------------------------------|
-| Enter                                                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| M                                                            | ![](images/RetroPad/Retro_Y_Round.png)    |
-| F4                                                           | ![](images/RetroPad/Retro_Select.png)     |
-| F1                                                           | ![](images/RetroPad/Retro_Start.png)      |
-| Arrow Up                                                     | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| Arrow Down                                                   | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| Arrow Left                                                   | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| Arrow Right                                                  | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| Space                                                        | ![](images/RetroPad/Retro_A_Round.png)    |
-| N                                                            | ![](images/RetroPad/Retro_X_Round.png)    |
-| F2                                                           | ![](images/RetroPad/Retro_L1.png)         |
-| F3                                                           | ![](images/RetroPad/Retro_R1.png)         |
-| Graph                                                        | ![](images/RetroPad/Retro_L2.png)         |
-| Ctrl                                                         | ![](images/RetroPad/Retro_R2.png)         |
-| F5                                                           | ![](images/RetroPad/Retro_L3.png)         |
-| Escape                                                       | ![](images/RetroPad/Retro_R3.png)         |
+| User 1 Remap descriptors for 'Emulated Keyboard' device type | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| Enter                    | ![](../image/retropad/retro_b.png)             |
+| M                        | ![](../image/retropad/retro_y.png)             |
+| F4                       | ![](../image/retropad/retro_select.png)        |
+| F1                       | ![](../image/retropad/retro_start.png)         |
+| Arrow Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| Arrow Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Arrow Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| Arrow Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| Space                    | ![](../image/retropad/retro_a.png)             |
+| N                        | ![](../image/retropad/retro_x.png)             |
+| F2                       | ![](../image/retropad/retro_l1.png)            |
+| F3                       | ![](../image/retropad/retro_r1.png)            |
+| Graph                    | ![](../image/retropad/retro_l2.png)            |
+| Ctrl                     | ![](../image/retropad/retro_r2.png)            |
+| F5                       | ![](../image/retropad/retro_l3.png)            |
+| Escape                   | ![](../image/retropad/retro_r3.png)            |
 
 #### Keyboard device type table
 

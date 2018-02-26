@@ -12,7 +12,7 @@ Citra is an experimental open-source Nintendo 3DS emulator/debugger written in C
 
 This core requires that you use OpenGL as the video driver. Go to Settings -> Driver. If ‘video driver’ is set to ‘vulkan’, switch it back to ‘gl’, and then restart.
 
-![](images/Cores/citra/gl.png)
+![](../image/core/citra/gl.png)
 
 !!! attention
 	The Citra core requires OpenGL 3.3 or higher in order to work.
@@ -24,15 +24,15 @@ Also, you need to turn on ‘Enable Shared Hardware Context’ so that fullscree
 
 First, you need to ensure that ‘Show Advanced Settings’ is turned on. Go to Settings -> User Interface and turn ‘Show Advanced Settings’ on.
 
-![](images/Cores/citra/advanced.png)
+![](../image/core/citra/advanced.png)
 
 Now, go back, and go to Settings -> Core.
 
-![](images/Cores/citra/core.png)
+![](../image/core/citra/core.png)
 
 Once inside the ‘Core’ settings, set ‘Enable Shared Hardware Context’ to ON.
 
-![](images/Cores/citra/context.png)
+![](../image/core/citra/context.png)
 	
 ### How to get and install the Citra core:
 
@@ -154,21 +154,21 @@ The Citra core has the following option(s) that can be tweaked from the core opt
 <center>
 
 ??? note "Screen layout positioning - Default Top-Bottom Screen"
-	![](images/Cores/citra/default.png)
+	![](../image/core/citra/default.png)
 
 </center>
 
 <center>
 
 ??? note "Screen layout positioning - Single Screen Only"
-	![](images/Cores/citra/single.png)
+	![](../image/core/citra/single.png)
 
 </center>
 
 <center>
 
 ??? note "Screen layout positioning - Large Screen, Small Screen)"
-	![](images/Cores/citra/large.png)
+	![](../image/core/citra/large.png)
 
 </center>
 
@@ -226,26 +226,26 @@ The Citra core supports the following device type(s) in the controls menu, bolde
 
 | User 1 input descriptors      |                                              | Nintendo 3DS       |
 |-------------------------------|----------------------------------------------|--------------------|
-| B                             | ![](images/RetroPad/Retro_B_Round.png)       | B                  |
-| Y                             | ![](images/RetroPad/Retro_Y_Round.png)       | Y                  |
-| Select                        | ![](images/RetroPad/Retro_Select.png)        | Select             |
-| Start                         | ![](images/RetroPad/Retro_Start.png)         | Start              |
-| Up                            | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up                 |
-| Down                          | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down               |
-| Left                          | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left               |
-| Right                         | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right              |
-| A                             | ![](images/RetroPad/Retro_A_Round.png)       | A                  |
-| X                             | ![](images/RetroPad/Retro_X_Round.png)       | X                  |
-| L                             | ![](images/RetroPad/Retro_L1.png)            | L                  |
-| R                             | ![](images/RetroPad/Retro_R1.png)            | R                  |
-| ZL                            | ![](images/RetroPad/Retro_L2.png)            | ZL                 |
-| ZR                            | ![](images/RetroPad/Retro_R2.png)            | ZR                 |
-| Home                          | ![](images/RetroPad/Retro_L3.png)            | Home               |
-| N/A                           | ![](images/RetroPad/Retro_R3.png)            | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
-| N/A                           | ![](images/RetroPad/Retro_Left_Stick.png) X  | Circle Pad X       |
-| N/A                           | ![](images/RetroPad/Retro_Left_Stick.png) Y  | Circle Pad Y       |
-| N/A                           | ![](images/RetroPad/Retro_Right_Stick.png) X | [Right analog function](https://docs.libretro.com/library/citra/#core-options) X |
-| N/A                           | ![](images/RetroPad/Retro_Right_Stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra/#core-options) Y |
+| B                             | ![](../image/retropad/retro_b.png)       | B                  |
+| Y                             | ![](../image/retropad/retro_y.png)       | Y                  |
+| Select                        | ![](../image/retropad/retro_select.png)        | Select             |
+| Start                         | ![](../image/retropad/retro_start.png)         | Start              |
+| Up                            | ![](../image/retropad/retro_dpad_up.png)       | Up                 |
+| Down                          | ![](../image/retropad/retro_dpad_down.png)     | Down               |
+| Left                          | ![](../image/retropad/retro_dpad_left.png)     | Left               |
+| Right                         | ![](../image/retropad/retro_dpad_right.png)    | Right              |
+| A                             | ![](../image/retropad/retro_a.png)       | A                  |
+| X                             | ![](../image/retropad/retro_x.png)       | X                  |
+| L                             | ![](../image/retropad/retro_l1.png)            | L                  |
+| R                             | ![](../image/retropad/retro_r1.png)            | R                  |
+| ZL                            | ![](../image/retropad/retro_l2.png)            | ZL                 |
+| ZR                            | ![](../image/retropad/retro_r2.png)            | ZR                 |
+| Home                          | ![](../image/retropad/retro_l3.png)            | Home               |
+| N/A                           | ![](../image/retropad/retro_r3.png)            | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
+| N/A                           | ![](../image/retropad/retro_left_stick.png) X  | Circle Pad X       |
+| N/A                           | ![](../image/retropad/retro_left_stick.png) Y  | Circle Pad Y       |
+| N/A                           | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](https://docs.libretro.com/library/citra/#core-options) X |
+| N/A                           | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra/#core-options) Y |
 
 #### Pointer device type table
 

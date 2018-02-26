@@ -363,23 +363,23 @@ Rumble only works in the Mupen64Plus core when
 
 | User 1 - 4 Remap descriptors  | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| A Button (C3)                 | ![](images/RetroPad/Retro_B_Round.png)       |
-| B Button (C2)                 | ![](images/RetroPad/Retro_Y_Round.png)       |
-| START Button                  | ![](images/RetroPad/Retro_Start.png)         |
-| Up (digital)                  | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down (digital)                | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left (digital)                | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right (digital)               | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| (C1)                          | ![](images/RetroPad/Retro_A_Round.png)       |
-| (C4)                          | ![](images/RetroPad/Retro_X_Round.png)       |
-| L-Trigger                     | ![](images/RetroPad/Retro_L1.png)            |
-| R-Trigger                     | ![](images/RetroPad/Retro_R1.png)            |
-| Z-Trigger                     | ![](images/RetroPad/Retro_L2.png)            | 
-| C Buttons Mode                | ![](images/RetroPad/Retro_R2.png)            |
-| Control Stick X               | ![](images/RetroPad/Retro_Left_Stick.png) X  |
-| Control Stick Y               | ![](images/RetroPad/Retro_Left_Stick.png) Y  |
-| C Buttons X                   | ![](images/RetroPad/Retro_Right_Stick.png) X |
-| C Buttons Y                   | ![](images/RetroPad/Retro_Right_Stick.png) Y |
+| A Button (C3)                 | ![](../image/retropad/retro_b.png)       |
+| B Button (C2)                 | ![](../image/retropad/retro_y.png)       |
+| START Button                  | ![](../image/retropad/retro_start.png)         |
+| Up (digital)                  | ![](../image/retropad/retro_dpad_up.png)       |
+| Down (digital)                | ![](../image/retropad/retro_dpad_down.png)     |
+| Left (digital)                | ![](../image/retropad/retro_dpad_left.png)     |
+| Right (digital)               | ![](../image/retropad/retro_dpad_right.png)    |
+| (C1)                          | ![](../image/retropad/retro_a.png)       |
+| (C4)                          | ![](../image/retropad/retro_x.png)       |
+| L-Trigger                     | ![](../image/retropad/retro_l1.png)            |
+| R-Trigger                     | ![](../image/retropad/retro_r1.png)            |
+| Z-Trigger                     | ![](../image/retropad/retro_l2.png)            | 
+| C Buttons Mode                | ![](../image/retropad/retro_r2.png)            |
+| Control Stick X               | ![](../image/retropad/retro_left_stick.png) X  |
+| Control Stick Y               | ![](../image/retropad/retro_left_stick.png) Y  |
+| C Buttons X                   | ![](../image/retropad/retro_right_stick.png) X |
+| C Buttons Y                   | ![](../image/retropad/retro_right_stick.png) Y |
 
 ## Compatibility
 

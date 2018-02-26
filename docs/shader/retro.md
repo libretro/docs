@@ -6,35 +6,35 @@
 
 * aann
 
-![aann](images/retro/aann.png)
+![](../image/shader/retro/aann.png)
 
 * ascii
 
-![ascii](images/retro/ascii.png)
+![](../image/shader/retro/ascii.png)
 
 * bead
 
-![bead](images/retro/bead.png)
+![](../image/shader/retro/bead.png)
 
 * bevel
 
-![bevel](images/retro/bevel.png)
+![](../image/shader/retro/bevel.png)
 
 * pixellate
 
-![pixellate](images/retro/pixellate.png)
+![](../image/shader/retro/pixellate.png)
 
 * retro-v2
 
-![retro-v2](images/retro/retro-v2.png)
+![](../image/shader/retro/retro-v2.png)
 
 * sharp-bilinear
 
-![sharp-bilinear](images/retro/sharp-bilinear.png)
+![](../image/shader/retro/sharp-bilinear.png)
 
 * smootheststep
 
-![smootheststep](images/retro/smootheststep.png)
+![](../image/shader/retro/smootheststep.png)
 
 ## Comments
 
