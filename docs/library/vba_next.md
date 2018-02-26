@@ -103,7 +103,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory. Look at the [BIOS section](https://docs.libretro.com/library/vba_next/#bios) for more information.
 	
 ??? note "Use bios if available - On"
-	![](images\Cores\vba_next\bios.png)
+	![](..\image\core\vba_next\bios.png)
 
 ## Controllers
 
@@ -119,20 +119,20 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](images/Controllers/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    |
-| L                        | ![](images/RetroPad/Retro_X_Round.png)    |
-| R                        | ![](images/RetroPad/Retro_L1.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| L                        | ![](../image/retropad/retro_l1.png)    |
+| R                        | ![](../image/retropad/retro_r1.png)         |
 
 ## Compatibility
 
@@ -154,7 +154,7 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 | Yoshi’s Universal Gravitation                     | The tilt sensor is not emulated.                                                                   |
 
 ??? note "1"
-	![](images/Cores/vba_next/ssx.png)
+	![](../image/core/vba_next/ssx.png)
 
 ## External Links
 

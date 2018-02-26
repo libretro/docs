@@ -22,15 +22,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'DOS (DOSBox)'.
 
-<center> ![](images\Cores\updater\dosbox.png) </center>
+<center> ![](..\image\core\updater\dosbox.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -38,7 +38,7 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 

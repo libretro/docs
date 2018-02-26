@@ -122,10 +122,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
 	
 ??? note "Preferred aspect ratio - 8:7 PAR"
-	![](images\Cores\fceumm\8by7_PAR.png)
+	![](..\image\core\fceumm\8by7_PAR.png)
 	
 ??? note "Preferred aspect ratio - 4:3"
-	![](images\Cores\fceumm\4by3.png)
+	![](..\image\core\fceumm\4by3.png)
 	
 - **Color Palette** [fceumm_palette] (**default**|asqrealc|nintendo-vc|rgb|yuv-v3|unsaturated-final|sony-cxa2025as-us|pal|bmf-final2|bmf-final3|smooth-fbx|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|nescap|wavebeam|raw|custom)
 
@@ -135,58 +135,58 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Color Palette core option screenshots have been taken with the 'Use NTSC Palette' core option set to Off.
 
 ??? note "Color Palette - default"
-	![](images\Cores\fceumm\default.png)
+	![](..\image\core\fceumm\default.png)
 
 ??? note "Color Palette - asqrealc"
-	![](images\Cores\fceumm\asqrealc.png)
+	![](..\image\core\fceumm\asqrealc.png)
 
 ??? note "Color Palette - nintendo-vc"
-	![](images\Cores\fceumm\nintendo_vc.png)
+	![](..\image\core\fceumm\nintendo_vc.png)
 
 ??? note "Color Palette - rgb"
-	![](images\Cores\fceumm\rgb.png)
+	![](..\image\core\fceumm\rgb.png)
 
 ??? note "Color Palette - yuv-v3"
-	![](images\Cores\fceumm\yuv_v3.png)
+	![](..\image\core\fceumm\yuv_v3.png)
 
 ??? note "Color Palette - unsaturated-final"
-	![](images\Cores\fceumm\unsaturated_final.png)
+	![](..\image\core\fceumm\unsaturated_final.png)
 
 ??? note "Color Palette - sony-cxa2025as-us"
-	![](images\Cores\fceumm\sony_cxa2025as_us.png)
+	![](..\image\core\fceumm\sony_cxa2025as_us.png)
 
 ??? note "Color Palette - pal"
-	![](images\Cores\fceumm\pal.png)
+	![](..\image\core\fceumm\pal.png)
 
 ??? note "Color Palette - bmf-final2"
-	![](images\Cores\fceumm\bmf_final2.png)
+	![](..\image\core\fceumm\bmf_final2.png)
 
 ??? note "Color Palette - bmf-final3"
-	![](images\Cores\fceumm\bmf_final3.png)
+	![](..\image\core\fceumm\bmf_final3.png)
 
 ??? note "Color Palette - smooth-fbx"
-	![](images\Cores\fceumm\smooth_fbx.png)
+	![](..\image\core\fceumm\smooth_fbx.png)
 	
 ??? note "Color Palette - composite-direct-fbx"
-	![](images\Cores\fceumm\direct_fbx.png)
+	![](..\image\core\fceumm\direct_fbx.png)
 
 ??? note "Color Palette - pvm-style-d93-fbx"
-	![](images\Cores\fceumm\pvm_style_d93_fbx.png)
+	![](..\image\core\fceumm\pvm_style_d93_fbx.png)
 
 ??? note "Color Palette - ntsc-hardware-fbx"
-	![](images\Cores\fceumm\ntsc_hardware_fbx.png)
+	![](..\image\core\fceumm\ntsc_hardware_fbx.png)
 
 ??? note "Color Palette - nes-classic-fbx-fs"
-	![](images\Cores\fceumm\nes_classic_fbx_fs.png)
+	![](..\image\core\fceumm\nes_classic_fbx_fs.png)
 
 ??? note "Color Palette - nescap"
-	![](images\Cores\fceumm\nescap.png)
+	![](..\image\core\fceumm\nescap.png)
 
 ??? note "Color Palette - wavebeam"
-	![](images\Cores\fceumm\wavebeam.png)
+	![](..\image\core\fceumm\wavebeam.png)
 
 ??? note "Color Palette - raw"
-	![](images\Cores\fceumm\raw.png)		
+	![](..\image\core\fceumm\raw.png)		
 	
 - **Use NTSC Palette** [fceumm_use_ntsc] (**disabled**|enabled)
 
@@ -196,30 +196,30 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Use NTSC Palette' core option screenshots have been taken with the 'Color Palette' core option set to default.
 
 ??? note "Use NTSC Palette - Off"
-	![](images\Cores\fceumm\ntsc_off.png)
+	![](..\image\core\fceumm\ntsc_off.png)
 	
 ??? note "Use NTSC Palette - On"
-	![](images\Cores\fceumm\ntsc_on.png)
+	![](..\image\core\fceumm\ntsc_on.png)
 	
 - **Crop Overscan (Horizontal)** [fceumm_overscan_h] (**disabled**|enabled)
 
 	Crop out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Crop Overscan (Horiontal) - Off"
-	![](images\Cores\fceumm\horiz_off.png)
+	![](..\image\core\fceumm\horiz_off.png)
 	
 ??? note "Crop Overscan (Horizontal) - On"
-	![](images\Cores\fceumm\horiz_on.png)		
+	![](..\image\core\fceumm\horiz_on.png)		
 	
 - **Crop Overscan (Vertical)** [fceumm_overscan_v] (**enabled**|disabled)
 
 	Crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Crop Overscan (Vertical) - On"
-	![](images\Cores\fceumm\vert_on.png)
+	![](..\image\core\fceumm\vert_on.png)
 	
 ??? note "Crop Overscan (Vertical) - Off"
-	![](images\Cores\fceumm\vert_off.png)	
+	![](..\image\core\fceumm\vert_off.png)	
 	
 - **No Sprite Limit** [fceumm_nospritelimit] (**disabled**|enabled)
 
@@ -254,10 +254,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Show the crosshair for the Zapper device type.
 	
 ??? note "Show Crosshair - On"
-	![](images\Cores\fceumm\cross_on.png)
+	![](..\image\core\fceumm\cross_on.png)
 	
 ??? note "Show Crosshair - Off"
-	![](images\Cores\fceumm\cross_off.png)	
+	![](..\image\core\fceumm\cross_off.png)	
 	
 - **Overclocking** [fceumm_overclocking] (**disabled**|2x-Postrender|2x-VBlank)
 
@@ -301,46 +301,46 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 #### Joypad
 
-![](images/Controllers/nes.png)
+![](../image/controller/nes.png)
 
 !!! warning 
 	In order to use the Turbo A and Turbo B buttons, the 'Turbo Enable' core option must be set to On.
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| Turbo B                  | ![](images/RetroPad/Retro_Y_Round.png)    |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    |
-| Turbo A                  | ![](images/RetroPad/Retro_X_Round.png)    |
-| (FDS) Disk Side Change   | ![](images/RetroPad/Retro_L1.png)         |
-| (FDS) Insert/Eject Disk  | ![](images/RetroPad/Retro_R1.png)         |
-| (VSSystem) Insert Coin   | ![](images/RetroPad/Retro_R2.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| (FDS) Disk Side Change   | ![](../image/retropad/retro_l1.png)         |
+| (FDS) Insert/Eject Disk  | ![](../image/retropad/retro_r1.png)         |
+| (VSSystem) Insert Coin   | ![](../image/retropad/retro_r2.png)         |
 
 | User 2 - 4 Remap descriptors | RetroPad Inputs                       |
 |--------------------------|-------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| Turbo B                  | ![](images/RetroPad/Retro_Y_Round.png)    |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    |
-| Turbo A                  | ![](images/RetroPad/Retro_X_Round.png)    |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| Turbo A                  | ![](../image/retropad/retro_x.png)    |
 
 #### Mouse
 
 | RetroMouse Inputs                                                                                   | Zapper           | Arkanoid          | Oeka Kids Tablet        | Bandai Hyper Shot Gun           |
 |-----------------------------------------------------------------------------------------------------|------------------|-------------------|-------------------------|---------------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) or ![](images/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
-| ![](images/RetroMouse/Retro_Left.png) or ![](images/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
 
 - When the 'Zapper Mode' core option is set to pointer, the 'Zapper' device type can be controlled with touch inputs.
 - When the 'Zapper Mode' core option is set to mouse, the 'Zapper' device type can be controlled with mouse inputs.

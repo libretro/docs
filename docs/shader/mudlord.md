@@ -6,27 +6,27 @@ A collection of shader presets by community member Mudlord.
 ## Preview Image
 * bloom
 
-![bloom](images/mudlord/bloom.png)
+![](../image/shader/mudlord/bloom.png)
 
 * blur
 
-![blur](images/mudlord/blur.png)
+![](../image/shader/mudlord/blur.png)
 
 * emboss
 
-![emboss](images/mudlord/emboss.png)
+![](../image/shader/mudlord/emboss.png)
 
 * oldtv
 
-![oldtv](images/mudlord/oldtv.png)
+![](../image/shader/mudlord/oldtv.png)
 
 * toon
 
-![toon](images/mudlord/toon.png)
+![](../image/shader/mudlord/toon.png)
 
 * waterpaint-mudlord
 
-![waterpaint-mudlord](images/mudlord/waterpaint-mudlord.png)
+![](../image/shader/mudlord/waterpaint-mudlord.png)
 
 ## Comments
 

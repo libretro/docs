@@ -117,7 +117,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Skips the BIOS intro when a Game Boy Advance BIOS present in RetroArch's system directory is used. The 'Use BIOS file if found' core option must be set to On for proper operation.
 
 ??? note "Skip BIOS intro - Off"
-    ![](images\Cores\mgba\bios.png)	
+    ![](..\image\core\mgba\bios.png)	
 
 - **Idle loop removal** [mgba_idle_optimization] (**Remove Known**/Detect and Remove/Don't Remove)
 
@@ -149,26 +149,26 @@ Rumble only works in the mGBA core when
 
 #### Joypad
 
-![](images/Controllers/mgba_retropad.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                              |
 |--------------------------|----------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)       |
-| Turbo B                  | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Select                   | ![](images/RetroPad/Retro_Select.png)        |
-| Start                    | ![](images/RetroPad/Retro_Start.png)         |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)       |
-| Turbo A                  | ![](images/RetroPad/Retro_X_Round.png)       |
-| L                        | ![](images/RetroPad/Retro_L1.png)            |
-| R                        | ![](images/RetroPad/Retro_R1.png)            |
-| Turbo L                  | ![](images/RetroPad/Retro_L2.png)            |
-| Turbo R                  | ![](images/RetroPad/Retro_R2.png)            |
-| Darken Solar Sensor      | ![](images/RetroPad/Retro_L3.png)            |
-| Brighten Solar Sensor    | ![](images/RetroPad/Retro_R3.png)            |
+| B                        | ![](../image/retropad/retro_b.png)       |
+| Turbo B                  | ![](../image/retropad/retro_y.png)       |
+| Select                   | ![](../image/retropad/retro_select.png)        |
+| Start                    | ![](../image/retropad/retro_start.png)         |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
+| A                        | ![](../image/retropad/retro_a.png)       |
+| Turbo A                  | ![](../image/retropad/retro_x.png)       |
+| L                        | ![](../image/retropad/retro_l1.png)            |
+| R                        | ![](../image/retropad/retro_r1.png)            |
+| Turbo L                  | ![](../image/retropad/retro_l2.png)            |
+| Turbo R                  | ![](../image/retropad/retro_r2.png)            |
+| Darken Solar Sensor      | ![](../image/retropad/retro_l3.png)            |
+| Brighten Solar Sensor    | ![](../image/retropad/retro_r3.png)            |
 
 ## Compatibility
 

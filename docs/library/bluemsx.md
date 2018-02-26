@@ -22,15 +22,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)'.
 
-<center> ![](images\Cores\updater\bluemsx.png) </center>
+<center> ![](..\image\core\updater\bluemsx.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -38,7 +38,7 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
@@ -193,13 +193,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Forces cropping of overscanned frames
 	
 ??? note "*Crop Overscan Off*"
-    ![](images\Cores\bluemsx\crop_off.png)
+    ![](..\image\core\bluemsx\crop_off.png)
 
 ??? note "*Crop Overscan On*"
-    ![](images\Cores\bluemsx\crop_on.png)
+    ![](..\image\core\bluemsx\crop_on.png)
 
 ??? note "*Crop Overscan MSX2*"
-    ![](images\Cores\bluemsx\crop_msx2.png)	
+    ![](..\image\core\bluemsx\crop_msx2.png)	
 
 - **VDP Sync Type (Restart)** (**Auto**/50Hz/60Hz)
 
@@ -238,46 +238,46 @@ The blueMSX core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-| User 1 - 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                              | RetroPad             |
-|---------------------------------------------------------|----------------------------------------------|----------------------|
-| Button 2                                                | ![](images/RetroPad/Retro_B_Round.png)       | Button 2             |
-| Button 3                                                | ![](images/RetroPad/Retro_Y_Round.png)       | Button 3, Coleco #2  |
-| Select                                                  | ![](images/RetroPad/Retro_Select.png)        | Select, Coleco *     |
-| Start                                                   | ![](images/RetroPad/Retro_Start.png)         | Start, Coleco #      |
-| Joy Up                                                  | ![](images/RetroPad/Retro_Dpad_Up.png)       | D-Pad Up             |
-| Joy Down                                                | ![](images/RetroPad/Retro_Dpad_Down.png)     | D-Pad Down           |
-| Joy Left                                                | ![](images/RetroPad/Retro_Dpad_Left.png)     | D-Pad Left           |
-| Joy Right                                               | ![](images/RetroPad/Retro_Dpad_Right.png)    | D-Pad Right          |
-| Button 1                                                | ![](images/RetroPad/Retro_A_Round.png)       | Button 1             |
-| Button 4                                                | ![](images/RetroPad/Retro_X_Round.png)       | Button 4, Coleco #1  |
-| Button 5                                                | ![](images/RetroPad/Retro_L1.png)            | Button 5, Coleco #4  |
-| Button 6                                                | ![](images/RetroPad/Retro_R1.png)            | Button 6, Coleco #3  |
-| Button 7                                                | ![](images/RetroPad/Retro_L2.png)            | Button 7, Coleco #6  |
-| Button 8                                                | ![](images/RetroPad/Retro_R2.png)            | Button 8, Coleco #5  |
-| Button 9                                                | ![](images/RetroPad/Retro_L3.png)            | Button 9, Coleco #8  |
-| Button 10                                               | ![](images/RetroPad/Retro_R3.png)            | Button 10, Coleco #7 |
+| User 1 - 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | RetroPad             |
+|---------------------------------------------------------|------------------------------------------------|----------------------|
+| Button 2                                                | ![](../image/retropad/retro_b.png)             | Button 2             |
+| Button 3                                                | ![](../image/retropad/retro_y.png)             | Button 3, Coleco #2  |
+| Select                                                  | ![](../image/retropad/retro_select.png)        | Select, Coleco *     |
+| Start                                                   | ![](../image/retropad/retro_start.png)         | Start, Coleco #      |
+| Joy Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | Joy Up               |
+| Joy Down                                                | ![](../image/retropad/retro_dpad_down.png)     | Joy Down             |
+| Joy Left                                                | ![](../image/retropad/retro_dpad_left.png)     | Joy Left             |
+| Joy Right                                               | ![](../image/retropad/retro_dpad_right.png)    | Joy Right            |
+| Button 1                                                | ![](../image/retropad/retro_a.png)             | Button 1             |
+| Button 4                                                | ![](../image/retropad/retro_x.png)             | Button 4, Coleco #1  |  
+| Button 5                                                | ![](../image/retropad/retro_l1.png)            | Button 5, Coleco #4  |
+| Button 6                                                | ![](../image/retropad/retro_r1.png)            | Button 6, Coleco #3  |
+| Button 7                                                | ![](../image/retropad/retro_l2.png)            | Button 7, Coleco #6  |
+| Button 8                                                | ![](../image/retropad/retro_r2.png)            | Button 8, Coleco #5  |
+| Button 9                                                | ![](../image/retropad/retro_l3.png)            | Button 9, Coleco #8  |
+| Button 10                                               | ![](../image/retropad/retro_r3.png)            | Button 10, Coleco #7 |
 
 !!! attention
 	Coleco #0 and #9 inputs are mapped to Keyboard 1 & 2 for Player 1 and Keyboard 3 & 4 for Player 2.
 
-| User 1 Remap descriptors for 'RetroPad Keyboard Map' device type | RetroPad Inputs                              | RetroPad Keyboard Map |
-|------------------------------------------------------------------|----------------------------------------------|-----------------------|
-|                                                                  | ![](images/RetroPad/Retro_B_Round.png)       |                       |
-|                                                                  | ![](images/RetroPad/Retro_Y_Round.png)       |                       |
-|                                                                  | ![](images/RetroPad/Retro_Select.png)        |                       |
-|                                                                  | ![](images/RetroPad/Retro_Start.png)         |                       |
-|                                                                  | ![](images/RetroPad/Retro_Dpad_Up.png)       |                       |
-|                                                                  | ![](images/RetroPad/Retro_Dpad_Down.png)     |                       |
-|                                                                  | ![](images/RetroPad/Retro_Dpad_Left.png)     |                       |
-|                                                                  | ![](images/RetroPad/Retro_Dpad_Right.png)    |                       |
-|                                                                  | ![](images/RetroPad/Retro_A_Round.png)       |                       |
-|                                                                  | ![](images/RetroPad/Retro_X_Round.png)       |                       |
-|                                                                  | ![](images/RetroPad/Retro_L1.png)            |                       |
-|                                                                  | ![](images/RetroPad/Retro_R1.png)            |                       |
-|                                                                  | ![](images/RetroPad/Retro_L2.png)            |                       |
-|                                                                  | ![](images/RetroPad/Retro_R2.png)            |                       |
-|                                                                  | ![](images/RetroPad/Retro_L3.png)            |                       |
-|                                                                  | ![](images/RetroPad/Retro_R3.png)            |                       |
+| User 1 Remap descriptors for 'RetroPad Keyboard Map' device type | RetroPad Inputs                                | RetroPad Keyboard Map     |
+|------------------------------------------------------------------|------------------------------------------------|---------------------------|
+|                                                                  | ![](../image/retropad/retro_b.png)             |                           |
+|                                                                  | ![](../image/retropad/retro_y.png)             |                           |
+|                                                                  | ![](../image/retropad/retro_select.png)        |                           |
+|                                                                  | ![](../image/retropad/retro_start.png)         |                           |
+|                                                                  | ![](../image/retropad/retro_dpad_up.png)       |                           |
+|                                                                  | ![](../image/retropad/retro_dpad_down.png)     |                           |
+|                                                                  | ![](../image/retropad/retro_dpad_left.png)     |                           |
+|                                                                  | ![](../image/retropad/retro_dpad_right.png)    |                           |
+|                                                                  | ![](../image/retropad/retro_a.png)             |                           |
+|                                                                  | ![](../image/retropad/retro_x.png)             |                           |
+|                                                                  | ![](../image/retropad/retro_l1.png)            |                           |
+|                                                                  | ![](../image/retropad/retro_r1.png)            |                           |
+|                                                                  | ![](../image/retropad/retro_l2.png)            |                           |
+|                                                                  | ![](../image/retropad/retro_r2.png)            |                           |
+|                                                                  | ![](../image/retropad/retro_l3.png)            |                           |
+|                                                                  | ![](../image/retropad/retro_r3.png)            |                           |
 
 #### Keyboard
 

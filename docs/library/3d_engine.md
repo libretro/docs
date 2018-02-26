@@ -157,23 +157,23 @@ The 3D Engine core supports the following device type(s) in the controls menu, b
 
 #### Joypad and analog device type table
 
-| User 1 input descriptors      | RetroPad Inputs                              | RetroPad                                 |
-|-------------------------------|----------------------------------------------|------------------------------------------|
-| N/A                           | ![](images/RetroPad/Retro_B_Round.png)       | Jump/Zoom-in                             |
-| N/A                           | ![](images/RetroPad/Retro_Dpad_Up.png)       | Move forwards                            |
-| N/A                           | ![](images/RetroPad/Retro_Dpad_Down.png)     | Move backwards                           |
-| N/A                           | ![](images/RetroPad/Retro_Dpad_Left.png)     | Turn left                                |
-| N/A                           | ![](images/RetroPad/Retro_Dpad_Right.png)    | Turn right                               |
-| N/A                           | ![](images/RetroPad/Retro_A_Round.png)       | Zoom-out                                 |
-| N/A                           | ![](images/RetroPad/Retro_L1.png)            | Move left                                |
-| N/A                           | ![](images/RetroPad/Retro_R1.png)            | Move right                               |
-| N/A                           | ![](images/RetroPad/Retro_L2.png)            | Adjust lighting                          |
-| N/A                           | ![](images/RetroPad/Retro_R2.png)            | Adjust lighting                          |
-| N/A                           | ![](images/RetroPad/Retro_R3.png)            | Adjust lighting                          |
-| N/A                           | ![](images/RetroPad/Retro_Left_Stick.png) X  | Move right or left/Rotate model          |
-| N/A                           | ![](images/RetroPad/Retro_Left_Stick.png) Y  | Move forwards and backwards/Rotate model |
-| N/A                           | ![](images/RetroPad/Retro_Right_Stick.png) X | Look right and left                      |
-| N/A                           | ![](images/RetroPad/Retro_Right_Stick.png) Y | Look up and down/Zoom-in or Zoom-out     |
+| User 1 Remap descriptors | RetroPad Inputs                                | 3D Engine core inputs                    |
+|--------------------------|------------------------------------------------|------------------------------------------|
+|                          | ![](../image/retropad/retro_b.png)             | Jump/Zoom-in                             |
+|                          | ![](../image/retropad/retro_dpad_up.png)       | Move forwards                            |
+|                          | ![](../image/retropad/retro_dpad_down.png)     | Move backwards                           |
+|                          | ![](../image/retropad/retro_dpad_left.png)     | Turn left                                |
+|                          | ![](../image/retropad/retro_dpad_right.png)    | Turn right                               |
+|                          | ![](../image/retropad/retro_a.png)             | Zoom-out                                 |
+|                          | ![](../image/retropad/retro_l1.png)            | Move left                                |
+|                          | ![](../image/retropad/retro_r1.png)            | Move right                               |
+|                          | ![](../image/retropad/retro_l2.png)            | Adjust lighting                          |
+|                          | ![](../image/retropad/retro_r2.png)            | Adjust lighting                          |
+|                          | ![](../image/retropad/retro_r3.png)            | Adjust lighting                          |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | Move right or left/Rotate model          |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | Move forwards and backwards/Rotate model |
+|                          | ![](../image/retropad/retro_right_stick.png) X | Look right and left                      |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | Look up and down/Zoom-in or Zoom-out     |
 
 ## External Links
 

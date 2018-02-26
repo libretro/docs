@@ -93,7 +93,7 @@ pages:
         - 'Rick Dangerous (XRick)': 'library/xrick.md'
         - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - Internal Cores:
-        - 'Dummy core': 'library/dummy.md'
+        - 'Dummy Core': 'library/dummy.md'
         - 'Remote RetroPad': 'library/remote_retropad.md'
         - 'Video Processor': 'library/video_processor.md'
       - Media Cores:
@@ -224,7 +224,7 @@ pages:
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
     - Interface Customization:
       - 'Creating a Theme': 'guides/themes.md'
-      - 'RGUI Interface': 'guides/RGUI.md'
+      - 'RGUI Interface': 'guides/rgui.md'
     - Feature Specific:
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
@@ -252,8 +252,8 @@ extra:
     accent:  'blue'
 theme:
   name: 'material'
-  logo: 'images/invader.png'
-  favicon: 'images/invader.png'
+  logo: 'image/branding/invader.png'
+  favicon: 'image/branding/invader.png'
 markdown_extensions:
   - admonition
   - codehilite(linenums=true)

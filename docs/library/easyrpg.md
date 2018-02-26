@@ -92,15 +92,15 @@ The EasyRPG core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-| RetroPad Inputs                              | EasyRPG core inputs |
-|----------------------------------------------|---------------------|
-| ![](images/RetroPad/Retro_B_Round.png)       | Cancel              |
-| ![](images/RetroPad/Retro_Start.png)         | Decision            |
-| ![](images/RetroPad/Retro_Dpad_Up.png)       | Up                  |
-| ![](images/RetroPad/Retro_Dpad_Down.png)     | Down                |
-| ![](images/RetroPad/Retro_Dpad_Left.png)     | Left                |
-| ![](images/RetroPad/Retro_Dpad_Right.png)    | Right               |
-| ![](images/RetroPad/Retro_A_Round.png)       | Decision            |
+| RetroPad Inputs                                | EasyRPG core inpits       |
+|------------------------------------------------|---------------------------|
+| ![](../image/retropad/retro_b.png)             | Cancel                    |
+| ![](../image/retropad/retro_start.png)         | Decision                  |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                        |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                      |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                      |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                     |
+| ![](../image/retropad/retro_a.png)             | Decision                  |
 
 ## External Links
 

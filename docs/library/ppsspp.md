@@ -92,11 +92,11 @@ In order to acquire PPSSPP's assets files and install them succcessfully, follow
 
 Here's an example of what it should look like.
 
-![](images/Cores/ppsspp/directory.png)
+![](../image/core/ppsspp/directory.png)
 
 2 . Visit [https://github.com/libretro/ppsspp](https://github.com/libretro/ppsspp) and download the repository.
 
-![](images/Cores/ppsspp/download.png)
+![](../image/core/ppsspp/download.png)
 
 3 . Extract ppsspp-master.zip
 
@@ -104,7 +104,7 @@ Here's an example of what it should look like.
 
 The end result should look like this.
 
-![](images/Cores/ppsspp/ppsspp_assets.png)
+![](../image/core/ppsspp/ppsspp_assets.png)
 
 !!! attention
 	Don't like PPSSPP's replacement fonts? You can place the original PSP fonts in 'system/PPSSPP/flash0/font'
@@ -297,22 +297,24 @@ The PPSSPP core supports the following device type(s) in the controls menu, bold
 
 #### Joypad and analog device type table
 
+![](../image/controller/psp.png)
+
 | User 1 Remap descriptors      | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| Cross                         | ![](images/RetroPad/Retro_B_Round.png)       |
-| Square                        | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Select                        | ![](images/RetroPad/Retro_Select.png)        |
-| Start                         | ![](images/RetroPad/Retro_Start.png)         |
-| D-Pad Up                      | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down                    | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left                    | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right                   | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Circle                        | ![](images/RetroPad/Retro_A_Round.png)       |
-| Triangle                      | ![](images/RetroPad/Retro_X_Round.png)       |
-| L                             | ![](images/RetroPad/Retro_L1.png)            |
-| R                             | ![](images/RetroPad/Retro_R1.png)            |
-| Analog X                      | ![](images/RetroPad/Retro_Left_Stick.png) X  |
-| Analog Y                      | ![](images/RetroPad/Retro_Left_Stick.png) Y  |
+| Cross                         | ![](../image/retropad/retro_b.png)       |
+| Square                        | ![](../image/retropad/retro_y.png)       |
+| Select                        | ![](../image/retropad/retro_select.png)        |
+| Start                         | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
+| Circle                        | ![](../image/retropad/retro_a.png)       |
+| Triangle                      | ![](../image/retropad/retro_x.png)       |
+| L                             | ![](../image/retropad/retro_l1.png)            |
+| R                             | ![](../image/retropad/retro_r1.png)            |
+| Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
+| Analog Y                      | ![](../image/retropad/retro_left_stick.png) Y  |
 
 ## Compatibility
 

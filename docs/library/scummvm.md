@@ -120,33 +120,33 @@ The ScummVM core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                              | ScummVM Core Inputs |
-|--------------------------|----------------------------------------------|---------------------|
-| Mouse Button 2           | ![](images/RetroPad/Retro_B_Round.png)       | Mouse Button 2      |
-| ScummVM GUI              | ![](images/RetroPad/Retro_Select.png)        | ScummVM GUI         |
-| Esc                      | ![](images/RetroPad/Retro_Start.png)         | Esc                 |
-| Mouse Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)       | Mouse Up            |
-| Mouse Down               | ![](images/RetroPad/Retro_Dpad_Down.png)     | Mouse Down          |
-| Mouse Left               | ![](images/RetroPad/Retro_Dpad_Left.png)     | Mouse Left          |
-| Mouse Right              | ![](images/RetroPad/Retro_Dpad_Right.png)    | Mouse Right         |
-| Mouse Button 1           | ![](images/RetroPad/Retro_A_Round.png)       | Mouse Button 1      |
-|                          | ![](images/RetroPad/Retro_Left_Stick.png) X  | Mouse Left/Right    |
-|                          | ![](images/RetroPad/Retro_Left_Stick.png) Y  | Mouse Up/Down       |
+| User 1 Remap descriptors | RetroPad Inputs                                | ScummVM Core Inputs |
+|--------------------------|------------------------------------------------|---------------------|
+| Mouse Button 2           | ![](../image/retropad/retro_b.png)             | Mouse Button 2      |
+| ScummVM GUI              | ![](../image/retropad/retro_select.png)        | ScummVM GUI         |
+| Esc                      | ![](../image/retropad/retro_start.png)         | Esc                 |
+| Mouse Up                 | ![](../image/retropad/retro_dpad_up.png)       | Mouse Up            |
+| Mouse Down               | ![](../image/retropad/retro_dpad_down.png)     | Mouse Down          |
+| Mouse Left               | ![](../image/retropad/retro_dpad_left.png)     | Mouse Left          |
+| Mouse Right              | ![](../image/retropad/retro_dpad_right.png)    | Mouse Right         |
+| Mouse Button 1           | ![](../image/retropad/retro_a_Round.png)       | Mouse Button 1      |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | Mouse Left/Right    |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | Mouse Up/Down       |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | ScummVM Core Inputs      |
 |-----------------------------------------------------|--------------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | Mouse Cursor             |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | Mouse Button 1           |
-| ![](images/RetroMouse/Retro_Right.png) Mouse 2      | Mouse Button 2           |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor             |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Button 1           |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Button 2           |
 
 #### Pointer
 
 | RetroPointer Inputs                                                                                                  | ScummVM Core Inputs |
 |----------------------------------------------------------------------------------------------------------------------|---------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) or ![](images/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor        | 
-| ![](images/RetroMouse/Retro_Left.png) or ![](images/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Mouse Button 1      |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor        | 
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Mouse Button 1      |
 
 ## Compatibility
 

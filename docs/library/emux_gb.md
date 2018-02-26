@@ -20,15 +20,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](images\Cores\all\updater.png) </center>
+<center> ![](..\image\core\all\updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](images\Cores\all\info.png) </center>
+<center> ![](..\image\core\all\info.png) </center>
 
 - Browse through the list and select 'Game Boy/Game Boy Color (Emux GB)'.
 
-<center> ![](images\Cores\emux\emux_gb.png) </center>
+<center> ![](..\image\core\emux\emux_gb.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -36,13 +36,13 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](..\image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
 - Select the content that you want to run.
 
-<center> ![](images\Cores\all\gb.png) </center>
+<center> ![](..\image\core\all\gb.png) </center>
 
 - If you are asked which core to select, choose 'Game Boy/Game Boy Color (Emux GB)'.
 
@@ -151,14 +151,14 @@ The Emux GB core supports the following device type(s) in the controls menu, bol
 
 | User 1 Input descriptors      | RetroPad Inputs                              | RetroPad           |
 |-------------------------------|----------------------------------------------|--------------------|
-|                               | ![](images/RetroPad/Retro_B_Round.png)       | B                  |
-|                               | ![](images/RetroPad/Retro_Select.png)        | Select             |
-|                               | ![](images/RetroPad/Retro_Start.png)         | Start              |
-|                               | ![](images/RetroPad/Retro_Dpad_Up.png)       | D-Pad Up           |
-|                               | ![](images/RetroPad/Retro_Dpad_Down.png)     | D-Pad Down         |
-|                               | ![](images/RetroPad/Retro_Dpad_Left.png)     | D-Pad Left         |
-|                               | ![](images/RetroPad/Retro_Dpad_Right.png)    | D-Pad Right        |
-|                               | ![](images/RetroPad/Retro_A_Round.png)       | A                  |
+|                               | ![](../image/retropad/retro_b.png)       | B                  |
+|                               | ![](../image/retropad/retro_select.png)        | Select             |
+|                               | ![](../image/retropad/retro_start.png)         | Start              |
+|                               | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up           |
+|                               | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down         |
+|                               | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left         |
+|                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right        |
+|                               | ![](../image/retropad/retro_a.png)       | A                  |
 
 ## Compatibility
 

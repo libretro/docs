@@ -101,30 +101,30 @@ The ProSystem core supports the following device type(s) in the controls menu, b
 
 #### Joypad
 
-![](images/Controllers/atari_7800.png)
+![](../image/controller/atari_7800.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)       |
-| Console Select           | ![](images/RetroPad/Retro_Select.png)        |
-| Console Pause            | ![](images/RetroPad/Retro_Start.png)         |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| 2                        | ![](images/RetroPad/Retro_A_Round.png)       |
-| Console Reset            | ![](images/RetroPad/Retro_X_Round.png)       |
-| Left Difficulty          | ![](images/RetroPad/Retro_L1.png)            |
-| Right Difficulty         | ![](images/RetroPad/Retro_R1.png)            |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Console Select           | ![](../image/retropad/retro_select.png)     |
+| Console Pause            | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| 2                        | ![](../image/retropad/retro_a.png)          |
+| Console Reset            | ![](../image/retropad/retro_x.png)          |
+| Left Difficulty          | ![](../image/retropad/retro_l1.png)         |
+| Right Difficulty         | ![](../image/retropad/retro_r1.png)         |
 
-| User 2 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| 1                        | ![](images/RetroPad/Retro_B_Round.png)       |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| 2                        | ![](images/RetroPad/Retro_A_Round.png)       |
+| User 2 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| 1                        | ![](../image/retropad/retro_b.png)          |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| 2                        | ![](../image/retropad/retro_a.png)          |
 
 ## External Links
 

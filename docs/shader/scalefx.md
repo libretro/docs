@@ -6,11 +6,11 @@
 
 * scalefx
 
-![scalefx](images/scalefx/scalefx.png)
+![](../image/shader/scalefx/scalefx.png)
 
 * scalefx-hybrid
 
-![scalefx-hybrid](images/scalefx/scalefx-hybrid.png)
+![](../image/shader/scalefx/scalefx-hybrid.png)
 
 ## Comments
 

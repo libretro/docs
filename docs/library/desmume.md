@@ -98,10 +98,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self explanatory. Please note that the DeSmuME core is only software rendered.
 	
 ??? note "Internal resolution - 256x192"
-	![](images\Cores\desmume\256x192.png)
+	![](..\image\core\desmume\256x192.png)
 	
 ??? note "Internal resolution - 2560x1920"
-	![](images\Cores\desmume\2560x1920.png)
+	![](..\image\core\desmume\2560x1920.png)
 	
 - **CPU cores** [desmume_num_cores] (**1**|2|3|4)
 
@@ -124,35 +124,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "Screen layout - top/bottom"
-	![](images\Cores\desmume\top_bottom.png)
+	![](..\image\core\desmume\top_bottom.png)
 	
 ??? note "Screen layout - bottom/top"
-	![](images\Cores\desmume\bottom_top.png)
+	![](..\image\core\desmume\bottom_top.png)
 	
 ??? note "Screen layout - left/right"
-	![](images\Cores\desmume\left_right.png)
+	![](..\image\core\desmume\left_right.png)
 	
 ??? note "Screen layout - right/left"
-	![](images\Cores\desmume\right_left.png)
+	![](..\image\core\desmume\right_left.png)
 	
 ??? note "Screen layout - top only"
-	![](images\Cores\desmume\top.png)
+	![](..\image\core\desmume\top.png)
 	
 ??? note "Screen layout - bottom only"
-	![](images\Cores\desmume\bottom.png)
+	![](..\image\core\desmume\bottom.png)
 	
 ??? note "Screen layout - hybrid/top"
-	![](images\Cores\desmume\hybrid_top.png)
+	![](..\image\core\desmume\hybrid_top.png)
 	
 - **Hybrid layout scale (restart)** [desmume_hybrid_layout_scale] (**1**|3)
 
 	Self explanatory. The 'Screen layout' core option must be set to a hybrid setting for this to function properly.
 	
 ??? note "Hybrid layout scale - 1"
-	![](images\Cores\desmume\scale_1.png)
+	![](..\image\core\desmume\scale_1.png)
 	
 ??? note "Hybrid layout scale - 3"
-	![](images\Cores\desmume\scale_3.png)
+	![](..\image\core\desmume\scale_3.png)
 	
 - **Hybrid layout show both screen** [desmume_hybrid_showboth_screens] (**enabled**|disabled)
 
@@ -181,19 +181,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Configure the color of the stylus pointer.
 	
 ??? note "Pointer Colour - white"
-	![](images\Cores\desmume\pointer_white.png)
+	![](..\image\core\desmume\pointer_white.png)
 	
 ??? note "Pointer Colour - black"
-	![](images\Cores\desmume\pointer_black.png)
+	![](..\image\core\desmume\pointer_black.png)
 	
 ??? note "Pointer Colour - red"
-	![](images\Cores\desmume\pointer_red.png)
+	![](..\image\core\desmume\pointer_red.png)
 	
 ??? note "Pointer Colour - blue"
-	![](images\Cores\desmume\pointer_blue.png)
+	![](..\image\core\desmume\pointer_blue.png)
 	
 ??? note "Pointer Colour - yellow"
-	![](images\Cores\desmume\pointer_yellow.png)
+	![](..\image\core\desmume\pointer_yellow.png)
 	
 - **Pointer mode l-analog** [desmume_pointer_device_l] (**none**|emulated|absolute|pressed)
 
@@ -244,10 +244,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self explanatory.
 	
 ??? note "Screen Gap - 0"
-	![](images\Cores\desmume\screengap_0.png)
+	![](..\image\core\desmume\screengap_0.png)
 	
 ??? note "Screen Gap - 100"
-	![](images\Cores\desmume\screengap_100.png)
+	![](..\image\core\desmume\screengap_100.png)
 	
 - **Enable Edgemark** [desmume_gfx_edgemark] (**enabled**|disabled)
 
@@ -295,33 +295,33 @@ The DeSmuME core supports the following device type(s) in the controls menu, bol
 
 | User 1 Remap descriptors | RetroPad Inputs                              | DeSmuME core Inputs |
 |--------------------------|----------------------------------------------|---------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)       | B                   |
-| Y                        | ![](images/RetroPad/Retro_Y_Round.png)       | Y                   |
-| Select                   | ![](images/RetroPad/Retro_Select.png)        | Select              |
-| Start                    | ![](images/RetroPad/Retro_Start.png)         | Start               |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       | Up                  |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     | Down                |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     | Left                |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    | Right               |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)       | A                   |
-| X                        | ![](images/RetroPad/Retro_X_Round.png)       | X                   |
-| L                        | ![](images/RetroPad/Retro_L1.png)            | L                   |
-| R                        | ![](images/RetroPad/Retro_R1.png)            | R                   |
-| Lid Close/Open           | ![](images/RetroPad/Retro_L2.png)            | Lid Close/Open      |
-| Tap Stylus               | ![](images/RetroPad/Retro_R2.png)            | Tap Stylus          |
-| Toggle Microphone        | ![](images/RetroPad/Retro_L3.png)            | Toggle Microphone   |
-| Quick Screen Switch      | ![](images/RetroPad/Retro_R3.png)            | Quick Screen Switch |
-|                          | ![](images/RetroPad/Retro_Left_Stick.png) X  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) X |
-|                          | ![](images/RetroPad/Retro_Left_Stick.png) Y  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) Y |
-|                          | ![](images/RetroPad/Retro_Right_Stick.png) X | [Pointer mode r-analog](https://docs.libretro.com/library/desmume/#core-options) X |
-|                          | ![](images/RetroPad/Retro_Right_Stick.png) Y | [Pointer mode r-analog](https://docs.libretro.com/library/desmume/#core-options) Y |
+| B                        | ![](../image/retropad/retro_b.png)       | B                   |
+| Y                        | ![](../image/retropad/retro_y.png)       | Y                   |
+| Select                   | ![](../image/retropad/retro_select.png)        | Select              |
+| Start                    | ![](../image/retropad/retro_start.png)         | Start               |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                  |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down                |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left                |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right               |
+| A                        | ![](../image/retropad/retro_a.png)       | A                   |
+| X                        | ![](../image/retropad/retro_x.png)       | X                   |
+| L                        | ![](../image/retropad/retro_l1.png)            | L                   |
+| R                        | ![](../image/retropad/retro_r1.png)            | R                   |
+| Lid Close/Open           | ![](../image/retropad/retro_l2.png)            | Lid Close/Open      |
+| Tap Stylus               | ![](../image/retropad/retro_r2.png)            | Tap Stylus          |
+| Toggle Microphone        | ![](../image/retropad/retro_l3.png)            | Toggle Microphone   |
+| Quick Screen Switch      | ![](../image/retropad/retro_r3.png)            | Quick Screen Switch |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) X |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) Y |
+|                          | ![](../image/retropad/retro_right_stick.png) X | [Pointer mode r-analog](https://docs.libretro.com/library/desmume/#core-options) X |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | [Pointer mode r-analog](https://docs.libretro.com/library/desmume/#core-options) Y |
 
 #### Pointer
 
 | RetroPointer Inputs                                                                                                  | DeSmuME core inputs |
 |----------------------------------------------------------------------------------------------------------------------|---------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) or ![](images/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Stylus              | 
-| ![](images/RetroMouse/Retro_Left.png) or ![](images/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Stylus Press        |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Stylus              | 
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Stylus Press        |
 
 ## Compatibility
 

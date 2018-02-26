@@ -87,11 +87,11 @@ The Game Music Emu core supports the following device type(s) in the controls me
 
 #### Joypad
 
-| RetroPad Inputs                              | Game Music Emu Inputs     |
-|----------------------------------------------|---------------------------|
-| ![](images/RetroPad/Retro_Start.png)         | Pause                     |
-| ![](images/RetroPad/Retro_L1.png)            | Previous Track            |
-| ![](images/RetroPad/Retro_R1.png)            | Next Track                |
+| RetroPad Inputs                                | Game Music Emu core inputs |
+|------------------------------------------------|----------------------------|
+| ![](../image/retropad/retro_start.png)         | Pause                      |
+| ![](../image/retropad/retro_l1.png)            | Previous Track             |
+| ![](../image/retropad/retro_r1.png)            | Next Track                 |
 
 ## External Links
 

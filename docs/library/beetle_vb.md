@@ -95,35 +95,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These Analglyph preset screenshots have been taken with the Palette core option set to black & red.
 
 ??? note "Anaglyph preset - Off"
-	![](images\Cores\beetle_vb\off.png)
+	![](..\image\core\beetle_vb\off.png)
 	
 ??? note "Anaglyph preset - red & blue"
-	![](images\Cores\beetle_vb\red&blue.png)
+	![](..\image\core\beetle_vb\red&blue.png)
 
 ??? note "Anaglyph preset - red & cyan"
-	![](images\Cores\beetle_vb\red&cyan.png)
+	![](..\image\core\beetle_vb\red&cyan.png)
 
 ??? note "Anaglyph preset - red & electric cyan"
-	![](images\Cores\beetle_vb\red&electriccyan.png)
+	![](..\image\core\beetle_vb\red&electriccyan.png)
 
 ??? note "Anaglyph preset - red & green"
-	![](images\Cores\beetle_vb\red&green.png)
+	![](..\image\core\beetle_vb\red&green.png)
 
 ??? note "Anaglyph preset - green & magenta"
-	![](images\Cores\beetle_vb\green&magenta.png)
+	![](..\image\core\beetle_vb\green&magenta.png)
 
 ??? note "Anaglyph preset - yellow & blue"
-	![](images\Cores\beetle_vb\yellow&blue.png)	
+	![](..\image\core\beetle_vb\yellow&blue.png)	
 	
 - **Palette (restart)** [vb_color_mode] (**black & red**/black & white)
 
 	Choose which color palette to use.
 	
 ??? note "Palette - black & red"
-	![](images\Cores\beetle_vb\black&red.png)
+	![](..\image\core\beetle_vb\black&red.png)
 	
 ??? note "Palette - black & white"
-	![](images\Cores\beetle_vb\black&white.png)
+	![](..\image\core\beetle_vb\black&white.png)
 	
 - **Right Analog to Digital** [vb_right_analog_to_digital] (**Off**/On/invert x/invert y/invert both)
 
@@ -148,22 +148,22 @@ The Beetle VB core supports the following device type(s) in the controls menu, b
 
 | User 1 Remap descriptors | RetroPad Inputs                              |
 |--------------------------|----------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)       |
-| Select                   | ![](images/RetroPad/Retro_Select.png)        |
-| Start                    | ![](images/RetroPad/Retro_Start.png)         |
-| Left D-Pad Up            | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Left D-Pad Down          | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left D-Pad Left          | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Left D-Pad Right         | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)       |
-| L                        | ![](images/RetroPad/Retro_L1.png)            |
-| R                        | ![](images/RetroPad/Retro_R1.png)            |
-| Right D-Pad Up           | ![](images/RetroPad/Retro_L2.png)            |
-| Right D-Pad Left         | ![](images/RetroPad/Retro_R2.png)            |
-| Right D-Pad Down         | ![](images/RetroPad/Retro_L3.png)            |
-| Right D-Pad Right        | ![](images/RetroPad/Retro_R3.png)            |
-| Right D-Pad X            | ![](images/RetroPad/Retro_Right_Stick.png) X |
-| Right D-Pad Y            | ![](images/RetroPad/Retro_Right_Stick.png) Y |
+| B                        | ![](../image/retropad/retro_b.png)       |
+| Select                   | ![](../image/retropad/retro_select.png)        |
+| Start                    | ![](../image/retropad/retro_start.png)         |
+| Left D-Pad Up            | ![](../image/retropad/retro_dpad_up.png)       |
+| Left D-Pad Down          | ![](../image/retropad/retro_dpad_down.png)     |
+| Left D-Pad Left          | ![](../image/retropad/retro_dpad_left.png)     |
+| Left D-Pad Right         | ![](../image/retropad/retro_dpad_right.png)    |
+| A                        | ![](../image/retropad/retro_a.png)       |
+| L                        | ![](../image/retropad/retro_l1.png)            |
+| R                        | ![](../image/retropad/retro_r1.png)            |
+| Right D-Pad Up           | ![](../imags/retropad/retro_l2.png)            |
+| Right D-Pad Left         | ![](../image/retropad/retro_r2.png)            |
+| Right D-Pad Down         | ![](../image/retropad/retro_l3.png)            |
+| Right D-Pad Right        | ![](../image/retropad/retro_r3.png)            |
+| Right D-Pad X            | ![](../image/retropad/retro_right_stick.png) X |
+| Right D-Pad Y            | ![](../image/retropad/retro_tight_stick.png) Y |
 
 ## Compatibility
 

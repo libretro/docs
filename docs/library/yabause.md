@@ -159,25 +159,25 @@ Activating multitap support in compatible games can be configured by switching t
 
 #### Joypad
 
-![](images/Controllers/saturn.png)
+![](../image/controller/saturn.png)
 
 | User 1 - 12 Remap descriptors | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| A                             | ![](images/RetroPad/Retro_B_Round.png)       |
-| X                             | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Start                         | ![](images/RetroPad/Retro_Start.png)         |
-| D-Pad Up                      | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down                    | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left                    | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right                   | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| B                             | ![](images/RetroPad/Retro_A_Round.png)       |
-| Y                             | ![](images/RetroPad/Retro_X_Round.png)       |
-| C                             | ![](images/RetroPad/Retro_L1.png)            |
-| Z                             | ![](images/RetroPad/Retro_R1.png)            |
-| L                             | ![](images/RetroPad/Retro_L2.png)            |
-| R                             | ![](images/RetroPad/Retro_R2.png)            |
-| Analog X                      | ![](images/RetroPad/Retro_Left_Stick.png) X  |
-| Analog Y                      | ![](images/RetroPad/Retro_Left_Stick.png) Y  |
+| A                             | ![](../image/retropad/retro_b.png)       |
+| X                             | ![](../image/retropad/retro_y.png)       |
+| Start                         | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
+| B                             | ![](../image/retropad/retro_a.png)       |
+| Y                             | ![](../image/retropad/retro_x.png)       |
+| C                             | ![](../image/retropad/retro_l1.png)            |
+| Z                             | ![](../image/retropad/retro_r1.png)            |
+| L                             | ![](../image/retropad/retro_l2.png)            |
+| R                             | ![](../image/retropad/retro_r2.png)            |
+| Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
+| Analog Y                      | ![](../image/retropad/retro_left_stick.png) Y  |
 
 ## Compatibility
 

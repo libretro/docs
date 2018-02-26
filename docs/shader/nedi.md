@@ -5,11 +5,11 @@
 ## Preview Image
 * fast-bilateral-nedi
 
-![fast-bilateral-nedi](images/nedi/fast-bilateral-nedi.png)
+![](../image/shader/nedi/fast-bilateral-nedi.png)
 
 * nedi
 
-![nedi](images/nedi/nedi.png)
+![](../image/shader/nedi/nedi.png)
 
 ## Comments
 

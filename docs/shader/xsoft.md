@@ -6,11 +6,11 @@
 
 * 4xsoft
 
-![4xsoft](images/xsoft/4xsoft.png)
+![](../image/shader/xsoft/4xsoft.png)
 
 * 4xsoftSdB
 
-![4xsoftSdB](images/xsoft/4xsoftSdB.png)
+![](../image/shader/xsoft/4xsoftSdB.png)
 
 ## Comments
 

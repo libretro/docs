@@ -5,7 +5,7 @@
 ## Preview Image
 * 3dfx_4x1
 
-![3dfx_4x1](images/3dfx/3dfx_4x1.png)
+![](../image/shader/3dfx/3dfx_4x1.png)
 
 ## Comments
 

@@ -87,13 +87,13 @@ The Imageviewer core supports the following device type(s) in the controls menu,
 
 #### Joypad
 
-| RetroPad Inputs                           | Imageviewer core Inputs                                    |
-|-------------------------------------------|------------------------------------------------------------|
-| ![](images/RetroPad/Retro_Y_Round.png)    | Automatic slideshow - Go to the next image every 2 seconds |
-| ![](images/RetroPad/Retro_Dpad_Up.png)    | Go forward 5 images                                        |
-| ![](images/RetroPad/Retro_Dpad_Down.png)  | Go backward 5 images                                       |
-| ![](images/RetroPad/Retro_Dpad_Left.png)  | Go backward 1 image                                        |
-| ![](images/RetroPad/Retro_Dpad_Right.png) | Go forward 1 image                                         |
+| RetroPad Inputs                                | Imageviewer core inpits                                    |
+|------------------------------------------------|------------------------------------------------------------|
+| ![](../image/retropad/retro_y.png)             | Automatic slideshow - Go to the next image every 2 seconds |
+| ![](../image/retropad/retro_dpad_up.png)       | Go forward 5 images                                        |
+| ![](../image/retropad/retro_dpad_down.png)     | Go backward 5 images                                       |
+| ![](../image/retropad/retro_dpad_left.png)     | Go backward 1 image                                        |
+| ![](../image/retropad/retro_dpad_right.png)    | Go forward 1 image                                         |
 
 ## External Links
 

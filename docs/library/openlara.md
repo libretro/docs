@@ -15,26 +15,26 @@ The nice thing about OpenLara is that, while staying true to the original look a
 
 This core requires that you use OpenGL as the video driver. Go to Settings -> Driver. If ‘video driver’ is set to ‘vulkan’, switch it back to ‘gl’, and then restart.
 
-![](images/Cores/openlara/gl.png)
+![](../image/core/openlara/gl.png)
 
 !!! attention 
 	There is currently no ‘working’ macOS version available due to the OpenGL requirement.
 	
 Also, the OpenLara core requires that you turn on ‘Enable Shared Hardware Context’, otherwise you will only see a single texture being displayed onscreen instead of the game screen.
 
-![](images/Cores/openlara/texture.png)
+![](../image/core/openlara/texture.png)
 
 1. First, you need to ensure that ‘Show Advanced Settings’ is turned on. Go to Settings -> User Interface and turn ‘Show Advanced Settings’ on.
 
-![](images/Cores/openlara/advanced.png)
+![](../image/core/openlara/advanced.png)
 
 2. Now, go back, and go to Settings -> Core.
 
-![](images/Cores/openlara/settings.png)
+![](../image/core/openlara/settings.png)
 
 3. Once inside the ‘Core’ settings, set ‘Enable Shared Hardware Context’ to ON.
 
-![](images/Cores/openlara/context.png)
+![](../image/core/openlara/context.png)
 
 #### How to start the OpenLara core:
 
@@ -48,17 +48,17 @@ We hope that it will book major progress so that one day we can replay the old T
 
 - To try the demo level, you need to obtain its data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](images\Cores\all\download.png) </center>
+<center> ![](image\core\all\download.png) </center>
 
 - Select 'Tomb Raider', then select 'tombraider1-demo.zip'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](images\Cores\folder\screenshot_name.png) </center>
+<center> ![](image\core\folder\screenshot_name.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](images\Cores\all\load.png) </center>
+<center> ![](image\core\all\load.png) </center>
 
-<center> ![](images\Cores\all\downloads.png) </center>
+<center> ![](image\core\all\downloads.png) </center>
 
 - Select the 'Tomb Raider' directory, then select 'LEVEL2.PSX'.
 
@@ -152,30 +152,30 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "Internal resolution - 320x240"
-	![](images/Cores/openlara/320x240.png)
+	![](../image/core/openlara/320x240.png)
 
 ??? note "Internal resolution - 1920x1080"
-	![](images/Cores/openlara/1920x1080.png)	
+	![](../image/core/openlara/1920x1080.png)	
 
 - **Texture filtering (restart)** [openlara_texture_filtering] (**Bilinear filtering**|Nearest)
 
 	Self-explanatory.
 
 ??? note "Texture filtering - Bilinear"
-	![](images/Cores/openlara/bilinear.png)
+	![](../image/core/openlara/bilinear.png)
 	
 ??? note "Texture filtering - Nearest"
-	![](images/Cores/openlara/nearest.png)
+	![](../image/core/openlara/nearest.png)
 	
 - **Water effects (restart)** [openlara_water_effects] (**enabled**|disabled)
 
 	Self-explanatory.
 	
 ??? note "Water effects - On"
-	![](images/Cores/openlara/water_on.png)
+	![](../image/core/openlara/water_on.png)
 	
 ??? note "Water effects - Off"
-	![](images/Cores/openlara/water_off.png)
+	![](../image/core/openlara/water_off.png)
 	
 ## Controllers
 
@@ -191,21 +191,21 @@ The OpenLara core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| Action (Shoot/grab)      | ![](images/RetroPad/Retro_B_Round.png)       |
-| Jump                     | ![](images/RetroPad/Retro_Y_Round.png)       |
-| View toggle              | ![](images/RetroPad/Retro_Select.png)        |
-| Inventory                | ![](images/RetroPad/Retro_Start.png)         |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     | 
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Roll                     | ![](images/RetroPad/Retro_A_Round.png)       |
-| Draw weapon              | ![](images/RetroPad/Retro_X_Round.png)       |
-| Walk (when holding)      | ![](images/RetroPad/Retro_R1.png)            |
-| Sidestep left            | ![](images/RetroPad/Retro_L2.png)            |
-| Sidestep right           | ![](images/RetroPad/Retro_R2.png)            |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| Action (Shoot/grab)      | ![](../image/retropad/retro_b.png)          |
+| Jump                     | ![](../image/retropad/retro_y.png)          |
+| View toggle              | ![](../image/retropad/retro_select.png)     |
+| Inventory                | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| Roll                     | ![](../image/retropad/retro_a.png)          |
+| Draw weapon              | ![](../image/retropad/retro_x.png)          |
+| Walk (when holding)      | ![](../image/retropad/retro_r1.png)         |
+| Sidestep left            | ![](../image/retropad/retro_l2.png)         |
+| Sidestep right           | ![](../image/retropad/retro_r2.png)         |
 
 ## External Links
 

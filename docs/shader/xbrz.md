@@ -6,15 +6,15 @@
 
 * 4xbrz
 
-![4xbrz](images/xbrz/4xbrz.png)
+![4xbrz](../image/shader/xbrz/4xbrz.png)
 
 * 5xbrz
 
-![5xbrz](images/xbrz/5xbrz.png)
+![5xbrz](../image/shader/xbrz/5xbrz.png)
 
 * 6xbrz
 
-![6xbrz](images/xbrz/6xbrz.png)
+![6xbrz](../image/shader/xbrz/6xbrz.png)
 
 ## Comments
 

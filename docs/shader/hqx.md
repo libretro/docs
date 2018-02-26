@@ -5,15 +5,15 @@
 ## Preview Image
 * hq2x
 
-![hq2x](images/hqx/hq2x.png)
+![](../image/shader/hqx/hq2x.png)
 
 * hq3x
 
-![hq3x](images/hqx/hq3x.png)
+![](../image/shader/hqx/hq3x.png)
 
 * hq4x
 
-![hq4x](images/hqx/hq4x.png)
+![](../image/shader/hqx/hq4x.png)
 
 ## Comments
 

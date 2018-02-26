@@ -107,24 +107,24 @@ The Remote RetroPad core supports the following device type(s) in the controls m
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)       |
-| Y                        | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Select                   | ![](images/RetroPad/Retro_Select.png)        |
-| Start                    | ![](images/RetroPad/Retro_Start.png)         |
-| D-Pad Up                 | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down               | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left               | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right              | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)       |
-| X                        | ![](images/RetroPad/Retro_X_Round.png)       |
-| L                        | ![](images/RetroPad/Retro_L1.png)            |
-| R                        | ![](images/RetroPad/Retro_R1.png)            |
-| L2                       | ![](images/RetroPad/Retro_L2.png)            |
-| R2                       | ![](images/RetroPad/Retro_R2.png)            |
-| L3                       | ![](images/RetroPad/Retro_L3.png)            |
-| R3                       | ![](images/RetroPad/Retro_R3.png)            |
+| User 1 Remap descriptors | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)             |
+| Y                        | ![](../image/retropad/retro_y.png)             |
+| Select                   | ![](../image/retropad/retro_select.png)        |
+| Start                    | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| A                        | ![](../image/retropad/retro_a.png)             |
+| X                        | ![](../image/retropad/retro_x.png)             |
+| L                        | ![](../image/retropad/retro_l1.png)            |
+| R                        | ![](../image/retropad/retro_r1.png)            |
+| L2                       | ![](../image/retropad/retro_l2.png)            |
+| R2                       | ![](../image/retropad/retro_r2.png)            |
+| L3                       | ![](../image/retropad/retro_l3.png)            |
+| R3                       | ![](../image/retropad/retro_r3.png)            |
 
 ## External Links
 

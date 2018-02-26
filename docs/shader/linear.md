@@ -3,7 +3,7 @@
 ## Background
 
 ## Preview Image
-![linear-gamma-correct](images/linear/linear-gamma-correct.png)
+![](../image/shader/linear/linear-gamma-correct.png)
 
 ## Comments
 

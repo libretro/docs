@@ -6,19 +6,19 @@
 
 * 2x-scalehq
 
-![2x-scalehq](images/scalehq/2x-scalehq.png)
+![](../image/shader/scalehq/2x-scalehq.png)
 
 * 2xScaleHQ
 
-![2xScaleHQ](images/scalehq/2xScaleHQ.png)
+![](../image/shader/scalehq/2xScaleHQ.png)
 
 * 4x-scalehq
 
-![4x-scalehq](images/scalehq/4x-scalehq.png)
+![](../image/shader/scalehq/4x-scalehq.png)
 
 * 4xScaleHQ
 
-![4xScaleHQ](images/scalehq/4xScaleHQ.png)
+![](../image/shader/scalehq/4xScaleHQ.png)
 
 
 ## Comments

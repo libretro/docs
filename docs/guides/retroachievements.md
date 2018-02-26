@@ -21,7 +21,7 @@
     The hardcore mode prevents you from using emulation features like slow motion, cheats and savestates.
     **BUT** gives you double points.
 
-![](../guides/images/retroachievements/achievements-settings.png)
+![](../image/retroachievements/achievements_settings.png)
 
 ## **Check your connection to the service**
 
@@ -33,7 +33,7 @@ Launch the game and trigger the Quick Menu.
 
 Go to Achievements and you should see a list of the unlockable trophies for this game.
 
-![](../guides/images/retroachievements/achievements-list.png)
+![](../image/retroachievements/achievements_list.png)
 
 ## **Check your progress**
 
@@ -45,7 +45,7 @@ Trophies unlocked in hardcore mode are marked with a special color.
 
 You can also check the progress of your friends and add comments on their trophies.
 
-![](../guides/images/retroachievements/achievements-progress.png)
+![](../image/retroachievements/achievements_progress.png)
 
 ## **Cores Compatibility**
 

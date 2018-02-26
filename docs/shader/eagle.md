@@ -5,7 +5,7 @@
 ## Preview Image
 * supereagle
 
-![supereagle](images/eagle/supereagle.png)
+![](../image/shader/eagle/supereagle.png)
 
 ## Comments
 

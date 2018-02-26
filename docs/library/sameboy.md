@@ -111,19 +111,19 @@ There are two ways to access the Subsystem API.
 
 First, we load the first GameBoy ROM through '2 Player Game Boy Link' in RetroArch's Main Menu.
 
-![](images/Cores/sameboy/menu1.png)
+![](../image/core/sameboy/menu1.png)
 
-![](images/Cores/sameboy/gb1.png)
+![](../image/core/sameboy/gb1.png)
 
 Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
 
-![](images/Cores/sameboy/menu2.png)
+![](../image/core/sameboy/menu2.png)
 
-![](images/Cores/sameboy/gb2.png)
+![](../image/core/sameboy/gb2.png)
 
 Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
 
-![](images/Cores/bsnes/start.png)
+![](../image/core/sameboy/start.png)
 
 **The other way is to launch RetroArch with commandline like this.**
 
@@ -150,16 +150,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Select color correction.
 	
 ??? note "Color Correction - off"
-	![](images\Cores\sameboy\color_off.png)
+	![](..\image\core\sameboy\color_off.png)
 	
 ??? note "Color Correction - correct curves"
-	![](images\Cores\sameboy\color_curves.png)
+	![](..\image\core\sameboy\color_curves.png)
 
 ??? note "Color Correction - emulate hardware"
-	![](images\Cores\sameboy\color_hardware.png)
+	![](..\image\core\sameboy\color_hardware.png)
 
 ??? note "Color Correction - preserve brightness"
-	![](images\Cores\sameboy\color_brightness.png)
+	![](..\image\core\sameboy\color_brightness.png)
 	
 - **High Pass Filter** [sameboy_high_pass_filter_mode] (**off**|accurate|remove dc offset)
 
@@ -243,18 +243,18 @@ Rumble only works in the SameBoy core when
 
 #### Joypad
 
-![](images/Controllers/gb.png)
+![](../image/controller/gb.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](images/RetroPad/Retro_B_Round.png)    |
-| Select                       | ![](images/RetroPad/Retro_Select.png)     |
-| Start                        | ![](images/RetroPad/Retro_Start.png)      |
-| Up                           | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| Down                         | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| Left                         | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| Right                        | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                            | ![](images/RetroPad/Retro_A_Round.png)    |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| Up                           | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                         | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                         | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                        | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 

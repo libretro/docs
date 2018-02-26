@@ -85,18 +85,18 @@ The Emux NES core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](images/Controllers/nes.png)
+![](../image/controller/nes.png)
 
 | RetroPad Inputs                              | Emux NES core Inputs |
 |----------------------------------------------|----------------------|
-| ![](images/RetroPad/Retro_B_Round.png)       | B                    |
-| ![](images/RetroPad/Retro_Select.png)        | Select               |
-| ![](images/RetroPad/Retro_Start.png)         | Start                |
-| ![](images/RetroPad/Retro_Dpad_Up.png)       | D-Pad Up             |
-| ![](images/RetroPad/Retro_Dpad_Down.png)     | D-Pad Down           |
-| ![](images/RetroPad/Retro_Dpad_Left.png)     | D-Pad Left           |
-| ![](images/RetroPad/Retro_Dpad_Right.png)    | D-Pad Right          |
-| ![](images/RetroPad/Retro_A_Round.png)       | A                    |
+| ![](../image/retropad/retro_b.png)       | B                    |
+| ![](../image/retropad/retro_select.png)        | Select               |
+| ![](../image/retropad/retro_start.png)         | Start                |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up             |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down           |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left           |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right          |
+| ![](../image/retropad/retro_a.png)       | A                    |
 
 ## Compatibility
 

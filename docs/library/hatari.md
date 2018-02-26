@@ -189,19 +189,19 @@ The Hatari core supports the following device type(s) in the controls menu, bold
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| Enter GUI                | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Mouse mode toggle        | ![](images/RetroPad/Retro_Select.png)        |
-| Keyboard overlay         | ![](images/RetroPad/Retro_Start.png)         |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png)    |
-| Fire                     | ![](images/RetroPad/Retro_A_Round.png)       |
-| Joystick number          | ![](images/RetroPad/Retro_L1.png)            |
-| Mouse speed              | ![](images/RetroPad/Retro_R1.png)            |
-| Toggle m/k status        | ![](images/RetroPad/Retro_L2.png)            |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| Enter GUI                | ![](../image/retropad/retro_y.png)          |
+| Mouse mode toggle        | ![](../image/retropad/retro_select.png)     |
+| Keyboard overlay         | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| Fire                     | ![](../image/retropad/retro_a.png)          |
+| Joystick number          | ![](../image/retropad/retro_l1.png)         |
+| Mouse speed              | ![](../image/retropad/retro_r1.png)         |
+| Toggle m/k status        | ![](../image/retropad/retro_l2.png)         |
 
 #### Keyboard
 
@@ -347,11 +347,11 @@ The Hatari core supports the following device type(s) in the controls menu, bold
 
 #### Mouse
 
-| RetroMouse Inputs                                   | Hatari core Inputs |
-|-----------------------------------------------------|--------------------|
-| ![](images/RetroMouse/Retro_Mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](images/RetroMouse/Retro_Left.png) Mouse 1       | Mouse Left Button  |
-| ![](images/RetroMouse/Retro_Right.png) Mouse 2      | Mouse Right Button |
+| RetroMouse Inputs                                     | Hatari core inputs |
+|-------------------------------------------------------|--------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
 ## Compatibility
 

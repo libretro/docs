@@ -109,18 +109,18 @@ The Gearboy core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-![](images/Controllers/gb.png)
+![](../image/controller/gb.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](images/RetroPad/Retro_B_Round.png)    |
-| Select                   | ![](images/RetroPad/Retro_Select.png)     |
-| Start                    | ![](images/RetroPad/Retro_Start.png)      |
-| Up                       | ![](images/RetroPad/Retro_Dpad_Up.png)    |
-| Down                     | ![](images/RetroPad/Retro_Dpad_Down.png)  |
-| Left                     | ![](images/RetroPad/Retro_Dpad_Left.png)  |
-| Right                    | ![](images/RetroPad/Retro_Dpad_Right.png) |
-| A                        | ![](images/RetroPad/Retro_A_Round.png)    |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 

@@ -6,7 +6,7 @@
 
 * adaptive-sharpen
 
-![adaptive-sharpen](images/sharpen/adaptive-sharpen.png)
+![](../image/shader/sharpen/adaptive-sharpen.png)
 
 ## Comments
 
