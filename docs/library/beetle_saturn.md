@@ -274,8 +274,8 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 | RetroMouse Inputs                                   | Mouse        |
 |-----------------------------------------------------|--------------|
-| ![](../image/retromouse/retro_Mouse.png) Mouse Cursor | Mouse Cursor |
-| ![](../image/retromouse/retro_Left.png) Mouse 1       | Mouse A      |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
 | ![](../image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
 | Mouse 4                                             | Mouse Start  |

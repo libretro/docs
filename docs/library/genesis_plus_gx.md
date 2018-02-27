@@ -347,10 +347,10 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 |                             | ![](../image/retropad/retro_r2.png)            |                    |                    |                    |                   |               | B             |
 |                             | ![](../image/retropad/retro_l3.png)            |                    |                    |                    |                   |               |               |
 |                             | ![](../image/retropad/retro_r3.png)            |                    |                    |                    |                   |               |               |
-|                             | ![](../image/retropad/Retro_left_stick.png) X  |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
-|                             | ![](../image/retropad/Retro_left_stick.png) Y  |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
-|                             | ![](../image/retropad/Retro_right_stick.png) X |                    |                    |                    |                   |               | Slider Y      |
-|                             | ![](../image/retropad/Retro_right_stick.png) Y |                    |                    |                    |                   |               | Slider X      |
+|                             | ![](../image/retropad/retro_left_stick.png) X  |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
+|                             | ![](../image/retropad/retro_left_stick.png) Y  |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
+|                             | ![](../image/retropad/retro_right_stick.png) X |                    |                    |                    |                   |               | Slider Y      |
+|                             | ![](../image/retropad/retro_right_stick.png) Y |                    |                    |                    |                   |               | Slider X      |
 
 #### Mouse
 

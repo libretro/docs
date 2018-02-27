@@ -123,6 +123,12 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle PCE Fast](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         |
 | [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         |
 
+### Neo Geo Pocket
+
+| Core                                                             | Supported |
+|------------------------------------------------------------------|:---------:|
+| [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         |
+
 ### Nintendo 64
 
 | Core                                                              | Supported |

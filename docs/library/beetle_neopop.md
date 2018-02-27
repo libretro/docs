@@ -44,7 +44,7 @@ Frontend-level settings or features that the Beetle NeoPop core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔ (not link-cable emulation)         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -60,7 +60,7 @@ Frontend-level settings or features that the Beetle NeoPop core respects.
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
-| LEDs              | ✔         |
+| LEDs              | ✕         |
 
 ### Directories
 

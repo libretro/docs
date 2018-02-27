@@ -361,17 +361,17 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 | B                                                | ![](../image/retropad/retro_y.png)       |
 | Select                                           | ![](../image/retropad/retro_select.png)        |
 | Start                                            | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                                         | ![](../image/retropad/Retro_dpad_up.png)       |
-| D-Pad Down                                       | ![](../image/retropad/Retro_dpad_down.png)     |
-| D-Pad Left                                       | ![](../image/retropad/Retro_dpad_left.png)     |
-| D-Pad Right                                      | ![](../image/retropad/Retro_dpad_right.png)    |
-| Turbo A                                          | ![](../image/retropad/Retro_a.png)       |
-| Turbo B                                          | ![](../image/retropad/Retro_x.png)       |
-| (FDS) Insert Next Disk                           | ![](../image/retropad/Retro_l1.png)            |
-| (FDS) Switch Disk Side                           | ![](../image/retropad/Retro_r1.png)            |
-| (VS) Insert Coin 1                               | ![](../image/retropad/Retro_l2.png)            |
-| (VS) Insert Coin 2                               | ![](../image/retropad/Retro_r2.png)            |
-| (Famicom) Microphone                             | ![](../image/retropad/Retro_l3.png)            |
+| D-Pad Up                                         | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                                       | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                                       | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                                      | ![](../image/retropad/retro_dpad_right.png)    |
+| Turbo A                                          | ![](../image/retropad/retro_a.png)       |
+| Turbo B                                          | ![](../image/retropad/retro_x.png)       |
+| (FDS) Insert Next Disk                           | ![](../image/retropad/retro_l1.png)            |
+| (FDS) Switch Disk Side                           | ![](../image/retropad/retro_r1.png)            |
+| (VS) Insert Coin 1                               | ![](../image/retropad/retro_l2.png)            |
+| (VS) Insert Coin 2                               | ![](../image/retropad/retro_r2.png)            |
+| (Famicom) Microphone                             | ![](../image/retropad/retro_l3.png)            |
 
 !!! attention
 	The (FDS) Insert Next Disk and (FDS) Switch Disk Side inputs will NOT do anything while the ['FDS: Automatically insert disks' core option](https://docs.libretro.com/library/mesen/#core-options) is enabled.
