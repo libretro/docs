@@ -204,7 +204,7 @@ pages:
       - 'presets': 'shader/presets.md'
       - 'retro': 'shader/retro.md'
       - 'sabr': 'shader/sabr.md'
-      - 'scalefx-OLD-shaders': 'shader/scalefx-OLD-shaders.md'
+      - 'scalefx-OLD-shaders': 'shader/scalefx-old-shaders.md'
       - 'scalefx': 'shader/scalefx.md'
       - 'scalehq': 'shader/scalehq.md'
       - 'scalenx': 'shader/scalenx.md'

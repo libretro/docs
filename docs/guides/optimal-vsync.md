@@ -1,6 +1,6 @@
 # Getting optimal vsync performance
 
-RetroArch uses [Dynamic Rate Control](files/ratecontrol.pdf) to synchronize both video and audio at the same time. Synchronizing like this is a very demanding task timing-wise and dynamic rate control helps smooth out imperfections in timing which are guaranteed to arise.
+RetroArch uses [Dynamic Rate Control](ratecontrol.pdf) to synchronize both video and audio at the same time. Synchronizing like this is a very demanding task timing-wise and dynamic rate control helps smooth out imperfections in timing which are guaranteed to arise.
 
 It can be disabled, but be aware that proper video/audio sync is nearly impossible to obtain in that case.
 
