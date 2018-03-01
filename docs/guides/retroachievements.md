@@ -62,7 +62,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | On Android has a [known issue](https://github.com/libretro/RetroArch/issues/3973) |
-| [Nestopia UE](https://github.com/libretro/nestopia)   | ✔         | |
+| [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         | |
 
