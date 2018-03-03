@@ -129,7 +129,7 @@ The ScummVM core supports the following device type(s) in the controls menu, bol
 | Mouse Down               | ![](../image/retropad/retro_dpad_down.png)     | Mouse Down          |
 | Mouse Left               | ![](../image/retropad/retro_dpad_left.png)     | Mouse Left          |
 | Mouse Right              | ![](../image/retropad/retro_dpad_right.png)    | Mouse Right         |
-| Mouse Button 1           | ![](../image/retropad/retro_a_Round.png)       | Mouse Button 1      |
+| Mouse Button 1           | ![](../image/retropad/retro_a.png)             | Mouse Button 1      |
 |                          | ![](../image/retropad/retro_left_stick.png) X  | Mouse Left/Right    |
 |                          | ![](../image/retropad/retro_left_stick.png) Y  | Mouse Up/Down       |
 

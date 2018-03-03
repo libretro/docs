@@ -119,7 +119,7 @@ Activating multitap support in compatible games can be configured by switching t
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
 | B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/Retro_y.png)    |
+| Y                            | ![](../image/retropad/retro_y.png)    |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |

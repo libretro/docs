@@ -158,12 +158,12 @@ The Beetle VB core supports the following device type(s) in the controls menu, b
 | A                        | ![](../image/retropad/retro_a.png)       |
 | L                        | ![](../image/retropad/retro_l1.png)            |
 | R                        | ![](../image/retropad/retro_r1.png)            |
-| Right D-Pad Up           | ![](../imags/retropad/retro_l2.png)            |
+| Right D-Pad Up           | ![](../image/retropad/retro_l2.png)            |
 | Right D-Pad Left         | ![](../image/retropad/retro_r2.png)            |
 | Right D-Pad Down         | ![](../image/retropad/retro_l3.png)            |
 | Right D-Pad Right        | ![](../image/retropad/retro_r3.png)            |
 | Right D-Pad X            | ![](../image/retropad/retro_right_stick.png) X |
-| Right D-Pad Y            | ![](../image/retropad/retro_tight_stick.png) Y |
+| Right D-Pad Y            | ![](../image/retropad/retro_right_stick.png) Y |
 
 ## Compatibility
 
