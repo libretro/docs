@@ -2,21 +2,29 @@
 
 ## FAQ
 
+What is netplay?
+
+- It's a mechanism that allows multiplayer over a network. It's not link cable emulation though. It's same system multiplayer.
+
 Does RetroArch require port-forwarding to work?
 
-- Yes, the host needs to forward the ports properly, please read the Setup Guide below.
+- Yes, the host needs to forward the ports properly. There is a fallback mechanism that can be employed by those who can't forward the ports, please read the Setup Guide below.
 
 Does it support more than two players?
 
 - Yes!
 
+What do you think for RetroArch netplay to work?
+
+- Same RetroArch version, same core version, and the same exact content.
+
 RetroArch says *Content not found, try loading content manually* 
 
 - Either load content manually, have the content in your recent history list, or scan your content to a playlist.
 
-Does the core need to be the same version for the server and the client?
+Does RetroArch support cross-platform netplay?
 
-- Yes, also some cores may not work for cross-platform netplay.
+- Yes, but your mileage may vary, particularly when endianness differs.
 
 Which cores work for netplay?
 
@@ -24,11 +32,11 @@ Which cores work for netplay?
 
 Does PSX / N64 / Dreamcast / Gamecube / Wii / 3DS netplay work?
 
-- No, currently the performance requirements and save state sizes make this too problematic at the moment.
+- No, the performance requirements make the current model unsuitable for those.
 
 Can I play GB / GBC / GBA / PSP / 3DS games with multiple people via RetroArch Netplay?
 
-- No, RetroArch's netplay is not link-cable emulation, GB, GBA, PSP netplay are currently not possible with our implementation. One notable exception is same game GB/GBC Netplay via the TGB-Dual core.
+- No, RetroArch's netplay is not link-cable emulation, GB, GBA, PSP netplay are currently not possible with our implementation. One notable exception is same game GB/GBC Netplay via the TGB-Dual and Sameboy cores.
 
 Can I trade pokemons via RetroArch Netplay?
 
