@@ -261,3 +261,4 @@ markdown_extensions:
   - codehilite(linenums=true)
   - toc(permalink=Link)
   - pymdownx.details
+  - pymdownx.superfences
