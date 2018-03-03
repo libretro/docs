@@ -45,6 +45,8 @@ pages:
       - 'Debugging': 'tech/debugging.md'
       - 'Adding Menu Entries': 'tech/new-menu-options.md'
       - 'Licenses': 'tech/licenses.md'
+      - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
+      - 'Adding Translations': 'tech/new-translations.md'
       - Protocols:
         - 'Netplay': 'tech/netplay.md'
         - 'Network Control Interface': 'tech/network-control-interface.md'
