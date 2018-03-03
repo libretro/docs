@@ -474,7 +474,7 @@ Activating multitap support in compatible games can be configured by the ['Multi
 | D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up    | D-Pad Up       | -      |
 | D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down  | D-Pad Down     | -      |
 | D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left  | D-Pad Left     | -      |
-| D-Pad Right                   | ![](../imags/retropad/retro_dpad_right.png)    | D-Pad Right | D-Pad Right    | -      |
+| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right | D-Pad Right    | -      |
 | Circle                        | ![](../image/retropad/retro_a.png)       | Circle      | Circle         | -      |
 | Triangle                      | ![](../image/retropad/retro_x.png)       | Triangle    | Triangle       | -      |
 | L1                            | ![](../image/retropad/retro_l1.png)            | L1          | L1             | -      |
@@ -486,7 +486,7 @@ Activating multitap support in compatible games can be configured by the ['Multi
 | Left Analog X                 | ![](../image/retropad/retro_left_stick.png) X  |             | Left Analog X  | -      |
 | Left Analog Y                 | ![](../image/retropad/retro_left_stick.png) Y  |             | Left Analog Y  | -      |
 | Right Analog X                | ![](../image/retropad/retro_right_stick.png) X |             | Right Analog X | -      |
-| Right Analog Y                | ![](../image/retropad/Retro_right_stick.png) Y |             | Right Analog Y | -      |
+| Right Analog Y                | ![](../image/retropad/retro_right_stick.png) Y |             | Right Analog Y | -      |
 
 ## Compatibility
 

@@ -278,7 +278,7 @@ The Fuse core supports the following device type(s) in the controls menu, bolded
 | Down                          | ![](../image/retropad/retro_dpad_down.png)     |
 | Left                          | ![](../image/retropad/retro_dpad_left.png)     |
 | Right                         | ![](../image/retropad/retro_dpad_right.png)    |
-| Fire                          | ![](../image/retropad/retro_A.png)       |
+| Fire                          | ![](../image/retropad/retro_a.png)       |
 | Fire                          | ![](../image/retropad/retro_x.png)       |
 | Enter                         | ![](../image/retropad/retro_l1.png)            |
 | Space                         | ![](../image/retropad/retro_r1.png)            |

@@ -362,6 +362,11 @@
 
 ### [〰️] Mesen
 
+- Add core provided fps.
+- Add core base width
+- Add core base height
+- Add core max width
+- Add core max height
 - Add HD Pack Before-After screenshots.
 - Add NTSC Filter core option screenshots.
 - Add Palette core option screenshots.
@@ -370,7 +375,6 @@
 - Add Aspect Ratio core option screenshots.
 - Add Sprite Limit core option screenshots.
 - Add Screen Rotation core option screenshots.
-- Add Hori Track inputs.
 
 ### [✕] MESS 2014
 

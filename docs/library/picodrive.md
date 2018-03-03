@@ -200,7 +200,7 @@ The PicoDrive core supports the following device type(s) in the controls menu, b
 | User 1 - 2 Remap descriptors | RetroPad Inputs                              | 3 button pad | 6 button pad |
 |------------------------------|----------------------------------------------|--------------|--------------|
 | B                            | ![](../image/retropad/retro_b.png)       | B            | B            |
-| A                            | ![](../image/retropad/retro_Y.png)       | A            | A            |
+| A                            | ![](../image/retropad/retro_y.png)       | A            | A            |
 | Mode                         | ![](../image/retropad/retro_select.png)        |              | Mode         |
 | Start                        | ![](../image/retropad/retro_start.png)         | Start        | Start        |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up     | D-Pad Up     |
