@@ -124,10 +124,12 @@
 
 ### [〰️] blueMSX
 
-- Complete why use this core section.
-- Complete compatibility section.
-- Test save support.
-- Add core provided aspect ratio.
+- Add core base height
+- Add core base width
+- Add core max height
+- Add core max width
+- ADd core provided aspect ratio.
+- Add Sound YM2413 Enable core description.
 - Add RetroPad Keyboard Map inputs
 
 ### [✔] bnes

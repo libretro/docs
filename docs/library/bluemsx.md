@@ -1,68 +1,20 @@
 # MSX/SVI/ColecoVision/SG-1000 (blueMSX)
 
-## Contribute to this documentation
-
-**DOCUMENTATION IS A WORK IN PROGRESS**
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/bluemsx.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
 blueMSX is a cycle accurate emulator that emulates all generations of MSX computers as well as SVI, ColecoVision and Sega SG-1000.
 
-### Why use this core?
+### Author/License
 
-Awaiting description.
-
-### How to install the blueMSX core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](..\image\core\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](..\image\core\all\info.png) </center>
-
-- Browse through the list and select 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)'.
-
-<center> ![](..\image\core\updater\bluemsx.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start the (Core name) core:
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](..\image\core\all\load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)'.
-
-The content should now start running!
-
-### Authors
+The blueMSX core has been authored by
 
 - Daniel Vik
-
-## See also
-
-- [MSX (fMSX)](https://docs.libretro.com/library/fmsx/)
-
-## License
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 The blueMSX core is licensed under
 
 - [GPLv2](https://github.com/libretro/blueMSX-libretro/blob/master/license.txt)
+
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ## Extensions
 
@@ -92,19 +44,19 @@ RetroArch database(s) that are associated with the blueMSX core:
 
 The blueMSX core requires the 'Databases' and 'Machines' folders from a full installation of blueMSX.
 
-You can download the 'Databases' and 'Machines' folders from here  [https://github.com/libretro/blueMSX-libretro/tree/master/system/bluemsx](https://github.com/libretro/blueMSX-libretro/tree/master/system/bluemsx) or you can get them from an official full standalone blueMSX emulator installation. (link to blueMSX official website at bottom of page)
+You can download the 'Databases' and 'Machines' folders from here [https://github.com/libretro/blueMSX-libretro/tree/master/system/bluemsx](https://github.com/libretro/blueMSX-libretro/tree/master/system/bluemsx) or you can get them from an [official full standalone blueMSX emulator installation](http://bluemsx.msxblue.com/download.html).
 
 Copy the 'Databases' and 'Machines' Folders to RetroArch's System directory.
 
 ## Features
 
-RetroArch-level settings or features that the blueMSX core respects.
+Frontend-level settings or features that the blueMSX core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | -         |
+| Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
@@ -129,37 +81,43 @@ RetroArch-level settings or features that the blueMSX core respects.
 
 ### Directories
 
-The blueMSX core's directory name is 'blueMSX'
+The blueMSX core's library name is 'blueMSX'
 
 The blueMSX core saves/loads to/from these directories.
 
-**RetroArch's Config directory**
+**Frontend's System directory**
 
-- blueMSX.cfg (Core Overrides)
-- 'content-name'.cfg (Game Overrides)
-- 'content-name'.opt (Game-options)
-
-**RetroArch's Input Remapping directory**
-
-- blueMSX.rmp (Core Remap)
-- 'content-name'.rmp (Game Remap)
-
-**RetroArch's Video Shader directory**
-
-- blueMSX.'shader-preset-extension' (Core Shader Preset)
-- 'content-name'.'shader-preset-extension' (Game Shader Preset)
+| File                | Description     |
+|:-------------------:|:---------------:|
+| bluemsx.ini         | blueMSX Config  |
+| bluemsx_history.ini | blueMSX History |
 
 ### Geometry and timing
 
 - The blueMSX core's core provided FPS is 60
-- The blueMSX core's core provided sample rate is 41000 Hz
+- The blueMSX core's core provided sample rate is 44100 Hz
+- The blueMSX core's base width is (Base width)
+- The blueMSX core's base height is (Base height)
+- The blueMSX core's max width is (Max width)
+- The blueMSX core's max height is (Max height)
 - The blueMSX core's core provided aspect ratio is (Ratio)
 
-### Usage
+## Usage
 
-To play SpectraVideo cassettes, type 'cload' and then 'run' or BLOAD "CAS:",R depending on the game.
+ColecoVision Gamepad Mapping is as follow:
 
-### Multiple-disk games
+- Button 1 as Retropad A
+- Button 2 as Retropad B
+- Dial keys 1 to 8 as X, Y, R, L, R2, L2, R3, L3
+- Star (*) as Select, Hash (#) as Start
+- 0 & 9 are on keyboard 1 & 2 for Player 1
+- 0 & 9 are on keyboard 3 & 4 for Player 2.
+
+To play SpectraVideo cassettes type 'cload' then 'run' 
+
+or BLOAD ''CAS:'',R depending on the game.
+
+## Multiple-disk games
 
 If foo is a multiple-disk game, you should have .dsk files for each one, e.g. `foo (Disk 1).dsk`, `foo (Disk 2).dsk`, `foo (Disk 3).dsk`.
 
@@ -184,11 +142,11 @@ The blueMSX core has the following option(s) that can be tweaked from the core o
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Machine Type (Restart)** (**Auto**/MSX/MSXturboR/MSX2/MSX2+/SEGA - SG-1000/SEGA - SC-3000/SEGA - SF-7000/SVI - Spectravideo SVI-318/SVI - Spectravideo SVI-328/SVI - Spectravideo SVI-328 MK2/ColecoVision/Coleco (Spectravideo SVI-603))
+- **Machine Type (Restart)** [bluemsx_msxtype] (**Auto**|MSX|MSXturboR|MSX2|MSX2+|SEGA - SG-1000|SEGA - SC-3000|SEGA - SF-7000|SVI - Spectravideo SVI-318|SVI - Spectravideo SVI-328|SVI - Spectravideo SVI-328 MK2|ColecoVision|Coleco (Spectravideo SVI-603))
 
-	Select the machine type you would like the core to start in.
-
-- **Crop Overscan** (**Off**/On/MSX2)
+	Manually select the machine type you would like the core to start in.
+	
+- **Crop Overscan** [bluemsx_overscan] (**disabled**|enabled|MSX2)
 
 	Forces cropping of overscanned frames
 	
@@ -199,189 +157,184 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     ![](..\image\core\bluemsx\crop_on.png)
 
 ??? note "*Crop Overscan MSX2*"
-    ![](..\image\core\bluemsx\crop_msx2.png)	
-
-- **VDP Sync Type (Restart)** (**Auto**/50Hz/60Hz)
+    ![](..\image\core\bluemsx\crop_msx2.png)
+	
+- **VDP Sync Type (Restart)** [bluemsx_vdp_synctype] (**Auto**|50Hz|60Hz)
 
 	Match the game/machine region frequency to avoid emulated speed issues.
-
-- **No Sprite Limit** (**Off**/On)
+	
+- **No Sprite Limit** [bluemsx_nospritelimits] (**OFF**|ON)
 
 	Remove the 4 sprite per line limit which can reduce or remove sprite flicker in some games.
+	
+- **Sound YM2413 Enable (Restart)** [bluemsx_ym2413_enable] (**enabled**|disabled)
 
-- **Sound YM2413 Enable (Restart)** (Off/**On**)
-
-	Sound YM2413 enable.
-
-- **Cart Mapper Type (Restart)** (**Auto**/Normal/mirrored/basic/0x4000/0xC000/ascii8/ascii8sram/ascii16/ascii16sram/ascii16nf/konami4/konami4nf/konami5/konamisynth/korean80/korean90/korean126/MegaFlashRomScc/MegaFlashRomSccPlus/msxdos2/scc/sccexpanded/sccmirrored/sccplus/snatcher/dsnatcher/SegaBasic/SG1000/SG1000Castle/SG1000RamA/SG1000RamB/SC3000)
+	Awaiting description.
+	
+- **Cart Mapper Type (Restart)** [bluemsx_cartmapper] (**Auto**|Normal|mirrored|basic|0x4000|0xC000|ascii8|ascii8sram|ascii16|ascii16sram|ascii16nf|konami4|konami4nf|konami5|konamisynth|korean80|korean90|korean126|MegaFlashRomScc|MegaFlashRomSccPlus|msxdos2|scc|sccexpanded|sccmirrored|sccplus|snatcher|sdsnatcher|SegaBasic|SG1000|SG1000Castle|SG1000RamA|SG1000RamB|SC3000)
 
 	When a rom game or application is in the database, the emulator uses the databases to apply the correct mapper. If the sha1 value of a dump is not yet in the databases, it uses an automatic mapper detection system, but it can fail in some cases. In this situation, you can manually select the correct mapper.
-
+	
 ## Controllers
 
 The blueMSX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
-- None - Doesn't disable input.
+- None - Doesn't disable input. There's no reason to switch to this.
 - **RetroPad** - Joypad
-- RetroKeyboard - Keyboard - Has keymapper support
-- RetroPad Keyboard Map - Joypad
+- RetroKeyboard - Keyboard - Keyboard inputs are always active. Has keymapper support.
+- RetroPad Keyboard Map - Joypad - Awaiting description.
 
 ### User 2 device types
 
-- None - Doesn't disable input.
+- None - Doesn't disable input. There's no reason to switch to this.
 - **RetroPad** - Joypad
-- RetroKeyboard - Keyboard
+- RetroKeyboard - Keyboard - Keyboard inputs are always active.
 
 ### Controller tables
 
 #### Joypad
 
-| User 1 - 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | RetroPad             |
-|---------------------------------------------------------|------------------------------------------------|----------------------|
-| Button 2                                                | ![](../image/retropad/retro_b.png)             | Button 2             |
-| Button 3                                                | ![](../image/retropad/retro_y.png)             | Button 3, Coleco #2  |
-| Select                                                  | ![](../image/retropad/retro_select.png)        | Select, Coleco *     |
-| Start                                                   | ![](../image/retropad/retro_start.png)         | Start, Coleco #      |
-| Joy Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | Joy Up               |
-| Joy Down                                                | ![](../image/retropad/retro_dpad_down.png)     | Joy Down             |
-| Joy Left                                                | ![](../image/retropad/retro_dpad_left.png)     | Joy Left             |
-| Joy Right                                               | ![](../image/retropad/retro_dpad_right.png)    | Joy Right            |
-| Button 1                                                | ![](../image/retropad/retro_a.png)             | Button 1             |
-| Button 4                                                | ![](../image/retropad/retro_x.png)             | Button 4, Coleco #1  |  
-| Button 5                                                | ![](../image/retropad/retro_l1.png)            | Button 5, Coleco #4  |
-| Button 6                                                | ![](../image/retropad/retro_r1.png)            | Button 6, Coleco #3  |
-| Button 7                                                | ![](../image/retropad/retro_l2.png)            | Button 7, Coleco #6  |
-| Button 8                                                | ![](../image/retropad/retro_r2.png)            | Button 8, Coleco #5  |
-| Button 9                                                | ![](../image/retropad/retro_l3.png)            | Button 9, Coleco #8  |
-| Button 10                                               | ![](../image/retropad/retro_r3.png)            | Button 10, Coleco #7 |
-
-!!! attention
-	Coleco #0 and #9 inputs are mapped to Keyboard 1 & 2 for Player 1 and Keyboard 3 & 4 for Player 2.
-
-| User 1 Remap descriptors for 'RetroPad Keyboard Map' device type | RetroPad Inputs                                | RetroPad Keyboard Map     |
-|------------------------------------------------------------------|------------------------------------------------|---------------------------|
-|                                                                  | ![](../image/retropad/retro_b.png)             |                           |
-|                                                                  | ![](../image/retropad/retro_y.png)             |                           |
-|                                                                  | ![](../image/retropad/retro_select.png)        |                           |
-|                                                                  | ![](../image/retropad/retro_start.png)         |                           |
-|                                                                  | ![](../image/retropad/retro_dpad_up.png)       |                           |
-|                                                                  | ![](../image/retropad/retro_dpad_down.png)     |                           |
-|                                                                  | ![](../image/retropad/retro_dpad_left.png)     |                           |
-|                                                                  | ![](../image/retropad/retro_dpad_right.png)    |                           |
-|                                                                  | ![](../image/retropad/retro_a.png)             |                           |
-|                                                                  | ![](../image/retropad/retro_x.png)             |                           |
-|                                                                  | ![](../image/retropad/retro_l1.png)            |                           |
-|                                                                  | ![](../image/retropad/retro_r1.png)            |                           |
-|                                                                  | ![](../image/retropad/retro_l2.png)            |                           |
-|                                                                  | ![](../image/retropad/retro_r2.png)            |                           |
-|                                                                  | ![](../image/retropad/retro_l3.png)            |                           |
-|                                                                  | ![](../image/retropad/retro_r3.png)            |                           |
+| User 1 and 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | blueMSX core inputs        |
+|-----------------------------------------------------------|------------------------------------------------|----------------------------|
+| Button 2                                                  | ![](../image/retropad/retro_b.png)             | Button 2, Coleco Button 2  |
+| Button 3                                                  | ![](../image/retropad/retro_y.png)             | Button 3, Coleco #2        |
+| Select                                                    | ![](../image/retropad/retro_select.png)        | Select, Coleco Star (*)    |
+| Start                                                     | ![](../image/retropad/retro_start.png)         | Start, Coleco Hash (#)     |
+| Joy Up                                                    | ![](../image/retropad/retro_dpad_up.png)       | Joy Up                     |
+| Joy Down                                                  | ![](../image/retropad/retro_dpad_down.png)     | Joy Down                   |
+| Joy Left                                                  | ![](../image/retropad/retro_dpad_left.png)     | Joy Left                   |
+| Joy Right                                                 | ![](../image/retropad/retro_dpad_right.png)    | Joy Right                  |
+| Button 1                                                  | ![](../image/retropad/retro_a.png)             | Button 1,  Coleco Button 1 |
+| Button 4                                                  | ![](../image/retropad/retro_x.png)             | Button 4, Coleco #1        |
+| Button 5                                                  | ![](../image/retropad/retro_l1.png)            | Button 5, Coleco #4        |
+| Button 6                                                  | ![](../image/retropad/retro_r1.png)            | Button 6, Coleco #3        |
+| Button 7                                                  | ![](../image/retropad/retro_l2.png)            | Button 7, Coleco #6        |
+| Button 8                                                  | ![](../image/retropad/retro_r2.png)            | Button 8, Coleco #5        |
+| Button 9                                                  | ![](../image/retropad/retro_l3.png)            | Button 9. Coleco #8        |
+| Button 10                                                 | ![](../image/retropad/retro_r3.png)            | Button 10, Coleco #7       |
 
 #### Keyboard
 
-| RetroKeyboard Inputs         | RetroKeyboard      |
-|------------------------------|--------------------|
-| Keyboard Backspace           | EC_BKSPACE         |
-| Keyboard Tab                 | EC_TAB             |
-| Keyboard Return              | EC_RETURN          |
-| Keyboard Pause               | EC_PAUSE           |
-| Keyboard Escape              | EC_ESC             |
-| Keyboard Space               | EC_SPACE           |
-| Keyboard Quote '             | EC_COLON           |
-| Keyboard Comma ,             | EC_COMMA           |
-| Keyboard Minus -             | EC_NEG             |
-| Keyboard Period .            | EC_PERIOD          |
-| Keyboard Slash /             | EC_DIV             |
-| Keyboard 0                   | EC_0               |
-| Keyboard 0 + Keyboard Left Shift | EC_UNDSCRE     |
-| Keyboard 1                   | EC_1               |
-| Keyboard 2                   | EC_2               |
-| Keyboard 3                   | EC_3               |
-| Keyboard 4                   | EC_4               |
-| Keyboard 5                   | EC_5               |
-| Keyboard 6                   | EC_6               |
-| Keyboard 7                   | EC_7               |
-| Keyboard 8                   | EC_8               |
-| Keyboard 9                   | EC_9               |
-| Keyboard Semicolon ;         | EC_SEMICOL         |
-| Keyboard Equals =            | EC_CIRCFLX         |
-| Keyboard Left Bracket [      | EC_LBRACK          |
-| Keyboard Backslash \         | EC_BKSLASH         |
-| Keyboard Right Bracket ]     | EC_RBRACK          |
-| Keyboard Backquote `         | EC_AT              |
-| Keyboard a                   | EC_A               |
-| Keyboard b                   | EC_B               |
-| Keyboard c                   | EC_C               |
-| Keyboard d                   | EC_D               |
-| Keyboard e                   | EC_E               |
-| Keyboard f                   | EC_F               |
-| Keyboard g                   | EC_G               |
-| Keyboard h                   | EC_H               |
-| Keyboard i                   | EC_I               |
-| Keyboard j                   | EC_J               |
-| Keyboard k                   | EC_K               |
-| Keyboard l                   | EC_L               |
-| Keyboard m                   | EC_M               |
-| Keyboard n                   | EC_N               |
-| Keyboard o                   | EC_O               |
-| Keyboard p                   | EC_P               |
-| Keyboard q                   | EC_Q               |
-| Keyboard r                   | EC_R               |
-| Keyboard s                   | EC_S               |
-| Keyboard t                   | EC_T               |
-| Keyboard u                   | EC_U               |
-| Keyboard v                   | EC_V               |
-| Keyboard w                   | EC_W               |
-| Keyboard x                   | EC_X               |
-| Keyboard y                   | EC_Y               |
-| Keyboard z                   | EC_Z               |
-| Keyboard Delete              | EC_DEL             |
-| Keyboard Keypad 0            | EC_NUM0            |
-| Keyboard Keypad 1            | EC_NUM1            |
-| Keyboard Keypad 2            | EC_NUM2            |
-| Keyboard Keypad 3            | EC_NUM3            |
-| Keyboard Keypad 4            | EC_NUM4            |
-| Keyboard Keypad 5            | EC_NUM5            |
-| Keyboard Keypad 6            | EC_NUM6            |
-| Keyboard Keypad 7            | EC_NUM7            |
-| Keyboard Keypad 8            | EC_NUM8            |
-| Keyboard Keypad 9            | EC_NUM9            |
-| Keyboard Keypad Period .     | EC_NUMCOM          |
-| Keyboard Keypad Divide /     | EC_NUMDIV          |
-| Keyboard Keypad Multiply *   | EC_NUMMUL          |
-| Keyboard Keypad Minus -      | EC_NUMSUB          |
-| Keyboard Keypad Plus +       | EC_NUMADD          |
-| Keyboard Keypad Equals =     | EC_NUMPER          |
-| Keyboard Up                  | EC_UP              |
-| Keyboard Down                | EC_DOWN            |
-| Keyboard Right               | EC_RIGHT           |
-| Keyboard Left                | EC_LEFT            |
-| Keyboard Insert              | EC_INS             |
-| Keyboard Home                | EC_CLS             |
-| Keyboard End                 | EC_STOP            |
-| Keyboard Page Up             | EC_SELECT          |
-| Keyboard F1                  | EC_F1              |
-| Keyboard F2                  | EC_F2              |
-| Keyboard F3                  | EC_F3              |
-| Keyboard F4                  | EC_F4              |
-| Keyboard F5                  | EC_F5              |
-| Keyboard Caps Lock           | EC_CAPS            |
-| Keyboard Right Shift         | EC_RSHIFT          |
-| Keyboard Left Shift          | EC_LSHIFT          |
-| Keyboard Left Control        | EC_CTRL            |
-| Keyboard Left Alt            | EC_GRAPH           |
-| Keyboard Print               | EC_PRINT           |
+| RetroKeyboard Inputs         | RetroKeyboard         |
+|------------------------------|-----------------------|
+| Keyboard Backspace           | BACKSPACE             |
+| Keyboard Tab                 | TAB                   |
+| Keyboard Return              | RETURN                |
+| Keyboard Pause               | PAUSE                 |
+| Keyboard Escape              | ESCAPE                |
+| Keyboard Space               | SPACE                 |
+| Keyboard Quote '             | COLON                 |
+| Keyboard Comma ,             | COMMA                 |
+| Keyboard Minus -             | NEGATIVE              |
+| Keyboard Period .            | PERIOD                |
+| Keyboard Slash /             | DIVIDE                |
+| Keyboard 0                   | 0                     |
+| Keyboard 1                   | 1, Player 1 Coleco #0 |
+| Keyboard 2                   | 2, Player 1 Coleco #9 |
+| Keyboard 3                   | 3, Player 2 Coleco #0 |
+| Keyboard 4                   | 4, Player 2 Coleco #9 |
+| Keyboard 5                   | 5                     |
+| Keyboard 6                   | 6                     |
+| Keyboard 7                   | 7                     |
+| Keyboard 8                   | 8                     |
+| Keyboard 9                   | 9                     |
+| Keyboard Semicolon ;         | SEMICOLON             |
+| Keyboard Equals =            | CIRCUMFLEX            |
+| Keyboard Left Bracket [      | LEFT BRACKET          |
+| Keyboard Backslash \         | BACKSLASH (YEN)       |
+| Keyboard Right Bracket ]     | RIGHT BRACKET         |
+| Keyboard Backquote `         | AT                    |
+| Keyboard a                   | A                     |
+| Keyboard b                   | B                     |
+| Keyboard c                   | C                     |
+| Keyboard d                   | D                     |
+| Keyboard e                   | E                     |
+| Keyboard f                   | F                     |
+| Keyboard g                   | G                     |
+| Keyboard h                   | H                     |
+| Keyboard i                   | I                     |
+| Keyboard j                   | J                     |
+| Keyboard k                   | K                     |
+| Keyboard l                   | L                     |
+| Keyboard m                   | M                     |
+| Keyboard n                   | N                     |
+| Keyboard o                   | O                     |
+| Keyboard p                   | P                     |
+| Keyboard q                   | Q                     |
+| Keyboard r                   | R                     |
+| Keyboard s                   | S                     |
+| Keyboard t                   | T                     |
+| Keyboard u                   | U                     |
+| Keyboard v                   | V                     |
+| Keyboard w                   | W                     |
+| Keyboard x                   | X                     |
+| Keyboard y                   | Y                     |
+| Keyboard z                   | Z                     |
+| Keyboard Delete              | DELETE                |
+| Keyboard Keypad 0            | NUMPAD 0              |
+| Keyboard Keypad 1            | NUMPAD 1              |
+| Keyboard Keypad 2            | NUMPAD 2              |
+| Keyboard Keypad 3            | NUMPAD 3              |
+| Keyboard Keypad 4            | NUMPAD 4              |
+| Keyboard Keypad 5            | NUMPAD 5              |
+| Keyboard Keypad 6            | NUMPAD 6              |
+| Keyboard Keypad 7            | NUMPAD 7              |
+| Keyboard Keypad 8            | NUMPAD 8              |
+| Keyboard Keypad 9            | NUMPAD 9              |
+| Keyboard Keypad Period .     | NUMPAD COMMA          |
+| Keyboard Keypad Divide /     | NUMPAD DIVIDE         |
+| Keyboard Keypad Multiply *   | NUMPAD MULTIPLY       |
+| Keyboard Keypad Minus -      | NUMPAD SUBTRACTION    |
+| Keyboard Keypad Plus +       | NUMPAD ADD            |
+| Keyboard Keypad Enter        | NUMPAD PERIOD         |
+| Keyboard Up                  | UP                    |
+| Keyboard Down                | DOWN                  |
+| Keyboard Right               | RIGHT                 |
+| Keyboard Left                | LEFT                  |
+| Keyboard Insert              | INSERT                |
+| Keyboard Home                | CLS                   |
+| Keyboard End                 | STOP                  |
+| Keyboard Page Up             | SELECT                |
+| Keyboard F1                  | F1                    |
+| Keyboard F2                  | F2                    |
+| Keyboard F3                  | F3                    |
+| Keyboard F4                  | F4                    |
+| Keyboard F5                  | F5                    |
+| Keyboard Caps Lock           | CAPS                  |
+| Keyboard Right Shift         | RIGHT SHIFT           |
+| Keyboard Left Shift          | LEFT SHIFT            |
+| Keyboard Left Control        | CONTROL               |
+| Keyboard Left Alt            | GRAPH                 |
+| Keyboard Print               | PRINT                 |
+
+Supported combinations
+
+- Keyboard Left or Right Shift + Keyboard 0 = UNDERSCORE
 
 ## Compatibility
 
-Awaiting description.
+- [blueMSX Manual](http://www.msxblue.com/manual/settingsports.htm)
 
 ## External Links
 
+- [Official blueMSX Website](http://bluemsx.com/)
+- [Official blueMSX SourceForge Repository](http://sourceforge.net/projects/bluemsx/)
 - [Libretro blueMSX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/bluemsx_libretro.info)
 - [Libretro blueMSX Github Repository](https://github.com/libretro/blueMSX-libretro)
 - [Report Libretro blueMSX Core Issues Here](https://github.com/libretro/blueMSX-libretro/issues)
-- [Official/Original blueMSX Website](http://bluemsx.com/)
-- [Official/Original blueMSX SourceForge Repository](http://sourceforge.net/projects/bluemsx/)
+
+### See also
+
+#### Sega - SG-1000
+
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+
+#### Microsoft - MSX
+
+- [Microsoft - MSX (fMSX)](https://docs.libretro.com/library/fmsx/)
+
+#### Microsoft - MSX2
+
+- [Microsoft - MSX (fMSX)](https://docs.libretro.com/library/fmsx/)
