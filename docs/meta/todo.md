@@ -486,6 +486,11 @@
 
 ### [〰️] PrBoom
 
+Add core base width
+Add core base height
+Add core max width
+Add core max height
+
 ### [✔] ProSystem
 
 ### [〰️] PX68k

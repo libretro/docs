@@ -413,3 +413,8 @@
 - [Imageviewer](https://docs.libretro.com/library/imageviewer/)
 - [mpv](https://docs.libretro.com/library/mpv/)
 - [PocketCDG](https://docs.libretro.com/library/pocketcdg/)
+
+#### id Software
+
+- [Doom (PrBoom)](https://docs.libretro.com/library/prboom/)
+- [Quake 1 (TyrQuake)](https://docs.libretro.com/library/tyrquake/)
