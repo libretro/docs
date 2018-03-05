@@ -18,7 +18,7 @@ The Snes9x core has been authored by
 
 The Snes9x core is licensed under
 
-- [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)
+- [Non-commercial](https://github.com/snes9xgit/snes9x/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
