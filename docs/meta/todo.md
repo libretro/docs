@@ -568,8 +568,15 @@ Add core max height
 
 ### [〰️] TyrQuake
 
-- Complete Core option descriptions.
 - Complete expansion pack section.
+- Add core base width
+- Add core base height
+- Add core max width
+- Add core max height
+- Add core provided fps
+- Add Colored lightning core option description.
+- Add Invert Y Axis core option description.
+- Add Keyboard and mouse table. (This core uses keyboard callback).
 
 ### [✕] UME 2014
 
