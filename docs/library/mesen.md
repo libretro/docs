@@ -91,7 +91,7 @@ The Mesen core saves/loads to/from these directories.
 
 | File  | Description            |
 |:-----:|:----------------------:|
-| *.sav | Cartridge battery save |
+| *.srm | Cartridge battery save |
 
 **Frontend's State directory**
 
