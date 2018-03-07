@@ -2,10 +2,7 @@
 
 ## Background
 
-Gearboy is a Nintendo Game Boy / GameBoy Color emulator written in C++ that runs on iOS, Raspberry Pi, Mac, Windows, Linux and RetroArch.
-
-Features
---------
+Gearboy is an open source, multi-platform, Nintendo Game Boy (DMG) / Game Boy Color (CGB) emulator written in C++.
 
 - Highly accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
 - Accurate instruction and memory timing, passes instr_timing.gb and mem_timing.gb from blargg's tests.
@@ -13,11 +10,8 @@ Features
 - Accurate LCD controller emulation. Background, window and sprites, with correct timings and priorities including mid-scanline timing.
 - Mix frames: Mimics the LCD ghosting effect seen in the original Game Boy.
 - Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
-- Game Boy Color support.
-- Integrated disassembler. It can dump the full disassembled memory to a text file or access it in real time.
-- Saves battery powered RAM cartridges to file.
-- Compressed rom support (ZIP deflate).
-- Multi platform. Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
+- Battery powered RAM save support.
+- Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
 
 ### Author/License
 
@@ -48,20 +42,24 @@ RetroArch database(s) that are associated with the Gearboy core:
 - [Nintendo - Game Boy](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy.rdb)
 - [Nintendo - Game Boy Color](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Color.rdb)
 
+## BIOS
+
+Not required.
+
 ## Features
 
 Frontend-level settings or features that the Gearboy core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✕         |
+| Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
-| Rewind            | ✕         |
+| States            | ✔         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
-| RetroAchievements | ✕         |
+| Core Options      | ✔         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -72,7 +70,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) |✕         |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -87,13 +85,35 @@ The Gearboy core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery backup save)
+- 'content-name'.srm (Cartridge battery save)
+- 'content-name'.rtc (Real time clock save)
+
+**Frontend's State directory**
+
+- 'content-name'.state# (State)
 
 ### Geometry and timing
 
 - The Gearboy core's core provided FPS is 59.7275005696
 - The Gearboy core's core provided sample rate is 44100 Hz
 - The Gearboy core's core provided aspect ratio is 10/9
+
+## Core options
+
+The Gearboy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+- **Emulated Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG)
+
+	Select which hardware/model is emulated.
+
+    - Auto selects the best hardware based in the rom.
+    - Game Boy DMG forces original Game Boy hardware.
+
+- **Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
+
+	Select a color palette for Game Boy DMG games.
 
 ## Controllers
 

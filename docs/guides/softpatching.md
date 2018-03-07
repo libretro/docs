@@ -10,11 +10,12 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 |--------------------------------------------|:---------:|
 | [Beetle Cygne](../library/beetle_cygne.md) | ✔         |
 
-### Nintendo - Game Boy / Color 
+### Nintendo - Game Boy / Color
 
 | Core                               | Supported |
 |------------------------------------|:---------:|
 | [Gambatte](../library/gambatte.md) | ✔         |
+| [Gearboy](../library/gearboy.md)   | ✔         |
 | [TGB Dual](../library/tgb_dual.md) | ✔         |
 
 ### Nintendo - Game Boy Advance
@@ -26,7 +27,7 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [VBA-M](../library/vba_m.md)       | ✔         |
 | [VBA Next](../library/vba_next.md) | ✔         |
 
-### Nintendo - SNES / Famicom 
+### Nintendo - SNES / Famicom
 
 | Core                                                                 | Supported |
 |----------------------------------------------------------------------|:---------:|

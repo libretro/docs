@@ -17,7 +17,7 @@
 2. Open Retroarch and go to Settings->Achievements
 3. Enable the functionality and fill your retroachievements credentials
 
-!!! note 
+!!! note
     The hardcore mode prevents you from using emulation features like slow motion, cheats and savestates.
     **BUT** gives you double points.
 
@@ -99,11 +99,11 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                      | Supported | Notes |
 |-----------------------------------------------------------|:---------:|-------|
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         | |
+| [Gearboy](https://github.com/libretro/gearboy)            | ✔         | |
 | [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | |
 | [mGBA](https://github.com/libretro/mgba)                  | ✕         | Achievements only work for the Game Boy Advance |
 | [Emux GB](https://github.com/libretro/emux)               | ✕         | |
 | [TGB Dual](https://github.com/libretro/tgbdual-libretro)  | ✕         | |
-| [Gearboy](https://github.com/libretro/gearboy)            | ✕         | |
 
 ### Game Boy Advance
 
