@@ -166,7 +166,7 @@ The (Core name) core saves/loads to/from these directories.
 
 // Fill in the (Core name).
 
--**Frontend's Home directory**
+**Frontend's Home directory**
 
 | File         | Description |
 |:------------:|:-----------:|
@@ -263,9 +263,9 @@ The (Core name) core supports the following device type(s) in the controls menu,
 //// Lightgun
 //// Pointer
 
-### Other controllers
+### Other devices
 // Optional section.
-// This section is for cores that have controllers that cannot be manually selected through the frontend's Controls menu.
+// This section is for cores that have devices that cannot be manually selected through the frontend's Controls menu.
 
 - (Device name) - (Device type) - Optional description.
 
@@ -289,11 +289,11 @@ Rumble only works in the (Core name) core when
 
 // Explain how to activate multitap.
 
-### Controller tables
+### Device tables
 
 #### Joypad
 
-| User # Remap descriptors | RetroPad Inputs                                | (Device name) Inputs      |
+| User # input descriptors | RetroPad Inputs                                | (Device name) Inputs      |
 |--------------------------|------------------------------------------------|---------------------------|
 | Action 1                 | ![](../image/retropad/retro_b.png)             | -                         |
 | Action 2                 | ![](../image/retropad/retro_y.png)             | -                         |

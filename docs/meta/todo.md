@@ -188,6 +188,14 @@
 
 - Complete Speed hack core option description.
 
+### [〰️] DeSmuME 2015
+
+- Complete pointer mode l-analog core option description.
+- Complete pointer mode r-analog core option description.
+- Complete Emulated pointer deadzone percent core option description.
+- Complete Emulated pointer acceleration modifier percent core option description.
+- Complete Enable Edgemark core option description.
+
 ### [〰️] DeSmuME
 
 - Complete pointer mode l-analog core option description.
@@ -195,6 +203,7 @@
 - Complete Emulated pointer deadzone percent core option description.
 - Complete Emulated pointer acceleration modifier percent core option description.
 - Complete Enable Edgemark core option description.
+- Complete core option descriptions.
 
 ### [〰️] Dinothawr
 
@@ -566,6 +575,14 @@ Add core max height
 - Add netplay usage section.
 - Explain what the Next Audio Mode/Prev Audio Mode inputs do.
 - Complete compatbility section.
+
+### [〰️] The Powder Toy
+
+- Add core base width
+- Add core base height
+- Add core max width
+- Add core max height
+- Add core provided aspect ratio.
 
 ### [〰️] TyrQuake
 
