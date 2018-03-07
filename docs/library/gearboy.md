@@ -41,7 +41,7 @@ RetroArch database(s) that are associated with the Gearboy core:
 
 - [Nintendo - Game Boy](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy.rdb)
 - [Nintendo - Game Boy Color](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Color.rdb)
--
+
 ## BIOS
 
 Not required.
