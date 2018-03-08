@@ -495,11 +495,12 @@ Add core max height
 
 ### [〰️] PX68k
 
-- Complete background section.
-- Complete compatibility section.
-- Find out what sram.dat is.
-- Add keyboard inputs.
-- Add Joypad inputs.
+- Add keyboard inputs. https://raw.githubusercontent.com/libretro/px68k-libretro/master/libretro/keyboard.c
+- Complete Use Analog core option description.
+- Complete P1 Joypad Type core option description.
+- Complete P2 Joypad Type core option description.
+- Complete ADPCM Volume core option description.
+- Complete OPM Volume core option description.
 
 ### [✔] QuickNES
 
