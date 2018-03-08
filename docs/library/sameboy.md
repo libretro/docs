@@ -107,7 +107,8 @@ The SameBoy core saves/loads to/from these directories.
 Link cable emulation is supported in single-cart mode and in dual-cart mode.
 To use it in single-cart mode enable the **Single cart dual mode** option under options and reload the content
 
-!!! note The savefile for the second slot in this mode will be named 'gamename.srm.2'
+!!! note
+The savefile for the second slot in this mode will be named 'gamename.srm.2'
 
 To use it in dual-cart mode you have to load content via the Subsystem API which you can achieve via the GUI or via CLI
 
@@ -129,7 +130,8 @@ Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu
 
 ![](../image/core/sameboy/start.png)
 
-!!! warning You have to load any game in the core for the '2 Player Game Boy Link' entries to show up, this is a RetroArch limitation, not a core limitation
+!!! warning
+You have to load any game in the core for the '2 Player Game Boy Link' entries to show up, this is a RetroArch limitation, not a core limitation
 
 !!! warning While loading the same game in this mode should work some users reported issues while linking them, you should use single cart mode for that scenario
 
