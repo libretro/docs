@@ -106,6 +106,7 @@ pages:
         - 'PocketCDG': 'library/pocketcdg.md'
       - Multi System Cores:
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
+        - 'Arcade (MAME 2010)': 'library/mame_2010.md'
       - Misc Cores:
         - '3D Engine': 'library/3d_engine.md'
         - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
