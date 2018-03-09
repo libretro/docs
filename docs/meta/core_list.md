@@ -28,6 +28,7 @@
 - Citra
 - Craft
 - CrocoDS
+- DeSmuME 2015
 - DeSmuME
 - Dinothawr
 - Dolphin
@@ -115,6 +116,7 @@
 - Stella
 - TempGBA
 - TGB Dual
+- The Powder Toy
 - TyrQuake
 - UME 2014
 - Uzem

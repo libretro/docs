@@ -201,16 +201,19 @@
 
 #### Nintendo - Nintendo DS (Download Play)
 
+- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
 - [Nintendo - DS (DeSmuME)](https://docs.libretro.com/library/desmume/)
 - [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)
 
 #### Nintendo - Nintendo DS Decrypted
 
+- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
 - [Nintendo - DS (DeSmuME)](https://docs.libretro.com/library/desmume/)
 - [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)
 
 #### Nintendo - Nintendo DS
 
+- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
 - [Nintendo - DS (DeSmuME)](https://docs.libretro.com/library/desmume/)
 - [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)
 

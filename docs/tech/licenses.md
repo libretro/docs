@@ -84,6 +84,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Craft](../library/craft.md)                     			           | [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)                           |                |
 | [CrocoDS](../library/crocods.md)                 			           | [MIT](https://github.com/libretro/libretro-crocods/blob/master/LICENSE)                   |                |
+| [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |
 | [DeSmuME](../library/desmume.md)                 			           | [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt)                     |                |
 | [Dinothawr](../library/dinothawr.md)             			           | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
@@ -171,6 +172,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Stella](../library/stella.md)                                                   | [GPLv2](https://github.com/stella-emu/stella/blob/master/License.txt)                     |                |
 | TempGBA                                                                          | [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/copyright)               |                |
 | [TGB Dual](../library/tgb_dual.md)                                               | [GPLv2](https://github.com/libretro/tgbdual-libretro/blob/master/docs/COPYING-2.0.txt)    |                |
+| [The Powder Toy](../library/the_powder_toy.md)                                   | [GPLv3](https://github.com/libretro/ThePowderToy/blob/master/LICENSE)                     |                |
 | [TyrQuake](../library/tyrquake.md)                                               | [GPLv2](https://github.com/libretro/tyrquake/blob/master/gnu.txt)                         |                |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 | [Uzem](../library/uzem.md)                                                       | [GPLv3](https://github.com/Uzebox/uzebox/blob/master/gpl-3.0.txt)                         |                |
