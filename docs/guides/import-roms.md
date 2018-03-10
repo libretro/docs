@@ -25,6 +25,6 @@ Please be patient while it scans, large collections could take a few minutes.
 
 ### Step 3: Add box art
 
-This is optional, but some games have box art that can make selection more prettier, head back to the main menu, select "Online Updater", then choose "Thumbnails Updater". Here you need to select the console you want to download.
+This is optional, but some games have box art that can make the menu more prettier, head back to the main menu, select "Online Updater", then choose "Thumbnails Updater". Here you need to select the console you want to download.
 
 Please be patient, these take quite some time to download, especially on a slow internet connection.
