@@ -28,7 +28,7 @@ Although the defaults will suit most users, if you want to configure custom BIOS
 
 #### System/BIOS
 
-This is where you specify the location for all your BIOS's, by default RetroArch looks for BIOS in your "Starting directory" folder, this can get messy.
+This is where you specify the location for all your BIOS's, by default RetroArch looks for BIOS in your "Starting directory" folder. It is not suggested that you dump all BIOS files in the "Starting directory".
 
 !!! note
     Some emulators *(Example: PS1 and PSP)* will require BIOS files to even function.
