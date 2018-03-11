@@ -1,19 +1,17 @@
-# Getting Started
-
-## Directory configuration
+# Getting Started: Directory configuration
 
 Next step you might want to consider is setting directories for RetroArch, this can help get the best experience possible.
 
 Although the defaults will suit most users, if you want to configure custom BIOS's or change the save location, you will have to change directories.
 
-### From the RetroArch settings:
+## From the RetroArch settings:
 
 - Navigate to **Settings**
 - Navigate to **Directories**
 - Select the directory you want to changed
 - Navigate to the desired location using the file browser
 
-### From a text editor:
+## From a text editor:
 
 - Close RetroArch
 - Find your retroarch config folder
@@ -24,9 +22,9 @@ Although the defaults will suit most users, if you want to configure custom BIOS
 - Open retroarch.cfg
 - After the = sign, make changes then save.
 
-### Paths to consider changing:
+## Paths to consider changing:
 
-#### System/BIOS
+### System/BIOS
 
 This is where you specify the location for all your BIOS's, by default RetroArch looks for BIOS in your "Starting directory" folder. It is not suggested that you dump all BIOS files in the "Starting directory".
 
@@ -38,10 +36,10 @@ It is suggested that this be changed to a folder named "system" under your retro
 !!! note
     You might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *system_directory =* is what you need to change in the config file.
 
-#### File Browser
+### File Browser
 
 Another one you'll want to consider changing. This will be the starting directory when you select "Load Content" and it can be very handy to have this set to your ROM folder. Although this probably isn't needed since RetroArch has an import feature, it doesn't hurt to have this set anyway.
 
-#### Savefile and Savestate
+### Savefile and Savestate
 
 Last one you should consider changing are the save locations, by default it will place them in the same folder as your ROMS. If you care about organisation you should change these to another folder.
