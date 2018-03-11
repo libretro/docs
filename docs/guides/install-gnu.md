@@ -15,19 +15,19 @@ flatpak --help
 Next you should add the Flathub repository, so that it may download from it:
 
 ```
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 To install RetroArch execute:
 
 ```
-flatpak install --from https://flathub.org/repo/appstream/org.libretro.RetroArch.flatpakref
+flatpak install --user flathub org.libretro.RetroArch
 ```
 
 To update you should periodcally run
 
 ```
-flatpak update
+flatpak --user update
 ```
 
 ### Ubuntu-based
