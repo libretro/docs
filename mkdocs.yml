@@ -56,6 +56,14 @@ pages:
         - 'Shaders': 'specs/shader.md'
         - 'Overlays': 'specs/overlay.md'
   - For Users:
+    - Downloading, Installing and Updating RetroArch:
+      - 'Windows': 'guides/install-windows.md'
+    - Getting Started:
+      - 'Keyboard Controls': 'guides/retroarch-keyboard-controls.md'
+      - 'Windows': 'guides/windows.md'
+      - 'Command-line interface (CLI)': 'guides/cli-intro.md'
+      - 'Generating Logs': 'guides/generating-retroarch-logs.md'
+      - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
     - Core Documentation:
       - Core Compatibility:
         - '3DO': 'library/compatibility/3do.md'
@@ -219,14 +227,7 @@ pages:
       - 'xbrz': 'shader/xbrz.md'
       - 'xsal': 'shader/xsal.md'
       - 'xsoft': 'shader/xsoft.md'
-    - Installing and Updating RetroArch:
-      - 'Windows': 'guides/install-windows.md'
-    - Getting Started:
-      - 'Keyboard Controls': 'guides/retroarch-keyboard-controls.md'
-      - 'Windows': 'guides/windows.md'
-      - 'Command-line interface (CLI)': 'guides/cli-intro.md'
-      - 'Generating Logs': 'guides/generating-retroarch-logs.md'
-      - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
+
     - Interface Customization:
       - 'Creating a Theme': 'guides/themes.md'
       - 'RGUI Interface': 'guides/rgui.md'
