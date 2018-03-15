@@ -10,7 +10,7 @@ It enables you to run classic games on a wide range of computers and consoles th
 
 libretro is a simple backend API that allows for the creation of games and emulators.
 
-The libretro system powers the RetroArch application. It aims for emulators and games to be run through a unified GUI.
+It aims for emulators, game engines and media players to be run through a unified GUI. The libretro system powers the RetroArch application.
 
 ## FAQ
 
