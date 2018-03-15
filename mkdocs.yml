@@ -4,58 +4,18 @@ repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'tree/master/docs'
 pages:
   - About: 'index.md'
-  - For Developers:
-    - Compilation:
-      - Apple:
-        - 'OSX/PowerPC': 'compilation/osxppc.md'
-        - 'OSX/macOS': 'compilation/osx.md'
-        - 'iOS': 'compilation/ios.md'
-      - 'Android': 'compilation/android.md'
-      - Linux and BSD:
-        - 'Overview for Linux/BSD': 'compilation/linux-and-bsd.md'
-        - 'Ubuntu': 'compilation/ubuntu.md'
-      - 'Haiku': 'compilation/haiku.md'
-      - Microsoft:
-        - 'DOS': 'compilation/dos.md'
-        - Windows NT3.51:
-          - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
-        - Windows 95/98/NT4:
-          - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
-        - Windows 98SE/ME/2000:
-          - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
-          - 'MSVC IDE': 'compilation/windows98.md'
-        - Windows XP and later:
-          - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
-          - 'MSVC IDE': 'compilation/windowsXP.md'
-        - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
-      - Nintendo:
-        - 'Nintendo 3DS': 'compilation/3ds.md'
-        - 'Nintendo GameCube': 'compilation/gamecube.md'
-        - 'Nintendo Wii': 'compilation/wii.md'
-        - 'Nintendo Wii U': 'compilation/wiiu.md'
-      - Sony:
-        - 'PlayStation Portable': 'compilation/psp.md'
-        - 'PlayStation Vita/TV': 'compilation/psvita.md'
-    - Meta:
-      - 'Core List': 'meta/core_list.md'
-      - 'To Do': 'meta/todo.md'
-      - 'Core Template': 'meta/core_template.md'
-      - 'See Also': 'meta/see_also.md'
-    - Technical:
-      - 'Debugging': 'tech/debugging.md'
-      - 'Adding Menu Entries': 'tech/new-menu-options.md'
-      - 'Licenses': 'tech/licenses.md'
-      - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
-      - 'Adding Translations': 'tech/new-translations.md'
-      - Protocols:
-        - 'Netplay': 'tech/netplay.md'
-        - 'Network Control Interface': 'tech/network-control-interface.md'
-      - Specifications:
-        - 'Libretro': 'specs/api.md'
-        - 'RetroPad': 'specs/retropad.md'
-        - 'Shaders': 'specs/shader.md'
-        - 'Overlays': 'specs/overlay.md'
   - For Users:
+    - Downloading, Installing and Updating RetroArch:
+      - 'Windows': 'guides/install-windows.md'
+      - 'GNU/Linux': 'guides/install-gnu.md'
+    - Getting Started:
+      - 'Welcome': 'guides/welcome-getting-started.md'
+      - 'User Interface': 
+      - 'Keyboard Controls': 'guides/retroarch-keyboard-controls.md'
+      - 'Windows': 'guides/windows.md'
+      - 'Command-line interface (CLI)': 'guides/cli-intro.md'
+      - 'Generating Logs': 'guides/generating-retroarch-logs.md'
+      - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
     - Core Documentation:
       - Core Compatibility:
         - '3DO': 'library/compatibility/3do.md'
@@ -219,14 +179,7 @@ pages:
       - 'xbrz': 'shader/xbrz.md'
       - 'xsal': 'shader/xsal.md'
       - 'xsoft': 'shader/xsoft.md'
-    - Installing and Updating RetroArch:
-      - 'Windows': 'guides/install-windows.md'
-    - Getting Started:
-      - 'Keyboard Controls': 'guides/retroarch-keyboard-controls.md'
-      - 'Windows': 'guides/windows.md'
-      - 'Command-line interface (CLI)': 'guides/cli-intro.md'
-      - 'Generating Logs': 'guides/generating-retroarch-logs.md'
-      - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
+
     - Interface Customization:
       - 'Creating a Theme': 'guides/themes.md'
       - 'RGUI Interface': 'guides/rgui.md'
@@ -244,6 +197,57 @@ pages:
       - 'Softpatching ROMs': 'guides/softpatching.md'
     - Contributing:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
+  - For Developers:
+    - Compilation:
+      - Apple:
+        - 'OSX/PowerPC': 'compilation/osxppc.md'
+        - 'OSX/macOS': 'compilation/osx.md'
+        - 'iOS': 'compilation/ios.md'
+      - 'Android': 'compilation/android.md'
+      - Linux and BSD:
+        - 'Overview for Linux/BSD': 'compilation/linux-and-bsd.md'
+        - 'Ubuntu': 'compilation/ubuntu.md'
+      - 'Haiku': 'compilation/haiku.md'
+      - Microsoft:
+        - 'DOS': 'compilation/dos.md'
+        - Windows NT3.51:
+          - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
+        - Windows 95/98/NT4:
+          - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
+        - Windows 98SE/ME/2000:
+          - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
+          - 'MSVC IDE': 'compilation/windows98.md'
+        - Windows XP and later:
+          - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
+          - 'MSVC IDE': 'compilation/windowsXP.md'
+        - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
+      - Nintendo:
+        - 'Nintendo 3DS': 'compilation/3ds.md'
+        - 'Nintendo GameCube': 'compilation/gamecube.md'
+        - 'Nintendo Wii': 'compilation/wii.md'
+        - 'Nintendo Wii U': 'compilation/wiiu.md'
+      - Sony:
+        - 'PlayStation Portable': 'compilation/psp.md'
+        - 'PlayStation Vita/TV': 'compilation/psvita.md'
+    - Meta:
+      - 'Core List': 'meta/core_list.md'
+      - 'To Do': 'meta/todo.md'
+      - 'Core Template': 'meta/core_template.md'
+      - 'See Also': 'meta/see_also.md'
+    - Technical:
+      - 'Debugging': 'tech/debugging.md'
+      - 'Adding Menu Entries': 'tech/new-menu-options.md'
+      - 'Licenses': 'tech/licenses.md'
+      - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
+      - 'Adding Translations': 'tech/new-translations.md'
+      - Protocols:
+        - 'Netplay': 'tech/netplay.md'
+        - 'Network Control Interface': 'tech/network-control-interface.md'
+      - Specifications:
+        - 'Libretro': 'specs/api.md'
+        - 'RetroPad': 'specs/retropad.md'
+        - 'Shaders': 'specs/shader.md'
+        - 'Overlays': 'specs/overlay.md'
 extra:
   version: '0.1.0'
   font:
