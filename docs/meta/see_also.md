@@ -330,12 +330,14 @@
 #### Sega - Game Gear
 
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+- [Sega - MS/GG (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 
 #### Sega - Master System - Mark III
 
 - [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
 - [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
+- [Sega - MS/GG (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 
 #### Sega - Mega Drive - Genesis
 

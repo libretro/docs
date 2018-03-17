@@ -70,6 +70,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                           | Supported |
 |----------------------------------------------------------------|:---------:|
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         |

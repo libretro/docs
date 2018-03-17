@@ -57,6 +57,7 @@
 - Gambatte
 - Game Music Emu
 - Gearboy
+- Gearsystem
 - Genesis Plus GX
 - gpSP
 - GW

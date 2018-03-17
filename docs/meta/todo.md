@@ -322,6 +322,8 @@
 
 ### [✔] Gearboy
 
+### [〰️] Gearsystem
+
 ### [〰️] Genesis Plus GX
 
 - Complete BIOS md5
