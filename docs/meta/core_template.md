@@ -284,9 +284,7 @@ Rumble only works in the (Core name) core when
 
 // Explain how to activate multitap.
 
-### Device tables
-
-#### Joypad
+### Joypad
 
 | User # input descriptors | RetroPad Inputs                                | (Device name) Inputs      |
 |--------------------------|------------------------------------------------|---------------------------|
@@ -311,7 +309,7 @@ Rumble only works in the (Core name) core when
 | Action 19                | ![](../image/retropad/retro_right_stick.png) X | -                         |
 | Action 20                | ![](../image/retropad/retro_right_stick.png) Y | -                         |
 
-#### Keyboard
+### Keyboard
 
 | RetroKeyboard Inputs         | (Device name) Inputs      |
 |------------------------------|---------------------------|
@@ -453,7 +451,7 @@ Rumble only works in the (Core name) core when
 | Keyboard Unmapped            | -                         |
 | Keyboard Unknown             | -                         |
 
-#### Mouse
+### Mouse
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|
@@ -468,14 +466,14 @@ Rumble only works in the (Core name) core when
 | Wheel Left                                            | -                         |
 | Wheel Right                                           | -                         |
 
-#### Pointer
+### Pointer
 
 | RetroPointer Inputs                                                                                                      | (Device name) Inputs      |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         | 
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | -                         |
 
-#### Lightgun
+### Lightgun
 
 | RetroLightgun Inputs                                   | (Device name) Inputs      |
 |--------------------------------------------------------|---------------------------|
@@ -497,7 +495,7 @@ Rumble only works in the (Core name) core when
 // RETRO_DEVICE_ID_LIGHTGUN_TURBO - Use Gun Aux B
 // RETRO_DEVICE_ID_LIGHTGUN_PAUSE - Use Gun Start
 
-#### Other
+### Other
 
 | Inputs                                                                                                               | Device name (Inputs) |
 |----------------------------------------------------------------------------------------------------------------------|----------------------|
