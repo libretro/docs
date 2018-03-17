@@ -230,6 +230,7 @@ pages:
 
     - Interface Customization:
       - 'Creating a Theme': 'guides/themes.md'
+      - 'Libretro Overlays': 'guides/libretro-overlays.md'
       - 'RGUI Interface': 'guides/rgui.md'
     - Feature Specific:
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
