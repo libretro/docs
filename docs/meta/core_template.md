@@ -73,6 +73,18 @@ The content should now start running!
 
 The content should now start running!
 
+## BIOS
+// For core that don't need BIOS, either say BIOS not required or just not include a BIOS section.
+
+Required or optional firmware files go in the frontend's system directory.
+
+| Filename          | Description                     | md5sum                           |
+|:-----------------:|:-------------------------------:|:--------------------------------:|
+| bios_filename.bin | Description - Optional/Required |                                  |
+
+// Copy the firmware information from the core info file and paste it here (
+// https://github.com/libretro/libretro-super/tree/master/dist/info)--
+
 ## Extensions
 // Optional section.
 
@@ -86,9 +98,6 @@ Content that can be loaded by the (Core name) core have the following file exten
 // https://github.com/libretro/libretro-super/tree/master/dist/info)
 // Also look at the core's libretro.c/libretro.cpp file, sometimes the core info files can get out of sync with the file extensions that core can load.
 
-## Databases
-// Optional section.
-
 RetroArch database(s) that are associated with the (Core name) core:
 
 // Fill in the (Core name).
@@ -96,20 +105,9 @@ RetroArch database(s) that are associated with the (Core name) core:
 - [Database name](Database file URL)
 
 // Copy the database entry from the core info file and paste it here. Also, paste in the link for the database. 
+// If the core doesn't have databases, don't include this.
 // https://github.com/libretro/libretro-super/tree/master/dist/info
 // https://github.com/libretro/libretro-database/tree/master/rdb
-
-## BIOS
-// For core that don't need BIOS, either say BIOS not required or just not include a BIOS section.
-
-Required or optional firmware files go in the frontend's system directory.
-
-| Filename          | Description                     | md5sum                           |
-|:-----------------:|:-------------------------------:|:--------------------------------:|
-| bios_filename.bin | Description - Optional/Required |                                  |
-
-// Copy the firmware information from the core info file and paste it here (
-// https://github.com/libretro/libretro-super/tree/master/dist/info)--
 
 ## Features
 
