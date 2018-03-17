@@ -4,7 +4,7 @@
 
 Gearsystem is an open source, multi-platform, Sega Master System / Game Gear emulator written in C++.
 
-- Highly accurate Z80 core, including undocumented opcodes and behaviour.
+- Highly accurate Z80 core, including undocumented opcodes and behaviour like R and MEMPTR registers.
 - Multi-Mapper support: SEGA, Codemasters, and ROM only cartridges.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Internal database for rom detection
