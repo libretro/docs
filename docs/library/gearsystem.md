@@ -2,16 +2,15 @@
 
 ## Background
 
-Gearsystem is a Sega Master System / Game Gear emulator written in C++ that runs on iOS, Raspberry Pi, Mac, Windows and Linux.
+Gearsystem is an open source, multi-platform, Sega Master System / Game Gear emulator written in C++.
 
-- Highly accurate Z80 core, including undocumented opcodes and behaviour like R and MEMPTR registers.
+- Highly accurate Z80 core, including undocumented opcodes and behaviour.
 - Multi-Mapper support: SEGA, Codemasters, and ROM only cartridges.
-- External RAM support with save files.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
+- Internal database for rom detection
 - Highly accurate VDP emulation including timing and SMS2 only 224 mode support.
-- Internal database for rom detection.
 - Audio emulation using SDL Audio and Sms_Snd_Emu library.
-- Saves battery powered RAM cartridges to file.
+- Battery powered RAM save support.
 - Save states.
 - Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
 
@@ -54,7 +53,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✕         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
