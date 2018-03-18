@@ -37,6 +37,6 @@ Menu                        ||In-game      ||
 ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_R.png) | Rewind | ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_O.png) | Movie record |
 ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_P.png) | Pause| ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_K.png) | Frame advance |
 ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_H.png)  | Reset | ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_E.png)     | Slow motion |
-![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_M.png)  | Next shader| Fullscreen toggle | ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_F.png) |
+![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_M.png)  | Next shader| ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_F.png) | Fullscreen toggle | 
 ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_N.png)     | Previous shader | | |
 ![](../image/Button_Pack/Keyboard_&_Mouse/Dark/Keyboard_Black_I.png)     | Netplay toggle play/spectate |  | |
