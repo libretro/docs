@@ -1,4 +1,4 @@
-# RetroArch Keyboard Controls
+# Getting Started: Keyboard Controls
 
 ## RetroArch Keyboard Gameplay Controls
 

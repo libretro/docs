@@ -1,5 +1,7 @@
 # Getting Started: Gamepad setup
 
+RetroArch is intented for playing games
+
 ## Setting up a Gamepad
 
 XINPUT controllers should work out of the box. If the controller can be autoconfigured the OSD will inform you of the autoconfiguration event. We also include autoconf profiles for many popular controllers. However not all controllers have these autoconfigs, if this is your case follow this guide:

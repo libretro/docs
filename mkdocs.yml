@@ -10,8 +10,10 @@ pages:
       - 'GNU/Linux': 'guides/install-gnu.md'
     - Getting Started:
       - 'Welcome': 'guides/welcome-getting-started.md'
-      - 'User Interface': 
+      - 'User Interface': 'guides/navigating.md'
       - 'Keyboard Controls': 'guides/retroarch-keyboard-controls.md'
+      - 'Gamepad Setup': 'guides/gamepad-setup.md'
+      - 'Installing Cores': 'guides/download-cores.md'
       - 'Windows': 'guides/windows.md'
       - 'Command-line interface (CLI)': 'guides/cli-intro.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
