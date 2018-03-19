@@ -1,9 +1,9 @@
 # Getting Started: Importing content into RetroArch
 
-!!! Warning
+!!! warning
     This guide assumes that you already have obtained the content legally, RetroArch does not provide users with copyright content.
 
-This guide uses the "scan" functionality to import your games into RetroArch's library, these are then sorted by console. The scan is recursive so you can organise your collection into sub-folders or potentially scan your whole computer.
+This guide uses the "scan" functionality to import your games into RetroArch's playlists sorted by console. The scan is recursive so you can organise your collection into sub-folders or potentially scan your whole computer.
 
 ## Step 1: Download database
 
@@ -17,7 +17,7 @@ Wait for this to finish downloading
 
 From the RetroArch Main Menu navigate to "Import content". You will be met by two options, "Scan Directory" or "Scan File".
 
-To import a collection of ROMs, you should select "Scan Directory". Using the file browser, navigate to the folder with your ROM collection and select ```<Scan This Directory>```.
+To import a collection of ROMs, you should select "Scan Directory". Using the file browser, navigate to the folder with your ROM collection and select **"<Scan This Directory>"**.
 
 Please be patient while it scans, large collections could take a few minutes.
 
