@@ -120,7 +120,7 @@ RetroArch-level settings or features that the PPSSPP core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔ (not Ad-Hoc emulation) |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
