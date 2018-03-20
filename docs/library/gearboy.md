@@ -11,6 +11,8 @@ Gearboy is an open source, multi-platform, Nintendo Game Boy (DMG) / Game Boy Co
 - Mix frames: Mimics the LCD ghosting effect seen in the original Game Boy.
 - Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
 - Battery powered RAM save support.
+- Save states.
+- Game Genie and GameShark cheat support.
 - Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
 
 ### Author/License
@@ -60,7 +62,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
