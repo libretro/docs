@@ -184,6 +184,7 @@ pages:
         - 'Sega - Dreamcast (Redream)': 'library/redream.md'
         - 'Sega - Dreamcast (Reicast)': 'library/reicast.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
+        - 'Sega - MS/GG (Gearsystem)': 'library/gearsystem.md'
         - 'Sega - MS/GG/MD/CD (Genesis Plus GX)': 'library/genesis_plus_gx.md'
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
