@@ -32,6 +32,19 @@ RetroArch database(s) that are associated with the DeSmuME core:
 - [Nintendo - Nintendo DS Decrypted](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20DS%20Decrypted.rdb)
 - [Nintendo - Nintendo DS (Download Play)](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20DS%20(Download%20Play).rdb)
 
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+!!! warning
+	In order for the firmware files to be loaded by the DeSmuME core, the 'Use External BIOS/Firmware (restart)' core option must be set to enabled.
+	
+|   Filename   |    Description          |              md5sum              |
+|:------------:|:-----------------------:|:--------------------------------:|
+| firmware.bin | NDS Firmware - Optional | 145eaef5bd3037cbc247c213bb3da1b3 |
+| bios7.bin    | ARM7 BIOS - Optional    | df692a80a5b1bc90728bc3dfc76cd948 |
+| bios9.bin    | ARM9 BIOS - Optional    | a392174eb3e572fed6447e956bde4b25 |
+
 ## Features
 
 Frontend-level settings or features that the DeSmuME core respects.
@@ -71,9 +84,10 @@ The DeSmuME core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-| File  | Description            |
-|:-----:|:----------------------:|
-| *.dsv | Cartridge battery save |
+| File         | Description            |
+|:------------:|:----------------------:|
+| *.dsv        | Cartridge battery save |
+| firmware.dfc | Firmware settings save |
 
 **Frontend's State directory**
 
@@ -103,7 +117,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Firmware Language** [desmume_firmware_language] (**Auto**|English|Japanese|French|German|Italian|Spanish)
 
-	Choose the language of the BIOS.
+	Choose the language of the firmware.
+	
+- **Use External BIOS/Firmware (restart)** [desmume_use_external_bios] (**disabled**|enabled)
+
+	When set to enabled, the DeSmuME core will use the external firmware files found in RetroArch's System Directory. Look at the [BIOS section](https://docs.libretro.com/library/desmume/#bios) for more information.
+
+- **Boot Into BIOS (interpreter and external bios only)** [desmume_boot_into_bios] (**disabled**|enabled)
+
+	**For proper functionality of this core option. The 'CPU Mode' core option must be set to interpreter and the 'Use External BIOS/Firmware' core option must be set to enabled.**
+	
+	**Also, you must have external firmware files in RetroArch's System Directory.**
+
+	When set to enabled, the DeSmuME core will boot into the Nintendo DS firmware screen upon content load.
+	
+	Any settings changed in the firmware screen will be saved to firmware.dfc in RetroArch's Save directory.
 	
 - **Load Game Into Memory (restart)** [desmume_load_to_memory] (**disabled**|enabled)
 
@@ -149,11 +177,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **OpenGL Rasterizer (restart)** [desmume_opengl_mode] (**disabled**|enabled)
 
-	Awaiting description.
+	Enable OpenGL renderer.
+	
+	**The Frontend's video driver must be set to gl.**
 	
 - **OpenGL: Color Depth (restart)** [desmume_color_depth] (**16-bit**|32-bit)
 
-	Awaiting description.
+	32-bit allows full color support from the DS (natively 6-bit).
+	
+	**OpenGL Rasterizer core option must be set to enabled.**
 	
 - **OpenGL: Multisampling (restart)** [desmume_gfx_multisampling] (**disabled**|2|4|8|16|32)
 
@@ -169,7 +201,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Soft3D: Line Hack** [desmume_gfx_linehack] (**enabled**|disabled)
 
-	Awaiting description.
+	Fixes some graphical bugs involving lines, but causes some other bugs. Not many games use lines.
 	
 - **Soft3D: Texture Hack** [desmume_gfx_txthack] (**disabled**|enabled)
 
@@ -212,7 +244,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "Screen layout - hybrid/top"
 	![](..\image\core\desmume\hybrid_top.png)
 	
-- **Screen Gap** [desmume_screens_gap] (**0**|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64)
+- **Screen Gap** [desmume_screens_gap] (0 to 100 in increments of 1. **0 is default.**)
 
 	Self explanatory.
 	
@@ -365,17 +397,7 @@ Same as upstream standalone.
 
 ### See also
 
-#### Nintendo - Nintendo DS (Download Play)
-
-- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
-- [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)
-
-#### Nintendo - Nintendo DS Decrypted
-
-- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
-- [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)
-
-#### Nintendo - Nintendo DS
+#### Nintendo - Nintendo DS + Decrypted + (Download Play)
 
 - [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
 - [Nintendo - DS (melonDS)](https://docs.libretro.com/library/melonds)

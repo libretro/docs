@@ -1,13 +1,34 @@
+// THE CORE TEMPLATE DOES NOT NEED TO BE FOLLOWED 100%. DOCUMENT THE CORE IN A WAY THAT FEELS THE EASIEST/MOST EFFICIENT TO YOU.
+// Note: Core Template is best viewed in a text editor.
+
 # (Title)
 
-// Copy the display name entry from the core info file and paste it here for the title.
+// Copy the display name entry from the core's info file and paste it here for the title.
 // https://github.com/libretro/libretro-super/tree/master/dist/info
 
 ## Background
 
 Awaiting description.
 
-// Put background information for the core here.
+// Fill in background information for the core here.
+
+The (Core name) core has been authored by
+
+- [Author](http://link)
+
+// Fill in the (Core name)
+// Copy the author entry from the core info file and paste it here. Link is optional.
+// https://github.com/libretro/libretro-super/tree/master/dist/info
+
+The (Core name) core is licensed under
+
+- [license](https://link)
+
+// Fill in the (Core name)
+// Copy the license entry from the core info file and a url to license information and paste it here.
+//(https://github.com/libretro/libretro-super/tree/master/dist/info)
+
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ### Requirements
 // Optional section.
@@ -22,21 +43,13 @@ Awaiting description.
 
 - To start the (Core name) core, you need to obtain (Core name)'s data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](..\image\core\all\download.png) </center>
-
 // Fill in the (Core name).
 
 - Select '(Content directory name)', then select '(Game filename)'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](..\image\core\folder\screenshot_name.png) </center>
-
 // Fill in the (Content directory name) and the (Game filename).
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
-
-<center> ![](..\image\core\all\load.png) </center>
-
-<center> ![](..\image\core\all\downloads.png) </center>
 
 - Select the '(Content directory name)' directory, then select '(Game filename)'.
 
@@ -60,25 +73,17 @@ The content should now start running!
 
 The content should now start running!
 
-### Author/License
+## BIOS
+// For core that don't need BIOS, either say BIOS not required or just not include a BIOS section.
 
-The (Core name) core has been authored by
+Required or optional firmware files go in the frontend's system directory.
 
-- [Author](http://link)
+| Filename          | Description                     | md5sum                           |
+|:-----------------:|:-------------------------------:|:--------------------------------:|
+| bios_filename.bin | Description - Optional/Required |                                  |
 
-// Fill in the (Core name)
-// Copy the author entry from the core info file and paste it here. Link is optional.
-// https://github.com/libretro/libretro-super/tree/master/dist/info
-
-The (Core name) core is licensed under
-
-- [license](https://link)
-
-// Fill in the (Core name)
-// Copy the license entry from the core info file and a url to license information and paste it here.
-//(https://github.com/libretro/libretro-super/tree/master/dist/info)
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+// Copy the firmware information from the core info file and paste it here (
+// https://github.com/libretro/libretro-super/tree/master/dist/info)--
 
 ## Extensions
 // Optional section.
@@ -91,9 +96,7 @@ Content that can be loaded by the (Core name) core have the following file exten
 
 // Copy the exntension entry from the core info file and paste it here.
 // https://github.com/libretro/libretro-super/tree/master/dist/info)
-
-## Databases
-// Optional section.
+// Also look at the core's libretro.c/libretro.cpp file, sometimes the core info files can get out of sync with the file extensions that core can load.
 
 RetroArch database(s) that are associated with the (Core name) core:
 
@@ -102,20 +105,9 @@ RetroArch database(s) that are associated with the (Core name) core:
 - [Database name](Database file URL)
 
 // Copy the database entry from the core info file and paste it here. Also, paste in the link for the database. 
+// If the core doesn't have databases, don't include this.
 // https://github.com/libretro/libretro-super/tree/master/dist/info
 // https://github.com/libretro/libretro-database/tree/master/rdb
-
-## BIOS
-// Optional section.
-
-Required or optional firmware files go in the frontend's system directory.
-
-| Filename          | Description                     | md5sum                           |
-|:-----------------:|:-------------------------------:|:--------------------------------:|
-| bios_filename.bin | Description - Optional/Required |                                  |
-
-// Copy the firmware information from the core info file and paste it here (
-// https://github.com/libretro/libretro-super/tree/master/dist/info)--
 
 ## Features
 
@@ -154,13 +146,12 @@ Frontend-level settings or features that the (Core name) core respects.
 // Leave it as - if unsure.
 
 ### Directories
+// This section is a list of files and/or directories the core creates in certain directories.
 
-The (Core name) core's valid extensions are (Extensions)
+The (Core name) core's library name is '(Library name)'
 
-The (Core name) core's library name is '(Directory name)'
-
-// Fill in the (Core name) and the (Directory name).
-// The (Directory name) is the name of the directory the core creates in the frontend's save and state directories.
+// Fill in the (Core name) and the (Library name).
+// The (Library name) is the name of the directory the core creates in the frontend's save and state directories.
 
 The (Core name) core saves/loads to/from these directories.
 
@@ -203,6 +194,7 @@ The (Core name) core saves/loads to/from these directories.
 | filename.bin | Description |
 
 // Add a list of directories/files the core uses.
+// The Home, Appdata directories sections are rarely used, they're only for cores that don't follow the libretro API 100%.
 
 ### Geometry and timing
 // Optional section.
@@ -240,19 +232,22 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 // Fill in core options.
 // Add core option screenshots if needed.
 
-## Controllers
+## Controls
+// THE DEVICE TYPES/CONTROLS TEMPLATE BELOW DO NOT NEED TO BE FOLLOWED 100%. DOCUMENT THE CORE IN A WAY THAT FEELS THE EASIEST/MOST EFFICIENT TO YOU.
+
+### Device types
+// Optional section. If the core doesn't use the device type API, don't include this section.
 
 The (Core name) core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 // Fill in the (Core name).
 
-### User # - # device types
+#### User # - # device types
 
 - None - Input disabled.
 - **(Device name)** - (Device type) - Optional description.
 
 // Fill in (Device name).
-
 // Fill in (Device type)
 /// Possible device types
 //// None
@@ -289,9 +284,7 @@ Rumble only works in the (Core name) core when
 
 // Explain how to activate multitap.
 
-### Device tables
-
-#### Joypad
+### Joypad
 
 | User # input descriptors | RetroPad Inputs                                | (Device name) Inputs      |
 |--------------------------|------------------------------------------------|---------------------------|
@@ -316,7 +309,7 @@ Rumble only works in the (Core name) core when
 | Action 19                | ![](../image/retropad/retro_right_stick.png) X | -                         |
 | Action 20                | ![](../image/retropad/retro_right_stick.png) Y | -                         |
 
-#### Keyboard
+### Keyboard
 
 | RetroKeyboard Inputs         | (Device name) Inputs      |
 |------------------------------|---------------------------|
@@ -458,7 +451,7 @@ Rumble only works in the (Core name) core when
 | Keyboard Unmapped            | -                         |
 | Keyboard Unknown             | -                         |
 
-#### Mouse
+### Mouse
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|
@@ -473,14 +466,14 @@ Rumble only works in the (Core name) core when
 | Wheel Left                                            | -                         |
 | Wheel Right                                           | -                         |
 
-#### Pointer
+### Pointer
 
 | RetroPointer Inputs                                                                                                      | (Device name) Inputs      |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         | 
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | -                         |
 
-#### Lightgun
+### Lightgun
 
 | RetroLightgun Inputs                                   | (Device name) Inputs      |
 |--------------------------------------------------------|---------------------------|
@@ -498,12 +491,11 @@ Rumble only works in the (Core name) core when
 | Gun D-pad Right                                        | -                         |
 
 // Deprecated Lightgun inputs
+// RETRO_DEVICE_ID_LIGHTGUN_CURSOR - Use Gun Aux A
+// RETRO_DEVICE_ID_LIGHTGUN_TURBO - Use Gun Aux B
+// RETRO_DEVICE_ID_LIGHTGUN_PAUSE - Use Gun Start
 
-#define RETRO_DEVICE_ID_LIGHTGUN_CURSOR           3 /*Use Aux:A*/
-#define RETRO_DEVICE_ID_LIGHTGUN_TURBO            4 /*Use Aux:B*/
-#define RETRO_DEVICE_ID_LIGHTGUN_PAUSE            5 /*Use Start*/
-
-#### Other
+### Other
 
 | Inputs                                                                                                               | Device name (Inputs) |
 |----------------------------------------------------------------------------------------------------------------------|----------------------|
