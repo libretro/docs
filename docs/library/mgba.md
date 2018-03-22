@@ -54,7 +54,7 @@ Frontend-level settings or features that the mGBA core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay (State based) | ✔ (not link-cable emulation)        |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔ (GBA only)        |
 | Cheats (Cheats menu) | ✔         |

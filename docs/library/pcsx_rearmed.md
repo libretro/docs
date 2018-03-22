@@ -112,7 +112,7 @@ RetroArch-level settings or features that the PCSX ReARMed core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✔         |

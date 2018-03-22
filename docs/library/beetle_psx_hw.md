@@ -63,7 +63,7 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay (State based) | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | Cheats (Cheats menu) | ✔         |
