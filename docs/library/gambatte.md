@@ -54,7 +54,7 @@ Frontend-level settings or features that the Gambatte core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔ (not link-cable emulation)         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |

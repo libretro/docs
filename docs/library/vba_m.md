@@ -40,7 +40,7 @@ Frontend-level settings or features that the VBA-M core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔ (not link-cable emulation)         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |

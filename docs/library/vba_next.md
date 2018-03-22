@@ -52,7 +52,7 @@ Frontend-level settings or features that the VBA Next core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔ (not link-cable emulation)         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |

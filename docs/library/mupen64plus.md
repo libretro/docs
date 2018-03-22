@@ -105,7 +105,7 @@ RetroArch-level settings or features that the Mupen64Plus core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
