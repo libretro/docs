@@ -149,7 +149,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Graphics Step Y Hack (Samurai Shodown)** [4do_hack_graphics_step_y] (**disabled**|enabled)
 
-	Enabke this to fix Samurai Shodown.
+	Enable this to fix Samurai Shodown.
 	
 ## Joypad
 
