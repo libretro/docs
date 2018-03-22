@@ -49,6 +49,12 @@ You can also check the progress of your friends and add comments on their trophi
 
 ## **Cores Compatibility**
 
+### Arcade
+
+| Core                                                  | Supported | Notes |
+|-------------------------------------------------------|:---------:|-------|
+| [FB Alpha](https://github.com/libretro/fbalpha)       | ✔         | **Very experimental**. Only supports NeoGeo at the moment. |
+
 ### Atari 2600
 
 | Core                                                  | Supported | Notes |
