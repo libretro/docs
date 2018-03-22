@@ -55,10 +55,11 @@ Frontend-level settings or features that the Gearboy core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔ (State-based, not link-cable emulation) |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✔         |
+| RetroArch Cheats - Game Genie | ✔         |
+| RetroArch Cheats - GameShark | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
