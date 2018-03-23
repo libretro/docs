@@ -12,6 +12,7 @@ Gearsystem is an open source, multi-platform, Sega Master System / Game Gear emu
 - Audio emulation using SDL Audio and Sms_Snd_Emu library.
 - Battery powered RAM save support.
 - Save states.
+- Game Genie and Pro Action Replay cheat support.
 - Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
 
 The Gearsystem core has been authored by
@@ -20,7 +21,7 @@ The Gearsystem core has been authored by
 
 The Gearsystem core is licensed under
 
-- [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE) 
+- [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
@@ -94,13 +95,13 @@ The Gearsystem core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Gearsystem core's core provided FPS is 60
+- The Gearsystem core's core provided FPS is 60 for NTSC games and 50 for PAL games
 - The Gearsystem core's core provided sample rate is 44100 Hz
-- The Gearsystem core's base width is (Base width)
-- The Gearsystem core's base height is (Base height)
-- The Gearsystem core's max width is (Max width)
-- The Gearsystem core's max height is (Max height)
-- The Gearsystem core's core provided aspect ratio is (Ratio)
+- The Gearsystem core's base width is 256 for Master System games and 160 for Game Gear games
+- The Gearsystem core's base height is 192 for Master System games and 144 for Game Gear games
+- The Gearsystem core's max width is 256 for Master System games and 160 for Game Gear games
+- The Gearsystem core's max height is 224 for Master System games and 144 for Game Gear games
+- The Gearsystem core's core provided aspect ratio is 4:3 for Master System games and 10:9 for Game Gear games
 
 ### Joypad
 
