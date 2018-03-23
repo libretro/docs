@@ -1,78 +1,18 @@
-# PSP (PPSSPP)
-
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/ppsspp.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
+# Sony - PlayStation Portable (PPSSPP)
 
 ## Background
 
-PPSSPP is a fast and portable Sony PSP emulator
+A PSP emulator for Android, Windows, Mac and Linux, written in C++
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the PPSSPP core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](images\Cores\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](images\Cores\all\info.png) </center>
-
-- Browse through the list and select 'PSP (PPSSPP)'.
-
-<center> ![](images\Cores\ppsspp\ppsspp.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](images\Cores\all\load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'PSP (PPSSPP)'.
-
-The content should now start running!
-
-### Authors
+The PPSSPP core has been authored by
 
 - Henrik Hrydgard
 
-## License
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
-
-The PPSPP core is licensed under
+The PPSSPP core is licensed under
 
 - [GPLv2](https://github.com/libretro/ppsspp/blob/master/LICENSE.TXT)
 
-## Extensions
-
-Content that can be loaded by the PPSSPP core have the following file extensions:
-
-- .elf
-- .iso
-- .cso
-- .prx
-- .pbp
-
-## Databases
-
-RetroArch database(s) that are associated with the PPSSPP core:
-
-- [Sony - PlayStation Portable](https://github.com/libretro/libretro-database/blob/master/rdb/Sony%20-%20PlayStation%20Portable.rdb)
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ## BIOS
 
@@ -109,9 +49,23 @@ The end result should look like this.
 !!! attention
 	Don't like PPSSPP's replacement fonts? You can place the original PSP fonts in 'system/PPSSPP/flash0/font'
 
+## Extensions
+
+Content that can be loaded by the PPSPP core have the following file extensions:
+
+- .elf
+- .iso
+- .cso
+- .prx
+- .pbp
+
+RetroArch database(s) that are associated with the PPSPP core:
+
+- [Sony - PlayStation Portable](https://github.com/libretro/libretro-database/blob/master/rdb/Sony%20-%20PlayStation%20Portable.rdb)
+
 ## Features
 
-RetroArch-level settings or features that the PPSSPP core respects.
+Frontend-level settings or features that the PPSSPP core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -133,37 +87,64 @@ RetroArch-level settings or features that the PPSSPP core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| Softpatching      | ✕         |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✔         |
 | Language          | ✔         |
 | Crop Overscan     | ✕         |
+| LEDs              | ✕         |
 
 ### Directories
 
-The PPSSPP core's directory name is 'PPSSPP'
+The PPSSPP core's library name is 'PPSSPP'
 
 The PPSSPP core saves/loads to/from these directories.
 
-**RetroArch's Save directory**
+**Frontend's Save directory**
 
 ```
-- PSP
-     - PPSSPP_STATE (Used to be the state directory, no longer used)
-     - SAVEDATA (Game memory stick directories and files)
-     - SYSTEM
-             - CACHE (Shader cache)
+.
+└── PSP/
+       ├── PPSSPP_STATE/ (Used to be the state directory, no longer used)
+	   ├── SAVEDATA/ (Game memory stick directories and files)
+	   ├── Cheats/ (Internal Cheats directory, disabled by default)
+       └── SYSTEM/
+                 └── CACHE/ (Shader cache)
 ```
 
-**RetroArch's State directory**
+**Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
-- The PPSSPP core's internal FPS is 60
-- The PPSSPP core's internal sample rate is 44100 Hz
+- The PPSSPP core's core provided FPS is 60
+- The PPSSPP core's core provided sample rate is 44100 Hz
+- The PPSSPP core's base width is dependent on the 'Internal Resolution' core option
+- The PPSSPP core's base height is dependent on the 'Internal Resolution' core option
+- The PPSSPP core's max width is dependent on the 'Internal Resolution' core option
+- The PPSSPP core's max height is dependent on the 'Internal Resolution' core option
 - The PPSSPP core's core provided aspect ratio is 16/9
+
+## Internal Cheats
+
+Disabled by default.
+
+**To enable and allow the use of ini cheat files in save\PSP\Cheats, set the 'Internal Cheats Support' core option to enabled.**
+
+Cheats can be used to unlock 60fps in several 30fps games.
+
+Each code can be activated or disabled in the ini directly with _C1 in place of _C0 on the title line.
+
+[PPSSPP forums thread](http://forums.ppsspp.org/showthread.php?tid=3590)
+
+## OpenGL and Vulkan
+
+PPSSPP's OpenGL renderer can be used by setting RetroArch's video driver to gl.
+
+PPSSPP's Vulkan renderer can be used by setting RetroArch's video driver to vulkan.
 
 ## Core options
 
@@ -171,159 +152,129 @@ The PPSSPP core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **CPU Core** (**jit**/interpreter)
+- **CPU Core** [ppsspp_cpu_core] (**jit**|IR jit|interpreter)
 
- The jit setting enables the Dynamic Recomplier (Dynarec) for CPU emulation. The Dynarec is much faster than the interpreter setting and is the default, recommended mode for supported architectures.
+    The jit setting enables the Dynamic Recomplier (Dynarec) for CPU emulation. The Dynarec is much faster than the interpreter setting and is the default, recommended mode for supported architectures.
  
- The interpreter setting enables the Interpreter for CPU emulation. The Interpreter is a very slow type of emulation and mostly useful for debug, but should work anywhere.
+    The interpreter setting enables the Interpreter for CPU emulation. The Interpreter is a very slow type of emulation and mostly useful for debug, but should work anywhere.
+	
+- **Locked CPU Speed** [ppsspp_locked_cpu_speed] (**off**|222MHz|266MHz|333MHz)
 
-- **Locked CPU Speed** (**off**/222MHz/266MHz/333MHz)
+	Lock the PSP's emulated CPU at a certain clock speed.
+	
+- **Language** [ppsspp_language] (**automatic**|english|japanese|french|spanish|german|italian|dutch|portuguese|russian|korean|chinese_traditional|chinese_simplified)
 
- Awaiting description.
+    Configure the PPSSPP's system language.
+	
+- **Rendering Mode** [ppsspp_rendering_mode] (**buffered**|nonbuffered)
 
-- **Language** (**automatic**/english/japanese/french/spanish/german/italian/dutch/portuguese/russian/korean/chinese_traditional/chinese_simplified)
+	Awaiting description.
+	
+- **True Color Depth** [ppsspp_true_color] (**enabled**|disabled)
 
- Configure the PPSSPP's system language.
+	Awaiting description.
+	
+- **Auto Frameskip** [ppsspp_auto_frameskip] (**disabled**|enabled)
 
-- **Rendering Mode** (**buffered**/nonbuffered/read_framebuffers_to_memory_cpu/read_framebuffers_to_memory_gpu)
+	Awaiting description.
+	
+- **Frameskip** [ppsspp_frameskip] (**0**|1|2|3|4|5|6|7|8|9)
 
- Awaiting description.
+	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+	
+- **Force Max FPS** [ppsspp_force_max_fps] (**disabled**|enabled)
 
-- **Auto Frameskip** (**Off**/On)
+	Prevents FPS form exceeding 60. Can be useful for games such as God of War which exceeds 60 FPS which can reduce the emulation speed.
 
- Awaiting description.
+- **Audio latency** [ppsspp_audio_latency] (**low**|medium|high)
 
-- **Frameskip** (**0**/1/2/3/4/5/6/7/8/9)
+	Awaiting description.
+	
+- **Internal Resolution** [ppsspp_internal_resolution] (**480x272**|960x544|1440x816|1920x1088|2400x1360|2880x1632|3360x1904|3840x2176|4320x2448|4800x2720)
 
- Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+	Configure the internal resolution.
+	
+- **Confirmation Button** [ppsspp_button_preference] (**cross**|circle)
 
-- **Framerate limit** (**0**/15/20/30/45/50/60)
+	Select whether the cross input or the circle input is the confirmation button.
+	
+- **Fast Memory (Speedhack)** [ppsspp_fast_memory] (**enabled**|disabled)
 
- Awaiting description.
+	Awaiting description.
+	
+- **Block Transfer GPU** [ppsspp_block_transfer_gpu] (**enabled**|disabled)
 
-- **Force Max FPS** (**Off**/On)
+	Awaiting description.
+	
+- **Texture Scaling Level** [ppsspp_texture_scaling_level] (**1**|2|3|4|5|0)
 
- Prevents FPS form exceeding 60. Can be useful for games such as God of War which exceeds 60 FPS which can reduce the emulation speed.
+	Awaiting description.
+	
+- **Texture Scaling Type** [ppsspp_texture_scaling_type] (**xbrz**|hybrid|bicubic|hybrid_bicubic)
 
-- **Audio latency** (**0**/1/2)
+	Awaiting description.
+	
+- **Anisotropic Filtering** [ppsspp_texture_anisotropic_filtering] (**off**|1x|2x|4x|8x|16x)
 
- Awaiting description.
+	Awaiting description.
 
-- **Internal Resolution** (**480x272**/960x544/1440x816/1920x1088/2400x1360/2880x1632/3360x1904/3840x2176/4320x2448/4800x2720" 
+- **Texture Deposterize** [ppsspp_texture_deposterize] (**disabled**|enabled)
 
- Configure the internal resolution.
+	Awaiting description.
+	
+- **GPU Hardware T&L** [ppsspp_gpu_hardware_transform] (**enabled**|disabled)
 
-- **Output Resolution (restart)** (**480x272**/960x544/1440x816/1920x1088/2400x1360/2880x1632/3360x1904/3840x2176/4320x2448/4800x2720)
+	Awaiting description.
+	
+- **Vertex Cache (Speedhack)** [ppsspp_vertex_cache] (**enabled**|disabled)
 
- Configure the output resolution.
+	An optimization, that makes things faster and in turn might miss some changes in geometry - though PPSSPP does its best to make it reliable there are some edge cases it can miss. Turn this off if you see strange graphical glitches.
 
-- **Confirmation Button** (**cross**/circle)
+- **IO Threading** [ppsspp_separate_io_thread] (**disabled**|enabled)
 
- Select whether the cross input or the circle input is the confirmation button.
+	Awaiting description.
+	
+- **Unsafe FuncReplacements** [ppsspp_unsafe_func_replacements] (**enabled**|disabled)
 
-- **Fast Memory (Speedhack)** (Off/**On**)
+	Awaiting description.
+	
+- **Sound Speedhack** [ppsspp_sound_speedhack] (**disabled**|enabled)
 
- Awaiting description.
+	Awaiting description.
 
-- **Set Rounding Mode** (Off/**On**)
+- **Internal Cheats Support** [ppsspp_cheats] (**disabled**|enabled)
 
- Awaiting description.
+	Awaiting description.
 
-- **Block Transfer GPU** (Off/**On**)
-
- Awaiting description.
-
-- **Texture Scaling Level** (**1**/2/3/4/5/0)
-
- Awaiting description.
-
-- **Texture Scaling Type** (xbrz/hybrid/bicubic/hybrid_bicubic)
-
- Awaiting description.
-
-- **Anisotropic Filtering** (**off**/1x/2x/4x/8x/16x)
-
- Awaiting description. **Not available on all platforms.**
-
-- **Texture Deposterize** (**Off**/On)
-
- Awaiting description.
-
-- **Internal Shader** (**off**/fxaa/crt/natural/vignette/grayscale/bloom/sharpen/inverse/scanlines/cartoon/4xHQ/aa-color/upscale)
-
- Awaiting description.
-
-- **GPU Hardware T&L** (Off/**On**)
-
- Awaiting description.
-
-- **Vertex Cache (Speedhack)** (Off/**On)
-
- An optimization, that makes things faster and in turn might miss some changes in geometry - though PPSSPP does its best to make it reliable there are some edge cases it can miss. Turn this off if you see strange graphical glitches.
-
-- **Prescale UV (Speedhack)** (**Off**/On)
-
- Awaiting description.
-
-- **IO Threading** (**Off**/On)
-
- Awaiting description.
-
-- **Unsafe FuncReplacements** (Off/**On**)
-
- Awaiting description.
-
-- **Sound Speedhack** (**Off**/On)
-
- Awaiting description.
-
-- **Threaded input hack** (**Off**/On)
-
- Awaiting description.
-
-## Controllers
-
-### Device types
-
-The PPSSPP core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-#### User 1 device types
-
-- None - Doesn't disable input.
-- **RetroPad** - Joypad
-- RetroPad w/Analog - Joypad - There's no reason to switch to this.
-
-### Controller tables
-
-#### Joypad and analog device type table
+## Joypad
 
 ![](../image/controller/psp.png)
 
-| User 1 Remap descriptors      | RetroPad Inputs                              |
-|-------------------------------|----------------------------------------------|
-| Cross                         | ![](../image/retropad/retro_b.png)       |
-| Square                        | ![](../image/retropad/retro_y.png)       |
-| Select                        | ![](../image/retropad/retro_select.png)        |
-| Start                         | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     |
-| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
-| Circle                        | ![](../image/retropad/retro_a.png)       |
-| Triangle                      | ![](../image/retropad/retro_x.png)       |
-| L                             | ![](../image/retropad/retro_l1.png)            |
-| R                             | ![](../image/retropad/retro_r1.png)            |
-| Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
-| Analog Y                      | ![](../image/retropad/retro_left_stick.png) Y  |
+| User 1 input descriptors | RetroPad Inputs                               |
+|--------------------------|-----------------------------------------------|
+| Cross                    | ![](../image/retropad/retro_b.png)            |
+| Square                   | ![](../image/retropad/retro_y.png)            |
+| Select                   | ![](../image/retropad/retro_select.png)       |
+| Start                    | ![](../image/retropad/retro_start.png)        |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)      |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)    |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)    |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)   |
+| Circle                   | ![](../image/retropad/retro_a.png)            |
+| Triangle                 | ![](../image/retropad/retro_x.png)            |
+| L                        | ![](../image/retropad/retro_l1.png)           |
+| R                        | ![](../image/retropad/retro_r1.png)           |
+| Analog X                 | ![](../image/retropad/retro_left_stick.png) X |
+| Analog Y                 | ![](../image/retropad/retro_left_stick.png) Y |
 
 ## Compatibility
 
-[PPSSPP Compatibility List](http://forums.ppsspp.org/showthread.php?tid=1473)
+- [PPSSPP Compatibility List](http://forums.ppsspp.org/showthread.php?tid=1473)
 
 ## External Links
 
+- [Official PPSSPP Website](http://www.ppsspp.org/)
+- [Official PPSSPP Github Repository](https://github.com/hrydgard/ppsspp)
 - [Libretro PPSSPP Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/ppsspp_libretro.info)
 - [Libretro PPSSPP Github Repository](https://github.com/libretro/ppsspp)
 - [Report Libretro PPSSPP Core Issues Here](https://github.com/libretro/ppsspp/issues)
-- [Official PPSSPP Website](http://www.ppsspp.org/)
-- [Official PPSSPP Github Repository](https://github.com/hrydgard/ppsspp)
