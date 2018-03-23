@@ -144,6 +144,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ### See also
 
+#### Nintendo - Nintendo Entertainment System
+
 - [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
 - [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
 - [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
