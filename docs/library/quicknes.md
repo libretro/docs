@@ -4,8 +4,6 @@
 
 Nes_Emu, the core NES emulator library used by QuickNES, began as a very simple NES emulator sometime in 2004. It was based on the 6502 CPU core and APU sound core used in the Game_Music_Emu sound engine.
 
-### Author/License
-
 The QuickNES core has been authored by
 
 - blargg
@@ -23,8 +21,6 @@ Content that can be loaded by the QuickNES core have the following file extensio
 
 - .nes
 
-## Databases
-
 RetroArch database(s) that are associated with the QuickNES core:
 
 - [Nintendo - Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20Entertainment%20System.rdb)
@@ -41,7 +37,7 @@ Frontend-level settings or features that the QuickNES core respects.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
@@ -57,55 +53,70 @@ Frontend-level settings or features that the QuickNES core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | ✔         |
+| Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
 ### Directories
 
-The QuickNES core's directory name is 'QuickNES'
+The QuickNES core's library name is 'QuickNES'
 
 The QuickNES core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | Cartridge battery save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
 - The QuickNES core's core provided FPS is 60
 - The QuickNES core's core provided sample rate is 44100 Hz
-- The QuickNES core's core provided aspect ratio is 4/3
+- The QuickNES core's base width is 256
+- The QuickNES core's base height is 240
+- The QuickNES core's max width is 256
+- The QuickNES core's max height is 240
+- The QuickNES core's core provided aspect ratio is 4/3 when the 'Aspect Ratio' core option is set to 4/3
+- The QuickNES core's core provided aspect ratio is 8/7 when the 'Aspect Ratio' core option is set to 8/7
 
-## Controllers
+## Core options
 
-The QuickNES core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The QuickNES core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
-### User 1 - 2 device types
+Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- None - Doesn't disable input.
-- **RetroPad** - Joypad
-- RetroPad w/ Analog - Joypad - There's no reason to switch to this.**
+- **Aspect Ratio** [quicknes_aspect_ratio_par] (**PAR**|4:3)
 
-### Controller tables
+	Configure QuickNES's core provided aspect ratio.
+	
+- **Show horizontal overscan** [quicknes_use_overscan_h] (**enabled**|disabled)
 
-#### Joypad
+	Set this to disabled to crop out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
+	
+- **Show vertical overscan** [quicknes_use_overscan_v] (**disabled**|enabled)
+
+	Set this to disabled to crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
+	
+## Joypad
 
 ![](../image/Controller/nes.png)
 
-| User 1 - 2 Remap descriptors | RetroPad Inputs                              |
-|------------------------------|----------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)       |
-| Select                       | ![](../image/retropad/retro_select.png)        |
-| Start                        | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
-| A                            | ![](../image/retropad/retro_a.png)       |
+| User 1 - 2 input descriptors | RetroPad Inputs                             |
+|------------------------------|---------------------------------------------|
+| B                            | ![](../image/retropad/retro_b.png)          |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)          |
 
 ## Compatibility
 
