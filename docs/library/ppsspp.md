@@ -25,9 +25,9 @@ In order to acquire PPSSPP's assets files and install them succcessfully, follow
 1 . Create a directory named PPSSPP in RetroArch's System directory.
 
 ```
-- RetroArch
-           - System
-		           - PPSSPP
+RetroArch/
+         └── system/
+		   └── PPSSPP/
 ```
 
 Here's an example of what it should look like.
@@ -106,8 +106,9 @@ The PPSSPP core saves/loads to/from these directories.
 .
 └── PSP/
        ├── PPSSPP_STATE/ (Used to be the state directory, no longer used)
-	   ├── SAVEDATA/ (Game memory stick directories and files)
-	   ├── Cheats/ (Internal Cheats directory, disabled by default)
+       ├── SAVEDATA/ (Game memory stick directories and files)
+       ├── Cheats/ (Internal Cheats directory, disabled by default)
+       ├── GAME/ (DLC directory)
        └── SYSTEM/
                  └── CACHE/ (Shader cache)
 ```
@@ -139,6 +140,12 @@ Cheats can be used to unlock 60fps in several 30fps games.
 Each code can be activated or disabled in the ini directly with _C1 in place of _C0 on the title line.
 
 [PPSSPP forums thread](http://forums.ppsspp.org/showthread.php?tid=3590)
+
+## DLC
+
+DLCs need to be installed in the GAME directory. Create the GAME directory in the PSP directory and it should look like this.
+
+RetroArch\saves\PPSSPP\PSP\GAME\
 
 ## OpenGL and Vulkan
 
