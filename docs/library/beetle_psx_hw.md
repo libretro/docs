@@ -8,11 +8,9 @@ Notable additions in this fork are:
 
 - PBP and CHD file format support, developed by Zapeth;
 - Software renderer internal resolution upscaling, implemented by simias;
-- An OpenGL 3.2 renderer, developed by simias;
+- An OpenGL 3.3 renderer, developed by simias;
 - A Vulkan renderer, developed by TinyTiger;
 - PGXP perspectve correct texturing and subpixel precision, developed by iCatButler;
-
-### Author/License
 
 The Beetle PSX HW core has been authored by
 
@@ -23,6 +21,21 @@ The Beetle PSX HW core is licensed under
 - [GPLv2](https://github.com/libretro/beetle-psx-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+
+### Requirements
+
+- OpenGL 3.3
+- Vulkan
+
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+|   Filename   | Description                         |              md5sum              |
+|:------------:|:-----------------------------------:|:--------------------------------:|
+| scph5500.bin | PS1 JP BIOS - Required for JP games | 8dd7d5296a650fac7319bce665a6a53c |
+| scph5501.bin | PS1 US BIOS - Required for US games | 490f666e1afb15b7362b406ed1cea246 |
+| scph5502.bin | PS1 EU BIOS - Required for EU games | 32736f17079d0b2b7024407c39bd3050 |
 
 ## Extensions
 
@@ -36,21 +49,9 @@ Content that can be loaded by the Beetle PSX HW core have the following file ext
 - .pbp
 - .chd
 
-## Databases
-
 RetroArch database(s) that are associated with the Beetle PSX HW core:
 
 - [Sony - PlayStation](https://github.com/libretro/libretro-database/blob/master/rdb/Sony%20-%20PlayStation.rdb)
-
-## BIOS
-
-Required or optional firmware files go in the frontend's system directory.
-
-|   Filename   | Description                         |              md5sum              |
-|:------------:|:-----------------------------------:|:--------------------------------:|
-| scph5500.bin | PS1 JP BIOS - Required for JP games | 8dd7d5296a650fac7319bce665a6a53c |
-| scph5501.bin | PS1 US BIOS - Required for US games | 490f666e1afb15b7362b406ed1cea246 |
-| scph5502.bin | PS1 EU BIOS - Required for EU games | 32736f17079d0b2b7024407c39bd3050 |
 
 ## Features
 
@@ -66,11 +67,11 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
-| Cheats (Cheats menu) | ✔         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | -         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -85,7 +86,7 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 
 ### Directories
 
-The Beetle PSX HW core's directory name is 'Beetle PSX HW'
+The Beetle PSX HW core's library name is 'Beetle PSX HW'
 
 The Beetle PSX HW core saves/loads to/from these directories.
 
@@ -95,15 +96,21 @@ The Beetle PSX HW core saves/loads to/from these directories.
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State      |
 
 ### Geometry and timing
 
 - The Beetle PSX HW core's core provided FPS is (FPS)
 - The Beetle PSX HW core's core provided sample rate is (Rate)
+- The Beetle PSX HW core's base width is (Base width)
+- The Beetle PSX HW core's base height is (Base height)
+- The Beetle PSX HW core's max width is (Max width)
+- The Beetle PSX HW core's max height is (Max height)
 - The Beetle PSX HW core's core provided aspect ratio is (Ratio)
 
-### Loading content
+## Loading content
 
 Beetle PSX HW needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
@@ -120,8 +127,8 @@ After that, you can load the `foo.cue` file in RetroArch with the Beetle PSX HW 
 
 !!! attention
     Certain PS1 games are multi-track, so their .cue files might be more complicated.
-	
-#### Playing PAL copy protected games
+
+### Playing PAL copy protected games
 
 PAL copy protected games need a SBI Subchannel file next to the bin/cue files in order to get past the copy protection.
 
@@ -156,9 +163,13 @@ Here's a m3u example done with Valkryie Profile
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
-### Game compression
+### Compressed content
 
-Alternatively to using cue sheets with .bin files, you can convert your games to .pbp (Playstation Portable update file) to reduce file sizes and neaten up your game folder. A recommended .pbp convert tool is PSX2PSP.
+Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .pbp (Playstation Portable update file) or .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
+
+#### PBP
+
+A recommended .pbp convert tool is PSX2PSP.
 
 If converting a multiple-disk game, all disks should be added to the same .pbp file, rather than making a .m3u file for them.
 
@@ -167,7 +178,19 @@ Most conversion tools will want a single .bin file for each disk. If your game u
 !!! attention
     RetroArch does not currently have .pbp database due to variability in users' conversion methods. All .pbp games will have to be added to playlists manually.
 
-### Saves
+#### CHD	
+
+To convert content to CHD format, use the chdman tool found inside the latest MAME distribution and point it to a .cue file, like so:
+
+```
+chdman createcd --input foo.cue --output foo.chd
+```
+
+Note that the tool currrently does not integrate .sbi files into the .chd, so these must be placed alongside the resulting .chd file in order to properly play games with LibCrypt protection.
+
+For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
+
+## Saves
 
 For game savedata storage, the PSX console used memory cards. The PSX console had two slots for memory cards. 
 
@@ -446,11 +469,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	An **experimental** feature, may not work correctly in all games. Some games may break if you set them past a certain speed. Can greatly reduce the loading times on games.
 
-## Controllers
+## User 1 - 8 device types
 
 The Beetle PSX HW core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 - 8 device types
 
 - None - Input disabled.
 - [**PlayStation Controller**](https://en.wikipedia.org/wiki/PlayStation_Controller) - Joypad - PlayStation Controller (SCPH-1080)
@@ -462,7 +483,7 @@ The Beetle PSX HW core supports the following device type(s) in the controls men
 - [Mouse](https://en.wikipedia.org/wiki/PlayStation_Mouse) - Mouse - PlayStation Mouse (SCPH-1090, SCPH-1030)
 - [neGcon](https://en.wikipedia.org/wiki/NeGcon) - Joypad - Namco third party controller
 
-### Rumble support
+## Rumble support
 
 Rumble only works in the Beetle PSX HW core when
 
@@ -471,18 +492,15 @@ Rumble only works in the Beetle PSX HW core when
 - The joypad device being used has rumble support.
 - The corresponding user's device type is set to **DualShock**
 
-### Multitap support
+## Multitap support
 
 ['Port 1: Multitap enable' and 'Port 2: Multitap enable' core options](https://docs.libretro.com/library/beetle_psx_hw#core-options).
 
-### Controller tables
-
-#### Joypad
-
+## Joypad
 
 ![](../image/controller/psx.png)
 
-| User 1 - 8 Remap descriptors  | RetroPad Inputs                              | PlayStation Controller Inputs                  | DualShock Inputs                                | Analog Controller Inputs                        | Analog Joystick Inputs                         | neGcon Inputs                   |
+| User 1 - 8 input descriptors  | RetroPad Inputs                              | PlayStation Controller Inputs                  | DualShock Inputs                                | Analog Controller Inputs                        | Analog Joystick Inputs                         | neGcon Inputs                   |
 |-------------------------------|----------------------------------------------|------------------------------------------------|-------------------------------------------------|-------------------------------------------------|------------------------------------------------|---------------------------------|
 | Cross                         | ![](../image/retropad/retro_b.png)             | ![](../image/Button_Pack/PS3/PS3_Cross.png)      | ![](../image/Button_Pack/PS3/PS3_Cross.png)       | ![](../image/Button_Pack/PS3/PS3_Cross.png)       | ![](../image/Button_Pack/PS3/PS3_Cross.png)      | Analog button I                 |
 | Square                        | ![](../image/retropad/retro_y.png)             | ![](../image/Button_Pack/PS3/PS3_Square.png)     | ![](../image/Button_Pack/PS3/PS3_Square.png)      | ![](../image/Button_Pack/PS3/PS3_Square.png)      | ![](../image/Button_Pack/PS3/PS3_Square.png)     | Analog button II                |
@@ -505,7 +523,7 @@ Rumble only works in the Beetle PSX HW core when
 | Right Analog X                | ![](../image/retropad/Retro_right_stick.png) X |                                                  | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick X                               |                                 |
 | Right Analog Y                | ![](../image/retropad/Retro_right_stick.png) Y |                                                  | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick Y                               |                                 |
 
-#### Mouse
+## Mouse
 
 | RetroMouse Inputs                                   | Mouse Inputs       |
 |-----------------------------------------------------|--------------------|
@@ -513,7 +531,7 @@ Rumble only works in the Beetle PSX HW core when
 | ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
-#### Lightgun
+## Lightgun
 
 | RetroLightgun Inputs                                 | Guncon / G-Con 45 Inputs    | Justifier Inputs    |
 |------------------------------------------------------|-----------------------------|---------------------|
@@ -526,15 +544,17 @@ Rumble only works in the Beetle PSX HW core when
 
 ## Compatibility
 
-A list of known emulation bugs can be found here [https://forum.fobby.net/index.php?t=msg&th=1114&start=0&](https://forum.fobby.net/index.php?t=msg&th=1114&start=0&)
+A list of known emulation bugs when using the software renderer can be found here [https://forum.fobby.net/index.php?t=msg&th=1114&start=0&](https://forum.fobby.net/index.php?t=msg&th=1114&start=0&)
+
+Expect bugs with hardware renderer enhancements.
 
 ## External Links
 
+- [Official Mednafen Website](https://mednafen.github.io/)
+- [Official Mednafen Downloads](https://mednafen.github.io/releases/)
 - [Beetle PSX HW Libretro Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_psx_hw_libretro.info)
 - [Beetle PSX HW Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX HW Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
-- [Official Mednafen Website](https://mednafen.github.io/)
-- [Official Mednafen Downloads](https://mednafen.github.io/releases/)
 
 ### See also
 
