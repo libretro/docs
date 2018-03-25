@@ -300,13 +300,13 @@
 
 ### [〰️] Fuse
 
-- Improve background section.
-- Complete why use this core section.
 - Complete BIOS section
-- Complete compatibility section.
-- Complete feature table.
-- Add core provided aspect ratio.
-- Add internal FPS
+- Add fps
+- Add base width
+- Add base height
+- Add max width
+- Add max height
+- Add aspect ratio
 - Improve core option descriptions.
 
 ### [〰️] Gambatte
