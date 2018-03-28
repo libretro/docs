@@ -53,7 +53,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|-------|
-| [FB Alpha](https://github.com/libretro/fbalpha)       | ✔         | **Very experimental**. Only supports NeoGeo at the moment. |
+| [FB Alpha](https://github.com/libretro/fbalpha)       | ✔         | **Very experimental**. Supports NeoGeo, CPS1, CPS2, CPS3 |
 
 ### Atari 2600
 
