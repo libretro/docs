@@ -179,6 +179,14 @@ If converting a multiple-disk game, all disks should be added to the same .pbp f
 
 Most conversion tools will want a single .bin file for each disk. If your game uses multiple .bin files (tracks) per disk, you will have to mount the cue sheet to a virtual drive and re-burn the images onto a single track before conversion.
 
+For multi-disk PAL copy-proected games, change the sbi file syntax from [filename].sbi to [filename]_[disc_number].sbi
+
+- Final Fantasy IX (Germany).pbp
+- **Final Fantasy IX (Germany)_1.sbi**
+- **Final Fantasy IX (Germany)_2.sbi**
+- **Final Fantasy IX (Germany)_3.sbi**
+- **Final Fantasy IX (Germany)_4.sbi**
+
 !!! attention
     RetroArch does not currently have .pbp database due to variability in users' conversion methods. All .pbp games will have to be added to playlists manually.
 
