@@ -91,7 +91,7 @@ The QuickNES core has the following option(s) that can be tweaked from the core 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Aspect Ratio** [quicknes_aspect_ratio_par] (**PAR**|4:3)
+- **Aspect ratio** [quicknes_aspect_ratio_par] (**PAR**|4:3)
 
 	Configure QuickNES's core provided aspect ratio.
 	
@@ -102,6 +102,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Show vertical overscan** [quicknes_use_overscan_v] (**disabled**|enabled)
 
 	Set this to disabled to crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
+	
+- **No sprite limit** [quicknes_no_sprite_limit] (**enabled**|disabled)
+
+	Reduce sprite flickering when enabled.
 	
 ## Joypad
 
