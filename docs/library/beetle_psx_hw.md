@@ -2,7 +2,7 @@
 
 ## Background
 
-Beetle PSX is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode, excluding the Vulkan renderer, which is written in C++11 for the time being. Beetle PSX currently runs on Linux, OSX and Windows.
+Beetle PSX HW is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode, excluding the Vulkan renderer, which is written in C++11 for the time being. Beetle PSX HW currently runs on Linux, OSX and Windows.
 
 Notable additions in this fork are:
 
@@ -24,8 +24,8 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 ### Requirements
 
-- OpenGL 3.3
-- Vulkan
+- OpenGL 3.3 for the opengl renderer
+- Vulkan for the vulkan renderer
 
 ## BIOS
 
@@ -102,13 +102,13 @@ The Beetle PSX HW core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Beetle PSX HW core's core provided FPS is (FPS)
-- The Beetle PSX HW core's core provided sample rate is (Rate)
-- The Beetle PSX HW core's base width is (Base width)
-- The Beetle PSX HW core's base height is (Base height)
-- The Beetle PSX HW core's max width is (Max width)
-- The Beetle PSX HW core's max height is (Max height)
-- The Beetle PSX HW core's core provided aspect ratio is (Ratio)
+- The Beetle PSX HW core's core provided FPS is 59.941 for NTSC games and 49.76 for PAL games
+- The Beetle PSX HW core's core provided sample rate is 44100 Hz
+- The Beetle PSX HW core's base width is 320
+- The Beetle PSX HW core's base height is 240
+- The Beetle PSX HW core's max width is 700 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max width
+- The Beetle PSX HW core's max height is 576 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max height
+- The Beetle PSX HW core's core provided aspect ratio is 4/3 when the 'Widescreen mode hack' core option is set to off. 16/9 when it's set to on
 
 ## Loading content
 
@@ -163,6 +163,18 @@ Here's a m3u example done with Valkryie Profile
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
+#### Swapping disks	
+
+Swapping disks follows this procedure
+
+1. Open tray (Disk Cycle Tray Status)
+
+2. Change the Disk Index to the disk you want to swap to. 
+
+3. Close tray (Disk Cycle Tray Status)
+
+4. Return to the game and wait a few seconds to let it take effect
+
 ### Compressed content
 
 Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .pbp (Playstation Portable update file) or .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
@@ -188,7 +200,8 @@ chdman createcd --input foo.cue --output foo.chd
 
 Note that the tool currrently does not integrate .sbi files into the .chd, so these must be placed alongside the resulting .chd file in order to properly play games with LibCrypt protection.
 
-For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
+!!! attention
+	For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
 
 ## Saves
 
@@ -257,15 +270,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Renderer (restart)** [beetle_psx_hw_renderer] (**vulkan**/opengl/software)
 
-	Choose which video renderer will be used. **Software is the most accurate renderer.** The OpenGL and Vulkan renderers will enable and/or speedup enhancements like upscaling and texture filtering. **The OpenGL and Vulkan renderers must be used with its corresponding video driver in RetroArch's Driver settings.** **Also, Hardware Shared Context must be enabled in RetroArch's Core settings.**
+	Choose which video renderer will be used. 
+	
+	Software is the most accurate renderer.
+	
+	The OpenGL and Vulkan renderers are less accurate at the moment but will enable and/or speedup enhancements like upscaling and texture filtering. 
+	
+	**The OpenGL and Vulkan renderers must be used with its corresponding video driver in RetroArch's Driver settings.**
+	
+	- Renderer - vulkan
+	- RetroArch Video Driver - vulkan
+		- The vulkan renderer supports Slang shaders
+	
+	- Renderer - opengl
+	- RetroArch Video driver - gl
+		- The opengl renderer supports GLSL shaders
 	
 - **Software framebuffer** [beetle_psx_hw_renderer_software_fb] (Off/**On**)
 
-	If off, the software renderer will skip some steps. Potential speedup. Causes bad graphics when doing framebuffer readbacks.
+	If off, the software renderer will skip some steps. 
+	
+	Potential speedup. 
+	
+	Causes bad graphics when doing framebuffer readbacks.
 	
 - **Adaptive smoothing** [beetle_psx_hw_adaptive_smoothing] (Off/**On**)
 
-	When upscaling, smooths out 2D elements while keeping 3D elements sharp. Only for the Vulkan renderer at the moment.
+	When upscaling, smooths out 2D elements while keeping 3D elements sharp. 
+	
+	**Only for the Vulkan renderer at the moment.**
 	
 ??? note "*Adapative smoothing - Off*"
     ![](..\image\core\beetle_psx_hw\smooth_off.png)
@@ -285,7 +318,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Texture filtering** [beetle_psx_hw_filter] (**nearest**/SABR/xBR/bilinear/3-point/JINC2)
 
-	Per-texture filtering. Only for the OpenGL renderer at the moment.
+	Per-texture filtering. 
+	
+	**Only for the OpenGL renderer at the moment.**
 	
 ??? note "*nearest*"
     ![](..\image\core\beetle_psx_hw\nearest.png)
@@ -307,18 +342,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Internal color depth** [beetle_psx_hw_internal_color_depth] (**dithered 16bpp (native)**/32bpp)
 
-	PSX had 16bpp depth, Beetle PSX HW can go up to 32bpp. **Only for the OpenGL and Vulkan renderers at the moment.** The Vulkan renderer always uses 32bpp.
+	PSX had 16bpp depth, Beetle PSX HW can go up to 32bpp. 
+	
+	**Only for the OpenGL and Vulkan renderers at the moment.** 
+	
+	**The Vulkan renderer always uses 32bpp.**
 	
 - **Wireframe mode** [beetle_psx_hw_wireframe] (**Off**/On)
 
-	Shows only the outlines of polygons. Only for the OpenGL renderer. **For debug use.**
+	Shows only the outlines of polygons. Only for the OpenGL renderer. 
+	
+	**For debug use.**
 	
 ??? note "Wireframe mode - On"
 	![](..\image\core\beetle_psx_hw\wire.png)
 	
 - **Display full VRAM** [beetle_psx_hw_display_vram] (**Off**/On)
 
-	Everything in VRAM is drawn on screen. **For debug use.**
+	Everything in VRAM is drawn on screen. 
+	
+	**For debug use.**
 	
 ??? note "Display full VRAM - On"
 	![](..\image\core\beetle_psx_hw\vram.png)
@@ -326,6 +369,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **PGXP operation mode** [beetle_psx_hw_pgxp_mode] (**Off**/memory only/memory + CPU)
 
 	When on, floating point coordinates will be used for vertex positions, to avoid the PSX polygon jitter. 'memory + cpu' mode can further reduce jitter at the cost of performance and geometry glitches.
+	
+	[https://www.youtube.com/watch?v=EYCpd_1lPUc](https://www.youtube.com/watch?v=EYCpd_1lPUc)
 	
 - **PGXP vertex cache** [beetle_psx_hw_pgxp_caching] (**Off**/On)
 
@@ -349,24 +394,40 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Redraws/reuses the last frame if there was no new data.
 	
-- **CPU Overclock** [beetle_psx_hw_cpu_overclock] (**Off**/On)
+- **CPU frequency scaling (overclock)** [beetle_psx_hw_cpu_freq_scale] (50% to 500% in increments of 10%. **100% is default**)
+	
+	Overclock the emulated PSX's CPU.
+	
+- **GTE Overclock** [beetle_psx_hw_gte_overclock] (**Off**/On)
 
 	Gets rid of memory access latency and makes all GTE instructions have 1 cycle latency.
 	
+- **GPU rasterizer overclock** [beetle_psx_hw_gpu_overclock] (**1x(native)**/2x/4x/8x/16x/32x)
+
+	Overclock the emulated PSX's GPU rasterizer.
+	
 - **Skip BIOS** [beetle_psx_hw_skipbios] (**Off**/On)
 
-	Self-explanatory. **Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
+	Self-explanatory. 
+	
+	**Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
 	
 ??? note "Skip BIOS - Off"
 	![](..\image\core\beetle_psx_hw\bios.png)	
 
 - **Dithering pattern** [beetle_psx_hw_dither_mode] (**1x(native)**/internal resolution/Off)
 
-	If off, disables the dithering pattern the PSX applies to combat color banding. **Only for the OpenGL and Software renderers. Vulkan always disables the pattern.**
+	If off, disables the dithering pattern the PSX applies to combat color banding. 
+	
+	**Only for the OpenGL and Software renderers.**
+	
+	**Vulkan always disables the pattern.**
 	
 - **Display internal FPS** [beetle_psx_hw_display_internal_framerate] (**Off**/On)
 
-	Shows the frame rate at which the emulated PSX is drawing at. **Onscreen Notifications must be enabled in the RetroArch Onscreen Display Settings.**
+	Shows the frame rate at which the emulated PSX is drawing at. 
+	
+	**Onscreen Notifications must be enabled in the RetroArch Onscreen Display Settings.**
 	
 ??? note "Display internal FPS - On"
 	![](..\image\core\beetle_psx_hw\fps.png)	
@@ -448,13 +509,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Enable memory card 1** [beetle_psx_hw_enable_memcard1] (Off/**On**)
 
-	Enable or disables Memcard slot 1. When disabled, games cannot save/load to Memcard slot 1.  **Memcard 1 must be enabled for game 'Codename Tenka'.**
+	Enable or disables Memcard slot 1. When disabled, games cannot save/load to Memcard slot 1.  
+	
+	**Memcard 1 must be enabled for game 'Codename Tenka'.**
 	
 - **Shared memcards (restart)** [beetle_psx_hw_shared_memory_cards] (**Off**/On)
 
 	Games will share and save/load to the same memory cards.
 	
-<center>
+	**The 'Memcard 0 method' core option needs to be set to 'mednafen' for the 'Shared memcards' core option to function properly.**
+
+<center>	
 
 | Memcard slot 0                     | Memcard slot 1                     |
 |------------------------------------|------------------------------------|
@@ -462,12 +527,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 </center>
 
-!!! attention
-	The 'Memcard 0 method' core option needs to be set to 'mednafen' for the 'Shared memcards' core option to function properly.
-
 - **Increase CD loading speed** [beetle_psx_hw_cd_fastload] (**2x (native)**/4x/6x/8x/10x/12x/14x)
 
-	An **experimental** feature, may not work correctly in all games. Some games may break if you set them past a certain speed. Can greatly reduce the loading times on games.
+	Can greatly reduce the loading times in games.
+
+	**May not work correctly in all games. Some games may break if you set them past a certain speed.**
 
 ## User 1 - 8 device types
 
@@ -544,9 +608,9 @@ Rumble only works in the Beetle PSX HW core when
 
 ## Compatibility
 
-A list of known emulation bugs when using the software renderer can be found here [https://forum.fobby.net/index.php?t=msg&th=1114&start=0&](https://forum.fobby.net/index.php?t=msg&th=1114&start=0&)
+**Expect bugs with hardware renderer enhancements.**
 
-Expect bugs with hardware renderer enhancements.
+A list of known emulation bugs when using the software renderer can be found here [https://forum.fobby.net/index.php?t=msg&th=1114&start=0&](https://forum.fobby.net/index.php?t=msg&th=1114&start=0&)
 
 ## External Links
 
@@ -556,9 +620,7 @@ Expect bugs with hardware renderer enhancements.
 - [Beetle PSX HW Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX HW Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
 
-### See also
-
-#### PSX
+## PSX
 
 - [PlayStation (Beetle PSX)](https://docs.libretro.com/library/beetle_psx/)
 - [PlayStation (PCSX ReARMed)](https://docs.libretro.com/library/pcsx_rearmed/)

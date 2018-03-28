@@ -2,7 +2,7 @@
 
 ## Background
 
-Beetle PSX is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode, excluding the Vulkan renderer, which is written in C++11 for the time being. Beetle PSX currently runs on Linux, OSX and Windows.
+Beetle PSX is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode. Beetle PSX currently runs on Linux, OSX and Windows.
 
 Notable additions in this fork are:
 
@@ -94,13 +94,13 @@ The Beetle PSX core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Beetle PSX core's core provided FPS is (FPS)
-- The Beetle PSX core's core provided sample rate is (Rate)
-- The Beetle PSX core's base width is (Base width)
-- The Beetle PSX core's base height is (Base height)
-- The Beetle PSX core's max width is (Max width)
-- The Beetle PSX core's max height is (Max height)
-- The Beetle PSX core's core provided aspect ratio is (Ratio)
+- The Beetle PSX core's core provided FPS is 59.941 for NTSC games and 49.76 for PAL games
+- The Beetle PSX core's core provided sample rate is 44100 Hz
+- The Beetle PSX core's base width is 320
+- The Beetle PSX core's base height is 240
+- The Beetle PSX core's max width is 700 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max width
+- The Beetle PSX core's max height is 576 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max height
+- The Beetle PSX core's core provided aspect ratio is 4/3 when the 'Widescreen mode hack' core option is set to off. 16/9 when it's set to on
 
 ## Loading content
 
@@ -155,6 +155,18 @@ Here's a m3u example done with Valkryie Profile
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
+#### Swapping disks	
+
+Swapping disks follows this procedure
+
+1. Open tray (Disk Cycle Tray Status)
+
+2. Change the Disk Index to the disk you want to swap to. 
+
+3. Close tray (Disk Cycle Tray Status)
+
+4. Return to the game and wait a few seconds to let it take effect
+	
 ### Compressed content
 
 Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .pbp (Playstation Portable update file) or .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
@@ -180,7 +192,8 @@ chdman createcd --input foo.cue --output foo.chd
 
 Note that the tool currrently does not integrate .sbi files into the .chd, so these must be placed alongside the resulting .chd file in order to properly play games with LibCrypt protection.
 
-For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
+!!! attention
+	For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
 
 ## Saves
 
@@ -271,24 +284,36 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Redraws/reuses the last frame if there was no new data.
 	
-- **CPU Overclock** [beetle_psx_cpu_overclock] (**Off**/On)
+- **CPU frequency scaling (overclock)** [beetle_psx_cpu_freq_scale] (50% to 500% in increments of 10%. **100% is default**)
+	
+	Overclock the emulated PSX's CPU.
+	
+- **GTE Overclock** [beetle_psx_gte_overclock] (**Off**/On)
 
 	Gets rid of memory access latency and makes all GTE instructions have 1 cycle latency.
 	
+- **GPU rasterizer overclock** [beetle_psx_gpu_overclock] (**1x(native)**/2x/4x/8x/16x/32x)
+
+	Overclock the emulated PSX's GPU rasterizer.
+	
 - **Skip BIOS** [beetle_psx_skipbios] (**Off**/On)
 
-	Self-explanatory. **Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
+	Self-explanatory. 
+	
+	**Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
 	
 ??? note "Skip BIOS - Off"
 	![](..\image\core\beetle_psx_hw\bios.png)
 	
 - **Dithering pattern** [beetle_psx_dither_mode] (**1x(native)**/internal resolution/Off)
 
-	If off, disables the dithering pattern the PSX applies to combat color banding. **Only for the OpenGL and Vulkan renderers. Vulkan always disables the pattern.** 
+	If off, disables the dithering pattern the PSX applies to combat color banding.
 	
 - **Display internal FPS** [beetle_psx_display_internal_framerate] (**Off**/On)
 
-	Shows the frame rate at which the emulated PSX is drawing at. **Onscreen Notifications must be enabled in the RetroArch Onscreen Display Settings.**
+	Shows the frame rate at which the emulated PSX is drawing at. 
+	
+	**Onscreen Notifications must be enabled in the RetroArch Onscreen Display Settings.**
 	
 ??? note "Display internal FPS - On"
 	![](..\image\core\beetle_psx_hw\fps.png)
@@ -370,11 +395,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Enable memory card 1** [beetle_psx_enable_memcard1] (Off/**On**)
 
-	Enable or disables Memcard slot 1. When disabled, games cannot save/load to Memcard slot 1. **Memcard 1 must be enabled for game 'Codename Tenka'.**
+	Enable or disables Memcard slot 1. When disabled, games cannot save/load to Memcard slot 1. 
+	
+	**Memcard 1 must be enabled for game 'Codename Tenka'.**
 	
 - **Shared memcards (restart)** [beetle_psx_shared_memory_cards] (**Setting1**/Setting2)
 
 	Games will share and save/load to the same memory cards.
+	
+	**The 'Memcard 0 method' core option needs to be set to 'mednafen' for the 'Shared memcards' core option to function properly.**
 
 <center>
 
@@ -384,12 +413,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 </center>
 
-!!! attention
-	The 'Memcard 0 method' core option needs to be set to 'mednafen' for the 'Shared memcards' core option to function properly.
-
 - **Increase CD loading speed** [beetle_psx_cd_fastload] (**2x (native)**/4x/6x/8x/10x/12x/14x)
 
-	An **experimental** feature, may not work correctly in all games. Some games may break if you set them past a certain speed. Can greatly reduce the loading times on games.
+	Can greatly reduce the loading times in games.
+
+	**May not work correctly in all games. Some games may break if you set them past a certain speed.**
 
 ## User 1 - 8 device types
 
@@ -476,9 +504,7 @@ A list of known emulation bugs can be found here [https://forum.fobby.net/index.
 - [Beetle PSX Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
 
-### See also
-
-#### PSX
+## PSX
 
 - [PlayStation (Beetle PSX HW)](https://docs.libretro.com/library/beetle_psx_hw/)
 - [PlayStation (PCSX ReARMed)](https://docs.libretro.com/library/pcsx_rearmed/)

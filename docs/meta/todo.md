@@ -89,19 +89,9 @@
 - Complete Turbo Delay core option description
 - Complete P1/P2/P3/P4/P5 Turbo I/II core option descriptions.
 
-### [〰️] Beetle PSX
+### [✔] Beetle PSX
 
-- Test Multimouse support.
-- Add core provided sample rate.
-- Add core provided FPS.
-- Add core provided aspect ratio.
-
-### [〰️] Beetle PSX HW
-
-- Test Multimouse support.
-- Add core provided sample rate.
-- Add core provided FPS.
-- Add core provided aspect ratio.
+### [✔] Beetle PSX HW
 
 ### [〰️] Beetle Saturn
 
