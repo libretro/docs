@@ -28,6 +28,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
 | [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
+| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/libretro-mirrors/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
@@ -126,6 +127,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
 | [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
+| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/libretro-mirrors/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
