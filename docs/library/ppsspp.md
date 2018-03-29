@@ -4,6 +4,8 @@
 
 A PSP emulator for Android, Windows, Mac and Linux, written in C++
 
+The PPSPP core supports [OpenGL](https://docs.libretro.com/library/ppsspp/#opengl), [Vulkan](https://docs.libretro.com/library/ppsspp/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/ppsspp/#d3d11) rendering.
+
 The PPSSPP core has been authored by
 
 - Henrik Hrydgard
@@ -147,11 +149,17 @@ DLCs need to be installed in the GAME directory. Create the GAME directory in th
 
 RetroArch\saves\PPSSPP\PSP\GAME\
 
-## OpenGL and Vulkan
+## OpenGL
 
 PPSSPP's OpenGL renderer can be used by setting RetroArch's video driver to gl.
 
+## Vulkan
+
 PPSSPP's Vulkan renderer can be used by setting RetroArch's video driver to vulkan.
+
+## D3D11
+
+PPSSPP's Direct3D 11 renderer can be used by setting RetroArch's video driver to d3d11.
 
 ## Core options
 
