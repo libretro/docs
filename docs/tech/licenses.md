@@ -82,6 +82,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Caprice32](../library/caprice32.md)             			           | [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)                 |                |
 | [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/LICENSE.md)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
+| [Citra Canary/Experimental](../library/citra_canary.md)              | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Craft](../library/craft.md)                     			           | [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)                           |                |
 | [CrocoDS](../library/crocods.md)                 			           | [MIT](https://github.com/libretro/libretro-crocods/blob/master/LICENSE)                   |                |
 | [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |
