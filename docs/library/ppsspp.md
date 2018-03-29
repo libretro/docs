@@ -12,7 +12,7 @@ The PPSSPP core has been authored by
 
 The PPSSPP core is licensed under
 
-- [GPLv2](https://github.com/libretro/ppsspp/blob/master/LICENSE.TXT)
+- [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
@@ -36,7 +36,7 @@ Here's an example of what it should look like.
 
 ![](../image/core/ppsspp/directory.png)
 
-2 . Visit [https://github.com/libretro/ppsspp](https://github.com/libretro/ppsspp) and download the repository.
+2 . Visit [https://github.com/hrydgard/ppsspp](https://github.com/hrydgard/ppsspp) and download the repository.
 
 ![](../image/core/ppsspp/download.png)
 
@@ -291,5 +291,4 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Official PPSSPP Website](http://www.ppsspp.org/)
 - [Official PPSSPP Github Repository](https://github.com/hrydgard/ppsspp)
 - [Libretro PPSSPP Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/ppsspp_libretro.info)
-- [Libretro PPSSPP Github Repository](https://github.com/libretro/ppsspp)
-- [Report Libretro PPSSPP Core Issues Here](https://github.com/libretro/ppsspp/issues)
+- [Report Libretro PPSSPP Core Issues Here](https://github.com/hrydgard/ppsspp/issues)

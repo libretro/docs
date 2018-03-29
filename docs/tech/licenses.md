@@ -154,7 +154,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [PicoDrive](../library/picodrive.md)                                             | [MAME (Non-commercial)](https://github.com/libretro/picodrive/blob/master/COPYING)        | Non-commercial |
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
 | [PokeMini](../library/pokemini.md)                                               | [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)                         |                |
-| [PPSSPP](../library/ppsspp.md)                                                   | [GPLv2](https://github.com/libretro/ppsspp/blob/master/LICENSE.TXT)                       |                |
+| [PPSSPP](../library/ppsspp.md)                                                   | [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)                       |                |
 | [PrBoom](../library/prboom.md)                                                   | [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)                  |                |
 | [ProSystem](..//library/prosystem.md)                                            | [GPLv2](https://github.com/libretro/prosystem-libretro/blob/master/License.txt)           |                |
 | PX68k                                                                            | [kero_src.txt](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)   |                |                                                                                          |                |
