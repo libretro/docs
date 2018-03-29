@@ -65,10 +65,10 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|-------|
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✕         | |
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✕         | [**Achievements are not fully supported yet**](https://github.com/SourMesen/Mesen/issues/341) |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | On Android has a [known issue](https://github.com/libretro/RetroArch/issues/3973) |
-| [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | |
+| [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         | |
 
