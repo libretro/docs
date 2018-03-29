@@ -154,6 +154,7 @@ pages:
         - 'Nintendo - NES / Famicom (Nestopia UE)': 'library/nestopia_ue.md'
         - 'Nintendo - NES / Famicom (QuickNES)': 'library/quicknes.md'
         - 'Nintendo - 3DS (Citra)': 'library/citra.md'
+        - 'Nintendo - 3DS (Citra Canary/Experimental)': 'library/citra_canary.md'
         - 'Nintendo - Nintendo 64 (Mupen64Plus)': 'library/mupen64plus.md'
         - 'Nintendo - DS (DeSmuME 2015)': 'library/desmume_2015.md'
         - 'Nintendo - DS (DeSmuME)': 'library/desmume.md'

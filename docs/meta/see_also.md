@@ -186,6 +186,7 @@
 #### Nintendo - Nintendo 3DS
 
 - [Nintendo - 3DS (Citra)](https://docs.libretro.com/library/citra/)
+- [Nintendo - 3DS (Citra Canary/Experimental)](https://docs.libretro.com/library/citra_canary/)
 
 #### Nintendo - Nintendo 64
 

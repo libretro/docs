@@ -26,6 +26,7 @@
 - Caprice32
 - ChaiLove
 - Citra
+- Citra Canary/Experimental
 - Craft
 - CrocoDS
 - DeSmuME 2015

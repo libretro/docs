@@ -1,14 +1,16 @@
-# Nintendo - 3DS (Citra)
+#Nintendo - 3DS (Citra Canary/Experimental)
 
 ## Background
 
 Citra is an experimental open-source Nintendo 3DS emulator/debugger written in C++. It is written with portability in mind.
 
-The Citra core has been authored by
+**Citra Canary is the new performance-optimized version of Citra.**
+
+The Citra Canary/Experimental core has been authored by
 
 - Citra Emulation Project
 
-The Citra core is licensed under
+The Citra Canary/Experimental core is licensed under
 
 - [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)
 
@@ -25,7 +27,7 @@ OpenGL 3.3 or higher
 
 ## Extensions
 
-Content that can be loaded by the Citra core have the following file extensions:
+Content that can be loaded by the Citra Canary/Experimental core have the following file extensions:
 
 - .3ds
 - .3dsx
@@ -35,13 +37,13 @@ Content that can be loaded by the Citra core have the following file extensions:
 - .cxi
 - .app
 
-RetroArch database(s) that are associated with the Citra core:
+RetroArch database(s) that are associated with the Citra Canary/Experimental core:
 
 - [Nintendo - Nintendo 3DS](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%203DS.rdb)
 
 ## Features
 
-Frontend-level settings or features that the Citra core respects.
+Frontend-level settings or features that the Citra Canary/Experimental core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -72,9 +74,9 @@ Frontend-level settings or features that the Citra core respects.
 
 ### Directories
 
-The Citra core's library name is 'Citra'
+The Citra Canary/Experimental core's library name is 'Citra'
 
-The Citra core saves/loads to/from these directories.
+The Citra Canary/Experimental core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -82,17 +84,17 @@ The Citra core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Citra core's core provided FPS is 60.0
-- The Citra core's core provided sample rate is 32728 Hz
-- The Citra core's base width is (Base width)
-- The Citra core's base height is (Base height)
-- The Citra core's max width is (Max width)
-- The Citra core's max height is (Max height)
-- The Citra core's core provided aspect ratio is (Ratio)
+- The Citra Canary/Experimental core's core provided FPS is 60.0
+- The Citra Canary/Experimental core's core provided sample rate is 32728 Hz
+- The Citra Canary/Experimental core's base width is (Base width)
+- The Citra Canary/Experimental core's base height is (Base height)
+- The Citra Canary/Experimental core's max width is (Max width)
+- The Citra Canary/Experimental core's max height is (Max height)
+- The Citra Canary/Experimental core's core provided aspect ratio is (Ratio)
 
 ## Core options
 
-The Citra core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Citra Canary/Experimental core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -102,7 +104,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	If disabled, Citra will solely use the Interpreter CPU core.
 	
-- **Enable hardware renderer** [citra_use_hw_renderer] (**enabled**|disabled)
+- **Select Renderer** [citra_renderer] (**enabled**|disabled)
 
 	Awaiting description.
 	
@@ -137,6 +139,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Emulated pointer deadzone (%)** [citra_deadzone] (**15**|20|25|30|35|0|5|10)
 
+	Awaiting description.
+	
+- **What hardware shaders to enable** [citra_hw_shaders] (**None**|Partial|Full)
+
+	Awaiting description.
+
+- **Enables accurate hardware shaders (infinity * 0 = 0), required for some games, though slow on some hardware** [citra_use_accurate_mul] (**enabled**|disabled)
+		
 	Awaiting description.
 	
 - **Enable virtual SD card** [citra_use_virtual_sd] (**enabled**|disabled)
@@ -181,8 +191,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | Touch Screen Touch       | ![](../image/retropad/retro_r3.png)            | Touch Screen Touch |
 |                          | ![](../image/retropad/retro_left_stick.png) X  | Circle Pad X       |
 |                          | ![](../image/retropad/retro_left_stick.png) Y  | Circle Pad Y       |
-|                          | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
-|                          | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
+|                          | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](https://docs.libretro.com/library/citra_canary/#core-options) |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra_canary/#core-options) |
 
 ### Mouse
 
@@ -204,12 +214,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## External Links
 
-- [Official Citra Website](https://citra-emu.org/)
-- [Official Citra Github Repository](https://github.com/citra-emu/citra)
-- [Libretro Citra Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/citra_libretro.info)
-- [Libretro Citra Github Repository](https://github.com/libretro/citra)
-- [Report Libretro Citra Core Issues Here](https://github.com/libretro/citra/issues)
+- [Official Citra Canary/Experimental Website](https://citra-emu.org/)
+- [Official Citra Canary/Experimental Github Repository](https://github.com/citra-emu/citra)
+- [Libretro Citra Canary/Experimental Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/citra_canary_libretro.info)
+- [Libretro Citra Canary/Experimental Github Repository](https://github.com/libretro/citra/tree/canary)
+- [Report Libretro Citra Canary/Experimental Core Issues Here](https://github.com/libretro/citra/issues)
 
 ## Nintendo - Nintendo 3DS
 
-- [Nintendo - 3DS (Citra Canary/Experimental)](https://docs.libretro.com/library/citra_canary/)
+- [Nintendo - 3DS (Citra)](https://docs.libretro.com/library/citra/)

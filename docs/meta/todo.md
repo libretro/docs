@@ -172,6 +172,8 @@
 
 ### [〰️] Citra
 
+### [〰️] Citra Canary/Experimental
+
 ### [〰️] Craft
 
 ### [〰️] CrocoDS
