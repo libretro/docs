@@ -70,6 +70,7 @@
 - MAME 2000
 - MAME 2003
 - MAME 2003 Midway
+- MAME 2003-Plus - Experimental
 - MAME 2009
 - MAME 2010
 - MAME 2014

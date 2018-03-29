@@ -353,6 +353,8 @@
 
 ### [✕] MAME 2003 Midway
 
+### [✕] MAME 2003-Plus - Experimental
+
 ### [✕] MAME 2009
 
 ### [✕] MAME 2010
