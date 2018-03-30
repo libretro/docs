@@ -26,6 +26,7 @@
 - Caprice32
 - ChaiLove
 - Citra
+- Citra Canary/Experimental
 - Craft
 - CrocoDS
 - DeSmuME 2015
@@ -57,6 +58,7 @@
 - Gambatte
 - Game Music Emu
 - Gearboy
+- Gearsystem
 - Genesis Plus GX
 - gpSP
 - GW
@@ -69,6 +71,7 @@
 - MAME 2000
 - MAME 2003
 - MAME 2003 Midway
+- MAME 2003-Plus - Experimental
 - MAME 2009
 - MAME 2010
 - MAME 2014

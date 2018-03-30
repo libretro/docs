@@ -39,7 +39,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename   |    Description          |              md5sum              |
 |:------------:|:-----------------------:|:--------------------------------:|
-| firmware.bin | NDS Firmware - Required | e45033d9b0fa6b0de071292bba7c9d13 |
+| firmware.bin | NDS Firmware - Required | 145eaef5bd3037cbc247c213bb3da1b3 |
 | bios7.bin    | ARM7 BIOS - Required    | df692a80a5b1bc90728bc3dfc76cd948 |
 | bios9.bin    | ARM9 BIOS - Required    | a392174eb3e572fed6447e956bde4b25 |
 

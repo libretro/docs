@@ -11,9 +11,9 @@ Gearboy is an open source, multi-platform, Nintendo Game Boy (DMG) / Game Boy Co
 - Mix frames: Mimics the LCD ghosting effect seen in the original Game Boy.
 - Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
 - Battery powered RAM save support.
+- Save states.
+- Game Genie and GameShark cheat support.
 - Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
-
-### Author/License
 
 The Gearboy core has been authored by
 
@@ -25,6 +25,10 @@ The Gearboy core is licensed under
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
+## BIOS
+
+Not required.
+
 ## Extensions
 
 Content that can be loaded by the Gearboy core have the following file extensions:
@@ -35,16 +39,10 @@ Content that can be loaded by the Gearboy core have the following file extension
 - .cgb
 - .sgb
 
-## Databases
-
 RetroArch database(s) that are associated with the Gearboy core:
 
 - [Nintendo - Game Boy](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy.rdb)
 - [Nintendo - Game Boy Color](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Color.rdb)
-
-## BIOS
-
-Not required.
 
 ## Features
 
@@ -60,7 +58,8 @@ Frontend-level settings or features that the Gearboy core respects.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats - Game Genie | ✔         |
+| RetroArch Cheats - GameShark | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -79,28 +78,36 @@ Frontend-level settings or features that the Gearboy core respects.
 
 ### Directories
 
-The Gearboy core's internal core name is 'Gearboy'
+The Gearboy core's library name is 'Gearboy'
 
 The Gearboy core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
-- 'content-name'.rtc (Real time clock save)
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | Cartridge battery save |
+| *.rtc | Real time clock save   |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
 - The Gearboy core's core provided FPS is 59.7275005696
 - The Gearboy core's core provided sample rate is 44100 Hz
+- The Gearboy core's base width is 160
+- The Gearboy core's base height is 144
+- The Gearboy core's max width is 160
+- The Gearboy core's max height is 144
 - The Gearboy core's core provided aspect ratio is 10/9
 
 ## Core options
 
-The Gearboy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The Gearboy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -115,36 +122,24 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select a color palette for Game Boy DMG games.
 
-## Controllers
-
-The Gearboy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 device types
-
-- None - Doesn't disable input. There's no reason to switch to this.
-- **RetroPad** - Joypad - Stay on this.
-- Nintendo Gameboy - Same as RetroPad. There's no reason to switch to this.
-
-### Controller tables
-
-#### Joypad
+## Joypad
 
 ![](../image/controller/gb.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                           |
-|--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
+| User 1 input descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)          |
 | Select                   | ![](../image/retropad/retro_select.png)     |
 | Start                    | ![](../image/retropad/retro_start.png)      |
 | Up                       | ![](../image/retropad/retro_dpad_up.png)    |
 | Down                     | ![](../image/retropad/retro_dpad_down.png)  |
 | Left                     | ![](../image/retropad/retro_dpad_left.png)  |
 | Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)    |
+| A                        | ![](../image/retropad/retro_a.png)          |
 
 ## Compatibility
 
-[Gearboy Accuracy Tests](https://github.com/drhelius/Gearboy#accuracy-tests)
+- [Gearboy Accuracy Tests](https://github.com/drhelius/Gearboy#accuracy-tests)
 
 ## External Links
 

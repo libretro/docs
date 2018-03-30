@@ -4,8 +4,6 @@
 
 4DO is an open-source, low-level emulator for the 3DO Game Console based on the FreeDO source code.
 
-### Author/License
-
 The 4DO core has been authored by
 
 - JohnnyDude
@@ -17,19 +15,6 @@ The 4DO core is licensed under
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
-## Extensions
-
-Content that can be loaded by the 4DO core have the following file extensions:
-
-- .iso
-- .cue
-
-## Databases
-
-RetroArch database(s) that are associated with the 4DO core:
-
-- [The 3DO Company - 3DO](https://github.com/libretro/libretro-database/blob/master/rdb/The%203DO%20Company%20-%203DO.rdb)
-
 ## BIOS
 
 Required or optional firmware files go in the frontend's system directory.
@@ -37,6 +22,19 @@ Required or optional firmware files go in the frontend's system directory.
 | Filename     | Description                     | md5sum                           |
 |:------------:|:-------------------------------:|:--------------------------------:|
 | panafz10.bin | Panasonic FZ-10 BIOS - Required | 51f2f43ae2f3508a14d9f56597e2d3ce |
+
+## Extensions
+
+Content that can be loaded by the 4DO core have the following file extensions:
+
+- .iso
+- .bin
+- .chd
+- .cue
+
+RetroArch database(s) that are associated with the 4DO core:
+
+- [The 3DO Company - 3DO](https://github.com/libretro/libretro-database/blob/master/rdb/The%203DO%20Company%20-%203DO.rdb)
 
 ## Features
 
@@ -62,31 +60,45 @@ Frontend-level settings or features that the 4DO core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕          |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | -         |
+| Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
 ### Directories
 
-The 4DO core's internal core name is '4DO'
+The 4DO core's library name is '4DO'
 
 The 4DO core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Save)
+| File          | Description       |
+|:-------------:|:-----------------:|
+| *.srm         | Per game NVRAM    |
+| 3DO.nvram     | Shared NVRAM      |
+| 3DO.nvram.tmp | Shared NVRAM Temp |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
 - The 4DO core's core provided FPS is 60
 - The 4DO core's core provided sample rate is 44100 Hz
+- The 4DO core's base width is 320 when the 'High Resolution' core option is set to disabled.
+- The 4DO core's base height is 240 when the 'High Resolution' core option is set to disabled.
+- The 4DO core's max width is 320 when the 'High Resolution' core option is set to disabled.
+- The 4DO core's max height is 240 when the 'High Resolution' core option is set to disabled.
+- The 4DO core's base width is 640 when the 'High Resolution' core option is set to enabled.
+- The 4DO core's base height is 480 when the 'High Resolution' core option is set to enabled.
+- The 4DO core's max width is 640 when the 'High Resolution' core option is set to enabled.
+- The 4DO core's max height is 480 when the 'High Resolution' core option is set to enabled.
 - The 4DO core's core provided aspect ratio is 4/3
 
 ## Core options
@@ -95,29 +107,51 @@ The 4DO core has the following option(s) that can be tweaked from the core optio
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **High Resolution (restart)** [4do_high_resolution] (**disabled**|enabled)
+- **CPU overclock** [4do_cpu_overclock] (**1x**|2x|4x)
+
+    The 3DO used a 12.5MHz ARM CPU as its central processor. We have implemented a CPU overclocking feature in the 4DO core so that you can increase this by 2 (25MHz) or 4x (50MHz).
+	
+    **May not work on all games.**
+	
+    [https://www.youtube.com/watch?v=7bT2ecwKdHQ](https://www.youtube.com/watch?v=7bT2ecwKdHQ) 
+	
+- **High Resolution** [4do_high_resolution] (**disabled**|enabled)
 
 	Doubles internal resolution.
 	
-??? note "High Resolution - Off"
+??? note "High Resolution - disabled"
 	![](..\image\core\4do\high_off.png)
 	
-??? note "High Resolution - On"
+??? note "High Resolution - enabled"
 	![](..\image\core\4do\high_on.png)
 	
-## Controllers
+- **NVRAM Storage** [4do_nvram_storage] (**per game**|shared)
 
-The 4DO core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+	Choose whether NVRAM saves are per game or NVRAM saves are shared between all games.
+	
+	Look at the [Directories section](https://docs.libretro.com/library/4do/#directories) for more information.
+	
+- **Timing Hack 1 (Crash 'n Burn)** [4do_hack_timing_1] (**disabled**|enabled)
 
-### User 1 - 2 device types
+	Enable this to fix Crash 'n Burn.
+	
+- **Timing Hack 3 (Dinopark Tycoon)** [4do_hack_timing_3] (**disabled**|enabled)
 
-- None - Doesn't disable input. There's no reason to switch to this.
-- **RetroPad** - Joypad - Stay on this
-- RetroPad w/Analog - Joypad - Seme as RetroPad. There's no reason to switch to this.
+	Enable this to fix Dinopark Tycoon.
+	
+- **Timing Hack 5 (Microcosm)** [4do_hack_timing_5] (**disabled**|enabled)
 
-### Controller tables
+	Enable this to fix Microcosm.
+	
+- **Timing Hack 6 (Alone in the Dark)** [4do_hack_timing_6] (**disabled**|enabled)
 
-#### Joypad
+    Enable this to fix Alone in the Dark.
+	
+- **Graphics Step Y Hack (Samurai Shodown)** [4do_hack_graphics_step_y] (**disabled**|enabled)
+
+	Enable this to fix Samurai Shodown.
+	
+## Joypad
 
 ![](../image/controller/3do.png)
 

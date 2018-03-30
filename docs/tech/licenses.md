@@ -28,6 +28,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
 | [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
+| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/libretro-mirrors/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
@@ -37,7 +38,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Snes9x 2002](../library/snes9x_2002.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial | 
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                               | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
-| [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt) | Non-commercial |
+| [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x2010/blob/master/LICENSE.txt) | Non-commercial |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 
 ## Libretro
@@ -82,6 +83,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Caprice32](../library/caprice32.md)             			           | [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)                 |                |
 | [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/LICENSE.md)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
+| [Citra Canary/Experimental](../library/citra_canary.md)              | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Craft](../library/craft.md)                     			           | [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)                           |                |
 | [CrocoDS](../library/crocods.md)                 			           | [MIT](https://github.com/libretro/libretro-crocods/blob/master/LICENSE)                   |                |
 | [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |
@@ -113,6 +115,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Gambatte](../library/gambatte.md)                                               | [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)                |                |
 | [Game Music Emu](../library/game_music_emu.md)            		           | [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)                     |                |
 | [Gearboy](../library/gearboy.md)                                                 | [GPLv3](https://github.com/libretro/Gearboy/blob/master/LICENSE)                          |                |
+| [Gearsystem](../library/gearsystem.md)                                           | [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)                       |                |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)          		           | [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)     | Non-commercial |
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |
 | [GW](../library/gw.md)                                                           | [zlib](https://github.com/libretro/gw-libretro/blob/master/LICENSE)                       |                |
@@ -125,6 +128,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
 | [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
+| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/libretro-mirrors/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
@@ -168,7 +172,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Snes9x 2002](../library/snes9x_2002.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial | 
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                               | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
-| [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt) | Non-commercial |
+| [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x2010/blob/master/LICENSE.txt) | Non-commercial |
 | [Stella](../library/stella.md)                                                   | [GPLv2](https://github.com/stella-emu/stella/blob/master/License.txt)                     |                |
 | TempGBA                                                                          | [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/copyright)               |                |
 | [TGB Dual](../library/tgb_dual.md)                                               | [GPLv2](https://github.com/libretro/tgbdual-libretro/blob/master/docs/COPYING-2.0.txt)    |                |

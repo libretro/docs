@@ -1,84 +1,25 @@
 # ZX Spectrum (Fuse)
 
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/fuse.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
 The Free Unix Spectrum Emulator (Fuse): an emulator of the 1980s home computer and various clones for Unix, Mac OS X and Windows. 
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the Fuse core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](..\image\core\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](..\image\core\all\info.png) </center>
-
-- Browse through the list and select 'ZX Spectrum (Fuse)'.
-
-<center> ![](..\image\core\updater\fuse.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](..\image\core\all\load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'ZX Spectrum (Fuse)'.
-
-The content should now start running!
-
-### Authors
+The Fuse core has been authored by
 
 - Team Fuse
-
-## License
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 The Fuse core is licensed under
 
 - [GPLv3](https://github.com/libretro/fuse-libretro/blob/master/LICENSE)
 
-## Extensions
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
-Content that can be loaded by the Fuse core have the following file extensions:
+## BIOS
 
-- .tzx
-- .tap
-- .z80
-- .rzx
-- .scl
-- .trd
+Required or optional firmware files go in the frontend's system directory.
 
-## Databases
-
-RetroArch database(s) that are associated with the Fuse core:
-
-- [Sinclair - ZX Spectrum +3](https://github.com/libretro/libretro-database/blob/master/rdb/Sinclair%20-%20ZX%20Spectrum%20%2B3.rdb)
-- [Sinclair - ZX Spectrum](https://github.com/libretro/libretro-database/blob/master/rdb/Sinclair%20-%20ZX%20Spectrum.rdb)
-
-## Emulated Machines / BIOS
-
-Required or optional firmware files go in RetroArch's system directory.
+!!! attention
+	The BIOS for the last four machines need to be in a directory named 'fuse' in RetroArch's System directory.
 
 - Spectrum 48K
 - Spectrum 48K (NTSC)
@@ -128,21 +69,34 @@ Required or optional firmware files go in RetroArch's system directory.
 | fuse/256s-2.rom | Scorpion 256K ROM - Required |                                  |
 | fuse/256s-3.rom | Scorpion 256K ROM - Required |                                  |
 
-!!! attention
-	The BIOS for the last four machines need to be in a directory named 'fuse' in RetroArch's System directory.
+## Extensions
+
+Content that can be loaded by the Fuse core have the following file extensions:
+
+- .tzx
+- .tap
+- .z80
+- .rzx
+- .scl
+- .trd
+
+RetroArch database(s) that are associated with the Fuse core:
+
+- [Sinclair - ZX Spectrum +3](https://github.com/libretro/libretro-database/blob/master/rdb/Sinclair%20-%20ZX%20Spectrum%20%2B3.rdb)
+- [Sinclair - ZX Spectrum](https://github.com/libretro/libretro-database/blob/master/rdb/Sinclair%20-%20ZX%20Spectrum.rdb)
 
 ## Features
 
-RetroArch-level settings or features that the Fuse core respects.
+Frontend-level settings or features that the Fuse core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | -         |
+| Saves             | ✕         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
@@ -160,23 +114,33 @@ RetroArch-level settings or features that the Fuse core respects.
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
-
+| LEDs              | ✕         |
 
 ### Directories
 
-The Fuse core's directory name is 'fuse'
+The Fuse core's library name is 'fuse'
 
 The Fuse core saves/loads to/from these directories.
 
-**RetroArch's State directory**
+**Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
-- The Fuse core's internal FPS is (FPS)
-- The Fuse core's internal sample rate is 44100 Hz
+- The Fuse core's core provided FPS is (FPS)
+- The Fuse core's core provided sample rate is 44100 Hz
+- The Fuse core's base width is (Base width)
+- The Fuse core's base height is (Base height)
+- The Fuse core's max width is (Max width)
+- The Fuse core's max height is (Max height)
 - The Fuse core's core provided aspect ratio is (Ratio)
+
+## Games
+
+There are hundreds of free, legally available ZX Spectrum games at [World of Spectrum](http://www.worldofspectrum.org/). You should start at the [Visitor Voted Top 100 Best Games](http://www.worldofspectrum.org/bestgames.html).
 
 ## Core options
 
@@ -184,41 +148,99 @@ The Fuse core has the following option(s) that can be tweaked from the core opti
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Model (needs content load)** (**Spectrum 48K**/Spectrum 48K (NTSC)/Spectrum 128K/Spectrum +2/Spectrum +2A/Spectrum +3/Spectrum +3e/Spectrum SE/Timex TC2048/Timex TC2068/Timex TS2068/Spectrum 16K/Pentagon 128K/Pentagon 512K/Pentagon 1024/Scorpion 256K)
+- **Model (needs content load)** [fuse_machine] (**Spectrum 48K**|Spectrum 48K (NTSC)|Spectrum 128K|Spectrum +2|Spectrum +2A|Spectrum +3|Spectrum +3e|Spectrum SE|Timex TC2048|Timex TC2068|Timex TS2068|Spectrum 16K|Pentagon 128K|Pentagon 512K|Pentagon 1024|Scorpion 256K)
 
 	Set the machine to emulate. Note that the this setting will have effect only when a new content is loaded.
 	
-- **Hide Video Border** (**Off**/On)
+- **Hide Video Border** [fuse_hide_border] (**Off**|On)
 
 	Hides the video border, making the game occupy the entire screen area.
 	
-- **Tape Fast Load** (Off/**On**)
+- **Tape Fast Load** [fuse_fast_load] (Off|**On**)
 
 	Instantly loads tape files if enabled, or disabled it to see the moving horizontal lines in the video border while the game loads.
 
-- **Tape Load Sound** (Off/**On**)
+- **Tape Load Sound** [fuse_load_sound] (Off|**On**)
 
 	Outputs the tape sound if fast load is disabled.
 
-- **Speaker Type** (**tv speaker**/beeper/unfiltered)
+- **Speaker Type** [fuse_speaker_type] (**tv speaker**|beeper|unfiltered)
 
 	Applies an audio filter.
 
-- **AV Stereo Separation** (**none**/acb/abc)
+- **AV Stereo Separation** [fise_ay_stereo_separation] (**none**|acb|abc)
 
 	The AY sound chip stereo separation.
 
-- **Transparent Keyboard Overlay** (Off/**On**)
+- **Transparent Keyboard Overlay** [fuse_key_ovrlay_transp] (Off|**On**)
 
 	If the keyboard overlay is transparent or opaque.
 
-- **Time to Release Key in ms** (**500**/1000/100/300)
+- **Time to Release Key in ms** [fuse_key_hold_time] (**500**|1000|100|300)
 
 	How much time to keep a key pressed before releasing it (used when a key is pressed using the keyboard overlay).
-	
-## Controllers
 
-### Controllers usage
+- **Joy Left mapping** [fuse_joypad_left] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Left joypad input to a keyboard input.
+	
+- **Joy Right mapping** [fuse_joypad_right] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Right joypad input to a keyboard input.
+	
+- **Joy Up mapping** [fuse_joypad_up] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Up joypad input to a keyboard input.
+	
+- **Joy Down mapping** [fuse_joypad_down] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Down joypad input to a keyboard input.
+	
+- **Joy Start mapping** [fuse_joypad_start] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Start joypad input to a keyboard input.
+	
+- **Joy A mapping** [fuse_joypad_a] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the A joypad input to a keyboard input.
+	
+- **Joy B mapping** [fuse_joypad_b] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the B joypad input to a keyboard input.
+	
+- **Joy X mapping** [fuse_joypad_x] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the X joypad input to a keyboard input.
+	
+- **Joy Y mapping** [fuse_joypad_y] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the Y joypad input to a keyboard input.
+	
+- **Joy L mapping** [fuse_joypad_l] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the L joypad input to a keyboard input.
+	
+- **Joy R mapping** [fuse_joypad_r] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the R joypad input to a keyboard input.
+	
+- **Joy L2 mapping** [fuse_joypad_l2] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the L2 joypad input to a keyboard input.
+	
+- **Joy R2 mapping** [fuse_joypad_r2] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the R2 joypad input to a keyboard input.
+	
+- **Joy L3 mapping** [fuse_joypad_l3] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the L3 joypad input to a keyboard input.
+	
+- **Joy R3 mapping** [fuse_joypad_r3] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
+	
+	Map the R3 joypad input to a keyboard input.
+	
+## Controllers usage
 
 There are seven types of joysticks emulated:
 
@@ -263,27 +285,25 @@ The Fuse core supports the following device type(s) in the controls menu, bolded
 
 - None - Input disabled.
 - **RetroPad** - Joypad
-- Sinclair Keyboard - Keyboard
+- Sinclair Keyboard - Keyboard - Has keymapper support
 
-### Controller tables
+### Joypad
 
-#### Joypad and analog device type table
+| User 1 - 7 input descriptors | RetroPad Inputs                             |
+|------------------------------|---------------------------------------------|
+| Up                           | ![](../image/retropad/retro_b.png)          |
+| Fire                         | ![](../image/retropad/retro_y.png)          |
+| Keyboard overlay             | ![](../image/retropad/retro_select.png)     |
+| Up                           | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                         | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                         | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                        | ![](../image/retropad/retro_dpad_right.png) |
+| Fire                         | ![](../image/retropad/retro_a.png)          |
+| Fire                         | ![](../image/retropad/retro_x.png)          |
+| Enter                        | ![](../image/retropad/retro_l1.png)         |
+| Space                        | ![](../image/retropad/retro_r1.png)         |
 
-| User 1 - 7 Remap descriptors  | RetroPad Inputs                              |
-|-------------------------------|----------------------------------------------|
-| Up                            | ![](../image/retropad/retro_b.png)       |
-| Fire                          | ![](../image/retropad/retro_y.png)       |
-| Keyboard overlay              | ![](../image/retropad/retro_select.png)        |
-| Up                            | ![](../image/retropad/retro_dpad_up.png)       |
-| Down                          | ![](../image/retropad/retro_dpad_down.png)     |
-| Left                          | ![](../image/retropad/retro_dpad_left.png)     |
-| Right                         | ![](../image/retropad/retro_dpad_right.png)    |
-| Fire                          | ![](../image/retropad/retro_a.png)       |
-| Fire                          | ![](../image/retropad/retro_x.png)       |
-| Enter                         | ![](../image/retropad/retro_l1.png)            |
-| Space                         | ![](../image/retropad/retro_r1.png)            |
-
-#### Keyboard device type table
+### Keyboard
 
 | RetroKeyboard Inputs          | Sinclair Keyboard  |
 |-------------------------------|--------------------|
@@ -337,14 +357,10 @@ The Fuse core supports the following device type(s) in the controls menu, bolded
 | Keyboard Right Super          | Right Super        |
 | Keyboard Left Super           | Left Super         |
 
-## Compatibility
-
-Awaiting description.
-
 ## External Links
 
+- [Official Fuse Website](http://fuse-emulator.sourceforge.net/)
+- [Official Fuse SourceForge Repository](https://sourceforge.net/projects/fuse-emulator/)
 - [Libretro Fuse Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/fuse_libretro.info)
 - [Libretro Fuse Github Repository](https://github.com/libretro/fuse-libretro)
 - [Report Libretro Fuse Core Issues Here](https://github.com/libretro/fuse-libretro/issues)
-- [Official Fuse Website](http://fuse-emulator.sourceforge.net/)
-- [Official Fuse SourceForge Repository](https://sourceforge.net/projects/fuse-emulator/)

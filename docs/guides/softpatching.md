@@ -55,3 +55,9 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [FCEUmm](../library/fceumm.md)           | ✔         |
 | [Nestopia UE](../library/nestopia_ue.md) | ✔         |
 | [QuickNES](../library/quicknes.md)       | ✔         |
+
+### Master System / MegaDrive - Genesis
+
+| Core                                                           | Supported |
+|----------------------------------------------------------------|:---------:|
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |

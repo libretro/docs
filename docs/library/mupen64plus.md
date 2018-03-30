@@ -105,7 +105,7 @@ RetroArch-level settings or features that the Mupen64Plus core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
@@ -248,7 +248,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Do not use shaders to emulate N64 blending modes. Works faster on slow GPU. It can cause glitches.
 	The default setting is dependent on your platform.
 
-- **GPU shader depth write** (**False/True)
+- **GPU shader depth write** (**False**/True)
 
 	Enable writing of fragment depth. Some mobile GPUs do not support it, thus it made optional.
 	The default seeting is dependent on your platform.
@@ -303,7 +303,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 
-- **Left C Button** (**C2/**C3/C4/C1)
+- **Left C Button** (**C2**/C3/C4/C1)
 
 	Awaiting description.
 
@@ -319,7 +319,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Choose what Pak has been inserted in the player 1 controller.
 
-- **Player 2 Pak** (**none/memory/rumble)
+- **Player 2 Pak** (**none**/memory/rumble)
 
 	Choose what Pak has been inserted in the player 2 controller.
 

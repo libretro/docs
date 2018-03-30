@@ -89,19 +89,9 @@
 - Complete Turbo Delay core option description
 - Complete P1/P2/P3/P4/P5 Turbo I/II core option descriptions.
 
-### [〰️] Beetle PSX
+### [✔] Beetle PSX
 
-- Test Multimouse support.
-- Add core provided sample rate.
-- Add core provided FPS.
-- Add core provided aspect ratio.
-
-### [〰️] Beetle PSX HW
-
-- Test Multimouse support.
-- Add core provided sample rate.
-- Add core provided FPS.
-- Add core provided aspect ratio.
+### [✔] Beetle PSX HW
 
 ### [〰️] Beetle Saturn
 
@@ -181,6 +171,8 @@
 - Add core provided aspect ratio
 
 ### [〰️] Citra
+
+### [〰️] Citra Canary/Experimental
 
 ### [〰️] Craft
 
@@ -300,13 +292,13 @@
 
 ### [〰️] Fuse
 
-- Improve background section.
-- Complete why use this core section.
 - Complete BIOS section
-- Complete compatibility section.
-- Complete feature table.
-- Add core provided aspect ratio.
-- Add internal FPS
+- Add fps
+- Add base width
+- Add base height
+- Add max width
+- Add max height
+- Add aspect ratio
 - Improve core option descriptions.
 
 ### [〰️] Gambatte
@@ -321,6 +313,8 @@
 ### [✔] Game Music Emu
 
 ### [✔] Gearboy
+
+### [〰️] Gearsystem
 
 ### [〰️] Genesis Plus GX
 
@@ -360,6 +354,8 @@
 ### [〰️] MAME 2003
 
 ### [✕] MAME 2003 Midway
+
+### [✕] MAME 2003-Plus - Experimental
 
 ### [✕] MAME 2009
 
