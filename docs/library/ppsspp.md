@@ -4,13 +4,15 @@
 
 A PSP emulator for Android, Windows, Mac and Linux, written in C++
 
+The PPSPP core supports [OpenGL](https://docs.libretro.com/library/ppsspp/#opengl), [Vulkan](https://docs.libretro.com/library/ppsspp/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/ppsspp/#d3d11) rendering.
+
 The PPSSPP core has been authored by
 
 - Henrik Hrydgard
 
 The PPSSPP core is licensed under
 
-- [GPLv2](https://github.com/libretro/ppsspp/blob/master/LICENSE.TXT)
+- [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
@@ -34,7 +36,7 @@ Here's an example of what it should look like.
 
 ![](../image/core/ppsspp/directory.png)
 
-2 . Visit [https://github.com/libretro/ppsspp](https://github.com/libretro/ppsspp) and download the repository.
+2 . Visit [https://github.com/hrydgard/ppsspp](https://github.com/hrydgard/ppsspp) and download the repository.
 
 ![](../image/core/ppsspp/download.png)
 
@@ -147,11 +149,17 @@ DLCs need to be installed in the GAME directory. Create the GAME directory in th
 
 RetroArch\saves\PPSSPP\PSP\GAME\
 
-## OpenGL and Vulkan
+## OpenGL
 
 PPSSPP's OpenGL renderer can be used by setting RetroArch's video driver to gl.
 
+## Vulkan
+
 PPSSPP's Vulkan renderer can be used by setting RetroArch's video driver to vulkan.
+
+## D3D11
+
+PPSSPP's Direct3D 11 renderer can be used by setting RetroArch's video driver to d3d11.
 
 ## Core options
 
@@ -283,5 +291,4 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Official PPSSPP Website](http://www.ppsspp.org/)
 - [Official PPSSPP Github Repository](https://github.com/hrydgard/ppsspp)
 - [Libretro PPSSPP Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/ppsspp_libretro.info)
-- [Libretro PPSSPP Github Repository](https://github.com/libretro/ppsspp)
 - [Report Libretro PPSSPP Core Issues Here](https://github.com/libretro/ppsspp/issues)
