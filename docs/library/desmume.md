@@ -286,9 +286,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Setting this to touch allows you to use mouse/touch inputs for the stylus (e.g. Touch controls on Android devices).
 	
-- **Mouse Speed** [desmume_mouse_speed] (**1.0**|1.5|2.0|0.125|0.25|0.5)
+- **Mouse Speed** [desmume_mouse_speed] (**1.0**|1.5|2.0|0.01|0.02|0.03|0.04|0.05|0.125|0.25|0.5)
 
-	Awaiting description.
+	**The Pointer type core option must be set to mouse**
+
+	Adjust mouse speed for the stylus.
+	
+- **Pointer Rotation** [desmume_input_rotation] (**0**|90|180|270)
+
+	Rotate pointer controls
+	
+	This is can be used in conjuction with RetroArch's Rotation setting.
 	
 - **Pointer Mode for Left Analog** [desmume_pointer_device_l] (**none**|emulated|absolute|pressed)
 
@@ -314,15 +322,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 	
-- **Force Microphone Enable** [desmume_mic_force_enable] (**disabled**|enabled)
-
-	Self-explanatory.
-
-- **Microphone Simulation Settings** [desmume_mic_mode] (**internal**|random)
+- **Microphone Button Noise Type** [desmume_mic_mode] (**pattern**|random)
 
 	Configure microphone input settings.
 	
-	With the internal setting, DeSmuME will use its internal noise sample for microphone input which works for many games that want you to blow on the mic.
+	With the pattern setting, DeSmuME will use its internal noise sample for microphone input which works for many games that want you to blow on the mic.
 	
 	With the random setting, DeSmuME will use random whitenoise for microphone input which will work for games that require blowing but which don't work with the internal noise sample.
 
@@ -362,7 +366,7 @@ The DeSmuME core supports the following device type(s) in the controls menu, bol
 | R                        | ![](../image/retropad/retro_r1.png)            | R                   |
 | Lid Close/Open           | ![](../image/retropad/retro_l2.png)            | Lid Close/Open      |
 | Tap Stylus               | ![](../image/retropad/retro_r2.png)            | Tap Stylus          |
-| Toggle Microphone        | ![](../image/retropad/retro_l3.png)            | Toggle Microphone   |
+| Make Microphone Noise    | ![](../image/retropad/retro_l3.png)            | Toggle Microphone   |
 | Quick Screen Switch      | ![](../image/retropad/retro_r3.png)            | Quick Screen Switch |
 |                          | ![](../image/retropad/retro_left_stick.png) X  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) X |
 |                          | ![](../image/retropad/retro_left_stick.png) Y  | [Pointer mode l-analog](https://docs.libretro.com/library/desmume/#core-options) Y |

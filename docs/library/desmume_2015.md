@@ -65,7 +65,7 @@ Frontend-level settings or features that the DeSmuME 2015 core respects.
 
 ### Directories
 
-The DeSmuME 2015 core's library name is 'DeSmuME'
+The DeSmuME 2015 core's library name is 'DeSmuME 2015'
 
 The DeSmuME 2015 core saves/loads to/from these directories.
 
@@ -184,6 +184,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Setting this to touch allows you to use mouse/touch inputs for the stylus (e.g. Touch controls on Android devices).
 	
+- **Mouse Speed** [desmume_mouse_speed] (**1.0**|1.5|2.0|0.125|0.25|0.5)	
+
+	**The Pointer type core option must be set to mouse**
+
+	Adjust mouse speed for the stylus.
+	
 - **Pointer Colour** [desmume_pointer_colour] (**white**|black|red|blue|yellow")
 
 	Configure the color of the stylus pointer.
@@ -223,7 +229,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Configure the emulated pressure on the touchscreen from a stylus pressing on it.
 	
-- *Enable emulated stylus jitter** [desmume_pointer_stylus_jitter] (**disabled**|enabled)
+- **Enable emulated stylus jitter** [desmume_pointer_stylus_jitter] (**disabled**|enabled)
 
 	Emulate the tiny jitter from a human hand when holding a stylus; some games were accidentally dependent on this.
 	
