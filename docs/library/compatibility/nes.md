@@ -24,14 +24,9 @@
 
 ## QuickNES
 
-| Game                          | Issue                                                                    |
-|-------------------------------|--------------------------------------------------------------------------|
-| Burai Fighter                 | Softlocks when entering a level.                                         |
-| Crisis Force                  | Crashes on start.                                                        |
-| Family Circuit '91            | Crashes on start.                                                        |
-| Gradius II                    | Crashes on start.                                                        |
-| Huge Insect                   | No enemies spawn.                                                        |
-| Lagrange Point                | Crashes on start.                                                        |
-| Mickey's Safari in Letterland | Graphical glitches on the sides of the screen and on the status bar.     |
-| Ms. Pac-Man (Tengen version)  | Graphical glitches on the sides of the screen.                           |
-| Skull & Crossbones            | Crashes on start.                                                        |
+| Game               | Issue                                                                         |
+|--------------------|-------------------------------------------------------------------------------|
+| Burai Fighter      | Softlocks when entering a level. Confirmed issue. MMC3 incompatible.          |
+| Family Circuit '91 | Crashes on start. Unsupported Mapper 210.                                     |
+| Huge Insect        | No enemies spawn. Mapper 3 confirmed issue. Unemulated bus conflict handling. |
+| Skull & Crossbones | Crashes on start. Unsupported Mapper.                                         |

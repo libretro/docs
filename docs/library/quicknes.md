@@ -15,6 +15,15 @@ The QuickNES core is licensed under
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
+## Compatibility
+
+| Game               | Issue                                                                         |
+|--------------------|-------------------------------------------------------------------------------|
+| Burai Fighter      | Softlocks when entering a level. Confirmed issue. MMC3 incompatible.          |
+| Family Circuit '91 | Crashes on start. Unsupported Mapper 210.                                     |
+| Huge Insect        | No enemies spawn. Mapper 3 confirmed issue. Unemulated bus conflict handling. |
+| Skull & Crossbones | Crashes on start. Unsupported Mapper.                                         |
+
 ## Extensions
 
 Content that can be loaded by the QuickNES core have the following file extensions:
@@ -122,23 +131,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
 | A                            | ![](../image/retropad/retro_a.png)          |
 
-## Compatibility
-
-| Game                          | Issue                                                                    |
-|-------------------------------|--------------------------------------------------------------------------|
-| Burai Fighter                 | Softlocks when entering a level.                                         |
-| Crisis Force                  | Crashes on start.                                                        |
-| Family Circuit '91            | Crashes on start.                                                        |
-| Gradius II                    | Crashes on start.                                                        |
-| Huge Insect                   | No enemies spawn.                                                        |
-| Lagrange Point                | Crashes on start.                                                        |
-| Mickey's Safari in Letterland | Graphical glitches on the sides of the screen and on the status bar. (1) |
-| Ms. Pac-Man (Tengen version)  | Graphical glitches on the sides of the screen.                           |
-| Skull & Crossbones            | Crashes on start.                                                        |
-
-??? note "(1)"
-    ![](../image/core/quicknes/mickey.png)
-
 ## External Links
 
 - [Official QuickNES Github Repository](https://github.com/kode54/QuickNES)
@@ -146,9 +138,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Libretro QuickNES Github Repository](https://github.com/libretro/QuickNES_Core)
 - [Report Libretro QuickNES Core Issues Here](https://github.com/libretro/QuickNES_Core/issues)
 
-### See also
-
-#### Nintendo - Nintendo Entertainment System
+## Nintendo - Nintendo Entertainment System
 
 - [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
 - [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
