@@ -111,6 +111,7 @@ pages:
         - 'Nintendo - NES / Famicom (Nestopia UE)': 'library/nestopia_ue.md'
         - 'Nintendo - NES / Famicom (QuickNES)': 'library/quicknes.md'
         - 'Nintendo - 3DS (Citra)': 'library/citra.md'
+        - 'Nintendo - 3DS (Citra Canary/Experimental)': 'library/citra_canary.md'
         - 'Nintendo - Nintendo 64 (Mupen64Plus)': 'library/mupen64plus.md'
         - 'Nintendo - DS (DeSmuME 2015)': 'library/desmume_2015.md'
         - 'Nintendo - DS (DeSmuME)': 'library/desmume.md'
@@ -141,6 +142,7 @@ pages:
         - 'Sega - Dreamcast (Redream)': 'library/redream.md'
         - 'Sega - Dreamcast (Reicast)': 'library/reicast.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
+        - 'Sega - MS/GG (Gearsystem)': 'library/gearsystem.md'
         - 'Sega - MS/GG/MD/CD (Genesis Plus GX)': 'library/genesis_plus_gx.md'
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
@@ -187,6 +189,7 @@ pages:
 
     - Interface Customization:
       - 'Creating a Theme': 'guides/themes.md'
+      - 'Libretro Overlays': 'guides/libretro-overlays.md'
       - 'RGUI Interface': 'guides/rgui.md'
     - Feature Specific:
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
