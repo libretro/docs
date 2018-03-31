@@ -1,64 +1,18 @@
 # DOS (DOSBox)
 
-## Contribute to this documentation
-
-**DOCUMENTATION IS A WORK IN PROGRESS**
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/dosbox.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
 DOSBox is a multiplatform DOS-emulator 
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the DOSBox core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](..\image\core\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](..\image\core\all\info.png) </center>
-
-- Browse through the list and select 'DOS (DOSBox)'.
-
-<center> ![](..\image\core\updater\dosbox.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](..\image\core\all\load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'DOS (DOSBox)'.
-
-The content should now start running!
-
-### Authors
+The DOSBox core has been authored by
 
 - DOSBox Team
-
-## License
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 The DOSBox core is licensed under
 
 - [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING) 
+
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ## Extensions
 
@@ -69,15 +23,13 @@ Content that can be loaded by the DOSBox core have the following file extensions
 - .bat
 - .conf
 
-## Databases
-
 RetroArch database(s) that are associated with the DOSBox core:
 
 - [DOS](https://github.com/libretro/libretro-database/blob/master/rdb/DOS.rdb)
 
 ## Features
 
-RetroArch-level settings or features that the DOSBox core respects.
+Frontend-level settings or features that the DOSBox core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -104,40 +56,53 @@ RetroArch-level settings or features that the DOSBox core respects.
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
+| LEDs              | ✕         |
 
 ### Directories
 
-The DOSBox core's directory name is 'DOSBox'
+The DOSBox core's library name is 'DOSBox'
 
-### Geometry and timing.
+### Geometry and timing
 
-- The DOSBox core's internal FPS is 60
-- The DOSBox core's internal sample rate is (Rate)
+- The DOSBox core's core provided FPS is 60.0
+- The DOSBox core's core provided sample rate is (Rate)
+- The DOSBox core's base width is 320
+- The DOSBox core's base height is 200
+- The DOSBox core's max width is 1024
+- The DOSBox core's max height is 768
 - The DOSBox core's core provided aspect ratio is 4/3
 
-### Loading content
+## Loading content
 
-If loading exe/com/bat, RetroArch's System directory will be searched for a 'dosbox.conf' file to load. If one isn't available default values will be used. This mode is equivalent to running a DOSBox binary with the specified file as the command line argument.
+- To use you can either load an exe/com/bat file or a *.conf file.
+- If loading exe/com/bat the system directory will be searched for a 'dosbox.conf' file to load. If one isn't available default values will be used. This mode is equivalent to running a DOSBox binary with the specified file as the command line argument.
+- If loading a conf file DOSBox will be loaded with the options in the config file. This mode is useful if you just want to be dumped at a command prompt, but can also be used to load a game by putting commands in the autoexec section.
+- To be useful the frontend will need to have keyboard+mouse support, and all keyboard shortcuts need to be remapped.
 
-If loading a conf file DOSBox will be loaded with the options in the config file. This mode is useful if you just want to be dumped at a command prompt, but can also be used to load a game by putting commands in the autoexec section.
-
-### Usage
+## Usage
 
 DOSBox can load DOS executables or custom config files. To get started you can generate a config file by creating the DOSbox folder in your libretro SYSTEM directory, and then loading any DOS application, exit back to the command interpreter and then run config -wcd, Configuration files allow you far better control than core options so far. Eventually every single useable option will be exposed but in the meantime combining both is the best alternative.
 
 If you generate a default config it will always be loaded by default, but you can override it by saving your custom settings, preferably in the game folder. You can create a config like this:
 
 ```
-[cpu]
-cycles=50000
 [autoexec]
 @echo off
-mount d c:\games\dos\gamename
+mount d "/storage/roms/dos/game"
 d:
-gamename
-```	
-
+game.exe
+```
 Then you can store this config in the game folder (or any other directory) and just the config instead of the exe file. Once you change a setting using the config command or via core options, you can always update the config file by using config -wc 
+
+## MIDI
+
+- To use MIDI you need MT32_CONTROL.ROM and MT32_PCM.ROM in the system directory of RetroArch.Then set:
+
+```
+[midi]
+mpu401=intelligent
+mididevice=mt32
+```
 
 ## Core options
 
@@ -145,88 +110,96 @@ The DOSBox core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Machine type** (**vgaonly**/svga_s3/svga_et3000/svga_et4000/svga_paradise/hercules/cga/tandy/pcjr/ega)
+- **Machine type** [dosbox_machine_type] (**vgaonly**|svga_s3|svga_et3000|svga_et4000|svga_paradise|hercules|cga|tandy|pcjr|ega)
 
 	Select what machine will be emulated.
 	
-- **Gamepad** (**enable**/disable)
-
-	Awaiting description.
-	
-- **CPU cycles x 100000** (**0**/1/2/3/4/5/6/7/8/9)
+- **Gamepad emulated mouse** [dosbox_emulated_mouse] (**enable**|disable)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 	
-- **CPU cycles x 10000** (**0**/1/2/3/4/5/6/7/8/9)
+- **CPU cycles x 100000** [dosbox_cpu_cycles_0] (**0**|1|2|3|4|5|6|7|8|9)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 	
-- **CPU cycles x 1000** (**1**/2/3/4/5/6/7/8/9/0)
+- **PU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 	
-- **CPU cycles x 100** (**0**/1/2/3/4/5/6/7/8/9)
+- **CPU cycles x 1000** [dosbox_cpu_cycles_2] (**1**|2|3|4|5|6|7|8|9|0)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+	
+- **CPU cycles x 100** [dosbox_cpu_cycles_3] (**0**|1|2|3|4|5|6|7|8|9")
 
-## Controllers
-
-### Device types
+	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+	
+## User 1 - 2 device types
 
 The DOSBox core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
-#### User 1 - 2 device types
-
 - None - Input disabled.
-- **Gamepad** - Joypad - Optional description.
-- Joystick - Joypad
-- Keyboard - Keyboard - Has keymapper support
+- **Gamepad** - Joypad
+- Joystick - Analog
+- Keyboard - Keyboard - Keyboard inputs are always active. Has keymapper support.
 
-### Controller tables
+## Joypad
 
-#### Joypad and analog device type table
+| Input descriptors for Gamepad 2 Button | RetroPad Inputs                             |
+|----------------------------------------|---------------------------------------------|
+| Button 2                               | ![](../image/retropad/retro_b.png)          |
+| Button 1                               | ![](../image/retropad/retro_y.png)          |
+| D-Pad Up                               | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                             | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                             | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                            | ![](../image/retropad/retro_dpad_right.png) |
 
-| User 1 Remap descriptors for 'Gamepad' device type | RetroPad Inputs                             |
-|----------------------------------------------------|---------------------------------------------|
-| Button 2                                           | ![](images/RetroPad/Retro_B_Round.png)      |
-| Button 1                                           | ![](images/RetroPad/Retro_Y_Round.png)      |
-| D-Pad Up                                           | ![](images/RetroPad/Retro_Dpad_Up.png)      |
-| D-Pad Down                                         | ![](images/RetroPad/Retro_Dpad_Down.png)    |
-| D-Pad Left                                         | ![](images/RetroPad/Retro_Dpad_Left.png)    |
-| D-Pad Right                                        | ![](images/RetroPad/Retro_Dpad_Right.png)   |
-| Emulated Mouse Right Click                         | ![](images/RetroPad/Retro_L2.png)           |
-| Emulated Mouse Left Click                          | ![](images/RetroPad/Retro_R2.png)           |
-| Emulated Mouse X Axis                              | ![](images/RetroPad/Retro_L3.png)           |
-| Emulated Mouse Y Axis                              | ![](images/RetroPad/Retro_R3.png)           |
+| Input descriptors for Gamepad 4 Button | RetroPad Inputs                             |
+|----------------------------------------|---------------------------------------------|
+| Button 3                               | ![](../image/retropad/retro_b.png)          |
+| Button 1                               | ![](../image/retropad/retro_y.png)          |
+| D-Pad Up                               | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                             | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                             | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                            | ![](../image/retropad/retro_dpad_right.png) |
+| Button 4                               | ![](../image/retropad/retro_a.png)          |
+| Button 2                               | ![](../image/retropad/retro_x.png)          |
 
-| User 1 Remap descriptors for 'Joystick' device type | RetroPad Inputs                              |
-|-----------------------------------------------------|----------------------------------------------|
-| Button 2                                            | ![](images/RetroPad/Retro_B_Round.png)       |
-| Button 1                                            | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Emulated Mouse Right Click                          | ![](images/RetroPad/Retro_L2.png)            |
-| Emulated Mouse Left Control                         | ![](images/RetroPad/Retro_R2.png)            |
-| Left Analog X                                       | ![](images/RetroPad/Retro_Left_Stick.png) X  |
-| Left Analog Y                                       | ![](images/RetroPad/Retro_Left_Stick.png) Y  |
-| Emulated Mouse X Axis                               | ![](images/RetroPad/Retro_Right_Stick.png) X |
-| Emulated Mouse Y Axis                               | ![](images/RetroPad/Retro_Right_Stick.png) Y |
+| Input descriptors for Joystick 2 Button | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| Button 2                                | ![](../image/retropad/retro_b.png)             |
+| Button 1                                | ![](../image/retropad/retro_y.png)             |
+| Left Analog X                           | ![](../image/retropad/retro_left_stick.png) X  |
+| Left Analog Y                           | ![](../image/retropad/retro_left_stick.png) Y  |
 
-| User 2 Remap descriptors for 'Gamepad' device type     | RetroPad Inputs                              |
-|--------------------------------------------------------|----------------------------------------------|
-| Button 2                                               | ![](images/RetroPad/Retro_B_Round.png)       |
-| Button 1                                               | ![](images/RetroPad/Retro_Y_Round.png)       |
-| D-Pad Up                                               | ![](images/RetroPad/Retro_Dpad_Up.png)       |
-| D-Pad Down                                             | ![](images/RetroPad/Retro_Dpad_Down.png)     |
-| D-Pad Left                                             | ![](images/RetroPad/Retro_Dpad_Left.png)     |
-| D-Pad Right                                            | ![](images/RetroPad/Retro_Dpad_Right.png)    |
+| Input descriptors for Joystick 4 Button | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| Button 3                                | ![](../image/retropad/retro_b.png)             |
+| Button 1                                | ![](../image/retropad/retro_y.png)             |
+| Button 4                                | ![](../image/retropad/retro_a.png)             |
+| Button 2                                | ![](../image/retropad/retro_x.png)             |
+| Left Analog X                           | ![](../image/retropad/retro_left_stick.png) X  |
+| Left Analog Y                           | ![](../image/retropad/retro_left_stick.png) Y  |
+| Right Analog X                          | ![](../image/retropad/retro_right_stick.png) X |
+| Right Analog Y                          | ![](../image/retropad/retro_right_stick.png) Y |
 
-| User 2 Remap descriptors for 'Joystick' device type | RetroPad Inputs                              |
-|-----------------------------------------------------|----------------------------------------------|
-| Button 2                                            | ![](images/RetroPad/Retro_B_Round.png)       |
-| Button 1                                            | ![](images/RetroPad/Retro_Y_Round.png)       |
-| Left Analog X                                       | ![](images/RetroPad/Retro_Left_Stick.png) X  |
-| LEft Analog Y                                       | ![](images/RetroPad/Retro_Left_Stick.png) Y  |
+| Input descriptors for Keyboard | RetroPad Inputs                             |
+|--------------------------------|---------------------------------------------|
+| Esc                            | ![](../image/retropad/retro_select.png)     |
+| Enter                          | ![](../image/retropad/retro_start.png)      |
+| Kbd Up                         | ![](../image/retropad/retro_dpad_up.png)    |
+| Kbd Down                       | ![](../image/retropad/retro_dpad_down.png)  |
+| Kbd Left                       | ![](../image/retropad/retro_dpad_left.png)  |
+| Kbd Right                      | ![](../image/retropad/retro_dpad_right.png) |
 
-#### Keyboard device type table
+| Input descriptors for Emulated mouse | RetroPad Inputs                                |
+|--------------------------------------|------------------------------------------------|
+| Emulated Mouse Right Click           | ![](../image/retropad/retro_l2.png)            |
+| Emulated Mouse Left Click            | ![](../image/retropad/retro_r2.png)            |
+| Emulated Mouse X Axis                | ![](../image/retropad/retro_right_stick.png) X |
+| Emulated Mouse Y Axis                | ![](../image/retropad/retro_right_stick.png) Y |
+
+## Keyboard
 
 | RetroKeyboard Inputs          | Keyboard           |
 |-------------------------------|--------------------|
@@ -332,14 +305,10 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 | Keyboard Left Alt             | Left Alt           |
 | Keyboard Sys Req              | Print Screen       |
 
-## Compatibility
-
-Awaiting description.
-
 ## External Links
 
+- [Official DOSBox Website](https://www.dosbox.com/)
+- [Official/Original DOSBox SourceForge Repository](https://sourceforge.net/projects/dosbox/)
 - [Libretro DOSBox Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dosbox_libretro.info)
 - [Libretro DOSBox Github Repository](https://github.com/libretro/dosbox-libretro)
 - [Report Libretro DOSBox Core Issues Here](https://github.com/libretro/dosbox-libretro/issues)
-- [Official DOSBox Website](https://www.dosbox.com/)
-- [Official/Original DOSBox SourceForge Repository](https://sourceforge.net/projects/dosbox/)
