@@ -96,6 +96,7 @@ pages:
         - 'Cave Story (NXEngine)': 'library/nxengine.md'
         - 'Dinothawr': 'library/dinothawr.md'
         - 'Doom (PrBoom)': 'library/prboom.md'
+        - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
         - 'Handheld Electronic (GW)': 'library/gw.md'
         - 'Minecraft (Craft)': 'library/craft.md'
         - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
