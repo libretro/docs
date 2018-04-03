@@ -20,7 +20,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 | Filename                                                                         | Description           |
 |:--------------------------------------------------------------------------------:|:---------------------:|
-| [prboom.wad](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) | PrBoom WAD - Required |
+| [prboom.wad](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) | PrBoom requires data ROM 'prboom.wad' inside the ROM directory. |
 
 ## Extensions
 
