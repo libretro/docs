@@ -4,8 +4,6 @@
 
 Port of prboom to libretro - plays Doom, Doom II, Final Doom and other Doom IWAD mods. 
 
-### Author/License
-
 The PrBoom core has been authored by
 
 - Florian Schulze
@@ -16,6 +14,14 @@ The PrBoom core is licensed under
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+| Filename                                                                         | Description           |
+|:--------------------------------------------------------------------------------:|:---------------------:|
+| [prboom.wad](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) | PrBoom WAD - Required |
+
 ## Extensions
 
 Content that can be loaded by the PrBoom core have the following file extensions:
@@ -23,8 +29,6 @@ Content that can be loaded by the PrBoom core have the following file extensions
 - .wad
 - .iwad
 - .pwad
-
-## Databases
 
 RetroArch database(s) that are associated with the PrBoom core:
 
@@ -69,28 +73,124 @@ The PrBoom core saves/loads to/from these directories.
 
 **Loaded content's directory**
 
-| File         | Description |
-|:------------:|:-----------:|
-| *.dsg | Quicksave |
+| File  | Description |
+|:-----:|:-----------:|
+| *.dsg | Quicksave   |
 | *.cfg | DOOM Config |
 
 ### Geometry and timing
 
 - The PrBoom core's core provided FPS is 60
 - The PrBoom core's core provided sample rate is 44100 Hz
-- The PrBoom core's base width is (Base width)
-- The PrBoom core's base height is (Base height)
-- The PrBoom core's max width is (Max width)
-- The PrBoom core's max height is (Max height)
+- The PrBoom core's base width is dependent on the Internal resolution core option.
+- The PrBoom core's base height is dependent on the Internal resolution core option.
+- The PrBoom core's max width is dependent on the Internal resolution core option.
+- The PrBoom core's max height is dependent on the Internal resolution core option.
 - The PrBoom core's core provided aspect ratio is 4/3
 
 ## Loading DOOM
 
 PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's directory.
 
+You must use a seperate folder for each wad to be able to have all Dooms use their correct music
+
+An example folder structure would be like so
+
+```
+└── roms/
+        └── ports/ 
+                 ├──doom/
+                 |       ├──doom.wad
+                 |       ├──prboom.wad
+                 |       └──doomusic.mp3
+                 └──doom2/
+                         ├──doom2.wad
+                         ├──prboom.wad
+                         └──doom2music.mp3
+```
+## Music
+
 The PrBoom core is not able to play the music files inside the wad files (they are in a proprietary midi format).
 
-To have music, you have to put the files in mp3 format inside the content's directory.
+To enable music in your Doom game(s) you need to copy MP3s with specific names into the same folder as your ROMs are located. You can find a list of names [here](https://github.com/libretro/libretro-prboom/blob/master/src/m_misc.c#L605): 
+
+They follow the scheme e1m1.mp3, e1m2.mp3, ..., e2m1.mp, e2m2.mp3, ... . 
+
+There are freely available tracks available - find them by searching for "PSX Doom Music".
+
+If you are having trouble with the audio not playing after you have renamed all the MP3s, try clearing all the ID3 tag information for each of the MP3s.
+
+Below are the corresponding tracks if the MP3s are named:
+
+| File Name  | mp3                                 |
+|------------|-------------------------------------|
+| mus_e1m1   | "level 01 (hangar).mp3"             |
+| mus_e1m2   | "level 02 (plant).mp3"              |
+| mus_e1m3   | "level 03 (toxin refinery).mp3"     |
+| mus_e1m4   | "level 04 (command control).mp3"    |
+| mus_e1m5   | "level 05 (phobos lab).mp3"         |
+| mus_e1m6   | "level 06 (central processing).mp3" |
+| mus_e1m7   | "level 07 (computer station).mp3"   |
+| mus_e1m8   | "level 08 (phobos anomaly).mp3"     |
+| mus_e1m9   | "level 06 (fistula).mp3"            |
+| mus_e2m1   | "level 09 (deimos anomaly).mp3"     |
+| mus_e2m2   | "level 10 (containment area).mp3"   |
+| mus_e2m3   | "level 11 (refinery).mp3"           |
+| mus_e2m4   | "level 12 (deimos lab).mp3"         |
+| mus_e2m5   | "level 13 (command center).mp3"     |
+| mus_e2m6   | "level 02 (plant).mp3"              |
+| mus_e2m7   | "level 01 (hangar).mp3"             |
+| mus_e2m8   | "level 03 (toxin refinery).mp3"     |
+| mus_e2m9   | "level 02 (virgil).mp3"             |
+| mus_e3m1   | "level 17 (hell keep).mp3"          |
+| mus_e3m2   | "level 03 (canyon).mp3"             |
+| mus_e3m3   | "level 18 (pandemonium).mp3"        |
+| mus_e3m4   | "level 06 (central processing).mp3" |
+| mus_e3m5   | "level 20 (unholy cathedral).mp3"   |
+| mus_e3m6   | "level 21 (mt erebus).mp3"          |
+| mus_e3m7   | "level 22 (limbo).mp3"              |
+| mus_e3m8   | "level 09 (nessus).mp3"             |
+| mus_e3m9   | "level 10 (paradox).mp3"            |
+| mus_inter  | "e2m3.mp3"                          |
+| mus_intro  | "track 02 title screen.mp3"         |
+| mus_bunny  | "track 03 main menu.mp3"            |
+| mus_victor | "track 09 endgame.mp3"              |
+| mus_introa | "track 02 title screen.mp3"         |
+| mus_runnin | "level 01 (hangar).mp3"             |
+| mus_stalks | "level 10 (containment area).mp3"   |
+| mus_countd | "level 22 (limbo).mp3"              |
+| mus_betwee | "level 16 (hell gate).mp3"          |
+| mus_doom   | "level 08 (phobos anomaly).mp3"     |
+| mus_the_da | "level 21 (mt erebus).mp3"          |
+| mus_shawn  | "level 20 (unholy cathedral).mp3"   |
+| mus_ddtblu | "level 24 (hell beneath).mp3"       |
+| mus_in_cit | "level 11 (refinery).mp3"           |
+| mus_dead   | "level 13 (command center).mp3"     |
+| mus_stlks2 | "level 09 (deimos anomaly).mp3"     |
+| mus_theda2 | "level 17 (hell keep).mp3"          |
+| mus_doom2  | "level 08 (minos).mp3"              |
+| mus_ddtbl2 | "level 16 (hell gate).mp3"          |
+| mus_runni2 | "level 04 (combine).mp3"            |
+| mus_dead2  | "level 18 (pandemonium).mp3"        |
+| mus_stlks3 | "level 06 (central processing).mp3" |
+| mus_romero | "level 05 (phobos lab).mp3"         |
+| mus_shawn2 | "level 10 (containment area).mp3"   |
+| mus_messag | "level 01 (attack).mp3"             |
+| mus_count2 | "level 02 (plant).mp3"              |
+| mus_ddtbl3 | "level 03 (toxin refinery).mp3"     |
+| mus_ampie  | "level 01 (hangar).mp3"             |
+| mus_theda3 | "level 06 (fistula).mp3"            |
+| mus_adrian | "level 07 (computer station).mp3"   |
+| mus_messg2 | "level 08 (phobos anomaly).mp3"     |
+| mus_romer2 | "level 11 (refinery).mp3"           |
+| mus_tense  | "level 07 (geryon).mp3"             |
+| mus_shawn3 | "level 05 (catwalk).mp3"            |
+| mus_openin | "level 04 (command control).mp3"    |
+| mus_evil   | "level 16 (hell gate).mp3"          |
+| mus_ultima | "level 03 (toxin refinery).mp3"     |
+| mus_read_m | "track 03 main menu.mp3"            |
+| mus_dm2ttl | "track 02 title screen.mp3"         |
+| mus_dm2int | "track 05 stats screen.mp3"         |
 
 ## Core options
 
@@ -110,27 +210,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Mouse active when using Gamepad** [prboom-mouse_on] (**disabled**|enabled)
 
-	Allows you to use mouse inputs even when User 1's device type isn't set to RetroKeyboard/Mouse.
+	Allows you to use mouse inputs even User 1's device type isn't set to RetroKeyboard/Mouse.
 	
 - **Look on parent folders for IWADs** [prboom-find_recursive_on] (**enabled**|disabled)
 
-	Awaiting description.
+	Scans parent folders for IWADs.
 	
-## Controllers
+## User 1 device types
 
 The PrBoom core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 device types
 
 - None - Input disabled.
 - **RetroPad** - Joypad
 - **RetroKeyboard/Mouse** - Keyboard and Mouse - Switch to this for keyboard and mouse input. Has keymapper support.
 
-### Controller tables
+## Joypad
 
-#### Joypad
-
-| User 1 Remap descriptors | RetroPad Inputs                                | PrBoom inputs     |
+| User 1 input descriptors | RetroPad Inputs                                | PrBoom inputs     |
 |--------------------------|------------------------------------------------|-------------------|
 | Strafe                   | ![](../image/retropad/retro_b.png)             | Strafe            |
 | Run                      | ![](../image/retropad/retro_y.png)             | Run               |
@@ -150,76 +246,76 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 |                          | ![](../image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
 |                          | ![](../image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
 
-#### Keyboard and Mouse
+## Keyboard and Mouse
 
-| RetroKeyboard/Mouse Inputs         | Weapons      |
+| RetroKeyboard/Mouse inputs                      | Weapons         |
+|-------------------------------------------------|-----------------|
+| Keyboard 1                                      | Fist            |
+| Keyboard 2                                      | Pistol          |
+| Keyboard 3                                      | Shotgun         |
+| Keyboard 4                                      | Chaingun        |
+| Keyboard 5                                      | Rocket          |
+| Keyboard 8                                      | Chainsaw        |
+| Keyboard 0                                      | Best            |
+| Keyboard Left Control                           | Fire            |
+| Keyboard Right Control                          | Fire            |
+| Wheel Up                                        | Next Weapon     |
+| Wheel Down                                      | Previous Weapon |
+| ![](../image/retromouse/retro_left.png) Mouse 1 | Fire            |
+
+| RetroKeyboard/Mouse inputs                            | Movement        |
+|-------------------------------------------------------|-----------------|
+| Keyboard Up                                           | Forward         |
+| Keyboard Down                                         | Backward        |
+| Keyboard Left                                         | Turn Left       |
+| Keyboard Right                                        | Turn Right      |
+| Keyboard Left Shift                                   | Run             |
+| Keyboard Right Shift                                  | Run             |
+| Keyboard Less than <                                  | Strafe Left     |
+| Keyboard Greater than >                               | Strafe Right    |
+| Keyboard Left Alt                                     | Strafe          |
+| Keyboard Right Alt                                    | Strafe          |
+| Keyboard Caps Lock                                    | Autorun         |
+| Keyboard Slash /                                      | 180 Turn        |
+| Keyboard Space                                        | Use             |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Turn Left/Right |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Strafe          |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Use             |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Forward         |
+
+| RetroKeyboard/Mouse inputs | Game      |
+|----------------------------|-----------|
+| Keyboard F2                | Save      |
+| Keyboard F3                | Load      |
+| Keyboard F6                | Quicksave |
+| Keyboard F7                | Endgame   |
+| Keyboard F9                | Quickload |
+| Keyboard F10               | Quit      |
+
+| RetroKeyboard/Mouse inputs   | Screen       |
 |------------------------------|--------------|
-| Keyboard 1                   | Fist         |
-| Keyboard 2                   | Pistol       |
-| Keyboard 3                   | Shotgun                         |
-| Keyboard 4                   | Chaingun                         |
-| Keyboard 5                   | Rocket                         |
-| Keyboard 8                   | Chainsaw                         |
-| Keyboard 0                   | Best                         |
-| Keyboard Left Control        | Fire                         |
-| Keyboard Right Control       | Fire                         |
-| Wheel Up                                              | Next Weapon                         |
-| Wheel Down                                            | Previous Weapon                         |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Fire                         |
+| Keyboard F1                  | Help         |
+| Keyboard Escape              | Menu         |
+| Keyboard Home                | Setup        |
+| Keyboard Pause               | Pause        |
+| Keyboard Tab                 | Automap      |
+| Keyboard F4                  | Sound Volume |
+| Keyboard F5                  | HUD          |
+| Keyboard F8                  | Messages     |
+| Keyboard F11                 | Gamma Fix    |
+| Keyboard F12                 | Spy          |
+| Keyboard Minus -             | Smaller View |
+| Keyboard Plus +              | Larger View  |
 
-| RetroKeyboard/Mouse Inputs         | Movement      |
-|------------------------------|---------------------------|
-| Keyboard Up                  | Forward                         |
-| Keyboard Down                | Backward                         |
-| Keyboard Left                | Turn Left                         |
-| Keyboard Right               | Turn Right                         |
-| Keyboard Left Shift          | Run                         |
-| Keyboard Right Shift         | Run                         |
-| Keyboard Less than <         | Strafe Left                 |
-| Keyboard Greater than >      | Strafe Right                 |
-| Keyboard Left Alt            | Strafe                         |
-| Keyboard Right Alt           | Strafe                         |
-| Keyboard Caps Lock           | Autorun                         |
-| Keyboard Slash /             | 180 Turn                         |
-| Keyboard Space               | Use                         |
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Turn Left/Right                         |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Strafe                         |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | Use                         |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | Forward                         |
-
-| RetroKeyboard/Mouse Inputs         | Game      |
-|------------------------------|---------------------------|
-| Keyboard F2                  | Save                         |
-| Keyboard F3                  | Load                         |
-| Keyboard F6                  | Quicksave                         |
-| Keyboard F7                  | Endgame                         |
-| Keyboard F9                  | Quickload                         |
-| Keyboard F10                 | Quit                         |
-
-| RetroKeyboard/Mouse Inputs         | Screen      |
-|------------------------------|---------------------------|
-| Keyboard F1                  | Help                         |
-| Keyboard Escape              | Menu                         |
-| Keyboard Home                | Setup                         |
-| Keyboard Pause               | Pause                         |
-| Keyboard Tab                 | Automap                         |
-| Keyboard F4                  | Sound Volume                         |
-| Keyboard F5                  | HUD                         |
-| Keyboard F8                  | Messages                         |
-| Keyboard F11                 | Gamma Fix                         |
-| Keyboard F12                 | Spy                         |
-| Keyboard Minus -             | Smaller View                         |
-| Keyboard Plus +              | Larger View                         |
-
-| RetroKeyboard/Mouse Inputs         | Automap      |
-|------------------------------|---------------------------|
-| Keyboard f                   | Follow Mode                         |
-| Keyboard Minus -             | Zoom in                         |
-| Keyboard Plus +              | Zoom out                         |
-| Keyboard m                   | Mark Place                         |
-| Keyboard c                   | Clear Marks                         |
-| Keyboard o                   | Full/Zoom                         |
-| Keyboard g                   | Grid                         |
+| RetroKeyboard/Mouse inputs | Automap     |
+|----------------------------|-------------|
+| Keyboard f                 | Follow Mode |
+| Keyboard Minus -           | Zoom in     |
+| Keyboard Plus +            | Zoom out    |
+| Keyboard m                 | Mark Place  |
+| Keyboard c                 | Clear Marks |
+| Keyboard o                 | Full/Zoom   |
+| Keyboard g                 | Grid        |
 
 ## External Links
 
@@ -229,6 +325,6 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 - [Libretro PrBoom Github Repository](https://github.com/libretro/libretro-prboom)
 - [Report Libretro PrBoom Core Issues Here](https://github.com/libretro/libretro-prboom/issues)
 
-#### id Software
+## id Software
 
 - [Quake 1 (TyrQuake)](https://docs.libretro.com/library/tyrquake/)
