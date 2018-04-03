@@ -18,3 +18,16 @@ make sure that you are comparing **your forks edited branch** to the **docs mast
 There is a To-Do list for libretro/docs [here](https://docs.libretro.com/meta/todo/)
 
 You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).
+
+## Adding a new core
+
+These are the documents that should be added/updated when a new core is added to the libretro ecosystem.
+
+- Add the core to docs/library/
+- Add the core to mkdocs.yml
+- Add the core to docs/meta/core_list.md
+- Add the core to docs/meta/see_also.md if it supports RetroArch databases or if it's related to another core in some way
+- Add the core to docs/tech/licenses.md
+- Add the core to docs/meta/todo.md
+- Add the core to docs/guides/softpatching.md if it supports softpatching
+- Add the core to docs/guides/retroachievements.md if it supports cheevos
