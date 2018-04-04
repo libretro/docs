@@ -4,8 +4,6 @@
 
 Port of standalone Mednafen Saturn to libretro.
 
-### Author/License
-
 The Beetle Saturn core has been authored by
 
 - [Mednafen Team](https://mednafen.github.io/)
@@ -25,8 +23,6 @@ Content that can be loaded by the Beetle Saturn core have the following file ext
 - .m3u
 - .ccd
 - .chd
-
-## Databases
 
 RetroArch database(s) that are associated with the Beetle Saturn core:
 
@@ -64,7 +60,7 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | -         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -77,26 +73,34 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Beetle Saturn core's internal core name is 'Mednafen Saturn'
+The Beetle Saturn core's library name is 'Mednafen Saturn'
 
 The Beetle Saturn core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.bcr (External cartridge backup save)
-- 'content-name'.bkr (Internal save)
-- 'content-name'.smpc (SMPC's emulated Real-Time Clock save)
+| File   | Description                          |
+|:------:|:------------------------------------:|
+| *.bcr  | External cartridge backup save       |
+| *.bkr  | Internal save                        |
+| *.smpc | SMPC's emulated Real-Time Clock save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
-- The Beetle Saturn core's core provided FPS is 59.82
+- The Beetle Saturn core's core provided FPS is 59.88 for NTSC games and 49.96 for PAL games
 - The Beetle Saturn core's core provided sample rate is 44100 Hz
+- The Beetle Saturn core's base width is 320
+- The Beetle Saturn core's base height is 240
+- The Beetle Saturn core's max width is 704
+- The Beetle Saturn core's max height is 576
 - The Beetle Saturn core's core provided aspect ratio is 4/3
 
 ## Loading Saturn Sega content
@@ -131,6 +135,18 @@ foo (Disc 1).cue
 foo (Disc 2).cue
 foo (Disc 3).cue
 ```
+
+## Swapping disks	
+
+Swapping disks follows this procedure
+
+1. Open tray (Disk Cycle Tray Status)
+
+2. Change the Disk Index to the disk you want to swap to. 
+
+3. Close tray (Disk Cycle Tray Status)
+
+4. Return to the game and wait a few seconds to let it take effect
 
 After that, you can load the `foo.m3u` file in RetroArch with the Beetle Saturn core.
 
@@ -209,7 +225,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Adjust the first displayed scanline in NTSC mode.
 	
-- **Last scanline PAL* [beetle_saturn_last_scanline_pal] (230 to 287 in increments of 1. **271 is default**)
+- **Last scanline PAL** [beetle_saturn_last_scanline_pal] (230 to 287 in increments of 1. **271 is default**)
 
 	Adjust the last displayed scanline in PAL mode.
 	
@@ -223,11 +239,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "Enable Horizontal Blend(blur) - On"
 	![](..\image\core\beetle_saturn\blend_on.png)
 	
-## Controllers
+## User 1 - 12 device types
 
 The Beetle Saturn core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 - 12 device types
 
 - None - Input disabled.
 - [**Control Pad**](http://segaretro.org/Control_Pad_(Saturn)) - Joypad
@@ -240,26 +254,26 @@ The Beetle Saturn core supports the following device type(s) in the controls men
 - [Virtua Gun](https://segaretro.org/Virtua_Gun) - Lightgun
 - [Dual Mission Sticks](https://segaretro.org/Sega_Mission_Stick) - Analog - Panzer Dragoon Zwei only
 
-### Multitap support
+## Multitap
 
 Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](https://docs.libretro.com/library/beetle_saturn#core-options).
 
-### Controller tables
+## Joypad
 
-#### Joypad
+![](../image/controller/saturn.png)
 
-| User 1 - 12 Remap descriptors | RetroPad Inputs                              | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
-|-------------------------------|----------------------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|
-| A Button                      | ![](../image/retropad/retro_b.png)       | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
-| X Button                      | ![](../image/retropad/retro_y.png)       | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
+| User 1 - 12 input descriptors | RetroPad Inputs                                | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
+|-------------------------------|------------------------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|
+| A Button                      | ![](../image/retropad/retro_b.png)             | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
+| X Button                      | ![](../image/retropad/retro_y.png)             | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
 | Mode Switch                   | ![](../image/retropad/retro_select.png)        |              | Mode Switch    |                           |                |                     |                      |
 | Start Button                  | ![](../image/retropad/retro_start.png)         | Start Button | Start Button   | Start Button              | Start Button   | Start Button        | Start Button         |
 | D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up     | D-Pad Up       |                           |                |                     |                      |
 | D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down   | D-Pad Down     |                           |                |                     |                      |
 | D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left   | D-Pad Left     |                           |                |                     |                      |
 | D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right  | D-Pad Right    |                           |                |                     |                      |
-| B Button                      | ![](../image/retropad/retro_a.png)       | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
-| Y Button                      | ![](../image/retropad/retro_x.png)       | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
+| B Button                      | ![](../image/retropad/retro_a.png)             | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
+| Y Button                      | ![](../image/retropad/retro_x.png)             | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
 | Z Button                      | ![](../image/retropad/retro_l1.png)            | Z Button     | Z Button       | Z Button                  | Z Button       | Left Stick Button   | Z Button             |
 | C Button                      | ![](../image/retropad/retro_r1.png)            | C Button     | C Button       | C Button                  | C Button       | Right Stick Button  | C Button             |
 | L Button                      | ![](../image/retropad/retro_l2.png)            | L Button     | L Button       | Left shift paddle (Up)    | L Button       | Left Stick Trigger  | L Button             |
@@ -270,25 +284,25 @@ Activating multitap support in compatible games can be configured by the ['6Play
 | Analog X (Right)              | ![](../image/retropad/retro_right_stick.png) X |              |                |                           |                | Right Stick X       | Right Analog Stick X |
 | Analog Y (Right)              | ![](../image/retropad/retro_right_stick.png) Y |              |                |                           | Throttle       | Right Stick Y       | Right Analog Stick Y |
 
-#### Mouse
+## Mouse
 
-| RetroMouse Inputs                                   | Mouse        |
-|-----------------------------------------------------|--------------|
+| RetroMouse Inputs                                     | Mouse        |
+|-------------------------------------------------------|--------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
 | ![](../image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
-| Mouse 4                                             | Mouse Start  |
-| Mouse 5                                             | Mouse Start  |
+| Mouse 4                                               | Mouse Start  |
+| Mouse 5                                               | Mouse Start  |
 
-#### Lightgun
+## Lightgun
 
-| RetroLightgun Inputs                                 | Stunner           | Virtua Gun           |
-|------------------------------------------------------|-------------------|----------------------|
+| RetroLightgun Inputs                                   | Stunner           | Virtua Gun           |
+|--------------------------------------------------------|-------------------|----------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Stunner Crosshair | Virtua Gun Crosshair |
-| Gun Trigger                                          | Stunner Trigger   | Virtua Gun Trigger   |
-| Gun Reload                                           | Stunner Reload    | Virtua Gun Reload    |
-| Gun Start                                            | Stunner Start     | Virtua Gun Start     |
+| Gun Trigger                                            | Stunner Trigger   | Virtua Gun Trigger   |
+| Gun Reload                                             | Stunner Reload    | Virtua Gun Reload    |
+| Gun Start                                              | Stunner Start     | Virtua Gun Start     |
 
 ## External Links
 
@@ -298,8 +312,6 @@ Activating multitap support in compatible games can be configured by the ['6Play
 - [Libretro Beetle Saturn Github Repository](https://github.com/libretro/beetle-saturn-libretro)
 - [Report Libretro Beetle Saturn Core Issues Here](https://github.com/libretro/beetle-saturn-libretro/issues)
 
-### See also
-
-#### Sega - Saturn
+## Sega - Saturn
 
 - [Sega - Saturn (Yabause)](https://docs.libretro.com/library/yabause/)
