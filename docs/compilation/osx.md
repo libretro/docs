@@ -68,7 +68,14 @@ To build a release build :
 
 ### Fetching Cores
 
-The easiest way to fetch all the cores is to use libretro-super. Run
+The easiest way to fetch all the cores is to use libretro-super. 
+
+To get libretro-super, run:
+
+    git clone https://github.com/libretro/libretro-super.git libretro-super
+    cd libretro-super
+
+Now you can run the following command to download the source for all cores:
 
     ./libretro-fetch.sh
 
