@@ -96,6 +96,8 @@ Follow this directory structure
 - quoth for Quoth addon
 - Put BGM into a subfolder named music in each of them.
 
+The files s0.sav up to s11.sav represents structure of savegames.
+
 ```
 id1/
 ├── pak0.pak ## shareware data
