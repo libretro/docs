@@ -302,7 +302,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	**Only for the Vulkan renderer at the moment.**
 	
-??? note "*Adapative smoothing - Off*"
+??? note "*Adaptive smoothing - Off*"
     ![](..\image\core\beetle_psx_hw\smooth_off.png)
 
 ??? note "*Adaptive smoothing - On*"
