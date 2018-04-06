@@ -276,23 +276,17 @@ The Beetle PSX HW core has the following option(s) that can be tweaked from the 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Renderer (restart)** [beetle_psx_hw_renderer] (**vulkan**/opengl/software)
+- **Renderer (restart)** [beetle_psx_hw_renderer] (hardware/software)
 
 	Choose which video renderer will be used. 
 	
-	Software is the most accurate renderer.
+	Software is the most accurate renderer. However, it is also the most demanding renderer at higher resolutions than native. So in case you want to increase the internal resolution and you have a capable GPU, it's highly recommended you use the 'hardware' option instead.
 	
-	The OpenGL and Vulkan renderers are less accurate at the moment but will enable and/or speedup enhancements like upscaling and texture filtering. 
+	The OpenGL and Vulkan renderers are less accurate at the moment but will enable and/or speedup enhancements like upscaling and texture filtering.
 	
-	**The OpenGL and Vulkan renderers must be used with its corresponding video driver in RetroArch's Driver settings.**
+	By setting this to 'hardware',  depending on which video driver has been selected in RetroArch, it will automatically switch to either the OpenGL renderer or the Vulkan renderer.
 	
-	- Renderer - vulkan
-	- RetroArch Video Driver - vulkan
-		- The vulkan renderer supports Slang shaders
-	
-	- Renderer - opengl
-	- RetroArch Video driver - gl
-		- The opengl renderer supports GLSL shaders
+	Also important to keep in mind is shader support. The Vulkan renderer supports Slang shaders, while the OpenGL renderer supports GLSL shaders.
 	
 - **Software framebuffer** [beetle_psx_hw_renderer_software_fb] (Off/**On**)
 
