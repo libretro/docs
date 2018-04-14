@@ -28,9 +28,9 @@ Does RetroArch support cross-platform netplay?
 
 Which cores work for netplay?
 
-- On a techincal level, every core that supports save states should work but the performance requirements may be too high for it to work in any practical level.
+- On a technical level, every core that supports save states should work but the performance requirements may be too high for it to work in any practical level.
 
-Does PSX / N64 / Dreamcast / Gamecube / Wii / 3DS netplay work?
+Does PSX / N64 / Dreamcast / GameCube / Wii / 3DS netplay work?
 
 - No, the performance requirements make the current model unsuitable for those.
 
@@ -38,7 +38,7 @@ Can I play GB / GBC / GBA / PSP / 3DS games with multiple people via RetroArch N
 
 - No, RetroArch's netplay is not link-cable emulation, GB, GBA, PSP netplay are currently not possible with our implementation. One notable exception is same game GB/GBC Netplay via the TGB-Dual and Sameboy cores.
 
-Can I trade pokemons via RetroArch Netplay?
+Can I trade Pokémon via RetroArch Netplay?
 
 - No.
 
