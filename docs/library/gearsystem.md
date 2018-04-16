@@ -55,7 +55,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats - Game Genie  | ✔         |
 | RetroArch Cheats - Pro Acion Replay | ✔         |
