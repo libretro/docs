@@ -112,7 +112,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **LCD Filter** [pokemini_lcdfilter] (**dotmatrix**|scanline|none)
 
-	Specifies which internal screen filter should be applied to the screen. 'dotmatrix' produces a clean LCD effect, and is the recommended option. LCD filters are disabled when 'Video Scale' is set to '1x'.
+	Specifies which internal screen filter should be applied to the display. 'dotmatrix' produces a clean LCD effect, and is the recommended option. LCD filters are disabled when 'Video Scale' is set to '1x'.
 
 ??? note "*LCD Filter - dotmatrix*"
     ![](..\image\core\pokemini\dotmatrix.png)
