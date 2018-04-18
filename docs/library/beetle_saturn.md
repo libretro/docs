@@ -75,7 +75,7 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 
 ## Directories
 
-The Beetle Saturn core's library name is 'Mednafen Saturn'
+The Beetle Saturn core's library name is 'Beetle Saturn'
 
 The Beetle Saturn core saves/loads to/from these directories.
 
