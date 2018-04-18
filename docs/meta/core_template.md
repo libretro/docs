@@ -270,28 +270,28 @@ Rumble only works in the [Core name] core when
 
 - // Add RetroPad inputs, please note the third column is only used when an input doesn't have a descriptor
 
-| User # input descriptors | RetroPad Inputs                                | (Device name) Inputs      |
-|--------------------------|------------------------------------------------|---------------------------|
-| Action 1                 | ![](../image/retropad/retro_b.png)             | -                         |
-| Action 2                 | ![](../image/retropad/retro_y.png)             | -                         |
-| Action 3                 | ![](../image/retropad/retro_select.png)        | -                         |
-| Action 4                 | ![](../image/retropad/retro_start.png)         | -                         |
-| Action 5                 | ![](../image/retropad/retro_dpad_up.png)       | -                         |
-| Action 6                 | ![](../image/retropad/retro_dpad_down.png)     | -                         |
-| Action 7                 | ![](../image/retropad/retro_dpad_left.png)     | -                         |
-| Action 8                 | ![](../image/retropad/retro_dpad_right.png)    | -                         |
-| Action 9                 | ![](../image/retropad/retro_a.png)             | -                         |
-| Action 10                | ![](../image/retropad/retro_x.png)             | -                         |
-| Action 11                | ![](../image/retropad/retro_l1.png)            | -                         |
-| Action 12                | ![](../image/retropad/retro_r1.png)            | -                         |
-| Action 13                | ![](../image/retropad/retro_l2.png)            | -                         |
-| Action 14                | ![](../image/retropad/retro_r2.png)            | -                         |
-| Action 15                | ![](../image/retropad/retro_l3.png)            | -                         |
-| Action 16                | ![](../image/retropad/retro_r3.png)            | -                         |
-| Action 17                | ![](../image/retropad/retro_left_stick.png) X  | -                         |
-| Action 18                | ![](../image/retropad/retro_left_stick.png) Y  | -                         |
-| Action 19                | ![](../image/retropad/retro_right_stick.png) X | -                         |
-| Action 20                | ![](../image/retropad/retro_right_stick.png) Y | -                         |
+| RetroPad Inputs                                | User # input descriptors | (Device name) Inputs      |
+|------------------------------------------------|--------------------------|---------------------------|
+| ![](../image/retropad/retro_b.png)             | Action 1                 | -                         |
+| ![](../image/retropad/retro_y.png)             | Action 2                 | -                         |
+| ![](../image/retropad/retro_select.png)        | Action 3                 | -                         |
+| ![](../image/retropad/retro_start.png)         | Action 4                 | -                         |
+| ![](../image/retropad/retro_dpad_up.png)       | Action 5                 | -                         |
+| ![](../image/retropad/retro_dpad_down.png)     | Action 6                 | -                         |
+| ![](../image/retropad/retro_dpad_left.png)     | Action 7                 | -                         |
+| ![](../image/retropad/retro_dpad_right.png)    | Action 8                 | -                         |
+| ![](../image/retropad/retro_a.png)             | Action 9                 | -                         |
+| ![](../image/retropad/retro_x.png)             | Action 10                | -                         |
+| ![](../image/retropad/retro_l1.png)            | Action 11                | -                         |
+| ![](../image/retropad/retro_r1.png)            | Action 12                | -                         |
+| ![](../image/retropad/retro_l2.png)            | Action 13                | -                         |
+| ![](../image/retropad/retro_r2.png)            | Action 14                | -                         |
+| ![](../image/retropad/retro_l3.png)            | Action 15                | -                         |
+| ![](../image/retropad/retro_r3.png)            | Action 16                | -                         |
+| ![](../image/retropad/retro_left_stick.png) X  | Action 17                | -                         |
+| ![](../image/retropad/retro_left_stick.png) Y  | Action 18                | -                         |
+| ![](../image/retropad/retro_right_stick.png) X | Action 19                | -                         |
+| ![](../image/retropad/retro_right_stick.png) Y | Action 20                | -                         |
 
 ## Keyboard
 
