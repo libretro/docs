@@ -72,10 +72,14 @@ The Virtual Jaguar core's internal core name is 'Virtual Jaguar'
 
 The Virtual Jaguar core saves/loads to/from these directories.
 
--**Frontend's Home directory**
+**Frontend's Save directory**
 
-- cdrom.eeprom (Save)
-- 'Game-CRC'.eeprom (Save)
+| File        | Description            |
+|:-----------:|:----------------------:|
+| *.srm       | Cartridge EEPROM save  |
+| *.cdrom.srm | CD-ROM EEPROM save     |
+
+**Note:** When performing an in-game save, the Virtual Jaguar core creates both a Cartridge EEPROM save file and a CD-ROM EEPROM save file, regardless of the game type.
 
 ### Geometry and timing
 
