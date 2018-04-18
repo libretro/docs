@@ -8,9 +8,6 @@ Port of upstream mainline **up-to-date** Snes9x, a portable Super Nintendo Enter
 - Highly accurate SNES emulation.
 - Simplified and easily accessible MSU-1 expansion chip support.
 - Recommended for netplay
-- Less CPU intensive than the higan/bsnes based cores.
-
-### Author/License
 
 The Snes9x core has been authored by
 
@@ -32,12 +29,9 @@ Content that can be loaded by the Snes9x core have the following file extensions
 - .fig
 - .bs
 
-## Databases
-
 RetroArch database(s) that are associated with the Snes9x core:
 
 - [Nintendo - Super Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.rdb)
-- [Nintendo - Super Nintendo Entertainment System Hacks](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System%20Hacks.rdb)
 - [Nintendo - Sufami Turbo](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Sufami%20Turbo.rdb)
 - [Nintendo - Satellaview](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Satellaview.rdb)
 
@@ -48,7 +42,6 @@ Frontend-level settings or features that the Snes9x core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
@@ -59,7 +52,7 @@ Frontend-level settings or features that the Snes9x core respects.
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | -         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -72,24 +65,32 @@ Frontend-level settings or features that the Snes9x core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Snes9x core's internal core name is 'Snes9x'
+The Snes9x core's library name is 'Snes9x'
 
 The Snes9x core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | Cartridge battery save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
 - The Snes9x core's core provided FPS is 60.0988118623 for NTSC games and 50.0069789082 for PAL games.
 - The Snes9x core's core provided sample rate is 32040 Hz
+- The Snes9x core's base width is 256
+- The Snes9x core's base height is 224 when the Crop Overscan core option is set to enabled. 239 when it's set to disabled.
+- The Snes9x core's max width is 512
+- The Snes9x core's max height is 478
 - The Snes9x core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](https://docs.libretro.com/library/snes9x#core-options).
 
 ## MSU-1 support
@@ -114,9 +115,19 @@ The Snes9x core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
+- **Allow Up+Down / Left+Right** [snes9x_up_down_allowed] (**disabled**|enabled)
+
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
+	
+	This may cause movement based glitches to occur in certain games.
+	
+	It's best to keep this core option disabled.
+
 - **SuperFX Frequency** [snes9x_overclock] (**10MHz**|20MHz|40MHz|60MHz|80MHz|100MHz)
 
 	Overclock the [SuperFX chip](https://en.wikipedia.org/wiki/Super_FX). 10Mhz is stock clockspeed.
+	
+	[Example video here](https://www.youtube.com/watch?v=3gVg8vDhfQk)
 	
 - **Reduce Slowdown (Hack, Unsafe)** [snes9x_overclock_cycles] (**disabled**|compatible|max)
 
@@ -130,71 +141,103 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Reduce Flickering (Hack, Unsafe)** [snes9x_reduce_sprite_flicker] (**disabled**|enabled)
 
-	Rises sprite limit to reduce flickering in games.
+	Raises sprite limit to reduce flickering in games.
 	
 - **Show layer 1** [snes9x_layer_1] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show graphical layer 1.
+	
+	It's best to keep this core option enabled.
 	
 - **Show layer 2** [snes9x_layer_2] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show graphical layer 2.
+	
+	It's best to keep this core option enabled.
 	
 - **Show layer 3** [snes9x_layer_3] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show graphical layer 3.
+	
+	It's best to keep this core option enabled.
 	
 - **Show layer 4** [snes9x_layer_4] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show graphical layer 4.
+	
+	It's best to keep this core option enabled.
 	
 - **Show sprite layer** [snes9x_layer_5] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show sprite layer.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable graphic clip windows** [snes9x_gfx_clip] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show graphic clip windows.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable transparency effects** [snes9x_gfx_transp] (**enabled**|disabled)
 
-	Self-explanatory.
+	Show transparency effects.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable hires mode** [snes9x_gfx_hires] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enable hires mode.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 1** [snes9x_sndchan_1] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 1.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 2** [snes9x_sndchan_2] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 2.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 3** [snes9x_sndchan_3] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 3.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 4** [snes9x_sndchan_4] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 4.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 5** [snes9x_sndchan_5] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 5.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 6** [snes9x_sndchan_6] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 6.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 7** [snes9x_sndchan_7] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 7.
+	
+	It's best to keep this core option enabled.
 	
 - **Enable sound channel 8** [snes9x_sndchan_8] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enabled sound channel 8.
+	
+	It's best to keep this core option enabled.
 	
 - **Crop overscan** [snes9x_overscan] (**auto**|enabled|disabled)
 
@@ -218,19 +261,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Preferred aspect ratio - 4:3"
 	![](..\image\core\snes9x\4by3.png)	
-	
-## Controllers
+
+## User 1 device types
 
 The Snes9x core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 device types
 
 - None - Doesn't disable input.
 - **[SNES Joypad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Joypad
 - [SNES Mouse](https://en.wikipedia.org/wiki/Super_NES_Mouse) - Mouse
 - [Multitap](http://nintendo.wikia.com/wiki/Super_Multitap) - Joypad - Allows for up to five players to play together in multitap games.
 
-### User 2 device types
+## User 2 device types
 
 - None - Doesn't disable input.
 - **[SNES Joypad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Joypad
@@ -239,50 +280,51 @@ The Snes9x core supports the following device type(s) in the controls menu, bold
 - [SuperScope](https://en.wikipedia.org/wiki/Super_Scope) - Lightgun
 - [Justifier](https://en.wikipedia.org/wiki/Konami_Justifier) - Lightgun
 
-### Multitap support
+## Multitap
 
 Activating multitap support in compatible games can be configured by switching to the 'Multitap' device type for the corresponding users.
 
-### Controller tables
-
-#### Joypad
+## Joypad
 
 ![](../image/controller/snes.png)
 
-| User 1 - 5 Remap descriptors | RetroPad Inputs                           |
-|------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/Retro_y.png)    |
-| Select                       | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| X                            | ![](../image/retropad/retro_x.png)    |
-| L                            | ![](../image/retropad/retro_l1.png)         |
-| R                            | ![](../image/retropad/retro_r1.png)         |
+| RetroPad Inputs                                | User 1 - 5 input descriptors |
+|------------------------------------------------|------------------------------|
+| ![](../image/retropad/retro_b.png)             | B                            |                    
+| ![](../image/retropad/retro_y.png)             | Y                            |
+| ![](../image/retropad/retro_select.png)        | Select                       |
+| ![](../image/retropad/retro_start.png)         | Start                        |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  |
+| ![](../image/retropad/retro_a.png)             | A                            |
+| ![](../image/retropad/retro_x.png)             | X                            |
+| ![](../image/retropad/retro_l1.png)            | L                            |
+| ![](../image/retropad/retro_r1.png)            | R                            |
 
-#### Mouse
+## Mouse
 
-| RetroMouse Inputs                                   | SNES Mouse                |
-|-----------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| RetroMouse Inputs                                     | SNES Mouse              |
+|-------------------------------------------------------|-------------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button |
 
-#### Lightgun
+## Lightgun
 
-| RetroLightgun Inputs                                 | SuperScope           | Justifier           |
-|------------------------------------------------------|----------------------|---------------------|
+| RetroLightgun Inputs                                   | SuperScope           | Justifier           |
+|--------------------------------------------------------|----------------------|---------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair | Justifier Crosshair |
-| Gun Trigger                                          | SuperScope Trigger   | Justifier Trigger   |
-| Gun Aux A                                            | SuperScope Cursor    |                     |
-| Gun Aux B                                            | SuperScope Turbo     | Justifier Offscreen |
-| Gun Start                                            | SuperScope Pause     | Justifier Start     |
+| Gun Trigger                                            | SuperScope Trigger   | Justifier Trigger   |
+| Gun Aux A                                              | SuperScope Cursor    |                     |
+| Gun Aux B                                              | SuperScope Turbo     | Justifier Offscreen |
+| Gun Start                                              | SuperScope Pause     | Justifier Start     |
 
 ## Compatibility
+
+!!! attention
+	The Snes9x core can launch some Satellaview games with sometimes low compatibility.
 
 | Game                                             | Issue                                                                                |
 |--------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -295,9 +337,6 @@ Activating multitap support in compatible games can be configured by switching t
 | Secret of Evermore (PAL versions)                | Randomly freezes when the background music changes.                                  |
 | Speedy Gonzales: Los Gatos Bandidos              | Freezes when pressing a switch in the last level.                                    |
 
-!!! attention
-	The Snes9x core can launch some Satellaview games with sometimes low compatibility.
-
 ## External Links
 
 - [Official Snes9x Website (no longer updated)](http://www.snes9x.com/)
@@ -308,24 +347,7 @@ Activating multitap support in compatible games can be configured by switching t
 - [Libretro Snes9x Github Repository](https://github.com/libretro/snes9x)
 - [Report Libretro Snes9x Core Issues Here](https://github.com/libretro/snes9x/issues)
 
-### See also
-
-#### Nintendo - Sufami Turbo
-
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](https://docs.libretro.com/library/bsnes_balanced/)
-- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](https://docs.libretro.com/library/bsnes_cplusplus98/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
-
-#### Nintendo - Super Nintendo Entertainment System (+ Hacks)
+## Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
