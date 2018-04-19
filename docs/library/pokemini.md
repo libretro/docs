@@ -4,8 +4,6 @@
 
 PokeMini is an emulator for the [Pokémon Mini](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Mini) handheld console.
 
-### Author/License
-
 The PokeMini core has been authored by
 
 - JustBurn
@@ -16,18 +14,6 @@ The PokeMini core is licensed under
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
-## Extensions
-
-Content that can be loaded by the PokeMini core have the following file extensions:
-
-- .min
-
-## Databases
-
-RetroArch database(s) that are associated with the PokeMini core:
-
-- [Nintendo - Pokemon Mini](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Pokemon%20Mini.rdb)
-
 ## BIOS
 
 Required or optional firmware files go in the frontend's system directory.
@@ -36,6 +22,16 @@ Required or optional firmware files go in the frontend's system directory.
 |:-------------:|:-----------------------------:|:--------------------------------:|
 | bios.min      | Pokémon Mini BIOS - Optional  | 1e4fb124a3a886865acb574f388c803d |
 
+## Extensions
+
+Content that can be loaded by the PokeMini core have the following file extensions:
+
+- .min
+
+RetroArch database(s) that are associated with the PokeMini core:
+
+- [Nintendo - Pokemon Mini](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Pokemon%20Mini.rdb)
+
 ## Features
 
 Frontend-level settings or features that the PokeMini core respects.
@@ -43,10 +39,9 @@ Frontend-level settings or features that the PokeMini core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
-| Rewind            | ✕         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
@@ -67,17 +62,17 @@ Frontend-level settings or features that the PokeMini core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The PokeMini core's directory name is 'PokeMini'
+The PokeMini core's library name is 'PokeMini'
 
 The PokeMini core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-| File  | Description            |
-|:-----:|:----------------------:|
-| *.eep | EEPROM save            |
+| File  | Description |
+|:-----:|:-----------:|
+| *.eep | EEPROM save |
 
 **Frontend's State directory**
 
@@ -85,10 +80,14 @@ The PokeMini core saves/loads to/from these directories.
 |:--------:|:-----------:|
 | *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
 - The PokeMini core's core provided FPS is 72
 - The PokeMini core's core provided sample rate is 44100 Hz
+- The PokeMini core's base width is 96
+- The PokeMini core's base height is 64
+- The PokeMini core's max width is 576
+- The PokeMini core's max height is 384
 - The PokeMini core's core provided aspect ratio is 3/2
 
 ## Core options
@@ -203,49 +202,39 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enables virtual force feedback effect by 'shaking' the screen. This is helpful when using a controller without physical rumble support, since a number of games rely on force feedback to prompt user action.
 
-## Controllers
-
-The PokeMini core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 device types
-
-- None - Doesn't disable input. There is no reason to switch to this.
-- **RetroPad** - Joypad. Stay on this.
-- RetroPad w/Analog - Joypad. There is no reason to switch to this.
-
-### Rumble support
+## Rumble
 
 Rumble only works in the PokeMini core when
 
+- The content being ran has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
 - The core option 'Rumble Level' is set to any value other than '0'.
 - The core option 'Controller Rumble' is set to 'ON'.
 
-If physical rumble is not supported, it is recommended to set the core option 'Screen Shake' to 'ON'.
+!!! attention
+	If physical rumble is not supported, it is recommended to set the core option 'Screen Shake' to 'ON'.
 
-### Controller tables
+## Joypad
 
-#### Joypad
-
-| RetroPad Inputs                              | PokeMini Core Inputs |
-|----------------------------------------------|----------------------|
-| ![](../image/retropad/retro_b.png)           | B                    |
-| ![](../image/retropad/retro_select.png)      | Power Button         |
-| ![](../image/retropad/retro_dpad_up.png)     | D-Pad Up             |
-| ![](../image/retropad/retro_dpad_down.png)   | D-Pad Down           |
-| ![](../image/retropad/retro_dpad_left.png)   | D-Pad Left           |
-| ![](../image/retropad/retro_dpad_right.png)  | D-Pad Right          |
-| ![](../image/retropad/retro_a.png)           | A                    |
-| ![](../image/retropad/retro_l1.png)          | Shake                |
-| ![](../image/retropad/retro_r1.png)          | C                    |
+| RetroPad Inputs                             | User 1 input descriptors |
+|---------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_b.png)          | B                        |
+| ![](../image/retropad/retro_select.png)     | Power                    |
+| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up                 |
+| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down               |
+| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left               |
+| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right              |
+| ![](../image/retropad/retro_a.png)          | A                        |
+| ![](../image/retropad/retro_l1.png)         | Shake                    |
+| ![](../image/retropad/retro_r1.png)         | C                        |
 
 ## Compatibility
 
-| Game                                              | Issue                                                            |
-|---------------------------------------------------|------------------------------------------------------------------|
-| Pokemon Pinball Mini                              | EEPROM saves do not function correctly - use save states instead |
-| Pokemon Race Mini                                 | EEPROM saves do not function correctly - use save states instead |
+| Game                 | Issue                                                            |
+|----------------------|------------------------------------------------------------------|
+| Pokemon Pinball Mini | EEPROM saves do not function correctly - use save states instead |
+| Pokemon Race Mini    | EEPROM saves do not function correctly - use save states instead |
 
 ## External Links
 
