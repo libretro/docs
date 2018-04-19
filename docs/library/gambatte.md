@@ -4,8 +4,6 @@
 
 Gambatte is an accuracy-focused, open-source, cross-platform Game Boy Color emulator written in C++. It is based on hundreds of corner case hardware tests, as well as previous documentation and reverse engineering efforts.
 
-### Author/License
-
 The Gambatte core has been authored by
 
 - Sinamas
@@ -15,21 +13,6 @@ The Gambatte core is licensed under
 - [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
-
-## Extensions
-
-Content that can be loaded by the Gambatte core have the following file extensions:
-
-- .gb
-- .gbc
-- .dmg
-
-## Databases
-
-RetroArch database(s) that are associated with the Gambatte core:
-
-- [Nintendo - Game Boy](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy.rdb)
-- [Nintendo - Game Boy Color](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Color.rdb)
 
 ## BIOS
 
@@ -43,6 +26,19 @@ Required or optional firmware files go in the frontend's system directory.
 | gb_bios.bin  | Game Boy BIOS - Optional       | 32fbbd84168d3482956eb3c5051637f5 |
 | gbc_bios.bin | Game Boy Color BIOS - Optional | dbfce9db9deaa2567f6a84fde55f9680 |
 
+## Extensions
+
+Content that can be loaded by the Gambatte core have the following file extensions:
+
+- .gb
+- .gbc
+- .dmg
+
+RetroArch database(s) that are associated with the Gambatte core:
+
+- [Nintendo - Game Boy](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy.rdb)
+- [Nintendo - Game Boy Color](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Color.rdb)
+
 ## Features
 
 Frontend-level settings or features that the Gambatte core respects.
@@ -50,7 +46,6 @@ Frontend-level settings or features that the Gambatte core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
@@ -74,30 +69,40 @@ Frontend-level settings or features that the Gambatte core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Gambatte core's internal core name is 'Gambatte'
+The Gambatte core's library name is 'Gambatte'
 
 The Gambatte core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | Cartridge battery save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-**Frontend's System directory**
+***Frontend's System directory**
 
-- palettes/Default.pal (Global custom palette)
-- palettes/'content-name'.pal (Per-game custom palette)
+| File                        | Description             |
+|:---------------------------:|:-----------------------:|
+| palettes/Default.pal        | Global custom palette   |
+| palettes/'content-name'.pal | Per-game custom palette |
 
-### Geometry and timing
+## Geometry and timing
 
-- The Gambatte core's core provided FPS is (FPS)
-- The Gambatte core's core provided sample rate is (Rate)
-- The Gambatte core's core provided aspect ratio is (Ratio)
+- The Gambatte core's core provided FPS is 59.7275005696
+- The Gambatte core's core provided sample rate is [Sample rate]
+- The Gambatte core's base width is [Base width]
+- The Gambatte core's base height is [Base height]
+- The Gambatte core's max width is [Max width]
+- The Gambatte core's max height is [Max height]
+- The Gambatte core's core provided aspect ratio is [Aspect ratio]
 
 ## Custom palettes for Game Boy games
 
@@ -117,6 +122,14 @@ You can also define a palette to be used for all Game Boy games by creating a .p
 The Gambatte core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+- **Allow Opposing Directions** [gambatte_up_down_allowed] (**disabled**/enabled)
+
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
+	
+	This may cause movement based glitches to occur in certain games.
+	
+	It's best to keep this core option disabled.
 
 - **GB Colorization** [gambatte_gb_colorization] (**disabled**|auto|internal|custom)
 
@@ -225,32 +238,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 
-## Controllers
-
-The Gambatte core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 - 2 device types
-
-- None - Doesn't disable input. There's no reason to switch to this.
-- **RetroPad** - Joypad - Stay on this.
-- RetroPad w/Analog - Joypad - Same as RetroPad. There's no reason to switch to this.
-
-### Controller tables
-
-#### Joypad
+## Joypad
 
 ![](../image/controller/gb.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                           |
-|--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
-| Select                   | ![](../image/retropad/retro_select.png)     |
-| Start                    | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)    |
+| RetroPad Inputs                                | User 1 input descriptors |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_b.png)             | B                        |
+| ![](../image/retropad/retro_select.png)        | Select                   |
+| ![](../image/retropad/retro_start.png)         | Start                    |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+| ![](../image/retropad/retro_a.png)             | A                        |
 
 ## Compatibility
 
@@ -272,9 +273,7 @@ The Gambatte core supports the following device type(s) in the controls menu, bo
 - [Libretro Gambatte Github Repository](https://github.com/libretro/gambatte-libretro)
 - [Report Libretro Gambatte Core Issues Here](https://github.com/libretro/gambatte-libretro/issues)
 
-### See also
-
-#### Nintendo - Game Boy (+ Color)
+## Nintendo - Game Boy (+ Color)
 
 - [Nintendo - Game Boy / Color (Emux GB)](https://docs.libretro.com/library/emux_gb/)
 - [Nintendo - Game Boy / Color (Gearboy)](https://docs.libretro.com/library/gearboy/)
