@@ -23,6 +23,7 @@ Content that can be loaded by the Beetle Cygne core have the following file exte
 
 - .ws
 - .wsc
+- .pc2 (Benesse Pocket Challenge v2 files)
 
 ## Databases
 
