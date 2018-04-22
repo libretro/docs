@@ -100,6 +100,14 @@ The QuickNES core has the following option(s) that can be tweaked from the core 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
+- **Allow Opposing Directions** [quicknes_up_down_allowed] (**disabled**|enabled)
+
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
+	
+	This may cause movement based glitches to occur in certain games.
+	
+	It's best to keep this core option disabled.
+
 - **Aspect ratio** [quicknes_aspect_ratio_par] (**PAR**|4:3)
 
 	Configure QuickNES's core provided aspect ratio.
