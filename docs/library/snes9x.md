@@ -115,7 +115,7 @@ The Snes9x core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Allow Up+Down / Left+Right** [snes9x_up_down_allowed] (**disabled**|enabled)
+- **Allow Opposing Directions** [snes9x_up_down_allowed] (**disabled**|enabled)
 
 	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
 	
