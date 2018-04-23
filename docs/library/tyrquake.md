@@ -299,8 +299,8 @@ In-game menu controls:
 | Navigate Down                        | ![](../image/retropad/retro_dpad_down.png)     |
 | Adjust Value                         | ![](../image/retropad/retro_dpad_left.png)     |
 | Adjust Value                         | ![](../image/retropad/retro_dpad_right.png)    |
-| Select Current Option                | ![](../image/retropad/retro_b.png)             |
-| Return To Previous Level/Close Menu  | ![](../image/retropad/retro_a.png)             |
+| Select Current Option                | ![](../image/retropad/retro_a.png)             |
+| Return To Previous Level/Close Menu  | ![](../image/retropad/retro_b.png)             |
 
 ## Keyboard
 
