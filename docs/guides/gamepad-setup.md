@@ -1,4 +1,6 @@
-# Getting Started: Gamepad setup
+# Gamepad Setup
+
+RetroArch is intented to be easily controlled with a gamepad.
 
 ## Setting up a Gamepad
 

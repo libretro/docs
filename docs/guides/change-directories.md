@@ -1,4 +1,4 @@
-# Getting Started: Directory configuration
+# Directory configuration
 
 Next step you might want to consider is setting directories for RetroArch, this can help get the best experience possible.
 
