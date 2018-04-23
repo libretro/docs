@@ -187,6 +187,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Color Palette - raw"
 	![](..\image\core\fceumm\raw.png)		
+
+- **Allow Opposing Directions** [fceumm_up_down_allowed] (**disabled**|enabled)
+
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
+	
+	This may cause movement based glitches to occur in certain games.
+	
+	It's best to keep this core option disabled.
 	
 - **Use NTSC Palette** [fceumm_use_ntsc] (**disabled**|enabled)
 
