@@ -19,7 +19,7 @@ From here it is up to you to navigate your game folder and find the game you wan
 
 ### Playing
 
-Well done, you have finally launched your first game with RetroArch!
+Well done, you have finally launched your first game with RetroArch.
 
 If you setup your controller take note of the RetroPad concept. With this you will not have to setup a controller for each console, instead the RetroPad will adapt depending on what console your playing.
 
