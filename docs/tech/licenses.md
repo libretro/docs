@@ -26,9 +26,9 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | fMSX                                                                             | [Non-commercial](https://github.com/libretro/fmsx-libretro/blob/master/LICENSE)           | Non-commercial |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)          		               | [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)     | Non-commercial |
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
-| [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
+| [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/LICENSE.md)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
-| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/arcadez/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
+| MAME 2003-Plus                                                                   | [MAME (Non-commercial)](https://github.com/libretro/mame2003-plus-libretro/blob/master/LICENSE.md) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
@@ -81,7 +81,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md)                            | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [bsnes Performance](../library/bsnes_performance.md)                             | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [Caprice32](../library/caprice32.md)             			           | [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)                 |                |
-| [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/LICENSE.md)                        |                |
+| [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/COPYING)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Citra Canary/Experimental](../library/citra_canary.md)              | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Craft](../library/craft.md)                     			           | [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)                           |                |
@@ -126,9 +126,9 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Lutro](../library/lutro.md)				                	   | [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE)                     |                |
 | MAME										   | [BSD-3-Clause & GNU GPLv2](http://mamedev.org/legal.html)                                 |                |
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
-| [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/docs/mame.txt)         | Non-commercial |
+| [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/LICENSE.md)         | Non-commercial |
 | MAME 2003 Midway                                                                 | [MAME (Non-commercial)](https://github.com/libretro/mame2003_midway/blob/master/docs/mame.txt)         | Non-commercial |
-| MAME 2003-Plus - Experimental                                                    | [MAME (Non-commercial)](https://github.com/arcadez/mame2003-plus-libretro/blob/master/docs/mame.txt) | Non-commercial |
+| MAME 2003-Plus                                                                   | [MAME (Non-commercial)](https://github.com/libretro/mame2003-plus-libretro/blob/master/LICENSE.md) | Non-commercial |
 | MAME 2009                                                                        | [MAME (Non-commercial)](https://github.com/r-type/mame2009/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2010                                                 	         	       | [MAME (Non-commercial)](https://github.com/libretro/mame2010-libretro/blob/master/docs/mame.txt)         | Non-commercial |
 | MAME 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
