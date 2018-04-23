@@ -1,4 +1,4 @@
-# Getting Started: Importing content into RetroArch
+# Importing Content
 
 !!! warning
     This guide assumes that you already have obtained the content legally, RetroArch does not provide users with copyright content.
