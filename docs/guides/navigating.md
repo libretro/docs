@@ -1,4 +1,4 @@
-# Getting Started: Navigating the user interface
+# Navigating The UI
 
 This tutorial will teach you the basics of navigating RetroArch and where to find everything. Soon, we will go over the essentials to set RetroArch up suitable for playing games.
 
