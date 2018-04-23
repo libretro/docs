@@ -1,4 +1,4 @@
-# Getting Started: Cores
+# Cores
 
 Cores are essentially other programs and games that run through RetroArch. RetroArch requires cores to run any content.
 
