@@ -1,4 +1,4 @@
-# Getting Started: Using file browser
+# File Browser
 
 For this part of the setup guide we will be teaching you how to use RetroArch's file browser. The browser is rather basic, although it isn't too hard to get used to it.
 
