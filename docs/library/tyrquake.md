@@ -69,12 +69,12 @@ The TyrQuake core's library name is 'TyrQuake'
 
 The TyrQuake core saves/loads to/from these directories.
 
-**Loaded content's directory**
+**Frontend's Save directory**
 
-| File         | Description |
-|:------------:|:-----------:|
-| config.cfg   | Config      |
-| *.sav        | Save        |
+| File                          | Description |
+|:-----------------------------:|:-----------:|
+| (game directory)/config.cfg   | Config      |
+| (game directory)/*.sav        | Save        |
 
 ### Geometry and timing
 
@@ -90,20 +90,16 @@ The TyrQuake core saves/loads to/from these directories.
 
 Follow this directory structure
 
-- id1 for the main game
-- hipnotic for the 1st mission pack
-- rogue for the 2nd mission pack
-- quoth for Quoth addon
+- 'id1' for the main game
+- 'hipnotic' for the 1st mission pack
+- 'rogue' for the 2nd mission pack
+- 'dopa' for the official "Episode 5: Dimension of the Past" expansion
 - Put BGM into a subfolder named music in each of them.
-
-The files s0.sav up to s11.sav represents structure of savegames.
 
 ```
 id1/
 ├── pak0.pak ## shareware data
 ├── pak1.pak ## registered data
-├── s0.sav
-├── s1.sav
 ├── music/
 │   ├── track02.ogg
 │   ├── ...
@@ -111,8 +107,6 @@ id1/
 │
 hipnotic/
 ├── pak0.pak
-├── s0.sav
-├── s1.sav
 ├── music/
 │   ├── track02.ogg
 │   ├── ...
@@ -120,18 +114,40 @@ hipnotic/
 │
 rogue/
 ├── pak0.pak
-├── s0.sav
-├── s1.sav
 ├── music/
 │   ├── track02.ogg
 │   ├── ...
 │   └── track09.ogg
 │
 dopa/
-├── pak0.pak
+└──  pak0.pak
+```
+
+Game saves and internal configuration files will be created in the frontend-defined save directory with a folder layout that mirrors the game data structure:
+
+```
+id1/
+├── config.cfg
+├── s0.sav
+├── s1.sav
+│
+hipnotic/
+├── config.cfg
+├── s0.sav
+├── s1.sav
+│
+rogue/
+├── config.cfg
+├── s0.sav
+├── s1.sav
+│
+dopa/
+├── config.cfg
 ├── s0.sav
 └── s1.sav
 ```
+
+Game saves are numbered from 's0.sav' to 's11.sav'.
 
 ## Soundtrack files
 
@@ -145,7 +161,37 @@ The TyrQuake core uses RetroArch's username setting for the in-game player name.
 
 ## Config
 
-TyrQuake's internal game settings can be found in config.cfg
+TyrQuake's internal game settings can be found in the 'config.cfg' file inside each game's save directory.
+
+Many of these settings may be changed from the in-game menu. Notable options are as follows:
+
+- VIDEO → SCREEN SIZE
+
+	With the slider at the 3rd position from the right, all HUD information is shown.
+	
+	With the slider at the 2nd position from the right, the gameplay area is increased while the HUD size is reduced such that only armour, health and current ammo are shown.
+	
+	With the slider at the far right position, the gameplay area fills the screen and no HUD is shown.
+
+- VIDEO → GAMMA
+
+	Sets display brightness
+
+- VIDEO → DITHER FILTERING (**OFF**|ON)
+
+	Enables texture smoothing.
+
+- VIDEO → SMOOTH ANIMATION (**OFF**|ON)
+
+	Enables linear interpolation of character animation.
+
+- VIDEO → SMOOTH MOVEMENT (**OFF**|ON)
+
+	Enables linear interpolation of character movement.
+
+- GAME → CROSSHAIR (**OFF**|ON)
+
+	Enables display of targeting reticule.
 
 ## Core options
 
@@ -174,6 +220,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Invert Y Axis** [tyrquake_invert_y_axis] (**disabled**|enabled)
 
 	Invert RetroPad Right Analog Y Axis.
+
+- **Analog Deadzone (percent)** [tyrquake_analog_deadzone] (**15**|20|25|30|0|5|10)
+
+	Sets the deadzone of the Gamepad analog sticks when the input device type is set to 'Gamepad Classic' or 'Gamepad Modern'.
 	
 ## User 1 device types
 
@@ -222,7 +272,7 @@ Rumble only works in the TyrQuake core when
 |-----------------------------------------------------------|------------------------------------------------|-------------------|
 | Swim Down                                                 | ![](../image/retropad/retro_b.png)             | Swim Down         |
 | Swim Up                                                   | ![](../image/retropad/retro_y.png)             | Swim Up           |
-| Toggle console                                            | ![](../image/retropad/retro_select.png)        | Toggle console    |
+| Show Scores                                               | ![](../image/retropad/retro_select.png)        | Show Scores       |
 | Menu                                                      | ![](../image/retropad/retro_start.png)         | Menu              |
 | D-Pad Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up          |
 | D-Pad Down                                                | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down        |
@@ -240,6 +290,17 @@ Rumble only works in the TyrQuake core when
 |                                                           | ![](../image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
 |                                                           | ![](../image/retropad/retro_right_stick.png) X | Look Left/Right   |
 |                                                           | ![](../image/retropad/retro_right_stick.png) Y | Look Up/Down      |
+
+In-game menu controls:
+
+| Menu Function                        | RetroPad Inputs                                |
+|--------------------------------------|------------------------------------------------|
+| Navigate Up                          | ![](../image/retropad/retro_dpad_up.png)       |
+| Navigate Down                        | ![](../image/retropad/retro_dpad_down.png)     |
+| Adjust Value                         | ![](../image/retropad/retro_dpad_left.png)     |
+| Adjust Value                         | ![](../image/retropad/retro_dpad_right.png)    |
+| Select Current Option                | ![](../image/retropad/retro_a.png)             |
+| Return To Previous Level/Close Menu  | ![](../image/retropad/retro_b.png)             |
 
 ## Keyboard
 
