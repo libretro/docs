@@ -16,7 +16,7 @@ Cores are essentially other programs and games that run through RetroArch. Retro
 ## Installing cores through package manager (Ubuntu PPA only)
 
 !!! note
-    Installing RetroArch through the Ubuntu PPA will disable the "Core Updater" option in RetroArch's interface, Therefore core installation needs to happen through the Ubuntu package manager.
+    Installing RetroArch through the Ubuntu PPA will disable the "Core Updater" option in RetroArch's interface, therefore core installation needs to happen through the Ubuntu package manager.
 
 - Open a terminal
 - Start typing **sudo apt-get install libretro-**
