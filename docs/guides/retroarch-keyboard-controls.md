@@ -10,7 +10,7 @@
 | `Right` | ![](../image/retropad/retro_dpad_right.png)    | `S`   | ![](../image/retropad/retro_x.png)       |
 | `Q`     | ![](../image/retropad/retro_l1.png)            | - | - |
 | `W`     | ![](../image/retropad/retro_r1.png)            | - | - |
-|         | ![](../image/retropad/retro_select.png)        | - | - |
+| `Shift` | ![](../image/retropad/retro_select.png)        | - | - |
 | `Enter` | ![](../image/retropad/retro_start.png)         | - | - |
 
 ## Introduction to Hotkeys
