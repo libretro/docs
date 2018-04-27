@@ -124,6 +124,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Reduce sprite flickering when enabled.
 	
+- **Audio mode** [quicknes_audio_nonlinear] (**nonlinear**|linear|stereo panning)
+
+	Configure audio mode.
+	
+	Stereo panning simulates stereo by using a panning method and some reverb effects to add some depth.
+	
+- **Audio equalizer preset** [quicknes_audio_eq] (**default**|famicom|tv|flat|crisp|tinny)
+	
+	Applies a preset to the audio equalizer.
+	
 ## Joypad
 
 ![](../image/Controller/nes.png)
