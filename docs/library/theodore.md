@@ -8,7 +8,7 @@ Theodore is a Thomson TO8D system emulator based on the Daniel Coulom's DCTO8D e
 
 The Theodore core has been authored by
 
-- Daniel Coulom
+- Thomas Lorblanchès
 
 The Theodore core is licensed under
 
@@ -23,12 +23,6 @@ Content that can be loaded by the Theodore core have the following file extensio
 - .fd (floppy disk)
 - .k7 (tape)
 - .rom (cartridge)
-
-## BIOS
-
-| Filename | Description               | md5sum                           |
-|:--------:|:-------------------------:|:--------------------------------:|
-| to8d.rom | Boot Image - Required     | 2091a2de4f663c48b580811f56e02c25 |
 
 ## Features
 
@@ -71,9 +65,20 @@ The Theodore core saves/loads to/from these directories.
 
 - theodore.cfg (Theodore Config file)
 
+### Geometry and timing
+
+- The Theodore core's base width is 672 pixels
+- The Theodore core's base height is 432 pixels
+
 ## Core options
 
-None
+The Theodore core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Floppy write protection** [theodore_floppy_write_protect]  (disabled|**enabled**)
+
+- **Tape write protection** [theodore_tape_write_protect]  (disabled|**enabled**)
+
+- **Dump printer data to file** [theodore_printer_emulation] (**disabled**|enabled)
 
 ## Controllers
 
@@ -86,7 +91,7 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 ### Other controllers
 
-Mouse - The Theodore core can emulate mouse inputs.
+Mouse - The Theodore core emulates the TO8D light pen.
 
 ### Controller tables
 
@@ -117,11 +122,9 @@ On controllers without Y/X keys, select can also be used to roll the virtual key
 |F1-F5             | F1-F5       |
 |F6-F10            | SHIFT+F1-F5 |
 
-
 ## External Links
 
-- [Official DCTO8D Website](http://dcto8.free.fr/)
-- [Official DCTO8D Downloads](http://dcto8.free.fr/dcto8d.2009/dcto8d_fr.html)
-- [Libretro Theodore Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/theodore_libretro.info)
 - [Libretro Theodore Github Repository](https://github.com/Zlika/theodore)
 - [Report Libretro Theodore Core Issues Here](https://github.com/Zlika/theodore/issues)
+- [Libretro Theodore Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/theodore_libretro.info)
+- [Official DCTO8D Website](http://dcto8.free.fr/)
