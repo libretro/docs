@@ -120,6 +120,7 @@
 - TempGBA
 - TGB Dual
 - The Powder Toy
+- Theodore
 - TyrQuake
 - UME 2014
 - Uzem

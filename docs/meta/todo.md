@@ -580,6 +580,16 @@ Add core max height
 - Add core max height
 - Add core provided aspect ratio.
 
+### [〰️] Theodore
+
+- Quickstart for non french speakers
+- Populate the features table
+- Add core base width
+- Add core base height
+- Add core max width
+- Add core max height
+- Add core provided aspect ratio
+
 ### [〰️] TyrQuake
 
 - Complete expansion pack section.
