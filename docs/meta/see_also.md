@@ -128,10 +128,12 @@
 ## NEC - PC Engine - TurboGrafx 16
 
 - [NEC - PC Engine / CD (Beetle PCE FAST)](https://docs.libretro.com/library/beetle_pce_fast/)
+- [NEC - PC Engine SuperGrafx (Beetle SGX)](https://docs.libretro.com/library/beetle_sgx/)
 
 ## NEC - PC Engine CD - TurboGrafx-CD
 
 - [NEC - PC Engine / CD (Beetle PCE FAST)](https://docs.libretro.com/library/beetle_pce_fast/)
+- [NEC - PC Engine SuperGrafx (Beetle SGX)](https://docs.libretro.com/library/beetle_sgx/)
 
 ## NEC - PC Engine SuperGrafx
 
