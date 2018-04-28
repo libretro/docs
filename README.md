@@ -8,6 +8,8 @@ This is the source for the [libretro documentation](https://docs.libretro.com), 
 
 [Libretro Forums topic](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078)
 
+[Contributing guide](https://docs.libretro.com/guides/how-to-contribute/)
+
 [To-do list](https://docs.libretro.com/meta/todo/)
 
 ![travis](https://www.travis-ci.org/libretro/docs.svg?branch=master)

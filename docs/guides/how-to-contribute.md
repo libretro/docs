@@ -23,7 +23,7 @@ You can submit suggestions or issues regarding documentation at the [libretro/do
 
 These are the documents that should be added/updated when a new core is added to the libretro ecosystem.
 
-- Add the core to docs/library/
+- Add the core to docs/library/ (Follow the latest core template. docs/meta/core_template.md)
 - Add the core to mkdocs.yml
 - Add the core to docs/meta/core_list.md
 - Add the core to docs/meta/see_also.md if it supports RetroArch databases or if it's related to another core in some way
