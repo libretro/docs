@@ -26,7 +26,7 @@ These are the documents that should be added/updated when a new core is added to
 - Add the core to docs/library/ (Follow the latest core template. docs/meta/core_template.md)
 - Add the core to mkdocs.yml
 - Add the core to docs/meta/core_list.md
-- Add the core to docs/meta/see_also.md if it supports RetroArch databases or if it's related to another core in some way
+- Add the core to docs/meta/see_also.md if it's related to another core in some way
 - Add the core to docs/tech/licenses.md
 - Add the core to docs/meta/todo.md
 - Add the core to docs/guides/softpatching.md if it supports softpatching
