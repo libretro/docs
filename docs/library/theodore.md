@@ -119,6 +119,8 @@ On controllers without Y/X keys, select can also be used to roll the virtual key
 
 ## Keyboard
 
+![](../image/core/theodore/to8d_keyboard.jpg)
+
 | RetroKeyboard Inputs         | Theodore Inputs           |
 |------------------------------|---------------------------|
 | Keyboard Tab                 | STOP                      |
