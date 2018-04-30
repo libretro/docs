@@ -584,7 +584,6 @@ Add core max height
 
 - Feature: more tests required
 - Geometry/timing: FPS, sample rate, aspect ratio, max width/weight
-- Usage: Quickstart for non french speakers
 
 ### [〰️] TyrQuake
 

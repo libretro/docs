@@ -6,7 +6,7 @@ Theodore is a Thomson TO8D system emulator based on the Daniel Coulom's DCTO8D e
 
 The Theodore core has been authored by
 
-- T. Lorblanchès
+- Thomas Lorblanchès
 
 The Theodore core is licensed under
 
@@ -30,7 +30,7 @@ Content that can be loaded by the Theodore core have the following file extensio
 - .sap (floppy disk)
 - .k7 (tape)
 - .rom (cartridge)
-- .m7 (MEMO7 cartridge)
+- .m7 (cartridge)
 
 ## Features
 
@@ -76,6 +76,12 @@ The Theodore core's internal core name is 'theodore'
 
 - The Theodore core's base width is 672 pixels
 - The Theodore core's base height is 432 pixels
+
+## Usage
+
+![](../image/core/theodore/to8d_os.jpg)
+
+Click the top yellow rectangle on the right-hand side.
 
 ## Core options
 
