@@ -582,11 +582,9 @@ Add core max height
 
 ### [〰️] Theodore
 
-- Quickstart for non french speakers
-- Populate the features table
-- Add core max width
-- Add core max height
-- Add core provided aspect ratio
+- Feature: more tests required
+- Geometry/timing: FPS, sample rate, aspect ratio, max width/weight
+- Usage: Quickstart for non french speakers
 
 ### [〰️] TyrQuake
 
