@@ -46,7 +46,7 @@ Frontend-level settings or features that the O2EM core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Saves             | ✕         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✕         |
