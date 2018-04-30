@@ -139,7 +139,7 @@ On controllers without Y/X keys, select can also be used to roll the virtual key
 
 ## Mouse
 
-| RetroMouse Inputs                                     | (Device name) Inputs      |
+| RetroMouse Inputs                                     | Theodore Inputs      |
 |-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Light pen cursor                         |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | Selection                      |
