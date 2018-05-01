@@ -26,7 +26,7 @@ Required or optional firmware files go in the frontend's system directory.
 | gba_bios.bin | Game Boy Advance BIOS - Optional | a860e8c0b6d573d191e4ec7db1b1e4f6 |
 | gb_bios.bin  | Game Boy BIOS - Optional         | 32fbbd84168d3482956eb3c5051637f5 |
 | gbc_bios.bin | Game Boy Color BIOS - Optional   | dbfce9db9deaa2567f6a84fde55f9680 |
-| sgb_bios.bin | Super Game Boy BIOS - Optional   |                                  |
+| sgb_bios.bin | Super Game Boy BIOS - Optional   | d574d4f9c12f305074798f54c091a8b4 |
 
 ## Extensions
 
