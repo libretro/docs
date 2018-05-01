@@ -177,6 +177,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | TempGBA                                                                          | [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/copyright)               |                |
 | [TGB Dual](../library/tgb_dual.md)                                               | [GPLv2](https://github.com/libretro/tgbdual-libretro/blob/master/docs/COPYING-2.0.txt)    |                |
 | [The Powder Toy](../library/the_powder_toy.md)                                   | [GPLv3](https://github.com/libretro/ThePowderToy/blob/master/LICENSE)                     |                |
+| [Theodore](../library/theodore.md)                                               | [GPLv3](https://github.com/Zlika/theodore/blob/master/LICENSE)                     |                |
 | [TyrQuake](../library/tyrquake.md)                                               | [GPLv2](https://github.com/libretro/tyrquake/blob/master/gnu.txt)                         |                |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 | [Uzem](../library/uzem.md)                                                       | [GPLv3](https://github.com/Uzebox/uzebox/blob/master/gpl-3.0.txt)                         |                |

@@ -580,6 +580,11 @@ Add core max height
 - Add core max height
 - Add core provided aspect ratio.
 
+### [〰️] Theodore
+
+- Feature: more tests required
+- Geometry/timing: FPS, sample rate, aspect ratio, max width/weight
+
 ### [〰️] TyrQuake
 
 - Complete expansion pack section.
