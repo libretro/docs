@@ -11,7 +11,17 @@ The nice thing about OpenLara is that, while staying true to the original look a
 - Shading effects – after Lara gets out of the water, her skin has a slightly wet shading effect.
 - A first-person mode that is more convincing and fun than what you’d expect. It behaves a bit like Mirror’s Edge in that the camera bobs up and down, and you can see Lara’s hands move in front of you. If you try to do a somersault – the camera will rotate along with it as well. What makes the firstperson mode a bit more convincing is the new self-shadowing effects that have been added.
 
-### Requirements
+The OpenLara core has been authored by
+
+- XProger
+
+The OpenLara core is licensed under
+
+- [2-clause BSD](https://github.com/XProger/OpenLara/blob/master/LICENSE)
+
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+
+## Requirements
 
 This core requires that you use OpenGL as the video driver. Go to Settings -> Driver. If ‘video driver’ is set to ‘vulkan’, switch it back to ‘gl’, and then restart.
 
@@ -36,7 +46,7 @@ Also, the OpenLara core requires that you turn on ‘Enable Shared Hardware Cont
 
 ![](../image/core/openlara/context.png)
 
-#### How to start the OpenLara core:
+## How to start the OpenLara core:
 
 Right now, OpenLara is more of a tech demo. You have to load separate levels into the program in order to play them. 
 
@@ -48,43 +58,19 @@ We hope that it will book major progress so that one day we can replay the old T
 
 - To try the demo level, you need to obtain its data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](image\core\all\download.png) </center>
-
 - Select 'Tomb Raider', then select 'tombraider1-demo.zip'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](image\core\folder\screenshot_name.png) </center>
-
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
-
-<center> ![](image\core\all\load.png) </center>
-
-<center> ![](image\core\all\downloads.png) </center>
 
 - Select the 'Tomb Raider' directory, then select 'LEVEL2.PSX'.
 
 - If you are asked which core to select, choose 'Tomb Raider (OpenLara)'.
-
-The content should now start running!
-
-### Author/License
-
-The OpenLara core has been authored by
-
-- XProger
-
-The OpenLara core is licensed under
-
-- [2-clause BSD](https://github.com/XProger/OpenLara/blob/master/LICENSE)
-
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ## Extensions
 
 Content that can be loaded by the OpenLara core have the following file extensions:
 
 - .psx
-
-## Databases
 
 RetroArch database(s) that are associated with the OpenLara core:
 
@@ -97,7 +83,6 @@ Frontend-level settings or features that the OpenLara core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✕         |
-| Screenshots       | ✔         |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
@@ -121,20 +106,26 @@ Frontend-level settings or features that the OpenLara core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The OpenLara core's internal core name is 'OpenLara'
+The OpenLara core's library name is 'OpenLara'
 
 The OpenLara core saves/loads to/from these directories.
 
 **Frontend's System directory**
 
-- openlara-'character-string'.xsh (???)
+| File           | Description  |
+|:--------------:|:------------:|
+| openlara-*.xsh | Shader files |
 
-### Geometry and timing
+## Geometry and timing
 
 - The OpenLara core's core provided FPS is dependent on the ['Framerate' core option](https://docs.libretro.com/library/openlara/#core-options).
 - The OpenLara core's core provided sample rate is 44100 Hz
+- The OpenLara core's base width is 320
+- The OpenLara core's base height is 240
+- The OpenLara core's max width is dependent on the ['Internal resolution' core option](https://docs.libretro.com/library/openlara/#core-options)
+- The OpenLara core's max height is dependent on the ['Internal resolution' core option](https://docs.libretro.com/library/openlara/#core-options)
 - The OpenLara core's core provided aspect ratio is 4/3
 
 ## Core options
@@ -145,11 +136,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Framerate (restart)** [openlara_framerate] (**60fps**|90fps|120fps|144fps|30fps)
 
-	Self-explanatory.
+	Modify framerate.
 	
 - **Internal resolution (restart)** [openlara_resolution] (**320x240**|360x480|480x272|512x384|512x512|640x240|640x448|640x480|720x576|800x600|960x720|1024x768|1024x1024|1280x720|1280x960|1600x1200|1920x1080|1920x1440|1920x1600|2048x2048|2560x1440|3840x2160|7680x4320|15360x8640|16000x9000)
 
-	Self-explanatory.
+	Modify the internal resolution.
 	
 ??? note "Internal resolution - 320x240"
 	![](../image/core/openlara/320x240.png)
@@ -159,7 +150,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Texture filtering (restart)** [openlara_texture_filtering] (**Bilinear filtering**|Nearest)
 
-	Self-explanatory.
+	Modify texture filtering.
 
 ??? note "Texture filtering - Bilinear"
 	![](../image/core/openlara/bilinear.png)
@@ -169,43 +160,31 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Water effects (restart)** [openlara_water_effects] (**enabled**|disabled)
 
-	Self-explanatory.
+	Enable or disable water effects.
 	
 ??? note "Water effects - On"
 	![](../image/core/openlara/water_on.png)
 	
 ??? note "Water effects - Off"
 	![](../image/core/openlara/water_off.png)
-	
-## Controllers
 
-The OpenLara core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+## Joypad
 
-### User 1 device types
-
-- None - Doesn't disable input. There's no reason to switch to this.
-- **RetroPad** - Joypad - Stay on this.
-- RetroPad w/Analog - Joypad - Same as RetroPad. There's no reason to switch to this.
-
-### Controller tables
-
-#### Joypad
-
-| User 1 Remap descriptors | RetroPad Inputs                             |
-|--------------------------|---------------------------------------------|
-| Action (Shoot/grab)      | ![](../image/retropad/retro_b.png)          |
-| Jump                     | ![](../image/retropad/retro_y.png)          |
-| View toggle              | ![](../image/retropad/retro_select.png)     |
-| Inventory                | ![](../image/retropad/retro_start.png)      |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| Roll                     | ![](../image/retropad/retro_a.png)          |
-| Draw weapon              | ![](../image/retropad/retro_x.png)          |
-| Walk (when holding)      | ![](../image/retropad/retro_r1.png)         |
-| Sidestep left            | ![](../image/retropad/retro_l2.png)         |
-| Sidestep right           | ![](../image/retropad/retro_r2.png)         |
+| RetroPad Inputs                                | User 1 input descriptors |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_b.png)             | Action (Shoot/grab)      |
+| ![](../image/retropad/retro_y.png)             | Jump                     |
+| ![](../image/retropad/retro_select.png)        | View toggle              |
+| ![](../image/retropad/retro_start.png)         | Inventory                |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](../image/retropad/retro_a.png)             | Roll                     |
+| ![](../image/retropad/retro_x.png)             | Draw weapon              |
+| ![](../image/retropad/retro_r1.png)            | Walk (when holding)      |
+| ![](../image/retropad/retro_l2.png)            | Sidestep left            |
+| ![](../image/retropad/retro_r2.png)            | Sidestep right           |
 
 ## External Links
 
