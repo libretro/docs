@@ -26,9 +26,9 @@ Restart MSYS2 once again. In some cases you may find out that the shell starting
 !!! Warning
     If you are updating from a very old MSYS2 installation you may need to update your shortcuts to reflect changes in MSYS2's subsystem. If the shell no longer works properly you need to update your shortcuts with the following targets:
 
-- MinGW-w64 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw64`
-- MinGW-w32 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw32`
-- MSYS2 Shell: `MSYS2_ROOT\msys2_shell.cmd -msys`
+    - MinGW-w64 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw64`
+    - MinGW-w32 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw32`
+    - MSYS2 Shell: `MSYS2_ROOT\msys2_shell.cmd -msys`
 
 Now we can start installing the packages we actually need.
 
@@ -96,10 +96,16 @@ After a few minutes you should be able to find retroarch.exe under that director
 
 ### Packaging RetroArch
 
-You might not be able to start your own build outside that environment. You might want to try to get all the required DLLs by using the following script:
+You might not be able to start your own build outside that environment. You might want to try to get all the required DLLs by running the following script in your destination RetroArch folder (not the git repo folder):
 
     :::bash
-    $ for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done;
+    $ for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
+
+If Qt is enabled for your build (detected automatically by default), the following is also needed:
+
+    :::bash
+    $ windeployqt --release --no-patchqt --no-translations retroarch.exe
+    $ for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 
 If you really want to get the required libraries for distribution or for personal use on other devices and LDD doesn't work for you for whatever reason, then you can try [Dependency Walker](http://www.dependencywalker.com/). 
 
