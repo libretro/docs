@@ -1,58 +1,35 @@
-# PC Engine SuperGrafx (Beetle SGX)
-
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/beetle_sgx.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
+# NEC - PC Engine SuperGrafx (Beetle SGX)
 
 ## Background
 
 Standalone port of Mednafen PCE Fast to libretro.
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the Beetle SGX core:
-
-1. Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-2. Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-3. Browse through the list and select 'PC Engine SuperGrafx (Beetle SGX)'.
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-1. Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-2. Browse to the folder that contains the content you want to run.
-
-3. Select the content that you want to run.
-
-4. If you are asked which core to select, choose 'PC Engine SuperGrafx (Beetle SGX)'.
-
-The content should now start running!
-
-### Authors
+The Beetle SGX core has been authored by
 
 - [Mednafen Team](https://mednafen.github.io/)
 
-## See also
+The Beetle SGX core is licensed under
 
-### NEC PC Engine
-
-- [PC Engine/PCE-CD (Beetle PCE FAST)](https://docs.libretro.com/library/beetle_pce_fast/)
-
-## License
+- [GPLv2](https://github.com/libretro/beetle-supergrafx-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
-[GPLv2](https://github.com/libretro/beetle-supergrafx-libretro/blob/master/COPYING)
+## BIOS
+
+Required or optional firmware files go in RetroArch's system directory.
+
+!!! attention
+	Which PCE CD BIOS file the Beetle SGX core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
+
+!!! attention
+	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
+
+|   Filename    |    Description                        |              md5sum              |
+|:-------------:|:-------------------------------------:|:--------------------------------:|
+| syscard3.pce  | Super CD-ROM2 System V3.xx - Required | 38179df8f4ac870017db21ebcbf53114 |
+| syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
+| syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
+| gexpress.pce  | Game Express CD Card - Optional       |                                  |
 
 ## Extensions
 
@@ -64,38 +41,19 @@ Content that can be loaded by the Beetle SGX core have the following file extens
 - .ccd
 - .chd
 
-## Databases
-
 RetroArch database(s) that are associated with the Beetle SGX core:
 
 - [NEC - PC Engine - TurboGrafx 16](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.rdb)
 - [NEC - PC Engine CD - TurboGrafx-CD](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20CD%20-%20TurboGrafx-CD.rdb)
 - [NEC - PC Engine SuperGrafx](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20SuperGrafx.rdb)
 
-## BIOS
-
-Required or optional firmware files go in RetroArch's system directory.
-
-Any CD-ROM System BIOS will work, but some them are known to be incompatible with certain games. 
-
-|   Filename    |    Description                        |              md5sum              |
-|:-------------:|:-------------------------------------:|:--------------------------------:|
-| syscard3.pce  | Super CD-ROM2 System V3.xx - Required | 38179df8f4ac870017db21ebcbf53114 |
-| syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
-| syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
-| gexpress.pce  | Game Express CD Card - Optional       |                                  |
-
-!!! attention
-	Which PCE CD BIOS file the Beetle SGX core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
-
 ## Features
 
-RetroArch-level settings or features that the Beetle SGX core respects.
+Frontend-level settings or features that the Beetle Saturn core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
@@ -112,30 +70,39 @@ RetroArch-level settings or features that the Beetle SGX core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| Softpatching      | ✕         |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
+| LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Beetle SGX core's directory name is 'Mednafen SuperGrafx'
+The Beetle SGX core's library name is 'Mednafen SuperGrafx'
 
 The Beetle SGX core saves/loads to/from these directories.
 
-**RetroArch's Save directory**
+**Frontend's Save directory**
 
-- 'content-name'.srm (Save)
+| File  | Description |
+|:-----:|:-----------:|
+| *.srm | Save        |
 
-**RetroArch's State directory**
+**Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
-- The Beetle SGX core's internal FPS is 59.82
-- The Beetle SGX core's internal sample rate is 44100 Hz
+- The Beetle SGX core's core provided FPS is 59.82
+- The Beetle SGX core's core provided sample rate is 44100 Hz
+- The Beetle SGX core's base width is 512
+- The Beetle SGX core's base height is dependent on the ['Initial scanline' and 'Last scanline' core options](https://docs.libretro.com/library/beetle_sgx#core-options).
+- The Beetle SGX core's max width is 512
+- The Beetle SGX core's max height is 243
 - The Beetle SGX core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
 
 ## Loading PC Engine CD content
@@ -156,149 +123,167 @@ After that, you can load the `foo.cue` file in RetroArch with the Beetle SGX cor
 !!! warning ""
     Certain PC Engine content are multi-track, so their .cue files might be more complicated.
 
+## CHD
+
+Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
+
+To convert content to CHD format, use the chdman tool found inside the latest MAME distribution and point it to a .cue file, like so:
+
+```
+chdman createcd --input foo.cue --output foo.chd
+```
+
 ## Core options
 
 The Beetle SGX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **CD Image Cache (Restart)** (**Off**/On) 
+- **CD Image Cache (Restart)** [sgx_cdimagecache] (**disabled**|enabled)
 
 	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
-
-- **CD Bios (Restart)** (**System Card 3**/Games Express/System Card 1/System Card 2)
+	
+- **CD Bios (Restart)** [sgx_cdbios] (**System Card 3**|Games Express|System Card 1|System Card 2)
 
 	Select which PC Engine CD BIOS to use.
-
-- **Force SuperGrafx Emulation (Restart)** (**Off**/On)
 	
+	Look at the [BIOS section](https://docs.libretro.com/library/beetle_sgx/#core-options) for more information.
+	
+- **Force SuperGrafx Emulation (Restart)** [sgx_forcesgx] (**disabled**|enabled)
+
 	This is helpful to run homebrew games or isolate games that will not run in SuperGrafx mode. (like Space Harrier).
 
-!!! attention
-	**Savestates are not compatible with each mode.** It's better to leave this option at default (Off) unless needed. Known Supergrafx games (like Dai-Makaimura, Aldyns) will automatically switch to SuperGrafx regardless of this option.
+	**Savestates are not compatible with each mode. It's better to leave this option at default (Off) unless needed. Known Supergrafx games (like Dai-Makaimura, Aldyns) will automatically switch to SuperGrafx regardless of this option.**
 	
-- **No Sprite Limit (Restart)** (**Off**/On)
+- **No Sprite Limit** [sgx_nospritelimit] (**disabled**|enabled)
 
 	Remove 16-sprites-per-scanline hardware limit.
-
-- **CPU Overclock Multiplier (Restart)** (**1**/2/3/4/5/6/7/8/9/10/20/30/40/50)
+	
+- **CPU Overclock Multiplier (Restart)** [sgx_ocmultiplier] (**1**|2|3|4|5|6|7|8|9|10|20|30|40|50)
 
 	Overclock the emulated CPU.
+	
+- **Horizontal Overscan (352 Width Mode Only)** [sgx_hoverscan] (300 to 352 in increments of 2. **352 in default**.)
 
-- **Horizontal Overscan (352 Width Mode Only)** (300 to 352 in increments of 2. **352 in default**.)
-
-	Awaiting description.
-
-- **Initial scanline** (0 to 40 in increments of 1. **3 is default.**)
+	Modify the horizontal overscan.
+	
+- **Initial scanline** [sgx_initial_scanline] (0 to 40 in increments of 1. **3 is default.**)
 
 	Adjust first display scanline.
-
-- **Last scanline** (208 to 242 in increments of 1. **242 is default.**)
+	
+- **Last scanline** [sgx_last_scanline] (208 to 242 in increments of 1. **242 is default.**)
 
 	Adjust last display scanline.
+	
+- **(CD) CDDA Volume %** [sgx_cddavolume] (0 to 200 in increments of 10. **100 is default**.)
 
-- **(CD) CDDA Volume %** (0 to 200 in increments of 10. **100 is default**.)
+	Modify CDDA Volume %.
+	
+- **(CD) ADPCM Volume %** [sgx_adpcmvolume] (0 to 200 in increments of 10. **100 is default**.)
 
-	Awaiting description.
+	Modify ADPCM Volume %.
+	
+- **(CD) CD PSG Volume %;** [sgx_cdpsgvolume] (0 to 200 in increments of 10. **100 is default**.)
 
-- **(CD) ADPCM Volume %** (0 to 200 in increments of 10. **100 is default**.)
-
-	Awaiting description.
-
-- **(CD) CD PSG Volume %** (0 to 200 in increments of 10. **100 is default**.)
-
-	Awaiting description.
-
-- **(CD) CD Speed** (**1**/2/4/8)
+	Modify CD PSG Volume %.
+	
+- **(CD) CD Speed** [sgx_cdspeed] (**1**|2|4|8)
 
 	Set the speed of the emulated CD drive.
+	
+- **Turbo Delay** [sgx_turbo_delay] (**3**|4|5|6|7|8|9|10|11|12|13|14|15|30|60|2)
 
-- **Turbo Delay** (**3**/4/5/6/7/8/9/10/11/12/13/14/15/30/60/2)
+	Adjust turbo delay.
+	
+- **Turbo ON/OFF Toggle** [sgx_turbo_toggle] (**disabled**|enabled)
 
-	Awaiting description.
+	Enables Turbo ON/OFF inputs. 
+	
+	Look at the [Joypad section](https://docs.libretro.com/library/beetle_sgx/#joypad) for more information.
 
-- **Turbo ON/OFF Toggle** (**Off**/On)
+- **Alternate Turbo Hotkey** [sgx_turbo_toggle_hotkey] (**disabled**|enabled)
 
-	Enables Turbo ON/OFF inputs. Look at the [Controllers table section](https://docs.libretro.com/library/beetle_sgx/#controller-tables) for more information.
+	Enables Alternate Turbo ON/OFF inputs. 
+	
+	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
+	
+	Look at the [Joypad section](https://docs.libretro.com/library/beetle_sgx/#joypad) for more information.
+	
+- **Allow Soft Reset(RUN+SELECT)** [sgx_disable_softreset] (**enabled**|disabled)
 
-- **Alternate Turbo Hotkey** (**Off**/On)
+	Set to enabled to do soft resets instead of hard resets when restarting the loaded content.
+	
+- **Allow UP+DOWN/LEFT+RIGHT** [sgx_up_down_allowed] (**disabled**|enabled)
 
-	Enables Alternate Turbo ON/OFF inputs. You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. Look at the [Controllers table section](https://docs.libretro.com/library/beetle_sgx/#controller-tables) for more information.
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
+	
+	This may cause movement based glitches to occur in certain games.
+	
+	It's best to keep this core option disabled.
+	
+- **Mouse Sensitivity** [sgx_mouse_sensitivity] (1.00 to 5.00 in increments of 0.25. **1.00 is default**.)
 
-- **Mouse Sensitivity** (1.00 to 5.00 in increments of 0.25. **1.00 is default**.)
+	Configure the PCE Mouse device type's sensitivity.
 
-	Configure the Mouse device type's sensitivity.
-
-- **Aspect Ratio** (**auto**/6:5/4:3)
+- **Aspect Ratio** [sgx_aspect_ratio] (**auto**|6:5|4:3)
 
 	Select an auto (PAR) aspect ratio, or a 6:5 (Used to be default) aspect ratio, or a 4:3 TV aspect ratio.
 
-!!! attention
-	When using games that constantly switches between 256 and 352 modes and using auto aspect, its best to set Horizontal width to 342 as to minimize resizing and extra black lines since this width is in ratio of 256-width mode(or something like that, just test with Asuka 100% which is one of the game that switches between these modes)
-	
-## Controllers
+	**When using games that constantly switches between 256 and 352 modes and using auto aspect, its best to set Horizontal width to 342 as to minimize resizing and extra black lines since this width is in ratio of 256-width mode(or something like that, just test with Asuka 100% which is one of the game that switches between these modes)**
 
-### Device types
+## User 1 - 5 device types
 
 The Beetle SGX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
-#### User 1 - 5 device types
-
-- None - Input disabled.
+- None - Input is disabled.
 - **PCE Joypad** - Joypad
-- Mouse - Mouse
+- PCE Mouse - Mouse
 
-### Controller tables
+## Joypad
 
-#### Joypad and analog device type table
+- Use the Mode Switch input to switch between button modes.
 
-| User 1 - 5 Remap descriptors  | RetroPad Inputs                              | PCE Joypad 2-button mode    | PCE Joypad 6-button mode |
-|-------------------------------|----------------------------------------------|-----------------------------|--------------------------|
-| II                            | ![](../image/retropad/retro_b.png)       | II                          | II                       |
-| III                           | ![](../image/retropad/retro_y.png)       | II Turbo On/Off †           | III                      |
-| Select                        | ![](../image/retropad/retro_select.png)        | Select                      | Select                   |
-| Run                           | ![](../image/retropad/retro_start.png)         | Run                         | Run                      |
-| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                    | D-Pad Up                 |
-| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                  | D-Pad Down               |
-| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                  | D-Pad Left               |
-| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                 | D-Pad Right              |
-| I                             | ![](../image/retropad/retro_a.png)       | I                           | I                        |
-| IV                            | ![](../image/retropad/retro_x.png)       | I Turbo On/Off †            | IV                       |
-| V                             | ![](../image/retropad/retro_l1.png)            |                             | V                        |
-| VI                            | ![](../image/retropad/retro_r1.png)            |                             | VI                       |
-| Mode Switch                   | ![](../image/retropad/retro_l2.png)            | Mode Switch                 | Mode Switch              |
-|                               | ![](../image/retropad/retro_l3.png)            | Alternate II Turbo On/Off § |                          |
-|                               | ![](../image/retropad/retro_r3.png)            | Alternate I Turbo On/Off  § |                          |
+- The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
 
-!!! attention
-	Which PCE Joypad button mode is in use can be configured by the Mode Switch input.
+- The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
 
-†
-	
-!!! attention
-	The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
+| RetroPad Inputs                                | User 1 - 5 input descriptors | PCE Joypad 2-button       | PCE Joypad 6-button |
+|------------------------------------------------|------------------------------|---------------------------|---------------------|
+| ![](../image/retropad/retro_b.png)             | II                           | II                        | II                  |
+| ![](../image/retropad/retro_y.png)             | III                          | II Turbo On/Off           | III                 |
+| ![](../image/retropad/retro_select.png)        | Select                       | Select                    | Select              |  
+| ![](../image/retropad/retro_start.png)         | Run                          | Run                       | Run                 |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  | D-Pad Up            |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                | D-Pad Down          |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left                | D-Pad Left          |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right               | D-Pad Right         |
+| ![](../image/retropad/retro_a.png)             | I                            | I                         | I                   |
+| ![](../image/retropad/retro_x.png)             | IV                           | I Turbo On/Off            | IV                  |
+| ![](../image/retropad/retro_l1.png)            | V                            |                           | V                   |
+| ![](../image/retropad/retro_r1.png)            | VI                           |                           | VI                  |
+| ![](../image/retropad/retro_l2.png)            | Mode Switch                  | Mode Switch               | Mode Switch         |
+| ![](../image/retropad/retro_l3.png)            |                              | Alternate II Turbo On/Off |                     |
+| ![](../image/retropad/retro_r3.png)            |                              | Alternate I Turbo On/Off  |                     |
 
-§	
-	
-!!! attention
-	The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
+## Mouse
 
-#### Mouse device type table
-
-| User 1 - 5 Remap descriptors  | RetroMouse Inputs                        | Mouse              |
-|-------------------------------|------------------------------------------|--------------------|
-|                               | ![](../image/retromouse/retro_mouse.png)   | Mouse Cursor       |
-|                               | ![](../image/retromouse/retro_left.png)    | Left Button        |
-|                               | ![](../image/retromouse/retro_right.png)   | Right Button       |
-
-## Compatibility
-
-Awaiting description.
+| RetroMouse Inputs                                     | PCE Mouse              |
+|-------------------------------------------------------|------------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | PCE Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | PCE Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | PCE Mouse Right Button |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | PCE Mouse Start Button |
+| ![](../image/retropad/retro_select.png)               | Select (Joypad)        |
+| ![](../image/retropad/retro_start.png)                | Start (Joypad)         |
 
 ## External Links
 
+- [Official Mednafen Website](https://mednafen.github.io/)
+- [Official Mednafen Downloads](https://mednafen.github.io/releases/)
 - [Libretro Beetle SGX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_supergrafx_libretro.info)
 - [Libretro Beetle SGX Github Repository](https://github.com/libretro/beetle-supergrafx-libretro)
 - [Report Libretro Beetle SGX Core Issues Here](https://github.com/libretro/beetle-supergrafx-libretro/issues)
-- [Official Mednafen Website](https://mednafen.github.io/)
-- [Official Mednafen Downloads](https://mednafen.github.io/releases/)
+
+## TG-16
+
+- [NEC - PC Engine / CD (Beetle PCE FAST)](https://docs.libretro.com/library/beetle_pce_fast/)
