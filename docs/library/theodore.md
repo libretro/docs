@@ -84,8 +84,12 @@ shown below.
 
 ![](../image/core/theodore/to8d_os.jpg)
 
-Pressing the joypad "B" button starts BASIC 512 that automatically runs the
-program on the bootable device currently presented.
+Now it is time to start BASIC that will run the program on the bootable device currently presented. To do that you only have to press the "B" button of your joypad that is conveniently mapped to the "B" key.
+
+!!! Notes
+        - BASIC 512 works for a vast majority of games.
+        - In case of failure try the 2nd BASIC by pressing "C" key.
+        - Programs on a cartridge are generally loaded with the "A" key (entry not shown here).
 
 ## Core options
 
@@ -114,7 +118,7 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 | RetroPad Inputs                        | User 1 input descriptors       |
 |----------------------------------------|--------------------------------|
 | ![](../image/retropad/retro_a.png)     | "Fire" button                  |
-| ![](../image/retropad/retro_b.png)     | Start screen only: Run content |
+| ![](../image/retropad/retro_b.png)     | "B" key<br>(See: [Usage](#usage)) |
 | ![](../image/retropad/retro_x.png)     | Virtual keyboard: go up        |
 | ![](../image/retropad/retro_y.png)     | Virtual keyboard: go down      |
 | ![](../image/retropad/retro_start.png) | Virtual keyboard: keystroke    |
