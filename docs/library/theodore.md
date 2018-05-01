@@ -64,7 +64,7 @@ Frontend-level settings or features that the Theodore core respects.
 
 ### Directories
 
-The Theodore core's internal core name is 'theodore'
+The Theodore core's internal core name is 'theodore'.
 
 **Frontend's System directory**
 
@@ -74,14 +74,18 @@ The Theodore core's internal core name is 'theodore'
 
 ### Geometry and timing
 
-- The Theodore core's base width is 672 pixels
-- The Theodore core's base height is 432 pixels
+- The Theodore core's base width is 672 pixels.
+- The Theodore core's base height is 432 pixels.
 
 ## Usage
 
+Once the content and core are loaded the start screen is displayed as
+shown below.
+
 ![](../image/core/theodore/to8d_os.jpg)
 
-Click the top yellow rectangle on the right-hand side.
+Pressing the joypad "B" button starts BASIC 512 that automatically runs the
+program on the bootable device currently presented.
 
 ## Core options
 
@@ -103,17 +107,17 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 ## Other devices
 
-- Light pen - The TO8 light pen inputs are mapped to the mouse
+- Light pen - The TO8 light pen inputs are mapped to the mouse.
 
 ## Joypad
 
-| RetroPad Inputs                        | User 1 input descriptors    |
-|----------------------------------------|-----------------------------|
-| ![](../image/retropad/retro_a.png)     | "Fire" button               |
-| ![](../image/retropad/retro_b.png)     | Start button                |
-| ![](../image/retropad/retro_x.png)     | Virtual keyboard: go up     |
-| ![](../image/retropad/retro_y.png)     | Virtual keyboard: go down   |
-| ![](../image/retropad/retro_start.png) | Virtual keyboard: keystroke |
+| RetroPad Inputs                        | User 1 input descriptors       |
+|----------------------------------------|--------------------------------|
+| ![](../image/retropad/retro_a.png)     | "Fire" button                  |
+| ![](../image/retropad/retro_b.png)     | Start screen only: Run content |
+| ![](../image/retropad/retro_x.png)     | Virtual keyboard: go up        |
+| ![](../image/retropad/retro_y.png)     | Virtual keyboard: go down      |
+| ![](../image/retropad/retro_start.png) | Virtual keyboard: keystroke    |
 
 On controllers without Y/X keys, select can also be used to roll the virtual keyboard up. The order of the keys in the virtual keyboard is: digits (0->9) then letters (A->Z) then "Enter".
 
@@ -139,11 +143,11 @@ On controllers without Y/X keys, select can also be used to roll the virtual key
 | Keyboard F3                  | F3                        |
 | Keyboard F4                  | F4                        |
 | Keyboard F5                  | F5                        |
-| Keyboard F6                  | Shift + F1                |
-| Keyboard F7                  | Shift + F2                |
-| Keyboard F8                  | Shift + F3                |
-| Keyboard F9                  | Shift + F4                |
-| Keyboard F10                 | Shift + F5                |
+| Keyboard Shift + F1          | F6                        |
+| Keyboard Shift + F2          | F7                        |
+| Keyboard Shift + F3          | F8                        |
+| Keyboard Shift + F4          | F9                        |
+| Keyboard Shift + F5          | F10                       |
 
 ## Mouse
 
