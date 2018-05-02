@@ -71,12 +71,12 @@ The PrBoom core's library name is 'PrBoom'
 
 The PrBoom core saves/loads to/from these directories.
 
-**Loaded content's directory**
+**Frontend's Save directory**
 
-| File  | Description |
-|:-----:|:-----------:|
-| *.dsg | Quicksave   |
-| *.cfg | DOOM Config |
+| File                      | Description |
+|:-------------------------:|:-----------:|
+| (content name)/*.dsg      | Save        |
+| (content name)/prboom.cfg | DOOM Config |
 
 ### Geometry and timing
 
@@ -92,22 +92,40 @@ The PrBoom core saves/loads to/from these directories.
 
 PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's directory.
 
-You must use a seperate folder for each wad to be able to have all Dooms use their correct music
+You must use a separate folder for each wad to be able to have all Dooms use their correct music
 
-An example folder structure would be like so
+An example folder structure would be like so:
 
 ```
 └── roms/
-        └── ports/ 
-                 ├──doom/
-                 |       ├──doom.wad
-                 |       ├──prboom.wad
-                 |       └──doomusic.mp3
-                 └──doom2/
-                         ├──doom2.wad
-                         ├──prboom.wad
-                         └──doom2music.mp3
+    └── ports/
+        ├── doom/
+        │   ├── doom.wad
+        │   ├── prboom.wad
+        │   └── doommusic.mp3
+        └── doom2/
+            ├── doom2.wad
+            ├── prboom.wad
+            └── doom2music.mp3
 ```
+
+Game saves and internal configuration files will be created in the frontend-defined save directory, organised in folders matching the filenames of loaded content - for example:
+
+```
+└── saves/
+    └── PrBoom/
+        ├── doom/
+        │   ├── prbmsav0.dsg
+        │   ├── prbmsav1.dsg
+        │   └── prboom.cfg
+        └── doom2/
+            ├── prbmsav0.dsg
+            ├── prbmsav1.dsg
+            └── prboom.cfg
+```
+
+Game saves are numbered from 'prbmsav0.dsg' to 'prbmsav7.dsg'.
+
 ## Music
 
 The PrBoom core is not able to play the music files inside the wad files (they are in a proprietary midi format).
@@ -116,7 +134,7 @@ To enable music in your Doom game(s) you need to copy MP3s with specific names i
 
 They follow the scheme e1m1.mp3, e1m2.mp3, ..., e2m1.mp, e2m2.mp3, ... . 
 
-There are freely available tracks available - find them by searching for "PSX Doom Music".
+Tracks are freely available - find them by searching for "PSX Doom Music".
 
 If you are having trouble with the audio not playing after you have renamed all the MP3s, try clearing all the ID3 tag information for each of the MP3s.
 
@@ -192,6 +210,34 @@ Below are the corresponding tracks if the MP3s are named:
 | mus_dm2ttl | "track 02 title screen.mp3"         |
 | mus_dm2int | "track 05 stats screen.mp3"         |
 
+## Config
+
+PrBoom's internal game settings can be found in the 'prboom.cfg' file inside each game's save directory.
+
+Many of these settings may be changed from the in-game menu. A few notable options are as follows:
+
+- Options → General (page 1) → Framerate (35fps|**40fps**|50fps|60fps)
+
+	Sets the in-game framerate. Note that game logic is tied to this value; the higher it is set, the faster the game will run.
+	
+	Vanilla Doom has a native framerate of 35fps. This should be considered the 'correct' value, but it can lead to an irregular 'stuttering' effect on 60Hz LCD displays.
+	
+	40fps provides the best balance between acceptable game speed and 'smooth' video.
+
+- Options → General (page 1) → Gamma Correction (**Off**|Lv. 1|Lv. 2|Lv. 3|Lv. 4)
+
+	Sets display brightness.
+
+- Options → Screen Size (**Low**|High)
+
+	When set to 'Low', the HUD is shown at the bottom of the screen.
+	
+	When set to 'High', the gameplay area fills the screen and no HUD is shown.
+
+- Options → Mouse Sensitivity
+
+	The 'horizontal' slider sets the movement speed when looking left/right with either the mouse or the gamepad right analog stick.
+
 ## Core options
 
 The PrBoom core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
@@ -210,41 +256,65 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Mouse active when using Gamepad** [prboom-mouse_on] (**disabled**|enabled)
 
-	Allows you to use mouse inputs even User 1's device type isn't set to RetroKeyboard/Mouse.
+	Allows you to use mouse inputs even when User 1's device type isn't set to 'RetroKeyboard/Mouse'.
 	
 - **Look on parent folders for IWADs** [prboom-find_recursive_on] (**enabled**|disabled)
 
 	Scans parent folders for IWADs.
+
+- **Analog Deadzone (percent)** [prboom-analog_deadzone] (**15**|20|25|30|0|5|10)
+
+	Sets the deadzone of the Gamepad analog sticks when the input device type is set to 'Gamepad Modern'.
 	
 ## User 1 device types
 
 The PrBoom core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 - None - Input disabled.
-- **RetroPad** - Joypad
+- **Gamepad Classic** - Joypad
+- **Gamepad Modern** - Joypad
 - **RetroKeyboard/Mouse** - Keyboard and Mouse - Switch to this for keyboard and mouse input. Has keymapper support.
 
 ## Joypad
 
-| User 1 input descriptors | RetroPad Inputs                                | PrBoom inputs     |
-|--------------------------|------------------------------------------------|-------------------|
-| Strafe                   | ![](../image/retropad/retro_b.png)             | Strafe            |
-| Run                      | ![](../image/retropad/retro_y.png)             | Run               |
-| Show/Hide Map            | ![](../image/retropad/retro_select.png)        | Show/Hide Map     |
-| Settings                 | ![](../image/retropad/retro_start.png)         | Settings          |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up          |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down        |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left        |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right       |
-| Use                      | ![](../image/retropad/retro_a.png)             | Use               |
-| Fire                     | ![](../image/retropad/retro_x.png)             | Fire              |
-| Strafe Left              | ![](../image/retropad/retro_l1.png)            | Strafe Left       |
-| Strafe Right             | ![](../image/retropad/retro_r1.png)            | Strafe Right      |  
-| Previous Weapon          | ![](../image/retropad/retro_l2.png)            | Previous Weapon   |
-| Next Weapon              | ![](../image/retropad/retro_r2.png)            | Next Weapon       |
-|                          | ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
-|                          | ![](../image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
-|                          | ![](../image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
+| User 1 input descriptors for 'Gamepad Classic' device type | RetroPad Inputs                             | PrBoom inputs   |
+|------------------------------------------------------------|---------------------------------------------|-----------------|
+| Use                                                        | ![](../image/retropad/retro_b.png)          | Use             |
+| Toggle Run                                                 | ![](../image/retropad/retro_y.png)          | Toggle Run      |
+| Show/Hide Map                                              | ![](../image/retropad/retro_select.png)     | Show/Hide Map   |
+| Show/Hide Menu                                             | ![](../image/retropad/retro_start.png)      | Show/Hide Menu  |
+| D-Pad Up                                                   | ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up        |
+| D-Pad Down                                                 | ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down      |
+| D-Pad Left                                                 | ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left      |
+| D-Pad Right                                                | ![](../image/retropad/retro_dpad_right.png) | D-Pad Right     |
+| Fire                                                       | ![](../image/retropad/retro_a.png)          | Fire            |
+| Strafe                                                     | ![](../image/retropad/retro_x.png)          | Strafe          |
+| Strafe Left                                                | ![](../image/retropad/retro_l1.png)         | Strafe Left     |
+| Strafe Right                                               | ![](../image/retropad/retro_r1.png)         | Strafe Right    |
+| Previous Weapon                                            | ![](../image/retropad/retro_l2.png)         | Previous Weapon |
+| Next Weapon                                                | ![](../image/retropad/retro_r2.png)         | Next Weapon     |
+
+| User 1 input descriptors for 'Gamepad Modern' device type | RetroPad Inputs                                | PrBoom inputs           |
+|-----------------------------------------------------------|------------------------------------------------|-------------------------|
+| Menu Cancel                                               | ![](../image/retropad/retro_b.png)             | Menu Cancel             |
+| Quick Save                                                | ![](../image/retropad/retro_y.png)             | Quick Save              |
+| Show/Hide Map                                             | ![](../image/retropad/retro_select.png)        | Show/Hide Map           |
+| Show/Hide Menu                                            | ![](../image/retropad/retro_start.png)         | Show/Hide Menu          |
+| D-Pad Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                |
+| D-Pad Down                                                | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down              |
+| D-Pad Left                                                | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left              |
+| D-Pad Right                                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right             |
+| Menu Select                                               | ![](../image/retropad/retro_a.png)             | Menu Select             |
+| Quick Load                                                | ![](../image/retropad/retro_x.png)             | Quick Load              |
+| Previous Weapon                                           | ![](../image/retropad/retro_l1.png)            | Previous Weapon         |
+| Next Weapon                                               | ![](../image/retropad/retro_r1.png)            | Next Weapon             |
+| Use                                                       | ![](../image/retropad/retro_l2.png)            | Use                     |
+| Fire                                                      | ![](../image/retropad/retro_r2.png)            | Fire                    |
+| Toggle Run                                                | ![](../image/retropad/retro_l3.png)            | Toggle Run              |
+| 180 Turn                                                  | ![](../image/retropad/retro_r3.png)            | 180 Turn                |
+|                                                           | ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right       |
+|                                                           | ![](../image/retropad/retro_left_stick.png) Y  | Move Forwards/Backwards |
+|                                                           | ![](../image/retropad/retro_right_stick.png) X | Look Left/Right         |
 
 ## Keyboard and Mouse
 
