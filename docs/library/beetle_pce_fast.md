@@ -21,7 +21,7 @@ Required or optional firmware files go in RetroArch's system directory.
 !!! warning ""
 	Which PCE CD BIOS file the Beetle PCE FAST core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options).
 
-!!! warning""
+!!! warning ""
 	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
 
 |   Filename    |    Description                        |              md5sum              |
