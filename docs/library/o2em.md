@@ -72,6 +72,14 @@ Frontend-level settings or features that the O2EM core respects.
 
 The O2EM core's library name is 'O2EM'
 
+The O2EM core saves/loads to/from these directories.
+
+**Frontend's State directory**
+
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
+
 ## Geometry and timing
 
 - The O2EM core's core provided FPS is 60 for NTSC games and 50 for PAL games
