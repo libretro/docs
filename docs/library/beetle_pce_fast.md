@@ -4,8 +4,6 @@
 
 Beetle/Mednafen PCE FAST is a libretro port of Mednafen PCE Fast with the PC Engine SuperGrafx module removed.
 
-### Author/License
-
 The Beetle PCE FAST core has been authored by
 
 - [Mednafen Team](https://mednafen.github.io/)
@@ -15,6 +13,23 @@ The Beetle PCE FAST core is licensed under
 - [GPLv2](https://github.com/libretro/beetle-pce-fast-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+
+## BIOS
+
+Required or optional firmware files go in RetroArch's system directory.
+
+!!! warning ""
+	Which PCE CD BIOS file the Beetle PCE FAST core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options).
+
+!!! warning ""
+	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
+
+|   Filename    |    Description                        |              md5sum              |
+|:-------------:|:-------------------------------------:|:--------------------------------:|
+| syscard3.pce  | Super CD-ROM2 System V3.xx - Required | 38179df8f4ac870017db21ebcbf53114 |
+| syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
+| syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
+| gexpress.pce  | Game Express CD Card - Optional       |                                  |
 
 ## Extensions
 
@@ -28,31 +43,10 @@ Content that can be loaded by the Beetle PCE FAST core have the following file e
 - .bin
 - .chd
 
-## Databases
-
-RetroArch database(s) that are associated with the Beetle PCE FAST core:
+RetroArch database(s) that are associated with the [Core name] core:
 
 - [NEC - PC Engine - TurboGrafx 16](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.rdb)
 - [NEC - PC Engine CD - TurboGrafx-CD](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20CD%20-%20TurboGrafx-CD.rdb)
-
-## BIOS
-
-Required or optional firmware files go in the frontend's system directory.
-
-Any CD-ROM System BIOS will work, but some them are known to be incompatible with certain games. 
-
-|   Filename    |    Description                        |              md5sum              |
-|:-------------:|:-------------------------------------:|:--------------------------------:|
-| syscard3.pce  | Super CD-ROM2 System V3.xx - Required | 38179df8f4ac870017db21ebcbf53114 |
-| syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
-| syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
-| gexpress.pce  | Game Express CD Card - Optional       |                                  |
-
-!!! attention
-	Any CD-ROM System BIOS will work, but some them are known to be incompatible with certain games.
-	
-!!! attention
-	Which PCE CD BIOS file the Beetle PCE FAST core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options).
 
 ## Features
 
@@ -61,15 +55,14 @@ Frontend-level settings or features that the Beetle PCE FAST core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | -         |
-| Native Cheats     | -         |
+| RetroArch Cheats  | ✕         |
+| Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -85,32 +78,41 @@ Frontend-level settings or features that the Beetle PCE FAST core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Beetle PCE FAST core's internal core name is 'Mednafen PCE Fast'
+The Beetle PCE FAST core's library name is 'Mednafen PCE Fast'
 
 The Beetle PCE FAST core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Save)
+| File  | Description |
+|:-----:|:-----------:|
+| *.srm | Save        |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
 - The Beetle PCE FAST core's core provided FPS is 59.82
 - The Beetle PCE FAST core's core provided sample rate is 44100 Hz
+- The Beetle PCE FAST core's base width is 512
+- The Beetle PCE FAST core's base height is 243
+- The Beetle PCE FAST core's max width is 512
+- The Beetle PCE FAST core's max height is 243
 - The Beetle PCE FAST core's core provided aspect ratio is 6/5
 
 ## Loading PC Engine CD content
 
-When loading PC Engine CD games, Beetle PCE FAST needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
+To load PC Engine CD content, Beetle PCE FAST needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
-If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cue`. If the PC Engine CD game is single-track, the cue file contents should look like this:
+If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cue`. If you're playing a single-track Saturn game, then the cue file contents should look like this:
 
+`foobin.cue`
 ```
  FILE "foo.bin" BINARY
   TRACK 01 MODE1/2352
@@ -119,11 +121,18 @@ If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cu
 
 After that, you can load the `foo.cue` file in RetroArch with the Beetle PCE FAST core.
 
-!!! warning
-    Certain Beetle PCE FAST games are multi-track, so their .cue files might be more complicated.
-	
-!!! attention
-	For cue files track type use OGG for ogg files, WAVE for wav files, BINARY for iso files.
+!!! warning ""
+    Certain PC Engine content are multi-track, so their .cue files might be more complicated.
+
+## CHD
+
+Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
+
+To convert content to CHD format, use the chdman tool found inside the latest MAME distribution and point it to a .cue file, like so:
+
+```
+chdman createcd --input foo.cue --output foo.chd
+```
 
 ## Core options
 
@@ -149,11 +158,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Horizontal Overscan (352 Width Mode Only)** [pce_hoverscan] (300 to 352 in increments of 2. **352 in default**.)
 
-	Awaiting description.
+	Modify the horizontal overscan.
 	
 - **Initial scanline** [pce_initial_scanline] (0 to 40 in increments of 1. **3 is default.**)
 
-	Adjust first display scanline.
+	Adjust initial display scanline.
 	
 - **Last scanline** [pce_last_scanline] (208 to 242 in increments of 1. **242 is default.**)
 
@@ -161,15 +170,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **(CD) CDDA Volume %** [pce_cddavolume] (0 to 200 in increments of 10. **100 is default**.)
 
-	Awaiting description.
+	Adjust CDDA Volume %.
 	
 - **(CD) ADPCM Volume %** [pce_adpcmvolume] (0 to 200 in increments of 10. **100 is default**.)
 
-	Awaiting description.
+	Adjust ADPCM Volume %.
 	
 - **(CD) CD PSG Volume %** [pce_cdpsgvolume] (0 to 200 in increments of 10. **100 is default**.)
 
-	Awaiting description.
+    Adjust CD PSG Volume %.
 	
 - **(CD) CD Speed** [pce_cdspeed] (**1**/2/4/8)
 
@@ -177,15 +186,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Turbo Delay** [pce_Turbo_Delay] (**Fast**/Medium/Slow)
 
-	Awaiting description.
+	Adjust turbo delay.
 	
 - **Turbo ON/OFF Toggle** [pce_Turbo_Toggling] (**disabled**/enabled)
 
-	Enables Turbo ON/OFF inputs. Look at the [Controllers table section](https://docs.libretro.com/library/beetle_pce_fast#controller-tables) for more information.
+	Enables Turbo ON/OFF inputs. 
+	
+	Look at the [Joypad section](https://docs.libretro.com/library/beetle_pce_fast#joypad) for more information.
 	
 - **Alternate Turbo Hotkey** [pce_turbo_toggle_hotkey] (**disabled**/enabled)
 
-	nables Alternate Turbo ON/OFF inputs. You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. Look at the [Controllers table section](https://docs.libretro.com/library/beetle_pce_fast#controller-tables) for more information.
+	Enables Alternate Turbo ON/OFF inputs. 
+	
+	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
+	
+	Look at the [Joypad section](https://docs.libretro.com/library/beetle_pce_fast#joypad) for more information.
 	
 - **P1 Turbo I** [pce_p0_turbo_I_enable] (**disabled**/enabled)
 
@@ -227,56 +242,47 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 
-## Controllers
+## User 1 - 2 device types
 
 The Beetle PCE FAST core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 - 2 device types
 
 - None - Doesn't disable input.
 - **PCE Joypad** - Joypad
 - Mouse - Mouse
 
-### Controller tables
+## Joypad
 
-#### Joypad
+- Which PCE Joypad button mode is in use can be configured by the Mode Switch input.
 
-![](../image/controller/pce.png)
-
-!!! attention
-	Which PCE Joypad button mode is in use can be configured by the Mode Switch input.
-
-!!! attention
-	The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On.
+- The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On.
 	
-!!! attention
-	The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On.
+- The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](https://docs.libretro.com/library/beetle_pce_fast#core-options) is set to On.
 
-| User 1 - 5 Remap descriptors | RetroPad Inputs                              | PCE Joypad 2 button mode  | PCE Joypad 6-button mode |
-|------------------------------|----------------------------------------------|---------------------------|--------------------------|
-| II                           | ![](../image/retropad/retro_b.png)       | II                        | II                       |
-| III                          | ![](../image/retropad/retro_y.png)       | II Turbo On/Off           | III                      |
-| Select                       | ![](../image/retropad/retro_select.png)        | Select                    | Select                   |
-| Run                          | ![](../image/retropad/retro_start.png)         | Run                       | Run                      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                  | D-Pad Up                 |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                | D-Pad Down               |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                | D-Pad Left               |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right               | D-Pad Right              |
-| I                            | ![](../image/retropad/retro_a.png)       | I                         | I                        |
-| IV                           | ![](../image/retropad/retro_x.png)       | I Turbo On/Off            | IV                       |
-| V                            | ![](../image/retropad/retro_l1.png)            |                           | V                        |
-| VI                           | ![](../image/retropad/retro_r1.png)            |                           | VI                       |
-| Mode Switch                  | ![](../image/retropad/retro_l2.png)            | Mode Switch               | Mode Switch              |
-|                              | ![](../image/retropad/retro_l3.png)            | Alternate II Turbo On/Off |                          |
-|                              | ![](../image/retropad/retro_r3.png)            | Alternate I Turbo On/Off  |                          |
+| RetroPad Inputs                                | User 1 - 5 input descriptors | PCE Joypad 2-button       | PCE Joypad 6-button |
+|------------------------------------------------|------------------------------|---------------------------|---------------------|
+| ![](../image/retropad/retro_b.png)             | II                           | II                        | II                  |
+| ![](../image/retropad/retro_y.png)             | III                          | II Turbo On/Off           | III                 |
+| ![](../image/retropad/retro_select.png)        | Select                       | Select                    | Select              |
+| ![](../image/retropad/retro_start.png)         | Run                          | Run                       | Run                 |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  | D-Pad Up            |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                | D-Pad Down          |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left                | D-Pad Left          |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right               | D-Pad Right         |
+| ![](../image/retropad/retro_a.png)             | I                            | I                         | I                   |
+| ![](../image/retropad/retro_x.png)             | IV                           | I Turbo On/Off            | IV                  |
+| ![](../image/retropad/retro_l1.png)            | V                            |                           | V                   |
+| ![](../image/retropad/retro_r1.png)            | VI                           |                           | VI                  |
+| ![](../image/retropad/retro_l2.png)            | Mode Switch                  | Mode Switch               | Mode Switch         |
+| ![](../image/retropad/retro_r2.png)            |                              | Alternate II Turbo On/Off |                     |
+| ![](../image/retropad/retro_r3.png)            |                              | Alternate I Turbo On/Off  |                     |
 
-#### Mouse
+## Mouse
 
-| RetroMouse Inputs                                   | Mouse                     |
-|-----------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor              |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button         |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button        |
+| RetroMouse Inputs                                     | Mouse             |
+|-------------------------------------------------------|--------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
 ## External Links
 
@@ -285,3 +291,7 @@ The Beetle PCE FAST core supports the following device type(s) in the controls m
 - [Libretro Beetle PCE FAST Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_pce_fast_libretro.info)
 - [Libretro Beetle PCE FAST Github Repository](https://github.com/libretro/beetle-pce-fast-libretro)
 - [Report Libretro Beetle PCE FAST Core Issues Here](https://github.com/libretro/beetle-pce-fast-libretro/issues)
+
+## TG-16
+
+- [NEC - PC Engine SuperGrafx (Beetle SGX)](https://docs.libretro.com/library/beetle_sgx/)
