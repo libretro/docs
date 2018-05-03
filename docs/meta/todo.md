@@ -57,7 +57,6 @@
 ### [〰️] 3D Engine
 
 - Fill in the core provided aspect ratio.
-- Complete why use this core section.
 - Complete core option descriptions.
 - Improve the background section. I believe the 3D Engine core is two older libretro core combined? (https://github.com/libretro/instancingviewer-libretro-gl) and (https://github.com/libretro/modelviewer-location-libretro)
 
@@ -65,7 +64,9 @@
 
 ### [✔] 2048
 
-### [〰️] Atari800
+### [!!!] Atari800
+
+- Need help with documentation.
 
 ### [✔] Beetle bsnes
 
@@ -93,23 +94,14 @@
 
 ### [✔] Beetle PSX HW
 
-### [〰️] Beetle Saturn
+### [✔] Beetle Saturn
 
-- Test Multimouse support.
 - Test RetroArch cheats support.
 
-### [〰️] Beetle SGX
-
-- Improve background section.
-- Complete why use this core section.
-- Complete and improve core option descriptions.
-- Complete controllers table section.
-- Add BIOS md5s.
-- Complete compatibility section.
+### [✔] Beetle SGX
 
 ### [〰️] Beetle VB
 
-- Complete compatibility section.
 - Combine the anagylph and palette core option screenshots into one image.
 
 ### [〰️] blueMSX
@@ -127,35 +119,24 @@
 ### [〰️] bsnes-mercury Accuracy
 
 - Needs Crop overscan core option screenshots 
-- Multi-Mouse support?
 
 ### [〰️] bsnes-mercury Balanced
 
 - Needs Crop overscan core option screenshots 
-- Multi-Mouse support?
 
 ### [〰️] bsnes-mercury Performance
 
 - Needs Crop overscan core option screenshots 
-- Multi-Mouse support?
 
-### [〰️] bsnes Accuracy
+### [✔] bsnes Accuracy
 
-- Multi-Mouse support?
-
-### [〰️] bsnes Balanced
-
-- Multi-Mouse support?
+### [✔] bsnes Balanced
 
 ### [〰️] bsnes C++98 (v085)
 
-- Multi-Mouse support?
-- Complete compatibility section.
 - Add core provided aspect ratio.
 
-### [〰️] bsnes Peformance
-
-- Multi-Mouse support?
+### [✔] bsnes Peformance
 
 ### [〰️] Caprice32
 
@@ -207,15 +188,12 @@
 
 ### [〰️] DOSBox
 
-- Improve background section
-- Complete why use this core section.
-- Complete compatibility section.
 - Add internal sample rate.
 - Improve core otpion descriptions.
 
 ### [✔] Dummy Core
 
-### [✕] Dungeon Crawl Stone Soup
+### [✔] Dungeon Crawl Stone Soup
 
 ### [〰️] EasyRPG
 
@@ -233,15 +211,12 @@
 
 ### [〰️] Emux GB
 
-- Complete why use this core section.
-- Complete compatibility section.
 - Add internal FPS.
 - Add internal sample rate.
 - Add core provided aspect ratio.
 
 ### [〰️] Emux NES
 
-- Complete compatibility section.
 - Add core provided FPS.
 - Add core provided sample rate.
 - Add core provided aspect ratio.
@@ -275,13 +250,11 @@
 
 ### [〰️] fMSX
 
-- Improve background section
-- Complete why use this core section.
-- Complete compatibility section.
 - Add core provided aspect ratio.
 - Complete core option descriptions.
 
 ### [〰️] FreeIntv
+
 - First and only standalone libretro emulator core for Mattel Intellivision
 - Uses a unique onscreen keyboard to get around the keypad limitations of the RetroPad abstraction
 - More information https://sourceforge.net/projects/freeintv/ and http://neocomputer.org/projects/freeintv/
@@ -336,7 +309,6 @@
 
 ### [〰️] higan Accuracy
 
-- Multi-Mouse support?
 - Add core provided fps
 - Add core provided sample rate
 - Add core provided aspect ratio
@@ -355,7 +327,7 @@
 
 ### [✕] MAME 2003 Midway
 
-### [✕] MAME 2003-Plus - Experimental
+### [✕] MAME 2003-Plus
 
 ### [✕] MAME 2009
 
@@ -406,8 +378,6 @@
 
 ### [〰️] Mupen64Plus
 
-- Improve background section.
-- Complete why use this core section.
 - Add internal sample rate
 - Add core provided aspect ratio.
 - Complete core option descriptions.
@@ -417,8 +387,6 @@
 
 ### [〰️] Neko Project II
 
-- Complete background section.
-- Complete compatibility section.
 - Complete core option descriptions.
 - Document np2.cfg
 - Add a disk switching guide
@@ -431,8 +399,6 @@
 
 ### [〰️] Neko Project II Kai
 
-- Complete background section.
-- Complete compatibility section.
 - Complete core option descriptions.
 - Document np2.cfg
 - Add a disk switching guide
@@ -446,17 +412,13 @@
 
 ### [〰️] nSide Balanced
 
-- Multi-Mouse support?
 - Add core provided fps
 - Add core provided sample rate
 - Add core provided aspect ratio
 
 ### [✔] NXEngine
 
-### [〰️] O2EM
-
-- Complete why use this core section.
-- Complete compatibility section.
+### [✔] O2EM
 
 ### [✔] OpenLara
 
@@ -470,12 +432,13 @@
 
 ### [〰️] PCSX ReARMed
 
-- Complete why use this core section.
 - Complete core option descriptions.
 - Explain what the default setting for the Pad Type core options does.
 - Add negcon inputs to controllers table
 
-### [✕] PCSX ReARMed [Interpreter]
+### [!!!] PCSX ReARMed [Interpreter]
+
+- Not making a doc for this, the regular PCSX ReARMed doc is enough.
 
 ### [✔] PicoDrive
 
@@ -483,18 +446,9 @@
 
 ### [✔] PokeMini
 
-### [〰️] PPSSPP
+### [✔] PPSSPP
 
-- Improve background section
-- Complete why use this core section.
-- Complete and improve core option descriptions.
-
-### [〰️] PrBoom
-
-Add core base width
-Add core base height
-Add core max width
-Add core max height
+### [✔] PrBoom
 
 ### [✔] ProSystem
 
@@ -513,7 +467,9 @@ Add core max height
 
 ### [〰️] Reicast
 
-### [〰️] RemoteJoy
+### [!!!] RemoteJoy
+
+- Not documentating. Core doesn't work at all and most likely no one uses it.
 
 ### [〰️] Remote RetroPad
 
@@ -535,9 +491,7 @@ Add core max height
 
 - Add keyboard table.
 
-### [〰️] Snes9x
-
-- Test Multi-Mouse support.
+### [✔] Snes9x
 
 ### [〰️] Snes9x 2002
 
@@ -555,9 +509,7 @@ Add core max height
 - Add core provided aspect ratio FPS.
 - Add core provided sample rate.
 
-### [〰️] Snes9x 2010
-
-- Test Multi-Mouse support.
+### [✔] Snes9x 2010
 
 ### [〰️] Stella
 
@@ -585,28 +537,12 @@ Add core max height
 - Feature: more tests required
 - Geometry/timing: FPS, sample rate, aspect ratio, max width/weight
 
-### [〰️] TyrQuake
-
-- Complete expansion pack section.
-- Add core base width
-- Add core base height
-- Add core max width
-- Add core max height
-- Add core provided fps
-- Add Colored lightning core option description.
-- Add Invert Y Axis core option description.
-- Add Keyboard and mouse table. (This core uses keyboard callback).
+### [✔] TyrQuake
 
 ### [✕] UME 2014
 
-### [〰️] Uzem
+### [!!!] Uzem
 
-- Improve background section.
-- Complete why use this core section.
-- Add core updater screenshot.
-- Add content example screenshot.
-- Complete author section.
-- Complete compatiblity section.
 - Can't complete documentation, core doesn't start. https://github.com/libretro/libretro-uzem/issues/2
 
 ### [✔] VBA-M
@@ -625,7 +561,7 @@ Add core max height
 
 ### [✕] VICE VIC20
 
-### [〰️] Video Processor
+### [!!!] Video Processor
 
 - Complete documentation when core is fixed.
 
