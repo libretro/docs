@@ -84,9 +84,10 @@ The PCSX ReARMed core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-| File  | Description        |
-|:-----:|:------------------:|
-| *.srm | Memory card slot 0 |
+| File           | Description                                          |
+|:--------------:|:----------------------------------------------------:|
+| *.srm          | Memory card slot 0                                   |
+| pcsx-card2.mcd | Memory card slot 1 (if enabled, default to disabled) |
 
 **Frontend's State directory**
 
@@ -183,9 +184,11 @@ Most conversion tools will want a single .bin file for each disk. If your game u
 
 For game savedata storage, the PSX console used memory cards. The PSX console had two slots for memory cards.
 
-The PCSX ReARMed core only has support for the first memory card slot.
+The PCSX ReARMed core defaults to only support the first memory card slot.
+Second memory card slot can be enabled via the `pcsx_rearmed_memcard2` option.
 
 In this doc, the first memory card slot will be referred to as 'Memcard slot 0'.
+The second memory card slot will be referred to as 'Memcard slot 1'.
 
 For memory card functionality and usage, the PCSX ReARMed core will the Libretro savedata format.
 
@@ -194,10 +197,15 @@ For memory card functionality and usage, the PCSX ReARMed core will the Libretro
 | Libretro savedata format |
 |--------------------------|
 | gamename.srm             |
+| pcsx-card2.mcd           |
 
 </center>
 
-**By default**, the filename of the Memcard savedata will match the loaded cue or m3u or pbp filename, like this:
+**By default**, the filename of the Memcard slot 0 savedata will match the loaded cue or m3u or pbp filename, like this:
+
+**By default**, the filename of the Memcard slot 1 savedata (if enabled) will be
+`pcsx-card2.mcd`. This basically means that all games in the same folder share
+the same nemory card in slot 1.
 
 - Loaded content: Breath of Fire III (USA).cue
 
@@ -234,7 +242,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Region** [pcsx_rearmed_region] (**auto**|NTSC|PAL)
 
 	Choose what region the system is from.
-	
+
+- **Memcard slot 1** [pcsx_rearmed_memcard2] (**disabled**|enabled)
+
+	Disable or enable second memory card (Memcard slot 1). Default to being
+	disabled. If enabled, Memcard slot 1's save data will be loaded and saved as
+	a `pcsx-card2.mcd` file in the directory of the loaded game.
+	All games in the same directory will share the same second memory card.
+
 - **Pad 1 Type** [pcsx_rearmed_pad1type] (**default**|none|standard|analog|negcon)
 
 	Choose the Pad Type for User 1.
