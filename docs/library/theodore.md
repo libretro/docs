@@ -2,7 +2,7 @@
 
 ## Background
 
-Theodore is a Thomson TO8D system emulator based on the Daniel Coulom's DCTO8D emulator. The Thomson TO8 is a home computer introduced by French company Thomson SA in 1986. The Thomson TO8D is an improved version that includes a built-in 3.5" floppy drive.
+Theodore is a Thomson TO8/TO8D system emulator based on the Daniel Coulom's DCTO8D emulator. The Thomson TO8 is a home computer introduced by French company Thomson SA in 1986. The Thomson TO8D is an improved version that includes a built-in 3.5" floppy drive.
 
 The Theodore core has been authored by
 
@@ -39,25 +39,25 @@ Frontend-level settings or features that the Theodore core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Saves             | ✕         |
-| States            | ✕         |
+| Saves             | ✔         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | -         |
 | Core Options      | ✔         |
-| RetroAchievements | -         |
-| RetroArch Cheats  | -         |
+| RetroAchievements | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | -         |
 | Controls          | -         |
 | Remapping         | -         |
 | Multi-Mouse       | -         |
-| Rumble            | -         |
-| Sensors           | -         |
-| Camera            | -         |
-| Location          | -         |
-| Subsystem         | -         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | -         |
-| Disk Control      | -         |
-| Username          | -         |
+| Rumble            | ✕         |
+| Sensors           | ✕         |
+| Camera            | ✕         |
+| Location          | ✕         |
+| Subsystem         | ✕         |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| Disk Control      | ✕         |
+| Username          | ✕         |
 | Language          | -         |
 | Crop Overscan     | -         |
 | LEDs              | -         |
@@ -94,6 +94,8 @@ Now it is time to start BASIC that will run the program on the bootable device c
 ## Core options
 
 The Theodore core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Thomson flavor** [theodore_rom]  (**TO8**|TO8D)
 
 - **Floppy write protection** [theodore_floppy_write_protect]  (disabled|**enabled**)
 
