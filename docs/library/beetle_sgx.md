@@ -209,9 +209,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Look at the [Joypad section](https://docs.libretro.com/library/beetle_sgx/#joypad) for more information.
 	
-- **Allow Soft Reset(RUN+SELECT)** [sgx_disable_softreset] (**enabled**|disabled)
+- **Disable Soft Reset (RUN+SELECT)** [sgx_disable_softreset] (**disabled**|enabled)
 
-	Set to enabled to do soft resets instead of hard resets when restarting the loaded content.
+	Pressing RUN and SELECT simultaneously on PCE gamepad will SOFT RESET the console. This is a default hardware behaviour.
+	
+	Set this to enabled if you want the soft reset functionality turned off.
 	
 - **Allow UP+DOWN/LEFT+RIGHT** [sgx_up_down_allowed] (**disabled**|enabled)
 
