@@ -4,7 +4,7 @@
 
 Genesis Plus GX is an open-source Sega 8/16 bit emulator focused on accuracy and portability. The source code, originally based on Genesis Plus 1.3 by Charles MacDonald, has been heavily modified & enhanced, with respect to initial goals and design, in order to improve the accuracy of emulation, implementing new features and adding support for extra peripherals, cartridge & systems hardware.
 
-### Author/License
+Genesis Plus GX has 100% compatibility with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear & SG-1000 released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available. It also has Pico emulation.
 
 The Genesis Plus GX core has been authored by
 
@@ -16,6 +16,28 @@ The Genesis Plus GX core is licensed under
 - [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+- Please note that BIOS choice isn't locked to any specific revisions.
+- BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](https://docs.libretro.com/library/genesis_plus_gx/#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
+
+|   Filename    |    Description                                  |              md5sum              |
+|:-------------:|:-----------------------------------------------:|:--------------------------------:|
+| bios_MD.bin   | MegaDrive TMSS startup ROM (bootrom) - Optional | 45e298905a08f9cfb38fd504cd6dbc84 |
+| bios_CD_E.bin | MegaCD EU BIOS - Required for MegaCD EU games   | e66fa1dc5820d254611fdcdba0662372 |
+| bios_CD_U.bin | SegaCD US BIOS - Required for SegaCD US games   | 854b9150240a198070150e4566ae1290 |
+| bios_CD_J.bin | MegaCD JP BIOS - Required for MegaCD JP games   | 278a9397d192149e84e820ac621a8edd |
+| bios_E.sms    | MasterSystem EU BIOS (bootrom) - Optional       | 840481177270d5642a14ca71ee72844c |
+| bios_U.sms    | MasterSystem US BIOS (bootrom) - Optional       | 840481177270d5642a14ca71ee72844c |
+| bios_J.sms    | MasterSystem JP BIOS (bootrom) - Optional       | 24a519c53f67b00640d0048ef7089105 |
+| bios.gg       | GameGear BIOS (bootrom) - Optional              | 672e104c3be3a238301aceffc3b23fd6 |
+| sk.bin        | Sonic & Knuckles ROM (lock-on) - Optional       | 4ea493ea4e9f6c9ebfccbdb15110367e |
+| sk2chip.bin   | Sonic & Knuckles UPMEM ROM (lock-on) - Optional | b4e76e416b887f4e7413ba76fa735f16 |
+| areplay.bin   | Action Replay ROM (lock-on) - Optional          | a0028b3043f9d59ceeb03da5b073b30d |
+| ggenie.bin    | Game Genie ROM (lock-on) - Optional             | b5d5ff1147036b06944b4d2cac2dd1e1 |
 
 ## Extensions
 
@@ -34,8 +56,6 @@ Content that can be loaded by the Genesis Plus GX core have the following file e
 - .68k
 - .chd
 
-## Databases
-
 RetroArch database(s) that are associated with the Genesis Plus GX core:
 
 - [Sega - Game Gear](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20Game%20Gear.rdb)
@@ -45,28 +65,6 @@ RetroArch database(s) that are associated with the Genesis Plus GX core:
 - [Sega - PICO](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20PICO.rdb)
 - [Sega - SG-1000](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20SG-1000.rdb)
 
-## BIOS
-
-Required or optional firmware files go in the frontend's system directory.
-
-!!! warning
-	BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](https://docs.libretro.com/library/genesis_plus_gx/#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
-
-|   Filename    |    Description                                  |              md5sum              |
-|:-------------:|:-----------------------------------------------:|:--------------------------------:|
-| bios_MD.bin   | MegaDrive TMSS startup ROM (bootrom) - Optional | 45e298905a08f9cfb38fd504cd6dbc84 |
-| bios_CD_E.bin | MegaCD EU BIOS - Required for MegaCD EU games   | e66fa1dc5820d254611fdcdba0662372 |
-| bios_CD_U.bin | SegaCD US BIOS - Required for SegaCD US games   | 854b9150240a198070150e4566ae1290 |
-| bios_CD_J.bin | MegaCD JP BIOS - Required for MegaCD JP games   | 278a9397d192149e84e820ac621a8edd |
-| bios_E.sms    | MasterSystem EU BIOS (bootrom) - Optional       | -                                |
-| bios_U.sms    | MasterSystem US BIOS (bootrom) - Optional       | -                                |
-| bios_J.sms    | MasterSystem JP BIOS (bootrom) - Optional       | -                                |
-| bios.gg       | GameGear BIOS (bootrom) - Optional              | -                                |
-| sk.bin        | Sonic & Knuckles ROM (lock-on) - Optional       | 4ea493ea4e9f6c9ebfccbdb15110367e |
-| sk2chip.bin   | Sonic & Knuckles UPMEM ROM (lock-on) - Optional | b4e76e416b887f4e7413ba76fa735f16 |
-| areplay.bin   | Action Replay ROM (lock-on) - Optional          | -                                |
-| ggenie.bin    | Game Genie ROM (lock-on) - Optional             | -                                |
-
 ## Features
 
 Frontend-level settings or features that the Genesis Plus GX core respects.
@@ -74,7 +72,6 @@ Frontend-level settings or features that the Genesis Plus GX core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
@@ -98,32 +95,40 @@ Frontend-level settings or features that the Genesis Plus GX core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The Genesis Plus GX core's internal core name is 'Genesis Plus GX'
+The Genesis Plus GX core's library name is 'Genesis Plus GX'
 
 The Genesis Plus GX core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (MS/GG/MD/Pico/SG-1000 Cartridge Backup save)
-- cart.brm (Sega/Mega CD RAM CART)
-- scd_E.brm (Mega CD EU Backup RAM - When the 'CD System BRAM' core option is set to per bios)
-- scd_U.brm (Sega CD US Backup RAM - When the 'CD System BRAM' core option is set to per bios)
-- scd_J.brm (Mega CD JP Backup RAM - When the 'CD System BRAM' core option is set to per bios)
-- 'content-name'.brm (Sega CD/MegaCD Backup RAM - When the 'CD System BRAM' core option is set to per game)
+| File         | Description                                                                          |
+|:------------:|:------------------------------------------------------------------------------------:|
+| *.srm        | MS/GG/MD/Pico/SG-1000 Cartridge backup save                                          |
+| cart.brm     | Sega/Mega CD RAM CART                                                                |
+| scd_U.brm    | Sega CD US Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
+| scd_E.brm    | Mega CD EU Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
+| scd_J.brm    | Mega CD JP Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
+| *.brm        | Sega CD/MegaCD Backup RAM - When the 'CD System BRAM' core option is set to per game |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
 - The Genesis Plus GX core's core provided FPS is dependent on the loaded content.
-- The Genesis Plus GX core's core provided sample rate is 44100 Hz.
+- The Genesis Plus GX core's core provided sample rate is 44100 Hz
+- The Genesis Plus GX core's base width is dependent on the loaded content.
+- The Genesis Plus GX core's base height is dependent on the loaded content.
+- The Genesis Plus GX core's max width is 720
+- The Genesis Plus GX core's max height is 576
 - The Genesis Plus GX core's core provided aspect ratio is dependent on the 'Core-provided aspect ratio' [core option](https://docs.libretro.com/library/genesis_plus_gx/#core-options).
 
-### Loading Sega CD games
+## Loading Sega CD games
 
 When loading Sega CD games, Genesis Plus GX needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
@@ -144,7 +149,7 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 
 ![](..\image\core\genesis_plus_gx\cue.png)
 
-!!! warning
+!!! warning ""
 	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported. 
 	
 ## Core options
@@ -270,13 +275,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Remove per-line sprite limit** [genesis_plus_gx_no_sprite_limit] (**disabled**/enabled)
 
-	Self-explanatory.
+	Reduce sprite flickering when enabled.
 
-## Controllers
+## User 1 device types
 
 The Genesis Plus GX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-### User 1 device types
 
 - Joypad Port Empty - None - No device is connected, input is disabled.
 - **Joypad Auto** - Joypad - Depending on the loaded content, the core will automatically emulate a MD Joypad 3 Button controller, or a MD Joypad 6 Button controller or a MS Joypad 2 Button controller.
@@ -295,7 +298,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 - [MD XE-1AP](https://segaretro.org/XE-1_AP) - Analog
 - [MD Mouse](https://segaretro.org/Sega_Mouse) - Mouse
 
-### User 2 device types
+## User 2 device types
 
 - Joypad Port Empty - None - No device is connected, input is disabled.
 - **Joypad Auto** - Joypad - Depending on the loaded content, the core will automatically emulate a MD Joypad 3 Button controller, or a MD Joypad 6 Button controller or a MS Joypad 2 Button controller.
@@ -316,89 +319,83 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 - [MD XE-1AP](https://segaretro.org/XE-1_AP) - Analog
 - [MD Mouse](https://segaretro.org/Sega_Mouse) - Mouse
 
-### Other controllers
+## Other devices
 
 - PICO tablet - The Genesis Plus GX core can emulate PICO tablet inputs but this is done automatically, based off the game's crc, and cannot be manually selected as a device type.
 - Terebi Oekaki tablet - The Genesis Plus GX core can emulate Terebi Oekaki table inputs but this is done automatically, based off the game's crc, and cannot be manually selected a device type.
 
-### Multitap support
+## Multitap
 
-Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer, Master Tap device types for the corresponding users.
+Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer, Master Tap device types for corresponding users.
 
-### Controller tables
+## Joypad
 
-#### Joypad
+| RetroPad Inputs                                | User 1 - 8 input descriptors | MD Joypad 3 Button | MD Joypad 6 Button | MS Joypad 2 Button | MS Paddle Control | MS Sports Pad | MD XE-1AP     |
+|------------------------------------------------|------------------------------|--------------------|--------------------|--------------------|-------------------|---------------|---------------|
+| ![](../image/retropad/retro_b.png)             | B                            | B                  | B                  | 1                  | 1                 | 1             | E2            |
+| ![](../image/retropad/retro_y.png)             | A                            | A                  | A                  |                    |                   |               | E1            |
+| ![](../image/retropad/retro_select.png)        | Mode                         |                    | Mode               |                    |                   |               | Select        |
+| ![](../image/retropad/retro_start.png)         | Start                        | Start              | Start              | Start              | Start             | Start         | Start         |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up           | D-Pad Up           | D-Pad Up           |                   |               |               |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down         | D-Pad Down         | D-Pad Down         |                   |               |               |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left         | D-Pad Left         | D-Pad Left         |                   |               |               |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right        | D-Pad Right        | D-Pad Right        |                   |               |               |
+| ![](../image/retropad/retro_a.png)             | C                            | C                  | C                  | 2                  |                   | 2             |               |
+| ![](../image/retropad/retro_x.png)             | Y                            |                    | Y                  |                    |                   |               |               |
+| ![](../image/retropad/retro_l1.png)            | X                            |                    | X                  |                    |                   |               | C             |
+| ![](../image/retropad/retro_r1.png)            | Z                            |                    | Z                  |                    |                   |               | A             |
+| ![](../image/retropad/retro_l2.png)            |                              |                    |                    |                    |                   |               | D             |
+| ![](../image/retropad/retro_r2.png)            |                              |                    |                    |                    |                   |               | B             |
+| ![](../image/retropad/retro_l3.png)            |                              |                    |                    |                    |                   |               |               |
+| ![](../image/retropad/retro_r3.png)            |                              |                    |                    |                    |                   |               |               |
+| ![](../image/retropad/retro_left_stick.png) X  |                              |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
+| ![](../image/retropad/retro_left_stick.png) Y  |                              |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
+| ![](../image/retropad/retro_right_stick.png) X |                              |                    |                    |                    |                   |               | Slider Y      |
+| ![](../image/retropad/retro_right_stick.png) Y |                              |                    |                    |                    |                   |               | Slider X      |
 
-| User 1- 8 Remap descriptors | RetroPad Inputs                              | MD Joypad 3 Button | MD Joypad 6 Button | MS Joypad 2 Button | MS Paddle Control | MS Sports Pad | MD XE-1AP     |
-|-----------------------------|----------------------------------------------|--------------------|--------------------|--------------------|-------------------|---------------|---------------|
-| B                           | ![](../image/retropad/retro_b.png)       | B                  | B                  | 1                  | 1                 | 1             | E2            |
-| A                           | ![](../image/retropad/retro_y.png)       | A                  | A                  |                    |                   |               | E1            |
-| Mode                        | ![](../image/retropad/retro_select.png)        |                    | Mode               |                    |                   |               | Select        |
-| Start                       | ![](../image/retropad/retro_start.png)         | Start              | Start              | Start              | Start             | Start         | Start         |
-| D-Pad Up                    | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up           | D-Pad Up           | D-Pad Up           |                   |               |               |
-| D-Pad Down                  | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down         | D-Pad Down         | D-Pad Down         |                   |               |               |
-| D-Pad Left                  | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left         | D-Pad Left         | D-Pad Left         |                   |               |               |
-| D-Pad Right                 | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right        | D-Pad Right        | D-Pad Right        |                   |               |               |
-| C                           | ![](../image/retropad/retro_a.png)       | C                  | C                  | 2                  |                   | 2             |               |
-| Y                           | ![](../image/retropad/retro_x.png)       |                    | Y                  |                    |                   |               |               |
-| X                           | ![](../image/retropad/retro_l1.png)            |                    | X                  |                    |                   |               | C             |
-| Z                           | ![](../image/retropad/retro_r1.png)            |                    | Z                  |                    |                   |               | A             |
-|                             | ![](../image/retropad/retro_l2.png)            |                    |                    |                    |                   |               | D             |
-|                             | ![](../image/retropad/retro_r2.png)            |                    |                    |                    |                   |               | B             |
-|                             | ![](../image/retropad/retro_l3.png)            |                    |                    |                    |                   |               |               |
-|                             | ![](../image/retropad/retro_r3.png)            |                    |                    |                    |                   |               |               |
-|                             | ![](../image/retropad/retro_left_stick.png) X  |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
-|                             | ![](../image/retropad/retro_left_stick.png) Y  |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
-|                             | ![](../image/retropad/retro_right_stick.png) X |                    |                    |                    |                   |               | Slider Y      |
-|                             | ![](../image/retropad/retro_right_stick.png) Y |                    |                    |                    |                   |               | Slider X      |
+## Mouse
 
-#### Mouse
-
-| RetroMouse Inputs                                   | MD Mouse        |
-|-----------------------------------------------------|-----------------|
+| RetroMouse Inputs                                     | MD Mouse        |
+|-------------------------------------------------------|-----------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | MD Mouse Cursor |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | MD Mouse Left   |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | MD Mouse Right  |
 | ![](../image/retromouse/retro_middle.png) Mouse 3     | MD Mouse Start  |
-| Wheel Down                                          | MD Mouse Center |
+| Wheel Down                                            | MD Mouse Center |
 
-#### Pointer
+## Pointer
 
-| RetroPointer Inputs                                                                                                  | MS Graphic Board        |
-|----------------------------------------------------------------------------------------------------------------------|-------------------------|
+| RetroPointer Inputs                                                                                                      | MS Graphic Board        |
+|--------------------------------------------------------------------------------------------------------------------------|-------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus | 
-| ![](../image/retromouse/retro_left.png) Mouse 1                                                                        | MS Graphic Board Pen    |
-| ![](../image/retromouse/retro_right.png) Mouse 2                                                                       | MS Graphic Board Menu   |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                      | MS Graphic Do           |
+| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | MS Graphic Board Pen    |
+| ![](../image/retromouse/retro_right.png) Mouse 2                                                                         | MS Graphic Board Menu   |
+| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        | MS Graphic Do           |
 
-#### Lightgun
+## Lightgun
 
-| RetroLightgun Inputs                                                                                                 | MD Menacer           | MD Justifier           | MS Light Phaser           |
-|----------------------------------------------------------------------------------------------------------------------|----------------------|------------------------|---------------------------|
+| RetroLightgun Inputs                                                                                                     | MD Menacer           | MD Justifier           | MS Light Phaser           |
+|--------------------------------------------------------------------------------------------------------------------------|----------------------|------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MD Menacer Crosshair | MD Justifier Crosshair | MS Light Phaser Crosshair |
-| Gun Trigger                                                                                                          | MD Menacer A         | MD Justifier A         | MS Light Phaser A         |
-| Gun Aux B                                                                                                            | MD Menacer B         | MD Justifier B         | MS Light Phaser B         |
-| Gun Start                                                                                                            | MD Menacer Start     | MD Justifier Start     | MS Light Phaser Start     |
-| Gun Start                                                                                                            | MD Menacer C         | MD Justifier C         | MS Light Phaser C         |
+| Gun Trigger                                                                                                              | MD Menacer A         | MD Justifier A         | MS Light Phaser A         |
+| Gun Aux B                                                                                                                | MD Menacer B         | MD Justifier B         | MS Light Phaser B         |
+| Gun Start                                                                                                                | MD Menacer Start     | MD Justifier Start     | MS Light Phaser Start     |
+| Gun Start                                                                                                                | MD Menacer C         | MD Justifier C         | MS Light Phaser C         |
 
-#### Other
+## Other
 
-| Inputs                                                                                                               | PICO tablet               | Terebi Oekaki tablet      |
-|----------------------------------------------------------------------------------------------------------------------|---------------------------|---------------------------|
+| Inputs                                                                                                                   | PICO tablet               | Terebi Oekaki tablet      |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | PICO tablet Stylus        | Terebi Oeka tablet Stylus |
-| ![](../image/retromouse/retro_left.png) Mouse 1                                                                        | PICO tablet Pen           | Terebi Oeka tablet Pen    |
-| ![](../image/retromouse/retro_right.png) Mouse 2                                                                       | PICO tablet Red           |                           |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                      |                           | Terebo Peka tablet Start  |
-| Wheel Up                                                                                                             | PICO tablet Previous page |                           |
-| Wheel Down                                                                                                           | PICO tablet Next page     |                           |
-| ![](../image/retropad/retro_dpad_up.png)                                                                               | PICO tablet Up (White)    |                           |
-| ![](../image/retropad/retro_dpad_down.png)                                                                             | PICO tablet Down (Orange) |                           |
-| ![](../image/retropad/retro_dpad_left.png)                                                                             | PICO tablet Left (Purple) |                           |
-| ![](../image/retropad/retro_dpad_right.png)                                                                            | PICO tablet Right (Green) |                           |
-
-## Compatibility
-
-100% compatibility with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear & SG-1000 released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available. It also has Pico emulation.
+| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | PICO tablet Pen           | Terebi Oeka tablet Pen    |
+| ![](../image/retromouse/retro_right.png) Mouse 2                                                                         | PICO tablet Red           |                           |
+| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        |                           | Terebo Peka tablet Start  |
+| Wheel Up                                                                                                                 | PICO tablet Previous page |                           |
+| Wheel Down                                                                                                               | PICO tablet Next page     |                           |
+| ![](../image/retropad/retro_dpad_up.png)                                                                                 | PICO tablet Up (White)    |                           |
+| ![](../image/retropad/retro_dpad_down.png)                                                                               | PICO tablet Down (Orange) |                           |
+| ![](../image/retropad/retro_dpad_left.png)                                                                               | PICO tablet Left (Purple) |                           |
+| ![](../image/retropad/retro_dpad_right.png)                                                                              | PICO tablet Right (Green) |                           |
 
 ## External Links
 
@@ -407,25 +404,9 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 - [Libretro Genesis Plus GX Github Repository](https://github.com/libretro/Genesis-Plus-GX)
 - [Report Libretro Genesis Plus GX Core Issues Here](https://github.com/libretro/Genesis-Plus-GX/issues)
 
-### See also
-
-#### Sega - Master System - Mark III
+## Sega 16-bit
 
 - [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
 - [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-
-#### Sega - Mega Drive - Genesis
-
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-
-#### Sega - Mega-CD - Sega CD
-
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-
-#### Sega - PICO
-
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-
-#### Sega - SG-1000
-
+- [Sega - MS/GG (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
