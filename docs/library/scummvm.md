@@ -183,6 +183,58 @@ Experiencing Monkey Island 2 without MT-32 emulation is like listening to Beetho
 
 This concludes 'Initial Configuration'. The core may be shut down either by pressing the 'Quit' button, or via 'Close Content' from the Quick Menu.
 
+### Game Management
+
+Before a game can be run via the ScummVM core, it should first be added to the internal launcher. Failure to do so will prevent game-specific configuration options from being saved (e.g. volume levels, subtitle speed, internal game settings overrides).
+
+#### Adding a Game to the ScummVM Launcher
+
+The data files for each game must be copied to a uniquely-named directory on local storage (i.e. one directory per game). A list of the specific files required for any particular game may be found on the ScummVM [Datafiles](http://wiki.scummvm.org/index.php/Datafiles) page.
+
+A suggested directory layout for 'Flight of the Amazon Queen' is presented as the simplest possible example:
+
+```
+└── ROMs/
+    └── ScummVM/
+        └── Flight of the Amazon Queen (CD DOS)/
+            └── queen.1
+```
+
+Once all files are in place, each game may be added as follows:
+
+- Run the ScummVM core without content:
+
+    - Go to RetroArch's main menu screen.
+    
+    - Select 'Load Core', then 'ScummVM'.
+    
+    - Select 'Start Core'.
+
+- In the main ScummVM user interface, press the 'Add Game...' button.
+
+- Navigate to the game directory. Double click the game directory itself to enter it, then press the 'Choose' button.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_add_game.png) </center>
+
+- If the game is detected correctly (i.e. if the data files are correct), a settings dialog box will open.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_game_options.png) </center>
+
+- In general, the automatically generated configuration settings can be accepted...
+
+- **However:** For simplicity, and compatibility with existing '.scummvm' files (discussed in the following section), the 'ID:' entry should be set to the so-called 'short name' of the game. All 'short names' are listed on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
+
+    - In most cases, the automatically generated 'ID:' is equal to the 'short name'.
+    
+    - In some cases, the automatically generated 'ID:' will be the 'short name' with an additional identifying suffix. This suffix should be deleted. If using a gamepad, this may be achieved by clicking at the end of the 'ID:' entry line and using the 'L2' button/trigger to delete unwanted characters.
+
+- Once the 'ID:' has been adjusted (if required), press the 'OK' button to 'register' the game.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_1st_game_added.png) </center>
+
+!!! attention
+	Once a game has been registered, it may be run by selecting it in the ScummVM Launcher game list and pressing the 'Start' button. **However:** Employing the ScummVM Launcher in this manner is not recommended, since it prevents the use of RetroArch per-game configuration overrides, input remaps and shader overrides. The ScummVM Launcher should only be used to add games and change settings.
+
 ## Core options
 
 The ScummVM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
