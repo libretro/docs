@@ -80,6 +80,109 @@ The ScummVM core saves/loads to/from these directories.
 - The ScummVM core's max height is 480.
 - The ScummVM core's core provided aspect ratio is 4/3
 
+## Usage
+
+### Initial Configuration
+
+Before attempting to run a game with the ScummVM core, certain preparations are required to ensure correct operation:
+
+- Download and extract the file [scummvm.zip](https://github.com/libretro/scummvm/raw/master/backends/platform/libretro/aux-data/scummvm.zip).
+
+- Place the resultant 'scummvm' folder inside the RetroArch 'system' directory.
+
+- Run the ScummVM core without content:
+
+    - Go to RetroArch's main menu screen.
+    
+    - Select 'Load Core', then 'ScummVM'.
+    
+    - Select 'Start Core'.
+    
+    - The main ScummVM user interface will open:
+
+<center> ![](..\image\core\scummvm\scummvm_menu_1st_run.png) </center>
+
+- Press the 'Options...' button, then select the 'Paths' tab.
+
+- Press the 'Theme Path:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/theme/' folder and press the 'Choose' button.
+
+- Press the 'Extra Path:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder and press the 'Choose' button.
+
+- Press the 'Apply' button.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_paths.png) </center>
+
+- Select the 'Misc' tab, then press the 'Theme:' button.
+
+- Select 'ScummVM Modern Theme' and press the 'Choose' button.
+
+- Press the 'Apply' button, then continue to the 'Enable Enhanced MIDI Emulation' section below.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_misc.png) </center>
+
+#### Enable Enhanced MIDI Emulation
+
+Some games only contain music in the form of MIDI data. By default, ScummVM will emulate MIDI mode using AdLib. Higher quality audio may be achieved for MIDI-enabled games by using FluidSynth MIDI emulation with an appropriate soundfont. This is the recommended mode of operation under RetroArch.
+
+- Select the 'MIDI' tab, then under 'GM Device' select 'FluidSynth'.
+
+- Press the 'SoundFont:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder. (NB: If you have followed the steps of this guide in order, the 'scummvm/extra/' folder will be selected automatically upon pressing the 'SoundFont:' button)
+
+- Select the file 'Roland_SC-55.sf2' and press the 'Choose' button.
+
+- Tick the 'Mixed AdLib/MIDI mode' checkbox.
+
+- Press the 'Apply' button, then continue to the 'Enable MT-32 Emulation' section below.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_midi.png) </center>
+
+Many games benefit greatly from FluidSynth MIDI emulation. Some particularly notable examples are:
+
+- Sam & Max Hit the Road
+
+- Day of the Tentacle
+
+- Discworld
+
+!!! attention
+	FluidSynth MIDI emulation slightly increases the CPU requirements of the ScummVM core. On the vast majority of platforms this should not be an issue. If crackling sound is observed on very low power devices, FluidSynth MIDI emulation should be disabled by setting 'GM Device' to the default "Don't use General MIDI music" option.
+
+#### Enable MT-32 Emulation (Optional)
+
+Some games which contain MIDI music data also have improved tracks designed for the MT-32 sound module. ScummVM can emulate this device, vastly increasing the audio quality of these games. Enabling MT-32 emulation is therefore highly recommended, but should be considered optional since it requires original MT-32 ROMs which must be provided by the user.
+
+The names and checksums of the two required ROM files are:
+
+|   Filename       |              md5sum              |
+|:----------------:|:--------------------------------:|
+| MT32_PCM.ROM     | 89e42e386e82e0cacb4a2704a03706ca |
+| MT32_CONTROL.ROM | 5626206284b22c2734f3e9efefcd2675 |
+
+These files must be placed inside the 'scummvm/extra/' folder within the RetroArch 'system' directory. MT-32 emulation may then be enabled via the main ScummVM user interface as follows:
+
+- Select the 'MT-32' tab.
+
+- Under 'MT-32 Device' select 'MT-32 Emulator'.
+
+- Press the 'Apply' button, then the 'OK' button to close the options menu.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_mt32.png) </center>
+
+Some notable examples of games that sound exquisite with MT-32 emulation are:
+
+- Monkey Island 2: LeChuck's Revenge
+
+- Indiana Jones and the Fate of Atlantis
+
+- Simon the Sorcerer
+
+Experiencing Monkey Island 2 without MT-32 emulation is like listening to Beethoven played on a kazoo.
+
+!!! attention
+	MT-32 emulation substantially increases the CPU requirements of the ScummVM core, and this can vary on a per-game basis. On most desktop systems this should not be an issue, but some devices may struggle to maintain full speed with all games. For example, 'Monkey Island 2' and 'Indiana Jones and the Fate of Atlantis' will run on very low power Android chipsets, but 'Simon the Sorcerer' will overwhelm mid-to-high-end mobile CPUs. If crackling sound is observed, the user should either (a) disable MT-32 emulation by setting 'MT-32 Device' to the default "Don't use Roland MT-32 music" or (b) force the use of the 'FluidSynth' audio device via an internal ScummVM game settings override (this is described in the following section).
+
+This concludes 'Initial Configuration'. The core may be shut down either by pressing the 'Quit' button, or via 'Close Content' from the Quick Menu.
+
 ## Core options
 
 The ScummVM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
