@@ -12,7 +12,7 @@ The ScummVM core is licensed under
 
 - [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores can be found [here](https://docs.libretro.com/tech/licenses/).
 
 ## Extensions
 
@@ -35,7 +35,7 @@ Frontend-level settings or features that the ScummVM core respects.
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
@@ -80,6 +80,32 @@ The ScummVM core saves/loads to/from these directories.
 - The ScummVM core's max height is 480.
 - The ScummVM core's core provided aspect ratio is 4/3
 
+## Core options
+
+The ScummVM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Gamepad Cursor Speed** [scummvm_gamepad_cursor_speed] (**1.0**|1.5|2.0|2.5|3.0|0.25|0.5|0.75)
+
+	Sets the mouse cursor speed multiplier when moving the cursor with the RetroPad left analog stick or D-Pad.
+
+!!! attention
+	The default value of '1.0' is optimised for games that have a native resolution of '320x200' or '320x240'. When running 'high definition' games with a native resolution of '640x400' or '640x480', it is recommended to set the Gamepad Cursor Speed to '2.0'.
+
+- **Analog Cursor Response** [scummvm_analog_response] (**linear**|cubic)
+
+	Determines how the speed of the cursor varies when tilting the RetroPad left analog stick.
+
+	'linear': Cursor speed increases linearly with analog stick movement. This is standard behaviour with which most users will be familiar.
+
+	'cubic': Cursor speed increases quadratically with analog stick movement. This allows for greater precision when making small movements with the analog stick, without sacrificing maximum speed at full analog stick range. This mode may require practice for effective use.
+
+- **Analog Deadzone (percent)** [scummvm_analog_deadzone] (**15**|20|25|30|0|5|10)
+
+	Sets the deadzone of the RetroPad analog sticks. Used to eliminate cursor drift/unwanted input.
+
+!!! attention
+	The deadzone setting can have a significant effect on the 'feel' of analog cursor movement. The value should be set as low as possible for best results - i.e. reduce the value until cursor drift is evident, then increment to the next highest setting. Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+
 ## Scanning Support
 
 To allow launching ScummVM games from the menu, you'll need to do the following:
@@ -110,26 +136,81 @@ This is an example of what the playlist would look like:
 
 ## Joypad
 
-| RetroPad Inputs                                | User 1 input descriptors | ScummVM Inputs   |
-|------------------------------------------------|--------------------------|------------------|
-| ![](../image/retropad/retro_b.png)             | Mouse Button 2           | Mouse Button 2   |
-| ![](../image/retropad/retro_select.png)        | ScummVM GUI              | ScummVM GUI      |
-| ![](../image/retropad/retro_start.png)         | Esc                      | Esc              |
-| ![](../image/retropad/retro_dpad_up.png)       | Mouse Up                 | Mouse Up         |
-| ![](../image/retropad/retro_dpad_down.png)     | Mouse Down               | Mouse Down       |
-| ![](../image/retropad/retro_dpad_left.png)     | Mouse Left               | Mouse Left       |
-| ![](../image/retropad/retro_dpad_right.png)    | Mouse Right              | Mouse Right      |
-| ![](../image/retropad/retro_a.png)             | Mouse Button 1           | Mouse Button 1   |
-| ![](../image/retropad/retro_left_stick.png) X  |                          | Mouse Left/Right |
-| ![](../image/retropad/retro_left_stick.png) Y  |                          | Mouse Up/Down    |
+| RetroPad Inputs                                | User 1 input descriptors | ScummVM Inputs          |
+|------------------------------------------------|--------------------------|-------------------------|
+| ![](../image/retropad/retro_b.png)             | Right Mouse Button       | Right Mouse Button      |
+| ![](../image/retropad/retro_y.png)             | .                        | . (period)              |
+| ![](../image/retropad/retro_select.png)        | F1                       | F1                      |
+| ![](../image/retropad/retro_start.png)         | ScummVM GUI              | ScummVM GUI             |
+| ![](../image/retropad/retro_dpad_up.png)       | Mouse Cursor Up          | Mouse Cursor Up         |
+| ![](../image/retropad/retro_dpad_down.png)     | Mouse Cursor Down        | Mouse Cursor Down       |
+| ![](../image/retropad/retro_dpad_left.png)     | Mouse Cursor Left        | Mouse Cursor Left       |
+| ![](../image/retropad/retro_dpad_right.png)    | Mouse Cursor Right       | Mouse Cursor Right      |
+| ![](../image/retropad/retro_a.png)             | Left Mouse Button        | Left Mouse Button       |
+| ![](../image/retropad/retro_x.png)             | Esc                      | Esc                     |
+| ![](../image/retropad/retro_l1.png)            | Enter                    | Enter                   |
+| ![](../image/retropad/retro_r1.png)            | Numpad 5                 | Numpad 5                |
+| ![](../image/retropad/retro_l2.png)            | Backspace                | Backspace               |
+| ![](../image/retropad/retro_r2.png)            | Cursor Fine Control      | Cursor Fine Control     |
+| ![](../image/retropad/retro_l3.png)            | F10                      | F10                     |
+| ![](../image/retropad/retro_r3.png)            | Numpad 0                 | Numpad 0                |
+| ![](../image/retropad/retro_left_stick.png) X  |                          | Mouse Cursor Left/Right |
+| ![](../image/retropad/retro_left_stick.png) Y  |                          | Mouse Cursor Up/Down    |
+| ![](../image/retropad/retro_right_stick.png)   |                          | Virtual Numpad          |
+
+**Additional Notes:**
+
+- Depressing the 'Cursor Fine Control' button reduces cursor speed to 1/3 of the value set by the 'Gamepad Cursor Speed' core option.
+
+- The RetroPad right analog stick is mapped to an 8-way 'Virtual Numpad' with the following layout:
+
+        [7][8][9]
+        [4]   [6]
+        [1][2][3]
+
+**Additional 'ScummVM Input' Descriptions:**
+
+- Esc:
+
+    - Skips cutscenes.
+    
+    - Opens/closes menus in some games.
+
+- Virtual Numpad + Numpad 5 + Numpad 0:
+
+    - Enables control during fight sequences in the 'Indiana Jones' series of games.
+    
+    - Enables bypass of Monkey Island 2 copy protection.
+    
+    - Enables saving in games that require text entry when naming a save slot.
+    
+    - Enables menu navigation in some games (Numpad 8 == up, Numpad 2 == down).
+
+- Enter + Backspace:
+
+    - Enables saving in games that require text entry when naming a save slot.
+    
+    - 'Enter' may be used to attack in 'Full Throttle' fight sequences.
+    
+    - 'Enter' enables menu item selection in some games.
+
+- . (period): Skips lines of dialogue in SCUMM engine games.
+
+- F1:
+
+    - Shows in-game menu in some games.
+    
+    - Enables saving in some games.
+
+- F10: Shows hotspots in Simon the Sorcerer 1 + 2.
 
 ## Mouse
 
-| RetroMouse Inputs                                     | ScummVM Inputs |
-|-------------------------------------------------------|----------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor   |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Button 1 |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Button 2 |
+| RetroMouse Inputs                                     | ScummVM Inputs     |
+|-------------------------------------------------------|--------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Left Mouse Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Right Mouse Button |
 
 ## Pointer
 
@@ -138,7 +219,7 @@ This is an example of what the playlist would look like:
 | RetroPointer Inputs                                                                                                      | ScummVM Inputs |
 |--------------------------------------------------------------------------------------------------------------------------|----------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor   | 
-| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Mouse Button 1 |
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Left Mouse Button   |
 
 ## Compatibility
 
