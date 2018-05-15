@@ -88,7 +88,7 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 
 - Download and extract the file [scummvm.zip](https://github.com/libretro/scummvm/raw/master/backends/platform/libretro/aux-data/scummvm.zip).
 
-- Place the resultant 'scummvm' folder inside the RetroArch 'system' directory.
+- Place the resultant `scummvm` folder inside the RetroArch `system` directory.
 
 - Run the ScummVM core without content:
 
@@ -104,9 +104,9 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 
 - Press the 'Options...' button, then select the 'Paths' tab.
 
-- Press the 'Theme Path:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/theme/' folder and press the 'Choose' button.
+- Press the 'Theme Path:' button and navigate to the RetroArch `system` directory. Enter the `scummvm/theme/` folder and press the 'Choose' button.
 
-- Press the 'Extra Path:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder and press the 'Choose' button.
+- Press the 'Extra Path:' button and navigate to the RetroArch `system` directory. Enter the `scummvm/extra/` folder and press the 'Choose' button.
 
 - Press the 'Apply' button.
 
@@ -126,9 +126,9 @@ Some games only contain music in the form of MIDI data. By default, ScummVM will
 
 - Select the 'MIDI' tab, then under 'GM Device' select 'FluidSynth'.
 
-- Press the 'SoundFont:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder. (NB: If the steps of this guide have been followed in order, the 'scummvm/extra/' folder will be selected automatically upon pressing the 'SoundFont:' button)
+- Press the 'SoundFont:' button and navigate to the RetroArch `system` directory. Enter the `scummvm/extra/` folder. (NB: If the steps of this guide have been followed in order, the `scummvm/extra/` folder will be selected automatically upon pressing the 'SoundFont:' button)
 
-- Select the file 'Roland_SC-55.sf2' and press the 'Choose' button.
+- Select the file `Roland_SC-55.sf2` and press the 'Choose' button.
 
 - Tick the 'Mixed AdLib/MIDI mode' checkbox.
 
@@ -158,7 +158,7 @@ The names and checksums of the two required ROM files are:
 | MT32_PCM.ROM     | 89e42e386e82e0cacb4a2704a03706ca |
 | MT32_CONTROL.ROM | 5626206284b22c2734f3e9efefcd2675 |
 
-These files must be placed inside the 'scummvm/extra/' folder within the RetroArch 'system' directory. MT-32 emulation may then be enabled via the main ScummVM user interface as follows:
+These files must be placed inside the `scummvm/extra/` folder within the RetroArch `system` directory. MT-32 emulation may then be enabled via the main ScummVM user interface as follows:
 
 - Select the 'MT-32' tab.
 
@@ -222,7 +222,7 @@ Once all files are in place, each game may be added as follows:
 
 - In general, the automatically generated configuration settings can be accepted...
 
-- **However:** For simplicity, and compatibility with existing '.scummvm' files (discussed in the following section), the 'ID:' entry should be set to the so-called 'short name' of the game. All 'short names' are listed on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
+- **However:** For simplicity, and compatibility with existing `.scummvm` files (discussed in the following section), the 'ID:' entry should be set to the so-called 'short name' of the game. All 'short names' are listed on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
 
     - In most cases, the automatically generated 'ID:' is equal to the 'short name'.
     
@@ -294,7 +294,7 @@ To launch games efficiently via the RetroArch frontend, it is recommended to add
 
 - Select `<Scan This Directory>`.
 
-All recognised games will be added to a `ScummVM.lpl` file in the RetroArch 'playlist' directory, and be made available via a new 'ScummVM' tab in the frontend menu.
+All recognised games will be added to a `ScummVM.lpl` file in the RetroArch `playlist` directory, and be made available via a new 'ScummVM' tab in the frontend menu.
 
 (Alternatively, each game directory may be scanned in turn - useful if game directories are present in multiple locations)
 
