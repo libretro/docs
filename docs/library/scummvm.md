@@ -321,8 +321,116 @@ ScummVM.lpl
 	ScummVM.lpl
 	```
 
+### Additional Configuration Notes
 
+Both ScummVM and RetroArch itself allow a vast number of options to be configured on a per-game basis. Here we present three additional configuration topics that will likely be of relevance for typical users:
 
+#### Volume Levels
+
+ScummVM games exhibit a spectacular variance in audio volume levels. For comfort, it is almost mandatory to adjust specific volumes on a per-game basis. Fortunately this is trivial:
+
+- While a game is running, press the RetroPad 'start' button to open the ScummVM GUI.
+
+- Using the cursor, press the 'Options' button.
+
+- Adjust the 'Music volume:', 'SFX volume:' and 'Speech volume:' sliders to the desired levels.
+
+<center> ![](..\image\core\scummvm\scummvm_volume_levels.png) </center>
+
+- Press the 'OK' button, then the 'Resume' button.
+
+Provided that the game has been correctly added to the ScummVM Launcher, the adjusted levels will be preserved between play sessions.
+
+!!! attention
+	If the game has *not* been added to the ScummVM Launcher, or if the game ID in the `.scummvm` files *does not* match the ScummVM Launcher ID, all settings will be lost when the game is closed.
+
+#### Manual Music Device Selection
+
+By default, ScummVM will automatically select the most appropriate music playback option for each game (i.e. MT-32 emulation, FluidSynth MIDI emulation, AdLib emulation). In the majority of cases this will yield the best possible sound quality, and no user intervention is required. There are, however, circumstances and games where a manual override is beneficial. This is something that should be determined by the user on a per-game basis, but here are some practical examples:
+
+- Simon the Sorcerer sounds best with the default selection of MT-32 emulation, but this is too CPU-intensive for most Android devices. An acceptable compromise between performance and sound quality can be achieved by forcing the game to use FluidSynth MIDI emulation.
+
+- Simon the Sorcerer 2 will use FluidSynth MIDI emulation by default. Far better quality music can be achieved by forcing the game to use MT-32 emulation. (And since this game has even higher CPU requirements than the first in the series, smooth playback on Android devices generally requires the use of AdLib emulation)
+
+- Beneath a Steel Sky defaults to MT-32 emulation, which should be best... but forcing the use of FluidSynth MIDI emulation tends to produce 'richer' sounding music, which some users may prefer.
+
+- Flight of the Amazon Queen is another game that defaults to MT-32 emulation but which (arguably) sounds far better with FluidSynth MIDI emulation.
+
+A per-game music device override may be set as follows:
+
+- Run the ScummVM core without content:
+
+    - Go to RetroArch's main menu screen.
+    
+    - Select 'Load Core', then 'ScummVM'.
+    
+    - Select 'Start Core'.
+
+- In the main ScummVM user interface, select the appropriate entry in the Launcher game list and press the 'Edit Game...' button.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_edit_game.png) </center>
+
+- In the dialog that opens, select the 'Audio' tab.
+
+- Tick the 'Override global audio settings' checkbox.
+
+- Under 'Music Device:', select the desired option (i.e. 'FluidSynth', 'MT-32 Emulator' or 'AdLib Emulator').
+
+- Press the 'OK' button.
+
+<center> ![](..\image\core\scummvm\scummvm_menu_audio_override.png) </center>
+
+#### Aspect Ratio Correction
+
+ScummVM's core provided aspect ratio is 4:3. For most games this is correct, particularly for newer games, and those that targeted the PC as their primary platform. It is widely known that DOS games typically ran at 320x200, with non-square pixels stretched to fill a 4:3 display.
+
+It is not so widely known that a number of popular games targeted the European Amiga market, where (due to various PAL/NTSC considerations) 320x200 content was often shown in a letterboxed rectangle at a display resolution of 320x256. It is sometimes difficult to determine the original intent of the artists, but many of these games were actually made in a quasi-widescreen format. Some notable examples are:
+
+- Beneath a Steel Sky
+
+- Flight of the Amazon Queen
+
+- Simon the Sorcerer 1 + 2
+
+(The full list of affected games should be determined at the user's discretion)
+
+The actual 'correct' aspect ratio in these cases is somewhat fuzzy, but good results are achieved by using the pixel aspect ratio of 16:10.
+
+To demonstrate the issue, here is an example screenshot from Beneath a Steel Sky at the default 4:3 ratio:
+
+<center> ![](..\image\core\scummvm\beneath_a_steel_sky_4-3.png) </center>
+
+Note the distorted fan vents. Here is the same image at a 16:10 ratio:
+
+<center> ![](..\image\core\scummvm\beneath_a_steel_sky_16-10.png) </center>
+
+The fan vents are the correct shape, and the character proportions are more natural.
+
+To automate correct aspect ratio selection for games such as these, a RetroArch configuration override should be used. This can be set up as follows:
+
+- Enter the RetroArch `config` directory.
+
+- Create a new directory called `scummvm` (if it does not already exist).
+
+- Create a new text file with the exact same name as the `.scummvm` file for the game to be overriden, but with a `.cfg` extension.
+
+	An example layout for 'Flight of the Amazon Queen' is shown:
+
+```
+└── config/
+    └── scummvm/
+        └── Flight of the Amazon Queen.cfg
+```
+
+- Open the `.cfg` file in a text editor and paste the following on a single line:
+
+```
+aspect_ratio_index = "2"
+```
+
+- Save and close the file.
+
+Now whenever the game is launched, it will be displayed at the 'correct' 16:10 ratio. This will not affect any other game.
 
 ## Core options
 
@@ -380,9 +488,11 @@ The ScummVM core has the following option(s) that can be tweaked from the core o
 
 - The RetroPad right analog stick is mapped to an 8-way 'Virtual Numpad' with the following layout:
 
-        [7][8][9]
-        [4]   [6]
-        [1][2][3]
+```
+[7][8][9]
+[4]   [6]
+[1][2][3]
+```
 
 **Additional 'ScummVM Input' Descriptions:**
 
