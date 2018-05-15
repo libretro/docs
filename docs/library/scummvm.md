@@ -124,7 +124,7 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 
 Some games only contain music in the form of MIDI data. By default, ScummVM will emulate MIDI mode using AdLib. Higher quality audio may be achieved for MIDI-enabled games by using FluidSynth MIDI emulation with an appropriate soundfont. This is the recommended mode of operation under RetroArch.
 
-- Select the 'MIDI' tab, then under 'GM Device' select 'FluidSynth'.
+- Select the 'MIDI' tab, then under 'GM Device:' select 'FluidSynth'.
 
 - Press the 'SoundFont:' button and navigate to the RetroArch `system` directory. Enter the `scummvm/extra/` folder. (NB: If the steps of this guide have been followed in order, the `scummvm/extra/` folder will be selected automatically upon pressing the 'SoundFont:' button)
 
@@ -145,7 +145,7 @@ Many games benefit greatly from FluidSynth MIDI emulation. Some particularly not
 - Discworld
 
 !!! attention
-	FluidSynth MIDI emulation slightly increases the CPU requirements of the ScummVM core. On the vast majority of platforms this should not be an issue. If crackling sound is observed on very low power devices, FluidSynth MIDI emulation should be disabled by setting 'GM Device' to the default "Don't use General MIDI music" option.
+	FluidSynth MIDI emulation slightly increases the CPU requirements of the ScummVM core. On the vast majority of platforms this should not be an issue. If crackling sound is observed on very low power devices, FluidSynth MIDI emulation should be disabled by setting 'GM Device:' to the default "Don't use General MIDI music" option.
 
 #### Enable MT-32 Emulation (Optional)
 
@@ -162,7 +162,7 @@ These files must be placed inside the `scummvm/extra/` folder within the RetroAr
 
 - Select the 'MT-32' tab.
 
-- Under 'MT-32 Device' select 'MT-32 Emulator'.
+- Under 'MT-32 Device:' select 'MT-32 Emulator'.
 
 - Press the 'Apply' button, then the 'OK' button to close the options menu.
 
@@ -179,7 +179,7 @@ Some notable examples of games that sound exquisite with MT-32 emulation are:
 Experiencing Monkey Island 2 without MT-32 emulation is like listening to Beethoven played on a kazoo.
 
 !!! attention
-	MT-32 emulation substantially increases the CPU requirements of the ScummVM core, and this can vary on a per-game basis. On most desktop systems this should not be an issue, but some devices may struggle to maintain full speed with all games. For example, 'Monkey Island 2' and 'Indiana Jones and the Fate of Atlantis' will run on very low power Android chipsets, but 'Simon the Sorcerer' will overwhelm mid-to-high-end mobile CPUs. If crackling sound is observed, the user should either (a) disable MT-32 emulation by setting 'MT-32 Device' to the default "Don't use Roland MT-32 music" or (b) force the use of the 'FluidSynth' audio device via an internal ScummVM game settings override (this is described in a following section).
+	MT-32 emulation substantially increases the CPU requirements of the ScummVM core, and this can vary on a per-game basis. On most desktop systems this should not be an issue, but some devices may struggle to maintain full speed with all games. For example, 'Monkey Island 2' and 'Indiana Jones and the Fate of Atlantis' will run on very low power Android chipsets, but 'Simon the Sorcerer' will overwhelm mid-to-high-end mobile CPUs. If crackling sound is observed, the user should either (a) disable MT-32 emulation by setting 'MT-32 Device:' to the default "Don't use Roland MT-32 music" or (b) force the use of the 'FluidSynth' audio device via an internal ScummVM game settings override (this is described in a following section).
 
 This concludes 'Initial Configuration'. The core may be shut down either by pressing the 'Quit' button, or via 'Close Content' from the Quick Menu.
 
@@ -342,11 +342,11 @@ ScummVM games exhibit a spectacular variance in audio volume levels. For comfort
 Provided that the game has been correctly added to the ScummVM Launcher, the adjusted levels will be preserved between play sessions.
 
 !!! attention
-	If the game has *not* been added to the ScummVM Launcher, or if the game ID in the `.scummvm` files *does not* match the ScummVM Launcher ID, all settings will be lost when the game is closed.
+	If the game has *not* been added to the ScummVM Launcher, or if the game ID in the `.scummvm` file *does not* match the ScummVM Launcher ID, all settings will be lost when the game is closed.
 
 #### Manual Music Device Selection
 
-By default, ScummVM will automatically select the most appropriate music playback option for each game (i.e. MT-32 emulation, FluidSynth MIDI emulation, AdLib emulation). In the majority of cases this will yield the best possible sound quality, and no user intervention is required. There are, however, circumstances and games where a manual override is beneficial. This is something that should be determined by the user on a per-game basis, but here are some practical examples:
+By default, ScummVM will automatically select the most appropriate music playback option for each game (i.e. MT-32 emulation, FluidSynth MIDI emulation or AdLib emulation). In the majority of cases this will yield the best possible sound quality, and no user intervention is required. There are, however, circumstances and games where a manual override is beneficial. This is something that should be determined by the user on a per-game basis, but here are some practical examples:
 
 - Simon the Sorcerer sounds best with the default selection of MT-32 emulation, but this is too CPU-intensive for most Android devices. An acceptable compromise between performance and sound quality can be achieved by forcing the game to use FluidSynth MIDI emulation.
 
