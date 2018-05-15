@@ -412,7 +412,7 @@ To automate correct aspect ratio selection for games such as these, a RetroArch 
 
 - Create a new directory called `scummvm` (if it does not already exist).
 
-- Create a new text file with the exact same name as the `.scummvm` file for the game to be overriden, but with a `.cfg` extension.
+- Create a new text file with the exact same name as the `.scummvm` file for the game to be overridden, but with a `.cfg` extension.
 
 	An example layout for 'Flight of the Amazon Queen' is shown:
 
@@ -549,7 +549,9 @@ The ScummVM core has the following option(s) that can be tweaked from the core o
 
 ## Compatibility
 
-- [ScummVM Compatibility List](https://www.scummvm.org/compatibility/)
+Compatibility listings for the standalone version of ScummVM may be found on the official [ScummVM Compatibility Page](http://scummvm.org/compatibility).
+
+The Libretro ScummVM core currently has issues with a handful of games that function correctly when using the standalone version. An evolving RetroArch-specific compatibility list is being maintained in this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1a87BnQJc7_fTD5zF55JXcm79d5_l_d1ghDxtiubTnDE).
 
 ## External Links
 
