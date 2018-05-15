@@ -126,7 +126,7 @@ Some games only contain music in the form of MIDI data. By default, ScummVM will
 
 - Select the 'MIDI' tab, then under 'GM Device' select 'FluidSynth'.
 
-- Press the 'SoundFont:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder. (NB: If you have followed the steps of this guide in order, the 'scummvm/extra/' folder will be selected automatically upon pressing the 'SoundFont:' button)
+- Press the 'SoundFont:' button and navigate to the RetroArch 'system' directory. Enter the 'scummvm/extra/' folder. (NB: If the steps of this guide have been followed in order, the 'scummvm/extra/' folder will be selected automatically upon pressing the 'SoundFont:' button)
 
 - Select the file 'Roland_SC-55.sf2' and press the 'Choose' button.
 
@@ -179,7 +179,7 @@ Some notable examples of games that sound exquisite with MT-32 emulation are:
 Experiencing Monkey Island 2 without MT-32 emulation is like listening to Beethoven played on a kazoo.
 
 !!! attention
-	MT-32 emulation substantially increases the CPU requirements of the ScummVM core, and this can vary on a per-game basis. On most desktop systems this should not be an issue, but some devices may struggle to maintain full speed with all games. For example, 'Monkey Island 2' and 'Indiana Jones and the Fate of Atlantis' will run on very low power Android chipsets, but 'Simon the Sorcerer' will overwhelm mid-to-high-end mobile CPUs. If crackling sound is observed, the user should either (a) disable MT-32 emulation by setting 'MT-32 Device' to the default "Don't use Roland MT-32 music" or (b) force the use of the 'FluidSynth' audio device via an internal ScummVM game settings override (this is described in the following section).
+	MT-32 emulation substantially increases the CPU requirements of the ScummVM core, and this can vary on a per-game basis. On most desktop systems this should not be an issue, but some devices may struggle to maintain full speed with all games. For example, 'Monkey Island 2' and 'Indiana Jones and the Fate of Atlantis' will run on very low power Android chipsets, but 'Simon the Sorcerer' will overwhelm mid-to-high-end mobile CPUs. If crackling sound is observed, the user should either (a) disable MT-32 emulation by setting 'MT-32 Device' to the default "Don't use Roland MT-32 music" or (b) force the use of the 'FluidSynth' audio device via an internal ScummVM game settings override (this is described in a following section).
 
 This concludes 'Initial Configuration'. The core may be shut down either by pressing the 'Quit' button, or via 'Close Content' from the Quick Menu.
 
@@ -235,6 +235,95 @@ Once all files are in place, each game may be added as follows:
 !!! attention
 	Once a game has been registered, it may be run by selecting it in the ScummVM Launcher game list and pressing the 'Start' button. **However:** Employing the ScummVM Launcher in this manner is not recommended, since it prevents the use of RetroArch per-game configuration overrides, input remaps and shader overrides. The ScummVM Launcher should only be used to add games and change settings.
 
+#### Running a Game
+
+Running a ScummVM game via the RetroArch frontend requires the addition of an appropriately configured `.scummvm` file to the game directory. For each game listed in the ScummVM Launcher, the following procedure should be followed:
+
+- Note the specific game 'ID:' that was submitted when adding the game to the ScummVM Launcher. If this guide has been followed, the game ID will be equal to the 'short name' found on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
+
+- Enter the directory containing the game data.
+
+- Create a new text file named after the game, with a `.scummvm` extension.
+
+	(The name of the `.scummvm` file will be used to select which RetroArch configuration/remap override should be loaded when a game is launched. The chosen name does not have to be the same as the game directory name or the ScummVM 'short name', although either would be appropriate. The only requirement is that each `.scummvm` file should have a *unique* name.)
+
+- Open the `.scummvm` file in a text editor and enter the game ID on a single line. Save and close the file.
+
+Again, 'Flight of the Amazon Queen' is presented as a simple example:
+
+```
+└── ROMs/
+    └── ScummVM/
+        └── Flight of the Amazon Queen (CD DOS)/
+            ├── Flight of the Amazon Queen.scummvm
+            └── queen.1
+```
+
+...where `Flight of the Amazon Queen.scummvm` has the following content:
+
+    queen
+
+Games can then be launched as follows:
+
+- Go to RetroArch's main menu screen.
+
+- Select 'Load Content'.
+
+- Navigate to the game directory.
+
+- Select the `.scummvm` file.
+
+- The game will load.
+
+<center> ![](..\image\core\scummvm\scummvm_load_content.png) </center>
+
+For users who do not wish to create their own `.scummvm` files, a pre-prepared collection is available in the [libretro-database-scummvm](https://github.com/RobLoach/libretro-database-scummvm/tree/master/games) repository. Simply download the appropriate file for a particular game and copy it to the game directory.
+
+!!! attention
+	When using third-party `.scummvm` files, it is important to verify that the file contents matches the specific game ID that was submitted when adding the game to the ScummVM Launcher. Do not assume that third-party `.scummvm` files are automagically 'correct'.
+
+#### Playlist/Scanning Support
+
+To launch games efficiently via the RetroArch frontend, it is recommended to add them to a playlist. Provided that a `.scummvm` file is present inside each game directory, RetroArch supports automated scanning/playlist generation for ScummVM content:
+
+- From RetroArch's main menu screen, navigate to the 'Import content' tab.
+
+- Select 'Scan Directory'.
+
+- Navigate to the folder containing the ScummVM game directories.
+
+- Select `<Scan This Directory>`.
+
+All recognised games will be added to a `ScummVM.lpl` file in the RetroArch 'playlist' directory, and be made available via a new 'ScummVM' tab in the frontend menu.
+
+(Alternatively, each game directory may be scanned in turn - useful if game directories are present in multiple locations)
+
+An example playlist entry for 'Flight of the Amazon Queen' is as follows:
+
+```
+/storage/ROMs/ScummVM/Flight of the Amazon Queen (CD DOS)/Flight of the Amazon Queen.scummvm
+Flight of the Amazon Queen
+DETECT
+DETECT
+19C1B1B5|crc
+ScummVM.lpl
+```
+
+!!! attention
+	Not all games/configurations are present in the current database. If a particular game is not detected, an entry in the `ScummVM.lpl` playlist file can be added by hand. It should have the format:
+	
+	```
+	/path/to/game_directory/game_name.scummvm
+	game_name
+	DETECT
+	DETECT
+	0|crc
+	ScummVM.lpl
+	```
+
+
+
+
 ## Core options
 
 The ScummVM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
@@ -260,34 +349,6 @@ The ScummVM core has the following option(s) that can be tweaked from the core o
 
 !!! attention
 	The deadzone setting can have a significant effect on the 'feel' of analog cursor movement. The value should be set as low as possible for best results - i.e. reduce the value until cursor drift is evident, then increment to the next highest setting. Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
-
-## Scanning Support
-
-To allow launching ScummVM games from the menu, you'll need to do the following:
-
-1. Look up the Game ID of the game you're looking to add to the menu. Game IDs can be found in [ScummVM's compatibility list](http://scummvm.org/compatibility).
-    > `monkey` for Monkey Island
-
-2. Inside the game directory, create a `.scummvm` file, named by the Game ID
-    > `monkey.scummvm` for Monkey Island
-
-3. Open up the file in a text editor, and enter in the Game ID.
-    > `echo monkey > monkey.scummvm`
-
-4. (Optional) Alternatively, you could download a prepared `.scummvm` file from [libretro-database-scummvm](https://github.com/RobLoach/libretro-database-scummvm/tree/master/games).
-
-5. Scan each game directory
-
-This is an example of what the playlist would look like:
-
-```
-    /storage/roms/scummvm/monkey/monkey.scummvm
-    The Secret of Monkey Island
-    /tmp/cores/scummvm_libretro.so
-    ScummVM
-    b0e2af30|crc
-    ScummVM.lpl
-```
 
 ## Joypad
 
