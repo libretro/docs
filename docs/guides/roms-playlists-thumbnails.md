@@ -95,7 +95,7 @@ Each playlist is a plain text file with an extension of `.lpl`.
     EC95702D|crc
     Nintendo - Nintendo 64.lpl
 
-1. The path to the ROM
+1. The path to the ROM. This can either be an 'absolute' path or a path relative to the current working directory.
 2. The display name (you can use any name here)
 3. The path to the core, this libretro core will be used to launch the ROM. **You can use the word DETECT in place of the core path here. Once this is done you can set the core to be used for this playlist via the RetroArch GUI.**
 4. The displayname of the core, not really useful, we keep it there because the history list is also using this format
