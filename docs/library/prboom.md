@@ -280,7 +280,7 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 | User 1 input descriptors for 'Gamepad Classic' device type | RetroPad Inputs                             | PrBoom inputs   |
 |------------------------------------------------------------|---------------------------------------------|-----------------|
 | Use                                                        | ![](../image/retropad/retro_b.png)          | Use             |
-| Toggle Run                                                 | ![](../image/retropad/retro_y.png)          | Toggle Run      |
+| Run                                                        | ![](../image/retropad/retro_y.png)          | Run             |
 | Show/Hide Map                                              | ![](../image/retropad/retro_select.png)     | Show/Hide Map   |
 | Show/Hide Menu                                             | ![](../image/retropad/retro_start.png)      | Show/Hide Menu  |
 | D-Pad Up                                                   | ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up        |
