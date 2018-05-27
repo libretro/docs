@@ -4,12 +4,20 @@
 
 A new work-in-progress Tomb Raider game engine ported to libretro.
 
-The nice thing about OpenLara is that, while staying true to the original look and feel of the original, it also adds some graphical enhancements to it that manages to make the boxy old-school Tomb Raider games look a bit less archaic. Some examples include :
+This game engine recreation seeks to allow you to play the original Tomb Raider engine games, from 1 all the way up to 5.
 
-- Self-shadowing on Lara, enemies, etc.
-- New water effects which replaces the simple vertex manipulation of the water surface on the PSX. The Saturn version actually was the only version that tried to do something a bit more sophisticated with the water. If you dislike these very nice graphical enhancements, I inserted a core option so you can turn these off (‘Enable water effects’ in Quick Menu -> options).
+The nice thing about OpenLara is that, while staying true to the original look and feel of the original, it also adds some enhancements to it that manages to make the boxy old-school Tomb Raider games look a bit less archaic. Some examples include :
+
+- The framerate is no longer fixed to 30fps, and you can now run it at a smooth 60fps framerate. There are even more framerate options, allowing you to play at 90fps, 120fps or even 144fps.
+- You can set the internal resolution of the game.
+- New water effects which replaces the simple vertex manipulation of the water surface on the PSX. The Saturn version actually was the only version that tried to do something a bit more sophisticated with the water.
+- Self-shadowing on all the player models (although this still has some visual anomalies at places).
+- Improved lighting effects, including colored lighting (you can see the save crystals emanating a blue light for instance, something which definitely was not in any of the prior Tomb Raider versions).
 - Shading effects – after Lara gets out of the water, her skin has a slightly wet shading effect.
-- A first-person mode that is more convincing and fun than what you’d expect. It behaves a bit like Mirror’s Edge in that the camera bobs up and down, and you can see Lara’s hands move in front of you. If you try to do a somersault – the camera will rotate along with it as well. What makes the firstperson mode a bit more convincing is the new self-shadowing effects that have been added.
+- There is also a brand new local multiplayer mode. You toggle the game into splitscreen mode by pressing Start at any one time. From there, you can see a second Lara character, which is only distinguished from the main character by a slightly jerky animation update routine. Player 2 can now take control of this Lara and you can engage in ‘jolly co-operation’. At all times, Player 1 can beckon Player 2 back to his position by pressing the Start button, which resets player 2’s position back to Player 1’s so that Player 2 can always be brought back in case he/she is running too far astray.
+- There is also a first person view that you can toggle into by pressing the Look button (L button) and then pressing the Action button (B button). This gives you a Mirror’s Edge-esque first person view.
+- The ability to target two enemies at the same time individually.
+- The graphical enhancements can all be toggled on/off inside the game’s inventory settings screen (toggleable by pressing the Select button).
 
 The OpenLara core has been authored by
 
@@ -46,31 +54,13 @@ Also, the OpenLara core requires that you turn on ‘Enable Shared Hardware Cont
 
 ![](../image/core/openlara/context.png)
 
-## How to start the OpenLara core:
-
-Right now, OpenLara is more of a tech demo. You have to load separate levels into the program in order to play them. 
-
-Be aware that certain gameplay elements are simply not implemented as of yet, such as health bars, taking damage, etc. You can ‘complete’ the stage technically but you also cannot die or continue to the next level. 
-
-We hope that it will book major progress so that one day we can replay the old Tomb Raider games entirely with these enhanced graphics and enhanced framerates. To this end, we intend to support the project.
-
-**For demonstration purposes, we provide you with the Tomb Raider 1 demo levels so that you can test it out. It is also possible to use levels from the PC/PSX version and load this into the game engine core, so try that out at your own discretion.**
-
-- To try the demo level, you need to obtain its data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
-
-- Select 'Tomb Raider', then select 'tombraider1-demo.zip'. This should download and extract this file to RetroArch's Downloads directory.
-
-- Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
-
-- Select the 'Tomb Raider' directory, then select 'LEVEL2.PSX'.
-
-- If you are asked which core to select, choose 'Tomb Raider (OpenLara)'.
-
 ## Extensions
 
 Content that can be loaded by the OpenLara core have the following file extensions:
 
+- .phd
 - .psx
+- .tr2
 
 RetroArch database(s) that are associated with the OpenLara core:
 
@@ -148,34 +138,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "Internal resolution - 1920x1080"
 	![](../image/core/openlara/1920x1080.png)	
 
-- **Texture filtering (restart)** [openlara_texture_filtering] (**Bilinear filtering**|Nearest)
-
-	Modify texture filtering.
-
-??? note "Texture filtering - Bilinear"
-	![](../image/core/openlara/bilinear.png)
-	
-??? note "Texture filtering - Nearest"
-	![](../image/core/openlara/nearest.png)
-	
-- **Water effects (restart)** [openlara_water_effects] (**enabled**|disabled)
-
-	Enable or disable water effects.
-	
-??? note "Water effects - On"
-	![](../image/core/openlara/water_on.png)
-	
-??? note "Water effects - Off"
-	![](../image/core/openlara/water_off.png)
-
 ## Joypad
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
 | ![](../image/retropad/retro_b.png)             | Action (Shoot/grab)      |
 | ![](../image/retropad/retro_y.png)             | Jump                     |
-| ![](../image/retropad/retro_select.png)        | View toggle              |
-| ![](../image/retropad/retro_start.png)         | Inventory                |
+| ![](../image/retropad/retro_select.png)        | Inventory                |
+| ![](../image/retropad/retro_start.png)         | Start                    |
 | ![](../image/retropad/retro_dpad_up.png)       | Up                       |
 | ![](../image/retropad/retro_dpad_down.png)     | Down                     |
 | ![](../image/retropad/retro_dpad_left.png)     | Left                     |
@@ -183,13 +153,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_a.png)             | Roll                     |
 | ![](../image/retropad/retro_x.png)             | Draw weapon              |
 | ![](../image/retropad/retro_r1.png)            | Walk (when holding)      |
-| ![](../image/retropad/retro_l2.png)            | Sidestep left            |
-| ![](../image/retropad/retro_r2.png)            | Sidestep right           |
+| ![](../image/retropad/retro_l2.png)            | Duck/Crouch (TR3 and up) |
+| ![](../image/retropad/retro_r2.png)            | Dash (TR3 and up)        |
 
 ## External Links
 
 - [Official OpenLara Github Repository](https://github.com/XProger/OpenLara)
-- [OpenLara WebGL build with demo level](http://xproger.info/projects/OpenLara/)
+- [Official OpenLara Website](http://xproger.info/projects/OpenLara/)
 - [Libretro OpenLara Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/openlara_libretro.info)
 - [Libretro OpenLara Github Repository](https://github.com/libretro/OpenLara)
 - [Report Libretro OpenLara Core Issues Here](https://github.com/libretro/libretro-meta/issues)
