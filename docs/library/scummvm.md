@@ -436,6 +436,8 @@ Now whenever the game is launched, it will be displayed at the 'correct' 16:10 r
 
 The ScummVM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
+Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
 - **Gamepad Cursor Speed** [scummvm_gamepad_cursor_speed] (**1.0**|1.5|2.0|2.5|3.0|0.25|0.5|0.75)
 
 	Sets the mouse cursor speed multiplier when moving the cursor with the RetroPad left analog stick or D-Pad.
@@ -457,6 +459,15 @@ The ScummVM core has the following option(s) that can be tweaked from the core o
 
 !!! attention
 	The deadzone setting can have a significant effect on the 'feel' of analog cursor movement. The value should be set as low as possible for best results - i.e. reduce the value until cursor drift is evident, then increment to the next highest setting. Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+
+- **Speed Hack (Restart)** [scummvm_speed_hack] (**disabled**|enabled)
+
+	Enables an optional speed hack that significantly reduces the CPU requirements of the core by allowing subtle timing inaccuracies.
+
+!!! attention
+	This hack is considered 'safe' - games should run correctly when it is enabled, and most inaccuracies are imperceptible other than in a few edge cases. It remains a hack, though, and it is strongly recommended that users of desktop class machines keep it disabled.
+	
+	**However:** For users of low power hardware (Android devices, single board computers), this hack is essentially **mandatory** for full speed operation of the core. For Android users in particular, the guides in the 'Usage' section of this document assume that the speed hack is enabled.
 
 ## Joypad
 
