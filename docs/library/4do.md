@@ -11,17 +11,22 @@ The 4DO core has been authored by
 
 The 4DO core is licensed under
 
-- [Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedocore.h)
+- [Modified GNU LGPL / Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedo_3do.c)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory.
+Required or optional firmware files go in the frontend's system directory. One of the following system BIOSes is required to run software.
 
-| Filename     | Description                     | md5sum                           |
-|:------------:|:-------------------------------:|:--------------------------------:|
-| panafz10.bin | Panasonic FZ-10 BIOS - Required | 51f2f43ae2f3508a14d9f56597e2d3ce |
+| Filename             | Description                 | md5sum                           |
+|:--------------------:|:---------------------------:|:--------------------------------:|
+| panafz1.bin          | Panasonic FZ-1 BIOS         | f47264dd47fe30f73ab3c010015c155b |
+| panafz10.bin         | Panasonic FZ-10 BIOS        | 51f2f43ae2f3508a14d9f56597e2d3ce |
+| panafz10-patched.bin | Panasonic FZ-10 [RSA Patch] | 1477bda80dc33731a65468c1f5bcbee9 |
+| goldstar.bin         | Goldstar  GDO-101M BIOS     | 8639fd5e549bd6238cfee79e3e749114 |
+| sanyotry.bin         | Sanyo IMP-21J TRY BIOS      | 35fa1a1ebaaeea286dc5cd15487c13ea |
+| rom2.bin             | Kanji ROM (optional)        | b8dc97f778a6245c58e064b0312e8281 |
 
 ## Extensions
 
@@ -75,11 +80,11 @@ The 4DO core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-| File          | Description       |
-|:-------------:|:-----------------:|
-| *.srm         | Per game NVRAM    |
-| 3DO.nvram     | Shared NVRAM      |
-| 3DO.nvram.tmp | Shared NVRAM Temp |
+| File          | Description                |
+|:-------------:|:--------------------------:|
+| *.srm         | Per game NVRAM             |
+| 3DO.nvram     | Shared NVRAM               |
+| 3DO.nvram.tmp | Only used for atomic saves |
 
 **Frontend's State directory**
 
@@ -107,17 +112,17 @@ The 4DO core has the following option(s) that can be tweaked from the core optio
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **CPU overclock** [4do_cpu_overclock] (**1x**|2x|4x)
+- **CPU overclock** [4do_cpu_overclock] (**1.0x (12.50Mhz)**|1.1x (13.75Mhz)|1.2x (15.00Mhz)|1.5x (18.75Mhz)|1.6x (20.00Mhz)|1.8x (22.50Mhz)|2.0x (25.00Mhz))
 
-    The 3DO used a 12.5MHz ARM CPU as its central processor. We have implemented a CPU overclocking feature in the 4DO core so that you can increase this by 2 (25MHz) or 4x (50MHz).
-	
-    **May not work on all games.**
+    The 3DO used a 12.5MHz ARM60 CPU as its central processor. We have implemented a CPU overclocking feature in the 4DO core so that you can increase performance upto 2x.
+    
+    **May not have an impact on all games.**
 	
     [https://www.youtube.com/watch?v=7bT2ecwKdHQ](https://www.youtube.com/watch?v=7bT2ecwKdHQ) 
 	
 - **High Resolution** [4do_high_resolution] (**disabled**|enabled)
 
-	Doubles internal resolution.
+	Internal resolution is 320x240. This feature makes the system behave as if it has a 640x480 framebuffer.
 	
 ??? note "High Resolution - disabled"
 	![](..\image\core\4do\high_off.png)
@@ -130,6 +135,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose whether NVRAM saves are per game or NVRAM saves are shared between all games.
 	
 	Look at the [Directories section](https://docs.libretro.com/library/4do/#directories) for more information.
+	
+- **Button X also acts as P** [4do_x_button_also_p] (**disabled**|enabled)
+
+	Normally P is by default mapped to Start. This option will also map P to X. This is useful in fighting games such as Super Street Fighter II Turbo.
+	
+- **Controller Count** [4do_controller_count] (**1**|2|3|4|5|6|7|8)
+
+	There is a bug (maybe in 4DO but possibly in certain games) in which having more than 1 controller emulated causes the game not to respond to input. This allows working around the issue.
 	
 - **Timing Hack 1 (Crash 'n Burn)** [4do_hack_timing_1] (**disabled**|enabled)
 
@@ -149,7 +162,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Graphics Step Y Hack (Samurai Shodown)** [4do_hack_graphics_step_y] (**disabled**|enabled)
 
-	Enable this to fix Samurai Shodown.
+	Enable this to fix Samurai Shodown's background rendering.
 	
 ## Joypad
 
