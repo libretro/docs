@@ -259,7 +259,6 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 | Sonic Adventure (PAL)                       | Must be set to use "VGA" output in core options, as "TV" mode will cause all subsequent FMV to make RetroArch become unresponsive.                                                                                                                                     |
 | Sonic Adventure 2 (USA)                     | Text during score tally will flicker sometimes (Wild Canyon as Knuckles).                                                                                                       |
 | Super Runabout: San Francisco (USA)         | Crash to desktop with no error message.                                                                                                                                                                                                                                |
-| Zombie Revenge (USA)                        | The laptop in the game's intro cutscene doesn't display correctly. If you pause the game using the start button, RetroArch freezes.                                                        |
 
 ## External Links
 
