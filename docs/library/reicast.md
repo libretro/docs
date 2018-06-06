@@ -164,9 +164,9 @@ The Reicast core has the following option(s) that can be tweaked from the core o
 
 <center> Awaiting description. </center>
 
-- **Volume modifier mode** (**Off**/debug/on/full)
+- **Volume modifier** (**On**/off)
 
-<center> Awaiting description. </center>
+<center> A GPU feature that is typically used by games to draw shadows of objects. You should typically leave this on - performance impact should be minimal to negligible. </center>
 
 - **Widescreen hack** (**Off**/On)
 
@@ -180,11 +180,11 @@ The Reicast core has the following option(s) that can be tweaked from the core o
 
 <center> Awaiting description. </center>
 
-- **Broadcast** (**4**/0/1/2/3)
+- **Broadcast** (**2**/3/4/0/1)
 
 <center> Awaiting description. </center>
 
-- **Framerate** (**normal**/fullspeed)
+- **Framerate** (**fullspeed**/normal)
 
 <center> Awaiting description. </center>
 
