@@ -260,6 +260,7 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 | Sonic Adventure (PAL)                       | Must be set to use "VGA" output in core options, as "TV" mode will cause all subsequent FMV to make RetroArch become unresponsive.                                                                                                                                     |
 | Sonic Adventure 2 (USA)                     | Text during score tally will flicker sometimes (Wild Canyon as Knuckles).                                                                                                       |
 | Super Runabout: San Francisco (USA)         | Crash to desktop with no error message.                                                                                                                                                                                                                                |
+| Unreal Tournament (USA)                     | Set Cable Type to 'VGA (RGB)', otherwise the game will crash at start.                                                                                                       |
 
 ## External Links
 
