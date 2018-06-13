@@ -26,6 +26,7 @@ Required or optional firmware files go in the frontend's system directory. One o
 | panafz10-patched.bin | Panasonic FZ-10 [RSA Patch] | 1477bda80dc33731a65468c1f5bcbee9 |
 | goldstar.bin         | Goldstar  GDO-101M BIOS     | 8639fd5e549bd6238cfee79e3e749114 |
 | sanyotry.bin         | Sanyo IMP-21J TRY BIOS      | 35fa1a1ebaaeea286dc5cd15487c13ea |
+| 3do_arcade_saot.bin  | Shootout At Old Tucson BIOS | 8970fc987ab89a7f64da9f8a8c4333ff |
 | rom2.bin             | Kanji ROM (optional)        | b8dc97f778a6245c58e064b0312e8281 |
 
 ## Extensions
