@@ -106,6 +106,7 @@ pages:
         - 'Nintendo - Game Boy Advance (mGBA)': 'library/mgba.md'
         - 'Nintendo - Game Boy Advance (VBA Next)': 'library/vba_next.md'
         - 'Nintendo - Game Boy Advance (VBA-M)': 'library/vba_m.md'
+        - 'Nintendo - GameCube/Wii (Dolphin)': 'library/dolphin.md'
         - 'Nintendo - NES (bnes)': 'library/bnes.md'
         - 'Nintendo - NES / Famicom (Emux NES)': 'library/emux_nes.md'
         - 'Nintendo - NES / Famicom (FCEUmm)': 'library/fceumm.md'
