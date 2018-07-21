@@ -335,7 +335,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Compatibility
 
-- [PPSSPP Compatibiltiy List](http://report.ppsspp.org/games)
+- [PPSSPP Compatibility List](http://report.ppsspp.org/games)
 
 ## External Links
 
