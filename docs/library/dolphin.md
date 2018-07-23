@@ -10,7 +10,7 @@ The Dolphin core is licensed under
 
 - [GPLv2](https://github.com/libretro/dolphin/blob/master/LICENSE.TXT)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores can be found [here](https://docs.libretro.com/tech/licenses/).
 
 ## Requirements
 
