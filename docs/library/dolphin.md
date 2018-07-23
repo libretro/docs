@@ -24,7 +24,7 @@ TODO/FIXME
 
 ## Extensions
 
-Content that can be loaded by the PPSSPP core have the following file extensions:
+Content that can be loaded by the Dolphin core have the following file extensions:
 
 - .elf
 - .iso
@@ -43,7 +43,7 @@ RetroArch database(s) that are associated with the Dolphin core:
 
 ## Features
 
-Frontend-level settings or features that the PPSSPP core respects.
+Frontend-level settings or features that the Dolphin core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
