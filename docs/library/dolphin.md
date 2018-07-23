@@ -4,11 +4,11 @@
 
 A Nintendo Gamecube/Wii emulator for Android, Windows, Mac and Linux, written in C++.
 
-The Dolphin core supports [OpenGL](https://docs.libretro.com/library/ppsspp/#opengl), [Vulkan](https://docs.libretro.com/library/ppsspp/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/ppsspp/#d3d11) rendering.
+The Dolphin core supports [OpenGL](https://docs.libretro.com/library/dolphin/#opengl), [Vulkan](https://docs.libretro.com/library/dolphin/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/dolphin/#d3d11) rendering.
 
 The Dolphin core is licensed under
 
-- [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)
+- [GPLv2](https://github.com/libretro/dolphin/blob/master/LICENSE.TXT)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
 
@@ -80,12 +80,12 @@ TODO/FIXME
 ## Geometry and timing
 
 - The Dolphin core's core provided FPS is 60 (for NTSC) / 50 (for PAL)
-- The PPSSPP core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
-- The PPSSPP core's base width is dependent on the 'Internal Resolution' core option
-- The PPSSPP core's base height is dependent on the 'Internal Resolution' core option
-- The PPSSPP core's max width is dependent on the 'Internal Resolution' core option
-- The PPSSPP core's max height is dependent on the 'Internal Resolution' core option
-- The PPSSPP core's core provided aspect ratio is 4/3.
+- The Dolphin core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
+- The Dolphin core's base width is dependent on the 'Internal Resolution' core option
+- The Dolphin core's base height is dependent on the 'Internal Resolution' core option
+- The Dolphin core's max width is dependent on the 'Internal Resolution' core option
+- The Dolphin core's max height is dependent on the 'Internal Resolution' core option
+- The Dolphin core's core provided aspect ratio is 4/3.
 
 ## Language
 
