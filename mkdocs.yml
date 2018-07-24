@@ -210,36 +210,37 @@ pages:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:
     - Compilation:
-      - Apple:
-        - 'OSX/PowerPC': 'compilation/osxppc.md'
-        - 'OSX/macOS': 'compilation/osx.md'
-        - 'iOS': 'compilation/ios.md'
-      - 'Android': 'compilation/android.md'
-      - Linux and BSD:
-        - 'Overview for Linux/BSD': 'compilation/linux-and-bsd.md'
-        - 'Ubuntu': 'compilation/ubuntu.md'
-      - 'Haiku': 'compilation/haiku.md'
-      - Microsoft:
-        - 'DOS': 'compilation/dos.md'
-        - Windows NT3.51:
-          - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
-        - Windows 95/98/NT4:
-          - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
-        - Windows 98SE/ME/2000:
-          - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
-          - 'MSVC IDE': 'compilation/windows98.md'
-        - Windows XP and later:
-          - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
-          - 'MSVC IDE': 'compilation/windowsXP.md'
-        - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
-      - Nintendo:
-        - 'Nintendo 3DS': 'compilation/3ds.md'
-        - 'Nintendo GameCube': 'compilation/gamecube.md'
-        - 'Nintendo Wii': 'compilation/wii.md'
-        - 'Nintendo Wii U': 'compilation/wiiu.md'
-      - Sony:
-        - 'PlayStation Portable': 'compilation/psp.md'
-        - 'PlayStation Vita/TV': 'compilation/psvita.md'
+      - RetroArch:
+        - Apple:
+          - 'OSX/PowerPC': 'compilation/osxppc.md'
+          - 'OSX/macOS': 'compilation/osx.md'
+          - 'iOS': 'compilation/ios.md'
+        - 'Android': 'compilation/android.md'
+        - Linux and BSD:
+          - 'Overview for Linux/BSD': 'compilation/linux-and-bsd.md'
+          - 'Ubuntu': 'compilation/ubuntu.md'
+        - 'Haiku': 'compilation/haiku.md'
+        - Microsoft:
+          - 'DOS': 'compilation/dos.md'
+          - Windows NT3.51:
+            - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
+          - Windows 95/98/NT4:
+            - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
+          - Windows 98SE/ME/2000:
+            - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
+            - 'MSVC IDE': 'compilation/windows98.md'
+          - Windows XP and later:
+            - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
+            - 'MSVC IDE': 'compilation/windowsXP.md'
+          - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
+        - Nintendo:
+          - 'Nintendo 3DS': 'compilation/3ds.md'
+          - 'Nintendo GameCube': 'compilation/gamecube.md'
+          - 'Nintendo Wii': 'compilation/wii.md'
+          - 'Nintendo Wii U': 'compilation/wiiu.md'
+        - Sony:
+          - 'PlayStation Portable': 'compilation/psp.md'
+          - 'PlayStation Vita/TV': 'compilation/psvita.md'
     - Meta:
       - 'Core List': 'meta/core_list.md'
       - 'To Do': 'meta/todo.md'
