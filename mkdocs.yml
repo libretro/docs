@@ -210,6 +210,9 @@ pages:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:
     - Compilation:
+      - Core Compatibility:
+        - Nintendo Cores:
+          - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
       - RetroArch:
         - Apple:
           - 'OSX/PowerPC': 'compilation/osxppc.md'
