@@ -213,6 +213,7 @@ pages:
       - Cores:
         - Nintendo Cores:
           - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
+          - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
       - RetroArch:
         - Apple:
           - 'OSX/PowerPC': 'compilation/osxppc.md'
