@@ -339,6 +339,32 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
 	
+- **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
+
+	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+
+!!! attention
+	Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
+	
+	Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+	
+	For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
+
+- **NegCon Twist Response** [pcsx_rearmed_negcon_response] (**linear**|quadratic|cubic)
+
+	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
+	
+	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
+	
+	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
+	
+	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
+	
+!!! attention
+	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
+	
+	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
+
 - **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
 
 	Enables Rumble. Look at the [Rumble section](https://docs.libretro.com/library/pcsx_rearmed#rumble-support) for more information.
@@ -398,28 +424,28 @@ Activating multitap support in compatible games can be configured by the ['Multi
 
 ![](../image/controller/psx.png)
 
-| RetroPad Inputs                                | User 1 - 8 input descriptors | standard    | analog         |
-|------------------------------------------------|------------------------------|-------------|----------------|
-| ![](../image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          |
-| ![](../image/retropad/retro_y.png)             | Square                       | Square      | Square         |
-| ![](../image/retropad/retro_select.png)        | Select                       | Select      | Select         |
-| ![](../image/retropad/retro_start.png)         | Start                        | Start       | Start          |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    |
-| ![](../image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         |
-| ![](../image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       |
-| ![](../image/retropad/retro_l1.png)            | L1                           | L1          | L1             |
-| ![](../image/retropad/retro_r1.png)            | R1                           | R1          | R1             |
-| ![](../image/retropad/retro_l2.png)            | L2                           | L2          | L2             |
-| ![](../image/retropad/retro_r2.png)            | R2                           | R2          | R2             |
-| ![](../image/retropad/retro_l3.png)            | L3                           |             | L3             |
-| ![](../image/retropad/retro_r3.png)            | R3                           |             | R3             |
-| ![](../image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  |
-| ![](../image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |
-| ![](../image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |
-| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y |
+| RetroPad Inputs                                | User 1 - 8 input descriptors | standard    | analog         | negcon                          |
+|------------------------------------------------|------------------------------|-------------|----------------|---------------------------------|
+| ![](../image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          | Analog Button I                 |
+| ![](../image/retropad/retro_y.png)             | Square                       | Square      | Square         | Analog Button II                |
+| ![](../image/retropad/retro_select.png)        | Select                       | Select      | Select         |                                 |
+| ![](../image/retropad/retro_start.png)         | Start                        | Start       | Start          | Start                           |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       | D-Pad Up                        |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     | D-Pad Down                      |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     | D-Pad Left                      |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    | D-Pad Right                     |
+| ![](../image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         | A                               |
+| ![](../image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       | B                               |
+| ![](../image/retropad/retro_l1.png)            | L1                           | L1          | L1             | Left Shoulder Button (analog)   |
+| ![](../image/retropad/retro_r1.png)            | R1                           | R1          | R1             | Right Shoulder Button (digital) |
+| ![](../image/retropad/retro_l2.png)            | L2                           | L2          | L2             | Analog Button II                |
+| ![](../image/retropad/retro_r2.png)            | R2                           | R2          | R2             | Analog Button I                 |
+| ![](../image/retropad/retro_l3.png)            | L3                           |             | L3             |                                 |
+| ![](../image/retropad/retro_r3.png)            | R3                           |             | R3             |                                 |
+| ![](../image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
+| ![](../image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
+| ![](../image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
+| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y |                                 |
 
 ## Compatibility
 
