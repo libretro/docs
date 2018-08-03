@@ -363,7 +363,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 !!! attention
 	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
 	
-	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between physical/emulated hardware, enabling smooth/precise analog input.
+	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
 
 - **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
 
