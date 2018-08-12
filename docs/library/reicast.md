@@ -87,7 +87,7 @@ Required or optional firmware files go in RetroArch's system directory.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -244,8 +244,8 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 
 ### General Reicast Issues
 
-- The date and time do not seem to get properly saved, as the system will ask you to set the clock every time you start. 
-- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. 
+- If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
+- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Reicast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
 - Polygon sorting issues can make objects appear distorted. 
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead. 
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing. 
