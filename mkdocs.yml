@@ -230,7 +230,7 @@ pages:
             - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
           - Windows 95/98/NT4 (MSVC2003):
             - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
-          - Windows 98SE/ME/2000 (MSVC2003):
+          - Windows 98SE/ME/2000 (MSVC2005):
             - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windows98.md'
           - Windows XP and later (MSVC2010):
