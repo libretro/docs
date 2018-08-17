@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-To compile RetroArch targetting Windows XP or later, we will use Microsoft Visual Studio 2010.
+To compile RetroArch targeting Windows XP or later, we will use Microsoft Visual Studio 2010.
 
 This guide assumes the host OS is Windows XP.
 
