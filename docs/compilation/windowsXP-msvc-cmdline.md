@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-To compile RetroArch on the command-line targetting Windows XP or later, we will use a combination of the MSYS2 shell and Microsoft Visual Studio 2010.
+To compile RetroArch on the command-line targeting Windows XP or later, we will use a combination of the MSYS2 shell and Microsoft Visual Studio 2010.
 
 This guide assumes the host OS is Windows Vista or later, as MSYS2 cannot be installed on anything older.
 
