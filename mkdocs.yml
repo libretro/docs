@@ -226,14 +226,14 @@ pages:
         - 'Haiku': 'compilation/haiku.md'
         - Microsoft:
           - 'DOS': 'compilation/dos.md'
-          - Windows NT3.51:
+          - Windows NT3.51 (MSVC6):
             - 'MSVC Commandline': 'compilation/windowsNT351-msvc-cmdline.md'
-          - Windows 95/98/NT4:
+          - Windows 95/98/NT4 (MSVC2003):
             - 'MSVC Commandline': 'compilation/windows95-msvc-cmdline.md'
-          - Windows 98SE/ME/2000:
+          - Windows 98SE/ME/2000 (MSVC2003):
             - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windows98.md'
-          - Windows XP and later:
+          - Windows XP and later (MSVC2010):
             - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windowsXP.md'
           - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
