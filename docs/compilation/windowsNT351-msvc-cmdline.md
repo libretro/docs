@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-To compile RetroArch on the command-line targetting Windows NT3.51, we will use a combination of the MSYS2 shell and Microsoft Visual C++ 6.
+To compile RetroArch on the command-line targeting Windows NT3.51, we will use a combination of the MSYS2 shell and Microsoft Visual C++ 6.
 
 This guide assumes the host OS is Windows Vista or later, as MSYS2 cannot be installed on anything older.
 
