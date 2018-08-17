@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-To compile RetroArch targetting Windows 98 and 2000, we will use Microsoft Visual C++ 2005. This is the last version of Visual C++ that can target 98/2000.
+To compile RetroArch targeting Windows 98 and 2000, we will use Microsoft Visual C++ 2005. This is the last version of Visual C++ that can target 98/2000.
 
 This guide assumes the host OS is Windows 2000 Professional. VC2005 does run on Windows XP and Vista but this has not been tested with RetroArch.
 
