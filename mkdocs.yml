@@ -233,6 +233,9 @@ pages:
           - Windows 98SE/ME/2000 (MSVC2005):
             - 'MSVC Commandline': 'compilation/windows98-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windows98.md'
+          - Windows 2000 and later (MSVC2008):
+            - 'MSVC Commandline': 'compilation/windows2000-msvc-cmdline.md'
+            - 'MSVC IDE': 'compilation/windows2000.md'
           - Windows XP and later (MSVC2010):
             - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windowsXP.md'
