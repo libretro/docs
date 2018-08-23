@@ -472,7 +472,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
 	
-- **DualShock Analog button toggl** [beetle_psx_hw_analog_toggle] (**Setting1**/Setting2)
+- **DualShock Analog button toggle** [beetle_psx_hw_analog_toggle] (**Setting1**/Setting2)
 
 	Toggles the Analog button from DualShock controllers, if disabled analogs are always on, if enabled you can toggle their state by pressing and holding START+SELECT+L1+L2+R1+R2.
 	
@@ -500,6 +500,32 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Mouse Sensitivity** [beetle_psx_hw_mouse_sensitivity] (5% to 200% in increments of 5%. **100% is default**)
 
 	Configure the 'Mouse' Device Type's sensitivity.
+	
+- **NegCon Twist Deadzone (percent)** [beetle_psx_hw_negcon_deadzone] (**0**|5|10|15|20|25|30)
+
+	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+
+!!! attention
+	Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
+	
+	Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+	
+	For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
+
+- **NegCon Twist Response** [beetle_psx_hw_negcon_response] (**linear**|quadratic|cubic)
+
+	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
+	
+	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
+	
+	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
+	
+	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
+	
+!!! attention
+	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
+	
+	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
 	
 - **CD Access Method (restart)** [beetle_psx_hw_cd_access_method] (**sync**/async/precache)
 
