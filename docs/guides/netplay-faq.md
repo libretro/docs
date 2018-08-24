@@ -14,7 +14,7 @@
 
 - Yes!
 
-### What do you think for RetroArch netplay to work?
+### What do you need for RetroArch netplay to work?
 
 - Same RetroArch version, same core version, and the same exact content.
 
