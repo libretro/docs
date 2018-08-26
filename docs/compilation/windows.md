@@ -47,12 +47,12 @@ You might want to install Qt too if you want to be able to use the desktop GUI.
 For 32-bit builds:
 
     :::bash
-    $ pacman -S mingw-w64-i686-qt5 mingw-w64-i686-openssl
+    $ pacman -S --needed mingw-w64-i686-qt5 mingw-w64-i686-openssl
     
 For 64-bit builds:
 
     :::bash
-    $ pacman -S mingw-w64-x86_64-qt5  mingw-w64-x86_64-openssl
+    $ pacman -S --needed mingw-w64-x86_64-qt5  mingw-w64-x86_64-openssl
 
 
 The NVIDIA CG toolkit package hasn't been updated for a while so you need to download that package manually and install with pacman. You can download the packages from sourceforge at the following locations: [32-bit](http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/i686/mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download) / [64-bit](http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/x86_64/mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download). Alternatively you can use the following commands directly:
