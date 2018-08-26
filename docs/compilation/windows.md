@@ -13,13 +13,13 @@ Follow the installation instructions and once finished start the MSYS2 shell.
 MSYS2 shell is a maintenance shell. We are going to use this shell to install the toolchain and other packages. First order of business is to update MSYS2. Start the MSYS2 Shell and run the following commands:
 
     :::bash
-    $ pacman --noconfirm -Sy
-    $ pacman --needed --noconfirm -S bash pacman pacman-mirrors msys2-runtime
+    pacman --noconfirm -Sy
+    pacman --needed --noconfirm -S bash pacman pacman-mirrors msys2-runtime
 
 Close MSYS2 shell and start it again, and:
 
     :::bash
-    $ pacman --noconfirm -Su
+    pacman --noconfirm -Su
 
 Restart MSYS2 once again. In some cases you may find out that the shell starting scripts don't work. If so check the following Note.
 
@@ -35,24 +35,24 @@ Now we can start installing the packages we actually need.
 For 32-bit builds:
 
     :::bash
-    $ pacman -S --noconfirm --needed wget git make mingw-w64-i686-toolchain mingw-w64-i686-ntldd mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-SDL2 mingw-w64-i686-libxml2 mingw-w64-i686-freetype mingw-w64-i686-python3 mingw-w64-i686-ffmpeg
+    pacman -S --noconfirm --needed wget git make mingw-w64-i686-toolchain mingw-w64-i686-ntldd mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-SDL2 mingw-w64-i686-libxml2 mingw-w64-i686-freetype mingw-w64-i686-python3 mingw-w64-i686-ffmpeg
 
 For 64-bit builds:
 
     :::bash
-    $ pacman -S --noconfirm --needed wget git make mingw-w64-x86_64-toolchain mingw-w64-x86_64-ntldd mingw-w64-x86_64-zlib mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-libxml2 mingw-w64-x86_64-freetype mingw-w64-x86_64-python3 mingw-w64-x86_64-ffmpeg
+    pacman -S --noconfirm --needed wget git make mingw-w64-x86_64-toolchain mingw-w64-x86_64-ntldd mingw-w64-x86_64-zlib mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-libxml2 mingw-w64-x86_64-freetype mingw-w64-x86_64-python3 mingw-w64-x86_64-ffmpeg
     
 You might want to install Qt too if you want to be able to use the desktop GUI.
 
 For 32-bit builds:
 
     :::bash
-    $ pacman -S --needed mingw-w64-i686-qt5 mingw-w64-i686-openssl
+    pacman -S --needed mingw-w64-i686-qt5 mingw-w64-i686-openssl
     
 For 64-bit builds:
 
     :::bash
-    $ pacman -S --needed mingw-w64-x86_64-qt5  mingw-w64-x86_64-openssl
+    pacman -S --needed mingw-w64-x86_64-qt5  mingw-w64-x86_64-openssl
 
 
 The NVIDIA CG toolkit package hasn't been updated for a while so you need to download that package manually and install with pacman. You can download the packages from sourceforge at the following locations: [32-bit](http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/i686/mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download) / [64-bit](http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/x86_64/mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download). Alternatively you can use the following commands directly:
@@ -60,14 +60,14 @@ The NVIDIA CG toolkit package hasn't been updated for a while so you need to dow
 For 32-bit builds:
 
     :::bash
-    $ wget http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/i686/mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download -O mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
-    $ pacman -U mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
+    wget http://sourceforge.net/projects/msys2/files/REPOS/MINGW_GCC_4_9/i686/mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz/download -O mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
+    pacman -U mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 
 For 64-bit builds:
            
     :::bash
-    $ wget https://sourceforge.net/projects/mingw-w64-archlinux/files/x86_64/mingw-w64-nvidia-cg-toolkit-3.1-2-any_4.pkg.tar.xz/download -O mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
-    $ pacman -U mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
+    wget https://sourceforge.net/projects/mingw-w64-archlinux/files/x86_64/mingw-w64-nvidia-cg-toolkit-3.1-2-any_4.pkg.tar.xz/download -O mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
+    pacman -U mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 
 Once these packages are installed close MSYS2 shell and open MinGW-w32 shell or MinGW-w64 shell depending on the platform you want to build for.
 
@@ -80,45 +80,45 @@ You can find the repository directly at [GitHub](https://github.com/libretro/Ret
 Start the MINGW64 or the MINGW32 shell depending on what you want to compile and run the following commands:
 
     :::bash
-    $ git clone https://github.com/libretro/RetroArch.git retroarch
+    git clone https://github.com/libretro/RetroArch.git retroarch
 
 For subsequent builds you will need to pull the changes from the repo
 
     :::bash
-    $ cd retroarch
-    $ git pull
+    cd retroarch
+    git pull
 
 To compile RetroArch run the following commands inside RetroArch's source tree:
 
     :::bash
-    $ ./configure
-    $ make clean
-    $ make -j4
+    ./configure
+    make clean
+    make -j4
 
 For development purposes you might want to run a debug build instead. In such case use the following commands:
 
     :::bash
-    $ ./configure
-    $ make clean
-    $ make DEBUG=1 GL_DEBUG=1 -j4
+    ./configure
+    make clean
+    make DEBUG=1 GL_DEBUG=1 -j4
 
 After a few minutes you should be able to find retroarch.exe under that directory. To start the newly compiled retroarch you can use:
 
     :::bash
-    $ ./retroarch
+    ./retroarch
 
 ### Packaging RetroArch
 
 You might not be able to start your own build outside that environment. You might want to try to get all the required DLLs by running the following script in your destination RetroArch folder (not the git repo folder):
 
     :::bash
-    $ for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
+    for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 
 If Qt is enabled for your build (detected automatically by default), the following is also needed:
 
     :::bash
-    $ windeployqt --release --no-patchqt --no-translations retroarch.exe
-    $ for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
+    windeployqt --release --no-patchqt --no-translations retroarch.exe
+    for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 
 If you really want to get the required libraries for distribution or for personal use on other devices and LDD doesn't work for you for whatever reason, then you can try [Dependency Walker](http://www.dependencywalker.com/). 
 
@@ -131,22 +131,22 @@ If you really want to get the required libraries for distribution or for persona
 Install **ccache** for 32-bit builds:
 
     :::bash
-    $ pacman -S --noconfirm --needed make mingw-w64-i686-ccache
+    pacman -S --noconfirm --needed make mingw-w64-i686-ccache
 
 Install **ccache** for 64-bit builds:
 
     :::bash
-    $ pacman -S --noconfirm --needed mingw-w64-x86_64-ccache
+    pacman -S --noconfirm --needed mingw-w64-x86_64-ccache
 
 Configure paths for 32-bit builds:
 
     :::bash
-    $ export PATH=/mingw32/lib/ccache/bin/:$PATH
+    export PATH=/mingw32/lib/ccache/bin/:$PATH
 
 Configure paths for 64-bit builds:
 
     :::bash
-    $ export PATH=/mingw64/lib/ccache/bin/:$PATH
+    export PATH=/mingw64/lib/ccache/bin/:$PATH
 
 !!! tip
     You can add that last line to your *~/.bashrc* to avoid having to type that every time you start your working environment.
@@ -171,7 +171,7 @@ With **ccache**:
 Strip **retroarch**: 
 
     :::bash
-    $ strip -s retroarch.exe
+    strip -s retroarch.exe
 
 ## Core Compilation
 
@@ -183,20 +183,20 @@ We have an all-in-one tool to fetch and compile cores which you can use to strea
 You can obtain the tool by using these commands:
 
     :::bash
-    $ git clone https://github.com/libretro/libretro-super.git
-    $ cd libretro-super
+    git clone https://github.com/libretro/libretro-super.git
+    cd libretro-super
 
 Then you can fetch one or all the cores by using **libretro-fetch.sh**
 
 Fetch all cores:
 
     :::bash
-    $ ./libretro-fetch.sh
+    ./libretro-fetch.sh
 
 Fetch one core:
 
     :::bash
-    $ ./libretro-fetch.sh *corename*
+    ./libretro-fetch.sh *corename*
 
 !!! Note
      Replace *corename* with the name of the core you want to fetch, for example gambatte
@@ -208,12 +208,12 @@ Fetch one core:
 The easiest way to build all the cores is to use **libretro-build.sh** from within libretro-super's source tree:
 
     :::bash
-    $ ./libretro-build.sh
+    ./libretro-build.sh
 
 In case you only want to build one and/or more cores instead of all, you can specify the cores you want to build after the first command in no particular order:
 
     :::bash
-    $ ./libretro-build.sh snes9x2010 fceumm
+    ./libretro-build.sh snes9x2010 fceumm
 
 Once compilation has finished, you can find the libretro cores inside *dist/win*.
 
@@ -222,17 +222,17 @@ Once compilation has finished, you can find the libretro cores inside *dist/win*
 Get the core's source tree. As an example we'll use [fceumm](https://github.com/libretro/libretro-fceumm/)
 
     :::bash
-    $ git clone https://github.com/libretro/libretro-fceumm.git
+    git clone https://github.com/libretro/libretro-fceumm.git
 
 Then compile the core: 
 
     :::bash
-    $ cd libretro-fceumm
-    $ make -f Makefile.libretro
+    cd libretro-fceumm
+    make -f Makefile.libretro
 
 Optionally strip the build product:
 
     :::bash
-    $ strip fceumm_libretro.dll
+    strip fceumm_libretro.dll
     
 Most cores will build with these instructions. You might need to browse to a subdirectory in some cases.
