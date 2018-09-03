@@ -1,4 +1,4 @@
-# Windows (98 SE/ME/2000) Command-line Compilation / Development Guide
+# Windows (2000 and later) Command-line Compilation / Development Guide
 
 ## Environment configuration
 
