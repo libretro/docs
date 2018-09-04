@@ -68,7 +68,7 @@ Frontend-level settings or features that the ChaiLove core respects.
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -98,7 +98,7 @@ The ChaiLove core saves/loads to/from these directories.
 
 - The ChaiLove core's core provided FPS is 60
 - The ChaiLove core's core provided sample rate is 44100 Hz
-- The ChaiLove core's core provided aspect ratio is (Ratio)
+- The ChaiLove core's core provided aspect ratio is game provided
 
 ## Core options
 
