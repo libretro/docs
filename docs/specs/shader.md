@@ -386,9 +386,9 @@ In RetroArch, the following table specifies which shader types work with what vi
 
 CONTEXT DRIVER         |    GLSL    |    CG   |    HLSL        |     SLANG
 -----------------------|------------|---------|----------------|--------------
-Android                |    Y       |    N    |    N           |  Y (Possible)
-CGL                    |    Y       |    N    |    N           |  N
-D3D                    |    N       |    Y    |    N (Possible)| N
+Android                |    Y       |    N    |    N           | Y
+CGL                    |    Y       |    N    |    N           | N
+D3D                    |    N       |    Y    |    N (Possible)| Y
 DRM                    |    Y       |    N    |    N           | N
 Emscripten             |    Y       |    N    |    N           | N
 GDI                    |    N       |    N    |    N           | N
