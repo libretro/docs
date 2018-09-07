@@ -460,7 +460,7 @@ Activating multitap support in compatible games can be configured by the ['Multi
 | ![](../image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
 | ![](../image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
 | ![](../image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
-| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y |                                 |
+| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y | Up: Analog Button I / Down: Analog Button II |
 
 ## Compatibility
 
