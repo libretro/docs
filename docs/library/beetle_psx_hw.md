@@ -458,7 +458,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	![](..\image\core\beetle_psx_hw\scan_on.png)
 	
 ??? note "Crop Overscan - Off"
-	![](..\image\core\beetle_psx_hw\scan_on.png)
+	![](..\image\core\beetle_psx_hw\scan_off.png)
 	
 - **Additional Cropping** [beetle_psx_hw_image_crop] (**Off**/1 px/2 px/3 px/4 px/5 px/6 px/7 px/8 px)
 
