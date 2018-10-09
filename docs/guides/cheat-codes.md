@@ -33,6 +33,45 @@ RetroArch now has the ability to search for and create new cheat codes.  The fol
 10. Alternately, you can "Search Memory For Values ... Equal to ###" if you know the exact number (e.g. the number of hit points you have in an RPG).
 
 
+# RetroArch cheat code spanning/sliding/repeating
+
+You can also use the "Number of Iterations", "Value Increase Each Iteration", and "Address Increase Each Iteration" options to create a single code that affects a wide range of memory values.
+
+This is useful for things like unlocking all levels, giving yourself 1 of every item, setting all of your RPG stats to 999, etc.
+
+Usually when you have found a cheat for a specific item (e.g. your strength attribute in an RPG), similarly themed values are found in the same memory area.  For example, if the strength attribute
+was found at memory address 0x0000AB04 then the dexterity attribute might be at 0x0000AB08, intelligence at 0x0000AB0C, etc.  
+
+This feature is also useful for experimenting.  If you found your strength attribute at memory address 0x0000AB04, then you might increase the number of iterations by 20 to see what changes in the game and if any of those changes are desirable.  Note that experimenting like this has a good chance of crashing your game, so have a save state prepared before blindly attempting to write to memory.
+
+Settings example:
+
+Your game has the following values/memory addresses :
+
+ - 0x0000AB04 - Strength
+ - 0x0000AB08 - Dexterity
+ - 0x0000AB0C - Constitution
+ - 0x0000AB10 - Intelligence
+
+A single code can update all of those values:
+
+ - Memory Search Size - 32 bit
+ - Memory Address - 0x0000AB04
+ - Value - 900 (0x00000384)
+ - Number of Iterations - 4
+ - Value Increase Each Iteration - 5
+ - Address Increase Each Iteration - 1
+
+The starting address is 0x0000AB04 which will be set to value 900.  Then for each of the 4 (Number of Iterations) iterations, it will add 1 of the "Memory Search Size" (1 * 32 bits = 4 bytes) to the address and 5
+to the value and then set that as well.  The final result will have updated these 4 memory locations to be:
+
+ - 0x0000AB04 - Strength      = 900
+ - 0x0000AB08 - Dexterity     = 905
+ - 0x0000AB0C - Constitution  = 910
+ - 0x0000AB10 - Intelligence  = 915
+
+The "Value Increase Each Iteration" would normally be 0 in the above scenario but was used for illustrative purposes.
+
 # RetroArch rumble codes
 
 RetroArch also has the ability to make your controller rumble when changes in the emulator/core memory occur.  It is based off of the same RetroArch-handled cheat codes described above.  For example, after 
