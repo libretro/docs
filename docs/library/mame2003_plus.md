@@ -120,6 +120,50 @@ The first value listed for the core option represents the default. "Restart" ind
 * **MK2/MK3 DCS Speedhack**: `enabled|disabled` - Speedhack for the Midway sound hardware used in Mortal Kombat 2, 3 and others. Improves performance in these games.
 * **Skip Warnings**: `disabled|enabled`
 
+# Input system, controls, and options
+
+mame2003-plus emulates thousands of games, many of which have unique control layouts. These games are emulated on more than a thousand variations of arcade hardware. The purpose of the input system is to communicate input from the user's physical controls through the libretro frontend, the mame2003-plus emulator core, and into the emulated game itself.
+
+No system of default input mappings can address the full range of emulated games and supported controls. Some degree of per-game customization should ways be expected. However, to the extent possible it is also within the purpose of the mame2003-plus input system to attempt to provide predictable and meaningful defaults for input across this wide range.
+
+## Default RetroPad Layouts
+
+### Gamepad
+The `gamepad` layout sets mame2003-plus to the same input configration as Final Burn Alpha (FBA). This layout is the fight stick and pad layout popularized by Street Fighter IV and assumes an 8+ button controller. Gamepad can also serve as an alternative Xbox/PSX-style layout for Street Fighter 2. https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/modern.png
+
+### 6-Button
+6 button is a layout for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this: https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/snesmapping.png
+
+### 8-Button
+8 button is a layout for an arcade panel that is configured like this: https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/10PANEL.png
+
+### Classic
+The `classic` layout has the same mapping as Final Burn Alpha's "classic" mapping -- both of which are based on mainline MAME's default Xbox 360 controller layout. This layout is not a good match for 6-button fighters, but may suit other games.
+
+## Keyboard Input
+`mame_keyboard` sets the core to process keyboard input directly through the legacy "MAME" keyboard interface. Use this input mode only if your input device is seen as a keyboard, including some arcade control panel hardware.
+
+## Mouse/Trackball/Analog Controller support
+
+MAME 2003-Plus has support for multiple mice or touch devices in games that support trackballs, etc.
+
+MAME 2003-Plus also supports one or two spinners/dials via the "Share 2 player dial controls across one X/Y device" core option.
+
+By default, mice/trackballs and analog sticks (the left one, for controllers with 2) are supported in games that would have them, or equivalents. For example, Centipede supports the mouse/trackball, and Afterburner supports the stick. Lightgun games are supported by either. The left and right mouse buttons can be bound to fire/etc using the MAME menu.
+
+### Pointer/Trackpad/Touchscreen support
+
+Absolute pointer devices are supported, but need to be turned on via a setting in the retroarch-core-options.cfg file.
+
+mame2003-plus-mouse_device = "pointer"
+
+### 2 player dial/spinner devices
+
+2 player spinner/dial devices can be represented as 1 device with 2 axes. MAME 2003-Plus can be configured to share this device across both players: Player 1 = X axis, Player 2 = Y axis. This can be enabled via a setting in the retroarch-core-options.cfg file, found in:
+
+mame2003--plus-dialsharexy = "enabled"
+NOTE: This will disable Mouse support.
+
 -----------
 
 ## Directories
@@ -176,27 +220,6 @@ MAME 2003-Plus supports the MAME cheat engine, allowing you to use the MAME menu
 Additionally, the 'enabled cheats' core option needs to be turned on. This option is is called: ``` mame2003-plus-cheats = "enabled" ```
 
 -----------
-
-## Mouse/Trackball/Analog Controller support
-
-MAME 2003-Plus has support for multiple mice or touch devices in games that support trackballs, etc.
-
-MAME 2003-Plus also supports one or two spinners/dials via the "Share 2 player dial controls across one X/Y device" core option.
-
-By default, mice/trackballs and analog sticks (the left one, for controllers with 2) are supported in games that would have them, or equivalents. For example, Centipede supports the mouse/trackball, and Afterburner supports the stick. Lightgun games are supported by either. The left and right mouse buttons can be bound to fire/etc using the MAME menu.
-
-### Pointer/Trackpad/Touchscreen support
-
-Absolute pointer devices are supported, but need to be turned on via a setting in the retroarch-core-options.cfg file.
-
-mame2003-plus-mouse_device = "pointer"
-
-### 2 player dial/spinner devices
-
-2 player spinner/dial devices can be represented as 1 device with 2 axes. MAME 2003-Plus can be configured to share this device across both players: Player 1 = X axis, Player 2 = Y axis. This can be enabled via a setting in the retroarch-core-options.cfg file, found in:
-
-mame2003--plus-dialsharexy = "enabled"
-NOTE: This will disable Mouse support.
 
 ## External Links
 
