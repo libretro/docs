@@ -131,10 +131,10 @@ No system of default input mappings can address the full range of emulated games
 ### Gamepad
 The `gamepad` layout sets mame2003-plus to the same input configration as Final Burn Alpha (FBA). This layout is the fight stick and pad layout popularized by Street Fighter IV and assumes an 8+ button controller. Gamepad can also serve as an alternative Xbox/PSX-style layout for Street Fighter 2. https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/modern.png
 
-## 6-Button
+### 6-Button
 6 button is a layout for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this: https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/snesmapping.png
 
-## 8-Button
+### 8-Button
 8 button is a layout for an arcade panel that is configured like this: https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/wipcontrols/10PANEL.png
 
 ### Classic
