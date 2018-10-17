@@ -94,6 +94,13 @@ Required or optional firmware files go in RetroArch's system directory.
 | MSX2EXT.ROM  | MSX2 ExtROM - Required  | 2183c2aff17cf4297bdb496de78c2e8a |
 | MSX2P.ROM    | MSX2+ BIOS - Required   | 847cc025ffae665487940ff2639540e5 |
 | MSX2PEXT.ROM  |MSX2+ ExtROM - Required | 7c8243c71d8f143b2531f01afa6a05dc |
+| DISK.ROM     | DiskROM/BDOS (optional)   | 80dcd1ad1a4cf65d64b7ba10504e8190 |
+| FMPAC.ROM    | FMPAC BIOS (optional)     | 6f69cc8b5ed761b03afd78000dfb0e19 |
+| MSXDOS2.ROM  | MSX-DOS 2 (optional)      | 6418d091cd6907bbcf940324339e43bb |
+| PAINTER.ROM  | Yamaha Painter (optional) | 403cdea1cbd2bb24fae506941f8f655e |
+| KANJI.ROM    | Kanji Font (optional)     | febe8782b466d7c3b16de6d104826b34 |
+
+This list of compatible ROMS is not complete.
 
 ## Features
 
