@@ -201,6 +201,7 @@ pages:
       - 'Linux KMS Mode': 'guides/kms-mode.md'
       - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
       - 'ROMs, Playlists, and Thumbnails': 'guides/roms-playlists-thumbnails.md'
+      - 'Run Ahead': 'guides/runahead.md'
       - 'RetroAchievements': 'guides/retroachievements.md'
       - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
     - Advanced Topics:
