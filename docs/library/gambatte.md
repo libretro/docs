@@ -131,79 +131,229 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	It's best to keep this core option disabled.
 
-- **GB Colorization** [gambatte_gb_colorization] (**disabled**|auto|internal|custom)
+- **GB Colorization** [gambatte_gb_colorization] (**disabled**|auto|GBC|SGB|internal|custom)
 
-	Colorizes Game Boy games.
+	Enables colorization of Game Boy games, using pre-defined or user-selected color palettes.
+	
+	'auto': Selects automatically the 'best' (most colorful/appropriate) palette for each individual game, using the following order of preference:
+	
+	   1. Game-specific Super Game Boy palette, if defined and more colorful than game-specific Game Boy Color palette.
+	   
+	   2. Game-specific Game Boy Color palette, if defined.
+	   
+	   3. Game-specific Super Game Boy palette, if defined.
+	   
+	   4. Palette specified by 'Internal Palette' core option.
+	   
+	'GBC': Selects game-specific Game Boy Color palette, if defined. If not, falls back to the Game Boy Color hardware default palette of 'GBC - Dark Green'.
+	
+	'SGB': Selects game-specific Super Game Boy palette, if defined. If not, falls back to the Super Game Boy hardware default palette of 'SGB - 1A'.
+	
+	'internal': Selects palette specified by 'Internal Palette' core option.
+	
+	'custom': Loads user-created palettes from RetroArch's system directory, as described in the 'Custom palettes for Game Boy games' section.
 
-??? note "*GB Colorization - Off*"
+??? note "*GB Colorization: Off*"
     ![](..\image\core\gambatte\color_off.png)
 
-??? note "*GB Colorization - auto*"
+??? note "*GB Colorization: auto (in this case, a game-specific SGB palette is auto-selected)*"
     ![](..\image\core\gambatte\color_auto.png)
+
+??? note "*GB Colorization: GBC*"
+    ![](..\image\core\gambatte\color_gbc.png)
+
+- **Internal Palette** [gambatte_gb_internal_palette] (**GB - DMG**|GB - Pocket|GB - Light|GBC - Blue|GBC - Brown|GBC - Dark Blue|GBC - Dark Brown|GBC - Dark Green|GBC - Grayscale|GBC - Green|GBC - Inverted|GBC - Orange|GBC - Pastel Mix|GBC - Red|GBC - Yellow|SGB - 1A|SGB - 1B|SGB - 1C|SGB - 1D|SGB - 1E|SGB - 1F|SGB - 1G|SGB - 1H|SGB - 2A|SGB - 2B|SGB - 2C|SGB - 2D|SGB - 2E|SGB - 2F|SGB - 2G|SGB - 2H|SGB - 3A|SGB - 3B|SGB - 3C|SGB - 3D|SGB - 3E|SGB - 3F|SGB - 3G|SGB - 3H|SGB - 4A|SGB - 4B|SGB - 4C|SGB - 4D|SGB - 4E|SGB - 4F|SGB - 4G|SGB - 4H|Special 1|Special 2|Special 3)
+
+	Selects the internal color palette to use for colorizing Game Boy games when the 'GB Colorization' core option is set to 'internal', or when the 'GB Colorization' core option is set to 'auto' and a game has no pre-defined Super Game Boy/Game Boy Color palette.
 	
-- **Internal Palette** [gambatte_gb_internal_palette] (**GBC - Blue**|GBC - Brown|GBC - Dark Blue|GBC - Dark Brown|GBC - Dark Green|GBC - Grayscale|GBC - Green|GBC - Inverted|GBC - Orange|GBC - Pastel Mix|GBC - Red|GBC - Yellow|Special 1|Special 2|Special 3)
+	'GB' palettes mimic the display characteristics of original Game Boy hardware.
+	
+	'GBC' palettes are identical to those used by original Game Boy Color hardware when colorizing Game Boy games.
+	
+	'SGB' palettes are identical to those used by original Super Game Boy hardware when colorizing Game Boy games.
 
-	Select which internal color palette for GB Colorization is going to be used. GB Colorization must be set to internal.
+??? note "*Internal Palette: GB - DMG*"
+    ![](..\image\core\gambatte\gb_dmg.png)
 
-??? note "*Internal Palette - GBC - Blue*"
-    ![](..\image\core\gambatte\blue.png)
+??? note "*Internal Palette: GB - Pocket*"
+    ![](..\image\core\gambatte\gb_pocket.png)
 
-??? note "*Internal Palette - GBC - Brown*"
-    ![](..\image\core\gambatte\brown.png)
+??? note "*Internal Palette: GB - Light*"
+    ![](..\image\core\gambatte\gb_light.png)
 
-??? note "*Internal Palette - GBC - Dark Blue*"
-    ![](..\image\core\gambatte\dark_blue.png)
+??? note "*Internal Palette: GBC - Blue*"
+    ![](..\image\core\gambatte\gbc_blue.png)
 
-??? note "*Internal Palette - GBC - Dark Brown*"
-    ![](..\image\core\gambatte\dark_brown.png)
+??? note "*Internal Palette: GBC - Brown*"
+    ![](..\image\core\gambatte\gbc_brown.png)
 
-??? note "*Internal Palette - GBC - Dark Green*"
-    ![](..\image\core\gambatte\dark_green.png)
+??? note "*Internal Palette: GBC - Dark Blue*"
+    ![](..\image\core\gambatte\gbc_dark_blue.png)
 
-??? note "*Internal Palette - GBC - Grayscale*"
-    ![](..\image\core\gambatte\grayscale.png)
+??? note "*Internal Palette: GBC - Dark Brown*"
+    ![](..\image\core\gambatte\gbc_dark_brown.png)
 
-??? note "*Internal Palette - GBC - Green*"
-    ![](..\image\core\gambatte\green.png)
+??? note "*Internal Palette: GBC - Dark Green*"
+    ![](..\image\core\gambatte\gbc_dark_green.png)
 
-??? note "*Internal Palette - GBC - Inverted*"
-    ![](..\image\core\gambatte\inverted.png)
+??? note "*Internal Palette: GBC - Grayscale*"
+    ![](..\image\core\gambatte\gbc_grayscale.png)
 
-??? note "*Internal Palette - GBC - Orange*"
-    ![](..\image\core\gambatte\orange.png)
+??? note "*Internal Palette: GBC - Green*"
+    ![](..\image\core\gambatte\gbc_green.png)
 
-??? note "*Internal Palette - GBC - Pastel Mix*"
-    ![](..\image\core\gambatte\pastel.png)
+??? note "*Internal Palette: GBC - Inverted*"
+    ![](..\image\core\gambatte\gbc_inverted.png)
 
-??? note "*Internal Palette - GBC - Red*"
-    ![](..\image\core\gambatte\red.png)
+??? note "*Internal Palette: GBC - Orange*"
+    ![](..\image\core\gambatte\gbc_orange.png)
 
-??? note "*Internal Palette - GBC - Yellow*"
-    ![](..\image\core\gambatte\yellow.png)
+??? note "*Internal Palette: GBC - Pastel Mix*"
+    ![](..\image\core\gambatte\gbc_pastel.png)
 
-??? note "*Internal Palette - GBC - Special 1*"
+??? note "*Internal Palette: GBC - Red*"
+    ![](..\image\core\gambatte\gbc_red.png)
+
+??? note "*Internal Palette: GBC - Yellow*"
+    ![](..\image\core\gambatte\gbc_yellow.png)
+
+??? note "*Internal Palette: SGB - 1A*"
+    ![](..\image\core\gambatte\sgb_1a.png)
+
+??? note "*Internal Palette: SGB - 1B*"
+    ![](..\image\core\gambatte\sgb_1b.png)
+
+??? note "*Internal Palette: SGB - 1C*"
+    ![](..\image\core\gambatte\sgb_1c.png)
+
+??? note "*Internal Palette: SGB - 1D*"
+    ![](..\image\core\gambatte\sgb_1d.png)
+
+??? note "*Internal Palette: SGB - 1E*"
+    ![](..\image\core\gambatte\sgb_1e.png)
+
+??? note "*Internal Palette: SGB - 1F*"
+    ![](..\image\core\gambatte\sgb_1f.png)
+
+??? note "*Internal Palette: SGB - 1G*"
+    ![](..\image\core\gambatte\sgb_1g.png)
+
+??? note "*Internal Palette: SGB - 1H*"
+    ![](..\image\core\gambatte\sgb_1h.png)
+
+??? note "*Internal Palette: SGB - 2A*"
+    ![](..\image\core\gambatte\sgb_2a.png)
+
+??? note "*Internal Palette: SGB - 2B*"
+    ![](..\image\core\gambatte\sgb_2b.png)
+
+??? note "*Internal Palette: SGB - 2C*"
+    ![](..\image\core\gambatte\sgb_2c.png)
+
+??? note "*Internal Palette: SGB - 2D*"
+    ![](..\image\core\gambatte\sgb_2d.png)
+
+??? note "*Internal Palette: SGB - 2E*"
+    ![](..\image\core\gambatte\sgb_2e.png)
+
+??? note "*Internal Palette: SGB - 2F*"
+    ![](..\image\core\gambatte\sgb_2f.png)
+
+??? note "*Internal Palette: SGB - 2G*"
+    ![](..\image\core\gambatte\sgb_2g.png)
+
+??? note "*Internal Palette: SGB - 2H*"
+    ![](..\image\core\gambatte\sgb_2h.png)
+
+??? note "*Internal Palette: SGB - 3A*"
+    ![](..\image\core\gambatte\sgb_3a.png)
+
+??? note "*Internal Palette: SGB - 3B*"
+    ![](..\image\core\gambatte\sgb_3b.png)
+
+??? note "*Internal Palette: SGB - 3C*"
+    ![](..\image\core\gambatte\sgb_3c.png)
+
+??? note "*Internal Palette: SGB - 3D*"
+    ![](..\image\core\gambatte\sgb_3d.png)
+
+??? note "*Internal Palette: SGB - 3E*"
+    ![](..\image\core\gambatte\sgb_3e.png)
+
+??? note "*Internal Palette: SGB - 3F*"
+    ![](..\image\core\gambatte\sgb_3f.png)
+
+??? note "*Internal Palette: SGB - 3G*"
+    ![](..\image\core\gambatte\sgb_3g.png)
+
+??? note "*Internal Palette: SGB - 3H*"
+    ![](..\image\core\gambatte\sgb_3h.png)
+
+??? note "*Internal Palette: SGB - 4A*"
+    ![](..\image\core\gambatte\sgb_4a.png)
+
+??? note "*Internal Palette: SGB - 4B*"
+    ![](..\image\core\gambatte\sgb_4b.png)
+
+??? note "*Internal Palette: SGB - 4C*"
+    ![](..\image\core\gambatte\sgb_4c.png)
+
+??? note "*Internal Palette: SGB - 4D*"
+    ![](..\image\core\gambatte\sgb_4d.png)
+
+??? note "*Internal Palette: SGB - 4E*"
+    ![](..\image\core\gambatte\sgb_4e.png)
+
+??? note "*Internal Palette: SGB - 4F*"
+    ![](..\image\core\gambatte\sgb_4f.png)
+
+??? note "*Internal Palette: SGB - 4G*"
+    ![](..\image\core\gambatte\sgb_4g.png)
+
+??? note "*Internal Palette: SGB - 4H*"
+    ![](..\image\core\gambatte\sgb_4h.png)
+
+??? note "*Internal Palette: Special 1*"
     ![](..\image\core\gambatte\special1.png)
 
-??? note "*Internal Palette - GBC - Special 2*"
+??? note "*Internal Palette: Special 2*"
     ![](..\image\core\gambatte\special2.png)
 
-??? note "*Internal Palette - GBC - Special 3*"
+??? note "*Internal Palette: Special 3*"
     ![](..\image\core\gambatte\special3.png)
 	
-- **Color correction** [gambatte_gbc_color_correction] (**enabled**|disabled)
+- **Color correction** [gambatte_gbc_color_correction] (**GBC only**|always|disabled)
 
-	Darkens Game Boy Color games to match the original hardware output.
-
-??? note "*Color Correction - On*"
-    ![](..\image\core\gambatte\correct_on.png)
-
-??? note "*Color Correction - Off*"
-    ![](..\image\core\gambatte\correct_off.png)
+	Enables adjustment of output colors to match the display characteristics of the LCD panel used in original Game Boy Color hardware.
 	
+	'GBC only': Color correction is only applied when playing Game Boy Color games, or when using a Game Boy Color palette to colorize a Game Boy game.
+	
+	'always': Color correction is always applied, regardless of which color palette is being used.
+
+!!! attention
+	Setting this option to 'always' will result in unexpected/suboptimal output when using 'GB' or 'SGB' internal color palettes, since these are intended for display on a normal TV/monitor rather than a Game Boy Color LCD panel.
+
+- **Color correction mode** [gambatte_gbc_color_correction_mode] (**accurate**|fast)
+
+	Specifies the method to use when performing color correction.
+	
+	'accurate': Provides a very close approximation of the image displayed on a real Game Boy Color LCD panel.
+	
+	'fast': Darkens colors in a loose approximation of the image displayed on a real Game Boy Color LCD panel. Has negligible performance impact, and may be used on low-end hardware in cases where the 'accurate' method is too slow.
+
+??? note "*Color correction: Off*"
+    ![](..\image\core\gambatte\correct_off.png)
+
+??? note "*Color correction: fast*"
+    ![](..\image\core\gambatte\correct_fast.png)
+
+??? note "*Color correction: accurate*"
+    ![](..\image\core\gambatte\correct_accurate.png)
+
 - **Emulated hardware (restart)** [gambatte_gb_hwmode] (**Auto**|GB|GBC|GBA)
 
 	Choose which hardware is emulated Game Boy, Game Boy Color, or Game Boy Advance.
-	
+
 - **Use official bootloader (restart)** [gambatte_gb_bootloader] (**enabled**|disabled)
 
 	Enables support for using official Game Boy and Game Boy Color bootloaders with startup logos. Check the [BIOS section](https://docs.libretro.com/library/gambatte#bios) to see what files are needed.
