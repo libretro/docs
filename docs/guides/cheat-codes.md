@@ -6,6 +6,26 @@ RetroArch uses two methods of applying cheat codes:
 - **RetroArch Handled** are codes that RetroArch itself handles by directly scanning/manipulating the emulator/core memory area.
 
 
+# Adding a new cheat code
+
+If you have a code that doesn't exist in the cheat database that you want to add manually, perform the following steps:
+
+1. Load the game in question and open the "Cheats" menu from the Quick Menu.
+
+2. Select either "Add New Code to Top" or "Add New Code to Bottom".
+
+3. Navigate to the newly added cheat code line and press enter to bring up the cheat code details.
+
+4. Select the "Code" menu item and press enter.  A popup text-entry screen will appear.  Type in your new code and press enter.
+
+5. Optionally perform the same steps for the "Description" menu item to edit the description.
+
+6. Ensure the "Enabled" field is set to on.
+
+7. Navigate back one level to the cheats menu and select "Apply Changes".
+
+
+
 # RetroArch new cheat code searching
 
 RetroArch now has the ability to search for and create new cheat codes.  The following is an overview for finding new cheats:
