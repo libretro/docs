@@ -350,6 +350,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "*Color correction: accurate*"
     ![](..\image\core\gambatte\correct_accurate.png)
 
+- **Dark Filter Level (percent)** [gambatte_dark_filter_level] (**0**|5|10|15|20|25|30|35|40|45|50)
+
+	Enables selective brightness reduction based upon pixel luminosity. May be used to reduce glare/eye strain. Of particular value when playing games with white backgrounds, which are intended for display on a non-backlit Game Boy Color LCD panel and appear uncomfortably bright when viewed on a modern backlit screen.
+
+??? note "*Dark Filter Level: 0%*"
+    ![](..\image\core\gambatte\dark_filter_off.png)
+
+??? note "*Dark Filter Level: 30%*"
+    ![](..\image\core\gambatte\dark_filter_30.png)
+
 - **Emulated hardware (restart)** [gambatte_gb_hwmode] (**Auto**|GB|GBC|GBA)
 
 	Choose which hardware is emulated Game Boy, Game Boy Color, or Game Boy Advance.
