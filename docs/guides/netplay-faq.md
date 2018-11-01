@@ -59,6 +59,9 @@ If you are gonna host a game you don't need to scan content or to build database
 
 ![Screenshot](../image/netplay/netplay.png)
 
+#### Check your lobby
+
+Once you start hosting you can check to see if your lobby is visible at [at lobby.libretro.com](http://lobby.libretro.com/).
 
 !!! tip
     If your router doesn't support UPnP or you can't forward your ports or you are uncertain, enable the **Use Relay Server** option. This routes both sides of the connection through our man-in-the-middle server.
@@ -69,7 +72,6 @@ If you are gonna host a game you don't need to scan content or to build database
 !!! Warning
     RetroArch doesn't check if you managed to open your ports manually, the lobby server doesn't either so make sure you do that properly or enable the Relay Server or people won't be able to connect to your session. You can use [this tool](http://www.yougetsignal.com/tools/open-ports/), enter your **Netplay TCP Port** once you are hosting and it will tell you if the port is open or not.
 
-Once you start hosting you can check your own lobby [here](http://newlobby.libretro.com/list).
 
 ### Configure Netplay Clients
 
