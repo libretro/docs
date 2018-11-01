@@ -38,13 +38,11 @@ MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [
 DAT files describe the exact ROM contents that the emulator needs including filenames, file sizes, and checksums to verify contents are not incorrect or corrupt. mame2003-plus has the ability to generate an XML "DAT" file from the MAME Menu. When `mame_keyboard` input is enabled, you can enter the MAME menu by pressing the `Tab` key. With any input mode, you can also access the MAME menu by turning it on as a core option.
 
 ### Step 2: Finding a source for ROMs
-A complete MAME 0.78 romset and CHD collection along with a complete MAME 0.139 romset collection together include nearly all ROMs needed to rebuild a complete collection of MAME 2003-Plus romsets. That being said, there is also support for hack, homebrew, and public domain arcade romsets from HBMAME as well as support for recent NeoGeo UniBIOS releases.
 
-In order to build a complete MAME 2003-Plus collection, the ideal ingredients are:
-* The most recent MAME full romset collection
+In order to build a complete MAME 2003-Plus collection, the ingredients are:
+* A complete MAME 0.193 or later romset collection
+* A complete MAME 0.193 or later "rollback" romset collection
 * MAME 0.78 CHD collection
-* The most recent HBMAME full romset collection
-* The MAME "Rollback" romset collection
 * The NeoGeo UniBIOS 3.3, freely available at http://unibios.free.fr/
 
 ### Step 3: Building MAME 2003-Plus romsets
