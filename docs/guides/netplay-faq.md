@@ -61,7 +61,7 @@ If you are gonna host a game you don't need to scan content or to build database
 
 #### Check your lobby
 
-Once you start hosting you can check to see if your lobby is visible at [at lobby.libretro.com](http://lobby.libretro.com/).
+Once you start hosting you can check to see if your lobby is visible [at lobby.libretro.com](http://lobby.libretro.com/).
 
 !!! tip
     If your router doesn't support UPnP or you can't forward your ports or you are uncertain, enable the **Use Relay Server** option. This routes both sides of the connection through our man-in-the-middle server.
