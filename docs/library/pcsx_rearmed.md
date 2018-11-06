@@ -250,7 +250,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	a `pcsx-card2.mcd` file in the directory of the loaded game.
 	All games in the same directory will share the same second memory card.
 
-- **Pad 1 Type** [pcsx_rearmed_pad1type] (**default**|none|standard|analog|negcon)
+- **Pad 1 Type** [pcsx_rearmed_pad1type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 1.
 	
@@ -258,11 +258,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 2 Type** [pcsx_rearmed_pad2type] (**default**|none|standard|analog|negcon)
+- **Pad 2 Type** [pcsx_rearmed_pad2type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 2.
 	
@@ -270,11 +272,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 3 Type** [pcsx_rearmed_pad3type] (**default**|none|standard|analog|negcon)
+- **Pad 3 Type** [pcsx_rearmed_pad3type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 3.
 	
@@ -282,11 +286,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 4 Type** [pcsx_rearmed_pad4type] (**default**|none|standard|analog|negcon)
+- **Pad 4 Type** [pcsx_rearmed_pad4type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 4.
 	
@@ -294,11 +300,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 5 Type** [pcsx_rearmed_pad5type] (**default**|none|standard|analog|negcon)
+- **Pad 5 Type** [pcsx_rearmed_pad5type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 5.
 	
@@ -306,11 +314,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 6 Type** [pcsx_rearmed_pad6type] (**default**|none|standard|analog|negcon)
+- **Pad 6 Type** [pcsx_rearmed_pad6type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 6.
 	
@@ -318,11 +328,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 7 Type** [pcsx_rearmed_pad7type] (**default**|none|standard|analog|negcon)
+- **Pad 7 Type** [pcsx_rearmed_pad7type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 7.
 	
@@ -330,11 +342,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 8 Type** [pcsx_rearmed_pad8type] (**default**|none|standard|analog|negcon)
+- **Pad 8 Type** [pcsx_rearmed_pad8type] (**default**|none|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 8.
 	
@@ -342,7 +356,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
 	
-	With the analog setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) is emulated.
+	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
+
+	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
