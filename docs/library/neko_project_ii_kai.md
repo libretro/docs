@@ -45,7 +45,7 @@ Content that can be loaded by the Neko Project II Kai core have the following fi
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	These firmware files need to be in a directory named 'np2' in the frontend's system directory.
+	These firmware files need to be in a directory named 'np2kai' in the frontend's system directory.
 
 | Filename         | Description                       | md5sum  |
 |:----------------:|:---------------------------------:|:-------:|
