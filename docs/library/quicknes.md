@@ -134,6 +134,69 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Applies a preset to the audio equalizer.
 	
+- **Color Palette** [quicknes_palette] (**default**|asqrealc|nintendo-vc|rgb|yuv-v3|unsaturated-final|sony-cxa2025as-us|pal|bmf-final2|bmf-final3|smooth-fbx|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|nescap|wavebeam)
+	
+	Specifies which color palette to use when decoding the NTSC video signal output by the NES.
+	
+??? note "Color Palette: default"
+    ![](..\image\core\quicknes\default.png)
+	
+??? note "Color Palette: asqrealc"
+    ![](..\image\core\quicknes\asqrealc.png)
+	
+??? note "Color Palette: nintendo-vc"
+    ![](..\image\core\quicknes\nintendo-vc.png)
+	
+??? note "Color Palette: rgb"
+    ![](..\image\core\quicknes\rgb.png)
+	
+??? note "Color Palette: yuv-v3"
+    ![](..\image\core\quicknes\yuv-v3.png)
+	
+??? note "Color Palette: unsaturated-final"
+    ![](..\image\core\quicknes\unsaturated-final.png)
+	
+??? note "Color Palette: sony-cxa2025as-us"
+    ![](..\image\core\quicknes\sony-cxa2025as-us.png)
+	
+??? note "Color Palette: pal"
+    ![](..\image\core\quicknes\pal.png)
+	
+??? note "Color Palette: bmf-final2"
+    ![](..\image\core\quicknes\bmf-final2.png)
+	
+??? note "Color Palette: bmf-final3"
+    ![](..\image\core\quicknes\bmf-final3.png)
+	
+??? note "Color Palette: smooth-fbx"
+    ![](..\image\core\quicknes\smooth-fbx.png)
+	
+??? note "Color Palette: composite-direct-fbx"
+    ![](..\image\core\quicknes\composite-direct-fbx.png)
+	
+??? note "Color Palette: pvm-style-d93-fbx"
+    ![](..\image\core\quicknes\pvm-style-d93-fbx.png)
+	
+??? note "Color Palette: ntsc-hardware-fbx"
+    ![](..\image\core\quicknes\ntsc-hardware-fbx.png)
+	
+??? note "Color Palette: nes-classic-fbx-fs"
+    ![](..\image\core\quicknes\nes-classic-fbx-fs.png)
+	
+??? note "Color Palette: nescap"
+    ![](..\image\core\quicknes\nescap.png)
+	
+??? note "Color Palette: wavebeam"
+    ![](..\image\core\quicknes\wavebeam.png)
+	
+- **Turbo enable** [quicknes_turbo_enable] (**none**|player 1|player 2|both)
+	
+	Enables the use of the [Turbo A and Turbo B buttons](https://docs.libretro.com/library/quicknes/index.html#joypad).
+	
+- **Turbo pulse width (in frames)** [quicknes_turbo_pulse_width] (**3**|5|10|15|30|60|1|2)
+	
+	Specifies both the width and spacing (in frames) of input 'pulses' when the [Turbo A and Turbo B buttons](https://docs.libretro.com/library/quicknes/index.html#joypad) are held down. For example, the default setting of '3' corresponds to a (60/(3+3)) = 10 Hz turbo frequency (10 presses per second).
+	
 ## Joypad
 
 ![](../image/Controller/nes.png)
@@ -141,6 +204,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | User 1 - 2 input descriptors | RetroPad Inputs                             |
 |------------------------------|---------------------------------------------|
 | B                            | ![](../image/retropad/retro_b.png)          |
+| Turbo B                      | ![](../image/retropad/retro_y.png)          |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
@@ -148,6 +212,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
 | A                            | ![](../image/retropad/retro_a.png)          |
+| Turbo A                      | ![](../image/retropad/retro_x.png)          |
 
 ## External Links
 
