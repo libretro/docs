@@ -287,8 +287,10 @@ theme:
   logo: 'image/branding/invader.png'
   favicon: 'image/branding/invader.png'
 markdown_extensions:
-  - admonition
-  - codehilite(linenums=true)
-  - toc(permalink=Link)
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      linenums: true
+  - markdown.extensions.toc:
+      permalink: true
   - pymdownx.details
   - pymdownx.superfences
