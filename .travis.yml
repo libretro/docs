@@ -4,5 +4,6 @@ python:
 install:
   - pip install mkdocs
   - pip install mkdocs-material
+  - pip install pymdown-extensions
 script:
-  - ./deploy
+  - mkdocs build
