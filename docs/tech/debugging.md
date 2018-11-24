@@ -12,7 +12,7 @@ If you observe a crash with RetroArch and would like to get more information, na
 > gdb retroarch
 
 !!! note "Windows users"
-    If you have not compiled RetroArch yourself with debugging enabled (`make DEBUG=1`), please specify `retroarch_debug.exe` here instead of `retroarch` to use the debug version that ships with our binary package.
+    If you have not compiled RetroArch yourself with debugging enabled (`make DEBUG=1`), please specify `retroarch_debug.exe` here instead of `retroarch` to use the debug version that ships with our binary package. In order to debug in Windows 10 when the D3D10 or D3D11 video drivers are in use, be sure that you have also [installed Microsoft's free Windows Direct3D Graphics Tools package](https://docs.microsoft.com/en-us/windows/uwp/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features).
 
 After gdb has started, you can then start up RetroArch with `run`. If RetroArch crashes, gdb should show you a prompt with a message such as:
 
