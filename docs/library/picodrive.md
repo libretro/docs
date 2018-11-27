@@ -183,6 +183,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Enable dynamic recompilers which help to improve performance. **This core option is not available on all hardware.**
 
+- **Audio filter** [picodrive_audio_filter] (**disabled**|low-pass)
+	
+	Enable a low pass audio filter to better simulate the characteristic sound of a Model 1 Genesis.
+	
+!!! attention
+	This option is ignored when running Master System and PICO titles. Only the Genesis and its add-on hardware (Sega CD, 32X) employed a physical low pass filter.
+	
+- **Low-pass filter %** [picodrive_lowpass_range] (**60**|65|70|75|80|85|90|95|5|10|15|20|25|30|35|40|45|50|55)
+	
+	Specify the cut-off frequency of the audio low pass filter. A higher value increases the perceived 'strength' of the filter, since a wider range of the high frequency spectrum is attenuated.
+
 ## Controllers
 
 The PicoDrive core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
