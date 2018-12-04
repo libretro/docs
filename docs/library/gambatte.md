@@ -374,6 +374,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "*Game Boy Color bootloader*"
     ![](..\image\core\gambatte\gbc_bios.png)
 	
+- **Mix frames** [gambatte_mix_frames] (**disabled**|accurate|fast)
+	
+	Enables simulation of LCD ghosting effects by blending the current and previous frames.
+	
+	'accurate': Blends pixel RGB values with floating point precision.
+	
+	'fast': Blends pixel RGB values using fast bit manipulation. Causes slight color darkening/shifting (due to rounding errors). May be used on low-end hardware in cases where the 'accurate' method is too slow.
+	
+!!! attention
+	A number of games generate transparency effects (or additional shades of color) by drawing objects on alternate frames, relying on the LCD ghosting of original hardware to 'smooth out' the result. Notable examples are Wave Race, Ballistic and Chikyuu Kaihou Gun ZAS. In order for these games to render correctly, 'Mix frames' must be set to 'accurate' or 'fast'. More importantly, the rapid flickering that is produced by these games when 'Mix frames' is disabled can lead to a form of screen burn-in on certain types of LCD panel (that of the 3DS in particular).
+	
+??? note "*Mix frames: Off*"
+    ![](..\image\core\gambatte\mix_frames_off.gif)
+	
+??? note "*Mix frames: accurate*"
+    ![](..\image\core\gambatte\mix_frames_accurate.gif)
+	
+??? note "*Mix frames: fast*"
+    ![](..\image\core\gambatte\mix_frames_fast.gif)
+	
 - **GameBoy Link Mode** [gambatte_gb_link_mode] (**Not Connected**|Network Server|Network Client)
 
 	Awaiting description.
@@ -422,8 +442,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | Game de Hakken!! Tamagotchi - Osutchi to Mesutchi | Crashes on start. Unemulated TAMA5 mapper.         |
 | Kirby Tilt 'n' Tumble                             | Crashes on start. Unemulated MBC7 mapper.          |
 | Net de Get: Mini-Game @ 100                       | Crashes on start. Unemulated MBC6 mapper.          |
-| Pocket Family GB2                                 | Crashes on start. Unemulated HuC3 mapper.          |
-| Robopon: Sun/Star/Moon Version                    | Crashes on start. Unemulated HuC3 mapper.          |
 
 ## External Links
 
