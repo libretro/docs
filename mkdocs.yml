@@ -22,6 +22,7 @@ pages:
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
     - Core Documentation:
+      - Bios information HUB: 'library/bios.md'
       - Core Compatibility:
         - '3DO': 'library/compatibility/3do.md'
         - 'Atari Jaguar': 'library/compatibility/jaguar.md'
