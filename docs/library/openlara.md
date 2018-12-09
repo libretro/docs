@@ -97,7 +97,7 @@ or preferably setup the content folder like this:
 | level/1/ | *.PNG and *.PHD or *.PSX or *.SAT        | Load-screens and levels                 |
 | level/2/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
 | level/3/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
-| video/1/ | *.RPL or *.FMV or *.CPK                  | Video cut-scenes                        |
+| video/1/ | *.RPL or *.FMV                           | Video cut-scenes                        |
 | video/2/ | *.RPL or *.FMV                           | Video cut-scenes                        |
 | video/3/ | *.RPL or *.FMV                           | Video cut-scenes                        |
 
