@@ -6,6 +6,8 @@ A new work-in-progress Tomb Raider game engine ported to libretro.
 
 This game engine recreation seeks to allow you to play the original Tomb Raider engine games, from 1 all the way up to 5.
 
+OpenLara V1 Tomb Raider 1 is fully playable.
+
 The nice thing about OpenLara is that, while staying true to the original look and feel of the original, it also adds some enhancements to it that manages to make the boxy old-school Tomb Raider games look a bit less archaic. Some examples include :
 
 - The framerate is no longer fixed to 30fps, and you can now run it at a smooth 60fps framerate. There are even more framerate options, allowing you to play at 90fps, 120fps or even 144fps.
@@ -37,22 +39,6 @@ This core requires that you use OpenGL as the video driver. Go to Settings -> Dr
 
 !!! attention 
 	There is currently no ‘working’ macOS version available due to the OpenGL requirement.
-	
-Also, the OpenLara core requires that you turn on ‘Enable Shared Hardware Context’, otherwise you will only see a single texture being displayed onscreen instead of the game screen.
-
-![](../image/core/openlara/texture.png)
-
-1. First, you need to ensure that ‘Show Advanced Settings’ is turned on. Go to Settings -> User Interface and turn ‘Show Advanced Settings’ on.
-
-![](../image/core/openlara/advanced.png)
-
-2. Now, go back, and go to Settings -> Core.
-
-![](../image/core/openlara/settings.png)
-
-3. Once inside the ‘Core’ settings, set ‘Enable Shared Hardware Context’ to ON.
-
-![](../image/core/openlara/context.png)
 
 ## Extensions
 
@@ -62,9 +48,9 @@ Content that can be loaded by the OpenLara core have the following file extensio
 - .psx
 - .tr2
 
-RetroArch database(s) that are associated with the OpenLara core:
+RetroArch dat that is associated with the OpenLara core:
 
-- [Tomb Raider](https://github.com/libretro/libretro-database/blob/master/rdb/Tomb%20Raider.rdb)
+- [Tomb Raider](https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Tomb%20Raider.dat)
 
 ## Features
 
@@ -73,7 +59,7 @@ Frontend-level settings or features that the OpenLara core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✕         |
-| Saves             | ✕         |
+| Saves             | ✔         |
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
@@ -100,13 +86,32 @@ Frontend-level settings or features that the OpenLara core respects.
 
 The OpenLara core's library name is 'OpenLara'
 
+To achieve a continous game that loads from one level to the next you can load directly from CD
+or preferably setup the content folder like this:
+
+| Folder   | File Type(s)                             | Description                             |
+|:--------:|:----------------------------------------:|:---------------------------------------:|
+| audio/1/ | track_XX.ogg or XXX.ogg                  | X represents a number                   |
+| audio/2/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
+| audio/3/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
+| level/1/ | *.PNG and *.PHD or *.PSX or *.SAT        | Load-screens and levels                 |
+| level/2/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
+| level/3/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
+| video/1/ | *.RPL or *.FMV or *.CPK                  | Video cut-scenes                        |
+| video/2/ | *.RPL or *.FMV                           | Video cut-scenes                        |
+| video/3/ | *.RPL or *.FMV                           | Video cut-scenes                        |
+
+!!! note
+    if you load from CD you won't have soundtrack in TR1
+
+
 The OpenLara core saves/loads to/from these directories.
 
-**Frontend's System directory**
-
-| File           | Description  |
-|:--------------:|:------------:|
-| openlara-*.xsh | Shader files |
+| File                        | Description  |
+|:---------------------------:|:------------:|
+| system/openlara/*.xsh       | Shader files |
+| saves/openlara/savegame.dat | Savegame     |
+| saves/openlara/settings     | Settings     |
 
 ## Geometry and timing
 
