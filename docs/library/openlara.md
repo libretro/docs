@@ -86,7 +86,7 @@ Frontend-level settings or features that the OpenLara core respects.
 
 The OpenLara core's library name is 'OpenLara'
 
-To achieve a continous game that loads from one level to the next you can load directly from CD
+To achieve a continuous game that loads from one level to the next you can load directly from CD
 or preferably setup the content folder like this:
 
 | Folder   | File Type(s)                             | Description                             |
