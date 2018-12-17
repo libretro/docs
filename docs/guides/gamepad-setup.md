@@ -3,15 +3,15 @@ RetroArch controls map real-world controller buttons to a virtual controller cal
 
 You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
 
-# Gamepad Setup
+![RetroPad Conceptual Diagram](../image/windows/retropad-conceptual-diagram.png)
 
-RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many emulators instead of having to configure each emulator individually. However, RetroArch also provides the freedom to configure specific emulators individually and even individual games differently if the user wants. This allows a specific setting or button mapping for a certain console or even just for a certain game.
+# Gamepad Setup
+RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
 
 ## Setting up a Gamepad
-
 XINPUT controllers should work out of the box. If the controller can be autoconfigured the OSD will inform you of the autoconfiguration event. We also include autoconf profiles for many popular controllers. However not all controllers have these autoconfigs, if this is your case follow this guide:
 
-![Screenshot](../image/windows/autoconf.gif)
+![Screenshot of input binding](../image/windows/autoconf.gif)
 
 - Navigate to **Settings**
 - Navigate to **Input**
