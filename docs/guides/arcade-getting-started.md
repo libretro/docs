@@ -87,3 +87,5 @@ In addition to having a version number, arcade ROMs can be formatted four ways:
 - **Non-merged ROM**: All romsets can be used standalone because each zip contains all the files needed to run that game, including any files from 'parent romsets'. The only exceptions are games which use BIOS ROMs, which are formatted as 'Split' and must be kept in the same folder as the game romset which uses it.
 - **Split**: Some romsets that are considered clones, translations, or bootlegs also require a "parent" romset to run. In some cases the parent is not the most popular or best working version of the game, however. For example, in a Split set `pacman.zip` (a clone), will not work without `puckman.zip` (its parent).
 - **Merged**: Clones are merged into the parent romset zip, meaning that more than one game is stored per file. **Merged romsets are not supported by libretro cores.**
+
+The arcade cabinets image is based on an image by Rob DiCaterino, licensed for reuse under a Creative Commons (CC BY 2.0) License. Original image and license: https://www.flickr.com/photos/goodrob13/17385639015/
