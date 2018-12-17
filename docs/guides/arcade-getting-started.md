@@ -8,6 +8,8 @@ Arcade emulation requires a different planning approach than console emulation. 
 
 The libretro core ecosystem includes a variety of arcade emulators, each with specific strengths and each requiring its own distinct version of arcade "romsets" which the emulator supports. Every arcade emulator core is optimized for different hardware and different games. This guide is intended to help you decide which core to use and find out what romset version is required for that emulator.
 
+![Arcade cabinets in an arcade room](../image/guides/arcade-emulation.png)
+
 ## Step 1: Choose an arcade emulator to match your system
 
 There are two families of multi-system arcade emulator available as libretro cores: Final Burn Alpha (FBA) and MAME. These emulators are available in multiple versions to allow users to best match a core to their system.
@@ -54,7 +56,7 @@ Users with modern desktop and laptop processors, and other full power systems, h
 
 In general, you will only get good results with a full collection of arcade romsets. Downloading individual arcade romset zip files is unlikely to work well because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset downloads may not include required "Parent" romsets or required audio sample files.
 
-**Full Non-Merged ROM sets are widely available and are the simplest romset format to get started with.**
+!!! tip Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
 
 | Emulator | Required ROM Version |
 | :---: | :---: |
@@ -80,7 +82,8 @@ Unlike some other systems, arcade romsets should remained zipped when used. If y
 
 In addition to having a version number, arcade ROMs can be formatted four ways:
 
-- **Full Non-merged**: All romsets can be used standalone because each zip contains all the files needed to run that game, including any ROMs from 'parent' ROM sets and BIOS sets. (ClrMamePro users: access through the "Advanced" button in the Rebuild and Scanner menus, then deselect "Separate BIOS sets". ClrMamePro will display those sets as missing in scans, but that is because all of their files will be distributed directly to the game romsets that need them.)
+- **Full Non-merged**: All romsets can be used standalone because each zip contains all the files needed to run that game, including any ROMs from 'parent' ROM sets and BIOS sets.
+!!! ClrMamePro users To rebuild Full Non-Merged romsets, use `Non-Merged` mode and deselect `Separate BIOS sets` via the `Advanced` button in the `Rebuild` and `Scanner` menus. ClrMamePro may display BIOS sets as missing in scans with these settings, but that is because all of the BIOS files will be distributed directly to the game romsets that need them.
 - **Non-merged ROM**: All romsets can be used standalone because each zip contains all the files needed to run that game, including any files from 'parent romsets'. The only exceptions are games which use BIOS ROMs, which are formatted as 'Split' and must be kept in the same folder as the game romset which uses it.
-- **Split**: Some romsets that are considered clones, translations, or bootlegs also require a "parent" romset to run. In some cases the parent is not the most popular or best working version of the game, however. For example, in a Split set pacman.zip (a clone), will not work without puckman.zip (its parent).
-- **Merged**: Clones are merged into the parent romset zip, meaning that more than one game is stored per file. Merged romsets are not supported by libretro cores.
+- **Split**: Some romsets that are considered clones, translations, or bootlegs also require a "parent" romset to run. In some cases the parent is not the most popular or best working version of the game, however. For example, in a Split set `pacman.zip` (a clone), will not work without `puckman.zip` (its parent).
+- **Merged**: Clones are merged into the parent romset zip, meaning that more than one game is stored per file. **Merged romsets are not supported by libretro cores.**
