@@ -54,7 +54,7 @@ Users with modern desktop and laptop processors, and other full power systems, h
 ## Step 2: Use the correct version romsets for that emulator
 **For best results, start with a full ROM collection with a version that matches the emulator you're using.**
 
-In general, you will only get good results with a full collection of arcade romsets. Downloading individual arcade romset zip files is unlikely to work well because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset downloads may not include required "Parent" romsets or required audio sample files.
+In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset downloads may not include BIOS ROMs, "Parent" romsets, or necessary audio sample files.
 
 !!! tip Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
 
