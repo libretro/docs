@@ -3,7 +3,7 @@ RetroArch controls map real-world controller buttons to a virtual controller cal
 
 You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
 
-![RetroPad Conceptual Diagram](../image/windows/retropad-conceptual-diagram.png)
+![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
 # Gamepad Setup
 RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
