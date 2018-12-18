@@ -10,16 +10,18 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ![Arcade cabinets in an arcade room](../image/guides/arcade-emulation.png)
 
+---
+
 ## Step 1: Choose an arcade emulator to match your system
 
-There are two families of multi-system arcade emulator available as libretro cores: Final Burn Alpha (FBA) and MAME. These emulators are available in multiple versions to allow users to best match a core to their system.
+There are two families of multi-system arcade emulators available as libretro cores: Final Burn Alpha (FBA, FB Alpha) and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
 
 **There are two principle criteria which affect arcade emulator core choice:**
   * Frontend integration
   * Processor performance requirements versus supported game library
 
 ### Frontend integration
-Among the libretro arcade cores, **Final Burn Alpha** and **MAME 2003-Plus** have the greatest amount of incorporation with the libretro frontend API. In practice, this means that more functionality like configuration, control mapping, fast-forward and rewind, screenshots, etc. are accessible through libretro frontends like RetroArch.
+Among the libretro arcade cores, **Final Burn Alpha** and **MAME 2003-Plus** have the closest integration with the libretro frontend API. In practice, this means that more functionality is accessible through libretro frontends like RetroArch in areas like configuration, control mapping, fast forward and rewind, screenshots, etc. .
 
 ### Processor performance requirements versus supported game library
 As the years have passed, emulators have become able to recreate arcade games with more and more accuracy to the original system. Arcade emulators have also added support for emulating more games over time. Particularly with MAME cores, increasing emulation accuracy requires increasing amounts of processing power, meaning that cores based on more recent emulators require greater processor power than cores based on older versions.
@@ -29,8 +31,8 @@ For purposes of this guide, ultra-low power devices are those such as the Raspbe
 
 |  | Recommended MAME Emulator | Recommended FB Alpha Emulator |
 | :---: | :---: | :---: |
-| **Primary recommendation** | mame2000 | fbalpha2012 |
-| **Secondary recommendation** | mame2003-plus | fbalpha |
+| **Primary recommendation** | MAME 2000 | FB Alpha 2012 |
+| **Secondary recommendation** | MAME 2003-Plus | FB Alpha |
 
 _Note: Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
 
@@ -43,25 +45,27 @@ For purposes of this guide, low power devices include:
 
 | | Recommended MAME Emulator | Recommended FB Alpha Emulator |
 | :---: | :---: | :---: |
-| **Primary recommendation** | mame2003-plus | fbalpha |
-| **Secondary recommendation** | mame2010, mame2016 | N/A |
+| **Primary recommendation** | MAME 2003-Plus | FB Alpha |
+| **Secondary recommendation** | MAME 2010, MAME 2016 | N/A |
 
 _Note: Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
 
 #### Full power devices
 Users with modern desktop and laptop processors, and other full power systems, have the greatest flexibility in terms of which arcade emulator cores to use.
 
+---
+
 ## Step 2: Use the correct version romsets for that emulator
 **For best results, start with a full ROM collection with a version that matches the emulator you're using.**
 
-In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset zip files may not include BIOS ROMs, "Parent" romsets, or necessary audio sample files.
+In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
 
 !!! tip Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
 
 | Emulator | Required ROM Version |
 | :---: | :---: |
-| Final Burn Alpha | FBA (latest version) |
-| Final Burn Alpha 2012 | FBA 0.2.97.24 |
+| FB Alpha | FBA (latest version) |
+| FB Alpha 2012 | FBA 0.2.97.24 |
 | MAME 2000 | MAME 0.37b5 |
 | MAME 2003 | MAME 0.78 |
 | MAME 2003-Plus | MAME 2003-Plus (latest version) |
@@ -71,11 +75,13 @@ In general, you will only get good results with a full collection of arcade roms
 | MAME (latest version) | MAME (latest version) |
 
 ### Keep arcade romsets zipped
-Unlike some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
+Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
+
+---
 
 ## Crash Course in Arcade ROM terminology
 
-- **ROM, ROM set, and romset**: Arcade games are packaged as zip files, most of which are composed of more than one individual 'ROM' files. That is why some resources refer to an individual arcade game as a ROM (like people use to describe a zipped game cartridge ROM) while other resources refer to an individual game as a ROM set or romset.
+- **ROM, ROM set, and romset**: Arcade games are packaged as zip files, most of which are composed of more than one individual 'ROM' file. That is why some resources refer to an individual arcade game as a ROM (like people use to describe a zipped game cartridge ROM) while other resources refer to an individual game as a ROM set or romset.
 - **ROM version or ROM set version**: Each version of an arcade emulator must be used with ROMs that have the same exact version number. For example, MAME 0.37b5 ROMs are required by the MAME 2000 emulator, but will not work correctly with the MAME 2010 emulator, which requires MAME 0.139 ROMs.
 - **Sample**: Some games require an additional zip file with recorded sounds or music in order for audio to work correctly. The path where these samples should be copied varies from emulator to emulator.
 - **CHD**: Some MAME games require data from an internal hard drive, CD-ROM, laserdisk, or other media in order to be emulated -- those forms of media are packaged as CHD files. CHD files should be copied to subfolders within the folder where the MAME ROM zips have been installed.
