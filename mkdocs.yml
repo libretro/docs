@@ -23,6 +23,7 @@ pages:
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
     - Core Documentation:
       - Bios information HUB: 'library/bios.md'
+      - Getting Started with Arcade Emulation: 'guides/arcade-getting-started.md'
       - Core Compatibility:
         - '3DO': 'library/compatibility/3do.md'
         - 'Atari Jaguar': 'library/compatibility/jaguar.md'
