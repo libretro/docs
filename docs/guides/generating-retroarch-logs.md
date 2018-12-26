@@ -101,8 +101,32 @@ Gathering log files in Android requires a third-party app that can interface wit
 ### Generating Logs in iOS
 At the moment there are no logging docs available for iOS. Please feel free to post about your situation in the libretro forums.
 
-### Generating Logs with Nintendo Consoles
-At the moment there are no logging docs available for Nintendo consoles. Please feel free to post about your situation in the libretro forums.
+### Generating Logs with Nintendo Switch
+
+You need to have your console and your PC on the same local network.
+
+You need to have `nxlink` installed on your PC to generate logs. The devkitpro environment has it, see the [switchbrew wiki](https://switchbrew.org/wiki/Setting_up_Development_Environment) for instructions on how to install it.
+
+Run the homebrew menu on your console, and press the Y button to open the netloader prompt.
+
+Take the NRO of the core you want to launch on your PC. Open a terminal and type this command  in :
+
+```
+nxlink /path/to/your/core.nro -s
+```
+
+Where `/path/to/your/core.nro` is the path to the core you want to generate logs from, on your PC. Be careful as it will overwrite any homebrew with the same name on your SD card !
+
+That will send the homebrew and run it on your console. Logs will be shown on the terminal you ran the command from.
+
+If you want to redirect logs to the file `libnx.logs`, use this command instead :
+
+```
+nxlink /path/to/your/core.nro -s > libnx.logs 2>&1
+```
+
+### Generating Logs with other Nintendo Consoles
+At the moment there are no logging docs available for other Nintendo consoles. Please feel free to post about your situation in the libretro forums.
 
 ### Generating Logs with PlayStation Consoles
 At the moment there are no logging docs available for PlayStation consoles. Please feel free to post about your situation in the libretro forums.

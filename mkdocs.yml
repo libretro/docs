@@ -250,6 +250,7 @@ pages:
           - 'Nintendo GameCube': 'compilation/gamecube.md'
           - 'Nintendo Wii': 'compilation/wii.md'
           - 'Nintendo Wii U': 'compilation/wiiu.md'
+          - 'Nintendo Switch (libnx)': 'compilation/switch-libnx.md'
         - Sony:
           - 'PlayStation2': 'compilation/ps2.md'
           - 'PlayStation Portable': 'compilation/psp.md'
