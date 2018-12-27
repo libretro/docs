@@ -7,9 +7,8 @@ That feature deals with "internal" game logic lag.
 This means you can still take advantage of other RetroArch lag reduction methods that happens later, such as Hard GPU Sync or Frame Delay.
 
 It's located in **Quickmenu > Latency** (also in Settings > Latency).
-  
-  
-# How many frames to Run Ahead?
+ 
+## How many frames to Run Ahead?
 
 We need to find **the shortest internal input lag** a game can have, it's usually just moving the character:
 
@@ -22,8 +21,7 @@ At best an action will be visible on the next frame, so the frames of lag are **
 If you did select an higher number than needed, you will see a stutter/rollback when pushing buttons and possibly various weirdnesses.  
 If you selected a lower number, repeating the test above will take more than 1 push on the "K" hotkey to see your character move.
   
-  
-# Can I always use Run Ahead?
+## Can I always use Run Ahead?
 
 **Run Ahead relies on save states** so they need to be clean and fast enough.  
 If a core doesn't support them, this can not work.  
@@ -32,8 +30,8 @@ Using **Second Instance** mode works around some save states limitation, use it 
 Calculating several frames in advance means that your machine must be fast enough to run the core at that level of speed.  
 **The higher the number of frames you are going to run ahead of emulation, the higher demands it places on your CPU.**
   
-  
-# More detailed explanation by its author Dwedit
+## More detailed explanation
+Here is a more detailed explanation on runahead by its author Dwedit.
 
 How the Run-Ahead feature currently works:
 
@@ -64,7 +62,3 @@ In Single-Instance mode, it is possible to improve performance further by runnin
 I'd imagine there'd be issues if calling the "run a frame" function left you in a state further along than a single frame.
 
 I'm also not doing any speculative inputs at all.
-
-
-
-
