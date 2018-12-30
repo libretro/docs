@@ -1,5 +1,10 @@
 # Debugging
 
+## Dr.MinGW
+
+Windows debug builds now have an integrated crash handler.
+If you find any recurrent crashes you can start the retroarch_debug.exe executable, reproduce the crash and you should find a time-stamped crash log in the retroarch directory.
+
 ## GDB (All platforms)
 
 The [GNU Debugger](https://www.gnu.org/software/gdb/) is the most widely available debugging tool for many platforms.
