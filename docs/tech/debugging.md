@@ -65,3 +65,7 @@ For more information on using rr, please see their usage guide [here](https://gi
 ## Time Travel Debugging (Windows)
 
 [Time Travel Debugging](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview) is a Windows tool for recording and replaying a program's execution, similar to [rr](http://rr-project.org/). For more information, please visit their website.
+
+## Android Studio (Android)
+
+See [this file](https://github.com/libretro/RetroArch/blob/master/pkg/android/phoenix-gradle/README.md) for a guide on how to build, sideload and debug a core using Android Studio.
