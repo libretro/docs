@@ -35,12 +35,12 @@ Now we can start installing the packages we actually need.
 For 32-bit builds:
 
     :::bash
-    pacman -S --noconfirm --needed wget git make mingw-w64-i686-toolchain mingw-w64-i686-ntldd mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-SDL2 mingw-w64-i686-libxml2 mingw-w64-i686-freetype mingw-w64-i686-python3 mingw-w64-i686-ffmpeg
+    pacman -S --noconfirm --needed wget git make mingw-w64-i686-toolchain mingw-w64-i686-ntldd mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-SDL2 mingw-w64-i686-libxml2 mingw-w64-i686-freetype mingw-w64-i686-python3 mingw-w64-i686-ffmpeg mingw-w64-i686-drmingw
 
 For 64-bit builds:
 
     :::bash
-    pacman -S --noconfirm --needed wget git make mingw-w64-x86_64-toolchain mingw-w64-x86_64-ntldd mingw-w64-x86_64-zlib mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-libxml2 mingw-w64-x86_64-freetype mingw-w64-x86_64-python3 mingw-w64-x86_64-ffmpeg
+    pacman -S --noconfirm --needed wget git make mingw-w64-x86_64-toolchain mingw-w64-x86_64-ntldd mingw-w64-x86_64-zlib mingw-w64-x86_64-pkg-config mingw-w64-x86_64-SDL2 mingw-w64-x86_64-libxml2 mingw-w64-x86_64-freetype mingw-w64-x86_64-python3 mingw-w64-x86_64-ffmpeg mingw-w64-x86_64-drmingw
     
 You might want to install Qt too if you want to be able to use the desktop GUI.
 
@@ -101,6 +101,10 @@ For development purposes you might want to run a debug build instead. In such ca
     ./configure
     make clean
     make DEBUG=1 GL_DEBUG=1 -j4
+
+To facilitate debugging you can get an integrated crash handler by replacing the configure step with (debug builds only):
+
+     ./configure--enable-drmingw
 
 After a few minutes you should be able to find retroarch.exe under that directory. To start the newly compiled retroarch you can use:
 
