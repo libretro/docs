@@ -98,9 +98,13 @@ To compile RetroArch run the following commands inside RetroArch's source tree:
 For development purposes you might want to run a debug build instead. In such case use the following commands:
 
     :::bash
-    ./configure --enable-drmingw
+    ./configure
     make clean
     make DEBUG=1 GL_DEBUG=1 -j4
+
+You can also get an integrated crash handler on debug builds by replacing the configure step with:
+
+     ./configure--enable-drmingw
 
 After a few minutes you should be able to find retroarch.exe under that directory. To start the newly compiled retroarch you can use:
 
