@@ -102,7 +102,7 @@ For development purposes you might want to run a debug build instead. In such ca
     make clean
     make DEBUG=1 GL_DEBUG=1 -j4
 
-You can also get an integrated crash handler on debug builds by replacing the configure step with:
+To facilitate debugging you can get an integrated crash handler by replacing the configure step with (debug builds only):
 
      ./configure--enable-drmingw
 
