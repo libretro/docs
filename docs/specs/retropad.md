@@ -2,20 +2,21 @@
 
 The **RetroPad** is a joypad abstraction interface defined by the Libretro API. It is the primary input device for a libretro frontend. Unless a core absolutely requires the use of a keyboard with no possible fallback for gamepad-type controls, a [[Libretro core]] should always be implemented as such that it is directly controllable by the RetroPad.
 
+![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
+
 In terms of button layout and functionality, the RetroPad is based on a PlayStation/Super Nintendo joypad.
 
-![RetroPad mapping for an XBox 360 gamepad](https://wiki.libretro.com/images/6/68/Retropad_360pad.png)
-
-Above: An example of the RetroPad joypad abstraction mapped to the Xbox 360 gamepad.
-
 ## Definition/Criteria
-A joypad must fulfill the following criteria to meet the requirements of the RetroPad joypad abstraction:
+The minimum implementation required for the RetroPad abstraction:
 
-* It must have at least two shoulder buttons - two additional extra shoulder buttons are also supported.
-* It must have at least four face buttons.
-* It must have at least one D-pad.
-* It must have at least one analogue stick - two analogue sticks are most common.
-* It must have at least a Start button and a Select/Back button.
+* At least two shoulder buttons
+* At least four face buttons
+* At least one D-pad
+* At least one analogue stick
+* A `Start` button and a `Select`/`Back` button.
+
+![Mega Drive 6-Button Gamepad](../image/controller/md6.png)
+Above: An example of the RetroPad joypad abstraction mapped to the Megadrive 6-Button gamepad.
 
 ### Parallel port joypads in Linux
 RetroArch supports parallel port joypads on Linux via the "parport" joypad driver. It uses an extended version of the Linux Multisystem 2-button joystick protocol.
