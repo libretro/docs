@@ -43,3 +43,9 @@ If your video driver has very bad performance, it is possible to run it on a thr
 ## Windows Vista+ problems
 
 Windows Vista and up suffer problems with OpenGL in windowed mode where it appears to be impossible to obtain proper, smooth VSync behavior no matter what you do. If you are annoyed by this problem, and still want to play in windowed mode, you should use the D3D9 driver which doesn't have this problem. Disabling Aero sometimes helps OpenGL VSync behavior.
+
+## macOS problems
+
+If you are experiencing periodic issues of audio and video stuttering and have multiple displays attached to your computer, this may be the cause. The solution is to limit macOS to a single display. 
+
+For example, if you are running on a laptop with a single external display, it is sufficient to close your laptop lid or turn off the external display.
