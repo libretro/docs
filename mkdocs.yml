@@ -244,7 +244,7 @@ pages:
           - Windows XP and later (MSVC2010):
             - 'MSVC Commandline': 'compilation/windowsXP-msvc-cmdline.md'
             - 'MSVC IDE': 'compilation/windowsXP.md'
-          - 'Windows Vista and later (MSYS2)': 'compilation/windows.md'
+          - 'Windows 7 and later (MSYS2)': 'compilation/windows.md'
         - Nintendo:
           - 'Nintendo 3DS': 'compilation/3ds.md'
           - 'Nintendo GameCube': 'compilation/gamecube.md'
