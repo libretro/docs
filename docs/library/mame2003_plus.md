@@ -255,7 +255,8 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 
 ## Core options
 
-The first value listed for the core option represents the default. **Restart core** indicates that the core must be restarted in order for changes to that option to take effect.
+!!! Tip
+    **Restart core** indicates that the core must be restarted in order for changes to that option to take effect.
 
 !!! Tip "Content-aware core options"
     Because MAME 2003-Plus supports more than 4,000 games, there are a number of core options which only apply to a subset of its library. For example, there are several options to configure vector displays which have no effect for games with any other kind of display. **MAME 2003-Plus only presents core options to the frontend that are relevant to the game that is currently loaded** In other words, the vector options only appear when a vector game is currently loaded.
