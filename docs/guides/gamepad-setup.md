@@ -8,7 +8,7 @@ You don't have to map all of the RetroPad buttons to a real world button. If you
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
 ## Keyboard controls
-RetroArch provides [a default set of bindings]([retroarch-keyboard-controls) between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys.
+RetroArch provides [a default set of bindings](retroarch-keyboard-controls.md) between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys.
 
 ### Cores with direct keyboard input
 Please be aware that some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to directly read the keyboard or controls that use a keyboard interface. **If you are using a core configured for direct keyboard access, it is recommended that users unbind the RetroArch keyboard-to-RetroPad and hotkey bindings or use the `Game Focus` mode to disable those bindings while using the keyboard device.** Otherwise, keyboard input may result in multiple conflicting simultaneous actions by the core.
