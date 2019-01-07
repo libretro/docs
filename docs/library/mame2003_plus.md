@@ -5,7 +5,7 @@
 MAME 2003-Plus (also referred to as MAME 2003+ and mame2003-plus) is a libretro multi-arcade system emulator core which prioritizes 1) usability and frontend integration, 2) performance, and 3) compatibility across the range of libretro-supported platforms including mobile devices, single board computers, and consoles. MAME 2003-Plus is part of a long tradition in arcade emulation of producing platform-specific and performance-optimized MAME builds.
 
 !!! Question "Why is it called **Plus**?"
-   Unlike the other 'historic' libretro MAME cores which remain fixed at one MAME version, MAME 2003-Plus is actively maintained and has to date added support for hundreds of new games along with dozens of new features.
+    Unlike the other 'historic' libretro MAME cores which remain fixed at one MAME version, MAME 2003-Plus is actively maintained and has to date added support for hundreds of new games along with dozens of new features.
 
 MAME 2003-Plus is part of a lineage of codebase forks and ports: this core was forked from MAME 2003, which is itself derived from Xmame 0.78, the X11/Unix port of MAME 0.78.
 
@@ -123,15 +123,15 @@ No system of default input mappings can address the full range of emulated games
 | **Modern Fightstick** |
 |-----------------------|
 | The **Modern Fightstick** layout is the fight stick and pad layout popularized by Street Fighter IV and assumes an 8+ button controller. Gamepad can also serve as an alternative Xbox/PSX-style layout for Street Fighter 2.<br>For arcade control panels, **Modern Fightstick** can be mapped in this way:<br>
-![Modern Fightstick mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/modern.png)|
+![Modern Fightstick mapping for arcade controls](../image/core/mame2003-plus/fightstick.png)|
 
 | **6-Button** |
 |--------------|
-| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this:<br>![6-button mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/snesmapping.png)|
+| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this:<br>![6-button mapping for arcade controls](../image/core/mame2003-plus/6button.png)|
 
 | **8-Button** |
 |--------------|
-|**8-button** is a layout intended for an arcade panel that is configured like this<br>![8-button mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/10PANEL.png)|
+|**8-button** is a layout intended for an arcade panel that is configured like this<br>![8-button mapping for arcade controls](../image/core/mame2003-plus/8button.png)|
 
 
 ### Keyboard Input
