@@ -1,4 +1,4 @@
-# RetroPad Setup
+# Getting started: Input
 
 ## RetroPad Concept
 RetroArch controls map real-world controller buttons to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES gamepad plus four shoulder buttons and dual analog sticks like a Sony DualShock.
@@ -10,9 +10,11 @@ You don't have to map all of the RetroPad buttons to a real world button. If you
 ## Keyboard controls
 RetroArch provides [a default set of bindings]([retroarch-keyboard-controls) between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys.
 
+### Cores with direct keyboard input
+Please be aware that some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to directly read the keyboard or controls that use a keyboard interface. **If you are using a core configured for direct keyboard access, it is recommended that users unbind the RetroArch keyboard-to-RetroPad and hotkey bindings or use the `Game Focus` mode to disable those bindings while using the keyboard device.** Otherwise, keyboard input may result in multiple conflicting simultaneous actions by the core.
 
 !!! tip
-    Some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to read the keyboard directly for input. **If you are using a core configured for direct keyboard access, it is often necessary to unbind the RetroArch keyboard-to-RetroPad and hotkey bindings or to use the `Game Focus` mode to disable those bindings while the core is in use.** Otherwise keyboard input may result in multiple conflicting simultaneous actions by the core.
+    Controls with keyboard interfaces can also benefit from defining a **Hotkey Enable** button in RetroArch which is required to be held down in order to activate the other hotkeys.
 
 ## Gamepad setup
 RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
