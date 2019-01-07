@@ -283,7 +283,7 @@ The first value listed for the core option represents the default. **Restart cor
 |DCS Speedhack| _Advanced feature: changing from the default is not recommended in most cases._ Use so-called "speed hacks" to improve the performance of DCS sound hardware. |
 |Locate system files within a subfolder | For historical reasons, MAME 2003-Plus reads system files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. |
 |Locate save files within a subfolder | For historical reasons, MAME 2003-Plus saves files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. |
-|TATE Mode| placeholder |
+|TATE Mode| From the Japanese 縦 (ta-te) meaning "vertical", **TATE Mode** renders vertical games lengthwise along the display. This mode is intended for use with rotating monitors and portable devices that can make the full use of their viewable area for games which used vertical monitors.
 |Brightness| Simple brightness adjustment. |
 | Gamma correction | Simple gamma adjustment.  |
 |Frameskip| _Advanced feature: changing from the default is not recommended in most cases._ |
