@@ -1,15 +1,29 @@
-# RetroPad Concept
-RetroArch controls map real-world controller buttons to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES controller plus four shoulder buttons and dual analog sticks like a Sony DualShock.
+# Getting started: Input
+
+## RetroPad Concept
+RetroArch controls map real-world controller buttons to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES gamepad plus four shoulder buttons and dual analog sticks like a Sony DualShock.
 
 You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
 
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
-# Gamepad Setup
+## Keyboard controls
+RetroArch provides [a default set of bindings](retroarch-keyboard-controls.md) between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys.
+
+### Cores with direct keyboard input
+Please be aware that some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to directly read the keyboard or controls that use a keyboard interface. **If you are using a core configured for direct keyboard access, it is recommended that users unbind the RetroArch keyboard-to-RetroPad and hotkey bindings or use the `Game Focus` mode to disable those bindings while using the keyboard device.** Otherwise, keyboard input may result in multiple conflicting simultaneous actions by the core.
+
+!!! tip
+    Controls with keyboard interfaces can also benefit from defining a **Hotkey Enable** button in RetroArch which is required to be held down in order to activate the other hotkeys.
+
+## Gamepad setup
 RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
 
-## Setting up a Gamepad
-XINPUT controllers should work out of the box. If the controller can be autoconfigured the OSD will inform you of the autoconfiguration event. We also include autoconf profiles for many popular controllers. However not all controllers have these autoconfigs, if this is your case follow this guide:
+### Gamepad autoconfiguration
+Many gamepads should work out of the box via the RetroArch autoconfiguration profile database. If the gamepad can be autoconfigured the OSD will inform you of the autoconfiguration event.
+
+### Manual gamepad binding
+Not all controllers have these autoconfigs, if this is your case follow this guide:
 
 ![Screenshot of input binding](../image/windows/autoconf.gif)
 
@@ -22,7 +36,7 @@ XINPUT controllers should work out of the box. If the controller can be autoconf
 !!! tip
     If you have several different controller types you may want to use the **User 1 Save Autoconfig** followed by **User 1 Bind Default All** options after binding in order to achieve hotplug functionality
 
-## Setting up controllers for multi-player 
+## Controls for multi-player 
 
 If you want to set-up local multi-player with games that supports it:
 
@@ -43,10 +57,11 @@ After you finish, go back, select **Input User 2 Binds** and repeat for user 2.
 ## Hotkeys
 Hotkeys are combinations of buttons you can press in order to access options such as saving, loading, and exiting games. Hotkey binds can be configured at `Settings` → `Input` → `Input Hotkey Binds`. If you map `Enable Hotkeys` to a button, it will require that button to be held in order to trigger any hotkeys.
 
-## Remapping Controls for Individual Cores or Content
+## Remapping controls for individual cores or content
 Core Controls Remapping alters how the core receives input rather than how the gamepad is coded, for example you can tell an individual core to switch button A and B on the RetroPad for gameplay, but you can still use "A" to select in the RetroArch menu and "B" to go back. This is opposed to changing the gamepad bindings in RetroArch itself which would swap "A" and "B" in the core but would also make "B" select and "A" back in the RetroArch menu.
 
 **How to remap the controls for a single core or game:**
+
 * Start content with the core for which you want to remap controls
 * Go to **Quick Menu** and then **Controls**
 * Configure the buttons the way you want
