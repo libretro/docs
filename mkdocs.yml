@@ -41,6 +41,10 @@ pages:
       - Amstrad Cores:
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
+      - Arcade Cores:
+        - 'Arcade (MAME 2003)': 'library/mame_2003.md'
+        - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'        
+        - 'Arcade (MAME 2010)': 'library/mame_2010.md'
       - Atari Cores:      
         - 'Atari - 2600 (Stella)': 'library/stella.md'
         - 'Atari - 7800 (ProSystem)': 'library/prosystem.md'
@@ -71,10 +75,6 @@ pages:
         - 'Game Music Emu': 'library/game_music_emu.md'
         - 'Imageviewer': 'library/imageviewer.md'
         - 'PocketCDG': 'library/pocketcdg.md'
-      - Multi System Cores:
-        - 'Arcade (MAME 2003)': 'library/mame_2003.md'
-        - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'        
-        - 'Arcade (MAME 2010)': 'library/mame_2010.md'
       - Misc Cores:
         - '3D Engine': 'library/3d_engine.md'
         - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
