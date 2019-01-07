@@ -123,15 +123,15 @@ No system of default input mappings can address the full range of emulated games
 | **Modern Fightstick** |
 |-----------------------|
 | The **Modern Fightstick** layout is the fight stick and pad layout popularized by Street Fighter IV and assumes an 8+ button controller. Gamepad can also serve as an alternative Xbox/PSX-style layout for Street Fighter 2.<br>For arcade control panels, **Modern Fightstick** can be mapped in this way:<br>
-![Modern Fightstick mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/modern.png)|
+![Modern Fightstick mapping for arcade controls](../image/core/mame2003-plus/fightstick.png)|
 
 | **6-Button** |
 |--------------|
-| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this:<br>![6-button mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/snesmapping.png)|
+| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels that are mapped like this:<br>![6-button mapping for arcade controls](../image/core/mame2003-plus/6button.png)|
 
 | **8-Button** |
 |--------------|
-|**8-button** is a layout intended for an arcade panel that is configured like this<br>![8-button mapping for arcade controls](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/controls/10PANEL.png)|
+|**8-button** is a layout intended for an arcade panel that is configured like this<br>![8-button mapping for arcade controls](../image/core/mame2003-plus/8button.png)|
 
 
 ### Keyboard Input
