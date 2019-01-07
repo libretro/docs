@@ -4,7 +4,7 @@
 
 MAME 2003-Plus (also referred to as MAME 2003+ and mame2003-plus) is a libretro multi-arcade system emulator core which prioritizes 1) usability and frontend integration, 2) performance, and 3) compatibility across the range of libretro-supported platforms including mobile devices, single board computers, and consoles. MAME 2003-Plus is part of a long tradition in arcade emulation of producing platform-specific and performance-optimized MAME builds.
 
-!!! question "Why is it called **Plus**?
+!!! Question "Why is it called **Plus**?"
    Unlike the other 'historic' libretro MAME cores which remain fixed at one MAME version, MAME 2003-Plus is actively maintained and has to date added support for hundreds of new games along with dozens of new features.
 
 MAME 2003-Plus is part of a lineage of codebase forks and ports: this core was forked from MAME 2003, which is itself derived from Xmame 0.78, the X11/Unix port of MAME 0.78.
@@ -255,7 +255,8 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 
 ## Core options
 
-The first value listed for the core option represents the default. **Restart core** indicates that the core must be restarted in order for changes to that option to take effect.
+!!! Tip
+    **Restart core** indicates that the core must be restarted in order for changes to that option to take effect.
 
 !!! Tip "Content-aware core options"
     Because MAME 2003-Plus supports more than 4,000 games, there are a number of core options which only apply to a subset of its library. For example, there are several options to configure vector displays which have no effect for games with any other kind of display. **MAME 2003-Plus only presents core options to the frontend that are relevant to the game that is currently loaded** In other words, the vector options only appear when a vector game is currently loaded.
