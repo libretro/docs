@@ -460,6 +460,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 !!! attention
 	The deadzone setting can have a significant effect on the 'feel' of analog cursor movement. The value should be set as low as possible for best results - i.e. reduce the value until cursor drift is evident, then increment to the next highest setting. Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
 
+- **Mouse Speed** [scummvm_mouse_speed] (**1.0**|1.25|1.5|1.75|2.0|2.5|3.0|0.05|0.1|0.15|0.2|0.25|0.3|0.35|0.4|0.45|0.5|0.6|0.7|0.8|0.9)
+
+	Sets the mouse cursor speed multiplier when moving the cursor with the RetroMouse.
+
 - **Speed Hack (Restart)** [scummvm_speed_hack] (**disabled**|enabled)
 
 	Enables an optional speed hack that significantly reduces the CPU requirements of the core by allowing subtle timing inaccuracies.
@@ -548,6 +552,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | Left Mouse Button  |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | Right Mouse Button |
+
+!!! attention
+	To ensure correct operation when using a RetroMouse, it is recommended that the RetroArch 'Grab Mouse' option be enabled while running content with the ScummVM core. By default, 'Grab Mouse' may be toggled on/off by pressing F11 on the keyboard.
+	
+	The 'Grab Mouse' option is not required when using a RetroPad to move the cursor.
 
 ## Pointer
 
