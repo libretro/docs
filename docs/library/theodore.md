@@ -1,4 +1,4 @@
-# Thomson - TO8D (Theodore)
+# Thomson - MO/TO (Theodore)
 
 ## Background
 
