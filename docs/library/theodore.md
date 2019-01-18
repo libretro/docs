@@ -2,7 +2,8 @@
 
 ## Background
 
-Theodore is a Thomson TO8/TO8D system emulator based on the Daniel Coulom's DCTO8D emulator. The Thomson TO8 is a home computer introduced by French company Thomson SA in 1986. The Thomson TO8D is an improved version that includes a built-in 3.5" floppy drive.
+Theodore is a Thomson MO/TO system emulator based on Daniel Coulom's DCTO8D/DCTO9P/DCMO5 emulators. [Thomson MO/TO](https://en.wikipedia.org/wiki/Thomson_computers) is a family of 8-bit home computers produced by French company Thomson SA between 1982 and 1989.
+At the time of this writing, Theodore emulates the following versions of the MO/TO family: TO8, TO8D, TO9, TO9+, MO5.
 
 The Theodore core has been authored by
 
@@ -31,6 +32,7 @@ Content that can be loaded by the Theodore core have the following file extensio
 - .k7 (tape)
 - .rom (cartridge)
 - .m7 (cartridge)
+- .m5 (cartridge)
 
 ## Features
 
@@ -84,18 +86,18 @@ shown below.
 
 ![](../image/core/theodore/to8d_os.jpg)
 
-Now it is time to start BASIC that will run the program on the bootable device currently presented. To do that you only have to press the "B" button of your joypad that is conveniently mapped to the "B" key.
+Now it is time to start BASIC 512 that will run the program on the bootable device currently presented. To do that you only have to press the "B" button of your joypad that is conveniently mapped to the "B" key (except for TO9 where the "B" button is mapped to the "D" key to start BASIC 128).
 
 !!! Notes
         - BASIC 512 works for a vast majority of games.
         - In case of failure try the 2nd BASIC by pressing "C" key.
-        - Programs on a cartridge are generally loaded with the "A" key (entry not shown here).
+        - When using a cartridge, the "B" button is mapped to the "A" key to start the program on the cartridge (entry not shown here).
 
 ## Core options
 
 The Theodore core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-- **Thomson flavor** [theodore_rom]  (**TO8**|TO8D)
+- **Thomson flavor** [theodore_rom]  (**TO8**|TO8D|TO9|TO9+|MO5)
 
 - **Floppy write protection** [theodore_floppy_write_protect]  (disabled|**enabled**)
 
@@ -113,19 +115,19 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 ## Other devices
 
-- Light pen - The TO8 light pen inputs are mapped to the mouse.
+- Light pen - The computer's light pen inputs are mapped to the mouse.
 
 ## Joypad
 
 | RetroPad Inputs                        | User 1 input descriptors       |
 |----------------------------------------|--------------------------------|
 | ![](../image/retropad/retro_a.png)     | "Fire" button                  |
-| ![](../image/retropad/retro_b.png)     | "B" key<br>(See: [Usage](#usage)) |
+| ![](../image/retropad/retro_b.png)     | Autostart program<br>(See: [Usage](#usage)) |
 | ![](../image/retropad/retro_x.png)     | Virtual keyboard: go up        |
 | ![](../image/retropad/retro_y.png)     | Virtual keyboard: go down      |
 | ![](../image/retropad/retro_start.png) | Virtual keyboard: keystroke    |
 
-On controllers without Y/X keys, select can also be used to roll the virtual keyboard up. The order of the keys in the virtual keyboard is: digits (0->9) then letters (A->Z) then "Enter".
+On controllers without Y/X keys, select can also be used to roll the virtual keyboard up. The order of the keys in the virtual keyboard is: digits (0->9) then letters (A->Z) then "Space" then "Enter".
 
 ## Keyboard
 
@@ -167,4 +169,4 @@ On controllers without Y/X keys, select can also be used to roll the virtual key
 - [Libretro Theodore Github Repository](https://github.com/Zlika/theodore)
 - [Report Libretro Theodore Core Issues Here](https://github.com/Zlika/theodore/issues)
 - [Libretro Theodore Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/theodore_libretro.info)
-- [Official DCTO8D Website](http://dcto8.free.fr/)
+- [Official DCTO8D/DCTO9P/DCMO5 Website](http://dcmoto.free.fr/)
