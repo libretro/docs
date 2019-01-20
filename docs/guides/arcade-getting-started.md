@@ -17,6 +17,7 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 There are two families of multi-system arcade emulators available as libretro cores: Final Burn Alpha (FBA, FB Alpha) and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
 
 **There are two principle criteria which affect arcade emulator core choice:**
+
   * Frontend integration
   * Processor performance requirements versus supported game library
 
