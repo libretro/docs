@@ -57,7 +57,7 @@ If you **haven't installed** RetroArch and have a folder with it:
 2. Navigate to the RetroArch folder using the `cd` command.
 3. Launch RetroArch with this commandline:<br />
  `.\retroarch.exe --log-file .\retroarch-log.txt -v`
-4. Once you exit RetrorArch, a file called `retroarch-log.txt` should be stored in the folder.
+4. Once you exit RetroArch, a file called `retroarch-log.txt` should be stored in the folder.
 
 ### Generating Logs in OS X
 1. Open a console window with the OS X "Terminal" app.
