@@ -37,7 +37,7 @@ Required or optional firmware files go in the frontend's system directory.
 | sk.bin        | Sonic & Knuckles ROM (lock-on) - Optional       | 4ea493ea4e9f6c9ebfccbdb15110367e |
 | sk2chip.bin   | Sonic & Knuckles UPMEM ROM (lock-on) - Optional | b4e76e416b887f4e7413ba76fa735f16 |
 | areplay.bin   | Action Replay ROM (lock-on) - Optional          | a0028b3043f9d59ceeb03da5b073b30d |
-| ggenie.bin    | Game Genie ROM (lock-on) - Optional             | b5d5ff1147036b06944b4d2cac2dd1e1 |
+| ggenie.bin    | Game Genie ROM (lock-on) - Optional             | e8af7fe115a75c849f6aab3701e7799b |
 
 ## Extensions
 
