@@ -5,6 +5,7 @@ Libretro frontends are programs that have implemented the [libretro API](../spec
 Name | Author(s) | Last Release | Description
 ------|-----------|--------------|------------
 [RetroArch](http://retroarch.com) | [libretro](http://libretro.com) | 2017-11-21 1.6.9 | Official reference libretro frontend, developed in-house. It is usually the first in implementing new features added to the libretro API. Written almost entirely in C, targets a large amount of platforms.
+[Ludo](https://github.com/libretro/ludo) | kivutar | 2019-01-28 | libretro frontend written in Go.
 [minir](https://github.com/Alcaro/minir) | Alcaro | | WIMP interface (Windows, Icons, Menus and Pointers), and only cares about the major desktop OSes. Drops flexibility in favor of improved out-of-the-box experience.
 [Arcan](https://github.com/letoram/arcan) | Letoram | | Powerful development framework for creating virtually anything from user interfaces for specialized embedded applications all the way to full-blown standalone desktop environments.
 [GNOME Games](https://wiki.gnome.org/Apps/Games) | GNOME | | Games is a GNOME application to browse your video games library and to easily pick and play a game from it.
