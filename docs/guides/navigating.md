@@ -4,7 +4,7 @@ This tutorial will teach you the basics of navigating RetroArch and where to fin
 
 ## PC
 
-By default the keyboard should be ready to use. 
+By default the keyboard should be ready to use.
 
 Using the *left* and *right* arrow keys, you move to a different tab, each tab will relate to an aspect of the RetroArch experience (main menu for game loading, settings for settings etc.). Once the desired tab is selected, use the *up* and *down* arrow to move to an option.
 
@@ -22,7 +22,7 @@ Welcome to the main menu this is where you will launch games, download and updat
 
 ### Settings
 
-![Settings](../images/gui/pc/settings.jpg)
+![Settings](../image/gui/pc/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.
 
@@ -63,5 +63,3 @@ Handles anything to do with creating and maintaining playlists. It gives you sca
 ![Settings](../image/gui/mobile/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.
-
-
