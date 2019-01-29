@@ -64,18 +64,12 @@ Updating will happen system-wide, to change frequency update checks, you should 
 
 ### Arch-based
 
-The Arch repositories contain compiled versions of RetroArch.
+Arch Linux provides [stable releases](https://www.archlinux.org/packages/community/x86_64/retroarch/) of RetroArch in their community repository.
 
-You could either install the stable or the git version.
-
-To install stable, execute:
+Install with:
 
 ```
-sudo pacman -Sy retroarch
+sudo pacman -S retroarch
 ```
 
-To install git, execute:
-
-```
-yaourt -Sy retroarch-git
-```
+A [git release](https://aur.archlinux.org/packages/retroarch-git) of RetroArch is also available on the [AUR](https://aur.archlinux.org/).
