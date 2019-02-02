@@ -73,3 +73,13 @@ Do not choose "Core Updater"! That will not work on iOS.
 #### Changing the Menu Interface
 
 If you want more visual flair in the interface, you can change it by going to "Settings" -> "Driver" -> "Menu Driver". You might need to restart to see it take effect.
+
+### Transferring ROMs
+
+#### iOS
+
+Use a 3rd party utility like iFunBox or iExplorer to transfer ROM files to the RetroArch app directory.
+
+#### Apple TV
+
+When you start RetroArch, you'll be presented with a screen with a web address that you can access on your computer to transfer files to the RetroArch app directory on your Apple TV.
