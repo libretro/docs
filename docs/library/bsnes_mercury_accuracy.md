@@ -140,7 +140,7 @@ First, we load our GameBoy ROM through 'Load Super GameBoy' in RetroArch's Main 
 
 ![](../image/core/bsnes/menu1.png)
 
-![](../images/core/bsnes/gb.png)
+![](../image/core/bsnes/gb.png)
 
 Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
 
