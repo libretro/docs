@@ -17,10 +17,11 @@ pages:
       - 'File Browser': 'guides/file-browser.md'
       - 'Launching Content': 'guides/launch-content.md'
       - 'Importing Content': 'guides/import-content.md'
-      - 'Windows': 'guides/windows.md'
+      - 'Custom Settings': 'guides/overrides.md'
       - 'Command-line interface (CLI)': 'guides/cli-intro.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
+    - Quick Guide - Windows: 'guides/windows.md'
     - Core Documentation:
       - Bios information HUB: 'library/bios.md'
       - Getting Started with Arcade Emulation: 'guides/arcade-getting-started.md'
@@ -34,7 +35,7 @@ pages:
         - 'Nintendo Game Boy Advance': 'library/compatibility/gba.md'
         - 'Nintendo Game Boy Color': 'library/compatibility/gbc.md'
         - 'Nintendo NES': 'library/compatibility/nes.md'
-        - 'Nintendo SNES': 'library/compatibility/snes.md'        
+        - 'Nintendo SNES': 'library/compatibility/snes.md'
         - 'Sega 32X': 'library/compatibility/32x.md'
         - 'Sega Dreamcast': 'library/compatibility/dc.md'
         - 'Sega Saturn': 'library/compatibility/saturn.md'
@@ -44,9 +45,9 @@ pages:
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
       - Arcade Cores:
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
-        - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'        
+        - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
-      - Atari Cores:      
+      - Atari Cores:
         - 'Atari - 2600 (Stella)': 'library/stella.md'
         - 'Atari - 7800 (ProSystem)': 'library/prosystem.md'
         - 'Atari - 5200 (Atari800)': 'library/atari800.md'
@@ -159,6 +160,23 @@ pages:
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
+    - Feature Specific:
+      - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
+      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
+      - 'Linux KMS Mode': 'guides/kms-mode.md'
+      - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
+      - 'ROMs, Playlists, and Thumbnails': 'guides/roms-playlists-thumbnails.md'
+      - 'Run Ahead': 'guides/runahead.md'
+      - 'RetroAchievements': 'guides/retroachievements.md'
+      - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
+    - Interface Customization:
+      - 'Creating a Theme': 'guides/themes.md'
+      - 'Libretro Overlays': 'guides/libretro-overlays.md'
+      - 'RGUI Interface': 'guides/rgui.md'
+    - Advanced Topics:
+      - 'Libretro Frontends': 'tech/frontends.md'
+      - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
+      - 'Softpatching ROMs': 'guides/softpatching.md'
     - Shader Previews:
       - 'Introduction': 'shader/introduction.md'
       - '3dfx': 'shader/3dfx.md'
@@ -192,25 +210,6 @@ pages:
       - 'xbrz': 'shader/xbrz.md'
       - 'xsal': 'shader/xsal.md'
       - 'xsoft': 'shader/xsoft.md'
-
-    - Interface Customization:
-      - 'Creating a Theme': 'guides/themes.md'
-      - 'Libretro Overlays': 'guides/libretro-overlays.md'
-      - 'RGUI Interface': 'guides/rgui.md'
-    - Feature Specific:
-      - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
-      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
-      - 'Linux KMS Mode': 'guides/kms-mode.md'
-      - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
-      - 'ROMs, Playlists, and Thumbnails': 'guides/roms-playlists-thumbnails.md'
-      - 'Run Ahead': 'guides/runahead.md'
-      - 'RetroAchievements': 'guides/retroachievements.md'
-      - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
-    - Advanced Topics:
-      - 'Libretro Frontends': 'tech/frontends.md'
-      - 'Custom Settings': 'guides/overrides.md'
-      - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
-      - 'Softpatching ROMs': 'guides/softpatching.md'
     - Contributing:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:

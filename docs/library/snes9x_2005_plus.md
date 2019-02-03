@@ -100,24 +100,24 @@ The Snes9x 2005 Plus core saves/loads to/from these directories.
 
 ## Core options
 
-The Snes9x 2005 Plus core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Snes9x 2005 Plus core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Video Mode** [catsfc_VideoMode] (**auto**|NTSC|PAL)
 
 	Awaiting description.
-	
+
 - **Reduce Slowdown (Hack, Unsafe, Restart)** [catsfc_overclock_cycles] (**disabled**|compatible|max)
 
 	Many games for the SNES suffered from slowdown due to the weak main CPU. This option helps allievate that at the cost of possible bugs.
-	
+
 	[Example video here](https://www.youtube.com/watch?v=8xA9fosum4Q)
-	
+
 	compatible: Reduce slowdown but keep as much game compatibility as much as possible.
-	
+
 	max: Reduce slowdown as much as possible but will break more games.
-	
+
 - **Reduce Flickering (Hack, Unsafe)** [catsfc_reduce_sprite_flicker] (**disabled**|enabled)
 
 	Rises sprite limit to reduce flickering in games.
@@ -141,7 +141,7 @@ The Snes9x 2005 Plus core supports the following device type(s) in the controls 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
 | B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/Retro_y.png)    |
+| Y                            | ![](../image/retropad/retro_y.png)    |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |

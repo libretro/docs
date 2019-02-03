@@ -70,17 +70,17 @@ World data is saved/loaded to and from 'craft.db' in RetroArch's system director
 
 ??? note "Resolution - 320x240"
 	![](..\image\core\craft\320x240.png)
-	
+
 ??? note "Resolution - 1920x1080"
-	![](..\image\core\craft\1920x1080.png)	
+	![](..\image\core\craft\1920x1080.png)
 
 - **Show info text** (**Off**/On): Show game information in the upper left corner of Craft.
 
 ??? note "Show info text - Off"
 	![](..\image\core\craft\show_info_text_off.png)
-	
+
 ??? note "Show info text - On"
-	![](..\image\core\craft\show_info_text_on.png)	
+	![](..\image\core\craft\show_info_text_on.png)
 
 - **Jumping Flash mode** (**Off**/On):  Enabling this allows you to jump infinitely into the air all while the camera faces downwards.
 
@@ -88,18 +88,18 @@ World data is saved/loaded to and from 'craft.db' in RetroArch's system director
 
 ??? note "Field of view - 65"
 	![](..\image\core\craft\fov_65.png)
-	
+
 ??? note "Field of view - 125"
-	![](..\image\core\craft\fov_125.png)	
+	![](..\image\core\craft\fov_125.png)
 
 - **Draw distance** (**10**/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/28/29/30/31/32/9/8/7/6/5/4/3/2/1): Configure the draw distance.
 
 ??? note "Draw distance - 10"
 	![](..\image\core\craft\draw_distance_10.png)
-	
+
 ??? note "Draw distance - 32"
 	![](..\image\core\craft\draw_distance_32.png)
-	
+
 - **Inverted aim** (**Off**/On): Invert up and down crosshair aiming controls for the RetroPad and the RetroMouse.
 - **Right analog sensitivity** (**0.0150**/0.0175/0.0200/0.0225/0.0250/0.0275/0.0300/0.0325/0.0350/0.0375/0.0400/0.0425/0.0450/0.0475/0.0500): Modify the RetroPad right analog stick's sensitivity.
 - **Analog deadzone size** (**0.010**/0.015/0.020/0.025/0.030/0.035/0.040/0.045/0.050/0.055/0.060/0.065/0.070/0.075/0.080/0.085/0.090/0.095/0.100/0.110/0.115/0.120/0.125/0.130/0.135/0.140/0.145/0.150/0.155/0.160/0.165/0.170/0.175/0.180/0.185/0.190/0.195/0.200): Modify RetroPad analog sticks' deadzone.
@@ -138,18 +138,18 @@ World data is saved/loaded to and from 'craft.db' in RetroArch's system director
 
 | RetroKeyboard                                                                                          | Craft                |
 |--------------------------------------------------------------------------------------------------------|----------------------|
-| ![Retro_Keyboard_Arrow_Up](images\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Up.png)       | Move forward         |
-| ![Retro_Keyboard_Arrow_Down](images\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Down.png)   | Move backwards       |
-| ![Retro_Keyboard_Arrow_Left](images\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Left.png)   | Move crosshair left  |
-| ![Retro_Keyboard_Arrow_Right](images\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Right.png) | Move crosshair right |
-| ![Retro_Keyboard_Right_Shift](images\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Shift_Alt.png)   | Zoom out             |
+| ![Retro_Keyboard_Arrow_Up](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Up.png)       | Move forward         |
+| ![Retro_Keyboard_Arrow_Down](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Down.png)   | Move backwards       |
+| ![Retro_Keyboard_Arrow_Left](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Left.png)   | Move crosshair left  |
+| ![Retro_Keyboard_Arrow_Right](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Right.png) | Move crosshair right |
+| ![Retro_Keyboard_Right_Shift](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Shift_Alt.png)   | Zoom out             |
 
 | RetroMouse                                                      | Craft          |
 |-----------------------------------------------------------------|----------------|
-| ![Retro_Mouse](images/RetroMouse/Retro_Mouse.png)               | Move crosshair |
-| ![Retro_Left](images/RetroMouse/Retro_Left.png)                 | Destroy block  |
-| ![Retro_Middle](images/RetroMouse/Retro_Middle.png)             | Copy block     |
-| ![Retro_Right](images/RetroMouse/Retro_Right.png)               | Place block    |
+| ![Retro_Mouse](image/RetroMouse/Retro_Mouse.png)               | Move crosshair |
+| ![Retro_Left](image/RetroMouse/Retro_Left.png)                 | Destroy block  |
+| ![Retro_Middle](image/RetroMouse/Retro_Middle.png)             | Copy block     |
+| ![Retro_Right](image/RetroMouse/Retro_Right.png)               | Place block    |
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|

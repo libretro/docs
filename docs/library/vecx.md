@@ -43,7 +43,7 @@ The vecx core does not feature BIOS use.
 
 ## Options
 
-The vecx core has the following options that can be tweaked from the core options menu. The default setting is bolded. 
+The vecx core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
 - **Res Multiplier** (**1**-4)
 
@@ -62,12 +62,12 @@ The vecx core supports one controller setting:
 | vecx      | [RetroPad](RetroPad)                                           |
 |-----------|----------------------------------------------------------------|
 | 2         | ![RetroPad_B](../image/retropad/retro_b.png)               |
-| 4         | ![RetroPad_Y](../image/retropad/Retro_y.png)               |
+| 4         | ![RetroPad_Y](../image/retropad/retro_y.png)               |
 |           | ![RetroPad_Select](../image/retropad/retro_select.png)           |
-|           | ![RetroPad_Start](../image/retropad/Retro_start.png)             |
+|           | ![RetroPad_Start](../image/retropad/retro_start.png)             |
 | D-pad     | ![RetroPad_Dpad](../image/retropad/retro_dpad.png)               |
 | 1         | ![RetroPad_A](../image/retropad/retro_a.png)               |
-| 3         | ![RetroPad_X](../image/retropad/Retro_x.png)               |
+| 3         | ![RetroPad_X](../image/retropad/retro_x.png)               |
 |           | ![RetroPad_L1](../image/retropad/retro_l1.png)                   |
 |           | ![RetroPad_R1](../image/retropad/retro_r1.png)                   |
 |           | ![RetroPad_L2](../image/retropad/retro_l2.png)              |
