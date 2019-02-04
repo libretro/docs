@@ -22,7 +22,7 @@ While RGUI cannot configure absolutely everything, it can do the most common thi
 - Enable/disable real-time rewind
 - Simple input configuration
 - Mute/unmute audio
-- Exit RetroArch (yes, sadly :p)
+- Exit RetroArch
 
 ## Config file
 By default, RetroArch looks for a config in various places depending on OS:
