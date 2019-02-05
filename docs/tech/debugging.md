@@ -25,6 +25,8 @@ After gdb has started, you can then start up RetroArch with `run`. If RetroArch 
 
 From here, type `bt full` to get a full backtrace of the crash. You can copy/paste this information to a pastebin site such as [dpaste](http://www.dpaste.com/) to get a link that you can provide to developers to help with your problem. Run `quit` when you are done to exit gdb.
 
+To get a full backtrace of the crash for all threads, type `thread apply all bt full`.
+
 For more information on using GDB, please see their online documentation [here](https://sourceware.org/gdb/current/onlinedocs/gdb/).
 
 ## ASAN (Linux/Mac/BSD/Android)
