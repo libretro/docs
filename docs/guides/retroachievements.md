@@ -55,12 +55,6 @@ You can also check the progress of your friends and add comments on their trophi
 |-------------------------------------------------------|:---------:|-------|
 | [FB Alpha](https://github.com/libretro/fbalpha)       | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3 |
 
-### Atari 2600
-
-| Core                                                  | Supported | Notes |
-|-------------------------------------------------------|:---------:|-------|
-| [Stella](https://github.com/libretro/stella-libretro) | ✔         | |
-
 ### NES
 
 | Core                                                  | Supported | Notes |
@@ -71,15 +65,6 @@ You can also check the progress of your friends and add comments on their trophi
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         | |
-
-### Master System / MegaDrive - Genesis
-
-| Core                                                           | Supported |
-|----------------------------------------------------------------|:---------:|
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
-| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
-| [Picodrive](https://github.com/libretro/picodrive)             | ✔         |
-| [Emux SMS](https://github.com/libretro/emux)                   | ✕         |
 
 ### SNES
 
@@ -123,19 +108,6 @@ You can also check the progress of your friends and add comments on their trophi
 | [gpSP](https://github.com/libretro/gpsp)                      | ✕         | |
 | [Meteor](https://github.com/libretro/meteor-libretro)         | ✕         | |
 
-### PC Engine
-
-| Core                                                                    | Supported |
-|-------------------------------------------------------------------------|:---------:|
-| [Beetle PCE Fast](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         |
-| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         |
-
-### Neo Geo Pocket
-
-| Core                                                             | Supported |
-|------------------------------------------------------------------|:---------:|
-| [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         |
-
 ### Nintendo 64
 
 | Core                                                              | Supported |
@@ -143,15 +115,56 @@ You can also check the progress of your friends and add comments on their trophi
 | [Mupen64Plus](https://github.com/libretro/mupen64plus-libretro)   | ✔         |
 | [ParaLLEl N64](https://github.com/libretro/parallel-n64)          | ✔         |
 
-### Lynx
+### Virtual Boy
+
+| Core                                                        | Supported |
+|-------------------------------------------------------------|:---------:|
+| [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         |
+
+### Master System / MegaDrive - Genesis
+
+| Core                                                           | Supported |
+|----------------------------------------------------------------|:---------:|
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
+| [Picodrive](https://github.com/libretro/picodrive)             | ✔         |
+| [Emux SMS](https://github.com/libretro/emux)                   | ✕         |
+
+### Game Gear
+
+| Core                                                           | Supported |
+|----------------------------------------------------------------|:---------:|
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
+
+### PC Engine
+
+| Core                                                                    | Supported |
+|-------------------------------------------------------------------------|:---------:|
+| [Beetle PCE Fast](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         |
+| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         |
+
+### Neo Geo Pocket / Neo Geo Pocket Color
+
+| Core                                                             | Supported |
+|------------------------------------------------------------------|:---------:|
+| [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         |
+
+### Atari 2600
+
+| Core                                                  | Supported |
+|-------------------------------------------------------|:---------:|
+| [Stella](https://github.com/libretro/stella-libretro) | ✔         |
+
+### Atari Lynx
 
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:-----:|
 | [Handy](https://github.com/libretro/libretro-handy)              | ✔         |       |
 | [Beetle Handy](https://github.com/libretro/beetle-lynx-libretro) | ✔         | Beetle Handy is incompatible with modern No-Intro romsets as they require headers to work properly. The regular Handy core does not have this issue. |
 
-### Virtual Boy
+### ColecoVision
 
-| Core                                                        | Supported | Notes |
-|-------------------------------------------------------------|:---------:|:-----:|
-| [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         |       |
+| Core                                                        | Supported |
+|-------------------------------------------------------------|:---------:|
+| [blueMSX](https://github.com/libretro/blueMSX-libretro/)    | ✔         |
+
