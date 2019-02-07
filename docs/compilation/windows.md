@@ -104,7 +104,7 @@ For development purposes you might want to run a debug build instead. In such ca
 
 To facilitate debugging you can get an integrated crash handler by replacing the configure step with (debug builds only):
 
-     ./configure--enable-drmingw
+     ./configure --enable-drmingw
 
 After a few minutes you should be able to find retroarch.exe under that directory. To start the newly compiled retroarch you can use:
 
