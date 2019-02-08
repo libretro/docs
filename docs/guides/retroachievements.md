@@ -155,6 +155,12 @@ You can also check the progress of your friends and add comments on their trophi
 |-------------------------------------------------------|:---------:|
 | [Stella](https://github.com/libretro/stella-libretro) | ✔         |
 
+### Atari 7800
+
+| Core                                                  | Supported |
+|-------------------------------------------------------|:---------:|
+| [ProSystem](https://github.com/libretro/prosystem-libretro) | ✔   |
+
 ### Atari Lynx
 
 | Core                                                             | Supported | Notes |
