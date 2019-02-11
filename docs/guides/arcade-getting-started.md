@@ -27,7 +27,7 @@ Among the libretro arcade cores, **Final Burn Alpha** and **MAME 2003-Plus** hav
 #### Processor performance requirements versus supported game library
 As the years have passed, emulators have become able to recreate arcade games with more and more accuracy to the original system. Arcade emulators have also added support for emulating more games over time. Particularly with MAME cores, increasing emulation accuracy requires increasing amounts of processing power, meaning that cores based on more recent emulators require greater processor power than cores based on older versions.
 
-### Ulta low-power devices
+### Ultra low-power devices
 For purposes of this guide, ultra low-power devices are those such as the Raspberry Pi 0 as well as older smartphones and tablets.
 
 |  | Recommended MAME Emulator | Recommended FB Alpha Emulator |
