@@ -21,23 +21,24 @@ There are two families of multi-system arcade emulators available as libretro co
   * Frontend integration
   * Processor performance requirements versus supported game library
 
-### Frontend integration
+#### Frontend integration
 Among the libretro arcade cores, **Final Burn Alpha** and **MAME 2003-Plus** have the closest integration with the libretro frontend API. In practice, this means that more functionality is accessible through libretro frontends like RetroArch in areas like configuration, control mapping, fast forward and rewind, screenshots, etc. .
 
-### Processor performance requirements versus supported game library
+#### Processor performance requirements versus supported game library
 As the years have passed, emulators have become able to recreate arcade games with more and more accuracy to the original system. Arcade emulators have also added support for emulating more games over time. Particularly with MAME cores, increasing emulation accuracy requires increasing amounts of processing power, meaning that cores based on more recent emulators require greater processor power than cores based on older versions.
 
-#### Ulta-low power devices
-For purposes of this guide, ultra-low power devices are those such as the Raspberry Pi 0 as well as older smartphones and tablets.
+### Ultra low-power devices
+For purposes of this guide, ultra low-power devices are those such as the Raspberry Pi 0 as well as older smartphones and tablets.
 
 |  | Recommended MAME Emulator | Recommended FB Alpha Emulator |
 | :---: | :---: | :---: |
 | **Primary recommendation** | MAME 2000 | FB Alpha 2012 |
 | **Secondary recommendation** | MAME 2003-Plus | FB Alpha |
 
-_Note: Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
+!!! Note
+    _Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
 
-#### Low power devices
+### Low-power devices
 For purposes of this guide, low power devices include:
 
   * Single board computers like the Raspberry Pi2 and Raspberry Pi3, Odroid-XU3/4, and Amlogic S905 boxes
@@ -50,9 +51,10 @@ For purposes of this guide, low power devices include:
 | **Primary recommendation** | MAME 2003-Plus | FB Alpha |
 | **Secondary recommendation** | MAME 2010, MAME 2016 | N/A |
 
-_Note: Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
+!!! Note
+    _Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
 
-#### Full power devices
+### Full-power devices
 Users with modern desktop and laptop processors, and other full power systems, have the greatest flexibility in terms of which arcade emulator cores to use.
 
 ---
@@ -62,7 +64,8 @@ Users with modern desktop and laptop processors, and other full power systems, h
 
 In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
 
-!!! tip Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
+!!! tip
+    Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
 
 | Emulator | Required ROM Version |
 | :---: | :---: |
@@ -72,12 +75,12 @@ In general, you will only get good results with a full collection of arcade roms
 | MAME 2003 | MAME 0.78 |
 | MAME 2003-Plus | MAME 2003-Plus (latest version) |
 | MAME 2010 | MAME 0.139 |
-| MAME 2014 | MAME 0.159 |
+| MAME 2015 | MAME 0.160 |
 | MAME 2016 | MAME 0.174 |
 | MAME (latest version) | MAME (latest version) |
 
-### Keep arcade romsets zipped
-Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
+!!! Warning "Warning: Keep arcade romsets zipped"
+    Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
 
 ---
 
