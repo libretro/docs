@@ -9,6 +9,7 @@ pages:
       - 'Windows': 'guides/install-windows.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
+      - 'Nintendo Switch': 'guides/install-libnx.md'
     - Getting Started:
       - 'Welcome': 'guides/welcome-getting-started.md'
       - 'User Interface': 'guides/navigating.md'
