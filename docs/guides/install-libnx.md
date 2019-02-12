@@ -26,7 +26,7 @@ The preferred way of running RetroArch is to use Atmosphère's title takeover fe
 
 **Note:** You need at least one title on the console (whether it's a digitally puchased game or a demo or a cartridge game or even an homebrew NSP). If you can pick an up to date game that's better as you won't be nagged everytime you run it.
 
-This guide will not cover the custom firmware part and assume that you are able to boot a fully functionnal copy of Atmosphère.
+This guide will not cover the custom firmware part and assume that you are able to boot a fully functional copy of Atmosphère.
 
 **TL;DR:** update hbmenu and hbloader, then in `atmosphere/loader.ini` set `tid` and `override_key` to any game and key - this will tell the system to run homebrew instead of this game when launching it while pressing the key.
 
