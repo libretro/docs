@@ -1,4 +1,4 @@
-## Downloading, Installing and Updating RetroArch
+# Downloading, Installing and Updating RetroArch
 
 ## GNU/Linux
 
