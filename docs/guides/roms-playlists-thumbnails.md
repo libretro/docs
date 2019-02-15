@@ -1,6 +1,6 @@
 # ROMs, Playlists, and Thumbnails
 
-## Storing game ROMs
+## Storing games and other content
 Game ROMs should be placed within the `roms` folder as configured in RetroArch. Many users sort their ROMs into subfolders named after the system which the ROMs belong to, which results in a folder arrangement such as:
 
 
