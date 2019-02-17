@@ -270,7 +270,9 @@ pages:
         - 'Netplay': 'tech/netplay.md'
         - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
-      - 'Core Development': 'tech/developing-cores.md'
+      - 'Core Development Overview': 'tech/developing-cores.md'
+      - 'OpenGL Accelerated Cores': 'tech/opengl-cores.md'
+      - 'Dynamic Rate Control for Emulators': '../archive/ratecontrol.pdf'
     - Specifications:
       - 'Libretro': 'specs/api.md'
       - 'RetroPad': 'specs/retropad.md'
