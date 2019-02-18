@@ -275,7 +275,7 @@ pages:
       - 'Dynamic Rate Control for Emulators': '../archive/ratecontrol.pdf'
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
-      - 'Game-Aware Shaders': tech/content-aware-shaders.md'
+      - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
     - Specifications:
       - 'Libretro': 'specs/api.md'
       - 'RetroPad': 'specs/retropad.md'
