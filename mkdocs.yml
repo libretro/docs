@@ -214,6 +214,9 @@ pages:
     - Contributing:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:
+    - Libretro API and Ecosystem:
+      - 'Libretro API Overview': 'specs/api.md'
+      - 'RetroPad Input API': 'specs/retropad.md'
     - Compilation:
       - Cores:
         - Nintendo Cores:
@@ -255,18 +258,14 @@ pages:
           - 'PlayStation2': 'compilation/ps2.md'
           - 'PlayStation Portable': 'compilation/psp.md'
           - 'PlayStation Vita/TV': 'compilation/psvita.md'
-    - Meta:
-      - 'Core List': 'meta/core_list.md'
-      - 'To Do': 'meta/todo.md'
-      - 'Core Template': 'meta/core_template.md'
-      - 'See Also': 'meta/see_also.md'
     - RetroArch Development:
       - 'Debugging': 'tech/debugging.md'
       - 'Adding Menu Entries': 'tech/new-menu-options.md'
+      - 'Input Overlays': 'specs/overlay.md'
       - 'Licenses': 'tech/licenses.md'
       - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
       - 'Adding Translations': 'tech/new-translations.md'
-      - Protocols:
+      - Network Protocols:
         - 'Netplay': 'tech/netplay.md'
         - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
@@ -276,10 +275,11 @@ pages:
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
       - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
-    - Specifications:
-      - 'Libretro': 'specs/api.md'
-      - 'RetroPad': 'specs/retropad.md'
-      - 'Overlays': 'specs/overlay.md'
+    - Documentation Meta:
+      - 'Core List': 'meta/core_list.md'
+      - 'To Do': 'meta/todo.md'
+      - 'Core Template': 'meta/core_template.md'
+      - 'See Also': 'meta/see_also.md'
 extra:
   version: '0.1.0'
   font:
