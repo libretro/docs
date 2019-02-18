@@ -271,8 +271,8 @@ pages:
         - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
       - 'Core Development Overview': 'tech/developing-cores.md'
+      - 'Dynamic Rate Control for Emulators': 'tech/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'tech/opengl-cores.md'
-      - 'Dynamic Rate Control for Emulators': '../archive/ratecontrol.pdf'
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
       - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'

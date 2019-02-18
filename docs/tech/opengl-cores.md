@@ -47,6 +47,4 @@ A [basic test implementation of libretro GL interface](https://github.com/Themai
 ## Building a libretro core
 
 Libretro is an interface, and not a utility library. Libretro cores are built as standalone dynamic or static libraries, and as they use GL symbols here,
-they must link against GL symbols themselves. An example of how this can be done is shown in [the test implementation.[(https://github.com/Themaister/RetroArch/blob/master/libretro-test-gl/Makefile)
-
-
+they must link against GL symbols themselves. An example of how this can be done is shown in [the test implementation](https://github.com/Themaister/RetroArch/blob/master/libretro-test-gl/Makefile).
