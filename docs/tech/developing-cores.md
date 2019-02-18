@@ -35,6 +35,9 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
 
 [`libretro-samples`](https://github.com/libretro/libretro-samples) is a set of illustrations of the libretro API.
 
+### OpenGL hardware accelerated cores
+[A guide for developing OpenGL accelerated cores](opengl-cores.md) is available.
+
 
 ## Implementing the API
 

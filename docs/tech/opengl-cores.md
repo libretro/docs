@@ -19,7 +19,7 @@ Using libretro API, platform specifics like managing windows, rendering surfaces
 
 ## Using OpenGL in libretro
 
-  - UseRETROENVIRONMENTSETPIXELFORMATand request a 32-bit format. This is the format that the resulting framebuffer will have. In reality, RetroArch converts all 16-bit data (`RETRO_PIXEL_FORMAT_RGB565`) to 32-bit (`XRGB8888`) when running desktop GL for performance reasons. In GLES mode, this is not done, however. Do not rely on this behavior, and be explicit about it.
+  - Use `RETRO_ENVIRONMENT_SET_PIXEL_FORMAT` and request a 32-bit format. This is the format that the resulting framebuffer will have. In reality, RetroArch converts all 16-bit data (`RETRO_PIXEL_FORMAT_RGB565`) to 32-bit (`XRGB8888`) when running desktop GL for performance reasons. In GLES mode, this is not done, however. Do not rely on this behavior, and be explicit about it.
   - Use `RETRO_ENVIRONMENT_SET_HW_RENDER` environment callback in `retro_load_game()`, notifying frontend that core is using hardware rendering. An OpenGL 2+ or GLES2 context can be specified here. If this is not supported the callback will return false, and you can fallback to software rendering or refuse to start.
   - In `retro_get_system_av_info()`, as normal, `max_width` and `max_height` fields specify the maximum resolution the core will render to.
   - When the frontend has created a context or reset the context, `retro_hw_context_reset_t` is called. Here, OpenGL resources can be initialized. The frontend can reset the context at will (e.g. when changing from fullscreen to windowed mode and vice versa). The core should take this into account. It will be notified when reinitialization needs to happen.
@@ -40,9 +40,8 @@ The frontend and libretro core share OpenGL context state. Some considerations h
 
 ## Test implementations
 
-A [basic test implementation of libretro GL interface](https://github.com/Themaister/RetroArch/tree/master/libretro-test-gl) is available which displays two spinning quads. It runs both as a GLES2 and GL2 core depending on `GLES` environment variable.
-
-[A slightly more involved test core is also available](https://bitbucket.org/Themaister/libretro-gl). It uses instanced rendering of a textured cube, with FPS-style fly-by camera. It uses libretro’s mouse API as well. It is valid GLES and GL2 at the same time.
+  * [Several OpenGL demonstrations are available in `libretro-samples`](https://github.com/libretro/libretro-samples/tree/master/video/opengl)
+  * [A demonstration OpenGL core is available](https://bitbucket.org/Themaister/libretro-gl) which uses instanced rendering of a textured cube, with FPS-style fly-by camera and libretro’s mouse API as well. It is valid GLES and GL2 at the same time.
 
 ## Building a libretro core
 
