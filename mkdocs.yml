@@ -270,10 +270,12 @@ pages:
         - 'Netplay': 'tech/netplay.md'
         - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
-      - 'Core Development': 'tech/developing-cores.md'
+      - 'Core Development Overview': 'tech/developing-cores.md'
+      - 'OpenGL Accelerated Cores': 'tech/opengl-cores.md'
+      - 'Dynamic Rate Control for Emulators': '../archive/ratecontrol.pdf'
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
-      - 'Game-Aware Shaders': tech/content-aware-shaders.md'
+      - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
     - Specifications:
       - 'Libretro': 'specs/api.md'
       - 'RetroPad': 'specs/retropad.md'
