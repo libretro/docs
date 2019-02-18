@@ -271,10 +271,12 @@ pages:
         - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
       - 'Core Development': 'tech/developing-cores.md'
+    - Shader Development:
+      - 'Shader Development Overview': 'specs/shader.md'
+      - 'Game-Aware Shaders': tech/content-aware-shaders.md'
     - Specifications:
       - 'Libretro': 'specs/api.md'
       - 'RetroPad': 'specs/retropad.md'
-      - 'Shaders': 'specs/shader.md'
       - 'Overlays': 'specs/overlay.md'
 extra:
   version: '0.1.0'
