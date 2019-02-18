@@ -1,4 +1,4 @@
-### Content-aware shaders
+# Content-aware shaders
 
 Content-aware shaders grab data from the core state itself, such as emulator RAM data. This is only implemented for SNES so far, but the idea is quite extendable and portable. The basic idea is that we capture RAM data in a certain way (semantic if you will) from the SNES, and pass it as a uniform to the shader. The shader can thus act on game state in interesting ways.
 
@@ -136,7 +136,7 @@ rain_linear = true
 ```
 
 
-### How to test when developing for RetroArch
+## How to test when developing for RetroArch
 
 To develop these kinds of shaders, I’d recommend using RetroArch w/Cg support, and a debugging tool for your emulator of choice to peek at RAM values (build it for bSNES yourself with `options=debugger`). After written, the shader should translate nicely over to RetroArch with some slight changes to the config.
 
@@ -145,8 +145,8 @@ To develop these kinds of shaders, I’d recommend using RetroArch w/Cg support,
 
 Here are some screenshots of the mario effect (in Super Mario World SNES) we developed. Obviously this is a very simple example showing what can be done. The imagination is the limit here.
 
-#### Prior to Mario jumping in water
+### Prior to Mario jumping in water
 ![Super Mario World prior to Mario jumping in water.](../image/development/shaders/content-aware-shader-1.png)
 
-#### After Mario jumps in water
+### After Mario jumps in water
 ![Super Mario World after Mario jumps in water](../image/development/shaders/content-aware-shader-2.png)
