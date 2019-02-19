@@ -1,4 +1,4 @@
-# Developing Libretro cores
+# Developing Libretro Cores
 
 ### Libretro API
 
@@ -7,8 +7,6 @@ The Libretro API is a lightweight C-based Application Programming Interface (API
 When you choose to use the libretro API, your program gets turned into a single library file (called a ‘libretro core’). A frontend that supports the libretro API can then load that library file and run the app. The frontend’s responsibility is to provide all the implementation-specific details. The libretro core’s responsibility is solely to provide the main program.
 
 Any project that is ported to work with this API can be made to run on ANY libretro frontend – now and forever. You maintain a single codebase that only deals with the main program, and you then target one single API (libretro) in order to port your program over to multiple platforms at once. A libretro core written in portable C or C++ can run seamlessly on many platforms with very little or no porting effort. Libretro bindings for other languages are growing increasingly common and comprehensive as well.
-
-[Read more about the API in the developer documentation](api.md) or by [browsing the source of libretro.h itself](https://raw.githubusercontent.com/libretro/libretro-common/master/include/libretro.h).
 
 !!! info "Licensing"
     Libretro is an open specification that is 100% free to implement, with no licensing fees or strings attached. Our reference frontend is RetroArch. The two projects are not the same, and this is reflected in the licensing. RetroArch is licensed via GPLv3 whereas the libretro API is a MIT-licensed API.
@@ -23,25 +21,36 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
     `libretro.h` is the single most important technial reference for developers of libretro cores and frontends
 
 
-### libretro-common
+### `libretro-common`
 
 [`libretro-common`](https://github.com/libretro/libretro-common/) is a collection of essential cross-platform coding blocks useful for libretro core and frontend development, written primarily in C. Permissively licensed.
 
-### libretro-deps
+
+### `libretro-deps`
 
 [`libretro-deps`](https://github.com/libretro-libretro-deps/) is a collection of third-party dependencies, pre-modified for use by libretro cores.
 
-### libretro-samples
+
+### `libretro-samples`
 
 [`libretro-samples`](https://github.com/libretro/libretro-samples) is a set of illustrations of the libretro API.
 
+
+### `skeletor` sample core
+
+RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bparker06/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
+
+
 ### OpenGL hardware accelerated cores
+
 [A guide for developing OpenGL accelerated cores](opengl-cores.md) is available.
 
 
 ## Implementing the API
 
-The libretro API consists of several functions outlined in libretro.h, found in the RetroArch source package. A libretro implementation should be compiled into a dynamically loadable executable (.dll/.so/.dylib) or a static library (.a/.lib) that exports all the functions outlined in libretro.h. These will be called by the frontend. Implementations are designed to be single-instance, so global state is allowed. Should the frontend call these functions in wrong order, undefined behavior occurs. The API header is compatible with C99 and C++. From C99, the bool type and <stdint.h> are used. The program flow of a frontend using the libretro API can be expressed as follows:
+The libretro API consists of several functions outlined in libretro.h, found in the RetroArch source package. A libretro implementation should be compiled into a dynamically loadable executable (.dll/.so/.dylib) or a static library (.a/.lib) that exports all the functions outlined in libretro.h. These will be called by the frontend. Implementations are designed to be single-instance, so global state is allowed. Should the frontend call these functions in wrong order, undefined behavior occurs. The API header is compatible with C99 and C++. From C99, the bool type and <stdint.h> are used.
+
+The program flow of a frontend using the libretro API can be expressed as follows:
 
 ### Startup
 
