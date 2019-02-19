@@ -38,7 +38,7 @@ The RetroArch loading process is:-
 
 Custom per game core options and shader presets work slightly different. These are full configurations and are loaded instead of the base shader preset and core option settings.
 
-## Configuartion Files & Location
+## Configuration Files & Location
 
 !!! note
     Depending on your chosen platform the location of these files after installation may vary.
