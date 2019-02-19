@@ -1,0 +1,2002 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "RetroArch Cores Manual"
+\pdf_author "Hans-Kristian Antzen, Daniel De Matteis"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 5
+\tocdepth 5
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/logo.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+RetroArch Android (v0.9.8.4) - Cores Manual
+\end_layout
+
+\begin_layout Author
+Hans Kristian Arntzen, Daniel De Matteis
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Listed below are all the cores that RetroArch Android supports.
+\end_layout
+
+\begin_layout Itemize
+SNES9x Next
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing SNES games (Super Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): SNES9x team, OV2, Bearoso, zones, Squarepusher (fork)
+\begin_inset Newline newline
+\end_inset
+
+Recommended system requirements: ARM Cortex A9 multi-core device (and up)
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "smc|fig|sfc|gd3|gd7|dx2|bsx|swc|zip|SMC|FIG|
+\begin_inset Newline newline
+\end_inset
+
+SFC|BSX|GD3|GD7|DX2|SWC|ZIP"
+\end_layout
+
+\begin_layout Itemize
+VBA Next
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Game Boy Advance games
+\begin_inset Newline newline
+\end_inset
+
+Recommended system requirements: ARM Cortex A9 multi-core based device (and
+ up)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Forgotten, VBA-M team, Squarepusher (fork)
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "gba|GBA|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+FCEUmm
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing NES games (Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): CaH4e3, original FCEU authors
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "fds|FDS|zip|ZIP|nes|NES|unif|UNIF"
+\end_layout
+
+\begin_layout Itemize
+NEStopia
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing NES games (Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Marty
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "nes|NES|zip|ZIP|fds|FDS"
+\end_layout
+
+\begin_layout Itemize
+Gambatte
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing GameBoy / GameBoy Color games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Sinamas
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "gb|gbc|dmg|zip|GB|GBC|DMG|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Final Burn Alpha
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing arcade games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Dave, FBA Team (Barry Harris & co)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: 
+\begin_inset Quotes eld
+\end_inset
+
+zip|ZIP
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Genesis Plus GX
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Sega Genesis / Master System / Game Gear / Sega CD games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Charles McDonald, ekeeke
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "md|smd|bin|cue|gen|zip|MD|SMD|bin|iso|
+\begin_inset Newline newline
+\end_inset
+
+ISO|CUE|GEN|ZIP|sms|SMS|gg|GG|sg|SG"
+\end_layout
+
+\begin_layout Itemize
+NX Engine
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Cave Story / Doukutsu Monogatari
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Caitlin Shaw (rogueeve)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: 
+\begin_inset Quotes eld
+\end_inset
+
+exe|EXE|zip|ZIP
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+PCSX ReARMed
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing PlayStation1 games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): PCSX Team, Notaz, Exophase (GPU plugin)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "bin|cue|img|mdf|pbp|cbn"
+\end_layout
+
+\begin_layout Itemize
+Prboom
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Doom, Doom 2, Ultimate Doom, Final Doom, and mods
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Various
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "WAD|wad|IWAD|iwad"
+\end_layout
+
+\begin_layout Itemize
+Mednafen NGP
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Neo Geo Pocket Color games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Original Neopop authors, Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "ngp|NGP|ngc|NGC|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen WonderSwan
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing WonderSwan / WonderSwan Color / WonderSwan Crystal games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Original Cygne authors, Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "ws|WS|wsc|WSC|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen Virtual Boy
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Virtual Boy games
+\begin_inset Newline newline
+\end_inset
+
+Author: Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "vb|VB|vboy|VBOY|bin|BIN|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen PC Engine
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing PC Engine / Supergrafx 16 / PC Engine CD games
+\begin_inset Newline newline
+\end_inset
+
+Author: Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "pce|PCE|sgx|SGX|cue|CUE|zip|ZIP"
+\end_layout
+
+\begin_layout Standard
+We'll go over each of these.
+\end_layout
+
+\begin_layout Subsection
+SNES9x Next
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:}
+\end_layout
+
+\end_inset
+
+ v1.52.3
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator should run at fullspeed on an Android device with a dual-core
+ ARM Cortex A9-based CPU.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{v1.52.4}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Speed optimizations for Star Fox 1 / Star Wing - now makes them fast enough
+ for fullspeed gameplay on Wii.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{v1.52.3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Fixed DKC2 graphics inaccuracies
+\end_layout
+
+\begin_layout Itemize
+Fixed issue that could corrupt memory addresses over time - found while
+ deiniting Super Mario Kart.
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565 as pixel format.
+\end_layout
+
+\begin_layout Itemize
+Speed hacks for Final Fantasy III/VI - makes it fullspeed for Wii.
+\end_layout
+
+\begin_layout Itemize
+Fixed Super Double Dragon input issue.
+\end_layout
+
+\begin_layout Subsection
+VBA Next
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:}
+\end_layout
+
+\end_inset
+
+ v1.0.2
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator needs at least a dual-core ARM Cortex A9-based CPU and up.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{v1.0.2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Added Pokemon Emerald to built-in vbaover - fixes white screen
+\end_layout
+
+\begin_layout Itemize
+Lessens RAM footprint - makes Mother 3 fit into memory on Wii.
+\end_layout
+
+\begin_layout Itemize
+More consistent syncing.
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565 as pixel format.
+\end_layout
+
+\begin_layout Subsection
+FCEUmm
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 98.13 SVN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to latest SVN (r134)
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565 as pixel format.
+\end_layout
+
+\begin_layout Subsection
+NEStopia
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 1.44
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+There might still be an audio desync that happen at the half hour mark.
+ Ever since NEStopia 1.36 some kind of APU bug has been inadvertently introduced.
+ We will be researching this.
+\end_layout
+
+\begin_layout Itemize
+For Famicom Disk System games - Y Button will switch sides of a disk.
+ - If you get any problems of the sort DISK A / B ERR 07' - pressing Y button
+ again or letting it run its course should do it.
+\end_layout
+
+\begin_layout Itemize
+Famicom Disk System loading is slow, so you might be tempted to fast forward
+ through most of it.
+ However, I'd advise caution when doing so and to savestate regularly in
+ case 'fast forwarding' can negatively affect disk loading.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8.3 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Famicom Disk System support.
+ For Android users - put disksys.rom into the same folder as the FDS ROM
+ you're trying to load.
+ For everyone else - put disksys.rom into your system directory.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+New port
+\end_layout
+
+\begin_layout Subsection
+Gambatte
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.50
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Now makes use of GBC BIOS color palettes.
+\end_layout
+
+\begin_layout Itemize
+Can also make use of custom color palettes.
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGBX8888 as pixel format.
+\end_layout
+
+\begin_layout Subsection
+Final Burn Alpha
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.2.97.28
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ Performance varies based on the game you're trying to play.
+ Systems like CPS2 and Neogeo have been tested to run at fullspeed on an
+ ARM Cortex A8 single-core CPU.
+ CPS3 needs a dual-core ARM Cortex A9-based CPU for fullspeed gameplay.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+Some games might be stuck in Service mode right now on big-endian systems
+ (ie.
+ PS3/360/Wii).
+ Some games that come to mind are Psikyo SH2 games and Taito games like
+ Darius 2.
+ We will be trying to fix this issue soon and release a point update for
+ it.
+\end_layout
+
+\begin_layout Itemize
+Button combos ingame:
+\end_layout
+
+\begin_layout Itemize
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Select = Service Menu
+ button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Start = Diagnostic
+ button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Left = Reset button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Right = DIP A Pressed
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Up = DIP B Pressed
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Down = Test Pressed
+\end_layout
+
+\begin_layout Itemize
+Savestates are hooked up but games can't have their 'state restored' after
+ unloading the game and loading it again.
+\end_layout
+
+\begin_layout Itemize
+If you want to play Warzard or Red Earth and you happen to get a 'No CD-ROM
+ drive' message - do the 'Reset' combo (see above) - it should work then.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to 0.2.97.28.
+\end_layout
+
+\begin_layout Itemize
+Controls have been revised - most of the controls should now be properly
+ hooked up.
+\end_layout
+
+\begin_layout Itemize
+Button combos have been changed - 
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Select = Service Menu
+ button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Start = Diagnostic
+ button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Left = Reset button
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Right = DIP A Pressed
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Up = DIP B Pressed
+\begin_inset Newline newline
+\end_inset
+
+RetroPad L2 + RetroPad R2 + RetroPad L + RetroPad R + Down = Test Pressed
+\end_layout
+
+\begin_layout Itemize
+Uses RGBX8888 as a color format for Psikyo SH2 games and RGB565 for everything
+ else.
+\end_layout
+
+\begin_layout Subsection
+Genesis Plus GX
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 1.7.3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run regular Genesis and Sega CD games
+ at fullspeed on an ARM Cortex A8 single-core CPU.
+ Virtua Racing runs at half realtime speed on the same hardware and thus
+ needs better system requirements.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+FOR ANDROID: To play Sega CD/Mega CD games, you will need Sega CD BIOS files
+ in the same directory as the game you want to play.
+ They should be named as follows: bios_CD_E.bin (for EU BIOS), bios_CD_U.bin
+ (for US BIOS), bios_CD_J.bin (for Japanese BIOS)
+\end_layout
+
+\begin_layout Itemize
+FOR EVERYTHING ELSE: To play Sega CD/Mega CD games, you will need Sega CD
+ BIOS files in the same directory as the game you want to play.
+ They should be named as follows: bios_CD_E.bin (for EU BIOS), bios_CD_U.bin
+ (for US BIOS), bios_CD_J.bin (for Japanese BIOS).
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to 1.7.3 ( might report 1.7.1 but is really 1.7.3).
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565.
+\end_layout
+
+\begin_layout Subsection
+NX Engine
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 1.0.4
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This game has been tested to run at fullspeed on an ARM Cortex A8 single-core
+ CPU.
+ Sound syncing however is currently not correct.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+HOW TO USE
+\end_layout
+
+\begin_layout Standard
+You need to copy all the 'datafiles' directory in the repository over.
+ Start the core with doukutsu.exe - it should properly extract the needed
+ archives from the EXE on initial boot.
+ From there on it will use those extracted asset files.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+NXEngine is not released yet on consoles - sound is currently corrupt on
+ big-endian consoles (Xbox 1/360/PS3/Wii).
+ Will need to research what is up here.
+\end_layout
+
+\begin_layout Itemize
+Savestates are not hooked up - therefore rewind is also not possible.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to 1.0.4.
+\end_layout
+
+\begin_layout Itemize
+Did major changes to path handling code and got rid of the hardcoded paths
+ - should now handle paths correctly on _WIN32 targets.
+\end_layout
+
+\begin_layout Itemize
+Fixed save files not working.
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565.
+\end_layout
+
+\begin_layout Subsection
+PCSX ReARMed
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} r18
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run most games at fullspeed on an ARM
+ Cortex A8 single-core CPU.
+ Higher-resolution interlaced games like Tekken 3 and Tobal 2 require higher
+ system specs (Cortex A9 and up).
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+PCSX ReARMed supports the loading of EBOOT (pbp) files as well.
+\end_layout
+
+\begin_layout Itemize
+Although PCSX ReARMed comes with built-in HLE BIOS code, you're recommended
+ to still put BIOS files in the system directory (on Android there is no
+ 'system directory', so instead you put the BIOS files in the same directory
+ as the image you're trying to load).
+ Some of the BIOS files used are: scph1001.bin, scph5500.bin, scph5501.bin,
+ scph5502.bin, scph7502.bin.
+\end_layout
+
+\begin_layout Itemize
+If an image might not load correctly, try it with and without BIOS files
+ in the 'system directory' (read above note about 'system directory' as
+ well).
+\end_layout
+
+\begin_layout Itemize
+This is an ARM architecture-centric port right now - it is not of much use
+ on other architectures and therefore consoles.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+New port.
+\end_layout
+
+\begin_layout Subsection
+Prboom
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 2.5.0
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This game engine has been tested to run most games at fullspeed on an ARM
+ Cortex A8 single-core CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+You need to have prboom.wad in the same directory as the Doom WAD file you're
+ going to load.
+\end_layout
+
+\begin_layout Itemize
+Savestates are currently not hooked up, and therefore rewind is not possible.
+\end_layout
+
+\begin_layout Itemize
+Re-entrancy does not work correctly yet - don't try to load a second WAD
+ file.
+ Instead, exit prboom first and then launch it again (only applies to consoles).
+\end_layout
+
+\begin_layout Itemize
+This is the only Doom port in existence right now where you have the option
+ to play at variable framerates.
+ The option exists to play at 35, 40, 50 and 60fps.
+ Doom originally ran at 35fps due to performance reasons and the slow CPUs
+ available at the time.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Now uses RGB565 as pixel format.
+\end_layout
+
+\begin_layout Subsubsection
+SOUNDTRACK LIST
+\end_layout
+
+\begin_layout Standard
+Prboom supports MP3 soundtracks.
+ The files must be in the same directory as the WAD file and should be correctly
+ named.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{
+\backslash
+break}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DOOM 1
+\end_layout
+
+\begin_layout Standard
+e1m1.mp3
+\end_layout
+
+\begin_layout Standard
+e1m2.mp3
+\end_layout
+
+\begin_layout Standard
+e1m3.mp3
+\end_layout
+
+\begin_layout Standard
+e1m4.mp3
+\end_layout
+
+\begin_layout Standard
+e1m5.mp3
+\end_layout
+
+\begin_layout Standard
+e1m6.mp3
+\end_layout
+
+\begin_layout Standard
+e1m7.mp3
+\end_layout
+
+\begin_layout Standard
+e1m8.mp3
+\end_layout
+
+\begin_layout Standard
+e1m9.mp3
+\end_layout
+
+\begin_layout Standard
+e2m1.mp3
+\end_layout
+
+\begin_layout Standard
+e2m2.mp3
+\end_layout
+
+\begin_layout Standard
+e2m3.mp3
+\end_layout
+
+\begin_layout Standard
+e2m4.mp3
+\end_layout
+
+\begin_layout Standard
+e2m5.mp3
+\end_layout
+
+\begin_layout Standard
+e2m6.mp3
+\end_layout
+
+\begin_layout Standard
+e2m7.mp3
+\end_layout
+
+\begin_layout Standard
+e2m8.mp3
+\end_layout
+
+\begin_layout Standard
+e2m9.mp3
+\end_layout
+
+\begin_layout Standard
+e3m1.mp3
+\end_layout
+
+\begin_layout Standard
+e3m2.mp3
+\end_layout
+
+\begin_layout Standard
+e3m3.mp3
+\end_layout
+
+\begin_layout Standard
+e3m4.mp3
+\end_layout
+
+\begin_layout Standard
+e3m5.mp3
+\end_layout
+
+\begin_layout Standard
+e3m6.mp3
+\end_layout
+
+\begin_layout Standard
+e3m7.mp3
+\end_layout
+
+\begin_layout Standard
+e3m8.mp3
+\end_layout
+
+\begin_layout Standard
+intermid1.mp3
+\end_layout
+
+\begin_layout Standard
+intro.mp3
+\end_layout
+
+\begin_layout Standard
+bunny.mp3
+\end_layout
+
+\begin_layout Standard
+victor.mp3
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{
+\backslash
+break}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DOOM 2
+\end_layout
+
+\begin_layout Standard
+stalks.mp3
+\end_layout
+
+\begin_layout Standard
+runnin.mp3
+\end_layout
+
+\begin_layout Standard
+countd.mp3
+\end_layout
+
+\begin_layout Standard
+betwee.mp3
+\end_layout
+
+\begin_layout Standard
+doom.mp3
+\end_layout
+
+\begin_layout Standard
+the_da.mp3
+\end_layout
+
+\begin_layout Standard
+shawn.mp3
+\end_layout
+
+\begin_layout Standard
+ddtblu.mp3
+\end_layout
+
+\begin_layout Standard
+in_cit.mp3
+\end_layout
+
+\begin_layout Standard
+dead.mp3
+\end_layout
+
+\begin_layout Standard
+romero.mp3
+\end_layout
+
+\begin_layout Standard
+messag.mp3
+\end_layout
+
+\begin_layout Standard
+ampie.mp3
+\end_layout
+
+\begin_layout Standard
+tense.mp3
+\end_layout
+
+\begin_layout Standard
+openin.mp3
+\end_layout
+
+\begin_layout Standard
+evil.mp3
+\end_layout
+
+\begin_layout Standard
+ultima.mp3
+\end_layout
+
+\begin_layout Standard
+read_m.mp3
+\end_layout
+
+\begin_layout Standard
+dm2ttl.mp3
+\end_layout
+
+\begin_layout Standard
+dm2int.mp3 
+\end_layout
+
+\begin_layout Subsection
+Mednafen NGP
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.9.28
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+New port.
+\end_layout
+
+\begin_layout Subsection
+Mednafen Wonderswan
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.9.28
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+The music is incorrect on Xbox 360.
+ This seems to be a 360-specific bug.
+\end_layout
+
+\begin_layout Itemize
+Because Wonderswan has a 75Hz refresh rate, V-sync is specifically disabled
+ for this core so that the framerate and sound is as it should be - that's
+ why you might notice some negligible tearing.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to 0.9.28 version.
+\end_layout
+
+\begin_layout Itemize
+Fixes save file issues on MSVC-based consoles (Xbox 1/360).
+\end_layout
+
+\begin_layout Itemize
+Now uses RGB565 as a pixel format.
+\end_layout
+
+\begin_layout Subsection
+Mednafen Virtual Boy
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.9.28
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ You will need at least a Cortex A9 CPU and/or higher for this.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+This is not released yet for Xbox 1 and 360 because there are numerous game
+ compatibility-breaking issues right now.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+New port.
+\end_layout
+
+\begin_layout Subsection
+Mednafen PC Engine
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Version:} 0.9.28
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Android performance:}
+\end_layout
+
+\end_inset
+
+ This emulator has been tested to run at fullspeed on an ARM Cortex A8 single-co
+re CPU.
+ Your mileage may vary on slower devices.
+\end_layout
+
+\begin_layout Subsubsection
+NOTES
+\end_layout
+
+\begin_layout Itemize
+FOR ANDROID USERS:
+\begin_inset space ~
+\end_inset
+
+You will need a BIOS file called 'syscard3.pce' placed in the same directory
+ as the ISO/CUE you want to play to be able to play PC Engine CD games.
+\end_layout
+
+\begin_layout Itemize
+FOR ANYBODY ELSE: You will need a BIOS file called 'syscard3.pce' in your
+ system directory in order to be able to play PC Engine CD games.
+\end_layout
+
+\begin_layout Subsubsection
+CHANGELOG
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{For 0.9.8 point release}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upgraded to 0.9.28.
+\end_layout
+
+\begin_layout Itemize
+Fixes save file issues on MSVC-based consoles (Xbox 1/360).
+\end_layout
+
+\begin_layout Itemize
+Updated to use RGB565 as pixel format.
+\end_layout
+
+\begin_layout Section
+About Us
+\end_layout
+
+\begin_layout Standard
+Homepage: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.libretro.org
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+IRC: #retroarch at freenode
+\begin_inset Newline newline
+\end_inset
+
+Github (libretro organization): 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/libretro
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+RetroArch @ Github: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/Themaister/RetroArch
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Libretro @ Twitter: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://twitter.com/libretro
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Libretro @ Facebook: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.facebook.com/libretro.retroarch
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

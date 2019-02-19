@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+
+\author{Hans-Kristian Arntzen}
+\title{Implementing a Hardware Accelerated Libretro Core}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Libretro API~\footnote{http://libretro.org} recently received support for cores to use OpenGL (GL2+ or GLES2) directly instead of software rendering to a buffer which is subsequently used by the frontend. This article explains how a core can take advantage of this, and which considerations must be taken into account. This article assumes familiarity with the libretro API.
+
+Cores which use hardware rendering can still use known frontend features, such as multi-pass shaders.
+This is accomplished by letting cores render to frame buffer objects (FBOs) instead of the back buffer~\footnote{GL drivers must support render-to-texture extensions for this to work.}.
+
+This addition to the libretro API is designed to be used with hardware-accelerated emulator cores, as well as serving as a framework for graphical demos and experiments.
+\end{abstract}
+
+\section*{Application model}
+Using OpenGL in a libretro context is somewhat different than when you use libraries like SDL, GLFW or SFML. In libretro, the frontend owns the OpenGL context. For an application using conventional libraries like SDL, the application will do this:
+
+\begin{itemize}
+\item Initialize, create a window of specific size
+\item Initialize OpenGL resources
+\item Per frame, handle window events (resize), handle input, render as desired, swap buffers
+\item Tear down context and window
+\end{itemize}
+
+Using libretro API, platform specifics like managing windows, rendering surfaces and input are all handled by the frontend. The core will only deal with rendering to a surface. The core renders to an FBO of fixed size, determined by the core. The frontend takes this rendered data and stretches to screen as desired by the user. It can apply shaders, change aspect ratio, etc. This model is equivalent to software rendering where \texttt{retro\_video\_refresh\_t} callback is called.
+
+\section*{Using OpenGL in libretro}
+
+\begin{itemize}
+\item Use \texttt{RETRO\_ENVIRONMENT\_SET\_PIXEL\_FORMAT} and request a 32-bit format. This is the format that the resulting framebuffer will have~\footnote{In reality, RetroArch converts all 16-bit data (\texttt{RETRO\_PIXEL\_FORMAT\_RGB565}) to 32-bit (\texttt{XRGB8888}) when running desktop GL for performance reasons. In GLES mode, this is not done, however. Do not rely on this behavior, and be explicit about it.}.
+
+\item Use \texttt{RETRO\_ENVIRONMENT\_SET\_HW\_RENDER} environment callback in \\\texttt{retro\_load\_game()}, notifying frontend that core is using hardware rendering. An OpenGL 2+ or GLES2 context can be specified here. If this is not supported the callback will return false, and you can fallback to software rendering or refuse to start.
+
+\item In \texttt{retro\_get\_system\_av\_info()}, as normal, \texttt{max\_width} and \\\texttt{max\_height} fields specify the maximum resolution the core will render to.
+
+\item When the frontend has created a context or reset the context, \\\texttt{retro\_hw\_context\_reset\_t} is called. Here, OpenGL resources can be initialized.
+The frontend can reset the context at will (e.g. when changing from fullscreen to windowed mode and vice versa). The core should take this into account. It will be notified when reinitialization needs to happen.
+
+\item A callback to grab OpenGL symbols is exposed via \\\texttt{retro\_hw\_get\_proc\_address\_t}. Use this to retrieve symbols and extensions.
+
+\item In \texttt{retro\_run()}, use \texttt{retro\_hw\_get\_current\_framebuffer\_t} callback
+to get which FBO to render to~\footnote{e.g. \texttt{glBindFramebuffer(GL\_FRAMEBUFFER, get\_current\_framebuffer())}}. This is your "backbuffer". Do not attempt to render to the real back buffer. You must call this every frame as it can change every frame. The dimensions of this FBO are at least as big as declared in \texttt{max\_width} and \texttt{max\_height}. If desired, the FBO also has a depth buffer attached~\footnote{see \texttt{RETRO\_ENVIRONMENT\_SET\_HW\_RENDER}}.
+
+\item When done rendering, call \texttt{retro\_video\_refresh\_t} with the macro \texttt{RETRO\_HW\_FRAME\_BUFFER\_VALID} as argument for buffer. Width and height should be specified as well, but pitch argument is irrelevant and will be ignored. If the frame is duped~\footnote{RETRO\_ENVIRONMENT\_CAN\_DUPE}, the buffer argument takes \texttt{NULL} as normal.
+\end{itemize}
+
+\section*{Important considerations in the OpenGL code}
+The frontend and libretro core share OpenGL context state. Some considerations have to be taken into account for this cooperation to work nicely.
+
+\begin{itemize}
+\item Don't leave buffers and global objects bound when calling \\\texttt{retro\_video\_refresh\_t}.
+Make sure to unbind everything, i.e. VAOs, VBOs, shader programs, textures, etc. Failing to do this could potentially hit strange bugs. The frontend will also follow this rule to avoid clashes. Being tidy here is considered good practice anyway.
+
+\item The GL viewport will be modified by frontend as well as libretro core. Set this every frame.
+
+\item \texttt{glEnable()} state like depth testing, etc, is likely to be disabled in frontend as it's just rendering a quad to screen. Enable this per-frame if you use depth testing.
+There is no need to disable this before calling \\\texttt{retro\_video\_refresh\_t}.
+
+\item Avoid VAOs. They tend to break on less-than-stellar drivers~\footnote{At least AMD drivers on Windows are known to break here.}.
+
+\item Try to write code which is GLES2 as well as GL2+ (w/ extensions) compliant. This ensures maximum target surface for the libretro core.
+
+\item Libretro treats top-left as origin. OpenGL treats bottom-left as origin. To be compatible with the libretro model, top-left semantics are preserved. Rendering normally will cause the image to be flipped vertically. To avoid this, simply scale the final projection matrix by $[1, -1, 1, 1]$.
+\end{itemize} 
+
+\section*{Test implementations}
+A very basic test implementation of libretro GL interface is available in RetroArch repository on GitHub~\footnote{https://github.com/Themaister/RetroArch/tree/master/libretro-test-gl}.
+It displays two spinning quads. It runs both as a GLES2 and GL2 core depending on \texttt{GLES} environment variable.
+
+A slightly more involved test core is found on Bitbucket~\footnote{https://bitbucket.org/Themaister/libretro-gl}. It uses instanced rendering of a textured cube, with FPS-style fly-by camera. It uses libretro's mouse API as well. It is valid GLES and GL2 at the same time.
+
+\section*{Building a libretro core}
+Libretro is an interface, and not a utility library. Libretro cores are built as standalone dynamic or static libraries, and as they use GL symbols here, they must link against GL symbols themselves.
+
+An example of how this can be done is shown in the test implementation~\footnote{https://github.com/Themaister/RetroArch/blob/master/libretro-test-gl/Makefile}.
+
+\end{document}
