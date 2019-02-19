@@ -216,7 +216,7 @@ pages:
   - For Developers:
     - Libretro API and Ecosystem:
       - 'Libretro API Overview': 'specs/api.md'
-      - 'Libretro Input API': 'specs/retropad.md'
+      - 'Libretro Input API': 'specs/input-api.md'
     - Compilation:
       - Cores:
         - Nintendo Cores:
