@@ -215,14 +215,19 @@ pages:
       - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:
     - Libretro API and Ecosystem:
-      - 'Libretro API Overview': 'specs/api.md'
-      - 'Libretro Input API': 'specs/input-api.md'
-    - Compilation:
-      - Cores:
-        - Nintendo Cores:
-          - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
-          - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
-      - RetroArch:
+      - 'Libretro Overview': 'specs/api.md'
+      - 'Input API': 'specs/input-api.md'
+    - RetroArch Development:
+      - 'Debugging': 'tech/debugging.md'
+      - 'Adding Menu Entries': 'tech/new-menu-options.md'
+      - 'Input Overlays': 'specs/overlay.md'
+      - 'Licenses': 'tech/licenses.md'
+      - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
+      - 'Adding Translations': 'tech/new-translations.md'
+      - Network Protocols:
+        - 'Netplay': 'tech/netplay.md'
+        - 'Network Control Interface': 'tech/network-control-interface.md'
+      - RetroArch Compilation Guides:
         - Apple:
           - 'OSX/PowerPC': 'compilation/osxppc.md'
           - 'OSX/macOS': 'compilation/osx.md'
@@ -258,20 +263,13 @@ pages:
           - 'PlayStation2': 'compilation/ps2.md'
           - 'PlayStation Portable': 'compilation/psp.md'
           - 'PlayStation Vita/TV': 'compilation/psvita.md'
-    - RetroArch Development:
-      - 'Debugging': 'tech/debugging.md'
-      - 'Adding Menu Entries': 'tech/new-menu-options.md'
-      - 'Input Overlays': 'specs/overlay.md'
-      - 'Licenses': 'tech/licenses.md'
-      - 'MSVC Runtimes': 'tech/msvc-runtime-versions.md'
-      - 'Adding Translations': 'tech/new-translations.md'
-      - Network Protocols:
-        - 'Netplay': 'tech/netplay.md'
-        - 'Network Control Interface': 'tech/network-control-interface.md'
     - Core Development:
       - 'Core Development Overview': 'tech/developing-cores.md'
       - 'Dynamic Rate Control for Emulators': 'tech/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'tech/opengl-cores.md'
+      - Core Compilation Guides:
+        - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
+        - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
       - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
