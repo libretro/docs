@@ -21,6 +21,16 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
     `libretro.h` is the single most important technial reference for developers of libretro cores and frontends
 
 
+### `skeletor` sample core
+
+RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bparker06/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
+
+
+### Vectrexia codebase and development log
+
+**beardypig** published a two-part guide ([Part 1](https://web.archive.org/web20190219134430/http://www.beardypig.com/2016/01/15/emulator-build-along-1/), [Part 2](https://web.archive.org/web20190219134028/http://www.beardypig.com/2016/01/22/emulator-build-along-2/)) describing the process of implementing `libretro.h` as part of creating [Vectrexia](https://github.com/beardypig/vectrexia-emulator/), an original emulator core designed for libretro from the ground up.
+
+
 ### `libretro-common`
 
 [`libretro-common`](https://github.com/libretro/libretro-common/) is a collection of essential cross-platform coding blocks useful for libretro core and frontend development, written primarily in C. Permissively licensed.
@@ -34,12 +44,6 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
 ### `libretro-samples`
 
 [`libretro-samples`](https://github.com/libretro/libretro-samples) is a set of illustrations of the libretro API.
-
-
-### `skeletor` sample core
-
-RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bparker06/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
-
 
 ### OpenGL hardware accelerated cores
 
