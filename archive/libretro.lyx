@@ -1,0 +1,1169 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Libretro - Implementing the core"
+\pdf_author "Hans-Kristian Arntzen, Daniel De Matteis"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Libretro - Implementing the core
+\end_layout
+
+\begin_layout Author
+Hans-Kristian Arntzen, Daniel De Matteis
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+This document explains how to successfully implement a library based on
+ the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro API.
+ Several reasons for why more emulators and game engines should run in 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro are outlined.
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch is a project that aims to be a center for “retro” gaming experiences.
+ For your quick fix of 2D gaming goodness, 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch aims to provide a simple, featureful uniform interface for many
+ different gaming systems.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+Libretro is an API that abstracts the inner functionality of a gaming system.
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch can load a library that implements this API, give it a ROM, and
+ play.
+ A key design is that libretro implementations are loaded as libraries.
+ This ensures great modularity, and flexibility for a developer of a core.
+\end_layout
+
+\begin_layout Standard
+Due to its simple and open API, other frontends can just as easily utilize
+ libretro implementations.
+\end_layout
+
+\begin_layout Standard
+While “retro” would often imply an emulator of a classic system, 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro can also abstract a game engine.
+ Classics such as 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Cave Story
+\end_layout
+
+\end_inset
+
+Cave Story (NXEngine) and 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Doom
+\end_layout
+
+\end_inset
+
+DOOM (PrBoom) have already been ported over.
+\end_layout
+
+\begin_layout Section
+Portability
+\end_layout
+
+\begin_layout Standard
+Most emulator authors write both the backend and frontend to their project.
+ The question of portability inevitably rises when the frontend is developed.
+ Should one target a single platform with high level of integration or take
+ a multi-platform approach with libraries like 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt
+\end_layout
+
+\end_inset
+
+Qt? Backends for essentials like video, audio and input take a lot of time
+ and effort to get right, especially on multiple platforms.
+\end_layout
+
+\begin_layout Standard
+By implementing for 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro, one can target standard C/C++ (or any language that can export
+ a C API), and achieve instant portability across tons of platforms.
+\end_layout
+
+\begin_layout Standard
+In 2012, we would argue that portability has never been more relevant.
+ There are three major operating systems on the desktop, two major smart
+ phone platforms, and three gaming consoles.
+ If your system is implemented with software rendering, your implementation
+ can run on all systems supported by the frontend, without writing any platform
+ specific code.
+ In the case of 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch these are currently:
+\end_layout
+
+\begin_layout Itemize
+Windows
+\end_layout
+
+\begin_layout Itemize
+Linux
+\end_layout
+
+\begin_layout Itemize
+OSX
+\end_layout
+
+\begin_layout Itemize
+GameCube
+\end_layout
+
+\begin_layout Itemize
+PlayStation 3
+\end_layout
+
+\begin_layout Itemize
+XBox 1
+\end_layout
+
+\begin_layout Itemize
+XBox 360
+\end_layout
+
+\begin_layout Itemize
+Wii
+\end_layout
+
+\begin_layout Itemize
+Android
+\end_layout
+
+\begin_layout Section
+Features
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch has been in development for about two years.
+ During this time, some features have shown to be quinessential to retro
+ gaming systems.
+ Implementing the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro API correctly, these features can be utilized without any additional
+ work.
+\end_layout
+
+\begin_layout Subsection
+Frame-by-frame rewind
+\end_layout
+
+\begin_layout Standard
+A libretro implementation that implements serialization and unserialization
+ of internal state is able to transparently support rewind mechanics.
+ While many emulators support coarse grained rewind, 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch supports rewind at the frame level, i.e., frames can be rewound
+ one frame at a time, similar to the indie-title 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Braid
+\end_layout
+
+\end_inset
+
+Braid.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FFmpeg
+\end_layout
+
+\end_inset
+
+FFmpeg lossless recording
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch can utilize the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libavcodec
+\end_layout
+
+\end_inset
+
+libavcodec library to encode video and audio output from a libretro implementati
+on.
+ The data is encoded losslessly, with 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FLAC
+\end_layout
+
+\end_inset
+
+FLAC as audio codec, and cutting-edge 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+
+H.264/RGB (libx264) encoding, with a fallback to FFV1 for older playback
+ systems that don't support the modern 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+
+H.264/RGB variant.
+ The recorder is multithreaded, and easily performs real-time.
+\end_layout
+
+\begin_layout Subsection
+Advanced GPU shader support
+\end_layout
+
+\begin_layout Standard
+Classic 2D games have the advantage that their video output is very flexible,
+ that is, it can be post- processed easily.
+ Before the advent of programmable GPUs, video filters had to be performed
+ on the main CPU, which cut directly into performance, and severely limited
+ the types of filters possible to acheive in real-time.
+ RetroArch aims to move this processing to the GPU by using shaders.
+ A vast amount of shader effects are written already, and the shader format
+ used is documented and implemented independently by other frontends as
+ well.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch's shader support is more advanced than most emulators.
+ It supports an arbitrary amount of shader passes, look-up textures (borders),
+ scriptable shaders that can react dynamically to input or game content.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch still supports use of traditional CPU filters, however, it should
+ be considered a fallback if GPU support is broken.
+\end_layout
+
+\begin_layout Subsection
+Peer-to-peer netplay
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch supports two-player action over the network.
+ It employs a rollback technique that aims to hide latency as much as possible,
+ similar to the method employed by 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GGPO
+\end_layout
+
+\end_inset
+
+GGPO.
+\end_layout
+
+\begin_layout Standard
+In addition to head-to-head multiplayer, a spectator mode is implemented.
+ This mode allows a host to live stream playback to several watchers in
+ real-time.
+ The bandwidth required for this mode is near- zero as only raw input data
+ is transferred over the network.
+\end_layout
+
+\begin_layout Subsection
+Audio DSP plugins
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch supports plugins that allows post-processing of audio data, similar
+ to post-processing of video data.
+ It supports use of on-the-fly configurable plugins with aid of a GUI.
+\end_layout
+
+\begin_layout Section
+Implementing the API
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro API consists of several functions outlined in libretro.h, found
+ in the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch source package.
+ A libretro implementation should be compiled into a dynamically loadable
+ executable (.dll/.so/.dylib) or a static library (.a/.lib) that exports all
+ the functions outlined in libretro.h.
+ These will be called by the frontend.
+ Implementations are designed to be single-instance, so global state is
+ allowed.
+ Should the frontend call these functions in wrong order, undefined behavior
+ occurs.
+\end_layout
+
+\begin_layout Standard
+The API header is compatible with 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C99
+\end_layout
+
+\end_inset
+
+C99 and 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C++
+\end_layout
+
+\end_inset
+
+C++.
+ From 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C99
+\end_layout
+
+\end_inset
+
+C99, the bool type and <stdint.h> are used.
+\end_layout
+
+\begin_layout Standard
+The program flow of a frontend using the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro API can be expressed as follows:
+\end_layout
+
+\begin_layout Subsection
+Startup
+\end_layout
+
+\begin_layout Subsubsection
+retro_api_version()
+\end_layout
+
+\begin_layout Standard
+This function should return RETRO_API_VERSION, defined in libretro.h.
+ It is used by the frontend to determine if ABI/API are mismatched.
+ The version will be bumped should there be any non- compatible changes
+ to the API.
+ Changes to retro_* structures, as well as changes in publically visible
+ functions and/or their arguments will warrant a bump in API version.
+\end_layout
+
+\begin_layout Subsubsection
+retro_init()
+\end_layout
+
+\begin_layout Standard
+This function is called once, and gives the implementation a chance to initializ
+e data structures.
+ This is sometimes implemented as a no-op.
+\end_layout
+
+\begin_layout Subsubsection
+retro_set_*()
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+Libretro is callback based.
+ The frontend will set all callbacks at this stage, and the implementation
+ must store these function pointers somewhere.
+ The frontend can, at a later stage, call these.
+\end_layout
+
+\begin_layout Subsubsection
+Environment callback
+\end_layout
+
+\begin_layout Standard
+While 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro has callbacks for video, audio and input, there's a callback type
+ dubbed the environment callback.
+ This callback (retro_environment_t) is a generic way for the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro implementation to access features of the API that are considered
+ too obscure to deserve its own symbols.
+ It can be extended without breaking 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ABI
+\end_layout
+
+\end_inset
+
+ABI.
+ The callback has a return type of bool which tells if the frontend recognized
+ the request given to it.
+\end_layout
+
+\begin_layout Standard
+Most implementations of 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro will not use this callback at all.
+\end_layout
+
+\begin_layout Subsubsection
+retro_set_controller_port_device()
+\end_layout
+
+\begin_layout Standard
+By default, joypads will be assumed to be inserted into the implementation.
+ If the engine is sensitive to which type of input device is plugged in,
+ the frontend may call this function to set the device to be used for a
+ certain player.
+ The implementation should try to auto-detect this if possible.
+\end_layout
+
+\begin_layout Subsubsection
+retro_get_system_info()
+\end_layout
+
+\begin_layout Standard
+The frontend will typically request statically known information about the
+ core such as the name of the implementation, version number, etc.
+ The information returned should be stored statically.
+ If dynamic allocation must take place, the implementation must make sure
+ to free this storage in retro_deinit() later.
+\end_layout
+
+\begin_layout Subsubsection
+retro_load_game()
+\end_layout
+
+\begin_layout Standard
+This function will load a ROM that the implementation will use to play the
+ game.
+ If the implementation is an emulator, this would be a game ROM image, if
+ it is a game engine, this could be packaged upassets for the game, etc.
+ The function takes a structure that points to the path where the ROM was
+ loaded from, as well as a memory chunk of the already loaded file.
+\end_layout
+
+\begin_layout Standard
+There are two modes of loading files with libretro.
+ If the game engine requires to know the path of where the ROM image was
+ loaded from, the need_fullpath field in retro_system_info must be set to
+ true.
+ If the path is required, the frontend will not load the file into the data/size
+ fields, and it is up to the implementation to load the file from disk.
+ The path might be both relative and absolute, and the implementation must
+ check for both cases.
+\end_layout
+
+\begin_layout Standard
+This is useful if the ROM image is too large to load into memory at once.
+ It is also useful if the assests consist of many smaller files, where it
+ is necessary to know the path of a master file to infer the paths of the
+ others.
+ If need_fullpath is set to false, the frontend will load the ROM image
+ into memory beforehand.
+ In this mode, the path field is not guaranteed to be non-NULL.
+ It should point to a valid path if the file was indeed, loaded from disk,
+ however, it is possible that the file was loaded from stdin, or similar,
+ which has no well-defined path.
+\end_layout
+
+\begin_layout Standard
+It is recommended that need_fullpath is set to false if possible, as it
+ allows more features, such as soft- patching to work correctly.
+\end_layout
+
+\begin_layout Standard
+retro_load_game_special() is a special case of retro_load_game().
+ It is designed to allow the loading of several ROMs together.
+ This is needed for certain odd cases like Super Nintendo with e.g.
+ Super GameBoy, Sufami Turbo, etc that consist of a "BIOS" + Game(s).
+ The function takes the type of game as an argument, and if a new game type
+ is to be added, it needs to be reserved in the libretro.h header.
+ Almost any libretro implementations should simply implement this as return
+ false;.
+ If a game consist of many smaller files it is encouraged to load a single
+ zipped file, or something similar.
+\end_layout
+
+\begin_layout Standard
+Each ROM image can take an optional meta-argument, a string that gives extra
+ metadeta to the implementation.
+ The metadata is implementation specific, and can be ignored completely
+ in almost any implementation.
+\end_layout
+
+\begin_layout Subsubsection
+retro_get_system_av_info()
+\end_layout
+
+\begin_layout Standard
+This function lets the frontend know essential audio/video properties of
+ the game.
+ As this information can depend on the game being loaded, this info will
+ only be queried after a valid ROM image has been loaded.
+ It is important to accuractely report FPS and audio sampling rates, as
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FFmpeg
+\end_layout
+
+\end_inset
+
+FFmpeg recording relies on exact information to be able to run in sync for
+ several hours.
+\end_layout
+
+\begin_layout Subsection
+Running
+\end_layout
+
+\begin_layout Subsubsection
+retro_run()
+\end_layout
+
+\begin_layout Standard
+After a game has been loaded successfully, retro_run() will be called repeatedly
+ as long as the user desires.
+ When called, the implementation will perform its inner functionality for
+ one video frame.
+ During this time, the implementation is free to call callbacks for video
+ frames, audio samples, as well as polling input, and querying current input
+ state.
+ The requirements for the callbacks are that video callback is called exactly
+ once, i.e.
+ it does not have to come last.
+ Also, input polling must be called at least once.
+\end_layout
+
+\begin_layout Subsubsection
+Video/Audio synchronization considerations
+\end_layout
+
+\begin_layout Standard
+Libretro is based on fixed rates.
+ Video FPS and audio sampling rates are always assumed to be constant.
+ Frontends will have control of the speed of playing, typically using VSync
+ to obtain correctspeed.
+ The frontend is free to "fast-forward", i.e.
+ play as fast as possible without waiting, or slow- motion.
+ For this reason, the engine should not rely on system timers to perform
+ arbitrary synchronization.
+ This is common and often needed in 3D games to account for varying frame
+ rates while still maintaining a playable game.
+ However, libretro targets classic systems where one can assume that 100
+ % real-time performance will always be met, thus avoiding the need for
+ careful timing code.
+\end_layout
+
+\begin_layout Standard
+By default, the libretro implementation should replace any arbitrary sleep()/tim
+e() patterns with simply calling video/audio callbacks.
+ The frontend will make sure to apply the proper synchronization.
+\end_layout
+
+\begin_layout Standard
+This is mostly a problem with game ports, such as PrBoom.
+ For the libretro port of PrBoom, which heavily relied on timers and sleeping
+ patterns, sleeping was replaced with simply running for one frame, and
+ calling the video callback.
+ After that, enough audio was rendered to correspond to one frames worth
+ of time, 1 / fps seconds.
+ All sleeping and timing patterns could be removed, and synchronization
+ was correct.
+\end_layout
+
+\begin_layout Subsubsection
+Audio callback considerations
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+libretro
+\end_layout
+
+\end_inset
+
+libretro API has two different audio callbacks.
+ Only one of these should be used; the implementation must choose which
+ callback is best suited.
+\end_layout
+
+\begin_layout Standard
+The first audio callback is per-sample, and has the type void (*)(int16_t,
+ int16_t).
+ This should be used if the implementation outputs audio on a per-sample
+ basis.
+ The frontend will make sure to partition the audio data into suitable chunks
+ to avoid incurring too much syscall overhead.
+\end_layout
+
+\begin_layout Standard
+If audio is output in a "batch" fashion, i.e.
+ 1 / fps seconds worth of audio data at a time, the batch approach should
+ be considered.
+ Rather than looping over all samples and calling per-sample callback every
+ time, the batch callback should be used instead, size_t (*)(const int16_t
+ *, size_t).
+\end_layout
+
+\begin_layout Standard
+Using the batch callback, audio will not be copied in a temporary buffer,
+ which can buy a slight performance gain.
+ Also, all data will be pushed to audio driver in one go, saving some slight
+ overhead.
+ It is not recommended to use the batch callback for very small (< 32 frames)
+ amounts of data.
+\end_layout
+
+\begin_layout Standard
+The data passed to the batch callback should, if possible, be aligned to
+ 16 bytes (depends on platform), to allow accelerated 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SIMD
+\end_layout
+
+\end_inset
+
+SIMD operations on audio.
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch implements 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SSE
+\end_layout
+
+\end_inset
+
+SSE/
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AltiVec
+\end_layout
+
+\end_inset
+
+AltiVec optimized audio processing for conversions and resampling.
+\end_layout
+
+\begin_layout Subsubsection
+Input device abstraction
+\end_layout
+
+\begin_layout Standard
+Abstracting input devices is the hardest part of defining a multi-system
+ API as it differs across every system.
+ The common input devices are:
+\end_layout
+
+\begin_layout Itemize
+Joypad (with or without analogs)
+\end_layout
+
+\begin_layout Itemize
+Mouse (e.g.
+ SNES mouse)
+\end_layout
+
+\begin_layout Itemize
+Keyboard (e.g.
+ Commodore, Amiga)
+\end_layout
+
+\begin_layout Itemize
+Lightguns (e.g.
+ SNES SuperScope)
+\end_layout
+
+\begin_layout Standard
+The joypad abstraction is the most interesting.
+ Rather than complicating things by mapping input arbitrarily in terms of
+ the implementation, which would make input configuration very complex with
+ careful configuration on a per-implementation basis, an abstract joypad
+ device, the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Input device abstractions!RetroPad
+\end_layout
+
+\end_inset
+
+RetroPad, was devised.
+ 
+\end_layout
+
+\begin_layout Standard
+This joypad is essentially the Super Nintendo controller, widely considered
+ the pinnacle of retro game controllers.
+ To account for more modern systems with additional buttons, additions from
+ the PlayStation DualShock are incorporated, with extra shoulder buttons
+ (L2/R2), as well as depressable analogs (L3/R3).
+ In addition, the RETRO_DEVICE_ANALOG is used for analog stick data.
+ An implementation should map its idea of a joypad in terms of the 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Input device abstractions!RetroPad
+\end_layout
+
+\end_inset
+
+RetroPad, which is what most users will have to use with their frontend.
+\end_layout
+
+\begin_layout Subsubsection
+retro_serialize_size()
+\end_layout
+
+\begin_layout Subsubsection
+retro_serialize()
+\end_layout
+
+\begin_layout Subsubsection
+retro_unserialize()
+\end_layout
+
+\begin_layout Standard
+Serialization is optional to implement.
+ Serialization is better known as "save states" in emulators, and these
+ functions are certainly more useful in emulators which have a fixed amount
+ of state.
+ It allows the frontend to take a snapshot of all internal state, and later
+ restore it.
+ This functionality is used to implement e.g.
+ rewind and netplay.
+ Some important considerations must be taken to implement these functions
+ well.
+\end_layout
+
+\begin_layout Standard
+If serialization is not supported, retro_serialize_size() should return
+ 0.
+ If retro_serialize_size() returns non-zero, it is assumed that serialization
+ is properly implemented.
+\end_layout
+
+\begin_layout Standard
+The frontend should call retro_serialize_size() before calling retro_serialize()
+ to determine the amount of memory needed to correctly serialize.
+ The size eventually passed to retro_serialize() must be at least the size
+ of the value returned in retro_serialize_size().
+ If too large a buffer is passed to retro_serialize(), the extra data should
+ be ignored (or memset to 0).
+\end_layout
+
+\begin_layout Standard
+It is valid for the value returned by retro_serialize_size() to vary over
+ time, however, it cannot ever increase over time.
+ If it should ever change, it must decrease.
+ This is rationaled by the ability to pre- determined a fixed save state
+ size right after retro_load_game() that will always be large enough to
+ hold any following serialization.
+ This certainty is fundamental to the rewind implementation.
+ This requirement only holds between calls to retro_load_game() and retro_unload
+_game().
+\end_layout
+
+\begin_layout Standard
+If possible, the implementation should attempt to serialize data at consistent
+ offsets in the memory buffer.
+ This will greatly help the rewind implementation in 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RetroArch
+\end_layout
+
+\end_inset
+
+RetroArch to use less memory.
+\end_layout
+
+\begin_layout Standard
+Both retro_serialize() and retro_unserialize() return a boolean value to
+ let the frontend know if the implementation succeeded in serializing or
+ unserializing.
+\end_layout
+
+\begin_layout Subsection
+Tear-down
+\end_layout
+
+\begin_layout Subsubsection
+retro_unload_game()
+\end_layout
+
+\begin_layout Standard
+After the user desired to stop playing, retro_unload_game() will be called.
+ This should free any internal data related to the game, and allow retro_load_ga
+me() to be called again.
+\end_layout
+
+\begin_layout Subsubsection
+retro_deinit()
+\end_layout
+
+\begin_layout Standard
+This function should free all state that was initialized during retro_init().
+ After calling this function, the frontend can again call retro_init().
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

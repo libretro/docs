@@ -1,0 +1,1832 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "RetroArch Android Manual"
+\pdf_author "Hans-Kristian Antzen, Daniel De Matteis"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 5
+\tocdepth 5
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/logo.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+RetroArch Android (v0.9.8)
+\end_layout
+
+\begin_layout Author
+Hans Kristian Arntzen, Daniel De Matteis, Michael Lelli
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+RetroArch Android is an app that has been designed to run and play:
+\end_layout
+
+\begin_layout Itemize
+Games 
+\end_layout
+
+\begin_layout Itemize
+Emulators
+\end_layout
+
+\begin_layout Standard
+Emulators and games that can be run on RetroArch come in the form of pluggable
+ 'engines' which are called 'libretro ports'.
+ The version that you just installed already has most of the full library
+ of 'cores' preinstalled.
+\end_layout
+
+\begin_layout Section
+Disclaimer
+\end_layout
+
+\begin_layout Standard
+RetroArch Android is released for free and will always be free.
+ There are no ads (push or otherwise), there is no 'spying' going on in
+ the form of analytics or collecting stats, there is no 'paid DLC', and
+ on and on - all the unsavory and bad aspects of this 'new generation of
+ computing' are not to be found here.
+ It will never be sold with a pricetag - not even disguised as a 'donationware
+ version'.
+ If you happen to have 'paid' for RetroArch Android or a derivative of it,
+ you have been scammed and you should probably demand your money back from
+ the scam artist in question (and scam artists they are).
+\end_layout
+
+\begin_layout Standard
+Just because the GPL allows people to make derivative copies of RetroArch
+ for commercial purposes does not mean that we support it or even approve
+ of it.
+ If you sell RetroArch or a derivative copy of it for any commercial purpose,
+ you are part of the problem and you need to be learnt a quick lesson in
+ etiquette.
+ Note to any 'entrepreneurs' out there that might be tempted by this 'easy
+ route to makin' some money' - I honestly wouldn't bother - we will undercut
+ you by offering this all for free and doing a better job at it to boot.
+ That and I severely doubt you can come up with many trinkets that will
+ persuade people to throw away their money on a derivative version when
+ they can have it all for free to begin with - just saying - save yourself
+ the time and the effort, because it isn't going to work out.
+\end_layout
+
+\begin_layout Section
+How to run
+\end_layout
+
+\begin_layout Subsection
+Select a core
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/maE85W6.png
+	lyxscale 50
+	scale 30
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Select a core from this menu.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/UhU7QrR.png
+	lyxscale 50
+	scale 30
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{After selecting the core, you will need to load a game.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 'libretro core' supports games with certain extensions.
+ Below you will find the list of cores that came preinstalled with this
+ app and what file extensions they support.
+\end_layout
+
+\begin_layout Itemize
+SNES9x Next
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing SNES games (Super Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): SNES9x team, OV2, Bearoso, zones, Squarepusher (fork)
+\begin_inset Newline newline
+\end_inset
+
+Recommended system requirements: ARM Cortex A9 multi-core device (and up)
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "smc|fig|sfc|gd3|gd7|dx2|bsx|swc|zip|SMC|FIG|
+\begin_inset Newline newline
+\end_inset
+
+SFC|BSX|GD3|GD7|DX2|SWC|ZIP"
+\end_layout
+
+\begin_layout Itemize
+VBA Next
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Game Boy Advance games
+\begin_inset Newline newline
+\end_inset
+
+Recommended system requirements: ARM Cortex A9 multi-core based device (and
+ up)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Forgotten, VBA-M team, Squarepusher (fork)
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "gba|GBA|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+FCEUmm
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing NES games (Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): CaH4e3, original FCEU authors
+\begin_inset Newline newline
+\end_inset
+
+Extensions: "fds|FDS|zip|ZIP|nes|NES|unif|UNIF"
+\end_layout
+
+\begin_layout Itemize
+NEStopia
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing NES games (Nintendo Entertainment System)
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Marty
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "nes|NES|zip|ZIP|fds|FDS"
+\end_layout
+
+\begin_layout Itemize
+Gambatte
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing GameBoy / GameBoy Color games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Sinamas
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "gb|gbc|dmg|zip|GB|GBC|DMG|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Final Burn Alpha
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing arcade games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Dave, FBA Team (Barry Harris & co)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: 
+\begin_inset Quotes eld
+\end_inset
+
+zip|ZIP
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Genesis Plus GX
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Sega Genesis / Master System / Game Gear / Sega CD games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Charles McDonald, ekeeke
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "md|smd|bin|cue|gen|zip|MD|SMD|bin|iso|
+\begin_inset Newline newline
+\end_inset
+
+ISO|CUE|GEN|ZIP|sms|SMS|gg|GG|sg|SG"
+\end_layout
+
+\begin_layout Itemize
+NX Engine
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Cave Story / Doukutsu Monogatari
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Caitlin Shaw (rogueeve)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: 
+\begin_inset Quotes eld
+\end_inset
+
+exe|EXE|zip|ZIP
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+PCSX ReARMed
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing PlayStation1 games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): PCSX Team, Notaz, Exophase (GPU plugin)
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "bin|cue|img|mdf|pbp|cbn"
+\end_layout
+
+\begin_layout Itemize
+Prboom
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Doom, Doom 2, Ultimate Doom, Final Doom, and mods
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Various
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "WAD|wad|IWAD|iwad"
+\end_layout
+
+\begin_layout Itemize
+Mednafen NGP
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Neo Geo Pocket Color games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Original Neopop authors, Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "ngp|NGP|ngc|NGC|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen WonderSwan
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing WonderSwan / WonderSwan Color / WonderSwan Crystal games
+\begin_inset Newline newline
+\end_inset
+
+Author(s): Original Cygne authors, Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "ws|WS|wsc|WSC|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen Virtual Boy
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing Virtual Boy games
+\begin_inset Newline newline
+\end_inset
+
+Author: Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "vb|VB|vboy|VBOY|bin|BIN|zip|ZIP"
+\end_layout
+
+\begin_layout Itemize
+Mednafen PC Engine
+\begin_inset Newline newline
+\end_inset
+
+Used for: playing PC Engine / Supergrafx 16 / PC Engine CD games
+\begin_inset Newline newline
+\end_inset
+
+Author: Ryphecha
+\begin_inset Newline newline
+\end_inset
+
+Extensions supported: "pce|PCE|sgx|SGX|cue|CUE|zip|ZIP"
+\end_layout
+
+\begin_layout Standard
+Select one of these cores in the menu.
+\end_layout
+
+\begin_layout Subsection
+Select a game
+\end_layout
+
+\begin_layout Standard
+After you have selected a core, you will need to select a compatible game
+ from the filebrowser.
+ It will then attempt to load the core with that specific game.
+\end_layout
+
+\begin_layout Section
+Controls
+\end_layout
+
+\begin_layout Subsection
+Touchscreen overlay
+\end_layout
+
+\begin_layout Standard
+RetroArch Android uses an overlay as a 'mock' gamepad to play with.
+ The 'overlay' controls will always be bound to Player 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/Rr2Nvgo.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Gamepad overlay' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Touchscreen menu navigation
+\end_layout
+
+\begin_layout Standard
+Each touchscreen overlay has a couple of screens that can be navigated to.
+ To go to the next screen of the overlay, you press the 'circle' icon at
+ the bottom.
+\end_layout
+
+\begin_layout Standard
+Most of the overlays that come bundled with RetroArch Android have the same
+ screen order.
+\end_layout
+
+\begin_layout Subsubsection
+Gamepad screen
+\end_layout
+
+\begin_layout Standard
+You can control the game with this screen.
+ Illustrated is a controller called 'RetroPad'.
+ It is laid out like a SNES pad with PlayStation-style shoulder
+\end_layout
+
+\begin_layout Standard
+buttons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/1ZhxUo2.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Quick Menu' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Quick Menu screen
+\end_layout
+
+\begin_layout Standard
+The actions on this screen have various effects on the game currently running.
+\end_layout
+
+\begin_layout Itemize
+LOAD STATE - Load a save state from the currently selected save state slot.
+\end_layout
+
+\begin_layout Itemize
+SAVE STATE - Save state to the currently selected save state slot.
+\end_layout
+
+\begin_layout Itemize
+STATE MINUS - Go back one save state slot.
+\end_layout
+
+\begin_layout Itemize
+STATE PLUS - Go forward one state slot.
+\end_layout
+
+\begin_layout Itemize
+REWIND - Rewind the game in real-time.
+ Note - the 'Rewind' option needs to be enabled at the Settings menu or
+ else this option won't work.
+\end_layout
+
+\begin_layout Itemize
+SLOWMOTION - Press and hold this button to let the game run in slowmotion.
+\end_layout
+
+\begin_layout Itemize
+RESET - Resets the game/system.
+\end_layout
+
+\begin_layout Itemize
+FAST FORWARD - Fast forward the game in real-time.
+\end_layout
+
+\begin_layout Itemize
+NEXT SHADER - Load the next shader in the folder (NOTE: only if shaders
+ are enabled)
+\end_layout
+
+\begin_layout Itemize
+PREVIOUS SHADER - Load the previous shader in the folder (NOTE: only if
+ shaders are enabled)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/hCwKqVN.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Gameplay' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Gameplay screen
+\end_layout
+
+\begin_layout Standard
+This screen is useful for when you are playing with an USB or Bluetooth
+ gamepad but you would still like to have access to the Quick Menu or Gamepad
+ screen without outright disabling overlays.
+ If you press the 'icon' at the bottom of this screen, you will go back
+ to the 'Gamepad' screen'.
+\end_layout
+
+\begin_layout Subsection
+Variations
+\end_layout
+
+\begin_layout Standard
+RetroArch Android comes packaged with a number of different-looking overlays.
+ You can select from a number of different overlays in the Settings menu.
+ Below is a list of different overlays:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/overlays.png
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{All the default overlays packaged with RetroArch Android.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Making your own custom overlays
+\end_layout
+
+\begin_layout Standard
+You can make your own custom overlays for use with RetroArch Android.
+ If you want to learn how to do this, you should read the 'Overlay Guide'.
+\end_layout
+
+\begin_layout Subsection
+USB gamepads
+\end_layout
+
+\begin_layout Standard
+Next to the standard touchscreen input, RetroArch Android autodetects and
+ autoconfigures various input devices automatically.
+ Most of these are USB joysticks/gamepads.
+\end_layout
+
+\begin_layout Standard
+A list of the gamepads that are supported by autodetection can be found
+ inside the app.
+ (go to Help).
+\end_layout
+
+\begin_layout Standard
+You connect the device to your tablet/phone.
+ You press a button while ingame.
+ If your pad is supported, it should bring up a message saying: 
+\begin_inset Quotes eld
+\end_inset
+
+RetroPad #? detected: 
+\begin_inset Quotes eld
+\end_inset
+
+ and then the name of the device it found.
+ Buttons and control layout will then be autoconfigured and mapped to the
+ RetroPad layout.
+\end_layout
+
+\begin_layout Subsubsection
+Unsupported gamepads
+\end_layout
+
+\begin_layout Standard
+If your pad is unsupported, it will likely show 
+\begin_inset Quotes eld
+\end_inset
+
+Unknown HID
+\begin_inset Quotes erd
+\end_inset
+
+ instead.
+ If you want this pad supported, contact us.
+\end_layout
+
+\begin_layout Subsubsection
+Notes
+\end_layout
+
+\begin_layout Standard
+If a USB gamepad that is listed above does not work immediately, your controller
+ may require a powered USB hub or perhaps a HID driver may be missing of
+ sorts.
+\end_layout
+
+\begin_layout Subsection
+Bluetooth
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/sVWyw8c.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{Setting an IME app from the RetroArch menu by clicking on the 'Settings'
+ icon.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RetroArch supports Bluetooth right now only through the use of IME apps.
+ A couple of IME apps are supported by RetroArch Android - if you use the
+ default key layouts with the IME apps listed below, your pads will be automatic
+ally configured:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://play.google.com/store/apps/details?id=com.dancingpixelstudios.sixaxiscontrol
+ler
+\end_layout
+
+\end_inset
+
+ Dancing Pixel Studios SixAxis Controller
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://play.google.com/store/apps/details?id=com.ccpcreations.android.WiiUseAndroid
+\end_layout
+
+\end_inset
+
+ ccpcreations.Wiiuse.Android
+\end_layout
+
+\begin_layout Standard
+Remember that you will have to change your Input Method to the needed IME
+ first before starting RetroArch.
+ This can also be done from the menu by clicking on the top righthand side
+ 'Settings' icon and then selecting 'Input Method' (see image).
+\end_layout
+
+\begin_layout Subsection
+Notes
+\end_layout
+
+\begin_layout Standard
+When using PS3 controller via Bluetooth, use SixAxis adapter app and after
+ you've got the controller setup, make sure to go to menu then preferences
+ and then Game pad settings, and enable Gamepad.
+ This turns it into a native android controller and no IME switch is needed.
+ Same for the MOGA controller via bluetooth, make sure to use the MOGA Universal
+ Driver and not the one that MOGA recommends.
+ In the app, make sure 'Enable left analog input' is checked, and that it's
+ in System Mode to make it a native gamepad for android and no need to switch
+ IMEs.
+\end_layout
+
+\begin_layout Section
+Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/Emu9nsQ.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Settings' menu.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can configure many aspects of RetroArch.
+ To go to the Settings menu, click on the 'Settings' icon at the top righthand
+ side of the screen and then select 'Settings'.
+\end_layout
+
+\begin_layout Subsection
+Path Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/4i6EGD7.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Path Settings' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ROM Directory
+\begin_inset Newline newline
+\end_inset
+
+Set the directory that will be used as a default starting point for the
+ filebrowser.
+\end_layout
+
+\begin_layout Itemize
+Save Files - Enable custom directory
+\begin_inset Newline newline
+\end_inset
+
+Enables use of custom save file folder.
+ (.srm) save files will be saved and loaded to the configured directory.
+ if not enabled, save files will reside in ROM folder.
+\end_layout
+
+\begin_layout Itemize
+Save Files - Savefile directory
+\begin_inset Newline newline
+\end_inset
+
+Sets directory where to save and load game save files.
+\end_layout
+
+\begin_layout Itemize
+Save States - Enable custom directory
+\begin_inset Newline newline
+\end_inset
+
+Enables use of custom save statefolder.
+ (.state) save states will be saved and loaded to configured directory.
+ If not enabled, save states will reside in ROM folder.
+\end_layout
+
+\begin_layout Itemize
+Save state directory
+\begin_inset Newline newline
+\end_inset
+
+Sets directory where to save and load game save states.
+\end_layout
+
+\begin_layout Subsection
+System Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/WOfUmx7.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'System Settings' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Auto load state
+\begin_inset Newline newline
+\end_inset
+
+Loads an automatically created savestate at startup.
+\end_layout
+
+\begin_layout Itemize
+Auto save state
+\begin_inset Newline newline
+\end_inset
+
+This will make a save state when you exit the game.
+ This auto savestate will be automatically loaded the next time you start
+ up the 
+\begin_inset Newline newline
+\end_inset
+
+game.
+ Useful for on-the-go gaming.
+\end_layout
+
+\begin_layout Itemize
+Rewinding Enable
+\begin_inset Newline newline
+\end_inset
+
+This allows you to rewind the game in real-time to undo 'mistakes' you made
+ while playing the game.
+ (NOTE - this is very CPU intensive - you should only enable this if the
+ core is running at least 2x realtime on your system).
+\end_layout
+
+\begin_layout Subsection
+Video Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/3gbr7az.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Video Settings' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vsync
+\begin_inset Newline newline
+\end_inset
+
+Unchecking this will cause screen tearing but faster performance.
+\end_layout
+
+\begin_layout Itemize
+Sync refreshrate to screen
+\begin_inset Newline newline
+\end_inset
+
+Synchronize RetroArch's refresh rate to the screen's refresh rate (recommended
+ - some screens have refresh rates below 59.95Hz and need this enabled to
+ get good audio/video sync).
+\end_layout
+
+\begin_layout Itemize
+Forced refresh rate (Hz)
+\begin_inset Newline newline
+\end_inset
+
+Force a specific refresh rate to be detected.
+ Only use this if auto-detection of refresh rate reports wrong refresh rate.
+\end_layout
+
+\begin_layout Itemize
+Auto-rotate
+\begin_inset Newline newline
+\end_inset
+
+Will auto-rotate the screen for vertically oriented games.
+\end_layout
+
+\begin_layout Itemize
+Aspect ratio
+\begin_inset Newline newline
+\end_inset
+
+Select the aspect ratio to enforce.
+\end_layout
+
+\begin_layout Itemize
+Shaders (1st pass) Bilinear filter
+\begin_inset Newline newline
+\end_inset
+
+Applies bilinear filtering, smooths out edges (setting still apply even
+ if no shader is selected).
+\end_layout
+
+\begin_layout Itemize
+Shaders (1st pass) Enable
+\begin_inset Newline newline
+\end_inset
+
+Enable the currently selected shader.
+\end_layout
+
+\begin_layout Itemize
+Shaders (1st pass) XML Shader
+\begin_inset Newline newline
+\end_inset
+
+Select this option to select a shader from the filesystem.
+ RetroArch comes prepackaged with a collection of shaders.
+\end_layout
+
+\begin_layout Itemize
+Shaders (Multi-pass) Render-to-texture
+\begin_inset Newline newline
+\end_inset
+
+Render first pass to a texture (FBO).
+ Stretch to screen with second shader.
+\end_layout
+
+\begin_layout Itemize
+Shaders (Multi-pass) Enable shader #2
+\begin_inset Newline newline
+\end_inset
+
+Enable custom shader or use after rendering to FBO.
+\end_layout
+
+\begin_layout Itemize
+Shaders (Multi-pass) XML shder (2nd pass)
+\begin_inset Newline newline
+\end_inset
+
+Sets shader to use for second-pass.
+\end_layout
+
+\begin_layout Itemize
+Shaders (Multi-pass) FBO Scale
+\begin_inset Newline newline
+\end_inset
+
+Scale to use when rendering to FBO.
+\end_layout
+
+\begin_layout Itemize
+Shaders (Multi-pass) Second-pass bilinear filtering
+\begin_inset Newline newline
+\end_inset
+
+Use bilinear filtering on FBO texture on second pass.
+\end_layout
+
+\begin_layout Itemize
+Enable on-screen fonts
+\begin_inset Newline newline
+\end_inset
+
+Enable rendering of on-screen fonts for system messages.
+\end_layout
+
+\begin_layout Subsubsection
+Notes on shaders
+\end_layout
+
+\begin_layout Itemize
+The shaders that come prepackaged with RetroArch Android come from the PS3
+ and Xbox 360 ports of RetroArch.
+ Unfortunately, most Android GPUs are very weak compared to the ones inside
+ the PS3 and 360 - so most of these shaders will run extemely slow on nearly
+ all Android devices right now.
+ To make these shaders usable we will have to wait until GPUs on Android-powered
+ devices catch up with PS3 and 360.
+ They will make for good GPU benchmarks in the meantime - these shaders
+ are far more intensive on the GPU than the trivial 'shaders' used in commercial
+ games - which are mostly used for menial tasks instead of applying an expensive
+ image-enhancing algorithm to the entire screen like the 'shader filters'
+ seen here.
+\end_layout
+
+\begin_layout Subsubsection
+Notes on refresh rate
+\end_layout
+
+\begin_layout Itemize
+Some devices (like the Samsung Galaxy S3) falsely report that the screen
+ refresh rate is 60Hz.
+ For these devices, it is recommended that you set 'forced refresh rate'
+ manually to a lower rate until you find the right value that gives you
+ good audio/video with no audio pops.
+\end_layout
+
+\begin_layout Subsection
+Audio Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/UVU6Chp.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Audio Settings' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Audio Enable
+\begin_inset Newline newline
+\end_inset
+
+Uncheck this to disable sound.
+\end_layout
+
+\begin_layout Itemize
+Dynamic Rate Control
+\begin_inset Newline newline
+\end_inset
+
+Dynamic rate control tries to prevent sound pops by dynamically adjusting
+ samplerate.
+ It is recommended that you leave this on for RetroArch Android.
+\end_layout
+
+\begin_layout Subsection
+Input Settings
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\backslash
+begin{centering}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename retroarch-android/deYDWvd.png
+	lyxscale 50
+	scale 35
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption{'Input Settings' screen.}
+\backslash
+end{centering}
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Configuration Autodetect Enable
+\begin_inset Newline newline
+\end_inset
+
+This will attempt to preconfigure various gamepads and/or IME apps that
+ you connect.
+\end_layout
+
+\begin_layout Itemize
+Debug Input Reporting Enable
+\begin_inset Newline newline
+\end_inset
+
+This will report keycodes onscreen generated by your input device(s).
+ You should use this option when you want us to support a gamepad that you
+ use.
+ You should use this option then to see which keycodes are generated by
+ all the buttons on your gamepad/input device and then report this back
+ to us.
+\end_layout
+
+\begin_layout Itemize
+Touchscreen Overlay Enable
+\begin_inset Newline newline
+\end_inset
+
+You can disable the overlay system entirely by disabling this.
+\end_layout
+
+\begin_layout Itemize
+Input overlay
+\begin_inset Newline newline
+\end_inset
+
+You can select a different overlay by choosing this option.
+\end_layout
+
+\begin_layout Section
+RetroArch on other platforms
+\end_layout
+
+\begin_layout Standard
+RetroArch isn't only available for Android.
+ It is available on other platforms as well, including:
+\end_layout
+
+\begin_layout Itemize
+PlayStation3
+\end_layout
+
+\begin_layout Itemize
+Xbox 1
+\end_layout
+
+\begin_layout Itemize
+Xbox 360
+\end_layout
+
+\begin_layout Itemize
+Wii/Gamecube
+\end_layout
+
+\begin_layout Itemize
+Raspberry Pi
+\end_layout
+
+\begin_layout Itemize
+PC (Mac/Linux/Windows)
+\end_layout
+
+\begin_layout Standard
+And it will be ported to even more platforms in the future.
+ You might even see the libretro cores running in XBMC shortly.
+\end_layout
+
+\begin_layout Section
+About Us
+\end_layout
+
+\begin_layout Standard
+Homepage: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.libretro.org
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+IRC: #retroarch at freenode
+\begin_inset Newline newline
+\end_inset
+
+Github (libretro organization): 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/libretro
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+RetroArch @ Github: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/Themaister/RetroArch
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Libretro @ Twitter: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://twitter.com/libretro
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Libretro @ Facebook: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.facebook.com/libretro.retroarch
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Credits
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{RetroArch Android}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hans-Kristian Arntzen (Themaister)
+\end_layout
+
+\begin_layout Standard
+Daniel De Matteis (Squarepusher2/Twinaphex)
+\end_layout
+
+\begin_layout Standard
+Michael Lelli (ToadKing)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{RetroArch Android contributions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Meancoot
+\end_layout
+
+\begin_layout Standard
+Opium2k (overlay images)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Thanks to}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notaz (PCSX ReARMed libretro port - RetroArch ARM Linux patches)
+\end_layout
+
+\begin_layout Standard
+FBA Team (for adopting libretro upstream - FBA)
+\end_layout
+
+\begin_layout Standard
+Ekeeke (for adopting libretro upstream - Genesis Plus GX)
+\end_layout
+
+\begin_layout Standard
+CaH4e3 (for adopting libretro upstream - FCEUmm)
+\end_layout
+
+\begin_layout Standard
+Rdanbrook (for adopting libretro upstream - NEStopia Undead)
+\end_layout
+
+\begin_layout Standard
+XBMC devs (for adopting libretro vis a vis RetroPlayer)
+\end_layout
+
+\begin_layout Standard
+Zeromus
+\end_layout
+
+\end_body
+\end_document
