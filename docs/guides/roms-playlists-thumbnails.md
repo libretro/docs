@@ -27,10 +27,11 @@ Playlists (or Collections as they are sometimes referred to) are the lists of ga
 RetroArch incoporates a ROM scanning system to automatically produce playlists. Each ROM that is scanned by the playlist generator is checked against a database of ROMs that are known to be good copies.
 
 In order for content to be correctly scanned, you must:
-- have a compatible core already downloaded
-- have `Core Info Files` updated via `Online Updater`
-- have `Databases` updated via `Online Updater`
-- restart RetroArch if any of the above was just done
+
+  - Have a compatible core already downloaded and installed
+  - Update `Core Info Files` via `Online Updater`
+  - Update `Databases` via `Online Updater`
+  - Restart RetroArch if any of the above was just done
 
 Finally, the content must match existing databases from the [libretro-database README](https://docs.libretro.com/guides/roms-playlists-thumbnails/#sources). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
 
