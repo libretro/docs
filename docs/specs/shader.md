@@ -430,7 +430,19 @@ The textures will be loaded "as-is", and coordinates `(0, 0)`, `(0, 1)`, `(1, 0)
 
 The implementation only guarantees to be able to load plain top-left non-RLE `.tga` files. It may provide possibilities to load `.png` and other popular formats.
 
-### Multi-pass uniforms
+### Multipass
+
+It is sometimes feasible to process an effect in several steps.
+
+```c
+shaders = 2
+shader0 = pass1.cg
+shader1 = pass2.cg
+scale_type0 = source
+scale0 = 2.0
+filter_linear0 = true
+filter_linear1 = false
+```
 
 During multi-pass rendering, some additional uniforms are available.
 
