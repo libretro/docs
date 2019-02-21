@@ -273,6 +273,7 @@ pages:
     - Shader Development:
       - 'Shader Development Overview': 'specs/shader.md'
       - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
+      - 'Shader Lookup Textures': 'tech/shader-lookup-textures.md'
     - Documentation Meta:
       - 'Core List': 'meta/core_list.md'
       - 'To Do': 'meta/todo.md'
