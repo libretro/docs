@@ -1,4 +1,4 @@
-# Shaders
+# Shader Development Overview
 Libretro has created this Shader Specification in order to facilitate the implementation of cross-platform video shaders.
 
 ## Audience
@@ -9,13 +9,23 @@ Some introduction to shader programming in general is given, so more experienced
 
 ### Available shader types:
 
-There are three popular shader languages in use today:
+As the reference libretro frotnend, RetroArch supports three shader languages:
 
-- HLSL (High-Level Shading Language, Direct3D)
-- GLSL (GL Shading Language, OpenGL, OpenGL ES, and EGL contexts including KMS mode in Linux)
 - Cg (HLSL/GLSL, nVidia)
+- GLSL (GL Shading Language, OpenGL, OpenGL ES, and EGL contexts including KMS mode in Linux)
+- Slang: Vulkan
 
-This spec is for the Cg shading language developed by nVidia. It wraps around OpenGL and HLSL to make shaders written in Cg quite portable. It is also the shading language implemented on the PlayStation3, thus increasing the popularity of it. RetroArch supports both single-pass Cg shaders as well as multi-pass shaders and uses a custom Cg preset format (.cgp).
+RetroArch is also able to stack these shaders to create a combined effect. These complex effects are saved with a special extension:
+
+ - `.cpg` for CG
+ - `.glslp` for GLSL
+ - `.slangp` for Slang
+
+
+## Common Shaders Repository
+
+The Libretro organization hosts a [repository](https://github.com/libretro/common-shaders) on Github that contains a compilation of shaders. Users can contribute their own shaders to this repository by doing a Pull Request.
+
 
 ## The rendering pipeline
 
@@ -31,7 +41,7 @@ it to:
 
 We are allowed to take control of what happens during vertex processing, and fragment processing.
 
-## A Cg/HLSL program
+## Example Cg/HLSL program
 
 If you were to process an image on a CPU, you would most likely do something like this:
 
@@ -201,19 +211,30 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0,
 ## Result
 
 As you can see, it’s not a practical shader, but it shows the blurring effect to the extreme.
-![Super Mario World prior to Mario jumping in water.](../image/development/shaders/example-shader.jpg)
+![A blurry Super Metroid shader](../image/development/shaders/example-burry-shader.jpg)
+
+
+-----------------------------------------------------------
+
 
 ## Shader file format
 
- * # are treated as comments. Rest of the line is ignored.
- * Format is: key = value. There can be as many spaces as you like in-between.
- * Value can be wrapped inside "" for multiword strings. (foo = "hai u")
- * #include includes a config file in-place.
- * Path is relative to where config file was loaded unless an absolute path is chosen.
- * Key/value pairs from an #include are read-only, and cannot be modified.
+ * `#` begins a comment; the rest of the line is ignored.
+ * Format is: `key = value`. There can be as many spaces as you like in between
+ * Values can be wrapped inside `"` for multiword strings (`foo = "hai u"`)
+ * `#include` includes a config file
+ * Path is relative to where config file was loaded unless an absolute path is chosen
+ * Key/value pairs from an `#include` are read-only and cannot be modified
+
+-----------------------------------------------------------
+
 
 ## Cg shader spec
-Cg is a shader specification from nVidia. It has the advantage that shaders written in Cg are compatible with both OpenGL and Direct3D, as well as PlayStation3. They are also compatible with basic HLSL if some considerations are taken into account. They can even be automatically compiled into GLSL shaders, which makes Cg shaders a true “write once, run everywhere” shader format. We encourage new shaders targeting Libretro frontends to be written in this format.
+
+This spec is for the Cg shading language developed by nVidia. It wraps around OpenGL to make shaders written in Cg quite portable. Shaders written in Cg can also be used with Direct3D and PlayStation3. Cg shaders are also compatible with basic HLSL if some considerations are taken into account. They can even be automatically compiled into GLSL shaders, which makes Cg shaders a true “write once, run everywhere” shader format.
+
+We encourage new shaders targeting Libretro frontends to be written in this format. RetroArch supports both single-pass Cg shaders as well as multi-pass shaders and uses a custom Cg preset format (`.cgp`).
+
 
 ### Another example Cg shader
 
@@ -248,48 +269,6 @@ Cg is a shader specification from nVidia. It has the advantage that shaders writ
     shader1 = dummy.cg
     filter_linear1 = true
 ```
-
-## GLSL shader spec
-Like Cg shaders, GLSL shaders represents a single pass, and requires a preset file to describe how multiple shaders are combined. The extension is .glsl.
-
-As GLSL shaders are normally placed in two different files (vertex, fragment), making it very impractical to select in a menu. This is worked around by using compiler defines in order to be equivalent to Cg shaders.
-
-## Example GLSL shader
-Note: GLSL shaders must be modern style, and using ruby prefix is discouraged.
-
-```
-    varying vec2 tex_coord;
-    #if defined(VERTEX)
-    attribute vec2 TexCoord;
-    attribute vec2 VertexCoord;
-    uniform mat4 MVPMatrix;
-    void main()
-    {
-        gl_Position = MVPMatrix * vec4(VertexCoord, 0.0, 1.0);
-        tex_coord = TexCoord;
-    }
-    #elif defined(FRAGMENT)
-    uniform sampler2D Texture;
-    void main()
-    {
-        gl_FragColor = texture2D(Texture, tex_coord);
-    }
-    #endif
-```
-
-### GLSL presets
-
-Like Cg shaders, there is a preset format. Instead of .cgp extension, .glslp extension is used. The format is exactly the same, just replace .cg shaders with .glsl. To convert a .cgp preset, rename to .glslp and replace all references to .cg shaders with .glsl.
-
-## Converting from Cg shaders
-
-GLSL shaders are mostly considered a compatibility format. It is possible to compile Cg shaders into GLSL shaders automatically using our [cg2glsl script](https://github.com/libretro/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as batch conversion. Shader converstion relies on nVidia's cgc tool found in the `nvidia-cg-toolkit` package.
-
-## Common Shaders Repository
-
-The Libretro organization hosts a [repository](https://github.com/libretro/common-shaders) on Github that contains a compilation of shaders. Users can contribute their own shaders to this repository by doing a Pull Request.
-
-## Detailed Cg Shader Specification
 
 ### Entry points:
    
@@ -343,9 +322,9 @@ The input is a struct:
 Most of these shaders are intended to be used with a non-filtered input. Nearest-neighbor filtering on the textures themselves are preferred. Some shaders, like scanline will most likely prefer bilinear texture filtering.
 
 
-### Cg meta-shader format
+## Cg meta-shader format
 
-#### Rationale
+### Rationale
 
 The `.cg` files themselves contain no metadata necessary to perform advanced filtering. They also cannot process an effect in multiple passes, which is necessary for some effects. The CgFX format does exist, but it would need current shaders to be rewritten to a HLSL-esque format. It also suffers a problem mentioned below.
 
@@ -430,7 +409,7 @@ The textures will be loaded "as-is", and coordinates `(0, 0)`, `(0, 1)`, `(1, 0)
 
 The implementation only guarantees to be able to load plain top-left non-RLE `.tga` files. It may provide possibilities to load `.png` and other popular formats.
 
-### Multipass
+## Multipass
 
 It is sometimes feasible to process an effect in several steps.
 
@@ -481,13 +460,51 @@ For example, with SNES there is a maximum width of `512` and height of `478`. If
 
 With "viewport" scale it might be necessary to reallocate the FBO in run-time if the user resizes the window.
 
+## GLSL shader spec
 
-## Compatibility of shader types with context drivers
+Like Cg shaders, GLSL shaders represents a single pass, and requires a preset file to describe how multiple shaders are combined. The extension is `.glsl`.
+
+As GLSL shaders are normally placed in two different files (`vertex`, `fragment`), making it impractical to select in a menu. This is worked around by using compiler defines in order to be equivalent to Cg shaders.
+
+## Example GLSL shader
+
+!!! Note
+    GLSL shaders must be modern style, and using ruby prefix is discouraged.
+
+```c
+    varying vec2 tex_coord;
+    #if defined(VERTEX)
+    attribute vec2 TexCoord;
+    attribute vec2 VertexCoord;
+    uniform mat4 MVPMatrix;
+    void main()
+    {
+        gl_Position = MVPMatrix * vec4(VertexCoord, 0.0, 1.0);
+        tex_coord = TexCoord;
+    }
+    #elif defined(FRAGMENT)
+    uniform sampler2D Texture;
+    void main()
+    {
+        gl_FragColor = texture2D(Texture, tex_coord);
+    }
+    #endif
+```
+
+### GLSL presets
+
+Like Cg shaders, there is a GLSL preset format. Instead of `.cgp` extension, `.glslp` extension is used. The format is exactly the same, just replace `.cg` shaders with `.glsl`. To convert a `.cgp` preset, rename to `.glslp` and replace all references to `.cg` shaders with `.glsl`.
+
+## Converting from Cg shaders
+
+GLSL shaders are mostly considered a compatibility format. It is possible to compile Cg shaders into GLSL shaders automatically using our [cg2glsl script](https://github.com/libretro/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as batch conversion. Shader converstion relies on nVidia's `cgc` tool found in the `nvidia-cg-toolkit` package.
+
+
+## Shader compatibility with RetroArch video drivers
 
 In RetroArch, the following table specifies which shader types work with what video contexts:
 
-```
-CONTEXT DRIVER         |    GLSL    |    CG   |    HLSL        |     SLANG
+Context Driver         |    GLSL    |    CG   |    HLSL        | Slang
 -----------------------|------------|---------|----------------|--------------
 Android                |    Y       |    N    |    N           | Y
 CGL                    |    Y       |    N    |    N           | N
@@ -508,7 +525,7 @@ Wayland                |    Y       |    N    |    N           | Y
 WGL                    |    Y       |    N    |    N           | Y
 X                      |    Y       |    Y    |    N           | Y
 XEGL                   |    Y       |    N    |    N           | N
-```
+
 
 !!! Warning
     Attempting to load unsupported shader types may result in segmentation faults because the context drivers currently do not have the behavior to declare which types of shaders it supports
