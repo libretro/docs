@@ -1,6 +1,36 @@
+# Use case for Libretro OpenGL API
+
+### What do most modern platforms have in common?
+
+**Answer**: OpenGL or OpenGL ES.
+
+These APIs allow us to write 3D graphics-based applications:
+  * In a platform-agnostic way
+  * With hardware acceleration
+  * Using a standard language/API
+
+### What do these platforms not have in common?
+
+  * Audio
+  * Input
+  * Shader
+  * Windowing implementations
+  * User interfaces
+  * Touchscreen overlays
+  * Camera
+  * Sensors
+  * Development environments
+
+### What is not portable about OpenGL?
+  * Symbol wrapper lookup (necessary on Windows)
+  * Divergent subsets of API functionality (GLES 1/2/3, GL 1.5/2/3/4)
+  * Windowing interfacing context drivers per platform
+  * Display frontend for each platform
+  * Post-processing by way of shaders
+
 # Implementing OpenGL accelerated cores
 
-The Libretro API allows cores to use OpenGL (GL2+ or GLES2) directly in addition to frontend features, such as multi-pass shaders. This is accomplished by letting cores render to frame buffer objects (FBOs) instead of the back buffer.
+Libretro GL provides a portable solution for OpenGL-based hardware acceleration along with the rest of libretro's simple but comprehensive API. The Libretro API allows cores to use OpenGL (GL2+ or GLES2) directly in addition to frontend features, such as multi-pass shaders. This is accomplished by letting cores render to frame buffer objects (FBOs) instead of the back buffer.
 
 !!! important
     GL drivers must support render-to-texture extensions for this to work.
