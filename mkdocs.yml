@@ -211,8 +211,6 @@ pages:
       - 'xbrz': 'shader/xbrz.md'
       - 'xsal': 'shader/xsal.md'
       - 'xsoft': 'shader/xsoft.md'
-    - Contributing:
-      - 'How to Contribute to the Docs': 'guides/how-to-contribute.md'
   - For Developers:
     - Libretro API and Ecosystem:
       - 'Libretro Overview': 'specs/api.md'
@@ -274,7 +272,8 @@ pages:
       - 'Shader Development Overview': 'specs/shader.md'
       - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
       - 'Shader Lookup Textures': 'tech/shader-lookup-textures.md'
-    - Documentation Meta:
+    - Contribute to the Docs:
+      - 'Contributing to the Libretro Docs': 'guides/how-to-contribute.md'
       - 'Core List': 'meta/core_list.md'
       - 'To Do': 'meta/todo.md'
       - 'Core Template': 'meta/core_template.md'
