@@ -298,6 +298,7 @@ markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       linenums: true
+  - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.details
