@@ -19,8 +19,7 @@ The libretro API consists of several functions outlined in libretro.h, found in 
 [A growing list of libretro frontends](../tech/frontends.md) is available, reflecting a variety of host systems and use cases. RetroArch is the libretro "reference frontend" and is available across a wide range of host platforms.
 
 ## Libretro-powered operating systems
-
-Lakka, based on LibreELEC, is our Libretro's reference operating system distribution. Below is a partial list of external distributions that also use libretro/RetroArch as part of their backend technology:
+Lakka, based on LibreELEC, is Libretro's reference operating system distribution. Below is a partial list of external distributions that also use libretro/RetroArch as part of their backend technology:
   
   * [batocera.linux](http://batocera-linux.xorhub.com/)
   * [RetroPie](http://retropie.org.uk/)
