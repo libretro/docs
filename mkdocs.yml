@@ -214,6 +214,7 @@ pages:
   - For Developers:
     - Libretro API and Ecosystem:
       - 'Libretro Overview': 'specs/api.md'
+      - 'Libretro Open Source Bounties': 'development/bounties.md'
       - 'Input API': 'specs/input-api.md'
     - RetroArch Development:
       - 'Debugging': 'tech/debugging.md'
