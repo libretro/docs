@@ -1,6 +1,6 @@
-# XML Shaders (Deprecated)
+# XML Shaders (Discontinued)
 
-XML shaders have been deprecated and are no longer supported by RetroArch. This page should be considered only for historical reference.
+XML shaders have been discontinued and are no longer available by RetroArch. This page should be considered only for historical reference.
 
 ## History
 
