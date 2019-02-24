@@ -213,7 +213,7 @@ pages:
       - 'xsoft': 'shader/xsoft.md'
   - For Developers:
     - Libretro API and Ecosystem:
-      - 'Libretro Overview': 'specs/api.md'
+      - 'Libretro Overview': 'development/libretro-overview.md'
       - 'Libretro Open Source Bounties': 'development/bounties.md'
       - 'Input API': 'specs/input-api.md'
     - RetroArch Development:
