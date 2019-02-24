@@ -4,7 +4,7 @@ XML shaders have been deprecated and are no longer supported by RetroArch. This 
 
 ## History
 
-XML shaders were originally implemented in bSNES as single pass GLSL shaders. The extension is .shader and is marked up with XML. These shaders were written against the fixed-function pipeline and is now referred to as a legacy XML shaders by RetroArch. The prefix ofruby originates from bSNES’ driver module, ruby::.
+XML shaders were originally implemented in bSNES as single pass GLSL shaders. The extension is `.shader` and is marked up with XML. These shaders were written against the fixed-function pipeline and is now referred to as a legacy XML shaders by RetroArch. The prefix ofruby originates from bSNES’ driver module, ruby::.
 
 ## Example legacy XML shader
 
