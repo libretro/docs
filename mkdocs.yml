@@ -267,8 +267,8 @@ pages:
       - 'Dynamic Rate Control for Emulators': 'development/cores/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'development/cores/opengl-cores.md'
       - Core Compilation Guides:
-        - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
-        - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
+        - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/compilation/dolphin.md'
+        - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/compilation/ishiiruka.md'
     - Shader Development:
       - 'Shader Development Overview': 'development/shader/shader-overview.md'
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
