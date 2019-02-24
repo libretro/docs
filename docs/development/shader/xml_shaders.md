@@ -1,6 +1,7 @@
 # XML Shaders (Discontinued)
 
-XML shaders have been discontinued and are no longer available by RetroArch. This page should be considered only for historical reference.
+!!! Warning
+    XML shaders have been discontinued and are no longer available in RetroArch. This page should be considered only for historical reference.
 
 ## History
 
