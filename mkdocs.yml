@@ -270,9 +270,12 @@ pages:
         - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
     - Shader Development:
-      - 'Shader Development Overview': 'specs/shader.md'
-      - 'Content-Aware Shaders': 'tech/content-aware-shaders.md'
-      - 'Shader Lookup Textures': 'tech/shader-lookup-textures.md'
+      - 'Shader Development Overview': 'development/shader/shader-overview.md'
+      - 'Slang Shader Development': 'development/shader/slang-shaders.md'
+      - 'GLSL Shader Development': 'development/shader/glsl-shaders.md'
+      - 'Cg Shader Development (deprecated)': 'development/shader/cg-shaders.md'
+      - 'Content-Aware Shaders': 'development/shader/content-aware-shaders.md'
+      - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
   - Contribute to the Docs:
     - 'Contributing to the Libretro Docs': 'guides/how-to-contribute.md'
     - 'Core List': 'meta/core_list.md'
