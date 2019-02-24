@@ -34,6 +34,16 @@ After this has finished downloading, the core should now be ready for use!
 
 The game should now start running!
 
+#### How to play NAOMI Games:
+1. Run NAOMI games stored in MAME format zip files by following the same process as standard Dreamcast games
+
+2. Run NAOMI GD-ROM format games stored in MAME zip + chd format by running the zip file through RetroArch.  The zip file should be stored in your roms folder with the chd file in a subdirectory of the roms folder named after the mame ID.
+
+Example (MAME ID=ikaruga)
+- [ROM FOLDER]/ikaruga.zip
+- [ROM FOLDER]/ikaruga/gdl-0010.chd
+
+
 ### Authors
 
 - skmp
@@ -56,6 +66,7 @@ Content that can be loaded by the Reicast core have the following file extension
 - .gdi
 - .chd
 - .cue
+- .zip
 
 ## Databases
 
@@ -71,6 +82,8 @@ Required or optional firmware files go in RetroArch's system directory.
 |:--------------:|:------------------------------:|:--------------------------------:|
 | dc/dc_boot.bin  | Dreamcast BIOS - Requried     | e10c53c2f8b90bab96ead2d368858623 |
 | dc/dc_flash.bin | Date/Time/Language - Required | 0a93f7940c455905bea6e392dfde92a4 |
+| dc/naomi.bin| NAOMI Bios - Optional/Required for NAOMI Games | 3bffafac42a7767d8dcecf771f5552ba |
+* A MAME format BIOS file (naomi.zip) from a recent (post 0.154) MAME build can be used instead of naomi.bin
 
 !!! attention
 	The 'dc_boot.bin' and 'dc_flash.bin' firmware files need to be in a directory named 'dc' in RetroArch's system directory.
