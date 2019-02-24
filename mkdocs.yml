@@ -274,6 +274,7 @@ pages:
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
       - 'GLSL Shader Development': 'development/shader/glsl-shaders.md'
       - 'Cg Shader Development (deprecated)': 'development/shader/cg-shaders.md'
+      - 'XML Shader Development (deprecated)': 'development/shader/xml-shaders.md'
       - 'Content-Aware Shaders': 'development/shader/content-aware-shaders.md'
       - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
   - Contribute to the Docs:
