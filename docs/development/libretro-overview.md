@@ -4,10 +4,10 @@ The Libretro API is a lightweight C-based Application Programming Interface (API
 
 ### Frontends and cores
 
-There are two sides to Libretro development: **frontend** and **core**.
+There are two sides to Libretro development:
 
-  - A **frontend** is a program that can run libretro-compatible programs.
-  - A **core** is a program (such as a game, emulator, or media player) that has been ported to the libretro API so that it can be executed by libretro frontends.
+  - **frontends** are programs that can run libretro-compatible cores.
+  - **cores** are program (such as a game, emulator, or media player) that has been ported to the libretro API so that it can be executed by libretro frontends.
 
 Developers of cores such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, joypads, etc.
 
@@ -18,16 +18,20 @@ The libretro API consists of several functions outlined in libretro.h, found in 
 
 ## Core development resources
 You can see a partial list of the cores which are maintained as part of [libretro's github repositories](http://github.com/libretro/) in the section `For Users > Core Documentation`.
+
+### Core development overview
 [Visit the overview on libretro core development](developing-cores.md).
 
 ## Frontend development resources
 [A growing list of libretro frontends](../tech/frontends.md) is available, reflecting a variety of host systems and use cases.
 
-### RetroArch - Libretro Reference Frontend
+### RetroArch Reference Frontend
 RetroArch is the libretro "reference frontend" and is available across a wide range of host platforms. Learn more about RetroARch development in the section `For Developers > RetroArch Development`.
 
 ## Libretro-powered operating systems
-[Lakka](http://www.lakka.tv/), based on LibreELEC, is Libretro's reference operating system distribution. Below is a partial list of external distributions that also use libretro/RetroArch as part of their backend technology:
+[Lakka](http://www.lakka.tv/), based on LibreELEC, is Libretro's reference operating system distribution.
+
+Below is a partial list of external distributions that also use libretro or RetroArch as part of their backend technology:
   
   * [batocera.linux](http://batocera-linux.xorhub.com/)
   * [RetroPie](http://retropie.org.uk/)
