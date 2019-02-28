@@ -15,7 +15,7 @@ The first screen should show the storage devices move to the one that contain yo
 !!! note
     On Windows it will display drive letters (like C:/ and D:/), However a system like Linux doesn't work in the same way and will only display the root. Most Android users should select */storage/emulated/0* if they want internal storage.
 
-You have now entered the main part of the file browser. Beneath the first two options will be all your folders. Navigate your file system until you are inside your content folder then select **"<Use this directory>"**.
+You have now entered the main part of the file browser. Beneath the first two options will be all your folders. Navigate your file system until you are inside your content folder then select **&lt;Use this directory>**.
 
 !!! tip
     On GNU/Linux, other hard drives are usually stored under */media/* or */mnt/*.
