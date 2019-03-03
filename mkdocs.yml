@@ -93,7 +93,7 @@ pages:
         - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
         - 'ScummVM': 'library/scummvm.md'
-        - 'Thomson - TO8 (Theodore)': 'library/theodore.md'
+        - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
         - 'Uzebox (Uzem)': 'library/uzem.md'
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
