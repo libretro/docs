@@ -63,6 +63,16 @@ When possible, use whitespace to improve the readability of code that makes many
 
 To maintain C89 compatibility, comments should be written in legacy C-style using `/*`. Comment headers for functions should use a maximum column width of 80 characters.
 
+### vim configuration for Libretro style
+
+Coders who use the **vim** editor can create a `vimrc` configuration file with the following settings in order to pre-set RetroArch indendtation style.
+
+```
+set hls
+set ts=3
+set sw=3
+```
+
 ## Standards for Libretro cores
 
 Cores and other projects that are maintained by the Libretro organization can be considered as three categories:
