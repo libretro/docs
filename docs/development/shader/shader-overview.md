@@ -4,11 +4,12 @@
 
 As the reference libretro frotnend, RetroArch supports three shader languages:
 
-| Shader Language | Video Context Drivers |
-| --------------- | -------------         |
-| Slang           | Vulkan, GL 2.x (legacy desktop), GL 3.x+ (modern desktop), GLES2 (legacy mobile), GLES3 (modern mobile), HLSL (Planned), Metal (Planned) |
-| GLSL            | GL Shading Language, OpenGL, OpenGL ES, and EGL contexts including KMS mode in Linux) |
-|Cg (deprecated)  | HLSL/GLSL, nVidia |
+| Shader Language                     | Video Context Drivers |
+| ----------------------------------- | --------------------- |
+| [Slang](slang-shaders.md)           | Vulkan, GL 2.x (legacy desktop), GL 3.x+ (modern desktop), GLES2 (legacy mobile), GLES3 (modern mobile), HLSL (Planned), Metal (Planned)    |
+| [GLSL](glsl-shaders.md)             | GL Shading Language, OpenGL, OpenGL ES, and EGL contexts including KMS mode in Linux) |
+| [Cg (deprecated)](cg-shaders.md)    | HLSL/GLSL, nVidia |
+| [XML (discontinued)](xml-shaders.md)  | GLSL              |
   
 When possible, it is recommended to use Slang shaders for supporting the widest variety of modern systems.
 

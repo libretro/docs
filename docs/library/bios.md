@@ -92,6 +92,6 @@ SNES/Super Famicom            | bsnes-mercury Perf | [BIOS information](https://
 SNES/Super Famicom            | nSide Balanced     | [BIOS information](https://docs.libretro.com/library/nside_balanced/#bios)
 SNES/Super Famicom            | higan Accuracy     | [BIOS information](https://docs.libretro.com/library/higan_accuracy/#bios)
 ST/STE/TT/Falcon              | Hatari             | [BIOS information](https://docs.libretro.com/library/hatari/#bios)
-Thomson - TO8D                | Theodore           | [BIOS information](https://docs.libretro.com/library/theodore/#bios)
+Thomson - MO/TO               | Theodore           | [BIOS information](https://docs.libretro.com/library/theodore/#bios)
 Vectrex                       | vecx               | [BIOS information](https://docs.libretro.com/library/vecx/#bios)
 ZX Spectrum                   | Fuse               | [BIOS information](https://docs.libretro.com/library/fuse/#bios)

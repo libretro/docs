@@ -93,7 +93,7 @@ pages:
         - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
         - 'ScummVM': 'library/scummvm.md'
-        - 'Thomson - TO8 (Theodore)': 'library/theodore.md'
+        - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
         - 'Uzebox (Uzem)': 'library/uzem.md'
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
@@ -217,6 +217,7 @@ pages:
       - 'Input API': 'development/input-api.md'
       - 'Libretro Frontends': 'development/frontends.md'
       - 'Licenses': 'development/licenses.md'
+      - 'Libretro Coding Standards': 'development/coding-standards.md'
     - RetroArch Development:
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
@@ -274,6 +275,7 @@ pages:
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
       - 'GLSL Shader Development': 'development/shader/glsl-shaders.md'
       - 'Cg Shader Development (deprecated)': 'development/shader/cg-shaders.md'
+      - 'XML Shader Development (deprecated)': 'development/shader/xml-shaders.md'
       - 'Content-Aware Shaders': 'development/shader/content-aware-shaders.md'
       - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
   - Contribute to the Docs:
