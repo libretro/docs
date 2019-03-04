@@ -216,6 +216,7 @@ pages:
       - 'Libretro Overview': 'development/libretro-overview.md'
       - 'Libretro Open Source Bounties': 'development/bounties.md'
       - 'Input API': 'specs/input-api.md'
+      - 'Libretro Coding Standards': 'development/coding-standards.md'
     - RetroArch Development:
       - 'Debugging': 'tech/debugging.md'
       - 'Adding Menu Entries': 'tech/new-menu-options.md'
