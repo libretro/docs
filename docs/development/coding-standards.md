@@ -10,7 +10,7 @@
 All code contributed to RetroArch must be compliant with the "C89" coding standard etablished by [ANSI X3.159-1989](https://web.archive.org/web/20110306044509/http://flash-gordon.me.uk/ansi.c.txt).
 
 ### Indentation
-Indentation is three spaces
+Indentation is three spaces.
 
 ### Braces
 Brace usage follows "Allman style". The brace associated with a control statement is placed on the following line, indented to the same level as the control statement. Statements within the braces are indented to the next level.
