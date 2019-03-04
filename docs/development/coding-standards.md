@@ -30,6 +30,7 @@ finalthing();
 When possible, use whitespace to improve the readability of code that makes many assignment statements in a row, uses complex conditionals, or passes a large number of paramters to a function.
 
 **Example of aligning successive assignment statements*:
+
 ```c
                if (seq == 1157460427127406720ULL)
                {
@@ -44,6 +45,7 @@ When possible, use whitespace to improve the readability of code that makes many
 ```
 
 **Example of aligning a complex parameter list**:
+
 ```c
    if (recording_driver_get_data_ptr())
    {
