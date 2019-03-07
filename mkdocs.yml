@@ -270,6 +270,7 @@ pages:
       - Core Compilation Guides:
         - 'Nintendo - GameCube/Wii (Dolphin)': 'compilation/library/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'compilation/library/ishiiruka.md'
+        - 'MAME 2016': 'development/cores/compilation/mame-2016.md'
     - Shader Development:
       - 'Shader Development Overview': 'development/shader/shader-overview.md'
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
