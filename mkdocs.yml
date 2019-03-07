@@ -14,7 +14,8 @@ pages:
     - Getting Started:
       - 'Welcome': 'guides/welcome-getting-started.md'
       - 'User Interface': 'guides/navigating.md'
-      - 'Input and controls': 'guides/input-and-controls.md'
+      - 'Input and Controls': 'guides/input-and-controls.md'
+      - 'Joypad Auto-Configuration': 'guides/joypad-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
       - 'File Browser': 'guides/file-browser.md'
       - 'Launching Content': 'guides/launch-content.md'
