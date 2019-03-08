@@ -17,7 +17,45 @@ make sure that you are comparing **your forks edited branch** to the **docs mast
 
 There is a To-Do list for libretro/docs [here](https://docs.libretro.com/meta/todo/)
 
-You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).
+You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues).
+
+## Building the docs
+
+1. Make sure you have [Python](https://www.python.org/) and [pip](https://pip.pypa.io) installed
+    ```
+    python --version
+    pip --version
+    ```
+
+!!! Note "Building in Windows/msys2"
+    If you are using the standard RetroArch msys2 environment, you will need to install python with the command `pacman -S python`. Next you will need to download [the `get-pip.py` script](https://bootstrap.pypa.io/get-pip.py) from the `pip` bootstrap site. Finally, execute the script with the command `python get-pip.py`.
+
+2. Install MkDocs
+    ```
+    pip install mkdocs
+    ```
+
+3. Install MkDocs-Material
+    ```
+    pip install mkdocs-material
+    ```
+	
+4. Install PyMdown Extensions
+    ```
+    pip install pymdown-extensions
+    ```	
+
+5. Build the site
+    ```
+    mkdocs build
+    ```
+
+6. The documentation will be built to the `site` directory
+
+**References**
+
+  - [Guide to installing mkdocs ](https://www.mkdocs.org/#installation)
+  
 
 ## Adding a new core
 
