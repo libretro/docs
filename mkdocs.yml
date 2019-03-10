@@ -2,7 +2,7 @@ site_name: Libretro Docs
 repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'tree/master/docs'
-nav:
+pages:
   - About: 'index.md'
   - For Users:
     - Downloading, Installing and Updating RetroArch:
@@ -26,7 +26,6 @@ nav:
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
     - Quick Guide - Windows: 'guides/windows.md'
-    - Lakka Documentation: 'http://www.lakka.tv/doc/Home/'
     - Core Documentation:
       - Bios information HUB: 'library/bios.md'
       - Getting Started with Arcade Emulation: 'guides/arcade-getting-started.md'
@@ -274,8 +273,8 @@ nav:
       - Core-Specific Development Docs:
         - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
-        - 'MAME (0.181-current)': 'development/cores/core-specific/mame.md'
-        - 'MAME 2016': 'development/cores/core-specific/mame-2016.md'
+        - 'MAME (0.181-current)': 'development/cores/core-specific/mame-2016.md'
+        - 'MAME 2016': 'development/cores/core-specific/mame.md'
         - 'MAME 2003-Plus': 'development/cores/core-specific/mame-2003-plus.md'
     - Shader Development:
       - 'Shader Development Overview': 'development/shader/shader-overview.md'
