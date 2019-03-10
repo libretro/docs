@@ -6,7 +6,7 @@
 
 #### How to start the ChaiLove core:
 
-- As an example showcasing loading content with Chailove core, we will load the Floppy Bird game hosted on RetroArch's Content Downloader.
+- As an example showcasing loading content with Chailove core, we will load the [Floppy Bird](https://github.com/robloach/chailove-floppybird) game hosted on RetroArch's Content Downloader.
 
 You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
@@ -44,8 +44,8 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 Content that can be loaded by the ChaiLove core have the following file extensions:
 
-- .chai
-- .chailove
+- `.chai`
+- `.chailove`
 
 ## Databases
 
@@ -79,7 +79,7 @@ Frontend-level settings or features that the ChaiLove core respects.
 | Subsystem         | ✕         |
 | [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
 | Disk Control      | ✕         |
-| Username          | ✕         |
+| Username          | ✔         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
@@ -166,6 +166,7 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 - [Libretro ChaiLove Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/chailove_libretro.info)
 - [Libretro ChaiLove Github Repository](https://github.com/libretro/libretro-chailove)
 - [Report Libretro ChaiLove Core Issues Here](https://github.com/libretro/libretro-chailove/issues)
+- [Floppy Bird](https://github.com/robloach/chailove-floppybird)
 
 ### See also
 
