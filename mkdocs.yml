@@ -268,10 +268,12 @@ pages:
       - 'Core Development Overview': 'development/cores/developing-cores.md'
       - 'Dynamic Rate Control for Emulators': 'development/cores/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'development/cores/opengl-cores.md'
-      - Core Compilation Guides:
-        - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/compilation/dolphin.md'
-        - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/compilation/ishiiruka.md'
-        - 'MAME 2016': 'development/cores/compilation/mame-2016.md'
+      - Core-Specific Development Docs:
+        - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
+        - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
+        - 'MAME (0.181-current)': 'development/cores/core-specific/mame-2016.md'
+        - 'MAME 2016': 'development/cores/core-specific/mame.md'
+        - 'MAME 2003-Plus': 'development/cores/core-specific/mame-2003-plus.md'
     - Shader Development:
       - 'Shader Development Overview': 'development/shader/shader-overview.md'
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
@@ -282,10 +284,10 @@ pages:
       - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
   - Contribute to the Docs:
     - 'Contributing to the Libretro Docs': 'meta/how-to-contribute.md'
-    - 'Core List': 'meta/core_list.md'
-    - 'To Do': 'meta/todo.md'
-    - 'Core Template': 'meta/core_template.md'
-    - 'See Also': 'meta/see_also.md'
+    - 'Core List': 'meta/core-list.md'
+    - 'Core Template': 'meta/core-template.md'
+    - 'Shader Preview Template': 'meta/shader-preview-template.md'
+    - 'See Also': 'meta/see-also.md'
 extra:
   version: '0.1.0'
   font:
