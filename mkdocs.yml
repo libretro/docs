@@ -187,7 +187,7 @@ pages:
       - 'border': 'shader/border.md'
       - 'cgp': 'shader/cgp.md'
       - 'crt': 'shader/crt.md'
-      - 'crt-royale: 'shader/crt_royale.md'
+      - 'crt-royale': 'shader/crt_royale.md'
       - 'cubic': 'shader/cubic.md'
       - 'ddt': 'shader/ddt.md'
       - 'dithering': 'shader/dithering.md'
