@@ -240,11 +240,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
 
-- **Use BIOS** [pcsx_rearmed_frameskip] (**auto**|HLE)
+- **Use BIOS** [pcsx_rearmed_bios] (**auto**|HLE)
 
 	Allows you to use real bios file (if available) or emulated bios (HLE).
-	**HLE** - force core to use built-in bios emulation
-	**auto** - tries to search for compatible bios file. falls back to use HLE if none is found.
+
+	**HLE** - Forces core to use built-in bios emulation
+
+	**auto** - Tries to search for compatible bios file, falls back to use HLE if none is found.
 	
 - **Region** [pcsx_rearmed_region] (**auto**|NTSC|PAL)
 
@@ -252,9 +254,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Enable second memory card** [pcsx_rearmed_memcard2] (**disabled**|enabled)
 
-	Enables or disabled second memory card (Memcard slot 1). Default to being
-	disabled. If enabled, Memcard slot 1's save data will be loaded and saved as
-	a `pcsx-card2.mcd` file in the preset save directory.
+	Enables or disabled second memory card (Memcard 2 slot). When enabled, 
+	Memcard 2 slot's save data will be loaded and saved as
+	`pcsx-card2.mcd` file in the saves directory.
 	All games will share the same second memory card.
 
 - **Pad 1 Type** [pcsx_rearmed_pad1type] (**standard**|analog|dualshock|negcon|none)
@@ -372,14 +374,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Multitap 1** [pcsx_rearmed_multitap1] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
+
 	**auto** - Enables multitap 1 when Pad 3-8 is not set to none.
+	
 	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
 	
 - **Multitap 2** [pcsx_rearmed_multitap2] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
+	
 	**auto** - Enables multitap 2 when Pad 5-8 is not set to none.
-	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 5-8 is used.
+	
+	**enabled/disabled** - Forces multitap 2 to be enabled or disabled regardless if pads 5-8 is used.
 	
 - **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
 
@@ -450,6 +456,38 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **InuYasha Sengoku Battle Fix** [pcsx_rearmed_inuyasha_fix] (**disabled**|enabled)
 
 	Enable this to fix InuYasha.
+
+- **Additional core options for DynaRec (Dynamic recompiler) builds:**
+
+- **Dynamic recompiler** [pcsx_rearmed_drc] (**enabled**|disabled)
+
+	Enables core to use dynamic recompiler or interpreter (slower) cpu instructions.
+
+- **PSX cpu clock** [pcsx_rearmed_psxclock] (30 - 100, **default 57**)
+
+	Overclock or underclock the PSX, default is 57.
+	
+	Lower value = less work for the emu, may be faster in some cases.
+	
+	Causes compatibility issues, so modify only for games that needs it, leave at default for most games.
+
+- **Additional core options for devices using NEON-compatible CPU:**
+
+- **Enable interlacing mode(s)** [pcsx_rearmed_neon_interlace_enable] (**disabled**|enabled)
+
+	Enables fake scanlines effect.
+
+- **Enhanced resolution (slow)** [pcsx_rearmed_neon_enhancement_enable] (**disabled**|enabled)
+
+	Renders in double resolution at the cost of lower performance
+	
+	Not available for high resolution games.
+
+- **Enhanced resolution speed hack** [pcsx_rearmed_neon_enhancement_no_main] (**disabled**|enabled)
+
+	Speed hack for above option.
+
+	Causes game glitches.	
 
 ## Rumble
 
