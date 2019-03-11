@@ -99,8 +99,9 @@ Within this root thumbnail folder called `Atari - 2600`, you should then create 
 #### Thumbnail filenames
 The thumbnail file should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with _ in the corresponding thumbnail filename:**
 
+```
     &*/:`<>?\|
-
+```
 
 ### Changing the displayed thumbnail type
 Regardless of whether you download the RetroArch thumbnail packs or use your own custom thumbnails, you can use the RetroArch GUI to set which type of thumbnail to display. In order to change this setting, go to `Menu Settings,` and change the `Thumbnails` option to reflect the type of thumbnail you wish to display.
