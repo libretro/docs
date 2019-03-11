@@ -20,7 +20,7 @@ The libretro API consists of several functions outlined in libretro.h, found in 
 You can see a partial list of the cores which are maintained as part of [libretro's github repositories](http://github.com/libretro/) in the section `For Users > Core Documentation`.
 
 ### Core development overview
-[Visit the overview on libretro core development](developing-cores.md).
+[Visit the overview on libretro core development](./cores/developing-cores.md).
 
 ## Frontend development resources
 [A growing list of libretro frontends](../tech/frontends.md) is available, reflecting a variety of host systems and use cases.
