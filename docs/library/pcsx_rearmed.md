@@ -471,7 +471,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Causes compatibility issues, so modify only for games that needs it, leave at default for most games.
 
-- **Additional core options for devices using NEON-compatible gpu:**
+- **Additional core options for devices using NEON-compatible CPU:**
 
 - **Enable interlacing mode(s)** [pcsx_rearmed_neon_interlace_enable] (**disabled**|enabled)
 
