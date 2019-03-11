@@ -41,6 +41,7 @@ Content that can be loaded by the PCSX ReARMed core have the following file exte
 - .toc
 - .cbn
 - .m3u
+- .ccd
 
 RetroArch database(s) that are associated with the PCSX ReARMed core:
 
@@ -238,19 +239,25 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Frameskip** [pcsx_rearmed_frameskip] (**0**|1|2|3)
 
 	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+
+- **Use BIOS** [pcsx_rearmed_frameskip] (**auto**|HLE)
+
+	Allows you to use real bios file (if available) or emulated bios (HLE).
+	**HLE** - force core to use built-in bios emulation
+	**auto** - tries to search for compatible bios file. falls back to use HLE if none is found.
 	
 - **Region** [pcsx_rearmed_region] (**auto**|NTSC|PAL)
 
 	Choose what region the system is from.
 
-- **Memcard slot 1** [pcsx_rearmed_memcard2] (**disabled**|enabled)
+- **Enable second memory card** [pcsx_rearmed_memcard2] (**disabled**|enabled)
 
-	Disable or enable second memory card (Memcard slot 1). Default to being
+	Enables or disabled second memory card (Memcard slot 1). Default to being
 	disabled. If enabled, Memcard slot 1's save data will be loaded and saved as
-	a `pcsx-card2.mcd` file in the directory of the loaded game.
-	All games in the same directory will share the same second memory card.
+	a `pcsx-card2.mcd` file in the preset save directory.
+	All games will share the same second memory card.
 
-- **Pad 1 Type** [pcsx_rearmed_pad1type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 1 Type** [pcsx_rearmed_pad1type] (**standard**|analog|dualshock|negcon|none)
 
 	Choose the Pad Type for User 1.
 	
@@ -264,7 +271,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 2 Type** [pcsx_rearmed_pad2type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 2 Type** [pcsx_rearmed_pad2type] (**standard**|analog|dualshock|negcon|none)
 
 	Choose the Pad Type for User 2.
 	
@@ -278,7 +285,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 3 Type** [pcsx_rearmed_pad3type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 3 Type** [pcsx_rearmed_pad3type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 3.
 	
@@ -292,7 +299,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 4 Type** [pcsx_rearmed_pad4type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 4 Type** [pcsx_rearmed_pad4type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 4.
 	
@@ -306,7 +313,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 5 Type** [pcsx_rearmed_pad5type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 5 Type** [pcsx_rearmed_pad5type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 5.
 	
@@ -320,7 +327,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 6 Type** [pcsx_rearmed_pad6type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 6 Type** [pcsx_rearmed_pad6type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 6.
 	
@@ -334,7 +341,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 7 Type** [pcsx_rearmed_pad7type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 7 Type** [pcsx_rearmed_pad7type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 7.
 	
@@ -348,7 +355,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
 	
-- **Pad 8 Type** [pcsx_rearmed_pad8type] (**default**|none|standard|analog|dualshock|negcon)
+- **Pad 8 Type** [pcsx_rearmed_pad8type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 8.
 	
@@ -365,10 +372,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Multitap 1** [pcsx_rearmed_multitap1] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
+	**auto** - Enables multitap 1 when Pad 3-8 is not set to none.
+	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
 	
 - **Multitap 2** [pcsx_rearmed_multitap2] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
+	**auto** - Enables multitap 2 when Pad 5-8 is not set to none.
+	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 5-8 is used.
 	
 - **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
 
@@ -386,10 +397,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
 	
 	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
+	Recommended when using racing wheel peripherals.
 	
 	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
+	Optimal setting for gamepads.
 	
 	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
+	Enables precise control but difficult to use.
 	
 !!! attention
 	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
