@@ -2,7 +2,7 @@
 
 RGUI is a simple built-in GUI for RetroArch. It was originally introduced in the Wii port of RetroArch in order to provide the console experience, where everything is controlled from a joypad. RGUI was later refitted for PC and mobile ports.
 
-![RGUI startup screen](../image/rgui/rgui.png)
+![RGUI startup screen](/image/retroarch/rgui/rgui.png)
 
 ## Features
 
@@ -69,11 +69,11 @@ To view existing playlists choose `Load Content` from the top menu, then `Collec
 
 *Thumbnails off:*
 
-<center> ![](../image/rgui/thumbnails_off.png) </center>
+<center> ![](/image/retroarch/rgui/thumbnails_off.png) </center>
 
 *Thumbnails on:*
 
-<center> ![](../image/rgui/thumbnails_on.png) </center>
+<center> ![](/image/retroarch/rgui/thumbnails_on.png) </center>
 
 Note that it is possible to navigate up and down through a playlist while thumbnails are being shown.
 
@@ -150,11 +150,11 @@ To work around this, set `Disk Index` to `No Disk`, and exit RGUI. The game will
 
 The visual appearance of RGUI may altered by choosing one of 32 inbuilt color themes. From the top menu select `Settings > User Interface > Appearance` and cycle through the various `Menu Color Theme` options:
 
-<center> ![](../image/rgui/rgui_color_theme.png) </center>
+<center> ![](/image/retroarch/rgui/rgui_color_theme.png) </center>
 
 Setting `Menu Color Theme` to `Custom` allows for an even greater degree of personalisation via the use of custom menu theme presets. A number of examples are provided in the RetroArch assets package, which may be downloaded by selecting from the top menu `Online Updater > Update Assets`. To choose one of these examples, go to `Settings > User Interface > Appearance` and select the `Custom Menu Theme Preset` option. In the file browser that opens, navigate to the `rgui` directory and select a `.cfg` file.
 
-<center> ![](../image/rgui/rgui_custom_theme_preset.png) </center>
+<center> ![](/image/retroarch/rgui/rgui_custom_theme_preset.png) </center>
 
 ### Creating Custom Menu Theme Presets
 

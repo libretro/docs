@@ -94,18 +94,18 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 
 #### Joypad
 
-![](../image/controller/nes.png)
+![](/image/controller/nes.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Select                       | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
+| B                            | ![](/image/retropad/retro_b.png)    |
+| Select                       | ![](/image/retropad/retro_select.png)     |
+| Start                        | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)    |
 
 ## Compatibility
 
@@ -118,7 +118,7 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 | Skull & Crossbones           | Crashes on start.                              |
 
 ??? note "(1)"
-    ![](images/Cores/bnes/crisisforce.png)
+    ![](/images/cores/bnes/crisisforce.png)
 
 ## External Links
 

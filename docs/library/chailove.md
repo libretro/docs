@@ -10,17 +10,17 @@
 
 You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](..\image\core\all\download.png) </center>
+<center> ![](/image/core/alldownload.png) </center>
 
 - Select 'ChaiLove', then select 'Floppy Bird.chailove'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](..\image\core\chailove\chailove.png) </center>
+<center> ![](/image/core/chailovechailove.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](..\image\core\all\load.png) </center>
+<center> ![](/image/core/allload.png) </center>
 
-<center> ![](..\image\core\all\downloads.png) </center>
+<center> ![](/image/core/alldownloads.png) </center>
 
 - Select 'Floppy Bird.chailove'.
 
@@ -111,20 +111,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enable or disable alpha blending (transparency).
 	
 ??? note "Alpha Blending - On"
-	![](..\image\core\chailove\alpha_on.png)
+	![](/image/core/chailovealpha_on.png)
 	
 ??? note "Alpha Blending - Off"
-	![](..\image\core\chailove\alpha_off.png)	
+	![](/image/core/chailovealpha_off.png)	
 	
 - **High Quality** [chailove_highquality] (**enabled**|disabled)
 
 	Enable or disable extra visual features.
 	
 ??? note "High Quality - On"
-	![](..\image\core\chailove\quality_on.png)
+	![](/image/core/chailovequality_on.png)
 	
 ??? note "High Quality - Off"
-	![](..\image\core\chailove\quality_off.png)
+	![](/image/core/chailovequality_off.png)
 
 ## Controllers
 
@@ -145,18 +145,18 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                                |
 |------------------------------|------------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)             |
-| Y                            | ![](../image/retropad/retro_y.png)             |
-| Select                       | ![](../image/retropad/retro_select.png)        |
-| Start                        | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | 
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
-| A                            | ![](../image/retropad/retro_a.png)             |
-| X                            | ![](../image/retropad/retro_x.png)             |
-| L                            | ![](../image/retropad/retro_l1.png)            |
-| R                            | ![](../image/retropad/retro_r1.png)            |
+| B                            | ![](/image/retropad/retro_b.png)             |
+| Y                            | ![](/image/retropad/retro_y.png)             |
+| Select                       | ![](/image/retropad/retro_select.png)        |
+| Start                        | ![](/image/retropad/retro_start.png)         |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)       | 
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    |
+| A                            | ![](/image/retropad/retro_a.png)             |
+| X                            | ![](/image/retropad/retro_x.png)             |
+| L                            | ![](/image/retropad/retro_l1.png)            |
+| R                            | ![](/image/retropad/retro_r1.png)            |
 
 ## External Links
 

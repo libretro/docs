@@ -187,24 +187,24 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     
 ## Joypad
 
-![](../image/controller/psp.png)
+![](/image/controller/psp.png)
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_b.png)             | Cross                    |
-| ![](../image/retropad/retro_y.png)             | Square                   |
-| ![](../image/retropad/retro_select.png)        | Select                   |
-| ![](../image/retropad/retro_start.png)         | Start                    |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](../image/retropad/retro_a.png)             | Circle                   |
-| ![](../image/retropad/retro_x.png)             | Triangle                 |
-| ![](../image/retropad/retro_l1.png)            | L                        |
-| ![](../image/retropad/retro_r1.png)            | R                        |
-| ![](../image/retropad/retro_left_stick.png) X  | Analog X                 |
-| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                 |
+| ![](/image/retropad/retro_b.png)             | Cross                    |
+| ![](/image/retropad/retro_y.png)             | Square                   |
+| ![](/image/retropad/retro_select.png)        | Select                   |
+| ![](/image/retropad/retro_start.png)         | Start                    |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+| ![](/image/retropad/retro_a.png)             | Circle                   |
+| ![](/image/retropad/retro_x.png)             | Triangle                 |
+| ![](/image/retropad/retro_l1.png)            | L                        |
+| ![](/image/retropad/retro_r1.png)            | R                        |
+| ![](/image/retropad/retro_left_stick.png) X  | Analog X                 |
+| ![](/image/retropad/retro_left_stick.png) Y  | Analog Y                 |
 
 ## Compatibility
 

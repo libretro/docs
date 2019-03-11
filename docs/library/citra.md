@@ -18,7 +18,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 OpenGL 3.3 or higher
 
-![](../image/core/citra/gl.png)
+![](/image/core/citra/gl.png)
 
 !!! warning
 	There is currently no ‘working’ macOS version available. This is because this core requires OpenGL core 3.3 context, and RetroArch on macOS currently does not support this. We will have to add support for this to a future version of RetroArch on macOS before this core will start to work on it.
@@ -115,13 +115,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "Screen layout positioning - Default Top-Bottom Screen"
-	![](../image/core/citra/default.png)
+	![](/image/core/citra/default.png)
 	
 ??? note "Screen layout positioning - Single Screen Only"
-	![](../image/core/citra/single.png)
+	![](/image/core/citra/single.png)
 	
 ??? note "Screen layout positioning - Large Screen, Small Screen)"
-	![](../image/core/citra/large.png)
+	![](/image/core/citra/large.png)
 	
 - **Screen layout positioning** [citra_layout_option] (**Default Top-Bottom Screen**|Single Screen Only|Large Screen, Small Screen|Side by Side)
 
@@ -163,40 +163,40 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 | User 1 input descriptors | RetroPad Inputs                                | Citra inputs       |
 |--------------------------|------------------------------------------------|--------------------|
-| B                        | ![](../image/retropad/retro_b.png)             | B                  |
-| Y                        | ![](../image/retropad/retro_y.png)             | Y                  |
-| Select                   | ![](../image/retropad/retro_select.png)        | Select             |
-| Start                    | ![](../image/retropad/retro_start.png)         | Start              |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                 |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down               |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left               |
-| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right              |
-| A                        | ![](../image/retropad/retro_a.png)             | A                  |
-| X                        | ![](../image/retropad/retro_x.png)             | X                  |
-| L                        | ![](../image/retropad/retro_l1.png)            | L                  |
-| R                        | ![](../image/retropad/retro_r1.png)            | R                  |
-| ZL                       | ![](../image/retropad/retro_l2.png)            | ZL                 |
-| ZR                       | ![](../image/retropad/retro_r2.png)            | ZR                 |
-| Home                     | ![](../image/retropad/retro_l3.png)            | Home               |
-| Touch Screen Touch       | ![](../image/retropad/retro_r3.png)            | Touch Screen Touch |
-|                          | ![](../image/retropad/retro_left_stick.png) X  | Circle Pad X       |
-|                          | ![](../image/retropad/retro_left_stick.png) Y  | Circle Pad Y       |
-|                          | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
-|                          | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
+| B                        | ![](/image/retropad/retro_b.png)             | B                  |
+| Y                        | ![](/image/retropad/retro_y.png)             | Y                  |
+| Select                   | ![](/image/retropad/retro_select.png)        | Select             |
+| Start                    | ![](/image/retropad/retro_start.png)         | Start              |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)       | Up                 |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)     | Down               |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)     | Left               |
+| Right                    | ![](/image/retropad/retro_dpad_right.png)    | Right              |
+| A                        | ![](/image/retropad/retro_a.png)             | A                  |
+| X                        | ![](/image/retropad/retro_x.png)             | X                  |
+| L                        | ![](/image/retropad/retro_l1.png)            | L                  |
+| R                        | ![](/image/retropad/retro_r1.png)            | R                  |
+| ZL                       | ![](/image/retropad/retro_l2.png)            | ZL                 |
+| ZR                       | ![](/image/retropad/retro_r2.png)            | ZR                 |
+| Home                     | ![](/image/retropad/retro_l3.png)            | Home               |
+| Touch Screen Touch       | ![](/image/retropad/retro_r3.png)            | Touch Screen Touch |
+|                          | ![](/image/retropad/retro_left_stick.png) X  | Circle Pad X       |
+|                          | ![](/image/retropad/retro_left_stick.png) Y  | Circle Pad Y       |
+|                          | ![](/image/retropad/retro_right_stick.png) X | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
+|                          | ![](/image/retropad/retro_right_stick.png) Y | [Right analog function](https://docs.libretro.com/library/citra/#core-options) |
 
 ### Mouse
 
 | RetroMouse Inputs                                     | Citra inputs        |
 |-------------------------------------------------------|---------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Touchscreen Pointer |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Touch Screen Touch  |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Touchscreen Pointer |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | Touch Screen Touch  |
 
 ### Pointer
 
 | RetroPointer Inputs                                                                                                      | Citra inputs        |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Touchscreen Pointer |
-| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Touch Screen Touch  |
+| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Touchscreen Pointer |
+| ![](/image/retromouse/retro_left.png) or ![](/image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Touch Screen Touch  |
 
 ## Compatibility
 

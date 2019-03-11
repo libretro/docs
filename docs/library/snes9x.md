@@ -107,7 +107,7 @@ Loading a manifest.bml file or having a xml file isn't necessary. **Just load ga
 
 Here's an example of a working MSU-1 setup done with [Secret of Mana MSU-1](https://www.romhacking.net/hacks/2467/). Please note that som_msu1.sfc is being [softpatched](https://docs.libretro.com/guides/softpatching/) in this example.
 
-![](../image/core/snes9x/msu.png)
+![](/image/core/snes9x/msu.png)
 
 ## Core options
 
@@ -244,23 +244,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Crop overscan - On"
-	![](..\image\core\snes9x\crop_on.png)
+	![](/image/core/snes9xcrop_on.png)
 	
 ??? note "Crop overscan - Off"
-	![](..\image\core\snes9x\crop_off.png)	
+	![](/image/core/snes9xcrop_off.png)	
 	
 - **Preferred aspect ratio** [snes9x_aspect] (**auto**|ntsc|pal|4:3)
 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
 	
 ??? note "Preferred aspect ratio - ntsc"
-	![](..\image\core\snes9x\ntsc.png)
+	![](/image/core/snes9xntsc.png)
 	
 ??? note "Preferred aspect ratio - pal"
-	![](..\image\core\snes9x\pal.png)
+	![](/image/core/snes9xpal.png)
 
 ??? note "Preferred aspect ratio - 4:3"
-	![](..\image\core\snes9x\4by3.png)	
+	![](/image/core/snes9x4by3.png)	
 
 ## User 1 device types
 
@@ -286,36 +286,36 @@ Activating multitap support in compatible games can be configured by switching t
 
 ## Joypad
 
-![](../image/controller/snes.png)
+![](/image/controller/snes.png)
 
 | RetroPad Inputs                                | User 1 - 5 input descriptors |
 |------------------------------------------------|------------------------------|
-| ![](../image/retropad/retro_b.png)             | B                            |                    
-| ![](../image/retropad/retro_y.png)             | Y                            |
-| ![](../image/retropad/retro_select.png)        | Select                       |
-| ![](../image/retropad/retro_start.png)         | Start                        |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  |
-| ![](../image/retropad/retro_a.png)             | A                            |
-| ![](../image/retropad/retro_x.png)             | X                            |
-| ![](../image/retropad/retro_l1.png)            | L                            |
-| ![](../image/retropad/retro_r1.png)            | R                            |
+| ![](/image/retropad/retro_b.png)             | B                            |                    
+| ![](/image/retropad/retro_y.png)             | Y                            |
+| ![](/image/retropad/retro_select.png)        | Select                       |
+| ![](/image/retropad/retro_start.png)         | Start                        |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                     |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                   |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                   |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                  |
+| ![](/image/retropad/retro_a.png)             | A                            |
+| ![](/image/retropad/retro_x.png)             | X                            |
+| ![](/image/retropad/retro_l1.png)            | L                            |
+| ![](/image/retropad/retro_r1.png)            | R                            |
 
 ## Mouse
 
 | RetroMouse Inputs                                     | SNES Mouse              |
 |-------------------------------------------------------|-------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor       |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button  |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor       |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button  |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button |
 
 ## Lightgun
 
 | RetroLightgun Inputs                                   | SuperScope           | Justifier           |
 |--------------------------------------------------------|----------------------|---------------------|
-| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair | Justifier Crosshair |
+| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair | Justifier Crosshair |
 | Gun Trigger                                            | SuperScope Trigger   | Justifier Trigger   |
 | Gun Aux A                                              | SuperScope Cursor    |                     |
 | Gun Aux B                                              | SuperScope Turbo     | Justifier Offscreen |

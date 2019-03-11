@@ -107,19 +107,19 @@ The Handy core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-![](../image/controller/lynx.png)
+![](/image/controller/lynx.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)          |
-| Pause                    | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)          |
-| Option 1                 | ![](../image/retropad/retro_l1.png)         |
-| Option 2                 | ![](../image/retropad/retro_r1.png)         |
+| B                        | ![](/image/retropad/retro_b.png)          |
+| Pause                    | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
+| A                        | ![](/image/retropad/retro_a.png)          |
+| Option 1                 | ![](/image/retropad/retro_l1.png)         |
+| Option 2                 | ![](/image/retropad/retro_r1.png)         |
 
 Supported combinations
 

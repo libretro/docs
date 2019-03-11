@@ -95,17 +95,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Emulates two Game Boy units side by side for multiplayer support.
 
 ??? note "*GB Link Enable - Enabled*"
-    ![](..\image\core\tgb_dual\link.png)
+    ![](/image/core/tgb_duallink.png)
 	
 - **Screen placement** [tgbdual_screen_placement] (**horizontal**|vertical)
 
 	Switches the screen layout for multiplayer support.
 
 ??? note "*Horizontal*"
-    ![](..\image\core\tgb_dual\horiz.png)
+    ![](/image/core/tgb_dualhoriz.png)
 
 ??? note "*Vertical*"
-    ![](..\image\core\tgb_dual\vert.png)
+    ![](/image/core/tgb_dualvert.png)
 	
 - **Switch player screens** [tgbdual_switch_screens] (**normal**|switched)
 
@@ -129,20 +129,20 @@ The TGB Dual core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](../image/controller/gb.png)
+![](/image/controller/gb.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Select                       | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| Next Audio Mode              | ![](../image/retropad/retro_l1.png)         |
-| Prev Audio Mode              | ![](../image/retropad/retro_r1.png)         |
+| B                            | ![](/image/retropad/retro_b.png)    |
+| Select                       | ![](/image/retropad/retro_select.png)     |
+| Start                        | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)    |
+| Next Audio Mode              | ![](/image/retropad/retro_l1.png)         |
+| Prev Audio Mode              | ![](/image/retropad/retro_r1.png)         |
 
 ## Compatibility
 

@@ -88,7 +88,7 @@ The Theodore core's internal core name is 'theodore'.
 Once the content and core are loaded the start screen is displayed as
 shown below.
 
-![](../image/core/theodore/to8d_os.jpg)
+![](/image/core/theodore/to8d_os.jpg)
 
 When the "Thomson model" core option is set to "Auto" (default value), the core tries to autodetect the Thomson model to emulate based on the name of the content file, and fallback to TO8 mode if it cannot.
 The "Start" button of the controller can be used to start the game. The core will then make an "educated guess" to start the game (cf. [Theodore's README file](https://github.com/Zlika/theodore/blob/master/README.md#video_game-gamepad-mapping-of-the-buttons) for more info about it).
@@ -123,17 +123,17 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 | RetroPad Inputs                        | User 1 input descriptors       |
 |----------------------------------------|--------------------------------|
-| ![](../image/retropad/retro_a.png)     | "Fire" button                  |
-| ![](../image/retropad/retro_x.png)     | Virtual keyboard: go up        |
-| ![](../image/retropad/retro_y.png)     | Virtual keyboard: go down      |
-| ![](../image/retropad/retro_select.png)| Virtual keyboard: keystroke    |
-| ![](../image/retropad/retro_start.png) | Start program<br>(See: [Usage](#usage)) |
+| ![](/image/retropad/retro_a.png)     | "Fire" button                  |
+| ![](/image/retropad/retro_x.png)     | Virtual keyboard: go up        |
+| ![](/image/retropad/retro_y.png)     | Virtual keyboard: go down      |
+| ![](/image/retropad/retro_select.png)| Virtual keyboard: keystroke    |
+| ![](/image/retropad/retro_start.png) | Start program<br>(See: [Usage](#usage)) |
 
 The order of the keys in the virtual keyboard is: digits (0->9) then letters (A->Z) then "Space" then "Enter".
 
 ## Keyboard
 
-![](../image/core/theodore/to8d_keyboard.jpg)
+![](/image/core/theodore/to8d_keyboard.jpg)
 
 | RetroKeyboard Inputs         | Theodore Inputs           |
 |------------------------------|---------------------------|
@@ -166,8 +166,8 @@ The order of the keys in the virtual keyboard is: digits (0->9) then letters (A-
 
 | RetroMouse Inputs                                     | Theodore Inputs      |
 |-------------------------------------------------------|----------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Light pen cursor     |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Selection            |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Light pen cursor     |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | Selection            |
 
 ## External Links
 

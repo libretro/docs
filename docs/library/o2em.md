@@ -94,23 +94,23 @@ The O2EM core saves/loads to/from these directories.
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_y.png)             | 1                        |
-| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
-| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
-| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
-| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](../image/retropad/retro_a.png)             | Fire                     |
-| ![](../image/retropad/retro_x.png)             | 2                        |
-| ![](../image/retropad/retro_l1.png)            | 3                        |
-| ![](../image/retropad/retro_r1.png)            | 4                        |
+| ![](/image/retropad/retro_y.png)             | 1                        |
+| ![](/image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](/image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](/image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](/image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](/image/retropad/retro_a.png)             | Fire                     |
+| ![](/image/retropad/retro_x.png)             | 2                        |
+| ![](/image/retropad/retro_l1.png)            | 3                        |
+| ![](/image/retropad/retro_r1.png)            | 4                        |
 
 | RetroPad Inputs                                | User 2 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
-| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
-| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
-| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](../image/retropad/retro_a.png)             | Action                   |
+| ![](/image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](/image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](/image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](/image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](/image/retropad/retro_a.png)             | Action                   |
 
 ## Keyboard
 

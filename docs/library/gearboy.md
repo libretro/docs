@@ -132,18 +132,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Joypad
 
-![](../image/controller/gb.png)
+![](/image/controller/gb.png)
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)          |
-| Select                   | ![](../image/retropad/retro_select.png)     |
-| Start                    | ![](../image/retropad/retro_start.png)      |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)          |
+| B                        | ![](/image/retropad/retro_b.png)          |
+| Select                   | ![](/image/retropad/retro_select.png)     |
+| Start                    | ![](/image/retropad/retro_start.png)      |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](/image/retropad/retro_dpad_right.png) |
+| A                        | ![](/image/retropad/retro_a.png)          |
 
 ## Compatibility
 

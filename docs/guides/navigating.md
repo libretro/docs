@@ -16,13 +16,13 @@ Pushing *Esc* will quit the program
 
 ### Main Menu
 
-![Main Menu](../image/gui/pc/main-menu.jpg)
+![Main Menu](/image/retroarch/xmb/main-menu.jpg)
 
 Welcome to the main menu this is where you will launch games, download and update cores and have access to freely available content. *Load Core*, *Load Content* and the *Online Updater* are the menu items you will probably be using the most.
 
 ### Settings
 
-![Settings](../image/gui/pc/settings.jpg)
+![Settings](/image/retroarch/xmb/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.
 
@@ -48,18 +48,18 @@ The mobile interface is much more minimalistic compared to the PC's interface. T
 
 ### Main Menu
 
-![Main Menu](../image/gui/mobile/main-menu.jpg)
+![Main Menu](/image/retroarch/materialui/main-menu.jpg)
 
 The main menu will be where you launch games, download and update cores, start or join netplay sessions and pretty much anything to do with gaming.
 
 ### Playlists
 
-![Playlist](../image/gui/mobile/playlist.jpg)
+![Playlist](/image/retroarch/materialuiplaylist.jpg)
 
 Handles anything to do with creating and maintaining playlists. It gives you scanning options to recognise your game collection. It also provides access to your images, music and videos.
 
 ### Settings
 
-![Settings](../image/gui/mobile/settings.jpg)
+![Settings](/image/retroarch/materialui/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.

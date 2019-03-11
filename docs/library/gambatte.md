@@ -115,7 +115,7 @@ You can define different palettes for specific games by creating a .pal file in 
 You can also define a palette to be used for all Game Boy games by creating a .pal file in the "palettes" folder named "Default.pal"
 
 ??? note "*Custom palettes can be created from the GUI in standalone Gambatte*"
-    ![](..\image\core\gambatte\tool.png)
+    ![](/image/core/gambattetool.png)
 
 ## Core options
 
@@ -154,13 +154,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	'custom': Loads user-created palettes from RetroArch's system directory, as described in the 'Custom palettes for Game Boy games' section.
 
 ??? note "*GB Colorization: Off*"
-    ![](..\image\core\gambatte\color_off.png)
+    ![](/image/core/gambattecolor_off.png)
 
 ??? note "*GB Colorization: auto (in this case, a game-specific SGB palette is auto-selected)*"
-    ![](..\image\core\gambatte\color_auto.png)
+    ![](/image/core/gambattecolor_auto.png)
 
 ??? note "*GB Colorization: GBC*"
-    ![](..\image\core\gambatte\color_gbc.png)
+    ![](/image/core/gambattecolor_gbc.png)
 
 - **Internal Palette** [gambatte_gb_internal_palette] (**GB - DMG**|GB - Pocket|GB - Light|GBC - Blue|GBC - Brown|GBC - Dark Blue|GBC - Dark Brown|GBC - Dark Green|GBC - Grayscale|GBC - Green|GBC - Inverted|GBC - Orange|GBC - Pastel Mix|GBC - Red|GBC - Yellow|SGB - 1A|SGB - 1B|SGB - 1C|SGB - 1D|SGB - 1E|SGB - 1F|SGB - 1G|SGB - 1H|SGB - 2A|SGB - 2B|SGB - 2C|SGB - 2D|SGB - 2E|SGB - 2F|SGB - 2G|SGB - 2H|SGB - 3A|SGB - 3B|SGB - 3C|SGB - 3D|SGB - 3E|SGB - 3F|SGB - 3G|SGB - 3H|SGB - 4A|SGB - 4B|SGB - 4C|SGB - 4D|SGB - 4E|SGB - 4F|SGB - 4G|SGB - 4H|Special 1|Special 2|Special 3)
 
@@ -173,154 +173,154 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	'SGB' palettes are identical to those used by original Super Game Boy hardware when colorizing Game Boy games.
 
 ??? note "*Internal Palette: GB - DMG*"
-    ![](..\image\core\gambatte\gb_dmg.png)
+    ![](/image/core/gambattegb_dmg.png)
 
 ??? note "*Internal Palette: GB - Pocket*"
-    ![](..\image\core\gambatte\gb_pocket.png)
+    ![](/image/core/gambattegb_pocket.png)
 
 ??? note "*Internal Palette: GB - Light*"
-    ![](..\image\core\gambatte\gb_light.png)
+    ![](/image/core/gambattegb_light.png)
 
 ??? note "*Internal Palette: GBC - Blue*"
-    ![](..\image\core\gambatte\gbc_blue.png)
+    ![](/image/core/gambattegbc_blue.png)
 
 ??? note "*Internal Palette: GBC - Brown*"
-    ![](..\image\core\gambatte\gbc_brown.png)
+    ![](/image/core/gambattegbc_brown.png)
 
 ??? note "*Internal Palette: GBC - Dark Blue*"
-    ![](..\image\core\gambatte\gbc_dark_blue.png)
+    ![](/image/core/gambattegbc_dark_blue.png)
 
 ??? note "*Internal Palette: GBC - Dark Brown*"
-    ![](..\image\core\gambatte\gbc_dark_brown.png)
+    ![](/image/core/gambattegbc_dark_brown.png)
 
 ??? note "*Internal Palette: GBC - Dark Green*"
-    ![](..\image\core\gambatte\gbc_dark_green.png)
+    ![](/image/core/gambattegbc_dark_green.png)
 
 ??? note "*Internal Palette: GBC - Grayscale*"
-    ![](..\image\core\gambatte\gbc_grayscale.png)
+    ![](/image/core/gambattegbc_grayscale.png)
 
 ??? note "*Internal Palette: GBC - Green*"
-    ![](..\image\core\gambatte\gbc_green.png)
+    ![](/image/core/gambattegbc_green.png)
 
 ??? note "*Internal Palette: GBC - Inverted*"
-    ![](..\image\core\gambatte\gbc_inverted.png)
+    ![](/image/core/gambattegbc_inverted.png)
 
 ??? note "*Internal Palette: GBC - Orange*"
-    ![](..\image\core\gambatte\gbc_orange.png)
+    ![](/image/core/gambattegbc_orange.png)
 
 ??? note "*Internal Palette: GBC - Pastel Mix*"
-    ![](..\image\core\gambatte\gbc_pastel.png)
+    ![](/image/core/gambattegbc_pastel.png)
 
 ??? note "*Internal Palette: GBC - Red*"
-    ![](..\image\core\gambatte\gbc_red.png)
+    ![](/image/core/gambattegbc_red.png)
 
 ??? note "*Internal Palette: GBC - Yellow*"
-    ![](..\image\core\gambatte\gbc_yellow.png)
+    ![](/image/core/gambattegbc_yellow.png)
 
 ??? note "*Internal Palette: SGB - 1A*"
-    ![](..\image\core\gambatte\sgb_1a.png)
+    ![](/image/core/gambattesgb_1a.png)
 
 ??? note "*Internal Palette: SGB - 1B*"
-    ![](..\image\core\gambatte\sgb_1b.png)
+    ![](/image/core/gambattesgb_1b.png)
 
 ??? note "*Internal Palette: SGB - 1C*"
-    ![](..\image\core\gambatte\sgb_1c.png)
+    ![](/image/core/gambattesgb_1c.png)
 
 ??? note "*Internal Palette: SGB - 1D*"
-    ![](..\image\core\gambatte\sgb_1d.png)
+    ![](/image/core/gambattesgb_1d.png)
 
 ??? note "*Internal Palette: SGB - 1E*"
-    ![](..\image\core\gambatte\sgb_1e.png)
+    ![](/image/core/gambattesgb_1e.png)
 
 ??? note "*Internal Palette: SGB - 1F*"
-    ![](..\image\core\gambatte\sgb_1f.png)
+    ![](/image/core/gambattesgb_1f.png)
 
 ??? note "*Internal Palette: SGB - 1G*"
-    ![](..\image\core\gambatte\sgb_1g.png)
+    ![](/image/core/gambattesgb_1g.png)
 
 ??? note "*Internal Palette: SGB - 1H*"
-    ![](..\image\core\gambatte\sgb_1h.png)
+    ![](/image/core/gambattesgb_1h.png)
 
 ??? note "*Internal Palette: SGB - 2A*"
-    ![](..\image\core\gambatte\sgb_2a.png)
+    ![](/image/core/gambattesgb_2a.png)
 
 ??? note "*Internal Palette: SGB - 2B*"
-    ![](..\image\core\gambatte\sgb_2b.png)
+    ![](/image/core/gambattesgb_2b.png)
 
 ??? note "*Internal Palette: SGB - 2C*"
-    ![](..\image\core\gambatte\sgb_2c.png)
+    ![](/image/core/gambattesgb_2c.png)
 
 ??? note "*Internal Palette: SGB - 2D*"
-    ![](..\image\core\gambatte\sgb_2d.png)
+    ![](/image/core/gambattesgb_2d.png)
 
 ??? note "*Internal Palette: SGB - 2E*"
-    ![](..\image\core\gambatte\sgb_2e.png)
+    ![](/image/core/gambattesgb_2e.png)
 
 ??? note "*Internal Palette: SGB - 2F*"
-    ![](..\image\core\gambatte\sgb_2f.png)
+    ![](/image/core/gambattesgb_2f.png)
 
 ??? note "*Internal Palette: SGB - 2G*"
-    ![](..\image\core\gambatte\sgb_2g.png)
+    ![](/image/core/gambattesgb_2g.png)
 
 ??? note "*Internal Palette: SGB - 2H*"
-    ![](..\image\core\gambatte\sgb_2h.png)
+    ![](/image/core/gambattesgb_2h.png)
 
 ??? note "*Internal Palette: SGB - 3A*"
-    ![](..\image\core\gambatte\sgb_3a.png)
+    ![](/image/core/gambattesgb_3a.png)
 
 ??? note "*Internal Palette: SGB - 3B*"
-    ![](..\image\core\gambatte\sgb_3b.png)
+    ![](/image/core/gambattesgb_3b.png)
 
 ??? note "*Internal Palette: SGB - 3C*"
-    ![](..\image\core\gambatte\sgb_3c.png)
+    ![](/image/core/gambattesgb_3c.png)
 
 ??? note "*Internal Palette: SGB - 3D*"
-    ![](..\image\core\gambatte\sgb_3d.png)
+    ![](/image/core/gambattesgb_3d.png)
 
 ??? note "*Internal Palette: SGB - 3E*"
-    ![](..\image\core\gambatte\sgb_3e.png)
+    ![](/image/core/gambattesgb_3e.png)
 
 ??? note "*Internal Palette: SGB - 3F*"
-    ![](..\image\core\gambatte\sgb_3f.png)
+    ![](/image/core/gambattesgb_3f.png)
 
 ??? note "*Internal Palette: SGB - 3G*"
-    ![](..\image\core\gambatte\sgb_3g.png)
+    ![](/image/core/gambattesgb_3g.png)
 
 ??? note "*Internal Palette: SGB - 3H*"
-    ![](..\image\core\gambatte\sgb_3h.png)
+    ![](/image/core/gambattesgb_3h.png)
 
 ??? note "*Internal Palette: SGB - 4A*"
-    ![](..\image\core\gambatte\sgb_4a.png)
+    ![](/image/core/gambattesgb_4a.png)
 
 ??? note "*Internal Palette: SGB - 4B*"
-    ![](..\image\core\gambatte\sgb_4b.png)
+    ![](/image/core/gambattesgb_4b.png)
 
 ??? note "*Internal Palette: SGB - 4C*"
-    ![](..\image\core\gambatte\sgb_4c.png)
+    ![](/image/core/gambattesgb_4c.png)
 
 ??? note "*Internal Palette: SGB - 4D*"
-    ![](..\image\core\gambatte\sgb_4d.png)
+    ![](/image/core/gambattesgb_4d.png)
 
 ??? note "*Internal Palette: SGB - 4E*"
-    ![](..\image\core\gambatte\sgb_4e.png)
+    ![](/image/core/gambattesgb_4e.png)
 
 ??? note "*Internal Palette: SGB - 4F*"
-    ![](..\image\core\gambatte\sgb_4f.png)
+    ![](/image/core/gambattesgb_4f.png)
 
 ??? note "*Internal Palette: SGB - 4G*"
-    ![](..\image\core\gambatte\sgb_4g.png)
+    ![](/image/core/gambattesgb_4g.png)
 
 ??? note "*Internal Palette: SGB - 4H*"
-    ![](..\image\core\gambatte\sgb_4h.png)
+    ![](/image/core/gambattesgb_4h.png)
 
 ??? note "*Internal Palette: Special 1*"
-    ![](..\image\core\gambatte\special1.png)
+    ![](/image/core/gambattespecial1.png)
 
 ??? note "*Internal Palette: Special 2*"
-    ![](..\image\core\gambatte\special2.png)
+    ![](/image/core/gambattespecial2.png)
 
 ??? note "*Internal Palette: Special 3*"
-    ![](..\image\core\gambatte\special3.png)
+    ![](/image/core/gambattespecial3.png)
 	
 - **Color correction** [gambatte_gbc_color_correction] (**GBC only**|always|disabled)
 
@@ -342,23 +342,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	'fast': Darkens colors in a loose approximation of the image displayed on a real Game Boy Color LCD panel. Has negligible performance impact, and may be used on low-end hardware in cases where the 'accurate' method is too slow.
 
 ??? note "*Color correction: Off*"
-    ![](..\image\core\gambatte\correct_off.png)
+    ![](/image/core/gambattecorrect_off.png)
 
 ??? note "*Color correction: fast*"
-    ![](..\image\core\gambatte\correct_fast.png)
+    ![](/image/core/gambattecorrect_fast.png)
 
 ??? note "*Color correction: accurate*"
-    ![](..\image\core\gambatte\correct_accurate.png)
+    ![](/image/core/gambattecorrect_accurate.png)
 
 - **Dark Filter Level (percent)** [gambatte_dark_filter_level] (**0**|5|10|15|20|25|30|35|40|45|50)
 
 	Enables selective brightness reduction based upon pixel luminosity. May be used to reduce glare/eye strain. Of particular value when playing games with white backgrounds, which are intended for display on a non-backlit Game Boy Color LCD panel and appear uncomfortably bright when viewed on a modern backlit screen.
 
 ??? note "*Dark Filter Level: 0%*"
-    ![](..\image\core\gambatte\dark_filter_off.png)
+    ![](/image/core/gambattedark_filter_off.png)
 
 ??? note "*Dark Filter Level: 30%*"
-    ![](..\image\core\gambatte\dark_filter_30.png)
+    ![](/image/core/gambattedark_filter_30.png)
 
 - **Emulated hardware (restart)** [gambatte_gb_hwmode] (**Auto**|GB|GBC|GBA)
 
@@ -369,10 +369,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enables support for using official Game Boy and Game Boy Color bootloaders with startup logos. Check the [BIOS section](https://docs.libretro.com/library/gambatte#bios) to see what files are needed.
 
 ??? note "*Game Boy bootloader*"
-    ![](..\image\core\gambatte\gb_bios.png)
+    ![](/image/core/gambattegb_bios.png)
 
 ??? note "*Game Boy Color bootloader*"
-    ![](..\image\core\gambatte\gbc_bios.png)
+    ![](/image/core/gambattegbc_bios.png)
 	
 - **Mix frames** [gambatte_mix_frames] (**disabled**|accurate|fast)
 	
@@ -386,13 +386,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	A number of games generate transparency effects (or additional shades of color) by drawing objects on alternate frames, relying on the LCD ghosting of original hardware to 'smooth out' the result. Notable examples are Wave Race, Ballistic and Chikyuu Kaihou Gun ZAS. In order for these games to render correctly, 'Mix frames' must be set to 'accurate' or 'fast'. More importantly, the rapid flickering that is produced by these games when 'Mix frames' is disabled can lead to a form of screen burn-in on certain types of LCD panel (that of the 3DS in particular).
 	
 ??? note "*Mix frames: Off*"
-    ![](..\image\core\gambatte\mix_frames_off.gif)
+    ![](/image/core/gambattemix_frames_off.gif)
 	
 ??? note "*Mix frames: accurate*"
-    ![](..\image\core\gambatte\mix_frames_accurate.gif)
+    ![](/image/core/gambattemix_frames_accurate.gif)
 	
 ??? note "*Mix frames: fast*"
-    ![](..\image\core\gambatte\mix_frames_fast.gif)
+    ![](/image/core/gambattemix_frames_fast.gif)
 	
 - **GameBoy Link Mode** [gambatte_gb_link_mode] (**Not Connected**|Network Server|Network Client)
 
@@ -420,18 +420,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Joypad
 
-![](../image/controller/gb.png)
+![](/image/controller/gb.png)
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_b.png)             | B                        |
-| ![](../image/retropad/retro_select.png)        | Select                   |
-| ![](../image/retropad/retro_start.png)         | Start                    |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](../image/retropad/retro_a.png)             | A                        |
+| ![](/image/retropad/retro_b.png)             | B                        |
+| ![](/image/retropad/retro_select.png)        | Select                   |
+| ![](/image/retropad/retro_start.png)         | Start                    |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+| ![](/image/retropad/retro_a.png)             | A                        |
 
 ## Compatibility
 

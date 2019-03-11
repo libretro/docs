@@ -208,10 +208,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Configure the resolution.
 	
 ??? note "Resolution - 320x240"
-	![](..\image\core\tyrquake\320x240.png)
+	![](/image/core/tyrquake320x240.png)
 	
 ??? note "Resolution - 1920x1080"
-	![](..\image\core\tyrquake\1920x1080.png)	
+	![](/image/core/tyrquake1920x1080.png)	
 	
 - **Rumble** [tyrquake_rumble] (**disabled**|enabled)
 
@@ -247,60 +247,60 @@ Rumble only works in the TyrQuake core when
 
 | User 1 Remap descriptors for 'Gamepad Classic' device type | RetroPad Inputs                                | TyrQuake inputs   |
 |------------------------------------------------------------|------------------------------------------------|-------------------|
-| Jump                                                       | ![](../image/retropad/retro_b.png)             | Jump              |
-| Fire                                                       | ![](../image/retropad/retro_y.png)             | Fire              |
-| Toggle Run Mode                                            | ![](../image/retropad/retro_select.png)        | Toggle Run Mode   |
-| Menu                                                       | ![](../image/retropad/retro_start.png)         | Menu              |
-| D-Pad Up                                                   | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up          |
-| D-Pad Down                                                 | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down        |
-| D-Pad Left                                                 | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left        |
-| D-Pad Right                                                | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right       |
-| Cycle Weapon                                               | ![](../image/retropad/retro_a.png)             | Cycle Weapon      |
-| Freelook                                                   | ![](../image/retropad/retro_x.png)             | Freelook          |
-| Strafe Left                                                | ![](../image/retropad/retro_l1.png)            | Strafe Left       |
-| Strafe Right                                               | ![](../image/retropad/retro_r1.png)            | Strafe Right      |
-| Look Up                                                    | ![](../image/retropad/retro_l2.png)            | Look Up           |
-| Look Down                                                  | ![](../image/retropad/retro_r2.png)            | Look Down         |
-| Move Down                                                  | ![](../image/retropad/retro_l3.png)            | Move Down         |
-| Swim Up                                                    | ![](../image/retropad/retro_r3.png)            | Swim Up           |
-|                                                            | ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
-|                                                            | ![](../image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
-|                                                            | ![](../image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
-|                                                            | ![](../image/retropad/retro_right_stick.png) Y | Look Up/Down      |
+| Jump                                                       | ![](/image/retropad/retro_b.png)             | Jump              |
+| Fire                                                       | ![](/image/retropad/retro_y.png)             | Fire              |
+| Toggle Run Mode                                            | ![](/image/retropad/retro_select.png)        | Toggle Run Mode   |
+| Menu                                                       | ![](/image/retropad/retro_start.png)         | Menu              |
+| D-Pad Up                                                   | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up          |
+| D-Pad Down                                                 | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down        |
+| D-Pad Left                                                 | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left        |
+| D-Pad Right                                                | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right       |
+| Cycle Weapon                                               | ![](/image/retropad/retro_a.png)             | Cycle Weapon      |
+| Freelook                                                   | ![](/image/retropad/retro_x.png)             | Freelook          |
+| Strafe Left                                                | ![](/image/retropad/retro_l1.png)            | Strafe Left       |
+| Strafe Right                                               | ![](/image/retropad/retro_r1.png)            | Strafe Right      |
+| Look Up                                                    | ![](/image/retropad/retro_l2.png)            | Look Up           |
+| Look Down                                                  | ![](/image/retropad/retro_r2.png)            | Look Down         |
+| Move Down                                                  | ![](/image/retropad/retro_l3.png)            | Move Down         |
+| Swim Up                                                    | ![](/image/retropad/retro_r3.png)            | Swim Up           |
+|                                                            | ![](/image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
+|                                                            | ![](/image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
+|                                                            | ![](/image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
+|                                                            | ![](/image/retropad/retro_right_stick.png) Y | Look Up/Down      |
 
 | User 1 Remap descriptors for 'Gamepad Modern' device type | RetroPad Inputs                                | TyrQuake inputs   |
 |-----------------------------------------------------------|------------------------------------------------|-------------------|
-| Swim Down                                                 | ![](../image/retropad/retro_b.png)             | Swim Down         |
-| Swim Up                                                   | ![](../image/retropad/retro_y.png)             | Swim Up           |
-| Show Scores                                               | ![](../image/retropad/retro_select.png)        | Show Scores       |
-| Menu                                                      | ![](../image/retropad/retro_start.png)         | Menu              |
-| D-Pad Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up          |
-| D-Pad Down                                                | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down        |
-| D-Pad Left                                                | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left        | 
-| D-Pad Right                                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right       |
-| Strafe Right                                              | ![](../image/retropad/retro_a.png)             | Strafe Right      |
-| Strafe Left                                               | ![](../image/retropad/retro_x.png)             | Strafe Left       |
-| Previous weapon                                           | ![](../image/retropad/retro_l1.png)            | Previous weapon   |
-| Next weapon                                               | ![](../image/retropad/retro_r1.png)            | Next weapon       |
-| Jump                                                      | ![](../image/retropad/retro_l2.png)            | Jump              |
-| Fire                                                      | ![](../image/retropad/retro_r2.png)            | Fire              |
-|                                                           | ![](../image/retropad/retro_l3.png)            | Move Down         |
-|                                                           | ![](../image/retropad/retro_r3.png)            | Swim Up           |
-|                                                           | ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
-|                                                           | ![](../image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
-|                                                           | ![](../image/retropad/retro_right_stick.png) X | Look Left/Right   |
-|                                                           | ![](../image/retropad/retro_right_stick.png) Y | Look Up/Down      |
+| Swim Down                                                 | ![](/image/retropad/retro_b.png)             | Swim Down         |
+| Swim Up                                                   | ![](/image/retropad/retro_y.png)             | Swim Up           |
+| Show Scores                                               | ![](/image/retropad/retro_select.png)        | Show Scores       |
+| Menu                                                      | ![](/image/retropad/retro_start.png)         | Menu              |
+| D-Pad Up                                                  | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up          |
+| D-Pad Down                                                | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down        |
+| D-Pad Left                                                | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left        | 
+| D-Pad Right                                               | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right       |
+| Strafe Right                                              | ![](/image/retropad/retro_a.png)             | Strafe Right      |
+| Strafe Left                                               | ![](/image/retropad/retro_x.png)             | Strafe Left       |
+| Previous weapon                                           | ![](/image/retropad/retro_l1.png)            | Previous weapon   |
+| Next weapon                                               | ![](/image/retropad/retro_r1.png)            | Next weapon       |
+| Jump                                                      | ![](/image/retropad/retro_l2.png)            | Jump              |
+| Fire                                                      | ![](/image/retropad/retro_r2.png)            | Fire              |
+|                                                           | ![](/image/retropad/retro_l3.png)            | Move Down         |
+|                                                           | ![](/image/retropad/retro_r3.png)            | Swim Up           |
+|                                                           | ![](/image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
+|                                                           | ![](/image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
+|                                                           | ![](/image/retropad/retro_right_stick.png) X | Look Left/Right   |
+|                                                           | ![](/image/retropad/retro_right_stick.png) Y | Look Up/Down      |
 
 In-game menu controls:
 
 | Menu Function                        | RetroPad Inputs                                |
 |--------------------------------------|------------------------------------------------|
-| Navigate Up                          | ![](../image/retropad/retro_dpad_up.png)       |
-| Navigate Down                        | ![](../image/retropad/retro_dpad_down.png)     |
-| Adjust Value                         | ![](../image/retropad/retro_dpad_left.png)     |
-| Adjust Value                         | ![](../image/retropad/retro_dpad_right.png)    |
-| Select Current Option                | ![](../image/retropad/retro_a.png)             |
-| Return To Previous Level/Close Menu  | ![](../image/retropad/retro_b.png)             |
+| Navigate Up                          | ![](/image/retropad/retro_dpad_up.png)       |
+| Navigate Down                        | ![](/image/retropad/retro_dpad_down.png)     |
+| Adjust Value                         | ![](/image/retropad/retro_dpad_left.png)     |
+| Adjust Value                         | ![](/image/retropad/retro_dpad_right.png)    |
+| Select Current Option                | ![](/image/retropad/retro_a.png)             |
+| Return To Previous Level/Close Menu  | ![](/image/retropad/retro_b.png)             |
 
 ## Keyboard
 

@@ -124,7 +124,7 @@ After that, you can load the `foo.cue` file in RetroArch with the PicoDrive core
 
 Here's a cue file example done with Lunar - Eternal Blue (USA)
 
-![](..\image\core\genesis_plus_gx\cue.png)
+![](/image/core/genesis_plus_gxcue.png)
 
 ## Core options
 
@@ -157,23 +157,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the core-provided aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
 	
 ??? note "Core-provided aspect ratio - PAR"
-	![](..\image\core\picodrive\par.png)
+	![](/image/core/picodrivepar.png)
 	
 ??? note "Core-provided aspect ratio - 4/3"
-	![](..\image\core\picodrive\4by3.png)
+	![](/image/core/picodrive4by3.png)
 
 ??? note "Core-provided aspect ratio - CRT"
-	![](..\image\core\picodrive\crt.png)	
+	![](/image/core/picodrivecrt.png)	
 	
 - **Show Overscan** [picodrive_overscan] (**disabled**/enabled)
 
 	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Show Overscan - Off"
-	![](..\image\core\picodrive\overscan_off.png)
+	![](/image/core/picodriveoverscan_off.png)
 	
 ??? note "Show Overscan - On"
-	![](..\image\core\picodrive\overscan_on.png)	
+	![](/image/core/picodriveoverscan_on.png)	
 	
 - **68k overclock** [picodrive_overclk68k] (**disabled**/+25%/+50%/+75%/+100%/+200%/+400%)
 
@@ -210,18 +210,18 @@ The PicoDrive core supports the following device type(s) in the controls menu, b
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                              | 3 button pad | 6 button pad |
 |------------------------------|----------------------------------------------|--------------|--------------|
-| B                            | ![](../image/retropad/retro_b.png)       | B            | B            |
-| A                            | ![](../image/retropad/retro_y.png)       | A            | A            |
-| Mode                         | ![](../image/retropad/retro_select.png)        |              | Mode         |
-| Start                        | ![](../image/retropad/retro_start.png)         | Start        | Start        |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up     | D-Pad Up     |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down   | D-Pad Down   |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left   | D-Pad Left   |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right  | D-Pad Right  |
-| C                            | ![](../image/retropad/retro_a.png)       | C            | C            |
-| Y                            | ![](../image/retropad/retro_x.png)       |              | Y            |
-| X                            | ![](../image/retropad/retro_l1.png)            |              | X            |
-| Z                            | ![](../image/retropad/retro_r1.png)            |              | Z            |
+| B                            | ![](/image/retropad/retro_b.png)       | B            | B            |
+| A                            | ![](/image/retropad/retro_y.png)       | A            | A            |
+| Mode                         | ![](/image/retropad/retro_select.png)        |              | Mode         |
+| Start                        | ![](/image/retropad/retro_start.png)         | Start        | Start        |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up     | D-Pad Up     |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down   | D-Pad Down   |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left   | D-Pad Left   |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right  | D-Pad Right  |
+| C                            | ![](/image/retropad/retro_a.png)       | C            | C            |
+| Y                            | ![](/image/retropad/retro_x.png)       |              | Y            |
+| X                            | ![](/image/retropad/retro_l1.png)            |              | X            |
+| Z                            | ![](/image/retropad/retro_r1.png)            |              | Z            |
 
 ## Compatibility
 

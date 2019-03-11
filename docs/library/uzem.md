@@ -24,25 +24,9 @@ The Uzebox is a minimal system based on a AVR ATmega644 microcontroller.
 
 Awaiting description.
 
-### How to get and install the Uzem core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](..\image\core\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](..\image\core\all\info.png) </center>
-
-- Browse through the list and select 'Uzebox (Uzem)'.
-
-After this has finished downloading, the core should now be ready for use!
-
 #### How to start (after installation):
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](..image\core\all\load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 

@@ -91,13 +91,13 @@ The VeMUlator core supports the following device type(s) in the controls menu, b
 
 | RetroPad Inputs                           | VeMUlator core Inputs |
 |-------------------------------------------|-----------------------|
-| ![](../image/retropad/retro_b.png)    | B                     |
-| ![](../image/retropad/retro_start.png)      | Start                 |
-| ![](../image/retropad/retro_dpad_up.png)    | Up                    |
-| ![](../image/retropad/retro_dpad_down.png)  | Down                  |
-| ![](../image/retropad/retro_dpad_left.png)  | Left                  |
-| ![](../image/retropad/retro_dpad_right.png) | Right                 |
-| ![](../image/retropad/retro_a.png)    | A                     |
+| ![](/image/retropad/retro_b.png)    | B                     |
+| ![](/image/retropad/retro_start.png)      | Start                 |
+| ![](/image/retropad/retro_dpad_up.png)    | Up                    |
+| ![](/image/retropad/retro_dpad_down.png)  | Down                  |
+| ![](/image/retropad/retro_dpad_left.png)  | Left                  |
+| ![](/image/retropad/retro_dpad_right.png) | Right                 |
+| ![](/image/retropad/retro_a.png)    | A                     |
 
 ## Compatibility
 

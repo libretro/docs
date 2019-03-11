@@ -151,7 +151,7 @@ After that, you can load the `foo.m3u` file in RetroArch with the PCSX ReARMed c
 
 Here's a m3u example done with Valkryie Profile
 
-![](..\image\core\beetle_psx_hw\m3u.png)
+![](/image/core/beetle_psx_hwm3u.png)
 
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
@@ -419,10 +419,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	If Off, disables the dithering pattern the PSX applies to combat color banding.
 	
 ??? note "Enable Dithering - On"
-	![](..\image\core\pcsx_rearmed\dither_on.png)
+	![](/image/core/pcsx_rearmeddither_on.png)
 	
 ??? note "Enable Dithering - Off"
-	![](..\image\core\pcsx_rearmed\dither_off.png)
+	![](/image/core/pcsx_rearmeddither_off.png)
 	
 - **Frame duping** [pcsx_rearmed_duping_enable] (**enabled**|disabled)
 
@@ -433,7 +433,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Show the BIOS bootlogo.
 	
 ??? note "Skip BIOS - Off"
-	![](..\image\core\beetle_psx_hw\bios.png)
+	![](/image/core/beetle_psx_hwbios.png)
 	
 - **Sound: Reverb** [pcsx_rearmed_spu_reverb] (**enabled**|disabled)
 
@@ -467,30 +467,30 @@ Activating multitap support in compatible games can be configured by the ['Multi
 
 ## Joypad
 
-![](../image/controller/psx.png)
+![](/image/controller/psx.png)
 
 | RetroPad Inputs                                | User 1 - 8 input descriptors | standard    | analog         | negcon                          |
 |------------------------------------------------|------------------------------|-------------|----------------|---------------------------------|
-| ![](../image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          | Analog Button I                 |
-| ![](../image/retropad/retro_y.png)             | Square                       | Square      | Square         | Analog Button II                |
-| ![](../image/retropad/retro_select.png)        | Select                       | Select      | Select         |                                 |
-| ![](../image/retropad/retro_start.png)         | Start                        | Start       | Start          | Start                           |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       | D-Pad Up                        |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     | D-Pad Down                      |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     | D-Pad Left                      |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    | D-Pad Right                     |
-| ![](../image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         | A                               |
-| ![](../image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       | B                               |
-| ![](../image/retropad/retro_l1.png)            | L1                           | L1          | L1             | Left Shoulder Button (analog)   |
-| ![](../image/retropad/retro_r1.png)            | R1                           | R1          | R1             | Right Shoulder Button (digital) |
-| ![](../image/retropad/retro_l2.png)            | L2                           | L2          | L2             | Analog Button II                |
-| ![](../image/retropad/retro_r2.png)            | R2                           | R2          | R2             | Analog Button I                 |
-| ![](../image/retropad/retro_l3.png)            | L3                           |             | L3             |                                 |
-| ![](../image/retropad/retro_r3.png)            | R3                           |             | R3             |                                 |
-| ![](../image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
-| ![](../image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
-| ![](../image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
-| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y | Up: Analog Button I / Down: Analog Button II |
+| ![](/image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          | Analog Button I                 |
+| ![](/image/retropad/retro_y.png)             | Square                       | Square      | Square         | Analog Button II                |
+| ![](/image/retropad/retro_select.png)        | Select                       | Select      | Select         |                                 |
+| ![](/image/retropad/retro_start.png)         | Start                        | Start       | Start          | Start                           |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       | D-Pad Up                        |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     | D-Pad Down                      |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     | D-Pad Left                      |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    | D-Pad Right                     |
+| ![](/image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         | A                               |
+| ![](/image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       | B                               |
+| ![](/image/retropad/retro_l1.png)            | L1                           | L1          | L1             | Left Shoulder Button (analog)   |
+| ![](/image/retropad/retro_r1.png)            | R1                           | R1          | R1             | Right Shoulder Button (digital) |
+| ![](/image/retropad/retro_l2.png)            | L2                           | L2          | L2             | Analog Button II                |
+| ![](/image/retropad/retro_r2.png)            | R2                           | R2          | R2             | Analog Button I                 |
+| ![](/image/retropad/retro_l3.png)            | L3                           |             | L3             |                                 |
+| ![](/image/retropad/retro_r3.png)            | R3                           |             | R3             |                                 |
+| ![](/image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
+| ![](/image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
+| ![](/image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
+| ![](/image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y | Up: Analog Button I / Down: Analog Button II |
 
 ## Compatibility
 

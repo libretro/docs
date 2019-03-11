@@ -134,21 +134,21 @@ The VBA-M core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-![](../image/controller/gba.png)
+![](/image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                              | RetroPad device type | GBA Joypad  | Alt Joypad YB | Alt Joypad AB |
 |--------------------------|----------------------------------------------|----------------------|-------------|---------------|---------------|
-| B                        | ![](../image/retropad/retro_b.png)             | B                    | B           | A             |  A            |
-|                          | ![](../image/retropad/retro_y.png)             |                      |             | B             |               |
-| Select                   | ![](../image/retropad/retro_select.png)        | Select               | Select      | Select        | Select        |
-| Start                    | ![](../image/retropad/retro_start.png)         | Start                | Start       | Start         | Start         |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up             | D-Pad Up    | D-Pad Up      | D-Pad Up      |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down           | D-Pad Down  | D-Pad Down    | D-Pad Down    |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left           | D-Pad Left  | D-Pad Left    | D-Pad Left    |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right          | D-Pad Right | D-Pad Right   | D-Pad Right   |
-| A                        | ![](../image/retropad/retro_a.png)             | A                    | A           |               | B             |
-| L                        | ![](../image/retropad/retro_l1.png)            | L                    | L           | L             | L             |
-| R                        | ![](../image/retropad/retro_r1.png)            | R                    | R           | R             | R             |
+| B                        | ![](/image/retropad/retro_b.png)             | B                    | B           | A             |  A            |
+|                          | ![](/image/retropad/retro_y.png)             |                      |             | B             |               |
+| Select                   | ![](/image/retropad/retro_select.png)        | Select               | Select      | Select        | Select        |
+| Start                    | ![](/image/retropad/retro_start.png)         | Start                | Start       | Start         | Start         |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up             | D-Pad Up    | D-Pad Up      | D-Pad Up      |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down           | D-Pad Down  | D-Pad Down    | D-Pad Down    |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left           | D-Pad Left  | D-Pad Left    | D-Pad Left    |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right          | D-Pad Right | D-Pad Right   | D-Pad Right   |
+| A                        | ![](/image/retropad/retro_a.png)             | A                    | A           |               | B             |
+| L                        | ![](/image/retropad/retro_l1.png)            | L                    | L           | L             | L             |
+| R                        | ![](/image/retropad/retro_r1.png)            | R                    | R           | R             | R             |
 
 ## Compatibility
 

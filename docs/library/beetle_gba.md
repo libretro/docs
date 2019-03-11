@@ -115,20 +115,20 @@ The Beetle GBA core supports the following device type(s) in the controls menu, 
 
 #### Joypad
 
-![](../image/controller/gba.png)
+![](/image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                              |
 |--------------------------|----------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)       |
-| Select                   | ![](../image/retropad/retro_select.png)        |
-| Start                    | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
-| A                        | ![](../image/retropad/retro_a.png)       |
-| L                        | ![](../image/retropad/retro_l1.png)            | 
-| R                        | ![](../image/retropad/retro_r1.png)            |
+| B                        | ![](/image/retropad/retro_b.png)       |
+| Select                   | ![](/image/retropad/retro_select.png)        |
+| Start                    | ![](/image/retropad/retro_start.png)         |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    |
+| A                        | ![](/image/retropad/retro_a.png)       |
+| L                        | ![](/image/retropad/retro_l1.png)            | 
+| R                        | ![](/image/retropad/retro_r1.png)            |
 
 ## External Links
 

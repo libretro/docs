@@ -7,7 +7,7 @@ Cores are essentially other programs and games that run through RetroArch. Retro
 
 ## Installing cores through RetroArch interface
 
-![Core Updater](../image/windows/core_updater.gif)
+![Core Updater](/image/retroarch/xmb/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**

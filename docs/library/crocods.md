@@ -88,20 +88,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "Color Monitor - color"
-	![](..\image\core\crocods\color.png)
+	![](/image/core/crocodscolor.png)
 	
 ??? note "Color Monitor - green"
-	![](..\image\core\crocods\green.png)	
+	![](/image/core/crocodsgreen.png)	
 	
 - **Resize** [crocods_resize] (**Auto**|320x200|Overscan)
 
 	Self-explanatory.
 	
 ??? note "Resize - 320x200"
-	![](..\image\core\crocods\320x200.png)
+	![](/image/core/crocods320x200.png)
 	
 ??? note "Resize - Overscan"
-	![](..\image\core\crocods\overscan.png)	
+	![](/image/core/crocodsoverscan.png)	
 	
 - **Speed hack** [crocods_hack] (**no**|yes)
 
@@ -123,33 +123,33 @@ The CrocoDS core supports the following device type(s) in the controls menu, bol
 
 | User 1 Remap descriptors | RetroPad Inputs                                | CrocoDS core inputs |
 |--------------------------|------------------------------------------------|---------------------|
-|                          | ![](../image/retropad/retro_b.png)             | JOY_FIRE2           |
-|                          | ![](../image/retropad/retro_y.png)             | NIL                 |
-| Pause                    | ![](../image/retropad/retro_select.png)        | SPARE               |
-| Start                    | ![](../image/retropad/retro_start.png)         | RETURN              |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)       | JOY_UP              |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)     | JOY_DOWN            |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)     | JOY_LEFT            |
-| Right                    | ![](../image/retropad/retro_dpad_right.png)    | JOY_RIGHT           |
-|                          | ![](../image/retropad/retro_a.png)             | JOY_FIRE1           |
-|                          | ![](../image/retropad/retro_x.png)             | NIL                 |
-|                          | ![](../image/retropad/retro_l1.png)            | NIL                 |
-|                          | ![](../image/retropad/retro_r1.png)            | NIL                 |
+|                          | ![](/image/retropad/retro_b.png)             | JOY_FIRE2           |
+|                          | ![](/image/retropad/retro_y.png)             | NIL                 |
+| Pause                    | ![](/image/retropad/retro_select.png)        | SPARE               |
+| Start                    | ![](/image/retropad/retro_start.png)         | RETURN              |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)       | JOY_UP              |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)     | JOY_DOWN            |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)     | JOY_LEFT            |
+| Right                    | ![](/image/retropad/retro_dpad_right.png)    | JOY_RIGHT           |
+|                          | ![](/image/retropad/retro_a.png)             | JOY_FIRE1           |
+|                          | ![](/image/retropad/retro_x.png)             | NIL                 |
+|                          | ![](/image/retropad/retro_l1.png)            | NIL                 |
+|                          | ![](/image/retropad/retro_r1.png)            | NIL                 |
 
 | User 2 Remap descriptors | RetroPad Inputs                                | CrocoDS core inputs |
 |--------------------------|------------------------------------------------|---------------------|
-|                          | ![](../image/retropad/retro_b.png)             | SPARE               |
-|                          | ![](../image/retropad/retro_y.png)             | NIL                 |
-|                          | ![](../image/retropad/retro_select.png)        | SPARE               |
-|                          | ![](../image/retropad/retro_start.png)         | RETURN              |
-|                          | ![](../image/retropad/retro_dpad_up.png)       | CURSOR_UP           |
-|                          | ![](../image/retropad/retro_dpad_down.png)     | CURSOR_DOWN         |
-|                          | ![](../image/retropad/retro_dpad_left.png)     | CURSOR_LEFT         |
-|                          | ![](../image/retropad/retro_dpad_right.png)    | CURSOR_RIGHT        |
-|                          | ![](../image/retropad/retro_a.png)             | SPARE               |
-|                          | ![](../image/retropad/retro_x.png)             | NIL                 |
-|                          | ![](../image/retropad/retro_l1.png)            | NIL                 |
-|                          | ![](../image/retropad/retro_r1.png)            | NIL                 |
+|                          | ![](/image/retropad/retro_b.png)             | SPARE               |
+|                          | ![](/image/retropad/retro_y.png)             | NIL                 |
+|                          | ![](/image/retropad/retro_select.png)        | SPARE               |
+|                          | ![](/image/retropad/retro_start.png)         | RETURN              |
+|                          | ![](/image/retropad/retro_dpad_up.png)       | CURSOR_UP           |
+|                          | ![](/image/retropad/retro_dpad_down.png)     | CURSOR_DOWN         |
+|                          | ![](/image/retropad/retro_dpad_left.png)     | CURSOR_LEFT         |
+|                          | ![](/image/retropad/retro_dpad_right.png)    | CURSOR_RIGHT        |
+|                          | ![](/image/retropad/retro_a.png)             | SPARE               |
+|                          | ![](/image/retropad/retro_x.png)             | NIL                 |
+|                          | ![](/image/retropad/retro_l1.png)            | NIL                 |
+|                          | ![](/image/retropad/retro_r1.png)            | NIL                 |
 
 #### Keyboard
 

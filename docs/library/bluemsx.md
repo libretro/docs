@@ -48,7 +48,7 @@ You can download the 'Databases' and 'Machines' folders from an [official full s
 
 Move/Copy the 'Databases' and 'Machines' Folders to RetroArch's System directory.
 
-![](../image/core/bluemsx/bios.png)
+![](/image/core/bluemsx/bios.png)
 
 ## Features
 
@@ -153,13 +153,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Forces cropping of overscanned frames
 	
 ??? note "*Crop Overscan Off*"
-    ![](..\image\core\bluemsx\crop_off.png)
+    ![](/image/core/bluemsxcrop_off.png)
 
 ??? note "*Crop Overscan On*"
-    ![](..\image\core\bluemsx\crop_on.png)
+    ![](/image/core/bluemsxcrop_on.png)
 
 ??? note "*Crop Overscan MSX2*"
-    ![](..\image\core\bluemsx\crop_msx2.png)
+    ![](/image/core/bluemsxcrop_msx2.png)
 	
 - **VDP Sync Type (Restart)** [bluemsx_vdp_synctype] (**Auto**|50Hz|60Hz)
 
@@ -200,22 +200,22 @@ The blueMSX core supports the following device type(s) in the controls menu, bol
 
 | User 1 and 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | blueMSX core inputs        |
 |-----------------------------------------------------------|------------------------------------------------|----------------------------|
-| Button 2                                                  | ![](../image/retropad/retro_b.png)             | Button 2, Coleco Button 2  |
-| Button 3                                                  | ![](../image/retropad/retro_y.png)             | Button 3, Coleco #2        |
-| Select                                                    | ![](../image/retropad/retro_select.png)        | Select, Coleco Star (*)    |
-| Start                                                     | ![](../image/retropad/retro_start.png)         | Start, Coleco Hash (#)     |
-| Joy Up                                                    | ![](../image/retropad/retro_dpad_up.png)       | Joy Up                     |
-| Joy Down                                                  | ![](../image/retropad/retro_dpad_down.png)     | Joy Down                   |
-| Joy Left                                                  | ![](../image/retropad/retro_dpad_left.png)     | Joy Left                   |
-| Joy Right                                                 | ![](../image/retropad/retro_dpad_right.png)    | Joy Right                  |
-| Button 1                                                  | ![](../image/retropad/retro_a.png)             | Button 1,  Coleco Button 1 |
-| Button 4                                                  | ![](../image/retropad/retro_x.png)             | Button 4, Coleco #1        |
-| Button 5                                                  | ![](../image/retropad/retro_l1.png)            | Button 5, Coleco #4        |
-| Button 6                                                  | ![](../image/retropad/retro_r1.png)            | Button 6, Coleco #3        |
-| Button 7                                                  | ![](../image/retropad/retro_l2.png)            | Button 7, Coleco #6        |
-| Button 8                                                  | ![](../image/retropad/retro_r2.png)            | Button 8, Coleco #5        |
-| Button 9                                                  | ![](../image/retropad/retro_l3.png)            | Button 9. Coleco #8        |
-| Button 10                                                 | ![](../image/retropad/retro_r3.png)            | Button 10, Coleco #7       |
+| Button 2                                                  | ![](/image/retropad/retro_b.png)             | Button 2, Coleco Button 2  |
+| Button 3                                                  | ![](/image/retropad/retro_y.png)             | Button 3, Coleco #2        |
+| Select                                                    | ![](/image/retropad/retro_select.png)        | Select, Coleco Star (*)    |
+| Start                                                     | ![](/image/retropad/retro_start.png)         | Start, Coleco Hash (#)     |
+| Joy Up                                                    | ![](/image/retropad/retro_dpad_up.png)       | Joy Up                     |
+| Joy Down                                                  | ![](/image/retropad/retro_dpad_down.png)     | Joy Down                   |
+| Joy Left                                                  | ![](/image/retropad/retro_dpad_left.png)     | Joy Left                   |
+| Joy Right                                                 | ![](/image/retropad/retro_dpad_right.png)    | Joy Right                  |
+| Button 1                                                  | ![](/image/retropad/retro_a.png)             | Button 1,  Coleco Button 1 |
+| Button 4                                                  | ![](/image/retropad/retro_x.png)             | Button 4, Coleco #1        |
+| Button 5                                                  | ![](/image/retropad/retro_l1.png)            | Button 5, Coleco #4        |
+| Button 6                                                  | ![](/image/retropad/retro_r1.png)            | Button 6, Coleco #3        |
+| Button 7                                                  | ![](/image/retropad/retro_l2.png)            | Button 7, Coleco #6        |
+| Button 8                                                  | ![](/image/retropad/retro_r2.png)            | Button 8, Coleco #5        |
+| Button 9                                                  | ![](/image/retropad/retro_l3.png)            | Button 9. Coleco #8        |
+| Button 10                                                 | ![](/image/retropad/retro_r3.png)            | Button 10, Coleco #7       |
 
 #### Keyboard
 

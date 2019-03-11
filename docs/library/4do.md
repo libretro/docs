@@ -137,10 +137,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Internal resolution is 320x240. This feature makes the system behave as if it has a 640x480 framebuffer.
 	
 ??? note "High Resolution - disabled"
-	![](..\image\core\4do\high_off.png)
+	![](/image/core/4do/high_off.png)
 	
 ??? note "High Resolution - enabled"
-	![](..\image\core\4do\high_on.png)
+	![](/image/core/4do/high_on.png)
 	
 - **NVRAM Storage** [4do_nvram_storage] (**per game**|shared)
 
@@ -174,21 +174,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 ## Joypad
 
-![](../image/controller/3do.png)
+![](/image/controller/3do.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                                |
 |------------------------------|------------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)             |
-| A                            | ![](../image/retropad/retro_y.png)             |
-| X (Stop)                     | ![](../image/retropad/retro_select.png)        |
-| P (Play/Pause)               | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | 
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
-| C                            | ![](../image/retropad/retro_a.png)             |
-| L                            | ![](../image/retropad/retro_l1.png)            |
-| R                            | ![](../image/retropad/retro_r1.png)            |
+| B                            | ![](/image/retropad/retro_b.png)             |
+| A                            | ![](/image/retropad/retro_y.png)             |
+| X (Stop)                     | ![](/image/retropad/retro_select.png)        |
+| P (Play/Pause)               | ![](/image/retropad/retro_start.png)         |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     | 
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    |
+| C                            | ![](/image/retropad/retro_a.png)             |
+| L                            | ![](/image/retropad/retro_l1.png)            |
+| R                            | ![](/image/retropad/retro_r1.png)            |
 
 ## Compatibility
 
