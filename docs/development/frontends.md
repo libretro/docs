@@ -1,5 +1,5 @@
 # Frontends
-Libretro frontends are programs that have implemented the [libretro API](../specs/api.md) specification. If fully implemented, this allows the program to run any libretro core that has been developed.
+Libretro frontends are programs that have implemented the [libretro API](libretro-overview.md) specification. If fully implemented, this allows the program to run any libretro core that has been developed.
 
 ## Reference frontend
 [RetroArch](http://retroarch.com) is the official reference [libretro](http://libretro.com) frontend, developed in-house. It is usually the first in implementing new features added to the libretro API. Written almost entirely in C, targets a large amount of platforms.
