@@ -147,7 +147,7 @@ After that, you can load the `foo.cue` file in RetroArch with the Genesis Plus G
 
 Here's a cue file example done with Lunar - Eternal Blue (USA)
 
-![](..\image\core\genesis_plus_gx\cue.png)
+![](/image/core/genesis_plus_gxcue.png)
 
 !!! warning ""
 	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported. 
@@ -211,24 +211,24 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "*Blargg NTSC filter - Off*"
-    ![](..\image\core\genesis_plus_gx\blargg_off.png)
+    ![](/image/core/genesis_plus_gxblargg_off.png)
 
 ??? note "*Blargg NTSC filter  - monochrome*"
-    ![](..\image\core\genesis_plus_gx\blargg_monochrome.png)
+    ![](/image/core/genesis_plus_gxblargg_monochrome.png)
 
 ??? note "*Blargg NTSC filter - composite*"
-    ![](..\image\core\genesis_plus_gx\blargg_composite.png)
+    ![](/image/core/genesis_plus_gxblargg_composite.png)
 
 ??? note "*Blargg NTSC filter  - svideo*"
-    ![](..\image\core\genesis_plus_gx\blargg_svideo.png)
+    ![](/image/core/genesis_plus_gxblargg_svideo.png)
 
 ??? note "*Blargg NTSC filter - rgb*"
-    ![](..\image\core\genesis_plus_gx\blargg_rgb.png)
+    ![](/image/core/genesis_plus_gxblargg_rgb.png)
 	
 - **LCD Ghosting filter** [genesis_plus_gx_lcd_filter] (**disabled**/enabled)
 
 ??? note "*LCD Ghosting filter - On*"
-    ![](..\image\core\genesis_plus_gx\ghost.png)
+    ![](/image/core/genesis_plus_gxghost.png)
 	
 - **Borders** [genesis_plus_gx_overscan] (**disabled**/top/bottom/left/right/full)
 
@@ -239,10 +239,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "*Game Gear extended screen - Off*"
-    ![](..\image\core\genesis_plus_gx\extend_off.png)
+    ![](/image/core/genesis_plus_gxextend_off.png)
 
 ??? note "*Game Gear extended screen - On*"
-    ![](..\image\core\genesis_plus_gx\extend_on.png)
+    ![](/image/core/genesis_plus_gxextend_on.png)
 	
 - **Core-provided aspect ratio** [genesis_plus_gx_aspect_ratio] (**auto**/NTSC PAR/PAL PAR)
 
@@ -253,17 +253,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Change how interlaced mode 2 output is handled. Games like Sonic 2's multiplayer mode uses Interlaced Mode 2.
 	
 ??? note "*Interlaced mode 2 output - single field*"
-    ![](..\image\core\genesis_plus_gx\single.png)
+    ![](/image/core/genesis_plus_gxsingle.png)
 	
 ??? note "*Interlaced mode 2 output - double field*"
-    ![](..\image\core\genesis_plus_gx\double.png)	
+    ![](/image/core/genesis_plus_gxdouble.png)	
 	
 - **Show Lightgun crosshair** [genesis_plus_gx_gun_cursor] (**disabled**/enabled)
 
 	Shows lightgun crosshairs for the 'MD Menancer', 'MD Justifiers', and 'MS Light Phaser' Device Types.
 	
 ??? note "*Lightgun crosshair*"
-    ![](..\image\core\genesis_plus_gx\lightgun.png)	
+    ![](/image/core/genesis_plus_gxlightgun.png)	
 
 - **Invert Mouse Y-axis** [genesis_plus_gx_invert_mouse] (**disabled**/enabled)
 
@@ -332,51 +332,51 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 | RetroPad Inputs                                | User 1 - 8 input descriptors | MD Joypad 3 Button | MD Joypad 6 Button | MS Joypad 2 Button | MS Paddle Control | MS Sports Pad | MD XE-1AP     |
 |------------------------------------------------|------------------------------|--------------------|--------------------|--------------------|-------------------|---------------|---------------|
-| ![](../image/retropad/retro_b.png)             | B                            | B                  | B                  | 1                  | 1                 | 1             | E2            |
-| ![](../image/retropad/retro_y.png)             | A                            | A                  | A                  |                    |                   |               | E1            |
-| ![](../image/retropad/retro_select.png)        | Mode                         |                    | Mode               |                    |                   |               | Select        |
-| ![](../image/retropad/retro_start.png)         | Start                        | Start              | Start              | Start              | Start             | Start         | Start         |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up           | D-Pad Up           | D-Pad Up           |                   |               |               |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down         | D-Pad Down         | D-Pad Down         |                   |               |               |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left         | D-Pad Left         | D-Pad Left         |                   |               |               |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right        | D-Pad Right        | D-Pad Right        |                   |               |               |
-| ![](../image/retropad/retro_a.png)             | C                            | C                  | C                  | 2                  |                   | 2             |               |
-| ![](../image/retropad/retro_x.png)             | Y                            |                    | Y                  |                    |                   |               |               |
-| ![](../image/retropad/retro_l1.png)            | X                            |                    | X                  |                    |                   |               | C             |
-| ![](../image/retropad/retro_r1.png)            | Z                            |                    | Z                  |                    |                   |               | A             |
-| ![](../image/retropad/retro_l2.png)            |                              |                    |                    |                    |                   |               | D             |
-| ![](../image/retropad/retro_r2.png)            |                              |                    |                    |                    |                   |               | B             |
-| ![](../image/retropad/retro_l3.png)            |                              |                    |                    |                    |                   |               |               |
-| ![](../image/retropad/retro_r3.png)            |                              |                    |                    |                    |                   |               |               |
-| ![](../image/retropad/retro_left_stick.png) X  |                              |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
-| ![](../image/retropad/retro_left_stick.png) Y  |                              |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
-| ![](../image/retropad/retro_right_stick.png) X |                              |                    |                    |                    |                   |               | Slider Y      |
-| ![](../image/retropad/retro_right_stick.png) Y |                              |                    |                    |                    |                   |               | Slider X      |
+| ![](/image/retropad/retro_b.png)             | B                            | B                  | B                  | 1                  | 1                 | 1             | E2            |
+| ![](/image/retropad/retro_y.png)             | A                            | A                  | A                  |                    |                   |               | E1            |
+| ![](/image/retropad/retro_select.png)        | Mode                         |                    | Mode               |                    |                   |               | Select        |
+| ![](/image/retropad/retro_start.png)         | Start                        | Start              | Start              | Start              | Start             | Start         | Start         |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up           | D-Pad Up           | D-Pad Up           |                   |               |               |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down         | D-Pad Down         | D-Pad Down         |                   |               |               |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left         | D-Pad Left         | D-Pad Left         |                   |               |               |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right        | D-Pad Right        | D-Pad Right        |                   |               |               |
+| ![](/image/retropad/retro_a.png)             | C                            | C                  | C                  | 2                  |                   | 2             |               |
+| ![](/image/retropad/retro_x.png)             | Y                            |                    | Y                  |                    |                   |               |               |
+| ![](/image/retropad/retro_l1.png)            | X                            |                    | X                  |                    |                   |               | C             |
+| ![](/image/retropad/retro_r1.png)            | Z                            |                    | Z                  |                    |                   |               | A             |
+| ![](/image/retropad/retro_l2.png)            |                              |                    |                    |                    |                   |               | D             |
+| ![](/image/retropad/retro_r2.png)            |                              |                    |                    |                    |                   |               | B             |
+| ![](/image/retropad/retro_l3.png)            |                              |                    |                    |                    |                   |               |               |
+| ![](/image/retropad/retro_r3.png)            |                              |                    |                    |                    |                   |               |               |
+| ![](/image/retropad/retro_left_stick.png) X  |                              |                    |                    |                    | Paddle            | Trackball X   | Thumb-stick X |
+| ![](/image/retropad/retro_left_stick.png) Y  |                              |                    |                    |                    |                   | Trackball Y   | Thumb-stick Y |
+| ![](/image/retropad/retro_right_stick.png) X |                              |                    |                    |                    |                   |               | Slider Y      |
+| ![](/image/retropad/retro_right_stick.png) Y |                              |                    |                    |                    |                   |               | Slider X      |
 
 ## Mouse
 
 | RetroMouse Inputs                                     | MD Mouse        |
 |-------------------------------------------------------|-----------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | MD Mouse Cursor |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | MD Mouse Left   |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | MD Mouse Right  |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | MD Mouse Start  |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | MD Mouse Cursor |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | MD Mouse Left   |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | MD Mouse Right  |
+| ![](/image/retromouse/retro_middle.png) Mouse 3     | MD Mouse Start  |
 | Wheel Down                                            | MD Mouse Center |
 
 ## Pointer
 
 | RetroPointer Inputs                                                                                                      | MS Graphic Board        |
 |--------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus | 
-| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | MS Graphic Board Pen    |
-| ![](../image/retromouse/retro_right.png) Mouse 2                                                                         | MS Graphic Board Menu   |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        | MS Graphic Do           |
+| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus | 
+| ![](/image/retromouse/retro_left.png) Mouse 1                                                                          | MS Graphic Board Pen    |
+| ![](/image/retromouse/retro_right.png) Mouse 2                                                                         | MS Graphic Board Menu   |
+| ![](/image/retromouse/retro_middle.png) Mouse 3                                                                        | MS Graphic Do           |
 
 ## Lightgun
 
 | RetroLightgun Inputs                                                                                                     | MD Menacer           | MD Justifier           | MS Light Phaser           |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------|------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MD Menacer Crosshair | MD Justifier Crosshair | MS Light Phaser Crosshair |
+| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MD Menacer Crosshair | MD Justifier Crosshair | MS Light Phaser Crosshair |
 | Gun Trigger                                                                                                              | MD Menacer A         | MD Justifier A         | MS Light Phaser A         |
 | Gun Aux B                                                                                                                | MD Menacer B         | MD Justifier B         | MS Light Phaser B         |
 | Gun Start                                                                                                                | MD Menacer Start     | MD Justifier Start     | MS Light Phaser Start     |
@@ -386,16 +386,16 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 | Inputs                                                                                                                   | PICO tablet               | Terebi Oekaki tablet      |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | PICO tablet Stylus        | Terebi Oeka tablet Stylus |
-| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | PICO tablet Pen           | Terebi Oeka tablet Pen    |
-| ![](../image/retromouse/retro_right.png) Mouse 2                                                                         | PICO tablet Red           |                           |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        |                           | Terebo Peka tablet Start  |
+| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | PICO tablet Stylus        | Terebi Oeka tablet Stylus |
+| ![](/image/retromouse/retro_left.png) Mouse 1                                                                          | PICO tablet Pen           | Terebi Oeka tablet Pen    |
+| ![](/image/retromouse/retro_right.png) Mouse 2                                                                         | PICO tablet Red           |                           |
+| ![](/image/retromouse/retro_middle.png) Mouse 3                                                                        |                           | Terebo Peka tablet Start  |
 | Wheel Up                                                                                                                 | PICO tablet Previous page |                           |
 | Wheel Down                                                                                                               | PICO tablet Next page     |                           |
-| ![](../image/retropad/retro_dpad_up.png)                                                                                 | PICO tablet Up (White)    |                           |
-| ![](../image/retropad/retro_dpad_down.png)                                                                               | PICO tablet Down (Orange) |                           |
-| ![](../image/retropad/retro_dpad_left.png)                                                                               | PICO tablet Left (Purple) |                           |
-| ![](../image/retropad/retro_dpad_right.png)                                                                              | PICO tablet Right (Green) |                           |
+| ![](/image/retropad/retro_dpad_up.png)                                                                                 | PICO tablet Up (White)    |                           |
+| ![](/image/retropad/retro_dpad_down.png)                                                                               | PICO tablet Down (Orange) |                           |
+| ![](/image/retropad/retro_dpad_left.png)                                                                               | PICO tablet Left (Purple) |                           |
+| ![](/image/retropad/retro_dpad_right.png)                                                                              | PICO tablet Right (Green) |                           |
 
 ## External Links
 

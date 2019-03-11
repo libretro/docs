@@ -101,26 +101,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Sets internal video scale factor. Increasing the scale factor improves the appearance of the internal 'dotmatrix' LCD filter. Scale should normally be set to '1x' for correct operation when using an external GPU shader.
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 2x*"
-    ![](..\image\core\pokemini\dotmatrix_2x.png)
+    ![](/image/core/pokeminidotmatrix_2x.png)
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 4x*"
-    ![](..\image\core\pokemini\dotmatrix_4x.png)
+    ![](/image/core/pokeminidotmatrix_4x.png)
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 6x*"
-    ![](..\image\core\pokemini\dotmatrix_6x.png)
+    ![](/image/core/pokeminidotmatrix_6x.png)
 
 - **LCD Filter** [pokemini_lcdfilter] (**dotmatrix**|scanline|none)
 
 	Specifies which internal screen filter should be applied to the display. 'dotmatrix' produces a clean LCD effect, and is the recommended option. LCD filters are disabled when 'Video Scale' is set to '1x'.
 
 ??? note "*LCD Filter - dotmatrix*"
-    ![](..\image\core\pokemini\dotmatrix.png)
+    ![](/image/core/pokeminidotmatrix.png)
 
 ??? note "*LCD Filter - scanline*"
-    ![](..\image\core\pokemini\scanline.png)
+    ![](/image/core/pokeminiscanline.png)
 
 ??? note "*LCD Filter - none*"
-    ![](..\image\core\pokemini\none.png)
+    ![](/image/core/pokemininone.png)
 
 - **LCD Mode** [pokemini_lcdmode] (**analog**|3shades|2shades)
 
@@ -145,46 +145,46 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Specifies palette used to 'colourise' the emulated liquid crystal display. 'Default' provides a close approximation of the natural screen tint of the original Pokémon Mini hardware. Palettes with a 'Vector' suffix correspond to inverted colours.
 
 ??? note "*Palette - Default*"
-    ![](..\image\core\pokemini\Default.png)
+    ![](/image/core/pokeminiDefault.png)
 
 ??? note "*Palette - Old*"
-    ![](..\image\core\pokemini\Old.png)
+    ![](/image/core/pokeminiOld.png)
 
 ??? note "*Palette - Monochrome*"
-    ![](..\image\core\pokemini\Monochrome.png)
+    ![](/image/core/pokeminiMonochrome.png)
 
 ??? note "*Palette - Green*"
-    ![](..\image\core\pokemini\Green.png)
+    ![](/image/core/pokeminiGreen.png)
 
 ??? note "*Palette - Green Vector*"
-    ![](..\image\core\pokemini\Green_Vector.png)
+    ![](/image/core/pokeminiGreen_Vector.png)
 
 ??? note "*Palette - Red*"
-    ![](..\image\core\pokemini\Red.png)
+    ![](/image/core/pokeminiRed.png)
 
 ??? note "*Palette - Red Vector*"
-    ![](..\image\core\pokemini\Red_Vector.png)
+    ![](/image/core/pokeminiRed_Vector.png)
 
 ??? note "*Palette - Blue LCD*"
-    ![](..\image\core\pokemini\Blue_LCD.png)
+    ![](/image/core/pokeminiBlue_LCD.png)
 
 ??? note "*Palette - LEDBacklight*"
-    ![](..\image\core\pokemini\LEDBacklight.png)
+    ![](/image/core/pokeminiLEDBacklight.png)
 
 ??? note "*Palette - Girl Power*"
-    ![](..\image\core\pokemini\Girl_Power.png)
+    ![](/image/core/pokeminiGirl_Power.png)
 
 ??? note "*Palette - Blue*"
-    ![](..\image\core\pokemini\Blue.png)
+    ![](/image/core/pokeminiBlue.png)
 
 ??? note "*Palette - Blue Vector*"
-    ![](..\image\core\pokemini\Blue_Vector.png)
+    ![](/image/core/pokeminiBlue_Vector.png)
 
 ??? note "*Palette - Sepia*"
-    ![](..\image\core\pokemini\Sepia.png)
+    ![](/image/core/pokeminiSepia.png)
 
 ??? note "*Palette - Monochrome Vector*"
-    ![](..\image\core\pokemini\Monochrome_Vector.png)
+    ![](/image/core/pokeminiMonochrome_Vector.png)
 
 - **Piezo Filter** [pokemini_piezofilter] (**ON**|OFF)
 
@@ -219,15 +219,15 @@ Rumble only works in the PokeMini core when
 
 | RetroPad Inputs                             | User 1 input descriptors |
 |---------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_b.png)          | B                        |
-| ![](../image/retropad/retro_select.png)     | Power                    |
-| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up                 |
-| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down               |
-| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left               |
-| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right              |
-| ![](../image/retropad/retro_a.png)          | A                        |
-| ![](../image/retropad/retro_l1.png)         | Shake                    |
-| ![](../image/retropad/retro_r1.png)         | C                        |
+| ![](/image/retropad/retro_b.png)          | B                        |
+| ![](/image/retropad/retro_select.png)     | Power                    |
+| ![](/image/retropad/retro_dpad_up.png)    | D-Pad Up                 |
+| ![](/image/retropad/retro_dpad_down.png)  | D-Pad Down               |
+| ![](/image/retropad/retro_dpad_left.png)  | D-Pad Left               |
+| ![](/image/retropad/retro_dpad_right.png) | D-Pad Right              |
+| ![](/image/retropad/retro_a.png)          | A                        |
+| ![](/image/retropad/retro_l1.png)         | Shake                    |
+| ![](/image/retropad/retro_r1.png)         | C                        |
 
 ## Compatibility
 

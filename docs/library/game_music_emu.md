@@ -89,9 +89,9 @@ The Game Music Emu core supports the following device type(s) in the controls me
 
 | RetroPad Inputs                                | Game Music Emu core inputs |
 |------------------------------------------------|----------------------------|
-| ![](../image/retropad/retro_start.png)         | Pause                      |
-| ![](../image/retropad/retro_l1.png)            | Previous Track             |
-| ![](../image/retropad/retro_r1.png)            | Next Track                 |
+| ![](/image/retropad/retro_start.png)         | Pause                      |
+| ![](/image/retropad/retro_l1.png)            | Previous Track             |
+| ![](/image/retropad/retro_r1.png)            | Next Track                 |
 
 ## External Links
 

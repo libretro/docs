@@ -105,19 +105,19 @@ The Gearsystem core saves/loads to/from these directories.
 
 ### Joypad
 
-![](../image/controller/gg.png)
+![](/image/controller/gg.png)
 
-![](../image/controller/sms.png)
+![](/image/controller/sms.png)
 
 | User 1 input descriptors | RetroPad Inputs                                |
 |--------------------------|------------------------------------------------|
-| 1                        | ![](../image/retropad/retro_b.png)             |
-| Start                    | ![](../image/retropad/retro_start.png)         |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
-| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
-| 2                        | ![](../image/retropad/retro_a.png)             |
+| 1                        | ![](/image/retropad/retro_b.png)             |
+| Start                    | ![](/image/retropad/retro_start.png)         |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)       |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)     |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)     |
+| Right                    | ![](/image/retropad/retro_dpad_right.png)    |
+| 2                        | ![](/image/retropad/retro_a.png)             |
 
 ## Compatibility
 

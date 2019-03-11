@@ -263,19 +263,19 @@ The Neko Project II Kai core supports the following device type(s) in the contro
 
 | RetroPad Inputs                              | Joy2Key (Arrows) | Joy2Key (Keypad)           | Joy2Mouse            |
 |----------------------------------------------|------------------|----------------------------|----------------------|
-| ![](../image/retropad/retro_b.png)       | Z key            | Z key                      | Mouse left button    |
-| ![](../image/retropad/retro_y.png)       | Left control key | Left control key           |                      |
-| ![](../image/retropad/retro_select.png)        | Escape key       | Escape key                 |                      |
-| ![](../image/retropad/retro_start.png)         | Return key       | Return key                 |                      |
-| ![](../image/retropad/retro_dpad_up.png)       | Up arrow key     | Keypad Up arrow key (8)    | Move mouse up        |
-| ![](../image/retropad/retro_dpad_down.png)     | Down arrow key   | Keypad down arrow key (2)  | Move mouse down      |
-| ![](../image/retropad/retro_dpad_left.png)     | Left arrow key   | Keypad left arrow key (4)  | Move mouse left      |
-| ![](../image/retropad/retro_dpad_right.png)    | Right arrow key  | Keypad right arrow key (6) | Move mouse right     |
-| ![](../image/retropad/retro_a.png)       | X key            | X key                      | Mouse right button   |
-| ![](../image/retropad/retro_x.png)       | Space key        | Space key                  |                      |
-| ![](../image/retropad/retro_l1.png)            | Backspace key    | Backspace key              | Increase mouse speed |
-| ![](../image/retropad/retro_r1.png)            | Right shift key  | Right shift key            |                      |
-| ![](../image/retropad/retro_l2.png)            | NP2 menu key     | NP2 menu key               | NP2 menu key         |
+| ![](/image/retropad/retro_b.png)       | Z key            | Z key                      | Mouse left button    |
+| ![](/image/retropad/retro_y.png)       | Left control key | Left control key           |                      |
+| ![](/image/retropad/retro_select.png)        | Escape key       | Escape key                 |                      |
+| ![](/image/retropad/retro_start.png)         | Return key       | Return key                 |                      |
+| ![](/image/retropad/retro_dpad_up.png)       | Up arrow key     | Keypad Up arrow key (8)    | Move mouse up        |
+| ![](/image/retropad/retro_dpad_down.png)     | Down arrow key   | Keypad down arrow key (2)  | Move mouse down      |
+| ![](/image/retropad/retro_dpad_left.png)     | Left arrow key   | Keypad left arrow key (4)  | Move mouse left      |
+| ![](/image/retropad/retro_dpad_right.png)    | Right arrow key  | Keypad right arrow key (6) | Move mouse right     |
+| ![](/image/retropad/retro_a.png)       | X key            | X key                      | Mouse right button   |
+| ![](/image/retropad/retro_x.png)       | Space key        | Space key                  |                      |
+| ![](/image/retropad/retro_l1.png)            | Backspace key    | Backspace key              | Increase mouse speed |
+| ![](/image/retropad/retro_r1.png)            | Right shift key  | Right shift key            |                      |
+| ![](/image/retropad/retro_l2.png)            | NP2 menu key     | NP2 menu key               | NP2 menu key         |
 
 #### Keyboard
 
@@ -394,10 +394,10 @@ Supported combinations
 
 | RetroMouse Inputs                                   | NP2 Mouse Inputs   |
 |-----------------------------------------------------|--------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | NP2 menu key       |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
+| ![](/image/retromouse/retro_middle.png) Mouse 3     | NP2 menu key       |
 
 ## Compatibility
 

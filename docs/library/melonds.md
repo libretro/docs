@@ -109,22 +109,22 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-![](../image/controller/nds.png)
+![](/image/controller/nds.png)
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)          |
-| Y                        | ![](../image/retropad/retro_y.png)          |
-| Select                   | ![](../image/retropad/retro_select.png)     |
-| Start                    | ![](../image/retropad/retro_start.png)      |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)          |
-| X                        | ![](../image/retropad/retro_x.png)          |
-| L                        | ![](../image/retropad/retro_l1.png)         |
-| R                        | ![](../image/retropad/retro_r1.png)         |
+| B                        | ![](/image/retropad/retro_b.png)          |
+| Y                        | ![](/image/retropad/retro_y.png)          |
+| Select                   | ![](/image/retropad/retro_select.png)     |
+| Start                    | ![](/image/retropad/retro_start.png)      |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](/image/retropad/retro_dpad_right.png) |
+| A                        | ![](/image/retropad/retro_a.png)          |
+| X                        | ![](/image/retropad/retro_x.png)          |
+| L                        | ![](/image/retropad/retro_l1.png)         |
+| R                        | ![](/image/retropad/retro_r1.png)         |
 
 ## Compatibility
 

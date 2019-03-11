@@ -162,14 +162,14 @@ The Reicast core has the following option(s) that can be tweaked from the core o
 <center>
 
 ??? note "Internal resolution - 640x480"
-	![](..\image\core\reicast\640x480.png)
+	![](/image/core/reicast640x480.png)
 	
 </center>
 
 <center>
 	
 ??? note "Internal resolution - 1920x1440"
-	![](..\image\core\reicast\1920x1440.png)
+	![](/image/core/reicast1920x1440.png)
 	
 </center>
 
@@ -233,25 +233,25 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 
 #### Joypad and analog device type table
 
-![](../image/controller/dc.png)
+![](/image/controller/dc.png)
 
 | User 1 - 4 input descriptors |                                             | RetroPad           |
 |------------------------------|---------------------------------------------|--------------------|
-| A                            | ![](../image/retropad/retro_b.png)      | A                  |
-| X                            | ![](../image/retropad/retro_y.png)      | X                  |
-| Start                        | ![](../image/retropad/retro_start.png)        | Start              |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)      | D-Pad Up           |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)    | D-Pad Down         |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)    | D-Pad Left         |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   | D-Pad Right        |
-| B                            | ![](../image/retropad/retro_a.png)      | B                  |
-| Y                            | ![](../image/retropad/retro_x.png)      | Y                  |
-| L (fierce)                   | ![](../image/retropad/retro_l1.png)           | L (fierce)         |
-| R (fierce)                   | ![](../image/retropad/retro_r1.png)           | R (fierce)         |
-| L (weak)                     | ![](../image/retropad/retro_l2.png)           | L (weak)           |
-| R (weak)                     | ![](../image/retropad/retro_r2.png)           | R (weak)           |
-| Analog X                     | ![](../image/retropad/retro_left_stick.png) X | Analog X           |
-| Analog Y                     | ![](../image/retropad/retro_left_stick.png) Y | Analog Y           |
+| A                            | ![](/image/retropad/retro_b.png)      | A                  |
+| X                            | ![](/image/retropad/retro_y.png)      | X                  |
+| Start                        | ![](/image/retropad/retro_start.png)        | Start              |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)      | D-Pad Up           |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)    | D-Pad Down         |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)    | D-Pad Left         |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)   | D-Pad Right        |
+| B                            | ![](/image/retropad/retro_a.png)      | B                  |
+| Y                            | ![](/image/retropad/retro_x.png)      | Y                  |
+| L (fierce)                   | ![](/image/retropad/retro_l1.png)           | L (fierce)         |
+| R (fierce)                   | ![](/image/retropad/retro_r1.png)           | R (fierce)         |
+| L (weak)                     | ![](/image/retropad/retro_l2.png)           | L (weak)           |
+| R (weak)                     | ![](/image/retropad/retro_r2.png)           | R (weak)           |
+| Analog X                     | ![](/image/retropad/retro_left_stick.png) X | Analog X           |
+| Analog Y                     | ![](/image/retropad/retro_left_stick.png) Y | Analog Y           |
 
 ## Compatibility
 

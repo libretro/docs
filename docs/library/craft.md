@@ -69,36 +69,36 @@ World data is saved/loaded to and from 'craft.db' in RetroArch's system director
 - **Resolution (restart)** (**640x480**/320x200/640x400/960x600/1280x800/1600x1000/1920x1200/2240x1400/2560x1600/2880x1800/3200x2000/3520x2200/3840x2400/7680x4320/15360x8640/16000x9000/320x240/320x480/360x200/360x240/360x400/360x480/400x224/480x272/512x224/512x240/512x384/512x512/640x224/640x240/640x448/720x576/800x480/800x600/960x720/1024x768/1280x720/1366x768/1600x900/1920x1080/2048x2048/4096x4096): Configure the resolution.
 
 ??? note "Resolution - 320x240"
-	![](..\image\core\craft\320x240.png)
+	![](/image/core/craft320x240.png)
 
 ??? note "Resolution - 1920x1080"
-	![](..\image\core\craft\1920x1080.png)
+	![](/image/core/craft1920x1080.png)
 
 - **Show info text** (**Off**/On): Show game information in the upper left corner of Craft.
 
 ??? note "Show info text - Off"
-	![](..\image\core\craft\show_info_text_off.png)
+	![](/image/core/craftshow_info_text_off.png)
 
 ??? note "Show info text - On"
-	![](..\image\core\craft\show_info_text_on.png)
+	![](/image/core/craftshow_info_text_on.png)
 
 - **Jumping Flash mode** (**Off**/On):  Enabling this allows you to jump infinitely into the air all while the camera faces downwards.
 
 - **Field of view** (**65**/70/75/80/85/90/95/100/105/110/115/120/125/130/135/140/145/150): Configure the field of view.
 
 ??? note "Field of view - 65"
-	![](..\image\core\craft\fov_65.png)
+	![](/image/core/craftfov_65.png)
 
 ??? note "Field of view - 125"
-	![](..\image\core\craft\fov_125.png)
+	![](/image/core/craftfov_125.png)
 
 - **Draw distance** (**10**/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/28/29/30/31/32/9/8/7/6/5/4/3/2/1): Configure the draw distance.
 
 ??? note "Draw distance - 10"
-	![](..\image\core\craft\draw_distance_10.png)
+	![](/image/core/craftdraw_distance_10.png)
 
 ??? note "Draw distance - 32"
-	![](..\image\core\craft\draw_distance_32.png)
+	![](/image/core/craftdraw_distance_32.png)
 
 - **Inverted aim** (**Off**/On): Invert up and down crosshair aiming controls for the RetroPad and the RetroMouse.
 - **Right analog sensitivity** (**0.0150**/0.0175/0.0200/0.0225/0.0250/0.0275/0.0300/0.0325/0.0350/0.0375/0.0400/0.0425/0.0450/0.0475/0.0500): Modify the RetroPad right analog stick's sensitivity.
@@ -118,45 +118,45 @@ World data is saved/loaded to and from 'craft.db' in RetroArch's system director
 
 | RetroPad Inputs                                | Craft core inputs         |
 |------------------------------------------------|---------------------------|
-| ![](../image/retropad/retro_b.png)             | Jump                      |
-| ![](../image/retropad/retro_y.png)             | Destroy block             |
-| ![](../image/retropad/retro_select.png)        | Zoom out                  |
-| ![](../image/retropad/retro_dpad_up.png)       | Move forwards             |
-| ![](../image/retropad/retro_dpad_down.png)     | Move backwards            |
-| ![](../image/retropad/retro_dpad_left.png)     | Move crosshair left       |
-| ![](../image/retropad/retro_dpad_right.png)    | Move crosshair right      |
-| ![](../image/retropad/retro_a.png)             | Next block                |
-| ![](../image/retropad/retro_x.png)             | Place block               |
-| ![](../image/retropad/retro_l1.png)            | Move left                 |
-| ![](../image/retropad/retro_r1.png)            | Move right                |
-| ![](../image/retropad/retro_l2.png)            | Move crosshair up         |
-| ![](../image/retropad/retro_r2.png)            | Move corsshair down       |
-| ![](../image/retropad/retro_left_stick.png) X  | Move left/right           |
-| ![](../image/retropad/retro_left_stick.png) Y  | Move up/down              |
-| ![](../image/retropad/retro_right_stick.png) X | Move crosshair left/right |
-| ![](../image/retropad/retro_right_stick.png) Y | Move crosshair up/down    |
+| ![](/image/retropad/retro_b.png)             | Jump                      |
+| ![](/image/retropad/retro_y.png)             | Destroy block             |
+| ![](/image/retropad/retro_select.png)        | Zoom out                  |
+| ![](/image/retropad/retro_dpad_up.png)       | Move forwards             |
+| ![](/image/retropad/retro_dpad_down.png)     | Move backwards            |
+| ![](/image/retropad/retro_dpad_left.png)     | Move crosshair left       |
+| ![](/image/retropad/retro_dpad_right.png)    | Move crosshair right      |
+| ![](/image/retropad/retro_a.png)             | Next block                |
+| ![](/image/retropad/retro_x.png)             | Place block               |
+| ![](/image/retropad/retro_l1.png)            | Move left                 |
+| ![](/image/retropad/retro_r1.png)            | Move right                |
+| ![](/image/retropad/retro_l2.png)            | Move crosshair up         |
+| ![](/image/retropad/retro_r2.png)            | Move corsshair down       |
+| ![](/image/retropad/retro_left_stick.png) X  | Move left/right           |
+| ![](/image/retropad/retro_left_stick.png) Y  | Move up/down              |
+| ![](/image/retropad/retro_right_stick.png) X | Move crosshair left/right |
+| ![](/image/retropad/retro_right_stick.png) Y | Move crosshair up/down    |
 
 | RetroKeyboard                                                                                          | Craft                |
 |--------------------------------------------------------------------------------------------------------|----------------------|
-| ![Retro_Keyboard_Arrow_Up](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Up.png)       | Move forward         |
-| ![Retro_Keyboard_Arrow_Down](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Down.png)   | Move backwards       |
-| ![Retro_Keyboard_Arrow_Left](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Left.png)   | Move crosshair left  |
-| ![Retro_Keyboard_Arrow_Right](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Arrow_Right.png) | Move crosshair right |
-| ![Retro_Keyboard_Right_Shift](image\Button_Pack\Keyboard_&_Mouse\Dark\Keyboard_Black_Shift_Alt.png)   | Zoom out             |
+| ![Retro_Keyboard_Arrow_Up](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | Move forward         |
+| ![Retro_Keyboard_Arrow_Down](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | Move backwards       |
+| ![Retro_Keyboard_Arrow_Left](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | Move crosshair left  |
+| ![Retro_Keyboard_Arrow_Right](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | Move crosshair right |
+| ![Retro_Keyboard_Right_Shift](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift_Alt.png)   | Zoom out             |
 
 | RetroMouse                                                      | Craft          |
 |-----------------------------------------------------------------|----------------|
-| ![Retro_Mouse](image/RetroMouse/Retro_Mouse.png)               | Move crosshair |
-| ![Retro_Left](image/RetroMouse/Retro_Left.png)                 | Destroy block  |
-| ![Retro_Middle](image/RetroMouse/Retro_Middle.png)             | Copy block     |
-| ![Retro_Right](image/RetroMouse/Retro_Right.png)               | Place block    |
+| ![Retro_Mouse](/image/RetroMouse/Retro_Mouse.png)               | Move crosshair |
+| ![Retro_Left](/image/RetroMouse/Retro_Left.png)                 | Destroy block  |
+| ![Retro_Middle](/image/RetroMouse/Retro_Middle.png)             | Copy block     |
+| ![Retro_Right](/image/RetroMouse/Retro_Right.png)               | Place block    |
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | -                         |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | -                         |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | -                         |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | -                         |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | -                         |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | -                         |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | -                         |
+| ![](/image/retromouse/retro_middle.png) Mouse 3     | -                         |
 | Mouse 4                                               | -                         |
 | Mouse 5                                               | -                         |
 | Wheel Up                                              | -                         |

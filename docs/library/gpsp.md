@@ -102,18 +102,18 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 
 #### Joypad
 
-![](../image/controller/gba.png)
+![](/image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
-| Select                   | ![](../image/retropad/retro_select.png)     |
-| Start                    | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) | 
-| A                        | ![](../image/retropad/retro_a.png)    |
+| B                        | ![](/image/retropad/retro_b.png)    |
+| Select                   | ![](/image/retropad/retro_select.png)     |
+| Start                    | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) | 
+| A                        | ![](/image/retropad/retro_a.png)    |
 
 ## Compatibility
 
@@ -145,13 +145,13 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 | Yoshi’s Universal Gravitation       |The tilt sensor is not emulated.|
 
 ??? note "(1)"
-	![](images/Cores/gpsp/goku.png)
+	![](/images/cores/gpsp/goku.png)
 
 ??? note "(2)"
-	![](images/Cores/gpsp/sims.png)
+	![](/images/cores/gpsp/sims.png)
 
 ??? note "(3)"
-	![](images/Cores/gpsp/fighter.png)
+	![](/images/cores/gpsp/fighter.png)
 
 ## External Links
 

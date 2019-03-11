@@ -20,7 +20,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 3. Create a file named game.crawlrc in the root of the game directory.
 4. Load game.crawlrc with the Dungeon Crawl Stone Soup core.
 
-![](../image/core/stone_soup/dat.png)
+![](/image/core/stone_soup/dat.png)
 
 ## Extensions
 
@@ -91,18 +91,18 @@ The Dungeon Crawl Stone Soup core saves/loads to/from these directories.
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| Enter                    | ![](../image/retropad/retro_b.png)          |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| Enter                    | ![](/image/retropad/retro_b.png)          |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](/image/retropad/retro_dpad_right.png) |
 
 ## Pointer
 
 | RetroPointer Inputs                                                                                                      | Dungeon Crawl Stone Soup inputs |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Cursor                          | 
-| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Click                           |
+| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Cursor                          | 
+| ![](/image/retromouse/retro_left.png) or ![](/image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Click                           |
 
 ## External Links
 

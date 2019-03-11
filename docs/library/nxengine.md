@@ -8,17 +8,17 @@ NXEngine is a open source reproduction of the [Cave Story game engine](https://e
 
 - To start the NXEngine core, you need to obtain NXEngine's data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](..\image\core\all\download.png) </center>
+<center> ![](/image/core/alldownload.png) </center>
 
 - Select 'NXEngine'', then select 'Cave Story (En).zip'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](..\image\core\nxengine\down_story.png) </center>
+<center> ![](/image/core/nxenginedown_story.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](..\image\core\all\load.png) </center>
+<center> ![](/image/core/allload.png) </center>
 
-<center> ![](..\image\core\all\downloads.png) </center>
+<center> ![](/image/core/alldownloads.png) </center>
 
 - Select the 'Cave Story (en)' directory, then select 'Doukutsu.exe'.
 
@@ -113,17 +113,17 @@ The NXEngine core supports the following device type(s) in the controls menu, bo
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| Jump                     | ![](../image/retropad/retro_b.png)          |
-| Settings                 | ![](../image/retropad/retro_select.png)     |
-| Inventory                | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| Fire                     | ![](../image/retropad/retro_a.png)          |
-| Show/Hide Map            | ![](../image/retropad/retro_x.png)          |
-| Previous Weapon          | ![](../image/retropad/retro_l1.png)         |
-| Next Weapon              | ![](../image/retropad/retro_r1.png)         |
+| Jump                     | ![](/image/retropad/retro_b.png)          |
+| Settings                 | ![](/image/retropad/retro_select.png)     |
+| Inventory                | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
+| Fire                     | ![](/image/retropad/retro_a.png)          |
+| Show/Hide Map            | ![](/image/retropad/retro_x.png)          |
+| Previous Weapon          | ![](/image/retropad/retro_l1.png)         |
+| Next Weapon              | ![](/image/retropad/retro_r1.png)         |
 
 ## External Links
 

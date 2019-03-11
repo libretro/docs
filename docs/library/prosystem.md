@@ -101,30 +101,30 @@ The ProSystem core supports the following device type(s) in the controls menu, b
 
 #### Joypad
 
-![](../image/controller/atari_7800.png)
+![](/image/controller/atari_7800.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)          |
-| Console Select           | ![](../image/retropad/retro_select.png)     |
-| Console Pause            | ![](../image/retropad/retro_start.png)      |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| 2                        | ![](../image/retropad/retro_a.png)          |
-| Console Reset            | ![](../image/retropad/retro_x.png)          |
-| Left Difficulty          | ![](../image/retropad/retro_l1.png)         |
-| Right Difficulty         | ![](../image/retropad/retro_r1.png)         |
+| B                        | ![](/image/retropad/retro_b.png)          |
+| Console Select           | ![](/image/retropad/retro_select.png)     |
+| Console Pause            | ![](/image/retropad/retro_start.png)      |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](/image/retropad/retro_dpad_right.png) |
+| 2                        | ![](/image/retropad/retro_a.png)          |
+| Console Reset            | ![](/image/retropad/retro_x.png)          |
+| Left Difficulty          | ![](/image/retropad/retro_l1.png)         |
+| Right Difficulty         | ![](/image/retropad/retro_r1.png)         |
 
 | User 2 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| 1                        | ![](../image/retropad/retro_b.png)          |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) |
-| 2                        | ![](../image/retropad/retro_a.png)          |
+| 1                        | ![](/image/retropad/retro_b.png)          |
+| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](/image/retropad/retro_dpad_right.png) |
+| 2                        | ![](/image/retropad/retro_a.png)          |
 
 ## External Links
 

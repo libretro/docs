@@ -291,17 +291,17 @@ The Fuse core supports the following device type(s) in the controls menu, bolded
 
 | User 1 - 7 input descriptors | RetroPad Inputs                             |
 |------------------------------|---------------------------------------------|
-| Up                           | ![](../image/retropad/retro_b.png)          |
-| Fire                         | ![](../image/retropad/retro_y.png)          |
-| Keyboard overlay             | ![](../image/retropad/retro_select.png)     |
-| Up                           | ![](../image/retropad/retro_dpad_up.png)    |
-| Down                         | ![](../image/retropad/retro_dpad_down.png)  |
-| Left                         | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                        | ![](../image/retropad/retro_dpad_right.png) |
-| Fire                         | ![](../image/retropad/retro_a.png)          |
-| Fire                         | ![](../image/retropad/retro_x.png)          |
-| Enter                        | ![](../image/retropad/retro_l1.png)         |
-| Space                        | ![](../image/retropad/retro_r1.png)         |
+| Up                           | ![](/image/retropad/retro_b.png)          |
+| Fire                         | ![](/image/retropad/retro_y.png)          |
+| Keyboard overlay             | ![](/image/retropad/retro_select.png)     |
+| Up                           | ![](/image/retropad/retro_dpad_up.png)    |
+| Down                         | ![](/image/retropad/retro_dpad_down.png)  |
+| Left                         | ![](/image/retropad/retro_dpad_left.png)  |
+| Right                        | ![](/image/retropad/retro_dpad_right.png) |
+| Fire                         | ![](/image/retropad/retro_a.png)          |
+| Fire                         | ![](/image/retropad/retro_x.png)          |
+| Enter                        | ![](/image/retropad/retro_l1.png)         |
+| Space                        | ![](/image/retropad/retro_r1.png)         |
 
 ### Keyboard
 

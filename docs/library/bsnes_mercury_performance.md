@@ -138,19 +138,19 @@ There are two ways to access the Subsystem API.
 
 First, we load our GameBoy ROM through 'Load Super GameBoy' in RetroArch's Main Menu.
 
-![](../image/core/bsnes/menu1.png)
+![](/image/core/bsnes/menu1.png)
 
-![](../image/core/bsnes/gb.png)
+![](/image/core/bsnes/gb.png)
 
 Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
 
-![](../image/core/bsnes/menu2.png)
+![](/image/core/bsnes/menu2.png)
 
-![](../image/core/bsnes/sgb.png)
+![](/image/core/bsnes/sgb.png)
 
 Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
 
-![](../image/core/bsnes/start.png)
+![](/image/core/bsnes/start.png)
 
 **The other way is to launch RetroArch with commandline like this.**
 
@@ -210,10 +210,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
 	
 ??? note "Gamma ramp - Disabled"
-    ![](../image/core/higan/gamma_off.png)
+    ![](/image/core/higan/gamma_off.png)
 	
 ??? note "Gamma ramp - Enabled"
-    ![](../image/core/higan/gamma_on.png)
+    ![](/image/core/higan/gamma_on.png)
 	
 ## Controllers
 
@@ -243,36 +243,36 @@ Activating multitap support in compatible games can be configured by switching t
 
 #### Joypad
 
-![](../image/controller/snes.png)
+![](/image/controller/snes.png)
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/retro_y.png)    |
-| Select                       | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| X                            | ![](../image/retropad/retro_x.png)    |
-| L                            | ![](../image/retropad/retro_l1.png)         |
-| R                            | ![](../image/retropad/retro_r1.png)         |
+| B                            | ![](/image/retropad/retro_b.png)    |
+| Y                            | ![](/image/retropad/retro_y.png)    |
+| Select                       | ![](/image/retropad/retro_select.png)     |
+| Start                        | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)    |
+| X                            | ![](/image/retropad/retro_x.png)    |
+| L                            | ![](/image/retropad/retro_l1.png)         |
+| R                            | ![](/image/retropad/retro_r1.png)         |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | SNES Mouse                |
 |-----------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 #### Lightgun
 
 | RetroLightgun Inputs                                 | SuperScope                | Justifier(s)        |
 |------------------------------------------------------|---------------------------|---------------------|
-| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
+| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
 | Gun Trigger                                          | SuperScope Trigger        | Justifier Trigger   |
 | Gun Aux A                                            | SuperScope Cursor         |                     |
 | Gun Aux B                                            | SuperScope Turbo          |                     |

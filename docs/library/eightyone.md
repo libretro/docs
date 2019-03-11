@@ -29,15 +29,15 @@ EightyOne emulates a number of ZX80, ZX81, clones, and other computers based on 
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](..\image\core\all\updater.png) </center>
+<center> ![](/image/core/allupdater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](..\image\core\all\info.png) </center>
+<center> ![](/image/core/allinfo.png) </center>
 
 - Browse through the list and select 'ZX81 (EightyOne)'.
 
-<center> ![](..\image\core\updater\eightyone.png) </center>
+<center> ![](/image/core/updatereightyone.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -45,7 +45,7 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](..\image\core\all\load.png) </center>
+<center> ![](/image/core/allload.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
@@ -163,23 +163,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enable the [Chroma 81](http://www.fruitcake.plus.com/Sinclair/ZX81/Chroma/ChromaInterface.htm) interface (colorization).
 
 ??? note "Emulate Chroma 81 - auto/On"	
-	![](../image/core/eightyone/chroma_on.png)
+	![](/image/core/eightyone/chroma_on.png)
 
 ??? note "Emulate Chroma 81 - Off"
-	![](../image/core/eightyone/chroma_off.png)
+	![](/image/core/eightyone/chroma_off.png)
 	
 - **Video Presets** (**clean**/tv/noisy)
 
 	Change how the video is emulated (if Chroma 81 is enabled, the video is set to "clean" regardless of this option).
 
 ??? note "Video Presets - clean"
-	![](../image/core/eightyone/clean.png)
+	![](/image/core/eightyone/clean.png)
 
 ??? note "Video Presets - tv"
-	![](../image/core/eightyone/tv.png)
+	![](/image/core/eightyone/tv.png)
 	
 ??? note "Video Presets - noisy"
-	![](../image/core/eightyone/clean.png)
+	![](/image/core/eightyone/clean.png)
 	
 - **Sound emulation** (**auto**/none/Zon X-81)
 
@@ -238,10 +238,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	If the keyboard overlay is transparent or opaque.
 	
 ??? note "Transparent Keyboard Overlay - On"
-	![](../image/core/eightyone/trans_on.png)
+	![](/image/core/eightyone/trans_on.png)
 	
 ??? note "Transparent Keyboard Overlay - Off"
-	![](../image/core/eightyone/trans_off.png)
+	![](/image/core/eightyone/trans_off.png)
 
 - **Time to Release key in ms** (**100**/300/500/1000)
 
@@ -272,19 +272,19 @@ The EightyOne core supports the following device type(s) in the controls menu, b
 
 | User 1 Remap descriptors      | RetroPad Inputs                              | Cursor Joystick          |
 |-------------------------------|----------------------------------------------|--------------------------|
-|                               | ![](../image/retropad/retro_b.png)       | Joypad B button mapping  |               
-|                               | ![](../image/retropad/retro_y.png)       | Joypad Y button mapping  |                
-|                               | ![](../image/retropad/retro_select.png)        | Keyboard overlay         |         
-|                               | ![](../image/retropad/retro_dpad_up.png)       | Joypad Up mapping        |          
-|                               | ![](../image/retropad/retro_dpad_down.png)     | Joypad Down mapping      |            
-|                               | ![](../image/retropad/retro_dpad_left.png)     | Joypad Left mapping      |            
-|                               | ![](../image/retropad/retro_dpad_right.png)    | Joypad Right mapping     |            
-|                               | ![](../image/retropad/retro_a.png)       | Joypad A button mapping  |                
-|                               | ![](../image/retropad/retro_x.png)       | Joypad X button mapping  |                
-|                               | ![](../image/retropad/retro_l1.png)            | Joypad L button mapping  |               
-|                               | ![](../image/retropad/retro_r1.png)            | Joypad R button mapping  |                  
-|                               | ![](../image/retropad/retro_l2.png)            | Joypad L2 button mapping |               
-|                               | ![](../image/retropad/retro_r2.png)            | Joypad R2 button mapping |                
+|                               | ![](/image/retropad/retro_b.png)       | Joypad B button mapping  |               
+|                               | ![](/image/retropad/retro_y.png)       | Joypad Y button mapping  |                
+|                               | ![](/image/retropad/retro_select.png)        | Keyboard overlay         |         
+|                               | ![](/image/retropad/retro_dpad_up.png)       | Joypad Up mapping        |          
+|                               | ![](/image/retropad/retro_dpad_down.png)     | Joypad Down mapping      |            
+|                               | ![](/image/retropad/retro_dpad_left.png)     | Joypad Left mapping      |            
+|                               | ![](/image/retropad/retro_dpad_right.png)    | Joypad Right mapping     |            
+|                               | ![](/image/retropad/retro_a.png)       | Joypad A button mapping  |                
+|                               | ![](/image/retropad/retro_x.png)       | Joypad X button mapping  |                
+|                               | ![](/image/retropad/retro_l1.png)            | Joypad L button mapping  |               
+|                               | ![](/image/retropad/retro_r1.png)            | Joypad R button mapping  |                  
+|                               | ![](/image/retropad/retro_l2.png)            | Joypad L2 button mapping |               
+|                               | ![](/image/retropad/retro_r2.png)            | Joypad R2 button mapping |                
 
 #### Keyboard
 

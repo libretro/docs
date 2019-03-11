@@ -250,30 +250,30 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                                | 2 Button  | CPSF-MD (8 Buttons) | CPSF-SFC (8 Buttons) |
 |------------------------------|------------------------------------------------|-----------|---------------------|----------------------|
-| B                            | ![](../image/retropad/retro_b.png)             | JOY_TRG2  | JOY_TRG2            | JOY_TRG1             |
-| Y                            | ![](../image/retropad/retro_y.png)             | JOY_TRG1  | JOY_TRG3            | JOY_TRG4             |
-| Select                       | ![](../image/retropad/retro_select.png)        | JOY_LEFT  | JOY_TRG7            | JOY_TRG7             |
-| Start                        | ![](../image/retropad/retro_start.png)         | JOY_RIGHT | JOY_TRG6            | JOY_TRG6             |
-| Up                           | ![](../image/retropad/retro_dpad_up.png)       | JOY_UP    | JOY_UP              | JOY_UP               |
-| Down                         | ![](../image/retropad/retro_dpad_down.png)     | JOY_DOWN  | JOY_DOWN            | JOY_DOWN             |
-| Left                         | ![](../image/retropad/retro_dpad_left.png)     | JOY_LEFT  | JOY_LEFT            | JOY_LEFT             |
-| Right                        | ![](../image/retropad/retro_dpad_right.png)    | JOY_RIGHT | JOY_RIGHT           | JOY_RIGHT            |
-| A                            | ![](../image/retropad/retro_a.png)             | JOY_TRG1  | JOY_TRG1            | JOY_TRG2             |
-| X                            | ![](../image/retropad/retro_x.png)             | JOY_TRG2  | JOY_TRG4            | JOY_TRG3             |
-| L                            | ![](../image/retropad/retro_l1.png)            | JOY_TRG1  | JOY_TRG5            | JOY_TRG8             |
-| R                            | ![](../image/retropad/retro_r1.png)            | JOY_TRG2  | JOY_TRG8            | JOY_TRG5             |
-| L2 - Menu                    | ![](../image/retropad/retro_l2.png)            | Menu      | Menu                | Menu                 |
-| R2                           | ![](../image/retropad/retro_r2.png)            |           |                     |                      |
-| L3                           | ![](../image/retropad/retro_l3.png)            |           |                     |                      |
-| R3                           | ![](../image/retropad/retro_r3.png)            |           |                     |                      |
-|                              | ![](../image/retropad/retro_left_stick.png) X  |           |                     |                      |
-|                              | ![](../image/retropad/retro_left_stick.png) Y  |           |                     |                      |
-|                              | ![](../image/retropad/retro_right_stick.png) X |           |                     |                      |
-|                              | ![](../image/retropad/retro_right_stick.png) Y |           |                     |                      |
+| B                            | ![](/image/retropad/retro_b.png)             | JOY_TRG2  | JOY_TRG2            | JOY_TRG1             |
+| Y                            | ![](/image/retropad/retro_y.png)             | JOY_TRG1  | JOY_TRG3            | JOY_TRG4             |
+| Select                       | ![](/image/retropad/retro_select.png)        | JOY_LEFT  | JOY_TRG7            | JOY_TRG7             |
+| Start                        | ![](/image/retropad/retro_start.png)         | JOY_RIGHT | JOY_TRG6            | JOY_TRG6             |
+| Up                           | ![](/image/retropad/retro_dpad_up.png)       | JOY_UP    | JOY_UP              | JOY_UP               |
+| Down                         | ![](/image/retropad/retro_dpad_down.png)     | JOY_DOWN  | JOY_DOWN            | JOY_DOWN             |
+| Left                         | ![](/image/retropad/retro_dpad_left.png)     | JOY_LEFT  | JOY_LEFT            | JOY_LEFT             |
+| Right                        | ![](/image/retropad/retro_dpad_right.png)    | JOY_RIGHT | JOY_RIGHT           | JOY_RIGHT            |
+| A                            | ![](/image/retropad/retro_a.png)             | JOY_TRG1  | JOY_TRG1            | JOY_TRG2             |
+| X                            | ![](/image/retropad/retro_x.png)             | JOY_TRG2  | JOY_TRG4            | JOY_TRG3             |
+| L                            | ![](/image/retropad/retro_l1.png)            | JOY_TRG1  | JOY_TRG5            | JOY_TRG8             |
+| R                            | ![](/image/retropad/retro_r1.png)            | JOY_TRG2  | JOY_TRG8            | JOY_TRG5             |
+| L2 - Menu                    | ![](/image/retropad/retro_l2.png)            | Menu      | Menu                | Menu                 |
+| R2                           | ![](/image/retropad/retro_r2.png)            |           |                     |                      |
+| L3                           | ![](/image/retropad/retro_l3.png)            |           |                     |                      |
+| R3                           | ![](/image/retropad/retro_r3.png)            |           |                     |                      |
+|                              | ![](/image/retropad/retro_left_stick.png) X  |           |                     |                      |
+|                              | ![](/image/retropad/retro_left_stick.png) Y  |           |                     |                      |
+|                              | ![](/image/retropad/retro_right_stick.png) X |           |                     |                      |
+|                              | ![](/image/retropad/retro_right_stick.png) Y |           |                     |                      |
 
 #### Keyboard
 
-![](../image/core/px68k/keyboard.jpg)
+![](/image/core/px68k/keyboard.jpg)
 
 | RetroKeyboard Inputs         | PX68k inputs              |
 |------------------------------|---------------------------|
@@ -419,9 +419,9 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 
 | RetroMouse Inputs                                     | PX68k inputs       |
 |-------------------------------------------------------|--------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | mouse Right Button |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | mouse Right Button |
 
 ## External Links
 

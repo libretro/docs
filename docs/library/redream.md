@@ -103,23 +103,23 @@ The Redream core saves/loads to/from these directories.
 
 ## Joypad
 
-![](../image/controller/dc.png)
+![](/image/controller/dc.png)
 
 | User 1 - 4 input descriptors | RetroPad Inputs                               |
 |------------------------------|-----------------------------------------------|
-| A                            | ![](../image/retropad/retro_b.png)            |
-| X                            | ![](../image/retropad/retro_y.png)            |
-| Start                        | ![](../image/retropad/retro_start.png)        |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)      |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)    |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)    | 
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   |
-| B                            | ![](../image/retropad/retro_a.png)            |
-| Y                            | ![](../image/retropad/retro_a.png)            | 
-| L                            | ![](../image/retropad/retro_l2.png)           |
-| R                            | ![](../image/retropad/retro_r2.png)           |
-| Analog X                     | ![](../image/retropad/retro_r3.png)           |
-| Analog Y                     | ![](../image/retropad/retro_left_stick.png) X |
+| A                            | ![](/image/retropad/retro_b.png)            |
+| X                            | ![](/image/retropad/retro_y.png)            |
+| Start                        | ![](/image/retropad/retro_start.png)        |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)      |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)    |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)    | 
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)   |
+| B                            | ![](/image/retropad/retro_a.png)            |
+| Y                            | ![](/image/retropad/retro_a.png)            | 
+| L                            | ![](/image/retropad/retro_l2.png)           |
+| R                            | ![](/image/retropad/retro_r2.png)           |
+| Analog X                     | ![](/image/retropad/retro_r3.png)           |
+| Analog Y                     | ![](/image/retropad/retro_left_stick.png) X |
 
 ## Compatibility
 

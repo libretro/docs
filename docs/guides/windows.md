@@ -4,7 +4,7 @@
 
 On the first run you will be greeted by this screen:
 
-![Screenshot](../image/windows/first_run.png)
+![Screenshot](/image/retroarch/xmb/first_run.png)
 
 From here you can launch content, change settings and build up your content collection.
 
@@ -16,7 +16,7 @@ The RetroArch user interface is designed with gamepad navigation in mind but it 
 
 XINPUT controllers should work out of the box. If the controller can be autoconfigured the OSD will inform you of the autoconfiguration event. We also include autoconf profiles for many popular controllers. If your controller doesn't auto configure you can follow this procedure:
 
-![Screenshot](../image/windows/autoconf.gif)
+![Screenshot](/image/retroarch/xmb/autoconf.gif)
 
 - Navigate to **Settings**
 - Navigate to **Input**
@@ -51,7 +51,7 @@ You should always configure the following paths:
 
 RetroArch requires cores to run any content. You can download cores directly from RetroArch's interface by following this procedure:
 
-![Screenshot](../image/windows/core_updater.gif)
+![Screenshot](/image/retroarch/xmb/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**
@@ -66,7 +66,7 @@ After you have installed one or more cores you can run your content following th
 - Select the content that you want to run
 - If you have more than one compatible core you will be asked to select the core you want to use for that purpose
 
-![Screenshot](../image/windows/run_content.gif)
+![Screenshot](/image/retroarch/xmb/run_content.gif)
 
 !!! tip
     By default loading content will trigger a content scan. If your content matches with any of our databases it will be added to a playlist for easy access. You can find the playlists by navigating to the right of the main menu.

@@ -99,18 +99,18 @@ The Beetle Cygne core supports the following device type(s) in the controls menu
 
 | User 1 Remap descriptors     | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Rotate screen + active D-Pad | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| X Cursor Up                  | ![](../image/retropad/retro_dpad_up.png)    |
-| X Cursor Down                | ![](../image/retropad/retro_dpad_down.png)  |
-| X Cursor Left                | ![](../image/retropad/retro_dpad_left.png)  |
-| X Cursor Right               | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| Y Cursor Left                | ![](../image/retropad/retro_l1.png)         |
-| Y Cursor Right               | ![](../image/retropad/retro_r1.png)         |
-| Y Cursor Down                | ![](../image/retropad/retro_l2.png)         |
-| Y Cursor Up                  | ![](../image/retropad/retro_r2.png)         |
+| B                            | ![](/image/retropad/retro_b.png)    |
+| Rotate screen + active D-Pad | ![](/image/retropad/retro_select.png)     |
+| Start                        | ![](/image/retropad/retro_start.png)      |
+| X Cursor Up                  | ![](/image/retropad/retro_dpad_up.png)    |
+| X Cursor Down                | ![](/image/retropad/retro_dpad_down.png)  |
+| X Cursor Left                | ![](/image/retropad/retro_dpad_left.png)  |
+| X Cursor Right               | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)    |
+| Y Cursor Left                | ![](/image/retropad/retro_l1.png)         |
+| Y Cursor Right               | ![](/image/retropad/retro_r1.png)         |
+| Y Cursor Down                | ![](/image/retropad/retro_l2.png)         |
+| Y Cursor Up                  | ![](/image/retropad/retro_r2.png)         |
 
 ## Compatibility
 

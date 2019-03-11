@@ -174,7 +174,7 @@ Load a SGB-supported GB/GBC rom.
 
 **Done**
 
-![](../image/core/higan/sgb.png)
+![](/image/core/higan/sgb.png)
 
 !!! warning
 	There may be graphical glitches when Rewind is set to On in RetroArch's settings.
@@ -199,42 +199,42 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "512x480"
-    ![](../image/core/higan/512x480.png)
+    ![](/image/core/higan/512x480.png)
 
 ??? note "512x448"
-    ![](../image/core/higan/512x448.png)
+    ![](/image/core/higan/512x448.png)
 
 ??? note "512x240"
-    ![](../image/core/higan/512x240.png)
+    ![](/image/core/higan/512x240.png)
 
 ??? note "512x224"
-    ![](../image/core/higan/512x224.png)
+    ![](/image/core/higan/512x224.png)
 
 ??? note "256x240"
-    ![](../image/core/higan/256x240.png)
+    ![](/image/core/higan/256x240.png)
 
 ??? note "256x224"
-    ![](../image/core/higan/256x224.png)
+    ![](/image/core/higan/256x224.png)
 
 - **Color emulation** [higan_sfc_color_emulation] (**OFF**|ON)
 
 	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
 	
 ??? note "Color emulation - Disabled"
-    ![](../image/core/higan/color_off.png)
+    ![](/image/core/higan/color_off.png)
 
 ??? note "Color emulation - Enabled"
-    ![](../image/core/higan/color_on.png)
+    ![](/image/core/higan/color_on.png)
 	
 - **Blur emulation** [higan_sfc_blur_emulation] (**OFF**|ON)
 
 	Simulates the limited horizontal resolution of standard-definition TVs by blurring together horizontally-adjacent pixels. Games like Jurassic Park for the Super Famicom depend on this to emulate a transparency effect.
 	
 ??? note "Blur emulation - Disabled"
-    ![](../image/core/higan/blur_off.png)
+    ![](/image/core/higan/blur_off.png)
 
 ??? note "Blur emulation - Enabled"
-    ![](../image/core/higan/blur_on.png)
+    ![](/image/core/higan/blur_on.png)
 	
 - **Scanline emulation** [higan_sfc_scanline_emulation] (**OFF**|ON)
 
@@ -272,30 +272,30 @@ Activating multitap support in compatible games can be configured by switching t
 
 #### Joypad
 
-![](../image/controller/snes.png)
+![](/image/controller/snes.png)
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/retro_y.png)    |
-| Select                       | ![](../image/retropad/retro_select.png)     |
-| Start                        | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| X                            | ![](../image/retropad/retro_x.png)    |
-| L                            | ![](../image/retropad/retro_l1.png)         |
-| R                            | ![](../image/retropad/retro_r1.png)         |
+| B                            | ![](/image/retropad/retro_b.png)    |
+| Y                            | ![](/image/retropad/retro_y.png)    |
+| Select                       | ![](/image/retropad/retro_select.png)     |
+| Start                        | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)    |
+| X                            | ![](/image/retropad/retro_x.png)    |
+| L                            | ![](/image/retropad/retro_l1.png)         |
+| R                            | ![](/image/retropad/retro_r1.png)         |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | SNES Mouse                |
 |-----------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 ## Compatibility
 

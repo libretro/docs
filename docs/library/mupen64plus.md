@@ -27,34 +27,6 @@ The graphic plugin GLideN64 is not available in Parallel-N64.
 
 Awaiting description.
 
-### How to get and install the Mupen64Plus core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](images\Cores\all\updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](images\Cores\all\info.png) </center>
-
-- Browse through the list and select 'Nintendo 64 (Mupen64Plus)'.
-
-<center> ![](images\Cores\updater\mupen64plus.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](images\Cores\all\load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'Nintendo 64 (Mupen64Plus)'.
-
-The content should now start running!
 
 ### Authors
 
@@ -363,23 +335,23 @@ Rumble only works in the Mupen64Plus core when
 
 | User 1 - 4 Remap descriptors  | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| A Button (C3)                 | ![](../image/retropad/retro_b.png)       |
-| B Button (C2)                 | ![](../image/retropad/retro_y.png)       |
-| START Button                  | ![](../image/retropad/retro_start.png)         |
-| Up (digital)                  | ![](../image/retropad/retro_dpad_up.png)       |
-| Down (digital)                | ![](../image/retropad/retro_dpad_down.png)     |
-| Left (digital)                | ![](../image/retropad/retro_dpad_left.png)     |
-| Right (digital)               | ![](../image/retropad/retro_dpad_right.png)    |
-| (C1)                          | ![](../image/retropad/retro_a.png)       |
-| (C4)                          | ![](../image/retropad/retro_x.png)       |
-| L-Trigger                     | ![](../image/retropad/retro_l1.png)            |
-| R-Trigger                     | ![](../image/retropad/retro_r1.png)            |
-| Z-Trigger                     | ![](../image/retropad/retro_l2.png)            | 
-| C Buttons Mode                | ![](../image/retropad/retro_r2.png)            |
-| Control Stick X               | ![](../image/retropad/retro_left_stick.png) X  |
-| Control Stick Y               | ![](../image/retropad/retro_left_stick.png) Y  |
-| C Buttons X                   | ![](../image/retropad/retro_right_stick.png) X |
-| C Buttons Y                   | ![](../image/retropad/retro_right_stick.png) Y |
+| A Button (C3)                 | ![](/image/retropad/retro_b.png)       |
+| B Button (C2)                 | ![](/image/retropad/retro_y.png)       |
+| START Button                  | ![](/image/retropad/retro_start.png)         |
+| Up (digital)                  | ![](/image/retropad/retro_dpad_up.png)       |
+| Down (digital)                | ![](/image/retropad/retro_dpad_down.png)     |
+| Left (digital)                | ![](/image/retropad/retro_dpad_left.png)     |
+| Right (digital)               | ![](/image/retropad/retro_dpad_right.png)    |
+| (C1)                          | ![](/image/retropad/retro_a.png)       |
+| (C4)                          | ![](/image/retropad/retro_x.png)       |
+| L-Trigger                     | ![](/image/retropad/retro_l1.png)            |
+| R-Trigger                     | ![](/image/retropad/retro_r1.png)            |
+| Z-Trigger                     | ![](/image/retropad/retro_l2.png)            | 
+| C Buttons Mode                | ![](/image/retropad/retro_r2.png)            |
+| Control Stick X               | ![](/image/retropad/retro_left_stick.png) X  |
+| Control Stick Y               | ![](/image/retropad/retro_left_stick.png) Y  |
+| C Buttons X                   | ![](/image/retropad/retro_right_stick.png) X |
+| C Buttons Y                   | ![](/image/retropad/retro_right_stick.png) Y |
 
 ## Compatibility
 

@@ -189,13 +189,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the crosshair for the 'Stunner' and 'Virtua Gun' device types. Setting it to Off disables the crosshair.
 	
 ??? note "Gun - Crosshair - Cross"
-	![](..\image\core\beetle_saturn\cross.png)
+	![](/image/core/beetle_saturncross.png)
 	
 ??? note "Gun - Crosshair - Dot"
-	![](..\image\core\beetle_saturn\dot.png)
+	![](/image/core/beetle_saturndot.png)
 
 ??? note "Gun - Crosshair - Off"
-	![](..\image\core\beetle_saturn\off.png)	
+	![](/image/core/beetle_saturnoff.png)	
 	
 - **CD Image Cache (restart)** [beetle_saturn_cdimagecache] (**disabled**|enabled)
 
@@ -238,10 +238,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "Enable Horizontal Blend(blur) - Off"
-	![](..\image\core\beetle_saturn\blend_off.png)
+	![](/image/core/beetle_saturnblend_off.png)
 	
 ??? note "Enable Horizontal Blend(blur) - On"
-	![](..\image\core\beetle_saturn\blend_on.png)
+	![](/image/core/beetle_saturnblend_on.png)
 	
 ## User 1 - 12 device types
 
@@ -264,38 +264,38 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 ## Joypad
 
-![](../image/controller/saturn.png)
+![](/image/controller/saturn.png)
 
 | RetroPad Inputs                                | User 1 - 12 input descriptors | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
 |------------------------------------------------|-------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|
-| ![](../image/retropad/retro_b.png)             | A Button                      | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
-| ![](../image/retropad/retro_y.png)             | X Button                      | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
-| ![](../image/retropad/retro_select.png)        | Mode Switch                   |              | Mode Switch    |                           |                |                     |                      |
-| ![](../image/retropad/retro_start.png)         | Start Button                  | Start Button | Start Button   | Start Button              | Start Button   | Start Button        | Start Button         |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                      | D-Pad Up     | D-Pad Up       |                           |                |                     |                      |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                    | D-Pad Down   | D-Pad Down     |                           |                |                     |                      |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                    | D-Pad Left   | D-Pad Left     |                           |                |                     |                      |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                   | D-Pad Right  | D-Pad Right    |                           |                |                     |                      |
-| ![](../image/retropad/retro_a.png)             | B Button                      | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
-| ![](../image/retropad/retro_x.png)             | Y Button                      | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
-| ![](../image/retropad/retro_l1.png)            | Z Button                      | Z Button     | Z Button       | Z Button                  | Z Button       | Left Stick Button   | Z Button             |
-| ![](../image/retropad/retro_r1.png)            | C Button                      | C Button     | C Button       | C Button                  | C Button       | Right Stick Button  | C Button             |
-| ![](../image/retropad/retro_l2.png)            | L Button                      | L Button     | L Button       | Left shift paddle (Up)    | L Button       | Left Stick Trigger  | L Button             |
-| ![](../image/retropad/retro_r2.png)            | R Button                      | R Button     | R Button       | Right shift paddle (Down) | R Button       | Right Stick Trigger | R Button             |
-| ![](../image/retropad/retro_r3.png)            |                               |              |                |                           | Throttle latch |                     | Throttle latch       |
-| ![](../image/retropad/retro_left_stick.png) X  | Analog X                      |              | Analog X       | Analog wheel              | Analog Stick X | Left Stick X        | Left Analog Stick X  |
-| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                      |              | Analog Y       |                           | Analog Stick Y | Left Stick Y        | Left Analog Stick Y  |
-| ![](../image/retropad/retro_right_stick.png) X | Analog X (Right)              |              |                |                           |                | Right Stick X       | Right Analog Stick X |
-| ![](../image/retropad/retro_right_stick.png) Y | Analog Y (Right)              |              |                |                           | Throttle       | Right Stick Y       | Right Analog Stick Y |
+| ![](/image/retropad/retro_b.png)             | A Button                      | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
+| ![](/image/retropad/retro_y.png)             | X Button                      | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
+| ![](/image/retropad/retro_select.png)        | Mode Switch                   |              | Mode Switch    |                           |                |                     |                      |
+| ![](/image/retropad/retro_start.png)         | Start Button                  | Start Button | Start Button   | Start Button              | Start Button   | Start Button        | Start Button         |
+| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                      | D-Pad Up     | D-Pad Up       |                           |                |                     |                      |
+| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                    | D-Pad Down   | D-Pad Down     |                           |                |                     |                      |
+| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                    | D-Pad Left   | D-Pad Left     |                           |                |                     |                      |
+| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                   | D-Pad Right  | D-Pad Right    |                           |                |                     |                      |
+| ![](/image/retropad/retro_a.png)             | B Button                      | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
+| ![](/image/retropad/retro_x.png)             | Y Button                      | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
+| ![](/image/retropad/retro_l1.png)            | Z Button                      | Z Button     | Z Button       | Z Button                  | Z Button       | Left Stick Button   | Z Button             |
+| ![](/image/retropad/retro_r1.png)            | C Button                      | C Button     | C Button       | C Button                  | C Button       | Right Stick Button  | C Button             |
+| ![](/image/retropad/retro_l2.png)            | L Button                      | L Button     | L Button       | Left shift paddle (Up)    | L Button       | Left Stick Trigger  | L Button             |
+| ![](/image/retropad/retro_r2.png)            | R Button                      | R Button     | R Button       | Right shift paddle (Down) | R Button       | Right Stick Trigger | R Button             |
+| ![](/image/retropad/retro_r3.png)            |                               |              |                |                           | Throttle latch |                     | Throttle latch       |
+| ![](/image/retropad/retro_left_stick.png) X  | Analog X                      |              | Analog X       | Analog wheel              | Analog Stick X | Left Stick X        | Left Analog Stick X  |
+| ![](/image/retropad/retro_left_stick.png) Y  | Analog Y                      |              | Analog Y       |                           | Analog Stick Y | Left Stick Y        | Left Analog Stick Y  |
+| ![](/image/retropad/retro_right_stick.png) X | Analog X (Right)              |              |                |                           |                | Right Stick X       | Right Analog Stick X |
+| ![](/image/retropad/retro_right_stick.png) Y | Analog Y (Right)              |              |                |                           | Throttle       | Right Stick Y       | Right Analog Stick Y |
 
 ## Mouse
 
 | RetroMouse Inputs                                     | Mouse        |
 |-------------------------------------------------------|--------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
+| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
+| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
+| ![](/image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
+| ![](/image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
 | Mouse 4                                               | Mouse Start  |
 | Mouse 5                                               | Mouse Start  |
 
@@ -303,7 +303,7 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 | RetroLightgun Inputs                                   | Stunner           | Virtua Gun           |
 |--------------------------------------------------------|-------------------|----------------------|
-| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Stunner Crosshair | Virtua Gun Crosshair |
+| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | Stunner Crosshair | Virtua Gun Crosshair |
 | Gun Trigger                                            | Stunner Trigger   | Virtua Gun Trigger   |
 | Gun Reload                                             | Stunner Reload    | Virtua Gun Reload    |
 | Gun Start                                              | Stunner Start     | Virtua Gun Start     |

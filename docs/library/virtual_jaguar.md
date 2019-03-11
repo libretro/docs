@@ -102,17 +102,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Needed for Doom to run in its correct resolution.
 	
 ??? note "*Doom Res Hack - Disabled*"
-    ![](..\image\core\virtual_jaguar\doom_off.png)
+    ![](/image/core/virtual_jaguardoom_off.png)
 
 ??? note "*Doom Res Hack - Enabled*"
-    ![](..\image\core\virtual_jaguar\doom_on.png)
+    ![](/image/core/virtual_jaguardoom_on.png)
 	
 - **Bios** [virtualjaguar_bios] (**disabled**|enabled)
 
 	Enables bios loading sequence.
 	
 ??? note "*Bios - Enabled*"
-    ![](..\image\core\virtual_jaguar\bios.png)
+    ![](/image/core/virtual_jaguarbios.png)
 	
 - **Pal (Restart)** [virtualjaguar_pal] (**disabled**|enabled)
 
@@ -132,26 +132,26 @@ The Virtual Jaguar core supports the following device type(s) in the controls me
 
 #### Joypad
 
-![](../image/controller/jaguar.png)
+![](/image/controller/jaguar.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                             |
 |------------------------------|---------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)          |
-| C                            | ![](../image/retropad/retro_y.png)          |
-| Pause                        | ![](../image/retropad/retro_select.png)     |
-| Option                       | ![](../image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)          |
-| Numpad 0                     | ![](../image/retropad/retro_x.png)          |
-| Numpad 1                     | ![](../image/retropad/retro_l1.png)         |
-| Numpad 2                     | ![](../image/retropad/retro_r1.png)         |
-| Numpad 3                     | ![](../image/retropad/retro_l2.png)         |
-| Numpad 4                     | ![](../image/retropad/retro_r2.png)         |
-| Numpad 5                     | ![](../image/retropad/retro_l3.png)         |
-| Numpad 6                     | ![](../image/retropad/retro_r3.png)         |
+| B                            | ![](/image/retropad/retro_b.png)          |
+| C                            | ![](/image/retropad/retro_y.png)          |
+| Pause                        | ![](/image/retropad/retro_select.png)     |
+| Option                       | ![](/image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
+| A                            | ![](/image/retropad/retro_a.png)          |
+| Numpad 0                     | ![](/image/retropad/retro_x.png)          |
+| Numpad 1                     | ![](/image/retropad/retro_l1.png)         |
+| Numpad 2                     | ![](/image/retropad/retro_r1.png)         |
+| Numpad 3                     | ![](/image/retropad/retro_l2.png)         |
+| Numpad 4                     | ![](/image/retropad/retro_r2.png)         |
+| Numpad 5                     | ![](/image/retropad/retro_l3.png)         |
+| Numpad 6                     | ![](/image/retropad/retro_r3.png)         |
 
 ## Compatibility
 
@@ -170,10 +170,10 @@ A reference compatibility table can be found on the bottom of this [page](https:
 | Wolfenstein 3D | Doesn't boot.                                           |
 
 ??? note "(1)"
-    ![](..\image\core\virtual_jaguar\cyber.png)
+    ![](/image/core/virtual_jaguarcyber.png)
 
 ??? note "(2)"
-    ![](..\image\core\virtual_jaguar\ninja.png)
+    ![](/image/core/virtual_jaguarninja.png)
 
 ## External Links
 
