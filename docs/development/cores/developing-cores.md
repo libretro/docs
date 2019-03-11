@@ -38,7 +38,7 @@ RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bpar
 
 ### `libretro-deps`
 
-[`libretro-deps`](https://github.com/libretro-libretro-deps/) is a collection of third-party dependencies, pre-modified for use by libretro cores.
+[`libretro-deps`](https://github.com/libretro/libretro-deps/) is a collection of third-party dependencies, pre-modified for use by libretro cores.
 
 
 ### `libretro-samples`
