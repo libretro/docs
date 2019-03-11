@@ -178,7 +178,7 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0,
 ## Result
 
 As you can see, it’s not a practical shader, but it shows the blurring effect to the extreme.
-![A blurry Super Metroid shader](../image/development/shaders/example-burry-shader.jpg)
+![A blurry Super Metroid shader](/image/development/shaders/example-burry-shader.jpg)
 
 
 -----------------------------------------------------------

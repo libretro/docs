@@ -23,7 +23,7 @@ You can see a partial list of the cores which are maintained as part of [libretr
 [Visit the overview on libretro core development](./cores/developing-cores.md).
 
 ## Frontend development resources
-[A growing list of libretro frontends](../tech/frontends.md) is available, reflecting a variety of host systems and use cases.
+[A growing list of libretro frontends](frontends.md) is available, reflecting a variety of host systems and use cases.
 
 ### RetroArch Reference Frontend
 RetroArch is the libretro "reference frontend" and is available across a wide range of host platforms. Learn more about RetroARch development in the section `For Developers > RetroArch Development`.
