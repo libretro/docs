@@ -103,7 +103,7 @@ The Lutro core supports the following device type(s) in the controls menu, bolde
 
 - None - Doesn't disable input. There's no reason to switch to this.
 - **RetroPad** - Joypad - Stay on this.
-- RetroPad w/Analog - Joypad - Same as RetroPad. There's no reaosn to switch to this.
+- RetroPad w/Analog - Joypad - Same as RetroPad. There's no reason to switch to this.
 
 ### Controller tables
 
