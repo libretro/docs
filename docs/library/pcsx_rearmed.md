@@ -23,11 +23,16 @@ Required or optional firmware files go in the frontend's system directory.
 !!! attention
 	In case the PCSX ReARMed core can find no BIOS files named like this in RetroArch's system directory, it will default to a High-Level Emulation BIOS. This decreases the level of compatibility of the emulator, so it is recommended that you always supply valid BIOS images inside the system directory.
 
-|   Filename    |    Description         |              md5sum              |
+|   Filename    |      Description       |              md5sum              |
 |:-------------:|:----------------------:|:--------------------------------:|
-| scph5500.bin  | PS1 JP BIOS - Optional | 8dd7d5296a650fac7319bce665a6a53c |
-| scph5501.bin  | PS1 US BIOS - Optional | 490f666e1afb15b7362b406ed1cea246 |
-| scph5502.bin  | PS1 EU BIOS - Optional | 32736f17079d0b2b7024407c39bd3050 |
+| scph101.bin   | Version 4.4 03/24/00 A | 6E3735FF4C7DC899EE98981385F6F3D0 |
+| scph7001.bin  | Version 4.1 12/16/97 A | 1e68c231d0896b7eadcad1d7d8e76129 |
+| scph5501.bin  | Version 3.0 11/18/96 A | 490f666e1afb15b7362b406ed1cea246 |
+| scph1001.bin  | Version 2.0 05/07/95 A | dc2b9bf8da62ec93e868cfd29f0d067d |
+
+In the event that none of the above is found, PCSX_ReARMed will search for filenames starting with "scph" and use that instead.
+It doesnt seem to matter whatever bios version is used and from what region as long as its from a retail psx/ps-one.
+If no compatible bios is found, PCSX_ReARMed will revert to use HLE bios, which can have compatibility issues (e.g. memcard issues in Suikoden games and some games just going into black screens...)
 
 ## Extensions
 
