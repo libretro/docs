@@ -90,9 +90,9 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                      | Supported | Notes |
 |-----------------------------------------------------------|:---------:|-------|
-| [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         | |
 | [Gearboy](https://github.com/libretro/gearboy)            | ✔         | |
 | [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | |
+| [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         | There's a [known issue](https://github.com/libretro/gambatte-libretro/issues/122) causing some incompatibilities in the Android and Windows builds |
 | [mGBA](https://github.com/libretro/mgba)                  | ✕         | Achievements only work for the Game Boy Advance |
 | [Emux GB](https://github.com/libretro/emux)               | ✕         | |
 | [TGB Dual](https://github.com/libretro/tgbdual-libretro)  | ✕         | |
