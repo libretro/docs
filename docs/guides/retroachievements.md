@@ -2,7 +2,7 @@
 
 ## **What are RetroAchievements?**
 
-[retroachievements.org](http://www.retroachievements.org/) is a service that provides a trophies unlocking mechanism similar to modern consoles, for Retro games.
+The [retroachievements.org](https://retroachievements.org/) is a service that provides a trophies unlocking mechanism similar to modern consoles, for Retro games.
 
 !!! Warning
     The service is not maintained by RetroArch or the Libretro team.
@@ -13,12 +13,12 @@
 
 ## **How to setup achievements**
 
-1. Register an account on [retroachievements.org](http://www.retroachievements.org/) (don't forget to confirm your account creation with the email they send to you).
+1. Register an account on [retroachievements.org](https://retroachievements.org/) (don't forget to confirm your account creation with the email they send to you).
 2. Open Retroarch and go to Settings->Achievements
 3. Enable the functionality and fill your retroachievements credentials
 
 !!! note
-    The hardcore mode prevents you from using emulation features like slow motion, cheats and savestates.
+    The hardcore mode prevents you from using emulation features like savestates, slow motion and cheats.
     **BUT** gives you double points.
 
 ![](/image/retroarch/retroachievements/achievements_settings.png)
