@@ -6,10 +6,10 @@ The documentation source is maintained via [Git](https://en.wikipedia.org/wiki/G
 
 In order to propose improvements to a document:
 
-    1. [Clone the repo](https://github.com/libretro/docs)
-    2. Make the changes and update your clone
-    3. Follow the "Building the docs" section to render the documentation site locally
-    4. Propose your changes using the button `New Pull Request` [in the docs repo](https://github.com/libretro/docs)
+1. [Clone the repo](https://github.com/libretro/docs)
+2. Make the changes and update your clone
+3. Follow the "Building the docs" section to render the documentation site locally
+4. Propose your changes using the button `New Pull Request` [in the docs repo](https://github.com/libretro/docs)
 
 There is a To-Do list for libretro/docs [here](https://docs.libretro.com/meta/todo/) and you can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues).
 
