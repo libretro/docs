@@ -1,7 +1,8 @@
 site_name: Libretro Docs
+site_url: 'http://docs.libretro.com/'
 repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
-edit_uri: 'tree/master/docs'
+edit_uri: 'edit/master/docs'
 nav:
   - About: 'index.md'
   - For Users:
