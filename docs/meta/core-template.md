@@ -224,7 +224,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Awaiting description.
 
 ??? note "Core Option - Setting"
-	![](\image\core\folder\screenshot_name.png)
+	![](/image/core/folder/screenshot_name.png)
 
 ## User # - # device types
 
