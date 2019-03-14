@@ -2,7 +2,7 @@
 
 ## **What are RetroAchievements?**
 
-The [retroachievements.org](https://retroachievements.org/) is a service that provides a trophies unlocking mechanism similar to modern consoles, for Retro games.
+[retroachievements.org](https://retroachievements.org/) is a service that provides a trophies unlocking mechanism similar to modern consoles, for Retro games.
 
 !!! Warning
     The service is not maintained by RetroArch or the Libretro team.
