@@ -136,7 +136,7 @@ If Qt is enabled for your build (detected automatically by default), the followi
 ``` bash
 windeployqt --release --no-patchqt --no-translations retroarch.exe
 for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
- ```
+```
 
 If you really want to get the required libraries for distribution or for personal use on other devices and LDD doesn't work for you for whatever reason, then you can try [Dependency Walker](http://www.dependencywalker.com/). 
 
@@ -229,7 +229,7 @@ Fetch one core:
 
 ### Building Cores
 
-#### LibRetro Super
+#### libretro-super
 
 The easiest way to build all the cores is to use **libretro-build.sh** from within libretro-super's source tree:
 
