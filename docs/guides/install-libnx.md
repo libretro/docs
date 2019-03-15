@@ -39,7 +39,7 @@ This guide will not cover the custom firmware part and assume that you are able 
 
 1. Go to [this webpage](https://switchbrew.org/wiki/Title_list/Games) and copy the title ID of the game you want to override.
 2. Edit the `atmosphere/loader.ini` file on your SD card
-3. Set the `hbl_tid` value to the title ID of your target game (for example `hbl_tid=0100000000010000` for Super Mario Odyssey)
+3. Set the `title_id` value to the title ID of your target game (for example `title_id=0100000000010000` for Super Mario Odyssey)
 4. Set the `override_key` value to `R` like so: `override_key=R`
     * Note: you can use any key here instead of R
     * Note: you can add `!` in front of the key name to invert the condition ("the key must be pressed to override" vs "the key must not be pressed to override")
