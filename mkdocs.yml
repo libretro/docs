@@ -6,13 +6,13 @@ edit_uri: 'edit/master/docs'
 nav:
   - About: 'index.md'
   - For Users:
-    - Downloading, Installing and Updating RetroArch:
+    - 'RetroArch: Downloading, Installing, and Updating'
       - 'Windows': 'guides/install-windows.md'
       - 'MSVC Runtime Compatibility': 'guides/msvc-runtime-versions.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
       - 'Nintendo Switch': 'guides/install-libnx.md'
-    - Getting Started:
+    - 'RetroArch: Getting Started':
       - 'Welcome': 'guides/welcome-getting-started.md'
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
@@ -26,26 +26,26 @@ nav:
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
-    - Quick Guide - Windows: 'guides/windows.md'
+    - 'RetroArch: Quick Guide - Windows': 'guides/windows.md'
+    - 'RetroArch: Feature-Specific':
+      - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
+      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
+      - 'Input Overlays': 'guides/libretro-overlays.md'
+      - 'Linux KMS Mode': 'guides/kms-mode.md'
+      - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
+      - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
+      - 'Run Ahead': 'guides/runahead.md'
+      - 'RetroAchievements': 'guides/retroachievements.md'
+      - 'Softpatching ROMs': 'guides/softpatching.md'
+      - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
+    - 'RetroArch: Appearance and Customization':
+      - 'Creating a Theme': 'guides/themes.md'
+      - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
+      - 'RGUI Interface': 'guides/rgui.md'
     - Lakka Documentation: 'http://www.lakka.tv/doc/Home/'
-    - Core Documentation:
-      - Bios information HUB: 'library/bios.md'
+    - Core Library:
+      - BIOS Information Hub: 'library/bios.md'
       - Getting Started with Arcade Emulation: 'guides/arcade-getting-started.md'
-      - Core Compatibility:
-        - '3DO': 'library/compatibility/3do.md'
-        - 'Atari Jaguar': 'library/compatibility/jaguar.md'
-        - 'Atari Lynx': 'library/compatibility/lynx.md'
-        - 'Bandai Wonderswan': 'library/compatibility/wswan.md'
-        - 'NEC PC-FX': 'library/compatibility/pcfx.md'
-        - 'Nintendo DS': 'library/compatibility/ds.md'
-        - 'Nintendo Game Boy Advance': 'library/compatibility/gba.md'
-        - 'Nintendo Game Boy Color': 'library/compatibility/gbc.md'
-        - 'Nintendo NES': 'library/compatibility/nes.md'
-        - 'Nintendo SNES': 'library/compatibility/snes.md'
-        - 'Sega 32X': 'library/compatibility/32x.md'
-        - 'Sega Dreamcast': 'library/compatibility/dc.md'
-        - 'Sega Saturn': 'library/compatibility/saturn.md'
-        - 'Sony Playstation': 'library/compatibility/psx.md'
       - Amstrad Cores:
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
@@ -54,6 +54,8 @@ nav:
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
       - Atari Cores:
+        - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
+        - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'
         - 'Atari - 2600 (Stella)': 'library/stella.md'
         - 'Atari - 7800 (ProSystem)': 'library/prosystem.md'
         - 'Atari - 5200 (Atari800)': 'library/atari800.md'
@@ -86,11 +88,12 @@ nav:
       - Misc Cores:
         - '3D Engine': 'library/3d_engine.md'
         - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
+        - '3DO Compatibility List': 'library/compatibility/3do.md'
         - 'ChaiLove': 'library/chailove.md'
         - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
         - 'DOS (DOSBox)': 'library/dosbox.md'
-        - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
+        - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
         - 'Lua Engine (Lutro)': 'library/lutro.md'
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
@@ -102,9 +105,15 @@ nav:
         - 'Uzebox (Uzem)': 'library/uzem.md'
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
+        - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
         - 'ZX Spectrum (Fuse)': 'library/fuse.md'
         - 'Sinclair - ZX 81 (EightyOne)': 'library/eightyone.md'
       - Nintendo Cores:
+        - 'Nintendo - DS Compatibility List': 'library/compatibility/ds.md'
+        - 'Nintendo - Game Boy Advance Compatibility List': 'library/compatibility/gba.md'
+        - 'Nintendo - Game Boy Color Compatibility List': 'library/compatibility/gbc.md'
+        - 'Nintendo - NES Compatibility List': 'library/compatibility/nes.md'
+        - 'Nintendo - SNES Compatibility List': 'library/compatibility/snes.md'
         - 'Nintendo - Game Boy / Color (Emux GB)': 'library/emux_gb.md'
         - 'Nintendo - Game Boy / Color (Gambatte)': 'library/gambatte.md'
         - 'Nintendo - Game Boy / Color (SameBoy)': 'library/sameboy.md'
@@ -147,11 +156,15 @@ nav:
         - 'Nintendo - SNES / Famicom (Snes9x)': 'library/snes9x.md'
         - 'Nintendo - Virtual Boy (Beetle VB)': 'library/beetle_vb.md'
       - NEC Cores:
+        - 'NEC - PC-FX Compatibility List': 'library/compatibility/pcfx.md'
         - 'NEC - PC-98 (Neko Project II Kai)': 'library/neko_project_ii_kai.md'
         - 'NEC - PC Engine SuperGrafx (Beetle SGX)': 'library/beetle_sgx.md'
         - 'NEC - PC Engine / CD (Beetle PCE FAST)': 'library/beetle_pce_fast.md'
         - 'NEC - PC-FX (Beetle PC-FX)': 'library/beetle_pc_fx.md'
       - Sega Cores:
+        - 'Sega - 32X Compatibility List': 'library/compatibility/32x.md'
+        - 'Sega - Dreamcast Compatibility List': 'library/compatibility/dc.md'
+        - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (Redream)': 'library/redream.md'
         - 'Sega - Dreamcast (Reicast)': 'library/reicast.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
@@ -162,27 +175,12 @@ nav:
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
         - 'VeMUlator': 'library/vemulator.md'
       - Sony Cores:
+        - 'Sony - Playstation Compatibility List': 'library/compatibility/psx.md'
         - 'Sony - PlayStation (Beetle PSX)': 'library/beetle_psx.md'
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
-    - Feature Specific:
-      - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
-      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
-      - 'Linux KMS Mode': 'guides/kms-mode.md'
-      - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
-      - 'ROMs, Playlists, and Thumbnails': 'guides/roms-playlists-thumbnails.md'
-      - 'Run Ahead': 'guides/runahead.md'
-      - 'RetroAchievements': 'guides/retroachievements.md'
-      - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
-    - Interface Customization:
-      - 'Creating a Theme': 'guides/themes.md'
-      - 'Libretro Overlays': 'guides/libretro-overlays.md'
-      - 'RGUI Interface': 'guides/rgui.md'
-    - Advanced Topics:
-      - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
-      - 'Softpatching ROMs': 'guides/softpatching.md'
-    - Shader Previews:
+    - Shader Library:
       - 'Introduction': 'shader/introduction.md'
       - '3dfx': 'shader/3dfx.md'
       - 'antialiasing': 'shader/antialiasing.md'
@@ -219,11 +217,11 @@ nav:
   - For Developers:
     - Libretro API and Ecosystem:
       - 'Libretro Overview': 'development/libretro-overview.md'
-      - 'Libretro Open Source Bounties': 'development/bounties.md'
+      - 'Open Source Bounties': 'development/bounties.md'
       - 'Input API': 'development/input-api.md'
-      - 'Libretro Coding Standards': 'development/coding-standards.md'
+      - 'Coding Standards': 'development/coding-standards.md'
       - 'Licenses': 'development/licenses.md'
-      - 'Libretro Frontends': 'development/frontends.md'
+      - 'Frontends': 'development/frontends.md'
     - RetroArch Development:
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
@@ -272,7 +270,7 @@ nav:
       - 'Core Development Overview': 'development/cores/developing-cores.md'
       - 'Dynamic Rate Control for Emulators': 'development/cores/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'development/cores/opengl-cores.md'
-      - Core-Specific Development Docs:
+      - Core-Specific Docs:
         - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
         - 'MAME (0.181-current)': 'development/cores/core-specific/mame.md'
@@ -287,7 +285,7 @@ nav:
       - 'Content-Aware Shaders': 'development/shader/content-aware-shaders.md'
       - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
   - Contribute to the Docs:
-    - 'Contributing to the Libretro Docs': 'meta/how-to-contribute.md'
+    - 'Adding or Editing Documentation': 'meta/how-to-contribute.md'
     - 'Core List': 'meta/core-list.md'
     - 'Core Template': 'meta/core-template.md'
     - 'Shader Preview Template': 'meta/shader-preview-template.md'
