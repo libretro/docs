@@ -32,6 +32,8 @@ This guide will not cover the custom firmware part and assume that you are able 
 
 #### 1. Install (or update) hbloader and hbmenu
 
+**Note:** Atmosphère now includes hbloader and hbmenu - updating to the latest release of Atmosphère should cover this step for you.
+
 1. Download the latest release of the homebrew menu from [here](https://github.com/switchbrew/nx-hbmenu/releases) and copy `hbmenu.nro` to the root of your SD card
 2. Download the latest release of the homebrew loader from [here](https://github.com/switchbrew/nx-hbloader/releases) and copy `hbl.nsp` to the `atmosphere` folder on your SD card
 
