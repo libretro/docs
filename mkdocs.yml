@@ -4,8 +4,8 @@ repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
 nav:
-  - About: 'index.md'
-  - For Users:
+  - 'About': 'index.md'
+  - 'For Users':
     - 'RetroArch: Downloading, Installing, and Updating':
       - 'Windows': 'guides/install-windows.md'
       - 'MSVC Runtime Compatibility': 'guides/msvc-runtime-versions.md'
@@ -42,21 +42,21 @@ nav:
       - 'Creating a Theme': 'guides/themes.md'
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'RGUI Interface': 'guides/rgui.md'
-    - Lakka Documentation: 'http://www.lakka.tv/doc/Home/'
-    - Core Library:
-      - BIOS Information Hub: 'library/bios.md'
-      - 3DO Emulation:
+    - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
+    - 'Core Library: Emulation':
+      - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
+      - 'BIOS Information Hub': 'library/bios.md'
+      - '3DO Emulation':
         - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
         - '3DO Compatibility List': 'library/compatibility/3do.md'
-      - Amstrad Emulation:
+      - 'Amstrad Emulation':
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
-      - Arcade Emulation:
-        - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
+      - 'Arcade Emulation':
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
-      - Atari Emulation:
+      - 'Atari Emulation':
         - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
         - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'
         - 'Atari - 2600 (Stella)': 'library/stella.md'
@@ -66,44 +66,19 @@ nav:
         - 'Atari - Lynx (Beetle Handy)': 'library/beetle_handy.md'
         - 'Atari - Lynx (Handy)': 'library/handy.md'
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
-      - Bandai Emulation:
+      - 'Bandai Emulation':
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
-      - ColecoVision Emulation:
+      - 'ColecoVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
-      - DOS Emulation:
+      - 'DOS Emulation':
         - 'DOS (DOSBox)': 'library/dosbox.md'
-      - GCE Emulation:
+      - 'GCE Emulation':
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
-      - Game and Scripting Engines:
-        - '2048': 'library/2048.md'
-        - '3D Engine': 'library/3d_engine.md'
-        - 'Cave Story (NXEngine)': 'library/nxengine.md'
-        - 'ChaiLove': 'library/chailove.md'
-        - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
-        - 'Dinothawr': 'library/dinothawr.md'
-        - 'Doom (PrBoom)': 'library/prboom.md'
-        - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
-        - 'Handheld Electronic (GW)': 'library/gw.md'
-        - 'Lua Engine (Lutro)': 'library/lutro.md'
-        - 'Minecraft (Craft)': 'library/craft.md'
-        - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
-        - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
-        - 'Rick Dangerous (XRick)': 'library/xrick.md'
-        - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
-        - 'ScummVM': 'library/scummvm.md'
-        - 'The Powder Toy': 'library/the_powder_toy.md'
-        - 'Tomb Raider (OpenLara)': 'library/openlara.md'
-        - 'Uzebox (Uzem)': 'library/uzem.md'
-      - Magnavox Cores:
+      - 'Magnavox Emulation':
         - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
-      - Mattel Emulation:
+      - 'Mattel Emulation':
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
-      - Media Cores:
-        - 'FFmpeg': 'library/ffmpeg.md'
-        - 'Game Music Emu': 'library/game_music_emu.md'
-        - 'Imageviewer': 'library/imageviewer.md'
-        - 'PocketCDG': 'library/pocketcdg.md'
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
@@ -189,15 +164,40 @@ nav:
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
-      - 'Special-Purpose Cores':
-        - 'Dummy Core': 'library/dummy.md'
-        - 'Remote RetroPad': 'library/remote_retropad.md'
-        - 'Video Processor': 'library/video_processor.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
-    - Shader Library:
+    - 'Core Library: Game and Scripting Engines':
+      - '2048': 'library/2048.md'
+      - '3D Engine': 'library/3d_engine.md'
+      - 'Cave Story (NXEngine)': 'library/nxengine.md'
+      - 'ChaiLove': 'library/chailove.md'
+      - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
+      - 'Dinothawr': 'library/dinothawr.md'
+      - 'Doom (PrBoom)': 'library/prboom.md'
+      - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
+      - 'Handheld Electronic (GW)': 'library/gw.md'
+      - 'Lua Engine (Lutro)': 'library/lutro.md'
+      - 'Minecraft (Craft)': 'library/craft.md'
+      - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
+      - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
+      - 'Rick Dangerous (XRick)': 'library/xrick.md'
+      - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
+      - 'ScummVM': 'library/scummvm.md'
+      - 'The Powder Toy': 'library/the_powder_toy.md'
+      - 'Tomb Raider (OpenLara)': 'library/openlara.md'
+      - 'Uzebox (Uzem)': 'library/uzem.md'    
+    - 'Core Library: Media':
+      - 'Imageviewer': 'library/imageviewer.md'
+      - 'FFmpeg': 'library/ffmpeg.md'
+      - 'Game Music Emu': 'library/game_music_emu.md'
+      - 'PocketCDG': 'library/pocketcdg.md'
+      - 'Video Processor': 'library/video_processor.md'
+    - 'Core Library: Special-Purpose':
+      - 'Dummy Core': 'library/dummy.md'
+      - 'Remote RetroPad': 'library/remote_retropad.md'
+    - 'Shader Library':
       - 'Introduction': 'shader/introduction.md'
       - '3dfx': 'shader/3dfx.md'
       - 'antialiasing': 'shader/antialiasing.md'
@@ -231,69 +231,69 @@ nav:
       - 'xbrz': 'shader/xbrz.md'
       - 'xsal': 'shader/xsal.md'
       - 'xsoft': 'shader/xsoft.md'
-  - For Developers:
-    - Libretro API and Ecosystem:
+  - 'For Developers':
+    - 'Libretro API and Ecosystem':
       - 'Libretro Overview': 'development/libretro-overview.md'
       - 'Open Source Bounties': 'development/bounties.md'
       - 'Input API': 'development/input-api.md'
       - 'Coding Standards': 'development/coding-standards.md'
       - 'Licenses': 'development/licenses.md'
       - 'Frontends': 'development/frontends.md'
-    - RetroArch Development:
+    - 'RetroArch Development':
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
       - 'Input Overlays': 'development/retroarch/overlay.md'
       - 'Adding Translations': 'development/retroarch/new-translations.md'
-      - Network Protocols:
+      - 'Network Protocols':
         - 'Netplay': 'development/retroarch/netplay.md'
         - 'Network Control Interface': 'development/retroarch/network-control-interface.md'
-      - RetroArch Compilation Guides:
-        - Apple:
+      - 'RetroArch Compilation Guides':
+        - 'Apple':
           - 'OSX/PowerPC': 'development/retroarch/compilation/osxppc.md'
           - 'OSX/macOS': 'development/retroarch/compilation/osx.md'
           - 'iOS': 'development/retroarch/compilation/ios.md'
         - 'Android': 'development/retroarch/compilation/android.md'
-        - Linux and BSD:
+        - 'Linux and BSD':
           - 'Overview for Linux/BSD': 'development/retroarch/compilation/linux-and-bsd.md'
           - 'Ubuntu': 'development/retroarch/compilation/ubuntu.md'
         - 'Haiku': 'development/retroarch/compilation/haiku.md'
-        - Microsoft:
-          - 'DOS': 'development/retroarch/compilation/dos.md'
-          - Windows NT3.51 (MSVC6):
-            - 'MSVC Commandline': 'development/retroarch/compilation/windowsNT351-msvc-cmdline.md'
-          - Windows 95/98/NT4 (MSVC2003):
-            - 'MSVC Commandline': 'development/retroarch/compilation/windows95-msvc-cmdline.md'
-          - Windows 98SE/ME/2000 (MSVC2005):
-            - 'MSVC Commandline': 'development/retroarch/compilation/windows98-msvc-cmdline.md'
-            - 'MSVC IDE': 'development/retroarch/compilation/windows98.md'
-          - Windows 2000 and later (MSVC2008):
-            - 'MSVC Commandline': 'development/retroarch/compilation/windows2000-msvc-cmdline.md'
-            - 'MSVC IDE': 'development/retroarch/compilation/windows2000.md'
+        - 'Microsoft':
+          - 'Windows 7 and later (MSYS2)': 'development/retroarch/compilation/windows.md'
           - Windows XP and later (MSVC2010):
             - 'MSVC Commandline': 'development/retroarch/compilation/windowsXP-msvc-cmdline.md'
             - 'MSVC IDE': 'development/retroarch/compilation/windowsXP.md'
-          - 'Windows 7 and later (MSYS2)': 'development/retroarch/compilation/windows.md'
-        - Nintendo:
+          - Windows 2000 and later (MSVC2008):
+            - 'MSVC Commandline': 'development/retroarch/compilation/windows2000-msvc-cmdline.md'
+            - 'MSVC IDE': 'development/retroarch/compilation/windows2000.md'
+          - Windows 98SE/ME/2000 (MSVC2005):
+            - 'MSVC Commandline': 'development/retroarch/compilation/windows98-msvc-cmdline.md'
+            - 'MSVC IDE': 'development/retroarch/compilation/windows98.md'
+          - Windows 95/98/NT4 (MSVC2003):
+            - 'MSVC Commandline': 'development/retroarch/compilation/windows95-msvc-cmdline.md'
+          - 'Windows NT3.51 (MSVC6)':
+            - 'MSVC Commandline': 'development/retroarch/compilation/windowsNT351-msvc-cmdline.md'
+          - 'DOS': 'development/retroarch/compilation/dos.md'
+        - 'Nintendo':
           - 'Nintendo 3DS': 'development/retroarch/compilation/3ds.md'
           - 'Nintendo GameCube': 'development/retroarch/compilation/gamecube.md'
           - 'Nintendo Wii': 'development/retroarch/compilation/wii.md'
           - 'Nintendo Wii U': 'development/retroarch/compilation/wiiu.md'
           - 'Nintendo Switch (libnx)': 'development/retroarch/compilation/switch-libnx.md'
-        - Sony:
+        - 'Sony':
           - 'PlayStation2': 'development/retroarch/compilation/ps2.md'
           - 'PlayStation Portable': 'development/retroarch/compilation/psp.md'
           - 'PlayStation Vita/TV': 'development/retroarch/compilation/psvita.md'
-    - Core Development:
+    - 'Core Development':
       - 'Core Development Overview': 'development/cores/developing-cores.md'
       - 'Dynamic Rate Control for Emulators': 'development/cores/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'development/cores/opengl-cores.md'
-      - Core-Specific Docs:
+      - 'Core-Specific Docs':
         - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
         - 'MAME (0.181-current)': 'development/cores/core-specific/mame.md'
         - 'MAME 2016': 'development/cores/core-specific/mame-2016.md'
         - 'MAME 2003-Plus': 'development/cores/core-specific/mame-2003-plus.md'
-    - Shader Development:
+    - 'Shader Development':
       - 'Shader Development Overview': 'development/shader/shader-overview.md'
       - 'Slang Shader Development': 'development/shader/slang-shaders.md'
       - 'GLSL Shader Development': 'development/shader/glsl-shaders.md'
@@ -301,7 +301,7 @@ nav:
       - 'XML Shader Development (discontinued)': 'development/shader/xml-shaders.md'
       - 'Content-Aware Shaders': 'development/shader/content-aware-shaders.md'
       - 'Shader Lookup Textures': 'development/shader/shader-lookup-textures.md'
-  - Contribute to the Docs:
+  - 'Contribute to the Docs':
     - 'Adding or Editing Documentation': 'meta/how-to-contribute.md'
     - 'Core List': 'meta/core-list.md'
     - 'Core Template': 'meta/core-template.md'
