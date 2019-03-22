@@ -239,7 +239,9 @@ nav:
     - 'RetroArch Development':
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
-      - 'Input Overlays': 'development/retroarch/overlay.md'
+      - 'Input':
+        - 'Input Overlays': 'development/retroarch/input/overlay.md'
+        - 'Parallel Port Joypads': 'development/retroarch/input/parallel-port-joypads.md'
       - 'Adding Translations': 'development/retroarch/new-translations.md'
       - 'Network Protocols':
         - 'Netplay': 'development/retroarch/netplay.md'
