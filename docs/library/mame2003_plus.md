@@ -184,7 +184,7 @@ Because support for control names is relatively new and is derived from the thir
 
 ## Audio samples
 
-Some games require an additional zip file with recorded sounds or music in order for audio to work correctly. Audio 'sample' files should be placed in a `sample` subdirectory within `/libretro system dir/mame2003/`.
+Some games require an additional zip file with recorded sounds or music in order for audio to work correctly. Audio 'sample' files should be placed in a `samples` subdirectory within `/libretro system dir/mame2003-plus/`.
 
 !!! tip "Alternate CD soundtrack support"
     MAME 2003-Plus also supports alternate soundtracks for several popular arcade titles that were also released in other formats with high quality audio soundtracks. Alternate soundtracks are supported for **Double Dragon**, **Final Fight**, **Mortal Kombat**, **Michael Jackson’s Moonwalker**, **NBA Jam**, and **Out Run**.
