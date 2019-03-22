@@ -6,27 +6,24 @@ edit_uri: 'edit/master/docs'
 nav:
   - 'About': 'index.md'
   - 'For Users':
-    - 'RetroArch: Downloading, Installing, and Updating':
+    - 'RetroArch: Getting Started':
       - 'Windows': 'guides/install-windows.md'
-      - 'MSVC Runtime Compatibility': 'guides/msvc-runtime-versions.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
       - 'Nintendo Switch': 'guides/install-libnx.md'
-    - 'RetroArch: Getting Started':
-      - 'Welcome': 'guides/welcome-getting-started.md'
+    - 'RetroArch: User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
       - 'Joypad Auto-Configuration': 'guides/joypad-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
+      - 'Directory Configuration': 'guides/change-directories.md'
       - 'File Browser': 'guides/file-browser.md'
       - 'Launching Content': 'guides/launch-content.md'
       - 'Importing Content': 'guides/import-content.md'
       - 'Custom Settings': 'guides/overrides.md'
-      - 'Directory Configuration': 'guides/change-directories.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
-    - 'RetroArch: Quick Guide - Windows': 'guides/windows.md'
     - 'RetroArch: Feature-Specific':
       - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
@@ -259,16 +256,17 @@ nav:
         - 'Haiku': 'development/retroarch/compilation/haiku.md'
         - 'Microsoft':
           - 'Windows 7 and later (MSYS2)': 'development/retroarch/compilation/windows.md'
-          - Windows XP and later (MSVC2010):
+          - 'MSVC Compatibility Guide': 'development/retroarch/compilation/msvc-runtime-versions.md'
+          - 'Windows XP and later (MSVC2010)':
             - 'MSVC Commandline': 'development/retroarch/compilation/windowsXP-msvc-cmdline.md'
             - 'MSVC IDE': 'development/retroarch/compilation/windowsXP.md'
-          - Windows 2000 and later (MSVC2008):
+          - 'Windows 2000 and later (MSVC2008)':
             - 'MSVC Commandline': 'development/retroarch/compilation/windows2000-msvc-cmdline.md'
             - 'MSVC IDE': 'development/retroarch/compilation/windows2000.md'
-          - Windows 98SE/ME/2000 (MSVC2005):
+          - 'Windows 98SE/ME/2000 (MSVC2005)':
             - 'MSVC Commandline': 'development/retroarch/compilation/windows98-msvc-cmdline.md'
             - 'MSVC IDE': 'development/retroarch/compilation/windows98.md'
-          - Windows 95/98/NT4 (MSVC2003):
+          - 'Windows 95/98/NT4 (MSVC2003)':
             - 'MSVC Commandline': 'development/retroarch/compilation/windows95-msvc-cmdline.md'
           - 'Windows NT3.51 (MSVC6)':
             - 'MSVC Commandline': 'development/retroarch/compilation/windowsNT351-msvc-cmdline.md'
