@@ -105,6 +105,13 @@ This function lets the frontend know essential audio/video properties of the gam
 
 After a game has been loaded successfully, retro_run() will be called repeatedly as long as the user desires. When called, the implementation will perform its inner functionality for one video frame. During this time, the implementation is free to call callbacks for video frames, audio samples, as well as polling input, and querying current input state. The requirements for the callbacks are that video callback is called exactly once, i.e. it does not have to come last. Also, input polling must be called at least once.
 
+#### Input
+Abstracting joypad and other input devices is the hardest part of defining a multi-system API as it differs across every system. The libretro API therefore provides the RetroPad -- a joypad abstraction available with digital and analog controls -- to allow cores to be written without platform-specific input code.
+
+Input device abstractions are also available for keyboards, mice, pointers, and lightguns.
+
+**Learn more in the [Input API](/development/input-api.md) docs.**
+
 #### Video/Audio synchronization considerations
 
 Libretro is based on fixed rates; video FPS and audio sampling rates are always assumed to be constant. Frontends will have control of the speed of playing, typically using VSync to obtain correctspeed. The frontend is free to "fast-forward", i.e. play as fast as possible without waiting, or slow-motion. For this reason, the engine should not rely on system timers to perform arbitrary synchronization. This is common and often needed in 3D games to account for varying frame rates while still maintaining a playable game.
@@ -125,13 +132,6 @@ The first audio callback is per-sample, and has the type `void (*)(int16_t, int1
 If audio is output in a "batch" fashion, i.e. 1 / fps seconds worth of audio data at a time, the batch approach should be considered. Rather than looping over all samples and calling per-sample callback every time, the batch callback should be used instead, `size_t (*)(const int16_t *, size_t)`. Using the batch callback, audio will not be copied in a temporary buffer, which can buy a slight performance gain. Also, all data will be pushed to audio driver in one go, saving some slight overhead.
 
 It is not recommended to use the batch callback for very small (< 32 frames) amounts of data. The data passed to the batch callback should, if possible, be aligned to 16 bytes (depends on platform), to allow accelerated SIMD operations on audio.
-
-
-#### Input device abstraction
-
-Abstracting input devices is the hardest part of defining a multi-system API as it differs across every system. Rather than complicating things by mapping input arbitrarily in terms of the implementation, which would make input configuration very complex with careful configuration on a per- implementation basis, an abstract joypad device, the RetroPad, was devised.
-
-This joypad is essentially the Super Nintendo controller, widely considered the pinnacle of retro game controllers. To account for more modern systems with additional buttons, additions from the PlayStation DualShock are incorporated, with extra shoulder buttons (L2/R2), as well as depressable analogs (L3/R3). In addition, the `RETRO_DEVICE_ANALOG` is used for analog stick data. An implementation should map its idea of a joypad in terms of the RetroPad, which is what most users will have to use with their frontend.
 
 #### `retro_serialize_size()`, `retro_serialize()`, and `retro_unserialize()`
 
