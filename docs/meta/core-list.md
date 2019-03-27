@@ -107,6 +107,7 @@
 - QuickNES
 - Redream
 - Reicast
+- REminiscence
 - RemoteJoy
 - Remote RetroPad
 - SameBoy
