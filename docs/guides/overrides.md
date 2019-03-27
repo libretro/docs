@@ -1,4 +1,4 @@
-# Understanding RetroArch Settings Systems
+# Using Content, Folder, and Core Overrides for Custom Settings
 
 There are various and comprehensive ways to save customized settings within the RetroArch menus. 99% of settings can be adjusted and saved from the menu but are only plain text files and can be adjusted manually with a text editor.
 
