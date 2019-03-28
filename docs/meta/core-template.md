@@ -29,7 +29,7 @@ The [Core name] core is licensed under
 - // https://github.com/libretro/libretro-super/tree/master/dist/info
 - // https://docs.libretro.com/tech/licenses/
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
 
 ## Requirements
 
