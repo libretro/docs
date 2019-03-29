@@ -67,6 +67,7 @@ Content that can be loaded by the Reicast core have the following file extension
 - .chd
 - .cue
 - .zip
+- .m3u
 
 ## Databases
 
@@ -111,7 +112,7 @@ Required or optional firmware files go in RetroArch's system directory.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | Softpatching      | ✕         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
 | Crop Overscan (in RetroArch's Video settings) | ✕         |
 
@@ -252,6 +253,25 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 | R (weak)                     | ![](/image/retropad/retro_r2.png)           | R (weak)           |
 | Analog X                     | ![](/image/retropad/retro_left_stick.png) X | Analog X           |
 | Analog Y                     | ![](/image/retropad/retro_left_stick.png) Y | Analog Y           |
+
+## Multiple-disc games
+
+If foo is a multiple-disc game, you should have .chd/cue/cdi/gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
+
+To take advantage of Reicast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
+
+Create a text file and save it as `foo.m3u`. Then enter your game's .chd/cue/cdi/gdi files on it. The m3u file contents should look something like this:
+
+`foo.m3u`
+```
+foo (Disc 1).chd
+foo (Disc 2).chd
+foo (Disc 3).chd
+```
+
+After that, you can load the `foo.m3u` file in RetroArch with the Reicast core.
+
+An alternative is to append discs to the current playlist via the "Disk Image Append" option in the Disk Control RetroArch menu.
 
 ## Compatibility
 
