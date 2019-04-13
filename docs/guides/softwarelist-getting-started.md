@@ -4,7 +4,7 @@ Multi software emulation requires a different planning approach than arcade emul
 The terms software and software list are used to define non-arcade machines emulated by MAME.
 
 ### Process
-  1. **Understand the core varients**
+  1. **Understand the core variants**
   2. **Use the correct version romsets for that emulator**
 
 The libretro core ecosystem currently includes many multi software emulators, that support software emulation. Arcade (MAME), Arcade (MAME 2016) will be the main focus of this guide but the MULTI (MESS 2015) and MULTI (UME 2015) cores have this ability. Each requiring its own distinct version of "romsets" which the emulator supports.
@@ -13,7 +13,7 @@ The libretro core ecosystem currently includes many multi software emulators, th
 
 ---
 
-## Step 1: Understand the core varients
+## Step 1: Understand the core variants
 
 There are three families of multi-system software emulators available as libretro cores: MAME, MESS and UME. These emulators are in turn available in multiple versions to allow users to best match a core to their preference.
 
@@ -56,8 +56,7 @@ There are two common methods of configuring Retroarch to launch software list ma
 ### MAME Frontend direct
 
 
-
-
+NOTES:-
 Method 1:- Authentic MAME
 Using the internal Software List functions of MAME.
 
