@@ -6,13 +6,13 @@
 ## Standards for RetroArch
 
 ### C89 Compatibility
+
 All code contributed to RetroArch must be compliant with the "C89" coding standard etablished by [ANSI X3.159-1989](https://web.archive.org/web/20110306044509/http://flash-gordon.me.uk/ansi.c.txt).
 
-### Declare variables at the beginning
-To maintain C89 compatibility, declare all local variables at the beginning of their respective scope blocks rather than inline at the time of their first use.
+####  Variable declaration
+To maintain C89 compatibility, declare all local variables at the beginning of their respective scope blocks, rather than inline at the time of their first use.
 
-### Comment style
-
+#### Comments
 To maintain C89 compatibility, comments should be written in legacy using `/*` at the beginning and `*/` and the end.
 
 Each new line of a multiline comment should begin with a space and an asterisk:
