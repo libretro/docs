@@ -6,13 +6,32 @@
 ## Standards for RetroArch
 
 ### C89 Compatibility
-
 All code contributed to RetroArch must be compliant with the "C89" coding standard etablished by [ANSI X3.159-1989](https://web.archive.org/web/20110306044509/http://flash-gordon.me.uk/ansi.c.txt).
 
+### Declare variables at the beginning
+To maintain C89 compatibility, declare all local variables at the beginning of their respective scope blocks rather than inline at the time of their first use.
+
+### Comment style
+
+To maintain C89 compatibility, comments should be written in legacy using `/*` at the beginning and `*/` and the end.
+
+Each new line of a multiline comment should begin with a space and an asterisk:
+
+```c
+/* Sometimes it is useful to incorporate a lengthy comment in source to name a few examples:
+ *    - providing specifications for a function preceeding its declaration
+ *    - to explain an algorithm
+ *    - to explain the history or special circumstances of a section of code
+ */
+```
+Comment headers for functions should use a maximum column width of 80 characters. 
+
 ### Indentation
+
 Indentation is three spaces.
 
 ### Braces
+
 Brace usage follows "Allman style". The brace associated with a control statement is placed on the following line, indented to the same level as the control statement. Statements within the braces are indented to the next level.
 
 ```c
@@ -23,6 +42,17 @@ while (x == y)
 }
 
 finalthing();
+```
+
+### Single-line `if` conditional statements
+
+`if` and `else` conditionals with single-line statements should be spaced with the conditional on one line and the statement below it, indented, with no braces:
+
+```c
+if(time > launch_date)
+   initiate_probe_communication();
+else
+   generate_prelaunch_report();
 ```
 
 ### Whitespace and alignment
@@ -58,10 +88,6 @@ When possible, use whitespace to improve the readability of code that makes many
       command_event(CMD_EVENT_RECORD_INIT, NULL);
    }
 ```
-
-### Source comments
-
-To maintain C89 compatibility, comments should be written in legacy C-style using `/*`. Comment headers for functions should use a maximum column width of 80 characters.
 
 ### vim configuration for Libretro style
 
