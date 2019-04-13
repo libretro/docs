@@ -7,7 +7,7 @@
 
 ### C89 Compatibility
 
-All code contributed to RetroArch must be compliant with the "C89" coding standard etablished by [ANSI X3.159-1989](https://web.archive.org/web/20110306044509/http://flash-gordon.me.uk/ansi.c.txt).
+All code contributed to RetroArch must be compliant with the "C89" coding standard established by [ANSI X3.159-1989](https://web.archive.org/web/20110306044509/http://flash-gordon.me.uk/ansi.c.txt).
 
 ####  Variable declaration
 To maintain C89 compatibility, declare all local variables at the beginning of their respective scope blocks, rather than inline at the time of their first use.
@@ -91,7 +91,7 @@ When possible, use whitespace to improve the readability of code that makes many
 
 ### vim configuration for Libretro style
 
-Coders who use the **vim** editor can create a `vimrc` configuration file with the following settings in order to pre-set RetroArch indendtation style.
+Coders who use the **vim** editor can create a `vimrc` configuration file with the following settings in order to pre-set RetroArch indentation style.
 
 ```
 set hls
