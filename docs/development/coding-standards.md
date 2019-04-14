@@ -18,9 +18,10 @@ To maintain C89 compatibility, comments should be written in legacy using `/*` a
 Each new line of a multiline comment should begin with a space and an asterisk:
 
 ```c
-/* Sometimes it is useful to incorporate a lengthy comment in source to name a few examples:
+/* Sometimes it is useful to incorporate a lengthy comment in source.
+ * For example:
  *    - providing specifications for a function preceeding its declaration
- *    - to explain an algorithm
+ *    - to explain a complex or unintuitive algorithm
  *    - to explain the history or special circumstances of a section of code
  */
 ```
@@ -49,7 +50,7 @@ finalthing();
 `if` and `else` conditionals with single-line statements should be spaced with the conditional on one line and the statement below it, indented, with no braces:
 
 ```c
-if(time > launch_date)
+if (time > launch_date)
    initiate_probe_communication();
 else
    generate_prelaunch_report();
