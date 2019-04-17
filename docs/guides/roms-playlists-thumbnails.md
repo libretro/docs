@@ -125,7 +125,7 @@ Within this root thumbnail folder called `Atari - 2600`, you should then create 
 
 The thumbnail filename should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with `_` in the corresponding thumbnail filename:** `` &*/:`<>?\| ``
 
-**Example: If your content is named `Q*bert's Qubes` in the playlist, then its thumbnails should be named `Q-bert's Qubes.png` and stored at these paths:**
+**Example: If your content is named `Q*bert's Qubes` in the playlist, then its thumbnails should be named `Q_bert's Qubes.png` and stored at these paths:**
 
 ```
      thumbnails/
