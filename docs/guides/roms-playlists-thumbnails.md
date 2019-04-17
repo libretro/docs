@@ -118,28 +118,26 @@ These packs can be downloaded manually from http://thumbnailpacks.libretro.com a
 ### Custom thumbnails
 Users who wish to use their own thumbnails can do so by naming PNG image files according to the RetroArch naming convention.
 
-#### Thumbnail file locations
+#### Thumbnail paths and filenames
 Thumbnails should be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. **Example: If your playlist is named `Atari - 2600.lpl`, then your Atari 2600 root thumbnail folder should be called `thumbnails/Atari - 2600/`.**
 
-Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively. **Example: If your content is named `Moon Patrol (USA).zip`, then its thumbnails should be stored in this arrangement:**
+Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively. 
+
+The thumbnail filename should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with `_` in the corresponding thumbnail filename:** `` &*/:`<>?\| ``
+
+**Example: If your content is named `Q*bert's Qubes` in the playlist, then its thumbnails should be named `Q-bert's Qubes.png` and stored at these paths:**
 
 ```
      thumbnails/
           Atari - 2600/
                Named_Boxarts/
-                    Moon Patrol (USA).png
+                    Q_bert's Qubes.png
                Named_Snaps/
-                    Moon Patrol (USA).png
+                    Q_bert's Qubes.png
                Named_Titles/
-                    Moon Patrol (USA).png
+                    Q_bert's Qubes.png
 ```
 
-#### Thumbnail filenames
-The thumbnail file should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with _ in the corresponding thumbnail filename:**
-
-```
-    &*/:`<>?\|
-```
 
 ### Changing the displayed thumbnail type
 Regardless of whether you download the RetroArch thumbnail packs or use your own custom thumbnails, you can use the RetroArch GUI to set which type of thumbnail to display. In order to change this setting, go to `Menu Settings,` and change the `Thumbnails` option to reflect the type of thumbnail you wish to display.
