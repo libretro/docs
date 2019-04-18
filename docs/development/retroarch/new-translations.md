@@ -35,33 +35,38 @@
          break;
      ```
    block inside the `msg_hash_to_str()` function
-10. Search for the `#include "msg_hash_us.h"` line and replace it with `#include "msg_hash_xx.h"`
-11. Open `Makefile.common`
-12. Add `intl/msg_hash_xx.o` to `OBJS`
-13. Copy `intl/msg_hash_us.c` to `intl/msg_hash_xx.c`
-14. Decide if `intl/msg_hash_xx.c` should use UTF-8 + BOM encoding. See the section below
-15. Open `intl/msg_hash_xx.c`
-16. Rename the `menu_hash_get_help_us_enum()` function to `menu_hash_get_help_xx_enum()`
-17. Rename the `menu_hash_to_str_us_label_enum()` function to `menu_hash_to_str_xx_label_enum()`
-18. Rename the `menu_hash_to_str_us()` function to `msg_hash_to_str_xx()` and, inside that same function:
+10. Open `Makefile.common`
+11. Add `intl/msg_hash_xx.o` to `OBJS`
+12. Copy `intl/msg_hash_us.c` to `intl/msg_hash_xx.c`
+13. Decide if `intl/msg_hash_xx.c` should use UTF-8 + BOM encoding. See the section below
+14. Open `intl/msg_hash_xx.c`
+15. Rename the `menu_hash_get_help_us_enum()` function to `menu_hash_get_help_xx_enum()`
+16. Rename the `menu_hash_to_str_us_label_enum()` function to `menu_hash_to_str_xx_label_enum()`
+17. Rename the `menu_hash_to_str_us()` function to `msg_hash_to_str_xx()` and, inside that same function:
     * Replace the call to `menu_hash_to_str_us_label_enum()` with a call to `menu_hash_to_str_xx_label_enum()`
     * Replace the `#include "msg_hash_us.h"` line with #include "msg_hash_xx.h"
-19. Open `intl/msg_hash_us.h`
-20. Add a
+18. Open `intl/msg_hash_us.h`
+19. Add a
      ```c
      MSG_HASH(MENU_ENUM_LABEL_VALUE_LANG_XXXXX, "Xxxxx")
      ```
-    block
-21. Copy `intl/msg_hash_us.h` to `intl/msg_hash_xx.h`
-22. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below
-23. Open `menu/menu_setting.c`
-24. Add a
+    block with the name of the new language written in English
+20. Copy `intl/msg_hash_us.h` to `intl/msg_hash_xx.h`
+21. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below
+22. Open `intl/msg_hash_xx.h`
+23. Make sure to modify the
+     ```c
+     MSG_HASH(MENU_ENUM_LABEL_VALUE_LANG_XXXXX, "Xxxxx")
+     ```
+    block to show the name of the new language written *in* the target language
+24. Open `menu/menu_setting.c`
+25. Add a
      ```c
      modes[RETRO_LANGUAGE_XXXXX] = msg_hash_to_str(MENU_ENUM_LABEL_VALUE_LANG_XXXXX);
      ```
     assignment to the `setting_get_string_representation_uint_user_language()` function
-25. Open `griffin/griffin.c`
-26. Add a `#include "../intl/msg_hash_xx.c"` line below the existing, similar
+26. Open `griffin/griffin.c`
+27. Add a `#include "../intl/msg_hash_xx.c"` line below the existing, similar
     ones for other languages.
 
 ### Encoding of translation files
