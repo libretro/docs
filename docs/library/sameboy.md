@@ -160,16 +160,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Select color correction.
 	
 ??? note "Color Correction - off"
-	![](/image/core/sameboycolor_off.png)
+	![](/image/core/sameboy/color_off.png)
 	
 ??? note "Color Correction - correct curves"
-	![](/image/core/sameboycolor_curves.png)
+	![](/image/core/sameboy/color_curves.png)
 
 ??? note "Color Correction - emulate hardware"
-	![](/image/core/sameboycolor_hardware.png)
+	![](/image/core/sameboy/color_hardware.png)
 
 ??? note "Color Correction - preserve brightness"
-	![](/image/core/sameboycolor_brightness.png)
+	![](/image/core/sameboy/color_brightness.png)
 	
 - **High-pass filter** [sameboy_high_pass_filter_mode] (**off**|accurate|remove dc offset)
 
