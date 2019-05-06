@@ -21,7 +21,8 @@ The following software needs to be installed:
 - XCode
 - (Optional) NVIDIA Cg Toolkit
 
-NOTE: You need to make sure you have the macOS 10.11 SDK or lower when compiling this software, or else the OpenGL driver might have several issues that currently cannot be fixed.
+!!! Note
+    You need to make sure you have the macOS 10.11 SDK or lower when compiling this software, or else the OpenGL driver might have several issues that currently cannot be fixed. 
 
 ## RetroArch Compilation
 
