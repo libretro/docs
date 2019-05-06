@@ -23,6 +23,10 @@ Clone RetroArch's repository from [GitHub](https://github.com/libretro/RetroArch
 
     git clone https://github.com/libretro/RetroArch.git retroarch
     cd retroarch
+    
+!!! Note
+    Versions of git available for OSX PowerPC might not come with the necessary SSL/TLS support that Github now requires. If you happen to find that you can not clone or pull from Github, perform the following command:
+    git config --global http.sslVerify false. 
 
 For subsequent builds you only need to pull the changes from the repo
 
