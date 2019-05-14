@@ -18,7 +18,7 @@ Optional dependencies:
 
 - libxml2_devel - For XML shaders and cheat support.
 - freetype_devel - TTF font rendering
-- ffmpeg - FFmpeg recording
+- ffmpeg_devel - FFmpeg recording
 
 ## RetroArch Compilation
 
