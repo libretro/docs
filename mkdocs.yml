@@ -43,6 +43,7 @@ nav:
     - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
     - 'Core Library: Emulation':
       - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
+      - 'Getting Started with MAME Software List Emulation': 'guides/softwarelist-getting-started.md'
       - 'BIOS Information Hub': 'library/bios.md'
       - '3DO Emulation':
         - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
