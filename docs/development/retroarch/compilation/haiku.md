@@ -41,7 +41,8 @@ To update your local copy from the repository run git pull
 Make sure gcc is installed, then run:
 
     # Build
-    ./configure --prefix=~/config/non-packaged/ --datarootdir=~/config/non-packaged/data/ --with-man_dir=~/config/non-packaged/documentation/man/ && make
+    ./configure --prefix=~/config/non-packaged/ --datarootdir=~/config/non-packaged/data/ --with-man_dir=~/config/non-packaged/documentation/man/
+    make
     # Install
     make install
     # Run
