@@ -4,6 +4,16 @@ This compilation guide will teach you how to build RetroArch for Haiku.
 
 It is more than recommended to keep your Haiku system up to date and use Nightlybuilds with upgraded packages.
 
+[![Build in Haiku](http://img.youtube.com/vi/jrrssHG_9uo/0.jpg)](http://www.youtube.com/watch?v=jrrssHG_9uo)
+
+This video covers quick demonstrations of these subjects;
+
+1. Environment Configuration
+
+2. Building RetroArch
+
+Be sure to read instructions that are given in this page.
+
 ## Environment configuration
 
 The following software needs to be installed:

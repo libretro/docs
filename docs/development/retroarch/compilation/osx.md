@@ -14,6 +14,16 @@ The following versions of the operating system are supported:
 
 RetroArch can work on both 32bit and 64bit Intel processor-powered Macs.
 
+[![Build in Osx](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)
+
+This video covers quick demonstrations of these subjects;
+
+1. Environment Configuration
+
+2. Building RetroArch
+
+Be sure to read instructions that are given in this page.
+
 ## Environment configuration
 
 The following software needs to be installed:

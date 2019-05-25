@@ -4,6 +4,18 @@
     The MinGW toolchain we use in this guide no longer supports targeting Windows Vista or ealier.
     Please refer to one of the MSVC guides for how to target older Windows versions with Visual Studio.
 
+[![Build in Windows](http://img.youtube.com/vi/OaYvc3y3VLI/0.jpg)](http://www.youtube.com/watch?v=OaYvc3y3VLI)
+
+This video covers quick demonstrations of these subjects;
+
+1. Environment Configuration
+
+2. Building RetroArch
+
+3. Packaging RetroArch
+
+Be sure to read instructions that are given in this page.
+
 ## Environment configuration
 
 We recommend MinGW-W64 from MSYS2. You can download MSYS2 installer from [here](http://msys2.github.io/).

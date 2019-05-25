@@ -10,7 +10,9 @@ nav:
       - 'Windows': 'guides/install-windows.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
-      - 'Nintendo Switch': 'guides/install-libnx.md'
+      - 'Nintendo': 'guides/install-libnx.md'
+        - 'Switch': 'guides/install-libnx.md'
+        - '3DS/2DS Family': 'guides/install-3ds2ds.md'
     - 'RetroArch: User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'

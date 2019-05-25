@@ -5,6 +5,7 @@ RetroArch uses two methods of applying cheat codes:
 - **Emulator Handled** are codes that are sent to the emulator/core and it is up to the emulator/core to apply them.
 - **RetroArch Handled** are codes that RetroArch itself handles by directly scanning/manipulating the emulator/core memory area.
 
+[![Quick Video Demonstration for Windows](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)
 
 # Adding a new cheat code
 
