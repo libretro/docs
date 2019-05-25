@@ -6,13 +6,13 @@ It is more than recommended to keep your Haiku system up to date and use Nightly
 
 [![Build in Haiku](http://img.youtube.com/vi/jrrssHG_9uo/0.jpg)](http://www.youtube.com/watch?v=jrrssHG_9uo)
 
-This video covers quick demonstrations of these subjects;
+This video covers a quick demonstration of these subjects;
 
 1. Environment Configuration
 
 2. Building RetroArch
 
-Be sure to read instructions that are given in this page.
+Be sure to read instructions that are given on this page.
 
 ## Environment configuration
 
