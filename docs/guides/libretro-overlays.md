@@ -4,6 +4,8 @@ Imagine a libretro core playing a game or video on your screen. Now imagine atta
 
 That layer of glass would be the **overlay** -- a virtual 'layer' between you and the video signal.
 
+[![Quick Video Demonstration for Overlays and Shaders](http://img.youtube.com/vi/bRNbA-4wuSc/0.jpg)](http://www.youtube.com/watch?v=bRNbA-4wuSc)
+
 ### What's the difference between an Overlay and a Bezel?
 
 With Libretro, **bezels** are one subtype of **overlay**. If you have experience with game emulators, you may be familiar with the term Bezel, which describes images that wrap around the emulated screen. Often this is to display an image of the original arcade cabinet or game console being emulated.

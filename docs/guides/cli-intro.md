@@ -4,6 +4,8 @@ RetroArch can be utilized via its robust graphical interfaces as well as a power
 
 Note: please be aware of whether your system uses DOS/Windows style paths with backslashes `\` or Unix-style paths with forward slashes: `/`.
 
+[![Quick Video Demonstration for Windows](http://img.youtube.com/vi/W-fRcamSp-c/0.jpg)](http://www.youtube.com/watch?v=W-fRcamSp-c)
+
 #### Loading a ROM and libretro core (Unix-style path)
     retroarch -L /path/to/libretro/core.so game.rom
     
