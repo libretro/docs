@@ -13,6 +13,8 @@ nav:
       - 'Nintendo':
         - 'Switch': 'guides/install-libnx.md'
         - '3DS/2DS Family': 'guides/install-3ds2ds.md'
+      - 'Sony':
+        - 'Playstation3': 'guides/install-ps3.md'
     - 'RetroArch: User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
