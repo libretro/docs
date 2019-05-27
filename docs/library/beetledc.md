@@ -1,12 +1,12 @@
-# Sega Dreamcast (Reicast)
+# Sega Dreamcast (Beetle DC)
 
 ## Contribute to this documentation
 
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/reicast.md). Changes are proposed using "Pull Requests."
+In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/beetledc.md). Changes are proposed using "Pull Requests."
 
 ## Background
 
-Reicast is a multi-platform Sega Dreamcast emulator. 
+Beetle DC is a multi-platform Sega Dreamcast emulator. 
 
 ### Why use this core?
 
@@ -50,8 +50,6 @@ Example (MAME ID=ikaruga)
 
 ## See also
 
-- [Sega Dreamcast (Redream)](https://docs.libretro.com/library/redream/) - Shared platforms.
-
 ## License
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
@@ -60,7 +58,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 ## Extensions
 
-Content that can be loaded by the Reicast core have the following file extensions:
+Content that can be loaded by the BeetleDC core have the following file extensions:
 
 - .cdi
 - .gdi
@@ -298,7 +296,5 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 ## External Links
 
 - [Libretro Reicast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/reicast_libretro.info)
-- [Libretro Reicast Github Repository](https://github.com/libretro/reicast-emulator)
-- [Report Libretro Reicast Core Issues Here](https://github.com/libretro/reicast-emulator/issues)
-- [Official Reicast Website](http://reicast.com/)
-- [Official Reicast Github Repository](https://github.com/reicast/reicast-emulator)
+- [Libretro Reicast Github Repository](https://github.com/libretro/beetle-dc)
+- [Report BeetleDC Core Issues Here](https://github.com/libretro/beetle-dc/issues)
