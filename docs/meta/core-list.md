@@ -105,8 +105,7 @@
 - ProSystem
 - PX68k
 - QuickNES
-- Redream
-- Reicast
+- BeetleDC
 - REminiscence
 - RemoteJoy
 - Remote RetroPad
