@@ -6,8 +6,8 @@
  - GL 3.x+ (modern desktop)
  - GLES2 (legacy mobile)
  - GLES3 (modern mobile)
- - HLSL (planned)
- - Metal (planned)
+ - HLSL
+ - Metal
 
 **Design principle: Avoid mandating high-level features which do not work for GLES2.**
 
