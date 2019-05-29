@@ -409,9 +409,10 @@ Other than uniforms related to textures, there are other special uniforms availa
 
  - `MVP`: `mat4` model view projection matrix.
  - `OutputSize`: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size `(x, y)` for this pass.
- - `FinalViewportSize: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size for the final pass. Accessible from any pass.
- - `FrameCount: a `uint` variable taking a value which increases by one every frame. This value could be pre-wrapped by modulo if specified in preset. This is useful for creating time-dependent effects.
-
+ - `FinalViewportSize`: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size for the final pass. Accessible from any pass.
+ - `FrameCount`: an `uint` variable taking a value which increases by one every frame. This value could be pre-wrapped by modulo if specified in preset. This is useful for creating time-dependent effects.
+ - `FrameDirection`: an `int` variable which indicates whether the content is currently being rewinded. Has a value of `-1` while rewinding, otherwise `1`.
+ 
 #### Aliases
 
 Aliases can give meaning to arbitrary names in a slang file. This is mostly relevant for LUT textures, shader parameters and accessing other passes by name.
