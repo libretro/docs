@@ -108,7 +108,7 @@ The Genesis Plus GX core saves/loads to/from these directories.
 | File         | Description                                                                          |
 |:------------:|:------------------------------------------------------------------------------------:|
 | *.srm        | MS/GG/MD/Pico/SG-1000 Cartridge backup save                                          |
-| cart.brm     | Sega/Mega CD RAM CART                                                                |
+| cart.brm     | Sega/Mega CD RAM Cart                                                                |
 | scd_U.brm    | Sega CD US Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
 | scd_E.brm    | Mega CD EU Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
 | scd_J.brm    | Mega CD JP Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
@@ -152,8 +152,8 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 ![](../image/core/genesis_plus_gx/cue.png)
 
 !!! warning ""
-	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported. 
-
+	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported.
+	
 ## Core options
 
 The Genesis Plus GX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
@@ -180,6 +180,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	The Sega CD's internal memory cannot hold a lot of saves. Setting this core option to per game allows each game to have its own one brm file, thus negating any lack of available space issues.
 	
+??? note "*CD System BRAM diagram*"
+	![](../image/core/genesis_plus_gx/bram.png)
+	
 - **68k address error** [genesis_plus_gx_addr_error] (**enabled**/disabled)
 
 	Emulate the [68k](http://segaretro.org/M68000) address error that occurs on real hardware. Set this to disabled when playing rom hacks since most emulators used to develop rom hacks don't emulate the error.
@@ -204,7 +207,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 	
-- **Low-pass filter %** [genesis_plus_gx_lowpass_range] (5 to 95 in increments of 5. **60 is default*)
+- **Low-pass filter %** [genesis_plus_gx_lowpass_range] (5 to 95 in increments of 5. **60 is default**)
 
 	Awaiting description.
 	
@@ -402,6 +405,7 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 ## External Links
 
 - [Official Genesis Plus GX Github Repository](https://github.com/ekeeke/Genesis-Plus-GX)
+- [Official Genesis Plus GX Bitbucket Repository](https://bitbucket.org/eke/genesis-plus-gx)
 - [Libretro Genesis Plus GX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/genesis_plus_gx_libretro.info)
 - [Libretro Genesis Plus GX Github Repository](https://github.com/libretro/Genesis-Plus-GX)
 - [Report Libretro Genesis Plus GX Core Issues Here](https://github.com/libretro/Genesis-Plus-GX/issues)
