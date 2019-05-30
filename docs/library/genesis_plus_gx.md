@@ -4,7 +4,7 @@
 
 Genesis Plus GX is an open-source Sega 8/16 bit emulator focused on accuracy and portability. The source code, originally based on Genesis Plus 1.3 by Charles MacDonald, has been heavily modified & enhanced, with respect to initial goals and design, in order to improve the accuracy of emulation, implementing new features and adding support for extra peripherals, cartridge & systems hardware.
 
-Genesis Plus GX has 100% compatibility with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear & SG-1000 released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available. It also has Pico emulation.
+Genesis Plus GX has 100% compatibility with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear, SG-1000 & Pico released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available.
 
 The Genesis Plus GX core has been authored by
 
@@ -21,10 +21,12 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 Required or optional firmware files go in the frontend's system directory.
 
-- Please note that BIOS choice isn't locked to any specific revisions.
-- BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](https://docs.libretro.com/library/genesis_plus_gx/#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
+!!! warning ""
+    Please note that BIOS choice isn't locked to any specific revisions.
+!!! warning ""
+    BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](https://docs.libretro.com/library/genesis_plus_gx/#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
 
-|   Filename    |    Description                                  |              md5sum              |
+| Filename      | Description                                     | md5sum                           |
 |:-------------:|:-----------------------------------------------:|:--------------------------------:|
 | bios_MD.bin   | MegaDrive TMSS startup ROM (bootrom) - Optional | 45e298905a08f9cfb38fd504cd6dbc84 |
 | bios_CD_E.bin | MegaCD EU BIOS - Required for MegaCD EU games   | e66fa1dc5820d254611fdcdba0662372 |
@@ -82,7 +84,7 @@ Frontend-level settings or features that the Genesis Plus GX core respects.
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | -         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -106,7 +108,7 @@ The Genesis Plus GX core saves/loads to/from these directories.
 | File         | Description                                                                          |
 |:------------:|:------------------------------------------------------------------------------------:|
 | *.srm        | MS/GG/MD/Pico/SG-1000 Cartridge backup save                                          |
-| cart.brm     | Sega/Mega CD RAM CART                                                                |
+| cart.brm     | Sega/Mega CD RAM Cart                                                                |
 | scd_U.brm    | Sega CD US Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
 | scd_E.brm    | Mega CD EU Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
 | scd_J.brm    | Mega CD JP Backup RAM - When the 'CD System BRAM' core option is set to per bios     |
@@ -150,8 +152,8 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 ![](../image/core/genesis_plus_gx/cue.png)
 
 !!! warning ""
-	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported. 
-
+	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported.
+	
 ## Core options
 
 The Genesis Plus GX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
@@ -178,6 +180,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	The Sega CD's internal memory cannot hold a lot of saves. Setting this core option to per game allows each game to have its own one brm file, thus negating any lack of available space issues.
 	
+??? note "*CD System BRAM diagram*"
+	![](../image/core/genesis_plus_gx/bram.png)
+	
 - **68k address error** [genesis_plus_gx_addr_error] (**enabled**/disabled)
 
 	Emulate the [68k](http://segaretro.org/M68000) address error that occurs on real hardware. Set this to disabled when playing rom hacks since most emulators used to develop rom hacks don't emulate the error.
@@ -188,7 +193,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Master System FM (YM2413)** [genesis_plus_gx_ym2413] (**auto**/disabled/enabled)
 
-	Enable the Master System FM chip. (Enhanced sound output support for [SMS compatible games](http://segaretro.org/FM_Sound_Unit_).
+	Enable the Master System FM chip. (Enhanced sound output support for [SMS compatible games](http://segaretro.org/FM_Sound_Unit).
 	
 - **Mega Drive / Genesis FM** [genesis_plus_gx_ym2612] (**mame (ym2612)**/mame (asic ym3438)/mame (enhanced ym3438)/nuked (ym2612)/nuked (asic ym3438)/nuked (discrete ym3438))
 
@@ -202,7 +207,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 	
-- **Low-pass filter %** [genesis_plus_gx_lowpass_range] (5 to 95 in increments of 5. **60 is default*)
+- **Low-pass filter %** [genesis_plus_gx_lowpass_range] (5 to 95 in increments of 5. **60 is default**)
 
 	Awaiting description.
 	
@@ -281,7 +286,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 The Genesis Plus GX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
-- Joypad Port Empty - None - No device is connected, input is disabled.
+- Joypad Port Empty - None - No device is connected; input is disabled.
 - **Joypad Auto** - Joypad - Depending on the loaded content, the core will automatically emulate a MD Joypad 3 Button controller, or a MD Joypad 6 Button controller or a MS Joypad 2 Button controller.
 - [MD Joypad 3 Button](https://segaretro.org/Control_Pad_(Mega_Drive)) - Joypad 
 - [MD Joypad 6 Button](https://segaretro.org/Six_Button_Control_Pad_(Mega_Drive)) - Joypad
@@ -300,7 +305,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 
 ## User 2 device types
 
-- Joypad Port Empty - None - No device is connected, input is disabled.
+- Joypad Port Empty - None - No device is connected; input is disabled.
 - **Joypad Auto** - Joypad - Depending on the loaded content, the core will automatically emulate a MD Joypad 3 Button controller, or a MD Joypad 6 Button controller or a MS Joypad 2 Button controller.
 - [MD Joypad 3 Button](https://segaretro.org/Control_Pad_(Mega_Drive)) - Joypad
 - [MD Joypad 6 Button](https://segaretro.org/Six_Button_Control_Pad_(Mega_Drive)) - Joypad
@@ -326,7 +331,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer, Master Tap device types for corresponding users.
+Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer, Master Tap device types for the corresponding users.
 
 ## Joypad
 
@@ -355,18 +360,18 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 ## Mouse
 
-| RetroMouse Inputs                                   | MD Mouse        |
-|-----------------------------------------------------|-----------------|
+| RetroMouse Inputs                                     | MD Mouse        |
+|-------------------------------------------------------|-----------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | MD Mouse Cursor |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | MD Mouse Left   |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | MD Mouse Right  |
 | ![](../image/retromouse/retro_middle.png) Mouse 3     | MD Mouse Start  |
-| Wheel Down                                          | MD Mouse Center |
+| Wheel Down                                            | MD Mouse Center |
 
 ## Pointer
 
-| RetroPointer Inputs                                                                                                  | MS Graphic Board        |
-|----------------------------------------------------------------------------------------------------------------------|-------------------------|
+| RetroPointer Inputs                                                                                                    | MS Graphic Board        |
+|------------------------------------------------------------------------------------------------------------------------|-------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus | 
 | ![](../image/retromouse/retro_left.png) Mouse 1                                                                        | MS Graphic Board Pen    |
 | ![](../image/retromouse/retro_right.png) Mouse 2                                                                       | MS Graphic Board Menu   |
@@ -400,6 +405,7 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 ## External Links
 
 - [Official Genesis Plus GX Github Repository](https://github.com/ekeeke/Genesis-Plus-GX)
+- [Official Genesis Plus GX Bitbucket Repository](https://bitbucket.org/eke/genesis-plus-gx)
 - [Libretro Genesis Plus GX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/genesis_plus_gx_libretro.info)
 - [Libretro Genesis Plus GX Github Repository](https://github.com/libretro/Genesis-Plus-GX)
 - [Report Libretro Genesis Plus GX Core Issues Here](https://github.com/libretro/Genesis-Plus-GX/issues)
