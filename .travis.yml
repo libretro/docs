@@ -5,6 +5,6 @@ install:
   - pip install mkdocs
   - pip install mkdocs-material
   - pip install pymdown-extensions
-  - pip install git-revision-date
+  - pip install mkdocs-git-revision-date-plugin
 script:
   - mkdocs build
