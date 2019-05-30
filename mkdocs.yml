@@ -332,3 +332,5 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+plugins:
+  - git-revision-date
