@@ -232,7 +232,6 @@ The PicoDrive core supports the following device type(s) in the controls menu, b
 | Knuckles’ Chaotix                            | Glitched graphics on the Player Select screen.                |
 | NBA Jam Tournament Edition                   | Framerate issues.                                             |
 | NFL Quarterback Club                         | Some menu graphics are missing.                               |
-| Star Wars Arcade (PAL version)               | Glitched opening visuals. Cannot get past Press Start screen. |
 | Virtua Racing Deluxe                         | Blinking line during the SEGA logo screen.                    |
 | World Series Baseball Starring Deion Sanders | Crashes when starting a match.                                |
 | WWF Raw                                      | Various graphics are missing.                                 |
