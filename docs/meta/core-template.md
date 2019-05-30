@@ -6,6 +6,8 @@
 - // [Title] is the display name entry from the core's info file
 - // https://github.com/libretro/libretro-super/tree/master/dist/info
 
+**Page last revised on: {{ git_revision_date }}**
+
 ## Background
 
 [Background info]
