@@ -27,6 +27,11 @@ sudo dnf install make automake gcc gcc-c++ kernel-devel mesa-libEGL-devel libv4l
 apt-get -y install build-essential libxkbcommon-dev zlib1g-dev libfreetype6-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev nvidia-cg-toolkit nvidia-cg-dev libavcodec-dev libsdl2-dev libsdl-image1.2-dev libxml2-dev yasm
 ```
 
+#### Satisfying dependencies under Alpine
+```sh
+apk add eudev-dev ffmpeg-dev freetype-dev g++ gcc libxml2-dev mesa-dev pkgconf zlib-dev
+```
+
 This list of packages may not be complete.
 ### Getting the code
 ```bash
