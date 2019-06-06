@@ -46,7 +46,7 @@ Example (MAME ID=ikaruga)
 
 ### Authors
 
-- skmp
+- flyinghead
 
 ## See also
 
