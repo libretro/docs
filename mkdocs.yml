@@ -7,7 +7,9 @@ nav:
   - 'About': 'index.md'
   - 'For Users':
     - 'RetroArch: Getting Started':
-      - 'Windows': 'guides/install-windows.md'
+      - 'Windows':
+        - 'Windows 10': 'guides/install-windows.md'
+        - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
       - 'Nintendo':
