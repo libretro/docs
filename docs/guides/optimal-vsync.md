@@ -34,7 +34,7 @@ RetroArch: [GL]: Using ARB_sync to reduce latency.
 ```
 Do note that this sync method can greatly reduce performance, and can turn smooth 60 fps into crawling 30 fps if there was not enough headroom in the performance.
 
-If you use [KMS mode,](https://github.com/libretro/RetroArch/wiki/KMS-mode) using `video_hard_sync` won't help as it already does something like this.
+If you use [KMS mode,](https://docs.libretro.com/guides/kms-mode/) using `video_hard_sync` won't help as it already does something like this.
 
 ## Threaded video fallback
 
