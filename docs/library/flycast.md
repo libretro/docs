@@ -1,24 +1,24 @@
-# Sega Dreamcast (Reicast)
+# Sega Dreamcast (flycast)
 
 ## Contribute to this documentation
 
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/reicast.md). Changes are proposed using "Pull Requests."
+In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/flycastc.md). Changes are proposed using "Pull Requests."
 
 ## Background
 
-Reicast is a multi-platform Sega Dreamcast emulator. 
+Flycast is a multi-platform Sega Dreamcast emulator. 
 
 ### Why use this core?
 
 Awaiting description.
 
-### How to get and install the Reicast core:
+### How to get and install the flycast core:
 
 1. Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
 2. Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-3. Browse through the list and select 'Sega Dreamcast (Reicast)'.
+3. Browse through the list and select 'Sega Dreamcast (flycast)'.
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -30,7 +30,7 @@ After this has finished downloading, the core should now be ready for use!
 
 3. Select the content that you want to run.
 
-4. If you are asked which core to select, choose 'Sega Dreamcast (Reicast)'.
+4. If you are asked which core to select, choose 'Sega Dreamcast (flycast)'.
 
 The game should now start running!
 
@@ -46,11 +46,9 @@ Example (MAME ID=ikaruga)
 
 ### Authors
 
-- skmp
+- flyinghead
 
 ## See also
-
-- [Sega Dreamcast (Redream)](https://docs.libretro.com/library/redream/) - Shared platforms.
 
 ## License
 
@@ -60,7 +58,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 ## Extensions
 
-Content that can be loaded by the Reicast core have the following file extensions:
+Content that can be loaded by the flycast core have the following file extensions:
 
 - .cdi
 - .gdi
@@ -71,7 +69,7 @@ Content that can be loaded by the Reicast core have the following file extension
 
 ## Databases
 
-RetroArch database(s) that are associated with the Reicast core:
+RetroArch database(s) that are associated with the flycast core:
 
 - [Sega - Dreamcast](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20Dreamcast.rdb)
 
@@ -285,11 +283,9 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 | Game                                        | Issue                                                                                                                                                                                                                                                                  |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Capcom vs. SNK: Millennium Fight 2000 (PAL) | The "KO" text appears distorted. Needs Order Independent Transparency for this to be displayed right.                                                                                                                                                                                                                                       |
 | Crazy Taxi (PAL)                            | Player taxis do not emit engine sounds.                                                                                                                                                                                                                                |
 | Crazy Taxi (USA)                            | Player taxis do not emit engine sounds.                                                                                                                                                                                                                                |                                                                                                                                                                                                                                |
 | Jet Grind Radio (USA)                       | Police reports during levels do not display correctly. |
-| Marvel Vs Capcom 2                          | Set dynamic recompiler to 'generic_recompiler' in order to avoid a crash on the second stage. |
 | Sonic Adventure (PAL)                       | Must be set to use "VGA" output in core options, as "TV" mode will cause all subsequent FMV to make RetroArch become unresponsive.                                                                                                                                     |
 | Sonic Adventure 2 (USA)                     | Text during score tally will flicker sometimes (Wild Canyon as Knuckles).                                                                                                       |
 | Super Runabout: San Francisco (USA)         | Crash to desktop with no error message.                                                                                                                                                                                                                                |
@@ -297,8 +293,6 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ## External Links
 
-- [Libretro Reicast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/reicast_libretro.info)
-- [Libretro Reicast Github Repository](https://github.com/libretro/reicast-emulator)
-- [Report Libretro Reicast Core Issues Here](https://github.com/libretro/reicast-emulator/issues)
-- [Official Reicast Website](http://reicast.com/)
-- [Official Reicast Github Repository](https://github.com/reicast/reicast-emulator)
+- [Libretro flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
+- [Libretro flycast Github Repository](https://github.com/libretro/flycast)
+- [Report flycast Core Issues Here](https://github.com/libretro/flycast/issues)

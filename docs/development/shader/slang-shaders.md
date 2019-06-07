@@ -6,8 +6,8 @@
  - GL 3.x+ (modern desktop)
  - GLES2 (legacy mobile)
  - GLES3 (modern mobile)
- - HLSL (planned)
- - Metal (planned)
+ - HLSL
+ - Metal
 
 **Design principle: Avoid mandating high-level features which do not work for GLES2.**
 
@@ -409,9 +409,10 @@ Other than uniforms related to textures, there are other special uniforms availa
 
  - `MVP`: `mat4` model view projection matrix.
  - `OutputSize`: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size `(x, y)` for this pass.
- - `FinalViewportSize: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size for the final pass. Accessible from any pass.
- - `FrameCount: a `uint` variable taking a value which increases by one every frame. This value could be pre-wrapped by modulo if specified in preset. This is useful for creating time-dependent effects.
-
+ - `FinalViewportSize`: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size for the final pass. Accessible from any pass.
+ - `FrameCount`: an `uint` variable taking a value which increases by one every frame. This value could be pre-wrapped by modulo if specified in preset. This is useful for creating time-dependent effects.
+ - `FrameDirection`: an `int` variable which indicates whether the content is currently being rewinded. Has a value of `-1` while rewinding, otherwise `1`.
+ 
 #### Aliases
 
 Aliases can give meaning to arbitrary names in a slang file. This is mostly relevant for LUT textures, shader parameters and accessing other passes by name.
