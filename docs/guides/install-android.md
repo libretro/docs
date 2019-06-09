@@ -15,7 +15,7 @@ This will download the latest stable version.
 
 #### Installation via Website
 ___
-- **APK** You have to turn on the installation from unknown source in settings.
+- **Unknown Sources** To avoid compromising the safety of your device, always use applications provided through our official channels.
 
 1. Go to www.retroarch.com then click **Get RetroArch** or [click here](https://www.retroarch.com/?page=platforms) on your device.
 2. Scroll down untill **Android** section.
