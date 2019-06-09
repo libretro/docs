@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- **UNZIP** You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.z7` in Windows 2000. to run RetroArch on your 3DS or 2DS.
+- **UNZIP** You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.z7` in Windows 2000.
 
 ### Downloading and installing
 
