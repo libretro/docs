@@ -6,7 +6,7 @@ There are multiple ways of downloading RetroArch for your Android device.
 
 #### Installation via Google Play
 ___
-1. Open the Google Play Store app ![Alt](image/guides/googleplaystorelogo.png "Google Play").
+1. Open the Google Play Store app ![Logo](...image/guides/google-playstore-logo.png "Google Play").
 *Note: you can also go to play.google.com*
 2. Search for **RetroArch**. 
 3. Select **RetroArch** then **Download**.
@@ -36,21 +36,21 @@ Go to `Settings` - `System` and check `Kernel version`. If the code inside conta
 * In the next menu, tick the box that lets that app install APKs.
 * `Hit the back button` to return to your installation.
 
+#### Installation via F-Droid
+___
+This is our F-Droid app repository for RetroArch. You can add this repo via QR scanning the code below:
+
+![QR Code](...image/guides/qr-code.png "QR Code").
+or by entering `https://fdroid.libretro.com` in the **F-Droid application**.
+
+You can also download older builds using `https://fdroid.libretro.com/archive` as repository URL in the F-Droid application.
+
 ### Download with Buildbot
 ___
 You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `android` and download `RetroArch.apk` or `RetroArch_aarch64.apk`.
 
 For Nightlies [here](https://buildbot.libretro.com/nightly/android/) - pick the latest version(based on date), and download `...RetroArch.apk` or `...RetroArch_aarch64.apk`.
 *where ... represents the date*
-
-#### Installation via F-Droid
-___
-This is our F-Droid app repository for RetroArch. You can add this repo via QR scanning the code below:
-
-![Alt](image/guides/qr-code.png "QR Code").
-or by entering `https://fdroid.libretro.com` in the **F-Droid application**.
-
-You can also download older builds using `https://fdroid.libretro.com/archive` as repository URL in the F-Droid application.
 
 ### Video Demonstration
 ___
