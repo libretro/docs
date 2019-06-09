@@ -6,7 +6,7 @@ There are multiple ways of downloading RetroArch for your Android device.
 
 #### Installation via Google Play
 ___
-1. Open the Google Play Store app ![Logo](...image/guides/google-playstore-logo.png "Google Play").
+1. Open the Google Play Store app ![Google Play Store Logo](../image/guides/google-playstore-logo.png)
 *Note: you can also go to play.google.com*
 2. Search for **RetroArch**. 
 3. Select **RetroArch** then **Download**.
@@ -40,7 +40,7 @@ Go to `Settings` - `System` and check `Kernel version`. If the code inside conta
 ___
 This is our F-Droid app repository for RetroArch. You can add this repo via QR scanning the code below:
 
-![QR Code](...image/guides/qr-code.png "QR Code").
+![QR Code](../image/guides/qr-code.png).
 or by entering `https://fdroid.libretro.com` in the **F-Droid application**.
 
 You can also download older builds using `https://fdroid.libretro.com/archive` as repository URL in the F-Droid application.
