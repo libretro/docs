@@ -20,8 +20,8 @@ ___
 1. Go to www.retroarch.com then click **Get RetroArch** or [click here](https://www.retroarch.com/?page=platforms) on your device.
 2. Scroll down untill **Android** section.
 3. Select either **Download** or **Download (64bit)**.
-...There are several ways to determine if you have 64bit or 32bit version. You can use app like *Antutu* or *AIDA64*. You can still find out without app. 
-...Go to `Settings` - `System` and check `Kernel version`. If the code inside contains **x64** string, your device has a `64-bit OS`; if you cannot find this string, then is **32-bit**.
+There are several ways to determine if you have 64bit or 32bit version. You can use app like *Antutu* or *AIDA64*. You can still find out without app. 
+Go to `Settings` - `System` and check `Kernel version`. If the code inside contains **x64** string, your device has a `64-bit OS`; if you cannot find this string, then is **32-bit**.
 4. Click on the downloaded APK file.
 **Before Android Oreo**:
 
@@ -35,7 +35,6 @@ ___
 * Android will tell you that `the app doesn’t have permission to install APKs`. Click the available `Settings` button in that prompt.
 * In the next menu, tick the box that lets that app install APKs.
 * `Hit the back button` to return to your installation.
-[![Quick Video Demonstration](http://img.youtube.com/vi/4TnjFE9t1a4/0.jpg)](http://www.youtube.com/watch?v=4TnjFE9t1a4)
 
 ### Download with Buildbot
 ___
