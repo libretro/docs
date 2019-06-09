@@ -1,11 +1,11 @@
 # Downloading, Installing and Updating RetroArch for Android devices.
 
 ### Downloading and installing
-
+___
 There are multiple ways of downloading RetroArch for your Android device.
 
 #### Installation via Google Play
-
+___
 1. Open the Google Play Store app ![Alt](image/guides/googleplaystorelogo.png "Google Play").
 *Note: you can also go to play.google.com*
 2. Search for **RetroArch**. 
@@ -14,7 +14,7 @@ There are multiple ways of downloading RetroArch for your Android device.
 This will download the latest stable version.
 
 #### Installation via Website
-
+___
 - **APK** You have to turn on the installation from unknown source in settings.
 
 1. Go to www.retroarch.com then click **Get RetroArch** or [click here](https://www.retroarch.com/?page=platforms) on your device.
@@ -38,17 +38,21 @@ This will download the latest stable version.
 [![Quick Video Demonstration](http://img.youtube.com/vi/4TnjFE9t1a4/0.jpg)](http://www.youtube.com/watch?v=4TnjFE9t1a4)
 
 ### Download with Buildbot
-
+___
 You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `android` and download `RetroArch.apk` or `RetroArch_aarch64.apk`.
 
 For Nightlies [here](https://buildbot.libretro.com/nightly/android/) - pick the latest version(based on date), and download `...RetroArch.apk` or `...RetroArch_aarch64.apk`.
 *where ... represents the date*
 
 #### Installation via F-Droid
-
+___
 This is our F-Droid app repository for RetroArch. You can add this repo via QR scanning the code below:
 
 ![Alt](image/guides/qr-code.png "QR Code").
 or by entering `https://fdroid.libretro.com` in the **F-Droid application**.
 
 You can also download older builds using `https://fdroid.libretro.com/archive` as repository URL in the F-Droid application.
+
+### Video Demonstration
+___
+[![Quick Video Demonstration](http://img.youtube.com/vi/dqx5c28pT3o/0.jpg)](http://www.youtube.com/watch?v=dqx5c28pT3o)
