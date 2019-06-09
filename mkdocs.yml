@@ -12,6 +12,7 @@ nav:
         - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'iOS/tvOS': 'guides/install-ios.md'
+      - 'Android': 'guides/install-android.md'
       - 'Nintendo':
         - 'Switch': 'guides/install-libnx.md'
         - '3DS/2DS Family': 'guides/install-3ds2ds.md'
