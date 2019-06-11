@@ -13,7 +13,7 @@ nav:
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'Apple':
         - 'iOS': 'guides/install-ios.md'
-        - 'iOS/tvOS Build': 'guides/install-ios.md'         
+        - 'iOS/tvOS Build': 'guides/build-ios.md'         
       - 'Android': 'guides/install-android.md'
       - 'Nintendo':
         - 'Switch': 'guides/install-libnx.md'
