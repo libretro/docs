@@ -8,7 +8,7 @@ You don't have to map all of the RetroPad buttons to a real world button. If you
 ![RetroPad Conceptual Diagram](/image/guides/retropad-conceptual-diagram.png)
 
 ## Gamepad setup
-RetroArch is intented to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
+RetroArch is intended to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
 
 ### Gamepad autoconfiguration
 Many gamepads should work out of the box via the RetroArch autoconfiguration profile database. If the gamepad can be autoconfigured the OSD will inform you of the autoconfiguration event.
