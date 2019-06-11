@@ -1,85 +1,60 @@
-# iOS/tvOS Installation Guide
+# Downloading, Installing and Updating RetroArch for iOS devices.
 
-The following is a non-developer guide to install RetroArch on non-jailbroken iOS devices. We're going to try to improve the process and possibly include the iOS cores in a download, but until then, here is a way to build RetroArch to get it running on your iPhone, iPad, or Apple TV.
+### Downloading and installing
+___
+There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](https://buildbot.libretro.com/stable/1.7.7/apple/ios/RetroArch.ipa)(iOS11+) to download now.
 
-## Building From Source using Xcode
+## Prerequisites
 
-This is probably the most straightforward way to install RetroArch without having to resort to 3rd party tools. It does however require:
+- **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
+- **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android. 
 
-- a Mac capable of running the latest Xcode
-- Xcode
-- an Apple ID
+### Installation
 
-### Get Xcode
+#### Installation for non-Jailbreak Devices
+___
 
-Download Xcode from the Mac App Store.
+In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The name of this application is Cydia Impactor and is not associated with LibRetro or RetroArch. You need to provide the Cydia Impactor yourself, you can reach the desired result using your favorite search engine.
 
-### Clone the RetroArch repository
+1. Run the **Cydia Impactor**.
+2. Drag and drop the `.ipa` file onto **Cydia Impactor**. 
+3. Enter the email for your **iTunes** account.
+4. Enter the password for your **iTunes** account.
+* Note: You will encounter an error and will ask you to create an application-specific password
+5. Go to appleid.apple.com
+6. Sign in with your Apple account information.
+7. Scroll down to the App-specific password field and click `Generate Password...`
+8. Enter a password label.
+* Note: You can name it RetroArch or type a label of your choice.
+9. Copy your `app-specific password` and perform steps 2 and 3 again.
+10. Enter your `app-specific password` this time instead of your Apple-ID password.
+* Note: Wait until you see Complete.
 
-Open Terminal (it's in Applications/Utilities) and run the following command:
-```
-git clone https://github.com/libretro/RetroArch.git
-```
+We will continue from here on your iOS device. You can see `RetroArch` on your screen, but don't run it for now.
 
-### Download the Emulator Cores
+1. Go to `Settings` then `General`.
+2. Scroll down until you see `Device Management`, then open it.
+3. You will see your iCloud e-mail address that you entered before, just click on it.
+4. Click Trust "your-email-address@icloud.com"
 
-Emulator cores are needed to use RetroArch as they contain the code that drives the emulation of the system of the game you want to play.
+Now you are free to run RetroArch. 
 
-Normally you'd compile the cores, but since you're not a developer, I'll provide a link to my personal set of precompiled cores for iOS: [Download Cores from Mega.nz](https://mega.nz/#!ScRDECzC!f8Gow0Zww5kbkl4XPlCJ2lK0sFqcZ1rWSL5QYLvO0O4)
+#### Content transfer via iTunes
+___
+**Unknown Sources** To avoid compromising the safety of your device, always use applications provided through official channels.
 
-### Extract the Cores
+1. Go to https://support.apple.com/downloads/itunes or [click here](https://support.apple.com/downloads/itunes) to go to downloads.
+2. Then click **Download iTunes** based on your OS.
+3. Install and run iTunes.
+* Note: Connect your device to your computer via USB cable and complete the pre-installation if necessary.
+4. Click the iphone![iphone-icon](../image/guides/iphone-icon.jpg) icon at the top.
+5. Click File Sharing from the left menu.
+6. Now you'll see RetroArch with some of your apps here. Select RetroArch.
+7. Drag and drop your content to `RetroArch Documents field`.
 
-Unzip the above archive of cores into the following directory in the RetroArch project: `pkg/apple/iOS/modules`. The core files should have the extension of `.dylib`.
+You can find your content under `Load Content > /var/mobile/containers/dat`.
 
-### Open RetroArch in Xcode
 
-Open the Xcode project located at `pkg/apple/iOS/RetroArch_iOS11.xcodeproj`
-
-### Sign in with your Apple ID
-
-- Open Xcode Preferences (Xcode -> Preferences)
-- Click the "Accounts" tab
-- Hit the "+" at the bottom left and choose "Apple ID" and sign in with your Apple ID
-- Once you’ve successfully logged in, a new "Personal Team" with the role "Free" will appear beneath your Apple ID.
-
-### Xcode Project Setup
-
-You'll need to assign the Developer credentials you just created above to the RetroArch project before you can run it on your device.
-
-Click on the project name, select the target you're interested in (RetroArchiOS11 for iOS, RetroArch TV) and change the "Team" to the role you created above.
-
-Then choose your run target (RetroArch iOS Release for iOS, RetroArch tvOS for AppleTV) and build and run:
-
-![Xcode Steps](../image/guides/ios-install-pic-1.png)
-
-### Using RetroArch
-
-On the iPhone and iPad, you'll be presented with a touch interface. If you have an mFi controller, you can control the interface that way as well.
-
-On the Apple TV, you'll be shown the "XMB" (PS3-like) interface. You need to use an mFi controller with an Apple TV. The Siri Remote is not supported yet.
-
-When you first start RetroArch, you'll notice that you're missing images. You'll want to run the Online Updater:
-
-- From the main menu, choose "Online Updater"
-- Choose:
-  - Update Core Info Files
-  - Update Assets
-  - Update Databases
-  - Update Overlays
-  - Update GLSL Shaders
-
-Do not choose "Core Updater"! That will not work on iOS.
-
-#### Changing the Menu Interface
-
-If you want more visual flair in the interface, you can change it by going to "Settings" -> "Driver" -> "Menu Driver". You might need to restart to see it take effect.
-
-### Transferring ROMs
-
-#### iOS
-
-Use a 3rd party utility like iFunBox or iExplorer to transfer ROM files to the RetroArch app directory.
-
-#### Apple TV
-
-When you start RetroArch, you'll be presented with a screen with a web address that you can access on your computer to transfer files to the RetroArch app directory on your Apple TV.
+### Video Demonstration
+___
+[![Quick Video Demonstration](http://img.youtube.com/vi/QMCXXabUR5k/0.jpg)](http://www.youtube.com/watch?v=QMCXXabUR5k)
