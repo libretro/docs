@@ -4,6 +4,11 @@
 ___
 There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](https://buildbot.libretro.com/stable/1.7.7/apple/ios/RetroArch.ipa)(iOS11+) to download now.
 
+## Prerequisites
+
+- **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
+- **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android. 
+
 ### Installation
 
 #### Installation for non-Jailbreak Devices
