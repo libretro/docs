@@ -16,6 +16,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
 | [Lakka](http://www.lakka.tv/)                                                    | [Non-commercial](http://www.lakka.tv/doc/FAQ/)                                            | Non-commercial |
 | [4DO](../library/4do.md)                         			                       | [Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedocore.h)      | Non-commercial |
+| [Cannonball](../library/cannonball.md)                                           | [Non-commercial](https://github.com/libretro/cannonball/blob/master/docs/license.txt)     | Non-commercial |
 | [Dinothawr](../library/dinothawr.md)             			                       | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | FB Alpha                                         			                       | [Non-commercial](https://github.com/libretro/fbalpha/blob/master/src/license.txt)         | Non-commercial |
 | FB Alpha 2012                                    			                       | [Non-commercial](https://github.com/libretro/fbalpha2012/blob/master/docs/license.txt)                                        | Non-commercial |
