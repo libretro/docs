@@ -148,6 +148,7 @@ nav:
       - 'SNK Emulation':
         - 'SNK - Neo Geo Pocket / Color (Beetle NeoPop)': 'library/beetle_neopop.md'
       - 'Sega Emulation':
+        - 'Cannonball': 'library/cannonball.md'
         - 'Sega - 32X Compatibility List': 'library/compatibility/32x.md'
         - 'Sega - Dreamcast Compatibility List': 'library/compatibility/dc.md'
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
