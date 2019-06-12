@@ -4,6 +4,7 @@
 - Atari800
 - Beetle bsnes
 - Beetle Cygne
+- BeetleDC
 - Beetle GBA
 - Beetle Handy
 - Beetle NeoPop
@@ -23,14 +24,15 @@
 - bsnes Balanced
 - bsnes C++98 (v085)
 - bsnes Performance
+- Cannonball
 - Caprice32
 - ChaiLove
 - Citra
 - Citra Canary/Experimental
 - Craft
 - CrocoDS
-- DeSmuME 2015
 - DeSmuME
+- DeSmuME 2015
 - Dinothawr
 - Dolphin
 - DOSBox
@@ -105,7 +107,6 @@
 - ProSystem
 - PX68k
 - QuickNES
-- BeetleDC
 - REminiscence
 - RemoteJoy
 - Remote RetroPad
@@ -119,8 +120,8 @@
 - Stella
 - TempGBA
 - TGB Dual
-- The Powder Toy
 - Theodore
+- The Powder Toy
 - TyrQuake
 - UME 2014
 - Uzem
