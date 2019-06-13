@@ -3,7 +3,7 @@
 
 ## Background
 
-CannonBall: The Enhanced OutRun Engine.
+This is an OutRun game engine recreation written by Chris White in 2014. It has been ported to the libretro API.
 
 ## Features
 
@@ -30,9 +30,15 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 - Select 'Cannonball', then select 'CannonBall.zip'. This should download and extract this file to RetroArch's Downloads directory.
 
+- Next, follow this [guide](https://github.com/djyt/cannonball/blob/master/roms/roms.txt) and place OutRun Revision B ROMs in the CannonBall directory.
+
+- Below is a pictured example of a working Cannonball setup.
+
+![](../image/core/cb/cb.png)
+
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-- Select the 'CannonBall' directory, then select 'CannonBall.zip'.
+- Select the 'CannonBall' directory, then select 'CannonBall.game'.
 
 - If you are asked which core to select, choose 'Cannonball'.
 
@@ -56,7 +62,7 @@ Frontend-level settings or features that the Cannonball core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✕         |
-| Saves             | -         |
+| Saves             | ✔         |
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
@@ -83,10 +89,20 @@ Frontend-level settings or features that the Cannonball core respects.
 
 The Cannonball core's library name is 'Cannonball'
 
+The Cannonball core saves/loads to/from these directories.
+
+**Frontend's Home directory**
+
+| File         | Description   |
+|:------------:|:-------------:|
+| config.xml   | Config File   |
+| hiscores.xml | Hiscores File |
+
 ## Geometry and timing
 
 - The Cannonball core's core provided FPS is 60 when the [Video Framerate core option](https://docs.libretro.com/library/cannonball/#core-options) is set to Smooth (60)
 - The Cannonball core's core provided FPS is 120 when the [Video Framerate core option](https://docs.libretro.com/library/cannonball/#core-options) is set to Ultra Smooth (120)
+- The Cannonball core's core provided FPS is 60 when the [Video Framerate core option](https://docs.libretro.com/library/cannonball/#core-options) is set to Original (60/30)
 - The Cannonball core's core provided sample rate is 44100 Hz
 - The Cannonball core's base width is 320
 - The Cannonball core's base height is 224
@@ -103,43 +119,45 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Menu At Start** [cannonball_menu_enabled] (**ON**|OFF)
 
-	Awaiting description.
+	When enabled; the Cannoball core shows the main menu upon startup. 
+	
+	When disabled; the Cannonball core goes into attract mode upon startup.
 	
 - **Menu Road Scroll Speed** [cannonball_menu_road_scroll_speed] (**50**|60|70|80|90|100|150|200|300|400|500|5|10|15|20|25|30|40)
 
-	Awaiting description.
+	Use this to configure the speed at which the road on the Main Menu scrolls at.
 	
 - **Video Widescreen Mode** [cannonball_video_widescreen] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
 	
 - **Video High-Resolution Mode** [cannonball_video_hires] (**OFF**|ON)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
 	
 - **Video Framerate** [cannonball_video_fps] (**Smooth (60)**|Ultra Smooth (120)|Original (60/30))
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
 	
 - **Advertise Sound** [cannonball_sound_advertise] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#advertise-sound).
 	
-- **Previus Music** [cannonball_sound_preview] (**ON**|OFF)
+- **Preview Music** [cannonball_sound_preview] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#preview-music).
 	
 - **Fix Samples (use opr-10188.71f)** [cannonball_sound_fix_samples] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#fix-corrupted-audio).
 	
 - **Gear Mode** [cannonball_gear] (**Manual**|Manual Cabinet|Manual 2 Buttons|Automatic)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
 	
 - **Analog Controls (off to allow digital speed setup)** [cannonball_analog] (**ON**|OFF)
 
-	Awaiting description.
+	Self-explanatory.
 	
 - **Digital Steer Speed** [cannonball_steer_speed] (**3**|4|5|6|7|8|9|1|2)
 
@@ -151,11 +169,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Time** [cannonball_dip_time] (**Easy (80s)**|Normal (75s)|Hard (72s)|Very Hard (70s)|Infinite Time)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
 	
 - **Traffic** [cannonball_dip_traffic] (**Normal**|Hard|Very Hard|No Traffic|Easy)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
 	
 - **Freeplay Mode** [cannonball_freeplay] (**OFF**|ON)
 
@@ -163,15 +181,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Use Japanese Tracks Version** [cannonball_jap] (**OFF**|ON)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#japanese-courses)
 	
 - **Use Prototype Stage 1** [cannonball_prototype] (**OFF**|ON)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#prototype-coconut-beach).
 	
 - **Objects Limit Enhanced** [cannonball_level_objects] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings)
 	
 - **Original Traffic Patterns Randomization** [cannonball_randomgen] (**ON**|OFF)
 
@@ -183,7 +201,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Fix Original Game Bugs** [cannonball_fix_bugs] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#bug-fixes)
 	
 - **Fix Timing Bugs** [cannonball_fix_timer] (**OFF**|ON)
 
@@ -195,7 +213,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **New Attract** [cannonball_new_attract] (**ON**|OFF)
 
-	Awaiting description.
+	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
 	
 - **Time Trial Laps** [cannonball_ttrial_laps] (**3**|4|5|1|2)
 
