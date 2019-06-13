@@ -34,8 +34,8 @@ The variables name must now be configured
 
  1. Open msg_hash.h
  2. Add `MENU_LABEL(TEST_MENU_OPTION)` to `enum msg_hash_enums`
- 3. Open msg_hash_lbl.h
- 4. Add `MSG_HASH(MENU_ENUM_LABEL_TEST_MENU_OPTION, "test_menu_option")` in the `MENU_ENUM_LABEL_` section this is how RetroArch identifys the option.
+ 3. Open intl/msg_hash_lbl.h
+ 4. Add `MSG_HASH(MENU_ENUM_LABEL_TEST_MENU_OPTION, "test_menu_option")` in the `MENU_ENUM_LABEL_` section this is how RetroArch identifies the option.
  5. Open msg_hash_us.h
  6. Add `MSG_HASH(MENU_ENUM_LABEL_VALUE_TEST_MENU_OPTION, "Test Menu Option")`  in the `MENU_ENUM_LABEL_VALUE_` section this is what the user actually sees.
  7. Add `MSG_HASH(MENU_ENUM_SUBLABEL_TEST_MENU_OPTION, "Unused Text")` in the `MENU_ENUM_SUBLABEL_` section, sublabels are only used by xmb and glui, they are unused by rgui.
