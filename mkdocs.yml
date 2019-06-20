@@ -195,6 +195,7 @@ nav:
       - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
       - 'ScummVM': 'library/scummvm.md'
       - 'The Powder Toy': 'library/the_powder_toy.md'
+      - 'TIC-80': 'library/tic80.md'
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - 'Uzebox (Uzem)': 'library/uzem.md'    
     - 'Core Library: Media':
