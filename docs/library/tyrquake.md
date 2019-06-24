@@ -231,6 +231,7 @@ The TyrQuake core supports the following device type(s) in the controls menu, bo
 
 - None - Input disabled.
 - **Gamepad Classic** - Joypad
+- **Gamepad Classic Alt** - Joypad
 - **Gamepad Modern** - Joypad
 - **Keyboard + Mouse** - Keyboard and Mouse - Switch to this for keyboard and mouse input. Has keymapper support.
 
@@ -245,8 +246,8 @@ Rumble only works in the TyrQuake core when
 
 ## Joypad
 
-| User 1 Remap descriptors for 'Gamepad Classic' device type | RetroPad Inputs                                | TyrQuake inputs   |
-|------------------------------------------------------------|------------------------------------------------|-------------------|
+| User 1 Remap descriptors for 'Gamepad Classic' device type | RetroPad Inputs                              | TyrQuake inputs   |
+|------------------------------------------------------------|----------------------------------------------|-------------------|
 | Jump                                                       | ![](/image/retropad/retro_b.png)             | Jump              |
 | Fire                                                       | ![](/image/retropad/retro_y.png)             | Fire              |
 | Toggle Run Mode                                            | ![](/image/retropad/retro_select.png)        | Toggle Run Mode   |
@@ -268,8 +269,31 @@ Rumble only works in the TyrQuake core when
 |                                                            | ![](/image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
 |                                                            | ![](/image/retropad/retro_right_stick.png) Y | Look Up/Down      |
 
-| User 1 Remap descriptors for 'Gamepad Modern' device type | RetroPad Inputs                                | TyrQuake inputs   |
-|-----------------------------------------------------------|------------------------------------------------|-------------------|
+| User 1 Remap descriptors for 'Gamepad Classic Alt' device type | RetroPad Inputs                              | TyrQuake inputs   |
+|----------------------------------------------------------------|----------------------------------------------|-------------------|
+| Look Down                                                      | ![](/image/retropad/retro_b.png)             | Look Down         |
+| Look Left                                                      | ![](/image/retropad/retro_y.png)             | Look Left         |
+| Toggle Run Mode                                                | ![](/image/retropad/retro_select.png)        | Toggle Run Mode   |
+| Menu                                                           | ![](/image/retropad/retro_start.png)         | Menu              |
+| D-Pad Up                                                       | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up          |
+| D-Pad Down                                                     | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down        |
+| D-Pad Left                                                     | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left        |
+| D-Pad Right                                                    | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right       |
+| Look Right                                                     | ![](/image/retropad/retro_a.png)             | Look Right        |
+| Look Up                                                        | ![](/image/retropad/retro_x.png)             | Look Up           |
+| Jump                                                           | ![](/image/retropad/retro_l1.png)            | Jump              |
+| Fire                                                           | ![](/image/retropad/retro_r1.png)            | Fire              |
+| Run                                                            | ![](/image/retropad/retro_l2.png)            | Run               |
+| Next Weapon                                                    | ![](/image/retropad/retro_r2.png)            | Next Weapon       |
+| Swim Down                                                      | ![](/image/retropad/retro_l3.png)            | Swim Down         |
+| Previous Weapon                                                | ![](/image/retropad/retro_r3.png)            | Previous Weapon   |
+|                                                                | ![](/image/retropad/retro_left_stick.png) X  | Strafe Left/Right |
+|                                                                | ![](/image/retropad/retro_left_stick.png) Y  | D-Pad Up/Down     |
+|                                                                | ![](/image/retropad/retro_right_stick.png) X | D-Pad Left/Right  |
+|                                                                | ![](/image/retropad/retro_right_stick.png) Y | Look Up/Down      |
+
+| User 1 Remap descriptors for 'Gamepad Modern' device type | RetroPad Inputs                              | TyrQuake inputs   |
+|-----------------------------------------------------------|----------------------------------------------|-------------------|
 | Swim Down                                                 | ![](/image/retropad/retro_b.png)             | Swim Down         |
 | Swim Up                                                   | ![](/image/retropad/retro_y.png)             | Swim Up           |
 | Show Scores                                               | ![](/image/retropad/retro_select.png)        | Show Scores       |
