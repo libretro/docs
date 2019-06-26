@@ -118,3 +118,19 @@ Menu                        ||In-game      ||
 ![N](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_N.png)     | Previous shader | ![F5](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F5.png)| Switch GUI |
 ![I](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_I.png)     | Netplay toggle play/spectate |  | |
 
+## Platform-specific controls
+
+### Nintendo Switch
+USB keyboards and mice: All keyboards seem to work. Not all mice seem to work. [Mouse compatibility sheet](https://docs.google.com/spreadsheets/d/1Drbo5-QuSX901MwtOytSMuqRGxeIkq2HELM806I9dj0/edit#gid=0).
+
+Touch mouse emulation: The Switch touchscreen can be used for mouse control like a laptop touchpad. The following gestures are supported.
+
+| Touch Input              | Effect                                                 |
+|--------------------------|--------------------------------------------------------|
+| single finger drag       | move the mouse pointer (indirectly like on a touchpad) | 
+| single short tap         | left mouse click                                       |
+| dual finger short tap*   | right mouse click                                      |
+| dual finger drag         | drag'n'drop (left mouse button is held down)           |
+| three finger drag        | drag'n'drop (right mouse button is held down)          |
+
+*: hold one finger, short tap with another
