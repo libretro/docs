@@ -153,68 +153,68 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 
 !!! warning ""
 	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported.
-	
+
 ## Core options
 
-The Genesis Plus GX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Genesis Plus GX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **System hardware** [genesis_plus_gx_system_hw] (**auto**/sg-1000/sg-1000 II/mark-III/master system/master system II/game gear/mega drive / genesis)
 
 	Choose which system is going to be emulated.
-	
+
 - **System region** [genesis_plus_gx_region_detect] (**auto**/ntsc-u/pal/ntsc-j)
 
 	Choose which region the system is from.
-	
+
 - **System lockups** [genesis_plus_gx_force_dtack] (**enabled**/disabled)
 
 	Emulate system lockups that occur on real hardware.
-	
+
 - **System bootrom** [genesis_plus_gx_bios] (**disabled**/enabled)
 
 	Runs bootrom if available and then starts loaded content after the boot sequence. Look above at the [BIOS section](https://docs.libretro.com/library/genesis_plus_gx/#bios) for more information.
-	
+
 - **CD System BRAM** [genesis_plus_gx_bram] (**per bios**/per game)
 
 	The Sega CD's internal memory cannot hold a lot of saves. Setting this core option to per game allows each game to have its own one brm file, thus negating any lack of available space issues.
-	
+
 ??? note "*CD System BRAM diagram*"
 	![](../image/core/genesis_plus_gx/bram.png)
-	
+
 - **68k address error** [genesis_plus_gx_addr_error] (**enabled**/disabled)
 
 	Emulate the [68k](http://segaretro.org/M68000) address error that occurs on real hardware. Set this to disabled when playing rom hacks since most emulators used to develop rom hacks don't emulate the error.
-	
+
 - **Cartridge lock-on** [genesis_plus_gx_lock_on] (**disabled**/game genie/action replay (pro)/sonic & knuckles)
 
 	Select lock-on cartridge. Look above at the [BIOS section](https://docs.libretro.com/library/genesis_plus_gx/#bios) for more information.
-	
+
 - **Master System FM (YM2413)** [genesis_plus_gx_ym2413] (**auto**/disabled/enabled)
 
 	Enable the Master System FM chip. (Enhanced sound output support for [SMS compatible games](http://segaretro.org/FM_Sound_Unit).
-	
+
 - **Mega Drive / Genesis FM** [genesis_plus_gx_ym2612] (**mame (ym2612)**/mame (asic ym3438)/mame (enhanced ym3438)/nuked (ym2612)/nuked (asic ym3438)/nuked (discrete ym3438))
 
 	Awaiting description.
-	
+
 - **Sound output** [genesis_plus_gx_sound_output] (**stereo**/mono)
 
 	Self-explanatory.
-	
+
 - **Audio filter** [genesis_plus_gx_audio_filter] (**disabled**/low-pass)
 
 	Awaiting description.
-	
+
 - **Low-pass filter %** [genesis_plus_gx_lowpass_range] (5 to 95 in increments of 5. **60 is default**)
 
 	Awaiting description.
-	
+
 - **Blargg NTSC filter** [genesis_plus_gx_blargg_ntsc_filter] (**Off**/monochrome/composite/svidio/rgb)
 
 	Self-explanatory.
-	
+
 ??? note "*Blargg NTSC filter - Off*"
     ![](../image/core/genesis_plus_gx/normal.png)
 
@@ -229,55 +229,55 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*Blargg NTSC filter - rgb*"
     ![](../image/core/genesis_plus_gx/rgb.png)
-	
+
 - **LCD Ghosting filter** [genesis_plus_gx_lcd_filter] (**disabled**/enabled)
 
 ??? note "*LCD Ghosting filter - On*"
     ![](../image/core/genesis_plus_gx/ghost.png)
-	
+
 - **Borders** [genesis_plus_gx_overscan] (**disabled**/top/bottom/left/right/full)
 
 	Self-explanatory.
-	
+
 - **Game Gear extended screen** [genesis_plus_gx_gg_extra] (**disabled**/enabled)
 
 	Self-explanatory.
-	
+
 ??? note "*Game Gear extended screen - Off*"
     ![](../image/core/genesis_plus_gx/off.png)
 
 ??? note "*Game Gear extended screen - On*"
     ![](../image/core/genesis_plus_gx/on.png)
-	
+
 - **Core-provided aspect ratio** [genesis_plus_gx_aspect_ratio] (**auto**/NTSC PAR/PAL PAR)
 
 	Choose the Core-provided aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings for this to function properly.
-	
+
 - **Interlaced mode 2 output** [genesis_plus_gx_render] (**single field**/double field)
 
 	Change how interlaced mode 2 output is handled. Games like Sonic 2's multiplayer mode uses Interlaced Mode 2.
-	
+
 ??? note "*Interlaced mode 2 output - single field*"
     ![](../image/core/genesis_plus_gx/single.png)
-	
+
 ??? note "*Interlaced mode 2 output - double field*"
-    ![](../image/core/genesis_plus_gx/double.png)	
-	
+    ![](../image/core/genesis_plus_gx/double.png)
+
 - **Show Lightgun crosshair** [genesis_plus_gx_gun_cursor] (**disabled**/enabled)
 
 	Shows lightgun crosshairs for the 'MD Menancer', 'MD Justifiers', and 'MS Light Phaser' Device Types.
-	
+
 ??? note "*Lightgun crosshair*"
-    ![](../image/core/genesis_plus_gx/lightgun.png)	
+    ![](../image/core/genesis_plus_gx/lightgun.png)
 
 - **Invert Mouse Y-axis** [genesis_plus_gx_invert_mouse] (**disabled**/enabled)
 
 	Inverts the Mouse Y-axis for the 'MD Mouse' Device Type.
-	
+
 - **CPU speed** [genesis_plus_gx_overclock] (**100%**/125%/150%/175%/200%)
 
 	Overclock the emulated CPU.
-	
+
 - **Remove per-line sprite limit** [genesis_plus_gx_no_sprite_limit] (**disabled**/enabled)
 
 	Reduce sprite flickering when enabled.
@@ -288,7 +288,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 
 - Joypad Port Empty - None - No device is connected; input is disabled.
 - **Joypad Auto** - Joypad - Depending on the loaded content, the core will automatically emulate a MD Joypad 3 Button controller, or a MD Joypad 6 Button controller or a MS Joypad 2 Button controller.
-- [MD Joypad 3 Button](https://segaretro.org/Control_Pad_(Mega_Drive)) - Joypad 
+- [MD Joypad 3 Button](https://segaretro.org/Control_Pad_(Mega_Drive)) - Joypad
 - [MD Joypad 6 Button](https://segaretro.org/Six_Button_Control_Pad_(Mega_Drive)) - Joypad
 - [MS Joypad 2 Button](https://segaretro.org/Control_Pad_(Master_System)) - Joypad - Also used for Game Gear.
 - [MD Joypad 3 Button + 4-WayPlay](https://segaretro.org/4_Way_Play) - Joypad - Enables multitap for 4-WayPlay games.
@@ -297,7 +297,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 - [MD Joypad 6 Button + Teamplayer](https://segaretro.org/Team_Player) - Joypad - Enables multitap for Teamplayer games.
 - MS Joypad 2 Button + Master Tap - Joypad - Enables Furrtek's Master Tap (unofficial mulitap device).
 - [MS Light Phaser](https://segaretro.org/Light_Phaser) - Lightgun
-- [MS Paddle Control](https://segaretro.org/Paddle_Control) - Analog 
+- [MS Paddle Control](https://segaretro.org/Paddle_Control) - Analog
 - [MS Sports Pad](https://segaretro.org/Sports_Pad) - Analog
 - [MS Graphic Board](https://segaretro.org/Sega_Graphic_Board) - Pointer
 - [MD XE-1AP](https://segaretro.org/XE-1_AP) - Analog
@@ -372,7 +372,7 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 | RetroPointer Inputs                                                                                                    | MS Graphic Board        |
 |------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus | 
+| ![](../image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus |
 | ![](../image/retromouse/retro_left.png) Mouse 1                                                                        | MS Graphic Board Pen    |
 | ![](../image/retromouse/retro_right.png) Mouse 2                                                                       | MS Graphic Board Menu   |
 | ![](../image/retromouse/retro_middle.png) Mouse 3                                                                      | MS Graphic Do           |
@@ -414,5 +414,5 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 - [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
 - [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-- [Sega - MS/GG (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
