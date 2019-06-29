@@ -324,6 +324,7 @@ nav:
     - 'See Also': 'meta/see-also.md'
 extra:
   version: '0.1.0'
+  adsense: "ca-pub-9447404270680650"
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
