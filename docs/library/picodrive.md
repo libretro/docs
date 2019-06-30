@@ -4,10 +4,10 @@
 
 PicoDrive is an open-source Sega 8/16 bit and 32X emulator which was written having ARM-based handheld devices in mind.
 
+## Features
+
 - Supports 32x emulation.
 - Designed to run on weak devices.
-
-### Author/License
 
 The PicoDrive core has been authored by
 
@@ -18,7 +18,17 @@ The PicoDrive core is licensed under
 
 - [Non-commercial](https://github.com/libretro/picodrive/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
+
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+|   Filename    |    Description            |              md5sum              |
+|:-------------:|:-------------------------:|:--------------------------------:|
+| bios_CD_E.bin | MegaCD EU BIOS - Required | e66fa1dc5820d254611fdcdba0662372 |
+| bios_CD_U.bin | SegaCD US BIOS - Required | 2efd74e3232ff260e371b99f84024f7f |
+| bios_CD_J.bin | MegaCD JP BIOS - Required | 278a9397d192149e84e820ac621a8edd |
 
 ## Extensions
 
@@ -34,8 +44,6 @@ Content that can be loaded by the PicoDrive core have the following file extensi
 - .sms
 - .68k
 
-## Databases
-
 RetroArch database(s) that are associated with the PicoDrive core:
 
 - [Sega - Master System - Mark III](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20Master%20System%20-%20Mark%20III.rdb)
@@ -44,16 +52,6 @@ RetroArch database(s) that are associated with the PicoDrive core:
 - [Sega - PICO](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%20PICO.rdb)
 - [Sega - 32X](https://github.com/libretro/libretro-database/blob/master/rdb/Sega%20-%2032X.rdb)
 
-## BIOS
-
-Required or optional firmware files go in the frontend's system directory.
-
-|   Filename    |    Description            |              md5sum              |
-|:-------------:|:-------------------------:|:--------------------------------:|
-| bios_CD_E.bin | MegaCD EU BIOS - Required | e66fa1dc5820d254611fdcdba0662372 |
-| bios_CD_U.bin | SegaCD US BIOS - Required | 2efd74e3232ff260e371b99f84024f7f |
-| bios_CD_J.bin | MegaCD JP BIOS - Required | 278a9397d192149e84e820ac621a8edd |
-
 ## Features
 
 Frontend-level settings or features that the PicoDrive core respects.
@@ -61,7 +59,6 @@ Frontend-level settings or features that the PicoDrive core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
-| Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
@@ -85,27 +82,37 @@ Frontend-level settings or features that the PicoDrive core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The PicoDrive core's internal core name is 'PicoDrive'
+The PicoDrive core's library name is 'PicoDrive'
 
 The PicoDrive core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge backup save)
+| File  | Description           |
+|:-----:|:---------------------:|
+| *.srm | Cartridge backup save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
-### Geometry and timing
+## Geometry and timing
 
 - The PicoDrive core's core provided FPS is 60 for NTSC games and 50 for PAL games.
 - The PicoDrive core's core provided sample rate is 44100 Hz
-- The PicoDrive core's core provided aspect ratio is dependent on the ['Core-provided aspect ratio' core option](https://docs.libretro.com/picodrive/#core-options).
+- The PicoDrive core's base width is 320
+- The PicoDrive core's base height is 224
+- The PicoDrive core's max width is 320
+- The PicoDrive core's max height is 240
+- The PicoDrive core's core provided aspect ratio is 10/7 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to PAR
+- The PicoDrive core's core provided aspect ratio is 4/3 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to 4/3
+- The PicoDrive core's core provided aspect ratio is 5/4 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to CRT
 
-### Loading Sega CD content
+## Loading Sega CD games
 
 When loading Sega CD games, PicoDrive needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
@@ -117,14 +124,14 @@ If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cu
    INDEX 01 00:00:00
 ```
 
-After that, you can load the `foo.cue` file in RetroArch with the PicoDrive core.
+After that, you can load the `foo.cue` file in RetroArch with the Genesis Plus GX core.
 
 !!! warning ""
     Certain Sega CD games are multi-track, so their .cue files might be more complicated.
 
 Here's a cue file example done with Lunar - Eternal Blue (USA)
 
-![](/image/core/genesis_plus_gxcue.png)
+![](../image/core/genesis_plus_gx/cue.png)
 
 ## Core options
 
@@ -146,7 +153,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **MegaCD RAM cart** [picodrive_ramcart] (**disabled**/enabled)
 
-	Emulate a MegaCD RAM cart.
+	Emulate a [MegaCD RAM cart](https://segaretro.org/CD_BackUp_RAM_Cart).
 	
 - **Region** [picodrive_region] (**Auto**/Japan NTSC/Japan PAL/US/Europe)
 
@@ -154,26 +161,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Core-provided aspect ratio** [picodrive_aspect] (**PAR**/4/3/CRT)
 
-	Choose the core-provided aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
+	Choose the core-provided aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
 	
 ??? note "Core-provided aspect ratio - PAR"
-	![](/image/core/picodrivepar.png)
+	![](../image/core/picodrive/par.png)
 	
 ??? note "Core-provided aspect ratio - 4/3"
-	![](/image/core/picodrive4by3.png)
+	![](../image/core/picodrive/4by3.png)
 
 ??? note "Core-provided aspect ratio - CRT"
-	![](/image/core/picodrivecrt.png)	
+	![](../image/core/picodrive/crt.png)	
 	
 - **Show Overscan** [picodrive_overscan] (**disabled**/enabled)
 
 	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Show Overscan - Off"
-	![](/image/core/picodriveoverscan_off.png)
+	![](../image/core/picodrive/off.png)
 	
 ??? note "Show Overscan - On"
-	![](/image/core/picodriveoverscan_on.png)	
+	![](../image/core/picodrive/on.png)	
 	
 - **68k overclock** [picodrive_overclk68k] (**disabled**/+25%/+50%/+75%/+100%/+200%/+400%)
 
@@ -194,34 +201,41 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Specify the cut-off frequency of the audio low pass filter. A higher value increases the perceived 'strength' of the filter, since a wider range of the high frequency spectrum is attenuated.
 
-## Controllers
+## User 1 - 2 device types
 
-The PicoDrive core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The PicoDrive core supports the following device type(s).
 
-### User 1 - 2 device types
+- None - Input is disabled - Can be switched to using the Input device core options.
+- **3 button pad** - Joypad - Can be switched to using the Input device core options.
+- 6 button pad - Joypad - Can be switched to using the Input device core options.
+- SMS pad - Joypad - Is automatically switched to when a Sega Master System game is loaded.
 
-- None - Doesn't disable input.
-- **RetroPad** - Joypad
-- RetroPad w/Analog  - Joypad - There's no reason to switch to this.
+## Joypad
 
-### Controller tables
+| RetroPad Inputs                                | User 1 - 2 input descriptors | 3 button pad | 6 button pad |
+|------------------------------------------------|------------------------------|--------------|--------------|
+| ![](../image/retropad/retro_b.png)             | B                            | B            | B            |
+| ![](../image/retropad/retro_y.png)             | A                            | A            | A            |
+| ![](../image/retropad/retro_select.png)        | Mode                         |              | Mode         |
+| ![](../image/retropad/retro_start.png)         | Start                        | Start        | Start        |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up     | D-Pad Up     |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down   | D-Pad Down   |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left   | D-Pad Left   |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right  | D-Pad Right  |
+| ![](../image/retropad/retro_a.png)             | C                            | C            | C            |
+| ![](../image/retropad/retro_x.png)             | Y                            |              | Y            |
+| ![](../image/retropad/retro_l1.png)            | X                            |              | X            |
+| ![](../image/retropad/retro_r1.png)            | Z                            |              | Z            |
 
-#### Joypad
-
-| User 1 - 2 Remap descriptors | RetroPad Inputs                              | 3 button pad | 6 button pad |
-|------------------------------|----------------------------------------------|--------------|--------------|
-| B                            | ![](/image/retropad/retro_b.png)       | B            | B            |
-| A                            | ![](/image/retropad/retro_y.png)       | A            | A            |
-| Mode                         | ![](/image/retropad/retro_select.png)        |              | Mode         |
-| Start                        | ![](/image/retropad/retro_start.png)         | Start        | Start        |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up     | D-Pad Up     |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down   | D-Pad Down   |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left   | D-Pad Left   |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right  | D-Pad Right  |
-| C                            | ![](/image/retropad/retro_a.png)       | C            | C            |
-| Y                            | ![](/image/retropad/retro_x.png)       |              | Y            |
-| X                            | ![](/image/retropad/retro_l1.png)            |              | X            |
-| Z                            | ![](/image/retropad/retro_r1.png)            |              | Z            |
+| RetroPad Inputs                                | User 1 - 2 input descriptors | SMS pad                   |
+|------------------------------------------------|------------------------------|---------------------------|
+| ![](../image/retropad/retro_b.png)             | Button 1 Start               | Button 1 Start            |
+| ![](../image/retropad/retro_start.png)         | Button Pause                 | Button Pause              |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left                |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right               |
+| ![](../image/retropad/retro_a.png)             | Button 2                     | Button 2                  |
 
 ## Compatibility
 
@@ -244,21 +258,9 @@ The PicoDrive core supports the following device type(s) in the controls menu, b
 - [Libretro PicoDrive Github Repository](https://github.com/libretro/picodrive)
 - [Report Libretro PicoDrive Core Issues Here](https://github.com/libretro/picodrive/issues)
 
-### See also
-
-#### Sega - Master System - Mark III
+## Sega 16-bit
 
 - [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-
-#### Sega - Mega Drive - Genesis
-
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-
-#### Sega - Mega-CD - Sega CD
-
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-
-#### Sega - PICO
-
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
+- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
