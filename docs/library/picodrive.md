@@ -124,7 +124,7 @@ If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cu
    INDEX 01 00:00:00
 ```
 
-After that, you can load the `foo.cue` file in RetroArch with the Genesis Plus GX core.
+After that, you can load the `foo.cue` file in RetroArch with the PicoDrive core.
 
 !!! warning ""
     Certain Sega CD games are multi-track, so their .cue files might be more complicated.
