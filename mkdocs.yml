@@ -22,6 +22,7 @@ nav:
         - 'Playstation3': 'guides/install-ps3.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md' 
+        - 'Steam Link': 'guides/install-steamlink.md' 
     - 'RetroArch: User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
