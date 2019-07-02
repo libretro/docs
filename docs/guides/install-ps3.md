@@ -1,4 +1,4 @@
-# Downloading and Installing RetroArch
+# Downloading and Installing RetroArch for PlayStation 3
 
 ## Sony Playstation 3
 
