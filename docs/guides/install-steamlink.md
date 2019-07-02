@@ -7,7 +7,7 @@ The download and installation process is as follows, and may change in the futur
 
 This is probably the most straightforward way to install RetroArch.
 
-- FAT32 formatted USB, It should be partitioned as MBR rather than GPT.
+- FAT32 formatted USB
 
 # Download 
 
