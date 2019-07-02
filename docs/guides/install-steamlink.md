@@ -1,7 +1,7 @@
 
 # Downloading and Installing RetroArch for Steam Link
 
-The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon, shaderpipeline are disabled and pre-configured RGUI theme is configured for full efficiency.
+The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon, shaderpipeline are disabled and pre-configured RGUI theme is configured and most Cores installed into Cores folder for full efficiency.
 
 ## Prerequisites
 
