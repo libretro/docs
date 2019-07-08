@@ -70,6 +70,7 @@ We can transfer our content with SSH or USBmount we have previously configured.
 Find out the IP address that SteamLink receives, which you can learn from your router or SteamLink network settings. Create an SFTP connection with your trusted FTP tool. SteamLink SSH username is `root` and password is `steamlink123`, 21 for FTP and 22 for SFTPthe sample scenario for this is as follows. It may be different(ip address) in your case. RetroArch is not related to the specified applications and cannot be held responsible.
 
 FileZilla
+
 | Host  | Username  | Passoword  | Port  |
 |---|---|---|---|
 | 192.168.1.5  | root  |  steamlink123 | 22  |
