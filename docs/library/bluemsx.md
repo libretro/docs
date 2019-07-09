@@ -115,7 +115,7 @@ ColecoVision Gamepad Mapping is as follow:
 - 0 & 9 are on keyboard 1 & 2 for Player 1
 - 0 & 9 are on keyboard 3 & 4 for Player 2.
 
-To play SpectraVideo cassettes type 'cload' then 'run' 
+To play SpectraVideo cassettes type 'cload' then 'run'
 
 or BLOAD ''CAS:'',R depending on the game.
 
@@ -140,18 +140,18 @@ An alternative is to append disks to the current playlist via the "Disk Image Ap
 
 ## Core options
 
-The blueMSX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The blueMSX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Machine Type (Restart)** [bluemsx_msxtype] (**Auto**|MSX|MSXturboR|MSX2|MSX2+|SEGA - SG-1000|SEGA - SC-3000|SEGA - SF-7000|SVI - Spectravideo SVI-318|SVI - Spectravideo SVI-328|SVI - Spectravideo SVI-328 MK2|ColecoVision|Coleco (Spectravideo SVI-603))
 
 	Manually select the machine type you would like the core to start in.
-	
+
 - **Crop Overscan** [bluemsx_overscan] (**disabled**|enabled|MSX2)
 
 	Forces cropping of overscanned frames
-	
+
 ??? note "*Crop Overscan Off*"
     ![](/image/core/bluemsxcrop_off.png)
 
@@ -160,23 +160,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*Crop Overscan MSX2*"
     ![](/image/core/bluemsxcrop_msx2.png)
-	
+
 - **VDP Sync Type (Restart)** [bluemsx_vdp_synctype] (**Auto**|50Hz|60Hz)
 
 	Match the game/machine region frequency to avoid emulated speed issues.
-	
+
 - **No Sprite Limit** [bluemsx_nospritelimits] (**OFF**|ON)
 
 	Remove the 4 sprite per line limit which can reduce or remove sprite flicker in some games.
-	
+
 - **Sound YM2413 Enable (Restart)** [bluemsx_ym2413_enable] (**enabled**|disabled)
 
 	Awaiting description.
-	
+
 - **Cart Mapper Type (Restart)** [bluemsx_cartmapper] (**Auto**|Normal|mirrored|basic|0x4000|0xC000|ascii8|ascii8sram|ascii16|ascii16sram|ascii16nf|konami4|konami4nf|konami5|konamisynth|korean80|korean90|korean126|MegaFlashRomScc|MegaFlashRomSccPlus|msxdos2|scc|sccexpanded|sccmirrored|sccplus|snatcher|sdsnatcher|SegaBasic|SG1000|SG1000Castle|SG1000RamA|SG1000RamB|SC3000)
 
 	When a rom game or application is in the database, the emulator uses the databases to apply the correct mapper. If the sha1 value of a dump is not yet in the databases, it uses an automatic mapper detection system, but it can fail in some cases. In this situation, you can manually select the correct mapper.
-	
+
 ## Controllers
 
 The blueMSX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -332,6 +332,7 @@ Supported combinations
 #### Sega - SG-1000
 
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 
 #### Microsoft - MSX
 

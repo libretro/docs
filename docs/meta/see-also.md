@@ -97,7 +97,7 @@ This is a list of cores that are related to each other in some way.
 - [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
 - [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-- [Sega - MS/GG (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
 
 ## Saturn

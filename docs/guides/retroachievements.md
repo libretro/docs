@@ -135,6 +135,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                           | Supported |
 |----------------------------------------------------------------|:---------:|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
 
 ### PC Engine
 

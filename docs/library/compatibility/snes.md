@@ -76,7 +76,6 @@ Same with Snes9x 2005 Plus
 | Hayazashi Nidan Morita Shougi 2                  | Matches won’t start.                                                                 |
 | Mecarobot Golf                                   | The ground "wobbles" during gameplay.                                                |
 | Secret of Evermore (PAL versions)                | Randomly freezes when the background music changes.                                  |
-| Speedy Gonzales: Los Gatos Bandidos              | Freezes when pressing a switch in the last level.                                    |
 
 ## higan Accuracy
 
