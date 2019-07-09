@@ -183,7 +183,7 @@ Configure paths for 64-bit builds:
 ```
 
 !!! tip
-    You can add that last line to your `~/.bashrc` to avoid having to type that every time you start your working environment.
+    You can add this to /etc/profile under both the 32-bit and 64-bit setups by adding `${MINGW_MOUNT_POINT}/lib/ccache/bin` to the front of the PATH variables found in `MINGW32)` and `MINGW64)`, around line 50 of profile, to ensure the proper binaries are loaded for each development environment.
 
 From our own buildbot, the times with and without **ccache** are the following:
 

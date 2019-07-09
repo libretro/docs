@@ -46,7 +46,7 @@ nav:
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'RGUI Interface': 'guides/rgui.md'
     - 'RetroArch: Advanced':
-      - 'Auto Translation': 'guides/auto-translation.md'
+      - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
@@ -157,7 +157,7 @@ nav:
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
-        - 'Sega - MS/GG (Gearsystem)': 'library/gearsystem.md'
+        - 'Sega - MS/GG/SG-1000 (Gearsystem)': 'library/gearsystem.md'
         - 'Sega - MS/GG/MD/CD (Genesis Plus GX)': 'library/genesis_plus_gx.md'
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
@@ -198,6 +198,7 @@ nav:
       - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
       - 'ScummVM': 'library/scummvm.md'
       - 'The Powder Toy': 'library/the_powder_toy.md'
+      - 'TIC-80': 'library/tic80.md'
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - 'Uzebox (Uzem)': 'library/uzem.md'    
     - 'Core Library: Media':
@@ -324,6 +325,7 @@ nav:
     - 'See Also': 'meta/see-also.md'
 extra:
   version: '0.1.0'
+  adsense: "ca-pub-9447404270680650"
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

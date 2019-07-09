@@ -121,6 +121,7 @@
 - TempGBA
 - TGB Dual
 - Theodore
+- TIC-80
 - The Powder Toy
 - TyrQuake
 - UME 2014

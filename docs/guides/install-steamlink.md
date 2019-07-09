@@ -1,7 +1,7 @@
 
 # Downloading and Installing RetroArch for Steam Link
 
-The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon, shaderpipeline are disabled and pre-configured RGUI theme is configured and most Cores installed into Cores folder for full efficiency.
+The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon and shaderpipeline are disabled, RGUI theme is pre-configured and most Cores installed into the `Cores` folder for full efficiency.
 
 ## Prerequisites
 
@@ -11,13 +11,13 @@ This is probably the most straightforward way to install RetroArch.
 
 # Download 
 
-You can find a cores-bundle with RetroArch by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down untill **Steam Link** section.
+You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down until you see the **Steam Link** section.
 
 # Getting USB Ready
 
 ## Setting up RetroArch
 
-Bringing RetroArch ready to install is still simple. Create the file structure in the root directory of your USB as follows;
+Getting RetroArch ready to install is very simple. Create the file structure in the root directory of your USB as follows:
 
 > steamlink/apps/
 
@@ -25,23 +25,23 @@ Unzip the `RetroArch.zip`,  move the `RetroArch` folder into the `apps` folder w
 
 ### Content Management
 
-Transferring files to Steam Link can be a bit tedious. You can put your contents inside the `Content` folder in `RetroArch` folder however our goal is to make this process more sustainable. In this case SSH or USBmount will help us.
+Transferring files to Steam Link can be a bit tedious. You can put your contents inside the `Content` folder in the `RetroArch` folder, however our goal is to make this process more sustainable. In this case SSH or USBmount will help us.
 
 #### SSH
 
-In order to use an SFTP connection with SSH, we must first enable SSH. It's easy to enable SSH on your Steam Link. To do this, go to `steamlink`folder and create two nested folders first create the `Config` directory then enter it and create the `System` directory there. The directory structure should be as follows;
+In order to use an SFTP connection with SSH, we must first enable SSH. It's easy to enable SSH on your Steam Link. To do this, go to `steamlink` folder and create two nested folders first create the `Config` directory then enter it and create the `System` directory there. The directory structure should be as follows;
 
 > steamlink/config/system/
 
 Then, enter the `System` directory and create an empty text file named `enable_ssh.txt`.
 
-Within this, create a blank text file, and label it **enable_ssh.txt**. The final directory structure should be as follows;
+Within this, create a blank text file, and label it **enable_ssh.txt**. The final directory structure should be as follows:
 
 > steamlink/config/system/enable_ssh.txt
 > 
 #### USBmount
 
-USBmount is alternative way to connect `/mnt/disk` aşağıdaki bağlantıda daha detaylı bilgi bulabilirsiniz.
+USBmount is an alternative way to connect `/mnt/disk`. You can find more detailed information in the link below.
 
 [https://steamcommunity.com/app/353380/discussions/1/152393186490496699/](https://steamcommunity.com/app/353380/discussions/1/152393186490496699/)
 
@@ -51,7 +51,7 @@ Put your USBmount folder into `steamlink/apps/`
 
 # Installation
 
-After completing the above operations, you have a directory structure like the one below. Repeat the above steps until you reach the final result.
+After completing the above operations, you should have a directory structure like the one below. Repeat the above steps until you reach the final result.
 
 |   |   |   |   |   |
 |---|---|---|---|---|
@@ -82,4 +82,3 @@ Go to root folder and open `apps` folder, you will see RetroArch folder in there
 Install USBmount the same way we install RetroArch. Remove the `RetroArch` folder from the `apps` directory before installation. Otherwise it will re-install on every boot.
 
 After completing the installation, create a folder on your USB and move your contents. Then plug the USB into your SteamLink and run the installed `USBmount` application.
-
