@@ -1,5 +1,7 @@
 # Netplay Getting Started / FAQ
 
+![](image/branding/netplay-logo.gif)
+
 ## FAQ
 
 ### What is netplay?

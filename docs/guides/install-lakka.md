@@ -24,7 +24,7 @@ Please note that due to the wide variety of PC hardware, Lakka may not work on y
 
 The following softwares are fine however you can use any other software you want. The following softwares are not related to RetroArch or Libretro in any way. You must act consciously when providing or using these softwares.
 
-## Etcher
+#### Etcher
 
 Etcher is a free and open-source utility used for burning image files such as .iso and .img files, as well as zipped folders to create live SD cards and USB flash drives. 
 
@@ -33,7 +33,7 @@ Etcher is a free and open-source utility used for burning image files such as .i
 • Select USB drive
 • Click **Flash**
 
-## Win32 Disk Imager
+#### Win32 Disk Imager
 
 This program is designed to write a raw disk image to a removable device or backup a removable device to a raw image file.
 
@@ -42,12 +42,12 @@ This program is designed to write a raw disk image to a removable device or back
 • Select drive letter **UNDER DEVICE**
 • Click **Write**
 
-#### Installation
+### Installation
 
 Lakka is still under heavy development. In its current state, the project allows you to play most games on most platforms. However, expect bugs, missing features or features not working as intended, and hardware that is yet to be supported.
 ___
 
-### The Live USB Mode
+#### The Live USB Mode
 
 Lakka can be installed on an USB key, and be booted in Live Mode on any PC that supports Lakka’s requirements. This Live Mode is persistent: all changes will be saved to the key, safely storing games within the USB.
 
@@ -62,7 +62,7 @@ Lakka can be installed on an USB key, and be booted in Live Mode on any PC that 
 
 This will start the Lakka operating system via USB. This Live Mode is persistent: all changes will be saved to the key, safely storing games within the USB. You will be able to check if Lakka works on your hardware, without altering your PC’s hard drive or partitions. Certain settings and configurations may not be saved in spite of the persistence property.
 
-### Full Setup
+#### Full Setup
 
 Installing Lakka on your device is as simple as installing any other operating systems. You may experience unexpected errors during setup. Lakka is still under construction.
 
@@ -80,7 +80,7 @@ Installing Lakka on your device is as simple as installing any other operating s
 
 Your computer will launch Lakka on the next Boot.
 
-#### Conclusion
+### Conclusion
 ___
 Lakka is still under heavy development. In its current state, the project allows you to play most games on most platforms. More information can be found in the [Lakka documents](http://www.lakka.tv/doc/Home/). You may also want to check the [Official Forum](https://forums.libretro.com/c/libretro/lakka-tv-general).
 

@@ -19,15 +19,15 @@ You can find a cores bundle with RetroArch by clicking [here](https://www.retroa
 
 Getting RetroArch ready to install is very simple. Create the file structure in the root directory of your USB as follows:
 
-> steamlink/app/
+> steamlink/apps/
 
-Unzip the `RetroArch.zip` archive,  then move the `RetroArch` folder into the `app` folder we just created. 
+Unzip the `RetroArch.zip`,  move the `RetroArch` folder into the `apps` folder we just created. 
 
-## Content Management
+### Content Management
 
 Transferring files to Steam Link can be a bit tedious. You can put your contents inside the `Content` folder in the `RetroArch` folder, however our goal is to make this process more sustainable. In this case SSH or USBmount will help us.
 
-### SSH
+#### SSH
 
 In order to use an SFTP connection with SSH, we must first enable SSH. It's easy to enable SSH on your Steam Link. To do this, go to `steamlink` folder and create two nested folders first create the `Config` directory then enter it and create the `System` directory there. The directory structure should be as follows;
 
@@ -39,13 +39,13 @@ Within this, create a blank text file, and label it **enable_ssh.txt**. The fina
 
 > steamlink/config/system/enable_ssh.txt
 > 
-### USBmount
+#### USBmount
 
 USBmount is an alternative way to connect `/mnt/disk`. You can find more detailed information in the link below.
 
 [https://steamcommunity.com/app/353380/discussions/1/152393186490496699/](https://steamcommunity.com/app/353380/discussions/1/152393186490496699/)
 
-Put your USBmount folder into `steamlink/app/`
+Put your USBmount folder into `steamlink/apps/`
 
 *RetroArch is not affiliated with the above link this link may change in the future or may not be original, this subject may vary.*
 
@@ -55,7 +55,7 @@ After completing the above operations, you should have a directory structure lik
 
 |   |   |   |   |   |
 |---|---|---|---|---|
-| steamlink  |  app |  retroarch |...   |   |
+| steamlink  |  apps |  retroarch |...   |   |
 |   | config  | system  | enable_ssh.txt  |   |
 
 
@@ -70,14 +70,15 @@ We can transfer our content with SSH or USBmount we have previously configured.
 Find out the IP address that SteamLink receives, which you can learn from your router or SteamLink network settings. Create an SFTP connection with your trusted FTP tool. SteamLink SSH username is `root` and password is `steamlink123`, 21 for FTP and 22 for SFTPthe sample scenario for this is as follows. It may be different(ip address) in your case. RetroArch is not related to the specified applications and cannot be held responsible.
 
 FileZilla
+
 | Host  | Username  | Passoword  | Port  |
 |---|---|---|---|
 | 192.168.1.5  | root  |  steamlink123 | 22  |
 
-Go to root folder and open `app` folder, you will see RetroArch folder in there. Open it and move your contents to `contents` folder.
+Go to root folder and open `apps` folder, you will see RetroArch folder in there. Open it and move your contents to `contents` folder.
 
 ## USBmount
 
-Install USBmount the same way we install RetroArch. Remove the `RetroArch` folder from the `app` directory before installation. Otherwise it will re-install on every boot.
+Install USBmount the same way we install RetroArch. Remove the `RetroArch` folder from the `apps` directory before installation. Otherwise it will re-install on every boot.
 
 After completing the installation, create a folder on your USB and move your contents. Then plug the USB into your SteamLink and run the installed `USBmount` application.
