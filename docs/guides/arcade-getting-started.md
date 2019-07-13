@@ -14,7 +14,7 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ## Step 1: Choose an arcade emulator to match your system
 
-There are two families of multi-system arcade emulators available as libretro cores: Final Burn Alpha (FBA, FB Alpha) and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
+There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
 
 **There are two principle criteria which affect arcade emulator core choice:**
 
@@ -22,7 +22,7 @@ There are two families of multi-system arcade emulators available as libretro co
   * Processor performance requirements versus supported game library
 
 #### Frontend integration
-Among the libretro arcade cores, **Final Burn Alpha** and **MAME 2003-Plus** have the closest integration with the libretro frontend API. In practice, this means that more functionality is accessible through libretro frontends like RetroArch in areas like configuration, control mapping, fast forward and rewind, screenshots, etc. .
+Among the libretro arcade cores, **FinalBurn Neo** and **MAME 2003-Plus** have the closest integration with the libretro frontend API. In practice, this means that more functionality is accessible through libretro frontends like RetroArch in areas like configuration, control mapping, fast forward and rewind, screenshots, etc. .
 
 #### Processor performance requirements versus supported game library
 As the years have passed, emulators have become able to recreate arcade games with more and more accuracy to the original system. Arcade emulators have also added support for emulating more games over time. Particularly with MAME cores, increasing emulation accuracy requires increasing amounts of processing power, meaning that cores based on more recent emulators require greater processor power than cores based on older versions.
@@ -30,10 +30,10 @@ As the years have passed, emulators have become able to recreate arcade games wi
 ### Ultra low-power devices
 For purposes of this guide, ultra low-power devices are those such as the Raspberry Pi 0 as well as older smartphones and tablets.
 
-|  | Recommended MAME Emulator | Recommended FB Alpha Emulator |
+|  | Recommended MAME Emulator | Recommended FinalBurn Emulator |
 | :---: | :---: | :---: |
 | **Primary recommendation** | MAME 2000 | FB Alpha 2012 |
-| **Secondary recommendation** | MAME 2003-Plus | FB Alpha |
+| **Secondary recommendation** | MAME 2003-Plus | FinalBurn Neo |
 
 !!! Note
     _Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
@@ -46,9 +46,9 @@ For purposes of this guide, low power devices include:
   * Modern smartphones and tablets
   * Desktop and laptop computers with processors from the Pentium 4/Athlon XP generation to the Sandy Bridge/K10 generation.
 
-| | Recommended MAME Emulator | Recommended FB Alpha Emulator |
+| | Recommended MAME Emulator | Recommended FinalBurn Emulator |
 | :---: | :---: | :---: |
-| **Primary recommendation** | MAME 2003-Plus | FB Alpha |
+| **Primary recommendation** | MAME 2003-Plus | FinalBurn Neo |
 | **Secondary recommendation** | MAME 2010, MAME 2016 | N/A |
 
 !!! Note
@@ -67,17 +67,17 @@ In general, you will only get good results with a full collection of arcade roms
 !!! tip
     Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
 
-| Emulator | Required ROM Version |
-| :---: | :---: |
-| FB Alpha | FBA (latest version) |
-| FB Alpha 2012 | FBA 0.2.97.24 |
-| MAME 2000 | MAME 0.37b5 |
-| MAME 2003 | MAME 0.78 |
-| MAME 2003-Plus | MAME 2003-Plus (latest version) |
-| MAME 2010 | MAME 0.139 |
-| MAME 2015 | MAME 0.160 |
-| MAME 2016 | MAME 0.174 |
-| MAME (latest version) | MAME (latest version) |
+| Emulator | Required ROM Version | ClrMamePro dat file |
+| :---: | :---: | :---: |
+| FB Neo | FBNeo (latest version) | [here](https://github.com/libretro/FBNeo/blob/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat) |
+| FB Alpha 2012 | FBA 0.2.97.24 | N/A |
+| MAME 2000 | MAME 0.37b5 | N/A |
+| MAME 2003 | MAME 0.78 | N/A |
+| MAME 2003-Plus | MAME 2003-Plus (latest version) | N/A |
+| MAME 2010 | MAME 0.139 | N/A |
+| MAME 2015 | MAME 0.160 | N/A |
+| MAME 2016 | MAME 0.174 | N/A |
+| MAME (latest version) | MAME (latest version) | N/A |
 
 !!! Warning "Warning: Keep arcade romsets zipped"
     Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
