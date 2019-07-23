@@ -33,12 +33,12 @@
 
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
-| Boktai Trilogy                        | The solar sensor is not emulated|
-| Digimon Racing (Europe)               |Freezes during the intro. This can be avoided by enabling linking in the standalone VBA-M release  |
-| Koro Koro Puzzle Happy Panechu!       |	The tilt sensor is not emulated|
-| Phantasy Star Collection              | Digital Eclipse logo sound effect is missing. Phantasy Star 1 flickers |
-| WarioWare: Twisted!                   |  	The tilt sensor is not emulated   |
-| Yoshi’s Universal Gravitation         |   The tilt sensor is not emulated   |
+| ~~Boktai Trilogy~~                        | ~~The solar sensor is not emulated~~|
+| ~~Digimon Racing (Europe)~~               |~~Freezes during the intro. This can be avoided by enabling linking in the standalone VBA-M release~~  |
+| ~~Koro Koro Puzzle Happy Panechu!~~       |	~~The tilt sensor is not emulated~~|
+| ~~Phantasy Star Collection~~              | ~~Digital Eclipse logo sound effect is missing. Phantasy Star 1 flickers~~ |
+| ~~WarioWare: Twisted!~~                   |  	~~The tilt sensor is not emulated~~   |
+| ~~Yoshi’s Universal Gravitation~~         |   ~~The tilt sensor is not emulated~~   |
 
 ## VBA Next
 
