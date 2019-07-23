@@ -80,21 +80,31 @@ The FCEUmm core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | Cartridge battery save |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 **Frontend's System directory**
 
-- nes.pal (Custom palette)
+| File     | Description                  |
+|:--------:|:----------------------------:|
+| nes.pal  | Custom palette (64 triplets) |
 
 ### Geometry and timing
 
-- The FCEUmm core's core provided FPS is 50.0069838766 when playing a PAL/Dendy game and 60.0998265207 when playing a NTSC game.
-- The FCEumm core's core provided sample rate is 48000 Hz
-- The FCEUmm core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](https://docs.libretro.com/library/fceumm/#core-options).
+- The FCEUmm core's core provided FPS is NTSC 60.10, PAL 50.0, Dendy 50.0
+- The FCEUmm core's core provided sample rate is 48000 Hz
+- The FCEUmm core's base width is 256
+- The FCEUmm core's base height is 240
+- The FCEUmm core's max width is 256
+- The FCEUmm core's max height is 240
+- The FCEUmm core's core provided aspect ratio is 4:3 or 8:7
 
 ### Custom color palettes
 
@@ -122,10 +132,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
 	
 ??? note "Preferred aspect ratio - 8:7 PAR"
-	![](/image/core/fceumm8by7_PAR.png)
+	![](/image/core/fceumm/8by7_PAR.png)
 	
 ??? note "Preferred aspect ratio - 4:3"
-	![](/image/core/fceumm4by3.png)
+	![](/image/core/fceumm/4by3.png)
 	
 - **Color Palette** [fceumm_palette] (**default**|asqrealc|nintendo-vc|rgb|yuv-v3|unsaturated-final|sony-cxa2025as-us|pal|bmf-final2|bmf-final3|smooth-fbx|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|nescap|wavebeam|raw|custom)
 
@@ -135,58 +145,58 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Color Palette core option screenshots have been taken with the 'Use NTSC Palette' core option set to Off.
 
 ??? note "Color Palette - default"
-	![](/image/core/fceummdefault.png)
+	![](/image/core/fceumm/default.png)
 
 ??? note "Color Palette - asqrealc"
-	![](/image/core/fceummasqrealc.png)
+	![](/image/core/fceumm/asqrealc.png)
 
 ??? note "Color Palette - nintendo-vc"
-	![](/image/core/fceummnintendo_vc.png)
+	![](/image/core/fceumm/nintendo_vc.png)
 
 ??? note "Color Palette - rgb"
-	![](/image/core/fceummrgb.png)
+	![](/image/core/fceumm/rgb.png)
 
 ??? note "Color Palette - yuv-v3"
-	![](/image/core/fceummyuv_v3.png)
+	![](/image/core/fceumm/yuv_v3.png)
 
 ??? note "Color Palette - unsaturated-final"
-	![](/image/core/fceummunsaturated_final.png)
+	![](/image/core/fceumm/unsaturated_final.png)
 
 ??? note "Color Palette - sony-cxa2025as-us"
-	![](/image/core/fceummsony_cxa2025as_us.png)
+	![](/image/core/fceumm/sony_cxa2025as_us.png)
 
 ??? note "Color Palette - pal"
-	![](/image/core/fceummpal.png)
+	![](/image/core/fceumm/pal.png)
 
 ??? note "Color Palette - bmf-final2"
-	![](/image/core/fceummbmf_final2.png)
+	![](/image/core/fceumm/bmf_final2.png)
 
 ??? note "Color Palette - bmf-final3"
-	![](/image/core/fceummbmf_final3.png)
+	![](/image/core/fceumm/bmf_final3.png)
 
 ??? note "Color Palette - smooth-fbx"
-	![](/image/core/fceummsmooth_fbx.png)
+	![](/image/core/fceumm/smooth_fbx.png)
 	
 ??? note "Color Palette - composite-direct-fbx"
-	![](/image/core/fceummdirect_fbx.png)
+	![](/image/core/fceumm/direct_fbx.png)
 
 ??? note "Color Palette - pvm-style-d93-fbx"
-	![](/image/core/fceummpvm_style_d93_fbx.png)
+	![](/image/core/fceumm/pvm_style_d93_fbx.png)
 
 ??? note "Color Palette - ntsc-hardware-fbx"
-	![](/image/core/fceummntsc_hardware_fbx.png)
+	![](/image/core/fceumm/ntsc_hardware_fbx.png)
 
 ??? note "Color Palette - nes-classic-fbx-fs"
-	![](/image/core/fceummnes_classic_fbx_fs.png)
+	![](/image/core/fceumm/nes_classic_fbx_fs.png)
 
 ??? note "Color Palette - nescap"
-	![](/image/core/fceummnescap.png)
+	![](/image/core/fceumm/nescap.png)
 
 ??? note "Color Palette - wavebeam"
-	![](/image/core/fceummwavebeam.png)
+	![](/image/core/fceumm/wavebeam.png)
 
 ??? note "Color Palette - raw"
-	![](/image/core/fceummraw.png)		
+	![](/image/core/fceumm/raw.png)		
 
 - **Allow Opposing Directions** [fceumm_up_down_allowed] (**disabled**|enabled)
 
@@ -196,44 +206,31 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	It's best to keep this core option disabled.
 	
-- **Use NTSC Palette** [fceumm_use_ntsc] (**disabled**|enabled)
-
-	Self-explanatory.
-	
-!!! attention
-	These 'Use NTSC Palette' core option screenshots have been taken with the 'Color Palette' core option set to default.
-
-??? note "Use NTSC Palette - Off"
-	![](/image/core/fceummntsc_off.png)
-	
-??? note "Use NTSC Palette - On"
-	![](/image/core/fceummntsc_on.png)
-	
 - **Crop Overscan (Horizontal)** [fceumm_overscan_h] (**disabled**|enabled)
 
 	Crop out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Crop Overscan (Horiontal) - Off"
-	![](/image/core/fceummhoriz_off.png)
+	![](/image/core/fceumm/horiz_off.png)
 	
 ??? note "Crop Overscan (Horizontal) - On"
-	![](/image/core/fceummhoriz_on.png)		
+	![](/image/core/fceumm/horiz_on.png)		
 	
 - **Crop Overscan (Vertical)** [fceumm_overscan_v] (**enabled**|disabled)
 
 	Crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Crop Overscan (Vertical) - On"
-	![](/image/core/fceummvert_on.png)
+	![](/image/core/fceumm/vert_on.png)
 	
 ??? note "Crop Overscan (Vertical) - Off"
-	![](/image/core/fceummvert_off.png)	
+	![](/image/core/fceumm/vert_off.png)	
 	
 - **No Sprite Limit** [fceumm_nospritelimit] (**disabled**|enabled)
 
 	Removes 8-sprites-per-scanline hardware limit.
 	
-- **Sound Volume** [fceumm_sndvolume] (**150**|160|170|180|190|200|210|220|230|240|250|0|10|20|30|40|50|60|70|80|90|100|110|120|130|140)
+- **Sound Volume** [fceumm_sndvolume] (0|1|2|3|4|5|6|**7**|8|9|10)
 
 	Self-explanatory.
 	
@@ -253,7 +250,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	The number of frames between consecutive buttton presses when the Turbo B or Turbo A buttons are held down.
 	
-- **Zapper Mode** [fceumm_zapper_mode] (**pointer**|mouse)
+- **Zapper Mode** [fceumm_zapper_mode] (**lightgun**|touchscreen|mouse)
 
 	Pointer allows the Zapper Device Type to be used for touch-devices, but still can be used with regular mouse. Pointer and Mouse mode movement behaves differently with different input driver so user can choose which movement feels natural to them.
 	
@@ -262,18 +259,22 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Show the crosshair for the Zapper device type.
 	
 ??? note "Show Crosshair - On"
-	![](/image/core/fceummcross_on.png)
+	![](/image/core/fceumm/cross_on.png)
 	
 ??? note "Show Crosshair - Off"
-	![](/image/core/fceummcross_off.png)	
+	![](/image/core/fceumm/cross_off.png)	
 	
 - **Overclocking** [fceumm_overclocking] (**disabled**|2x-Postrender|2x-VBlank)
 
 	Overclocks the NES using PPU method to minimize ingame slowdowns of some games. Contra Force needs VBlank mode (stage 3 slowdowns). Choose which ever minimizes slowdowns without image distortion.
+
+- **RAM power up state (Restart)** [fceumm_ramstate] (**fill $ff**|fill $00|random)
+
+	Choose RAM startup during power up. Fill the ram with either $FF, $00 or random. Some games rely on initial ram values for random generator as an example.
 	
 ## Controllers
 
-The Nestopia UE core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The FCEUmm core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
@@ -281,6 +282,8 @@ The Nestopia UE core supports the following device type(s) in the controls menu,
 - **Auto** - Joypad - Based off the loaded game's crc, the core will automatically select a regular controller (NES or Famicom) for User 1.
 - [Gamepad](http://nintendo.wikia.com/wiki/Nintendo_Entertainment_System_controller) - Joypad - Manually selects a regular controller (NES or Famicom) for User 1.
 - [Zapper](http://nintendo.wikia.com/wiki/NES_Zapper) - Mouse - Manually selects a Zapper light gun (NES or Famicom) for User 1.
+
+**NOTE 1: Zapper connected to user 1 is only required on VS Unisystem games. You will hear a loud alarm when a game requires one and no zapped device is selected or the game's CRC fails to match existing database for autodetection.**
 
 ### User 2 device types
 
@@ -290,20 +293,26 @@ The Nestopia UE core supports the following device type(s) in the controls menu,
 - [Arkanoid](https://en.wikipedia.org/wiki/Arkanoid_Controller) - Mouse - Manually selects a Arkanoid Paddle (NES only) for User 2.
 - [Zapper](http://nintendo.wikia.com/wiki/NES_Zapper) - Mouse - Manually selects a Zapper light gun (NES or Famicom) for User 2.
 
-### Other controllers
+**NOTE 2: Zapper connected to user 2 is required for most cases. See note 1 above.**
+
+### User 3 and 4 device types - used for multitap
+
+- None - Input disabled.
+- **Auto** - Joypad - Based off the loaded game's crc, the core will automatically select a regular controller (NES or Famicom) for User 3 and/or 4 in multitap games.
+- [Gamepad](http://nintendo.wikia.com/wiki/Nintendo_Entertainment_System_controller) - Joypad - Manually selects a regular controller (NES or Famicom) for User 3/4.
+
+### Other controllers (User 5 device type)
 
 The FCEUmm core will also auto select the following controllers for the **Famicom** based off the loaded game's crc.
 
 - [Arkanoid Paddle (Famicom)](https://en.wikipedia.org/wiki/Arkanoid_Controller) - Mouse
 - Bandai Hyper Shot Gun (Famicom) - Mouse
 - Oeka Kids Tablet (Famicom) - Mouse
-
-!!! attention
-	Please note that these Famicom controllers are completely separate from the device types in the controls menu and cannot be manually selected.
+- 4-Player Adaptor - force enable multitap mode
 
 ### Multitap support
 
-The FCEUmm core supports up to 4 players in multitap games for the NES and Famicom, games with multitap usage are detected by their crc.
+The FCEUmm core supports up to 4 players in multitap games for the NES and Famicom, games with multitap usage are detected by their crc. Multitap can be manually enabled if selecting **4-Player Adaptor** in **User 5 Device type**.
 
 ### Controller tables
 
@@ -350,7 +359,8 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 | ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
 | ![](/image/retromouse/retro_left.png) or ![](/image/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
 
-- When the 'Zapper Mode' core option is set to pointer, the 'Zapper' device type can be controlled with touch inputs.
+- When the 'Zapper Mode' core option is set to lightgun, the 'Zapper' device type can be controlled with lightgun inputs (such as Wii remote).
+- When the 'Zapper Mode' core option is set to touchscreen, the 'Zapper' device type can be controlled with touch inputs.
 - When the 'Zapper Mode' core option is set to mouse, the 'Zapper' device type can be controlled with mouse inputs.
 
 ## Compatibility
