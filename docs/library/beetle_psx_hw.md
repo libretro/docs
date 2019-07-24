@@ -638,6 +638,8 @@ Rumble only works in the Beetle PSX HW core when
 
 **Expect bugs with hardware renderer enhancements.**
 
+When using the run-ahead latency reduction feature, the "second instance" setting will break the hardware renderer.
+
 A list of known emulation bugs when using the software renderer can be found here [https://forum.fobby.net/index.php?t=msg&th=1114&start=0&](https://forum.fobby.net/index.php?t=msg&th=1114&start=0&)
 
 ## External Links
