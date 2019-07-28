@@ -245,7 +245,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Internal resolution (restart)** [prboom-resolution] (**320x200**|640x400|960x600|1280x800|1600x1000|1920x1200)
 
-	Configure the resolution.
+	Configure the resolution. Requires a restart.
 	
 ??? note "Internal resolution - 320x200"
 	![](/image/core/prboom320x200.png)
