@@ -259,7 +259,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Look on parent folders for IWADs** [prboom-find_recursive_on] (**enabled**|disabled)
 
-	Scans parent folders for IWADs.
+	Scans parent folders for IWADs. NOTE: You need to disable this if you want to run SIGIL.
 
 - **Analog Deadzone (percent)** [prboom-analog_deadzone] (**15**|20|25|30|0|5|10)
 
