@@ -216,7 +216,7 @@ PrBoom's internal game settings can be found in the 'prboom.cfg' file inside eac
 
 Many of these settings may be changed from the in-game menu. A few notable options are as follows:
 
-- Options → General (page 1) → Framerate (35fps|40fps|50fps|**60fps**|70fps|72fps|75fps|100fps|119fps|120fps|140fps|144fps)
+- Options → General (page 1) → Framerate (35fps|40fps|50fps|**60fps**|70fps|72fps|75fps|90fps|100fps|119fps|120fps|140fps|144fps|240fps|244fps)
 	
 	Vanilla Doom has a native framerate of 35fps. This should be considered the 'correct' value, but it can lead to an irregular 'stuttering' effect on 60Hz LCD displays.
 	
