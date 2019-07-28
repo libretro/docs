@@ -201,11 +201,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Colored lighting (restart)** [tyrquake_colored_lighting] (**disabled**|enabled)
 
-	Enables colored lightning when the loaded content supports it.
+	Enables colored lightning when the loaded content supports it. Requires a restart.
 	
 - **Resolution (restart)** [tyrquake_resolution] (**320x200**|640x400|960x600|1280x800|1600x1000|1920x1200|320x240|320x480|360x200|360x240|360x400|360x480|400x224|480x272|512x224|512x240|512x384|512x512|640x224|640x240|640x448|640x480|720x576|800x480|800x600|960x720|1024x768|1280x720|1600x900|1920x1080)
 
-	Configure the resolution.
+	Configure the resolution. Requires a restart.
 	
 ??? note "Resolution - 320x240"
 	![](/image/core/tyrquake320x240.png)
