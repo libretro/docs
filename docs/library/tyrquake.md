@@ -219,7 +219,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Invert Y Axis** [tyrquake_invert_y_axis] (**disabled**|enabled)
 
-	Invert RetroPad Right Analog Y Axis.
+	Invert the gamepad right analog stick's Y axis.
 
 - **Analog Deadzone (percent)** [tyrquake_analog_deadzone] (**15**|20|25|30|0|5|10)
 
