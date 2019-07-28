@@ -248,7 +248,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Game Genie Sound Distortion** [nestopia_genie_distortion] (**disabled**|enabled)
 
-	Awaiting description.
+	The Game Genie cheat device could inadvertently introduce sound distortion in games. By enabling this, you can simulate the distortion it would add to a game's sound.
 	
 - **Favored System** [nestopia_favored_system] (**auto**|ntsc|pal|famicom|dendy)
 
