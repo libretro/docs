@@ -80,7 +80,7 @@ The PrBoom core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The PrBoom core's core provided FPS is 60
+- The PrBoom core's core provided FPS (by default) is 60
 - The PrBoom core's core provided sample rate is 44100 Hz
 - The PrBoom core's base width is dependent on the Internal resolution core option.
 - The PrBoom core's base height is dependent on the Internal resolution core option.
@@ -216,13 +216,9 @@ PrBoom's internal game settings can be found in the 'prboom.cfg' file inside eac
 
 Many of these settings may be changed from the in-game menu. A few notable options are as follows:
 
-- Options → General (page 1) → Framerate (35fps|**40fps**|50fps|60fps)
-
-	Sets the in-game framerate. Note that game logic is tied to this value; the higher it is set, the faster the game will run.
+- Options → General (page 1) → Framerate (35fps|**40fps**|50fps|60fps|70fps|72fps|75fps|100fps|119fps|120fps|140fps|144fps)
 	
 	Vanilla Doom has a native framerate of 35fps. This should be considered the 'correct' value, but it can lead to an irregular 'stuttering' effect on 60Hz LCD displays.
-	
-	40fps provides the best balance between acceptable game speed and 'smooth' video.
 
 - Options → General (page 1) → Gamma Correction (**Off**|Lv. 1|Lv. 2|Lv. 3|Lv. 4)
 
