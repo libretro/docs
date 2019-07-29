@@ -167,7 +167,6 @@ A reference compatibility table can be found on the bottom of this [page](https:
 | Ruiner Pinball | Doesn't boot.                                           |
 | Super Burnout  | Hangs after selecting a track.                          |
 | Towers II      | Heavy flickering.                                       |
-| Wolfenstein 3D | Doesn't boot.                                           |
 
 ??? note "(1)"
     ![](/image/core/virtual_jaguarcyber.png)
