@@ -109,7 +109,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Bios** [virtualjaguar_bios] (**disabled**|enabled)
 
-	Enables bios loading sequence.
+	Enables BIOS loading sequence.
 	
 ??? note "*Bios - Enabled*"
     ![](/image/core/virtual_jaguarbios.png)
