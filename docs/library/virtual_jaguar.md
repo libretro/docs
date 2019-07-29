@@ -99,7 +99,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Doom Res Hack** [virtualjaguar_doom_res_hack] (**disabled**|enabled)
 
-	Needed for Doom to run in its correct resolution.
+	A hack that needs to be enabled for Doom to run at its correct resolution.
 	
 ??? note "*Doom Res Hack - Disabled*"
     ![](/image/core/virtual_jaguardoom_off.png)
