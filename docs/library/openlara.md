@@ -134,8 +134,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Modify framerate. Requires a restart.
 	
-- **Internal resolution (restart)** [openlara_resolution] (**320x240**|360x480|480x272|512x384|512x512|640x240|640x448|640x480|720x576|800x600|960x720|1024x768|
-1024x1024|1280x720|1280x960|1600x1200|1920x1080|1920x1440|1920x1600|2048x2048|2560x1440|
+- **Internal resolution (restart)** [openlara_resolution] (**320x240**|360x480|480x272|512x384|512x512|640x240|
+640x448|640x480|720x576|800x600|960x720|1024x768|
+1024x1024|1280x720|1280x960|1600x1200|1920x1080|
+1920x1440|1920x1600|2048x2048|2560x1440|
 3840x2160|7680x4320|15360x8640|16000x9000)
 
 	Modify the internal resolution. Requires a restart.
