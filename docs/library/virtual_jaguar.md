@@ -167,6 +167,7 @@ A reference compatibility table can be found on the bottom of this [page](https:
 | Ruiner Pinball | Doesn't boot.                                           |
 | Super Burnout  | Hangs after selecting a track.                          |
 | Towers II      | Heavy flickering.                                       |
+| Wolfenstein 3D | ROM version doesn't boot, J64 version does.             |
 
 ??? note "(1)"
     ![](/image/core/virtual_jaguarcyber.png)
