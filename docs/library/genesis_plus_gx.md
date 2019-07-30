@@ -265,7 +265,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Lightgun crosshair** [genesis_plus_gx_gun_cursor] (**disabled**/enabled)
 
-	Shows lightgun crosshairs for the 'MD Menancer', 'MD Justifiers', and 'MS Light Phaser' Device Types.
+	Shows lightgun crosshairs for the 'MD Menacer', 'MD Justifiers', and 'MS Light Phaser' Device Types.
 
 ??? note "*Lightgun crosshair*"
     ![](../image/core/genesis_plus_gx/lightgun.png)
