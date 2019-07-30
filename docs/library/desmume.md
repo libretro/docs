@@ -139,7 +139,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **CPU Cores** [desmume_num_cores] (**1**|2|3|4)
 
-	Configure how much CPU cores the DeSmuME core will use. Please note that, in general, DeSmuME benefits more from few fast CPUs than from many slow CPUs. For example, a dual-core 3.9GHz CPU will run DeSmuME much faster than a 12-core 1.6GHz CPU.
+	Configure how many CPU cores the DeSmuME core will use. Please note that, in general, DeSmuME benefits more from few fast CPUs than from many slow CPUs. For example, a dual-core 3.9GHz CPU will run DeSmuME much faster than a 12-core 1.6GHz CPU.
 
 - **CPU Mode** [desmume_cpu_mode] (**jit**|interpreter)
 
