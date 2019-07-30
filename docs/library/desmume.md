@@ -167,7 +167,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	 
 - **Internal Resolution (restart)** [desmume_internal_resolution] (**256x192**|512x384|768x576|1024x768|1280x960|1536x1152|1792x1344|2048x1536|2304x1728|2560x1920)
 
-	Self explanatory. Please note that the DeSmuME core is only software rendered.
+	Configure the resolution. Requires a restart.
 	
 ??? note "Internal resolution - 256x192"
 	![](/image/core/desmume256x192.png)
