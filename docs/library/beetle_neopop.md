@@ -90,7 +90,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Language (restart)** [ngp_language] (**english**/japanese)
 
-	Choose system language of the BIOS.
+	Choose the system language of the BIOS.
 
 ## Controllers
 
