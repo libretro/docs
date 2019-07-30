@@ -193,7 +193,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Master System FM (YM2413)** [genesis_plus_gx_ym2413] (**auto**/disabled/enabled)
 
-	Enable the Master System FM chip. (Enhanced sound output support for [SMS compatible games](http://segaretro.org/FM_Sound_Unit).
+	Enable the Master System FM chip. (Enhanced sound output support for [SMS compatible games](http://segaretro.org/FM_Sound_Unit))
 
 - **Mega Drive / Genesis FM** [genesis_plus_gx_ym2612] (**mame (ym2612)**/mame (asic ym3438)/mame (enhanced ym3438)/nuked (ym2612)/nuked (asic ym3438)/nuked (discrete ym3438))
 
