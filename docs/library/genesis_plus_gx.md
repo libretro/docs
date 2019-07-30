@@ -189,7 +189,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Cartridge lock-on** [genesis_plus_gx_lock_on] (**disabled**/game genie/action replay (pro)/sonic & knuckles)
 
-	Select lock-on cartridge. Look above at the [BIOS section](https://docs.libretro.com/library/genesis_plus_gx/#bios) for more information.
+	Select a lock-on cartridge. Look above at the [BIOS section](https://docs.libretro.com/library/genesis_plus_gx/#bios) for more information.
 
 - **Master System FM (YM2413)** [genesis_plus_gx_ym2413] (**auto**/disabled/enabled)
 
