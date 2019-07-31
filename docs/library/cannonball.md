@@ -153,7 +153,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Gear Mode** [cannonball_gear] (**Manual**|Manual Cabinet|Manual 2 Buttons|Automatic)
 
-	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
+	Change the gear shift behaviour. Useful to configure based on your target hardware.
+	
+	0 = Manual (Click to shift, for normal play)
+	1 = Manual (Hold to shift, for cabinet play)
+	2 = Manual (Separate Buttons for High/Low)
+	3 = Automatic (No need to change gear)
 	
 - **Analog Controls (off to allow digital speed setup)** [cannonball_analog] (**ON**|OFF)
 
