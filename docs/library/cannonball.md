@@ -133,7 +133,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Video High-Resolution Mode** [cannonball_video_hires] (**OFF**|ON)
 
-	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
+	The original game ran at 320x224. This mode doubles that resolution to 640x448. However, rather than simply doubling up the display, the sprites and road are rendered at a higher resolution where possible.
 	
 - **Video Framerate** [cannonball_video_fps] (**Smooth (60)**|Ultra Smooth (120)|Original (60/30))
 
