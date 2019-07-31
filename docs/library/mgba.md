@@ -108,7 +108,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Solar sensor level** [mgba_solar_sensor_level] (**0**|1|2|3|4|5|6|7|8|9|10)
 
-	Can be used for games that employed the use of a solar sensor on their cartridges.
+	Can be used by games that employed the use of a solar sensor on their cartridges.
 	
 - **Allow opposing directional input** [mgba_allow_opposing_directions] (**OFF**|ON)
 
