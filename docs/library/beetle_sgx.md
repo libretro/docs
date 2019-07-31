@@ -215,7 +215,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Set this to enabled if you want the soft reset functionality turned off.
 	
-- **Allow UP+DOWN/LEFT+RIGHT** [sgx_up_down_allowed] (**disabled**|enabled)
+- **Allow Opposing Directions** [sgx_up_down_allowed] (**disabled**|enabled)
 
 	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
 	
