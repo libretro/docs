@@ -119,7 +119,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Menu At Start** [cannonball_menu_enabled] (**ON**|OFF)
 
-	When enabled; the Cannoball core shows the main menu upon startup. 
+	When enabled; the Cannonball core shows the main menu upon startup. 
 	
 	When disabled; the Cannonball core goes into attract mode upon startup.
 	
