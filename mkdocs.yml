@@ -183,6 +183,7 @@ nav:
       - '2048': 'library/2048.md'
       - '3D Engine': 'library/3d_engine.md'
       - 'Cave Story (NXEngine)': 'library/nxengine.md'
+      - 'Cannonball': 'library/cannonball.md'
       - 'ChaiLove': 'library/chailove.md'
       - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
       - 'Dinothawr': 'library/dinothawr.md'
