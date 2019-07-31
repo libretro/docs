@@ -145,7 +145,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preview Music** [cannonball_sound_preview] (**ON**|OFF)
 
-	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#preview-music).
+	Preview the music tracks at the point of selection in-game. The original game did not have this option and you would not hear the audio track until the game started.
 	
 - **Fix Samples (use opr-10188.71f)** [cannonball_sound_fix_samples] (**ON**|OFF)
 
