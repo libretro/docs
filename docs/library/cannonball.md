@@ -141,7 +141,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Advertise Sound** [cannonball_sound_advertise] (**ON**|OFF)
 
-	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#advertise-sound).
+	Play sounds in attract mode.
 	
 - **Preview Music** [cannonball_sound_preview] (**ON**|OFF)
 
