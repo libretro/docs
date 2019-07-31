@@ -134,7 +134,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **High Resolution** [4do_high_resolution] (**disabled**|enabled)
 
-	Internal resolution is 320x240. This feature makes the system behave as if it has a 640x480 framebuffer.
+	The default internal resolution is 320x240, but the output resolution is 640x480. This feature makes the system behave as if it has a 640x480 framebuffer.
 	
 ??? note "High Resolution - disabled"
 	![](/image/core/4do/high_off.png)
