@@ -100,7 +100,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use bios if available (Restart)** [vbanext_bios] (Off/**On**)
 
-	Self-explanatory. Look at the [BIOS section](https://docs.libretro.com/library/vba_next/#bios) for more information.
+	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](https://docs.libretro.com/library/vba_next/#bios) for more information.
 	
 ??? note "Use bios if available - On"
 	![](/image/core/vba_nextbios.png)
