@@ -122,7 +122,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **No sprite limit** [quicknes_no_sprite_limit] (**enabled**|disabled)
 
-	Reduce sprite flickering when enabled.
+        Removes the 8-per-scanline hardware limit. This reduces sprite flickering but can cause some games to glitch since some use this for effects.
+
 	
 - **Audio mode** [quicknes_audio_nonlinear] (**nonlinear**|linear|stereo panning)
 
