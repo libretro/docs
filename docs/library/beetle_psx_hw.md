@@ -370,13 +370,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **PGXP operation mode** [beetle_psx_hw_pgxp_mode] (**Off**/memory only/memory + CPU)
 
-	When on, floating point coordinates will be used for vertex positions, to avoid the PSX polygon jitter. 'memory + cpu' mode can further reduce jitter at the cost of performance and geometry glitches.
+	When on, floating point coordinates will be used for vertex positions, to avoid the PSX polygon jitter. 'memory + cpu' mode can further reduce jitter at the cost of performance and geometry glitches. It is recommended that you use 'Memory only' for the best compatibility with PGXP.
 
 	[https://www.youtube.com/watch?v=EYCpd_1lPUc](https://www.youtube.com/watch?v=EYCpd_1lPUc)
 
 - **PGXP vertex cache** [beetle_psx_hw_pgxp_caching] (**Off**/On)
 
-	Maintains a cache for vertices. May result in better performance but can result in graphics glitches in most games.
+	Maintains a cache for vertices. May result in better performance but can result in graphics glitches in most games. Is best left disabled from a compatibility perspective on average
 
 - **PGXP perspective correct texturing** [beetle_psx_hw_pgxp_texture] (**Off**/On)
 
@@ -402,15 +402,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **GTE Overclock** [beetle_psx_hw_gte_overclock] (**Off**/On)
 
-	Gets rid of memory access latency and makes all GTE instructions have 1 cycle latency.
+	Gets rid of memory access latency and makes all GTE instructions have 1 cycle latency. Can greatly help in reducing framerate slowdowns in games that are GTE-bound, and making frametimes/framerates more stable.
 
 - **GPU rasterizer overclock** [beetle_psx_hw_gpu_overclock] (**1x(native)**/2x/4x/8x/16x/32x)
 
-	Overclock the emulated PSX's GPU rasterizer.
+	Overclock the emulated PSX's GPU rasterizer. Doesn't really do much.
 
 - **Skip BIOS** [beetle_psx_hw_skipbios] (**Off**/On)
 
-	Self-explanatory.
+	Skips the PSX BIOS screen when starting a game.
 
 	**Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
 
