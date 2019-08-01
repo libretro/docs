@@ -73,10 +73,6 @@ The PocketCDG core has the following option(s) that can be tweaked from the core
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Resize** [pocketcdg_resize] (**320x240**|Overscan)
-
-	Doesn't seem to do anything
-
 ## Controllers
 
 The PocketCDG core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
