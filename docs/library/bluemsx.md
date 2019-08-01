@@ -173,7 +173,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 
-- **Cart Mapper Type (Restart)** [bluemsx_cartmapper] (**Auto**|Normal|mirrored|basic|0x4000|0xC000|ascii8|ascii8sram|ascii16|ascii16sram|ascii16nf|konami4|konami4nf|konami5|konamisynth|korean80|korean90|korean126|MegaFlashRomScc|MegaFlashRomSccPlus|msxdos2|scc|sccexpanded|sccmirrored|sccplus|snatcher|sdsnatcher|SegaBasic|SG1000|SG1000Castle|SG1000RamA|SG1000RamB|SC3000)
+- **Cart Mapper Type (Restart)** [bluemsx_cartmapper] (**Auto**|Normal|mirrored|basic|0x4000|0xC000|ascii8|ascii8sram|ascii16|ascii16sram|
+ascii16nf|konami4|konami4nf|konami5|konamisynth|korean80|korean90|korean126|
+MegaFlashRomScc|MegaFlashRomSccPlus|msxdos2|scc|sccexpanded|sccmirrored|sccplus|
+snatcher|sdsnatcher|SegaBasic|SG1000|SG1000Castle|SG1000RamA|SG1000RamB|SC3000)
 
 	When a rom game or application is in the database, the emulator uses the databases to apply the correct mapper. If the sha1 value of a dump is not yet in the databases, it uses an automatic mapper detection system, but it can fail in some cases. In this situation, you can manually select the correct mapper.
 
