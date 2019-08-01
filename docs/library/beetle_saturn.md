@@ -224,7 +224,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Last scanline** [beetle_saturn_last_scanline] (210 to 239 in increments of 1. **239 is default**)
 
-	Adjust the first displayed scanline in NTSC mode.
+	Adjust the last displayed scanline in NTSC mode.
 	
 - **Initial scanline PAL** [beetle_saturn_initial_scanline_pal] (0 to 60 in increments of 1. **16 is default**)
 
