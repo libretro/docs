@@ -236,7 +236,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Enable Horizontal Blend(blur)** [beetle_saturn_horizontal_blend] (**disabled**|enabled)
 
-	Self-explanatory.
+	Enable horizontal blend(blur) filter. Has a more noticeable effect with the Saturn's higher horizontal resolution modes(640/704).
 	
 ??? note "Enable Horizontal Blend(blur) - Off"
 	![](/image/core/beetle_saturnblend_off.png)
