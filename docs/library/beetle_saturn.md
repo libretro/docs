@@ -199,7 +199,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **CD Image Cache (restart)** [beetle_saturn_cdimagecache] (**disabled**|enabled)
 
-	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
+	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time. 
+	Requires a restart in order for a change to take effect.
 	
 - **Mid-frame Input Synchronization** [beetle_saturn_midsync] (**disabled**|enabled)
 
