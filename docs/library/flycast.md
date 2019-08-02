@@ -116,9 +116,9 @@ Required or optional firmware files go in RetroArch's system directory.
 
 ### Directories
 
-The Reicast core's directory name is 'Reicast'
+The FlyCast core's directory name is 'Reicast'
 
-The Reicast core creates these files in RetroArch's system directory.
+The FlyCast core creates these files in RetroArch's system directory.
 
 - dc/vmu_save_A1.bin
 - dc/vmu_save_B1.bin
@@ -136,7 +136,7 @@ The Reicast core creates these files in RetroArch's system directory.
 
 ### Core provided aspect ratio
 
-Reicast's core provided aspect ratio is 4/3.
+FlyCast's core provided aspect ratio is 4/3.
 
 ### Rumble
 
@@ -144,7 +144,7 @@ Rumble only works when the Joypad being used has rumble functionality and the Jo
 
 ## Core options
 
-The Reicast core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+The FlyCast core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CPU Mode (restart)** (**dynamic_recomplier**/generic_recomplier)
 
@@ -220,7 +220,7 @@ The Reicast core has the following option(s) that can be tweaked from the core o
 
 ### Device types
 
-The Reicast core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The FlyCast core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 #### User 1 - 4 device types
 
@@ -256,7 +256,7 @@ The Reicast core supports the following device type(s) in the controls menu, bol
 
 If foo is a multiple-disc game, you should have .chd/cue/cdi/gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
 
-To take advantage of Reicast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
+To take advantage of FlyCast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
 
 Create a text file and save it as `foo.m3u`. Then enter your game's .chd/cue/cdi/gdi files on it. The m3u file contents should look something like this:
 
@@ -267,17 +267,17 @@ foo (Disc 2).chd
 foo (Disc 3).chd
 ```
 
-After that, you can load the `foo.m3u` file in RetroArch with the Reicast core.
+After that, you can load the `foo.m3u` file in RetroArch with the FlyCast core.
 
 An alternative is to append discs to the current playlist via the "Disk Image Append" option in the Disk Control RetroArch menu.
 
 ## Compatibility
 
-### General Reicast Issues
+### General Flycast Issues
 
 - If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
-- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Reicast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
-- Polygon sorting issues can make objects appear distorted. 
+- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/FlyCast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
+- Polygon sorting issues can make objects appear distorted. Use Per-Pixel Alpha sorting for accurate rendering (at the expense of performance).
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead. 
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing. 
 
@@ -287,8 +287,6 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 | Crazy Taxi (USA)                            | Player taxis do not emit engine sounds.                                                                                                                                                                                                                                |                                                                                                                                                                                                                                |
 | Jet Grind Radio (USA)                       | Police reports during levels do not display correctly. |
 | Sonic Adventure (PAL)                       | Must be set to use "VGA" output in core options, as "TV" mode will cause all subsequent FMV to make RetroArch become unresponsive.                                                                                                                                     |
-| Sonic Adventure 2 (USA)                     | Text during score tally will flicker sometimes (Wild Canyon as Knuckles).                                                                                                       |
-| Super Runabout: San Francisco (USA)         | Crash to desktop with no error message.                                                                                                                                                                                                                                |
 | Unreal Tournament (USA)                     | Set Cable Type to 'VGA (RGB)', otherwise the game will crash at start.                                                                                                       |
 
 ## External Links
