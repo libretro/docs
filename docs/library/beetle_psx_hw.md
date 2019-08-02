@@ -561,6 +561,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	**May not work correctly in all games. Some games may break if you set them past a certain speed.**
 
+- **Super sampling (downsample from internal upscale)** [beetle_psx_hw_super_sampling] (**disabled**/enabled)
+
+	Renders internally at high resolution, but downsamples in scanout to get native 240p output, but super-anti-aliased 3D.
+
+	**Only for the Vulkan renderer at the moment.**
+	
+- **MDEC YUV Chroma filter** [beetle_psx_hw_mdec_yuv] (**disabled**/enabled)
+
+	Improves video quality of FMV scenes. When converting YcBcR to RGB, the chroma channel will be smoothed.
+
+	**Only for the Vulkan renderer at the moment.**
+
 ## User 1 - 8 device types
 
 The Beetle PSX HW core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
