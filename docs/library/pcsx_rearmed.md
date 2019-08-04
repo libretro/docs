@@ -156,6 +156,12 @@ After that, you can load the `foo.m3u` file in RetroArch with the PCSX ReARMed c
 
 Here's a m3u example done with Valkryie Profile
 
+`Valkyrie Profile (USA).m3u`
+```
+Valkyrie Profile (USA) (Disc 1).cue
+Valkyrie Profile (USA) (Disc 2).cue
+```
+
 ![](/image/core/beetle_psx_hwm3u.png)
 
 !!! attention
