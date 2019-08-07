@@ -98,13 +98,13 @@ The VBA-M core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The VBA-M core's core provided FPS is [59.72]
-- The VBA-M core's core provided sample rate is 32000 Hz
-- The VBA-M core's base width is [GBA: 240 GB: 160 (256 with border)]
-- The VBA-M core's base height is [GBA: 160 GB: 144 (224 with border)]
-- The VBA-M core's max width is [256]
-- The VBA-M core's max height is [224]
-- The VBA-M core's core provided aspect ratio is [GBA: 3/2 GB: 10/9 (8/7 with border)]
+- The VBA-M core's core provided FPS is 59.72
+- The VBA-M core's core provided sample rate is 32768 Hz
+- The VBA-M core's base width is GBA: 240, GB: 160 (256 with border/SGB mode)
+- The VBA-M core's base height is GBA: 160, GB: 144 (224 with border/SGB mode)
+- The VBA-M core's max width is 256
+- The VBA-M core's max height is 224
+- The VBA-M core's core provided aspect ratio is GBA: 3:2, GB: 10:9 (8:7 with border/SGB)]
 
 ## Core options
 
@@ -119,6 +119,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Use BIOS file if found** [vbam_usebios] (Off/**On**)
 	
 	Uses BIOS present in RetroArch's system directory.
+
+- **Force enable RTC** [vbam_forceRTCenable] (**Off**/On)
+	
+	Forces the internal real-time clock to be enabled regardless of rom. Usuable for rom patches that requires clock to be enabled (aka Pokemon).
 
 - **Sound Interpolation** [vbam_soundinterpolation] (Off/**On**)
 	
@@ -247,25 +251,25 @@ The VBA-M core supports the following device type(s) in the controls menu, bolde
 
 ![](/image/controller/gba.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                              | GBA Joypad           |
-|--------------------------|----------------------------------------------|----------------------|
-| B                        | ![](/image/retropad/retro_b.png)             | B                    |
-| Y                        | ![](/image/retropad/retro_y.png)             | Turbo B              |
-| Select                   | ![](/image/retropad/retro_select.png)        | Select               |
-| Start                    | ![](/image/retropad/retro_start.png)         | Start                |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up             |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down           |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left           |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right          |
-| A                        | ![](/image/retropad/retro_a.png)             | A                    |
-| X                        | ![](/image/retropad/retro_x.png)             | Turbo B              |
-| L                        | ![](/image/retropad/retro_l1.png)            | L                    |
-| R                        | ![](/image/retropad/retro_r1.png)            | R                    |
-| L2                       | ![](/image/retropad/retro_l2.png)            | Darken Sensor        |
-| R2                       | ![](/image/retropad/retro_r2.png)            | Lighten Solar Sensor |
-| Left Analog X-axis       | ![](/image/retropad/retro_left_stick.png)    | Tilt                 |
-| Left Analog Y-axis       | ![](/image/retropad/retro_left_stick.png)    | Tilt                 |
-| Right Analog X-axis      | ![](/image/retropad/retro_right_stick.png)   | Gyro                 |
+| User 1 Remap descriptors | RetroPad Inputs                              |
+|--------------------------|----------------------------------------------|
+| B                        | ![](/image/retropad/retro_b.png)             |
+| Turbo B                  | ![](/image/retropad/retro_y.png)             |
+| Select                   | ![](/image/retropad/retro_select.png)        |
+| Start                    | ![](/image/retropad/retro_start.png)         |
+| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       |
+| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     |
+| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     |
+| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    |
+| A                        | ![](/image/retropad/retro_a.png)             |
+| Turbo A                  | ![](/image/retropad/retro_x.png)             |
+| L                        | ![](/image/retropad/retro_l1.png)            |
+| R                        | ![](/image/retropad/retro_r1.png)            |
+| Solar Sensor (Darker)    | ![](/image/retropad/retro_l2.png)            |
+| Solar Sensor (Lighter)   | ![](/image/retropad/retro_r2.png)            |
+| Tilt X-Axis              | ![](/image/retropad/retro_left_stick.png)    |
+| Tilt X-Yxis              | ![](/image/retropad/retro_left_stick.png)    |
+| Gyro                     | ![](/image/retropad/retro_right_stick.png)   |
 
 ## Compatibility
 
