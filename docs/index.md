@@ -2,7 +2,7 @@
 
 ![www.retroarch.com](image/branding/retroarch_banner.png)
 
-RetroArch is a the official reference frontend for libretro "cores": applications that include emulators, game engines, and media players. Settings are also unified across cores with advanced features like shaders, netplay, rewinding, and more!
+RetroArch is the official reference frontend for libretro "cores": applications that include emulators, game engines, and media players. Settings are also unified across cores with advanced features like shaders, netplay, rewinding, and more!
 
 ![www.libretro.com](image/branding/libretro_banner.png)
 
