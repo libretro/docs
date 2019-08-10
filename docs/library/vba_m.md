@@ -104,7 +104,7 @@ The VBA-M core saves/loads to/from these directories.
 - The VBA-M core's base height is GBA: 160, GB: 144 (224 with border/SGB mode)
 - The VBA-M core's max width is 256
 - The VBA-M core's max height is 224
-- The VBA-M core's core provided aspect ratio is GBA: 3:2, GB: 10:9 (8:7 with border/SGB)]
+- The VBA-M core's core provided aspect ratio is GBA: 3:2, GB: 10:9 (8:7 with border/SGB)
 
 ## Core options
 
@@ -134,7 +134,34 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **(GB) Color Palette** [vbam_palettes] (**black and white**|blue sea|dark knight|green forest|hot desert|pink dreams|wierd colors|original gameboy|gba sp)
 	
-	Sets the cutoff-frequency for the interpolation filter. Higher value reduces more high frequencies.
+	Set Game Boy palettes to use.
+
+??? note "(GB) Color Palette - black and white"
+	![](/image/core/vba_m/pal_1bw.png)
+
+??? note "(GB) Color Palette - blue sea"
+	![](/image/core/vba_m/pal_2bluesea.png)
+
+??? note "(GB) Color Palette - dark knight"
+	![](/image/core/vba_m/pal_3darkknight.png)
+
+??? note "(GB) Color Palette - green forest"
+	![](/image/core/vba_m/pal_4greenforest.png)
+
+??? note "(GB) Color Palette - hot desert"
+	![](/image/core/vba_m/pal_5hotdesert.png)
+
+??? note "(GB) Color Palette - pink dreams"
+	![](/image/core/vba_m/pal_6pinkdreams.png)
+
+??? note "(GB) Color Palette - wierd colors"
+	![](/image/core/vba_m/pal_7wierdcolors.png)
+
+??? note "(GB) Color Palette - original gameboy"
+	![](/image/core/vba_m/pal_8originalgb.png)
+
+??? note "(GB) Color Palette - gba sp"
+	![](/image/core/vba_m/pal_9gbsp.png)
 
 - **(GB) Emulated Hardware (Requires Restart)** [vbam_gbHardware] (Automatic|**Game Boy Color**|Super Game Boy|Game Boy|Game Boy Advance|Super Game Boy)
 	
@@ -148,13 +175,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **(GB) Show Borders** [vbam_showborders] (auto|**Off**|On)
 
-	Shows a solod-colored border around the normal window. If current game is SGB capable, an appropriate border from the cartridge will be loaded and shown instead.
+	Shows a solid-colored border around the normal window. If current game is SGB capable, an appropriate border from the cartridge will be loaded and shown instead.
+
+??? note "Show Borders - Off"
+	![](/image/core/vba_m/border_off.png)
+
+??? note "Show Borders - On"
+	![](/image/core/vba_m/border_on.png)
 	
 - **(GB) Color Correction** [vbam_gbcoloroption] (**Off**/On)
 
 	Applies color correction to palette.
 	
-	See: https://github.com/libretro/vbam-libretro/issues/60
+??? note "(GB) Color Correction - Off"
+	![](/image/core/vba_m/cc_Off.png)
+
+??? note "(GB) Color Correction - On"
+	![](/image/core/vba_m/cc_On.png)
 
 - **Enable Turbo Buttons** [vbam_turboenable] (**Off**/On)
 
@@ -170,11 +207,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Sensor Sensitivity (Gyroscope) (%)** [vbam_gyro_sensitivity] (10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|**100**|105|110|115|120)
 
-	Default bind is left analog. Used to adjust sensitivity level for gyro-enabled games.
+	Used to adjust sensitivity level for gyro-enabled games. Default bind is left analog. 
 
 - **Sensor Sensitivity (Tilt) (%)** [vbam_tilt_sensitivity] (10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|**100**|105|110|115|120)
 
-	Default bind is right analog. Used to adjust sensitivity level for gyro-enabled games.
+	Used to adjust sensitivity level for gyro-enabled games. Default bind is right analog. 
 
 - **Swap Left/Right Analog** [vbam_swap_astick] (**Off**/On)
 
