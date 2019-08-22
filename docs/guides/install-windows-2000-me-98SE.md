@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- **UNZIP** You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.z7` in Windows 2000.
+- **UNZIP** You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.7z` in Windows 2000.
 
 ### Downloading and installing
 
