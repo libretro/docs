@@ -2,15 +2,15 @@
 
 ## What is the AI Service
 
-This feature allows users to play games written in a foreign language, or automated voice-overs capability.  This uses OCR (optical character recognition), machine translation, and text-to-speech.  While these technologies can't provide the same level of accuracy as curated content, it can go quite far.  Machine translation can give a good gist of what's being said, especially for some language pairs, and text-to-speech can be of great benefit for accessibility.
+This feature allows users to play games written in a foreign language, or add text voice-overs automatically.  This uses OCR (optical character recognition), machine translation, and text-to-speech.  While these technologies can't provide the same level of accuracy as curated content, it can go quite far.  Machine translation can give a good gist of what's being said, especially for some language pairs, and text-to-speech can be of great benefit for accessibility.
 
 
 ## How it works
 
-When a user presses the AI Service key bind, RetroArch will grab the screen of the game being played and send it to the service endpoint listed in the configuration.  When the service returns, RetroArch will then either write the translated image to the screen or play the text-to-speech, depending on the configuration.
+When a user presses the AI Service hotkey, RetroArch will grab the screen of the game being played and send it to the service endpoint listed in the configuration.  When the service returns, RetroArch will then either write the translated image to the screen or say the text, depending on the configuration.
 
 
-The main supported service is the vgtranslate project: ( https://gitlab.com/spherebeaker/vgtranslate ).  This project is a python server you can run locally (or on your network) and uses Google Cloud OCR, and Google Text-to-Speech APIs with the Google Cloud keys you provide.
+The main supported service to use is the vgtranslate project: ( https://gitlab.com/spherebeaker/vgtranslate ).  This project is a python server you can run locally (or on your network) and uses Google Cloud OCR, and Google Text-to-Speech APIs with the Google Cloud keys you provide.
 
 Other supported services are in the Alternative Services section. 
 
@@ -21,15 +21,15 @@ First, go to Settings->Input->Hotkey Binds, and assign a key for the AI Service.
 
 Next, go to Settings->AI Service and modify the configuration options as follows.
 
-If `AI Service Output` is `Image Mode`, then when you press the AI Service hotkey, RetroArch will pause the game while the screen grab is being processed and then display the translated image to the screen when it's available.  Pressing the AI Service hotkey again will unpause the game and continue as normal.  This mode is recommended when you want to text on the screen to translated and written back on the screen where it was found.  When `AI Service Output` is `Speech Mode`, then RetroArch will not pause the game while the screen is being processed.  This is recommended when doing text-to-speech, since the audio will not play while the game is paused.
+If `AI Service Output` is `Image Mode`, then when you press the AI Service hotkey, RetroArch will pause the game while the screen grab is being processed and then display the translated image to the screen when it's available.  Pressing the AI Service hotkey again will unpause the game and continue as normal.  This mode is recommended when you want to text on the screen to be translated and written back on the screen where it was found.  When `AI Service Output` is `Speech Mode`, then RetroArch will not pause the game while the screen is being processed.  This is recommended when doing text-to-speech, since the audio can not play while the game is paused.
 
-The `AI Service URL` points to where translation service you're going to use is located.  The recommended service to use is vgtranslate ( https://gitlab.com/spherebeaker/vgtranslate/ ).  In this case, the URL to use would be `http://localhost:4404`.  For more instructions on how to set up vgtranslate on your system, see https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md
+The `AI Service URL` points to where the translation service you're using is located.  In the case of running vgtranslate yourself, this URL would be `http://localhost:4404`.  For more instructions on how to set up vgtranslate on your system, see https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md
 
 `AI Service Enabled` should be set to on.
 
 If `Source Language` is set to `Don't care`, then the service will attempt to auto-detect the language on the screen.  Setting it to a specific language will increase accuracy, and restrict translation to only text in the source language specified.
 
-Finally, `Target Language` is the language to translate into.  If set to `Don't care` then it will translate into English.  
+Finally, `Target Language` is the language to translate into.  If set to `Don't care` then it will translate into English.  See the vgtranslate docs for more information.
 
 
 ## Supported Cores
