@@ -17,20 +17,19 @@ Other supported services are in the Alternative Services section.
 
 ## How to set it up
 
-Go into your retroarch configuration and modify the following lines:
-```
-ai_service_enable = "true"
-ai_service_mode = "0"
-ai_service_url = "http://localhost:4404/?output=image&target_lang="
-```
+First, go to Settings->Input->Hotkey Binds, and assign a key for the AI Service.
 
-If `ai_service_mode` is `"0"`, then retroarch will pause the game while the screen grab is being processed and then unpause when it's pressed again.  This mode is recommended when you want to translate the text on the screen and write it to the screen.  If `ai_service_mode` is `"1"`, then retroarch will not pause while the screen is being processed.  This is recommended when doing text-to-speech, since the audio will not play while the game is paused.
+Next, go to Settings->AI Service and modify the configuration options as follows.
 
-In the url, `output` can be `image` to write to the screen `sound` to play the text, or `image,sound` to do both.  `target_lang` can be any supported language code as used by google (eg: `es`, `fr`, `de`, etc.).  The default value for the target language is english (`en`), while an empty value will not do any translation on the text.
+If `AI Service Output` is `Image Mode`, then when you press the AI Service hotkey, RetroArch will pause the game while the screen grab is being processed and then display the translated image to the screen when it's available.  Pressing the AI Service hotkey again will unpause the game and continue as normal.  This mode is recommended when you want to text on the screen to translated and written back on the screen where it was found.  When `AI Service Output` is `Speech Mode`, then RetroArch will not pause the game while the screen is being processed.  This is recommended when doing text-to-speech, since the audio will not play while the game is paused.
 
-After modifying the RetroArch configuration, go to Settings->Input->Hotkey Binds, and assign a key for the AI Service.
+The `AI Service URL` points to where translation service you're going to use is located.  The recommended service to use is vgtranslate ( https://gitlab.com/spherebeaker/vgtranslate/ ).  In this case, the URL to use would be `http://localhost:4404`.  For more instructions on how to set up vgtranslate on your system, see https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md
 
-Finally, follow the instructions in https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md to start running a vgtranslate service on your machine.
+`AI Service Enabled` should be set to on.
+
+If `Source Language` is set to `Don't care`, then the service will attempt to auto-detect the language on the screen.  Setting it to a specific language will increase accuracy, and restrict translation to only text in the source language specified.
+
+Finally, `Target Language` is the language to translate into.  If set to `Don't care` then it will translate into English.  
 
 
 ## Supported Cores
@@ -40,13 +39,13 @@ At the moment, any core that uses the RGB565 or RGB8888 pixel formats is support
 
 ## Alternative Services
 
-If you have issues setting up the vgtranslate service, or don't want to run a local service yourself, you can use a service someone else has set up.  One example is the ZTranslate service ( https://ztranslate.net/docs/service ).  In this case, you can put the following url in your retroarch config:
+If you have issues setting up the vgtranslate service, or don't want to run a local service yourself, you can use a service someone else has set up.  One example is the ZTranslate service ( https://ztranslate.net/docs/service ).  In this case, you can use the following url for `AI Service URL`:
 
 ```
-ai_service_url = "http://ztranslate.net/service?output=image&target_lang=En&source_lang=Ja&mode=Fast&api_key=<YOUR_ZTRANSLATE_API_KEY>"
+http://ztranslate.net/service?api_key=<YOUR_ZTRANSLATE_API_KEY>
 ```
 
-This requires registering an account with ztranslate.net to get an API key.  See the ztranslate docs for more information.
+This requires registering an account with ztranslate.net to get an API key.  Due to uploading of the screen cap to the server, latency will likely be a bit higher than using a vgtranslate service running locally.  See the ztranslate docs for more information.
 
 
 ## Alternative Translators
