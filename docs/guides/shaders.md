@@ -28,6 +28,16 @@ Note: If the preset uses scaling methods which are not simple, (i.e. source scal
 - **Apply Changes**: After changing shader settings, use this to apply changes. Changing shader settings is a somewhat expensive operation so it has to be done explicitly.
 - **Shader Parameters**: Shows the list of all tweakable shader parameters, which are previewed "live", i.e. without the need of hitting Apply Changes
 
+### "Reference" Presets
+
+Presets can use a `#reference "<preset path>"` directive, which will act as if the preset with the given path was loaded instead.
+
+From the shader menu you can create such reference presets by first loading any shader preset and then immediately saving it as an automatic shader preset. If any changes were made to the menu preset, it'll be saved as a copy like usual.
+
+If you make changes and still want a automatic preset to point to it, you can first save it as a custom preset and then immediately save an automatic preset. This allows you to change your custom preset without having to resave the automatic one every time.
+
+Note that custom saved presets are always saved as copies and automatic presets cannot point to automatic presets. This is so we never get references to references (which are not supported).
+
 ### Command Line
 The `--set-shader` command line option allows to set shaders directly, bypassing even automatic shader presets.
 
