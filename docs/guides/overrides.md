@@ -91,17 +91,3 @@ These settings files are created as above with the `Quick Menu -> Save Game Over
 ### Input Remaps
 
 Input remaps use the same logic as core/game overrides and use the `.rmp` extension. They can be adjusted and saved from `Quick Menu -> Controls -> Save Game or Core Remap`. Set the save directory in `Settings -> Directory -> Input Remapping` *(by default they will save to /config/remaps/"name-of-core"/"name-of-core/game".rmp)*
-
-### Shader Presets
-
-Shader Presets are combinations of one or more shaders. They can be adjusted and saved from `Quick Menu -> Shaders -> Save Core/Game Preset`. Set the save directory in `Settings -> Directory -> Video Shader` *(by default they will save to /shaders/presets/"name-of-core"/"name-of-core/game".cgp|glslp|slangp)*
-
-In addition to this you can save custom non core/game specific shader presets from `Quick Menu -> Shaders -> Save Shader Preset As`*(by default this will save to the shader directory set in* `Settings -> Directory -> Video Shader` *under "name-you-assigned .cgp|glslp|slangp)*
-
-So if you create your "perfect" combination of shaders you can recall this with `Quick Menu -> Shaders -> Load Shader Preset` then continue on to save it as a core or game preset. This will save time if using the same preset for multiple games or cores.
-
-There are plenty of user created default presets that come bundled with the RetroArch installation and these can be updated from `Main Menu -> Online Updater -> Update Cg|Glsl|Slang Shaders`
-
-[Example Screenshots](https://docs.libretro.com/shader/introduction/)
-
-Explore the navigation bar

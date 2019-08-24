@@ -104,24 +104,9 @@ After loading a libretro core, you will see the name and version of the core in 
 
 The browser will filter out extensions for the last core set in `Core`, and use that core when a ROM is loaded. If `libretro_path` in config is set with a full path to a core, this core is automatically selected once RGUI boots up (but you can still change the core afterwards).
 
-### Applying shaders
-The fundamental options are:
+## Applying shaders
 
-- **Apply Shader Changes**: After changing shader settings, use this to apply changes. Changing shader settings is a somewhat expensive operation so it has to be done explicitly.
-- **Default Filter**: Choose hardware filter to use if a shader pass is not explicitly defined.
-- **Load Shader Preset**: Load a Cg/GLSL preset directly. The RGUI shader menu is updated accordingly. If the CGP uses scaling methods which are not simple, (i.e. source scaling, same scaling factor for X/Y), the scaling factors displayed in RGUI might not be correct.
-- **Shader Passes**: Number of shader passes to use. If you set this to 0, and use Apply Shader Changes, you use a "blank" shader. The Default Filter option will affect the stretching filter.
-
-For every shader pass you can configure:
-- **Shader #N**: Path to shader. All shaders must be of the same type (i.e. .cg or .glsl). Set `video_shader_dir` in config to set where browser starts to look for shaders.
-- **Shader #N Filter**: Hardware filter. If "don't care" is set, Default Filter will be used.
-- **Shader #N Scale**: Scale for this pass. The scale factor accumulates, i.e. 2x for first pass and 2x for second pass will give you a 4x total scale. If there is a scale factor for last pass, the result is stretched to screen with filter specificed in Default Filter. If "don't care" is set, either 1x scale or stretch to fullscreen will be used depending if it's not the last pass or not.
-
-When you apply shaders, the RGUI shader settings are saved to a temporary file (either rgui.cgp or rgui.glslp) and loaded. The file persists after RetroArch exits. The file is saved to `video_shader_dir` directory in config. If you always want to load the RGUI preset on bootup, you can set `video_shader` option to this file.
-
-### Converting Cg shaders to GLSL
-In some cases, Cg shaders cannot be supported. This goes for OpenGL ES drivers, and when EGL OpenGL contexts are used (KMS mode for instance). Using nVidia's `cgc` compiler, you can convert Cg shaders to GLSL shaders with the `cg2glsl` tool developed by us [here](https://github.com/Themaister/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as whole folder structures in batch.
-100% compatibility is not guaranteed, but almost all shaders should work fine. Cg presets (.cgp) are not converted at the moment, but converting them is as simple as copying over the .cgp, rename it to .glslp and replace references to .cg files to .glsl.
+See the [shaders user guide](shaders.md).
 
 ## Configuring input
 Currently you can configure two settings per player (on PC):
