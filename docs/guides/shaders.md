@@ -43,15 +43,15 @@ The `--set-shader` command line option allows to set shaders directly, bypassing
 
 Example use:
     
-    retroarch --set-shader "D:\RetroArch\shaders\shaders_glsl\blurs\kawase_blur_5pass.glslp" -L &lt;core&gt; &lt;content&gt;
+    retroarch --set-shader "D:\RetroArch\shaders\shaders_glsl\blurs\kawase_blur_5pass.glslp" -L <core> <content>
     
 The shader path can be relative to the shader directory:
     
-    retroarch --set-shader "shaders_glsl\blurs\kawase_blur_5pass.glslp" -L &lt;core&gt; &lt;content&gt;
+    retroarch --set-shader "shaders_glsl\blurs\kawase_blur_5pass.glslp" -L <core> <content>
     
 An empty parameter effectively disables any automatic presets:
     
-    retroarch --set-shader "" -L &lt;core&gt; &lt;content&gt;
+    retroarch --set-shader "" -L <core> <content>
     
 ### Converting Cg shaders to GLSL
 In some cases, Cg shaders cannot be supported. This goes for OpenGL ES drivers, and when EGL OpenGL contexts are used (KMS mode for instance). Using Nvidia's `cgc` compiler, you can convert Cg shaders to GLSL shaders with the `cg2glsl` tool developed by us [here](https://github.com/Themaister/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as whole folder structures in batch.
