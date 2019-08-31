@@ -52,7 +52,7 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 
 You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
 
-For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed.
+For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed. Some cores (like snes9x2002) need an older NDK.
 
 In the event you are missing a core that you want, you can build it by going to its subfolder (libretro-corename) and performing this series of commands:
     
