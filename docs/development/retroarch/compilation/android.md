@@ -50,11 +50,11 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 ### Run build script ( read notes below before running the script):
     NOCLEAN=1 ./libretro-build-android-mk.sh 
 
-#You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
+You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
 
-#For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed.
+For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed.
 
-#In the event you are missing a core that you want, you can build it by going to its subfolder (libretro-corename) and performing this series of commands:
+In the event you are missing a core that you want, you can build it by going to its subfolder (libretro-corename) and performing this series of commands:
     
     #for example
     cd libretro-flycast
@@ -71,7 +71,7 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
     #if it succeeds, do this to move built .so files to dist folder:
     for arch in "arm64-v8a" "armeabi-v7a" "x86" "x86_64"; do if [ -f "$arch/libretro.so" ]; then cp -v  $arch/libretro.so $SRC/dist/android/$arch/"$corename"_libretro_android.so; else echo "$arch" build HAS FAILED!; fi; done
     
-#You may also want to check this repo for a list of depencies needed to build the cores:
+You may also want to check this repo for a list of depencies needed to build the cores:
 
     https://github.com/libretro/libretro-deps/ 
     
@@ -79,7 +79,7 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
     
     sudo apt-get install libfaac-dev
 
-#more info about core building can be had here:
+more info about core building can be had here:
 
     https://github.com/thebunnyrules/docs/blob/master/docs/development/cores/developing-cores.md
 
