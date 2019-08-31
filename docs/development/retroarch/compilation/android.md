@@ -43,7 +43,7 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 
 ### Building the cores
 
-### You'll need to put your NDK dir in the PATH variable for the build script to work. Just for the heck of it, I also like to throw in the tools folder from SDK as well as the build-tools (adjust to your situation):
+You'll need to put your NDK dir in the PATH variable for the build script to work. Just for the heck of it, I also like to throw in the tools folder from SDK as well as the build-tools (adjust to your situation):
 
     export PATH=/home/boo/Android/Sdk/ndk-bundle/build:/home/boo/Android/Sdk/tools:/home/boo/Android/Sdk/build-tools/28.0.3:$PATH
 
