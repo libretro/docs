@@ -52,15 +52,15 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 
 #You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
 
-#For a variaty of reasons, some of the cores will not be compiled by the script. These reason can range from: core folder doesn't have a jni folder setup yet, the core folder's jni folder is in a place that the script does not expect, the script is out of date and outright doesn't even try to build the core or you're missing some essential dependencies and build script failed.
+#For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed.
 
-#In the event you are missing a core that you want, you can  build individual cores by going to it's subfolder (libretro-corename) and finding performing this series of commands:
+#In the event you are missing a core that you want, you can build it by going to its subfolder (libretro-corename) and performing this series of commands:
     
     #for example
     cd libretro-flycast
     
     #get corename for later
-    corename=$(echo ${PWD##*/}|cut -d "-" -f 2) #you'll need this for later, do this in top level of core source
+    corename=$(echo ${PWD##*/}|cut -d "-" -f 2) 
     
     #now try to find the libretro/jni folder
     cd $(find . -iname "jni" -type d | grep --color=NEVER "libretro/jni")
@@ -74,7 +74,10 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 #You may also want to check this repo for a list of depencies needed to build the cores:
 
     https://github.com/libretro/libretro-deps/ 
-    #these deps can usually be installed via apt-get install (don't forget to append -dev at the end).
+    
+    #these deps can usually be installed via apt-get install (don't forget to append -dev at the end). for example:
+    
+    sudo apt-get install libfaac-dev
 
 #more info about core building can be had here:
 
