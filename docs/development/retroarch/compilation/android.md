@@ -47,15 +47,40 @@ These instructions have been tested under Linux (Fedora 20). They may also work 
 
     export PATH=/home/boo/Android/Sdk/ndk-bundle/build:/home/boo/Android/Sdk/tools:/home/boo/Android/Sdk/build-tools/28.0.3:$PATH
 
-### Run build script
+### Run build script ( read notes below before running the script):
     NOCLEAN=1 ./libretro-build-android-mk.sh 
 
 #You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
-#Check to make sure all the cores built correctly
 
-#You can also build individual cores by going to <core git>/jni and doing:
+#For a variaty of reasons, some of the cores will not be compiled by the script. These reason can range from: core folder doesn't have a jni folder setup yet, the core folder's jni folder is in a place that the script does not expect, the script is out of date and outright doesn't even try to build the core or you're missing some essential dependencies and build script failed.
+
+#In the event you are missing a core that you want, you can  build individual cores by going to it's subfolder (libretro-corename) and finding performing this series of commands:
     
+    #for example
+    cd libretro-flycast
+    
+    #get corename for later
+    corename=$(echo ${PWD##*/}|cut -d "-" -f 2) #you'll need this for later, do this in top level of core source
+    
+    #now try to find the libretro/jni folder
+    cd $(find . -iname "jni" -type d | grep --color=NEVER "libretro/jni")
+    
+    #if it exists and you don't get an error, build the core:
     ndk-build
+    
+    #if it succeeds, do this to move built .so files to dist folder:
+    for arch in "arm64-v8a" "armeabi-v7a" "x86" "x86_64"; do if [ -f "$arch/libretro.so" ]; then cp -v  $arch/libretro.so $SRC/dist/android/$arch/"$corename"_libretro_android.so; else echo "$arch" build HAS FAILED!; fi; done
+    
+#You may also want to check this repo for a list of depencies needed to build the cores:
+
+    https://github.com/libretro/libretro-deps/ 
+    #these deps can usually be installed via apt-get install (don't forget to append -dev at the end).
+
+#more info about core building can be had here:
+
+    https://github.com/thebunnyrules/docs/blob/master/docs/development/cores/developing-cores.md
+
+
 
 ### Building RetroArch
 
