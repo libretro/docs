@@ -52,7 +52,7 @@ You'll need to put your NDK dir in the PATH variable for the build script to wor
 
 You can omit `NOCLEAN=1` if you'd like to perform make clean on every core's repo before building each.
 
-For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed. Some cores (like snes9x2002) need an older NDK.
+For a variety of reasons, some of the cores may not be compiled by the script. These reasons can range from: core folder doesn't have a libretro/jni folder setup yet, core's libretro/jni folder is in a place that the script does not expect, core has been recently added to project and has not yet been added to script or you're missing some essential dependencies and the build script failed. Some cores (like snes9x2002) need an older NDK. Some core don't use jni but use make or cmake instead.
 
 In the event you are missing a core that you want, you can build it by going to its subfolder (libretro-corename) and performing this series of commands:
     
@@ -89,6 +89,7 @@ more info about core building can be had here:
 
 
 ###     PREP WORK
+
 The RetroArch repo is fetched into the libretro-super folder by `./libretro-fetch.sh` above.
 
 You first need to fetch the submodules for it.
@@ -123,7 +124,6 @@ Now, generate a keystore file and be sure to put it where `keystore.properties` 
 
 Now all the generated release apk will be automatically signed.
 
-
 Finally, copy the cores, assets and overlays to the right place and build it.
 
     mkdir -p assets/cores
@@ -131,6 +131,18 @@ Finally, copy the cores, assets and overlays to the right place and build it.
     cp ../../../../dist/android/arm64-v8a/* assets/cores/ #replace arm64-v8a here by archetecture of your choosing
     cp -r ../../../../dist/info/ assets/
     cp -r ../../../../retroarch/media/overlays/* assets/overlays/
+    
+Optionally, you may want to include the assets for the front-end (menu icons, fonts, images etc), shader caches, dbs, cheats, etc... These assets can be downloaded at any time during run time via the updater but if you want to bundle them into the build you may do so by following downloading bundle.zip / cheats.zip and extracting them to assets folder: 
+
+        wget https://buildbot.libretro.com/assets/frontend/bundle.zip
+        unzip -n bundle.zip -d assets
+        wget https://buildbot.libretro.com/assets/frontend/cheats.zip
+        mkdir assets/cheats
+        unzip cheats.zip -d assets/cheats
+
+*NOTE ABOUT BUNDLED ASSETS AND CORES* 
+
+I've noticed a bug where the built apk does not unpack the bundled assets and cores on first install. My workaround was to re-install the same apk a second time. On the second install, the assets and cores get unpacked.
 
 ###     BUILD
 
