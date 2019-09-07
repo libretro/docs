@@ -7,11 +7,22 @@ Cores are essentially other programs and games that run through RetroArch. Retro
 
 ## Installing cores through RetroArch interface
 
-![Core Updater](/image/retroarch/xmb/core_updater.gif)
+!!! tip
+    If you do not see the "Core Updater" option, you may have installed RetroArch using a package manager. If so, see [Installing cores through package manager (Ubuntu PPA only)](#installing-cores-through-package-manager-ubuntu-ppa-only). Otherwise, to enable it:
+
+    - Navigate to **Settings**
+    - Navigate to **User Interface**
+    - Navigate to **Views**
+    - Enable **Show Core Updater**
+
+![Core Updater](https://docs.libretro.com/image/retroarch/xmb/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**
 - Select the core you want to download
+
+!!! note
+    If you're using the Ubuntu PPA version of RetroArch and have enabled "Show Core Updater" manually, your changes will not be reflected unless your the Cores directory setting is set to a writable location in the [Directory Cofiguration](https://docs.libretro.com/guides/change-directories#cores).
 
 ## Installing cores through package manager (Ubuntu PPA only)
 
