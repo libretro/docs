@@ -22,7 +22,7 @@ Cores are essentially other programs and games that run through RetroArch. Retro
 - Select the core you want to download
 
 !!! note
-    If you're using the Ubuntu PPA version of RetroArch and have enabled "Show Core Updater" manually, your changes will not be reflected unless your the Cores directory setting is set to a writable location in the [Directory Cofiguration](https://docs.libretro.com/guides/change-directories#cores).
+    If you're using the Ubuntu PPA version of RetroArch and have enabled "Show Core Updater" manually, your changes will not be reflected unless your the Cores directory setting is set to a writable location in the [Directory Cofiguration](../change-directories#cores).
 
 ## Installing cores through package manager (Ubuntu PPA only)
 
