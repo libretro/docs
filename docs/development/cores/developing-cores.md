@@ -28,7 +28,7 @@ RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bpar
 
 ### Vectrexia codebase and development log
 
-**beardypig** published a two-part guide ([Part 1](https://web.archive.org/web20190219134430/http://www.beardypig.com/2016/01/15/emulator-build-along-1/), [Part 2](https://web.archive.org/web20190219134028/http://www.beardypig.com/2016/01/22/emulator-build-along-2/)) describing the process of implementing `libretro.h` as part of creating [Vectrexia](https://github.com/beardypig/vectrexia-emulator/), an original emulator core designed for libretro from the ground up.
+**beardypig** published a two-part guide ([Part 1](https://web.archive.org/web/20190219134430/http://www.beardypig.com/2016/01/15/emulator-build-along-1/), [Part 2](https://web.archive.org/web/20190219134028/http://www.beardypig.com/2016/01/22/emulator-build-along-2/)) describing the process of implementing `libretro.h` as part of creating [Vectrexia](https://github.com/beardypig/vectrexia-emulator/), an original emulator core designed for libretro from the ground up.
 
 
 ### `libretro-common`
@@ -110,7 +110,7 @@ Abstracting joypad and other input devices is the hardest part of defining a mul
 
 Input device abstractions are also available for keyboards, mice, pointers, and lightguns.
 
-**Learn more in the [Input API](/development/input-api.md) docs.**
+**Learn more in the [Input API](/docs/development/input-api.md) docs.**
 
 #### Video/Audio synchronization considerations
 
