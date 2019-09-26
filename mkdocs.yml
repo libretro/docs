@@ -20,6 +20,7 @@ nav:
         - '3DS/2DS Family': 'guides/install-3ds2ds.md'
       - 'Sony':
         - 'PlayStation Portable': 'guides/install-psp.md'
+        - 'PlayStation Vita': 'guides/install-psv.md'
         - 'PlayStation3': 'guides/install-ps3.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md' 
