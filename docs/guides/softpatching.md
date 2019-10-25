@@ -53,6 +53,7 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 |------------------------------------------|:---------:|
 | [bnes](../library/bnes.md)               | ✔         |
 | [FCEUmm](../library/fceumm.md)           | ✔         |
+| [Mesen](../library/mesen.md)             | ✔         |
 | [Nestopia UE](../library/nestopia_ue.md) | ✔         |
 | [QuickNES](../library/quicknes.md)       | ✔         |
 
