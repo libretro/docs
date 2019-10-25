@@ -10,7 +10,7 @@ Notable additions in this fork are:
 - Software renderer internal resolution upscaling, implemented by simias;
 - An OpenGL 3.3 renderer, developed by simias;
 - A Vulkan renderer, developed by TinyTiger;
-- PGXP perspectve correct texturing and subpixel precision, developed by iCatButler;
+- PGXP perspective correct texturing and subpixel precision, developed by iCatButler;
 
 The Beetle PSX HW core has been authored by
 
@@ -420,8 +420,6 @@ The default setting for each option will be highlighted in bold. Settings with (
 	    ![](/image/core/beetle_psx_hw/jinc2.png)
 
 - **PGXP Operation Mode** [beetle_psx_hw_pgxp_mode] (**disabled**/memory only/memory + CPU)
-
-	OpenGL/Vulkan Only
 
 	Enabling the Parallel/Precision Geometry Transform Pipeline (PGXP) allows polygons to be rendered with subpixel precision, eliminating or otherwise diminishing the polygon jitter/wobble visible on original PSX hardware. This distortion results from original hardware using fixed point mathematics when rendering 3D models, thus rounding polygon vertices to the nearest integer pixel.
 
