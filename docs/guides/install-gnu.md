@@ -73,3 +73,7 @@ sudo pacman -S retroarch
 ```
 
 A [git release](https://aur.archlinux.org/packages/retroarch-git) of RetroArch is also available on the [AUR](https://aur.archlinux.org/).
+
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/hu-TW02bhhY/0.jpg)](http://www.youtube.com/watch?v=hu-TW02bhhY)

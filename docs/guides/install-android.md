@@ -54,6 +54,6 @@ You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with
 For Nightlies [here](https://buildbot.libretro.com/nightly/android/) - pick the latest version(based on date), and download `...RetroArch.apk` or `...RetroArch_aarch64.apk`.
 (*where ... represents the date*)
 
-### Video Demonstration
+### Video Tutorial
 ___
 [![Quick Video Demonstration](http://img.youtube.com/vi/dqx5c28pT3o/0.jpg)](http://www.youtube.com/watch?v=dqx5c28pT3o)

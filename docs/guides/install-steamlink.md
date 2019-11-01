@@ -82,3 +82,7 @@ Go to root folder and open `apps` folder, you will see RetroArch folder in there
 Install USBmount the same way we install RetroArch. Remove the `RetroArch` folder from the `apps` directory before installation. Otherwise it will re-install on every boot.
 
 After completing the installation, create a folder on your USB and move your contents. Then plug the USB into your SteamLink and run the installed `USBmount` application.
+
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/02M9SdUKLa0/0.jpg)](http://www.youtube.com/watch?v=02M9SdUKLa0)

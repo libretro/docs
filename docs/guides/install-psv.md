@@ -42,3 +42,7 @@ Connect your PS Vita with your PC via _VitaShell_. Just move `RetroArch` folder 
 Connect your PS Vita with your PC via _VitaShell_. Move your `RetroArch.vpk` to root of your sdcard. Disconnect PS Vita from your PC. Enter the `ux0:`directory, you will see a lot of files, scroll down to the bottom until you see `RetroArch.vpk`. Press your selection key, it can be _O_ or _X_. You may receive a warning asking for the reliability of the file you downloaded, if you downloaded this file from our channels, you can accept and continue.
 
 Once the installation is complete, run the **RetroArch** once and you will see that Fonts and Images are missing. Close `RetroArch` and connect PS Vita to PC with `VitaShell`. Once you have made the connection, move the files of the downloaded `Bundle` archive to` data/retroarch/`. After successful file transfers, close the application and run RetroArch again.
+
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/K8iP_L49QdI/0.jpg)](http://www.youtube.com/watch?v=K8iP_L49QdI)

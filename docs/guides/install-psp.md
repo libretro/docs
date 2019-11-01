@@ -23,4 +23,6 @@ You can download a bundle with RetroArch, all the supported cores and all the as
 
 Installation is also very simple. Just create `RetroArch` folder under `PSP/Game` directory and transfer the archive files to the `PSP/Game/RetroArch` then go to `Memory Stick™` under **Game** press **X** and first or last application is must be RetroArch.
 
+#### Video Tutorial
+
 [![Quick Video Demonstration](http://img.youtube.com/vi/VXY7HjvMfnU/0.jpg)](http://www.youtube.com/watch?v=VXY7HjvMfnU)

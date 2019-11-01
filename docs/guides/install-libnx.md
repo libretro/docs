@@ -20,8 +20,6 @@ If you don't want to download all cores at once, you can go [here](https://build
 
 Alternatively, you can download only one core and use the Online Updater inside of RetroArch to download or update additional cores later.
 
-[![Quick Video Demonstration](http://img.youtube.com/vi/8onZ4H8h3iE/0.jpg)](http://www.youtube.com/watch?v=8onZ4H8h3iE)
-
 ### Running RetroArch using title takeover
 
 The preferred way of running RetroArch is to use Atmosphère's title takeover feature. This allows you to (temporarly) replace a game with the homebrew loader, which will then be used to load RetroArch. Make sure to use the latest version of Atmosphère before continuing.
@@ -31,3 +29,7 @@ The preferred way of running RetroArch is to use Atmosphère's title takeover fe
 Atmosphère now contains everything needed to run homebrews out of the box. To do so, simply run any game while holding the R key. Make sure to hold the key until you can actually see the homebrew menu. Select RetroArch in the list to start!
 
 If you wish to change the key, you can edit `/atmosphere/loader.ini` and change `override_key` here. You can add a `!` in front of the key to flip the condition ("run homebrew if the key is pressed" versus "run homebrew if the key isn't pressed").
+
+### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/8onZ4H8h3iE/0.jpg)](http://www.youtube.com/watch?v=8onZ4H8h3iE)

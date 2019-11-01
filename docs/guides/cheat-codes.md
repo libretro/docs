@@ -114,5 +114,6 @@ Available rumble controls:
 - Rumble when memory value increases by a specific amount
 
 
+#### Video Tutorial
 
-
+[![Quick Video Demonstration](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)

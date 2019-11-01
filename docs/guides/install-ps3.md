@@ -25,4 +25,6 @@ You can find a bundle with RetroArch, all the cores and all the assets for `CEX`
 
 Installation is also very simple. Just extract the archive to the root of your USB. Put your USB to right USB port. Use the CFW package installer to select and install RetroArch's pkg file. You can watch the short video Demonstration by clicking on the image below.
 
+#### Video Tutorial
+
 [![Quick Video Demonstration](http://img.youtube.com/vi/8O-jcykRX6w/0.jpg)](http://www.youtube.com/watch?v=8O-jcykRX6w)
