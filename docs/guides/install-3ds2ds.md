@@ -17,4 +17,6 @@ For Nightlies [here](http://buildbot.libretro.com/nightly/nintendo/3ds/) - pick 
 
 Just extract `RetroArch` folder to the root of your SD card `RetroArch.cia` anywhere else, to install cores use `FBI installer`. Go to the `RetroArch`folder and open the `Cores` folder. Select and install the Cores you want to use. For example; install `pcsx_rearmed_libretro.cia` for Playstation 1 Roms.
 
+### Video Tutorial
+
 [![Quick Video Demonstration](http://img.youtube.com/vi/4TnjFE9t1a4/0.jpg)](http://www.youtube.com/watch?v=4TnjFE9t1a4)

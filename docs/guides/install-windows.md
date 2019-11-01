@@ -128,3 +128,7 @@ Additional files that might or not be part of the romset that might be needed to
 
 #### autoconf
 A configuration file that has button definitions for a particular gamepad
+
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/hu-TW02bhhY/0.jpg)](http://www.youtube.com/watch?v=hu-TW02bhhY)

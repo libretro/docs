@@ -84,3 +84,6 @@ You don't need to configure anything to connect to netplay rooms. Browse to the 
 You will be asked for a password if one is required, and if you have matching content scanned or in the **Content History** it will connect right away. Otherwise it will tell you to load the core and content manually and it will attempt to connect right away.
 
 
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/Z3CTuTx0nnc/0.jpg)](http://www.youtube.com/watch?v=Z3CTuTx0nnc)

@@ -279,3 +279,8 @@ Optionally strip the build product:
 ``
     
 Most cores will build with these instructions. You might need to browse to a subdirectory in some cases.
+
+```
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/OaYvc3y3VLI/0.jpg)](http://www.youtube.com/watch?v=OaYvc3y3VLI)

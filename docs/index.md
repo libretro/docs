@@ -16,3 +16,15 @@ libretro is released under the MIT license. RetroArch is released under the GNU 
 
 ## What emulators, games, and other cores are currently supported?
 You can see a list sorted by hardware maker under *For Users > Core Documentation*
+
+## Official Links
+
+- [Website](https://www.retroarch.com/)
+- [Github Repository](https://github.com/libretro/RetroArch)
+- [Libretro Documentation](https://docs.libretro.com/)
+- [Forum](https://forums.libretro.com/)
+- [Facebook](https://www.facebook.com/libretro)
+- [Twitter](https://twitter.com/libretro)
+- [YouTube](https://www.youtube.com/Libretro)
+- [Discord](https://discord.gg/27Xxm2h)
+- [Teespring](https://teespring.com/stores/retroarch)

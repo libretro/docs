@@ -84,6 +84,6 @@ Your computer will launch Lakka on the next Boot.
 ___
 Lakka is still under heavy development. In its current state, the project allows you to play most games on most platforms. More information can be found in the [Lakka documents](http://www.lakka.tv/doc/Home/). You may also want to check the [Official Forum](https://forums.libretro.com/c/libretro/lakka-tv-general).
 
-### Video Demonstration
+### Video Tutorial
 ___
 [![Quick Video Demonstration](http://img.youtube.com/vi/8rMvf3tfjFk/0.jpg)](http://www.youtube.com/watch?v=8rMvf3tfjFk)

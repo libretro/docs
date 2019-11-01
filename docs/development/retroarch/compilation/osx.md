@@ -105,3 +105,7 @@ In case you only want to build one and/or more cores instead of all, you can spe
     ./libretro-build.sh snes9x2010 fceumm
 
 Once finished, you can find the libretro cores inside directory `dist/osx`.
+
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)

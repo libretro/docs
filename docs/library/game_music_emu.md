@@ -93,6 +93,10 @@ The Game Music Emu core supports the following device type(s) in the controls me
 | ![](/image/retropad/retro_l1.png)            | Previous Track             |
 | ![](/image/retropad/retro_r1.png)            | Next Track                 |
 
+#### Video Tutorial
+
+[![Quick Video Demonstration](http://img.youtube.com/vi/vxbRDG2TTIM/0.jpg)](http://www.youtube.com/watch?v=vxbRDG2TTIM)
+
 ## External Links
 
 - [Official Game Music Emu Website](http://blargg.8bitalley.com/libs/audio.html)
