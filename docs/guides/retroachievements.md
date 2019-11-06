@@ -53,7 +53,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|-------|
-| [FB Alpha](https://github.com/libretro/fbalpha)       | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3 |
+| [FB Neo](https://github.com/libretro/FBNeo)       | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3 |
 
 ### NES
 
