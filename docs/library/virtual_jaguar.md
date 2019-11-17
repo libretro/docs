@@ -153,6 +153,21 @@ The Virtual Jaguar core supports the following device type(s) in the controls me
 | Numpad 5                     | ![](/image/retropad/retro_l3.png)         |
 | Numpad 6                     | ![](/image/retropad/retro_r3.png)         |
 
+#### Keyboard
+| User 1 Joypad Descriptors    | Keyboard Inputs                             |
+|------------------------------|---------------------------------------------|
+| Numpad 0                     | 0
+| Numpad 1                     | 1
+| Numpad 2                     | 2
+| Numpad 3                     | 3
+| Numpad 4                     | 4                  
+| Numpad 5                     | 5                    
+| Numpad 6                     | 6                   
+| Numpad 7                     | 7
+| Numpad 8                     | 8
+| Numpad 9                     | 9
+| Numpad *                     | -
+| Numpad #                     | = 
 ## Compatibility
 
 A reference compatibility table can be found on the bottom of this [page](https://icculus.org/virtualjaguar/)
