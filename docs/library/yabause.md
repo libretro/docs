@@ -2,7 +2,7 @@
 
 ## Background
 
-Yabause is an active Sega Saturn emulator that is both open-source and written with portability in mind. The libretro port only supports the software renderer at the moment, which is more accurate but also slower than the GL renderer.
+Yabause is a Sega Saturn emulator that is both open-source and written with portability in mind. It is software rendered. Without any update for years it seems upstream is now dead.
 
 ### Author/License
 
@@ -22,9 +22,12 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 Content that can be loaded by the Yabause core have the following file extensions:
 
-- .bin
 - .cue
 - .iso
+- .ccd
+- .mds
+- .chd
+- .zip
 
 ## Databases
 
@@ -39,6 +42,8 @@ Required or optional firmware files go in the frontend's system directory.
 | Filename          | Description                     | md5sum                           |
 |:-----------------:|:-------------------------------:|:--------------------------------:|
 | saturn_bios.bin   | Saturn BIOS - Optional          | af5828fdff51384f99b3c4926be27762 |
+
+This md5sum is just a hint, it is not required, any valid saturn bios should work. 
 
 ## Features
 
@@ -93,21 +98,8 @@ The Yabause core saves/loads to/from these directories.
 
 ## Loading Sega Saturn content
 
-!!! warning
-    Yabause does not support cue files that point to multiple bin files. Convert multi-bin tracks to single-bin tracks for proper operation.
-
-Yabause needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
-
-If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cue`. If you're playing a single-track Saturn game, then the cue file contents should look like this:
-
-`foobin.cue`
-```
- FILE "foo.bin" BINARY
-  TRACK 01 MODE1/2352
-   INDEX 01 00:00:00
-```
-
-After that, you can load the `foo.cue` file in RetroArch with the Yabause core.
+- Yabause is not compatible with cue sheets containing references to audio files with wav/mp3/ogg/flac/ape extensions.
+- Zip files containing cue+bin files can be loaded directly, however the dump will be loaded in RAM (meaning it will use around 700MB of RAM depending on the size of the dump).
 
 ## Core options
 
@@ -129,7 +121,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	A list of games that require a cartridge can be found [here](https://www.satakore.com/cartridge.php).
 	
-- **Number of Threads (restart)** [yabause_numthreads] (**1**|2|4|8|16|32)
+- **6Player Adaptor on Port 1** [yabause_multitap_port1] (**disabled**|enabled)
+
+	Enable multitap in port 1.
+	
+- **6Player Adaptor on Port 2** [yabause_multitap_port2] (**disabled**|enabled)
+
+	Enable multitap in port 2.
+	
+- **Number of Threads (restart)** [yabause_numthreads] (1|2|**4**|8|16|32)
 
 	Adjust the number of threads to an appropriate level for your CPU.
 	
@@ -137,23 +137,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 The Yabause core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
-### User 1 - 2 device types
+### User device types
 
 - None - Doesn't disable input. There's no reason to switch to this.
 - **Saturn Pad** - Joypad
 - Saturn 3D Pad - Analog
-- Multitap + Pad - Joypad - Allows for up to twelve players to play together in multitap games.
-- Multitap + 3D Pad - Analog - Allows for up to twelve players to play together in multitap games.
-
-### User 3 - 12 device types
-
-- None - Doesn't disable input. There's no reason to switch to this.
-- Saturn Pad - Joypad
-- Saturn 3D Pad - Analog
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the 'Mulitap + Pad' or 'Multitap + 3D Pad' device types for Users 1 and 2.
+Must be enabled in core options.
 
 ### Controller tables
 
@@ -182,6 +174,11 @@ Activating multitap support in compatible games can be configured by switching t
 ## Compatibility
 
 - [Official Yabause Compatibility List](https://wiki.yabause.org/index.php5?title=Compatibility_list)
+
+## Known issues
+
+- Savestates work but can freeze a game
+- Enabling both multitaps at the same time causes some kind of "autofire" bug
 
 ## External Links
 
