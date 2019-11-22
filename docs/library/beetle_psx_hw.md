@@ -278,7 +278,7 @@ The Beetle PSX HW core has the following options that can be tweaked from your f
 
 ``Option Name [option_key] (setting1/setting2/...)``
 
-To manually change an option, search for that option's key in the core configuration file you want to edit and set it to your desired setting value, enclosed in quotations. For example, if you had set the Internal Color Depth to 32bpp and wanted to revert it to 16bpp, you would change ``beetle_psx_hw_depth = "32bpp"`` to ``beetle_psx_hw_depth = "dithered 16bpp (native)"``. Manually editing core configuration files is typically unnecessary unless your frontend does not have a method for toggling options.
+To manually change an option, search for that option's key in the core configuration file you want to edit and set it to your desired setting value, enclosed in quotations. For example, if you had set the Internal Color Depth to 32bpp and wanted to revert it to 16bpp, you would change ``beetle_psx_hw_depth = "32bpp"`` to ``beetle_psx_hw_depth = "16bpp(native)"``. Manually editing core configuration files is typically unnecessary unless your frontend does not have a method for toggling options.
 
 The default setting for each option will be highlighted in bold. Settings with (Restart) means that core has to be shut down for the new setting to be applied on next launch.
 
@@ -290,7 +290,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	Hardware is less accurate but may have improved performance over the software renderer at internal GPU resolutions of 2x and above on capable hardware. The hardware renderers also allow various graphical enhancements such as higher color depth, texture filtering, and PGXP. Choosing this setting will automatically select either the Vulkan or OpenGL renderer depending on the current libretro frontend video driver. If the provided video driver is not Vulkan or OpenGL 3.3-compatible then the core will fall back to the software renderer.
 
-	The hardware renderer has known issues -- check the compatibility section below or the core's [issue tracker](https://github.com/libretro/beetle-psx-libretro/issues) for more details.
+	The hardware renderers have known issues -- check the compatibility section below or the core's [issue tracker](https://github.com/libretro/beetle-psx-libretro/issues) for more details.
 
 	<!--Also important to keep in mind is shader support. The Vulkan renderer supports Slang shaders, while the OpenGL renderer supports GLSL shaders.-->
 
@@ -301,6 +301,85 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Allows accurate emulation of framebuffer readback effects (e.g. motion blur, FF7 battle swirl, etc.) when using the hardware renderer. If disabled, certain operations are omitted or rendered on the GPU, which can improve performance but may cause graphical errors or [cause stuttering](https://github.com/libretro/beetle-psx-libretro/pull/469#issue-238935899).
 
 	Leave enabled if unsure.
+
+- **Internal GPU Resolution** [beetle_psx_hw_internal_resolution] (**1x(native)**/2x/4x/8x/16x)
+
+	Selects internal resolution multiplier.
+
+	Resolutions higher than 1x(native) improve the fidelity of 3D models at the expense of increased performance requirements. 2D elements are generally unaffected by this setting from the core's perspective.
+
+	??? note "*Internal GPU Resolution - 1x*"
+	    ![](/image/core/beetle_psx_hw/gpu_1.png)
+
+	??? note "*Internal GPU Resolution - 2x*"
+	    ![](/image/core/beetle_psx_hw/gpu_2.png)
+
+- **Internal Color Depth** [beetle_psx_hw_depth] (**16bpp(native)**/32bpp)
+
+	OpenGL Only
+
+	The PSX has a limited color depth of 16 bits per pixel (bpp). This leads to banding effects (uneven color gradients) which are smoothed out by original hardware through the use of a dithering pattern. The '16bpp(native)' setting emulates the original 16bpp color depth. Selecting '32 bpp' increases the color depth such that smoother gradients can be achieved without dithering, allowing for a cleaner undithered output.
+
+	Note the visible horizontal bands on an undithered 16bpp image compared to the same undithered image at 32bpp:
+
+	??? note "*Undithered 16bpp*"
+	    ![](/image/core/beetle_psx_hw/16bpp_no-dither.png)
+
+	??? note "*Undithered 32bpp*"
+	    ![](/image/core/beetle_psx_hw/32bpp_no-dither.png)
+
+	This option should be toggled in conjunction with the Dithering Pattern option.
+
+	The software renderer is locked to 16bpp while the Vulkan renderer will automatically set render at 16bpp if dithering is enabled and 32bpp if dithering is disabled.
+
+- **Dithering Pattern** [beetle_psx_hw_dither_mode] (**1x(native)**/internal resolution/disabled)
+
+	Select dithering pattern.
+
+	Dithering is used by the original PSX hardware to combat the color banding visible due to 16bpp color depth. This option is less necessary and can be disabled if the Internal Color Depth option is set to '32bpp'.
+
+	'1x(native)' emulates original hardware but can look grainy at higher internal resolutions.
+
+	'internal resolution' reduces graininess by allowing for finer dithering at higher Internal GPU Resolutions, but has limited effectiveness in combating color banding if the Internal GPU Resolution is set too high. (Note in the examples below that the 'internal resolution' option is less grainy but has more visible banding than '1x(native)' at 4x Internal GPU Resolution)
+
+	'disabled' is useful to pair with '32bpp' Internal Color Depth where banding is far less visible or for users who otherwise wish to turn off dithering regardless of color banding at 16bpp.
+
+	??? note "*Dithering Pattern - 1x Native (16bpp 4x IR)*"
+	    ![](/image/core/beetle_psx_hw/dither_native.png)
+
+	??? note "*Dithering Pattern - Internal Resolution (16bpp 4x IR)*"
+	    ![](/image/core/beetle_psx_hw/dither_internalres.png)
+
+	??? note "*Dithering Pattern - Disabled (16bpp 4x IR)*"
+	    ![](/image/core/beetle_psx_hw/dither_off.png)
+
+	<!--Vulkan occasionally exhibits issues with this setting when it is turned on.-->
+
+- **Texture Filtering** [beetle_psx_hw_filter] (**nearest**/SABR/xBR/bilinear/3-point/JINC2)
+
+	OpenGL/Vulkan Only
+
+	Choose per-texture filtering method.
+
+	Texture filters can modify or enhance the appearance of 3D polygon textures and 2D elements. 'Nearest' emulates original hardware. 'Bilinear' and '3-Point' are smoothing filters, which reduce pixelation via blurring. 'SABR', 'xBR' and 'JINC2' are upscaling filters, which improve texture fidelity/sharpness at the expense of increased performance requirements.
+
+	??? note "*nearest*"
+	    ![](/image/core/beetle_psx_hw/nearest.png)
+
+	??? note "*SABR*"
+	    ![](/image/core/beetle_psx_hw/sabr.png)
+
+	??? note "*xBR*"
+	    ![](/image/core/beetle_psx_hw/xbr.png)
+
+	??? note "*bilinear*"
+	    ![](/image/core/beetle_psx_hw/bilinear.png)
+
+	??? note "*3-point*"
+	    ![](/image/core/beetle_psx_hw/3point.png)
+
+	??? note "*JINC2*"
+	    ![](/image/core/beetle_psx_hw/jinc2.png)
 
 - **Adaptive Smoothing** [beetle_psx_hw_adaptive_smoothing] (**enabled**/disabled)
 
@@ -341,36 +420,6 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*MDEC YUV Chroma Filter On/Off Comparison*"
 	    ![](/image/core/beetle_psx_hw/mdec-yuv-filter.png)
 
-- **Internal GPU Resolution** [beetle_psx_hw_internal_resolution] (**1x(native)**/2x/4x/8x/16x)
-
-	Selects internal resolution multiplier.
-
-	Resolutions higher than 1x(native) improve the fidelity of 3D models at the expense of increased performance requirements. 2D elements are generally unaffected by this setting from the core's perspective.
-
-	??? note "*Internal GPU Resolution - 1x*"
-	    ![](/image/core/beetle_psx_hw/gpu_1.png)
-
-	??? note "*Internal GPU Resolution - 2x*"
-	    ![](/image/core/beetle_psx_hw/gpu_2.png)
-
-- **Internal Color Depth** [beetle_psx_hw_depth] (**dithered 16bpp (native)**/32bpp)
-
-	OpenGL Only
-
-	The PSX has a limited color depth of 16 bits per pixel (bpp). This leads to banding effects (uneven color gradients) which are smoothed out by original hardware through the use of a dithering pattern. The 'dithered 16bpp (native)' setting emulates the original 16bpp color depth. Selecting '32 bpp' increases the color depth such that smoother gradients can be achieved without dithering, allowing for a cleaner undithered output.
-
-	Note the visible horizontal bands on an undithered 16bpp image compared to the same undithered image at 32bpp:
-
-	??? note "*Undithered 16bpp*"
-	    ![](/image/core/beetle_psx_hw/16bpp_no-dither.png)
-
-	??? note "*Undithered 32bpp*"
-	    ![](/image/core/beetle_psx_hw/32bpp_no-dither.png)
-
-	This option should be toggled in conjunction with the Dithering Pattern option.
-
-	Not available for the software and Vulkan renderers as they are locked to 16bpp and 32bpp respectively.
-
 - **Wireframe Mode** [beetle_psx_hw_wireframe] (**disabled**/enabled)
 
 	OpenGL Only
@@ -392,32 +441,6 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	??? note "*Display full VRAM - On*"
 	    ![](/image/core/beetle_psx_hw/vram.png)
-
-- **Texture Filtering** [beetle_psx_hw_filter] (**nearest**/SABR/xBR/bilinear/3-point/JINC2)
-
-	OpenGL/Vulkan Only
-
-	Choose per-texture filtering method.
-
-	Texture filters can modify or enhance the appearance of 3D polygon textures and 2D elements. 'Nearest' emulates original hardware. 'Bilinear' and '3-Point' are smoothing filters, which reduce pixelation via blurring. 'SABR', 'xBR' and 'JINC2' are upscaling filters, which improve texture fidelity/sharpness at the expense of increased performance requirements.
-
-	??? note "*nearest*"
-	    ![](/image/core/beetle_psx_hw/nearest.png)
-
-	??? note "*SABR*"
-	    ![](/image/core/beetle_psx_hw/sabr.png)
-
-	??? note "*xBR*"
-	    ![](/image/core/beetle_psx_hw/xbr.png)
-
-	??? note "*bilinear*"
-	    ![](/image/core/beetle_psx_hw/bilinear.png)
-
-	??? note "*3-point*"
-	    ![](/image/core/beetle_psx_hw/3point.png)
-
-	??? note "*JINC2*"
-	    ![](/image/core/beetle_psx_hw/jinc2.png)
 
 - **PGXP Operation Mode** [beetle_psx_hw_pgxp_mode] (**disabled**/memory only/memory + CPU)
 
@@ -447,6 +470,13 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*PGXP Texturing - On*"
 	    ![](/image/core/beetle_psx_hw/pgxp_texture_on.jpg)
 
+- **Display Internal FPS** [beetle_psx_hw_display_internal_fps] (**disabled**/enabled)
+
+	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend.
+
+	??? note "*Display internal FPS - On*"
+	    ![](/image/core/beetle_psx_hw/fps.png)
+
 - **Line-to-Quad Hack** [beetle_psx_hw_lineRender] (**default**/aggressive/disabled)
 
 	Certain games employ a special technique for drawing horizontal lines, which involves stretching single-pixel-high triangles across the screen in a manner that causes the PSX hardware to rasterise them as a row of pixels. Examples include Doom/Hexen, and the water effects in Soul Blade. When running such games with an Internal GPU Resolution higher than native, these triangles no longer resolve as a line, causing gaps to appear in the output image.
@@ -455,21 +485,12 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	The 'Aggressive' option will likely introduce visual glitches due to false positives, but is needed for correct rendering of some 'difficult' titles (e.g. Dark Forces, Duke Nukem).
 
-- **Widescreen Mode Hack** [beetle_psx_hw_widescreen_hack] (**disabled**/enabled)
-
-	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment issues in games that mix 3D and 2D elements. Leave off for most games.
-
-	??? note "*Widescreen mode hack - Off*"
-	    ![](/image/core/beetle_psx_hw/wide_off.png)
-
-	??? note "*Widescreen mode hack - On*"
-	    ![](/image/core/beetle_psx_hw/wide_on.png)
-
 - **Frame Duping (Speedup)** [beetle_psx_hw_frame_duping] (**disabled**/enabled)
+	Software Renderer Only
 
 	When enabled, provides a small performance increase by redrawing/reusing the last rendered frame (instead of presenting a new one) if the content of the current frame is unchanged.
 
-- **CPU Frequency Scaling (Overclock)** [beetle_psx_hw_cpu_freq_scale] (50% to 500% in increments of 10%. Default: **100% (native)**)
+- **CPU Frequency Scaling (Overclock)** [beetle_psx_hw_cpu_freq_scale] (50% to 500% in increments of 10%. Default: **100%(native)**)
 
 	Enable overclocking (or underclocking) of the emulated PSX's CPU. The default frequency of the MIPS R3000A-compatible 32-bit RISC CPU is 33.8688 MHz; running at higher frequencies can eliminate slowdown and improve frame rates in certain games at the expense of increased performance requirements.
 
@@ -496,41 +517,21 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*Skip BIOS - Off*"
 	    ![](/image/core/beetle_psx_hw/bios.png)
 
-- **Dithering Pattern** [beetle_psx_hw_dither_mode] (**1x(native)**/internal resolution/disabled)
+- **Widescreen Mode Hack** [beetle_psx_hw_widescreen_hack] (**disabled**/enabled)
 
-	Select dithering pattern.
+	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment issues in games that mix 3D and 2D elements. Leave off for most games.
 
-	Dithering is used by the original PSX hardware to combat the color banding visible due to 16bpp color depth. This option is less necessary and can be disabled if the Internal Color Depth option is set to '32bpp'.
+	??? note "*Widescreen mode hack - Off*"
+	    ![](/image/core/beetle_psx_hw/wide_off.png)
 
-	'1x(native)' emulates original hardware but can look grainy at higher internal resolutions.
+	??? note "*Widescreen mode hack - On*"
+	    ![](/image/core/beetle_psx_hw/wide_on.png)
 
-	'internal resolution' reduces graininess by allowing for finer dithering at higher Internal GPU Resolutions, but has limited effectiveness in combating color banding if the Internal GPU Resolution is set too high. (Note in the examples below that the 'internal resolution' option is less grainy but has more visible banding than '1x(native)' at 4x Internal GPU Resolution)
+- **Crop Horizontal Overscan** [beetle_psx_hw_crop_overscan] (**enabled**/disabled)
 
-	'disabled' is useful to pair with '32bpp' Internal Color Depth where banding is far less visible or for users who otherwise wish to turn off dithering regardless of color banding at 16bpp.
+	By default, Beetle PSX includes horizontal padding (black bars or 'pillarboxes' on either side of the screen) to emulate the same black bars generated in analog video output by real PSX hardware. This horizontal padding can contain garbage pixels that are generated when the game's width mode is smaller than the display area width in the emulated GPU registers.
 
-	??? note "*Dithering Pattern - 1x Native (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_native.png)
-
-	??? note "*Dithering Pattern - Internal Resolution (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_internalres.png)
-
-	??? note "*Dithering Pattern - Disabled (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_off.png)
-
-	<!--Vulkan occasionally exhibits issues with this setting when it is turned on.-->
-
-- **Display Internal FPS** [beetle_psx_hw_display_internal_fps] (**disabled**/enabled)
-
-	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend.
-
-	??? note "*Display internal FPS - On*"
-	    ![](/image/core/beetle_psx_hw/fps.png)
-
-- **Crop Overscan** [beetle_psx_hw_crop_overscan] (**enabled**/disabled)
-
-	By default, the software renderer includes horizontal padding (black bars or 'pillarboxes' on either side of the screen) to emulate the same black bars generated in analog video output by real PSX hardware. This horizontal padding can contain garbage pixels that are generated when the game's width mode is smaller than the display area width in the emulated GPU registers.
-
-	Enabling 'Crop Overscan' will remove this potentially glitchy horizontal overscan region and stretch the remaining output to the full window width. Viewport width settings will need to be adjusted to unstretch content back to its original aspect ratio.
+	Enabling 'Crop Horizontal Overscan' will remove this potentially glitchy horizontal overscan region and stretch the remaining output to the full window width. Viewport width settings will need to be adjusted to unstretch content back to its original aspect ratio.
 
 	Not all games will benefit from enabling this setting as shown in the examples below.
 
@@ -550,88 +551,55 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	Currently only supported by the software renderer, as the hardware renderers will always output without pillarboxing.
 
-- **Additional Cropping** [beetle_psx_hw_image_crop] (**disabled**/1 px/2 px/3 px/4 px/5 px/6 px/7 px/8 px)
+- **Additional Cropping** [beetle_psx_hw_image_crop] (**disabled**/1px/2px/3px/4px/5px/6px/7px/8px)
 
-	When 'Crop Overscan' is enabled, this option further reduces the width of the cropped image by the specified number of pixels.
+	Software Renderer Only
 
-	Note: This can have unintended consequences. While the absolute width is reduced, the resultant video is still scaled to the currently set aspect ratio. Enabling 'Additional Cropping' may therefore cause horizontal stretching. As with 'Crop Overscan', currently only supported by the software renderer.
+	When 'Crop Horizontal Overscan' is enabled, this option further reduces the width of the cropped image by the specified number of pixels.
 
-- **Offset Cropped Image** [beetle_psx_hw_image_offset] (**disabled**/-4 px/-3 px/-2 px/-1 px/1 px/2 px/3 px/4 px)
+	Note: This can have unintended consequences. While the absolute width is reduced, the resultant video is still scaled to the currently set aspect ratio. Enabling 'Additional Cropping' may therefore cause horizontal stretching.
 
-	When 'Crop Overscan' is enabled, allows the resultant cropped image to be offset horizontally to the right (positive) or left (negative) by the specified number of pixels. May be used to correct alignment issues.
+- **Offset Cropped Image** [beetle_psx_hw_image_offset] (**disabled**/-4px/-3px/-2px/-1px/+1px/+2px/+3px/+4px)
 
-	As with 'Crop Overscan', currently only supported by the software renderer.
+	Software Renderer Only
+
+	When 'Crop Horizontal Overscan' is enabled, allows the resultant cropped image to be offset horizontally to the right (positive) or left (negative) by the specified number of pixels. May be used to correct alignment issues.
+
+- **Horizontal Image Offset (GPU Cycles)** [beetle_psx_hw_image_offset_cycles] (-24 to +24 in increments of 1. Default: **0**)
+
+	OpenGL/Vulkan Only
+
+	Horizontally offsets the outputted image by the specified number of GPU timing cycles. Currently only for the hardware renderers and functions like 'Offset Cropped Image', but at a finer granularity and does not require 'Crop Horizontal Overscan' to be enabled for this option to have an effect.
+
+- **Initial Scanline - NTSC** [beetle_psx_hw_initial_scanline] (0 to 40 in increments of 1. Default: **0**)
+
+	Selects the first displayed scanline when running NTSC content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+
+	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
+
+- **Last Scanline - NTSC** [beetle_psx_hw_last_scanline] (210 to 239 in increments of 1. Default: **239**)
+
+	Selects the last displayed scanline when running NTSC content. Setting a value less than 239 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+
+	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 239 will cause vertical stretching unless a custom viewport is set in the frontend.
+
+- **Initial Scanline - PAL** [beetle_psx_hw_initial_scanline_pal] (0 to 40 in increments of 1. Default: **0**)
+
+	Selects the first displayed scanline when running PAL content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+
+	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
+
+- **Last Scanline - PAL** [beetle_psx_hw_last_scanline_pal] (230 to 287 in increments of 1. Default: **287**)
+
+	Selects the last displayed scanline when running PAL content. Setting a value less than 287 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+
+	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 287 will cause vertical stretching unless a custom viewport is set in the frontend.
 
 - **Analog Self-Calibration** [beetle_psx_hw_analog_calibration] (**disabled**/enabled)
 
 	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
 
 	While modern analog sticks have circular logical ranges, older analog sticks such as those on the DualShock have logical ranges closer to squares and can report larger values at the intercardinal directions than modern analog sticks can. Games that expect these larger values will have issues controlling with modern analog sticks, which this option can solve by scaling modern analog stick values up.
-
-- **DualShock Analog Button Toggle** [beetle_psx_hw_analog_toggle] (**disabled**/enabled)
-
-	When the input device type is set to DualShock, this option determines whether or not the Analog Button on that device can be toggled.
-
-	When this option is disabled, the DualShock input device will be locked in Analog Mode where the analog sticks are on.
-
-	When this option is enabled, the DualShock input device can be toggled between Digital Mode (analog sticks off) and Analog Mode (analog sticks on) much like real hardware by pressing and holding START+SELECT+L1+L2+R1+R2 for one second in lieu of a dedicated Analog Button.
-
-	Note: Some games may not respond to input when the DualShock is in Analog Mode. Either enable Analog Button Toggle and toggle the DualShock to Digital Mode or change your input device type to PlayStation Controller.
-
-- **Port 1: Multitap Enable** [beetle_psx_hw_enable_multitap_port1] (**disabled**/enabled)
-
-	Enables/Disables multitap functionality on port 1.
-
-- **Port 2: Multitap Enable** [beetle_psx_hw_enable_multitap_port2] (**disabled**/enabled)
-
-	Enables/Disables multitap functionality on port 2.
-
-- **Gun Cursor** [beetle_psx_hw_gun_cursor] (**Cross**/Dot/Off)
-
-	Selects the gun cursor to be displayed on screen while using the the 'Guncon / G-Con 45' and 'Justifier' input device types. When disabled, cross hairs are always hidden.
-
-	??? note "*Gun Cursor - Cross*"
-	    ![](/image/core/beetle_psx_hw/cursor_cross.png)
-
-	??? note "*Gun Cursor - Dot*"
-	    ![](/image/core/beetle_psx_hw/cursor_dot.png)
-
-	??? note "*Gun Cursor - Off*"
-	    ![](/image/core/beetle_psx_hw/cursor_off.png)
-
-- **Gun Input Mode** [beetle_psx_hw_gun_input_mode] (**Lightgun**/Touchscreen)
-
-	When device type is set to 'Guncon / G-Con 45' or 'Justifier', specify whether to use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
-
-- **Mouse Sensitivity** [beetle_psx_hw_mouse_sensitivity] (5% to 200% in increments of 5%. Default: **100%**)
-
-	Configure the response of the 'Mouse' input device type.
-
-- **NegCon Twist Deadzone (Percent)** [beetle_psx_hw_negcon_deadzone] (**0**/5/10/15/20/25/30)
-
-	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
-
-	!!! attention
-		Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
-
-		Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
-
-		For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
-
-- **NegCon Twist Response** [beetle_psx_hw_negcon_response] (**linear**/quadratic/cubic)
-
-	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
-
-	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
-
-	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
-
-	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
-
-	!!! attention
-		A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
-
-		In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware and is the closest approximation of real hardware, enabling smooth/precise analog input.
 
 - **CD Access Method (Restart)** [beetle_psx_hw_cd_access_method] (**sync**/async/precache)
 
@@ -642,6 +610,14 @@ The default setting for each option will be highlighted in bold. Settings with (
 	'async' can alleviate stuttering on devices with slow storage.
 
 	'precache' loads the entire disc image into memory when starting content, incurring a small startup delay. This can improve in-game loading times and eliminate stutters due to emulated CD access, but may cause issues on systems with low memory.
+
+- **Increase CD Loading Speed** [beetle_psx_hw_cd_fastload] (**2x(native)**/4x/6x/8x/10x/12x/14x)
+
+	Selects disk access speed multiplier.
+
+	This speedhack can greatly reduce loading times at speeds higher than native but is known to introduce texture corruption errors, timing glitches, or loading screen softlocks in many titles. Some games will not work at all if loading speed is not set to native (e.g. Castlevania: Symphony of the Night).
+
+	**Reduce multiplier value if experiencing loading issues, freezes, etc.**
 
 - **Memory Card 0 Method** [beetle_psx_hw_use_mednafen_memcard0_method] (**libretro**/mednafen)
 
@@ -671,37 +647,70 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 </center>
 
-- **Increase CD Loading Speed** [beetle_psx_hw_cd_fastload] (**2x (native)**/4x/6x/8x/10x/12x/14x)
+- **DualShock Analog Button Toggle** [beetle_psx_hw_analog_toggle] (**disabled**/enabled)
 
-	Selects disk access speed multiplier.
+	When the input device type is set to DualShock, this option determines whether or not the Analog Button on that device can be toggled.
 
-	This speedhack can greatly reduce loading times at speeds higher than native but is known to introduce texture corruption errors, timing glitches, or loading screen softlocks in many titles. Some games will not work at all if loading speed is not set to native (e.g. Castlevania: Symphony of the Night).
+	When this option is disabled, the DualShock input device will be locked in Analog Mode where the analog sticks are on.
 
-	**Reduce multiplier value if experiencing loading issues, freezes, etc.**
+	When this option is enabled, the DualShock input device can be toggled between Digital Mode (analog sticks off) and Analog Mode (analog sticks on) much like real hardware by pressing and holding START+SELECT+L1+L2+R1+R2 for one second in lieu of a dedicated Analog Button.
 
-- **Initial Scanline - NTSC (Restart)** [beetle_psx_hw_initial_scanline] (0 to 40 in increments of 1. Default: **0**)
+	Note: Some games may not respond to input when the DualShock is in Analog Mode. Either enable Analog Button Toggle and toggle the DualShock to Digital Mode or change your input device type to PlayStation Controller.
 
-	Selects the first displayed scanline when running NTSC content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+- **Port 1: Multitap Enable** [beetle_psx_hw_enable_multitap_port1] (**disabled**/enabled)
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
+	Enables/Disables multitap functionality on port 1.
 
-- **Last Scanline - NTSC (Restart)** [beetle_psx_hw_last_scanline] (210 to 239 in increments of 1. Default: **239**)
+- **Port 2: Multitap Enable** [beetle_psx_hw_enable_multitap_port2] (**disabled**/enabled)
 
-	Selects the last displayed scanline when running NTSC content. Setting a value less than 239 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+	Enables/Disables multitap functionality on port 2.
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 239 will cause vertical stretching unless a custom viewport is set in the frontend.
+- **Gun Input Mode** [beetle_psx_hw_gun_input_mode] (**lightgun**/touchscreen)
 
-- **Initial Scanline - PAL (Restart)** [beetle_psx_hw_initial_scanline_pal] (0 to 40 in increments of 1. Default: **0**)
+	When device type is set to 'Guncon / G-Con 45' or 'Justifier', specify whether to use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
 
-	Selects the first displayed scanline when running PAL content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+- **Gun Cursor** [beetle_psx_hw_gun_cursor] (**cross**/dot/off)
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
+	Selects the gun cursor to be displayed on screen while using the the 'Guncon / G-Con 45' and 'Justifier' input device types. When disabled, cross hairs are always hidden.
 
-- **Last Scanline - PAL (Restart)** [beetle_psx_hw_last_scanline_pal] (230 to 287 in increments of 1. Default: **287**)
+	??? note "*Gun Cursor - Cross*"
+	    ![](/image/core/beetle_psx_hw/cursor_cross.png)
 
-	Selects the last displayed scanline when running PAL content. Setting a value less than 287 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+	??? note "*Gun Cursor - Dot*"
+	    ![](/image/core/beetle_psx_hw/cursor_dot.png)
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 287 will cause vertical stretching unless a custom viewport is set in the frontend.
+	??? note "*Gun Cursor - Off*"
+	    ![](/image/core/beetle_psx_hw/cursor_off.png)
+
+- **Mouse Sensitivity** [beetle_psx_hw_mouse_sensitivity] (5% to 200% in increments of 5%. Default: **100%**)
+
+	Configure the response of the 'Mouse' input device type.
+
+- **NegCon Twist Response** [beetle_psx_hw_negcon_response] (**linear**/quadratic/cubic)
+
+	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
+
+	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
+
+	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
+
+	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
+
+	!!! attention
+		A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
+
+		In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware and is the closest approximation of real hardware, enabling smooth/precise analog input.
+
+- **NegCon Twist Deadzone** [beetle_psx_hw_negcon_deadzone] (**0%**/5%/10%/15%/20%/25%/30%)
+
+	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+
+	!!! attention
+		Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
+
+		Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+
+		For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
 
 ## User 1 - 8 device types
 
