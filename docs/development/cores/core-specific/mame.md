@@ -57,6 +57,7 @@ git checkout b691c38
 
 | Version  | Commit  |
 | -------- | ------- |
+| mame0216 | 7cf10a3 |
 | mame0207 | 40fc339 |
 | mame0206 | cf02fe3 |
 | mame0205 | b691c38 |
