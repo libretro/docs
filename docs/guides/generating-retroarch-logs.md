@@ -8,6 +8,18 @@ The answer to this dilemma involves "logs", which RetroArch and other libretro s
 
 ## Generating Logs
 
+### Generating Logs via Menu
+First We'll need to activate the Advanced Settings:
+1. Go to settings
+2. Enter at "User Interface"
+3. Activate "Show Advanced Settings"
+Next We'll activate the logging option:
+1. Go to settings if you weren't there
+2. Enter at "Logging"
+3. Activate "Log to File"
+4.(optional) Costumize Core & Frontend Logging Level & if you want timestamps or performance counters on your log
+5. Acttivate "Logging Verbosity"
+
 ### Generating Logs in Lakka
 [Please see the Troubleshooting Lakka doc](http://www.lakka.tv/doc/Troubleshooting-Lakka/).
 
