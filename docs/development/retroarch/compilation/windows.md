@@ -90,6 +90,12 @@ For 64-bit builds:
 
 Once these packages are installed close MSYS2 shell and open MinGW-w32 shell or MinGW-w64 shell depending on the platform you want to build for.
 
+You'll need gcc and make:
+```bash
+pacman -S make
+pacman -S gcc
+```
+
 ## RetroArch Compilation
 ### Building RetroArch
 
