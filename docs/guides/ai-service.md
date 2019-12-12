@@ -21,9 +21,9 @@ First, go to Settings->Input->Hotkey Binds, and assign a key for the AI Service.
 
 Next, go to Settings->AI Service and modify the configuration options as follows.
 
-If `AI Service Output` is `Image Mode`, then when you press the AI Service hotkey, RetroArch will pause the game while the screen grab is being processed and then display the translated image to the screen when it's available.  Pressing the AI Service hotkey again will unpause the game and continue as normal.  This mode is recommended when you want to text on the screen to be translated and written back on the screen where it was found.  When `AI Service Output` is `Speech Mode`, then RetroArch will not pause the game while the screen is being processed.  This is recommended when doing text-to-speech, since the audio can not play while the game is paused.
+If `AI Service Output` is `Image Mode`, then when you press the AI Service hotkey, RetroArch will grab the game screen and display translated textbox over the screen when it's available, and pressing the hotkey again will clear the translated textbox.  If `AI Service Pause Toggle` is `ON` then it will pause while doing so, and pressing the AI Service hotkey again will unpause the game and continue as normal.  This mode is recommended when you want the text on the screen to be translated and written back on the screen where it was found.  When `AI Service Output` is `Speech Mode`, then RetroArch speak the text on the screen instead, and will use an AI text-to-speech algorithm.  This speech however will only play while the core is unpaused (for technical reasons).  However, if in `Narrator Mode` the AI Service will use the OS's narrator, which will speak the text even while unpaused (assuming that accessibility is enabled).  However, `Narrator Mode` is only supported on Windows, Linux, and Macos.
 
-The `AI Service URL` points to where the translation service you're using is located.  In the case of running vgtranslate yourself, this URL would be `http://localhost:4404`.  For more instructions on how to set up vgtranslate on your system, see https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md
+The `AI Service URL` points to where the translation service you're using is located.  In the case of running vgtranslate yourself, this URL would be `http://localhost:4404`.  For more instructions on how to set up vgtranslate on your system, see ( https://gitlab.com/spherebeaker/vgtranslate/blob/master/README.md ).  If you have issues running vgtranslate, or don't want to run the service yourself, see the "Alternative Services" section.
 
 `AI Service Enabled` should be set to on.
 
@@ -34,7 +34,7 @@ Finally, `Target Language` is the language to translate into.  If set to `Don't 
 
 ## Supported Cores
 
-At the moment, any core that uses the RGB565 or RGB8888 pixel formats is supported, but cores that use a hardware buffer will not work.  If you're not sure what mode your selected core is using, then running RetroArch with logging will tell you in the log what the format is when the AI Service tries to process the screen.  For possibilities of what to do in the hardware buffer case, see Alternative Translators.
+Since RetroArch v1.8.0, all cores should now be supported if your build has menu widgets.  If not, then only software cores will be supported.
 
 
 ## Alternative Services
