@@ -119,7 +119,7 @@ Custom color palettes for the NES can be generated with either of these tools.
 
 ## Core options
 
-The Nestopia UE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The FCEUmm core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
