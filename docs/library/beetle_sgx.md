@@ -1,14 +1,14 @@
-# NEC - PC Engine SuperGrafx (Beetle SGX)
+# NEC - PC Engine SuperGrafx (Beetle SuperGrafx)
 
 ## Background
 
 Standalone port of Mednafen PCE Fast to libretro.
 
-The Beetle SGX core has been authored by
+The Beetle SuperGrafx core has been authored by
 
 - [Mednafen Team](https://mednafen.github.io/)
 
-The Beetle SGX core is licensed under
+The Beetle SuperGrafx core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-supergrafx-libretro/blob/master/COPYING)
 
@@ -19,7 +19,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
-	Which PCE CD BIOS file the Beetle SGX core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
+	Which PCE CD BIOS file the Beetle SuperGrafx core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
 
 !!! attention
 	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
@@ -33,7 +33,7 @@ Required or optional firmware files go in RetroArch's system directory.
 
 ## Extensions
 
-Content that can be loaded by the Beetle SGX core have the following file extensions:
+Content that can be loaded by the Beetle SuperGrafx core have the following file extensions:
 
 - .pce
 - .sgx
@@ -41,7 +41,7 @@ Content that can be loaded by the Beetle SGX core have the following file extens
 - .ccd
 - .chd
 
-RetroArch database(s) that are associated with the Beetle SGX core:
+RetroArch database(s) that are associated with the Beetle SuperGrafx core:
 
 - [NEC - PC Engine - TurboGrafx 16](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.rdb)
 - [NEC - PC Engine CD - TurboGrafx-CD](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20CD%20-%20TurboGrafx-CD.rdb)
@@ -60,11 +60,11 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | ✕         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -79,9 +79,9 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 
 ## Directories
 
-The Beetle SGX core's library name is 'Mednafen SuperGrafx'
+The Beetle SuperGrafx core's library name is 'Mednafen SuperGrafx'
 
-The Beetle SGX core saves/loads to/from these directories.
+The Beetle SuperGrafx core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -97,17 +97,17 @@ The Beetle SGX core saves/loads to/from these directories.
 
 ## Geometry and timing
 
-- The Beetle SGX core's core provided FPS is 59.82
-- The Beetle SGX core's core provided sample rate is 44100 Hz
-- The Beetle SGX core's base width is 512
-- The Beetle SGX core's base height is dependent on the ['Initial scanline' and 'Last scanline' core options](https://docs.libretro.com/library/beetle_sgx#core-options).
-- The Beetle SGX core's max width is 512
-- The Beetle SGX core's max height is 243
-- The Beetle SGX core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
+- The Beetle SuperGrafx core's core provided FPS is 59.82
+- The Beetle SuperGrafx core's core provided sample rate is 44100 Hz
+- The Beetle SuperGrafx core's base width is 512
+- The Beetle SuperGrafx core's base height is dependent on the ['Initial scanline' and 'Last scanline' core options](https://docs.libretro.com/library/beetle_sgx#core-options).
+- The Beetle SuperGrafx core's max width is 512
+- The Beetle SuperGrafx core's max height is 243
+- The Beetle SuperGrafx core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
 
 ## Loading PC Engine CD content
 
-To load PC Engine CD content, Beetle SGX needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
+To load PC Engine CD content, Beetle SuperGrafx needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
 If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cue`. If you're playing a single-track Saturn game, then the cue file contents should look like this:
 
@@ -118,7 +118,7 @@ If you have e.g. `foo.bin`, you should create a text file and save it as `foo.cu
    INDEX 01 00:00:00
 ```
 
-After that, you can load the `foo.cue` file in RetroArch with the Beetle SGX core.
+After that, you can load the `foo.cue` file in RetroArch with the Beetle SuperGrafx core.
 
 !!! warning ""
     Certain PC Engine content are multi-track, so their .cue files might be more complicated.
@@ -135,7 +135,7 @@ chdman createcd --input foo.cue --output foo.chd
 
 ## Core options
 
-The Beetle SGX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle SuperGrafx core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -235,7 +235,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## User 1 - 5 device types
 
-The Beetle SGX core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Beetle SuperGrafx core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 - None - Input is disabled.
 - **PCE Joypad** - Joypad
@@ -282,9 +282,9 @@ The Beetle SGX core supports the following device type(s) in the controls menu, 
 
 - [Official Mednafen Website](https://mednafen.github.io/)
 - [Official Mednafen Downloads](https://mednafen.github.io/releases/)
-- [Libretro Beetle SGX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_supergrafx_libretro.info)
-- [Libretro Beetle SGX Github Repository](https://github.com/libretro/beetle-supergrafx-libretro)
-- [Report Libretro Beetle SGX Core Issues Here](https://github.com/libretro/beetle-supergrafx-libretro/issues)
+- [Libretro Beetle SuperGrafx Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_supergrafx_libretro.info)
+- [Libretro Beetle SuperGrafx Github Repository](https://github.com/libretro/beetle-supergrafx-libretro)
+- [Report Libretro Beetle SuperGrafx Core Issues Here](https://github.com/libretro/beetle-supergrafx-libretro/issues)
 
 ## TG-16
 
