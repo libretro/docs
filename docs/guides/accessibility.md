@@ -6,7 +6,7 @@ Accessibility allows people with disabilities to access various types of softwar
 
 ## How to enable Accessibility
 
-While Accessibility has been availble in RetroArch since v1.8.2, it is turned off by default.  To turn it on, one can turn it on from the in-RetroArch menu by pressing right, up seven times, enter (or x on Linux), and the right.  Otherwise, running the RetroArch executable with the --accessibility flag will override the configuration setting and turn on accessibility.
+While Accessibility has been available in RetroArch since v1.8.2, it is turned off by default.  To turn it on, one can turn it on from the in-RetroArch menu by pressing right, up seven times, enter (or x on Linux), and the right.  Otherwise, running the RetroArch executable with the --accessibility flag will override the configuration setting and turn on accessibility.
 
 ## OS requirements
 
