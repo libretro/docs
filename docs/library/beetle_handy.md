@@ -4,9 +4,6 @@
 
 Beetle Lynx is an Atari Lynx video game system emulator that can be used as a libretro core. Specifically it's a port of Mednafen Lynx which is a fork of Handy.
 
-!!! attention
-	Beetle Handy is incompatible with modern No-Intro romsets as they require headers to work properly. The regular Handy core does not have this issue.
-
 ### Author/License
 
 The Beetle Handy core has been authored by
@@ -25,6 +22,7 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 Content that can be loaded by the Beetle Handy core have the following file extensions:
 
 - .lnx
+- .o
 
 ## Databases
 
@@ -52,19 +50,19 @@ Frontend-level settings or features that the Beetle Handy core respects.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay (State based) | ✔ (not link-cable emulation)         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| Cheats (Cheats menu) | ✕         |
+| Cheats (Cheats menu) | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
-| Remapping         | ✕         |
+| Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -73,7 +71,7 @@ Frontend-level settings or features that the Beetle Handy core respects.
 
 ### Directories
 
-The Beetle Handy core's directory name is 'Mednafen Lynx'
+The Beetle Handy core's directory name is 'Beetle Lynx'
 
 The Beetle Handy core saves/loads to/from these directories.
 
@@ -89,7 +87,18 @@ The Beetle Handy core saves/loads to/from these directories.
 
 ## Loading content
 
-Beetle Handy is incompatible with modern No-Intro romsets as they require headers to work properly. The regular Handy core does not have this issue.
+Beetle Handy supports Lynx headered roms and non-headered roms. It also supports homebrews in *.o extensions.
+
+## Core options
+
+The Beetle Handy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+
+Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+- **Auto-rotate Screen** [lynx_rot_screen] (**enabled**/disabled)
+
+	Virtually rotates the screen orientation and keymaps automatically for known games.
+	When disabled, screen rotation is manually adjusted by pressing the SELECT button.
 
 ## Controllers
 
@@ -125,9 +134,6 @@ Supported combinations
 * Option 2 + Pause = Restarts game
 
 ## Compatibility
-
-!!! attention
-	Beetle Handy is incompatible with modern No-Intro romsets as they require headers to work properly. The regular Handy core does not have this issue.
 
 | Game             | Issue                                                                   |
 |------------------|-------------------------------------------------------------------------|
