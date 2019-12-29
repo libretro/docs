@@ -18,7 +18,7 @@ The RACE core has been authored by
 
 The RACE core is licensed under
 
-- GPLv2
+- [GPLv2](https://github.com/libretro/RACE/blob/master/license.txt)
 
 A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
 
@@ -126,5 +126,5 @@ The RACE core supports the following device type(s) in the controls menu, bolded
 ## External Links
 
 - [Libretro RACE Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/race_libretro.info)
-- [Libretro RACE Github Repository](https://github.com/libretro/RACE-NGPC-Emulator-PSP)
-- [Report Libretro RACE Core Issues Here](https://github.com/libretro/RACE-NGPC-Emulator-PSP/issues)
+- [Libretro RACE Github Repository](https://github.com/libretro/RACE)
+- [Report Libretro RACE Core Issues Here](https://github.com/libretro/RACE/issues)
