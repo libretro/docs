@@ -155,6 +155,7 @@ nav:
         - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
       - 'SNK Emulation':
         - 'SNK - Neo Geo Pocket / Color (Beetle NeoPop)': 'library/beetle_neopop.md'
+        - 'SNK - Neo Geo Pocket / Color ()': 'library/race.md'
       - 'Sega Emulation':
         - 'Cannonball': 'library/cannonball.md'
         - 'Sega - 32X Compatibility List': 'library/compatibility/32x.md'
