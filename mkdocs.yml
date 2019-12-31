@@ -41,7 +41,9 @@ nav:
       - 'Netplay Getting Started / FAQ': 'guides/netplay-faq.md'
       - 'RetroAchievements': 'guides/retroachievements.md'
       - 'Softpatching ROMs': 'guides/softpatching.md'
-      - 'Accessibility': 'guides/accessibility.md'
+      - 'Accessibility':
+        - 'Quick Start': 'guides/accessibility.md'
+        - 'Guide': 'retroarch-accessibility-guide.md'
       - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
