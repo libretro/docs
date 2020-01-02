@@ -206,35 +206,35 @@ We encourage new shaders targeting Libretro frontends to be written in this form
 ### Another example Cg shader
 
 ```c
-    void main_vertex
-    (
-       float4 position : POSITION,
-       out float4 oPosition : POSITION,
-       uniform float4x4 modelViewProj,
-       float2 tex : TEXCOORD,
-       out float2 oTex : TEXCOORD
-    )
-    {
-       oPosition = mul(modelViewProj, position);
-       oTex = tex;
-    }
-    
-    float4 main_fragment (float2 tex : TEXCOORD, uniform sampler2D s0 : TEXUNIT0) : COLOR
-    {
-       return tex2D(s0, tex);
-    }
+void main_vertex
+(
+   float4 position : POSITION,
+   out float4 oPosition : POSITION,
+   uniform float4x4 modelViewProj,
+   float2 tex : TEXCOORD,
+   out float2 oTex : TEXCOORD
+)
+{
+   oPosition = mul(modelViewProj, position);
+   oTex = tex;
+}
+
+float4 main_fragment (float2 tex : TEXCOORD, uniform sampler2D s0 : TEXUNIT0) : COLOR
+{
+   return tex2D(s0, tex);
+}
 ```
 
 ### Example Cg preset
 
 ```c
-    shaders = 2
-    shader0 = 4xBR-v3.9.cg
-    scale_type0 = source
-    scale0 = 4.0
-    filter_linear0 = false
-    shader1 = dummy.cg
-    filter_linear1 = true
+shaders = 2
+shader0 = 4xBR-v3.9.cg
+scale_type0 = source
+scale0 = 4.0
+filter_linear0 = false
+shader1 = dummy.cg
+filter_linear1 = true
 ```
 
 ### Entry points:
@@ -256,22 +256,22 @@ The texture coordinate origin is defined to be top-left oriented. A texture coor
 Some parameters will need to be passed to all shaders, both vertex and fragment program. A generic entry point for fragment shader will look like:
 
 ```c
-   float4 main_fragment (float2 tex : TEXCOORD0, 
-      uniform input IN, uniform sampler2D s_p : TEXUNIT0) : COLOR
-   {}
+float4 main_fragment (float2 tex : TEXCOORD0, 
+   uniform input IN, uniform sampler2D s_p : TEXUNIT0) : COLOR
+{}
 ```
 
 The input is a struct:
 
 ```c
-   struct input
-   {
-      float2 video_size;
-      float2 texture_size;
-      float2 output_size;
-      float frame_count;
-      float frame_direction;
-   };
+struct input
+{
+   float2 video_size;
+   float2 texture_size;
+   float2 output_size;
+   float frame_count;
+   float frame_direction;
+};
 ```
 
    - `TEXCOORD0`: Texture coordinates for the current input frame will be passed in `TEXCOORD0`. (`TEXCOORD` is a valid alias for `TEXCOORD0`).

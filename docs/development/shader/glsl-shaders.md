@@ -10,23 +10,23 @@ As GLSL shaders are normally placed in two different files (`vertex`, `fragment`
     GLSL shaders must be modern style, and using ruby prefix is discouraged.
 
 ```c
-    varying vec2 tex_coord;
-    #if defined(VERTEX)
-    attribute vec2 TexCoord;
-    attribute vec2 VertexCoord;
-    uniform mat4 MVPMatrix;
-    void main()
-    {
-        gl_Position = MVPMatrix * vec4(VertexCoord, 0.0, 1.0);
-        tex_coord = TexCoord;
-    }
-    #elif defined(FRAGMENT)
-    uniform sampler2D Texture;
-    void main()
-    {
-        gl_FragColor = texture2D(Texture, tex_coord);
-    }
-    #endif
+varying vec2 tex_coord;
+#if defined(VERTEX)
+attribute vec2 TexCoord;
+attribute vec2 VertexCoord;
+uniform mat4 MVPMatrix;
+void main()
+{
+    gl_Position = MVPMatrix * vec4(VertexCoord, 0.0, 1.0);
+    tex_coord = TexCoord;
+}
+#elif defined(FRAGMENT)
+uniform sampler2D Texture;
+void main()
+{
+    gl_FragColor = texture2D(Texture, tex_coord);
+}
+#endif
 ```
 
 ### GLSL presets

@@ -221,12 +221,12 @@ For games where dip switches are not available directly within the MAME menu, MA
 
 ### High scores
 
-The **hiscore.dat** is compiled into MAME 2003-Plus and then spawned into `/libretro system dir/mame2003-plus/` the first time the core is run. Users do not need to install the **hiscore.dat** themselves. From then on, users can modify or replace this file with their own custom DAT if they choose. When high scores are saved, they are either stored as NVRAM data in ``` libretro system dir/mame2003-plus/nvram/ ```or as hiscore data in: ``` libretro system dir/mame2003-plus/hi/ ```
+The **hiscore.dat** is compiled into MAME 2003-Plus and then spawned into `/libretro system dir/mame2003-plus/` the first time the core is run. Users do not need to install the **hiscore.dat** themselves. From then on, users can modify or replace this file with their own custom DAT if they choose. When high scores are saved, they are either stored as NVRAM data in `libretro system dir/mame2003-plus/nvram/` or as hiscore data in: `libretro system dir/mame2003-plus/hi/`
 
 
 ### Cheats
 
-MAME 2003-Plus supports the MAME cheat engine, allowing you to use the MAME menu to enable various in-game cheats. To activate these, there is a necessary supplementary file called `cheat.dat`. This file can be [downloaded from the MAME 2003-Plus 'metadata' repository](https://github.com/libretro/mame2003-plus-libretro/tree/master/metadata). Place `cheat.dat` in: `libretro system dir/mame2003-plus/ `.
+MAME 2003-Plus supports the MAME cheat engine, allowing you to use the MAME menu to enable various in-game cheats. To activate these, there is a necessary supplementary file called `cheat.dat`. This file can be [downloaded from the MAME 2003-Plus 'metadata' repository](https://github.com/libretro/mame2003-plus-libretro/tree/master/metadata). Place `cheat.dat` in: `libretro system dir/mame2003-plus/`.
 
 
 ### History DAT

@@ -63,31 +63,31 @@ When possible, use whitespace to improve the readability of code that makes many
 **Example of aligning successive assignment statements*:
 
 ```c
-               if (seq == 1157460427127406720ULL)
-               {
-                  content_ctx_info_t content_info;
-                  content_info.argc                   = 0;
-                  content_info.argv                   = NULL;
-                  content_info.args                   = NULL;
-                  content_info.environ_get            = NULL;
+if (seq == 1157460427127406720ULL)
+{
+   content_ctx_info_t content_info;
+   content_info.argc                   = 0;
+   content_info.argv                   = NULL;
+   content_info.args                   = NULL;
+   content_info.environ_get            = NULL;
 
-                  ...
-               }
+   ...
+}
 ```
 
 **Example of aligning a complex parameter list**:
 
 ```c
-   if (recording_driver_get_data_ptr())
-   {
-      runloop_msg_queue_push(
-            msg_hash_to_str(MSG_RESTARTING_RECORDING_DUE_TO_DRIVER_REINIT),
-            2, 180, false,
-            NULL, MESSAGE_QUEUE_ICON_DEFAULT, MESSAGE_QUEUE_CATEGORY_INFO);
+if (recording_driver_get_data_ptr())
+{
+   runloop_msg_queue_push(
+         msg_hash_to_str(MSG_RESTARTING_RECORDING_DUE_TO_DRIVER_REINIT),
+         2, 180, false,
+         NULL, MESSAGE_QUEUE_ICON_DEFAULT, MESSAGE_QUEUE_CATEGORY_INFO);
 
-      command_event(CMD_EVENT_RECORD_DEINIT, NULL);
-      command_event(CMD_EVENT_RECORD_INIT, NULL);
-   }
+   command_event(CMD_EVENT_RECORD_DEINIT, NULL);
+   command_event(CMD_EVENT_RECORD_INIT, NULL);
+}
 ```
 
 ### vim configuration for Libretro style
