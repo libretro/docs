@@ -51,16 +51,17 @@ You can also check the progress of your friends and add comments on their trophi
 
 ### Arcade
 
-| Core                                                  | Supported | Notes |
-|-------------------------------------------------------|:---------:|-------|
-| [FB Neo](https://github.com/libretro/FBNeo)       | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3 |
+| Core                                               | Supported | Notes |
+|----------------------------------------------------|:---------:|:-----:|
+| [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3. NeoGeo must be in AES mode for achievements. AES Asia is English. |
+| [MAME](https://github.com/libretro/mame)           | ✕         | |
 
 ### NES
 
 | Core                                                  | Supported | Notes |
-|-------------------------------------------------------|:---------:|-------|
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | |
-| [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | |
+|-------------------------------------------------------|:---------:|:-----:|
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements in some games may have issues**](https://github.com/SourMesen/Mesen/issues/642) |
+| [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Also supports FDS. |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | |
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
@@ -69,27 +70,29 @@ You can also check the progress of your friends and add comments on their trophi
 ### SNES
 
 | Core                                                                         | Supported | Notes |
-|------------------------------------------------------------------------------|:---------:|-------|
+|------------------------------------------------------------------------------|:---------:|:-----:|
 | [Snes9x](https://github.com/libretro/snes9x)                                 | ✔         | |
 | [Snes9x 2010](https://github.com/libretro/snes9x2010)                        | ✔         | |
 | [Snes9x 2005](https://github.com/libretro/snes9x2005)                        | ✔         | |
 | [Snes9x 2005 Plus](https://github.com/libretro/snes9x2005)                   | ✔         | |
 | [Snes9x 2002](https://github.com/libretro/snes9x2002)                        | ✔         | |
-| [bsnes Accuracy](https://github.com/libretro/bsnes-libretro)                 | ✔         | |
-| [bsnes Balanced](https://github.com/libretro/bsnes-libretro)                 | ✔         | |
-| [bsnes Performance](https://github.com/libretro/bsnes-libretro)              | ✔         | |
+| [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✔         | |
+| [bsnes](https://github.com/libretro/bsnes-libretro)                          | ✕         | |
+| [bsnes 2014 Accuracy](https://github.com/libretro/bsnes-libretro)            | ✔         | |
+| [bsnes 2014 Balanced](https://github.com/libretro/bsnes-libretro)            | ✔         | |
+| [bsnes 2014 Performance](https://github.com/libretro/bsnes-libretro)         | ✔         | |
 | [bsnes-mercury Accuracy](https://github.com/libretro/bsnes-mercury)          | ✔         | |
 | [bsnes-mercury Balanced](https://github.com/libretro/bsnes-mercury)          | ✔         | |
 | [bsnes-mercury Performance](https://github.com/libretro/bsnes-mercury)       | ✔         | |
 | [bsnes C++98 (v085)](https://github.com/libretro/bsnes-libretro-cplusplus98) | ✔         | |
-| higan Accuracy                                                               | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
-| nSide Balanced                                                               | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
-| [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✕         | |
+| [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | |
+| [higan Accuracy](https://gitlab.com/higan/higan)                             | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
+| [nSide Balanced](https://github.com/libretro/nSide)                          | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
 
 ### Game Boy / Game Boy Color
 
 | Core                                                      | Supported | Notes |
-|-----------------------------------------------------------|:---------:|-------|
+|-----------------------------------------------------------|:---------:|:-----:|
 | [Gearboy](https://github.com/libretro/gearboy)            | ✔         | |
 | [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | |
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         | |
@@ -101,7 +104,7 @@ You can also check the progress of your friends and add comments on their trophi
 ### Game Boy Advance
 
 | Core                                                          | Supported | Notes |
-|---------------------------------------------------------------|:---------:|-------|
+|---------------------------------------------------------------|:---------:|:-----:|
 | [mGBA](https://github.com/libretro/mgba)                      | ✔         | |
 | [VBA Next](https://github.com/libretro/vba-next)              | ✔         | |
 | [VBA-M](https://github.com/libretro/vbam-libretro)            | ✔         | |
@@ -111,57 +114,99 @@ You can also check the progress of your friends and add comments on their trophi
 
 ### Nintendo 64
 
-| Core                                                              | Supported |
-|-------------------------------------------------------------------|:---------:|
-| [Mupen64Plus](https://github.com/libretro/mupen64plus-libretro)   | ✔         |
-| [ParaLLEl N64](https://github.com/libretro/parallel-n64)          | ✔         |
+| Core                                                                 | Supported | Notes |
+|----------------------------------------------------------------------|:---------:|:-----:|
+| [Mupen64Plus-Next](https://github.com/libretro/mupen64plus-libretro) | ✔         | |
+| [ParaLLEl N64](https://github.com/libretro/parallel-n64)             | ✔         | |
 
 ### Virtual Boy
 
-| Core                                                        | Supported |
-|-------------------------------------------------------------|:---------:|
-| [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         |
+| Core                                                        | Supported | Notes |
+|-------------------------------------------------------------|:---------:|:-----:|
+| [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         | |
+
+### Nintendo DS
+
+| Core                                                    | Supported | Notes |
+|---------------------------------------------------------|:---------:|:-----:|
+| [DeSmuME](https://github.com/libretro/desmume)          | ✔         | |
+| [DeSmuME 2015](https://github.com/libretro/desmume2015) | ✔         | |
+| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | |
+
+### Pokemon Mini
+
+| Core                                             | Supported | Notes |
+|--------------------------------------------------|:---------:|:-----:|
+| [PokeMini](https://github.com/libretro/PokeMini) | ✔         | |
 
 ### Master System / MegaDrive - Genesis
 
-| Core                                                           | Supported |
-|----------------------------------------------------------------|:---------:|
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
-| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
-| [Picodrive](https://github.com/libretro/picodrive)             | ✔         |
-| [Emux SMS](https://github.com/libretro/emux)                   | ✕         |
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
+| [Picodrive](https://github.com/libretro/picodrive)             | ✔         | |
+| [BlastEm](https://github.com/libretro/blastem)                 | x         | |
+| [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
 
 ### Game Gear
 
-| Core                                                           | Supported |
-|----------------------------------------------------------------|:---------:|
-| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
 
-### PC Engine
+### SG-1000
 
-| Core                                                                    | Supported |
-|-------------------------------------------------------------------------|:---------:|
-| [Beetle PCE Fast](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         |
-| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         |
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
+| [blueMSX](https://github.com/libretro/blueMSX-libretro/)       | ✔         | |
+
+### Sega CD
+
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | x         | Sega CD support is a work in progress. |
+| [Picodrive](https://github.com/libretro/picodrive)             | x         | |
+
+### Sega Saturn
+
+| Core                                                                | Supported | Notes |
+|---------------------------------------------------------------------|:---------:|:-----:|
+| [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         | |
+| [Yabause](https://github.com/libretro/yabause)                      | x         | |
+| [Yabasanshiro](https://github.com/libretro/yabause)                 | x         | |
+| [Kronos](https://github.com/libretro/yabause)                       | x         | |
+
+### PC Engine / PC Engine CD
+
+| Core                                                                    | Supported | Notes |
+|-------------------------------------------------------------------------|:---------:|:-----:|
+| [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         | |
+| [Beetle PCE](https://github.com/libretro/beetle-pce-fast-libretro)      | ✔         | |
+| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         | |
 
 ### Neo Geo Pocket / Neo Geo Pocket Color
 
-| Core                                                             | Supported |
-|------------------------------------------------------------------|:---------:|
-| [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         |
+| Core                                                             | Supported | Notes |
+|------------------------------------------------------------------|:---------:|:-----:|
+| [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         | |
+| [RACE](https://github.com/libretro/RACE)                         | ✔         | |
 
 ### Atari 2600
 
-| Core                                                  | Supported |
-|-------------------------------------------------------|:---------:|
-| [Stella](https://github.com/libretro/stella-libretro) | ✔         |
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Stella](https://github.com/libretro/stella-libretro)          | ✔         | |
+| [Stella 2014](https://github.com/libretro/stella2014-libretro) | ✔         | |
 
 ### Atari 7800
 
-| Core                                                  | Supported |
-|-------------------------------------------------------|:---------:|
-| [ProSystem](https://github.com/libretro/prosystem-libretro) | ✔   |
+| Core                                                        | Supported | Notes |
+|-------------------------------------------------------------|:---------:|:-----:|
+| [ProSystem](https://github.com/libretro/prosystem-libretro) | ✔   | |
 
 ### Atari Lynx
 
@@ -172,7 +217,20 @@ You can also check the progress of your friends and add comments on their trophi
 
 ### ColecoVision
 
-| Core                                                        | Supported |
-|-------------------------------------------------------------|:---------:|
-| [blueMSX](https://github.com/libretro/blueMSX-libretro/)    | ✔         |
+| Core                                                    | Supported | Notes |
+|---------------------------------------------------------|:---------:|:-----:|
+| [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         | |
 
+### Sony Playstation
+
+| Core                                                             | Supported | Notes |
+|------------------------------------------------------------------|:---------:|:-----:|
+| [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | |
+| [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | |
+| [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | |
+
+### PC-8000 / PC-8800
+
+| Core                                                    | Supported | Notes |
+|---------------------------------------------------------|:---------:|:-----:|
+| [QUASI88](https://github.com/libretro/quasi88-libretro) | ✔         | Some games may be difficult to play in Retroarch due to lack of complete keyboard access. Sets generally expect the MkIISR bios. |
