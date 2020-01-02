@@ -53,14 +53,14 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                               | Supported | Notes |
 |----------------------------------------------------|:---------:|:-----:|
-| [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | Supports NeoGeo, CPS1, CPS2, CPS3. NeoGeo must be in AES mode for achievements. AES Asia is English. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | AES bios is required for NeoGeo achievements. AES Asia is English. |
 | [MAME](https://github.com/libretro/mame)           | ✕         | |
 
 ### NES
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|:-----:|
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements in some games may have issues**](https://github.com/SourMesen/Mesen/issues/642) |
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements utilizing SRAM will have issues**](https://github.com/SourMesen/Mesen/issues/642) |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Also supports FDS. |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | |
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
@@ -149,6 +149,12 @@ You can also check the progress of your friends and add comments on their trophi
 | [BlastEm](https://github.com/libretro/blastem)                 | x         | |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
 
+### Sega 32X
+
+| Core                                                           | Supported | Notes |
+|----------------------------------------------------------------|:---------:|:-----:|
+| [Picodrive](https://github.com/libretro/picodrive)             | ✔         | Support is extremely variable. |
+
 ### Game Gear
 
 | Core                                                           | Supported | Notes |
@@ -168,7 +174,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                           | Supported | Notes |
 |----------------------------------------------------------------|:---------:|:-----:|
-| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | x         | Sega CD support is a work in progress. |
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | Sega CD support is a work in progress. |
 | [Picodrive](https://github.com/libretro/picodrive)             | x         | |
 
 ### Sega Saturn
@@ -184,8 +190,8 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                                    | Supported | Notes |
 |-------------------------------------------------------------------------|:---------:|:-----:|
-| [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         | |
-| [Beetle PCE](https://github.com/libretro/beetle-pce-fast-libretro)      | ✔         | |
+| [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         | Does not support SuperGrafx games. |
+| [Beetle PCE](https://github.com/libretro/beetle-pce-fast-libretro)      | ✔         | Slightly behind in updates. |
 | [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         | |
 
 ### Neo Geo Pocket / Neo Geo Pocket Color
@@ -228,6 +234,12 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | |
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | |
+
+### Wonderswan / Wonderswan Color
+
+| Core                                                              | Supported | Notes |
+|-------------------------------------------------------------------|:---------:|:-----:|
+| [Beetle Cygne](https://github.com/libretro/beetle-wswan-libretro) | ✔         | |
 
 ### PC-8000 / PC-8800
 
