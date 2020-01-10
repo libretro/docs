@@ -98,6 +98,9 @@ The PX68k core saves/loads to/from these directories.
 | keropi/config   | Config      |
 | keropi/sram.dat | SRAM        |
 
+**NOTE:**
+If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
+
 ### Geometry and timing
 
 - The PX68k core's core provided FPS is 55.45 or 59.94.
@@ -234,15 +237,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select Mouse or Joypad to controls in-game virtual pointer.
 
-- **VBtn Swap** [px68k_vbtn_swap] (**TRIG1 TRIG2*|TRIG2 TRIG1)
+- **VBtn Swap** [px68k_vbtn_swap] (**TRIG1 TRIG2**|TRIG2 TRIG1)
 
 	When set to enabled, swaps TRIG1 and TRIG2 buttons when a 2-button gamepad is used.
 
-- **No Wait Mode** [px68k_no_wait_mode] (**disabled*|enabled)
+- **No Wait Mode** [px68k_no_wait_mode] (**disabled**|enabled)
 
 	When set to enabled, core runs as fast as possible. Can cause audio dysnc but useful if using fast-forward.
 
-	Setting this to disabled is **recommended**.
+	Leaving it disabled is **recommended**.
 
 - **Frame Skip** [px68k_frameskip] (**Full Frame**|1/2 Frame|1/3 Frame|1/4 Frame|1/5 Frame|1/6 Frame|1/8 Frame1/16 Frame|1/32 Frame|1/60 Frame|Auto Frame Skip)
 
