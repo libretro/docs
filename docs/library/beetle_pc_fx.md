@@ -191,9 +191,9 @@ The Beetle PC-FX core supports the following device type(s) in the controls menu
 
 ## Compatibility
 
-| Game                                                                | Issue                                                   |
-|---------------------------------------------------------------------|---------------------------------------------------------|
-| Pia Carrot e Youkoso!! (Japan) [T-En by David Michel + filler v1.0] | Doesn't boot. Confirmed to work on real hardware.       |
+| Game                                                            | Issue                                                   |
+|-----------------------------------------------------------------|---------------------------------------------------------|
+|                                                                 |                                                         |
 
 ## External Links
 
