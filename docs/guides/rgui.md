@@ -135,11 +135,11 @@ To work around this, set `Disk Index` to `No Disk`, and exit RGUI. The game will
 
 The visual appearance of RGUI may altered by choosing one of 32 inbuilt color themes. From the top menu select `Settings > User Interface > Appearance` and cycle through the various `Menu Color Theme` options:
 
-<center> ![](/image/retroarch/rgui/rgui_color_theme.png) </center>
+<center> ![](/image/retroarch/rgui/rgui_color_theme.jpg) </center>
 
 Setting `Menu Color Theme` to `Custom` allows for an even greater degree of personalisation via the use of custom menu theme presets. A number of examples are provided in the RetroArch assets package, which may be downloaded by selecting from the top menu `Online Updater > Update Assets`. To choose one of these examples, go to `Settings > User Interface > Appearance` and select the `Custom Menu Theme Preset` option. In the file browser that opens, navigate to the `rgui` directory and select a `.cfg` file.
 
-<center> ![](/image/retroarch/rgui/rgui_custom_theme_preset.png) </center>
+<center> ![](/image/retroarch/rgui/rgui_custom_theme_preset.jpg) </center>
 
 ### Creating Custom Menu Theme Presets
 
