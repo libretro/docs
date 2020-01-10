@@ -49,10 +49,10 @@ Required or optional firmware files go in the frontend's system directory.
 |   Filename          |    Description           |              md5sum              |
 |:-------------------:|:------------------------:|:--------------------------------:|
 | keropi/iplrom.dat   | X68000 BIOS - Required   |                                  |
+| keropi/cgrom.dat    | Font file - Required     |                                  |
 | keropi/iplrom30.dat | X68000 BIOS 2 - Optional |                                  |
 | keropi/iplromco.dat | X68000 BIOS 3 - Optional |                                  |
 | keropi/iplromxv.dat | X68000 BIOS 4 - Optional |                                  |
-| keropi/cgrom.dat    | Font file - Required     |                                  |
 
 ## Features
 
@@ -109,6 +109,8 @@ The PX68k core saves/loads to/from these directories.
 - The PX68k core's core provided aspect ratio is 4/3
 
 ## Usage
+
+You can launch px68k to launch a supported game. You can also use px68k without any content by using Load Core and then Run Core. This will directly bring you to the px68k menu.
 
 L2 button or F12 key brings up the original px68k menu where you can change the inserted disks. 
 
@@ -223,6 +225,28 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Swap Disks on Drive** [px68k_disk_drive] (**FDD1**|FDD0)
 
 	By default using the native Disk Swap interface within RetroArch's menu will swap the disk in drive FDD1. Change this option to swap disks in drive FDD0.
+
+- **Save Disk Paths** [px68k_disk_path] (disabled|**enabled**)
+
+	When enabled, saves the paths of the last loaded disks in drives and auto-loads them on startup. When disabled, FDD and HDD starts empty.
+
+- **Joy/Mouse** [px68k_joy_mouse] (**Mouse**|Joystick)
+
+	Select Mouse or Joypad to controls in-game virtual pointer.
+
+- **VBtn Swap** [px68k_vbtn_swap] (**TRIG1 TRIG2*|TRIG2 TRIG1)
+
+	When set to enabled, swaps TRIG1 and TRIG2 buttons when a 2-button gamepad is used.
+
+- **No Wait Mode** [px68k_no_wait_mode] (**disabled*|enabled)
+
+	When set to enabled, core runs as fast as possible. Can cause audio dysnc but useful if using fast-forward.
+
+	Setting this to disabled is **recommended**.
+
+- **Frame Skip** [px68k_frameskip] (**Full Frame**|1/2 Frame|1/3 Frame|1/4 Frame|1/5 Frame|1/6 Frame|1/8 Frame1/16 Frame|1/32 Frame|1/60 Frame|Auto Frame Skip)
+
+	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.	
 	
 ## Controllers
 
