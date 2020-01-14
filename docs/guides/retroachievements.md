@@ -21,7 +21,7 @@
     The hardcore mode prevents you from using emulation features like savestates, slow motion and cheats.
     **BUT** gives you double points.
 
-![](/image/retroarch/retroachievements/achievements_settings.png)
+![](/image/retroarch/retroachievements/achievements_settings.jpg)
 
 ## **Check your connection to the service**
 
