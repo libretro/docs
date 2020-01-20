@@ -56,6 +56,8 @@ Ultimately, the `Sys` folder should be placed at a location similar to:
 ```
 RETROARCH_SYSTEM_FOLDER/dolphin-emu/Sys
 ```
+There is also currently a bug with this core and the GL driver that can be worked around by going to settings > user interface > show advanced settings ON and then going to settings > core > allow cores to change the video driver OFF.
+
 The Dolphin core will now work without issues.
 
 ## BIOS
