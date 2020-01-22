@@ -63,6 +63,7 @@ Intellivision                 | FreeIntv           | [BIOS information](https://
 Lynx                          | Beetle Handy       | [BIOS information](https://docs.libretro.com/library/beetle_handy/#bios)
 Lynx                          | Handy              | [BIOS information](https://docs.libretro.com/library/handy/#bios)
 Master System                 | Emux SMS           | [BIOS information](https://docs.libretro.com/library/emux_sms/#bios)
+MS/GG                         | SMS Plus GX        | [BIOS information](https://docs.libretro.com/library/smsplus/#bios)
 MS/GG/MD/CD                   | Genesis Plus GX    | [BIOS information](https://docs.libretro.com/library/genesis_plus_gx/#bios)
 MS/MD/CD/32X                  | PicoDrive          | [BIOS information](https://docs.libretro.com/library/picodrive/#bios)
 MSX/SVI/ColecoVision/SG-1000  | blueMSX            | [BIOS information](https://docs.libretro.com/library/bluemsx/#bios)

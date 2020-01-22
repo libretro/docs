@@ -112,6 +112,7 @@
 - Remote RetroPad
 - SameBoy
 - ScummVM
+- SMS Plus GX
 - Snes9x
 - Snes9x 2002
 - Snes9x 2005
