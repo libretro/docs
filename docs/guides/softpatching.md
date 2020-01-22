@@ -61,4 +61,5 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 
 | Core                                                           | Supported |
 |----------------------------------------------------------------|:---------:|
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |

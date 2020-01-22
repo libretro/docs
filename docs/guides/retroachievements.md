@@ -194,6 +194,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         | |
 | [BlastEm](https://github.com/libretro/blastem)                 | x         | |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | |
 
 ### Sega 32X
 
@@ -207,6 +208,7 @@ You can also check the progress of your friends and add comments on their trophi
 |----------------------------------------------------------------|:---------:|:-----:|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | |
 
 ### SG-1000
 
