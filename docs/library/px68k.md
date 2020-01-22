@@ -452,6 +452,7 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 
 ## External Links
 
+- [Game-Notes---Video-Audio-modes-and-extra-functionality](https://github.com/libretro/px68k-libretro/wiki/Game-Notes---Video-Audio-modes-and-extra-functionality/)
 - [Official PX68k Website](http://hissorii.blog45.fc2.com/)
 - [Official PX68k Github Repository](https://github.com/hissorii/px68k)
 - [Libretro PX68k Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/px68k_libretro.info)
