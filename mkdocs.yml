@@ -166,6 +166,7 @@ nav:
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
+        - 'Sega - MS/GG (SMS Plus GX)': 'library/smsplus.md'
         - 'Sega - MS/GG/SG-1000 (Gearsystem)': 'library/gearsystem.md'
         - 'Sega - MS/GG/MD/CD (Genesis Plus GX)': 'library/genesis_plus_gx.md'
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
