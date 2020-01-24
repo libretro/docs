@@ -93,7 +93,7 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 ### Menu controls
 
-The keybord inputs shown here are active only when `Settings` → `Input` → `Unified Menu Controls` is disabled (default). Otherwise, only Retropad inputs are used.
+The keyboard inputs shown here are active only when `Settings` → `Input` → `Unified Menu Controls` is disabled (default). Otherwise, only Retropad inputs are used.
 
 | Keyboard Input                                                                        | Retropad Input                                            | Menu Action                   |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------- |
