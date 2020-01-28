@@ -77,16 +77,16 @@ RetroArch database(s) that are associated with the flycast core:
 
 Required or optional firmware files go in RetroArch's system directory.
 
-|   Filename      |    Description                |              md5sum              |
-|:--------------:|:------------------------------:|:--------------------------------:|
-| dc/dc_boot.bin  | Dreamcast BIOS - Requried     | e10c53c2f8b90bab96ead2d368858623 |
-| dc/dc_flash.bin | Date/Time/Language - Required | 0a93f7940c455905bea6e392dfde92a4 |
-| dc/naomi.bin| NAOMI Bios - Optional/Required for NAOMI Games | 3bffafac42a7767d8dcecf771f5552ba |
-* A MAME format BIOS file (naomi.zip) from a recent (post 0.154) MAME build can be used instead of naomi.bin
+|   Filename      |    Description                                                                       |              md5sum              |
+|:---------------:|:------------------------------------------------------------------------------------:|:--------------------------------:|
+| dc/dc_boot.bin  | Dreamcast BIOS - Requried                                                            | e10c53c2f8b90bab96ead2d368858623 |
+| dc/dc_flash.bin | Date/Time/Language - Required                                                        | 0a93f7940c455905bea6e392dfde92a4 |
+| dc/naomi.zip    | A MAME format BIOS file (naomi.zip) from a recent (post 0.154) MAME build - Required |                                  |
 
 !!! attention
-	The 'dc_boot.bin' and 'dc_flash.bin' firmware files need to be in a directory named 'dc' in RetroArch's system directory.
-	
+        1. naomi.zip must include the epr-21576g.ic27 file (md5sum:3bffafac42a7767d8dcecf771f5552ba)
+	2. The 'dc_boot.bin', 'dc_flash.bin', and 'naomi.zip' files need to be in a directory named 'dc' in RetroArch's system directory.
+
 ## Features
 
 | Feature           | Supported |
