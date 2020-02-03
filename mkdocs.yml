@@ -336,6 +336,7 @@ nav:
     - 'See Also': 'meta/see-also.md'
   - 'Google Summer of Code':
     - 'Participation': 'meta/gsoc-participation.md'
+    - 'Requirements': 'meta/gsoc-requirements.md'
     - 'Communication': 'meta/gsoc-communication.md'
     - 'Mentors': 'meta/gsoc-mentors.md'
     - 'Expectations': 'meta/gsoc-expectations.md'
