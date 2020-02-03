@@ -335,7 +335,7 @@ nav:
     - 'Shader Preview Template': 'meta/shader-preview-template.md'
     - 'See Also': 'meta/see-also.md'
   - 'Google Summer of Code':
-    - 'Mentors': 'meta/mentors.md'
+    - 'Mentors': 'meta/gsoc-mentors.md'
     - 'Ideas': 'meta/gsoc-ideas.md'
 extra:
   version: '0.1.0'
