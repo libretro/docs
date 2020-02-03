@@ -71,7 +71,7 @@ This project idea would implement a video preview feature. For this the frontend
 
 For this we would need to write a new widget that displays a video (using the ffmpeg core) and a way to connect a game entry and a pre-recorded video file (like screenshots  / box arts are currently distributed).
 
-Further readings:
+**Further readings:**
 
 [https://github.com/libretro/RetroArch/tree/master/menu/widgets](https://github.com/libretro/RetroArch/tree/master/menu/widgets)
 
