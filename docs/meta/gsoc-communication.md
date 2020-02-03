@@ -9,3 +9,5 @@ Mention the Libretro/RetroArch project(s) or other technologies if it is importa
 If you are trying to solve a particular problem, please describe any of the solutions you have tried. Links to example code or documentation would be helpful.
 If you're looking for some extra information or help, please describe it in some more detail.
 This is actually valid for all open source communities, not just our own. We would be more than happy to help.
+
+You can also post an issue on our [Github issues page](https://github.com/libretro/RetroArch/issues).
