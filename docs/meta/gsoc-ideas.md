@@ -18,7 +18,9 @@ The netplay protocol is currently TCP based, it could also be re-written to use 
 If the student has a deep background in network protocols, he/she could also design a new version if the netplay protocol all together.
 
 Further readings:
+
 [https://github.com/libretro/RetroArch/tree/master/network/netplay](https://github.com/libretro/RetroArch/tree/master/network/netplay)
+
 [https://github.com/libretro/netplay-mitm-server](https://github.com/libretro/netplay-mitm-server)
 
 Needed knowledge:
@@ -44,7 +46,9 @@ Hardening the current TLS support
 Either by extending the current implementation or by using an external, portable and small library. Not all of our targets need to be supported with these changes. Exotic build targets often don’t have network support anyway.
 
 Further readings:
+
 [https://github.com/libretro/RetroArch/tree/master/libretro-common/net](https://github.com/libretro/RetroArch/tree/master/libretro-common/net)
+
 [https://github.com/libretro/RetroArch/tree/master/network](https://github.com/libretro/RetroArch/tree/master/network)
 
 Needed knowledge:
@@ -63,7 +67,9 @@ This project idea would implement a video preview feature. For this the frontend
 For this we would need to write a new widget that displays a video (using the ffmpeg core) and a way to connect a game entry and a pre-recorded video file (like screenshots  / box arts are currently distributed).
 
 Further readings:
+
 [https://github.com/libretro/RetroArch/tree/master/menu/widgets](https://github.com/libretro/RetroArch/tree/master/menu/widgets)
+
 [https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
 
 Needed knowledge:
@@ -80,7 +86,9 @@ Currently the retroarch frontend gives the core the file path of the game / medi
 This proposed project would implement a mechanism to cache those files locally (for example in memory), so that the cores can access the files in a cached manner.
 
 Further readings:
+
 [https://github.com/libretro/RetroArch](https://github.com/libretro/RetroArch)
+
 [https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
 
 Needed knowledge:
