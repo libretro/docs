@@ -2,7 +2,7 @@
 ## Improving the netplay protocol
 
 ### Description
-The retroarch frontend currently provides a way to connect two cores together using the netplay protocol. This way, the state / inputs of the cores are shared and users can play their favorite (retro-)games together online.
+The RetroArch frontend currently provides a way to connect two cores together using the netplay protocol. This way, the state / inputs of the cores are shared and users can play their favorite (retro-)games together online.
 
 The current implementation is quite old and has no extensive documentation nor formal specification.
 
@@ -29,11 +29,11 @@ C, Network protocols (TCP / UDP), FSM
 Main mentor:
 hasenbanck
 
-## Improving the network library in retroarch
+## Improving the network library in RetroArch
 
 ### Description
 
-Currently retroarch uses the network stack provided by libretro-common to implement simple network interactions. It’s currently mainly IPv4 aware and supports only HTTP / HTTPS version 1. For TLS support we currently use the mbedtls library.
+Currently RetroArch uses the network stack provided by libretro-common to implement simple network interactions. It’s currently mainly IPv4 aware and supports only HTTP / HTTPS version 1. For TLS support we currently use the mbedtls library.
 
 The current HTTP implementation is also not feature complete and has a lot of compatibility issues. The tasks for thus projects could involve:
 
@@ -60,7 +60,7 @@ hasenbanck
 ## Video preview for games / video files
 
 ### Description
-The retroarch frontend can currently display a screenshot of a video file (actually taken from the media file) or an archived screenshot / box art of a game inside the menu beside the medgame / video ia entry.
+The RetroArch frontend can currently display a screenshot of a video file (actually taken from the media file) or an archived screenshot / box art of a game inside the menu beside the medgame / video ia entry.
 
 This project idea would implement a video preview feature. For this the frontend needs to be extended to preview a video file, or be able to display a pre-recorded gameplay video of the game in case instead of a screenshot.
 
@@ -81,7 +81,7 @@ hasenbanck
 ## Universal caching of game / media files
 
 ### Description
-Currently the retroarch frontend gives the core the file path of the game / media to play. The core than has to open the media file directly. If the file is stored on a remote filesystem, the increased access time and slow bandwidth could cause slowdowns inside the core.
+Currently the RetroArch frontend gives the core the file path of the game / media to play. The core than has to open the media file directly. If the file is stored on a remote filesystem, the increased access time and slow bandwidth could cause slowdowns inside the core.
 
 This proposed project would implement a mechanism to cache those files locally (for example in memory), so that the cores can access the files in a cached manner.
 
