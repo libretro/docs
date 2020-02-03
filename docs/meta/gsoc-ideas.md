@@ -1,7 +1,6 @@
 # Introducing our mentors
 
 ## hasenbanck
-(github name for now)
 Hasenbanck is a German developer that mainly works in frontend / auxiliary related systems for the libretro project. He’s currently working as a DevOp at a big german retailer and creates server systems, CI/CD pipelines and functional / performance tests.
 He also has a big interest in hardware projects. You can have a quick look at his projects over at his Github account:
 https://github.com/hasenbanck/
