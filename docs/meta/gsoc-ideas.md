@@ -25,7 +25,7 @@ If the student has a deep background in network protocols, he/she could also des
 
 **Needed knowledge:**
 
-C, Network protocols (TCP / UDP), FSM
+C, Network protocols (TCP / UDP), FSM (Finite-state machine)
 
 **Main mentor:**
 
