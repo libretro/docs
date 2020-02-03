@@ -340,8 +340,9 @@ nav:
     - 'Communication': 'meta/gsoc-communication.md'
     - 'Mentors': 'meta/gsoc-mentors.md'
     - 'Expectations': 'meta/gsoc-expectations.md'
-    - 'Ideas': 'meta/gsoc-ideas.md'
     - 'Getting Started': 'meta/gsoc-gettingstarted.md'
+    - 'Ideas': 'meta/gsoc-ideas.md'
+    - 'Contact': 'meta/gsoc-contact.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
