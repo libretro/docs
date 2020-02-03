@@ -11,7 +11,8 @@ These are the things students are expected to do:
   
 ## Technical competency
 
-* Students need to be fluent in C
-* Students need to have an elementary knowledge of Git and know how to collaborate on code through Github
+* Students need to be fluent in C.
+* Students must have a basic understanding of debugging through tools like gdb, Visual Studio debugger, and/or lldb. Concepts like thread safety and memory management must not be foreign to the student.
+* Students need to have an elementary knowledge of Git and know how to collaborate on code through Github.
   
 We recommend reading [this](https://medium.com/@i.oleks/how-to-apply-for-google-summer-of-code-95c1bfcd41a5) great document to get some more tips for GSoC. 
