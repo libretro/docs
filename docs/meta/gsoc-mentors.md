@@ -14,3 +14,8 @@ Daniel is a Dutch developer that has been the leader and maintainer of the Libre
 Most of his activity takes place on the various subrepos on our Github organization ([https://github.com/libretro](https://github.com/libretro)), and work is spread out across the various repos, from core development to frontend development.
 
 [https://github.com/twinaphex/](https://github.com/twinaphex/)
+
+## Hunter Kaller
+Hunter Kaller is an American IT manager that mainly works in shader and video-related systems for the libretro project. He currently manages, designs and supports classroom audio/video at a mid-size public university.
+
+[https://github.com/hizzlekizzle/](https://github.com/hizzlekizzle/)
