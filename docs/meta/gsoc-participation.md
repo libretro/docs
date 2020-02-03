@@ -1,3 +1,4 @@
+# Intent to participate in GSoC 2020
 The Libretro/RetroArch organization is planning to participate in Google Summer of Code in 2020.
 
 All students & developers are welcome to participate in the Google Summer of Code 2020 program with the Libretro/RetroArch organization (once Libretro/RetroArch organization is accepted by Google)!
