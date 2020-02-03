@@ -107,4 +107,4 @@ C
 twinaphex
 
 ## Student suggested ideas
-Of course you're free to propose your own ideas. Feel free to contact us and discuss your idea with us!
+Of course you're free to propose your own ideas. Feel free to discuss your idea with us!
