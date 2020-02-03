@@ -9,4 +9,9 @@ These are the things students are expected to do:
 * Libretro/RetroArch expects students to make a non-trivial contribution before accepting the application. Trying to fix open bugs or working on issues 
   with label "GoodFirstTask" is a good idea. You can check the Github repositories for the issues and bugs.
   
+## Technical competency
+
+* Students need to be fluent in C
+* Students need to have an elementary knowledge of Git and know how to collaborate on code through Github
+  
 We recommend reading [this](https://medium.com/@i.oleks/how-to-apply-for-google-summer-of-code-95c1bfcd41a5) great document to get some more tips for GSoC. 
