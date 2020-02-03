@@ -334,6 +334,8 @@ nav:
     - 'Core Template': 'meta/core-template.md'
     - 'Shader Preview Template': 'meta/shader-preview-template.md'
     - 'See Also': 'meta/see-also.md'
+  - 'Google Summer of Code':
+    - 'Ideas': 'meta/gsoc-ideas.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
