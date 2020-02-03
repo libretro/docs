@@ -17,7 +17,7 @@ The netplay protocol is currently TCP based, it could also be re-written to use 
 
 If the student has a deep background in network protocols, he/she could also design a new version if the netplay protocol all together.
 
-Further readings:
+**Further readings:**
 
 [https://github.com/libretro/RetroArch/tree/master/network/netplay](https://github.com/libretro/RetroArch/tree/master/network/netplay)
 
@@ -92,7 +92,7 @@ Currently the RetroArch frontend gives the core the file path of the game / medi
 
 This proposed project would implement a mechanism to cache those files locally (for example in memory), so that the cores can access the files in a cached manner.
 
-Further readings:
+**Further readings:**
 
 [https://github.com/libretro/RetroArch](https://github.com/libretro/RetroArch)
 
