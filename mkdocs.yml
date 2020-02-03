@@ -338,6 +338,7 @@ nav:
     - 'Participation': 'meta/gsoc-participation.md'
     - 'Communication': 'meta/gsoc-communication.md'
     - 'Mentors': 'meta/gsoc-mentors.md'
+    - 'Expectations': 'meta/gsoc-expectations.md'
     - 'Ideas': 'meta/gsoc-ideas.md'
     - 'Getting Started': 'meta/gsoc-gettingstarted.md'
 extra:
