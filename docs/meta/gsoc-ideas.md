@@ -23,10 +23,12 @@ Further readings:
 
 [https://github.com/libretro/netplay-mitm-server](https://github.com/libretro/netplay-mitm-server)
 
-Needed knowledge:
+**Needed knowledge:**
+
 C, Network protocols (TCP / UDP), FSM
 
-Main mentor:
+**Main mentor:**
+
 hasenbanck
 
 ## Improving the network library in RetroArch
@@ -45,16 +47,19 @@ Hardening the current TLS support
 
 Either by extending the current implementation or by using an external, portable and small library. Not all of our targets need to be supported with these changes. Exotic build targets often don’t have network support anyway.
 
-Further readings:
+**Further readings:**
+
 
 [https://github.com/libretro/RetroArch/tree/master/libretro-common/net](https://github.com/libretro/RetroArch/tree/master/libretro-common/net)
 
 [https://github.com/libretro/RetroArch/tree/master/network](https://github.com/libretro/RetroArch/tree/master/network)
 
-Needed knowledge:
+**Needed knowledge:**
+
 C, Network protocols (IPv4 / IPv6 / TCP / HTTP / HTTP/2 / HTTP/3)
 
-Main mentor:
+**Main mentor:**
+
 hasenbanck
 
 ## Video preview for games / video files
@@ -72,10 +77,12 @@ Further readings:
 
 [https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
 
-Needed knowledge:
+**Needed knowledge:**
+
 C, Video decoding
 
-Main mentor:
+**Main mentor:**
+
 hasenbanck
 
 ## Universal caching of game / media files
@@ -91,8 +98,10 @@ Further readings:
 
 [https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
 
-Needed knowledge:
+**Needed knowledge:**
+
 C
 
-Main mentor:
+**Main mentor:**
+
 twinaphex
