@@ -254,7 +254,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Use High-Res textures** (**False**/True)
 
 	Enable the High resolution Textures. 
-	The High resolution textures have to be put in the cache directory. 
+	Pre-fabricated high resolution textures in .htc format have to be put in the cache subdirectory of the system directory. The recommended way is to create your own .htc texture pack from uncompressed textures: If you have the necessary high resolution textures in the uncompressed Rice format, you put them into the hires_texture subdirectory. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation, you can delete the uncompressed texture directory as it is no longer needed.
 
 - **Use High-Res Full Alpha Channel** (**False**/True)
 
