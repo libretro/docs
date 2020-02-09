@@ -126,7 +126,11 @@ The Mupen64Plus core saves/loads to/from these directories.
 
 ###  Hi res Textures
 
-The High resolution textures have to be put in the cache directory.
+You can either use pre-compiled hires texture packs (.htc format) or compile your own hires texture packs from uncompressed Rice sources. 
+
+Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended.
+
+For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed.
 
 ## Core options
 
@@ -253,8 +257,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use High-Res textures** (**False**/True)
 
-	Enable the High resolution Textures. 
-	Pre-fabricated high resolution textures in .htc format have to be put in the cache subdirectory of the system directory. The recommended way is to create your own .htc texture pack from uncompressed textures: If you have the necessary high resolution textures in the uncompressed Rice format, you put them into the hires_texture subdirectory. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation, you can delete the uncompressed texture directory as it is no longer needed.
+	Enable the high resolution textures. Usage of hires textures is explained above.	
 
 - **Use High-Res Full Alpha Channel** (**False**/True)
 
