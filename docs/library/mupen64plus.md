@@ -25,7 +25,7 @@ The graphic plugin GLideN64 is not available in Parallel-N64.
 
 ### Why use this core?
 
-Awaiting description.
+The GlideN64 video plugin is very capable. Outstanding support of Hires Textures. Multi-plugin support is in the making.
 
 
 ### Authors
@@ -124,13 +124,24 @@ The Mupen64Plus core saves/loads to/from these directories.
 - The Mupen64Plus core's internal sample rate is 44100 Hz
 - The Mupen64Plus core's core provided aspect ratio is (Ratio)
 
-###  Hi res Textures
+###  Hires Textures
 
-You can either use pre-compiled hires texture packs (.htc format) or compile your own hires texture packs from uncompressed Rice sources. 
+You can either use pre-compiled hires texture packs (.htc format, available for download) or compile your own hires texture packs from uncompressed Rice sources.
 
-Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended.
+Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended. 
 
-For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed.
+Recommended Core Options for pre-compiled very popular .htc texture packs, such as those of Djipi or Mollymutt, are:
+- mupen64plus-EnableTextureCache = "True"
+- mupen64plus-txHiresEnable = "True"
+- mupen64plus-txCacheCompression = "True"
+- mupen64plus-txHiresFullAlphaChannel = "False"
+- mupen64plus-EnableEnhancedTextureStorage = "False"
+- mupen64plus-EnableEnhancedHighResStorage = "False"
+
+For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed. If you want to re-use such texture pack on a different system, the Core Options as of compilation must match again.
+If you compile an own texture pack, you should enable the further three options for Alpha channel and Enhanced Storage. Such Core Options then produce a hires texture pack with .hts ending.
+Compilation under Windows seems to be more complicated than under Linux or iOS. Rice texture packs must be converted to 32bit PNG.
+
 
 ## Core options
 
