@@ -138,10 +138,9 @@ Recommended Core Options for pre-compiled very popular .htc texture packs, such 
 - mupen64plus-EnableEnhancedTextureStorage = "False"
 - mupen64plus-EnableEnhancedHighResStorage = "False"
 
-For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed. If you want to re-use such texture pack on a different system, the Core Options as of compilation must match again.
-If you compile an own texture pack, you should enable the further three options for Alpha channel and Enhanced Storage. Such Core Options then produce a hires texture pack with .hts ending.
+For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed. If you want to re-use your newly created texture pack on a different system, you must enable the same core options on the new system that you used when you compiled the pack.
+If you compile your own texture pack, you should be sure to enable the further three for Alpha Channel and Enhanced Storage, which will then produce a hires texture pack with the *.hts extension.
 Compilation under Windows seems to be more complicated than under Linux or iOS. Rice texture packs must be converted to 32bit PNG.
-
 
 ## Core options
 
