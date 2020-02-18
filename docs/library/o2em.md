@@ -27,7 +27,7 @@ Required or optional firmware files go in the frontend's system directory.
 | g7400.bin  | Videopac+ European BIOS - G7400 model - Required | c500ff71236068e0dc0d0603d265ae76 |
 | jopac.bin  | Videopac+ French BIOS - G7400 model - Required   | 279008e4a0db2dc5f1c048853b033828 |
 
-Currently the libretro core only works with the o2rom.bin. As a workaround for playing Videopac+ games, you can rename the g7400.bin firmware file into o2rom.bin, and the lr-o2em plays it correctly as a Videopac+ game.
+Currently the libretro core only works with the o2rom.bin. As a workaround for playing Videopac+ games, you can rename the g7400.bin firmware file into o2rom.bin, and the core plays it correctly as a Videopac+ game.
 
 ## Extensions
 
