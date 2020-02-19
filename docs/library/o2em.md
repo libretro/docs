@@ -27,6 +27,8 @@ Required or optional firmware files go in the frontend's system directory.
 | g7400.bin  | Videopac+ European BIOS - G7400 model - Required | c500ff71236068e0dc0d0603d265ae76 |
 | jopac.bin  | Videopac+ French BIOS - G7400 model - Required   | 279008e4a0db2dc5f1c048853b033828 |
 
+Currently the libretro core only works with the o2rom.bin. As a workaround for playing Videopac+ games, you can rename the g7400.bin firmware file into o2rom.bin, and the core plays it correctly as a Videopac+ game.
+
 ## Extensions
 
 Content that can be loaded by the O2EM core have the following file extensions:
@@ -111,6 +113,8 @@ The O2EM core saves/loads to/from these directories.
 | ![](/image/retropad/retro_dpad_left.png)     | Left                     |
 | ![](/image/retropad/retro_dpad_right.png)    | Right                    |
 | ![](/image/retropad/retro_a.png)             | Action                   |
+
+In some games, for example UFO/Satellite Attack, the original had the joypads swapped so that Player 1 was on Joypad 2. If you only use one Joypad, a workaround is to provide identical assignments of both Retropads to one joystick and save it as Game Remap or Core Remap.
 
 ## Keyboard
 
