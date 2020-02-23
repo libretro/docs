@@ -334,16 +334,6 @@ nav:
     - 'Core Template': 'meta/core-template.md'
     - 'Shader Preview Template': 'meta/shader-preview-template.md'
     - 'See Also': 'meta/see-also.md'
-  - 'Google Summer of Code':
-    - 'Participation': 'meta/gsoc-participation.md'
-    - 'Requirements': 'meta/gsoc-requirements.md'
-    - 'General Information': 'meta/gsoc-generalinformation.md'
-    - 'Communication': 'meta/gsoc-communication.md'
-    - 'Mentors': 'meta/gsoc-mentors.md'
-    - 'Expectations': 'meta/gsoc-expectations.md'
-    - 'Getting Started': 'meta/gsoc-gettingstarted.md'
-    - 'Ideas': 'meta/gsoc-ideas.md'
-    - 'Contact': 'meta/gsoc-contact.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
