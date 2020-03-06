@@ -47,21 +47,21 @@ Required or optional firmware files go in the frontend's system directory.
 !!! attention
 	These firmware files need to be in a directory named 'np2kai' in the frontend's system directory.
 
-| Filename         | Description                       | md5sum  |
-|:----------------:|:---------------------------------:|:-------:|
-| np2/font.bmp     | Needed to display text - Required |         |
-| np2/FONT.ROM     | Alt font file - Required          |         |
-| np2/bios.rom     | - Required                        |         |
-| np2/itf.rom      | - Required                        |         |
-| np2/sound.rom    | - Required                        |         |
-| np2/bios9821.rom | - Optional                        |         |
-| np2/d8000.rom    | - Optional                        |         |
-| np2/2608_bd.wav  | YM2608 RYTHM sample - Optional    |         |    
-| np2/2608_sd.wav  | YM2608 RYTHM sample - Optional    |         |
-| np2/2608_top.wav | YM2608 RYTHM sample - Optional    |         |   
-| np2/2608_hh.wav  | YM2608 RYTHM sample - Optional    |         |   
-| np2/2608_tom.wav | YM2608 RYTHM sample - Optional    |         |
-| np2/2608_rim.wav | YM2608 RYTHM sample - Optional    |         |
+| Filename            | Description                       | md5sum  |
+|:-------------------:|:---------------------------------:|:-------:|
+| np2kai/font.bmp     | Needed to display text - Required |         |
+| np2kai/FONT.ROM     | Alt font file - Required          |         |
+| np2kai/bios.rom     | - Required                        |         |
+| np2kai/itf.rom      | - Required                        |         |
+| np2kai/sound.rom    | - Required                        |         |
+| np2kai/bios9821.rom | - Optional                        |         |
+| np2kai/d8000.rom    | - Optional                        |         |
+| np2kai/2608_BD.WAV  | YM2608 RYTHM sample - Optional    |         |    
+| np2kai/2608_SD.WAV  | YM2608 RYTHM sample - Optional    |         |
+| np2kai/2608_TOP.WAV | YM2608 RYTHM sample - Optional    |         |   
+| np2kai/2608_HH.WAV  | YM2608 RYTHM sample - Optional    |         |   
+| np2kai/2608_TOM.WAV | YM2608 RYTHM sample - Optional    |         |
+| np2kai/2608_RIM.WAV | YM2608 RYTHM sample - Optional    |         |
 
 ## Features
 
