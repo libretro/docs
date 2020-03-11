@@ -102,7 +102,7 @@ The FCEUmm core saves/loads to/from these directories.
 - The FCEUmm core's core provided sample rate is 48000 Hz
 - The FCEUmm core's base width is 256
 - The FCEUmm core's base height is 240
-- The FCEUmm core's max width is 256
+- The FCEUmm core's max width is 256 (602 when using NTSC Filters)
 - The FCEUmm core's max height is 240
 - The FCEUmm core's core provided aspect ratio is 4:3 DAR or 8:7 PAR
 
@@ -278,7 +278,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enable blargg NTSC filters.
 	
-!!! ATTENTION: "Disclaimer"
+!!! attention "Disclaimer"
 	These 'NTSC Filter' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
 	
 ??? note "NTSC Filter - Off"
@@ -300,7 +300,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Creates a scanline effect when using NTSC Filters.
 	
-!!! ATTENTION: "Disclaimer"
+!!! attention "Disclaimer"
 	These 'NTSC Scanline' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
 	
 ??? note "ntsc filter - Off"
