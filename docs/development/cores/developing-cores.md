@@ -18,7 +18,7 @@ Any project that is ported to work with this API can be made to run on ANY libre
 The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.com/libretro/libretro-common/master/include/libretro.h) can be found in the master branch of the libretro-common repository.
 
 !!! tip
-    `libretro.h` is the single most important technial reference for developers of libretro cores and frontends
+    `libretro.h` is the single most important technical reference for developers of libretro cores and frontends
 
 
 ### `skeletor` sample core
