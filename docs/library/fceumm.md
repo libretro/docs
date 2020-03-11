@@ -56,7 +56,7 @@ Frontend-level settings or features that the FCEUmm core respects.
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
-| Native Cheats     | ✕         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -104,7 +104,7 @@ The FCEUmm core saves/loads to/from these directories.
 - The FCEUmm core's base height is 240
 - The FCEUmm core's max width is 256
 - The FCEUmm core's max height is 240
-- The FCEUmm core's core provided aspect ratio is 4:3 or 8:7
+- The FCEUmm core's core provided aspect ratio is 4:3 DAR or 8:7 PAR
 
 ### Custom color palettes
 
@@ -123,9 +123,9 @@ The FCEUmm core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Region Override** [fceumm_region] (**Auto**|NTSC|PAL|Dendy)
+- **Region** [fceumm_region] (**Auto**|NTSC|PAL|Dendy)
 
-	Choose which region the system is from.
+	Force core to use NTSC, PAL or Dendy system audio / video timings.
 	
 - **Preferred aspect ratio** [fceumm_aspect] (**8:7 PAR**|4:3)
 
@@ -268,9 +268,63 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Overclocks the NES using PPU method to minimize ingame slowdowns of some games. Contra Force needs VBlank mode (stage 3 slowdowns). Choose which ever minimizes slowdowns without image distortion.
 
-- **RAM power up state (Restart)** [fceumm_ramstate] (**fill $ff**|fill $00|random)
+- **RAM power up state (Restart)** [fceumm_ramstate] (**$FF**|$00|random)
 
 	Choose RAM startup during power up. Fill the ram with either $FF, $00 or random. Some games rely on initial ram values for random generator as an example.
+
+	Some unlicensed carts and rom hacks prefers $00 or else rom will not boot up or causes graphics glitches or any other problems.
+
+- **NTSC Filter** [fceumm_ntsc_filter] (**disabled**|composite|svideo|rgb|monochrome)
+
+	Enable blargg NTSC filters.
+	
+!!! ATTENTION: "Disclaimer"
+	These 'NTSC Filter' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
+	
+??? note "NTSC Filter - Off"
+	![](/image/core/fceumm/blargg_off.png)
+	
+??? note "NTSC Filter - composite (color bleeding + artifacts)"
+	![](/image/core/fceumm/blargg_composite_normal.png)
+
+??? note "NTSC Filter - svideo (color bleeding only)"
+	![](/image/core/fceumm/blargg_svideo_normal.png)
+
+??? note "NTSC Filter - rgb (crisp image)"
+	![](/image/core/fceumm/blargg_rgb_normal.png)
+
+??? note "NTSC Filter - monochrome (desaturated + artifacts)"
+	![](/image/core/fceumm/blargg_monochrome_normal.png)
+
+- **NTSC Scanlines** [fceumm_ntsc_scanlines] (**disabled**|enabled)
+
+	Creates a scanline effect when using NTSC Filters.
+	
+!!! ATTENTION: "Disclaimer"
+	These 'NTSC Scanline' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
+	
+??? note "ntsc filter - Off"
+	![](/image/core/fceumm/blargg_off.png)
+	
+??? note "composite + ntsc scanline"
+	![](/image/core/fceumm/blargg_composite_scanline.png)
+
+??? note "svideo + ntsc scanline"
+	![](/image/core/fceumm/blargg_svideo_scanline.png)
+
+??? note "rgb + ntsc scanline"
+	![](/image/core/fceumm/blargg_rgb_scanline.png)
+
+??? note "monochrome + ntsc scanline"
+	![](/image/core/fceumm/blargg_monochrome_scanline.png)
+
+- **Show Advanced System Options** [fceumm_show_adv_system_options] (**disabled**|enabled)
+
+	Show advanced system options and tweaks.
+
+- **Show Advanced Sound Options** [fceumm_show_adv_sound_options] (**disabled**|enabled)
+
+	Show advanced sound controls and tweaks.
 	
 ## Controllers
 
@@ -376,6 +430,9 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 - [Libretro FCEUmm Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/fceumm_libretro.info)
 - [Libretro FCEUmm Github Repository](https://github.com/libretro/libretro-fceumm)
 - [Report Libretro FCEUmm Core Issues Here](https://github.com/libretro/libretro-fceumm/issues)
+
+## Other Links
+- [NES Header Database](http://nes.dnsabr.com/) - Verify, remove or add headers for known No-Intro roms.
 
 ### See also
 
