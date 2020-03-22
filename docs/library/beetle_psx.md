@@ -1,5 +1,7 @@
 # PlayStation (Beetle PSX)
 
+*Last Updated: March 22, 2020*
+
 ## Background
 
 Beetle PSX is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode. Beetle PSX currently runs on Linux, OSX and Windows.
@@ -8,6 +10,9 @@ Notable additions in this fork are:
 
 - PBP and CHD file format support, developed by Zapeth;
 - Software renderer internal resolution upscaling, implemented by simias;
+- PGXP subpixel precision, developed by iCatButler;
+
+Beetle PSX is built without hardware rendering support and lacks enhancements such as texture filtering, PGXP perspective correct texturing, and more. To take advantage of hardware rendering and the various enhancements that come with it, use Beetle PSX HW instead.
 
 The Beetle PSX core has been authored by
 
@@ -58,7 +63,7 @@ Frontend-level settings or features that the Beetle PSX core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -73,8 +78,10 @@ Frontend-level settings or features that the Beetle PSX core respects.
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | ✕         |
+| Crop Overscan *   | ✕         |
 | LEDs              | ✕         |
+
+\* Overscan cropping available via Core Options instead of frontend settings
 
 ### Directories
 
@@ -94,13 +101,13 @@ The Beetle PSX core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Beetle PSX core's core provided FPS is 59.941 for NTSC games and 49.76 for PAL games
+- The Beetle PSX core's core provided FPS is 59.826 for NTSC games and 49.761 for PAL games (non-interlaced rates) and is toggleable to 59.940 for NTSC games and 50.000 for PAL games (interlaced rates) through core options
 - The Beetle PSX core's core provided sample rate is 44100 Hz
 - The Beetle PSX core's base width is 320
 - The Beetle PSX core's base height is 240
 - The Beetle PSX core's max width is 700 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max width
 - The Beetle PSX core's max height is 576 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max height
-- The Beetle PSX core's core provided aspect ratio is 4/3 when the 'Widescreen mode hack' core option is set to off. 16/9 when it's set to on
+- The Beetle PSX core's core provided aspect ratio is automatically set based on core options
 
 ## Loading content
 
@@ -157,15 +164,11 @@ Here's a m3u example done with Valkryie Profile
 
 #### Swapping disks	
 
-Swapping disks follows this procedure
+Disks can be swapped through Quick Menu -> Disk Control in RetroArch. 
 
-1. Open tray (Disk Cycle Tray Status)
+If not using .m3u files, .cue files must be manually selected via the Load New Disk legacy feature.
 
-2. Change the Disk Index to the disk you want to swap to. 
-
-3. Close tray (Disk Cycle Tray Status)
-
-4. Return to the game and wait a few seconds to let it take effect
+If using .m3u files, disks can be swapped by selecting Eject Disk, changing the Current Disk Index to your desired disk, and finally selecting Insert Disk.
 	
 ### Compressed content
 
@@ -179,7 +182,7 @@ If converting a multiple-disk game, all disks should be added to the same .pbp f
 
 Most conversion tools will want a single .bin file for each disk. If your game uses multiple .bin files (tracks) per disk, you will have to mount the cue sheet to a virtual drive and re-burn the images onto a single track before conversion.
 
-For multi-disk PAL copy-proected games, change the sbi file syntax from [filename].sbi to [filename]_[disc_number].sbi
+For multi-disk PAL copy-proected games, change the sbi file syntax from `[filename].sbi` to `[filename]_[disc_number].sbi`
 
 - Final Fantasy IX (Germany).pbp
 - **Final Fantasy IX (Germany)_1.sbi**
@@ -257,187 +260,223 @@ or
 - **Memcard slot 1: `Wild Arms 2 (USA).1.mcr**
 
 !!! attention
-	To import your old memory cards from other emulators, you need to rename them to either the Libretro savedata format or the Mednafen savedata format.
+	To import your old memory cards from other emulators, you need to rename them to either the Libretro savedata format or the Mednafen savedata format. The Libretro (.srm) savedata format, when used with Beetle PSX, is internally identical to the Mednafen PSX (.mcr) savedata format, and can be converted between one another via renaming.
 	
 !!! warning
 	Keep in mind that save states also include the state of the memory card; carelessly loading an old save state will **OVEWRITE** the memory card, potentially resulting in lost saved games.	**You can set the 'Don't overwrite SaveRAM on loading savestate' option in RetroArch's Saving settings to On to prevent this.**
 
 ## Core options
 
-The Beetle PSX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle PSX core has the following options that can be tweaked from your frontend's core options menu or manually changed via core configuration files. Options are listed below in the following format:
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+``Option Name [option_key] (setting1/setting2/...)``
 
-- **Internal GPU resolution** [beetle_psx_internal_resolution] (**1x(native)**/2x/4x/8x/16x/32x)
+To manually change an option, search for that option's key in the core configuration file you want to edit and set it to your desired setting value, enclosed in quotations. For example, if you had set the Internal Color Depth to 32bpp and wanted to revert it to 16bpp, you would change ``beetle_psx_depth = "32bpp"`` to ``beetle_psx_depth = "16bpp(native)"``. Manually editing core configuration files is typically unnecessary unless your frontend does not have a method for toggling options.
 
-	Modify the resolution.
-	
-??? note "*Internal GPU Resolution - 1x*"
-    ![](/image/core/beetle_psx_hw/gpu_1.png)
+The default setting for each option will be highlighted in bold. Settings with (Restart) means that core has to be shut down for the new setting to be applied on next launch.
 
-??? note "*Internal GPU Resolution - 2x*"
-    ![](/image/core/beetle_psx_hw/gpu_2.png)
+- **Internal GPU Resolution** [beetle_psx_internal_resolution] (**1x(native)**/2x/4x/8x/16x)
 
-- **Widescreen mode hack** [beetle_psx_widescreen_hack] (**Off**/On)
+	Selects internal resolution multiplier.
 
-	If on, renders in 16:9. Works best on 3D games.
-	
-??? note "Widescreen mode hack - Off"
-	![](/image/core/beetle_psx_hw/wide_off.png)
-	
-??? note "Widescreen mode hack - On"
-	![](/image/core/beetle_psx_hw/wide_on.png)
-	
-- **Frame duping (speedup)** [beetle_psx_frame_duping_enable] (**Off**/On)
+	Resolutions higher than 1x(native) improve the fidelity of 3D models at the expense of increased performance requirements. 2D elements are generally unaffected by this setting from the core's perspective.
 
-	Redraws/reuses the last frame if there was no new data.
-	
-- **CPU frequency scaling (overclock)** [beetle_psx_cpu_freq_scale] (50% to 500% in increments of 10%. **100% is default**)
-	
-	Overclock the emulated PSX's CPU.
-	
-- **GTE Overclock** [beetle_psx_gte_overclock] (**Off**/On)
+	??? note "*Internal GPU Resolution - 1x*"
+	    ![](/image/core/beetle_psx_hw/gpu_1.png)
 
-	Gets rid of memory access latency and makes all GTE instructions have 1 cycle latency.
-	
-- **GPU rasterizer overclock** [beetle_psx_gpu_overclock] (**1x(native)**/2x/4x/8x/16x/32x)
+	??? note "*Internal GPU Resolution - 2x*"
+	    ![](/image/core/beetle_psx_hw/gpu_2.png)
 
-	Overclock the emulated PSX's GPU rasterizer.
-	
-- **Skip BIOS** [beetle_psx_skipbios] (**Off**/On)
+- **Dithering Pattern** [beetle_psx_dither_mode] (**1x(native)**/internal resolution/disabled)
 
-	Self-explanatory. 
-	
-	**Some games have issues when this core option is enabled (Saga Frontier, PAL copy protected games, etc).**
-	
-??? note "Skip BIOS - Off"
-	![](/image/core/beetle_psx_hw/bios.png)
-	
-- **Dithering pattern** [beetle_psx_dither_mode] (**1x(native)**/internal resolution/Off)
+	Select dithering pattern.
 
-	If off, disables the dithering pattern the PSX applies to combat color banding.
-	
-- **Display internal FPS** [beetle_psx_display_internal_framerate] (**Off**/On)
+	Dithering is used by the original PSX hardware to combat the color banding visible due to 16bpp color depth.
 
-	Shows the frame rate at which the emulated PSX is drawing at. 
-	
-	**Onscreen Notifications must be enabled in the RetroArch Onscreen Display Settings.**
-	
-??? note "Display internal FPS - On"
-	![](/image/core/beetle_psx_hw/fps.png)
-	
-- **Initial scanline** [beetle_psx_initial_scanline] (0 to 40 in increments of 1. **0 is default**)
+	'1x(native)' emulates original hardware but can look grainy at higher internal resolutions.
 
-	Sets the first scanline to be drawn on screen.
-	
-- **Last scanline** [beetle_psx_last_scanline] (210 to 239 in increments of 1. **239 is default**)
+	'internal resolution' reduces graininess by allowing for finer dithering at higher Internal GPU Resolutions, but has limited effectiveness in combating color banding if the Internal GPU Resolution is set too high. (Note in the examples below that the 'internal resolution' option is less grainy but has more visible banding than '1x(native)' at 4x Internal GPU Resolution)
 
-	Sets the last scanline to be drawn on screen.
-	
-- **Initial scanline PAL** [beetle_psx_initial_scanline_pal] (0 to 40 in increments of 1. **0 is default**)
+	'disabled' is for users who otherwise wish to turn off dithering regardless of color banding.
 
-	Sets the first scanline to be drawn on screen for PAL systems.
-	
-- **Last scanline PAL** [beetle_psx_last_scanline_pal] (260 to 287 in increments of 1. **287 is default**)
+	??? note "*Dithering Pattern - 1x Native*"
+	    ![](/image/core/beetle_psx_hw/dither_native.png)
 
-	Sets the last scanline to be drawn on screen for PAL systems.
-	
-- **Crop Overscan** [beetle_psx_crop_overscan] (Off/**On**)
+	??? note "*Dithering Pattern - Internal Resolution*"
+	    ![](/image/core/beetle_psx_hw/dither_internalres.png)
 
-	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
-??? note "Crop Overscan - On"
-	![](/image/core/beetle_psx_hw/scan_on.png)
-	
-??? note "Crop Overscan - Off"
-	![](/image/core/beetle_psx_hw/scan_off.png)	
+	??? note "*Dithering Pattern - Disabled*"
+	    ![](/image/core/beetle_psx_hw/dither_off.png)
 
-- **Additional Cropping** [beetle_psx_image_crop] (**Off**/1 px/2 px/3 px/4 px/5 px/6 px/7 px/8 px)
+- **PGXP Operation Mode** [beetle_psx_pgxp_mode] (**disabled**/memory only/memory + CPU)
 
-	Self-explanatory.
-	
-- **Offset Cropped Image** [beetle_psx_image_offset] (**Off**/1 px/2 px/3 px/4 px/-4 px/-3 px/-2 px/-1 px)
+	Enabling the Parallel/Precision Geometry Transform Pipeline (PGXP) allows polygons to be rendered with subpixel precision, eliminating or otherwise diminishing the polygon jitter/wobble visible on original PSX hardware. This distortion results from original hardware using fixed point mathematics when rendering 3D models, thus rounding polygon vertices to the nearest integer pixel.
 
-	Self-explanatory.
-	
-- **Analog self-calibration** [beetle_psx_analog_calibration] (**Off**/On)
+	'disabled' emulates original hardware behavior.
 
-	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
-	
-- **DualShock Analog button toggle** [beetle_psx_analog_toggle] (**Off**/On)
+	'memory only' mode enables subpixel precision at the cost of increased performance requirements with only minor compatibility issues. 'memory + CPU' mode can further reduce jitter but is highly demanding and is known to cause geometry errors. 'memory only' is recommended for best compatibility.
 
-	Toggles the Analog button from DualShock controllers, if disabled analogs are always on, if enabled you can toggle their state by pressing and holding START+SELECT+L1+L2+R1+R2.
-	
-- **Port 1: Multitap enable** [beetle_psx_enable_multitap_port1] (**Off**/On)
+	[https://www.youtube.com/watch?v=EYCpd_1lPUc](https://www.youtube.com/watch?v=EYCpd_1lPUc)
 
-	Enables/Disables multitap functionality on port 1.
-	
-- **Port 2: Multitap enable** [beetle_psx_enable_multitap_port2] (**Off**/On)
+- **Display Internal FPS** [beetle_psx_display_internal_fps] (**disabled**/enabled)
 
-	Enables/Disables multitap functionality on port 2.
-	
-- **Gun Cursor** [beetle_psx_gun_cursor] (**Cross**/Dot/Off)
+	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend. Reported values may be inaccurate.
 
-	Choose the cursor for the 'Guncon / G-Con 45' and 'Justifier' Device Types. Setting it to off disables the crosshair.
-	
-??? note "Gun Cursor - Cross"
-	![](/image/core/beetle_psx_hw/cursor_cross.png)
-	
-??? note "Gun Cursor - Dot"
-	![](/image/core/beetle_psx_hw/cursor_dot.png)	
+	??? note "*Display internal FPS - On*"
+	    ![](/image/core/beetle_psx_hw/fps.png)
 
-??? note "Gun Cursor - Off"
-	![](/image/core/beetle_psx_hw/cursor_off.png)	
-	
-- **Mouse Sensitivity** [beetle_psx_mouse_sensitivity] (5% to 200% in increments of 5%. **100% is default**)
+- **Line-to-Quad Hack** [beetle_psx_line_render] (**default**/aggressive/disabled)
 
-	Configure the 'Mouse' Device Type's sensitivity.
-	
-- **NegCon Twist Deadzone (percent)** [beetle_psx_negcon_deadzone] (**0**|5|10|15|20|25|30)
+	Certain games employ a special technique for drawing horizontal lines, which involves stretching single-pixel-high triangles across the screen in a manner that causes the PSX hardware to rasterise them as a row of pixels. Examples include Doom/Hexen, and the water effects in Soul Blade. When running such games with an Internal GPU Resolution higher than native, these triangles no longer resolve as a line, causing gaps to appear in the output image.
 
-	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+	Setting 'Line-to-Quad Hack' to 'Default' solves this issue by detecting small triangles and converting them as required.
 
-!!! attention
-	Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
-	
-	Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
-	
-	For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
+	The 'Aggressive' option will likely introduce visual glitches due to false positives, but is needed for correct rendering of some 'difficult' titles (e.g. Dark Forces, Duke Nukem).
 
-- **NegCon Twist Response** [beetle_psx_negcon_response] (**linear**|quadratic|cubic)
+- **Frame Duping (Speedup)** [beetle_psx_frame_duping] (**disabled**/enabled)
 
-	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
-	
-	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
-	
-	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
-	
-	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
-	
-!!! attention
-	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
-	
-	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
-	
-- **CD Access Method (restart)** [beetle_psx_cd_access_method] (**sync**/async/precache)
+	When enabled, provides a small performance increase by redrawing/reusing the last rendered frame (instead of presenting a new one) if the content of the current frame is unchanged based on the internal fps heuristic. May cause inaccurate behavior or lost animation frames, so it is not recommended to use this unless necessary.
 
-	The precache setting loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
-	
-- **Memcard 0 method** [beetle_psx_use_mednafen_memcard0_method] (**libretro**/mednafen)
+- **CPU Dynarec** [beetle_psx_cpu_dynarec] (**disabled**/execute/execute_once/run_interpreter)
 
-	Choose the savedata format used for Memcard slot 0 (libretro or mednafen) . Look above at the [Saves section](https://docs.libretro.com/library/beetle_psx/#saves) for an explanation regarding the libretro and mednafen formats.
-	
-- **Enable memory card 1** [beetle_psx_enable_memcard1] (Off/**On**)
+	Dynamically recompile CPU instructions to native instructions. Much faster than interpreter, but CPU timing is less accurate, and may have bugs.
 
-	Enable or disables Memcard slot 1. When disabled, games cannot save/load to Memcard slot 1. 
-	
-	**Memcard 1 must be enabled for game 'Codename Tenka'.**
-	
-- **Shared memcards (restart)** [beetle_psx_shared_memory_cards] (**Setting1**/Setting2)
+- **Dynarec Code Invalidation** [beetle_psx_dynarec_invalidate] (**full**/dma)
 
-	Games will share and save/load to the same memory cards.
-	
-	**The 'Memcard 0 method' core option needs to be set to 'mednafen' for the 'Shared memcards' core option to function properly.**
+	Some games require Full invalidation, some require DMA Only. This option has no effect when CPU Dynarec is not enabled.
+
+- **Dynarec DMA/GPU Event Cycles** [beetle_psx_dynarec_eventcycles] (**128**/256/384/512/640/768/896/1024)
+
+	Max cycles run by CPU before a GPU or DMA Update is checked, higher number will be faster, has much less impact on beetle interpreter than dynarec. Leave at 128 for default Beetle interpreter behavior when CPU Dynarec is not enabled.
+
+- **CPU Frequency Scaling (Overclock)** [beetle_psx_cpu_freq_scale] (50% to 750% in increments of 10%. Default: **100%(native)**)
+
+	Enable overclocking (or underclocking) of the emulated PSX's CPU. The default frequency of the MIPS R3000A-compatible 32-bit RISC CPU is 33.8688 MHz; running at higher frequencies can eliminate slowdown and improve frame rates in certain games at the expense of increased performance requirements.
+
+	Note that some games have an internal frame rate limiter and may not benefit from overclocking. It is generally not recommended to adjust this setting as it causes many games or portions of them to run at unintended speeds. This can lead to audio and video desynchronization, among other issues.
+
+	Leave at default for most games.
+
+- **GTE Overclock** [beetle_psx_gte_overclock] (**disabled**/enabled)
+
+	When enabled, reduces the latency of operations involving the emulated PSX's Geometry Transform Engine (CPU coprocessor used for calculations related to 3D projection - i.e. all 3D graphics) to 1 cycle per instruction and additionally eliminates all memory access or cache fetch latency. For games that make heavy use of the GTE, this can greatly improve frame rate (and frame time) stability at the expense of increased performance requirements.
+
+	Currently unstable -- leave off if unsure.
+
+- **GPU Rasterizer Overclock** [beetle_psx_gpu_overclock] (**1x(native)**/2x/4x/8x/16x/32x)
+
+	Enables overclocking of the 2D rasterizer contained within the emulated PSX's GPU. Does not improve 3D rendering, and in general has little effect.
+
+- **Skip BIOS** [beetle_psx_skip_bios] (**disabled**/enabled)
+
+	When enabled, skips the PSX BIOS animation normally displayed with starting content.
+
+	**Enabling this option will cause compatibility issues with a small minority of games (Saga Frontier, PAL copy protected games, etc).**
+
+	??? note "*Skip BIOS - Off*"
+	    ![](/image/core/beetle_psx_hw/bios.png)
+
+- **Core-Reported FPS Timing** [beetle_psx_core_timing_fps] (**force_progressive**/force_interlaced/auto_toggle)
+
+	Sets FPS timing that the core will report to the frontend. Automatic toggling will allow the core to switch between reporting progressive and interlaced rates, but may cause frontend video/audio driver reinits. Progressive timings are 59.826 for NTSC content and 49.761 for PAL content, and interlaced timings are 59.940 for NTSC content and 50.000 for PAL content.
+
+- **Core Aspect Ratio** [beetle_psx_aspect_ratio] (**corrected**/uncorrected/4:3)
+
+	Set core provided aspect ratio. This setting is ignored when the Widescreen Mode Hack or Display Full VRAM options are enabled. "4:3" forces the core aspect ratio to 4:3 without taking horizontal overscan cropping or visible scanlines into account. The "4:3" setting should not be used and is only provided as a legacy feature for users desiring old incorrect behavior from the core.
+
+- **Widescreen Mode Hack** [beetle_psx_widescreen_hack] (**disabled**/enabled)
+
+	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment/stretching issues in games that mix 3D and 2D elements. Leave off for most games.
+
+	??? note "*Widescreen mode hack - Off*"
+	    ![](/image/core/beetle_psx_hw/wide_off.png)
+
+	??? note "*Widescreen mode hack - On*"
+	    ![](/image/core/beetle_psx_hw/wide_on.png)
+
+- **Crop Horizontal Overscan** [beetle_psx_crop_overscan] (**enabled**/disabled)
+
+	By default, Beetle PSX includes horizontal padding (black bars or 'pillarboxes' on either side of the screen) to emulate the same black bars generated in analog video output by real PSX hardware. This horizontal padding can contain garbage pixels that are generated when the game's width mode is smaller than the display area width in the emulated GPU registers. Enabling 'Crop Horizontal Overscan' will remove this potentially glitchy horizontal overscan region.
+
+	Not all games will benefit from enabling this setting as shown in the examples below.
+
+	??? note "*Crop Overscan - Off (Game with Garbage Pixels)*"
+	    ![](/image/core/beetle_psx_hw/crop_off.png)
+
+	??? note "*Crop Overscan - On (Game with Garbage Pixels)*"
+	    ![](/image/core/beetle_psx_hw/crop_on.png)
+
+	??? note "*Crop Overscan - Off (Game with No Issues)*"
+	    ![](/image/core/beetle_psx_hw/scan_off.png)
+
+	??? note "*Crop Overscan - On (Game with No Issues)*"
+	    ![](/image/core/beetle_psx_hw/scan_on.png)
+
+	This option does not affect vertical overscan. Vertical overscan can be cropped using the Initial/Last Scanline core options.
+
+- **Additional Cropping** [beetle_psx_image_crop] (**disabled**/1px/2px/3px/4px/5px/6px/7px/8px)
+
+	When 'Crop Horizontal Overscan' is enabled, this option further reduces the width of the cropped image by the specified number of pixels.
+
+	Note: This can have unintended consequences. While the absolute width is reduced, the resultant video is still scaled to the currently set aspect ratio. Enabling 'Additional Cropping' may therefore cause horizontal stretching.
+
+- **Offset Cropped Image** [beetle_psx_image_offset] (**disabled**/-4px/-3px/-2px/-1px/+1px/+2px/+3px/+4px)
+
+	When 'Crop Horizontal Overscan' is enabled, allows the resultant cropped image to be offset horizontally to the right (positive) or left (negative) by the specified number of pixels. May be used to correct alignment issues.
+
+- **Initial Scanline - NTSC** [beetle_psx_initial_scanline] (0 to 40 in increments of 1. Default: **0**)
+
+	Selects the first displayed scanline when running NTSC content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+
+- **Last Scanline - NTSC** [beetle_psx_last_scanline] (210 to 239 in increments of 1. Default: **239**)
+
+	Selects the last displayed scanline when running NTSC content. Setting a value less than 239 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+
+- **Initial Scanline - PAL** [beetle_psx_initial_scanline_pal] (0 to 40 in increments of 1. Default: **0**)
+
+	Selects the first displayed scanline when running PAL content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
+
+- **Last Scanline - PAL** [beetle_psx_last_scanline_pal] (230 to 287 in increments of 1. Default: **287**)
+
+	Selects the last displayed scanline when running PAL content. Setting a value less than 287 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
+
+- **CD Access Method (Restart)** [beetle_psx_cd_access_method] (**sync**/async/precache)
+
+	Selects method used to read data from content disc images.
+
+	'sync' emulates original hardware.
+
+	'async' can alleviate stuttering on devices with slow storage.
+
+	'precache' loads the entire disc image into memory when starting content, incurring a small startup delay. This can improve in-game loading times and eliminate stutters due to emulated CD access, but may cause issues on systems with low memory.
+
+- **CD Loading Speed** [beetle_psx_cd_fastload] (**2x(native)**/4x/6x/8x/10x/12x/14x)
+
+	Selects disk access speed multiplier.
+
+	This speedhack can greatly reduce loading times at speeds higher than native but is known to introduce texture corruption errors, timing glitches, or loading screen softlocks in many titles. Some games will not work at all if loading speed is not set to native (e.g. Castlevania: Symphony of the Night).
+
+	**Reduce multiplier value if experiencing loading issues, freezes, etc.**
+
+- **Memory Card 0 Method (Restart)** [beetle_psx_use_mednafen_memcard0_method] (**libretro**/mednafen)
+
+	Choose the savedata format used for Memory Card 0. See the [Saves section](https://docs.libretro.com/library/beetle_psx_hw/#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
+
+	Note: This option must be set to 'mednafen' if the Shared Memcards option is enabled.
+
+- **Enable Memory Card 1 (Restart)** [beetle_psx_enable_memcard1] (**enabled**/disabled)
+
+	Selects whether to emulate a second memory card in Slot 1. When disabled, games can only access the memory card in Slot 0.
+
+	Note: Some games require this option to be disabled for correct operation (e.g. Codename Tenka).
+
+- **Shared Memory Cards (Restart)** [beetle_psx_shared_memory_cards] (**disabled**/enabled)
+
+	When enabled, games will save and load using the same memory card files. Note: The "Memcard 0 Method" option must be set to 'mednafen' for this option to function properly.
+
+	When disabled, separate memory card files will be generated for each title.
+
+	This option is useful for games in series such as Suikoden or Arc the Lad that check for save data from previous titles.
 
 <center>
 
@@ -447,11 +486,76 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 </center>
 
-- **Increase CD loading speed** [beetle_psx_cd_fastload] (**2x (native)**/4x/6x/8x/10x/12x/14x)
+- **Analog Self-Calibration** [beetle_psx_analog_calibration] (**disabled**/enabled)
 
-	Can greatly reduce the loading times in games.
+	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
 
-	**May not work correctly in all games. Some games may break if you set them past a certain speed.**
+	While modern analog sticks have circular logical ranges, older analog sticks such as those on the DualShock have logical ranges closer to squares and can report larger values at the intercardinal directions than modern analog sticks can. Games that expect these larger values will have issues controlling with modern analog sticks, which this option can solve by scaling modern analog stick values up.
+
+- **Enable DualShock Analog Mode Toggle** [beetle_psx_analog_toggle] (**disabled**/enabled)
+
+	When the input device type is set to DualShock, this option determines whether or not the Analog Button on that device can be toggled.
+
+	When this option is disabled, the DualShock input device will be locked in Analog Mode where the analog sticks are on.
+
+	When this option is enabled, the DualShock input device can be toggled between Digital Mode (analog sticks off) and Analog Mode (analog sticks on) much like real hardware by pressing and holding START+SELECT+L1+L2+R1+R2 for one second in lieu of a dedicated Analog Button.
+
+	Note: Some games may not respond to input when the DualShock is in Analog Mode. Either enable Analog Button Toggle and toggle the DualShock to Digital Mode or change your input device type to PlayStation Controller.
+
+- **Port 1: Multitap Enable** [beetle_psx_enable_multitap_port1] (**disabled**/enabled)
+
+	Enables/Disables multitap functionality on port 1.
+
+- **Port 2: Multitap Enable** [beetle_psx_enable_multitap_port2] (**disabled**/enabled)
+
+	Enables/Disables multitap functionality on port 2.
+
+- **Gun Input Mode** [beetle_psx_gun_input_mode] (**lightgun**/touchscreen)
+
+	When device type is set to 'Guncon / G-Con 45' or 'Justifier', specify whether to use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
+
+- **Gun Cursor** [beetle_psx_gun_cursor] (**cross**/dot/off)
+
+	Selects the gun cursor to be displayed on screen while using the the 'Guncon / G-Con 45' and 'Justifier' input device types. When disabled, cross hairs are always hidden.
+
+	??? note "*Gun Cursor - Cross*"
+	    ![](/image/core/beetle_psx_hw/cursor_cross.png)
+
+	??? note "*Gun Cursor - Dot*"
+	    ![](/image/core/beetle_psx_hw/cursor_dot.png)
+
+	??? note "*Gun Cursor - Off*"
+	    ![](/image/core/beetle_psx_hw/cursor_off.png)
+
+- **Mouse Sensitivity** [beetle_psx_mouse_sensitivity] (5% to 200% in increments of 5%. Default: **100%**)
+
+	Configure the response of the 'Mouse' input device type.
+
+- **NegCon Twist Response** [beetle_psx_negcon_response] (**linear**/quadratic/cubic)
+
+	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
+
+	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
+
+	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
+
+	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
+
+	!!! attention
+		A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
+
+		In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware and is the closest approximation of real hardware, enabling smooth/precise analog input.
+
+- **NegCon Twist Deadzone** [beetle_psx_negcon_deadzone] (**0%**/5%/10%/15%/20%/25%/30%)
+
+	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+
+	!!! attention
+		Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
+
+		Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+
+		For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
 
 ## User 1 - 8 device types
 
@@ -538,7 +642,7 @@ A list of known emulation bugs can be found here [https://forum.fobby.net/index.
 - [Beetle PSX Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
 
-## PSX
+## Libretro PSX cores
 
 - [PlayStation (Beetle PSX HW)](https://docs.libretro.com/library/beetle_psx_hw/)
 - [PlayStation (PCSX ReARMed)](https://docs.libretro.com/library/pcsx_rearmed/)

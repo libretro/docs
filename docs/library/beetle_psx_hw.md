@@ -1,5 +1,7 @@
 # PlayStation (Beetle PSX HW)
 
+*Last Updated: March 21, 2020*
+
 ## Background
 
 Beetle PSX HW is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode, excluding the Vulkan renderer, which is written in C++11 for the time being. Beetle PSX HW currently runs on Linux, OSX and Windows.
@@ -104,13 +106,13 @@ The Beetle PSX HW core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Beetle PSX HW core's core provided FPS is 59.941 for NTSC games and 49.76 for PAL games
+- The Beetle PSX HW core's core provided FPS is 59.826 for NTSC games and 49.761 for PAL games (non-interlaced rates) and is toggleable to 59.940 for NTSC games and 50.000 for PAL games (interlaced rates) through core options
 - The Beetle PSX HW core's core provided sample rate is 44100 Hz
 - The Beetle PSX HW core's base width is 320
 - The Beetle PSX HW core's base height is 240
 - The Beetle PSX HW core's max width is 700 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max width
 - The Beetle PSX HW core's max height is 576 when the 'Internal GPU resolution' is set to 1x. Raising the resolution past 1x will increase the max height
-- The Beetle PSX HW core's core provided aspect ratio is 4/3 when the 'Widescreen mode hack' core option is set to off. 16/9 when it's set to on
+- The Beetle PSX HW core's core provided aspect ratio is automatically set based on core options
 
 ## Loading content
 
@@ -167,15 +169,11 @@ Here's a m3u example done with Valkryie Profile
 
 #### Swapping disks
 
-Swapping disks follows this procedure
+Disks can be swapped through Quick Menu -> Disk Control in RetroArch. 
 
-1. Open tray (Disk Cycle Tray Status)
+If not using .m3u files, .cue files must be manually selected via the Load New Disk legacy feature.
 
-2. Change the Disk Index to the disk you want to swap to.
-
-3. Close tray (Disk Cycle Tray Status)
-
-4. Return to the game and wait a few seconds to let it take effect
+If using .m3u files, disks can be swapped by selecting Eject Disk, changing the Current Disk Index to your desired disk, and finally selecting Insert Disk.
 
 ### Compressed content
 
@@ -267,7 +265,7 @@ or
 - **Memcard slot 1: `Wild Arms 2 (USA).1.mcr**
 
 !!! attention
-	To import your old memory cards from other emulators, you need to rename them to either the Libretro savedata format or the Mednafen savedata format.
+	To import your old memory cards from other emulators, you need to rename them to either the Libretro (.srm) savedata format or the Mednafen (.mcr) savedata format. The Libretro (.srm) savedata format, when used with Beetle PSX, is internally identical to the Mednafen PSX (.mcr) savedata format, and can be converted between one another via renaming.
 
 !!! warning
 	Keep in mind that save states also include the state of the memory card; carelessly loading an old save state will **OVEWRITE** the memory card, potentially resulting in lost saved games. **You can set the 'Don't overwrite SaveRAM on loading savestate' option in RetroArch's Saving settings to On to prevent this.**
@@ -282,13 +280,15 @@ To manually change an option, search for that option's key in the core configura
 
 The default setting for each option will be highlighted in bold. Settings with (Restart) means that core has to be shut down for the new setting to be applied on next launch.
 
-- **Renderer (Restart)** [beetle_psx_hw_renderer] (**hardware**/software)
+- **Renderer (Restart)** [beetle_psx_hw_renderer] (**hardware**/hardware_gl/hardware_vk/software)
 
 	Chooses which video renderer will be used.
 
 	Software is the most accurate but generally has higher performance requirements when running at internal GPU resolutions higher than 1x. The software renderer also lacks certain enhancements exclusive to the hardware renderer.
 
-	Hardware is less accurate but may have improved performance over the software renderer at internal GPU resolutions of 2x and above on capable hardware. The hardware renderers also allow various graphical enhancements such as higher color depth, texture filtering, and PGXP. Choosing this setting will automatically select either the Vulkan or OpenGL renderer depending on the current libretro frontend video driver. If the provided video driver is not Vulkan or OpenGL 3.3-compatible then the core will fall back to the software renderer.
+	Hardware is less accurate but may have improved performance over the software renderer at internal GPU resolutions of 2x and above on capable hardware. The hardware renderers also allow various graphical enhancements such as higher color depth, texture filtering, and PGXP. Choosing **hardware** will automatically select either the Vulkan or OpenGL renderer depending on the current libretro frontend video driver. If the provided frontend video driver is not Vulkan or OpenGL (3.3 or higher) then the core will fall back to the software renderer at 1x internal resolution.
+
+	**hardware_gl** and **hardware_vk** allow the core to ignore the frontend preferred hardware context and attempt to force a specific hardware renderer. If the core is unable to do so, it will fall back to the software renderer at 1x internal resolution. The ability to force specific renderers may not be available on all platforms.
 
 	The hardware renderers have known issues -- check the compatibility section below or the core's [issue tracker](https://github.com/libretro/beetle-psx-libretro/issues) for more details.
 
@@ -381,7 +381,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*JINC2*"
 	    ![](/image/core/beetle_psx_hw/jinc2.png)
 
-- **Adaptive Smoothing** [beetle_psx_hw_adaptive_smoothing] (**enabled**/disabled)
+- **Adaptive Smoothing** [beetle_psx_hw_adaptive_smoothing] (**disabled**/enabled)
 
 	Vulkan Only
 
@@ -393,7 +393,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*Adaptive smoothing - On*"
 	    ![](/image/core/beetle_psx_hw/smooth_on.png)
 
-- **Supersampling (Downsample from Internal Upscale)** [beetle_psx_hw_super_sampling] (**disabled**/enabled)
+- **Supersampling (Downsample to Native Resolution)** [beetle_psx_hw_super_sampling] (**disabled**/enabled)
 
 	Vulkan Only
 
@@ -433,7 +433,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 - **Display Full VRAM** [beetle_psx_hw_display_vram] (**disabled**/enabled)
 
-	OpenGL Only
+	OpenGL/Vulkan Only
 
 	Visualizes full contents of the emulated PSX VRAM.
 
@@ -472,12 +472,12 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 - **Display Internal FPS** [beetle_psx_hw_display_internal_fps] (**disabled**/enabled)
 
-	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend.
+	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend. Reported values may be inaccurate.
 
 	??? note "*Display internal FPS - On*"
 	    ![](/image/core/beetle_psx_hw/fps.png)
 
-- **Line-to-Quad Hack** [beetle_psx_hw_lineRender] (**default**/aggressive/disabled)
+- **Line-to-Quad Hack** [beetle_psx_hw_line_render] (**default**/aggressive/disabled)
 
 	Certain games employ a special technique for drawing horizontal lines, which involves stretching single-pixel-high triangles across the screen in a manner that causes the PSX hardware to rasterise them as a row of pixels. Examples include Doom/Hexen, and the water effects in Soul Blade. When running such games with an Internal GPU Resolution higher than native, these triangles no longer resolve as a line, causing gaps to appear in the output image.
 
@@ -486,11 +486,23 @@ The default setting for each option will be highlighted in bold. Settings with (
 	The 'Aggressive' option will likely introduce visual glitches due to false positives, but is needed for correct rendering of some 'difficult' titles (e.g. Dark Forces, Duke Nukem).
 
 - **Frame Duping (Speedup)** [beetle_psx_hw_frame_duping] (**disabled**/enabled)
-	Software Renderer Only
+	Software Renderer and Vulkan only
 
-	When enabled, provides a small performance increase by redrawing/reusing the last rendered frame (instead of presenting a new one) if the content of the current frame is unchanged.
+	When enabled, provides a small performance increase by redrawing/reusing the last rendered frame (instead of presenting a new one) if the content of the current frame is unchanged based on the internal fps heuristic. May cause inaccurate behavior or lost animation frames, so it is not recommended to use this unless necessary.
 
-- **CPU Frequency Scaling (Overclock)** [beetle_psx_hw_cpu_freq_scale] (50% to 500% in increments of 10%. Default: **100%(native)**)
+- **CPU Dynarec** [beetle_psx_hw_cpu_dynarec] (**disabled**/execute/execute_once/run_interpreter)
+
+	Dynamically recompile CPU instructions to native instructions. Much faster than interpreter, but CPU timing is less accurate, and may have bugs.
+
+- **Dynarec Code Invalidation** [beetle_psx_hw_dynarec_invalidate] (**full**/dma)
+
+	Some games require Full invalidation, some require DMA Only. This option has no effect when CPU Dynarec is not enabled.
+
+- **Dynarec DMA/GPU Event Cycles** [beetle_psx_hw_dynarec_eventcycles] (**128**/256/384/512/640/768/896/1024)
+
+	Max cycles run by CPU before a GPU or DMA Update is checked, higher number will be faster, has much less impact on beetle interpreter than dynarec. Leave at 128 for default Beetle interpreter behavior when CPU Dynarec is not enabled.
+
+- **CPU Frequency Scaling (Overclock)** [beetle_psx_hw_cpu_freq_scale] (50% to 750% in increments of 10%. Default: **100%(native)**)
 
 	Enable overclocking (or underclocking) of the emulated PSX's CPU. The default frequency of the MIPS R3000A-compatible 32-bit RISC CPU is 33.8688 MHz; running at higher frequencies can eliminate slowdown and improve frame rates in certain games at the expense of increased performance requirements.
 
@@ -517,9 +529,17 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*Skip BIOS - Off*"
 	    ![](/image/core/beetle_psx_hw/bios.png)
 
+- **Core-Reported FPS Timing** [beetle_psx_hw_core_timing_fps] (**force_progressive**/force_interlaced/auto_toggle)
+
+	Sets FPS timing that the core will report to the frontend. Automatic toggling will allow the core to switch between reporting progressive and interlaced rates, but may cause frontend video/audio driver reinits. Progressive timings are 59.826 for NTSC content and 49.761 for PAL content, and interlaced timings are 59.940 for NTSC content and 50.000 for PAL content.
+
+- **Core Aspect Ratio** [beetle_psx_hw_aspect_ratio] (**corrected**/uncorrected/4:3)
+
+	Set core provided aspect ratio. This setting is ignored when the Widescreen Mode Hack or Display Full VRAM options are enabled. "4:3" forces the core aspect ratio to 4:3 without taking horizontal overscan cropping or visible scanlines into account. The "4:3" setting should not be used and is only provided as a legacy feature for users desiring old incorrect behavior from the core.
+
 - **Widescreen Mode Hack** [beetle_psx_hw_widescreen_hack] (**disabled**/enabled)
 
-	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment issues in games that mix 3D and 2D elements. Leave off for most games.
+	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment/stretching issues in games that mix 3D and 2D elements. Leave off for most games.
 
 	??? note "*Widescreen mode hack - Off*"
 	    ![](/image/core/beetle_psx_hw/wide_off.png)
@@ -529,9 +549,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 - **Crop Horizontal Overscan** [beetle_psx_hw_crop_overscan] (**enabled**/disabled)
 
-	By default, Beetle PSX includes horizontal padding (black bars or 'pillarboxes' on either side of the screen) to emulate the same black bars generated in analog video output by real PSX hardware. This horizontal padding can contain garbage pixels that are generated when the game's width mode is smaller than the display area width in the emulated GPU registers.
-
-	Enabling 'Crop Horizontal Overscan' will remove this potentially glitchy horizontal overscan region and stretch the remaining output to the full window width. Viewport width settings will need to be adjusted to unstretch content back to its original aspect ratio.
+	By default, Beetle PSX includes horizontal padding (black bars or 'pillarboxes' on either side of the screen) to emulate the same black bars generated in analog video output by real PSX hardware. This horizontal padding can contain garbage pixels that are generated when the game's width mode is smaller than the display area width in the emulated GPU registers. Enabling 'Crop Horizontal Overscan' will remove this potentially glitchy horizontal overscan region.
 
 	Not all games will benefit from enabling this setting as shown in the examples below.
 
@@ -548,8 +566,6 @@ The default setting for each option will be highlighted in bold. Settings with (
 	    ![](/image/core/beetle_psx_hw/scan_on.png)
 
 	This option does not affect vertical overscan. Vertical overscan can be cropped using the Initial/Last Scanline core options.
-
-	Currently only supported by the software renderer, as the hardware renderers will always output without pillarboxing.
 
 - **Additional Cropping** [beetle_psx_hw_image_crop] (**disabled**/1px/2px/3px/4px/5px/6px/7px/8px)
 
@@ -575,31 +591,17 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	Selects the first displayed scanline when running NTSC content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
-
 - **Last Scanline - NTSC** [beetle_psx_hw_last_scanline] (210 to 239 in increments of 1. Default: **239**)
 
 	Selects the last displayed scanline when running NTSC content. Setting a value less than 239 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
-
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 239 will cause vertical stretching unless a custom viewport is set in the frontend.
 
 - **Initial Scanline - PAL** [beetle_psx_hw_initial_scanline_pal] (0 to 40 in increments of 1. Default: **0**)
 
 	Selects the first displayed scanline when running PAL content. Setting a value greater than 0 will reduce the height of output images by cropping pixels from the topmost edge. May be used to counteract letterboxing built in to some games.
 
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values greater than 0 will cause vertical stretching unless a custom viewport is set in the frontend.
-
 - **Last Scanline - PAL** [beetle_psx_hw_last_scanline_pal] (230 to 287 in increments of 1. Default: **287**)
 
 	Selects the last displayed scanline when running PAL content. Setting a value less than 287 will reduce the height of output images by cropping pixels from the bottommost edge. May be used to counteract letterboxing built in to some games.
-
-	Note: While the absolute height is reduced, the resultant video is still scaled to the currently set aspect ratio. Values less than 287 will cause vertical stretching unless a custom viewport is set in the frontend.
-
-- **Analog Self-Calibration** [beetle_psx_hw_analog_calibration] (**disabled**/enabled)
-
-	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
-
-	While modern analog sticks have circular logical ranges, older analog sticks such as those on the DualShock have logical ranges closer to squares and can report larger values at the intercardinal directions than modern analog sticks can. Games that expect these larger values will have issues controlling with modern analog sticks, which this option can solve by scaling modern analog stick values up.
 
 - **CD Access Method (Restart)** [beetle_psx_hw_cd_access_method] (**sync**/async/precache)
 
@@ -611,7 +613,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	'precache' loads the entire disc image into memory when starting content, incurring a small startup delay. This can improve in-game loading times and eliminate stutters due to emulated CD access, but may cause issues on systems with low memory.
 
-- **Increase CD Loading Speed** [beetle_psx_hw_cd_fastload] (**2x(native)**/4x/6x/8x/10x/12x/14x)
+- **CD Loading Speed** [beetle_psx_hw_cd_fastload] (**2x(native)**/4x/6x/8x/10x/12x/14x)
 
 	Selects disk access speed multiplier.
 
@@ -619,19 +621,19 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 	**Reduce multiplier value if experiencing loading issues, freezes, etc.**
 
-- **Memory Card 0 Method** [beetle_psx_hw_use_mednafen_memcard0_method] (**libretro**/mednafen)
+- **Memory Card 0 Method (Restart)** [beetle_psx_hw_use_mednafen_memcard0_method] (**libretro**/mednafen)
 
-	Choose the savedata format used for Memory Card 0. See the [Saves section](https://docs.libretro.com/library/beetle_psx_hw/#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen.
+	Choose the savedata format used for Memory Card 0. See the [Saves section](https://docs.libretro.com/library/beetle_psx_hw/#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
 
 	Note: This option must be set to 'mednafen' if the Shared Memcards option is enabled.
 
-- **Enable Memory Card 1** [beetle_psx_hw_enable_memcard1] (**enabled**/disabled)
+- **Enable Memory Card 1 (Restart)** [beetle_psx_hw_enable_memcard1] (**enabled**/disabled)
 
 	Selects whether to emulate a second memory card in Slot 1. When disabled, games can only access the memory card in Slot 0.
 
 	Note: Some games require this option to be disabled for correct operation (e.g. Codename Tenka).
 
-- **Shared Memcards (Restart)** [beetle_psx_hw_shared_memory_cards] (**disabled**/enabled)
+- **Shared Memory Cards (Restart)** [beetle_psx_hw_shared_memory_cards] (**disabled**/enabled)
 
 	When enabled, games will save and load using the same memory card files. Note: The "Memcard 0 Method" option must be set to 'mednafen' for this option to function properly.
 
@@ -647,7 +649,13 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 </center>
 
-- **DualShock Analog Button Toggle** [beetle_psx_hw_analog_toggle] (**disabled**/enabled)
+- **Analog Self-Calibration** [beetle_psx_hw_analog_calibration] (**disabled**/enabled)
+
+	When enabled, monitors the max values reached by the input, using it as a calibration heuristic which then scales the analog coordinates sent to the emulator accordingly. For best results, rotate the sticks at max amplitude for the algorithm to get a good estimate of the scaling factor, otherwise it will adjust while playing.
+
+	While modern analog sticks have circular logical ranges, older analog sticks such as those on the DualShock have logical ranges closer to squares and can report larger values at the intercardinal directions than modern analog sticks can. Games that expect these larger values will have issues controlling with modern analog sticks, which this option can solve by scaling modern analog stick values up.
+
+- **Enable DualShock Analog Mode Toggle** [beetle_psx_hw_analog_toggle] (**disabled**/enabled)
 
 	When the input device type is set to DualShock, this option determines whether or not the Analog Button on that device can be toggled.
 
