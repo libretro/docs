@@ -44,7 +44,10 @@ There is a To-Do list for libretro/docs [here](https://docs.libretro.com/meta/to
     mkdocs build
     ```
 
-6. The documentation will be built to the `site` directory
+6. The documentation will be built to the `site` directory; preview any changes with MkDocs' built-in dev-server before submitting a pull request
+    ```
+    mkdocs serve
+    ```
 
 **References**
 
