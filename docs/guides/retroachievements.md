@@ -137,9 +137,9 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|:-----:|
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements utilizing SRAM will have issues**](https://github.com/SourMesen/Mesen/issues/642) |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Also supports FDS. |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | |
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements utilizing SRAM will have issues**](https://github.com/SourMesen/Mesen/issues/642) |
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         | |
