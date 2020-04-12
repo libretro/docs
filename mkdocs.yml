@@ -21,8 +21,8 @@ nav:
       - 'Sony':
         - 'PlayStation Portable': 'guides/install-psp.md'
         - 'PlayStation Vita': 'guides/install-psv.md'
-        - 'PlayStation 2': 'guides/install-ps2.md'
-        - 'PlayStation 3': 'guides/install-ps3.md'
+        - 'PlayStation2': 'guides/install-ps2.md'
+        - 'PlayStation3': 'guides/install-ps3.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md' 
         - 'Steam Link': 'guides/install-steamlink.md' 
