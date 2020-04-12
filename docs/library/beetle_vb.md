@@ -95,35 +95,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These Analglyph preset screenshots have been taken with the Palette core option set to black & red.
 
 ??? note "Anaglyph preset - Off"
-	![](/image/core/beetle_vboff.png)
+	![](/image/core/beetle_vb/off.png)
 	
 ??? note "Anaglyph preset - red & blue"
-	![](/image/core/beetle_vbred&blue.png)
+	![](/image/core/beetle_vb/red&blue.png)
 
 ??? note "Anaglyph preset - red & cyan"
-	![](/image/core/beetle_vbred&cyan.png)
+	![](/image/core/beetle_vb/red&cyan.png)
 
 ??? note "Anaglyph preset - red & electric cyan"
-	![](/image/core/beetle_vbred&electriccyan.png)
+	![](/image/core/beetle_vb/red&electriccyan.png)
 
 ??? note "Anaglyph preset - red & green"
-	![](/image/core/beetle_vbred&green.png)
+	![](/image/core/beetle_vb/red&green.png)
 
 ??? note "Anaglyph preset - green & magenta"
-	![](/image/core/beetle_vbgreen&magenta.png)
+	![](/image/core/beetle_vb/green&magenta.png)
 
 ??? note "Anaglyph preset - yellow & blue"
-	![](/image/core/beetle_vbyellow&blue.png)	
+	![](/image/core/beetle_vb/yellow&blue.png)	
 	
 - **Palette (restart)** [vb_color_mode] (**black & red**/black & white)
 
 	Choose which color palette to use.
 	
 ??? note "Palette - black & red"
-	![](/image/core/beetle_vbblack&red.png)
+	![](/image/core/beetle_vb/black&red.png)
 	
 ??? note "Palette - black & white"
-	![](/image/core/beetle_vbblack&white.png)
+	![](/image/core/beetle_vb/black&white.png)
 	
 - **Right Analog to Digital** [vb_right_analog_to_digital] (**Off**/On/invert x/invert y/invert both)
 
