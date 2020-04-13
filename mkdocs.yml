@@ -347,7 +347,7 @@ extra:
     primary: 'blue'
     accent:  'blue'
 theme:
-  name: 'material'
+  name: 'readthedocs'
   custom_dir: 'custom_theme'
   logo: 'image/branding/invader.png'
   favicon: 'image/branding/invader.png'
@@ -358,5 +358,3 @@ markdown_extensions:
   - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
-  - pymdownx.details
-  - pymdownx.superfences
