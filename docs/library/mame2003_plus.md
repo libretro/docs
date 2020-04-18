@@ -263,39 +263,39 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 
 | Core option | Description|
 | --- | --- |
-| 4-way joystick emulation on 8-way joysticks | See **4-way joystick simulation** section of this doc. |
-| Mouse Device | Set mouse device input to be read either from a mouse, a pointer (pointer, trackpad, touchscreen), or to be disabled. |
-| Show Lightgun crosshair | Toggle crosshair visibilty for lightgun games. |
-|Skip Disclaimer| Skip the copyright disclaimer message. |
-|Skip Warnings| _Advanced feature: changing from the default is not recommended in most cases._ Skip any driver warnings about emulation quality. |
-|Display MAME menu | Enable this core option to display the core's **MAME Menu** and then disable it when you have finished using the **MAME Menu**.  |
-|Specify Neo Geo BIOS (Restart core) | Manually specify your choice of Neo Geo BIOS from among those supported.  |
-|Specify Sega ST-V BIOS (Restart core) | Manually specify your choice of ST-V BIOS from among those supported. |
-|Use CD soundtrack (Restart core) | See **Alternate CD soundtrack support** in the **Audio samples** section of this doc. |
-|Share 2 player dial controls across one X/Y device | See the **2-player dial and spinner devices** section of this doc. |
-|Dual joystick mode | _Note: This option may affect stateless netplay between two users with the option set differently._ Reassigns the Player 2 joystick as a second joystick for Player 1. This is intended for emulating cabints with **Dual Joystick** designs.  |
-|Map right analog stick as buttons | Provides an alternative mapping for users with unused right analog sticks. |
-|Vector resolution multiplier (Restart core)| Attempts to create a higher quality emulation of vector display hardware by upscaling the emulated display to a higher resolution. |
-|Vector antialiasing| Enables or disables the **anti-aliasing** for vector games. |
-|Vector beam width | Sets the emulated width of the vector beam in pixels. This setting is only effective when **anti-aliasing** is enabled. |
+| 4-way joystick emulation on 8-way joysticks | See **4-way joystick simulation** section of this doc. ```mame2003-plus_four_way_emulation = "enabled|disabled"``` |
+| Mouse Device | Set mouse device input to be read either from a mouse, a pointer (pointer, trackpad, touchscreen), or to be disabled. ``` mame2003-plus_mouse_device = "mouse|pointer|disabled"``` |
+| Show Lightgun crosshair | Toggle crosshair visibilty for lightgun games. ```mame2003-plus_crosshair_enabled = "enabled|disabled"``` |
+|Skip Disclaimer| Skip the copyright disclaimer message. ```mame2003-plus_skip_disclaimer = "disabled|enabled"``` |
+|Skip Warnings| _Advanced feature: changing from the default is not recommended in most cases._ Skip any driver warnings about emulation quality. ```mame2003-plus_skip_warnings = "disabled|enabled"``` |
+|Display MAME menu | Enable this core option to display the core's **MAME Menu** and then disable it when you have finished using the **MAME Menu**. ```mame2003-plus_display_setup = "disabled|enabled"``` |
+|Specify Neo Geo BIOS (Restart core) | Manually specify your choice of Neo Geo BIOS from among those supported. ```mame2003-plus_neogeo_bios = "default|euro|euro-s1|us|us-e|asia|japan|japan-s2|unibios33|unibios20|unibios13|unibios11|unibios10|debug|asia-aes"``` |
+|Specify Sega ST-V BIOS (Restart core) | Manually specify your choice of ST-V BIOS from among those supported. ```mame2003-plus_stv_bios = "default|japan|japana|us|japan_b|taiwan|europe"``` |
+|Use CD soundtrack (Restart core) | See **Alternate CD soundtrack support** in the **Audio samples** section of this doc. ```mame2003-plus_use_alt_sound = "enabled|disabled"``` |
+|Share 2 player dial controls across one X/Y device | See the **2-player dial and spinner devices** section of this doc. ```mame2003-plus_dialsharexy = "disabled|enabled"``` |
+|Dual joystick mode | _Note: This option may affect stateless netplay between two users with the option set differently._ Reassigns the Player 2 joystick as a second joystick for Player 1. This is intended for emulating cabints with **Dual Joystick** designs. |
+|Map right analog stick as but  tons | Provides an alternative mapping for users with unused right analog sticks. |
+|Vector resolution multiplier (Restart core)| Attempts to create a higher quality emulation of vector display hardware by upscaling the emulated display to a higher resolution. ```mame2003-plus_vector_resolution = "1024x768|640x480|1280x960|1440x1080|1600x1200|original"``` |
+|Vector antialiasing| Enables or disables the **anti-aliasing** for vector games. ```mame2003-plus_vector_antialias = "enabled|disabled"``` |
+|Vector beam width | Sets the emulated width of the vector beam in pixels. This setting is only effective when **anti-aliasing** is enabled. ```mame2003-plus_vector_beam_width = "2|1|1.2|1.4|1.6|1.8|2.5|3|4|5|6|7|8|9|10|11|12"``` |
 |Vector translucency| Emulates the partial transparency of vector display hardware. |
-|Vector flicker| Emulates the flicker of vector display hardware. |
-|Vector intensity| Emulates the variable intensity of vector display hardware. |
-|DCS Speedhack| _Advanced feature: changing from the default is not recommended in most cases._ Use so-called "speed hacks" to improve the performance of DCS sound hardware. |
-|Locate system files within a subfolder | For historical reasons, MAME 2003-Plus reads system files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. |
-|Locate save files within a subfolder | For historical reasons, MAME 2003-Plus saves files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. |
-|TATE Mode| From the Japanese 縦 (ta-te) meaning "vertical", **TATE Mode** renders vertical games lengthwise along the display. This mode is intended for use with rotating monitors and portable devices that can make the full use of their viewable area for games which used vertical monitors.
-|Brightness| Simple brightness adjustment. |
-| Gamma correction | Simple gamma adjustment.  |
-|Frameskip| _Advanced feature: changing from the default is not recommended in most cases._ |
-|Sample Rate (KHz)| _Advanced feature: changing from the default is not recommended in most cases._ |
-|Input interface | _Advanced feature: changing from the default is not recommended in most cases._ **retropad**, the default option, processes input via the libretro retropad abstraction, including from any keyboard which are bound to the retropad. The **keyboard** setting only sends keyboard input directly to the core, ignoring the retropad. The **simultaneous** setting sends inputs both ways at the same time and is not recommended. This setting exists for historical reasons. |
-|Legacy Remapping | _Note: Using the legacy MAME control remapper may affect stateless netplay between two users with their MAME remappings set differently._ |
-|Display artwork (Restart core) | Display artwork packs from within the core, particularly "backdrop" artwork. |
-|Artwork resolution multiplier (Restart core)| Upscales games with artwork backs so that the artwork can be displayed at a higher resolution. |
-|NVRAM Bootstraps | _Advanced feature: changing from the default is not recommended in most cases._ |
-|Dip switch/Cheat input ports| _Advanced feature: changing from the default is not recommended in most cases._ Activates a few specific cheats that manipulate the dipswitch input system. |
-|Bypass audio skew (Restart core) | _Advanced feature: changing from the default is not recommended in most cases._ Bypass the frontend's "audio skew" feature which attempts to adjust the audio for games which displayed at framerates not native to modern displays. |
+|Vector flicker| Emulates the flicker of vector display hardware. ```mame2003-plus_vector_flicker = "20|0|10|30|40|50|60|70|80|90|1001.5|0.5|1|2|2.5|3"``` |
+|Vector intensity| Emulates the variable intensity of vector display hardware. ```mame2003-plus_vector_intensity  = "1.5|0.5|1|2|2.5|3"``` |
+|DCS Speedhack| _Advanced feature: changing from the default is not recommended in most cases._ Use so-called "speed hacks" to improve the performance of DCS sound hardware. ```mame2003-plus_dcs_speedhack = "enabled|disabled"``` |
+|Locate system files within a subfolder | For historical reasons, MAME 2003-Plus reads system files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. ```mame2003-plus_core_sys_subfolder = "enabled|disabled"```|
+|Locate save files within a subfolder | For historical reasons, MAME 2003-Plus saves files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. ```mame2003-plus_core_save_subfolder = "enabled|disabled"``` |
+|TATE Mode| From the Japanese 縦 (ta-te) meaning "vertical", **TATE Mode** renders vertical games lengthwise along the display. This mode is intended for use with rotating monitors and portable devices that can make the full use of their viewable area for games which used vertical monitors. ```mame2003-plus_tate_mode = "disabled|enabled"```|
+|Brightness| Simple brightness adjustment. ```mame2003-plus_brightness = ""``` |
+| Gamma correction | Simple gamma adjustment. ```mame2003-plus_gamma = "1.0|0.5|0.6|0.7|0.8|0.9|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0"``` |
+|Frameskip| _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_frameskip = "0|1|2|3|4|5"``` |
+|Sample Rate (KHz)| _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_sample_rate = "48000|8000|11025|22050|30000|44100"```|
+|Input interface | _Advanced feature: changing from the default is not recommended in most cases._ **retropad**, the default option, processes input via the libretro retropad abstraction, including from any keyboard which are bound to the retropad. The **keyboard** setting only sends keyboard input directly to the core, ignoring the retropad. The **simultaneous** setting sends inputs both ways at the same time and is not recommended. This setting exists for historical reasons. ```mame2003-plus_input_interface = "retropad|keyboard|simultaneous"``` |
+|Legacy Remapping | _Note: Using the legacy MAME control remapper may affect stateless netplay between two users with their MAME remappings set differently._ ```mame2003-plus_mame_remapping = "enabled|disabled"``` |
+|Display artwork (Restart core) | Display artwork packs from within the core, particularly "backdrop" artwork. ```mame2003-plus_display_artwork = "enabled|disabled"``` |
+|Artwork resolution multiplier (Restart core)| Upscales games with artwork backs so that the artwork can be displayed at a higher resolution. ```mame2003-plus_art_resolution = "1|2"``` |
+|NVRAM Bootstraps | _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_nvram_bootstraps = "enabled|disabled"```|
+|Dip switch/Cheat input ports| _Advanced feature: changing from the default is not recommended in most cases._ Activates a few specific cheats that manipulate the dipswitch input system. ```mame2003-plus_cheat_input_ports = "disabled|enabled"``` |
+|Bypass audio skew (Restart core) | _Advanced feature: changing from the default is not recommended in most cases._ Bypass the frontend's "audio skew" feature which attempts to adjust the audio for games which displayed at framerates not native to modern displays. ```mame2003-plus_machine_timing = "enabled|disabled"``` |
 
 -----------
 
