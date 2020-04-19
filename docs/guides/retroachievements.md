@@ -192,7 +192,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         | |
-| [BlastEm](https://github.com/libretro/blastem)                 | x         | |
+| [BlastEm](https://github.com/libretro/blastem)                 | ✔         | |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | |
 
