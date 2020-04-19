@@ -162,10 +162,9 @@ Because MAME 2003-Plus does not yet implement the libretro lightgun API, the cor
     Enabling this option will disable standard mouse support.
 
 
-### Analog controller support
+### Analog and digital controller support
 
-Currently MAME 2003-Plus only supports analog controls in RetroArch by virtue of the fact that RetroArch passes on some analog input data to the core regardless of whether the core has implemented the analog interface. It is out-of-spec behavior and it also doesn’t encompass the full analog functionality of the libretro analog controls API. 
-
+MAME 2003-Plus supports analog and digital controls, it comes with analog by default and you can switch to digital thanks to the Retroarch following setting ```Quick menu``` -> ```Options``` -> ```Control mapping``` -> ```digital```. 
 
 ### 4-way joystick simulation
 
@@ -273,6 +272,7 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 |Specify Sega ST-V BIOS (Restart core) | Manually specify your choice of ST-V BIOS from among those supported. ```mame2003-plus_stv_bios = "default|japan|japana|us|japan_b|taiwan|europe"``` |
 |Use CD soundtrack (Restart core) | See **Alternate CD soundtrack support** in the **Audio samples** section of this doc. ```mame2003-plus_use_alt_sound = "enabled|disabled"``` |
 |Share 2 player dial controls across one X/Y device | See the **2-player dial and spinner devices** section of this doc. ```mame2003-plus_dialsharexy = "disabled|enabled"``` |
+|Control Mapping | See the **Analog and digital controller support** section of this doc. ```mame2003-plus_analog = "analog|digital"``` |
 |Dual joystick mode | _Note: This option may affect stateless netplay between two users with the option set differently._ Reassigns the Player 2 joystick as a second joystick for Player 1. This is intended for emulating cabints with **Dual Joystick** designs. |
 |Map right analog stick as but  tons | Provides an alternative mapping for users with unused right analog sticks. |
 |Vector resolution multiplier (Restart core)| Attempts to create a higher quality emulation of vector display hardware by upscaling the emulated display to a higher resolution. ```mame2003-plus_vector_resolution = "1024x768|640x480|1280x960|1440x1080|1600x1200|original"``` |
@@ -285,7 +285,7 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 |Locate system files within a subfolder | For historical reasons, MAME 2003-Plus reads system files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. ```mame2003-plus_core_sys_subfolder = "enabled|disabled"```|
 |Locate save files within a subfolder | For historical reasons, MAME 2003-Plus saves files within a subfolder named `mame2003-plus` even though this is not part of the libretro API. ```mame2003-plus_core_save_subfolder = "enabled|disabled"``` |
 |TATE Mode| From the Japanese 縦 (ta-te) meaning "vertical", **TATE Mode** renders vertical games lengthwise along the display. This mode is intended for use with rotating monitors and portable devices that can make the full use of their viewable area for games which used vertical monitors. ```mame2003-plus_tate_mode = "disabled|enabled"```|
-|Brightness| Simple brightness adjustment. ```mame2003-plus_brightness = ""``` |
+|Brightness| Simple brightness adjustment. ```mame2003-plus_brightness = "1.0|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0"``` |
 | Gamma correction | Simple gamma adjustment. ```mame2003-plus_gamma = "1.0|0.5|0.6|0.7|0.8|0.9|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0"``` |
 |Frameskip| _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_frameskip = "0|1|2|3|4|5"``` |
 |Sample Rate (KHz)| _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_sample_rate = "48000|8000|11025|22050|30000|44100"```|
