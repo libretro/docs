@@ -28,6 +28,7 @@ Content that can be loaded by the Caprice32 core have the following file extensi
 - .cdt
 - .voc
 - .m3u
+- .cpr
 - .zip
 
 ## Databases
@@ -131,13 +132,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Self-explanatory.
 	
-- **Model:** [cap32_model] (**6128**|464)
+- **Model** [cap32_model] (**6128**|464|6128+)
 
 	Choose which Amstrad CPC model to emulate.
 	
-- **Ram size:** [cap32_ram] (**128**|64|192|512|576)
+- **Ram size** [cap32_ram] (**128**|64|192|512|576)
 
 	CPC physical RAM size in kB
+
+- **Status bar** [cap32_statusbar] (**disabled**|enabled)
+
+	Not yet implemented, future option.
 	
 - **Monitor Type** [cap32_scr_tube] (**color**|green|white)
 
@@ -161,11 +166,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 ??? note "scr_intensity - 15"
 	![](/image/core/caprice3215.png)
-	
-- **User (x) Joystick Configuration** [cap32_retrojoy0] (**joystick**|qaop|incentive)
 
-	Select Joy/Overlay configuration.
+- **Lang Layout** [cap32_lang_layout] (**english**|french|spanish)
+
+	Choose between english, french or spanish keyboard layout.
 	
+- **User 1 Joystick Configuration** [cap32_retrojoy0] (**joystick**|qaop|incentive)
+
+	Select Joy/Overlay configuration for player 1
+
+- **User 2 Joystick Configuration** [cap32_retrojoy1] (**joystick**|qaop|incentive|joystick_port2)
+
+	Select Joy/Overlay configuration for player 2
+
 ## Controllers
 
 The Caprice32 core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
