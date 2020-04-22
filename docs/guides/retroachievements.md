@@ -74,7 +74,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:-----:|
 | [Handy](https://github.com/libretro/libretro-handy)              | ✔         |       |
-| [Beetle Handy](https://github.com/libretro/beetle-lynx-libretro) | ✔         | Beetle Handy is incompatible with modern No-Intro romsets as they require headers to work properly. The regular Handy core does not have this issue. |
+| [Beetle Handy](https://github.com/libretro/beetle-lynx-libretro) | ✔         |       |
 
 ### Wonderswan / Wonderswan Color
 
@@ -222,8 +222,8 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                           | Supported | Notes |
 |----------------------------------------------------------------|:---------:|:-----:|
-| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | Sega CD support is a work in progress. |
-| [Picodrive](https://github.com/libretro/picodrive)             | x         | |
+| [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
+| [Picodrive](https://github.com/libretro/picodrive)             | ✔         | |
 
 ### Sega Saturn
 
