@@ -38,8 +38,8 @@ Brace usage follows "Allman style". The brace associated with a control statemen
 ```c
 while (x == y)
 {
-    something();
-    somethingelse();
+   something();
+   somethingelse();
 }
 
 finalthing();
@@ -60,7 +60,7 @@ else
 
 When possible, use whitespace to improve the readability of code that makes many assignment statements in a row, uses complex conditionals, or passes a large number of paramters to a function.
 
-**Example of aligning successive assignment statements*:
+**Example of aligning successive assignment statements**:
 
 ```c
 if (seq == 1157460427127406720ULL)
@@ -95,9 +95,10 @@ if (recording_driver_get_data_ptr())
 Coders who use the **vim** editor can create a `vimrc` configuration file with the following settings in order to pre-set RetroArch indentation style.
 
 ```
-set hls
-set ts=3
-set sw=3
+set tabstop=3
+set shiftwidth=3
+set expandtab
+set textwidth=80
 ```
 
 ## Standards for Libretro cores
