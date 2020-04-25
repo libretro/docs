@@ -62,13 +62,13 @@ The program flow of a frontend using the libretro API can be expressed as follow
 
 This function should return RETRO_API_VERSION, defined in libretro.h. It is used by the frontend to determine if ABI/API are mismatched. The ver- sion will be bumped should there be any non- compatible changes to the API. Changes to retro_* structures, as well as changes in publically visible functions and/or their arguments will warrant a bump in API version.
 
-#### `retro_init()`
-
-This function is called once, and gives the implementation a chance to initialize data structures.
-
 #### `retro_set_*()`
 
 Libretro is callback based. The frontend will set all callbacks at this stage, and the implementation must store these function pointers somewhere. The frontend can, at a later stage, call these.
+
+#### `retro_init()`
+
+This function is called once, and gives the implementation a chance to initialize data structures.
 
 #### Environment callback
 
