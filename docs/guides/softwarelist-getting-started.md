@@ -9,7 +9,8 @@ The terms software and software list are used to define non-arcade machines emul
 
 The libretro core ecosystem currently includes many multi software emulators, that support software emulation. Arcade (MAME), Arcade (MAME 2016) will be the main focus of this guide but the MULTI (MESS 2015) and MULTI (UME 2015) cores have this ability. Each requiring its own distinct version of "romsets" which the emulator supports.
 
-!!! tip Matching emulator and game versions is advised for maximum compatibility but you may find mis-matched combinations also work.  
+!!! tip
+    Matching emulator and game versions is advised for maximum compatibility but you may find mis-matched combinations also work.  
 
 ---
 
