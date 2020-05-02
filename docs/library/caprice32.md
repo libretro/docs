@@ -70,7 +70,7 @@ Frontend-level settings or features that the Caprice32 core respects.
 
 ### Directories
 
-The Caprice32 core's internal core name is 'cap32'
+The Caprice32 core's internal core name is 'cap32'.
 
 The Caprice32 core saves/loads to/from these directories.
 
@@ -84,24 +84,24 @@ When you have a multi disk game, you can use a m3u file to specify each disk of 
 
 A M3U file is a simple text file with one disk per line (see https://en.wikipedia.org/wiki/M3U).
 
-Example : **Alive (F).m3u**
+Example: **Alive (F).m3u**
 
     Alive (F) - Disk 1A.dsk
     Alive (F) - Disk 1B.dsk
 
 Path can be absolute or relative to the location of the M3U file.
 
-When a game ask for it, you can change the current disk in the RetroArch 'Disk Control' menu :
+When a game ask for it, you can change the current disk in the RetroArch 'Disk Control' menu:
 
- * Eject the current disk with 'Disk Cycle Tray Status'.
- * Select the right disk index.
- * Insert the new disk with 'Disk Cycle Tray Status'.
+* Eject the current disk with 'Disk Cycle Tray Status'
+* Select the right disk index
+* Insert the new disk with 'Disk Cycle Tray Status'
 
 ### Geometry and timing
 
-- The Caprice32 core's core provided FPS is 50
-- The Caprice32 core's core provided sample rate is 44.100
-- The Caprice32 core's core provided aspect ratio is 3/4
+* The Caprice32 core's core provided FPS is 50
+* The Caprice32 core's core provided sample rate is 44.100
+* The Caprice32 core's core provided aspect ratio is 3/4
 
 ## Usage
 
@@ -113,72 +113,47 @@ The mouse cursor can be controlled by RetroPad D-Pad inputs when the RetroPad Se
 
 Here are some actions you can do in page 2 of the virtual keyboard GUI.
 
-- "EXT" EXIT EMU
-- "SNA" SAVE SNA
-- "DSK" SWITCH DSK DRIVE A/B
-- "Col" SWTICH FGCOL ON/OFF
+* "EXT" EXIT EMU
+* "SNA" SAVE SNA
+* "DSK" SWITCH DSK DRIVE A/B
+* "Col" SWITCH FGCOL ON/OFF
 
 ## Core options
 
-The Caprice32 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Caprice32 core has the following option(s) that can be tweaked from the core options menu. 
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+!!! tip
+    Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Autorun** [cap32_autorun] (**enabled**|disabled)
+| Core option | Description | Default |
+| ---         | ---         | ---     |
+| Autorun     | If enabled, the core will run the first bas/bin found in the DSK. `cap32_autorun = "enabled|disabled"` | `enabled`     |
+| Combo Key   | See [Combo list](#combo-list) below. `cap32_combokey = "select|y|b|disabled"`                          |  `select`      |
+| Internal resolution   | Self-explanatory. `cap32_resolution = "384x272|400x300"`                                       | `384x272`     |
+| Model (Restart)       | Choose which Amstrad CPC model to emulate. `cap32_model = "6128|464|6128+"`                    | `6128`        |
+| Ram size (Restart)    | CPC physical RAM size in kB. `cap32_ram = "128|64|192|512|576"`                                | `128`         |
+| Status Bar            | Not yet implemented, future option. `cap32_statusbar = "disabled|enabled"`                     | `disabled`    |
+| Monitor Type          | Choose between a color display or a monochrome display. `cap32_scr_tube = "color|green|white"` | `color`       |
+| Monitor Intensity     | Screen cathodic tube intensity. `cap32_scr_intensity = "5|6|7|8|9|10|11|12|13|14|15"`          | `5`           |
+| CPC Language (Restart) | Choose between english, french or spanish keyboard layout. `cap32_lang_layout = "english|french|spanish"` | `english` |
+| User 1 Joystick Configuration | Select Joy/Overlay configuration for player 1. `cap32_retrojoy0 = "joystick|qaop|incentive"` | `joystick` |
+| User 2 Joystick Configuration | Select Joy/Overlay configuration for player 2. `cap32_retrojoy1 = "joystick|qaop|incentive|joystick_port2"` | `joystick` |
 
-	If enabled, the core will run the first bas/bin found in the DSK.
+!!! note "cap32_scr_tube = color"
+	![](../image/core/caprice32/tube_off.png)
 	
-- **Internal resolution** [cap32_resolution] (**384x272**|400x300)
-
-	Self-explanatory.
-	
-- **Model** [cap32_model] (**6128**|464|6128+)
-
-	Choose which Amstrad CPC model to emulate.
-	
-- **Ram size** [cap32_ram] (**128**|64|192|512|576)
-
-	CPC physical RAM size in kB
-
-- **Status bar** [cap32_statusbar] (**disabled**|enabled)
-
-	Not yet implemented, future option.
-	
-- **Monitor Type** [cap32_scr_tube] (**color**|green|white)
-
-	Choose between a color display or a monochrome display.
-
-??? note "cap32_scr_tube - color"
-	![](../image/core/caprice32tube_off.png)
-	
-??? note "cap32_scr_tube - green"
-	![](../image/core/caprice32tube_on.png)	
-
-- **scr_intensity** [cap32_scr_intensity] (**5**|6|7|8|9|10|11|12|13|14|15)
-
-	Screen cathodic tube intensity.
+!!! note "cap32_scr_tube = green"
+	![](../image/core/caprice32/tube_on.png)	
 	
 !!! attention
-	These 'scr_intensity' core option screenshots have been taken with the 'cap32_scr_tube' core option set to color.
+	These 'scr_intensity' core option screenshots have been taken with the 'cap32_scr_tube' core option set to 'color'.
 
-??? note "scr_intensity - 5"
-	![](../image/core/caprice325.png)
+!!! note "scr_intensity = 5"
+	![](../image/core/caprice32/5.png)
 	
-??? note "scr_intensity - 15"
-	![](../image/core/caprice3215.png)
-
-- **Lang Layout** [cap32_lang_layout] (**english**|french|spanish)
-
-	Choose between english, french or spanish keyboard layout.
+!!! note "scr_intensity = 15"
+	![](../image/core/caprice32/15.png)
 	
-- **User 1 Joystick Configuration** [cap32_retrojoy0] (**joystick**|qaop|incentive)
-
-	Select Joy/Overlay configuration for player 1
-
-- **User 2 Joystick Configuration** [cap32_retrojoy1] (**joystick**|qaop|incentive|joystick_port2)
-
-	Select Joy/Overlay configuration for player 2
-
 ## Controllers
 
 The Caprice32 core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -258,6 +233,8 @@ The Caprice32 core supports the following device type(s) in the controls menu, b
 | Select                   | ![](../image/retropad/retro_select.png)        | COMBO (see bellow)|
 | L3                       | ![](../image/retropad/retro_l3.png)            |                   |
 | R3                       | ![](../image/retropad/retro_r3.png)            |                   |
+
+#### COMBO LIST
 
 If you press **SELECT** you could make a combo with other buttons:
 
