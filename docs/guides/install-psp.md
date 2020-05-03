@@ -2,8 +2,11 @@
 
 ## PlayStation Portable
 
-**Note:** You currently need the have custom firmware(PRO-C) to run RetroArch on your PlayStation Portable.
-**Note:** PRO-C must be running before running RetroArch, if you run RetroArch before running PRO-C, data corrupt error will occur.
+!! Note
+   You currently need the have custom firmware(PRO-C) to run RetroArch on your PlayStation Portable.
+
+!! Warning
+   PRO-C must be running before running RetroArch, if you run RetroArch before running PRO-C, data corrupt error will occur.
 
 ## Prerequisites
 
