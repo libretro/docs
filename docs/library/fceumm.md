@@ -98,9 +98,9 @@ The FCEUmm core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The FCEUmm core's core provided FPS is NTSC 60.10, PAL 50.0, Dendy 50.0
+- The FCEUmm core's core provided FPS is NTSC 60.10, PAL/Dendy 50.0
 - The FCEUmm core's core provided sample rate is 48000 Hz
-- The FCEUmm core's base width is 256
+- The FCEUmm core's base width is 256 (602 when using NTSC Filters)
 - The FCEUmm core's base height is 240
 - The FCEUmm core's max width is 256 (602 when using NTSC Filters)
 - The FCEUmm core's max height is 240
@@ -295,28 +295,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "NTSC Filter - monochrome (desaturated + artifacts)"
 	![](/image/core/fceumm/blargg_monochrome_normal.png)
-
-- **NTSC Scanlines** [fceumm_ntsc_scanlines] (**disabled**|enabled)
-
-	Creates a scanline effect when using NTSC Filters.
-	
-!!! attention "Disclaimer"
-	These 'NTSC Scanline' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
-	
-??? note "ntsc filter - Off"
-	![](/image/core/fceumm/blargg_off.png)
-	
-??? note "composite + ntsc scanline"
-	![](/image/core/fceumm/blargg_composite_scanline.png)
-
-??? note "svideo + ntsc scanline"
-	![](/image/core/fceumm/blargg_svideo_scanline.png)
-
-??? note "rgb + ntsc scanline"
-	![](/image/core/fceumm/blargg_rgb_scanline.png)
-
-??? note "monochrome + ntsc scanline"
-	![](/image/core/fceumm/blargg_monochrome_scanline.png)
 
 - **Show Advanced System Options** [fceumm_show_adv_system_options] (**disabled**|enabled)
 
