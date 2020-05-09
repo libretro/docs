@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: fpscan/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Hello @${{ github.actor }} , thank you for submitting an issue! Please be sure to join our [Discord Channel](https://discord.gg/27Xxm2h)'
+        pr-message: 'Hello @${{ github.actor }} , thank you submitting a pull request! Please be sure to join our [Discord Channel](https://discord.gg/27Xxm2h)'
