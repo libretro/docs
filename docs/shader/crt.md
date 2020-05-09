@@ -20,7 +20,7 @@
 
 ![crt-easymode-halation](../image/shader/crt/crt-easymode-halation.png)
 
-* crt-easymode
+* crt-easymode 
 
 ![crt-easymode](../image/shader/crt/crt-easymode.png)
 
