@@ -1,8 +1,11 @@
 site_name: Libretro Docs
-site_url: 'http://docs.libretro.com/'
+site_url: 'https://docs.libretro.com'
+site_description: >-
+  This is RetroArch's document page, modification or development information outside of this repo may be incorrect.
 repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
+copyright: Copyright &copy; 2010 <a href="https://libretro.com">Libretro</a>
 nav:
   - 'About': 'index.md'
   - 'For Users':
@@ -21,8 +24,8 @@ nav:
       - 'Sony':
         - 'PlayStation Portable': 'guides/install-psp.md'
         - 'PlayStation Vita': 'guides/install-psv.md'
-        - 'PlayStation2': 'guides/install-ps2.md'
-        - 'PlayStation3': 'guides/install-ps3.md'
+        - 'PlayStation 2': 'guides/install-ps2.md'
+        - 'PlayStation 3': 'guides/install-ps3.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md' 
         - 'Steam Link': 'guides/install-steamlink.md' 
@@ -346,15 +349,69 @@ extra:
   palette:
     primary: 'blue'
     accent:  'blue'
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/libretro
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/libretro
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/libretro
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/libretro         
+  disqus: retroarch
+
 theme:
-  name: 'readthedocs'
-  custom_dir: 'custom_theme'
+  name: 'material'
+  custom_dir: overrides
+  include_search_page: false
+  search_index_only: true
+  language: en
+  features:
+    - tabs
+    #- instant
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
   logo: 'image/branding/invader.png'
   favicon: 'image/branding/invader.png'
+
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       linenums: true
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta   
   - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: libretro
+      repo: docs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
