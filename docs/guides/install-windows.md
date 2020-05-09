@@ -33,7 +33,7 @@ If you pick the installer package we recommend to use the default location, foll
 
 On the first run you will be greeted by this screen:
 
-![Screenshot](/image/retroarch/xmb/first_run.png)
+![Screenshot](/image/retroarch/ozone/first_run.jpg)
 
 From here you can launch content, change settings and build up your content collection.
 
@@ -80,7 +80,7 @@ You should always configure the following paths:
 
 RetroArch requires cores to run any content. You can download cores directly from RetroArch's interface by following this procedure:
 
-![Screenshot](/image/retroarch/xmb/core_updater.gif)
+![Screenshot](/image/retroarch/ozone/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**
@@ -95,7 +95,7 @@ After you have installed one or more cores you can run your content following th
 - Select the content that you want to run
 - If you have more than one compatible core you will be asked to select the core you want to use for that purpose
 
-![Screenshot](/image/retroarch/xmb/run_content.gif)
+![Screenshot](/image/retroarch/ozone/run_content.gif)
 
 !!! tip
     By default loading content will trigger a content scan. If your content matches with any of our databases it will be added to a playlist for easy access. You can find the playlists by navigating to the right of the main menu.
