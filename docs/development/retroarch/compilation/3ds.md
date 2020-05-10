@@ -34,7 +34,7 @@ To update your local copy from the repository run git pull
 
 ### Building RetroArch separately
 
-First, you need to compile 'Salamander'. To compile Salamander (for 3DS) run:
+First, you need to compile [Salamander](../glossary.md#salamander). To compile Salamander (for 3DS) run:
 
     make -f Makefile.ctr.salamander
 
