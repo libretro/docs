@@ -267,6 +267,7 @@ nav:
       - 'Licenses': 'development/licenses.md'
       - 'Frontends': 'development/frontends.md'
     - 'RetroArch Development':
+      - 'Glossary': 'development/retroarch/glossary.md'
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
       - 'Input':

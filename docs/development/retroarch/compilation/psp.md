@@ -22,7 +22,7 @@ To update your local copy from the repository run git pull
 
 ### Building RetroArch separately
 
-First, you need to compile 'Salamander'. To compile Salamander (for PlayStation Portable) run:
+First, you need to compile [Salamander](../glossary.md#salamander). To compile Salamander (for PlayStation Portable) run:
 
     make -f Makefile.psp1.salamander
 

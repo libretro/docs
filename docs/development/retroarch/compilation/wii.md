@@ -22,7 +22,7 @@ To update your local copy from the repository run git pull
 
 ### Building RetroArch separately
 
-First, you need to compile 'Salamander'. Salamander is the RetroArch frontend for embedded platforms for which the cores are statically linked to the frontend. It means that for each core there is a file which contains the code of the core and the frontend.
+First, you need to compile [Salamander](../glossary.md#salamander).
 To compile Salamander (for Wii) run:
 
     make -f Makefile.wii.salamander
