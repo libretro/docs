@@ -1,6 +1,6 @@
 # Netplay Getting Started / FAQ
 
-![](image/branding/netplay-logo.gif)
+![](/image/branding/netplay-logo.gif)
 
 ## FAQ
 
