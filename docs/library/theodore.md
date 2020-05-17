@@ -3,7 +3,7 @@
 ## Background
 
 Theodore is a Thomson MO/TO system emulator based on Daniel Coulom's DCTO8D/DCTO9P/DCMO5 emulators. [Thomson MO/TO](https://en.wikipedia.org/wiki/Thomson_computers) is a family of 8-bit home computers produced by French company Thomson SA between 1982 and 1989.
-At the time of this writing, Theodore emulates the following models of the MO/TO family: TO7, TO7/70, TO8, TO8D, TO9, TO9+, MO5 and MO6.
+Theodore emulates all the main models of the MO/TO family: TO7, TO7/70, TO8, TO8D, TO9, TO9+, MO5 and MO6.
 It also emulates the [Olivetti Prodest PC128](https://it.wikipedia.org/wiki/Olivetti_Prodest_PC_128), a rebranded MO6 for the Italian market.
 
 The Theodore core has been authored by
@@ -102,6 +102,8 @@ The Theodore core has the following option(s) that can be tweaked from the core 
 
 - **Auto run game** [theodore_autorun] (**disabled**|enabled)
 
+- **Virtual keyboard transparency** [theodore_vkb_transparency] (**0%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
+
 - **Floppy write protection** [theodore_floppy_write_protect]  (disabled|**enabled**)
 
 - **Tape write protection** [theodore_tape_write_protect]  (disabled|**enabled**)
@@ -124,13 +126,15 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 | RetroPad Inputs                      | User 1 input descriptors       |
 |--------------------------------------|--------------------------------|
-| ![](/image/retropad/retro_b.png)     | "Fire" button                  |
-| ![](/image/retropad/retro_x.png)     | Virtual keyboard: go up        |
-| ![](/image/retropad/retro_y.png)     | Virtual keyboard: go down      |
-| ![](/image/retropad/retro_select.png)| Virtual keyboard: keystroke    |
+| ![](/image/retropad/retro_b.png)     | "Fire" button / Press key when the virtual keyboard is displayed |
+| ![](/image/retropad/retro_y.png)     | Virtual keyboard: move up/down |
+| ![](/image/retropad/retro_select.png)| Virtual keyboard: show/hide    |
 | ![](/image/retropad/retro_start.png) | Start program<br>(See: [Usage](#usage)) |
 
-The order of the keys in the virtual keyboard is: digits (0->9) then letters (A->Z) then "Space" then "Enter".
+When the virtual keyboard is displayed, the D-pad is used to move the selected key and the B button is used to press the selected key.
+Long press the B button for a sticky key.
+The virtual keyboard can also be used with a touch screen.
+The transparency of the virtual keyboard can be set using the core's "Virtual keyboard transparency" option.
 
 ## Keyboard
 
