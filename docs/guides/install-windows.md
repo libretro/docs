@@ -33,7 +33,7 @@ If you pick the installer package we recommend to use the default location, foll
 
 On the first run you will be greeted by this screen:
 
-![Screenshot](/image/retroarch/ozone/first_run.jpg)
+![Screenshot](/image/retroarch/ozone/first_run.webp)
 
 From here you can launch content, change settings and build up your content collection.
 
