@@ -49,9 +49,9 @@ Frontend-level settings or features that the O2EM core respects.
 | Restart           | ✔         |
 | Saves             | ✕         |
 | States            | ✔         |
-| Rewind            | ✕         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
@@ -92,27 +92,31 @@ The O2EM core saves/loads to/from these directories.
 - The O2EM core's max height is 250
 - The O2EM core's core provided aspect ratio is 4/3
 
+## Core options
+
+The O2EM core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Virtual keyboard transparency** [o2em_vkb_transparency]  (**0%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
+
 ## Joypad
 
-| RetroPad Inputs                                | User 1 input descriptors |
-|------------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_y.png)             | 1                        |
+| RetroPad Inputs                              | User 1 input descriptors |
+|----------------------------------------------|--------------------------|
 | ![](/image/retropad/retro_dpad_up.png)       | Up                       |
 | ![](/image/retropad/retro_dpad_down.png)     | Down                     |
 | ![](/image/retropad/retro_dpad_left.png)     | Left                     |
 | ![](/image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](/image/retropad/retro_a.png)             | Fire                     |
-| ![](/image/retropad/retro_x.png)             | 2                        |
-| ![](/image/retropad/retro_l1.png)            | 3                        |
-| ![](/image/retropad/retro_r1.png)            | 4                        |
+| ![](/image/retropad/retro_b.png)             | Action / Press Key (Virtual Keyboard) |
+| ![](/image/retropad/retro_y.png)             | Move Virtual Keyboard Up/Down |
+| ![](/image/retropad/retro_select.png)        | Show/Hide Virtual Keyboard    |
 
-| RetroPad Inputs                                | User 2 input descriptors |
-|------------------------------------------------|--------------------------|
+| RetroPad Inputs                              | User 2 input descriptors |
+|----------------------------------------------|--------------------------|
 | ![](/image/retropad/retro_dpad_up.png)       | Up                       |
 | ![](/image/retropad/retro_dpad_down.png)     | Down                     |
 | ![](/image/retropad/retro_dpad_left.png)     | Left                     |
 | ![](/image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](/image/retropad/retro_a.png)             | Action                   |
+| ![](/image/retropad/retro_b.png)             | Action                   |
 
 In some games, for example UFO/Satellite Attack, the original had the joypads swapped so that Player 1 was on Joypad 2. If you only use one Joypad, a workaround is to provide identical assignments of both Retropads to one joystick and save it as Game Remap or Core Remap.
 
