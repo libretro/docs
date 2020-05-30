@@ -28,5 +28,6 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 - [Twitter](https://twitter.com/libretro)
 - [YouTube](https://www.youtube.com/Libretro)
 - [RetroArch Gameplays](https://www.youtube.com/channel/UC_yi-5YZEf8LnapjkP3HL8A)
+- [Dailymotion](https://dailymotion.com/retroarch)
 - [Discord](https://discord.gg/27Xxm2h)
 - [Teespring](https://teespring.com/stores/retroarch)
