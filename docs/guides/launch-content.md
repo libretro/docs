@@ -26,4 +26,4 @@ If you setup your controller take note of the RetroPad concept. With this you wi
 To return to RetroArch, press F1 or the RetroArch button on mobile. This will bring up the menu where you can change core settings, or otherwise configure the current content, or close it.
 
 !!! warning
-    On PC's pressing *Esc* will close RetroArch without saving.
+    On PC's pressing *Esc* twice will close RetroArch without saving.
