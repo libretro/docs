@@ -48,7 +48,7 @@ RetroArch relies on peer-to-peer networking to reduce network latency and ensure
 
 ### Import content
 
-![import-content](/image/retroarch/ozone/import-content.jpg)
+![import-content](/image/retroarch/ozone/import-content.png)
 
 Either you scan automatically so that your content that matches the last database will add to the playlists or you scan manually without being dependent on the database so you can freely add your contents to playlists.
 
