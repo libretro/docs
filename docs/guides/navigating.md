@@ -28,6 +28,8 @@ Here you will find all the options available to configure RetroArch, from Graphi
 
 ### Favourites
 
+![Favorites](/image/retroarch/ozone/favorites.png)
+
 Favourites allow you to maintain a short list of your favourite games. You can add the content you want to add to your favorites from the Quick Menu or before launching it. So you can quickly access your favorite content.
 
 ### History
@@ -45,6 +47,8 @@ These tabs will handle all your media. Images will contain any screenshots you'v
 RetroArch relies on peer-to-peer networking to reduce network latency and ensure the best possible experience. Allows multi-player over the internet. Host or join a network gaming session. Rediscover the joy of multiplayer games using RetroArch's builtin netplay lobby. You can also use the spectator mode to watch others play.
 
 ### Import content
+
+![import-content](/image/retroarch/ozone/import-content.jpg)
 
 Either you scan automatically so that your content that matches the last database will add to the playlists or you scan manually without being dependent on the database so you can freely add your contents to playlists.
 
