@@ -1,10 +1,8 @@
 # Retroarch Getting Started guide for users of the accessibility mode
 
-
 ## Introduction
 
 This user guide is to aid users of screen readers who are newcomers to Retroarch begin using the program. Retroarch is an emulation front-end which allows one to play many games from many video game consoles, Arcades, and vintage computers. As of version 1.8.2, the user interface is accessible to blind people. Using the AI service within games, one is able to read textual content: menus, character dialog, statistics screens, ETC. Along with the game’s sound design, this makes many games which were playable even more enjoyable, or games which use only text playable at all. For now, accessibility mode works on Windows, macOS, and Linux operating systems.
-
 
 ## Retroarch Terminology
 
@@ -17,29 +15,27 @@ This user guide is to aid users of screen readers who are newcomers to Retroarch
 -   **Netplay:** Playing an originally offline video game across the local network or Internet.
 -   **bind:** To link one thing with another. In Retroarch terms, to link a key or button with an action.
 
-
 ## Download Retroarch
 
 To download Retroarch, go to [Retroarch's download page](https://www.retroarch.com/?page=platforms) and choose the download for your system. Windows users should choose the 64-bit installer version, unless they have an old computer with a 32-bit operating system. Mac users should download the Intel version under the “Apple macOS / OSX” heading. Linux users should see if version 1.8.2 or higher is in their package manager, and get that and the cores through APT, Pacman, DNF, and so on, or compile it yourself. For iOS, Android, tvOS, and game consoles, accessibility features are not implemented.
 
-
 ## Open the Program
 
 After installing Retroarch, launch the program in the usual way according to your system. Right now, it will not speak, but if it opens, that means it’s at least installed correctly, and you can press escape twice to close it, or using the usual quit command of your operating system.
-
 
 ## Turn on accessibility
 
 To turn on the accessibility feature, do the following:
 
 -   Open Retroarch.
--   Press **Right arrow**.
+- Press **Left Arrow**, **Down Arrow**, then **Enter**.
 -   Press **up arrow** seven times.
 -   Press **Enter** twice, or **Enter** then **Right arrow**.
 -   You’ll hear “Retroarch accessibility on.”
 
-Now, you can either keep exploring the menu, or quit and reopen Retroarch for a fresh start. Accessibility mode will stay on, and if not, after enabling accessibility, arrow left once, down to configuration, press **Enter**, and enable “save on exit” with **enter**.
+Now, you can either keep exploring the menu, or quit and reopen Retroarch for a fresh start. Accessibility mode will stay on, and if not, after enabling accessibility, arrow left once, then down arrow until you hear "settings", then arrow down to configuration, press **Enter**, and enable “save on exit” with **enter**.
 
+**note**: in later versions of Retroarch, the default menu has been set to Ozone. For an easier experience, especially with gamepads, you may switch to the "XMB" menu by going to settings, drivers, menu driver, and changing "ozone" to "XMB." The rest of this guide assumes that you are using the XMB menu.
 
 ## Set Narrator Speed
 
@@ -47,7 +43,6 @@ If you find that Retroarch is speaking too quickly or too slowly, you can change
 
 -   From the Retroarch accessibility menu, press **Down arrow**.
 -   Press the **Left arrow** to decrease the speed, and the **Right arrow** to increase it.
-
 
 ## Navigate the Interface
 
