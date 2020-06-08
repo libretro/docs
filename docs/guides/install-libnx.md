@@ -2,7 +2,11 @@
 
 ## Nintendo Switch
 
-**Note:** you currently need the Atmosphère custom firmware to run RetroArch on your Switch.
+!!! Note 
+	You need to have Atmosphère custom firmware to run RetroArch on your Switch.
+
+!!! Warning
+    Hardware or software changes on your device may damage your device.
 
 ### Downloading and installing
 

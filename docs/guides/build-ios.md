@@ -2,6 +2,9 @@
 
 The following is a non-developer guide to install RetroArch on non-jailbroken iOS devices. We're going to try to improve the process and possibly include the iOS cores in a download, but until then, here is a way to build RetroArch to get it running on your iPhone, iPad, or Apple TV.
 
+!!! note
+    You can find latest built in [here](http://buildbot.libretro.com/stable/1.8.8/apple/tvos/RetroArch-tvOS.ipa) 
+
 ## Building From Source using Xcode
 
 This is probably the most straightforward way to install RetroArch without having to resort to 3rd party tools. It does however require:

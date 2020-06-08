@@ -1,17 +1,20 @@
 # Downloading, Installing and Updating RetroArch for iOS devices.
 
-### Downloading and installing
+## Downloading and installing
 ___
-There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](https://buildbot.libretro.com/stable/1.7.7/apple/ios/RetroArch.ipa)(iOS11+) to download now.
+There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/1.8.8/apple/ios/RetroArch.ipa)(iOS11+) to download now.
 
 ## Prerequisites
 
 - **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
 - **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android. 
 
-### Installation
+!!! Warning
+    RetroArch or Libretro is not affiliated with Cydia Impactor in anyway. You can also use alternative applications that can do this function.
 
-#### Installation for non-Jailbreak Devices
+## Installation
+
+### Installation for non-Jailbreak Devices
 ___
 
 In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The name of this application is Cydia Impactor and is not associated with LibRetro or RetroArch. You need to provide the Cydia Impactor yourself, you can reach the desired result using your favorite search engine.
@@ -39,7 +42,7 @@ We will continue from here on your iOS device. You can see `RetroArch` on your s
 
 Now you are free to run RetroArch. 
 
-#### Content transfer via iTunes
+## Content transfer via iTunes
 ___
 **Unknown Sources** To avoid compromising the safety of your device, always use applications provided through official channels.
 
