@@ -5,6 +5,9 @@
 - **CFW** You must have custom firmware to run RetroArch on your 3DS or 2DS.
 - **Installer** You can either use `FBI installer` or `Rosalina Menu` from `Luma`.
 
+!!! Warning
+    Hardware or software changes on your device may damage your device.
+
 ### Downloading and installing
 
 There are multiple ways of downloading RetroArch for your 3DS or 2DS.

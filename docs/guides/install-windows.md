@@ -5,7 +5,15 @@
 
 First decide if you want a stable release or a nightly. 
 
+### Stable
+
+The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
+
 Stable release are [here](https://buildbot.libretro.com/stable), Simply click on the lastest version, navigate to *Windows*, and then select the architecture of your computer.
+
+### Nightly
+
+This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
 
 The current nightly is [here](https://buildbot.libretro.com/nightly/windows/).
 
@@ -18,13 +26,15 @@ Both options provide you with the lastest RetroArch, the only difference is that
 
 ## Installing
 
-If you pick the 7z archive package, extract it in a folder that doesn't require administrator permissions such as *C:\Users\yourusername\RetroArch*. Don't extract it to *Program Files* or your Windows folder.
+If you pick the 7z archive package, extract it in a folder that doesn't require administrator permissions such as *C:\Users\yourusername\RetroArch* or any other drive. Don't extract it to *Program Files* or your Windows folder. This could case some issues.
 
 ## Updating
 
 You can update the installation by downloading the latest **20XX-XX-XX-RetroArch.7z** package and overwriting the executable.
 
 If you pick the installer package we recommend to use the default location, follow the installation steps and you should be good to go. You can update the installer version by downloading the latest version and re-running the installer.
+
+You can also update to nightly via _Desktop Menu_ by pressing F5 which is default key. `Tools > Online Updater > Update RetroArch (nightly)`. This will update current release to latest built from buildbot which you can find [here](http://buildbot.libretro.com/nightly/windows/).
 
 !!! Warning
     If you were running a stable release prior to 1.4.0. you will need to update the system libraries. You can do so by downloading the full **RetroArch.7z** package or **redist.7z** from the download locations.
@@ -39,7 +49,7 @@ From here you can launch content, change settings and build up your content coll
 
 ## Keyboard Controls
 
-The RetroArch user interface is designed with gamepad navigation in mind but it also features robust keyboard and mouse support. Learn more about keyboard input at [RetroArch Keyboard Controls](https://buildbot.libretro.com/.docs/guides/retroarch-keyboard-controls/).
+The RetroArch user interface is designed with gamepad navigation in mind but it also features robust keyboard and mouse support. Learn more about keyboard input at [Input and Controls](https://docs.libretro.com/guides/input-and-controls/).
       
 ## Gamepad Controls
 
@@ -80,7 +90,7 @@ You should always configure the following paths:
 
 RetroArch requires cores to run any content. You can download cores directly from RetroArch's interface by following this procedure:
 
-![Screenshot](/image/retroarch/ozone/core_updater.gif)
+![Core updater](/image/retroarch/ozone/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**
@@ -95,7 +105,7 @@ After you have installed one or more cores you can run your content following th
 - Select the content that you want to run
 - If you have more than one compatible core you will be asked to select the core you want to use for that purpose
 
-![Screenshot](/image/retroarch/ozone/run_content.gif)
+![Run content](/image/retroarch/ozone/run_content.gif)
 
 !!! tip
     By default loading content will trigger a content scan. If your content matches with any of our databases it will be added to a playlist for easy access. You can find the playlists by navigating to the right of the main menu.

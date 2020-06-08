@@ -2,7 +2,11 @@
 
 ## PlayStation Vita
 
-**Note:** You currently need the have custom firmware(HENkaku) to run RetroArch on your PlayStation Vita.
+!!! Note 
+	You need to have custom firmware(HENkaku) to run RetroArch on your PlayStation Vita.
+
+!!! Warning
+    Hardware or software changes on your device may damage your device.
 
 ## Prerequisites
 

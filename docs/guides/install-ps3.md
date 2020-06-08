@@ -2,7 +2,11 @@
 
 ## Sony Playstation 3
 
-**Note:** you currently need the any-CFW(Rebug, Ferrox etc.) custom firmware to run RetroArch on your PlayStation 3.
+!!! Note 
+	You need to have any-CFW(Rebug, Ferrox etc.) custom firmware to run RetroArch on your PlayStation 3.
+
+!!! Warning
+    Hardware or software changes on your device may damage your device.
 
 ## Prerequisites
 
@@ -21,7 +25,7 @@ There are two types of CFW files. One of them is `CEX` and the other is `DEX`. C
 
 You can find a bundle with RetroArch, all the cores and all the assets for `CEX` and `DEX` by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down untill PlayStation 3 section. 
 
-#### Installing
+## Installing
 
 Installation is also very simple. Just extract the archive to the root of your USB. Put your USB to right USB port. Use the CFW package installer to select and install RetroArch's pkg file. You can watch the short video Demonstration by clicking on the image below.
 
