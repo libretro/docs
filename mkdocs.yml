@@ -274,7 +274,8 @@ nav:
       - 'Input':
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
         - 'Parallel Port Joypads': 'development/retroarch/input/parallel-port-joypads.md'
-      - 'Adding Translations': 'development/retroarch/new-translations.md'
+      - 'Adding Translations(not active)': 'development/retroarch/new-translations.md'
+      - 'Adding Translations with Crowdin': 'development/retroarch/new-translations-crowdin.md'
       - 'Network Protocols':
         - 'Netplay': 'development/retroarch/netplay.md'
         - 'Network Control Interface': 'development/retroarch/network-control-interface.md'
