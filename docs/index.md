@@ -26,6 +26,7 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 - [Forum](https://forums.libretro.com/)
 - [Facebook](https://www.facebook.com/libretro)
 - [Facebook Group](https://www.facebook.com/groups/retroarch/)
+- [Facebook Watch](https://www.facebook.com/watch/libretro/)
 - [Twitter](https://twitter.com/libretro)
 - [YouTube](https://www.youtube.com/Libretro)
 - [RetroArch Gameplays](https://www.youtube.com/RetroArchOfficial)
