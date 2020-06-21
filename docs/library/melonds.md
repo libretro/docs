@@ -2,9 +2,6 @@
 
 ## Background
 
-!!! warning
-	The melonDS core does not have touchscreen control yet.
-
 An up-and-coming Nintendo DS emulator by StapleButter, ported to libretro.
 
 ### Author/License
@@ -57,7 +54,7 @@ Frontend-level settings or features that the melonDS core respects.
 | Netplay           | ✕         |
 | Core Options      | ✕         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
