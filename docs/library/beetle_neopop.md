@@ -45,7 +45,7 @@ Frontend-level settings or features that the Beetle NeoPop core respects.
 | Netplay           | ✔ (not link-cable emulation)         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
