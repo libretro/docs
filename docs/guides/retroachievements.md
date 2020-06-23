@@ -87,14 +87,29 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:-----:|
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✔         | Requires games in `coleco` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
+
+### Vectrex
+
+| Core                                              | Supported | Notes |
+|---------------------------------------------------|:---------:|:-----:|
+| [vecx](https://github.com/libretro/libretro-vecx) | ✔         | |
+
+### MSX / MSX2
+
+| Core                                                     | Supported | Notes |
+|----------------------------------------------------------|:---------:|:-----:|
+| [blueMSX](https://github.com/libretro/blueMSX-libretro/) | ✔         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)       | ✔         | Requires games in `msx` subdirectory, exact archives just like arcade. Not all games may be linked for this core. MSX2 is not supported. |
 
 ### PC Engine / PC Engine CD
 
 | Core                                                                    | Supported | Notes |
 |-------------------------------------------------------------------------|:---------:|:-----:|
-| [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         | Does not support SuperGrafx games. |
-| [Beetle PCE](https://github.com/libretro/beetle-pce-fast-libretro)      | ✔         | Slightly behind in updates. |
-| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         | |
+| [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro) | ✔         | Higher speed. Does not support SuperGrafx games. |
+| [Beetle PCE](https://github.com/libretro/beetle-pce-libretro)           | ✔         | Higher accuracy, lower speed. Supports SuperGrafx games. |
+| [Beetle SGX](https://github.com/libretro/beetle-supergrafx-libretro)    | ✔         | Higher speed. Supports SuperGrafx games. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)                      | ✔         | Requires games in `pce`, `tg16`, or `sgx` subdirectories, exact archives just like arcade. Not all games may be linked for this core. CD is not supported. |
 
 ### PC-8000 / PC-8800
 
@@ -119,6 +134,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         | |
 | [VBA-M](https://github.com/libretro/vbam-libretro)        | ✔         | |
 | [mGBA](https://github.com/libretro/mgba)                  | ✔         | |
+| [Mesen-S](https://github.com/SourMesen/Mesen-S/)          | ✔         | Currently the only supported core with complete SGB support. |
 | [Emux GB](https://github.com/libretro/emux)               | ✕         | |
 | [TGB Dual](https://github.com/libretro/tgbdual-libretro)  | ✕         | |
 
@@ -137,12 +153,13 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|:-----:|
-| [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Also supports FDS. |
+| [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Full FDS support |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         | |
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | [**Achievements utilizing SRAM will have issues**](https://github.com/SourMesen/Mesen/issues/642) |
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✔/✕       | Full FDS support, [**NES Achievements utilizing SRAM will have issues**](https://github.com/SourMesen/Mesen/issues/642) |
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         | |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✕         | Requires games in `nes` or `fds` subdirectories, exact archives just like arcade. Not supported at this time. |
 
 ### Nintendo 64
 
@@ -161,13 +178,15 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                                         | Supported | Notes |
 |------------------------------------------------------------------------------|:---------:|:-----:|
-| [Snes9x](https://github.com/libretro/snes9x)                                 | ✔         | |
+| [Snes9x](https://github.com/libretro/snes9x)                                 | ✔         | High speed, moderate accuracy. Actively maintained. |
 | [Snes9x 2010](https://github.com/libretro/snes9x2010)                        | ✔         | |
 | [Snes9x 2005](https://github.com/libretro/snes9x2005)                        | ✔         | |
 | [Snes9x 2005 Plus](https://github.com/libretro/snes9x2005)                   | ✔         | |
 | [Snes9x 2002](https://github.com/libretro/snes9x2002)                        | ✔         | |
+| [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | High accuracy, high performance cost. Actively maintained. |
 | [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✔         | |
 | [bsnes](https://github.com/libretro/bsnes-libretro)                          | ✕         | |
+| [bsnes-hd](https://github.com/DerKoun/bsnes-hd)                              | ✕         | |
 | [bsnes 2014 Accuracy](https://github.com/libretro/bsnes-libretro)            | ✔         | |
 | [bsnes 2014 Balanced](https://github.com/libretro/bsnes-libretro)            | ✔         | |
 | [bsnes 2014 Performance](https://github.com/libretro/bsnes-libretro)         | ✔         | |
@@ -175,7 +194,6 @@ You can also check the progress of your friends and add comments on their trophi
 | [bsnes-mercury Balanced](https://github.com/libretro/bsnes-mercury)          | ✔         | |
 | [bsnes-mercury Performance](https://github.com/libretro/bsnes-mercury)       | ✔         | |
 | [bsnes C++98 (v085)](https://github.com/libretro/bsnes-libretro-cplusplus98) | ✔         | |
-| [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | |
 | [higan Accuracy](https://gitlab.com/higan/higan)                             | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
 | [nSide Balanced](https://github.com/libretro/nSide)                          | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
 
@@ -193,14 +211,15 @@ You can also check the progress of your friends and add comments on their trophi
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         | |
 | [BlastEm](https://github.com/libretro/blastem)                 | ✔         | |
-| [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | |
+| [Emux SMS](https://github.com/libretro/emux)                   | ✕         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `megadriv` or `sms` subdirectories, exact archives just like arcade. Not supported at this time. |
 
 ### Sega 32X
 
-| Core                                                           | Supported | Notes |
-|----------------------------------------------------------------|:---------:|:-----:|
-| [Picodrive](https://github.com/libretro/picodrive)             | ✔         | Support is extremely variable. |
+| Core                                               | Supported | Notes |
+|----------------------------------------------------|:---------:|:-----:|
+| [Picodrive](https://github.com/libretro/picodrive) | ✔         | Emulation quality can be dodgy. |
 
 ### Game Gear
 
@@ -209,6 +228,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `gamegear` subdirectory, exact archives just like arcade. Not supported at this time. |
 
 ### SG-1000
 
@@ -217,6 +237,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro/)       | ✔         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✔         | Requires games in `sg1000` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
 
 ### Sega CD
 
@@ -240,11 +261,18 @@ You can also check the progress of your friends and add comments on their trophi
 |------------------------------------------------------------------|:---------:|:-----:|
 | [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         | |
 | [RACE](https://github.com/libretro/RACE)                         | ✔         | |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)               | ✕         | Requires games in `ngp` subdirectory, exact archives just like arcade. Not supported at this time. |
 
 ### Sony Playstation
 
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:-----:|
-| [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | |
+| [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | Identical to Beetle PSX, with extra hardware features. High accuracy. |
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | |
-| [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | |
+| [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
+
+### 3DO
+
+| Core                                                | Supported | Notes |
+|-----------------------------------------------------|:---------:|:-----:|
+| [Opera](https://github.com/libretro/opera-libretro) | ✔         | |
