@@ -34,3 +34,4 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 - [Discord](https://discord.gg/27Xxm2h)
 - [Teespring](https://teespring.com/stores/retroarch)
 - [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
+- [Patreon](https://www.patreon.com/libretro)
