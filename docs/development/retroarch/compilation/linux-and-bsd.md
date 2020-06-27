@@ -24,7 +24,7 @@ sudo dnf install make automake gcc gcc-c++ kernel-devel mesa-libEGL-devel libv4l
 
 #### Satisfying dependencies under Debian/Ubuntu
 ```bash
-apt-get -y install build-essential libxkbcommon-dev zlib1g-dev libfreetype6-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev nvidia-cg-toolkit nvidia-cg-dev libavcodec-dev libsdl2-dev libsdl-image1.2-dev libxml2-dev yasm
+apt-get -y install build-essential libxkbcommon-dev zlib1g-dev libfreetype6-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev nvidia-cg-toolkit nvidia-cg-dev libavcodec-dev libsdl2-dev libsdl-image1.2-dev libxml2-dev yasm libx11-xcb-dev
 ```
 
 #### Satisfying dependencies under Alpine
