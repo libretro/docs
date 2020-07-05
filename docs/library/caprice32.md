@@ -16,7 +16,7 @@ The Caprice32 core is licensed under
 
 - [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -61,7 +61,7 @@ Frontend-level settings or features that the Caprice32 core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -306,4 +306,4 @@ Choose AMSTRAD KEYBOARD in Quick Menu > Controls to customize your retropad keys
 
 #### Amstrad - CPC
 
-- [Amstrad - CPC (CrocoDS)](https://docs.libretro.com/library/crocods/)
+- [Amstrad - CPC (CrocoDS)](crocods.md)

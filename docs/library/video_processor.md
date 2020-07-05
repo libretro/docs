@@ -22,7 +22,7 @@ The Video Processor core is licensed under
 
 - [BSD-2-Clause](https://github.com/jaredmcneill/libretro-v4l2/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Features
 
@@ -48,7 +48,7 @@ Frontend-level settings or features that the Video Processor core respects.
 | Camera            | -         |
 | Location          | -         |
 | Subsystem         | -         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | -         |
+| [Softpatching](../guides/softpatching.md) | -         |
 | Disk Control      | -         |
 | Username          | -         |
 | Language          | -         |

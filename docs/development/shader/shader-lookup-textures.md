@@ -30,4 +30,4 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0,
 
 ## Results: a shader for drawing a background border
 
-![Using a shader to draw a border](/image/development/shaders/lookup-texture-shader.jpg)
+![Using a shader to draw a border](../../image/development/shaders/lookup-texture-shader.jpg)

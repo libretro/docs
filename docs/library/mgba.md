@@ -12,7 +12,7 @@ The mGBA core is licensed under
 
 - [MPLv2.0](https://github.com/libretro/mgba/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -65,7 +65,7 @@ Frontend-level settings or features that the mGBA core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -122,7 +122,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Use BIOS file if found** [mgba_use_bios] (**ON**|OFF)
 	
-	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](https://docs.libretro.com/library/mgba/#bios) for more information.
+	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](mgba.md#bios) for more information.
 	
 - **Skip BIOS intro** [mgba_skip_bios] (**OFF**|ON)
 
@@ -131,7 +131,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Skips the BIOS intro when a BIOS is present in RetroArch's system directory is used.
 
 ??? note "Skip BIOS intro - Off"
-    ![](/image/core/mgbabios.png)	
+    ![](../image/core/mgba/bios.png)	
 
 - **Use Super Game Boy borders (requires restart)** [mgba_sgb_borders] (**ON**|OFF)
 
@@ -157,26 +157,26 @@ Rumble only works in the mGBA core when
 
 ## Joypad
 
-![](/image/controller/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)          |
-| Turbo B                  | ![](/image/retropad/retro_y.png)          |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)          |
-| Turbo A                  | ![](/image/retropad/retro_x.png)          |
-| L                        | ![](/image/retropad/retro_l1.png)         |
-| R                        | ![](/image/retropad/retro_r1.png)         |
-| Turbo L                  | ![](/image/retropad/retro_l2.png)         |
-| Turbo R                  | ![](/image/retropad/retro_r2.png)         |
-| Darken Solar Sensor      | ![](/image/retropad/retro_l3.png)         |
-| Brighten Solar Sensor    | ![](/image/retropad/retro_r3.png)         |
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Turbo B                  | ![](../image/retropad/retro_y.png)          |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| Turbo A                  | ![](../image/retropad/retro_x.png)          |
+| L                        | ![](../image/retropad/retro_l1.png)         |
+| R                        | ![](../image/retropad/retro_r1.png)         |
+| Turbo L                  | ![](../image/retropad/retro_l2.png)         |
+| Turbo R                  | ![](../image/retropad/retro_r2.png)         |
+| Darken Solar Sensor      | ![](../image/retropad/retro_l3.png)         |
+| Brighten Solar Sensor    | ![](../image/retropad/retro_r3.png)         |
 
 ## Compatibility
 
@@ -192,18 +192,18 @@ Please file game bugs on the issue tracker [here](https://github.com/mgba-emu/mg
 
 ## GBA
 
-- [Game Boy Advance (Beetle GBA)](https://docs.libretro.com/library/beetle_gba/)
-- [Game Boy Advance (gpSP)](https://docs.libretro.com/library/gpsp/)
-- [Game Boy Advance (Meteor)](https://docs.libretro.com/library/meteor/)
-- [Game Boy Advance (VBA Next)](https://docs.libretro.com/library/vba_next/)
-- [Game Boy Advance (VBA-M)](https://docs.libretro.com/library/vba_m/)
+- [Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Game Boy Advance (gpSP)](gpsp.md)
+- [Game Boy Advance (Meteor)](meteor.md)
+- [Game Boy Advance (VBA Next)](vba_next.md)
+- [Game Boy Advance (VBA-M)](vba_m.md)
 
 ## GB/GBC
 
-- [Game Boy / Game Boy Color (Emux GB)](https://docs.libretro.com/library/emux_gb/)
-- [Game Boy / Game Boy Color (Gambatte)](https://docs.libretro.com/library/gambatte/)
-- [Game Boy / Game Boy Color (SameBoy)](https://docs.libretro.com/library/sameboy/)
-- [Game Boy / Game Boy Color (TGB Dual)](https://docs.libretro.com/library/tgb_dual/)
-- [Game Boy / Game Boy Color (Gearboy)](https://docs.libretro.com/library/gearboy/)
-- [SNES / Super Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [SNES / Super Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
+- [Game Boy / Game Boy Color (Emux GB)](emux_gb.md)
+- [Game Boy / Game Boy Color (Gambatte)](gambatte.md)
+- [Game Boy / Game Boy Color (SameBoy)](sameboy.md)
+- [Game Boy / Game Boy Color (TGB Dual)](tgb_dual.md)
+- [Game Boy / Game Boy Color (Gearboy)](gearboy.md)
+- [SNES / Super Famicom (higan Accuracy)](higan_accuracy.md)
+- [SNES / Super Famicom (nSide Balanced)](nside_balanced.md)

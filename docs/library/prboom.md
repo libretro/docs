@@ -12,7 +12,7 @@ The PrBoom core is licensed under
 
 - [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -58,7 +58,7 @@ Frontend-level settings or features that the PrBoom core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -248,10 +248,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Configure the resolution. Requires a restart.
 	
 ??? note "Internal resolution - 320x200"
-	![](/image/core/prboom320x200.png)
+	![](../image/core/prboom/320x200.png)
 	
 ??? note "Internal resolution - 1920x1200"
-	![](/image/core/prboom1920x1200.png)	
+	![](../image/core/prboom/1920x1200.png)	
 	
 - **Mouse active when using Gamepad** [prboom-mouse_on] (**disabled**|enabled)
 
@@ -278,42 +278,42 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 
 | User 1 input descriptors for 'Gamepad Classic' device type | RetroPad Inputs                             | PrBoom inputs   |
 |------------------------------------------------------------|---------------------------------------------|-----------------|
-| Use                                                        | ![](/image/retropad/retro_b.png)          | Use             |
-| Run                                                        | ![](/image/retropad/retro_y.png)          | Run             |
-| Show/Hide Map                                              | ![](/image/retropad/retro_select.png)     | Show/Hide Map   |
-| Show/Hide Menu                                             | ![](/image/retropad/retro_start.png)      | Show/Hide Menu  |
-| D-Pad Up                                                   | ![](/image/retropad/retro_dpad_up.png)    | D-Pad Up        |
-| D-Pad Down                                                 | ![](/image/retropad/retro_dpad_down.png)  | D-Pad Down      |
-| D-Pad Left                                                 | ![](/image/retropad/retro_dpad_left.png)  | D-Pad Left      |
-| D-Pad Right                                                | ![](/image/retropad/retro_dpad_right.png) | D-Pad Right     |
-| Fire                                                       | ![](/image/retropad/retro_a.png)          | Fire            |
-| Strafe                                                     | ![](/image/retropad/retro_x.png)          | Strafe          |
-| Strafe Left                                                | ![](/image/retropad/retro_l1.png)         | Strafe Left     |
-| Strafe Right                                               | ![](/image/retropad/retro_r1.png)         | Strafe Right    |
-| Previous Weapon                                            | ![](/image/retropad/retro_l2.png)         | Previous Weapon |
-| Next Weapon                                                | ![](/image/retropad/retro_r2.png)         | Next Weapon     |
+| Use                                                        | ![](../image/retropad/retro_b.png)          | Use             |
+| Run                                                        | ![](../image/retropad/retro_y.png)          | Run             |
+| Show/Hide Map                                              | ![](../image/retropad/retro_select.png)     | Show/Hide Map   |
+| Show/Hide Menu                                             | ![](../image/retropad/retro_start.png)      | Show/Hide Menu  |
+| D-Pad Up                                                   | ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up        |
+| D-Pad Down                                                 | ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down      |
+| D-Pad Left                                                 | ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left      |
+| D-Pad Right                                                | ![](../image/retropad/retro_dpad_right.png) | D-Pad Right     |
+| Fire                                                       | ![](../image/retropad/retro_a.png)          | Fire            |
+| Strafe                                                     | ![](../image/retropad/retro_x.png)          | Strafe          |
+| Strafe Left                                                | ![](../image/retropad/retro_l1.png)         | Strafe Left     |
+| Strafe Right                                               | ![](../image/retropad/retro_r1.png)         | Strafe Right    |
+| Previous Weapon                                            | ![](../image/retropad/retro_l2.png)         | Previous Weapon |
+| Next Weapon                                                | ![](../image/retropad/retro_r2.png)         | Next Weapon     |
 
 | User 1 input descriptors for 'Gamepad Modern' device type | RetroPad Inputs                                | PrBoom inputs           |
 |-----------------------------------------------------------|------------------------------------------------|-------------------------|
-| Menu Cancel                                               | ![](/image/retropad/retro_b.png)             | Menu Cancel             |
-| Quick Save                                                | ![](/image/retropad/retro_y.png)             | Quick Save              |
-| Show/Hide Map                                             | ![](/image/retropad/retro_select.png)        | Show/Hide Map           |
-| Show/Hide Menu                                            | ![](/image/retropad/retro_start.png)         | Show/Hide Menu          |
-| D-Pad Up                                                  | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                |
-| D-Pad Down                                                | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down              |
-| D-Pad Left                                                | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left              |
-| D-Pad Right                                               | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right             |
-| Menu Select                                               | ![](/image/retropad/retro_a.png)             | Menu Select             |
-| Quick Load                                                | ![](/image/retropad/retro_x.png)             | Quick Load              |
-| Previous Weapon                                           | ![](/image/retropad/retro_l1.png)            | Previous Weapon         |
-| Next Weapon                                               | ![](/image/retropad/retro_r1.png)            | Next Weapon             |
-| Use                                                       | ![](/image/retropad/retro_l2.png)            | Use                     |
-| Fire                                                      | ![](/image/retropad/retro_r2.png)            | Fire                    |
-| Toggle Run                                                | ![](/image/retropad/retro_l3.png)            | Toggle Run              |
-| 180 Turn                                                  | ![](/image/retropad/retro_r3.png)            | 180 Turn                |
-|                                                           | ![](/image/retropad/retro_left_stick.png) X  | Strafe Left/Right       |
-|                                                           | ![](/image/retropad/retro_left_stick.png) Y  | Move Forwards/Backwards |
-|                                                           | ![](/image/retropad/retro_right_stick.png) X | Look Left/Right         |
+| Menu Cancel                                               | ![](../image/retropad/retro_b.png)             | Menu Cancel             |
+| Quick Save                                                | ![](../image/retropad/retro_y.png)             | Quick Save              |
+| Show/Hide Map                                             | ![](../image/retropad/retro_select.png)        | Show/Hide Map           |
+| Show/Hide Menu                                            | ![](../image/retropad/retro_start.png)         | Show/Hide Menu          |
+| D-Pad Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                |
+| D-Pad Down                                                | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down              |
+| D-Pad Left                                                | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left              |
+| D-Pad Right                                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right             |
+| Menu Select                                               | ![](../image/retropad/retro_a.png)             | Menu Select             |
+| Quick Load                                                | ![](../image/retropad/retro_x.png)             | Quick Load              |
+| Previous Weapon                                           | ![](../image/retropad/retro_l1.png)            | Previous Weapon         |
+| Next Weapon                                               | ![](../image/retropad/retro_r1.png)            | Next Weapon             |
+| Use                                                       | ![](../image/retropad/retro_l2.png)            | Use                     |
+| Fire                                                      | ![](../image/retropad/retro_r2.png)            | Fire                    |
+| Toggle Run                                                | ![](../image/retropad/retro_l3.png)            | Toggle Run              |
+| 180 Turn                                                  | ![](../image/retropad/retro_r3.png)            | 180 Turn                |
+|                                                           | ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right       |
+|                                                           | ![](../image/retropad/retro_left_stick.png) Y  | Move Forwards/Backwards |
+|                                                           | ![](../image/retropad/retro_right_stick.png) X | Look Left/Right         |
 
 ## Keyboard and Mouse
 
@@ -330,7 +330,7 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 | Keyboard Right Control                          | Fire            |
 | Wheel Up                                        | Next Weapon     |
 | Wheel Down                                      | Previous Weapon |
-| ![](/image/retromouse/retro_left.png) Mouse 1 | Fire            |
+| ![](../image/retromouse/retro_left.png) Mouse 1 | Fire            |
 
 | RetroKeyboard/Mouse inputs                            | Movement        |
 |-------------------------------------------------------|-----------------|
@@ -347,10 +347,10 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 | Keyboard Caps Lock                                    | Autorun         |
 | Keyboard Slash /                                      | 180 Turn        |
 | Keyboard Space                                        | Use             |
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Turn Left/Right |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | Strafe          |
-| ![](/image/retromouse/retro_middle.png) Mouse 3     | Use             |
-| ![](/image/retromouse/retro_middle.png) Mouse 3     | Forward         |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Turn Left/Right |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Strafe          |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Use             |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Forward         |
 
 | RetroKeyboard/Mouse inputs | Game      |
 |----------------------------|-----------|
@@ -396,4 +396,4 @@ The PrBoom core supports the following device type(s) in the controls menu, bold
 
 ## id Software
 
-- [Quake 1 (TyrQuake)](https://docs.libretro.com/library/tyrquake/)
+- [Quake 1 (TyrQuake)](tyrquake.md)

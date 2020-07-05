@@ -14,7 +14,7 @@ The Hatari core is licensed under
 
 - [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -62,7 +62,7 @@ Frontend-level settings or features that the Hatari core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -191,17 +191,17 @@ The Hatari core supports the following device type(s) in the controls menu, bold
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| Enter GUI                | ![](/image/retropad/retro_y.png)          |
-| Mouse mode toggle        | ![](/image/retropad/retro_select.png)     |
-| Keyboard overlay         | ![](/image/retropad/retro_start.png)      |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](/image/retropad/retro_dpad_right.png) |
-| Fire                     | ![](/image/retropad/retro_a.png)          |
-| Joystick number          | ![](/image/retropad/retro_l1.png)         |
-| Mouse speed              | ![](/image/retropad/retro_r1.png)         |
-| Toggle m/k status        | ![](/image/retropad/retro_l2.png)         |
+| Enter GUI                | ![](../image/retropad/retro_y.png)          |
+| Mouse mode toggle        | ![](../image/retropad/retro_select.png)     |
+| Keyboard overlay         | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| Fire                     | ![](../image/retropad/retro_a.png)          |
+| Joystick number          | ![](../image/retropad/retro_l1.png)         |
+| Mouse speed              | ![](../image/retropad/retro_r1.png)         |
+| Toggle m/k status        | ![](../image/retropad/retro_l2.png)         |
 
 #### Keyboard
 
@@ -349,9 +349,9 @@ The Hatari core supports the following device type(s) in the controls menu, bold
 
 | RetroMouse Inputs                                     | Hatari core inputs |
 |-------------------------------------------------------|--------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
 ## Compatibility
 

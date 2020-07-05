@@ -30,7 +30,7 @@ The Craft core is licensed under
 
 - [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -67,7 +67,7 @@ Frontend-level settings or features that the Craft core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |

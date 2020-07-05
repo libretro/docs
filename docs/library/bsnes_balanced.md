@@ -8,7 +8,7 @@ This core has been compiled with the Balanced profile.
 
 Highly accurate SNES emulation. Whether to use the Accuracy, or Balanced or Performance core depends on how much accuracy you want to give up for game performance. 
 
-Please check the [compatibility section](https://docs.libretro.com/library/bsnes_balanced/#compatibility) for more information.
+Please check the [compatibility section](#compatibility) for more information.
 
 ### Author/License
 
@@ -20,7 +20,7 @@ The bsnes Balanced core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -112,7 +112,7 @@ Frontend-level settings or features that the bsnes Balanced core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✔         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -142,7 +142,7 @@ The bsnes Balanced core saves/loads to/from these directories.
 ## Super GameBoy
 
 !!! warning
-	Super GameBoy support in this core is **Windows only**, and has **buggy save state support** and **visual glitches**. **Use the [higan Accuracy core](https://docs.libretro.com/library/higan_accuracy#super-gameboy-support) or the [nSide Balanced core](https://docs.libretro.com/library/nside_balanced#super-gameboy-support) for simplified, functional, and easily accessible Super Gameboy support.**
+	Super GameBoy support in this core is **Windows only**, and has **buggy save state support** and **visual glitches**. **Use the [higan Accuracy core](higan_accuracy.md#super-gameboy-support) or the [nSide Balanced core](nside_balanced.md#super-gameboy-support) for simplified, functional, and easily accessible Super Gameboy support.**
 
 For Super GameBoy support, you need sgb.boot.rom (in RetroArch's System directory), a GameBoy ROM and a Super GameBoy ROM.
 
@@ -156,19 +156,19 @@ There are two ways to access the Subsystem API.
 
 First, we load our GameBoy ROM through 'Load Super GameBoy' in RetroArch's Main Menu.
 
-![](/image/core/bsnes/menu1.png)
+![](../image/core/bsnes/menu1.png)
 
-![](/image/core/bsnes/gb.png)
+![](../image/core/bsnes/gb.png)
 
 Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
 
-![](/image/core/bsnes/menu2.png)
+![](../image/core/bsnes/menu2.png)
 
-![](/image/core/bsnes/sgb.png)
+![](../image/core/bsnes/sgb.png)
 
 Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
 
-![](/image/core/bsnes/start.png)
+![](../image/core/bsnes/start.png)
 
 **The other way is to launch RetroArch with commandline like this.**
 
@@ -179,7 +179,7 @@ retroarch -L {path to bsnes core} {path to Super GameBoy ROM} --subsystem sgb {p
 ## MSU-1
 
 !!! attention
-	MSU-1 support in this core is complex. **Use the [Snes9x core](https://docs.libretro.com/library/snes9x#msu-1-support) for simplified and easily accessible MSU-1 support.**
+	MSU-1 support in this core is complex. **Use the [Snes9x core](snes9x.md#msu-1-support) for simplified and easily accessible MSU-1 support.**
 
 MSU-1 support can be used by loading a correct .bml file.
 
@@ -207,42 +207,42 @@ The bsnes Balanced core supports the following device type(s) in the controls me
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](https://docs.libretro.com/library/bsnes_balanced#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](#controllers) for User 2.
 
 ### Controller tables
 
 #### Joypad
 
-![](/image/controller/snes.png)
+![](../image/controller/snes.png)
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Y                            | ![](/image/retropad/retro_y.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
-| X                            | ![](/image/retropad/retro_x.png)    |
-| L                            | ![](/image/retropad/retro_l1.png)         |
-| R                            | ![](/image/retropad/retro_r1.png)         |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Y                            | ![](../image/retropad/retro_y.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
+| X                            | ![](../image/retropad/retro_x.png)    |
+| L                            | ![](../image/retropad/retro_l1.png)         |
+| R                            | ![](../image/retropad/retro_r1.png)         |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | SNES Mouse                |
 |-----------------------------------------------------|---------------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 #### Lightgun
 
 | RetroLightgun Inputs                                 | SuperScope                | Justifier(s)        |
 |------------------------------------------------------|---------------------------|---------------------|
-| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
 | Gun Trigger                                          | SuperScope Trigger        | Justifier Trigger   |
 | Gun Aux A                                            | SuperScope Cursor         |                     |
 | Gun Aux B                                            | SuperScope Turbo          |                     |
@@ -266,32 +266,32 @@ Activating multitap support in compatible games can be configured by switching t
 
 #### Nintendo - Sufami Turbo
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](https://docs.libretro.com/library/bsnes_cplusplus98/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (Snes9x)](https://docs.libretro.com/library/snes9x/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](https://docs.libretro.com/library/bsnes_cplusplus98/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
-- [Nintendo - SNES / Famicom (Snes9x)](https://docs.libretro.com/library/snes9x/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)

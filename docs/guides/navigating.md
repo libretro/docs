@@ -16,25 +16,25 @@ Pushing *Esc* twice will quit the program
 
 ### Main Menu
 
-![Main Menu](/image/retroarch/ozone/first_run.webp)
+![Main Menu](../image/retroarch/ozone/first_run.webp)
 
 Welcome to the main menu this is where you will launch games, download and update cores and have access to freely available content. *Load Core*, *Load Content* and the *Online Updater* are the menu items you will probably be using the most.
 
 ### Settings
 
-![Settings](/image/retroarch/ozone/settings.png)
+![Settings](../image/retroarch/ozone/settings.png)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.
 
 ### Favourites
 
-![Favorites](/image/retroarch/ozone/favorites.png)
+![Favorites](../image/retroarch/ozone/favorites.png)
 
 Favourites allow you to maintain a short list of your favourite games. You can add the content you want to add to your favorites from the Quick Menu or before launching it. So you can quickly access your favorite content.
 
 ### History
 
-![History](/image/retroarch/ozone/history.png)
+![History](../image/retroarch/ozone/history.png)
 
 The content you recently run will be added here, the content you run last will be at the top.
 
@@ -48,7 +48,7 @@ RetroArch relies on peer-to-peer networking to reduce network latency and ensure
 
 ### Import content
 
-![import-content](/image/retroarch/ozone/import-content.png)
+![import-content](../image/retroarch/ozone/import-content.png)
 
 Either you scan automatically so that your content that matches the last database will add to the playlists or you scan manually without being dependent on the database so you can freely add your contents to playlists.
 
@@ -58,18 +58,18 @@ The mobile interface is much more minimalistic compared to the PC's interface. T
 
 ### Main Menu
 
-![Main Menu](/image/retroarch/materialui/GUI-MaterialUI-main-menu.jpg)
+![Main Menu](../image/retroarch/materialui/GUI-MaterialUI-main-menu.jpg)
 
 The main menu will be where you launch games, download and update cores, start or join netplay sessions and pretty much anything to do with gaming.
 
 ### Playlists
 
-![Playlist](/image/retroarch/materialuiplaylist.jpg)
+![Playlist](../image/retroarch/materialui/playlist.jpg)
 
 Handles anything to do with creating and maintaining playlists. It gives you scanning options to recognise your game collection. It also provides access to your images, music and videos.
 
 ### Settings
 
-![Settings](/image/retroarch/materialui/settings.jpg)
+![Settings](../image/retroarch/materialui/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.

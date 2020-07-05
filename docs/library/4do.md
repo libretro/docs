@@ -13,7 +13,7 @@ The 4DO core is licensed under
 
 - [Modified GNU LGPL / Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedo_3do.c)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -77,7 +77,7 @@ Frontend-level settings or features that the 4DO core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -137,16 +137,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	The default internal resolution is 320x240, but the output resolution is 640x480. This feature makes the system behave as if it has a 640x480 framebuffer.
 	
 ??? note "High Resolution - disabled"
-	![](/image/core/4do/high_off.png)
+	![](../image/core/4do/high_off.png)
 	
 ??? note "High Resolution - enabled"
-	![](/image/core/4do/high_on.png)
+	![](../image/core/4do/high_on.png)
 	
 - **NVRAM Storage** [4do_nvram_storage] (**per game**|shared)
 
 	Choose whether NVRAM saves are per game or NVRAM saves are shared between all games.
 	
-	Look at the [Directories section](https://docs.libretro.com/library/4do/#directories) for more information.
+	Look at the [Directories section](4do.md#directories) for more information.
 	
 - **Active Devices** [4do_active_devices] (**1**|2|3|4|5|6|7|8|0)
 
@@ -174,21 +174,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 ## Joypad
 
-![](/image/controller/3do.png)
+![](../image/controller/3do.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                                |
 |------------------------------|------------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)             |
-| A                            | ![](/image/retropad/retro_y.png)             |
-| X (Stop)                     | ![](/image/retropad/retro_select.png)        |
-| P (Play/Pause)               | ![](/image/retropad/retro_start.png)         |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     | 
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    |
-| C                            | ![](/image/retropad/retro_a.png)             |
-| L                            | ![](/image/retropad/retro_l1.png)            |
-| R                            | ![](/image/retropad/retro_r1.png)            |
+| B                            | ![](../image/retropad/retro_b.png)             |
+| A                            | ![](../image/retropad/retro_y.png)             |
+| X (Stop)                     | ![](../image/retropad/retro_select.png)        |
+| P (Play/Pause)               | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | 
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
+| C                            | ![](../image/retropad/retro_a.png)             |
+| L                            | ![](../image/retropad/retro_l1.png)            |
+| R                            | ![](../image/retropad/retro_r1.png)            |
 
 ## Compatibility
 

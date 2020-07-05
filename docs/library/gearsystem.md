@@ -23,7 +23,7 @@ The Gearsystem core is licensed under
 
 - [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -70,7 +70,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -107,21 +107,21 @@ The Gearsystem core saves/loads to/from these directories.
 
 ### Joypad
 
-![](/image/controller/gg.png)
+![](../image/controller/gg.png)
 
-![](/image/controller/sms.png)
+![](../image/controller/sms.png)
 
-![](/image/controller/sg1000.png)
+![](../image/controller/sg1000.png)
 
 | User 1 input descriptors | RetroPad Inputs                                |
 |--------------------------|------------------------------------------------|
-| 1                        | ![](/image/retropad/retro_b.png)             |
-| Start                    | ![](/image/retropad/retro_start.png)         |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)       |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)     |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)     |
-| Right                    | ![](/image/retropad/retro_dpad_right.png)    |
-| 2                        | ![](/image/retropad/retro_a.png)             |
+| 1                        | ![](../image/retropad/retro_b.png)             |
+| Start                    | ![](../image/retropad/retro_start.png)         |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
+| 2                        | ![](../image/retropad/retro_a.png)             |
 
 ## Compatibility
 
@@ -137,15 +137,15 @@ The Gearsystem core saves/loads to/from these directories.
 
 #### Sega - Game Gear
 
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
 
 #### Sega - Master System - Mark III
 
-- [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
+- [Sega - Master System (Emux SMS)](emux_sms.md)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
+- [Sega - MS/MD/CD/32X (PicoDrive)](picodrive.md)
 
 #### Sega - SG-1000
 
-- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
+- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)

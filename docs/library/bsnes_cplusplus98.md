@@ -18,7 +18,7 @@ The bsnes C++98 (v085) core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -59,7 +59,7 @@ Frontend-level settings or features that the bsnes C++98 (v085) core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -108,42 +108,42 @@ The bsnes C++98 (v085) core supports the following device type(s) in the control
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](https://docs.libretro.com/library/bsnes_cplusplus98#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/bsnes_cplusplus98#controllers) for User 2.
 
 ### Controller tables
 
 #### Joypad
 
-![](/image/controller/snes.png)
+![](../image/controller/snes.png)
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Y                            | ![](/image/retropad/retro_y.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
-| X                            | ![](/image/retropad/retro_x.png)    |
-| L                            | ![](/image/retropad/retro_l1.png)         |
-| R                            | ![](/image/retropad/retro_r1.png)         |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Y                            | ![](../image/retropad/retro_y.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
+| X                            | ![](../image/retropad/retro_x.png)    |
+| L                            | ![](../image/retropad/retro_l1.png)         |
+| R                            | ![](../image/retropad/retro_r1.png)         |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | SNES Mouse                |
 |-----------------------------------------------------|---------------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 #### Lightgun
 
 | RetroLightgun Inputs                                 | SuperScope                | Justifier(s)        |
 |------------------------------------------------------|---------------------------|---------------------|
-| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
 | Gun Trigger                                          | SuperScope Trigger        | Justifier Trigger   |
 | Gun Aux A                                            | SuperScope Cursor         |                     |
 | Gun Aux B                                            | SuperScope Turbo          |                     |
@@ -165,32 +165,32 @@ Awaiting description.
 
 #### Nintendo - Sufami Turbo
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](https://docs.libretro.com/library/bsnes_balanced/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (Snes9x)](https://docs.libretro.com/library/snes9x/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](https://docs.libretro.com/library/bsnes_balanced/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
-- [Nintendo - SNES / Famicom (Snes9x)](https://docs.libretro.com/library/snes9x/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)

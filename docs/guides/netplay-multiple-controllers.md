@@ -1,5 +1,5 @@
 
-![](/image/branding/netplay-logo.gif)
+![](../image/branding/netplay-logo.gif)
 
 ## Setup Multiple Controllers on One (1) Computer
 
@@ -50,7 +50,7 @@ Set host computer's RetroArch NetPlay to request control of the running core's d
 
 Host is now able to start a NetPlay game controlling controllers one (1) and three (3). See [Getting Started Guide](netplay-getting-started) for more details.
 
-![Screenshot](/image/retroarch/netplay/netplay_multiple_controllers_host.png)
+![Screenshot](../image/retroarch/netplay/netplay_multiple_controllers_host.png)
 
 ###Client
 #### Input Devices
@@ -82,7 +82,7 @@ Set client computer's RetroArch Netplay to request control of the running core's
 
 Client is now able to join the host in a NetPlay game controlling controllers two (2) and four (4). See [Getting Started Guide](netplay-getting-started) for more details.
 
-![Screenshot](/image/retroarch/netplay/netplay_multiple_controllers_client.png)
+![Screenshot](../image/retroarch/netplay/netplay_multiple_controllers_client.png)
 
 
 !!! Warning

@@ -15,7 +15,7 @@ The Beetle NeoPop core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-ngp-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -55,7 +55,7 @@ Frontend-level settings or features that the Beetle NeoPop core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -106,17 +106,17 @@ The Beetle NeoPop core supports the following device type(s) in the controls men
 
 #### Joypad
 
-![](/image/controller/ngp.png)
+![](../image/controller/ngp.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                                |
 |--------------------------|------------------------------------------------|
-| A                        | ![](/image/retropad/retro_b.png)             |
-| Option                   | ![](/image/retropad/retro_start.png)         |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    |
-| B                        | ![](/image/retropad/retro_a.png)             |
+| A                        | ![](../image/retropad/retro_b.png)             |
+| Option                   | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| B                        | ![](../image/retropad/retro_a.png)             |
 
 ## External Links
 

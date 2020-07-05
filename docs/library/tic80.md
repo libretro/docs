@@ -12,7 +12,7 @@ The TIC-80 core is licensed under
 
 - [MIT](https://github.com/nesbox/TIC-80/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -55,7 +55,7 @@ Frontend-level settings or features that the Theodore core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -104,16 +104,16 @@ The TIC-80 core supports the following device type(s) in the controls menu, bold
 
 | User 1 - 4 Remap descriptors | RetroPad Inputs                                |
 |------------------------------|------------------------------------------------|
-| A                            | ![](/image/retropad/retro_b.png)             |
-| X                            | ![](/image/retropad/retro_y.png)             |
-| Select                       | ![](/image/retropad/retro_select.png)        |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)     |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png)    |
-| B                            | ![](/image/retropad/retro_a.png)             |
-| Y                            | ![](/image/retropad/retro_x.png)             |
-| L                            | ![](/image/retropad/retro_l1.png)            |
-| R                            | ![](/image/retropad/retro_r1.png)            |
+| A                            | ![](../image/retropad/retro_b.png)             |
+| X                            | ![](../image/retropad/retro_y.png)             |
+| Select                       | ![](../image/retropad/retro_select.png)        |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
+| B                            | ![](../image/retropad/retro_a.png)             |
+| Y                            | ![](../image/retropad/retro_x.png)             |
+| L                            | ![](../image/retropad/retro_l1.png)            |
+| R                            | ![](../image/retropad/retro_r1.png)            |
 
 ## External Links
 

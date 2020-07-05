@@ -55,10 +55,10 @@ Save states are saved/loaded to and from where state files are stored.
 - **Monsters** (Off/**On**): Awaiting description. Enable or disable monsters.
 
 ??? note "Monsters - On"
-	![](/image/core/mr_boommonsters_on.png)
+	![](../image/core/mr_boom/monsters_on.png)
 	
 ??? note "Monsters - Off"
-	![](/image/core/mr_boommonsters_off.png)	
+	![](../image/core/mr_boom/monsters_off.png)	
 
 - **Drop bomb autofire** (**Off**/On): Enables Drop bomb autofire mode. Holding down the Drop bomb button will repeatedly use the Drop bomb action. (Potentially useful when used in conjunction with certain powerups)
 
@@ -76,15 +76,15 @@ Save states are saved/loaded to and from where state files are stored.
 
 | RetroPad Inputs                                | Mr.Boom core inputs |
 |------------------------------------------------|---------------------|
-| ![](/image/retropad/retro_b.png)             | Drop Bomb/Join game                         |
-| ![](/image/retropad/retro_select.png)        | Add a bomberman bot (while in the join game screen)                         |
-| ![](/image/retropad/retro_start.png)         | Start game                         |
-| ![](/image/retropad/retro_dpad_up.png)       | Up/Push bomb                         |
-| ![](/image/retropad/retro_dpad_down.png)     | Down/Push bomb                         |
-| ![](/image/retropad/retro_dpad_left.png)     | Left/Push bomb                         |
-| ![](/image/retropad/retro_dpad_right.png)    | Right/Push bomb                         |
-| ![](/image/retropad/retro_a.png)             | Detonate bomb (when you have the Remote control power)/Join game                         |
-| ![](/image/retropad/retro_x.png)             | Jump (while riding a Kangaroo)/Join game)                         |
+| ![](../image/retropad/retro_b.png)             | Drop Bomb/Join game                         |
+| ![](../image/retropad/retro_select.png)        | Add a bomberman bot (while in the join game screen)                         |
+| ![](../image/retropad/retro_start.png)         | Start game                         |
+| ![](../image/retropad/retro_dpad_up.png)       | Up/Push bomb                         |
+| ![](../image/retropad/retro_dpad_down.png)     | Down/Push bomb                         |
+| ![](../image/retropad/retro_dpad_left.png)     | Left/Push bomb                         |
+| ![](../image/retropad/retro_dpad_right.png)    | Right/Push bomb                         |
+| ![](../image/retropad/retro_a.png)             | Detonate bomb (when you have the Remote control power)/Join game                         |
+| ![](../image/retropad/retro_x.png)             | Jump (while riding a Kangaroo)/Join game)                         |
 
 ## External Links
 

@@ -14,7 +14,7 @@ The O2EM core is licensed under
 
 - [Artistic License](https://sourceforge.net/projects/o2em/)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -63,7 +63,7 @@ Frontend-level settings or features that the O2EM core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -102,21 +102,21 @@ The O2EM core has the following option(s) that can be tweaked from the core opti
 
 | RetroPad Inputs                              | User 1 input descriptors |
 |----------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_dpad_up.png)       | Up                       |
-| ![](/image/retropad/retro_dpad_down.png)     | Down                     |
-| ![](/image/retropad/retro_dpad_left.png)     | Left                     |
-| ![](/image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](/image/retropad/retro_b.png)             | Action / Press Key (Virtual Keyboard) |
-| ![](/image/retropad/retro_y.png)             | Move Virtual Keyboard Up/Down |
-| ![](/image/retropad/retro_select.png)        | Show/Hide Virtual Keyboard    |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](../image/retropad/retro_b.png)             | Action / Press Key (Virtual Keyboard) |
+| ![](../image/retropad/retro_y.png)             | Move Virtual Keyboard Up/Down |
+| ![](../image/retropad/retro_select.png)        | Show/Hide Virtual Keyboard    |
 
 | RetroPad Inputs                              | User 2 input descriptors |
 |----------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_dpad_up.png)       | Up                       |
-| ![](/image/retropad/retro_dpad_down.png)     | Down                     |
-| ![](/image/retropad/retro_dpad_left.png)     | Left                     |
-| ![](/image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](/image/retropad/retro_b.png)             | Action                   |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](../image/retropad/retro_b.png)             | Action                   |
 
 In some games, for example UFO/Satellite Attack, the original had the joypads swapped so that Player 1 was on Joypad 2. If you only use one Joypad, a workaround is to provide identical assignments of both Retropads to one joystick and save it as Game Remap or Core Remap.
 

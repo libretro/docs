@@ -14,7 +14,7 @@ The Handy core is licensed under
 
 - [zlib](https://sourceforge.net/projects/handy/)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -60,7 +60,7 @@ Frontend-level settings or features that the Handy core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -81,7 +81,7 @@ The Handy core saves/loads to/from these directories.
 
 - The Handy core's core provided FPS is 75
 - The Handy core's core provided sample rate is 22050 Hz
-- The Handy core's core provided aspect ratio is dependent on the ['Display rotation' core option](https://docs.libretro.com/library/handy/#core-options/). When set to None, the aspect ratio will be 80/51. When set to 90 or 240, the aspect ratio will be 51/80.
+- The Handy core's core provided aspect ratio is dependent on the ['Display rotation' core option](handy.md#core-options/). When set to None, the aspect ratio will be 80/51. When set to 90 or 240, the aspect ratio will be 51/80.
 
 ## Core options
 
@@ -107,19 +107,19 @@ The Handy core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-![](/image/controller/lynx.png)
+![](../image/controller/lynx.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)          |
-| Pause                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)          |
-| Option 1                 | ![](/image/retropad/retro_l1.png)         |
-| Option 2                 | ![](/image/retropad/retro_r1.png)         |
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Pause                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| Option 1                 | ![](../image/retropad/retro_l1.png)         |
+| Option 2                 | ![](../image/retropad/retro_r1.png)         |
 
 Supported combinations
 
@@ -144,4 +144,4 @@ Supported combinations
 
 #### Atari - Lynx
 
-- [Atari - Lynx (Beetle Lynx)](https://docs.libretro.com/library/beetle_lynx/)
+- [Atari - Lynx (Beetle Lynx)](beetle_lynx.md)

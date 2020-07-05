@@ -15,7 +15,7 @@ The Beetle Lynx core is licensed under
 
 - [zlib](https://github.com/libretro/beetle-lynx-libretro/blob/master/mednafen/lynx/license.txt), [GPLv2](https://github.com/libretro/beetle-lynx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -62,7 +62,7 @@ Frontend-level settings or features that the Beetle Lynx core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -112,21 +112,21 @@ The Beetle Lynx core supports the following device type(s) in the controls menu,
 
 ### Controller tables
 
-![](/image/controller/lynx.png)
+![](../image/controller/lynx.png)
 
 #### Joypad
 
 | User 1 Remap descriptors | RetroPad Inputs                                | Beetle Lynx core inputs |
 |--------------------------|------------------------------------------------|--------------------------|
-|                          | ![](/image/retropad/retro_b.png)             | B                        |
-|                          | ![](/image/retropad/retro_start.png)         | Pause                    |
-|                          | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-|                          | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-|                          | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-|                          | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-|                          | ![](/image/retropad/retro_a.png)             | A                        |
-|                          | ![](/image/retropad/retro_l1.png)            | Option 1                 |
-|                          | ![](/image/retropad/retro_r1.png)            | Option 2                 |
+|                          | ![](../image/retropad/retro_b.png)             | B                        |
+|                          | ![](../image/retropad/retro_start.png)         | Pause                    |
+|                          | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+|                          | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+|                          | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+|                          | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+|                          | ![](../image/retropad/retro_a.png)             | A                        |
+|                          | ![](../image/retropad/retro_l1.png)            | Option 1                 |
+|                          | ![](../image/retropad/retro_r1.png)            | Option 2                 |
 
 Supported combinations
 
@@ -151,4 +151,4 @@ Supported combinations
 
 #### Atari - Lynx
 
-- [Atari - Lynx (Handy)](https://docs.libretro.com/library/handy/)
+- [Atari - Lynx (Handy)](handy.md)

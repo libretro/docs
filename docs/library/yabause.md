@@ -16,7 +16,7 @@ The Yabause core is licensed under
 
 - [GPLv2](https://github.com/libretro/yabause/blob/master/yabause/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -69,7 +69,7 @@ Frontend-level settings or features that the Yabause core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -151,25 +151,25 @@ Must be enabled in core options.
 
 #### Joypad
 
-![](/image/controller/saturn.png)
+![](../image/controller/saturn.png)
 
 | User 1 - 12 Remap descriptors | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| A                             | ![](/image/retropad/retro_b.png)       |
-| X                             | ![](/image/retropad/retro_y.png)       |
-| Start                         | ![](/image/retropad/retro_start.png)         |
-| D-Pad Up                      | ![](/image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                    | ![](/image/retropad/retro_dpad_down.png)     |
-| D-Pad Left                    | ![](/image/retropad/retro_dpad_left.png)     |
-| D-Pad Right                   | ![](/image/retropad/retro_dpad_right.png)    |
-| B                             | ![](/image/retropad/retro_a.png)       |
-| Y                             | ![](/image/retropad/retro_x.png)       |
-| C                             | ![](/image/retropad/retro_l1.png)            |
-| Z                             | ![](/image/retropad/retro_r1.png)            |
-| L                             | ![](/image/retropad/retro_l2.png)            |
-| R                             | ![](/image/retropad/retro_r2.png)            |
-| Analog X                      | ![](/image/retropad/retro_left_stick.png) X  |
-| Analog Y                      | ![](/image/retropad/retro_left_stick.png) Y  |
+| A                             | ![](../image/retropad/retro_b.png)       |
+| X                             | ![](../image/retropad/retro_y.png)       |
+| Start                         | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
+| B                             | ![](../image/retropad/retro_a.png)       |
+| Y                             | ![](../image/retropad/retro_x.png)       |
+| C                             | ![](../image/retropad/retro_l1.png)            |
+| Z                             | ![](../image/retropad/retro_r1.png)            |
+| L                             | ![](../image/retropad/retro_l2.png)            |
+| R                             | ![](../image/retropad/retro_r2.png)            |
+| Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
+| Analog Y                      | ![](../image/retropad/retro_left_stick.png) Y  |
 
 ## Compatibility
 
@@ -193,4 +193,4 @@ Must be enabled in core options.
 
 #### Sega - Saturn
 
-- [Sega - Saturn (Beetle Saturn)](https://docs.libretro.com/library/beetle_saturn/)
+- [Sega - Saturn (Beetle Saturn)](beetle_saturn.md)

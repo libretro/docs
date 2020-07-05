@@ -14,7 +14,7 @@ The gpSP core is licensed under
 
 - [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -61,7 +61,7 @@ Frontend-level settings or features that the gpSP core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -102,18 +102,18 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 
 #### Joypad
 
-![](/image/controller/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) | 
-| A                        | ![](/image/retropad/retro_a.png)    |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) | 
+| A                        | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 
@@ -145,13 +145,13 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 | Yoshi’s Universal Gravitation       |The tilt sensor is not emulated.|
 
 ??? note "(1)"
-	![](/images/cores/gpsp/goku.png)
+	![](../image/core/gpsp/goku.png)
 
 ??? note "(2)"
-	![](/images/cores/gpsp/sims.png)
+	![](../image/core/gpsp/sims.png)
 
 ??? note "(3)"
-	![](/images/cores/gpsp/fighter.png)
+	![](../image/core/gpsp/fighter.png)
 
 ## External Links
 
@@ -165,9 +165,9 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 
 #### Nintendo - Game Boy Advance
 
-- [Nintendo - Game Boy Advance (Beetle GBA)](https://docs.libretro.com/library/beetle_gba/)
-- [Nintendo - Game Boy Advance (Meteor)](https://docs.libretro.com/library/meteor/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - Game Boy Advance (TempGBA)](https://docs.libretro.com/library/tempgba/)
-- [Nintendo - Game Boy Advance (VBA-M)](https://docs.libretro.com/library/vba_m/)
-- [Nintendo - Game Boy Advance (VBA Next)](https://docs.libretro.com/library/vba_next/)
+- [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Nintendo - Game Boy Advance (Meteor)](meteor.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
+- [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)

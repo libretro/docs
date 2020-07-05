@@ -12,7 +12,7 @@ The ScummVM core is licensed under
 
 - [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores can be found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -47,7 +47,7 @@ Frontend-level settings or features that the ScummVM core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -100,7 +100,7 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
     
     - The main ScummVM user interface will open:
 
-<center> ![](/image/core/scummvmscummvm_menu_1st_run.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_1st_run.png) </center>
 
 - Press the 'Options...' button, then select the 'Paths' tab.
 
@@ -110,7 +110,7 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 
 - Press the 'Apply' button.
 
-<center> ![](/image/core/scummvmscummvm_menu_paths.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_paths.png) </center>
 
 - Select the 'Misc' tab, then press the 'Theme:' button.
 
@@ -118,7 +118,7 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 
 - Press the 'Apply' button, then continue to the 'Enable Enhanced MIDI Emulation' section below.
 
-<center> ![](/image/core/scummvmscummvm_menu_misc.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_misc.png) </center>
 
 #### Enable Enhanced MIDI Emulation
 
@@ -134,7 +134,7 @@ Some games only contain music in the form of MIDI data. By default, ScummVM will
 
 - Press the 'Apply' button, then continue to the 'Enable MT-32 Emulation' section below.
 
-<center> ![](/image/core/scummvmscummvm_menu_midi.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_midi.png) </center>
 
 Many games benefit greatly from FluidSynth MIDI emulation. Some particularly notable examples are:
 
@@ -166,7 +166,7 @@ These files must be placed inside the `scummvm/extra/` folder within the RetroAr
 
 - Press the 'Apply' button, then the 'OK' button to close the options menu.
 
-<center> ![](/image/core/scummvmscummvm_menu_mt32.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_mt32.png) </center>
 
 Some notable examples of games that sound exquisite with MT-32 emulation are:
 
@@ -214,11 +214,11 @@ Once all files are in place, each game may be added as follows:
 
 - Navigate to the game directory. Double click the game directory itself to enter it, then press the 'Choose' button.
 
-<center> ![](/image/core/scummvmscummvm_menu_add_game.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_add_game.png) </center>
 
 - If the game is detected correctly (i.e. if the data files are correct), a settings dialog box will open.
 
-<center> ![](/image/core/scummvmscummvm_menu_game_options.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_game_options.png) </center>
 
 - In general, the automatically generated configuration settings can be accepted...
 
@@ -230,7 +230,7 @@ Once all files are in place, each game may be added as follows:
 
 - Once the 'ID:' has been adjusted (if required), press the 'OK' button to 'register' the game.
 
-<center> ![](/image/core/scummvmscummvm_menu_1st_game_added.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_1st_game_added.png) </center>
 
 !!! attention
 	Once a game has been registered, it may be run by selecting it in the ScummVM Launcher game list and pressing the 'Start' button. **However:** Employing the ScummVM Launcher in this manner is not recommended, since it prevents the use of RetroArch per-game configuration overrides, input remaps and shader overrides. The ScummVM Launcher should only be used to add games and change settings.
@@ -275,7 +275,7 @@ Games can then be launched as follows:
 
 - The game will load.
 
-<center> ![](/image/core/scummvmscummvm_load_content.png) </center>
+<center> ![](../image/core/scummvm/scummvm_load_content.png) </center>
 
 For users who do not wish to create their own `.scummvm` files, a pre-prepared collection is available in the [libretro-database-scummvm](https://github.com/RobLoach/libretro-database-scummvm/tree/master/games) repository. Simply download the appropriate file for a particular game and copy it to the game directory.
 
@@ -335,7 +335,7 @@ ScummVM games exhibit a spectacular variance in audio volume levels. For comfort
 
 - Adjust the 'Music volume:', 'SFX volume:' and 'Speech volume:' sliders to the desired levels.
 
-<center> ![](/image/core/scummvmscummvm_volume_levels.png) </center>
+<center> ![](../image/core/scummvm/scummvm_volume_levels.png) </center>
 
 - Press the 'OK' button, then the 'Resume' button.
 
@@ -368,7 +368,7 @@ A per-game music device override may be set as follows:
 
 - In the main ScummVM user interface, select the appropriate entry in the Launcher game list and press the 'Edit Game...' button.
 
-<center> ![](/image/core/scummvmscummvm_menu_edit_game.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_edit_game.png) </center>
 
 - In the dialog that opens, select the 'Audio' tab.
 
@@ -378,7 +378,7 @@ A per-game music device override may be set as follows:
 
 - Press the 'OK' button.
 
-<center> ![](/image/core/scummvmscummvm_menu_audio_override.png) </center>
+<center> ![](../image/core/scummvm/scummvm_menu_audio_override.png) </center>
 
 #### Aspect Ratio Correction
 
@@ -398,11 +398,11 @@ The actual 'correct' aspect ratio in these cases is somewhat fuzzy, but good res
 
 To demonstrate the issue, here is an example screenshot from Beneath a Steel Sky at the default 4:3 ratio:
 
-<center> ![](/image/core/scummvmbeneath_a_steel_sky_4-3.png) </center>
+<center> ![](../image/core/scummvm/beneath_a_steel_sky_4-3.png) </center>
 
 Note the distorted fan vents. Here is the same image at a 16:10 ratio:
 
-<center> ![](/image/core/scummvmbeneath_a_steel_sky_16-10.png) </center>
+<center> ![](../image/core/scummvm/beneath_a_steel_sky_16-10.png) </center>
 
 The fan vents are the correct shape, and the character proportions are more natural.
 
@@ -477,25 +477,25 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 | RetroPad Inputs                                | User 1 input descriptors | ScummVM Inputs          |
 |------------------------------------------------|--------------------------|-------------------------|
-| ![](/image/retropad/retro_b.png)             | Right Mouse Button       | Right Mouse Button      |
-| ![](/image/retropad/retro_y.png)             | .                        | . (period)              |
-| ![](/image/retropad/retro_select.png)        | F1                       | F1                      |
-| ![](/image/retropad/retro_start.png)         | ScummVM GUI              | ScummVM GUI             |
-| ![](/image/retropad/retro_dpad_up.png)       | Mouse Cursor Up          | Mouse Cursor Up         |
-| ![](/image/retropad/retro_dpad_down.png)     | Mouse Cursor Down        | Mouse Cursor Down       |
-| ![](/image/retropad/retro_dpad_left.png)     | Mouse Cursor Left        | Mouse Cursor Left       |
-| ![](/image/retropad/retro_dpad_right.png)    | Mouse Cursor Right       | Mouse Cursor Right      |
-| ![](/image/retropad/retro_a.png)             | Left Mouse Button        | Left Mouse Button       |
-| ![](/image/retropad/retro_x.png)             | Esc                      | Esc                     |
-| ![](/image/retropad/retro_l1.png)            | Enter                    | Enter                   |
-| ![](/image/retropad/retro_r1.png)            | Numpad 5                 | Numpad 5                |
-| ![](/image/retropad/retro_l2.png)            | Backspace                | Backspace               |
-| ![](/image/retropad/retro_r2.png)            | Cursor Fine Control      | Cursor Fine Control     |
-| ![](/image/retropad/retro_l3.png)            | F10                      | F10                     |
-| ![](/image/retropad/retro_r3.png)            | Numpad 0                 | Numpad 0                |
-| ![](/image/retropad/retro_left_stick.png) X  |                          | Mouse Cursor Left/Right |
-| ![](/image/retropad/retro_left_stick.png) Y  |                          | Mouse Cursor Up/Down    |
-| ![](/image/retropad/retro_right_stick.png)   |                          | Virtual Numpad          |
+| ![](../image/retropad/retro_b.png)             | Right Mouse Button       | Right Mouse Button      |
+| ![](../image/retropad/retro_y.png)             | .                        | . (period)              |
+| ![](../image/retropad/retro_select.png)        | F1                       | F1                      |
+| ![](../image/retropad/retro_start.png)         | ScummVM GUI              | ScummVM GUI             |
+| ![](../image/retropad/retro_dpad_up.png)       | Mouse Cursor Up          | Mouse Cursor Up         |
+| ![](../image/retropad/retro_dpad_down.png)     | Mouse Cursor Down        | Mouse Cursor Down       |
+| ![](../image/retropad/retro_dpad_left.png)     | Mouse Cursor Left        | Mouse Cursor Left       |
+| ![](../image/retropad/retro_dpad_right.png)    | Mouse Cursor Right       | Mouse Cursor Right      |
+| ![](../image/retropad/retro_a.png)             | Left Mouse Button        | Left Mouse Button       |
+| ![](../image/retropad/retro_x.png)             | Esc                      | Esc                     |
+| ![](../image/retropad/retro_l1.png)            | Enter                    | Enter                   |
+| ![](../image/retropad/retro_r1.png)            | Numpad 5                 | Numpad 5                |
+| ![](../image/retropad/retro_l2.png)            | Backspace                | Backspace               |
+| ![](../image/retropad/retro_r2.png)            | Cursor Fine Control      | Cursor Fine Control     |
+| ![](../image/retropad/retro_l3.png)            | F10                      | F10                     |
+| ![](../image/retropad/retro_r3.png)            | Numpad 0                 | Numpad 0                |
+| ![](../image/retropad/retro_left_stick.png) X  |                          | Mouse Cursor Left/Right |
+| ![](../image/retropad/retro_left_stick.png) Y  |                          | Mouse Cursor Up/Down    |
+| ![](../image/retropad/retro_right_stick.png)   |                          | Virtual Numpad          |
 
 **Additional Notes:**
 
@@ -549,9 +549,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 | RetroMouse Inputs                                     | ScummVM Inputs     |
 |-------------------------------------------------------|--------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | Left Mouse Button  |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | Right Mouse Button |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Left Mouse Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Right Mouse Button |
 
 !!! attention
 	To ensure correct operation when using a RetroMouse, it is recommended that the RetroArch 'Grab Mouse' option be enabled while running content with the ScummVM core. By default, 'Grab Mouse' may be toggled on/off by pressing F11 on the keyboard.
@@ -564,8 +564,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 | RetroPointer Inputs                                                                                                      | ScummVM Inputs |
 |--------------------------------------------------------------------------------------------------------------------------|----------------|
-| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor   | 
-| ![](/image/retromouse/retro_left.png) or ![](/image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Left Mouse Button   |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor   | 
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Left Mouse Button   |
 
 ## Compatibility
 

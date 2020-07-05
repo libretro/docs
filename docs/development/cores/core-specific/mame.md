@@ -6,7 +6,7 @@
 
 #### Windows
 
-1. [Install and configure the RetroArch msys2 build environment](https://docs.libretro.com/development/retroarch/compilation/windows)
+1. [Install and configure the RetroArch msys2 build environment](../../retroarch/compilation/windows.md)
 2. From the msys2 console, install python with the command `pacman -S python`
 
 ### Clone the repository

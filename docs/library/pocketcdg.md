@@ -14,7 +14,7 @@ The PocketCDG core is licensed under
 
 - [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -46,7 +46,7 @@ Frontend-level settings or features that the PocketCDG core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -89,13 +89,13 @@ The PocketCDG core supports the following device type(s) in the controls menu, b
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| Pause                    | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](/image/retropad/retro_dpad_right.png) |
-| Shutdown                 | ![](/image/retropad/retro_r1.png)         |
+| Pause                    | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| Shutdown                 | ![](../image/retropad/retro_r1.png)         |
 
 ## External Links
 
@@ -107,7 +107,7 @@ The PocketCDG core supports the following device type(s) in the controls menu, b
 
 #### Media
 
-- [FFmpeg](https://docs.libretro.com/library/ffmpeg/)
-- [Game Music Emu](https://docs.libretro.com/library/game_music_emu/)
-- [Imageviewer](https://docs.libretro.com/library/imageviewer/)
-- [mpv](https://docs.libretro.com/library/mpv/)
+- [FFmpeg](ffmpeg.md)
+- [Game Music Emu](game_music_emu.md)
+- [Imageviewer](imageviewer.md)
+- [mpv](mpv.md)

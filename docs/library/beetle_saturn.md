@@ -12,7 +12,7 @@ The Beetle Saturn core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-saturn-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -33,12 +33,12 @@ RetroArch database(s) that are associated with the Beetle Saturn core:
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	The King of Fighters '95 and Ultraman: Hikari no Kyojin Densetsu ROM Cartridges can be manually selected with the ['Cartridge' core option](https://docs.libretro.com/library/beetle_saturn#core-options).
+	The King of Fighters '95 and Ultraman: Hikari no Kyojin Densetsu ROM Cartridges can be manually selected with the ['Cartridge' core option](../library/beetle_saturn#core-options).
 
 |   Filename       |    Description                                                             |              md5sum              |
 |:----------------:|:--------------------------------------------------------------------------:|:--------------------------------:|
 | sega_101.bin     | Saturn JP BIOS - Required for JP games                                     | 85ec9ca47d8f6807718151cbcca8b964 |
-| mpr-17933.bin    | Saturn US/EU BIOS - Required for US/EU games                               | 3240872c70984b6cbfda1586cab68dbe |
+| mpr-17933.bin    | Saturn US.mdEU BIOS - Required for US/EU games                               | 3240872c70984b6cbfda1586cab68dbe |
 | mpr-18811-mx.ic1 | The King of Fighters '95 ROM Cartridge - Required for this game            | 255113ba943c92a54facd25a10fd780c |
 | mpr-19367-mx.ic1 | Ultraman: Hikari no Kyojin Densetsu ROM Cartridge - Required for this game | 1cd19988d1d72a3e7caa0b73234c96b4 |
 
@@ -66,7 +66,7 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -189,13 +189,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the crosshair for the 'Stunner' and 'Virtua Gun' device types. Setting it to Off disables the crosshair.
 	
 ??? note "Gun - Crosshair - Cross"
-	![](/image/core/beetle_saturncross.png)
+	![](../image/core/beetle_saturn/cross.png)
 	
 ??? note "Gun - Crosshair - Dot"
-	![](/image/core/beetle_saturndot.png)
+	![](../image/core/beetle_saturn/dot.png)
 
 ??? note "Gun - Crosshair - Off"
-	![](/image/core/beetle_saturnoff.png)	
+	![](../image/core/beetle_saturn/off.png)	
 	
 - **CD Image Cache (restart)** [beetle_saturn_cdimagecache] (**disabled**|enabled)
 
@@ -239,10 +239,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enable horizontal blend(blur) filter. Has a more noticeable effect with the Saturn's higher horizontal resolution modes(640/704).
 	
 ??? note "Enable Horizontal Blend(blur) - Off"
-	![](/image/core/beetle_saturnblend_off.png)
+	![](../image/core/beetle_saturn/blend_off.png)
 	
 ??? note "Enable Horizontal Blend(blur) - On"
-	![](/image/core/beetle_saturnblend_on.png)
+	![](../image/core/beetle_saturn/blend_on.png)
 	
 ## User 1 - 12 device types
 
@@ -261,42 +261,42 @@ The Beetle Saturn core supports the following device type(s) in the controls men
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](https://docs.libretro.com/library/beetle_saturn#core-options).
+Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](../library/beetle_saturn#core-options).
 
 ## Joypad
 
-![](/image/controller/saturn.png)
+![](../image/controller/saturn.png)
 
 | RetroPad Inputs                                | User 1 - 12 input descriptors | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
 |------------------------------------------------|-------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|
-| ![](/image/retropad/retro_b.png)             | A Button                      | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
-| ![](/image/retropad/retro_y.png)             | X Button                      | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
-| ![](/image/retropad/retro_select.png)        | Mode Switch                   |              | Mode Switch    |                           |                |                     |                      |
-| ![](/image/retropad/retro_start.png)         | Start Button                  | Start Button | Start Button   | Start Button              | Start Button   | Start Button        | Start Button         |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                      | D-Pad Up     | D-Pad Up       |                           |                |                     |                      |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                    | D-Pad Down   | D-Pad Down     |                           |                |                     |                      |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                    | D-Pad Left   | D-Pad Left     |                           |                |                     |                      |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                   | D-Pad Right  | D-Pad Right    |                           |                |                     |                      |
-| ![](/image/retropad/retro_a.png)             | B Button                      | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
-| ![](/image/retropad/retro_x.png)             | Y Button                      | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
-| ![](/image/retropad/retro_l1.png)            | Z Button                      | Z Button     | Z Button       | Z Button                  | Z Button       | Left Stick Button   | Z Button             |
-| ![](/image/retropad/retro_r1.png)            | C Button                      | C Button     | C Button       | C Button                  | C Button       | Right Stick Button  | C Button             |
-| ![](/image/retropad/retro_l2.png)            | L Button                      | L Button     | L Button       | Left shift paddle (Up)    | L Button       | Left Stick Trigger  | L Button             |
-| ![](/image/retropad/retro_r2.png)            | R Button                      | R Button     | R Button       | Right shift paddle (Down) | R Button       | Right Stick Trigger | R Button             |
-| ![](/image/retropad/retro_r3.png)            |                               |              |                |                           | Throttle latch |                     | Throttle latch       |
-| ![](/image/retropad/retro_left_stick.png) X  | Analog X                      |              | Analog X       | Analog wheel              | Analog Stick X | Left Stick X        | Left Analog Stick X  |
-| ![](/image/retropad/retro_left_stick.png) Y  | Analog Y                      |              | Analog Y       |                           | Analog Stick Y | Left Stick Y        | Left Analog Stick Y  |
-| ![](/image/retropad/retro_right_stick.png) X | Analog X (Right)              |              |                |                           |                | Right Stick X       | Right Analog Stick X |
-| ![](/image/retropad/retro_right_stick.png) Y | Analog Y (Right)              |              |                |                           | Throttle       | Right Stick Y       | Right Analog Stick Y |
+| ![](../image/retropad/retro_b.png)             | A Button                      | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
+| ![](../image/retropad/retro_y.png)             | X Button                      | X Button     | X Button       | X Button                  | X Button       |                     | X Button             |
+| ![](../image/retropad/retro_select.png)        | Mode Switch                   |              | Mode Switch    |                           |                |                     |                      |
+| ![](../image/retropad/retro_start.png)         | Start Button                  | Start Button | Start Button   | Start Button              | Start Button   | Start Button        | Start Button         |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                      | D-Pad Up     | D-Pad Up       |                           |                |                     |                      |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                    | D-Pad Down   | D-Pad Down     |                           |                |                     |                      |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                    | D-Pad Left   | D-Pad Left     |                           |                |                     |                      |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                   | D-Pad Right  | D-Pad Right    |                           |                |                     |                      |
+| ![](../image/retropad/retro_a.png)             | B Button                      | B Button     | B Button       | B Button                  | B Button       |                     | B Button             |
+| ![](../image/retropad/retro_x.png)             | Y Button                      | Y Button     | Y Button       | Y Button                  | Y Button       |                     | Y Button             |
+| ![](../image/retropad/retro_l1.png)            | Z Button                      | Z Button     | Z Button       | Z Button                  | Z Button       | Left Stick Button   | Z Button             |
+| ![](../image/retropad/retro_r1.png)            | C Button                      | C Button     | C Button       | C Button                  | C Button       | Right Stick Button  | C Button             |
+| ![](../image/retropad/retro_l2.png)            | L Button                      | L Button     | L Button       | Left shift paddle (Up)    | L Button       | Left Stick Trigger  | L Button             |
+| ![](../image/retropad/retro_r2.png)            | R Button                      | R Button     | R Button       | Right shift paddle (Down) | R Button       | Right Stick Trigger | R Button             |
+| ![](../image/retropad/retro_r3.png)            |                               |              |                |                           | Throttle latch |                     | Throttle latch       |
+| ![](../image/retropad/retro_left_stick.png) X  | Analog X                      |              | Analog X       | Analog wheel              | Analog Stick X | Left Stick X        | Left Analog Stick X  |
+| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                      |              | Analog Y       |                           | Analog Stick Y | Left Stick Y        | Left Analog Stick Y  |
+| ![](../image/retropad/retro_right_stick.png) X | Analog X (Right)              |              |                |                           |                | Right Stick X       | Right Analog Stick X |
+| ![](../image/retropad/retro_right_stick.png) Y | Analog Y (Right)              |              |                |                           | Throttle       | Right Stick Y       | Right Analog Stick Y |
 
 ## Mouse
 
 | RetroMouse Inputs                                     | Mouse        |
 |-------------------------------------------------------|--------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
-| ![](/image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse A      |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse B      |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Mouse C      |
 | Mouse 4                                               | Mouse Start  |
 | Mouse 5                                               | Mouse Start  |
 
@@ -304,7 +304,7 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 | RetroLightgun Inputs                                   | Stunner           | Virtua Gun           |
 |--------------------------------------------------------|-------------------|----------------------|
-| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | Stunner Crosshair | Virtua Gun Crosshair |
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Stunner Crosshair | Virtua Gun Crosshair |
 | Gun Trigger                                            | Stunner Trigger   | Virtua Gun Trigger   |
 | Gun Reload                                             | Stunner Reload    | Virtua Gun Reload    |
 | Gun Start                                              | Stunner Start     | Virtua Gun Start     |
@@ -319,5 +319,5 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 ## Saturn
 
-- [Sega - Saturn (Beetle Saturn)](https://docs.libretro.com/library/beetle_saturn/)
-- [Sega - Saturn (Yabause)](https://docs.libretro.com/library/yabause/)
+- [Sega - Saturn (Beetle Saturn)](beetle_saturn.md)
+- [Sega - Saturn (Yabause)](yabause.md)

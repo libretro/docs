@@ -18,7 +18,7 @@ The SMS Plus GX core is licensed under
 
 - [GPLv2](https://github.com/libretro/smsplus-gx/blob/master/docs/license)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -71,7 +71,7 @@ Frontend-level settings or features that the SMS Plus GX core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -140,19 +140,19 @@ The SMS Plus GX core supports the following device type(s) in the controls menu,
 
 #### Joypad
 
-![](/image/controller/gg.png)
+![](../image/controller/gg.png)
 
-![](/image/controller/sms.png)
+![](../image/controller/sms.png)
 
 | RetroPad Inputs                           | SMS Plus GX core Inputs |
 |-------------------------------------------|----------------------|
-| ![](/image/retropad/retro_b.png)    | 1                    |
-| ![](/image/retropad/retro_start.png)      | Pause                |
-| ![](/image/retropad/retro_dpad_up.png)    | D-Pad Up             |
-| ![](/image/retropad/retro_dpad_down.png)  | D-Pad Down           |
-| ![](/image/retropad/retro_dpad_left.png)  | D-Pad Left           |
-| ![](/image/retropad/retro_dpad_right.png) | D-Pad Right          |
-| ![](/image/retropad/retro_a.png)    | 2                    |
+| ![](../image/retropad/retro_b.png)    | 1                    |
+| ![](../image/retropad/retro_start.png)      | Pause                |
+| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up             |
+| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down           |
+| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left           |
+| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right          |
+| ![](../image/retropad/retro_a.png)    | 2                    |
 
 #### Keyboard
 
@@ -179,8 +179,8 @@ The SMS Plus GX core supports the following device type(s) in the controls menu,
 
 ### See also
 
-- [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
-- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
-- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
+- [Sega - Master System (Emux SMS)](emux_sms.md)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
+- [Sega - MS/MD/CD/32X (PicoDrive)](picodrive.md)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](gearsystem.md)
+- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)

@@ -10,7 +10,7 @@ Move to the settings tab then find **Directory**, then move to **File Browser**.
 
 The first screen should show the storage devices move to the one that contain your game content and press enter.
 
-![Storage Devices](/image/retroarch/ozone/ozone_directory1.jpg)
+![Storage Devices](../image/retroarch/ozone/ozone_directory1.jpg)
 
 !!! note
     On Windows it will display drive letters (like C:/ and D:/), However a system like Linux doesn't work in the same way and will only display the root. Most Android users should select */storage/emulated/0* if they want internal storage.
@@ -20,6 +20,6 @@ You have now entered the main part of the file browser. Beneath the first two op
 !!! tip
     On GNU/Linux, other hard drives are usually stored under */media/* or */mnt/*.
 
-![File System](/image/retroarch/ozone/ozone_directory2.jpg)
+![File System](../image/retroarch/ozone/ozone_directory2.jpg)
 
 You should now be back in the settings menu with the *File browser* set to the folder you wanted.

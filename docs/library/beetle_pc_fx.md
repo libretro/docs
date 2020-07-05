@@ -14,7 +14,7 @@ The Beetle PC-FX core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-pcfx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -63,7 +63,7 @@ Frontend-level settings or features that the Beetle PC-FX core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -166,28 +166,28 @@ The Beetle PC-FX core supports the following device type(s) in the controls menu
 
 | User 1 - 6 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| II                           | ![](/image/retropad/retro_b.png)    |
-| IV                           | ![](/image/retropad/retro_y.png)    | 
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Run                          | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| I                            | ![](/image/retropad/retro_a.png)    |
-| III                          | ![](/image/retropad/retro_x.png)    |
-| V                            | ![](/image/retropad/retro_l1.png)         |
-| VI                           | ![](/image/retropad/retro_r1.png)         |
-| MODE 1 (Switch)              | ![](/image/retropad/retro_l2.png)         | 
-| MODE 2 (Switch)              | ![](/image/retropad/retro_r2.png)         | 
+| II                           | ![](../image/retropad/retro_b.png)    |
+| IV                           | ![](../image/retropad/retro_y.png)    | 
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Run                          | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| I                            | ![](../image/retropad/retro_a.png)    |
+| III                          | ![](../image/retropad/retro_x.png)    |
+| V                            | ![](../image/retropad/retro_l1.png)         |
+| VI                           | ![](../image/retropad/retro_r1.png)         |
+| MODE 1 (Switch)              | ![](../image/retropad/retro_l2.png)         | 
+| MODE 2 (Switch)              | ![](../image/retropad/retro_r2.png)         | 
 
 #### Mouse
 
 | RetroMouse Inputs                                   | PCFX Mouse              |
 |-----------------------------------------------------|-------------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | PCFX Mouse Cursor       |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | PCFX Mouse Left Button  |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | PCFX Mouse Right Button |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | PCFX Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | PCFX Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | PCFX Mouse Right Button |
 
 ## Compatibility
 

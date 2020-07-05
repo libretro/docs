@@ -33,7 +33,7 @@ In order for content to be correctly scanned, you must:
   - Update `Databases` via `Online Updater`
   - Restart RetroArch if any of the above was just done
 
-Finally, the content must match existing databases from the [libretro-database README](https://docs.libretro.com/guides/roms-playlists-thumbnails/#sources). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
+Finally, the content must match existing databases from the [libretro-database README](#sources). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
 
 #### Designating which core to use
 

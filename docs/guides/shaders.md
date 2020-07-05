@@ -12,7 +12,7 @@ By default automatic presets will save to under /presets/"name-of-core"/"name-of
 
 There are plenty of user created default presets that come bundled with the RetroArch installation and these can be updated from `Main Menu -> Online Updater -> Update Glsl|Slang|Cg Shaders` *(you can find these presets in the shaders_glsl|slang|cg subfolders of your shader directory)*
 
-[Example Screenshots](https://docs.libretro.com/shader/introduction/)
+[Example Screenshots](../shader/introduction.md)
 
 ### Editing Shader Presets
 

@@ -40,7 +40,7 @@ Awaiting description.
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 - [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)
 
@@ -209,22 +209,22 @@ The Atari800 core supports the following device type(s) in the controls menu, bo
 
 | User 1 Remap descriptors | RetroPad Inputs                                | ATARI Joystick          |
 |--------------------------|------------------------------------------------|-------------------------|
-| B                        | ![](/image/retropad/retro_b.png)             | KEY RETURN              |
-| Y                        | ![](/image/retropad/retro_y.png)             | VKBD ON/OFF             |
-| Select                   | ![](/image/retropad/retro_select.png)        | CONSOL_SELECT           |
-| Start                    | ![](/image/retropad/retro_start.png)         | CONSOL_START            |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)       | Up                      |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)     | Down                    |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)     | Left                    |
-| Right                    | ![](/image/retropad/retro_dpad_right.png)    | Right                   |
-| A                        | ![](/image/retropad/retro_a.png)             | FIRE1/KEY RETURN IN GUI |
-| X                        | ![](/image/retropad/retro_x.png)             | FIRE2/KEY ESCAPE IN GUI |
-| L                        | ![](/image/retropad/retro_l1.png)            | CONSOLE_OPTION          |
-| R                        | ![](/image/retropad/retro_r1.png)            | TOGGLE_UI               |
-| L2                       | ![](/image/retropad/retro_l2.png)            | KEY SPACE               |
-| R2                       | ![](/image/retropad/retro_r2.png)            | KEY ESCAPE              |
-| L3                       | ![](/image/retropad/retro_l3.png)            |                         |
-| R3                       | ![](/image/retropad/retro_r3.png)            |                         |
+| B                        | ![](../image/retropad/retro_b.png)             | KEY RETURN              |
+| Y                        | ![](../image/retropad/retro_y.png)             | VKBD ON/OFF             |
+| Select                   | ![](../image/retropad/retro_select.png)        | CONSOL_SELECT           |
+| Start                    | ![](../image/retropad/retro_start.png)         | CONSOL_START            |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                      |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down                    |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left                    |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right                   |
+| A                        | ![](../image/retropad/retro_a.png)             | FIRE1/KEY RETURN IN GUI |
+| X                        | ![](../image/retropad/retro_x.png)             | FIRE2/KEY ESCAPE IN GUI |
+| L                        | ![](../image/retropad/retro_l1.png)            | CONSOLE_OPTION          |
+| R                        | ![](../image/retropad/retro_r1.png)            | TOGGLE_UI               |
+| L2                       | ![](../image/retropad/retro_l2.png)            | KEY SPACE               |
+| R2                       | ![](../image/retropad/retro_r2.png)            | KEY ESCAPE              |
+| L3                       | ![](../image/retropad/retro_l3.png)            |                         |
+| R3                       | ![](../image/retropad/retro_r3.png)            |                         |
 
 #### Keyboard device type table
 

@@ -23,7 +23,7 @@ The Gearboy core is licensed under
 
 - [GPLv3](https://github.com/libretro/Gearboy/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -69,7 +69,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -132,18 +132,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Joypad
 
-![](/image/controller/gb.png)
+![](../image/controller/gb.png)
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)          |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)          |
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)          |
 
 ## Compatibility
 
@@ -160,10 +160,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 #### Nintendo - Game Boy (+ Color)
 
-- [Nintendo - Game Boy / Color (Emux GB)](https://docs.libretro.com/library/emux_gb/)
-- [Nintendo - Game Boy / Color (Gambatte)](https://docs.libretro.com/library/gambatte/)
-- [Nintendo - Game Boy / Color (SameBoy)](https://docs.libretro.com/library/sameboy/)
-- [Nintendo - Game Boy / Color (TGB Dual)](https://docs.libretro.com/library/tgb_dual/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - SNES / Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)

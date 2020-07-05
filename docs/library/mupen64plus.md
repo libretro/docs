@@ -6,7 +6,7 @@
 
 **In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/mupen64plus.md). Changes are proposed using "Pull Requests."**
 
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
+**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
 
 **You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
 
@@ -38,11 +38,11 @@ The GlideN64 video plugin is very capable. Outstanding support of Hires Textures
 
 ### N64
 
-- [Nintendo 64 (ParaLLEl N64)](https://docs.libretro.com/library/parallel/)
+- [Nintendo 64 (ParaLLEl N64)](parallel.md)
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 The Mupen64Plus core is licensed under
 
@@ -90,7 +90,7 @@ RetroArch-level settings or features that the Mupen64Plus core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -348,23 +348,23 @@ Rumble only works in the Mupen64Plus core when
 
 | User 1 - 4 Remap descriptors  | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
-| A Button (C3)                 | ![](/image/retropad/retro_b.png)       |
-| B Button (C2)                 | ![](/image/retropad/retro_y.png)       |
-| START Button                  | ![](/image/retropad/retro_start.png)         |
-| Up (digital)                  | ![](/image/retropad/retro_dpad_up.png)       |
-| Down (digital)                | ![](/image/retropad/retro_dpad_down.png)     |
-| Left (digital)                | ![](/image/retropad/retro_dpad_left.png)     |
-| Right (digital)               | ![](/image/retropad/retro_dpad_right.png)    |
-| (C1)                          | ![](/image/retropad/retro_a.png)       |
-| (C4)                          | ![](/image/retropad/retro_x.png)       |
-| L-Trigger                     | ![](/image/retropad/retro_l1.png)            |
-| R-Trigger                     | ![](/image/retropad/retro_r1.png)            |
-| Z-Trigger                     | ![](/image/retropad/retro_l2.png)            | 
-| C Buttons Mode                | ![](/image/retropad/retro_r2.png)            |
-| Control Stick X               | ![](/image/retropad/retro_left_stick.png) X  |
-| Control Stick Y               | ![](/image/retropad/retro_left_stick.png) Y  |
-| C Buttons X                   | ![](/image/retropad/retro_right_stick.png) X |
-| C Buttons Y                   | ![](/image/retropad/retro_right_stick.png) Y |
+| A Button (C3)                 | ![](../image/retropad/retro_b.png)       |
+| B Button (C2)                 | ![](../image/retropad/retro_y.png)       |
+| START Button                  | ![](../image/retropad/retro_start.png)         |
+| Up (digital)                  | ![](../image/retropad/retro_dpad_up.png)       |
+| Down (digital)                | ![](../image/retropad/retro_dpad_down.png)     |
+| Left (digital)                | ![](../image/retropad/retro_dpad_left.png)     |
+| Right (digital)               | ![](../image/retropad/retro_dpad_right.png)    |
+| (C1)                          | ![](../image/retropad/retro_a.png)       |
+| (C4)                          | ![](../image/retropad/retro_x.png)       |
+| L-Trigger                     | ![](../image/retropad/retro_l1.png)            |
+| R-Trigger                     | ![](../image/retropad/retro_r1.png)            |
+| Z-Trigger                     | ![](../image/retropad/retro_l2.png)            | 
+| C Buttons Mode                | ![](../image/retropad/retro_r2.png)            |
+| Control Stick X               | ![](../image/retropad/retro_left_stick.png) X  |
+| Control Stick Y               | ![](../image/retropad/retro_left_stick.png) Y  |
+| C Buttons X                   | ![](../image/retropad/retro_right_stick.png) X |
+| C Buttons Y                   | ![](../image/retropad/retro_right_stick.png) Y |
 
 ## Compatibility
 

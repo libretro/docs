@@ -14,7 +14,7 @@ The Game Music Emu core is licensed under
 
 - [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -56,7 +56,7 @@ Frontend-level settings or features that the Game Music Emu core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -89,9 +89,9 @@ The Game Music Emu core supports the following device type(s) in the controls me
 
 | RetroPad Inputs                                | Game Music Emu core inputs |
 |------------------------------------------------|----------------------------|
-| ![](/image/retropad/retro_start.png)         | Pause                      |
-| ![](/image/retropad/retro_l1.png)            | Previous Track             |
-| ![](/image/retropad/retro_r1.png)            | Next Track                 |
+| ![](../image/retropad/retro_start.png)         | Pause                      |
+| ![](../image/retropad/retro_l1.png)            | Previous Track             |
+| ![](../image/retropad/retro_r1.png)            | Next Track                 |
 
 #### Video Tutorial
 

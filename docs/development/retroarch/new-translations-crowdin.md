@@ -16,13 +16,13 @@ First you need to create Crowdin account in [here](https://accounts.crowdin.com/
 
 You can reach the project page of RetroArch by clicking [here](https://crowdin.com/project/retroarch). You can either join the project and make translations or you don't join the project but still make translations. But if you join the project, you will be informed about the changes and development, also you can display RetroArch project on your profile and you can connect quickly. You can join the project by clicking the **Join** button at the top right.
 
-![Join the Project](/image/development/crowdin-join.png)
+![Join the Project](../../image/development/crowdin-join.png)
 
 After clicking the language you want to translate, the string file will welcome you. After clicking the file from here, you will see the translation page.
 
 This screen may scare you at first, but don't worry, it's actually very simple process. You will see untranslated or translated titles in the left menu. After clicking on any title, you will see the source string, that is, the main term, and below you will have your space to translate to your language. After making your translation, click **Save** and you will have sent your translation. It's that simple.
 
-![Translate main screen](/image/development/crowdin-translate-page.png)
+![Translate main screen](../../image/development/crowdin-translate-page.png)
 
 ### Proofreading
 

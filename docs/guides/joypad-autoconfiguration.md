@@ -21,7 +21,7 @@ RetroArch works many platforms. Each of these platforms has one or more input sy
 
 Traditional emulators allow you map each button of your pad to the original pad of the emulated system. For example, this is how the Snes9x joypad configuration interface looks:
 
-![Snes9x joypad configuration](/image/retroarch/input/snes9x-joyconfig-example.jpg)
+![Snes9x joypad configuration](../image/retroarch/input/snes9x-joyconfig-example.jpg)
 
 RetroArch also allows this kind of manual mapping. However, RetroArch tries to go further by detecting your joypad and automatically configuring it so manual configuration becomes obsolete.
 
@@ -38,7 +38,7 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 
 ## Installing or updating joypad profiles
 
-![downloading joypad profiles](/image/retroarch/input/update-joypads.png)
+![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
 
 The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Autoconfig Profiles` to get the latest version of the profile pack.
 

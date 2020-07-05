@@ -16,7 +16,7 @@ The Nestopia UE core is licensed under
 
 - [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -43,7 +43,7 @@ Required or optional firmware files go in the frontend's system directory.
 	
 |   Filename      |    Description                                                                |              md5sum              |
 |:---------------:|:-----------------------------------------------------------------------------:|:--------------------------------:|
-| [NstDatabase.xml](https://docs.libretro.com/library/nestopia_ue/index.html#nstdatabasexml) | Nestopia UE Database file - Required  |
+| [NstDatabase.xml](#nstdatabasexml) | Nestopia UE Database file - Required  |
 | disksys.rom     | Family Computer Disk System BIOS - Required for Famicom Disk System emulation | ca30b50f880eb660a320674ed365ef7a |
 
 ## Features
@@ -70,7 +70,7 @@ Frontend-level settings or features that the Nestopia UE core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -99,7 +99,7 @@ The Nestopia UE core saves/loads to/from these directories.
 
 - The Nestopia UE core's core provided FPS is (FPS)
 - The Nestopia UE core's core provided sample rate is 44100 Hz
-- The Nestopia UE core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](https://docs.libretro.com/library/nestopia_ue/#core-options).
+- The Nestopia UE core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](nestopia_ue.md#core-options).
 
 ### NstDatabase.xml
 
@@ -143,19 +143,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Blargg NTSC filter' core option screenshots have been taken with the 'Palette' core option set to cxa2025as.
 	
 ??? note "Blargg NTSC filter - Off"
-	![](/image/core/nestopia_ue/blargg_off.png)
+	![](../image/core/nestopia_ue/blargg_off.png)
 	
 ??? note "Blargg NTSC filter - composite"
-	![](/image/core/nestopia_ue/blargg_composite.png)
+	![](../image/core/nestopia_ue/blargg_composite.png)
 
 ??? note "Blargg NTSC filter - svideo"
-	![](/image/core/nestopia_ue/blargg_svideo.png)
+	![](../image/core/nestopia_ue/blargg_svideo.png)
 
 ??? note "Blargg NTSC filter - rgb"
-	![](/image/core/nestopia_ue/blargg_rgb.png)
+	![](../image/core/nestopia_ue/blargg_rgb.png)
 
 ??? note "Blargg NTSC filter - monochrome"
-	![](/image/core/nestopia_ue/blargg_monochrome.png)	
+	![](../image/core/nestopia_ue/blargg_monochrome.png)	
 	
 - **Palette** [nestopia_palette] (**cxa2025as**|consumer|canonical|alternative|rgb|pal|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|raw|custom)
 
@@ -165,37 +165,37 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Palette' core option screenshots have been taken with the 'Blargg NTSC filter' core option set to Off.
 	
 ??? note "Palette - cxa2025as"
-	![](/image/core/nestopia_ue/cxa2025as.png)
+	![](../image/core/nestopia_ue/cxa2025as.png)
 
 ??? note "Palette - consumer"
-	![](/image/core/nestopia_ue/consumer.png)
+	![](../image/core/nestopia_ue/consumer.png)
 
 ??? note "Palette - canonical"
-	![](/image/core/nestopia_ue/canonical.png)
+	![](../image/core/nestopia_ue/canonical.png)
 	
 ??? note "Palette - alternative"
-	![](/image/core/nestopia_ue/alternative.png)
+	![](../image/core/nestopia_ue/alternative.png)
 
 ??? note "Palette - rgb"
-	![](/image/core/nestopia_ue/rgb.png)
+	![](../image/core/nestopia_ue/rgb.png)
 
 ??? note "Palette - pal"
-	![](/image/core/nestopia_ue/pal.png)
+	![](../image/core/nestopia_ue/pal.png)
 
 ??? note "Palette - composite-direct-fbx"
-	![](/image/core/nestopia_ue/composite_direct_fbx.png)
+	![](../image/core/nestopia_ue/composite_direct_fbx.png)
 
 ??? note "Palette - pvm-style-d93-fbx"
-	![](/image/core/nestopia_ue/pvm_style_d93_fbx.png)
+	![](../image/core/nestopia_ue/pvm_style_d93_fbx.png)
 
 ??? note "Palette - ntsc-hardware-fbx"
-	![](/image/core/nestopia_ue/ntsc_hardware_fbx.png)
+	![](../image/core/nestopia_ue/ntsc_hardware_fbx.png)
 
 ??? note "Palette - nes-classic-fbx-fs"
-	![](/image/core/nestopia_ue/nes_classic_fbx_fs.png)
+	![](../image/core/nestopia_ue/nes_classic_fbx_fs.png)
 
 ??? note "Palette - raw"
-	![](/image/core/nestopia_ue/raw.png)
+	![](../image/core/nestopia_ue/raw.png)
 	
 - **Remove 8-sprites-per-scanline hardware limit** [nestopia_nospritelimit] (**disabled**|enabled)
 
@@ -218,33 +218,33 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Mask out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Mask Overscan (Vertical) - On"
-	![](/image/core/nestopia_ue/vert_on.png)
+	![](../image/core/nestopia_ue/vert_on.png)
 	
 ??? note "Mask Overscan (Vertical) - Off"
-	![](/image/core/nestopia_ue/vert_off.png)	
+	![](../image/core/nestopia_ue/vert_off.png)	
 
 - **Mask Overscan (Horizontal)** [nestopia_overscan_h] (**disabled**|enabled)
 
 	Mask out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Mask Overscan (Horizontal) - Off"
-	![](/image/core/nestopia_ue/horiz_off.png)
+	![](../image/core/nestopia_ue/horiz_off.png)
 	
 ??? note "Mask Overscan (Horizontal) - On"
-	![](/image/core/nestopia_ue/horiz_on.png)	
+	![](../image/core/nestopia_ue/horiz_on.png)	
 
 - **Preferred aspect ratio** [nestopia_aspect] (**auto**|ntsc|pal|4:3)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings. 'auto' will use the [NstDatabase.xml](https://docs.libretro.com/library/nestopia_ue/index.html#nstdatabasexml) database file for aspect ratio autodetection. If there is no database present it will default to NTSC for 'auto'.
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for aspect ratio autodetection. If there is no database present it will default to NTSC for 'auto'.
 	
 ??? note "Preferred aspect ratio - ntsc"
-	![](/image/core/nestopia_ue/ratio_ntsc.png)
+	![](../image/core/nestopia_ue/ratio_ntsc.png)
 	
 ??? note "Preferred aspect ratio - pal"
-	![](/image/core/nestopia_ue/ratio_pal.png)
+	![](../image/core/nestopia_ue/ratio_pal.png)
 	
 ??? note "Preferred aspect ratio - 4:3"
-	![](/image/core/nestopia_ue/ratio_4by3.png)	
+	![](../image/core/nestopia_ue/ratio_4by3.png)	
 
 - **Game Genie Sound Distortion** [nestopia_genie_distortion] (**disabled**|enabled)
 
@@ -252,7 +252,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Favored System** [nestopia_favored_system] (**auto**|ntsc|pal|famicom|dendy)
 
-	Choose which region the system is from. 'auto' will use the [NstDatabase.xml](https://docs.libretro.com/library/nestopia_ue/index.html#nstdatabasexml) database file for region autodetection. If there is no database present it will default to NTSC for 'auto'.
+	Choose which region the system is from. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for region autodetection. If there is no database present it will default to NTSC for 'auto'.
 	
 - **RAM Power-on State** [nestopia_ram_power_state] (**0x00**|0xFF|random)
 
@@ -284,46 +284,46 @@ The Nestopia UE core uses the NstDatabase.xml database file to detect which game
 
 #### Joypad
 
-![](/image/controller/nes.png)
+![](../image/controller/nes.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Turbo B                  | ![](/image/retropad/retro_y.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)    |
-| Turbo A                  | ![](/image/retropad/retro_x.png)    |
-| (FDS) Disk Side Change   | ![](/image/retropad/retro_l1.png)         |
-| (FDS) Eject Disk         | ![](/image/retropad/retro_r1.png)         |
-| (VSSystem) Coin 1        | ![](/image/retropad/retro_l2.png)         |
-| (VSSystem) Coin 2        | ![](/image/retropad/retro_r2.png)         |
-| (Famicom) Microphone     | ![](/image/retropad/retro_l3.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| (FDS) Disk Side Change   | ![](../image/retropad/retro_l1.png)         |
+| (FDS) Eject Disk         | ![](../image/retropad/retro_r1.png)         |
+| (VSSystem) Coin 1        | ![](../image/retropad/retro_l2.png)         |
+| (VSSystem) Coin 2        | ![](../image/retropad/retro_r2.png)         |
+| (Famicom) Microphone     | ![](../image/retropad/retro_l3.png)         |
 
 | User 2 - 4 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Turbo B                      | ![](/image/retropad/retro_y.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
-| Turbo A                      | ![](/image/retropad/retro_x.png)    |
-| (FDS) Disk Side Change       | ![](/image/retropad/retro_l1.png)         |
-| (FDS) Eject Disk             | ![](/image/retropad/retro_r1.png)         |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Turbo B                      | ![](../image/retropad/retro_y.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
+| Turbo A                      | ![](../image/retropad/retro_x.png)    |
+| (FDS) Disk Side Change       | ![](../image/retropad/retro_l1.png)         |
+| (FDS) Eject Disk             | ![](../image/retropad/retro_r1.png)         |
 
 #### Lightgun
 
 | RetroLightgun Inputs                                 | Zapper           |
 |------------------------------------------------------|------------------|
-| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | Zapper Crosshair |
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Zapper Crosshair |
 | Gun Trigger                                          | Zapper Trigger   |
 | Gun Aux B                                            | Zapper Light On  |
 
@@ -334,7 +334,7 @@ The Nestopia UE core uses the NstDatabase.xml database file to detect which game
 | Skull & Crossbones     | Graphical glitches and screen shaking when in 2-player mode. (1) |
 
 ??? note "(1)"
-	![](/image/core/nestopia_ue/skull.png)
+	![](../image/core/nestopia_ue/skull.png)
 
 ## External Links
 
@@ -348,13 +348,13 @@ The Nestopia UE core uses the NstDatabase.xml database file to detect which game
 
 #### Nintendo - Family Computer Disk System
 
-- [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
+- [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
 
 #### Nintendo - Nintendo Entertainment System
 
-- [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
-- [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
-- [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (QuickNES)](https://docs.libretro.com/library/quicknes/)
+- [Nintendo - NES / Famicom (bnes)](bnes.md)
+- [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
+- [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

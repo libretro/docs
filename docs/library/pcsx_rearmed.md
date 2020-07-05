@@ -14,7 +14,7 @@ The PCSX ReARMed core is licensed under
 
 - [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -75,7 +75,7 @@ Frontend-level settings or features that the PCSX ReARMed core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -162,7 +162,7 @@ Valkyrie Profile (USA) (Disc 1).cue
 Valkyrie Profile (USA) (Disc 2).cue
 ```
 
-![](/image/core/beetle_psx_hwm3u.png)
+![](../image/core/beetle_psx_hw/m3u.png)
 
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
@@ -429,17 +429,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
 
-	Enables Rumble. Look at the [Rumble section](https://docs.libretro.com/library/pcsx_rearmed#rumble-support) for more information.
+	Enables Rumble. Look at the [Rumble section](#rumble-support) for more information.
 	
 - **Enable Dithering** [pcsx_rearmed_dithering] (**enabled**|disabled)
 
 	If Off, disables the dithering pattern the PSX applies to combat color banding.
 	
 ??? note "Enable Dithering - On"
-	![](/image/core/pcsx_rearmeddither_on.png)
+	![](../image/core/pcsx_rearmed/dither_on.png)
 	
 ??? note "Enable Dithering - Off"
-	![](/image/core/pcsx_rearmeddither_off.png)
+	![](../image/core/pcsx_rearmed/dither_off.png)
 	
 - **Frame duping** [pcsx_rearmed_duping_enable] (**enabled**|disabled)
 
@@ -450,7 +450,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Show the BIOS bootlogo.
 	
 ??? note "Skip BIOS - Off"
-	![](/image/core/beetle_psx_hwbios.png)
+	![](../image/core/beetle_psx_hw/bios.png)
 	
 - **Sound: Reverb** [pcsx_rearmed_spu_reverb] (**enabled**|disabled)
 
@@ -507,39 +507,39 @@ Rumble only works in the PCSX ReARMed core when
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
-- The ['Enable Vibration' core option](https://docs.libretro.com/library/pcsx_rearmed#core-options) is set to On
+- The ['Enable Vibration' core option](#core-options) is set to On
 - The corresponding user's Pad Type is set to **analog**
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](https://docs.libretro.com/library/pcsx_rearmed#core-options).
+Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](#core-options).
 
 ## Joypad
 
-![](/image/controller/psx.png)
+![](../image/controller/psx.png)
 
 | RetroPad Inputs                                | User 1 - 8 input descriptors | standard    | analog         | negcon                          |
 |------------------------------------------------|------------------------------|-------------|----------------|---------------------------------|
-| ![](/image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          | Analog Button I                 |
-| ![](/image/retropad/retro_y.png)             | Square                       | Square      | Square         | Analog Button II                |
-| ![](/image/retropad/retro_select.png)        | Select                       | Select      | Select         |                                 |
-| ![](/image/retropad/retro_start.png)         | Start                        | Start       | Start          | Start                           |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       | D-Pad Up                        |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     | D-Pad Down                      |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     | D-Pad Left                      |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    | D-Pad Right                     |
-| ![](/image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         | A                               |
-| ![](/image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       | B                               |
-| ![](/image/retropad/retro_l1.png)            | L1                           | L1          | L1             | Left Shoulder Button (analog)   |
-| ![](/image/retropad/retro_r1.png)            | R1                           | R1          | R1             | Right Shoulder Button (digital) |
-| ![](/image/retropad/retro_l2.png)            | L2                           | L2          | L2             | Analog Button II                |
-| ![](/image/retropad/retro_r2.png)            | R2                           | R2          | R2             | Analog Button I                 |
-| ![](/image/retropad/retro_l3.png)            | L3                           |             | L3             |                                 |
-| ![](/image/retropad/retro_r3.png)            | R3                           |             | R3             |                                 |
-| ![](/image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
-| ![](/image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
-| ![](/image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
-| ![](/image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y | Up: Analog Button I / Down: Analog Button II |
+| ![](../image/retropad/retro_b.png)             | Cross                        | Cross       | Cross          | Analog Button I                 |
+| ![](../image/retropad/retro_y.png)             | Square                       | Square      | Square         | Analog Button II                |
+| ![](../image/retropad/retro_select.png)        | Select                       | Select      | Select         |                                 |
+| ![](../image/retropad/retro_start.png)         | Start                        | Start       | Start          | Start                           |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up    | D-Pad Up       | D-Pad Up                        |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down  | D-Pad Down     | D-Pad Down                      |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left  | D-Pad Left     | D-Pad Left                      |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right | D-Pad Right    | D-Pad Right                     |
+| ![](../image/retropad/retro_a.png)             | Circle                       | Circle      | Circle         | A                               |
+| ![](../image/retropad/retro_x.png)             | Triangle                     | Triangle    | Triangle       | B                               |
+| ![](../image/retropad/retro_l1.png)            | L1                           | L1          | L1             | Left Shoulder Button (analog)   |
+| ![](../image/retropad/retro_r1.png)            | R1                           | R1          | R1             | Right Shoulder Button (digital) |
+| ![](../image/retropad/retro_l2.png)            | L2                           | L2          | L2             | Analog Button II                |
+| ![](../image/retropad/retro_r2.png)            | R2                           | R2          | R2             | Analog Button I                 |
+| ![](../image/retropad/retro_l3.png)            | L3                           |             | L3             |                                 |
+| ![](../image/retropad/retro_r3.png)            | R3                           |             | R3             |                                 |
+| ![](../image/retropad/retro_left_stick.png) X  | Left Analog X                |             | Left Analog X  | Twist                           |
+| ![](../image/retropad/retro_left_stick.png) Y  | Left Analog Y                |             | Left Analog Y  |                                 |
+| ![](../image/retropad/retro_right_stick.png) X | Right Analog X               |             | Right Analog X |                                 |
+| ![](../image/retropad/retro_right_stick.png) Y | Right Analog Y               |             | Right Analog Y | Up: Analog Button I / Down: Analog Button II |
 
 ## Compatibility
 
@@ -558,5 +558,5 @@ Activating multitap support in compatible games can be configured by the ['Multi
 
 ## PSX
 
-- [Sony - PlayStation (Beetle PSX)](https://docs.libretro.com/library/beetle_psx/)
-- [Sony - PlayStation (Beetle PSX HW)](https://docs.libretro.com/library/beetle_psx_hw/)
+- [Sony - PlayStation (Beetle PSX)](beetle_psx.md)
+- [Sony - PlayStation (Beetle PSX HW)](beetle_psx_hw.md)

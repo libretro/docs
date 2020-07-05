@@ -5,7 +5,7 @@ RetroArch controls map real-world controller buttons to a virtual controller cal
 
 You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
 
-![RetroPad Conceptual Diagram](/image/guides/retropad-conceptual-diagram.png)
+![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
 ## Gamepad setup
 RetroArch is intended to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
@@ -29,7 +29,7 @@ Please be aware that some cores, for example arcade emulator cores and vintage c
 
 If your gamepad does not have an autoconfiguration or if you would like to change its default RetroPad binding, use the **Input** settings menu.
 
-![Screenshot of input binding](/image/retroarch/xmb/autoconf.gif)
+![Screenshot of input binding](../image/retroarch/xmb/autoconf.gif)
 
 - Navigate to **Settings**
 - Navigate to **Input**
@@ -78,18 +78,18 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 | User 1 Keyboard                                                                       | Default RetroPad Mapping                                     |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| ![Up Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)          |
-| ![Down Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)      |
-| ![Left Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)      |
-| ![Right Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png)    |
-| ![Q](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Q.png)                     | ![RetroPad L1](../image/retropad/retro_l1.png)               |
-| ![W](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_W.png)                     | ![RetroPad R1](../image/retropad/retro_r1.png)               |
-| ![Shift](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       |
-| ![Enter](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         |
-| ![Z](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Z.png)                     | ![RetroPad B](../image/retropad/retro_b.png)                 |
-| ![X](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_X.png)                     | ![RetroPad A](../image/retropad/retro_a.png)                 |
-| ![A](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_A.png)                     | ![RetroPad Y](../image/retropad/retro_y.png)                 |
-| ![S](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetoPad X](../image/retropad/retro_x.png)                  |
+| ![Up Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)          |
+| ![Down Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)      |
+| ![Left Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)      |
+| ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png)    |
+| ![Q](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Q.png)                     | ![RetroPad L1](../image/retropad/retro_l1.png)               |
+| ![W](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_W.png)                     | ![RetroPad R1](../image/retropad/retro_r1.png)               |
+| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       |
+| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         |
+| ![Z](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Z.png)                     | ![RetroPad B](../image/retropad/retro_b.png)                 |
+| ![X](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_X.png)                     | ![RetroPad A](../image/retropad/retro_a.png)                 |
+| ![A](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_A.png)                     | ![RetroPad Y](../image/retropad/retro_y.png)                 |
+| ![S](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetoPad X](../image/retropad/retro_x.png)                  |
 
 ### Menu controls
 
@@ -97,20 +97,20 @@ The keyboard inputs shown here are active only when `Settings` → `Input` → `
 
 | Keyboard Input                                                                        | Retropad Input                                            | Menu Action                   |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------- |
-| ![Up Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)       | Move cursor up                |
-| ![Down Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)   | Move cursor down              |
-| ![Left Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)   | Move cursor left              |
-| ![Right Arrow](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png) | Move cursor right             |
-| ![Page Up](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Up.png)         | ![RetroPad L1](../image/retropad/retro_l1.png)            | Scroll one page up            |
-| ![Page Down](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Down.png)     | ![RetroPad R1](../image/retropad/retro_r1.png)            | Scroll one page down          |
-| ![Backspace](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Backspace.png)     | ![RetroPad B](../image/retropad/retro_b.png)              | Return to the previous screen |
-| ![Enter](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad A](../image/retropad/retro_a.png)              | Select Item                   |
+| ![Up Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)       | Move cursor up                |
+| ![Down Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)   | Move cursor down              |
+| ![Left Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)   | Move cursor left              |
+| ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png) | Move cursor right             |
+| ![Page Up](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Up.png)         | ![RetroPad L1](../image/retropad/retro_l1.png)            | Scroll one page up            |
+| ![Page Down](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Down.png)     | ![RetroPad R1](../image/retropad/retro_r1.png)            | Scroll one page down          |
+| ![Backspace](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Backspace.png)     | ![RetroPad B](../image/retropad/retro_b.png)              | Return to the previous screen |
+| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad A](../image/retropad/retro_a.png)              | Select Item                   |
 | -                                                                                     | ![RetroPad Y](../image/retropad/retro_y.png)              | Scan content                  |
-| ![/](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Slash.png)                 | ![RetroPad X](../image/retropad/retro_x.png)              | Search                        |
-| ![Shift](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)    | Help                          |
-| ![Del](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | -                                                         | Remove highlighted input bind |
-| ![Space](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png)             | ![RetroPad Start](../image/retropad/retro_start.png)      | Reset to default              |
-| ![Esc](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Esc.png)                 | -                                                         | Exit RetroArch                |
+| ![/](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Slash.png)                 | ![RetroPad X](../image/retropad/retro_x.png)              | Search                        |
+| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)    | Help                          |
+| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | -                                                         | Remove highlighted input bind |
+| ![Space](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png)             | ![RetroPad Start](../image/retropad/retro_start.png)      | Reset to default              |
+| ![Esc](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Esc.png)                 | -                                                         | Exit RetroArch                |
 
 ### Hotkey controls
 
@@ -121,30 +121,30 @@ Hotkey binds can be configured at `Settings` → `Input` → 'Input Hotkey Binds
 
 | Keyboard Input                                                               | In-Game Action               |
 | ---------------------------------------------------------------------------- | ---------------------------- |
-| ![R](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_R.png)            | Rewind                       |
-| ![P](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_P.png)            | Pause                        |
-| ![H](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_H.png)            | Reset                        |
-| ![M](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_M.png)            | Next shader                  |
-| ![N](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_N.png)            | Previous shader              |
-| ![I](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_I.png)            | Netplay toggle play/spectate |
-| ![F1](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F1.png)          | Menu toggle                  |
-| ![F2](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F2.png)          | Save state                   |
-| ![F4](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F4.png)          | Load state                   |
-| ![F7](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F7.png)          | Increase current state slot  |
-| ![F6](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F6.png)          | Decrease current state slot  |
-| ![F8](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F8.png)          | Take screenshot              |
-| ![F9](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F9.png)          | Mute                         |
-| ![F12](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F12.png)        | Show on-screen keyboard      |
-| ![F11](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F11.png)        | Grab mouse                   |
-| ![+](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Plus.png)         | Volume Up                    |
-| ![-](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Minus.png)        | Volume Down                  |
-| ![Spacebar](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png) | Fast forward toggle          |
-| ![L](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_L.png)            | Fast forward hold            |
-| ![O](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_O.png)            | Movie record                 |
-| ![P](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_K.png)            | Frame advance                |
-| ![E](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_E.png)            | Slow motion                  |
-| ![F](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F.png)            | Fullscreen toggle            |
-| ![F5](/image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F5.png)          | Switch GUI                   |
+| ![R](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_R.png)            | Rewind                       |
+| ![P](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_P.png)            | Pause                        |
+| ![H](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_H.png)            | Reset                        |
+| ![M](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_M.png)            | Next shader                  |
+| ![N](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_N.png)            | Previous shader              |
+| ![I](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_I.png)            | Netplay toggle play/spectate |
+| ![F1](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F1.png)          | Menu toggle                  |
+| ![F2](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F2.png)          | Save state                   |
+| ![F4](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F4.png)          | Load state                   |
+| ![F7](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F7.png)          | Increase current state slot  |
+| ![F6](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F6.png)          | Decrease current state slot  |
+| ![F8](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F8.png)          | Take screenshot              |
+| ![F9](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F9.png)          | Mute                         |
+| ![F12](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F12.png)        | Show on-screen keyboard      |
+| ![F11](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F11.png)        | Grab mouse                   |
+| ![+](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Plus.png)         | Volume Up                    |
+| ![-](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Minus.png)        | Volume Down                  |
+| ![Spacebar](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png) | Fast forward toggle          |
+| ![L](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_L.png)            | Fast forward hold            |
+| ![O](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_O.png)            | Movie record                 |
+| ![P](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_K.png)            | Frame advance                |
+| ![E](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_E.png)            | Slow motion                  |
+| ![F](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F.png)            | Fullscreen toggle            |
+| ![F5](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_F5.png)          | Switch GUI                   |
 
 ## Platform-specific controls
 

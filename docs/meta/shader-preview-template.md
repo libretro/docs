@@ -3,7 +3,7 @@
 ## Background
 
 ## Preview Image
-![Preset Name](/image/shader/folder/shader-preview.png)
+![Preset Name](../image/shader/folder/shader-preview.png)
 
 ## Comments
 
