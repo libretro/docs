@@ -10,8 +10,8 @@ The Stella core has been authored by
 
 - Stephen Anthony
 - Bradford Mott
-- Eckhard Stolberg
-- Brian Watson
+- Thomas Jentzsch
+- Christian Speckner
 
 The Stella core is licensed under
 

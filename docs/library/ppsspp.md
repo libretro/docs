@@ -80,7 +80,7 @@ Frontend-level settings or features that the PPSSPP core respects.
 | Restart           | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
-| Rewind            | ✔         |
+| Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |

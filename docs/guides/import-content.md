@@ -15,14 +15,14 @@ Wait for this to finish downloading
 
 ## Step 2: Scan and import
 
-From the RetroArch Main Menu navigate to "Import content". You will be met by two options, "Scan Directory" or "Scan File".
+From the RetroArch Main Menu navigate to "Import content". You will be met by three options, "Scan Directory" , "Scan File" and "Manual Scan".
 
-To import a collection of ROMs, you should select "Scan Directory". Using the file browser, navigate to the folder with your ROM collection and select **"<Scan This Directory>"**.
+To import a collection of Contents, you should select "Scan Directory". Using the file browser, navigate to the folder with your Content collection and select **"<Scan This Directory>"**. If you like to import single file, you can use "Scan File" then navigate to file and select it. You can also "Manual Scan" it scan based on content file names and does not require content to match database.
 
 Please be patient while it scans, large collections could take a few minutes.
 
 ## Step 3: Add box art
 
-This is optional, but some games have box art that can make the menu more prettier, head back to the main menu, select "Online Updater", then choose "Thumbnails Updater". Here you need to select the console you want to download.
+This is optional, but some games have box art that can make the menu more prettier, head back to the main menu, select "Online Updater", then choose "Playlist Thumbnails Updater". Here you need to select the console you want to download.
 
 Please be patient, these take quite some time to download, especially on a slow internet connection.
