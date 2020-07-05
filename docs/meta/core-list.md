@@ -6,7 +6,7 @@
 - Beetle Cygne
 - BeetleDC
 - Beetle GBA
-- Beetle Handy
+- Beetle Lynx
 - Beetle NeoPop
 - Beetle PC-FX
 - Beetle PCE FAST

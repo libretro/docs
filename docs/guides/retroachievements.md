@@ -75,7 +75,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:------|
-| [Beetle Handy](https://github.com/libretro/beetle-lynx-libretro) | ✔         | Also known as Beetle Lynx |
+| [Beetle Lynx](https://github.com/libretro/beetle-lynx-libretro)  | ✔         |       |
 | [Handy](https://github.com/libretro/libretro-handy)              | ✔         |       |
 
 ### Bandai

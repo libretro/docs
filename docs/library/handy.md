@@ -144,4 +144,4 @@ Supported combinations
 
 #### Atari - Lynx
 
-- [Atari - Lynx (Beetle Handy)](https://docs.libretro.com/library/beetle_handy/)
+- [Atari - Lynx (Beetle Lynx)](https://docs.libretro.com/library/beetle_lynx/)

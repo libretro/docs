@@ -88,7 +88,7 @@ nav:
         - 'Atari - 7800 (ProSystem)': 'library/prosystem.md'
         - 'Atari - 5200 (Atari800)': 'library/atari800.md'
         - 'Atari - Jaguar (Virtual Jaguar)': 'library/virtual_jaguar.md'
-        - 'Atari - Lynx (Beetle Handy)': 'library/beetle_handy.md'
+        - 'Atari - Lynx (Beetle Lynx)': 'library/beetle_lynx.md'
         - 'Atari - Lynx (Handy)': 'library/handy.md'
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
       - 'Bandai Emulation':
