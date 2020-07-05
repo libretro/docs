@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2010 <a href="https://libretro.com">Libretro</a>
 nav:
   - 'About': 'index.md'
   - 'For Users':
-    - 'RetroArch: Getting Started':
+    - 'Getting Started':
       - 'Windows':
         - 'Windows 10': 'guides/install-windows.md'
         - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
@@ -30,7 +30,7 @@ nav:
         - 'Lakka-PC': 'guides/install-lakka.md' 
         - 'Steam Link': 'guides/install-steamlink.md'
         - 'Web Player': 'guides/web-player.md' 
-    - 'RetroArch: User Guides':
+    - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
       - 'Joypad Auto-Configuration': 'guides/joypad-autoconfiguration.md'
@@ -52,17 +52,18 @@ nav:
       - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
-    - 'RetroArch: Appearance and Customization':
+    - 'Appearance & Customization':
       - 'Creating a Theme': 'guides/themes.md'
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'RGUI Interface': 'guides/rgui.md'
-    - 'RetroArch: Advanced':
+    - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
       - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
       - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
       - 'Run Ahead': 'guides/runahead.md'
+      - 'Latency': 'guides/latency.md'
     - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
     - 'Core Library: Emulation':
       - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
