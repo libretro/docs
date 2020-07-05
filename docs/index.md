@@ -20,6 +20,7 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 ## Official Links
 
 - [Website](https://www.retroarch.com/)
+- [Patreon](https://www.patreon.com/libretro)
 - [F.A.Q](https://www.retroarch.com/?page=faq)
 - [Github Repository](https://github.com/libretro/RetroArch)
 - [Forum](https://forums.libretro.com/)
@@ -44,4 +45,3 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 - [Steam Group](https://steamcommunity.com/groups/libretro)
 - [Steam Developer Page](https://store.steampowered.com/developer/libretro)
 - [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
-- [Patreon](https://www.patreon.com/libretro)
