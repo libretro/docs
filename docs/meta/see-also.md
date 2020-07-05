@@ -9,7 +9,7 @@ This is a list of cores that are related to each other in some way.
 
 ## Lynx
 
-- [Atari - Lynx (Beetle Handy)](https://docs.libretro.com/library/beetle_handy/)
+- [Atari - Lynx (Beetle Lynx)](https://docs.libretro.com/library/beetle_lynx/)
 - [Atari - Lynx (Handy)](https://docs.libretro.com/library/handy/)
 
 ## MSX

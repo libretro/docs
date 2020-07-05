@@ -60,7 +60,7 @@ GameBoy Advance               | mGBA               | [BIOS information](https://
 GameBoy Advance               | VBA Next           | [BIOS information](https://docs.libretro.com/library/vba_next/#bios)
 Gamecube/Wii                  | Dolphin            | [BIOS information](https://docs.libretro.com/library/dolphin/#bios)
 Intellivision                 | FreeIntv           | [BIOS information](https://docs.libretro.com/library/freeintv/#bios)
-Lynx                          | Beetle Handy       | [BIOS information](https://docs.libretro.com/library/beetle_handy/#bios)
+Lynx                          | Beetle Lynx        | [BIOS information](https://docs.libretro.com/library/beetle_lynx/#bios)
 Lynx                          | Handy              | [BIOS information](https://docs.libretro.com/library/handy/#bios)
 Master System                 | Emux SMS           | [BIOS information](https://docs.libretro.com/library/emux_sms/#bios)
 MS/GG                         | SMS Plus GX        | [BIOS information](https://docs.libretro.com/library/smsplus/#bios)

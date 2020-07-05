@@ -1,4 +1,4 @@
-# Atari - Lynx (Beetle Handy)
+# Atari - Lynx (Beetle Lynx)
 
 ## Background
 
@@ -6,12 +6,12 @@ Beetle Lynx is an Atari Lynx video game system emulator that can be used as a li
 
 ### Author/License
 
-The Beetle Handy core has been authored by
+The Beetle Lynx core has been authored by
 
 - K. Wilkins
 - [Mednafen Team](https://mednafen.github.io/)
 
-The Beetle Handy core is licensed under
+The Beetle Lynx core is licensed under
 
 - [zlib](https://github.com/libretro/beetle-lynx-libretro/blob/master/mednafen/lynx/license.txt), [GPLv2](https://github.com/libretro/beetle-lynx-libretro/blob/master/COPYING)
 
@@ -19,14 +19,14 @@ A summary of the licenses behind RetroArch and its cores have found [here](https
 
 ## Extensions
 
-Content that can be loaded by the Beetle Handy core have the following file extensions:
+Content that can be loaded by the Beetle Lynx core have the following file extensions:
 
 - .lnx
 - .o
 
 ## Databases
 
-RetroArch database(s) that are associated with the Beetle Handy core:
+RetroArch database(s) that are associated with the Beetle Lynx core:
 
 - [Atari - Lynx](https://github.com/libretro/libretro-database/blob/master/rdb/Atari%20-%20Lynx.rdb)
 
@@ -40,7 +40,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 ## Features
 
-Frontend-level settings or features that the Beetle Handy core respects.
+Frontend-level settings or features that the Beetle Lynx core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -71,9 +71,9 @@ Frontend-level settings or features that the Beetle Handy core respects.
 
 ### Directories
 
-The Beetle Handy core's directory name is 'Beetle Lynx'
+The Beetle Lynx core's directory name is 'Beetle Lynx'
 
-The Beetle Handy core saves/loads to/from these directories.
+The Beetle Lynx core saves/loads to/from these directories.
 
 **Frontend's State directory**
 
@@ -81,17 +81,17 @@ The Beetle Handy core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Beetle Handy core's core provided FPS is 75
-- The Beetle Handy core's core provided sample rate is 44100 Hz
-- The Beetle Handy core's core provided aspect ratio is 80/51
+- The Beetle Lynx core's core provided FPS is 75
+- The Beetle Lynx core's core provided sample rate is 44100 Hz
+- The Beetle Lynx core's core provided aspect ratio is 80/51
 
 ## Loading content
 
-Beetle Handy supports Lynx headered roms and non-headered roms. It also supports homebrews in *.o extensions.
+Beetle Lynx supports Lynx headered roms and non-headered roms. It also supports homebrews in *.o extensions.
 
 ## Core options
 
-The Beetle Handy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle Lynx core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -102,7 +102,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Controllers
 
-The Beetle Handy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Beetle Lynx core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
@@ -116,7 +116,7 @@ The Beetle Handy core supports the following device type(s) in the controls menu
 
 #### Joypad
 
-| User 1 Remap descriptors | RetroPad Inputs                                | Beetle Handy core inputs |
+| User 1 Remap descriptors | RetroPad Inputs                                | Beetle Lynx core inputs |
 |--------------------------|------------------------------------------------|--------------------------|
 |                          | ![](/image/retropad/retro_b.png)             | B                        |
 |                          | ![](/image/retropad/retro_start.png)         | Pause                    |
@@ -143,9 +143,9 @@ Supported combinations
 
 - [Official Mednafen Website](https://mednafen.github.io/)
 - [Official Mednafen Downloads](https://mednafen.github.io/releases/)
-- [Libretro Beetle Handy Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_lynx_libretro.info)
-- [Libretro Beetle Handy Github Repository](https://github.com/libretro/beetle-lynx-libretro)
-- [Report Libretro Beetle Handy Core Issues Here](https://github.com/libretro/beetle-lynx-libretro/issues)
+- [Libretro Beetle Lynx Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_lynx_libretro.info)
+- [Libretro Beetle Lynx Github Repository](https://github.com/libretro/beetle-lynx-libretro)
+- [Report Libretro Beetle Lynx Core Issues Here](https://github.com/libretro/beetle-lynx-libretro/issues)
 
 ### See also
 
