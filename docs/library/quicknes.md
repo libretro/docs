@@ -13,7 +13,7 @@ The QuickNES core is licensed under
 
 - [LGPLv2.1+](https://github.com/kode54/QuickNES/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Compatibility
 
@@ -58,7 +58,7 @@ Frontend-level settings or features that the QuickNES core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -140,80 +140,80 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Specifies which color palette to use when decoding the NTSC video signal output by the NES.
 	
 ??? note "Color Palette: default"
-    ![](/image/core/quicknesdefault.png)
+    ![](../image/core/quicknes/default.png)
 	
 ??? note "Color Palette: asqrealc"
-    ![](/image/core/quicknesasqrealc.png)
+    ![](../image/core/quicknes/asqrealc.png)
 	
 ??? note "Color Palette: nintendo-vc"
-    ![](/image/core/quicknesnintendo-vc.png)
+    ![](../image/core/quicknes/nintendo-vc.png)
 	
 ??? note "Color Palette: rgb"
-    ![](/image/core/quicknesrgb.png)
+    ![](../image/core/quicknes/rgb.png)
 	
 ??? note "Color Palette: yuv-v3"
-    ![](/image/core/quicknesyuv-v3.png)
+    ![](../image/core/quicknes/yuv-v3.png)
 	
 ??? note "Color Palette: unsaturated-final"
-    ![](/image/core/quicknesunsaturated-final.png)
+    ![](../image/core/quicknes/unsaturated-final.png)
 	
 ??? note "Color Palette: sony-cxa2025as-us"
-    ![](/image/core/quicknessony-cxa2025as-us.png)
+    ![](../image/core/quicknes/sony-cxa2025as-us.png)
 	
 ??? note "Color Palette: pal"
-    ![](/image/core/quicknespal.png)
+    ![](../image/core/quicknes/pal.png)
 	
 ??? note "Color Palette: bmf-final2"
-    ![](/image/core/quicknesbmf-final2.png)
+    ![](../image/core/quicknes/bmf-final2.png)
 	
 ??? note "Color Palette: bmf-final3"
-    ![](/image/core/quicknesbmf-final3.png)
+    ![](../image/core/quicknes/bmf-final3.png)
 	
 ??? note "Color Palette: smooth-fbx"
-    ![](/image/core/quicknessmooth-fbx.png)
+    ![](../image/core/quicknes/smooth-fbx.png)
 	
 ??? note "Color Palette: composite-direct-fbx"
-    ![](/image/core/quicknescomposite-direct-fbx.png)
+    ![](../image/core/quicknes/composite-direct-fbx.png)
 	
 ??? note "Color Palette: pvm-style-d93-fbx"
-    ![](/image/core/quicknespvm-style-d93-fbx.png)
+    ![](../image/core/quicknes/pvm-style-d93-fbx.png)
 	
 ??? note "Color Palette: ntsc-hardware-fbx"
-    ![](/image/core/quicknesntsc-hardware-fbx.png)
+    ![](../image/core/quicknes/ntsc-hardware-fbx.png)
 	
 ??? note "Color Palette: nes-classic-fbx-fs"
-    ![](/image/core/quicknesnes-classic-fbx-fs.png)
+    ![](../image/core/quicknes/nes-classic-fbx-fs.png)
 	
 ??? note "Color Palette: nescap"
-    ![](/image/core/quicknesnescap.png)
+    ![](../image/core/quicknes/nescap.png)
 	
 ??? note "Color Palette: wavebeam"
-    ![](/image/core/quickneswavebeam.png)
+    ![](../image/core/quicknes/wavebeam.png)
 	
 - **Turbo enable** [quicknes_turbo_enable] (**none**|player 1|player 2|both)
 	
-	Enables the use of the [Turbo A and Turbo B buttons](https://docs.libretro.com/library/quicknes/index.html#joypad).
+	Enables the use of the [Turbo A and Turbo B buttons](#joypad).
 	
 - **Turbo pulse width (in frames)** [quicknes_turbo_pulse_width] (**3**|5|10|15|30|60|1|2)
 	
-	Specifies both the width and spacing (in frames) of input 'pulses' when the [Turbo A and Turbo B buttons](https://docs.libretro.com/library/quicknes/index.html#joypad) are held down. For example, the default setting of '3' corresponds to a (60/(3+3)) = 10 Hz turbo frequency (10 presses per second).
+	Specifies both the width and spacing (in frames) of input 'pulses' when the [Turbo A and Turbo B buttons](#joypad) are held down. For example, the default setting of '3' corresponds to a (60/(3+3)) = 10 Hz turbo frequency (10 presses per second).
 	
 ## Joypad
 
-![](/image/Controller/nes.png)
+![](../image/controller/nes.png)
 
 | User 1 - 2 input descriptors | RetroPad Inputs                             |
 |------------------------------|---------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)          |
-| Turbo B                      | ![](/image/retropad/retro_y.png)          |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)          |
-| Turbo A                      | ![](/image/retropad/retro_x.png)          |
+| B                            | ![](../image/retropad/retro_b.png)            |
+| Turbo B                      | ![](../image/retropad/retro_y.png)            |
+| Select                       | ![](../image/retropad/retro_select.png)       |
+| Start                        | ![](../image/retropad/retro_start.png)        |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)      |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)    |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)    |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   |
+| A                            | ![](../image/retropad/retro_a.png)            |
+| Turbo A                      | ![](../image/retropad/retro_x.png)            |
 
 ## External Links
 
@@ -224,8 +224,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Nintendo - Nintendo Entertainment System
 
-- [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
-- [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
-- [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (Nestopia UE)](https://docs.libretro.com/library/nestopia_ue/)
+- [Nintendo - NES / Famicom (bnes)](bnes.md)
+- [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
+- [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)

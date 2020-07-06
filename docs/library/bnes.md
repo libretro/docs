@@ -15,7 +15,7 @@ The bnes core is licensed under
 
 - [GPLv3](https://github.com/libretro/bnes-libretro/blob/master/license)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -53,7 +53,7 @@ Frontend-level settings or features that the bnes core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -94,18 +94,18 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 
 #### Joypad
 
-![](/image/controller/nes.png)
+![](../image/controller/nes.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility
 
@@ -118,7 +118,7 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 | Skull & Crossbones           | Crashes on start.                              |
 
 ??? note "(1)"
-    ![](/images/cores/bnes/crisisforce.png)
+    ![](../image/core/bnes/crisisforce.png)
 
 ## External Links
 
@@ -132,8 +132,8 @@ The bnes core supports the following device type(s) in the controls menu, bolded
 
 #### Nintendo - Nintendo Entertainment System
 
-- [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
-- [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (Nestopia UE)](https://docs.libretro.com/library/nestopia_ue/)
-- [Nintendo - NES / Famicom (QuickNES)](https://docs.libretro.com/library/quicknes/)
+- [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
+- [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

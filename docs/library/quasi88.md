@@ -12,7 +12,7 @@ The QUASI88 core is licensed under
 
 - BSD 3-Clause
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -107,7 +107,7 @@ Frontend-level settings or features that the QUASI88 core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✔         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -186,28 +186,28 @@ When using software that requires full keyboard input, it's recommended to use g
 
 | User 1 input descriptors      | RetroPad Inputs                           |
 |-------------------------------|-------------------------------------------|
-| Z Key                         | ![](/image/retropad/retro_b.png)          |
-| Space Key                     | ![](/image/retropad/retro_y.png)          |
-| I Key                         | ![](/image/retropad/retro_select.png)     |
-| Return Key                    | ![](/image/retropad/retro_start.png)      |
-| Keypad 8 (Up)                 | ![](/image/retropad/retro_dpad_up.png)    |
-| Keypad 2 (Down)               | ![](/image/retropad/retro_dpad_down.png)  |
-| Keypad 4 (Left)               | ![](/image/retropad/retro_dpad_left.png)  |
-| Keypad 6 (Right)              | ![](/image/retropad/retro_dpad_right.png) |
-| X Key                         | ![](/image/retropad/retro_a.png)          |
-| Change loaded disk in drive 1 | ![](/image/retropad/retro_l.png)          |
-| Change loaded disk in drive 2 | ![](/image/retropad/retro_r.png)          |
+| Z Key                         | ![](../image/retropad/retro_b.png)          |
+| Space Key                     | ![](../image/retropad/retro_y.png)          |
+| I Key                         | ![](../image/retropad/retro_select.png)     |
+| Return Key                    | ![](../image/retropad/retro_start.png)      |
+| Keypad 8 (Up)                 | ![](../image/retropad/retro_dpad_up.png)    |
+| Keypad 2 (Down)               | ![](../image/retropad/retro_dpad_down.png)  |
+| Keypad 4 (Left)               | ![](../image/retropad/retro_dpad_left.png)  |
+| Keypad 6 (Right)              | ![](../image/retropad/retro_dpad_right.png) |
+| X Key                         | ![](../image/retropad/retro_a.png)          |
+| Change loaded disk in drive 1 | ![](../image/retropad/retro_l1.png)         |
+| Change loaded disk in drive 2 | ![](../image/retropad/retro_r1.png)         |
 
 ### Player 2
 
 | User 2 input descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| Q Key                    | ![](/image/retropad/retro_b.png)          |
-| R Key                    | ![](/image/retropad/retro_dpad_up.png)    |
-| F Key                    | ![](/image/retropad/retro_dpad_down.png)  |
-| D Key                    | ![](/image/retropad/retro_dpad_left.png)  |
-| G Key                    | ![](/image/retropad/retro_dpad_right.png) |
-| Tab Key                  | ![](/image/retropad/retro_a.png)          |
+| Q Key                    | ![](../image/retropad/retro_b.png)          |
+| R Key                    | ![](../image/retropad/retro_dpad_up.png)    |
+| F Key                    | ![](../image/retropad/retro_dpad_down.png)  |
+| D Key                    | ![](../image/retropad/retro_dpad_left.png)  |
+| G Key                    | ![](../image/retropad/retro_dpad_right.png) |
+| Tab Key                  | ![](../image/retropad/retro_a.png)          |
 
 ## External Links
 

@@ -18,7 +18,7 @@ The PicoDrive core is licensed under
 
 - [Non-commercial](https://github.com/libretro/picodrive/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -75,7 +75,7 @@ Frontend-level settings or features that the PicoDrive core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -108,9 +108,9 @@ The PicoDrive core saves/loads to/from these directories.
 - The PicoDrive core's base height is 224
 - The PicoDrive core's max width is 320
 - The PicoDrive core's max height is 240
-- The PicoDrive core's core provided aspect ratio is 10/7 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to PAR
-- The PicoDrive core's core provided aspect ratio is 4/3 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to 4/3
-- The PicoDrive core's core provided aspect ratio is 5/4 when the ['Core-provided aspect ratio' core option](https://docs.libretro.com/library/picodrive/#core-options) is set to CRT
+- The PicoDrive core's core provided aspect ratio is 10/7 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to PAR
+- The PicoDrive core's core provided aspect ratio is 4/3 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to 4/3
+- The PicoDrive core's core provided aspect ratio is 5/4 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to CRT
 
 ## Loading Sega CD games
 
@@ -260,7 +260,7 @@ The PicoDrive core supports the following device type(s).
 
 ## Sega 16-bit
 
-- [Sega - Master System (Emux SMS)](https://docs.libretro.com/library/emux_sms/)
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
-- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](https://docs.libretro.com/library/bluemsx/)
+- [Sega - Master System (Emux SMS)](emux_sms.md)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](gearsystem.md)
+- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)

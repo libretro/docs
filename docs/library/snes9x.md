@@ -12,7 +12,7 @@ The Snes9x core is licensed under
 
 - [Non-commercial](https://github.com/snes9xgit/snes9x/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Features
 
@@ -69,7 +69,7 @@ Frontend-level settings or features that the Snes9x core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✔         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -102,11 +102,11 @@ The Snes9x core saves/loads to/from these directories.
 - The Snes9x core's base height is 224 when the Crop Overscan core option is set to enabled. 239 when it's set to disabled.
 - The Snes9x core's max width is 512
 - The Snes9x core's max height is 478
-- The Snes9x core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](https://docs.libretro.com/library/snes9x#core-options).
+- The Snes9x core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](../library/snes9x#core-options).
 
 ## MSU-1 support
 
-MSU-1 support in the Snes9x core follows the SD2SNES/Snes9x naming format, i.e.
+MSU-1 support in the Snes9x core follows the SD2SNES.mdSnes9x naming format, i.e.
 
 ```
 gamename.sfc
@@ -116,7 +116,7 @@ gamename-#.pcm
 
 Loading a manifest.bml file or having a xml file isn't necessary. **Just load gamename.sfc.**
 
-Here's an example of a working MSU-1 setup done with [Secret of Mana MSU-1](https://www.romhacking.net/hacks/2467/). Please note that som_msu1.sfc is being [softpatched](https://docs.libretro.com/guides/softpatching/) in this example.
+Here's an example of a working MSU-1 setup done with [Secret of Mana MSU-1](https://www.romhacking.net/hacks/2467/). Please note that som_msu1.sfc is being [softpatched](../guides/softpatching.md) in this example.
 
 ![](../image/core/snes9x/msu.png)
 
@@ -449,17 +449,17 @@ Activating multitap support in compatible games can be configured by switching t
 
 ## SNES
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](https://docs.libretro.com/library/bsnes_balanced/)
-- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](https://docs.libretro.com/library/bsnes_cplusplus98/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)

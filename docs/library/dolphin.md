@@ -4,13 +4,13 @@
 
 A Nintendo Gamecube/Wii emulator for Android, Windows, Mac and Linux, written in C++.
 
-The Dolphin core supports [OpenGL](https://docs.libretro.com/library/dolphin/#opengl), [Vulkan](https://docs.libretro.com/library/dolphin/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/dolphin/#d3d11) rendering.
+The Dolphin core supports [OpenGL](dolphin.md#opengl), [Vulkan](dolphin.md#vulkan), and [Direct3D 11](dolphin.md#d3d11) rendering.
 
 The Dolphin core is licensed under
 
 - [GPLv2](https://github.com/libretro/dolphin/blob/master/LICENSE.TXT)
 
-A summary of the licenses behind RetroArch and its cores can be found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -106,7 +106,7 @@ Frontend-level settings or features that the Dolphin core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✔         |
@@ -189,24 +189,24 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     
 ## Joypad
 
-![](/image/controller/psp.png)
+![](../image/controller/psp.png)
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_b.png)             | Cross                    |
-| ![](/image/retropad/retro_y.png)             | Square                   |
-| ![](/image/retropad/retro_select.png)        | Select                   |
-| ![](/image/retropad/retro_start.png)         | Start                    |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](/image/retropad/retro_a.png)             | Circle                   |
-| ![](/image/retropad/retro_x.png)             | Triangle                 |
-| ![](/image/retropad/retro_l1.png)            | L                        |
-| ![](/image/retropad/retro_r1.png)            | R                        |
-| ![](/image/retropad/retro_left_stick.png) X  | Analog X                 |
-| ![](/image/retropad/retro_left_stick.png) Y  | Analog Y                 |
+| ![](../image/retropad/retro_b.png)             | Cross                    |
+| ![](../image/retropad/retro_y.png)             | Square                   |
+| ![](../image/retropad/retro_select.png)        | Select                   |
+| ![](../image/retropad/retro_start.png)         | Start                    |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+| ![](../image/retropad/retro_a.png)             | Circle                   |
+| ![](../image/retropad/retro_x.png)             | Triangle                 |
+| ![](../image/retropad/retro_l1.png)            | L                        |
+| ![](../image/retropad/retro_r1.png)            | R                        |
+| ![](../image/retropad/retro_left_stick.png) X  | Analog X                 |
+| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                 |
 
 ## Compatibility
 

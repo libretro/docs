@@ -16,7 +16,7 @@ The Dummy core is licensed under
 
 - MIT
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## External Links
 

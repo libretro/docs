@@ -12,7 +12,7 @@ The PokeMini core is licensed under
 
 - [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -55,7 +55,7 @@ Frontend-level settings or features that the PokeMini core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -101,26 +101,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Sets internal video scale factor. Increasing the scale factor improves the appearance of the internal 'dotmatrix' LCD filter. Scale should normally be set to '1x' for correct operation when using an external GPU shader.
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 2x*"
-    ![](/image/core/pokeminidotmatrix_2x.png)
+    ![](../image/core/pokemini/dotmatrix_2x.png)
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 4x*"
-    ![](/image/core/pokeminidotmatrix_4x.png)
+    ![](../image/core/pokemini/dotmatrix_4x.png)
 
 ??? note "*'dotmatrix' LCD filter - Video Scale - 6x*"
-    ![](/image/core/pokeminidotmatrix_6x.png)
+    ![](../image/core/pokemini/dotmatrix_6x.png)
 
 - **LCD Filter** [pokemini_lcdfilter] (**dotmatrix**|scanline|none)
 
 	Specifies which internal screen filter should be applied to the display. 'dotmatrix' produces a clean LCD effect, and is the recommended option. LCD filters are disabled when 'Video Scale' is set to '1x'.
 
 ??? note "*LCD Filter - dotmatrix*"
-    ![](/image/core/pokeminidotmatrix.png)
+    ![](../image/core/pokemini/dotmatrix.png)
 
 ??? note "*LCD Filter - scanline*"
-    ![](/image/core/pokeminiscanline.png)
+    ![](../image/core/pokemini/scanline.png)
 
 ??? note "*LCD Filter - none*"
-    ![](/image/core/pokemininone.png)
+    ![](../image/core/pokemini/none.png)
 
 - **LCD Mode** [pokemini_lcdmode] (**analog**|3shades|2shades)
 
@@ -145,46 +145,46 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Specifies palette used to 'colourise' the emulated liquid crystal display. 'Default' provides a close approximation of the natural screen tint of the original Pokémon Mini hardware. Palettes with a 'Vector' suffix correspond to inverted colours.
 
 ??? note "*Palette - Default*"
-    ![](/image/core/pokeminiDefault.png)
+    ![](../image/core/pokemini/Default.png)
 
 ??? note "*Palette - Old*"
-    ![](/image/core/pokeminiOld.png)
+    ![](../image/core/pokemini/Old.png)
 
 ??? note "*Palette - Monochrome*"
-    ![](/image/core/pokeminiMonochrome.png)
+    ![](../image/core/pokemini/Monochrome.png)
 
 ??? note "*Palette - Green*"
-    ![](/image/core/pokeminiGreen.png)
+    ![](../image/core/pokemini/Green.png)
 
 ??? note "*Palette - Green Vector*"
-    ![](/image/core/pokeminiGreen_Vector.png)
+    ![](../image/core/pokemini/Green_Vector.png)
 
 ??? note "*Palette - Red*"
-    ![](/image/core/pokeminiRed.png)
+    ![](../image/core/pokemini/Red.png)
 
 ??? note "*Palette - Red Vector*"
-    ![](/image/core/pokeminiRed_Vector.png)
+    ![](../image/core/pokemini/Red_Vector.png)
 
 ??? note "*Palette - Blue LCD*"
-    ![](/image/core/pokeminiBlue_LCD.png)
+    ![](../image/core/pokemini/Blue_LCD.png)
 
 ??? note "*Palette - LEDBacklight*"
-    ![](/image/core/pokeminiLEDBacklight.png)
+    ![](../image/core/pokemini/LEDBacklight.png)
 
 ??? note "*Palette - Girl Power*"
-    ![](/image/core/pokeminiGirl_Power.png)
+    ![](../image/core/pokemini/Girl_Power.png)
 
 ??? note "*Palette - Blue*"
-    ![](/image/core/pokeminiBlue.png)
+    ![](../image/core/pokemini/Blue.png)
 
 ??? note "*Palette - Blue Vector*"
-    ![](/image/core/pokeminiBlue_Vector.png)
+    ![](../image/core/pokemini/Blue_Vector.png)
 
 ??? note "*Palette - Sepia*"
-    ![](/image/core/pokeminiSepia.png)
+    ![](../image/core/pokemini/Sepia.png)
 
 ??? note "*Palette - Monochrome Vector*"
-    ![](/image/core/pokeminiMonochrome_Vector.png)
+    ![](../image/core/pokemini/Monochrome_Vector.png)
 
 - **Piezo Filter** [pokemini_piezofilter] (**ON**|OFF)
 
@@ -219,15 +219,15 @@ Rumble only works in the PokeMini core when
 
 | RetroPad Inputs                             | User 1 input descriptors |
 |---------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_b.png)          | B                        |
-| ![](/image/retropad/retro_select.png)     | Power                    |
-| ![](/image/retropad/retro_dpad_up.png)    | D-Pad Up                 |
-| ![](/image/retropad/retro_dpad_down.png)  | D-Pad Down               |
-| ![](/image/retropad/retro_dpad_left.png)  | D-Pad Left               |
-| ![](/image/retropad/retro_dpad_right.png) | D-Pad Right              |
-| ![](/image/retropad/retro_a.png)          | A                        |
-| ![](/image/retropad/retro_l1.png)         | Shake                    |
-| ![](/image/retropad/retro_r1.png)         | C                        |
+| ![](../image/retropad/retro_b.png)          | B                        |
+| ![](../image/retropad/retro_select.png)     | Power                    |
+| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up                 |
+| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down               |
+| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left               |
+| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right              |
+| ![](../image/retropad/retro_a.png)          | A                        |
+| ![](../image/retropad/retro_l1.png)         | Shake                    |
+| ![](../image/retropad/retro_r1.png)         | C                        |
 
 ## Compatibility
 

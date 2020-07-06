@@ -43,7 +43,7 @@ MAME Content numbers in the thousands of items for MAME Cores.  To help reduce l
 
 This approach will work fine as long as the MAME Content romset is a **Full Non-Merged romset**.  If the romset is **not Full Non-Merged**, then all MAME content will need to remain in the same directory.
 
-**Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**  For more information, please refer to [Getting started with arcade emulation](https://docs.libretro.com/guides/arcade-getting-started/).
+**Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**  For more information, please refer to [Getting started with arcade emulation](arcade-getting-started.md).
 
 #### Control Configuration for MAME Cores
 

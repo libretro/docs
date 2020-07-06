@@ -29,13 +29,13 @@ The OpenLara core is licensed under
 
 - [2-clause BSD](https://github.com/XProger/OpenLara/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Requirements
 
 This core requires that you use OpenGL as the video driver. Go to Settings -> Driver. If ‘video driver’ is set to ‘vulkan’, switch it back to ‘gl’, and then restart.
 
-![](/image/core/openlara/gl.png)
+![](../image/core/openlara/gl.png)
 
 !!! attention 
 	There is currently no ‘working’ macOS version available due to the OpenGL requirement.
@@ -75,7 +75,7 @@ Frontend-level settings or features that the OpenLara core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -115,12 +115,12 @@ The OpenLara core saves/loads to/from these directories.
 
 ## Geometry and timing
 
-- The OpenLara core's core provided FPS is dependent on the ['Framerate' core option](https://docs.libretro.com/library/openlara/#core-options).
+- The OpenLara core's core provided FPS is dependent on the ['Framerate' core option](openlara.md#core-options).
 - The OpenLara core's core provided sample rate is 44100 Hz
 - The OpenLara core's base width is 320
 - The OpenLara core's base height is 240
-- The OpenLara core's max width is dependent on the ['Internal resolution' core option](https://docs.libretro.com/library/openlara/#core-options)
-- The OpenLara core's max height is dependent on the ['Internal resolution' core option](https://docs.libretro.com/library/openlara/#core-options)
+- The OpenLara core's max width is dependent on the ['Internal resolution' core option](openlara.md#core-options)
+- The OpenLara core's max height is dependent on the ['Internal resolution' core option](openlara.md#core-options)
 - The OpenLara core's core provided aspect ratio is 4/3
 
 ## Core options
@@ -143,28 +143,28 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Modify the internal resolution. Requires a restart.
 	
 ??? note "Internal resolution - 320x240"
-	![](/image/core/openlara/320x240.png)
+	![](../image/core/openlara/320x240.png)
 
 ??? note "Internal resolution - 1920x1080"
-	![](/image/core/openlara/1920x1080.png)	
+	![](../image/core/openlara/1920x1080.png)	
 
 ## Joypad
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_b.png)             | Action (Shoot/grab)      |
-| ![](/image/retropad/retro_y.png)             | Jump                     |
-| ![](/image/retropad/retro_select.png)        | Inventory                |
-| ![](/image/retropad/retro_start.png)         | Start                    |
-| ![](/image/retropad/retro_dpad_up.png)       | Up                       |
-| ![](/image/retropad/retro_dpad_down.png)     | Down                     |
-| ![](/image/retropad/retro_dpad_left.png)     | Left                     |
-| ![](/image/retropad/retro_dpad_right.png)    | Right                    |
-| ![](/image/retropad/retro_a.png)             | Roll                     |
-| ![](/image/retropad/retro_x.png)             | Draw weapon              |
-| ![](/image/retropad/retro_r1.png)            | Walk (when holding)      |
-| ![](/image/retropad/retro_l2.png)            | Duck/Crouch (TR3 and up) |
-| ![](/image/retropad/retro_r2.png)            | Dash (TR3 and up)        |
+| ![](../image/retropad/retro_b.png)             | Action (Shoot/grab)      |
+| ![](../image/retropad/retro_y.png)             | Jump                     |
+| ![](../image/retropad/retro_select.png)        | Inventory                |
+| ![](../image/retropad/retro_start.png)         | Start                    |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](../image/retropad/retro_a.png)             | Roll                     |
+| ![](../image/retropad/retro_x.png)             | Draw weapon              |
+| ![](../image/retropad/retro_r1.png)            | Walk (when holding)      |
+| ![](../image/retropad/retro_l2.png)            | Duck/Crouch (TR3 and up) |
+| ![](../image/retropad/retro_r2.png)            | Dash (TR3 and up)        |
 
 ## External Links
 

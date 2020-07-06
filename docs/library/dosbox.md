@@ -12,7 +12,7 @@ The DOSBox core is licensed under
 
 - [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -51,7 +51,7 @@ Frontend-level settings or features that the DOSBox core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -147,57 +147,57 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 
 | Input descriptors for Gamepad 2 Button | RetroPad Inputs                             |
 |----------------------------------------|---------------------------------------------|
-| Button 2                               | ![](/image/retropad/retro_b.png)          |
-| Button 1                               | ![](/image/retropad/retro_y.png)          |
-| D-Pad Up                               | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                             | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                             | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                            | ![](/image/retropad/retro_dpad_right.png) |
+| Button 2                               | ![](../image/retropad/retro_b.png)          |
+| Button 1                               | ![](../image/retropad/retro_y.png)          |
+| D-Pad Up                               | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                             | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                             | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                            | ![](../image/retropad/retro_dpad_right.png) |
 
 | Input descriptors for Gamepad 4 Button | RetroPad Inputs                             |
 |----------------------------------------|---------------------------------------------|
-| Button 3                               | ![](/image/retropad/retro_b.png)          |
-| Button 1                               | ![](/image/retropad/retro_y.png)          |
-| D-Pad Up                               | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                             | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                             | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                            | ![](/image/retropad/retro_dpad_right.png) |
-| Button 4                               | ![](/image/retropad/retro_a.png)          |
-| Button 2                               | ![](/image/retropad/retro_x.png)          |
+| Button 3                               | ![](../image/retropad/retro_b.png)          |
+| Button 1                               | ![](../image/retropad/retro_y.png)          |
+| D-Pad Up                               | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                             | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                             | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                            | ![](../image/retropad/retro_dpad_right.png) |
+| Button 4                               | ![](../image/retropad/retro_a.png)          |
+| Button 2                               | ![](../image/retropad/retro_x.png)          |
 
 | Input descriptors for Joystick 2 Button | RetroPad Inputs                                |
 |-----------------------------------------|------------------------------------------------|
-| Button 2                                | ![](/image/retropad/retro_b.png)             |
-| Button 1                                | ![](/image/retropad/retro_y.png)             |
-| Left Analog X                           | ![](/image/retropad/retro_left_stick.png) X  |
-| Left Analog Y                           | ![](/image/retropad/retro_left_stick.png) Y  |
+| Button 2                                | ![](../image/retropad/retro_b.png)             |
+| Button 1                                | ![](../image/retropad/retro_y.png)             |
+| Left Analog X                           | ![](../image/retropad/retro_left_stick.png) X  |
+| Left Analog Y                           | ![](../image/retropad/retro_left_stick.png) Y  |
 
 | Input descriptors for Joystick 4 Button | RetroPad Inputs                                |
 |-----------------------------------------|------------------------------------------------|
-| Button 3                                | ![](/image/retropad/retro_b.png)             |
-| Button 1                                | ![](/image/retropad/retro_y.png)             |
-| Button 4                                | ![](/image/retropad/retro_a.png)             |
-| Button 2                                | ![](/image/retropad/retro_x.png)             |
-| Left Analog X                           | ![](/image/retropad/retro_left_stick.png) X  |
-| Left Analog Y                           | ![](/image/retropad/retro_left_stick.png) Y  |
-| Right Analog X                          | ![](/image/retropad/retro_right_stick.png) X |
-| Right Analog Y                          | ![](/image/retropad/retro_right_stick.png) Y |
+| Button 3                                | ![](../image/retropad/retro_b.png)             |
+| Button 1                                | ![](../image/retropad/retro_y.png)             |
+| Button 4                                | ![](../image/retropad/retro_a.png)             |
+| Button 2                                | ![](../image/retropad/retro_x.png)             |
+| Left Analog X                           | ![](../image/retropad/retro_left_stick.png) X  |
+| Left Analog Y                           | ![](../image/retropad/retro_left_stick.png) Y  |
+| Right Analog X                          | ![](../image/retropad/retro_right_stick.png) X |
+| Right Analog Y                          | ![](../image/retropad/retro_right_stick.png) Y |
 
 | Input descriptors for Keyboard | RetroPad Inputs                             |
 |--------------------------------|---------------------------------------------|
-| Esc                            | ![](/image/retropad/retro_select.png)     |
-| Enter                          | ![](/image/retropad/retro_start.png)      |
-| Kbd Up                         | ![](/image/retropad/retro_dpad_up.png)    |
-| Kbd Down                       | ![](/image/retropad/retro_dpad_down.png)  |
-| Kbd Left                       | ![](/image/retropad/retro_dpad_left.png)  |
-| Kbd Right                      | ![](/image/retropad/retro_dpad_right.png) |
+| Esc                            | ![](../image/retropad/retro_select.png)     |
+| Enter                          | ![](../image/retropad/retro_start.png)      |
+| Kbd Up                         | ![](../image/retropad/retro_dpad_up.png)    |
+| Kbd Down                       | ![](../image/retropad/retro_dpad_down.png)  |
+| Kbd Left                       | ![](../image/retropad/retro_dpad_left.png)  |
+| Kbd Right                      | ![](../image/retropad/retro_dpad_right.png) |
 
 | Input descriptors for Emulated mouse | RetroPad Inputs                                |
 |--------------------------------------|------------------------------------------------|
-| Emulated Mouse Right Click           | ![](/image/retropad/retro_l2.png)            |
-| Emulated Mouse Left Click            | ![](/image/retropad/retro_r2.png)            |
-| Emulated Mouse X Axis                | ![](/image/retropad/retro_right_stick.png) X |
-| Emulated Mouse Y Axis                | ![](/image/retropad/retro_right_stick.png) Y |
+| Emulated Mouse Right Click           | ![](../image/retropad/retro_l2.png)            |
+| Emulated Mouse Left Click            | ![](../image/retropad/retro_r2.png)            |
+| Emulated Mouse X Axis                | ![](../image/retropad/retro_right_stick.png) X |
+| Emulated Mouse Y Axis                | ![](../image/retropad/retro_right_stick.png) Y |
 
 ## Keyboard
 

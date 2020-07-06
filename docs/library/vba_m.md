@@ -15,7 +15,7 @@ The VBA-M core is licensed under
 
 - [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -70,7 +70,7 @@ Frontend-level settings or features that the VBA-M core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -132,36 +132,36 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	Sets the cutoff-frequency for the interpolation filter. Higher value reduces more high frequencies.
 
-- **(GB) Color Palette** [vbam_palettes] (**black and white**|blue sea|dark knight|green forest|hot desert|pink dreams|wierd colors|original gameboy|gba sp)
+- **(GB) Color Palette** [vbam_palettes] (**black and white**|blue sea|dark knight|green forest|hot desert|pink dreams|weird colors|original gameboy|gba sp)
 	
 	Set Game Boy palettes to use.
 
 ??? note "(GB) Color Palette - black and white"
-	![](/image/core/vba_m/pal_1bw.png)
+	![](../image/core/vba_m/pal_1bw.png)
 
 ??? note "(GB) Color Palette - blue sea"
-	![](/image/core/vba_m/pal_2bluesea.png)
+	![](../image/core/vba_m/pal_2bluesea.png)
 
 ??? note "(GB) Color Palette - dark knight"
-	![](/image/core/vba_m/pal_3darkknight.png)
+	![](../image/core/vba_m/pal_3darkknight.png)
 
 ??? note "(GB) Color Palette - green forest"
-	![](/image/core/vba_m/pal_4greenforest.png)
+	![](../image/core/vba_m/pal_4greenforest.png)
 
 ??? note "(GB) Color Palette - hot desert"
-	![](/image/core/vba_m/pal_5hotdesert.png)
+	![](../image/core/vba_m/pal_5hotdesert.png)
 
 ??? note "(GB) Color Palette - pink dreams"
-	![](/image/core/vba_m/pal_6pinkdreams.png)
+	![](../image/core/vba_m/pal_6pinkdreams.png)
 
-??? note "(GB) Color Palette - wierd colors"
-	![](/image/core/vba_m/pal_7wierdcolors.png)
+??? note "(GB) Color Palette - weird colors"
+	![](../image/core/vba_m/pal_7weirdcolors.png)
 
 ??? note "(GB) Color Palette - original gameboy"
-	![](/image/core/vba_m/pal_8originalgb.png)
+	![](../image/core/vba_m/pal_8originalgb.png)
 
 ??? note "(GB) Color Palette - gba sp"
-	![](/image/core/vba_m/pal_9gbsp.png)
+	![](../image/core/vba_m/pal_9gbsp.png)
 
 - **(GB) Emulated Hardware (Requires Restart)** [vbam_gbHardware] (Automatic|**Game Boy Color**|Super Game Boy|Game Boy|Game Boy Advance|Super Game Boy)
 	
@@ -178,20 +178,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Shows a solid-colored border around the normal window. If current game is SGB capable, an appropriate border from the cartridge will be loaded and shown instead.
 
 ??? note "Show Borders - Off"
-	![](/image/core/vba_m/border_off.png)
+	![](../image/core/vba_m/border_off.png)
 
 ??? note "Show Borders - On"
-	![](/image/core/vba_m/border_on.png)
+	![](../image/core/vba_m/border_on.png)
 	
 - **(GB) Color Correction** [vbam_gbcoloroption] (**Off**/On)
 
 	Applies color correction to palette.
 	
 ??? note "(GB) Color Correction - Off"
-	![](/image/core/vba_m/cc_Off.png)
+	![](../image/core/vba_m/cc_Off.png)
 
 ??? note "(GB) Color Correction - On"
-	![](/image/core/vba_m/cc_On.png)
+	![](../image/core/vba_m/cc_On.png)
 
 - **Enable Turbo Buttons** [vbam_turboenable] (**Off**/On)
 
@@ -286,27 +286,27 @@ The VBA-M core supports the following device type(s) in the controls menu, bolde
 
 #### Joypad
 
-![](/image/controller/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                              |
 |--------------------------|----------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)             |
-| Turbo B                  | ![](/image/retropad/retro_y.png)             |
-| Select                   | ![](/image/retropad/retro_select.png)        |
-| Start                    | ![](/image/retropad/retro_start.png)         |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)       |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)     |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)     |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png)    |
-| A                        | ![](/image/retropad/retro_a.png)             |
-| Turbo A                  | ![](/image/retropad/retro_x.png)             |
-| L                        | ![](/image/retropad/retro_l1.png)            |
-| R                        | ![](/image/retropad/retro_r1.png)            |
-| Solar Sensor (Darker)    | ![](/image/retropad/retro_l2.png)            |
-| Solar Sensor (Lighter)   | ![](/image/retropad/retro_r2.png)            |
-| Tilt X-Axis              | ![](/image/retropad/retro_left_stick.png)    |
-| Tilt X-Yxis              | ![](/image/retropad/retro_left_stick.png)    |
-| Gyro                     | ![](/image/retropad/retro_right_stick.png)   |
+| B                        | ![](../image/retropad/retro_b.png)             |
+| Turbo B                  | ![](../image/retropad/retro_y.png)             |
+| Select                   | ![](../image/retropad/retro_select.png)        |
+| Start                    | ![](../image/retropad/retro_start.png)         |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
+| A                        | ![](../image/retropad/retro_a.png)             |
+| Turbo A                  | ![](../image/retropad/retro_x.png)             |
+| L                        | ![](../image/retropad/retro_l1.png)            |
+| R                        | ![](../image/retropad/retro_r1.png)            |
+| Solar Sensor (Darker)    | ![](../image/retropad/retro_l2.png)            |
+| Solar Sensor (Lighter)   | ![](../image/retropad/retro_r2.png)            |
+| Tilt X-Axis              | ![](../image/retropad/retro_left_stick.png)    |
+| Tilt X-Yxis              | ![](../image/retropad/retro_left_stick.png)    |
+| Gyro                     | ![](../image/retropad/retro_right_stick.png)   |
 
 ## Compatibility
 
@@ -325,9 +325,9 @@ The VBA-M core supports the following device type(s) in the controls menu, bolde
 
 #### Nintendo - Game Boy Advance
 
-- [Nintendo - Game Boy Advance (Beetle GBA)](https://docs.libretro.com/library/beetle_gba/)
-- [Nintendo - Game Boy Advance (gpSP)](https://docs.libretro.com/library/gpsp/)
-- [Nintendo - Game Boy Advance (Meteor)](https://docs.libretro.com/library/meteor/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - Game Boy Advance (TempGBA)](https://docs.libretro.com/library/tempgba/)
-- [Nintendo - Game Boy Advance (VBA Next)](https://docs.libretro.com/library/vba_next/)
+- [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
+- [Nintendo - Game Boy Advance (Meteor)](meteor.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
+- [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)

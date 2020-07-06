@@ -14,7 +14,7 @@ The Emux NES core is licensed under
 
 - [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -54,7 +54,7 @@ Frontend-level settings or features that the Emux NES core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -85,18 +85,18 @@ The Emux NES core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](/image/controller/nes.png)
+![](../image/controller/nes.png)
 
 | RetroPad Inputs                              | Emux NES core Inputs |
 |----------------------------------------------|----------------------|
-| ![](/image/retropad/retro_b.png)       | B                    |
-| ![](/image/retropad/retro_select.png)        | Select               |
-| ![](/image/retropad/retro_start.png)         | Start                |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up             |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down           |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left           |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right          |
-| ![](/image/retropad/retro_a.png)       | A                    |
+| ![](../image/retropad/retro_b.png)       | B                    |
+| ![](../image/retropad/retro_select.png)        | Select               |
+| ![](../image/retropad/retro_start.png)         | Start                |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up             |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down           |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left           |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right          |
+| ![](../image/retropad/retro_a.png)       | A                    |
 
 ## Compatibility
 
@@ -113,8 +113,8 @@ Awaiting description.
 
 #### Nintendo - Nintendo Entertainment System
 
-- [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
-- [Nintendo - NES / Famicom (FCEUmm)](https://docs.libretro.com/library/fceumm/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (Nestopia UE)](https://docs.libretro.com/library/nestopia_ue/)
-- [Nintendo - NES / Famicom (QuickNES)](https://docs.libretro.com/library/quicknes/)
+- [Nintendo - NES / Famicom (bnes)](bnes.md)
+- [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

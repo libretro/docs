@@ -1,5 +1,5 @@
 
-![](/image/branding/netplay-logo.gif)
+![](../image/branding/netplay-logo.gif)
 
 ## Getting Started
 
@@ -9,13 +9,13 @@
 - Select **Username**
 - Configure your preferred nickname
 
-![Screenshot](/image/retroarch/netplay/nickname.png)
+![Screenshot](../image/retroarch/netplay/nickname.png)
 
 ### Configure Netplay Server
 
 If you are gonna host a game you don't need to scan content or to build databases. The only thing you need to do is to configure your network parameters and "Start Hosting" from the netplay menu. After doing that just load the content you want to netplay and wait for players.
 
-![Screenshot](/image/retroarch/netplay/netplay.png)
+![Screenshot](../image/retroarch/netplay/netplay.jpg)
 
 #### Check your lobby
 
@@ -35,7 +35,7 @@ Once you start hosting you can check to see if your lobby is visible [at lobby.l
 
 You don't need to configure anything to connect to netplay rooms. Browse to the netplay menu, Select **Refresh** and then select the room you want to connect to.
 
-![Screenshot](/image/retroarch/netplay/rooms.png)
+![Screenshot](../image/retroarch/netplay/rooms.png)
 
 You will be asked for a password if one is required, and if you have matching content scanned or in the **Content History** it will connect right away. Otherwise it will tell you to load the core and content manually and it will attempt to connect right away.
 

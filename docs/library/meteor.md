@@ -14,7 +14,7 @@ The Meteor core is licensed under
 
 - [GPLv3](https://github.com/libretro/meteor-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -52,7 +52,7 @@ Frontend-level settings or features that the Meteor core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -93,20 +93,20 @@ The Meteor core supports the following device type(s) in the controls menu, bold
 
 #### Joypad
 
-![](/image/controller/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)    |
-| L                        | ![](/image/retropad/retro_l1.png)         |
-| R                        | ![](/image/retropad/retro_r1.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| L                        | ![](../image/retropad/retro_l1.png)         |
+| R                        | ![](../image/retropad/retro_r1.png)         |
 
 ## Compatibility
 
@@ -123,9 +123,9 @@ Awaiting description.
 
 #### Nintendo - Game Boy Advance
 
-- [Nintendo - Game Boy Advance (Beetle GBA)](https://docs.libretro.com/library/beetle_gba/)
-- [Nintendo - Game Boy Advance (gpSP)](https://docs.libretro.com/library/gpsp/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - Game Boy Advance (TempGBA)](https://docs.libretro.com/library/tempgba/)
-- [Nintendo - Game Boy Advance (VBA-M)](https://docs.libretro.com/library/vba_m/)
-- [Nintendo - Game Boy Advance (VBA Next)](https://docs.libretro.com/library/vba_next/)
+- [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
+- [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)

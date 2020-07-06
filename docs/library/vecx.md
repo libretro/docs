@@ -48,10 +48,10 @@ The vecx core has the following options that can be tweaked from the core option
 - **Res Multiplier** (**1**-4)
 
 ??? note "*Res Multiplier - 1*"
-    ![](/image/core/vecxres_multiplier_1.png)
+    ![](../image/core/vecx/res_multiplier_1.png)
 
 ??? note "*Res Multiplier - 4*"
-    ![](/image/core/vecxres_multiplier_4.png)
+    ![](../image/core/vecx/res_multiplier_4.png)
 
 ## Controllers
 
@@ -61,21 +61,21 @@ The vecx core supports one controller setting:
 
 | vecx      | [RetroPad](RetroPad)                                           |
 |-----------|----------------------------------------------------------------|
-| 2         | ![RetroPad_B](/image/retropad/retro_b.png)               |
-| 4         | ![RetroPad_Y](/image/retropad/retro_y.png)               |
-|           | ![RetroPad_Select](/image/retropad/retro_select.png)           |
-|           | ![RetroPad_Start](/image/retropad/retro_start.png)             |
-| D-pad     | ![RetroPad_Dpad](/image/retropad/retro_dpad.png)               |
-| 1         | ![RetroPad_A](/image/retropad/retro_a.png)               |
-| 3         | ![RetroPad_X](/image/retropad/retro_x.png)               |
-|           | ![RetroPad_L1](/image/retropad/retro_l1.png)                   |
-|           | ![RetroPad_R1](/image/retropad/retro_r1.png)                   |
-|           | ![RetroPad_L2](/image/retropad/retro_l2.png)              |
-|           | ![RetroPad_R2](/image/retropad/retro_r2.png)                   |
-|           | ![RetroPad_L3](/image/retropad/retro_l3.png)                   |
-|           | ![RetroPad_R3](/image/retropad/retro_r3.png)                   |
-|           | ![RetroPad_Left_Stick](/image/retropad/retro_left_stick.png)   |
-|           | ![RetroPad_Right_Stick](/image/retropad/retro_right_stick.png) |
+| 2         | ![RetroPad_B](../image/retropad/retro_b.png)               |
+| 4         | ![RetroPad_Y](../image/retropad/retro_y.png)               |
+|           | ![RetroPad_Select](../image/retropad/retro_select.png)           |
+|           | ![RetroPad_Start](../image/retropad/retro_start.png)             |
+| D-pad     | ![RetroPad_Dpad](../image/retropad/retro_dpad.png)               |
+| 1         | ![RetroPad_A](../image/retropad/retro_a.png)               |
+| 3         | ![RetroPad_X](../image/retropad/retro_x.png)               |
+|           | ![RetroPad_L1](../image/retropad/retro_l1.png)                   |
+|           | ![RetroPad_R1](../image/retropad/retro_r1.png)                   |
+|           | ![RetroPad_L2](../image/retropad/retro_l2.png)              |
+|           | ![RetroPad_R2](../image/retropad/retro_r2.png)                   |
+|           | ![RetroPad_L3](../image/retropad/retro_l3.png)                   |
+|           | ![RetroPad_R3](../image/retropad/retro_r3.png)                   |
+|           | ![RetroPad_Left_Stick](../image/retropad/retro_left_stick.png)   |
+|           | ![RetroPad_Right_Stick](../image/retropad/retro_right_stick.png) |
 
 ## Compatibility
 

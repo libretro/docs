@@ -22,7 +22,7 @@ The Beetle PSX HW core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-psx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ### Requirements
 
@@ -79,7 +79,7 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -162,7 +162,7 @@ After that, you can load the `foo.m3u` file in RetroArch with the Beetle PSX HW 
 
 Here's a m3u example done with Valkryie Profile
 
-![](/image/core/beetle_psx_hw/m3u.png)
+![](../image/core/beetle_psx_hw/m3u.png)
 
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
@@ -238,7 +238,7 @@ For memory card functionality and usage, the Beetle PSX HW core will either use 
 </center>
 
 !!! attention
-    Memory card behavior can be controlled with the following [core options](https://docs.libretro.com/library/beetle_psx/#core-options) (Memcard 0 method, Enable memory card 1, Shared memcards).
+    Memory card behavior can be controlled with the following [core options](beetle_psx.md#core-options) (Memcard 0 method, Enable memory card 1, Shared memcards).
 
 **By default**, the filenames of the Memcard savedata will match the loaded cue or m3u or pbp filename, like this:
 
@@ -309,10 +309,10 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Resolutions higher than 1x(native) improve the fidelity of 3D models at the expense of increased performance requirements. 2D elements are generally unaffected by this setting from the core's perspective.
 
 	??? note "*Internal GPU Resolution - 1x*"
-	    ![](/image/core/beetle_psx_hw/gpu_1.png)
+	    ![](../image/core/beetle_psx_hw/gpu_1.png)
 
 	??? note "*Internal GPU Resolution - 2x*"
-	    ![](/image/core/beetle_psx_hw/gpu_2.png)
+	    ![](../image/core/beetle_psx_hw/gpu_2.png)
 
 - **Internal Color Depth** [beetle_psx_hw_depth] (**16bpp(native)**/32bpp)
 
@@ -323,10 +323,10 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Note the visible horizontal bands on an undithered 16bpp image compared to the same undithered image at 32bpp:
 
 	??? note "*Undithered 16bpp*"
-	    ![](/image/core/beetle_psx_hw/16bpp_no-dither.png)
+	    ![](../image/core/beetle_psx_hw/16bpp_no-dither.png)
 
 	??? note "*Undithered 32bpp*"
-	    ![](/image/core/beetle_psx_hw/32bpp_no-dither.png)
+	    ![](../image/core/beetle_psx_hw/32bpp_no-dither.png)
 
 	This option should be toggled in conjunction with the Dithering Pattern option.
 
@@ -345,13 +345,13 @@ The default setting for each option will be highlighted in bold. Settings with (
 	'disabled' is useful to pair with '32bpp' Internal Color Depth where banding is far less visible or for users who otherwise wish to turn off dithering regardless of color banding at 16bpp.
 
 	??? note "*Dithering Pattern - 1x Native (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_native.png)
+	    ![](../image/core/beetle_psx_hw/dither_native.png)
 
 	??? note "*Dithering Pattern - Internal Resolution (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_internalres.png)
+	    ![](../image/core/beetle_psx_hw/dither_internalres.png)
 
 	??? note "*Dithering Pattern - Disabled (16bpp 4x IR)*"
-	    ![](/image/core/beetle_psx_hw/dither_off.png)
+	    ![](../image/core/beetle_psx_hw/dither_off.png)
 
 	<!--Vulkan occasionally exhibits issues with this setting when it is turned on.-->
 
@@ -364,22 +364,22 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Texture filters can modify or enhance the appearance of 3D polygon textures and 2D elements. 'Nearest' emulates original hardware. 'Bilinear' and '3-Point' are smoothing filters, which reduce pixelation via blurring. 'SABR', 'xBR' and 'JINC2' are upscaling filters, which improve texture fidelity/sharpness at the expense of increased performance requirements.
 
 	??? note "*nearest*"
-	    ![](/image/core/beetle_psx_hw/nearest.png)
+	    ![](../image/core/beetle_psx_hw/nearest.png)
 
 	??? note "*SABR*"
-	    ![](/image/core/beetle_psx_hw/sabr.png)
+	    ![](../image/core/beetle_psx_hw/sabr.png)
 
 	??? note "*xBR*"
-	    ![](/image/core/beetle_psx_hw/xbr.png)
+	    ![](../image/core/beetle_psx_hw/xbr.png)
 
 	??? note "*bilinear*"
-	    ![](/image/core/beetle_psx_hw/bilinear.png)
+	    ![](../image/core/beetle_psx_hw/bilinear.png)
 
 	??? note "*3-point*"
-	    ![](/image/core/beetle_psx_hw/3point.png)
+	    ![](../image/core/beetle_psx_hw/3point.png)
 
 	??? note "*JINC2*"
-	    ![](/image/core/beetle_psx_hw/jinc2.png)
+	    ![](../image/core/beetle_psx_hw/jinc2.png)
 
 - **Adaptive Smoothing** [beetle_psx_hw_adaptive_smoothing] (**disabled**/enabled)
 
@@ -388,10 +388,10 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Enable smoothing of 2D artwork and UI elements without blurring 3D rendered objects.
 
 	??? note "*Adaptive smoothing - Off*"
-	    ![](/image/core/beetle_psx_hw/smooth_off.png)
+	    ![](../image/core/beetle_psx_hw/smooth_off.png)
 
 	??? note "*Adaptive smoothing - On*"
-	    ![](/image/core/beetle_psx_hw/smooth_on.png)
+	    ![](../image/core/beetle_psx_hw/smooth_on.png)
 
 - **Supersampling (Downsample to Native Resolution)** [beetle_psx_hw_super_sampling] (**disabled**/enabled)
 
@@ -400,10 +400,10 @@ The default setting for each option will be highlighted in bold. Settings with (
 	When enabled, renders content at the specified Internal GPU Resolution then downsamples the resulting image to native 240p before shaders and resizing are applied by the frontend. Allows games to be displayed at native (low) resolution but with clean anti-aliased 3D objects. Produces best results when applied to titles that mix 2D and 3D elements such as 3D characters on pre-rendered backgrounds. This option is not to be confused with implicit supersampling provided by rendering at a higher Internal GPU Resolution multiplier then downsampling to the frontend's window scale.
 
 	??? note "*Supersampling from 1x Internal Resolution with CRT Royale Shader*"
-	    ![](/image/core/beetle_psx_hw/ssaa1x_crt-royale.png)
+	    ![](../image/core/beetle_psx_hw/ssaa1x_crt-royale.png)
 
 	??? note "*Supersampling from 8x Internal Resolution with CRT Royale Shader*"
-	    ![](/image/core/beetle_psx_hw/ssaa8x_crt-royale.png)
+	    ![](../image/core/beetle_psx_hw/ssaa8x_crt-royale.png)
 
 - **Multi-Sampled Anti Aliasing** [beetle_psx_hw_msaa] (**1x**/2x/4x/8x/16x)
 
@@ -418,7 +418,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Improves the quality of FMV playblack by smoothing the chroma channel when converting YcBcR to RGB. This reduces macroblocking artefacts (squares/jagged edges) as shown below:
 
 	??? note "*MDEC YUV Chroma Filter On/Off Comparison*"
-	    ![](/image/core/beetle_psx_hw/mdec-yuv-filter.png)
+	    ![](../image/core/beetle_psx_hw/mdec-yuv-filter.png)
 
 - **Wireframe Mode** [beetle_psx_hw_wireframe] (**disabled**/enabled)
 
@@ -429,7 +429,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	**For debug use only. Leave off for normal usage.**
 
 	??? note "*Wireframe mode - On*"
-	    ![](/image/core/beetle_psx_hw/wire.png)
+	    ![](../image/core/beetle_psx_hw/wire.png)
 
 - **Display Full VRAM** [beetle_psx_hw_display_vram] (**disabled**/enabled)
 
@@ -440,7 +440,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	**For debug use only. Leave off for normal usage.**
 
 	??? note "*Display full VRAM - On*"
-	    ![](/image/core/beetle_psx_hw/vram.png)
+	    ![](../image/core/beetle_psx_hw/vram.png)
 
 - **PGXP Operation Mode** [beetle_psx_hw_pgxp_mode] (**disabled**/memory only/memory + CPU)
 
@@ -465,17 +465,17 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Allows for perspective correct texturing when PGXP Operation Mode is also enabled. Original PSX hardware renders 3D objects with affine texture mapping where texture coordinates are interpolated between polygon vertices in 2D screen space with no consideration of object depth. This causes significant position-dependent distortion and/or blending of textures such as warped lines across floors and walls. PGXP Perspective Correct Texturing accounts correctly for vertex positions in 3D space thereby eliminating this texture distortion at the expense of increased performance requirements.
 
 	??? note "*PGXP Texturing - Off*"
-	    ![](/image/core/beetle_psx_hw/pgxp_texture_off.jpg)
+	    ![](../image/core/beetle_psx_hw/pgxp_texture_off.jpg)
 
 	??? note "*PGXP Texturing - On*"
-	    ![](/image/core/beetle_psx_hw/pgxp_texture_on.jpg)
+	    ![](../image/core/beetle_psx_hw/pgxp_texture_on.jpg)
 
 - **Display Internal FPS** [beetle_psx_hw_display_internal_fps] (**disabled**/enabled)
 
 	Displays the frame rate that the emulated PSX is drawing at. Requires onscreen notifications to be enabled in the libretro frontend. Reported values may be inaccurate.
 
 	??? note "*Display internal FPS - On*"
-	    ![](/image/core/beetle_psx_hw/fps.png)
+	    ![](../image/core/beetle_psx_hw/fps.png)
 
 - **Line-to-Quad Hack** [beetle_psx_hw_line_render] (**default**/aggressive/disabled)
 
@@ -527,7 +527,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 	**Enabling this option will cause compatibility issues with a small minority of games (Saga Frontier, PAL copy protected games, etc).**
 
 	??? note "*Skip BIOS - Off*"
-	    ![](/image/core/beetle_psx_hw/bios.png)
+	    ![](../image/core/beetle_psx_hw/bios.png)
 
 - **Core-Reported FPS Timing** [beetle_psx_hw_core_timing_fps] (**force_progressive**/force_interlaced/auto_toggle)
 
@@ -542,10 +542,10 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Forces content to be rendered with an aspect ratio of 16:9. Produces best results with fully 3D games. Can cause graphical glitches or alignment/stretching issues in games that mix 3D and 2D elements. Leave off for most games.
 
 	??? note "*Widescreen mode hack - Off*"
-	    ![](/image/core/beetle_psx_hw/wide_off.png)
+	    ![](../image/core/beetle_psx_hw/wide_off.png)
 
 	??? note "*Widescreen mode hack - On*"
-	    ![](/image/core/beetle_psx_hw/wide_on.png)
+	    ![](../image/core/beetle_psx_hw/wide_on.png)
 
 - **Crop Horizontal Overscan** [beetle_psx_hw_crop_overscan] (**enabled**/disabled)
 
@@ -554,16 +554,16 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Not all games will benefit from enabling this setting as shown in the examples below.
 
 	??? note "*Crop Overscan - Off (Game with Garbage Pixels)*"
-	    ![](/image/core/beetle_psx_hw/crop_off.png)
+	    ![](../image/core/beetle_psx_hw/crop_off.png)
 
 	??? note "*Crop Overscan - On (Game with Garbage Pixels)*"
-	    ![](/image/core/beetle_psx_hw/crop_on.png)
+	    ![](../image/core/beetle_psx_hw/crop_on.png)
 
 	??? note "*Crop Overscan - Off (Game with No Issues)*"
-	    ![](/image/core/beetle_psx_hw/scan_off.png)
+	    ![](../image/core/beetle_psx_hw/scan_off.png)
 
 	??? note "*Crop Overscan - On (Game with No Issues)*"
-	    ![](/image/core/beetle_psx_hw/scan_on.png)
+	    ![](../image/core/beetle_psx_hw/scan_on.png)
 
 	This option does not affect vertical overscan. Vertical overscan can be cropped using the Initial/Last Scanline core options.
 
@@ -623,7 +623,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 - **Memory Card 0 Method (Restart)** [beetle_psx_hw_use_mednafen_memcard0_method] (**libretro**/mednafen)
 
-	Choose the savedata format used for Memory Card 0. See the [Saves section](https://docs.libretro.com/library/beetle_psx_hw/#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
+	Choose the savedata format used for Memory Card 0. See the [Saves section](beetle_psx_hw.md#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
 
 	Note: This option must be set to 'mednafen' if the Shared Memcards option is enabled.
 
@@ -682,13 +682,13 @@ The default setting for each option will be highlighted in bold. Settings with (
 	Selects the gun cursor to be displayed on screen while using the the 'Guncon / G-Con 45' and 'Justifier' input device types. When disabled, cross hairs are always hidden.
 
 	??? note "*Gun Cursor - Cross*"
-	    ![](/image/core/beetle_psx_hw/cursor_cross.png)
+	    ![](../image/core/beetle_psx_hw/cursor_cross.png)
 
 	??? note "*Gun Cursor - Dot*"
-	    ![](/image/core/beetle_psx_hw/cursor_dot.png)
+	    ![](../image/core/beetle_psx_hw/cursor_dot.png)
 
 	??? note "*Gun Cursor - Off*"
-	    ![](/image/core/beetle_psx_hw/cursor_off.png)
+	    ![](../image/core/beetle_psx_hw/cursor_off.png)
 
 - **Mouse Sensitivity** [beetle_psx_hw_mouse_sensitivity] (5% to 200% in increments of 5%. Default: **100%**)
 
@@ -745,48 +745,48 @@ Rumble only works in the Beetle PSX HW core when
 
 ## Multitap support
 
-['Port 1: Multitap enable' and 'Port 2: Multitap enable' core options](https://docs.libretro.com/library/beetle_psx_hw#core-options).
+['Port 1: Multitap enable' and 'Port 2: Multitap enable' core options](../library/beetle_psx_hw#core-options).
 
 ## Joypad
 
-![](/image/controller/psx.png)
+![](../image/controller/psx.png)
 
 | User 1 - 8 input descriptors  | RetroPad Inputs                              | PlayStation Controller Inputs                  | DualShock Inputs                                | Analog Controller Inputs                        | Analog Joystick Inputs                         | neGcon Inputs                   |
 |-------------------------------|----------------------------------------------|------------------------------------------------|-------------------------------------------------|-------------------------------------------------|------------------------------------------------|---------------------------------|
-| Cross                         | ![](/image/retropad/retro_b.png)             | ![](/image/Button_Pack/PS3/PS3_Cross.png)      | ![](/image/Button_Pack/PS3/PS3_Cross.png)       | ![](/image/Button_Pack/PS3/PS3_Cross.png)       | ![](/image/Button_Pack/PS3/PS3_Cross.png)      | Analog button I                 |
-| Square                        | ![](/image/retropad/retro_y.png)             | ![](/image/Button_Pack/PS3/PS3_Square.png)     | ![](/image/Button_Pack/PS3/PS3_Square.png)      | ![](/image/Button_Pack/PS3/PS3_Square.png)      | ![](/image/Button_Pack/PS3/PS3_Square.png)     | Analog button II                |
-| Select                        | ![](/image/retropad/retro_select.png)        | ![](/image/Button_Pack/PS3/PS3_Select.png)     | ![](/image/Button_Pack/PS3/PS3_Select.png)      | ![](/image/Button_Pack/PS3/PS3_Select.png)      | ![](/image/Button_Pack/PS3/PS3_Select.png)     |                                 |
-| Start                         | ![](/image/retropad/retro_start.png)         | ![](/image/Button_Pack/PS3/PS3_Start.png)      | ![](/image/Button_Pack/PS3/PS3_Start.png)       | ![](/image/Button_Pack/PS3/PS3_Start.png)       | ![](/image/Button_Pack/PS3/PS3_Start.png)      | Start                           |
-| D-Pad Up                      | ![](/image/retropad/retro_dpad_up.png)       | ![](/image/Button_Pack/PS3/PS3_Dpad_Up.png)    | ![](/image/Button_Pack/PS3/PS3_Dpad_Up.png)     | ![](/image/Button_Pack/PS3/PS3_Dpad_Up.png)     | ![](/image/Button_Pack/PS3/PS3_Dpad_Up.png)    | D-Pad Up                        |
-| D-Pad Down                    | ![](/image/retropad/retro_dpad_down.png)     | ![](/image/Button_Pack/PS3/PS3_Dpad_Down.png)  | ![](/image/Button_Pack/PS3/PS3_Dpad_Down.png)   | ![](/image/Button_Pack/PS3/PS3_Dpad_Down.png)   | ![](/image/Button_Pack/PS3/PS3_Dpad_Down.png)  | D-Pad Down                      |
-| D-Pad Left                    | ![](/image/retropad/retro_dpad_left.png)     | ![](/image/Button_Pack/PS3/PS3_Dpad_Left.png)  | ![](/image/Button_Pack/PS3/PS3_Dpad_Left.png)   | ![](/image/Button_Pack/PS3/PS3_Dpad_Left.png)   | ![](/image/Button_Pack/PS3/PS3_Dpad_Left.png)  | D-Pad Left                      |
-| D-Pad Right                   | ![](/image/retropad/retro_dpad_right.png)    | ![](/image/Button_Pack/PS3/PS3_Dpad_Right.png) | ![](/image/Button_Pack/PS3/PS3_Dpad_Right.png)  | ![](/image/Button_Pack/PS3/PS3_Dpad_Right.png)  | ![](/image/Button_Pack/PS3/PS3_Dpad_Right.png) | D-Pad Right                     |
-| Circle                        | ![](/image/retropad/retro_a.png)             | ![](/image/Button_Pack/PS3/PS3_Circle.png)     | ![](/image/Button_Pack/PS3/PS3_Circle.png)      | ![](/image/Button_Pack/PS3/PS3_Circle.png)      | ![](/image/Button_Pack/PS3/PS3_Circle.png)     | A                               |
-| Triangle                      | ![](/image/retropad/retro_x.png)             | ![](/image/Button_Pack/PS3/PS3_Triangle.png)   | ![](/image/Button_Pack/PS3/PS3_Triangle.png)    | ![](/image/Button_Pack/PS3/PS3_Triangle.png)    | ![](/image/Button_Pack/PS3/PS3_Triangle.png)   | B                               |
-| L1                            | ![](/image/retropad/retro_l1.png)            | ![](/image/Button_Pack/PS3/PS3_L1.png)         | ![](/image/Button_Pack/PS3/PS3_L1.png)          | ![](/image/Button_Pack/PS3/PS3_L1.png)          | ![](/image/Button_Pack/PS3/PS3_L1.png)         | Left shoulder button (analog)   |
-| R1                            | ![](/image/retropad/retro_r1.png)            | ![](/image/Button_Pack/PS3/PS3_R1.png)         | ![](/image/Button_Pack/PS3/PS3_R1.png)          | ![](/image/Button_Pack/PS3/PS3_R1.png)          | ![](/image/Button_Pack/PS3/PS3_R1.png)         | Right shoulder button (digital) |
-| L2                            | ![](/image/retropad/retro_l2.png)            | ![](/image/Button_Pack/PS3/PS3_L2.png)         | ![](/image/Button_Pack/PS3/PS3_L2.png)          | ![](/image/Button_Pack/PS3/PS3_L2.png)          | ![](/image/Button_Pack/PS3/PS3_L2.png)         | Analog button II                |
-| R2                            | ![](/image/retropad/retro_r2.png)            | ![](/image/Button_Pack/PS3/PS3_R2.png)         | ![](/image/Button_Pack/PS3/PS3_R2.png)          | ![](/image/Button_Pack/PS3/PS3_R2.png)          | ![](/image/Button_Pack/PS3/PS3_R2.png)         | Analog button I                 |
-| L3                            | ![](/image/retropad/retro_l3.png)            |                                                  | ![](/image/Button_Pack/PS3/PS3_L3.png)          |                                                   |                                                |                                 |
-| R3                            | ![](/image/retropad/retro_r3.png)            |                                                  | ![](/image/Button_Pack/PS3/PS3_R3.png)          |                                                   |                                                |                                 |
-| Left Analog X                 | ![](/image/retropad/retro_left_stick.png) X  |                                                  | ![](/image/Button_Pack/PS3/PS3_Left_Stick.png)  | ![](/image/Button_Pack/PS3/PS3_Left_Stick.png)  | Left Joystick X                                | Twist                           |
-| Left Analog Y                 | ![](/image/retropad/retro_left_stick.png) Y  |                                                  | ![](/image/Button_Pack/PS3/PS3_Left_Stick.png)  | ![](/image/Button_Pack/PS3/PS3_Left_Stick.png)  | Left Joystick Y                                |                                 |
-| Right Analog X                | ![](/image/retropad/retro_right_stick.png) X |                                                  | ![](/image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](/image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick X                               |                                 |
-| Right Analog Y                | ![](/image/retropad/retro_right_stick.png) Y |                                                  | ![](/image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](/image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick Y                               |                                 |
+| Cross                         | ![](../image/retropad/retro_b.png)             | ![](../image/Button_Pack/PS3/PS3_Cross.png)      | ![](../image/Button_Pack/PS3/PS3_Cross.png)       | ![](../image/Button_Pack/PS3/PS3_Cross.png)       | ![](../image/Button_Pack/PS3/PS3_Cross.png)      | Analog button I                 |
+| Square                        | ![](../image/retropad/retro_y.png)             | ![](../image/Button_Pack/PS3/PS3_Square.png)     | ![](../image/Button_Pack/PS3/PS3_Square.png)      | ![](../image/Button_Pack/PS3/PS3_Square.png)      | ![](../image/Button_Pack/PS3/PS3_Square.png)     | Analog button II                |
+| Select                        | ![](../image/retropad/retro_select.png)        | ![](../image/Button_Pack/PS3/PS3_Select.png)     | ![](../image/Button_Pack/PS3/PS3_Select.png)      | ![](../image/Button_Pack/PS3/PS3_Select.png)      | ![](../image/Button_Pack/PS3/PS3_Select.png)     |                                 |
+| Start                         | ![](../image/retropad/retro_start.png)         | ![](../image/Button_Pack/PS3/PS3_Start.png)      | ![](../image/Button_Pack/PS3/PS3_Start.png)       | ![](../image/Button_Pack/PS3/PS3_Start.png)       | ![](../image/Button_Pack/PS3/PS3_Start.png)      | Start                           |
+| D-Pad Up                      | ![](../image/retropad/retro_dpad_up.png)       | ![](../image/Button_Pack/PS3/PS3_Dpad_Up.png)    | ![](../image/Button_Pack/PS3/PS3_Dpad_Up.png)     | ![](../image/Button_Pack/PS3/PS3_Dpad_Up.png)     | ![](../image/Button_Pack/PS3/PS3_Dpad_Up.png)    | D-Pad Up                        |
+| D-Pad Down                    | ![](../image/retropad/retro_dpad_down.png)     | ![](../image/Button_Pack/PS3/PS3_Dpad_Down.png)  | ![](../image/Button_Pack/PS3/PS3_Dpad_Down.png)   | ![](../image/Button_Pack/PS3/PS3_Dpad_Down.png)   | ![](../image/Button_Pack/PS3/PS3_Dpad_Down.png)  | D-Pad Down                      |
+| D-Pad Left                    | ![](../image/retropad/retro_dpad_left.png)     | ![](../image/Button_Pack/PS3/PS3_Dpad_Left.png)  | ![](../image/Button_Pack/PS3/PS3_Dpad_Left.png)   | ![](../image/Button_Pack/PS3/PS3_Dpad_Left.png)   | ![](../image/Button_Pack/PS3/PS3_Dpad_Left.png)  | D-Pad Left                      |
+| D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    | ![](../image/Button_Pack/PS3/PS3_Dpad_Right.png) | ![](../image/Button_Pack/PS3/PS3_Dpad_Right.png)  | ![](../image/Button_Pack/PS3/PS3_Dpad_Right.png)  | ![](../image/Button_Pack/PS3/PS3_Dpad_Right.png) | D-Pad Right                     |
+| Circle                        | ![](../image/retropad/retro_a.png)             | ![](../image/Button_Pack/PS3/PS3_Circle.png)     | ![](../image/Button_Pack/PS3/PS3_Circle.png)      | ![](../image/Button_Pack/PS3/PS3_Circle.png)      | ![](../image/Button_Pack/PS3/PS3_Circle.png)     | A                               |
+| Triangle                      | ![](../image/retropad/retro_x.png)             | ![](../image/Button_Pack/PS3/PS3_Triangle.png)   | ![](../image/Button_Pack/PS3/PS3_Triangle.png)    | ![](../image/Button_Pack/PS3/PS3_Triangle.png)    | ![](../image/Button_Pack/PS3/PS3_Triangle.png)   | B                               |
+| L1                            | ![](../image/retropad/retro_l1.png)            | ![](../image/Button_Pack/PS3/PS3_L1.png)         | ![](../image/Button_Pack/PS3/PS3_L1.png)          | ![](../image/Button_Pack/PS3/PS3_L1.png)          | ![](../image/Button_Pack/PS3/PS3_L1.png)         | Left shoulder button (analog)   |
+| R1                            | ![](../image/retropad/retro_r1.png)            | ![](../image/Button_Pack/PS3/PS3_R1.png)         | ![](../image/Button_Pack/PS3/PS3_R1.png)          | ![](../image/Button_Pack/PS3/PS3_R1.png)          | ![](../image/Button_Pack/PS3/PS3_R1.png)         | Right shoulder button (digital) |
+| L2                            | ![](../image/retropad/retro_l2.png)            | ![](../image/Button_Pack/PS3/PS3_L2.png)         | ![](../image/Button_Pack/PS3/PS3_L2.png)          | ![](../image/Button_Pack/PS3/PS3_L2.png)          | ![](../image/Button_Pack/PS3/PS3_L2.png)         | Analog button II                |
+| R2                            | ![](../image/retropad/retro_r2.png)            | ![](../image/Button_Pack/PS3/PS3_R2.png)         | ![](../image/Button_Pack/PS3/PS3_R2.png)          | ![](../image/Button_Pack/PS3/PS3_R2.png)          | ![](../image/Button_Pack/PS3/PS3_R2.png)         | Analog button I                 |
+| L3                            | ![](../image/retropad/retro_l3.png)            |                                                  | ![](../image/Button_Pack/PS3/PS3_L3.png)          |                                                   |                                                |                                 |
+| R3                            | ![](../image/retropad/retro_r3.png)            |                                                  | ![](../image/Button_Pack/PS3/PS3_R3.png)          |                                                   |                                                |                                 |
+| Left Analog X                 | ![](../image/retropad/retro_left_stick.png) X  |                                                  | ![](../image/Button_Pack/PS3/PS3_Left_Stick.png)  | ![](../image/Button_Pack/PS3/PS3_Left_Stick.png)  | Left Joystick X                                | Twist                           |
+| Left Analog Y                 | ![](../image/retropad/retro_left_stick.png) Y  |                                                  | ![](../image/Button_Pack/PS3/PS3_Left_Stick.png)  | ![](../image/Button_Pack/PS3/PS3_Left_Stick.png)  | Left Joystick Y                                |                                 |
+| Right Analog X                | ![](../image/retropad/retro_right_stick.png) X |                                                  | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick X                               |                                 |
+| Right Analog Y                | ![](../image/retropad/retro_right_stick.png) Y |                                                  | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | ![](../image/Button_Pack/PS3/PS3_Right_Stick.png) | Right Joystick Y                               |                                 |
 
 ## Mouse
 
 | RetroMouse Inputs                                   | Mouse Inputs       |
 |-----------------------------------------------------|--------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Mouse Right Button |
 
 ## Lightgun
 
 | RetroLightgun Inputs                                 | Guncon / G-Con 45 Inputs    | Justifier Inputs    |
 |------------------------------------------------------|-----------------------------|---------------------|
-| ![](/image/retromouse/retro_mouse.png) Gun Crosshair | Guncon / G-Con 45 Crosshair | Justifier Crosshair |
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Guncon / G-Con 45 Crosshair | Justifier Crosshair |
 | Gun Trigger                                          | Guncon / G-Con 45 Trigger   | Justifier Trigger   |
 | Gun Reload                                           | Guncon / G-Con 45 Reload    | Justifier Reload    |
 | Gun Aux A                                            | Guncon / G-Con 45 A         | Justifier Aux       |
@@ -815,5 +815,5 @@ Issue tracker for the hardware renderer can be found here [https://github.com/li
 
 ## Libretro PSX cores
 
-- [PlayStation (Beetle PSX)](https://docs.libretro.com/library/beetle_psx/)
-- [PlayStation (PCSX ReARMed)](https://docs.libretro.com/library/pcsx_rearmed/)
+- [PlayStation (Beetle PSX)](beetle_psx.md)
+- [PlayStation (PCSX ReARMed)](pcsx_rearmed.md)

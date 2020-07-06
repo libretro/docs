@@ -16,7 +16,7 @@ The EasyRPG core is licensed under
 
 - [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -54,7 +54,7 @@ Frontend-level settings or features that the EasyRPG core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -94,13 +94,13 @@ The EasyRPG core supports the following device type(s) in the controls menu, bol
 
 | RetroPad Inputs                                | EasyRPG core inpits       |
 |------------------------------------------------|---------------------------|
-| ![](/image/retropad/retro_b.png)             | Cancel                    |
-| ![](/image/retropad/retro_start.png)         | Decision                  |
-| ![](/image/retropad/retro_dpad_up.png)       | Up                        |
-| ![](/image/retropad/retro_dpad_down.png)     | Down                      |
-| ![](/image/retropad/retro_dpad_left.png)     | Left                      |
-| ![](/image/retropad/retro_dpad_right.png)    | Right                     |
-| ![](/image/retropad/retro_a.png)             | Decision                  |
+| ![](../image/retropad/retro_b.png)             | Cancel                    |
+| ![](../image/retropad/retro_start.png)         | Decision                  |
+| ![](../image/retropad/retro_dpad_up.png)       | Up                        |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                      |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                      |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                     |
+| ![](../image/retropad/retro_a.png)             | Decision                  |
 
 ## External Links
 

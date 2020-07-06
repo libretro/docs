@@ -17,7 +17,7 @@ The higan Accuracy core is licensed under
 
 - [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -47,9 +47,9 @@ Required or optional firmware files go in the frontend's system directory.
 	higan Accuracy uses split ROMS for special chip games.
 	
 !!! attention
-	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](https://docs.libretro.com/library/higan_accuracy#super-gameboy-support) for more information.
+	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](../library/higan_accuracy#super-gameboy-support) for more information.
 	
-Notable DSP1/DSP1B Games:
+Notable DSP1.mdDSP1B Games:
 
 - Super Mario Kart
 - Pilotwings
@@ -119,7 +119,7 @@ Frontend-level settings or features that the higan Accuracy core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -166,15 +166,15 @@ Copy your original Super Game Boy ROM into the SGB1.sfc directory and then renam
 
 Copy your sgb.boot.rom BIOS into each of your SGB1.sfc and SGB2.sfc directories, and rename them to sgb1.boot.rom and sgb2.boot.rom, respectively. 
 
-The ['Preferred Super GameBoy BIOS' core option](https://docs.libretro.com/library/higan_accuracy#core-options) lets you choose which of the two SGB BIOSes to use.
+The ['Preferred Super GameBoy BIOS' core option](../library/higan_accuracy#core-options) lets you choose which of the two SGB BIOSes to use.
 
 **Step 4**
 
-Load a SGB-supported GB/GBC rom.
+Load a SGB-supported GB.mdGBC rom.
 
 **Done**
 
-![](/image/core/higan/sgb.png)
+![](../image/core/higan/sgb.png)
 
 !!! warning
 	There may be graphical glitches when Rewind is set to On in RetroArch's settings.
@@ -182,7 +182,7 @@ Load a SGB-supported GB/GBC rom.
 ## MSU-1
 
 !!! attention
-	MSU-1 support in this core is complex. **Use the [Snes9x core](https://docs.libretro.com/library/snes9x#msu-1-support) for simplified and easily accessible MSU-1 support.**
+	MSU-1 support in this core is complex. **Use the [Snes9x core](../library/snes9x#msu-1-support) for simplified and easily accessible MSU-1 support.**
 
 MSU-1 support can be used by loading a correct .bml file.
 
@@ -199,42 +199,42 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Self-explanatory.
 	
 ??? note "512x480"
-    ![](/image/core/higan/512x480.png)
+    ![](../image/core/higan/512x480.png)
 
 ??? note "512x448"
-    ![](/image/core/higan/512x448.png)
+    ![](../image/core/higan/512x448.png)
 
 ??? note "512x240"
-    ![](/image/core/higan/512x240.png)
+    ![](../image/core/higan/512x240.png)
 
 ??? note "512x224"
-    ![](/image/core/higan/512x224.png)
+    ![](../image/core/higan/512x224.png)
 
 ??? note "256x240"
-    ![](/image/core/higan/256x240.png)
+    ![](../image/core/higan/256x240.png)
 
 ??? note "256x224"
-    ![](/image/core/higan/256x224.png)
+    ![](../image/core/higan/256x224.png)
 
 - **Color emulation** [higan_sfc_color_emulation] (**OFF**|ON)
 
 	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
 	
 ??? note "Color emulation - Disabled"
-    ![](/image/core/higan/color_off.png)
+    ![](../image/core/higan/color_off.png)
 
 ??? note "Color emulation - Enabled"
-    ![](/image/core/higan/color_on.png)
+    ![](../image/core/higan/color_on.png)
 	
 - **Blur emulation** [higan_sfc_blur_emulation] (**OFF**|ON)
 
 	Simulates the limited horizontal resolution of standard-definition TVs by blurring together horizontally-adjacent pixels. Games like Jurassic Park for the Super Famicom depend on this to emulate a transparency effect.
 	
 ??? note "Blur emulation - Disabled"
-    ![](/image/core/higan/blur_off.png)
+    ![](../image/core/higan/blur_off.png)
 
 ??? note "Blur emulation - Enabled"
-    ![](/image/core/higan/blur_on.png)
+    ![](../image/core/higan/blur_on.png)
 	
 - **Scanline emulation** [higan_sfc_scanline_emulation] (**OFF**|ON)
 
@@ -242,7 +242,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred Super GameBoy BIOS (restart)** [higan_sfc_sgb_bios] (**SGB1.sfc/**|SGB2.sfc/)
 
-	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](https://docs.libretro.com/library/higan_accuracy#super-gameboy-support) for more information.
+	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](../library/higan_accuracy#super-gameboy-support) for more information.
 
 ## Controllers
 
@@ -266,36 +266,36 @@ The higan Accuracy core supports the following device type(s) in the controls me
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](https://docs.libretro.com/library/higan_accuracy#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/higan_accuracy#controllers) for User 2.
 
 ### Controller tables
 
 #### Joypad
 
-![](/image/controller/snes.png)
+![](../image/controller/snes.png)
 
 | User 1 - 5 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Y                            | ![](/image/retropad/retro_y.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
-| X                            | ![](/image/retropad/retro_x.png)    |
-| L                            | ![](/image/retropad/retro_l1.png)         |
-| R                            | ![](/image/retropad/retro_r1.png)         |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Y                            | ![](../image/retropad/retro_y.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
+| X                            | ![](../image/retropad/retro_x.png)    |
+| L                            | ![](../image/retropad/retro_l1.png)         |
+| R                            | ![](../image/retropad/retro_r1.png)         |
 
 #### Mouse
 
 | RetroMouse Inputs                                   | SNES Mouse                |
 |-----------------------------------------------------|---------------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 ## Compatibility
 
@@ -315,27 +315,27 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 
 #### Nintendo - Game Boy (+ Color)
 
-- [Nintendo - Game Boy / Color (Emux GB)](https://docs.libretro.com/library/emux_gb/)
-- [Nintendo - Game Boy / Color (Gambatte)](https://docs.libretro.com/library/gambatte/)
-- [Nintendo - Game Boy / Color (Gearboy)](https://docs.libretro.com/library/gearboy/)
-- [Nintendo - Game Boy / Color (SameBoy)](https://docs.libretro.com/library/sameboy/)
-- [Nintendo - Game Boy / Color (TGB Dual)](https://docs.libretro.com/library/tgb_dual/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](https://docs.libretro.com/library/beetle_bsnes/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](https://docs.libretro.com/library/bsnes_mercury_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](https://docs.libretro.com/library/bsnes_mercury_balanced/)
-- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](https://docs.libretro.com/library/bsnes_mercury_performance/)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](https://docs.libretro.com/library/bsnes_accuracy/)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](https://docs.libretro.com/library/bsnes_balanced/)
-- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](https://docs.libretro.com/library/bsnes_cplusplus98/)
-- [Nintendo - SNES / Famicom (bsnes Performance)](https://docs.libretro.com/library/bsnes_performance/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
-- [Nintendo - SNES / Famicom (Snes9x)](https://docs.libretro.com/library/snes9x/)
-- [Nintendo - SNES / Famicom (Snes9x 2002)](https://docs.libretro.com/library/snes9x_2002/)
-- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](https://docs.libretro.com/library/snes9x_2005_plus/)
-- [Nintendo - SNES / Famicom (Snes9x 2005)](https://docs.libretro.com/library/snes9x_2005/)
-- [Nintendo - SNES / Famicom (Snes9x 2010)](https://docs.libretro.com/library/snes9x_2010/)
+- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
+- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
+- [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
+- [Nintendo - SNES / Famicom (Snes9x 2005)](snes9x_2005.md)
+- [Nintendo - SNES / Famicom (Snes9x 2010)](snes9x_2010.md)

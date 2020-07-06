@@ -14,7 +14,7 @@ The blueMSX core is licensed under
 
 - [GPLv2](https://github.com/libretro/blueMSX-libretro/blob/master/license.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -48,7 +48,7 @@ You can download the 'Databases' and 'Machines' folders from an [official full s
 
 Move/Copy the 'Databases' and 'Machines' Folders to RetroArch's System directory.
 
-![](/image/core/bluemsx/bios.png)
+![](../image/core/bluemsx/bios.png)
 
 ## Features
 
@@ -74,7 +74,7 @@ Frontend-level settings or features that the blueMSX core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -153,13 +153,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Forces cropping of overscanned frames
 
 ??? note "*Crop Overscan Off*"
-    ![](/image/core/bluemsxcrop_off.png)
+    ![](../image/core/bluemsx/crop_off.png)
 
 ??? note "*Crop Overscan On*"
-    ![](/image/core/bluemsxcrop_on.png)
+    ![](../image/core/bluemsx/crop_on.png)
 
 ??? note "*Crop Overscan MSX2*"
-    ![](/image/core/bluemsxcrop_msx2.png)
+    ![](../image/core/bluemsx/crop_msx2.png)
 
 - **VDP Sync Type (Restart)** [bluemsx_vdp_synctype] (**Auto**|50Hz|60Hz)
 
@@ -203,22 +203,22 @@ The blueMSX core supports the following device type(s) in the controls menu, bol
 
 | User 1 and 2 Remap descriptors for 'RetroPad' device type | RetroPad Inputs                                | blueMSX core inputs        |
 |-----------------------------------------------------------|------------------------------------------------|----------------------------|
-| Button 2                                                  | ![](/image/retropad/retro_b.png)             | Button 2, Coleco Button 2  |
-| Button 3                                                  | ![](/image/retropad/retro_y.png)             | Button 3, Coleco #2        |
-| Select                                                    | ![](/image/retropad/retro_select.png)        | Select, Coleco Star (*)    |
-| Start                                                     | ![](/image/retropad/retro_start.png)         | Start, Coleco Hash (#)     |
-| Joy Up                                                    | ![](/image/retropad/retro_dpad_up.png)       | Joy Up                     |
-| Joy Down                                                  | ![](/image/retropad/retro_dpad_down.png)     | Joy Down                   |
-| Joy Left                                                  | ![](/image/retropad/retro_dpad_left.png)     | Joy Left                   |
-| Joy Right                                                 | ![](/image/retropad/retro_dpad_right.png)    | Joy Right                  |
-| Button 1                                                  | ![](/image/retropad/retro_a.png)             | Button 1,  Coleco Button 1 |
-| Button 4                                                  | ![](/image/retropad/retro_x.png)             | Button 4, Coleco #1        |
-| Button 5                                                  | ![](/image/retropad/retro_l1.png)            | Button 5, Coleco #4        |
-| Button 6                                                  | ![](/image/retropad/retro_r1.png)            | Button 6, Coleco #3        |
-| Button 7                                                  | ![](/image/retropad/retro_l2.png)            | Button 7, Coleco #6        |
-| Button 8                                                  | ![](/image/retropad/retro_r2.png)            | Button 8, Coleco #5        |
-| Button 9                                                  | ![](/image/retropad/retro_l3.png)            | Button 9. Coleco #8        |
-| Button 10                                                 | ![](/image/retropad/retro_r3.png)            | Button 10, Coleco #7       |
+| Button 2                                                  | ![](../image/retropad/retro_b.png)             | Button 2, Coleco Button 2  |
+| Button 3                                                  | ![](../image/retropad/retro_y.png)             | Button 3, Coleco #2        |
+| Select                                                    | ![](../image/retropad/retro_select.png)        | Select, Coleco Star (*)    |
+| Start                                                     | ![](../image/retropad/retro_start.png)         | Start, Coleco Hash (#)     |
+| Joy Up                                                    | ![](../image/retropad/retro_dpad_up.png)       | Joy Up                     |
+| Joy Down                                                  | ![](../image/retropad/retro_dpad_down.png)     | Joy Down                   |
+| Joy Left                                                  | ![](../image/retropad/retro_dpad_left.png)     | Joy Left                   |
+| Joy Right                                                 | ![](../image/retropad/retro_dpad_right.png)    | Joy Right                  |
+| Button 1                                                  | ![](../image/retropad/retro_a.png)             | Button 1,  Coleco Button 1 |
+| Button 4                                                  | ![](../image/retropad/retro_x.png)             | Button 4, Coleco #1        |
+| Button 5                                                  | ![](../image/retropad/retro_l1.png)            | Button 5, Coleco #4        |
+| Button 6                                                  | ![](../image/retropad/retro_r1.png)            | Button 6, Coleco #3        |
+| Button 7                                                  | ![](../image/retropad/retro_l2.png)            | Button 7, Coleco #6        |
+| Button 8                                                  | ![](../image/retropad/retro_r2.png)            | Button 8, Coleco #5        |
+| Button 9                                                  | ![](../image/retropad/retro_l3.png)            | Button 9. Coleco #8        |
+| Button 10                                                 | ![](../image/retropad/retro_r3.png)            | Button 10, Coleco #7       |
 
 #### Keyboard
 
@@ -334,13 +334,13 @@ Supported combinations
 
 #### Sega - SG-1000
 
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-- [Sega - MS/GG/SG-1000 (Gearsystem)](https://docs.libretro.com/library/gearsystem/)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
+- [Sega - MS/GG/SG-1000 (Gearsystem)](gearsystem.md)
 
 #### Microsoft - MSX
 
-- [Microsoft - MSX (fMSX)](https://docs.libretro.com/library/fmsx/)
+- [Microsoft - MSX (fMSX)](fmsx.md)
 
 #### Microsoft - MSX2
 
-- [Microsoft - MSX (fMSX)](https://docs.libretro.com/library/fmsx/)
+- [Microsoft - MSX (fMSX)](fmsx.md)

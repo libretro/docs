@@ -14,7 +14,7 @@ The Emux SMS core is licensed under
 
 - [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -62,7 +62,7 @@ Frontend-level settings or features that the Emux SMS core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -93,17 +93,17 @@ The Emux SMS core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](/image/controller/sms.png)
+![](../image/controller/sms.png)
 
 | RetroPad Inputs                           | Emux SMS core Inputs |
 |-------------------------------------------|----------------------|
-| ![](/image/retropad/retro_b.png)    | 1                    |
-| ![](/image/retropad/retro_start.png)      | Pause                |
-| ![](/image/retropad/retro_dpad_up.png)    | D-Pad Up             |
-| ![](/image/retropad/retro_dpad_down.png)  | D-Pad Down           |
-| ![](/image/retropad/retro_dpad_left.png)  | D-Pad Left           |
-| ![](/image/retropad/retro_dpad_right.png) | D-Pad Right          |
-| ![](/image/retropad/retro_a.png)    | 2                    |
+| ![](../image/retropad/retro_b.png)    | 1                    |
+| ![](../image/retropad/retro_start.png)      | Pause                |
+| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up             |
+| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down           |
+| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left           |
+| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right          |
+| ![](../image/retropad/retro_a.png)    | 2                    |
 
 ## External Links
 
@@ -116,5 +116,5 @@ The Emux SMS core supports the following device type(s) in the controls menu, bo
 
 #### Sega - Master System - Mark III
 
-- [Sega - MS/GG/MD/CD (Genesis Plus GX)](https://docs.libretro.com/library/genesis_plus_gx/)
-- [Sega - MS/MD/CD/32X (PicoDrive)](https://docs.libretro.com/library/picodrive/)
+- [Sega - MS/GG/MD/CD (Genesis Plus GX)](genesis_plus_gx.md)
+- [Sega - MS/MD/CD/32X (PicoDrive)](picodrive.md)

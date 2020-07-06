@@ -16,7 +16,7 @@ The VBA Next core is licensed under
 
 - [GPLv2](https://github.com/libretro/vba-next/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -65,7 +65,7 @@ Frontend-level settings or features that the VBA Next core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -100,10 +100,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use bios if available (Restart)** [vbanext_bios] (Off/**On**)
 
-	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](https://docs.libretro.com/library/vba_next/#bios) for more information.
+	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](vba_next.md#bios) for more information.
 	
 ??? note "Use bios if available - On"
-	![](/image/core/vba_nextbios.png)
+	![](../image/core/vba_next/bios.png)
 
 ## Controllers
 
@@ -119,20 +119,20 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](/image/controller/gba.png)
+![](../image/controller/gba.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)    |
-| L                        | ![](/image/retropad/retro_l1.png)    |
-| R                        | ![](/image/retropad/retro_r1.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| L                        | ![](../image/retropad/retro_l1.png)    |
+| R                        | ![](../image/retropad/retro_r1.png)         |
 
 ## Compatibility
 
@@ -154,7 +154,7 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 | Yoshi’s Universal Gravitation                     | The tilt sensor is not emulated.                                                                   |
 
 ??? note "1"
-	![](/image/core/vba_next/ssx.png)
+	![](../image/core/vba_next/ssx.png)
 
 ## External Links
 
@@ -166,9 +166,9 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 
 #### Nintendo - Game Boy Advance
 
-- [Nintendo - Game Boy Advance (Beetle GBA)](https://docs.libretro.com/library/beetle_gba/)
-- [Nintendo - Game Boy Advance (gpSP)](https://docs.libretro.com/library/gpsp/)
-- [Nintendo - Game Boy Advance (Meteor)](https://docs.libretro.com/library/meteor/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - Game Boy Advance (TempGBA)](https://docs.libretro.com/library/tempgba/)
-- [Nintendo - Game Boy Advance (VBA-M)](https://docs.libretro.com/library/vba_m/)
+- [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
+- [Nintendo - Game Boy Advance (Meteor)](meteor.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)

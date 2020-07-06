@@ -146,7 +146,7 @@ To develop these kinds of shaders, I’d recommend using RetroArch w/Cg support,
 Here are some screenshots of the mario effect (in Super Mario World SNES) we developed. Obviously this is a very simple example showing what can be done. The imagination is the limit here.
 
 ### Prior to Mario jumping in water
-![Super Mario World prior to Mario jumping in water.](/image/development/shaders/content-aware-shader-1.jpg)
+![Super Mario World prior to Mario jumping in water.](../../image/development/shaders/content-aware-shader-1.jpg)
 
 ### After Mario jumps in water
-![Super Mario World after Mario jumps in water](/image/development/shaders/content-aware-shader-2.jpg)
+![Super Mario World after Mario jumps in water](../../image/development/shaders/content-aware-shader-2.jpg)

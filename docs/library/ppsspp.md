@@ -4,7 +4,7 @@
 
 A PSP emulator for Android, Windows, Mac and Linux, written in C++.
 
-The PPSSPP core supports [OpenGL](https://docs.libretro.com/library/ppsspp/#opengl), [Vulkan](https://docs.libretro.com/library/ppsspp/#vulkan), and [Direct3D 11](https://docs.libretro.com/library/ppsspp/#d3d11) rendering.
+The PPSSPP core supports [OpenGL](ppsspp.md#opengl), [Vulkan](ppsspp.md#vulkan), and [Direct3D 11](ppsspp.md#d3d11) rendering.
 
 The PPSSPP core has been authored by
 
@@ -14,7 +14,7 @@ The PPSSPP core is licensed under
 
 - [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)
 
-A summary of the licenses behind RetroArch and its cores can be found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -40,11 +40,11 @@ RetroArch/
 
 Here's an example of what it should look like.
 
-![](/image/core/ppsspp/directory.png)
+![](../image/core/ppsspp/directory.png)
 
 2 . Visit [https://github.com/hrydgard/ppsspp](https://github.com/hrydgard/ppsspp) and download the repository.
 
-![](/image/core/ppsspp/download.png)
+![](../image/core/ppsspp/download.png)
 
 3 . Extract ppsspp-master.zip
 
@@ -52,7 +52,7 @@ Here's an example of what it should look like.
 
 The end result should look like this.
 
-![](/image/core/ppsspp/ppsspp_assets.png)
+![](../image/core/ppsspp/ppsspp_assets.png)
 
 !!! attention
 	Don't like PPSSPP's replacement fonts? You can place the original PSP fonts in 'system/PPSSPP/flash0/font'
@@ -94,7 +94,7 @@ Frontend-level settings or features that the PPSSPP core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✔         |
 | Language          | ✔         |
@@ -311,28 +311,28 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Internal Cheats Support** [ppsspp_cheats] (**disabled**|enabled)
 
-	Enables internal cheats. Look at the [Internal Cheats section](https://docs.libretro.com/library/ppsspp/#internal-cheats) for more information.
+	Enables internal cheats. Look at the [Internal Cheats section](ppsspp.md#internal-cheats) for more information.
 
 ## Joypad
 
-![](/image/controller/psp.png)
+![](../image/controller/psp.png)
 
 | RetroPad Inputs                                | User 1 input descriptors |
 |------------------------------------------------|--------------------------|
-| ![](/image/retropad/retro_b.png)             | Cross                    |
-| ![](/image/retropad/retro_y.png)             | Square                   |
-| ![](/image/retropad/retro_select.png)        | Select                   |
-| ![](/image/retropad/retro_start.png)         | Start                    |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](/image/retropad/retro_a.png)             | Circle                   |
-| ![](/image/retropad/retro_x.png)             | Triangle                 |
-| ![](/image/retropad/retro_l1.png)            | L                        |
-| ![](/image/retropad/retro_r1.png)            | R                        |
-| ![](/image/retropad/retro_left_stick.png) X  | Analog X                 |
-| ![](/image/retropad/retro_left_stick.png) Y  | Analog Y                 |
+| ![](../image/retropad/retro_b.png)             | Cross                    |
+| ![](../image/retropad/retro_y.png)             | Square                   |
+| ![](../image/retropad/retro_select.png)        | Select                   |
+| ![](../image/retropad/retro_start.png)         | Start                    |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
+| ![](../image/retropad/retro_a.png)             | Circle                   |
+| ![](../image/retropad/retro_x.png)             | Triangle                 |
+| ![](../image/retropad/retro_l1.png)            | L                        |
+| ![](../image/retropad/retro_r1.png)            | R                        |
+| ![](../image/retropad/retro_left_stick.png) X  | Analog X                 |
+| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                 |
 
 ## Compatibility
 

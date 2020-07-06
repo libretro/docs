@@ -14,7 +14,7 @@ The Theodore core is licensed under
 
 - [GPLv3](https://github.com/Zlika/theodore/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -62,7 +62,7 @@ Frontend-level settings or features that the Theodore core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -89,7 +89,7 @@ The Theodore core's internal core name is 'theodore'.
 Once the content and core are loaded the start screen is displayed as
 shown below.
 
-![](/image/core/theodore/to8d_os.jpg)
+![](../image/core/theodore/to8d_os.jpg)
 
 When the "Thomson model" core option is set to "Auto" (default value), the core tries to autodetect the Thomson model to emulate based on the name of the content file, and fallback to TO8 mode if it cannot.
 The "Start" button of the controller can be used to start the game. The core will then make an "educated guess" to start the game (cf. [Theodore's README file](https://github.com/Zlika/theodore/blob/master/README.md#video_game-gamepad-mapping-of-the-buttons) for more info about it).
@@ -126,10 +126,10 @@ The Theodore core supports the following device type(s) in the controls menu, bo
 
 | RetroPad Inputs                      | User 1 input descriptors       |
 |--------------------------------------|--------------------------------|
-| ![](/image/retropad/retro_b.png)     | "Fire" button / Press key when the virtual keyboard is displayed |
-| ![](/image/retropad/retro_y.png)     | Virtual keyboard: move up/down |
-| ![](/image/retropad/retro_select.png)| Virtual keyboard: show/hide    |
-| ![](/image/retropad/retro_start.png) | Start program<br>(See: [Usage](#usage)) |
+| ![](../image/retropad/retro_b.png)     | "Fire" button / Press key when the virtual keyboard is displayed |
+| ![](../image/retropad/retro_y.png)     | Virtual keyboard: move up/down |
+| ![](../image/retropad/retro_select.png)| Virtual keyboard: show/hide    |
+| ![](../image/retropad/retro_start.png) | Start program<br>(See: [Usage](#usage)) |
 
 When the virtual keyboard is displayed, the D-pad is used to move the selected key and the B button is used to press the selected key.
 Long press the B button for a sticky key.
@@ -138,7 +138,7 @@ The transparency of the virtual keyboard can be set using the core's "Virtual ke
 
 ## Keyboard
 
-![](/image/core/theodore/to8d_keyboard.jpg)
+![](../image/core/theodore/to8d_keyboard.jpg)
 
 | RetroKeyboard Inputs         | Theodore Inputs           |
 |------------------------------|---------------------------|
@@ -171,8 +171,8 @@ The transparency of the virtual keyboard can be set using the core's "Virtual ke
 
 | RetroMouse Inputs                                   | Theodore Inputs      |
 |-----------------------------------------------------|----------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | Light pen cursor     |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | Selection            |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Light pen cursor     |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Selection            |
 
 ## External Links
 

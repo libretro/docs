@@ -15,7 +15,7 @@ The TGB Dual core is licensed under
 
 - [GPLv2](https://github.com/libretro/tgbdual-libretro/blob/master/docs/COPYING-2.0.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -56,7 +56,7 @@ Frontend-level settings or features that the TGB Dual core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -95,17 +95,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Emulates two Game Boy units side by side for multiplayer support.
 
 ??? note "*GB Link Enable - Enabled*"
-    ![](/image/core/tgb_duallink.png)
+    ![](../image/core/tgb_dual/link.png)
 	
 - **Screen placement** [tgbdual_screen_placement] (**horizontal**|vertical)
 
 	Switches the screen layout for multiplayer support.
 
 ??? note "*Horizontal*"
-    ![](/image/core/tgb_dualhoriz.png)
+    ![](../image/core/tgb_dual/horiz.png)
 
 ??? note "*Vertical*"
-    ![](/image/core/tgb_dualvert.png)
+    ![](../image/core/tgb_dual/vert.png)
 	
 - **Switch player screens** [tgbdual_switch_screens] (**normal**|switched)
 
@@ -129,20 +129,20 @@ The TGB Dual core supports the following device type(s) in the controls menu, bo
 
 #### Joypad
 
-![](/image/controller/gb.png)
+![](../image/controller/gb.png)
 
 | User 1 - 2 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
-| B                            | ![](/image/retropad/retro_b.png)    |
-| Select                       | ![](/image/retropad/retro_select.png)     |
-| Start                        | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                     | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                   | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                   | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                  | ![](/image/retropad/retro_dpad_right.png) |
-| A                            | ![](/image/retropad/retro_a.png)    |
-| Next Audio Mode              | ![](/image/retropad/retro_l1.png)         |
-| Prev Audio Mode              | ![](/image/retropad/retro_r1.png)         |
+| B                            | ![](../image/retropad/retro_b.png)    |
+| Select                       | ![](../image/retropad/retro_select.png)     |
+| Start                        | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
+| A                            | ![](../image/retropad/retro_a.png)    |
+| Next Audio Mode              | ![](../image/retropad/retro_l1.png)         |
+| Prev Audio Mode              | ![](../image/retropad/retro_r1.png)         |
 
 ## Compatibility
 
@@ -160,10 +160,10 @@ Awaiting description.
 
 #### Nintendo - Game Boy (+ Color)
 
-- [Nintendo - Game Boy / Color (Emux GB)](https://docs.libretro.com/library/emux_gb/)
-- [Nintendo - Game Boy / Color (Gambatte)](https://docs.libretro.com/library/gambatte/)
-- [Nintendo - Game Boy / Color (Gearboy)](https://docs.libretro.com/library/gearboy/)
-- [Nintendo - Game Boy / Color (SameBoy)](https://docs.libretro.com/library/sameboy/)
-- [Nintendo - Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
-- [Nintendo - SNES / Famicom (higan Accuracy)](https://docs.libretro.com/library/higan_accuracy/)
-- [Nintendo - SNES / Famicom (nSide Balanced)](https://docs.libretro.com/library/nside_balanced/)
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)

@@ -15,7 +15,7 @@ Cores are essentially other programs and games that run through RetroArch. Retro
     - Navigate to **Views**
     - Enable **Show Core Updater**
 
-![Core Updater](/image/retroarch/ozone/core_updater.gif)
+![Core Updater](../image/retroarch/ozone/core_updater.gif)
 
 - Navigate to **Online Updater**
 - Navigate to **Select Core Updater**

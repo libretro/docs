@@ -10,7 +10,7 @@
 
 **In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/uzem.md). Changes are proposed using "Pull Requests."**
 
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
+**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
 
 **You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
 
@@ -42,7 +42,7 @@ The content should now start running!
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 The Uzem core is licensed under
 

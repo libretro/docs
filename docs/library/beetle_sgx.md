@@ -12,14 +12,14 @@ The Beetle SuperGrafx core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-supergrafx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## BIOS
 
 Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
-	Which PCE CD BIOS file the Beetle SuperGrafx core will use can be configured by the ['CD BIOS' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
+	Which PCE CD BIOS file the Beetle SuperGrafx core will use can be configured by the ['CD BIOS' core option](#core-options).
 
 !!! attention
 	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
@@ -70,7 +70,7 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -100,10 +100,10 @@ The Beetle SuperGrafx core saves/loads to/from these directories.
 - The Beetle SuperGrafx core's core provided FPS is 59.82
 - The Beetle SuperGrafx core's core provided sample rate is 44100 Hz
 - The Beetle SuperGrafx core's base width is 512
-- The Beetle SuperGrafx core's base height is dependent on the ['Initial scanline' and 'Last scanline' core options](https://docs.libretro.com/library/beetle_sgx#core-options).
+- The Beetle SuperGrafx core's base height is dependent on the ['Initial scanline' and 'Last scanline' core options](#core-options).
 - The Beetle SuperGrafx core's max width is 512
 - The Beetle SuperGrafx core's max height is 243
-- The Beetle SuperGrafx core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](https://docs.libretro.com/library/beetle_sgx#core-options).
+- The Beetle SuperGrafx core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](#core-options).
 
 ## Loading PC Engine CD content
 
@@ -147,7 +147,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select which PC Engine CD BIOS to use.
 	
-	Look at the [BIOS section](https://docs.libretro.com/library/beetle_sgx/#core-options) for more information.
+	Look at the [BIOS section](#core-options) for more information.
 	
 - **Force SuperGrafx Emulation (Restart)** [sgx_forcesgx] (**disabled**|enabled)
 
@@ -199,7 +199,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enables Turbo ON/OFF inputs. 
 	
-	Look at the [Joypad section](https://docs.libretro.com/library/beetle_sgx/#joypad) for more information.
+	Look at the [Joypad section](#joypad) for more information.
 
 - **Alternate Turbo Hotkey** [sgx_turbo_toggle_hotkey] (**disabled**|enabled)
 
@@ -207,7 +207,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
 	
-	Look at the [Joypad section](https://docs.libretro.com/library/beetle_sgx/#joypad) for more information.
+	Look at the [Joypad section](#joypad) for more information.
 	
 - **Disable Soft Reset (RUN+SELECT)** [sgx_disable_softreset] (**disabled**|enabled)
 
@@ -245,38 +245,38 @@ The Beetle SuperGrafx core supports the following device type(s) in the controls
 
 - Use the Mode Switch input to switch between button modes.
 
-- The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
+- The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](#core-options) is set to On.
 
-- The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](https://docs.libretro.com/library/beetle_sgx#core-options) is set to On.
+- The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON.mdOFF Toggle' core option](#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](#core-options) is set to On.
 
 | RetroPad Inputs                                | User 1 - 5 input descriptors | PCE Joypad 2-button       | PCE Joypad 6-button |
 |------------------------------------------------|------------------------------|---------------------------|---------------------|
-| ![](/image/retropad/retro_b.png)             | II                           | II                        | II                  |
-| ![](/image/retropad/retro_y.png)             | III                          | II Turbo On/Off           | III                 |
-| ![](/image/retropad/retro_select.png)        | Select                       | Select                    | Select              |  
-| ![](/image/retropad/retro_start.png)         | Run                          | Run                       | Run                 |
-| ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  | D-Pad Up            |
-| ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                | D-Pad Down          |
-| ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left                | D-Pad Left          |
-| ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right               | D-Pad Right         |
-| ![](/image/retropad/retro_a.png)             | I                            | I                         | I                   |
-| ![](/image/retropad/retro_x.png)             | IV                           | I Turbo On/Off            | IV                  |
-| ![](/image/retropad/retro_l1.png)            | V                            |                           | V                   |
-| ![](/image/retropad/retro_r1.png)            | VI                           |                           | VI                  |
-| ![](/image/retropad/retro_l2.png)            | Mode Switch                  | Mode Switch               | Mode Switch         |
-| ![](/image/retropad/retro_l3.png)            |                              | Alternate II Turbo On/Off |                     |
-| ![](/image/retropad/retro_r3.png)            |                              | Alternate I Turbo On/Off  |                     |
+| ![](../image/retropad/retro_b.png)             | II                           | II                        | II                  |
+| ![](../image/retropad/retro_y.png)             | III                          | II Turbo On/Off           | III                 |
+| ![](../image/retropad/retro_select.png)        | Select                       | Select                    | Select              |  
+| ![](../image/retropad/retro_start.png)         | Run                          | Run                       | Run                 |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  | D-Pad Up            |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                | D-Pad Down          |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   | D-Pad Left                | D-Pad Left          |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  | D-Pad Right               | D-Pad Right         |
+| ![](../image/retropad/retro_a.png)             | I                            | I                         | I                   |
+| ![](../image/retropad/retro_x.png)             | IV                           | I Turbo On/Off            | IV                  |
+| ![](../image/retropad/retro_l1.png)            | V                            |                           | V                   |
+| ![](../image/retropad/retro_r1.png)            | VI                           |                           | VI                  |
+| ![](../image/retropad/retro_l2.png)            | Mode Switch                  | Mode Switch               | Mode Switch         |
+| ![](../image/retropad/retro_l3.png)            |                              | Alternate II Turbo On/Off |                     |
+| ![](../image/retropad/retro_r3.png)            |                              | Alternate I Turbo On/Off  |                     |
 
 ## Mouse
 
 | RetroMouse Inputs                                     | PCE Mouse              |
 |-------------------------------------------------------|------------------------|
-| ![](/image/retromouse/retro_mouse.png) Mouse Cursor | PCE Mouse Cursor       |
-| ![](/image/retromouse/retro_left.png) Mouse 1       | PCE Mouse Left Button  |
-| ![](/image/retromouse/retro_right.png) Mouse 2      | PCE Mouse Right Button |
-| ![](/image/retromouse/retro_middle.png) Mouse 3     | PCE Mouse Start Button |
-| ![](/image/retropad/retro_select.png)               | Select (Joypad)        |
-| ![](/image/retropad/retro_start.png)                | Start (Joypad)         |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | PCE Mouse Cursor       |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | PCE Mouse Left Button  |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | PCE Mouse Right Button |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | PCE Mouse Start Button |
+| ![](../image/retropad/retro_select.png)               | Select (Joypad)        |
+| ![](../image/retropad/retro_start.png)                | Start (Joypad)         |
 
 ## External Links
 
@@ -288,4 +288,4 @@ The Beetle SuperGrafx core supports the following device type(s) in the controls
 
 ## TG-16
 
-- [NEC - PC Engine / CD (Beetle PCE FAST)](https://docs.libretro.com/library/beetle_pce_fast/)
+- [NEC - PC Engine / CD (Beetle PCE FAST)](beetle_pce_fast.md)

@@ -10,17 +10,17 @@ Lutro is an experimental lua game framework that follows the [LÖVE API](https:/
 
 You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
-<center> ![](/image/core/alldownload.png) </center>
+<center> ![](../image/core/all/download.png) </center>
 
 - Select 'Lutro', then select 'Pong.lutro'. This should download and extract this file to RetroArch's Downloads directory.
 
-<center> ![](/image/core/lutrolutro.png) </center>
+<center> ![](../image/core/lutro/lutro.png) </center>
 
 - Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
 
-<center> ![](/image/core/allload.png) </center>
+<center> ![](../image/core/all/load.png) </center>
 
-<center> ![](/image/core/alldownloads.png) </center>
+<center> ![](../image/core/all/downloads.png) </center>
 
 - Select 'Pong.lutro'.
 
@@ -39,7 +39,7 @@ The Lutro core is licensed under
 
 - [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -78,7 +78,7 @@ Frontend-level settings or features that the Lutro core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -114,22 +114,22 @@ The Lutro core supports the following device type(s) in the controls menu, bolde
 
 | User 1 Remap descriptors | RetroPad Inputs                                | Lutro core inputs |
 |--------------------------|------------------------------------------------|-------------------|
-|                          | ![](/image/retropad/retro_b.png)             | B                 |
-|                          | ![](/image/retropad/retro_y.png)             | Y                 |
-|                          | ![](/image/retropad/retro_select.png)        | Select            |
-|                          | ![](/image/retropad/retro_start.png)         | Start             |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)       | Up                |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)     | Down              |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)     | Left              |
-| Right                    | ![](/image/retropad/retro_dpad_right.png)    | Right             |
-|                          | ![](/image/retropad/retro_a.png)             | A                 |
-|                          | ![](/image/retropad/retro_x.png)             | X                 |
-|                          | ![](/image/retropad/retro_l1.png)            | L1                |
-|                          | ![](/image/retropad/retro_r1.png)            | R1                |
-|                          | ![](/image/retropad/retro_l2.png)            | L2                |
-|                          | ![](/image/retropad/retro_r2.png)            | R2                |
-|                          | ![](/image/retropad/retro_l3.png)            | L3                |
-|                          | ![](/image/retropad/retro_r3.png)            | R3                |
+|                          | ![](../image/retropad/retro_b.png)             | B                 |
+|                          | ![](../image/retropad/retro_y.png)             | Y                 |
+|                          | ![](../image/retropad/retro_select.png)        | Select            |
+|                          | ![](../image/retropad/retro_start.png)         | Start             |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down              |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left              |
+| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right             |
+|                          | ![](../image/retropad/retro_a.png)             | A                 |
+|                          | ![](../image/retropad/retro_x.png)             | X                 |
+|                          | ![](../image/retropad/retro_l1.png)            | L1                |
+|                          | ![](../image/retropad/retro_r1.png)            | R1                |
+|                          | ![](../image/retropad/retro_l2.png)            | L2                |
+|                          | ![](../image/retropad/retro_r2.png)            | R2                |
+|                          | ![](../image/retropad/retro_l3.png)            | L3                |
+|                          | ![](../image/retropad/retro_r3.png)            | R3                |
 
 ## External Links
 
@@ -145,4 +145,4 @@ The Lutro core supports the following device type(s) in the controls menu, bolde
 
 #### Custom Engine
 
-- [ChaiLove](https://docs.libretro.com/library/chailove/)
+- [ChaiLove](chailove.md)

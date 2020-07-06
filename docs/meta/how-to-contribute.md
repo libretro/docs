@@ -11,7 +11,7 @@ In order to propose improvements to a document:
 3. Follow the "Building the docs" section to render the documentation site locally
 4. Propose your changes using the button `New Pull Request` [in the docs repo](https://github.com/libretro/docs)
 
-There is a To-Do list for libretro/docs [here](https://docs.libretro.com/meta/todo/) and you can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues).
+There is a To-Do list for libretro/docs [here](todo.md) and you can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues).
 
 ## Building the docs
 

@@ -15,7 +15,7 @@ The FCEUmm core is licensed under
 
 - [GPLv2](https://github.com/libretro/libretro-fceumm/blob/master/Copying)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -65,7 +65,7 @@ Frontend-level settings or features that the FCEUmm core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -108,7 +108,7 @@ The FCEUmm core saves/loads to/from these directories.
 
 ### Custom color palettes
 
-To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](https://docs.libretro.com/library/fceumm/#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](fceumm.md#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory. 
 
 Make sure the custom palette file is named 'nes.pal'
 
@@ -132,10 +132,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
 	
 ??? note "Preferred aspect ratio - 8:7 PAR"
-	![](/image/core/fceumm/8by7_PAR.png)
+	![](../image/core/fceumm/8by7_PAR.png)
 	
 ??? note "Preferred aspect ratio - 4:3"
-	![](/image/core/fceumm/4by3.png)
+	![](../image/core/fceumm/4by3.png)
 	
 - **Color Palette** [fceumm_palette] (**default**|asqrealc|nintendo-vc|rgb|yuv-v3|unsaturated-final|sony-cxa2025as-us|pal|bmf-final2|bmf-final3|smooth-fbx|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|nescap|wavebeam|raw|custom)
 
@@ -145,58 +145,58 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Color Palette core option screenshots have been taken with the 'Use NTSC Palette' core option set to Off.
 
 ??? note "Color Palette - default"
-	![](/image/core/fceumm/default.png)
+	![](../image/core/fceumm/default.png)
 
 ??? note "Color Palette - asqrealc"
-	![](/image/core/fceumm/asqrealc.png)
+	![](../image/core/fceumm/asqrealc.png)
 
 ??? note "Color Palette - nintendo-vc"
-	![](/image/core/fceumm/nintendo_vc.png)
+	![](../image/core/fceumm/nintendo_vc.png)
 
 ??? note "Color Palette - rgb"
-	![](/image/core/fceumm/rgb.png)
+	![](../image/core/fceumm/rgb.png)
 
 ??? note "Color Palette - yuv-v3"
-	![](/image/core/fceumm/yuv_v3.png)
+	![](../image/core/fceumm/yuv_v3.png)
 
 ??? note "Color Palette - unsaturated-final"
-	![](/image/core/fceumm/unsaturated_final.png)
+	![](../image/core/fceumm/unsaturated_final.png)
 
 ??? note "Color Palette - sony-cxa2025as-us"
-	![](/image/core/fceumm/sony_cxa2025as_us.png)
+	![](../image/core/fceumm/sony_cxa2025as_us.png)
 
 ??? note "Color Palette - pal"
-	![](/image/core/fceumm/pal.png)
+	![](../image/core/fceumm/pal.png)
 
 ??? note "Color Palette - bmf-final2"
-	![](/image/core/fceumm/bmf_final2.png)
+	![](../image/core/fceumm/bmf_final2.png)
 
 ??? note "Color Palette - bmf-final3"
-	![](/image/core/fceumm/bmf_final3.png)
+	![](../image/core/fceumm/bmf_final3.png)
 
 ??? note "Color Palette - smooth-fbx"
-	![](/image/core/fceumm/smooth_fbx.png)
+	![](../image/core/fceumm/smooth_fbx.png)
 	
 ??? note "Color Palette - composite-direct-fbx"
-	![](/image/core/fceumm/direct_fbx.png)
+	![](../image/core/fceumm/direct_fbx.png)
 
 ??? note "Color Palette - pvm-style-d93-fbx"
-	![](/image/core/fceumm/pvm_style_d93_fbx.png)
+	![](../image/core/fceumm/pvm_style_d93_fbx.png)
 
 ??? note "Color Palette - ntsc-hardware-fbx"
-	![](/image/core/fceumm/ntsc_hardware_fbx.png)
+	![](../image/core/fceumm/ntsc_hardware_fbx.png)
 
 ??? note "Color Palette - nes-classic-fbx-fs"
-	![](/image/core/fceumm/nes_classic_fbx_fs.png)
+	![](../image/core/fceumm/nes_classic_fbx_fs.png)
 
 ??? note "Color Palette - nescap"
-	![](/image/core/fceumm/nescap.png)
+	![](../image/core/fceumm/nescap.png)
 
 ??? note "Color Palette - wavebeam"
-	![](/image/core/fceumm/wavebeam.png)
+	![](../image/core/fceumm/wavebeam.png)
 
 ??? note "Color Palette - raw"
-	![](/image/core/fceumm/raw.png)		
+	![](../image/core/fceumm/raw.png)		
 
 - **Allow Opposing Directions** [fceumm_up_down_allowed] (**disabled**|enabled)
 
@@ -211,20 +211,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Crop out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 	
 ??? note "Crop Overscan (Horiontal) - Off"
-	![](/image/core/fceumm/horiz_off.png)
+	![](../image/core/fceumm/horiz_off.png)
 	
 ??? note "Crop Overscan (Horizontal) - On"
-	![](/image/core/fceumm/horiz_on.png)		
+	![](../image/core/fceumm/horiz_on.png)		
 	
 - **Crop Overscan (Vertical)** [fceumm_overscan_v] (**enabled**|disabled)
 
 	Crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Crop Overscan (Vertical) - On"
-	![](/image/core/fceumm/vert_on.png)
+	![](../image/core/fceumm/vert_on.png)
 	
 ??? note "Crop Overscan (Vertical) - Off"
-	![](/image/core/fceumm/vert_off.png)	
+	![](../image/core/fceumm/vert_off.png)	
 	
 - **No Sprite Limit** [fceumm_nospritelimit] (**disabled**|enabled)
 
@@ -244,7 +244,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Turbo Enable** [fceumm_turbo_enable] (**None**|Player 1|Player 2|Both)
 
-	Enable the use of the [Turbo B and Turbo A buttons](https://docs.libretro.com/library/fceumm/index.html#controllers).
+	Enable the use of the [Turbo B and Turbo A buttons](#controllers).
 	
 - **Turbo Delay (in frames)** [fceumm_turbo_delay] (**3**|5|10|15|30|60|1|2)
 
@@ -259,10 +259,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Show the crosshair for the Zapper device type.
 	
 ??? note "Show Crosshair - On"
-	![](/image/core/fceumm/cross_on.png)
+	![](../image/core/fceumm/cross_on.png)
 	
 ??? note "Show Crosshair - Off"
-	![](/image/core/fceumm/cross_off.png)	
+	![](../image/core/fceumm/cross_off.png)	
 	
 - **Overclocking** [fceumm_overclocking] (**disabled**|2x-Postrender|2x-VBlank)
 
@@ -282,19 +282,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'NTSC Filter' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
 	
 ??? note "NTSC Filter - Off"
-	![](/image/core/fceumm/blargg_off.png)
+	![](../image/core/fceumm/blargg_off.png)
 	
 ??? note "NTSC Filter - composite (color bleeding + artifacts)"
-	![](/image/core/fceumm/blargg_composite_normal.png)
+	![](../image/core/fceumm/blargg_composite_normal.png)
 
 ??? note "NTSC Filter - svideo (color bleeding only)"
-	![](/image/core/fceumm/blargg_svideo_normal.png)
+	![](../image/core/fceumm/blargg_svideo_normal.png)
 
 ??? note "NTSC Filter - rgb (crisp image)"
-	![](/image/core/fceumm/blargg_rgb_normal.png)
+	![](../image/core/fceumm/blargg_rgb_normal.png)
 
 ??? note "NTSC Filter - monochrome (desaturated + artifacts)"
-	![](/image/core/fceumm/blargg_monochrome_normal.png)
+	![](../image/core/fceumm/blargg_monochrome_normal.png)
 
 - **Show Advanced System Options** [fceumm_show_adv_system_options] (**disabled**|enabled)
 
@@ -350,46 +350,46 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 #### Joypad
 
-![](/image/controller/nes.png)
+![](../image/controller/nes.png)
 
 !!! warning 
 	In order to use the Turbo A and Turbo B buttons, the 'Turbo Enable' core option must be set to On.
 
 | User 1 Remap descriptors | RetroPad Inputs                           |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Turbo B                  | ![](/image/retropad/retro_y.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)    |
-| Turbo A                  | ![](/image/retropad/retro_x.png)    |
-| (FDS) Disk Side Change   | ![](/image/retropad/retro_l1.png)         |
-| (FDS) Insert/Eject Disk  | ![](/image/retropad/retro_r1.png)         |
-| (VSSystem) Insert Coin   | ![](/image/retropad/retro_r2.png)         |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| (FDS) Disk Side Change   | ![](../image/retropad/retro_l1.png)         |
+| (FDS) Insert/Eject Disk  | ![](../image/retropad/retro_r1.png)         |
+| (VSSystem) Insert Coin   | ![](../image/retropad/retro_r2.png)         |
 
 | User 2 - 4 Remap descriptors | RetroPad Inputs                       |
 |--------------------------|-------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)    |
-| Turbo B                  | ![](/image/retropad/retro_y.png)    |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| D-Pad Up                 | ![](/image/retropad/retro_dpad_up.png)    |
-| D-Pad Down               | ![](/image/retropad/retro_dpad_down.png)  |
-| D-Pad Left               | ![](/image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)    |
-| Turbo A                  | ![](/image/retropad/retro_x.png)    |
+| B                        | ![](../image/retropad/retro_b.png)    |
+| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
+| D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
+| D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)    |
+| Turbo A                  | ![](../image/retropad/retro_x.png)    |
 
 #### Mouse
 
 | RetroMouse Inputs                                                                                   | Zapper           | Arkanoid          | Oeka Kids Tablet        | Bandai Hyper Shot Gun           |
 |-----------------------------------------------------------------------------------------------------|------------------|-------------------|-------------------------|---------------------------------|
-| ![](/image/retromouse/retro_mouse.png) or ![](/image/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
-| ![](/image/retromouse/retro_left.png) or ![](/image/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
+| ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
 
 - When the 'Zapper Mode' core option is set to lightgun, the 'Zapper' device type can be controlled with lightgun inputs (such as Wii remote).
 - When the 'Zapper Mode' core option is set to touchscreen, the 'Zapper' device type can be controlled with touch inputs.
@@ -416,13 +416,13 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 #### Nintendo - Family Computer Disk System
 
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (Nestopia UE)](https://docs.libretro.com/library/nestopia_ue/)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
 
 #### Nintendo - Nintendo Entertainment System
 
-- [Nintendo - NES / Famicom (bnes)](https://docs.libretro.com/library/bnes/)
-- [Nintendo - NES / Famicom (Emux NES)](https://docs.libretro.com/library/emux_nes/)
-- [Nintendo - NES / Famicom (Mesen)](https://docs.libretro.com/library/mesen/)
-- [Nintendo - NES / Famicom (Nestopia UE)](https://docs.libretro.com/library/nestopia_ue/)
-- [Nintendo - NES / Famicom (QuickNES)](https://docs.libretro.com/library/quicknes/)
+- [Nintendo - NES / Famicom (bnes)](bnes.md)
+- [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
+- [Nintendo - NES / Famicom (Mesen)](mesen.md)
+- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

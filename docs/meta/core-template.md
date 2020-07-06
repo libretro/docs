@@ -27,9 +27,9 @@ The [Core name] core is licensed under
 - // Add [Core name]
 - // Add [License] and (URL), use the core info file, the licenses doc or google for license info
 - // https://github.com/libretro/libretro-super/tree/master/dist/info
-- // https://docs.libretro.com/tech/licenses/
+- // https://docs.libretro.com/development/licenses/
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/development/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -134,7 +134,7 @@ Frontend-level settings or features that the [Core name] core respects.
 | Camera            | -         |
 | Location          | -         |
 | Subsystem         | -         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | -         |
+| [Softpatching](../guides/softpatching.md) | -         |
 | Disk Control      | -         |
 | Username          | -         |
 | Language          | -         |
@@ -224,7 +224,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Awaiting description.
 
 ??? note "Core Option - Setting"
-	![](/image/core/folder/screenshot_name.png)
+	![](../image/core/folder/screenshot_name.png)
 
 ## User # - # device types
 
@@ -507,4 +507,4 @@ Rumble only works in the [Core name] core when
 - // Add links to related core docs here. Use the See Also doc for help
 - // https://docs.libretro.com/meta/see_also
 
-- [Other Core](https://docs.libretro.com/library/name)
+- [Other Core](../library/name.md)

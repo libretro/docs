@@ -14,7 +14,7 @@ The Imageviewer core is licensed under
 
 - [MIT](https://github.com/libretro/RetroArch/blob/master/cores/libretro-imageviewer/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -56,7 +56,7 @@ Frontend-level settings or features that the Imageviewer core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -89,11 +89,11 @@ The Imageviewer core supports the following device type(s) in the controls menu,
 
 | RetroPad Inputs                                | Imageviewer core inputs                                    |
 |------------------------------------------------|------------------------------------------------------------|
-| ![](/image/retropad/retro_y.png)             | Automatic slideshow - Go to the next image every 2 seconds |
-| ![](/image/retropad/retro_dpad_up.png)       | Go forward 5 images                                        |
-| ![](/image/retropad/retro_dpad_down.png)     | Go backward 5 images                                       |
-| ![](/image/retropad/retro_dpad_left.png)     | Go backward 1 image                                        |
-| ![](/image/retropad/retro_dpad_right.png)    | Go forward 1 image                                         |
+| ![](../image/retropad/retro_y.png)             | Automatic slideshow - Go to the next image every 2 seconds |
+| ![](../image/retropad/retro_dpad_up.png)       | Go forward 5 images                                        |
+| ![](../image/retropad/retro_dpad_down.png)     | Go backward 5 images                                       |
+| ![](../image/retropad/retro_dpad_left.png)     | Go backward 1 image                                        |
+| ![](../image/retropad/retro_dpad_right.png)    | Go forward 1 image                                         |
 
 ## External Links
 
@@ -105,7 +105,7 @@ The Imageviewer core supports the following device type(s) in the controls menu,
 
 #### Media
 
-- [FFmpeg](https://docs.libretro.com/library/ffmpeg/)
-- [Game Music Emu](https://docs.libretro.com/library/game_music_emu/)
-- [mpv](https://docs.libretro.com/library/mpv/)
-- [PocketCDG](https://docs.libretro.com/library/pocketcdg/)
+- [FFmpeg](ffmpeg.md)
+- [Game Music Emu](game_music_emu.md)
+- [mpv](mpv.md)
+- [PocketCDG](pocketcdg.md)

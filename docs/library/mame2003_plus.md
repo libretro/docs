@@ -19,7 +19,7 @@ In order to propose improvements to this document, [visit it's corresponding sou
 
 ## See also
 
-[MAME 2003](https://docs.libretro.com/library/mame_2003/)
+[MAME 2003](mame_2003.md)
 
 
 ## License
@@ -118,20 +118,20 @@ No system of default input mappings can address the full range of emulated games
 
 | **Classic Gamepad** |
 |---------------------|
-| The **Classic Gamepad** is based on mainline MAME's default Xbox 360 controller layout and is also likely to suit DualShock or SNES-style gamepads. The corresponding option in configuration file is ```input_libretro_device_pX = "1"``` (where X is the player number, ```input_libretro_device_p1 = "1"``` for player 1, etc.).<br>![Xbox 360-style RetroPad](/image/controller/xbox360.png)<br>![PSX DualShock-style RetroPad](/image/controller/psx.png) |
+| The **Classic Gamepad** is based on mainline MAME's default Xbox 360 controller layout and is also likely to suit DualShock or SNES-style gamepads. The corresponding option in configuration file is ```input_libretro_device_pX = "1"``` (where X is the player number, ```input_libretro_device_p1 = "1"``` for player 1, etc.).<br>![Xbox 360-style RetroPad](../image/controller/xbox360.png)<br>![PSX DualShock-style RetroPad](../image/controller/psx.png) |
 
 | **Modern Fightstick** |
 |-----------------------|
 | The **Modern Fightstick** layout is the fight stick and pad layout popularized by Street Fighter IV and assumes an 8+ button controller. The corresponding option in configuration file is ```input_libretro_device_pX = "257"``` (where X is the player number, ```input_libretro_device_p1 = "257"``` for player 1, etc.). Gamepad can also serve as an alternative Xbox/PSX-style layout for Street Fighter 2.<br>For arcade control panels, **Modern Fightstick** can be mapped in this way:<br>
-![Modern Fightstick mapping for arcade controls](/image/core/mame2003-plus/fightstick.png)|
+![Modern Fightstick mapping for arcade controls](../image/core/mame2003-plus/fightstick.png)|
 
 | **6-Button** |
 |--------------|
-| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels. The corresponding option in configuration file is ```input_libretro_device_pX = "769"``` (where X is the player number, ```input_libretro_device_p1 = "769"``` for player 1, etc.). **6-button** can be mapped in this way:<br>![6-button mapping for arcade controls](/image/core/mame2003-plus/6button.png)|
+| **6-button** is a layout intended for SNES-type RetroPad controls as well as 6-button arcade panels arcade panels. The corresponding option in configuration file is ```input_libretro_device_pX = "769"``` (where X is the player number, ```input_libretro_device_p1 = "769"``` for player 1, etc.). **6-button** can be mapped in this way:<br>![6-button mapping for arcade controls](../image/core/mame2003-plus/6button.png)|
 
 | **8-Button** |
 |--------------|
-|**8-button** is a layout intended for an arcade panel. The corresponding option in configuration file is ```input_libretro_device_pX = "513"``` (where X is the player number, ```input_libretro_device_p1 = "513"``` for player 1, etc.). **8-button** is configured like this<br>![8-button mapping for arcade controls](/image/core/mame2003-plus/8button.png)|
+|**8-button** is a layout intended for an arcade panel. The corresponding option in configuration file is ```input_libretro_device_pX = "513"``` (where X is the player number, ```input_libretro_device_p1 = "513"``` for player 1, etc.). **8-button** is configured like this<br>![8-button mapping for arcade controls](../image/core/mame2003-plus/8button.png)|
 
 
 ### Keyboard Input
@@ -193,7 +193,7 @@ Some games require an additional zip file with recorded sounds or music in order
 
 Some games require backdrop artwork files in order to be fully emulated. Because RetroArch, the reference libretro frontend, does not yet incorporate support for so-called "backdrop" artwork, the MAME 2003-Plus github repository includes [a folder of high-resolution backdrop artwork](https://github.com/libretro/mame2003-plus-libretro/tree/master/metadata/artwork) that is compatible with the core's built-in artwork display system. These artwork `zip` files should be placed within `/libretro system dir/mame2003-plus/artwork`.
 
-![Armor Attack with backdrop artwork](/image/core/mame2003-plus/armor-attack-backdrop-artwork.jpg)
+![Armor Attack with backdrop artwork](../image/core/mame2003-plus/armor-attack-backdrop-artwork.jpg)
 
 _"Armor Attack" backdrop artwork pack prepared by UDB23_
 

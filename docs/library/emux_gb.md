@@ -4,7 +4,7 @@
 
 **In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/emux_gb.md). Changes are proposed using "Pull Requests."**
 
-**There is a To-Do list for libretro/docs [here](https://docs.libretro.com/docguide/todo/)**
+**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
 
 **You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
 
@@ -20,15 +20,15 @@ Awaiting description.
 
 - Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-<center> ![](/image/core/allupdater.png) </center>
+<center> ![](../image/core/all/updater.png) </center>
 
 - Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
 
-<center> ![](/image/core/allinfo.png) </center>
+<center> ![](../image/core/all/info.png) </center>
 
 - Browse through the list and select 'Game Boy/Game Boy Color (Emux GB)'.
 
-<center> ![](/image/core/emuxemux_gb.png) </center>
+<center> ![](../image/core/emux/emux_gb.png) </center>
 
 After this has finished downloading, the core should now be ready for use!
 
@@ -36,13 +36,13 @@ After this has finished downloading, the core should now be ready for use!
 
 - Go back to RetroArch's main menu screen. Select 'Load Content'.
 
-<center> ![](/image/core/allload.png) </center>
+<center> ![](../image/core/all/load.png) </center>
 
 - Browse to the folder that contains the content you want to run.
 
 - Select the content that you want to run.
 
-<center> ![](/image/core/allgb.png) </center>
+<center> ![](../image/core/all/gb.png) </center>
 
 - If you are asked which core to select, choose 'Game Boy/Game Boy Color (Emux GB)'.
 
@@ -56,15 +56,15 @@ The content should now start running!
 
 ### GB/GBC
 
-- [Game Boy / Game Boy Color (Gambatte)](https://docs.libretro.com/library/gambatte/)
-- [Game Boy / Game Boy Color (SameBoy)](https://docs.libretro.com/library/sameboy/)
-- [Game Boy / Game Boy Color (TGB Dual)](https://docs.libretro.com/library/tgb_dual/)
-- [Game Boy / Game Boy Color (Gearboy)](https://docs.libretro.com/library/gearboy/)
-- [Game Boy Advance (mGBA)](https://docs.libretro.com/library/mgba/)
+- [Game Boy / Game Boy Color (Gambatte)](gambatte.md)
+- [Game Boy / Game Boy Color (SameBoy)](sameboy.md)
+- [Game Boy / Game Boy Color (TGB Dual)](tgb_dual.md)
+- [Game Boy / Game Boy Color (Gearboy)](gearboy.md)
+- [Game Boy Advance (mGBA)](mgba.md)
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 The Emux GB core is licensed under
 
@@ -151,14 +151,14 @@ The Emux GB core supports the following device type(s) in the controls menu, bol
 
 | User 1 Input descriptors      | RetroPad Inputs                              | RetroPad           |
 |-------------------------------|----------------------------------------------|--------------------|
-|                               | ![](/image/retropad/retro_b.png)       | B                  |
-|                               | ![](/image/retropad/retro_select.png)        | Select             |
-|                               | ![](/image/retropad/retro_start.png)         | Start              |
-|                               | ![](/image/retropad/retro_dpad_up.png)       | D-Pad Up           |
-|                               | ![](/image/retropad/retro_dpad_down.png)     | D-Pad Down         |
-|                               | ![](/image/retropad/retro_dpad_left.png)     | D-Pad Left         |
-|                               | ![](/image/retropad/retro_dpad_right.png)    | D-Pad Right        |
-|                               | ![](/image/retropad/retro_a.png)       | A                  |
+|                               | ![](../image/retropad/retro_b.png)       | B                  |
+|                               | ![](../image/retropad/retro_select.png)        | Select             |
+|                               | ![](../image/retropad/retro_start.png)         | Start              |
+|                               | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up           |
+|                               | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down         |
+|                               | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left         |
+|                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right        |
+|                               | ![](../image/retropad/retro_a.png)       | A                  |
 
 ## Compatibility
 

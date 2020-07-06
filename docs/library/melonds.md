@@ -14,7 +14,7 @@ The melonDS core is licensed under
 
 - [GPLv3](https://github.com/libretro/melonDS/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](https://docs.libretro.com/tech/licenses/).
+A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -64,7 +64,7 @@ Frontend-level settings or features that the melonDS core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](https://docs.libretro.com/guides/softpatching/) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -106,22 +106,22 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-![](/image/controller/nds.png)
+![](../image/controller/nds.png)
 
 | User 1 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
-| B                        | ![](/image/retropad/retro_b.png)          |
-| Y                        | ![](/image/retropad/retro_y.png)          |
-| Select                   | ![](/image/retropad/retro_select.png)     |
-| Start                    | ![](/image/retropad/retro_start.png)      |
-| Up                       | ![](/image/retropad/retro_dpad_up.png)    |
-| Down                     | ![](/image/retropad/retro_dpad_down.png)  |
-| Left                     | ![](/image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](/image/retropad/retro_dpad_right.png) |
-| A                        | ![](/image/retropad/retro_a.png)          |
-| X                        | ![](/image/retropad/retro_x.png)          |
-| L                        | ![](/image/retropad/retro_l1.png)         |
-| R                        | ![](/image/retropad/retro_r1.png)         |
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Y                        | ![](../image/retropad/retro_y.png)          |
+| Select                   | ![](../image/retropad/retro_select.png)     |
+| Start                    | ![](../image/retropad/retro_start.png)      |
+| Up                       | ![](../image/retropad/retro_dpad_up.png)    |
+| Down                     | ![](../image/retropad/retro_dpad_down.png)  |
+| Left                     | ![](../image/retropad/retro_dpad_left.png)  |
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| X                        | ![](../image/retropad/retro_x.png)          |
+| L                        | ![](../image/retropad/retro_l1.png)         |
+| R                        | ![](../image/retropad/retro_r1.png)         |
 
 ## Compatibility
 
@@ -139,5 +139,5 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 #### Nintendo - Nintendo DS + Decrypted + (Download Play)
 
-- [Nintendo - DS (DeSmuME 2015)](https://docs.libretro.com/library/desmume_2015/)
-- [Nintendo - DS (DeSmuME)](https://docs.libretro.com/library/desmume/)
+- [Nintendo - DS (DeSmuME 2015)](desmume_2015.md)
+- [Nintendo - DS (DeSmuME)](desmume.md)
