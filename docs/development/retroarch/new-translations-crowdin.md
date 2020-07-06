@@ -20,7 +20,7 @@ You can reach the project page of RetroArch by clicking [here](https://crowdin.c
 
 After clicking the language you want to translate, the string file will welcome you. After clicking the file from here, you will see the translation page.
 
-This screen may scare you at first, but don't worry, it's actually very simple process. You will see untranslated or translated titles in the left menu. After clicking on any title, you will see the source string, that is, the main term, and below you will have your space to translate to your language. After making your translation, click **Save** and you will have sent your translation. It's that simple.
+This screen may scare you at first, but don't worry, it's actually a very simple process. You will see untranslated or translated titles in the left menu. After clicking on any title, you will see the source string, that is, the main term, and below you will have your space to translate to your language. After making your translation, click **Save** and you will have sent your translation. It's that simple.
 
 ![Translate main screen](/image/development/crowdin-translate-page.png)
 
