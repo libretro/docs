@@ -92,6 +92,7 @@ SNES/Super Famicom            | bsnes-mercury Bal  | [BIOS information](bsnes_me
 SNES/Super Famicom            | bsnes-mercury Perf | [BIOS information](bsnes_mercury_performance.md#bios)
 SNES/Super Famicom            | nSide Balanced     | [BIOS information](nside_balanced.md#bios)
 SNES/Super Famicom            | higan Accuracy     | [BIOS information](higan_accuracy.md#bios)
+SNES/Super Famicom            | Mesen-S            | [BIOS information](mesen-s.md#bios)
 ST/STE/TT/Falcon              | Hatari             | [BIOS information](hatari.md#bios)
 Thomson - MO/TO               | Theodore           | [BIOS information](theodore.md#bios)
 Vectrex                       | vecx               | [BIOS information](vecx.md#bios)

@@ -318,6 +318,7 @@ The bsnes-mercury Accuracy core fully emulates all SNES games that have ever bee
 - [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
 - [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)

@@ -80,6 +80,7 @@
 - MAME 2016
 - melonDS
 - Mesen
+- Mesen-S
 - MESS 2014
 - Meteor
 - mGBA

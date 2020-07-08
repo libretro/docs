@@ -334,6 +334,7 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
 - [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
 - [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
