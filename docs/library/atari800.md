@@ -40,7 +40,7 @@ Awaiting description.
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 - [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)
 

@@ -15,7 +15,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Software                                             			                   | License                                                                                   | Non-commercial |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
 | [Lakka](http://www.lakka.tv/)                                                    | [Non-commercial](http://www.lakka.tv/doc/FAQ/)                                            | Non-commercial |
-| [4DO](../library/4do.md)                         			                       | [Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedocore.h)      | Non-commercial |
+| [Opera](../library/opera.md)                         			                       | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h)      | Non-commercial |
 | [Cannonball](../library/cannonball.md)                                           | [Non-commercial](https://github.com/libretro/cannonball/blob/master/docs/license.txt)     | Non-commercial |
 | [Dinothawr](../library/dinothawr.md)             			                       | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | FB Alpha                                         			                       | [Non-commercial](https://github.com/libretro/fbalpha/blob/master/src/license.txt)         | Non-commercial |
@@ -57,7 +57,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Core                                             			           | License                                                                                   | Non-commercial |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
 | [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
-| [4DO](../library/4do.md)                         			           | [Non-commercial](https://github.com/libretro/4do-libretro/blob/master/libfreedo/freedocore.h) | Non-commercial |
+| [Opera](../library/opera.md)                         			           | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h) | Non-commercial |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Atari800](../library/atari800.md)               			           | [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)                         |                |
 | [Beetle bsnes](../library/beetle_bsnes.md)       			           | [GPLv2](https://github.com/libretro/beetle-bsnes-libretro/blob/master/COPYING)            |                |
@@ -108,6 +108,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | FB Alpha 2012 Neo Geo                            		                   | [Non-commercial](https://github.com/libretro/fbalpha2012_neogeo/blob/master/src/license.txt)                                        | Non-commercial |
 | [FCEUmm](../library/fceumm.md)                                                   | [GPLv2](https://github.com/libretro/libretro-fceumm/blob/master/Copying)                  |                |
 | [FFmpeg](../library/ffmpeg.md)                                                   | [LGPLv2, GPLv2](https://github.com/libretro/FFmpeg/blob/master/LICENSE.md)                |                |
+| [Flycast](../library/flycast.md)                                                 | [GPLv2](https://github.com/libretro/flycast/blob/master/LICENSE)        |                |
 | fMSX                                                                             | [Non-commercial](https://github.com/libretro/fmsx-libretro/blob/master/LICENSE)           | Non-commercial |
 | FreeIntv                                                                         | [GPLv3](https://github.com/libretro/FreeIntv/blob/master/LICENSE)             |                |
 | FreeJ2ME                                                                         | [GPLv3](https://github.com/hex007/freej2me/blob/master/LICENSE)                           |                |
@@ -165,7 +166,6 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | PX68k                                                                            | [kero_src.txt](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)   |                |                                                                                          |                |
 | [QuickNES](../library/quicknes.md)                                               | [LGPLv2.1+](https://github.com/kode54/QuickNES/blob/master/COPYING)                       |                |
 | [Redream (libretro fork)](../library/redream.md)                                 | [GPLv3](https://github.com/libretro/redream/blob/master/LICENSE.txt)                      |                |
-| Reicast*                                                 | GPLv2        |                |
 | [REminiscence](../library/reminiscence.md)                                       | GPLv3                                                                                     |                |
 | RemoteJoy                                                                        | [GPLv2](https://github.com/libretro/libretro-remotejoy/blob/master/LICENSE)               |                |
 | Remote RetroPad                                                                  | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)                   |                |
@@ -196,5 +196,3 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Virtual Jaguar](../library/virtual_jaguar.md)                                   | [GPLv3](https://github.com/libretro/virtualjaguar-libretro/blob/master/docs/GPLv3)        |                |
 | [XRick](../library/xrick.md)                                                     | [GPLv3](https://github.com/libretro/xrick-libretro/blob/master/README)                    |                |
 | [Yabause](../library/yabause.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/master/yabause/COPYING)                  |                |
-
-

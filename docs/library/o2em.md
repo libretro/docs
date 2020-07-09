@@ -14,7 +14,7 @@ The O2EM core is licensed under
 
 - [Artistic License](https://sourceforge.net/projects/o2em/)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 

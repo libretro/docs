@@ -1,4 +1,4 @@
-##**Verifying that you have the right BIOS**
+## **Verifying that you have the right BIOS**
 
 It is very important that the following requirements are met:
 
@@ -6,7 +6,7 @@ It is very important that the following requirements are met:
 2. Name
 3. File Hash (md5sum)
 
-###**Location**
+### **Location**
 Ensure that you have placed the BIOS file(s) in the correct location.
 
 Usually is the system folder, which can be located in RetroArch by going to:
@@ -15,7 +15,7 @@ Settings->Directory->System/BIOS (look at the right column).
 
 The specific core information page will tell you where exactly. (you may need to create a subfolder)
 
-###**Name**
+### **Name**
 Verify that the file(s) have the same name and extension that appears in the core info/docs page.
 
 Remember that some operating systems are case sensitive.
@@ -23,32 +23,32 @@ Remember that some operating systems are case sensitive.
 ###**File Hash (md5sum)**
 Last, but probably the most important part of all, the hash of your BIOS should match the one in the docs.
 
-####*What is a hash?*
+#### *What is a hash?*
 A File Hash is a string of characters that uniquely identifies a file.
 
-####*Why should i care?*
+#### *Why should i care?*
 If i rename *dog.jpg* to *bios.bin*, how would you know?
 
 If the dump is not the version that the core needs, or if the file integrity is compromised (corrupted), unexpected things (**bad**) can happen.
 
 A file can become corrupted by errors in transmission, write errors during copying or moving, faulty storage media, software bugs, etc. 
 
-####*How do i check it?*
+#### *How do i check it?*
 You need two things, a piece of software that can generate a hash from your file and a known valid file hash for the comparison, you will find the correct hash in the corresponding core information page (links below)
 
 As for the software, some operating systems have tools integrated in the commandline that can do the job, but if you prefer a graphical interface look for something like Open-Hashtool, HashMyFiles, etc
 
-##Links to the core specific BIOS information
+## Links to the core specific BIOS information
 
 System                        | Core               | Link |
 |:----------------------------|:-------------------|:--------------------------------------------------------------------|
-3DO                           | 4DO                | [BIOS information](4do.md#bios)
+3DO                           | Opera              | [BIOS information](opera.md#bios)
 5200/Atari 8-bit computers    | Atari800           | [BIOS information](atari800.md#bios)
 7800                          | ProSystem          | [BIOS information](prosystem.md#bios)
 Arcade                        | MAME2003           | [BIOS information](mame_2003.md#bios)
 Arcade                        | MAME2003+          | [BIOS information](mame2003_plus.md#bios)
 Arcade                        | MAME2010           | [BIOS information](mame_2010.md#bios)
-Dreamcast                     | Reicast            | [BIOS information](reicast.md#bios)
+Dreamcast                     | Flycast            | [BIOS information](flycast.md#bios)
 DS                            | DeSmuME            | [BIOS information](desmume.md#bios)
 GameBoy/GameBoy Color         | Emux GB            | [BIOS information](emux_gb.md#bios)
 GameBoy/GameBoy Color         | Gambatte           | [BIOS information](gambatte.md#bios)

@@ -14,7 +14,7 @@ The nSide Balanced core is licensed under
 
 - [GPLv3](https://github.com/hex-usr/nSide/blob/master/gpl-3.0.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -44,7 +44,7 @@ Required or optional firmware files go in the frontend's system directory.
 	nSide Balanced uses split ROMS for special chip games.
 	
 !!! attention
-	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](../library/nside_balanced#super-gameboy-support) for more information.
+	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](#super-gameboy-support) for more information.
 	
 Notable DSP1.mdDSP1B Games:
 
@@ -163,7 +163,7 @@ Copy your original Super Game Boy ROM into the SGB1.sfc directory and then renam
 
 Copy your sgb.boot.rom BIOS into each of your SGB1.sfc and SGB2.sfc directories, and rename them to sgb1.boot.rom and sgb2.boot.rom, respectively. 
 
-The ['Preferred Super GameBoy BIOS' core option](../library/nside_balanced#core-options) lets you choose which of the two SGB BIOSes to use.
+The ['Preferred Super GameBoy BIOS' core option](#core-options) lets you choose which of the two SGB BIOSes to use.
 
 **Step 4**
 
@@ -239,7 +239,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred Super GameBoy BIOS (restart)** [higan_sfc_sgb_bios] (**SGB1.sfc/**|SGB2.sfc/)
 
-	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](../library/nside_balanced#super-gameboy-support) for more information.
+	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](#super-gameboy-support) for more information.
 
 ## Controllers
 
@@ -263,7 +263,7 @@ The nSide Balanced core supports the following device type(s) in the controls me
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/nside_balanced#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](#controllers) for User 2.
 
 ### Controller tables
 
@@ -271,25 +271,25 @@ Activating multitap support in compatible games can be configured by switching t
 
 ![](../image/controller/snes.png)
 
-| User 1 - 5 Remap descriptors | RetroPad Inputs                           |
-|------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/retro_y.png)    |
+| User 1 - 5 Remap descriptors | RetroPad Inputs                             |
+|------------------------------|---------------------------------------------|
+| B                            | ![](../image/retropad/retro_b.png)          |
+| Y                            | ![](../image/retropad/retro_y.png)          |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| X                            | ![](../image/retropad/retro_x.png)    |
+| A                            | ![](../image/retropad/retro_a.png)          |
+| X                            | ![](../image/retropad/retro_x.png)          |
 | L                            | ![](../image/retropad/retro_l1.png)         |
 | R                            | ![](../image/retropad/retro_r1.png)         |
 
 #### Mouse
 
-| RetroMouse Inputs                                   | SNES Mouse                |
-|-----------------------------------------------------|---------------------------|
+| RetroMouse Inputs                                     | SNES Mouse                |
+|-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
@@ -320,7 +320,9 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 - [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
 - [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 

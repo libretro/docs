@@ -18,7 +18,7 @@ The PicoDrive core is licensed under
 
 - [Non-commercial](https://github.com/libretro/picodrive/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -108,9 +108,9 @@ The PicoDrive core saves/loads to/from these directories.
 - The PicoDrive core's base height is 224
 - The PicoDrive core's max width is 320
 - The PicoDrive core's max height is 240
-- The PicoDrive core's core provided aspect ratio is 10/7 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to PAR
-- The PicoDrive core's core provided aspect ratio is 4/3 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to 4/3
-- The PicoDrive core's core provided aspect ratio is 5/4 when the ['Core-provided aspect ratio' core option](picodrive.md#core-options) is set to CRT
+- The PicoDrive core's core provided aspect ratio is 10/7 when the ['Core-provided aspect ratio' core option](#core-options) is set to PAR
+- The PicoDrive core's core provided aspect ratio is 4/3 when the ['Core-provided aspect ratio' core option](#core-options) is set to 4/3
+- The PicoDrive core's core provided aspect ratio is 5/4 when the ['Core-provided aspect ratio' core option](#core-options) is set to CRT
 
 ## Loading Sega CD games
 

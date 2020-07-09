@@ -17,7 +17,7 @@ The higan Accuracy core is licensed under
 
 - [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -47,7 +47,7 @@ Required or optional firmware files go in the frontend's system directory.
 	higan Accuracy uses split ROMS for special chip games.
 	
 !!! attention
-	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](../library/higan_accuracy#super-gameboy-support) for more information.
+	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](#super-gameboy-support) for more information.
 	
 Notable DSP1.mdDSP1B Games:
 
@@ -166,7 +166,7 @@ Copy your original Super Game Boy ROM into the SGB1.sfc directory and then renam
 
 Copy your sgb.boot.rom BIOS into each of your SGB1.sfc and SGB2.sfc directories, and rename them to sgb1.boot.rom and sgb2.boot.rom, respectively. 
 
-The ['Preferred Super GameBoy BIOS' core option](../library/higan_accuracy#core-options) lets you choose which of the two SGB BIOSes to use.
+The ['Preferred Super GameBoy BIOS' core option](#core-options) lets you choose which of the two SGB BIOSes to use.
 
 **Step 4**
 
@@ -242,7 +242,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred Super GameBoy BIOS (restart)** [higan_sfc_sgb_bios] (**SGB1.sfc/**|SGB2.sfc/)
 
-	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](../library/higan_accuracy#super-gameboy-support) for more information.
+	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](#super-gameboy-support) for more information.
 
 ## Controllers
 
@@ -266,7 +266,7 @@ The higan Accuracy core supports the following device type(s) in the controls me
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/higan_accuracy#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](#controllers) for User 2.
 
 ### Controller tables
 
@@ -321,7 +321,9 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 - [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
 - [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 

@@ -12,7 +12,7 @@ The Redream core **(libretro fork only)** is licensed under
 
 - [GPLv3](https://github.com/libretro/redream/blob/master/LICENSE.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ### Requirements
 
@@ -134,4 +134,4 @@ Since Redream is a work-in-progress Dreamcast emulator, expect sound issues, gen
 
 ## Sega - Dreamcast
 
-- [Sega - Dreamcast (Reicast)](reicast.md)
+- [Sega - Dreamcast (Flycast)](flycast.md)

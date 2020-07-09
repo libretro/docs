@@ -15,7 +15,7 @@ The Virtual Jaguar core is licensed under
 
 - [GPLv3](https://github.com/libretro/virtualjaguar-libretro/blob/master/docs/GPLv3)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

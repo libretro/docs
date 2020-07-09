@@ -22,7 +22,7 @@ The SameBoy core is licensed under
 
 - [MIT](https://github.com/libretro/SameBoy/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -287,5 +287,7 @@ Rumble only works in the SameBoy core when
 - [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
 - [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

@@ -1,4 +1,4 @@
-# Sega Dreamcast (flycast)
+# Sega - Dreamcast/NAOMI (Flycast)
 
 ## Contribute to this documentation
 
@@ -6,7 +6,7 @@ In order to propose improvements to this document, [visit its corresponding sour
 
 ## Background
 
-Flycast is a multi-platform Sega Dreamcast emulator. 
+Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator. 
 
 ### Why use this core?
 
@@ -52,9 +52,9 @@ Example (MAME ID=ikaruga)
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-- [GPLv2](https://github.com/reicast/reicast-emulator/blob/master/LICENSE)
+- [GPLv2](https://github.com/libretro/flycast/blob/master/LICENSE)
 
 ## Extensions
 
@@ -64,7 +64,13 @@ Content that can be loaded by the flycast core have the following file extension
 - .gdi
 - .chd
 - .cue
+- .bin
+- .iso
+- .elf
 - .zip
+- .7z
+- .lst
+- .dat
 - .m3u
 
 ## Databases
@@ -77,15 +83,20 @@ RetroArch database(s) that are associated with the flycast core:
 
 Required or optional firmware files go in RetroArch's system directory.
 
-|   Filename      |    Description                                                                       |              md5sum              |
-|:---------------:|:------------------------------------------------------------------------------------:|:--------------------------------:|
-| dc/dc_boot.bin  | Dreamcast BIOS - Requried                                                            | e10c53c2f8b90bab96ead2d368858623 |
-| dc/dc_flash.bin | Date/Time/Language - Required                                                        | 0a93f7940c455905bea6e392dfde92a4 |
-| dc/naomi.zip    | A MAME format BIOS file (naomi.zip) from a recent (post 0.154) MAME build - Required |                                  |
+|   Filename      |    Description                                                     |              md5sum              |
+|:---------------:|:------------------------------------------------------------------:|:--------------------------------:|
+| dc/dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
+| dc/dc_flash.bin | Date/Time/Language - Required for Dreamcast                        | 0a93f7940c455905bea6e392dfde92a4 |
+| dc/naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
+| dc/hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
+| dc/f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
+| dc/f355bios.zip | Naomi Ferrari F355 Challenge twin/deluxe Bios from MAME - Optional |                                  |
+| dc/airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
+| dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
 
 !!! attention
         1. naomi.zip must include the epr-21576g.ic27 file (md5sum:3bffafac42a7767d8dcecf771f5552ba)
-	2. The 'dc_boot.bin', 'dc_flash.bin', and 'naomi.zip' files need to be in a directory named 'dc' in RetroArch's system directory.
+	2. All bios files need to be in a directory named 'dc' in RetroArch's system directory.
 
 ## Features
 
@@ -116,7 +127,7 @@ Required or optional firmware files go in RetroArch's system directory.
 
 ### Directories
 
-The FlyCast core's directory name is 'Reicast'
+The FlyCast core's directory name is 'Flycast'
 
 The FlyCast core creates these files in RetroArch's system directory.
 
@@ -163,14 +174,14 @@ The FlyCast core has the following option(s) that can be tweaked from the core o
 <center>
 
 ??? note "Internal resolution - 640x480"
-	![](../image/core/reicast/640x480.png)
+	![](../image/core/flycast/640x480.png)
 	
 </center>
 
 <center>
 	
 ??? note "Internal resolution - 1920x1440"
-	![](../image/core/reicast/1920x1440.png)
+	![](../image/core/flycast/1920x1440.png)
 	
 </center>
 
@@ -222,7 +233,7 @@ The FlyCast core has the following option(s) that can be tweaked from the core o
 
 ### Device types
 
-The FlyCast core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Flycast core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 #### User 1 - 4 device types
 
@@ -258,7 +269,7 @@ The FlyCast core supports the following device type(s) in the controls menu, bol
 
 If foo is a multiple-disc game, you should have .chd/cue/cdi/gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
 
-To take advantage of FlyCast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
+To take advantage of Flycast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
 
 Create a text file and save it as `foo.m3u`. Then enter your game's .chd/cue/cdi/gdi files on it. The m3u file contents should look something like this:
 
@@ -269,7 +280,7 @@ foo (Disc 2).chd
 foo (Disc 3).chd
 ```
 
-After that, you can load the `foo.m3u` file in RetroArch with the FlyCast core.
+After that, you can load the `foo.m3u` file in RetroArch with the Flycast core.
 
 An alternative is to append discs to the current playlist via the "Disk Image Append" option in the Disk Control RetroArch menu.
 
@@ -278,7 +289,7 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 ### General Flycast Issues
 
 - If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
-- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/FlyCast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
+- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Flycast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
 - Polygon sorting issues can make objects appear distorted. Use Per-Pixel Alpha sorting for accurate rendering (at the expense of performance).
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead. 
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing. 
@@ -293,6 +304,6 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ## External Links
 
-- [Libretro flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
-- [Libretro flycast Github Repository](https://github.com/libretro/flycast)
-- [Report flycast Core Issues Here](https://github.com/libretro/flycast/issues)
+- [Libretro Flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
+- [Libretro Flycast Github Repository](https://github.com/libretro/flycast)
+- [Report Flycast Core Issues Here](https://github.com/libretro/flycast/issues)

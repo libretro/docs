@@ -17,7 +17,10 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [Gambatte](../library/gambatte.md) | ✔         |
 | [Gearboy](../library/gearboy.md)   | ✔         |
 | [Mesen-S](../library/mesen-s.md)   | ✔         |
+| [mGBA](../library/mgba.md)         | ✔         |
+| [SameBoy](../library/sameboy.md)   | ✕         |
 | [TGB Dual](../library/tgb_dual.md) | ✔         |
+| [VBA-M](../library/vba_m.md)       | ✔         |
 
 ### Nintendo - Game Boy Advance
 
@@ -27,6 +30,16 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [mGBA](../library/mgba.md)         | ✔         |
 | [VBA-M](../library/vba_m.md)       | ✔         |
 | [VBA Next](../library/vba_next.md) | ✔         |
+
+### Nintendo - NES / Famicom
+
+| Core                                     | Supported |
+|------------------------------------------|:---------:|
+| [bnes](../library/bnes.md)               | ✔         |
+| [FCEUmm](../library/fceumm.md)           | ✔         |
+| [Mesen](../library/mesen.md)             | ✔         |
+| [Nestopia UE](../library/nestopia_ue.md) | ✔         |
+| [QuickNES](../library/quicknes.md)       | ✔         |
 
 ### Nintendo - SNES / Famicom
 
@@ -49,19 +62,26 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                   | ✔         |
 | [Snes9x 2010](../library/snes9x_2010.md)                             | ✔         |
 
-### Nintendo - NES / Famicom
+### Sega - Master System
 
-| Core                                     | Supported |
-|------------------------------------------|:---------:|
-| [bnes](../library/bnes.md)               | ✔         |
-| [FCEUmm](../library/fceumm.md)           | ✔         |
-| [Mesen](../library/mesen.md)             | ✔         |
-| [Nestopia UE](../library/nestopia_ue.md) | ✔         |
-| [QuickNES](../library/quicknes.md)       | ✔         |
+| Core                                             | Supported |
+|--------------------------------------------------|:---------:|
+| [SMS Plus GX](../library/smsplus.md)             | ✔         |
+| [Gearsystem](../library/gearsystem.md)           | ✔         |
+| [Genesis Plus GX](../library/genesis_plus_gx.md) | ✕         |
+| [PicoDrive](../library/picodrive.md)             | ✕         |
 
-### Master System / MegaDrive - Genesis
+### Sega - MegaDrive / Genesis
 
-| Core                                                           | Supported |
-|----------------------------------------------------------------|:---------:|
-| [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         |
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |
+| Core                                             | Supported |
+|--------------------------------------------------|:---------:|
+| [BlastEm](../library/blastem.md)                 | ✔         |
+| [Genesis Plus GX](../library/genesis_plus_gx.md) | ✕         |
+| [PicoDrive](../library/picodrive.md)             | ✕         |
+
+### SNK - Neo Geo Pocket / Neo Geo Pocket Color
+
+| Core                                         | Supported |
+|----------------------------------------------|:---------:|
+| [Beetle NeoPop](../library/beetle_neopop.md) | ✔         |
+| [RACE](../library/race.md)                   | ✕         |

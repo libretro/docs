@@ -24,7 +24,7 @@ The Mesen core is licensed under
 
 - [GPLv3](https://github.com/SourMesen/Mesen/blob/master/README.md)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -108,17 +108,17 @@ The Mesen core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Mesen core's core provided FPS is (FPS)
+- The Mesen core's core provided FPS is NTSC 60, PAL/Dendy 50
 - The Mesen core's core provided sample rate is 48000 Hz
-- The Mesen core's base width is (Base width)
-- The Mesen core's base height is (Base height)
-- The Mesen core's max width is (Max width)
-- The Mesen core's max height is (Max height)
-- The Mesen core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](mesen.md#core-options).
+- The Mesen core's base width is 256
+- The Mesen core's base height is 240
+- The Mesen core's max width is 256 (higher when using HD Packs)
+- The Mesen core's max height is 240 (higher when using HD Packs)
+- The Mesen core's core provided aspect ratio is dependent on the ['Aspect Ratio' core option](#core-options).
 
 ### Custom Palettes
 
-To use custom color palettes in the Mesen core, the ['Palette' core option](mesen.md#core-options) must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the Mesen core, the ['Palette' core option](#core-options) must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory. 
 
 Make sure the custom palette file is named 'MesenPalette.pal'
 
@@ -132,7 +132,7 @@ Custom color palettes for the NES can be generated with either of these tools.
 !!! attention
 	There is more HD pack documentation at the [official Mesen documentation](https://www.mesen.ca/docs/hdpacks/#using-hd-packs).
 
-To use HD packs, first make sure to turn on the [Enable HD Packs core option](mesen.md#core-options.)
+To use HD packs, first make sure to turn on the [Enable HD Packs core option](#core-options.)
 
 First, create a folder named 'HdPacks' in RetroArch's System directory.
 
@@ -204,7 +204,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Enable HD Packs** [mesen_hdpacks] (Off/**On**)
 
-	Enables the use of [HD packs](https://www.mesen.ca/docs/hdpacks/). [Look at the HD packs section for more information](mesen.md#hd-packs).
+	Enables the use of [HD packs](https://www.mesen.ca/docs/hdpacks/). [Look at the HD packs section for more information](#hd-packs).
 
 - **Remove sprite limit** [mesen_nospritelimit] (Off/**On**)
 
@@ -302,7 +302,7 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 #### Joypad
 
 !!! attention
-	The (FDS) Insert Next Disk and (FDS) Switch Disk Side inputs will NOT do anything while the ['FDS: Automatically insert disks' core option](mesen.md#core-options) is enabled.
+	The (FDS) Insert Next Disk and (FDS) Switch Disk Side inputs will NOT do anything while the ['FDS: Automatically insert disks' core option](#core-options) is enabled.
 
 ![](../image/controller/nes.png)
 	
@@ -404,7 +404,7 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 
 ## Compatibility
 
-- [Mesen Compatibility List](https://www.mesen.ca/#Compatibility)
+- [Mesen Mapper Support List](https://github.com/SourMesen/Mesen/blob/master/Core/MapperFactory.cpp#L275)
 
 ## External Links
 

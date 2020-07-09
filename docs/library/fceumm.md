@@ -15,7 +15,7 @@ The FCEUmm core is licensed under
 
 - [GPLv2](https://github.com/libretro/libretro-fceumm/blob/master/Copying)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -108,7 +108,7 @@ The FCEUmm core saves/loads to/from these directories.
 
 ### Custom color palettes
 
-To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](fceumm.md#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory. 
 
 Make sure the custom palette file is named 'nes.pal'
 
@@ -355,39 +355,39 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 !!! warning 
 	In order to use the Turbo A and Turbo B buttons, the 'Turbo Enable' core option must be set to On.
 
-| User 1 Remap descriptors | RetroPad Inputs                           |
-|--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
-| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Turbo B                  | ![](../image/retropad/retro_y.png)          |
 | Select                   | ![](../image/retropad/retro_select.png)     |
 | Start                    | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)    |
-| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| Turbo A                  | ![](../image/retropad/retro_x.png)          |
 | (FDS) Disk Side Change   | ![](../image/retropad/retro_l1.png)         |
 | (FDS) Insert/Eject Disk  | ![](../image/retropad/retro_r1.png)         |
 | (VSSystem) Insert Coin   | ![](../image/retropad/retro_r2.png)         |
 
-| User 2 - 4 Remap descriptors | RetroPad Inputs                       |
-|--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
-| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| User 2 - 4 Remap descriptors | RetroPad Inputs                         |
+|--------------------------|---------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Turbo B                  | ![](../image/retropad/retro_y.png)          |
 | Select                   | ![](../image/retropad/retro_select.png)     |
 | Start                    | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)    |
-| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| Turbo A                  | ![](../image/retropad/retro_x.png)          |
 
 #### Mouse
 
-| RetroMouse Inputs                                                                                   | Zapper           | Arkanoid          | Oeka Kids Tablet        | Bandai Hyper Shot Gun           |
-|-----------------------------------------------------------------------------------------------------|------------------|-------------------|-------------------------|---------------------------------|
+| RetroMouse Inputs                                                                                       | Zapper           | Arkanoid          | Oeka Kids Tablet        | Bandai Hyper Shot Gun           |
+|---------------------------------------------------------------------------------------------------------|------------------|-------------------|-------------------------|---------------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) | Zapper Crosshair | Arkanoid Movement | Oeka Kids Tablet Cursor | Bandai Hyper Shot Gun Crosshair |
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png)           | Zapper Trigger   | Arkanoid Fire     | Oeka Kids Tablet Touch  | Bandai Hyper Shot Gun Trigger   |
 

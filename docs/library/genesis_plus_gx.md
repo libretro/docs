@@ -15,7 +15,7 @@ The Genesis Plus GX core is licensed under
 
 - [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -24,7 +24,7 @@ Required or optional firmware files go in the frontend's system directory.
 !!! warning ""
     Please note that BIOS choice isn't locked to any specific revisions.
 !!! warning ""
-    BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](genesis_plus_gx.md#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
+    BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
 
 | Filename      | Description                                     | md5sum                           |
 |:-------------:|:-----------------------------------------------:|:--------------------------------:|
@@ -128,7 +128,7 @@ The Genesis Plus GX core saves/loads to/from these directories.
 - The Genesis Plus GX core's base height is dependent on the loaded content.
 - The Genesis Plus GX core's max width is 720
 - The Genesis Plus GX core's max height is 576
-- The Genesis Plus GX core's core provided aspect ratio is dependent on the 'Core-provided aspect ratio' [core option](genesis_plus_gx.md#core-options).
+- The Genesis Plus GX core's core provided aspect ratio is dependent on the 'Core-provided aspect ratio' [core option](#core-options).
 
 ## Loading Sega CD games
 
@@ -174,7 +174,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **System bootrom** [genesis_plus_gx_bios] (**disabled**/enabled)
 
-	Runs bootrom if available and then starts loaded content after the boot sequence. Look above at the [BIOS section](genesis_plus_gx.md#bios) for more information.
+	Runs bootrom if available and then starts loaded content after the boot sequence. Look above at the [BIOS section](#bios) for more information.
 
 - **CD System BRAM** [genesis_plus_gx_bram] (**per bios**/per game)
 
@@ -189,7 +189,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Cartridge lock-on** [genesis_plus_gx_lock_on] (**disabled**/game genie/action replay (pro)/sonic & knuckles)
 
-	Select a lock-on cartridge. Look above at the [BIOS section](genesis_plus_gx.md#bios) for more information.
+	Select a lock-on cartridge. Look above at the [BIOS section](#bios) for more information.
 
 - **Master System FM (YM2413)** [genesis_plus_gx_ym2413] (**auto**/disabled/enabled)
 

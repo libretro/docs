@@ -16,7 +16,7 @@ The Nestopia UE core is licensed under
 
 - [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -99,7 +99,7 @@ The Nestopia UE core saves/loads to/from these directories.
 
 - The Nestopia UE core's core provided FPS is (FPS)
 - The Nestopia UE core's core provided sample rate is 44100 Hz
-- The Nestopia UE core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](nestopia_ue.md#core-options).
+- The Nestopia UE core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](#core-options).
 
 ### NstDatabase.xml
 
@@ -286,36 +286,36 @@ The Nestopia UE core uses the NstDatabase.xml database file to detect which game
 
 ![](../image/controller/nes.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                           |
-|--------------------------|-------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)    |
-| Turbo B                  | ![](../image/retropad/retro_y.png)    |
+| User 1 Remap descriptors | RetroPad Inputs                             |
+|--------------------------|---------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)          |
+| Turbo B                  | ![](../image/retropad/retro_y.png)          |
 | Select                   | ![](../image/retropad/retro_select.png)     |
 | Start                    | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
-| A                        | ![](../image/retropad/retro_a.png)    |
-| Turbo A                  | ![](../image/retropad/retro_x.png)    |
+| A                        | ![](../image/retropad/retro_a.png)          |
+| Turbo A                  | ![](../image/retropad/retro_x.png)          |
 | (FDS) Disk Side Change   | ![](../image/retropad/retro_l1.png)         |
 | (FDS) Eject Disk         | ![](../image/retropad/retro_r1.png)         |
 | (VSSystem) Coin 1        | ![](../image/retropad/retro_l2.png)         |
 | (VSSystem) Coin 2        | ![](../image/retropad/retro_r2.png)         |
 | (Famicom) Microphone     | ![](../image/retropad/retro_l3.png)         |
 
-| User 2 - 4 Remap descriptors | RetroPad Inputs                           |
-|------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Turbo B                      | ![](../image/retropad/retro_y.png)    |
+| User 2 - 4 Remap descriptors | RetroPad Inputs                             |
+|------------------------------|---------------------------------------------|
+| B                            | ![](../image/retropad/retro_b.png)          |
+| Turbo B                      | ![](../image/retropad/retro_y.png)          |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| Turbo A                      | ![](../image/retropad/retro_x.png)    |
+| A                            | ![](../image/retropad/retro_a.png)          |
+| Turbo A                      | ![](../image/retropad/retro_x.png)          |
 | (FDS) Disk Side Change       | ![](../image/retropad/retro_l1.png)         |
 | (FDS) Eject Disk             | ![](../image/retropad/retro_r1.png)         |
 

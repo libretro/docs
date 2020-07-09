@@ -71,7 +71,7 @@ A game-specific options file is created when you select `Quick Menu -> Options -
 
 ### Override Configs
 
-The override system activates on loading of content. RetroArch applies config settings with the logic as [explained above](overrides.md#logic).
+The override system activates on loading of content. RetroArch applies config settings with the logic as [explained above](#logic).
 
 **Per Core Override**
 

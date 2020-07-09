@@ -14,7 +14,7 @@ The PX68k core is licensed under
 
 - [kero_src.txt](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

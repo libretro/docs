@@ -4,7 +4,7 @@
 
 A Nintendo Gamecube/Wii emulator for Android, Windows, Mac and Linux, written in C++.
 
-The Dolphin core supports [OpenGL](dolphin.md#opengl), [Vulkan](dolphin.md#vulkan), and [Direct3D 11](dolphin.md#d3d11) rendering.
+The Dolphin core supports [OpenGL](#opengl), [Vulkan](#vulkan), and [Direct3D 11](#d3d11) rendering.
 
 The Dolphin core is licensed under
 
@@ -43,7 +43,7 @@ This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*  
 Unless you customized your installation, the RetroArch configuration path is
 the one listed in the
-[RGUI page](http://localhost:8000/guides/rgui/#config-file).  
+[RGUI page](../guides/rgui/#config-file).  
 If you didn't change any value, the system folder is:
 `RETROARCH_CONFIG_DIR/system`.  
 If you changed the default directory configuration, you should check the
@@ -210,7 +210,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Compatibility
 
-TODO/FIXME
+[Compatibility Pages](https://dolphin-emu.org/compat/)
 
 ## External Links
 

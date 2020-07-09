@@ -20,7 +20,7 @@ The bsnes Accuracy core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -207,7 +207,7 @@ The bsnes Accuracy core supports the following device type(s) in the controls me
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/bsnes_accuracy#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](#controllers) for User 2.
 
 ### Controller tables
 

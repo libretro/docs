@@ -17,7 +17,7 @@ The REminiscence core is licensed under
 
 - GPLv3
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## How to start the REminiscence core:
 

@@ -15,7 +15,7 @@ The DeSmuME core is licensed under
 
 - [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -121,7 +121,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Use External BIOS/Firmware (restart)** [desmume_use_external_bios] (**disabled**|enabled)
 
-	When set to enabled, the DeSmuME core will use the external firmware files found in RetroArch's System Directory. Look at the [BIOS section](desmume.md#bios) for more information.
+	When set to enabled, the DeSmuME core will use the external firmware files found in RetroArch's System Directory. Look at the [BIOS section](#bios) for more information.
 
 - **Boot Into BIOS (interpreter and external bios only)** [desmume_boot_into_bios] (**disabled**|enabled)
 
@@ -368,10 +368,10 @@ The DeSmuME core supports the following device type(s) in the controls menu, bol
 | Tap Stylus               | ![](../image/retropad/retro_r2.png)            | Tap Stylus          |
 | Make Microphone Noise    | ![](../image/retropad/retro_l3.png)            | Toggle Microphone   |
 | Quick Screen Switch      | ![](../image/retropad/retro_r3.png)            | Quick Screen Switch |
-|                          | ![](../image/retropad/retro_left_stick.png) X  | [Pointer mode l-analog](desmume.md#core-options) X |
-|                          | ![](../image/retropad/retro_left_stick.png) Y  | [Pointer mode l-analog](desmume.md#core-options) Y |
-|                          | ![](../image/retropad/retro_right_stick.png) X | [Pointer mode r-analog](desmume.md#core-options) X |
-|                          | ![](../image/retropad/retro_right_stick.png) Y | [Pointer mode r-analog](desmume.md#core-options) Y |
+|                          | ![](../image/retropad/retro_left_stick.png) X  | [Pointer mode l-analog](#core-options) X |
+|                          | ![](../image/retropad/retro_left_stick.png) Y  | [Pointer mode l-analog](#core-options) Y |
+|                          | ![](../image/retropad/retro_right_stick.png) X | [Pointer mode r-analog](#core-options) X |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | [Pointer mode r-analog](#core-options) Y |
 
 #### Mouse
 

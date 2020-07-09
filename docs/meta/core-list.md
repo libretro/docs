@@ -1,5 +1,4 @@
 - 3D Engine
-- 4DO
 - 2048
 - Atari800
 - Beetle bsnes
@@ -95,6 +94,7 @@
 - NXEngine
 - O2EM
 - OpenLara
+- Opera
 - P-UAE
 - ParaLLEl N64
 - PCem

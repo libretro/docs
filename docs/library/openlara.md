@@ -29,7 +29,7 @@ The OpenLara core is licensed under
 
 - [2-clause BSD](https://github.com/XProger/OpenLara/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -115,12 +115,12 @@ The OpenLara core saves/loads to/from these directories.
 
 ## Geometry and timing
 
-- The OpenLara core's core provided FPS is dependent on the ['Framerate' core option](openlara.md#core-options).
+- The OpenLara core's core provided FPS is dependent on the ['Framerate' core option](#core-options).
 - The OpenLara core's core provided sample rate is 44100 Hz
 - The OpenLara core's base width is 320
 - The OpenLara core's base height is 240
-- The OpenLara core's max width is dependent on the ['Internal resolution' core option](openlara.md#core-options)
-- The OpenLara core's max height is dependent on the ['Internal resolution' core option](openlara.md#core-options)
+- The OpenLara core's max width is dependent on the ['Internal resolution' core option](#core-options)
+- The OpenLara core's max height is dependent on the ['Internal resolution' core option](#core-options)
 - The OpenLara core's core provided aspect ratio is 4/3
 
 ## Core options

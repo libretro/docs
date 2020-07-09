@@ -124,7 +124,7 @@ Configuring keyboard input is currently not supported. To configure keyboard bin
 ## PlayStation disk swapping
 Some PlayStation games require disk swapping. To manage disks, libretro has a concept of a disk index (like a multi-disk CD player, remember those? :P). If a PlayStation core is loaded, `Disk Index` and `Disk Image Append` options are added to main menu.
 
-In Mednafen PSX, multi-CD images are typically handled with an .m3u playlist. In this case, you can swap disks by cycling through the Disk Index setting. If you don't or can't use a playlist, you can append a disk image on the fly using `Disk Image Append`. In this case, you browse for a disk image and append it to the internal disk image list. The `Disk Index` is updated appropriately and you are returned to the game.
+In Beetle PSX, multi-CD images are typically handled with an .m3u playlist. In this case, you can swap disks by cycling through the Disk Index setting. If you don't or can't use a playlist, you can append a disk image on the fly using `Disk Image Append`. In this case, you browse for a disk image and append it to the internal disk image list. The `Disk Index` is updated appropriately and you are returned to the game.
 
 ### Workarounds
 Replacing the disk inside RGUI is "physically" speaking the same as ejecting, swapping disks and closing the tray instantanously. Some games will not work with this approach, notably Metal Gear Solid because they need to detect an actual eject taking place.

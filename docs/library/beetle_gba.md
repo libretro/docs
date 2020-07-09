@@ -15,7 +15,7 @@ The Beetle GBA core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-gba-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -72,7 +72,7 @@ Frontend-level settings or features that the Beetle GBA core respects.
 
 ### Directories
 
-The Beetle GBA core's internal core name is 'Mednafen VBA-M'
+The Beetle GBA core's internal core name is 'Beetle GBA'
 
 The Beetle GBA core saves/loads to/from these directories.
 
@@ -117,16 +117,16 @@ The Beetle GBA core supports the following device type(s) in the controls menu, 
 
 ![](../image/controller/gba.png)
 
-| User 1 Remap descriptors | RetroPad Inputs                              |
-|--------------------------|----------------------------------------------|
-| B                        | ![](../image/retropad/retro_b.png)       |
+| User 1 Remap descriptors | RetroPad Inputs                                |
+|--------------------------|------------------------------------------------|
+| B                        | ![](../image/retropad/retro_b.png)             |
 | Select                   | ![](../image/retropad/retro_select.png)        |
 | Start                    | ![](../image/retropad/retro_start.png)         |
 | D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)       |
 | D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)     |
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
 | D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
-| A                        | ![](../image/retropad/retro_a.png)       |
+| A                        | ![](../image/retropad/retro_a.png)             |
 | L                        | ![](../image/retropad/retro_l1.png)            | 
 | R                        | ![](../image/retropad/retro_r1.png)            |
 

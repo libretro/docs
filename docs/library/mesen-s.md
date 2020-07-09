@@ -20,7 +20,7 @@ The Mesen-S core is licensed under
 
 - [GPLv3](https://github.com/SourMesen/Mesen-S/blob/master/README.md)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -262,7 +262,7 @@ Multitap support can be activated in the Mesen-S core by switching User 2's devi
 | ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        | Turbo Toggle  |
 
 !!! attention
-	Currently there is no crosshair. Pressing the mouse grab binding in RetroArch (default F11) should make your system cursor visible.
+	Currently there is no crosshair. Pressing the mouse grab binding twice in RetroArch (default F11) should make your system cursor visible.
 
 ## Compatibility
 
@@ -276,7 +276,21 @@ The Mesen-S core fully emulates all SNES, GB, and GBC games that have ever been 
 - [Official Mesen-S Github Repository](https://github.com/SourMesen/Mesen-S)
 - [Report Libretro Mesen-S Core Issues Here](https://github.com/SourMesen/Mesen-S/issues)
 
-## SNES
+### See also
+
+#### Nintendo - Game Boy (+ Color)
+
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+
+#### SNES
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)

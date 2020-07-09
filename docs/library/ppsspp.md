@@ -4,7 +4,7 @@
 
 A PSP emulator for Android, Windows, Mac and Linux, written in C++.
 
-The PPSSPP core supports [OpenGL](ppsspp.md#opengl), [Vulkan](ppsspp.md#vulkan), and [Direct3D 11](ppsspp.md#d3d11) rendering.
+The PPSSPP core supports [OpenGL](#opengl), [Vulkan](#vulkan), and [Direct3D 11](#d3d11) rendering.
 
 The PPSSPP core has been authored by
 
@@ -311,7 +311,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Internal Cheats Support** [ppsspp_cheats] (**disabled**|enabled)
 
-	Enables internal cheats. Look at the [Internal Cheats section](ppsspp.md#internal-cheats) for more information.
+	Enables internal cheats. Look at the [Internal Cheats section](#internal-cheats) for more information.
 
 ## Joypad
 

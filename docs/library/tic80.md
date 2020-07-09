@@ -12,7 +12,7 @@ The TIC-80 core is licensed under
 
 - [MIT](https://github.com/nesbox/TIC-80/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Requirements
 

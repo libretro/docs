@@ -37,7 +37,7 @@ The Dinothawr core is licensed under
 
 - [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

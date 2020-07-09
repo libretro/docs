@@ -14,7 +14,7 @@ The Beetle VB core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-vb-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -63,7 +63,7 @@ Frontend-level settings or features that the Beetle VB core respects.
 
 ### Directories
 
-The Beetle VB core's directory name is 'Mednafen VB'
+The Beetle VB core's directory name is 'Beetle VB'
 
 The Beetle VB core saves/loads to/from these directories.
 

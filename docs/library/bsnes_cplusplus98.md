@@ -18,7 +18,7 @@ The bsnes C++98 (v085) core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -108,7 +108,7 @@ The bsnes C++98 (v085) core supports the following device type(s) in the control
 
 ### Multitap support
 
-Activating multitap support in compatible games can be configured by switching to the [Multitap device type](../library/bsnes_cplusplus98#controllers) for User 2.
+Activating multitap support in compatible games can be configured by switching to the [Multitap device type](#controllers) for User 2.
 
 ### Controller tables
 
@@ -133,21 +133,21 @@ Activating multitap support in compatible games can be configured by switching t
 
 #### Mouse
 
-| RetroMouse Inputs                                   | SNES Mouse                |
-|-----------------------------------------------------|---------------------------|
+| RetroMouse Inputs                                     | SNES Mouse                |
+|-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 #### Lightgun
 
-| RetroLightgun Inputs                                 | SuperScope                | Justifier(s)        |
-|------------------------------------------------------|---------------------------|---------------------|
+| RetroLightgun Inputs                                   | SuperScope                | Justifier(s)        |
+|--------------------------------------------------------|---------------------------|---------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
-| Gun Trigger                                          | SuperScope Trigger        | Justifier Trigger   |
-| Gun Aux A                                            | SuperScope Cursor         |                     |
-| Gun Aux B                                            | SuperScope Turbo          |                     |
-| Gun Start                                            | SuperScope Pause          | Justifier Start     |
+| Gun Trigger                                            | SuperScope Trigger        | Justifier Trigger   |
+| Gun Aux A                                              | SuperScope Cursor         |                     |
+| Gun Aux B                                              | SuperScope Turbo          |                     |
+| Gun Start                                              | SuperScope Pause          | Justifier Start     |
 
 ## Compatibility
 

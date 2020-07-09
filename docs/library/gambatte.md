@@ -12,14 +12,14 @@ The Gambatte core is licensed under
 
 - [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	The ['Use official bootloader' core option](../library/gambatte#core-options) must be set to On in order for these BIOS files to be used.
+	The ['Use official bootloader' core option](#core-options) must be set to On in order for these BIOS files to be used.
 
 | Filename     | Description                    | md5sum                           |
 |:------------:|:------------------------------:|:--------------------------------:|
@@ -388,7 +388,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use official bootloader (restart)** [gambatte_gb_bootloader] (**enabled**|disabled)
 
-	Enables support for using official Game Boy and Game Boy Color bootloaders with startup logos. Check the [BIOS section](../library/gambatte#bios) to see what files are needed.
+	Enables support for using official Game Boy and Game Boy Color bootloaders with startup logos. Check the [BIOS section](#bios) to see what files are needed.
 
 ??? note "*Game Boy bootloader*"
     ![](../image/core/gambatte/gb_bios.png)
@@ -480,5 +480,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
 - [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
