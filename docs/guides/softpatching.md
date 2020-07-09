@@ -16,6 +16,7 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 |------------------------------------|:---------:|
 | [Gambatte](../library/gambatte.md) | ✔         |
 | [Gearboy](../library/gearboy.md)   | ✔         |
+| [Mesen-S](../library/mesen-s.md)   | ✔         |
 | [TGB Dual](../library/tgb_dual.md) | ✔         |
 
 ### Nintendo - Game Boy Advance
@@ -41,6 +42,7 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | [bsnes Performance](../library/bsnes_performance.md)                 | ✔         |
 | [higan Accuracy](../library/higan_accuracy.md)                       | ✔         |
 | [nSide Balanced](../library/nside_balanced.md)                       | ✔         |
+| [Mesen-S](../library/mesen-s.md)                                     | ✔         |
 | [Snes9x](../library/snes9x.md)                                       | ✔         |
 | [Snes9x 2002](../library/snes9x_2002.md)                             | ✔         |
 | [Snes9x 2005](../library/snes9x_2005.md)                             | ✔         |

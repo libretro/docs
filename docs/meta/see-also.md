@@ -32,6 +32,7 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - Game Boy Advance (mGBA)](../library/mgba.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](../library/higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](../library/nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](../library/mesen-s.md)
 
 ## GBA
 
@@ -81,6 +82,7 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - SNES / Famicom (bsnes Performance)](../library/bsnes_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](../library/higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](../library/nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](../library/mesen-s.md)
 - [Nintendo - SNES / Famicom (Snes9x)](../library/snes9x.md)
 - [Nintendo - SNES / Famicom (Snes9x 2002)](../library/snes9x_2002.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](../library/snes9x_2005_plus.md)
