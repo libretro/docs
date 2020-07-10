@@ -73,7 +73,7 @@ nav:
       - 'Getting Started with MAME Software List Emulation': 'guides/softwarelist-getting-started.md'
       - 'BIOS Information Hub': 'library/bios.md'
       - '3DO Emulation':
-        - 'The 3DO Company - 3DO (4DO)': 'library/4do.md'
+        - 'The 3DO Company - 3DO (Opera)': 'library/opera.md'
         - '3DO Compatibility List': 'library/compatibility/3do.md'
       - 'Amstrad Emulation':
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'

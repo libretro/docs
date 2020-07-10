@@ -27,7 +27,7 @@ The bsnes-mercury Performance core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -245,38 +245,38 @@ Activating multitap support in compatible games can be configured by switching t
 
 ![](../image/controller/snes.png)
 
-| User 1 - 5 Remap descriptors | RetroPad Inputs                           |
-|------------------------------|-------------------------------------------|
-| B                            | ![](../image/retropad/retro_b.png)    |
-| Y                            | ![](../image/retropad/retro_y.png)    |
+| User 1 - 5 Remap descriptors | RetroPad Inputs                             |
+|------------------------------|---------------------------------------------|
+| B                            | ![](../image/retropad/retro_b.png)          |
+| Y                            | ![](../image/retropad/retro_y.png)          |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Start                        | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)  |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png) |
-| A                            | ![](../image/retropad/retro_a.png)    |
-| X                            | ![](../image/retropad/retro_x.png)    |
+| A                            | ![](../image/retropad/retro_a.png)          |
+| X                            | ![](../image/retropad/retro_x.png)          |
 | L                            | ![](../image/retropad/retro_l1.png)         |
 | R                            | ![](../image/retropad/retro_r1.png)         |
 
 #### Mouse
 
-| RetroMouse Inputs                                   | SNES Mouse                |
-|-----------------------------------------------------|---------------------------|
+| RetroMouse Inputs                                     | SNES Mouse                |
+|-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | SNES Mouse Cursor         |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | SNES Mouse Left Button    |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | SNES Mouse Right Button   |
 
 #### Lightgun
 
-| RetroLightgun Inputs                                 | SuperScope                | Justifier(s)        |
-|------------------------------------------------------|---------------------------|---------------------|
+| RetroLightgun Inputs                                   | SuperScope                | Justifier(s)        |
+|--------------------------------------------------------|---------------------------|---------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | SuperScope Crosshair      | Justifier Crosshair |
-| Gun Trigger                                          | SuperScope Trigger        | Justifier Trigger   |
-| Gun Aux A                                            | SuperScope Cursor         |                     |
-| Gun Aux B                                            | SuperScope Turbo          |                     |
-| Gun Start                                            | SuperScope Pause          | Justifier Start     |
+| Gun Trigger                                            | SuperScope Trigger        | Justifier Trigger   |
+| Gun Aux A                                              | SuperScope Cursor         |                     |
+| Gun Aux B                                              | SuperScope Turbo          |                     |
+| Gun Start                                              | SuperScope Pause          | Justifier Start     |
 
 ## Compatibility
 

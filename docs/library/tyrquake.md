@@ -20,7 +20,7 @@ The TyrQuake core is licensed under
 
 - [GPLv2](https://github.com/libretro/tyrquake/blob/master/gnu.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -242,7 +242,7 @@ Rumble only works in the TyrQuake core when
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
-- The ['Rumble' core option](tyrquake.md#core-options) is set to enabled.
+- The ['Rumble' core option](#core-options) is set to enabled.
 
 ## Joypad
 

@@ -14,7 +14,7 @@ The Citra Canary/Experimental core is licensed under
 
 - [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ### Requirements
 
@@ -191,8 +191,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | Touch Screen Touch       | ![](../image/retropad/retro_r3.png)            | Touch Screen Touch |
 |                          | ![](../image/retropad/retro_left_stick.png) X  | Circle Pad X       |
 |                          | ![](../image/retropad/retro_left_stick.png) Y  | Circle Pad Y       |
-|                          | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](citra_canary.md#core-options) |
-|                          | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](citra_canary.md#core-options) |
+|                          | ![](../image/retropad/retro_right_stick.png) X | [Right analog function](#core-options) |
+|                          | ![](../image/retropad/retro_right_stick.png) Y | [Right analog function](#core-options) |
 
 ### Mouse
 

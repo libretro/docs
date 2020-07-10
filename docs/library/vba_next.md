@@ -16,7 +16,7 @@ The VBA Next core is licensed under
 
 - [GPLv2](https://github.com/libretro/vba-next/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -100,7 +100,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use bios if available (Restart)** [vbanext_bios] (Off/**On**)
 
-	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](vba_next.md#bios) for more information.
+	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](#bios) for more information.
 	
 ??? note "Use bios if available - On"
 	![](../image/core/vba_next/bios.png)

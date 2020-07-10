@@ -15,7 +15,7 @@ The Beetle Cygne core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-wswan-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -65,7 +65,7 @@ Frontend-level settings or features that the Beetle Cygne core respects.
 
 ### Directories
 
-The Beetle Cygne core's internal core name is 'Mednafen WonderSwan'
+The Beetle Cygne core's internal core name is 'Beetle WonderSwan'
 
 The Beetle Cygne core saves/loads to/from these directories.
 

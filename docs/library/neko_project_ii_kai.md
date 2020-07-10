@@ -15,7 +15,7 @@ The Neko Project II Kai core is licensed under
 
 - [MIT](https://github.com/AZO234/NP2kai/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

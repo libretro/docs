@@ -12,14 +12,14 @@ The Beetle PCE FAST core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-pce-fast-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
 Required or optional firmware files go in RetroArch's system directory.
 
 !!! warning ""
-	Which PCE CD BIOS file the Beetle PCE FAST core will use can be configured by the ['CD BIOS' core option](../library/beetle_pce_fast#core-options).
+	Which PCE CD BIOS file the Beetle PCE FAST core will use can be configured by the ['CD BIOS' core option](#core-options).
 
 !!! warning ""
 	Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
@@ -80,7 +80,7 @@ Frontend-level settings or features that the Beetle PCE FAST core respects.
 
 ## Directories
 
-The Beetle PCE FAST core's library name is 'Mednafen PCE Fast'
+The Beetle PCE FAST core's library name is 'Beetle PCE Fast'
 
 The Beetle PCE FAST core saves/loads to/from these directories.
 
@@ -192,7 +192,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enables Turbo ON/OFF inputs. 
 	
-	Look at the [Joypad section](../library/beetle_pce_fast#joypad) for more information.
+	Look at the [Joypad section](#joypad) for more information.
 	
 - **Alternate Turbo Hotkey** [pce_turbo_toggle_hotkey] (**disabled**/enabled)
 
@@ -200,7 +200,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
 	
-	Look at the [Joypad section](../library/beetle_pce_fast#joypad) for more information.
+	Look at the [Joypad section](#joypad) for more information.
 	
 - **P1 Turbo I** [pce_p0_turbo_I_enable] (**disabled**/enabled)
 

@@ -22,7 +22,7 @@ The Video Processor core is licensed under
 
 - [BSD-2-Clause](https://github.com/jaredmcneill/libretro-v4l2/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Features
 

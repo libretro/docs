@@ -12,7 +12,7 @@ The Snes9x core is licensed under
 
 - [Non-commercial](https://github.com/snes9xgit/snes9x/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Features
 
@@ -102,7 +102,7 @@ The Snes9x core saves/loads to/from these directories.
 - The Snes9x core's base height is 224 when the Crop Overscan core option is set to enabled. 239 when it's set to disabled.
 - The Snes9x core's max width is 512
 - The Snes9x core's max height is 478
-- The Snes9x core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](../library/snes9x#core-options).
+- The Snes9x core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](#core-options).
 
 ## MSU-1 support
 

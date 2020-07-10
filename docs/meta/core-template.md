@@ -10,7 +10,7 @@
 
 [Background info]
 
-- // Add [Background] info for the core here, Use google for background info
+- // Add [Background] info for the core here, use google for background info
 
 The [Core name] core has been authored by
 
@@ -29,7 +29,7 @@ The [Core name] core is licensed under
 - // https://github.com/libretro/libretro-super/tree/master/dist/info
 - // https://docs.libretro.com/development/licenses/
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Requirements
 
@@ -507,4 +507,4 @@ Rumble only works in the [Core name] core when
 - // Add links to related core docs here. Use the See Also doc for help
 - // https://docs.libretro.com/meta/see_also
 
-- [Other Core](../library/name.md)
+- [Other Core](name.md)

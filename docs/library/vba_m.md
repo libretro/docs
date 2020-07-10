@@ -15,7 +15,7 @@ The VBA-M core is licensed under
 
 - [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt) 
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -331,3 +331,14 @@ The VBA-M core supports the following device type(s) in the controls menu, bolde
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
 - [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
 - [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)
+
+#### Nintendo - Game Boy (+ Color)
+
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

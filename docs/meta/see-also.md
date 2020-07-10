@@ -92,7 +92,7 @@ This is a list of cores that are related to each other in some way.
 ## Dreamcast
 
 - [Sega - Dreamcast (Redream)](../library/redream.md)
-- [Sega - Dreamcast (Reicast)](../library/reicast.md)
+- [Sega - Dreamcast (Flycast)](../library/flycast.md)
 
 ## Sega 16-bit
 

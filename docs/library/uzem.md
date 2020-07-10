@@ -42,7 +42,7 @@ The content should now start running!
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 The Uzem core is licensed under
 

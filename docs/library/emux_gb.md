@@ -64,7 +64,7 @@ The content should now start running!
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 The Emux GB core is licensed under
 
@@ -170,3 +170,17 @@ Awaiting description.
 - [Libretro Emux GB Github Repository](https://github.com/libretro/emux)
 - [Report Libretro Emux GB Core Issues Here](https://github.com/libretro/libretro-meta/issues)
 - [Official Emux GB Github Repository](https://github.com/sronsse/emux)
+
+### See also
+
+#### Nintendo - Game Boy (+ Color)
+
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - Game Boy Advance (mGBA)](mgba.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

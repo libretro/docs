@@ -6,7 +6,7 @@ General FlyCast Issues
 
 - The date and time do not seem to get properly saved, as the system will ask you to set the clock every time you start. 
 - Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. 
-- Polygon/Alpha sorting issues can make objects appear distorted in regular Reicast core. Use Per-Pixel Alpha sorting if you want complete/accurate emulation instead. 
+- Polygon/Alpha sorting issues can make objects appear distorted in regular Flycast core. Use Per-Pixel Alpha sorting if you want complete/accurate emulation instead. 
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead. 
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing. 
 

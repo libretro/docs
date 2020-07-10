@@ -42,7 +42,7 @@ The GlideN64 video plugin is very capable. Outstanding support of Hires Textures
 
 ## License
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 The Mupen64Plus core is licensed under
 

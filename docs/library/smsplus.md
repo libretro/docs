@@ -18,7 +18,7 @@ The SMS Plus GX core is licensed under
 
 - [GPLv2](https://github.com/libretro/smsplus-gx/blob/master/docs/license)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

@@ -22,7 +22,7 @@ The Beetle PSX HW core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-psx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ### Requirements
 
@@ -238,7 +238,7 @@ For memory card functionality and usage, the Beetle PSX HW core will either use 
 </center>
 
 !!! attention
-    Memory card behavior can be controlled with the following [core options](beetle_psx.md#core-options) (Memcard 0 method, Enable memory card 1, Shared memcards).
+    Memory card behavior can be controlled with the following [core options](#core-options) (Memcard 0 method, Enable memory card 1, Shared memcards).
 
 **By default**, the filenames of the Memcard savedata will match the loaded cue or m3u or pbp filename, like this:
 
@@ -623,7 +623,7 @@ The default setting for each option will be highlighted in bold. Settings with (
 
 - **Memory Card 0 Method (Restart)** [beetle_psx_hw_use_mednafen_memcard0_method] (**libretro**/mednafen)
 
-	Choose the savedata format used for Memory Card 0. See the [Saves section](beetle_psx_hw.md#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
+	Choose the savedata format used for Memory Card 0. See the [Saves section](#saves) above for an explanation regarding the libretro and mednafen formats. libretro is recommended, but mednafen may be used for compatibility with the standalone version of Mednafen. The libretro (.srm) and Mednafen (.mcr) formats are internally identical when used with Beetle PSX.
 
 	Note: This option must be set to 'mednafen' if the Shared Memcards option is enabled.
 
@@ -745,7 +745,7 @@ Rumble only works in the Beetle PSX HW core when
 
 ## Multitap support
 
-['Port 1: Multitap enable' and 'Port 2: Multitap enable' core options](../library/beetle_psx_hw#core-options).
+['Port 1: Multitap enable' and 'Port 2: Multitap enable' core options](#core-options).
 
 ## Joypad
 

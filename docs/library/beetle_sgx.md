@@ -12,7 +12,7 @@ The Beetle SuperGrafx core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-supergrafx-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -79,7 +79,7 @@ Frontend-level settings or features that the Beetle Saturn core respects.
 
 ## Directories
 
-The Beetle SuperGrafx core's library name is 'Mednafen SuperGrafx'
+The Beetle SuperGrafx core's library name is 'Beetle SuperGrafx'
 
 The Beetle SuperGrafx core saves/loads to/from these directories.
 

@@ -12,7 +12,7 @@ The Beetle Saturn core is licensed under
 
 - [GPLv2](https://github.com/libretro/beetle-saturn-libretro/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -33,7 +33,7 @@ RetroArch database(s) that are associated with the Beetle Saturn core:
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	The King of Fighters '95 and Ultraman: Hikari no Kyojin Densetsu ROM Cartridges can be manually selected with the ['Cartridge' core option](../library/beetle_saturn#core-options).
+	The King of Fighters '95 and Ultraman: Hikari no Kyojin Densetsu ROM Cartridges can be manually selected with the ['Cartridge' core option](#core-options).
 
 |   Filename       |    Description                                                             |              md5sum              |
 |:----------------:|:--------------------------------------------------------------------------:|:--------------------------------:|
@@ -261,7 +261,7 @@ The Beetle Saturn core supports the following device type(s) in the controls men
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](../library/beetle_saturn#core-options).
+Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](#core-options).
 
 ## Joypad
 

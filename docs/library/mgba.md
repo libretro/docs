@@ -12,7 +12,7 @@ The mGBA core is licensed under
 
 - [MPLv2.0](https://github.com/libretro/mgba/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
@@ -54,7 +54,7 @@ Frontend-level settings or features that the mGBA core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔ (GBA only)         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -122,7 +122,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Use BIOS file if found** [mgba_use_bios] (**ON**|OFF)
 	
-	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](mgba.md#bios) for more information.
+	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](#bios) for more information.
 	
 - **Skip BIOS intro** [mgba_skip_bios] (**OFF**|ON)
 
@@ -190,20 +190,23 @@ Please file game bugs on the issue tracker [here](https://github.com/mgba-emu/mg
 - [Libretro mGBA Github Repository](https://github.com/libretro/mgba)
 - [Report Libretro mGBA Core Issues Here](https://github.com/mgba-emu/mgba/issues)
 
-## GBA
+### See also
 
-- [Game Boy Advance (Beetle GBA)](beetle_gba.md)
-- [Game Boy Advance (gpSP)](gpsp.md)
-- [Game Boy Advance (Meteor)](meteor.md)
-- [Game Boy Advance (VBA Next)](vba_next.md)
-- [Game Boy Advance (VBA-M)](vba_m.md)
+#### Nintendo - Game Boy Advance
 
-## GB/GBC
+- [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
+- [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
+- [Nintendo - Game Boy Advance (Meteor)](meteor.md)
+- [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)
+- [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 
-- [Game Boy / Game Boy Color (Emux GB)](emux_gb.md)
-- [Game Boy / Game Boy Color (Gambatte)](gambatte.md)
-- [Game Boy / Game Boy Color (SameBoy)](sameboy.md)
-- [Game Boy / Game Boy Color (TGB Dual)](tgb_dual.md)
-- [Game Boy / Game Boy Color (Gearboy)](gearboy.md)
-- [SNES / Super Famicom (higan Accuracy)](higan_accuracy.md)
-- [SNES / Super Famicom (nSide Balanced)](nside_balanced.md)
+#### Nintendo - Game Boy (+ Color)
+
+- [Nintendo - Game Boy / Color (Emux GB)](emux_gb.md)
+- [Nintendo - Game Boy / Color (Gambatte)](gambatte.md)
+- [Nintendo - Game Boy / Color (Gearboy)](gearboy.md)
+- [Nintendo - Game Boy / Color (SameBoy)](sameboy.md)
+- [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
+- [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
+- [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
+- [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

@@ -39,7 +39,14 @@ Supported Cores for now are as follows, may vary in this list.
 
 ```
 2048
-4DO
+Beetle Lynx
+Beetle NeoPop
+Beetle PCE FAST
+Beetle PC-FX
+Beetle PSX
+Beetle SNES
+Beetle VB
+Beetle WonderSwan
 BlueMSX
 ChaiLove
 Craft
@@ -59,19 +66,12 @@ GLupeN64
 gPSP
 Handy
 MAME 2000
-Mednafen Lynx
-Mednafen Neo Geo Pocket
-Mednafen PC Engine Fast
-Mednafen/Beetle PCFX
-Mednafen/Beetle PSX
-Mednafen/Beetle SNES
-Mednafen/Beetle Virtual Boy
-Mednafen/Beetle WonderSwan
 Mu
 Mupen64 Plus
 Nestopia
 NX Engine
 02em
+Opera
 PicoDrive
 PrBoom
 QuickNES

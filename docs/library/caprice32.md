@@ -16,7 +16,7 @@ The Caprice32 core is licensed under
 
 - [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

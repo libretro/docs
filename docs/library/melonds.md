@@ -14,7 +14,7 @@ The melonDS core is licensed under
 
 - [GPLv3](https://github.com/libretro/melonDS/blob/master/LICENSE)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

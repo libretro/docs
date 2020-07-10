@@ -12,7 +12,7 @@ The PrBoom core is licensed under
 
 - [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)
 
-A summary of the licenses behind RetroArch and its cores have found [here](../development/licenses.md).
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
