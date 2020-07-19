@@ -26,7 +26,7 @@ Alternatively, you can download only one core and use the Online Updater inside 
 
 ### Running RetroArch using title takeover
 
-The preferred way of running RetroArch is to use Atmosphère's title takeover feature. This allows you to (temporarly) replace a game with the homebrew loader, which will then be used to load RetroArch. Make sure to use the latest version of Atmosphère before continuing.
+The preferred way of running RetroArch is to use Atmosphère's title takeover feature. This allows you to (temporarily) replace a game with the homebrew loader, which will then be used to load RetroArch. Make sure to use the latest version of Atmosphère before continuing.
 
 **Note:** You need at least one title on the console (whether it's a digitally puchased game or a demo or a cartridge game or even an homebrew NSP). If you can pick an up to date game that's better as you won't be nagged everytime you run it.
 

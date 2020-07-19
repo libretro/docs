@@ -134,7 +134,7 @@ Now you can manually select what Atari system you want to emulate through the 'A
 Finally, you can load any content files compatible with the system chosen through RetroArch's Load Content menu.
 
 !!! attention
-	You can set per-game core option settings by creating a game-options file through RetroArch's Core Opitons menu.
+	You can set per-game core option settings by creating a game-options file through RetroArch's Core Options menu.
 
 Alternatively, you can manually configure how the Atari800 will look for and handle BIOS files.
 

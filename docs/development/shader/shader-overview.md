@@ -2,7 +2,7 @@
 
 ## Available shader types
 
-As the reference libretro frotnend, RetroArch supports three shader languages:
+As the reference libretro frontend, RetroArch supports three shader languages:
 
 | Shader Language                     | Video Context Drivers |
 | ----------------------------------- | --------------------- |

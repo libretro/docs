@@ -96,7 +96,7 @@ If `need_fullpath` is set to `false`, the frontend will load the ROM image into 
 
 #### `retro_get_system_av_info()`
 
-This function lets the frontend know essential audio/video properties of the game. As this information can depend on the game being loaded, this info will only be queried after a valid ROM image has been loaded. It is important to accuractely report FPS and audio sampling rates, as FFmpeg recording relies on exact information to be able to run in sync for several hours.
+This function lets the frontend know essential audio/video properties of the game. As this information can depend on the game being loaded, this info will only be queried after a valid ROM image has been loaded. It is important to accurately report FPS and audio sampling rates, as FFmpeg recording relies on exact information to be able to run in sync for several hours.
 
 
 ### Running
@@ -142,7 +142,7 @@ Some important considerations must be taken to implement these functions well:
   * If serialization is not supported, `retro_serialize_size()` should return 0. If retro_serialize_size() returns non-zero, it is assumed that serialization is properly implemented.
   * The frontend should call `retro_serialize_size()` before calling `retro_serialize()` to determine the amount of memory needed to correctly serialize.
   * The size eventually passed to `retro_serialize()` must be at least the size of the value returned in `retro_serialize_size()`. If too large a buffer is passed to `retro_serialize()`, the extra data should be ignored (or `memset` to 0).
-  * It is valid for the value returned by `retro_serialize_size()` to vary over time, however, it cannot ever increase over time. If it should ever change, it must decrease. This is rationaled by the ability to predetermined a fixed save state size right after `retro_load_game()` that will always be large enough to hold any following serialization. This certainty is fundamental to the rewind implementation. This requirement only holds between calls to `retro_load_game()` and `retro_unload_game()`.
+  * It is valid for the value returned by `retro_serialize_size()` to vary over time, however, it cannot ever increase over time. If it should ever change, it must decrease. This is rationalized by the ability to predetermined a fixed save state size right after `retro_load_game()` that will always be large enough to hold any following serialization. This certainty is fundamental to the rewind implementation. This requirement only holds between calls to `retro_load_game()` and `retro_unload_game()`.
 
 If possible, the implementation should attempt to serialize data at consistent offsets in the memory buffer. This will greatly help the rewind implementation in RetroArch to use less memory. Both `retro_serialize()` and `retro_unserialize()` return a boolean value to let the frontend know if the implementation succeeded in serializing or unserializing.
 

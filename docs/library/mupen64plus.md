@@ -20,7 +20,7 @@ For Android there are two versions of Mupen64Plus. One is designed to work with 
 
 How is this different from Parallel-N64?
 
-Parallel-N64 implements multiple Graphics plugins amongst them the new Parallel plugin. There are also code modifications that make it different from the standalone Mupen64Plus.
+Parallel-N64 implements multiple Graphics plugins including the new Parallel plugin. There are also code modifications that make it different from the standalone Mupen64Plus.
 The graphic plugin GLideN64 is not available in Parallel-N64.
 
 ### Why use this core?
@@ -237,7 +237,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **GPU shader depth write** (**False**/True)
 
 	Enable writing of fragment depth. Some mobile GPUs do not support it, thus it made optional.
-	The default seeting is dependent on your platform.
+	The default setting is dependent on your platform.
 
 - **Cache GPU Shaders** (**True**/False)
 

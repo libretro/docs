@@ -23,7 +23,7 @@ There are multiple ways of downloading RetroArch for your Playstation 3.
 
 There are two types of CFW files. One of them is `CEX` and the other is `DEX`. CFW devices with `CEX` systems are more specific to the end user. On the other hand the `DEX` version is more for developers. You can use RetroArch in two ways and benefit from the same features. Always check which version of your CFW you have and download the correct file.
 
-You can find a bundle with RetroArch, all the cores and all the assets for `CEX` and `DEX` by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down untill PlayStation 3 section. 
+You can find a bundle with RetroArch, all the cores and all the assets for `CEX` and `DEX` by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down to the PlayStation 3 section.
 
 ## Installing
 

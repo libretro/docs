@@ -20,13 +20,13 @@ There are three families of multi-system software emulators available as libretr
 
 
 #### MAME
-Arcade (MAME) & Arcade (MAME 2016) are currently the only MAME cores that support the emulation of software & arcade system. The Arcade (MAME) core is updated regulary and most inline with the official MAME project release. Arcade (MAME 2016) is an archived snapshot of MAME from the 0.174 release.
+Arcade (MAME) & Arcade (MAME 2016) are currently the only MAME cores that support the emulation of software & arcade system. The Arcade (MAME) core is updated regularly and most inline with the official MAME project release. Arcade (MAME 2016) is an archived snapshot of MAME from the 0.174 release.
 
 #### MESS
 Multi (MESS 2015) is a snapshot of the MESS project from v0.160. The MESS project later merged with the MAME project in MAME v0.162
 
 #### UME
-Multi (UME 2015) is a snapshot of the Universal Machine Emulator. This was a precursor to the MAME/MESS merger, released by David Haywood (haze). The MAME and MESS project codebases co-existed in the MESS SVN development tree before they official merged. This allowed haze to build and release the eumlator with unmodified code from both projects under the name UME
+Multi (UME 2015) is a snapshot of the Universal Machine Emulator. This was a precursor to the MAME/MESS merger, released by David Haywood (haze). The MAME and MESS project codebases co-existed in the MESS SVN development tree before they officially merged. This allowed haze to build and release the emulator with unmodified code from both projects under the name UME
 
 ---
 

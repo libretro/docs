@@ -17,7 +17,7 @@ Next We'll activate the logging option:
 1. Go to settings if you weren't there
 2. Enter at "Logging"
 3. Activate "Log to File"
-4.(optional) Costumize Core & Frontend Logging Level & if you want timestamps or performance counters on your log
+4.(optional) Customize Core & Frontend Logging Level & if you want timestamps or performance counters on your log
 5. Acttivate "Logging Verbosity"
 
 ### Generating Logs in Lakka

@@ -182,7 +182,7 @@ If converting a multiple-disk game, all disks should be added to the same .pbp f
 
 Most conversion tools will want a single .bin file for each disk. If your game uses multiple .bin files (tracks) per disk, you will have to mount the cue sheet to a virtual drive and re-burn the images onto a single track before conversion.
 
-For multi-disk PAL copy-proected games, change the sbi file syntax from `[filename].sbi` to `[filename]_[disc_number].sbi`
+For multi-disk PAL copy-protected games, change the sbi file syntax from `[filename].sbi` to `[filename]_[disc_number].sbi`
 
 - Final Fantasy IX (Germany).pbp
 - **Final Fantasy IX (Germany)_1.sbi**
@@ -201,7 +201,7 @@ To convert content to CHD format, use the chdman tool found inside the latest MA
 chdman createcd --input foo.cue --output foo.chd
 ```
 
-Note that the tool currrently does not integrate .sbi files into the .chd, so these must be placed alongside the resulting .chd file in order to properly play games with LibCrypt protection.
+Note that the tool currently does not integrate .sbi files into the .chd, so these must be placed alongside the resulting .chd file in order to properly play games with LibCrypt protection.
 
 !!! attention
 	For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.

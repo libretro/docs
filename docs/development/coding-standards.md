@@ -20,7 +20,7 @@ Each new line of a multiline comment should begin with a space and an asterisk:
 ```c
 /* Sometimes it is useful to incorporate a lengthy comment in source.
  * For example:
- *    - providing specifications for a function preceeding its declaration
+ *    - providing specifications for a function preceding its declaration
  *    - to explain a complex or unintuitive algorithm
  *    - to explain the history or special circumstances of a section of code
  */
@@ -58,7 +58,7 @@ else
 
 ### Whitespace and alignment
 
-When possible, use whitespace to improve the readability of code that makes many assignment statements in a row, uses complex conditionals, or passes a large number of paramters to a function.
+When possible, use whitespace to improve the readability of code that makes many assignment statements in a row, uses complex conditionals, or passes a large number of parameters to a function.
 
 **Example of aligning successive assignment statements**:
 
@@ -108,5 +108,5 @@ Cores and other projects that are maintained by the Libretro organization can be
   * New, original software
   * Ports and enhancements of third-party software that is still maintained
   * Ports and enhancements of third-party software that is not maintained
-  
-New cores and other projects **that are maintained by the Libretro organization** should be coded as closely to the Libretro/RetroArch standard as possible based on the language used by the core. Cores that are based on existing software should generally conform to whatever standards and style were used in the orginal software, unless the original software is no longer maintained. In that case the coding style may be changed to Libretro/RetroArch at the discretion of the involved Libretro developers and leadership.
+
+New cores and other projects **that are maintained by the Libretro organization** should be coded as closely to the Libretro/RetroArch standard as possible based on the language used by the core. Cores that are based on existing software should generally conform to whatever standards and style were used in the original software, unless the original software is no longer maintained. In that case the coding style may be changed to Libretro/RetroArch at the discretion of the involved Libretro developers and leadership.

@@ -24,7 +24,7 @@ Playlists (or Collections as they are sometimes referred to) are the lists of ga
 
 ### RetroArch Playlist Scanner
 
-RetroArch incoporates a ROM scanning system to automatically produce playlists. Each ROM that is scanned by the playlist generator is checked against a database of ROMs that are known to be good copies.
+RetroArch incorporates a ROM scanning system to automatically produce playlists. Each ROM that is scanned by the playlist generator is checked against a database of ROMs that are known to be good copies.
 
 In order for content to be correctly scanned, you must:
 
@@ -41,7 +41,7 @@ RetroArch will attempt to detect and use the correct core for use with the ROMs 
 
 ### Playlist File Overview
 
-Each playlist is a plain text file with an extension of `.lpl`. RetroArch 1.7.5 and later uses a JSON playlist format, although the backwards compatibilty remains for the deprecated "6-Line" playlist format.
+Each playlist is a plain text file with an extension of `.lpl`. RetroArch 1.7.5 and later uses a JSON playlist format, although the backwards compatibility remains for the deprecated "6-Line" playlist format.
 
 **Note:** The paths in playlist files need to use the correct 'slash' character for the user's platform. Linux, OS X, and Android systems including Lakka and LudOS require forward slashes `/`, while Windows and DOS systems require backslashes `\`.
 
@@ -74,7 +74,7 @@ The **Alien Arena** romset is located at `C:\retroarch\downloads\alienar.zip`; n
 ```
 
 !!! Alert
-    You can omit the CRC or Serial for a manualy created playlist entry by using the word `DETECT`  instead, although it may limit your ability to use netplay for this playlist entry.
+    You can omit the CRC or Serial for a manually created playlist entry by using the word `DETECT`  instead, although it may limit your ability to use netplay for this playlist entry.
 
 #### 6-Line Playlist Format (Deprecated)
 
@@ -97,7 +97,7 @@ MAME 2003-Plus.lpl
 2. The display name (you can use any name here)
 3. The path to the core, this libretro core will be used to launch the ROM. **You can use the word DETECT in place of the core path here. Once this is done you can set the core to be used for this playlist via the RetroArch GUI.**
 4. The displayname of the core, not really useful, we keep it there because the history list is also using this format
-5. CRC or Serial number for database and other matching purposes. **You can omit the CRC or Serial for a manualy created playlist entry by using the word DETECT here instead, although it may limit your ability to use Netplay for this playlist entry.**
+5. CRC or Serial number for database and other matching purposes. **You can omit the CRC or Serial for a manually created playlist entry by using the word DETECT here instead, although it may limit your ability to use Netplay for this playlist entry.**
 6. The name of this playlist, ending in the extension .lpl
 
 ## Thumbnails

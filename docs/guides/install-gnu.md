@@ -24,7 +24,7 @@ To install RetroArch execute:
 flatpak install --user flathub org.libretro.RetroArch
 ```
 
-To update you should periodcally run
+To update you should periodically run
 
 ```
 flatpak --user update
@@ -34,7 +34,7 @@ flatpak --user update
 
 The best way to get RetroArch and the corresponding libretro cores on to a Ubuntu-based system is using PPA.
 
-First open the terminal on Ubuntu. You now need to consider which branch you want to use, stable or testing? Stable will give you better stablity at the cost of slower updates, while testing gives you the chance to try features early and get updates quicker.
+First open the terminal on Ubuntu. You now need to consider which branch you want to use, stable or testing? Stable will give you better stability at the cost of slower updates, while testing gives you the chance to try features early and get updates quicker.
 
 To add the stable branch to your system type:
 

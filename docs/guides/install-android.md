@@ -18,7 +18,7 @@ ___
 **Unknown Sources** To avoid compromising the safety of your device, always use applications provided through our official channels.
 
 1. Go to www.retroarch.com then click **Get RetroArch** or [click here](https://www.retroarch.com/?page=platforms) on your device.
-2. Scroll down untill **Android** section.
+2. Scroll down until **Android** section.
 3. Select either **Download** or **Download (64bit)**.
 > There are several ways to determine if you have 64bit or 32bit version. You can use app like *Antutu* or *AIDA64*. You can still find out without app. 
 >>

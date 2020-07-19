@@ -199,7 +199,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred aspect ratio** [bsnes_aspect_ratio] (**auto**|ntsc|pal)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
 	
 - **Crop overscan** [bsnes_crop_overscan] (**disabled**|enabled)
 

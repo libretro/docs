@@ -18,7 +18,7 @@ We need to find **the shortest internal input lag** a game can have, it's usuall
 
 At best an action will be visible on the next frame, so the frames of lag are **the amount of time you pushed "K" minus 1**.
 
-If you did select an higher number than needed, you will see a stutter/rollback when pushing buttons and possibly various weirdnesses.  
+If you did select an higher number than needed, you will see a stutter/rollback when pushing buttons and possibly various weirdness.
 If you selected a lower number, repeating the test above will take more than 1 push on the "K" hotkey to see your character move.
   
 ## Can I always use Run Ahead?
@@ -58,7 +58,7 @@ For performance reasons, it only resyncs the secondary core when input is dirty,
 
 Why bother with Two-Instance mode at all? Many of the cores do not leave audio emulation in a clean state after loading state, so you would get buzzing. Using Two-Instance mode makes the primary core not do any load states and avoids that.
 
-In Single-Instance mode, it is possible to improve performance further by running ahead without loading state while input is clean, but I am not currently doing that.  
-I'd imagine there'd be issues if calling the "run a frame" function left you in a state further along than a single frame.
+In Single-Instance mode, it is possible to improve performance further by running ahead without loading state while input is clean, but I am not currently doing that.
+I'd imagine there would be issues if calling the "run a frame" function left you in a state further along than a single frame.
 
 I'm also not doing any speculative inputs at all.

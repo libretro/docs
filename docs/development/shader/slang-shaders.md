@@ -126,7 +126,7 @@ It is very important that shaders do not blindly sample with nearest filter with
 
 ### Deduce shader inputs by reflection
 
-We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders whereever we can. The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
+We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders wherever we can. The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
 
 There are three main types of inputs in this shader system:
 

@@ -12,7 +12,7 @@ The hierarchy for loading is:
 * That emulation will always have an implicit 3 to 5 frames of input lag, and that therefore FPGA-based hardware will always hold a distinct advantage over software-based emulation.
 * That there's nothing one can do to avoid this
 
-RetroArch shatters these myths. It has been demonstratedy by independent researchers that a next-frame response time (≤16ms!) achievable with RetroArch! This means zero frames of input lag is achievable, indistinguishable from real hardware.
+RetroArch shatters these myths. It has been demonstrated by independent researchers that a next-frame response time (≤16ms!) achievable with RetroArch! This means zero frames of input lag is achievable, indistinguishable from real hardware.
 
 Whoever told you that input lag was a given with emulators and that you needed FPGA in order to avoid this latency, should get him/herself acquainted with RetroArch. Post-RetroArch, latency indistinguishable from real hardware is perfectly possible!
 
