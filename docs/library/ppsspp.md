@@ -281,7 +281,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Anisotropic Filtering** [ppsspp_texture_anisotropic_filtering] (**off**|1x|2x|4x|8x|16x)
 
-	Modify the Anisotropic Filtering, which fixs the textures on the horizon that are drawn at angles resulting in a better look.
+	Modify the Anisotropic Filtering, which fixes the textures on the horizon that are drawn at angles resulting in a better look.
 
 - **Texture Deposterize** [ppsspp_texture_deposterize] (**disabled**|enabled)
 

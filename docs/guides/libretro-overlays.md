@@ -66,7 +66,7 @@ To be written
 
 The first time you set up a per-game overlay:
 1. Ensure that these two options are set in retroarch.cfg: `game_specific_options = "true"` and `auto_overrides_enable = "true"`
-2. The first time you load content with these seetings, RetroArch will create a settings override directory structure and a `.opts` configuration file which you can use as a template to correctly name and locate your overlay configuration files. 
+2. The first time you load content with these settings, RetroArch will create a settings override directory structure and a `.opts` configuration file which you can use as a template to correctly name and locate your overlay configuration files.
 3. If the automatically-generated file is named `Dinothawr.opts`, you would name your per-game override `Dinothawr.cfg`.
 3. The new RetroArch `.cfg` should only include the options you want to change for this single game.
 

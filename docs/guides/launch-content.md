@@ -7,7 +7,7 @@ You should already have both cores and content, now we just have to launch it!
 
 ### Launching
 
-Go back to the Main Menu and select **Load content**. From the last guide you should have already set the default start directory, if this is the case choose **Start directory**. If you haven't set it or you are choosing other content (such as downloaded content) select the relvent option.
+Go back to the Main Menu and select **Load content**. From the last guide you should have already set the default start directory, if this is the case choose **Start directory**. If you haven't set it or you are choosing other content (such as downloaded content) select the relevant option.
 
 From here it is up to you to navigate your game folder and find the game you want to try, select it once you have.
 

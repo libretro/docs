@@ -299,8 +299,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred aspect ratio** [snes9x_aspect] (**4:3**|uncorrected|auto|ntsc|pal)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
-	
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
+
 ??? note "Preferred aspect ratio - ntsc"
 	![](../image/core/snes9x/ntsc.png)
 	

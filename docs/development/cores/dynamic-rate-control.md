@@ -4,8 +4,8 @@ Dynamic Rate Control allows emulator frontends to synchronize both audio and vid
 
 The method works by dynamically adjusting audio resampling ratios in such ways that ideally, the audio buffer is never underrun nor overrun, thus avoiding blocking on audio. This in turn allows vertical synchronization for video. The audio pitch is adjusted when adjusting audio resampling ratios, but in practice so little, that it is inaudible to the human ear.
 
-!!! Tip "Read this documenation in PDF form"
-    Because the formulas in this documenation have not yet been converted to markdown, [please consult the original PDF version](https://github.com/libretro/docs/blob/master/archive/ratecontrol.pdf). _If you can assist in the conversion, please post an issue or PR in [the libretro documentation repository](https://github.com/libretro/docs)._
+!!! Tip "Read this documentation in PDF form"
+    Because the formulas in this documentation have not yet been converted to markdown, [please consult the original PDF version](https://github.com/libretro/docs/blob/master/archive/ratecontrol.pdf). _If you can assist in the conversion, please post an issue or PR in [the libretro documentation repository](https://github.com/libretro/docs)._
 
 Retro games are highly synchronous. Their audio output rates are linked directly to video refresh rates. Every video frame, the audio chip generates on average a fixed amount of audio samples. Before continuing to emulate the next frame, the generated audio samples must be pushed to an audio buffer of fixed size.
 
@@ -32,4 +32,4 @@ This method assumes that audio from the emulator is output at regular intervals,
 
 ## Link to full version
 
-Because the formulas in this documenation have not yet been converted to markdown, [please consult the original PDF version](https://github.com/libretro/docs/blob/master/archive/ratecontrol.pdf). _If you can assist in the conversion, please post an issue or PR in [the libretro documentation repository](https://github.com/libretro/docs)._
+Because the formulas in this documentation have not yet been converted to markdown, [please consult the original PDF version](https://github.com/libretro/docs/blob/master/archive/ratecontrol.pdf). _If you can assist in the conversion, please post an issue or PR in [the libretro documentation repository](https://github.com/libretro/docs)._

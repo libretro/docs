@@ -28,7 +28,7 @@ For the Cg program, we need to implement two different functions. `main_vertex()
 
 Vertex shaders get various coordinates as input, and uniforms. Every vertex emitted by the emulator is run through `main_vertex` which calculates the final output position. For our emulators this is just 4 times, since we’re rendering a quad on the screen. 3D games would obviously have a lot more vertices.
 
-While coordinates differ for each invocation, uniforms are constant through-out every call. Think of it as a global variable that you’re not allowed to change. Vertex shading can almost be ignored altogether, but since the vertex shader is run only 4 times, and the fragment shader is run millions of times per frame, it is a good idea to precalculate values in vertex shader that can later be used in fragment shader. There are some limitiations to this which will be mentioned
+While coordinates differ for each invocation, uniforms are constant through-out every call. Think of it as a global variable that you’re not allowed to change. Vertex shading can almost be ignored altogether, but since the vertex shader is run only 4 times, and the fragment shader is run millions of times per frame, it is a good idea to precalculate values in vertex shader that can later be used in fragment shader. There are some limitations to this which will be mentioned
 later.
 
 `main_fragment()` takes care of calculating a pixel color for every single out-put pixel on the screen. If you’re playing at 1080p, the fragment shader will have to be run `1920 * 1080` times! This is obviously straining on the GPU unless the shader is written efficiently. Obviously, main_fragment is where the real action happens. For many shaders we can stick with a “dummy” vertex shader which does some very simple stuff.
@@ -39,7 +39,7 @@ here.
 
 ## Shader Hello World
 
-We’ll start off with the basic vertex shader. No fancy things are being done. You’ll see a similiar vertex shader in most of the Cg programs out there in the wild.
+We’ll start off with the basic vertex shader. No fancy things are being done. You’ll see a similar vertex shader in most of the Cg programs out there in the wild.
 
 ```c
 void main_vertex (float4 pos : POSITION,
@@ -333,7 +333,7 @@ This positive parameter defines which modulo to apply to `IN.frame_count`. `IN.f
 This can be set to one of these values:
    - `source`:   Output size of shader pass `N` is relative to the input size as found in `IN.video_size`. Value is `float`.
    - `viewport`: Output size of shader pass `N` is relative to the size of the window viewport. Value is `float`. **This value can change over time if the user resizes their window!**
-   - `absolute`: Output size is statically defined to a certain size. Useful for hi-res blenders or similiar.
+   - `absolute`: Output size is statically defined to a certain size. Useful for hi-res blenders or similar.
 
 If no scale type is assumed, it is assumed that it is set to `source` with `scaleN` set to `1.0`.
 
@@ -367,7 +367,7 @@ The path of the textures can be found in the IDs, i.e. `foo = image0.tga` and `b
 It is also possible to control the filtering options of the lookup texture as a boolean option in `ID_linear = true/false`. For example `foo_linear = false` will force nearest neighbor filtering for texture `foo`.
 
 !!! Note
-    If `ID_linear` is not set, it is assumed to be linearily filtered.
+    If `ID_linear` is not set, it is assumed to be linearly filtered.
 
 The textures will be loaded "as-is", and coordinates `(0, 0)`, `(0, 1)`, `(1, 0)`, `(1, 1)` will correspond to the corners of the texture. Since the texture coordinates of the texture in TEXUNIT0 might not be as convenient, the texture coordinates for all lookup textures will be found in `TEXCOORD1`.
 

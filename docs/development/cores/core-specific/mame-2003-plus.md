@@ -1,8 +1,8 @@
 # MAME 2003-Plus Development
 
-## Build environement
+## Build environment
 
-MAME 2003-Plus is generally compatibile with the RetroArch build environments that can be found in the docs section `For Developers` -> `RetroArch` -> `Compilation Guides`.
+MAME 2003-Plus is generally compatible with the RetroArch build environments that can be found in the docs section `For Developers` -> `RetroArch` -> `Compilation Guides`.
 
 ## Submitting Control Names
 

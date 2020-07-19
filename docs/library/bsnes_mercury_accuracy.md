@@ -3,7 +3,7 @@
 ## Background
 
 bsnes-mercury is a fork of higan, aiming to restore some useful features that have been removed, as well as improving performance a bit.
-Maximum accuracy is still uncompromisable; anything that affects accuracy is optional and off by default.
+Maximum accuracy is still uncompromising; anything that affects accuracy is optional and off by default.
 
 This core has been compiled with the Accuracy profile.
 
@@ -199,7 +199,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred aspect ratio** [bsnes_aspect_ratio] (**auto**|ntsc|pal)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
 	
 - **Crop overscan** [bsnes_crop_overscan] (**disabled**|enabled)
 

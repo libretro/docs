@@ -127,7 +127,7 @@ Some PlayStation games require disk swapping. To manage disks, libretro has a co
 In Beetle PSX, multi-CD images are typically handled with an .m3u playlist. In this case, you can swap disks by cycling through the Disk Index setting. If you don't or can't use a playlist, you can append a disk image on the fly using `Disk Image Append`. In this case, you browse for a disk image and append it to the internal disk image list. The `Disk Index` is updated appropriately and you are returned to the game.
 
 ### Workarounds
-Replacing the disk inside RGUI is "physically" speaking the same as ejecting, swapping disks and closing the tray instantanously. Some games will not work with this approach, notably Metal Gear Solid because they need to detect an actual eject taking place.
+Replacing the disk inside RGUI is "physically" speaking the same as ejecting, swapping disks and closing the tray instantaneously. Some games will not work with this approach, notably Metal Gear Solid because they need to detect an actual eject taking place.
 
 To work around this, set `Disk Index` to `No Disk`, and exit RGUI. The game will pick up that the tray has been ejected/missing disk after half a second or so. Now you can go back to RGUI, pick the correct disk index and return to the game.
 

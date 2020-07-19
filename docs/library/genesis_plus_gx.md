@@ -24,7 +24,7 @@ Required or optional firmware files go in the frontend's system directory.
 !!! warning ""
     Please note that BIOS choice isn't locked to any specific revisions.
 !!! warning ""
-    BIOS files that are labelled (bootrom) and (lock-on) must have their corresponding [core option](#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
+    BIOS files that are labeled (bootrom) and (lock-on) must have their corresponding [core option](#core-options) ('System bootrom' core option or 'Cartridge lock-on' core option) configured correctly in order for them to be loaded.
 
 | Filename      | Description                                     | md5sum                           |
 |:-------------:|:-----------------------------------------------:|:--------------------------------:|

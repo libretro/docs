@@ -6,7 +6,7 @@ Accessibility features allow people with disabilities to access various types of
 
 ## How to enable Accessibility
 
-While Accessibility has been available in RetroArch since v1.8.2, it is turned off by default. One can turn it on from the in-RetroArch menu in one of two ways.  For the XMB theme (default before v1.8.5) by pressing: right, up seven times, enter (or x on Linux), and then right, or for the Ozone theme (default v1.8.5 and later) by pressing: left, down, right, up seven times, entery (x on linux), and then right.  Otherwise, running the RetroArch executable with the --accessibility flag will override the configuration setting, and turn on accessibility. For blind users, the command is as follows: "retroarch, space, two dashes, accessibility" For a complete guide on using Retroarch with accessibility features, see [This guide](retroarch-accessibility-guide.md)
+While Accessibility has been available in RetroArch since v1.8.2, it is turned off by default. One can turn it on from the in-RetroArch menu in one of two ways.  For the XMB theme (default before v1.8.5) by pressing: right, up seven times, enter (or x on Linux), and then right, or for the Ozone theme (default v1.8.5 and later) by pressing: left, down, right, up seven times, enter (x on linux), and then right.  Otherwise, running the RetroArch executable with the --accessibility flag will override the configuration setting, and turn on accessibility. For blind users, the command is as follows: "retroarch, space, two dashes, accessibility" For a complete guide on using Retroarch with accessibility features, see [This guide](retroarch-accessibility-guide.md)
 
 ## OS requirements
 

@@ -129,7 +129,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Preferred aspect ratio** [fceumm_aspect] (**8:7 PAR**|4:3)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video seetings.
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
 	
 ??? note "Preferred aspect ratio - 8:7 PAR"
 	![](../image/core/fceumm/8by7_PAR.png)
@@ -248,8 +248,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	
 - **Turbo Delay (in frames)** [fceumm_turbo_delay] (**3**|5|10|15|30|60|1|2)
 
-	The number of frames between consecutive buttton presses when the Turbo B or Turbo A buttons are held down.
-	
+	The number of frames between consecutive button presses when the Turbo B or Turbo A buttons are held down.
+
 - **Zapper Mode** [fceumm_zapper_mode] (**lightgun**|touchscreen|mouse)
 
 	Pointer allows the Zapper Device Type to be used for touch-devices, but still can be used with regular mouse. Pointer and Mouse mode movement behaves differently with different input driver so user can choose which movement feels natural to them.

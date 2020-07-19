@@ -27,7 +27,7 @@ To compile Salamander (for Wii) run:
 
     make -f Makefile.wii.salamander
 
-Rename the file retroarch-salamander_wii.dol as boot.dol. This file is the frontend launcher for the other cores (indeed files containing core and fronend).
+Rename the file retroarch-salamander_wii.dol as boot.dol. This file is the frontend launcher for the other cores (indeed files containing core and frontend).
 
 Second, to compile RetroArch for Wii (the core and the frontend), rename the compiled core as 'libretro_wii.a' (see bellow how to compile a core), put it in the RetroArch directory and run:
 

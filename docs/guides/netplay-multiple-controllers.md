@@ -86,5 +86,5 @@ Client is now able to join the host in a NetPlay game controlling controllers tw
 
 
 !!! Warning
-    RetroArch **Network** typically has all **Request Device #** set to _NO_. When all **Request Device #** are set to _NO_, this allows NetPlay to automatically set host as device/controller one (1). Then when the client connets to the host, the client will connect to device/controller two (2) for the NetPlay session. Each subsequent client that connects will continue connect to the next available device/controller.
+    RetroArch **Network** typically has all **Request Device #** set to _NO_. When all **Request Device #** are set to _NO_, this allows NetPlay to automatically set host as device/controller one (1). Then when the client connects to the host, the client will connect to device/controller two (2) for the NetPlay session. Each subsequent client that connects will continue connect to the next available device/controller.
     RetroArch NetPlay requires all **Request Device #** set to _NO_ for RetroArch Netplay to automatically assign device/controller for the NetPlay session.
