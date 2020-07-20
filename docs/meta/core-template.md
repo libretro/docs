@@ -210,7 +210,7 @@ The [Core name] core saves/loads to/from these directories.
 
 ## Core options
 
-The [Core name] core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The [Core name] core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 // Fill in the [Core name]
 
@@ -460,7 +460,7 @@ Rumble only works in the [Core name] core when
 
 | RetroPointer Inputs                                                                                                      | (Device name) Inputs      |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         | 
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | -                         |
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | -                         |
 
 ## Lightgun

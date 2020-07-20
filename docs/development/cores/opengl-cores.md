@@ -27,7 +27,7 @@ These APIs allow us to write 3D graphics-based applications:
   * Windowing interfacing context drivers per platform
   * Display frontend for each platform
   * Post-processing by way of shaders
-  
+
 Libretro's OpenGL implementation is designed specifically to address the practicalities of extending OpenGL and OpenGL ES hardware acceleration to the wide variety of architectures and environments supported by the libretro ecosystem.
 
 # Implementing OpenGL accelerated cores

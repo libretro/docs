@@ -2,8 +2,8 @@
 
 ## Environment configuration
 
-You need the homebrew Nintendo 3DS SDK libctru and DevkitARM toolchain installed. 
-If you are running windows you will need to install [MSYS2](http://www.msys2.org/) and point it to your devkitARM installation like this: 
+You need the homebrew Nintendo 3DS SDK libctru and DevkitARM toolchain installed.
+If you are running windows you will need to install [MSYS2](http://www.msys2.org/) and point it to your devkitARM installation like this:
 
     Put these lines in RetroArch3DSEnv.sh
     export DEVKITPRO="/c/devkitPro"
@@ -11,7 +11,7 @@ If you are running windows you will need to install [MSYS2](http://www.msys2.org
     export CTRULIB="$DEVKITPRO/libctru"
     export CTRBANNERTOOL="/c/Users/Emily/Desktop/RetroArchDev/CompatFiles/bannertool.exe"
     bash
-The custom bannertool is needed if you want to compile .cia builds due to a broken wav encoder in the windows version of bannertool included with RetroArch. 
+The custom bannertool is needed if you want to compile .cia builds due to a broken wav encoder in the windows version of bannertool included with RetroArch.
 Before building RetroArch you will have to load MSYS2 and launch `RetroArch3DSEnv.sh`, then proceed as you would for linux.
 
 The working bannertool can be compiled from the sources [here](https://github.com/Steveice10/bannertool) using MSYS2.
@@ -58,7 +58,7 @@ Instead of building each core one by one, you can build all cores as a batch tas
 
 Once inside this directory, run :
 
-    ./dist-cores.sh ctr 
+    ./dist-cores.sh ctr
 
 This process will also automate the packaging process for you.
 

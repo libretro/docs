@@ -1,13 +1,13 @@
 # RetroArch Run Ahead
 
-Every game has a certain built-in amount of lag, some react on the next displayed frame, some can take 2, 3 or even more frames before an action on the gamepad finally get rendered on screen.  
+Every game has a certain built-in amount of lag, some react on the next displayed frame, some can take 2, 3 or even more frames before an action on the gamepad finally get rendered on screen.
 The Run Ahead feature calculates the frames as fast as possible in the background to "rollback" the action as close as possible to the input command requested.
 
-That feature deals with "internal" game logic lag.  
+That feature deals with "internal" game logic lag.
 This means you can still take advantage of other RetroArch lag reduction methods that happens later, such as Hard GPU Sync or Frame Delay.
 
 It's located in **Quickmenu > Latency** (also in Settings > Latency).
- 
+
 ## How many frames to Run Ahead?
 
 We need to find **the shortest internal input lag** a game can have, it's usually just moving the character:
@@ -20,16 +20,16 @@ At best an action will be visible on the next frame, so the frames of lag are **
 
 If you did select an higher number than needed, you will see a stutter/rollback when pushing buttons and possibly various weirdness.
 If you selected a lower number, repeating the test above will take more than 1 push on the "K" hotkey to see your character move.
-  
+
 ## Can I always use Run Ahead?
 
-**Run Ahead relies on save states** so they need to be clean and fast enough.  
-If a core doesn't support them, this can not work.  
+**Run Ahead relies on save states** so they need to be clean and fast enough.
+If a core doesn't support them, this can not work.
 Using **Second Instance** mode works around some save states limitation, use it if possible.
 
-Calculating several frames in advance means that your machine must be fast enough to run the core at that level of speed.  
+Calculating several frames in advance means that your machine must be fast enough to run the core at that level of speed.
 **The higher the number of frames you are going to run ahead of emulation, the higher demands it places on your CPU.**
-  
+
 ## More detailed explanation
 Here is a more detailed explanation on runahead by its author Dwedit.
 

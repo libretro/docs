@@ -279,7 +279,7 @@ Some of the systems listed above (the ones marked [*]) might require a jailbreak
 \end_layout
 
 \begin_layout Standard
-For the latest versions, go to the official homepage - 
+For the latest versions, go to the official homepage -
 \begin_inset Flex URL
 status open
 
@@ -349,7 +349,7 @@ RetroArch can be thought of as the 'Proof of Concept' that demonstrates
  that this kind of convergence is possible.
  Other apps (media players, multi-system emus, CAD applications) are encouraged
  and allowed to implement the specification themselves.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -359,7 +359,7 @@ The user can do many things with RetroArch, from playing games to watching
  purposes it will be used and what content will be run in it.
  There is no digital rights management or restrictions imposed upon the
  user.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -458,7 +458,7 @@ RetroArch has a built-in UI (User Interface) that functions nearly the same
  across every platform.
  It is called RGUI (short for Retro GUI).
  Most of RetroArch's features can be changed on-the-fly from this.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -467,7 +467,7 @@ Just like everything else in RetroArch, RGUI is controlled with the RetroPad.
  on eye-candy.
  On the plus side, it is very scaleable and works well even at resolutions
  as low as 320x240.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -693,7 +693,7 @@ Later versions of bsnes are written in cutting-edge C++11 and cannot be
  This port of bsnes to C++98 was written for those compilers in mind.
  It is an older version of bsnes compared to the one in Higan but there
  should only be minor differences between this and bsnes performance v0.92.
- 
+
 \end_layout
 
 \begin_layout Subsection
@@ -775,7 +775,7 @@ How to run
 \end_layout
 
 \begin_layout Enumerate
-Go to this website - 
+Go to this website -
 \begin_inset Flex URL
 status open
 
@@ -1678,7 +1678,7 @@ NX Engine
 \end_layout
 
 \begin_layout Standard
-This is a game engine capable of running the game 
+This is a game engine capable of running the game
 \begin_inset ERT
 status open
 
@@ -1691,7 +1691,7 @@ textbf{Cave Story}
 
 \end_inset
 
- (Japanese title: 
+ (Japanese title:
 \begin_inset ERT
 status open
 
@@ -1720,7 +1720,7 @@ In order to run the game, you need to have the original datafiles from the
 \end_layout
 
 \begin_layout Enumerate
-Go to this website - 
+Go to this website -
 \begin_inset Flex URL
 status open
 
@@ -2258,7 +2258,7 @@ Setting up BIOS files
 \begin_layout Standard
 The compatibility of PCSX ReARMed is increased a lot by using real BIOS
  firmware images.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2698,7 +2698,7 @@ Normally, Quake's software renderer has this always enabled.
  to the player.
  Enabling this will come at a big performance cost - so only enable it if
  your platform is powerful enough.
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -2745,7 +2745,7 @@ The original Quake never ran at a fixed framerate, and it took quite a few
  50 or 60 frames per second.
  You can set the framerate to either 50fps or 60fps from the Quake settings
  menu.
- 
+
 \end_layout
 
 \begin_layout Subsection

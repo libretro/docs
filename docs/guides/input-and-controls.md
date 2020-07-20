@@ -24,7 +24,7 @@ Please be aware that some cores, for example arcade emulator cores and vintage c
 
 !!! tip
     Controls with keyboard interfaces can also benefit from defining a **Hotkey Enable** button in RetroArch which is required to be held down in order to activate the other hotkeys.
-    
+
 ## Manual RetroPad binding
 
 If your gamepad does not have an autoconfiguration or if you would like to change its default RetroPad binding, use the **Input** settings menu.
@@ -40,7 +40,7 @@ If your gamepad does not have an autoconfiguration or if you would like to chang
 !!! tip
     If you have several different controller types you may want to use the **User 1 Save Autoconfig** followed by **User 1 Bind Default All** options after binding in order to achieve hotplug functionality
 
-## Controls for multi-player 
+## Controls for multi-player
 
 If you want to set-up local multi-player with games that supports it:
 
@@ -156,7 +156,7 @@ Touch mouse emulation: The Switch touchscreen can be used for mouse control like
 
 | Touch Input              | Effect                                                 |
 |--------------------------|--------------------------------------------------------|
-| single finger drag       | move the mouse pointer (indirectly like on a touchpad) | 
+| single finger drag       | move the mouse pointer (indirectly like on a touchpad) |
 | single short tap         | left mouse click                                       |
 | dual finger short tap*   | right mouse click                                      |
 | dual finger drag         | drag'n'drop (left mouse button is held down)           |

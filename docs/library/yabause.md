@@ -43,7 +43,7 @@ Required or optional firmware files go in the frontend's system directory.
 |:-----------------:|:-------------------------------:|:--------------------------------:|
 | saturn_bios.bin   | Saturn BIOS - Optional          | af5828fdff51384f99b3c4926be27762 |
 
-This md5sum is just a hint, it is not required, any valid saturn bios should work. 
+This md5sum is just a hint, it is not required, any valid saturn bios should work.
 
 ## Features
 
@@ -103,36 +103,36 @@ The Yabause core saves/loads to/from these directories.
 
 ## Core options
 
-The Yabause core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Yabause core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Frameskip** [yabause_frameskip] (**disabled**|enabled)
 
 	Frames are skipped when the CPU is unable to keep up a stable rate.
-	
+
 - **Force HLE BIOS (restart)** [yabause_force_hle_bios] (**disabled**|enabled)
 
 	HLE BIOS will be used even when a real BIOS file is present.
-	
+
 - **Addon Cartridge (restart)** [yabause_addon_cart] (**none**|1M_ram|4M_ram)
 
 	Allows switching between the various RAM cartridges released for the system.
-	
+
 	A list of games that require a cartridge can be found [here](https://www.satakore.com/cartridge.php).
-	
+
 - **6Player Adaptor on Port 1** [yabause_multitap_port1] (**disabled**|enabled)
 
 	Enable multitap in port 1.
-	
+
 - **6Player Adaptor on Port 2** [yabause_multitap_port2] (**disabled**|enabled)
 
 	Enable multitap in port 2.
-	
+
 - **Number of Threads (restart)** [yabause_numthreads] (1|2|**4**|8|16|32)
 
 	Adjust the number of threads to an appropriate level for your CPU.
-	
+
 ## Controllers
 
 The Yabause core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

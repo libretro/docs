@@ -167,13 +167,13 @@ Valkyrie Profile (USA) (Disc 2).cue
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
-## Swapping disks	
+## Swapping disks
 
 Swapping disks follows this procedure
 
 1. Open tray (Disk Cycle Tray Status)
 
-2. Change the Disk Index to the disk you want to swap to. 
+2. Change the Disk Index to the disk you want to swap to.
 
 3. Close tray (Disk Cycle Tray Status)
 
@@ -243,7 +243,7 @@ or
 
 ## Core options
 
-The PCSX ReARMed core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PCSX ReARMed core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -258,14 +258,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	**HLE** - Forces core to use built-in bios emulation
 
 	**auto** - Tries to search for compatible bios file, falls back to use HLE if none is found.
-	
+
 - **Region** [pcsx_rearmed_region] (**auto**|NTSC|PAL)
 
 	Choose what region the system is from.
 
 - **Enable second memory card** [pcsx_rearmed_memcard2] (**disabled**|enabled)
 
-	Enables or disabled second memory card (Memcard 2 slot). When enabled, 
+	Enables or disabled second memory card (Memcard 2 slot). When enabled,
 	Memcard 2 slot's save data will be loaded and saved as
 	`pcsx-card2.mcd` file in the saves directory.
 	All games will share the same second memory card.
@@ -273,197 +273,197 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Pad 1 Type** [pcsx_rearmed_pad1type] (**standard**|analog|dualshock|negcon|none)
 
 	Choose the Pad Type for User 1.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 2 Type** [pcsx_rearmed_pad2type] (**standard**|analog|dualshock|negcon|none)
 
 	Choose the Pad Type for User 2.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 3 Type** [pcsx_rearmed_pad3type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 3.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 4 Type** [pcsx_rearmed_pad4type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 4.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 5 Type** [pcsx_rearmed_pad5type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 5.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 6 Type** [pcsx_rearmed_pad6type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 6.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 7 Type** [pcsx_rearmed_pad7type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 7.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Pad 8 Type** [pcsx_rearmed_pad8type] (**none**|standard|analog|dualshock|negcon)
 
 	Choose the Pad Type for User 8.
-	
+
 	With the none setting, input is disabled.
-	
+
 	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-	
+
 	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
 
 	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-	
+
 	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-	
+
 - **Multitap 1** [pcsx_rearmed_multitap1] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
 
 	**auto** - Enables multitap 1 when Pad 3-8 is not set to none.
-	
+
 	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
-	
+
 - **Multitap 2** [pcsx_rearmed_multitap2] (**auto**|disabled|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
-	
+
 	**auto** - Enables multitap 2 when Pad 5-8 is not set to none.
-	
+
 	**enabled/disabled** - Forces multitap 2 to be enabled or disabled regardless if pads 5-8 is used.
-	
+
 - **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
 
 	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
 
 !!! attention
 	Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
-	
+
 	Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
-	
+
 	For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
 
 - **NegCon Twist Response** [pcsx_rearmed_negcon_response] (**linear**|quadratic|cubic)
 
 	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
-	
+
 	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
 	Recommended when using racing wheel peripherals.
-	
+
 	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
 	Optimal setting for gamepads.
-	
+
 	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
 	Enables precise control but difficult to use.
-	
+
 !!! attention
 	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
-	
+
 	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
 
 - **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
 
 	Enables Rumble. Look at the [Rumble section](#rumble-support) for more information.
-	
+
 - **Enable Dithering** [pcsx_rearmed_dithering] (**enabled**|disabled)
 
 	If Off, disables the dithering pattern the PSX applies to combat color banding.
-	
+
 ??? note "Enable Dithering - On"
 	![](../image/core/pcsx_rearmed/dither_on.png)
-	
+
 ??? note "Enable Dithering - Off"
 	![](../image/core/pcsx_rearmed/dither_off.png)
-	
+
 - **Frame duping** [pcsx_rearmed_duping_enable] (**enabled**|disabled)
 
 	A speedup, redraws/reuses the last frame if there was no new data.
-	
+
 - **Show Bios Bootlogo(Breaks some games)** [pcsx_rearmed_show_bios_bootlogo] (**disabled**|enabled)
 
 	Show the BIOS bootlogo.
-	
+
 ??? note "Skip BIOS - Off"
 	![](../image/core/beetle_psx_hw/bios.png)
-	
+
 - **Sound: Reverb** [pcsx_rearmed_spu_reverb] (**enabled**|disabled)
 
 	Enable sound reverb.
-	
+
 - **Sound: Interpolation** [pcsx_rearmed_spu_interpolation] (**simple**|gaussian|cubic|off)
 
 	Modify sound interpolation.
-	
+
 - **Parasite Eve 2/Vandal Hearts 1/2 Fix** [pcsx_rearmed_pe2_fix] (**disabled**|enabled)
 
 	Enable this to fit Parasite Eve 2 and Vandal Hearts 1/2
-	
+
 - **InuYasha Sengoku Battle Fix** [pcsx_rearmed_inuyasha_fix] (**disabled**|enabled)
 
 	Enable this to fix InuYasha.
@@ -477,9 +477,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **PSX cpu clock** [pcsx_rearmed_psxclock] (30 - 100, **default 57**)
 
 	Overclock or underclock the PSX, default is 57.
-	
+
 	Lower value = less work for the emu, may be faster in some cases.
-	
+
 	Causes compatibility issues, so modify only for games that needs it, leave at default for most games.
 
 - **Additional core options for devices using NEON-compatible CPU:**
@@ -491,14 +491,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Enhanced resolution (slow)** [pcsx_rearmed_neon_enhancement_enable] (**disabled**|enabled)
 
 	Renders in double resolution at the cost of lower performance
-	
+
 	Not available for high resolution games.
 
 - **Enhanced resolution speed hack** [pcsx_rearmed_neon_enhancement_no_main] (**disabled**|enabled)
 
 	Speed hack for above option.
 
-	Causes game glitches.	
+	Causes game glitches.
 
 ## Rumble
 

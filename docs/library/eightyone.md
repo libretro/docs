@@ -142,7 +142,7 @@ Since the EightyOne core can't load arbitrary programs from the file system, the
 
 ## Core options
 
-The EightyOne core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The EightyOne core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -157,17 +157,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **High Resolution** (**auto**/none/WRX)
 
 	Enables WRX high resolution.
-	
+
 - **Emulate Chroma 81** (**auto**/Off/On)
 
 	Enable the [Chroma 81](http://www.fruitcake.plus.com/Sinclair/ZX81/Chroma/ChromaInterface.htm) interface (colorization).
 
-??? note "Emulate Chroma 81 - auto/On"	
+??? note "Emulate Chroma 81 - auto/On"
 	![](../image/core/eightyone/chroma_on.png)
 
 ??? note "Emulate Chroma 81 - Off"
 	![](../image/core/eightyone/chroma_off.png)
-	
+
 - **Video Presets** (**clean**/tv/noisy)
 
 	Change how the video is emulated (if Chroma 81 is enabled, the video is set to "clean" regardless of this option).
@@ -177,10 +177,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Video Presets - tv"
 	![](../image/core/eightyone/tv.png)
-	
+
 ??? note "Video Presets - noisy"
 	![](../image/core/eightyone/clean.png)
-	
+
 - **Sound emulation** (**auto**/none/Zon X-81)
 
 	Enables sound emulation.
@@ -236,17 +236,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Transparent Keyboard Overlay** (Off/**On**)
 
 	If the keyboard overlay is transparent or opaque.
-	
+
 ??? note "Transparent Keyboard Overlay - On"
 	![](../image/core/eightyone/trans_on.png)
-	
+
 ??? note "Transparent Keyboard Overlay - Off"
 	![](../image/core/eightyone/trans_off.png)
 
 - **Time to Release key in ms** (**100**/300/500/1000)
 
-	How many milliseconds to wait before releasing the key pressed using the keyboard overlay.	
-	
+	How many milliseconds to wait before releasing the key pressed using the keyboard overlay.
+
 ## Controllers
 
 The EightyOne core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -272,19 +272,19 @@ The EightyOne core supports the following device type(s) in the controls menu, b
 
 | User 1 Remap descriptors      | RetroPad Inputs                              | Cursor Joystick          |
 |-------------------------------|----------------------------------------------|--------------------------|
-|                               | ![](../image/retropad/retro_b.png)       | Joypad B button mapping  |               
-|                               | ![](../image/retropad/retro_y.png)       | Joypad Y button mapping  |                
-|                               | ![](../image/retropad/retro_select.png)        | Keyboard overlay         |         
-|                               | ![](../image/retropad/retro_dpad_up.png)       | Joypad Up mapping        |          
-|                               | ![](../image/retropad/retro_dpad_down.png)     | Joypad Down mapping      |            
-|                               | ![](../image/retropad/retro_dpad_left.png)     | Joypad Left mapping      |            
-|                               | ![](../image/retropad/retro_dpad_right.png)    | Joypad Right mapping     |            
-|                               | ![](../image/retropad/retro_a.png)       | Joypad A button mapping  |                
-|                               | ![](../image/retropad/retro_x.png)       | Joypad X button mapping  |                
-|                               | ![](../image/retropad/retro_l1.png)            | Joypad L button mapping  |               
-|                               | ![](../image/retropad/retro_r1.png)            | Joypad R button mapping  |                  
-|                               | ![](../image/retropad/retro_l2.png)            | Joypad L2 button mapping |               
-|                               | ![](../image/retropad/retro_r2.png)            | Joypad R2 button mapping |                
+|                               | ![](../image/retropad/retro_b.png)       | Joypad B button mapping  |
+|                               | ![](../image/retropad/retro_y.png)       | Joypad Y button mapping  |
+|                               | ![](../image/retropad/retro_select.png)        | Keyboard overlay         |
+|                               | ![](../image/retropad/retro_dpad_up.png)       | Joypad Up mapping        |
+|                               | ![](../image/retropad/retro_dpad_down.png)     | Joypad Down mapping      |
+|                               | ![](../image/retropad/retro_dpad_left.png)     | Joypad Left mapping      |
+|                               | ![](../image/retropad/retro_dpad_right.png)    | Joypad Right mapping     |
+|                               | ![](../image/retropad/retro_a.png)       | Joypad A button mapping  |
+|                               | ![](../image/retropad/retro_x.png)       | Joypad X button mapping  |
+|                               | ![](../image/retropad/retro_l1.png)            | Joypad L button mapping  |
+|                               | ![](../image/retropad/retro_r1.png)            | Joypad R button mapping  |
+|                               | ![](../image/retropad/retro_l2.png)            | Joypad L2 button mapping |
+|                               | ![](../image/retropad/retro_r2.png)            | Joypad R2 button mapping |
 
 #### Keyboard
 

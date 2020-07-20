@@ -117,7 +117,7 @@ The Stella core supports the following device type(s) in the controls menu, bold
 | Up                       | ![](../image/retropad/retro_dpad_up.png)    |
 | Down                     | ![](../image/retropad/retro_dpad_down.png)  |
 | Left                     | ![](../image/retropad/retro_dpad_left.png)  |
-| Right                    | ![](../image/retropad/retro_dpad_right.png) | 
+| Right                    | ![](../image/retropad/retro_dpad_right.png) |
 
 ## External Links
 

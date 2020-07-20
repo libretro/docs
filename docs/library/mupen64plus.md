@@ -128,7 +128,7 @@ The Mupen64Plus core saves/loads to/from these directories.
 
 You can either use pre-compiled hires texture packs (.htc format, available for download) or compile your own hires texture packs from uncompressed Rice sources.
 
-Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended. 
+Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended.
 
 Recommended Core Options for pre-compiled very popular .htc texture packs, such as those of Djipi or Mollymutt, are:
 - mupen64plus-EnableTextureCache = "True"
@@ -144,90 +144,90 @@ Compilation under Windows seems to be more complicated than under Linux or iOS. 
 
 ## Core options
 
-The Mupen64Plus core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Mupen64Plus core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
  - **CPU Core** (**dynamic_recompiler**/cached_interpreter/pure_interpreter)
 
 	Choose which kind of CPU emulation is going to be used. Dynamic recompiler is the fastest mode.
-	
+
 	**Dynamic recompilier is not available on all platforms.**
-	
+
 - **RSP Mode** (**HLE**/LLE)
 
 	How the RSP is emulated, High Level Emulation or Low Level Emulation.
-	Low level emulation should be more precise but it requires more computational power.  
-	
+	Low level emulation should be more precise but it requires more computational power.
+
 	**LLE mode is not available on all platforms**
 
 - **4:3 Resolution** (**320x240**/640x480/960x720/1280x960/1600x1200/1920x1440/2240x1680/2560x1920/2880x2160/3200x2400/3520x2640/3840x2880)
 
 	Select the internal rendering resolution for 4:3 Aspect Ratio mode. The 'Aspect Ratio' core option must be set to 4:3 for this to have an effect.
-	Higher values require more computational power. 
-	
+	Higher values require more computational power.
+
 - **16:9 Resolution** (**640x360**/960x540/1280x720/1920x1080/2560x1440/3840x2160/7680x4320)
 
 	Select the internal rendering resolution for 16:9 Aspect Ratio mode. The 'Aspect Ratio' core option must be set to 16:9 or 16:9 adjusted for this to have an effect.
-	Higher values require more computational power. 
+	Higher values require more computational power.
 
 - **Aspect Ratio** (**4:3**/16:9/16:9 adjusted)
 
-	This setting adjusts the aspect ratio of the video output. All N64 games support 4:3. Some games support 16:9 within game settings. 
+	This setting adjusts the aspect ratio of the video output. All N64 games support 4:3. Some games support 16:9 within game settings.
 
 - **Bilinear filtering mode** (**standard**/3point)
 
-	Bilinear filtering: Textures will use standard PC-style bilinear filtering.  
-	3 point: Textures will be filtered more like the N64. The result is less smooth but more accurate.  
+	Bilinear filtering: Textures will use standard PC-style bilinear filtering.
+	3 point: Textures will be filtered more like the N64. The result is less smooth but more accurate.
 
 - **MSAA level** (0/2/4/8/16)
-	
-	Enable/Disable MultiSampling Anti-aliasing (0=off, 2,4,8,16=quality).	
-	
+
+	Enable/Disable MultiSampling Anti-aliasing (0=off, 2,4,8,16=quality).
+
 	**This core option is not available on all platforms.**
 
 - **Framebuffer Emulation** (**True**/False)
 
 	Enable the framebuffer emulation.
-	Frame buffer emulation is a set of techniques used to emulate manipulations with color and depth buffer areas on the real console. 
+	Frame buffer emulation is a set of techniques used to emulate manipulations with color and depth buffer areas on the real console.
 	Unchecking this option disables many effects including cropping, aspect ratio, N64 resolution factor and more. Do not uncheck this option unless you have performance issues.
 
 - **Color buffer to RDRAM** (**Async**/Sync/Off)
 
 	Used with the framebuffer emulation.
-	Frame buffer copy is used for some effects (e.g. TV monitor effect where TV shows part of the displayed picture). 
-	In some games GLideN64 cannot detect when the game uses the frame buffer. 
-	With these options, you can have GLideN64 copy each frame of your video cards frame buffer to N64 memory.  
-	Off: Disable copying buffers from video card.  
-	Synchronous: Effects are detected for all games, but it can be slow. Use for games where Asynchronous does not work.  
+	Frame buffer copy is used for some effects (e.g. TV monitor effect where TV shows part of the displayed picture).
+	In some games GLideN64 cannot detect when the game uses the frame buffer.
+	With these options, you can have GLideN64 copy each frame of your video cards frame buffer to N64 memory.
+	Off: Disable copying buffers from video card.
+	Synchronous: Effects are detected for all games, but it can be slow. Use for games where Asynchronous does not work.
 	Asynchronous: Effects are detected for most games (best choice).
-	
+
 	The default setting is dependent on your platform.
 
 - **Depth buffer to RDRAM** (**Software**/FromMem/Off)
 
 	Used with the framebuffer emulation.
-	The depth buffer is used to emulate some effects (e.g. coronas).  
-	Off: Depth buffer is disabled.  
-	FromMem: Your video card’s depth buffer is copied to N64 memory each frame, which can be slow on some games.  
+	The depth buffer is used to emulate some effects (e.g. coronas).
+	Off: Depth buffer is disabled.
+	FromMem: Your video card’s depth buffer is copied to N64 memory each frame, which can be slow on some games.
 	Software: Generally faster than copying from VRAM, but the result can be imperfect.
 
 - **Hardware per-pixel lighting** (**False**/True)
 
-	In N64 games lighting is calculated per vertex. 
-	This option enables hardware per-pixel lighting calculation known as Phong shading, which provides smoother and more realistic lighting. 
+	In N64 games lighting is calculated per vertex.
+	This option enables hardware per-pixel lighting calculation known as Phong shading, which provides smoother and more realistic lighting.
 	Per-vertex lighting is instead calculated via software. HLE only.
-	
+
 - **Continuous texrect coords** (**Off**/Auto/Force)
 
-	In some games the coordinates for parts of 2D elements are not aligned: there is a half-pixel split between adjacent elements. 
-	When rendering at the N64’s original resolution it is not visible, but when the image is scaled up it results in black lines. 
+	In some games the coordinates for parts of 2D elements are not aligned: there is a half-pixel split between adjacent elements.
+	When rendering at the N64’s original resolution it is not visible, but when the image is scaled up it results in black lines.
 	This option attempts to connect these 2D elements.
 
 - **Native res. 2D texrects** (**False**/True)
-	When checked, 2D elements are rendered at the N64s resolution before copying them to output. 
-	This usually eliminates display issues with 2D elements, but it can be slow. 
-	This option uses heuristics to detect adjacent 2D elements that does not work for every game. 
+	When checked, 2D elements are rendered at the N64s resolution before copying them to output.
+	This usually eliminates display issues with 2D elements, but it can be slow.
+	This option uses heuristics to detect adjacent 2D elements that does not work for every game.
 
 - **Less accurate blending mode** (**True**/False)
 
@@ -241,39 +241,39 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Cache GPU Shaders** (**True**/False)
 
-	When the option is enabled, plugin saves all new created shaders in a file. 
+	When the option is enabled, plugin saves all new created shaders in a file.
 	When user starts that game again, plugin loads all previously compiled shaders from that file and further gameplay goes smooth.
 
 - **Crop Mode** (**Auto**/Off)
 
 	Its purpose is to remove black borders, which many N64 games add around image. In auto mode plugins tries to detect empty space and remove it.
 	It works only if frame buffer emulation is enabled, as all other post-processing filters.
-	
+
 - **Texture filter** (**None**/Smooth filtering 1/Smooth filtering 2/Smooth filtering 3/Smooth filtering 4/Sharp filtering 1/Sharp filtering 2)
 
-	This filter smooths or sharpens textures. There are four smoothing filters and two sharpening filters. The higher the number, the stronger the effect. 
+	This filter smooths or sharpens textures. There are four smoothing filters and two sharpening filters. The higher the number, the stronger the effect.
 	Performance may be affected depending on the game and/or your device.
 
 - **Texture Enhancement** (**None**/As Is/X2/X2SAI/HQ2X/HQ2XS/LQ2X/LQ2XS/HQ4X/2xBRZ/3xBRZ/4xBRZ/5xBRZ/6xBRZ)
 
-	Filter applied to textures. Depending on which filter, they may cause performance problems. 
-	When AS IS is selected, textures are saved to the cache as-is; this improves performance in games that load many textures; 
+	Filter applied to textures. Depending on which filter, they may cause performance problems.
+	When AS IS is selected, textures are saved to the cache as-is; this improves performance in games that load many textures;
 	unset Filer background textures for the best performance.
 
 - **Filter background textures** (**True**/False)
 
-	This option skips texture enhancements for long, narrow textures that are usually used for backgrounds. This may save texture memory and improve performance. 
+	This option skips texture enhancements for long, narrow textures that are usually used for backgrounds. This may save texture memory and improve performance.
 	Set true unless Enhancement mode is set to AS IS.
 
 - **Use High-Res textures** (**False**/True)
 
-	Enable the high resolution textures. Usage of hires textures is explained above.	
+	Enable the high resolution textures. Usage of hires textures is explained above.
 
 - **Use High-Res Full Alpha Channel** (**False**/True)
 
-	When this option is selected, GlideN64 will check how the texture’s alpha channel was designed and will select the most appropriate format. 
-	This gives texture pack designers freedom to use semi-transparent textures. 
-	Clear this option for older or poorly designed texture packs. 
+	When this option is selected, GlideN64 will check how the texture’s alpha channel was designed and will select the most appropriate format.
+	This gives texture pack designers freedom to use semi-transparent textures.
+	Clear this option for older or poorly designed texture packs.
 	Recommended for newer texture packs.
 
 - **Analog Deadzone (percent)** (**15**/20/25/30/0/5/10)
@@ -359,7 +359,7 @@ Rumble only works in the Mupen64Plus core when
 | (C4)                          | ![](../image/retropad/retro_x.png)       |
 | L-Trigger                     | ![](../image/retropad/retro_l1.png)            |
 | R-Trigger                     | ![](../image/retropad/retro_r1.png)            |
-| Z-Trigger                     | ![](../image/retropad/retro_l2.png)            | 
+| Z-Trigger                     | ![](../image/retropad/retro_l2.png)            |
 | C Buttons Mode                | ![](../image/retropad/retro_r2.png)            |
 | Control Stick X               | ![](../image/retropad/retro_left_stick.png) X  |
 | Control Stick Y               | ![](../image/retropad/retro_left_stick.png) Y  |

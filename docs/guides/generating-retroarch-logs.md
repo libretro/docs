@@ -65,7 +65,7 @@ If you **haven't installed** RetroArch and have a folder with it:
     Select `Open PowerShell window here`.<br />
     Then jump to step 3.
 
-1. Open a console window with the `cmd` command, found either in the Start Menu or through use of the Windows "Run" menu. 
+1. Open a console window with the `cmd` command, found either in the Start Menu or through use of the Windows "Run" menu.
 2. Navigate to the RetroArch folder using the `cd` command.
 3. Launch RetroArch with this commandline:<br />
  `.\retroarch.exe --log-file .\retroarch-log.txt -v`

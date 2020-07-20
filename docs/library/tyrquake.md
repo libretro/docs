@@ -168,9 +168,9 @@ Many of these settings may be changed from the in-game menu. Notable options are
 - VIDEO → SCREEN SIZE
 
 	With the slider at the 3rd position from the right, all HUD information is shown.
-	
+
 	With the slider at the 2nd position from the right, the gameplay area is increased while the HUD size is reduced such that only armour, health and current ammo are shown.
-	
+
 	With the slider at the far right position, the gameplay area fills the screen and no HUD is shown.
 
 - VIDEO → GAMMA
@@ -195,28 +195,28 @@ Many of these settings may be changed from the in-game menu. Notable options are
 
 ## Core options
 
-The TyrQuake core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The TyrQuake core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Colored lighting (restart)** [tyrquake_colored_lighting] (**disabled**|enabled)
 
 	Enables colored lightning when the loaded content supports it. Requires a restart.
-	
+
 - **Resolution (restart)** [tyrquake_resolution] (**320x200**|640x400|960x600|1280x800|1600x1000|1920x1200|320x240|320x480|360x200|360x240|360x400|360x480|400x224|480x272|512x224|512x240|512x384|512x512|640x224|640x240|640x448|640x480|720x576|800x480|800x600|960x720|1024x768|1280x720|1600x900|1920x1080)
 
 	Configure the resolution. Requires a restart.
-	
+
 ??? note "Resolution - 320x240"
 	![](../image/core/tyrquake/320x240.png)
-	
+
 ??? note "Resolution - 1920x1080"
-	![](../image/core/tyrquake/1920x1080.png)	
-	
+	![](../image/core/tyrquake/1920x1080.png)
+
 - **Rumble** [tyrquake_rumble] (**disabled**|enabled)
 
 	Enables joypad rumble.
-	
+
 - **Invert Y Axis** [tyrquake_invert_y_axis] (**disabled**|enabled)
 
 	Invert the gamepad right analog stick's Y axis.
@@ -224,7 +224,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Analog Deadzone (percent)** [tyrquake_analog_deadzone] (**15**|20|25|30|0|5|10)
 
 	Sets the deadzone of the Gamepad analog sticks when the input device type is set to 'Gamepad Classic' or 'Gamepad Modern'.
-	
+
 ## User 1 device types
 
 The TyrQuake core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -300,7 +300,7 @@ Rumble only works in the TyrQuake core when
 | Menu                                                      | ![](../image/retropad/retro_start.png)         | Menu              |
 | D-Pad Up                                                  | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up          |
 | D-Pad Down                                                | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down        |
-| D-Pad Left                                                | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left        | 
+| D-Pad Left                                                | ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left        |
 | D-Pad Right                                               | ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right       |
 | Strafe Right                                              | ![](../image/retropad/retro_a.png)             | Strafe Right      |
 | Strafe Left                                               | ![](../image/retropad/retro_x.png)             | Strafe Left       |

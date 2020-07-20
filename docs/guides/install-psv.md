@@ -2,7 +2,7 @@
 
 ## PlayStation Vita
 
-!!! Note 
+!!! Note
 	You need to have custom firmware(HENkaku) to run RetroArch on your PlayStation Vita.
 
 !!! Warning
@@ -21,7 +21,7 @@ We're gonna download two files to get the full experience. One of these files is
 
 #### Downloading
 
-You can download a stable RetroArch by clicking [here](http://buildbot.libretro.com/stable/1.7.9/playstation/vita/RetroArch.vpk). If you want to install the Nightly version, you can also use [this link](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch.vpk). 
+You can download a stable RetroArch by clicking [here](http://buildbot.libretro.com/stable/1.7.9/playstation/vita/RetroArch.vpk). If you want to install the Nightly version, you can also use [this link](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch.vpk).
 
 From now on, there are two ways to download our assets. This option will affect your setup method. We're going use the **bundle** this time.
 

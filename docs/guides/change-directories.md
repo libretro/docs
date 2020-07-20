@@ -26,7 +26,7 @@ Although the defaults will suit most users, if you want to configure custom BIOS
 
 ### Cores
 
-This is the location for all your cores. To [install them using the user interface](download-cores.md#installing-cores-through-retroarch-interface), this setting needs to point to a writeable directory. 
+This is the location for all your cores. To [install them using the user interface](download-cores.md#installing-cores-through-retroarch-interface), this setting needs to point to a writeable directory.
 
 !!! note
     The Ubuntu PPA does not point this to a user-writable directory because cores are modified by the package manager. If you want to change it manually, you might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *libretro_directory =* is what you need to change in the config file. Some distributions use `~/.config/retroarch/cores/`

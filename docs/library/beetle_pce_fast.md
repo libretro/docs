@@ -136,14 +136,14 @@ chdman createcd --input foo.cue --output foo.chd
 
 ## Core options
 
-The Beetle PCE FAST core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle PCE FAST core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CD Image Cache (Restart)** [pce_fast_cdimagecache] (**disabled**/enabled)
 
 	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
-	
+
 - **CD Bios (Restart)** [pce_fast_cdbios] (**System Card 3**/Games Express/System Card 1/System Card 2)
 
 	Select which PC Engine CD BIOS to use.
@@ -151,93 +151,93 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **No Sprite Limit (Restart)** [pce_nospritelimit] (**disabled**/enabled")
 
 	Remove 16-sprites-per-scanline hardware limit.
-	
+
 - **CPU Overclock Multiplier (Restart)** [pce_ocmultiplier] (**1**/2/3/4/5/6/7/8/9/10/20/30/40/50)
 
 	Overclock the emulated CPU.
-	
+
 - **Horizontal Overscan (352 Width Mode Only)** [pce_hoverscan] (300 to 352 in increments of 2. **352 in default**.)
 
 	Modify the horizontal overscan.
-	
+
 - **Initial scanline** [pce_initial_scanline] (0 to 40 in increments of 1. **3 is default.**)
 
 	Adjust initial display scanline.
-	
+
 - **Last scanline** [pce_last_scanline] (208 to 242 in increments of 1. **242 is default.**)
 
 	Adjust last display scanline.
-	
+
 - **(CD) CDDA Volume %** [pce_cddavolume] (0 to 200 in increments of 10. **100 is default**.)
 
 	Adjust CDDA Volume %.
-	
+
 - **(CD) ADPCM Volume %** [pce_adpcmvolume] (0 to 200 in increments of 10. **100 is default**.)
 
 	Adjust ADPCM Volume %.
-	
+
 - **(CD) CD PSG Volume %** [pce_cdpsgvolume] (0 to 200 in increments of 10. **100 is default**.)
 
     Adjust CD PSG Volume %.
-	
+
 - **(CD) CD Speed** [pce_cdspeed] (**1**/2/4/8)
 
 	Set the speed of the emulated CD drive.
-	
+
 - **Turbo Delay** [pce_Turbo_Delay] (**Fast**/Medium/Slow)
 
 	Adjust turbo delay.
-	
+
 - **Turbo ON/OFF Toggle** [pce_Turbo_Toggling] (**disabled**/enabled)
 
-	Enables Turbo ON/OFF inputs. 
-	
+	Enables Turbo ON/OFF inputs.
+
 	Look at the [Joypad section](#joypad) for more information.
-	
+
 - **Alternate Turbo Hotkey** [pce_turbo_toggle_hotkey] (**disabled**/enabled)
 
-	Enables Alternate Turbo ON/OFF inputs. 
-	
-	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
-	
+	Enables Alternate Turbo ON/OFF inputs.
+
+	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this.
+
 	Look at the [Joypad section](#joypad) for more information.
-	
+
 - **P1 Turbo I** [pce_p0_turbo_I_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P1 Turbo II** [pce_p0_turbo_II_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P2 Turbo I** [pce_p1_turbo_I_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P2 Turbo II** [pce_p1_turbo_II_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P3 Turbo I** [pce_p2_turbo_I_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P3 Turbo II** [pce_p2_turbo_II_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P4 Turbo I** [pce_p3_turbo_I_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P4 Turbo II** [pce_p3_turbo_II_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P5 Turbo I** [pce_p4_turbo_I_enable] (**disabled**/enabled)
 
 	Awaiting description.
-	
+
 - **P5 Turbo II** [pce_p4_turbo_II_enable] (**disabled**/enabled)
 
 	Awaiting description.
@@ -255,7 +255,7 @@ The Beetle PCE FAST core supports the following device type(s) in the controls m
 - Which PCE Joypad button mode is in use can be configured by the Mode Switch input.
 
 - The regular Turbo inputs for 2-button mode are only active when the ['Turbo ON/OFF Toggle' core option](#core-options) is set to On.
-	
+
 - The Alternate Turbo inputs for 2-button mode are only active when the ['Turbo ON.mdOFF Toggle' core option](#core-options) is set to On and the ['Alternate Turbo Hotkey' core option](#core-options) is set to On.
 
 | RetroPad Inputs                                | User 1 - 5 input descriptors | PCE Joypad 2-button       | PCE Joypad 6-button |

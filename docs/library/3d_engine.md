@@ -97,7 +97,7 @@ The 3D Engine core's core provided aspect ratio is (Ratio).
 
 ## Core options
 
-The 3D Engine core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The 3D Engine core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 

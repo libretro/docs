@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need the homebrew PlayStation PSP SDK and toolchain installed. 
+You need the homebrew PlayStation PSP SDK and toolchain installed.
 
 ## RetroArch Compilation
 

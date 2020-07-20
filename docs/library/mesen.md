@@ -118,7 +118,7 @@ The Mesen core saves/loads to/from these directories.
 
 ### Custom Palettes
 
-To use custom color palettes in the Mesen core, the ['Palette' core option](#core-options) must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the Mesen core, the ['Palette' core option](#core-options) must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory.
 
 Make sure the custom palette file is named 'MesenPalette.pal'
 
@@ -141,8 +141,8 @@ Next, create a folder inside the HdPacks directory that has the same name as the
 So, if the content you're loading is Mega Man (USA).nes, the folder should be named 'Mega Man (USA)'.
 
 Finally, extract the HD pack content files to the Mega Man (USA) folder.
-	
-Here's an example of a working HD pack setup done with [Mega Man 1 (NES) - 30th Anniversary 16-bit Graphic Pack](https://www.romhacking.net/forum/index.php?topic=25426.0). 
+
+Here's an example of a working HD pack setup done with [Mega Man 1 (NES) - 30th Anniversary 16-bit Graphic Pack](https://www.romhacking.net/forum/index.php?topic=25426.0).
 
 Pay attention to the file path.
 
@@ -150,7 +150,7 @@ Pay attention to the file path.
 
 ## Core options
 
-The Mesen core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Mesen core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -160,15 +160,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **NTSC filter** [mesen_ntsc_filter] (**Disabled**/Composite (Blargg)/S-Video (Blargg)/RGB (Blargg)/Monochrome (Blargg)/Bisqwit 2x/Bisqwit 4x/Bisqwit 8x)
 
 	Selects a filter to apply to the picture.
-	
+
 	Blargg filters are fast.
-	
+
 	Bisqwit filters are slower.
 
 - **Palette** [mesen_palette] (**Default**/Composite Direct (by FirebrandX)/Nes Classic/Nestopia (RGB)/Original Hardware (by FirebrandX)/PVM Style (by FirebrandX)/Sony CXA2025AS/Unsaturated v6 (by FirebrandX)/YUV v3 (by FirebrandX)/Custom)
 
 	Mesen comes with a number of built-in palette options - you can select them from here.
-	
+
 - **Overclock** [mesen_overclock] (**None**/Low/Medium/High/Very High)
 
 	Use this to overclock or underclock the CPU.
@@ -179,7 +179,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Overclock Type** [mesen_overclock_type] (**Before NMI (Recommended)**/After NMI)
 
 	Before NMI: Increases the number of scanlines in the PPU, before the NMI signal is triggered at the end of the visible frame. This effectively gives more time for games to perform calculations, which can reduce slowdowns in games. **This is the preferred option for overclocking.**
-	
+
 	After NMI: Increases the number of scanlines in the PPU, after the NMI signal is triggered at the end of the visible frame. This effectively gives more time for games to perform calculations, which can reduce slowdowns in games. **This option is less compatible and should only be used if the before NMI variation does not work as expected.**
 
 - **Region** [mesen_region] (**Auto**/NTSC/PAL/Dendy)
@@ -189,10 +189,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Vertical Overscan** [mesen_overscan_vertical] (**None**/8px/16px)
 
 	This overscan setting allow you to cut out pixels vertically on any edge of the screen. On a CRT TV, a few pixels on each side of the screen was usually invisible to the player. Because of this, games often have glitches or incorrect palette colors on the edges of the screen – this is normal and caused by the game itself. Setting a value of 8 or so on each side of the overscan configuration will usually hide most glitches.
-	
+
 - **Horizontal Overscan** [mesen_overscan_horizontal] (**None**/8px/16px)
-	
-	This overscan setting allow you to cut out pixels horizontally on any edge of the screen. On a CRT TV, a few pixels on each side of the screen was usually invisible to the player. Because of this, games often have glitches or incorrect palette colors on the edges of the screen – this is normal and caused by the game itself. Setting a value of 8 or so on each side of the overscan configuration will usually hide most glitches.	
+
+	This overscan setting allow you to cut out pixels horizontally on any edge of the screen. On a CRT TV, a few pixels on each side of the screen was usually invisible to the player. Because of this, games often have glitches or incorrect palette colors on the edges of the screen – this is normal and caused by the game itself. Setting a value of 8 or so on each side of the overscan configuration will usually hide most glitches.
 
 - **Aspect Ratio** [mesen_aspect_ratio] (**Auto**/No Stretching/NTSC/PAL/4:3/16:9)
 
@@ -213,11 +213,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Enable fake stereo effect** [mesen_fake_stereo] (**Off**/On)
 
 	Self-explanatory.
-	
+
 - **Reduce popping on Triangle channel** [mesen_mute_triangle_ultrasonic] (Off/**On**)
 
 	This option mutes the triangle channel under certain conditions, which prevents it from causing popping sounds.
-	
+
 - **Reduce popping on DMC channel** [mesen_reduce_dmc_popping] (Off/**On**)
 
 	Similar to the previous option, but for the DMC channel – this option prevents games from changing the output of the DMC channel too abruptly, which often causes popping sounds.
@@ -229,7 +229,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Disable Noise channel mode flag** [mesen_disable_noise_mode_flag] (**Off**/On)
 
 	Very early Famicom models did not implement this feature, so this option is available to mimic early Famicom consoles. It changes the sound output of the noise channel in some games, and shouldn’t be enabled unless you want this behavior.
-	
+
 - **Screen Rotation** [mesen_screenrotation] (**None**/90 degrees/180 degrees/270 degrees)
 
 	Rotates the display by the specified angle. This is useful to play games (generally homebrew games) designed for a vertical display.
@@ -305,7 +305,7 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 	The (FDS) Insert Next Disk and (FDS) Switch Disk Side inputs will NOT do anything while the ['FDS: Automatically insert disks' core option](#core-options) is enabled.
 
 ![](../image/controller/nes.png)
-	
+
 | User Remap descriptors for 'Standard Controller' device type | RetroPad Inputs                             |
 |--------------------------------------------------------------|---------------------------------------------|
 | A                                                            | ![](../image/retropad/retro_b.png)          |
@@ -350,7 +350,7 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 | Powerpad B7                                                              | ![](../image/retropad/retro_dpad_left.png)  |
 | Powerpad B8                                                              | ![](../image/retropad/retro_dpad_right.png) |
 | Powerpad B2                                                              | ![](../image/retropad/retro_a.png)          |
-| Powerpad B4                                                              | ![](../image/retropad/retro_x.png)          | 
+| Powerpad B4                                                              | ![](../image/retropad/retro_x.png)          |
 | Powerpad B5                                                              | ![](../image/retropad/retro_l1.png)         |
 | Powerpad B6                                                              | ![](../image/retropad/retro_r1.png)         |
 

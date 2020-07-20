@@ -3,8 +3,8 @@
 Compilation on Linux and BSD does not have many surprises, as its foundation is Unix-based.
 
 ### Dependencies
-- At least one libretro implementation  
-- pkgconfig  
+- At least one libretro implementation
+- pkgconfig
 - Working OpenGL headers (should be included by default, but you might need to install libgl/mesa development packages)
 
 ### Optional dependencies
@@ -51,7 +51,7 @@ There is a [super-project](https://github.com/libretro/libretro-super) that is d
 ```bash
 NOCLEAN=1 ./libretro-build.sh
 ```
-Omit NOCLEAN=1 if you wish to perform "make clean" on every repo before building 
+Omit NOCLEAN=1 if you wish to perform "make clean" on every repo before building
 
 ### Installing
 Let's assume you'd like to install RetroArch into a folder called `~/ra`

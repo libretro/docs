@@ -2,7 +2,7 @@
 
 ## Background
 
-Standalone port of Mednafen WonderSwan to libretro, itself a fork of Cygne. 
+Standalone port of Mednafen WonderSwan to libretro, itself a fork of Cygne.
 
 ### Author/License
 

@@ -79,7 +79,7 @@ ClrMamePro remains the most popular tool for rebuilding MAME romsets, at least f
 
 ### Sourcing CHDs
 
-MAME 2003-Plus uses exactly the same MAME 0.78 CHDs (CHD v3) as MAME 2003. 
+MAME 2003-Plus uses exactly the same MAME 0.78 CHDs (CHD v3) as MAME 2003.
 
 
 ## BIOS
@@ -140,7 +140,7 @@ No system of default input mappings can address the full range of emulated games
 
 ### Mouse and trackball support
 
-MAME 2003-Plus has support for multiple mice or touch devices in games that support trackballs, etc. MAME 2003-Plus also supports one or two spinners/dials via the "Share 2 player dial controls across one X/Y device" core option. By default, mice/trackballs and analog sticks (the left one, for controllers with 2) are supported in games that would have them, or equivalents. For example, Centipede supports the mouse/trackball, and Afterburner supports the stick. 
+MAME 2003-Plus has support for multiple mice or touch devices in games that support trackballs, etc. MAME 2003-Plus also supports one or two spinners/dials via the "Share 2 player dial controls across one X/Y device" core option. By default, mice/trackballs and analog sticks (the left one, for controllers with 2) are supported in games that would have them, or equivalents. For example, Centipede supports the mouse/trackball, and Afterburner supports the stick.
 
 
 ### Pointer, trackpad, touchscreen support
@@ -164,7 +164,7 @@ Because MAME 2003-Plus does not yet implement the libretro lightgun API, the cor
 
 ### Analog and digital controller support
 
-MAME 2003-Plus supports analog and digital controls, it comes with analog by default and you can switch to digital thanks to the Retroarch following setting ```Quick menu``` -> ```Options``` -> ```Control mapping``` -> ```digital```. 
+MAME 2003-Plus supports analog and digital controls, it comes with analog by default and you can switch to digital thanks to the Retroarch following setting ```Quick menu``` -> ```Options``` -> ```Control mapping``` -> ```digital```.
 
 ### 4-way joystick simulation
 

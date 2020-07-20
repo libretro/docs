@@ -42,10 +42,10 @@ Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
 	nSide Balanced uses split ROMS for special chip games.
-	
+
 !!! attention
 	Firmware files for SGB emulation need to be in directories called SGB1.sfc and SGB2.sfc in RetroArch's system directory. Look at the [Super GameBoy support section](#super-gameboy-support) for more information.
-	
+
 Notable DSP1.mdDSP1B Games:
 
 - Super Mario Kart
@@ -145,7 +145,7 @@ The nSide Balanced core saves/loads to/from these directories.
 
 ## Super Gameboy Support
 
-The nSide Balanced core uses a simplified Super Game Boy routine that makes it much easier to access this feature than with the old v094-based cores. 
+The nSide Balanced core uses a simplified Super Game Boy routine that makes it much easier to access this feature than with the old v094-based cores.
 
 Instead of using the complex, CLI-based 'subsystem' launch commands, it looks for the necessary files in the system/BIOS directory whenever you feed the core a *.gb/c file.
 
@@ -161,7 +161,7 @@ Copy your original Super Game Boy ROM into the SGB1.sfc directory and then renam
 
 **Step 3**
 
-Copy your sgb.boot.rom BIOS into each of your SGB1.sfc and SGB2.sfc directories, and rename them to sgb1.boot.rom and sgb2.boot.rom, respectively. 
+Copy your sgb.boot.rom BIOS into each of your SGB1.sfc and SGB2.sfc directories, and rename them to sgb1.boot.rom and sgb2.boot.rom, respectively.
 
 The ['Preferred Super GameBoy BIOS' core option](#core-options) lets you choose which of the two SGB BIOSes to use.
 
@@ -175,7 +175,7 @@ Load a SGB-supported GB.mdGBC rom.
 
 !!! warning
 	There may be graphical glitches when Rewind is set to On in RetroArch's settings.
-	
+
 ## MSU-1
 
 !!! attention
@@ -183,18 +183,18 @@ Load a SGB-supported GB.mdGBC rom.
 
 MSU-1 support can be used by loading a correct .bml file.
 
-There's documentation for loading MSU-1 games in standalone higan [here](https://higan.readthedocs.io/en/stable/guides/import/#msu-1-games).	
+There's documentation for loading MSU-1 games in standalone higan [here](https://higan.readthedocs.io/en/stable/guides/import/#msu-1-games).
 
 ## Core options
 
-The nSide Balanced core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The nSide Balanced core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Internal resolution** [higan_sfc_internal_resolution] (**512x480**|512x448|512x240|512x224|256x240|256x224)
 
 	Self-explanatory.
-	
+
 ??? note "512x480"
     ![](../image/core/higan/512x480.png)
 
@@ -216,27 +216,27 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Color emulation** [higan_sfc_color_emulation] (**OFF**|ON)
 
 	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
-	
+
 ??? note "Color emulation - Disabled"
     ![](../image/core/higan/color_off.png)
 
 ??? note "Color emulation - Enabled"
     ![](../image/core/higan/color_on.png)
-	
+
 - **Blur emulation** [higan_sfc_blur_emulation] (**OFF**|ON)
 
 	Simulates the limited horizontal resolution of standard-definition TVs by blurring together horizontally-adjacent pixels. Games like Jurassic Park for the Super Famicom depend on this to emulate a transparency effect.
-	
+
 ??? note "Blur emulation - Disabled"
     ![](../image/core/higan/blur_off.png)
 
 ??? note "Blur emulation - Enabled"
     ![](../image/core/higan/blur_on.png)
-	
+
 - **Scanline emulation** [higan_sfc_scanline_emulation] (**OFF**|ON)
 
 	Currently does not function properly.
-	
+
 - **Preferred Super GameBoy BIOS (restart)** [higan_sfc_sgb_bios] (**SGB1.sfc/**|SGB2.sfc/)
 
 	Choose what Super GameBoy BIOS you want to use. Look at the [Super GameBoy Support section](#super-gameboy-support) for more information.

@@ -6,7 +6,7 @@ For this part of the setup guide we will be teaching you how to use RetroArch's 
 
 To make your content easier to get to, you should change the default directory. This would be a good first use of the file browser.
 
-Move to the settings tab then find **Directory**, then move to **File Browser**. 
+Move to the settings tab then find **Directory**, then move to **File Browser**.
 
 The first screen should show the storage devices move to the one that contain your game content and press enter.
 

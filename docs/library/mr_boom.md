@@ -8,7 +8,7 @@ The goal of the game is to bomb away your enemies and other players.
 
 ### Author(s):
 
-Remdy Software 
+Remdy Software
 
 ## Contribute to this documentation
 
@@ -44,7 +44,7 @@ The Mr.Boom core does not feature extension use. Just load and start the core.
 
 The Mr.Boom core's directory name is 'Mr.Boom'
 
-Save states are saved/loaded to and from where state files are stored. 
+Save states are saved/loaded to and from where state files are stored.
 
 ## Core options
 
@@ -56,9 +56,9 @@ Save states are saved/loaded to and from where state files are stored.
 
 ??? note "Monsters - On"
 	![](../image/core/mr_boom/monsters_on.png)
-	
+
 ??? note "Monsters - Off"
-	![](../image/core/mr_boom/monsters_off.png)	
+	![](../image/core/mr_boom/monsters_off.png)
 
 - **Drop bomb autofire** (**Off**/On): Enables Drop bomb autofire mode. Holding down the Drop bomb button will repeatedly use the Drop bomb action. (Potentially useful when used in conjunction with certain powerups)
 

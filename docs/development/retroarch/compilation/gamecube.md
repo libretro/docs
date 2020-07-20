@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need the homebrew Nintendo GameCube SDK libogc and Devkitpro PPC toolchain installed. 
+You need the homebrew Nintendo GameCube SDK libogc and Devkitpro PPC toolchain installed.
 
 ## RetroArch Compilation
 
@@ -42,7 +42,7 @@ Instead of building each core one by one, you can build all cores as a batch tas
 
 Once inside this directory, run :
 
-    ./dist-cores.sh ngc 
+    ./dist-cores.sh ngc
 
 This process will also automate the packaging process for you.
 

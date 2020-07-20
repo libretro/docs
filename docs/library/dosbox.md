@@ -2,7 +2,7 @@
 
 ## Background
 
-DOSBox is a multiplatform DOS-emulator 
+DOSBox is a multiplatform DOS-emulator
 
 The DOSBox core has been authored by
 
@@ -10,7 +10,7 @@ The DOSBox core has been authored by
 
 The DOSBox core is licensed under
 
-- [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING) 
+- [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -92,7 +92,7 @@ mount d "/storage/roms/dos/game"
 d:
 game.exe
 ```
-Then you can store this config in the game folder (or any other directory) and just the config instead of the exe file. Once you change a setting using the config command or via core options, you can always update the config file by using config -wc 
+Then you can store this config in the game folder (or any other directory) and just the config instead of the exe file. Once you change a setting using the config command or via core options, you can always update the config file by using config -wc
 
 ## MIDI
 
@@ -106,34 +106,34 @@ mididevice=mt32
 
 ## Core options
 
-The DOSBox core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The DOSBox core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Machine type** [dosbox_machine_type] (**vgaonly**|svga_s3|svga_et3000|svga_et4000|svga_paradise|hercules|cga|tandy|pcjr|ega)
 
 	Select what machine will be emulated.
-	
+
 - **Gamepad emulated mouse** [dosbox_emulated_mouse] (**enable**|disable)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-	
+
 - **CPU cycles x 100000** [dosbox_cpu_cycles_0] (**0**|1|2|3|4|5|6|7|8|9)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-	
+
 - **PU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-	
+
 - **CPU cycles x 1000** [dosbox_cpu_cycles_2] (**1**|2|3|4|5|6|7|8|9|0)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-	
+
 - **CPU cycles x 100** [dosbox_cpu_cycles_3] (**0**|1|2|3|4|5|6|7|8|9")
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-	
+
 ## User 1 - 2 device types
 
 The DOSBox core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

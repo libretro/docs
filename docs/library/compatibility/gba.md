@@ -44,7 +44,7 @@
 
 | Game                                              | Issue                                                                                              |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Boktai Trilogy 	                                | The solar sensor is not emulated.                                                                  | 
+| Boktai Trilogy 	                                | The solar sensor is not emulated.                                                                  |
 | Croket! 2 – Yami no Bank to Banqueen              | Heavy slowdown when approaching the snowman in the beginning.                                      |
 | Digimon Racing (Europe) 	                        | Freezes during the intro. This can be avoided by enabling linking in the standalone VBA-M release. |
 | Drome Racers 	                                    | Only shows a black screen after the THQ logo.                                                      |

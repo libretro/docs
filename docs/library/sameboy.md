@@ -143,7 +143,7 @@ retroarch -L {path to sameboy core} {path to first GameBoy ROM} --subsystem gb_l
 
 ## Core options
 
-The SameBoy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The SameBoy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -152,16 +152,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Single cart dual mode (reload)** [sameboy_dual] (**disabled**|enabled)
 
 	Emulate two Game Boy games at the same time.
-	
+
 - **Color correction** [sameboy_color_correction_mode] (**off**|correct curves|emulate hardware|preserve brightness)
 
 	Only for Gameboy Color games.
 
 	Select color correction.
-	
+
 ??? note "Color Correction - off"
 	![](../image/core/sameboy/color_off.png)
-	
+
 ??? note "Color Correction - correct curves"
 	![](../image/core/sameboy/color_curves.png)
 
@@ -170,11 +170,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Color Correction - preserve brightness"
 	![](../image/core/sameboy/color_brightness.png)
-	
+
 - **High-pass filter** [sameboy_high_pass_filter_mode] (**off**|accurate|remove dc offset)
 
 	Awaiting description.
-	
+
 - **Emulated model** [sameboy_model] (**Game Boy Color**|Game Boy Advance|Auto|Game Boy)
 
 	Select what console/model the content is being ran on. May activate special in-game content.
@@ -184,49 +184,49 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Single cart dual mode (reload)** [sameboy_dual] (**disabled**|enabled)
 
 	Emulate two Game Boy games at the same time.
-	
+
 	This core option is enabled by default and is hidden from view when the 2 Player Game Boy Link Subsystem API is used.
-	
+
 - **Link cable emulation** [sameboy_link] (**enabled**|disabled)
 
 	Enable in-game Game Boy link cable functions.
-	
+
 - **Screen layout** [sameboy_screen_layout] (**top-down**|left-right)
 
 	Configure the layout of the two emulated Game Boys.
-	
+
 - **Audio output** [sameboy_audio_output] (**Game Boy #1**|Game Boy #2)
 
 	Select which Game Boy will output audio.
-	
+
 - **Emulated model for Game Boy #1** [sameboy_model_1] (**Game Boy Color**|Game Boy Advance|Auto|Game Boy)
 
 	Select what console/model the content is being ran on for Game Boy #1.
-	
+
 	May activate special in-game content.
-	
+
 - **Emulated model for Game Boy #2** [sameboy_model_2] (**Game Boy Color**|Game Boy Advance|Auto|Game Boy)
 
 	Select what console/model the content is being ran on for Game Boy #2.
-	
+
 	May activate special in-game content.
-	
+
 - **Color correction for Game Boy #1** [sameboy_color_correction_mode_1] (**off**|correct curves|emulate hardware|preserve brightness)
 
 	Only for Gameboy Color games.
 
 	Select color correction for Game Boy #1.
-	
+
 - **Color correction for Game Boy #2** [sameboy_color_correction_mode_2] (**off**|correct curves|emulate hardware|preserve brightness)
 
 	Only for Gameboy Color games.
 
 	Select color correction for Game Boy #2.
-	
+
 - **High-pass filter for Game Boy #1** [sameboy_high_pass_filter_mode_1] (**off**|accurate|remove dc offset)
 
 	Awaiting description.
-	
+
 - **High-pass filter for Game Boy #2** [sameboy_high_pass_filter_mode_2] (**off**|accurate|remove dc offset)
 
 	Awaiting description.

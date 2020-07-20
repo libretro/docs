@@ -9,7 +9,7 @@ The matching algorithm considers three criteria:
    - Device name
    - Vendor ID
    - Product ID
-   
+
 We compute a matching score for each configuration file based on these three factors. The profile with the highest score is chosen to configure the pad.
 
 !!! Note

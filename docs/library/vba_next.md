@@ -94,14 +94,14 @@ The VBA Next core saves/loads to/from these directories.
 
 ## Core options
 
-The VBA Next core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The VBA Next core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Use bios if available (Restart)** [vbanext_bios] (Off/**On**)
 
 	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](#bios) for more information.
-	
+
 ??? note "Use bios if available - On"
 	![](../image/core/vba_next/bios.png)
 
@@ -138,7 +138,7 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 
 | Game                                              | Issue                                                                                              |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Boktai Trilogy 	                                | The solar sensor is not emulated.                                                                  | 
+| Boktai Trilogy 	                                | The solar sensor is not emulated.                                                                  |
 | Croket! 2 – Yami no Bank to Banqueen              | Heavy slowdown when approaching the snowman in the beginning.                                      |
 | Digimon Racing (Europe) 	                        | Freezes during the intro. This can be avoided by enabling linking in the standalone VBA-M release. |
 | Drome Racers 	                                    | Only shows a black screen after the THQ logo.                                                      |

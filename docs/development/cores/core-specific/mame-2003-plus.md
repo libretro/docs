@@ -168,7 +168,7 @@ make
 ./bin2c -o rungunu_bootstrap.c rungunu.nv
 ```
 
-#### Output 
+#### Output
 
 The generated output will look like this:
 ```c
@@ -193,7 +193,7 @@ The next step is manual -- putting the data that bin2c generated into the format
 ```c
 struct bin2cFILE {
   const unsigned int length;
-  const unsigned char data[]; 
+  const unsigned char data[];
 };
 ```
 
@@ -211,7 +211,7 @@ const struct bin2cFILE rungunu_bootstrap = {
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,
-  } 
+  }
 };
 ```
 
@@ -270,6 +270,3 @@ rm 590.diff
 sudo ./retropie_packages.sh lr-mame2003-plus build
 sudo ./retropie_packages.sh lr-mame2003-plus build install
 ```
-
-
-

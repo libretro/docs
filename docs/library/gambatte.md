@@ -119,38 +119,38 @@ You can also define a palette to be used for all Game Boy games by creating a .p
 
 ## Core options
 
-The Gambatte core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Gambatte core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Allow Opposing Directions** [gambatte_up_down_allowed] (**disabled**/enabled)
 
-	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
-	
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+
 	This may cause movement based glitches to occur in certain games.
-	
+
 	It's best to keep this core option disabled.
 
 - **GB Colorization** [gambatte_gb_colorization] (**disabled**|auto|GBC|SGB|internal|custom)
 
 	Enables colorization of Game Boy games, using pre-defined or user-selected color palettes.
-	
+
 	'auto': Selects automatically the 'best' (most colorful/appropriate) palette for each individual game, using the following order of preference:
-	
+
 	   1. Game-specific Super Game Boy palette, if defined and more colorful than game-specific Game Boy Color palette.
-	   
+
 	   2. Game-specific Game Boy Color palette, if defined.
-	   
+
 	   3. Game-specific Super Game Boy palette, if defined.
-	   
+
 	   4. Palette specified by 'Internal Palette' core option.
-	   
+
 	'GBC': Selects game-specific Game Boy Color palette, if defined. If not, falls back to the Game Boy Color hardware default palette of 'GBC - Dark Green'.
-	
+
 	'SGB': Selects game-specific Super Game Boy palette, if defined. If not, falls back to the Super Game Boy hardware default palette of 'SGB - 1A'.
-	
+
 	'internal': Selects palette specified by 'Internal Palette' core option.
-	
+
 	'custom': Loads user-created palettes from RetroArch's system directory, as described in the 'Custom palettes for Game Boy games' section.
 
 ??? note "*GB Colorization: Off*"
@@ -165,11 +165,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Internal Palette** [gambatte_gb_internal_palette] (**GB - DMG**|GB - Pocket|GB - Light|GBC - Blue|GBC - Brown|GBC - Dark Blue|GBC - Dark Brown|GBC - Dark Green|GBC - Grayscale|GBC - Green|GBC - Inverted|GBC - Orange|GBC - Pastel Mix|GBC - Red|GBC - Yellow|SGB - 1A|SGB - 1B|SGB - 1C|SGB - 1D|SGB - 1E|SGB - 1F|SGB - 1G|SGB - 1H|SGB - 2A|SGB - 2B|SGB - 2C|SGB - 2D|SGB - 2E|SGB - 2F|SGB - 2G|SGB - 2H|SGB - 3A|SGB - 3B|SGB - 3C|SGB - 3D|SGB - 3E|SGB - 3F|SGB - 3G|SGB - 3H|SGB - 4A|SGB - 4B|SGB - 4C|SGB - 4D|SGB - 4E|SGB - 4F|SGB - 4G|SGB - 4H|Special 1|Special 2|Special 3)
 
 	Selects the internal color palette to use for colorizing Game Boy games when the 'GB Colorization' core option is set to 'internal', or when the 'GB Colorization' core option is set to 'auto' and a game has no pre-defined Super Game Boy/Game Boy Color palette.
-	
+
 	'GB' palettes mimic the display characteristics of original Game Boy hardware.
-	
+
 	'GBC' palettes are identical to those used by original Game Boy Color hardware when colorizing Game Boy games.
-	
+
 	'SGB' palettes are identical to those used by original Super Game Boy hardware when colorizing Game Boy games.
 
 ??? note "*Internal Palette: GB - DMG*"
@@ -321,13 +321,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*Internal Palette: Special 3*"
     ![](../image/core/gambatte/special3.png)
-	
+
 - **Color correction** [gambatte_gbc_color_correction] (**GBC only**|always|disabled)
 
 	Enables adjustment of output colors to match the display characteristics of the LCD panel used in original Game Boy Color hardware.
-	
+
 	'GBC only': Color correction is only applied when playing Game Boy Color games, or when using a Game Boy Color palette to colorize a Game Boy game.
-	
+
 	'always': Color correction is always applied, regardless of which color palette is being used.
 
 !!! attention
@@ -336,9 +336,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Color correction mode** [gambatte_gbc_color_correction_mode] (**accurate**|fast)
 
 	Specifies the method to use when performing color correction.
-	
+
 	'accurate': Provides a very close approximation of the image displayed on a real Game Boy Color LCD panel.
-	
+
 	'fast': Darkens colors in a loose approximation of the image displayed on a real Game Boy Color LCD panel. Has negligible performance impact, and may be used on low-end hardware in cases where the 'accurate' method is too slow.
 
 ??? note "*Color correction: Off*"
@@ -353,11 +353,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Color correction - frontlight position** [gambatte_gbc_frontlight_position] (**central**|above screen|below screen)
 
 	Simulates the physical response of the Game Boy Color LCD panel when illuminated from different angles.
-	
+
 	'central': Standard color reproduction, corresponding to ambient light hitting the screen at 90°.
-	
+
 	'above screen': Increases brightness (gamma), corresponding to sunlight or a ceiling light shining on the screen from above.
-	
+
 	'below screen': Reduces brightness (gamma), corresponding to light shining on the screen from below.
 
 !!! attention
@@ -395,47 +395,47 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*Game Boy Color bootloader*"
     ![](../image/core/gambatte/gbc_bios.png)
-	
+
 - **Mix frames** [gambatte_mix_frames] (**disabled**|accurate|fast)
-	
+
 	Enables simulation of LCD ghosting effects by blending the current and previous frames.
-	
+
 	'accurate': Blends pixel RGB values with floating point precision.
-	
+
 	'fast': Blends pixel RGB values using fast bit manipulation. Causes slight color darkening/shifting (due to rounding errors). May be used on low-end hardware in cases where the 'accurate' method is too slow.
-	
+
 !!! attention
 	A number of games generate transparency effects (or additional shades of color) by drawing objects on alternate frames, relying on the LCD ghosting of original hardware to 'smooth out' the result. Notable examples are Wave Race, Ballistic and Chikyuu Kaihou Gun ZAS. In order for these games to render correctly, 'Mix frames' must be set to 'accurate' or 'fast'. More importantly, the rapid flickering that is produced by these games when 'Mix frames' is disabled can lead to a form of screen burn-in on certain types of LCD panel (that of the 3DS in particular).
-	
+
 ??? note "*Mix frames: Off*"
     ![](../image/core/gambatte/mix_frames_off.gif)
-	
+
 ??? note "*Mix frames: accurate*"
     ![](../image/core/gambatte/mix_frames_accurate.gif)
-	
+
 ??? note "*Mix frames: fast*"
     ![](../image/core/gambatte/mix_frames_fast.gif)
-	
+
 - **GameBoy Link Mode** [gambatte_gb_link_mode] (**Not Connected**|Network Server|Network Client)
 
 	Awaiting description.
-	
+
 - **Network Link Port** [gambatte_gb_link_network_port] (56400 to 56420 in increments of 1. **56400 is default**.)
 
 	Awaiting description.
-	
+
 - **Network link server address part 1 (client only)** [gambatte_gb_link_network_server_ip_octet1] (0 to 255 in increments of 1. **0 is default**.)
 
 	Awaiting description.
-	
+
 - **Network link server address part 2 (client only)** [gambatte_gb_link_network_server_ip_octet2] (0 to 255 in increments of 1. **0 is default**.)
 
 	Awaiting description.
-	
+
 - **Network link server address part 3 (client only)** [gambatte_gb_link_network_server_ip_octet3] (0 to 255 in increments of 1. **0 is default**.)
 
 	Awaiting description.
-	
+
 - **Network link server address part 4 (client only)** [gambatte_gb_link_network_server_ip_octet4] (0 to 255 in increments of 1. **0 is default**.)
 
 	Awaiting description.

@@ -2,7 +2,7 @@
 
 ## Background
 
-A MP3 karaoke music player. 
+A MP3 karaoke music player.
 
 ### Author/License
 
@@ -69,7 +69,7 @@ The PocketCDG core can load any MP3+CDG file combination. It will then show the 
 
 ## Core options
 
-The PocketCDG core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PocketCDG core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 

@@ -1,6 +1,6 @@
 # Haiku Compilation / Development Guide
 
-This compilation guide will teach you how to build RetroArch for Haiku. 
+This compilation guide will teach you how to build RetroArch for Haiku.
 
 It is more than recommended to keep your Haiku system up to date and use Nightlybuilds with upgraded packages.
 
@@ -68,7 +68,7 @@ The easiest way to fetch all the cores is to use libretro-super. Run
 
 ### Building Cores
 
-The easiest way to build all the cores is to use libretro-super. 
+The easiest way to build all the cores is to use libretro-super.
 
 To build all cores for Haiku, run
 

@@ -98,7 +98,7 @@ The Craft core saves/loads to/from these directories.
 
 ## Core options
 
-The Craft core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Craft core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -115,14 +115,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Show info text** [craft_show_info_text] (**disabled**|enabled)
 
 	Show game information in the upper left corner of Craft.
-	
+
 ??? note "Show info text - Off"
 	![](../image/core/craft/off.png)
 
 ??? note "Show info text - On"
 	![](../image/core/craft/on.png)
 
-- **Jumping Flash mode** (**Off**/On):  
+- **Jumping Flash mode** (**Off**/On):
 
 	Enabling this allows you to jump infinitely into the air all while the camera faces downwards.
 
@@ -157,7 +157,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Analog deadzone size** [craft_deadzone_radius] (**0.010** to 0.200 in increments of 0.005)
 
 	Modify RetroPad analog sticks' deadzone.
-	
+
 ## Joypad
 
 | RetroPad Inputs                                | Craft Inputs              |

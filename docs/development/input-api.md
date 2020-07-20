@@ -44,7 +44,7 @@ X and Y coordinates are reported relatively to last poll (poll callback) and it 
 ## Pointer Input
 The pointer abstraction represents pen, stylus, touch and other input devices that use absolute coordinates with respect to the screen.
 
-Coordinates in X and Y are reported as `[-0x7fff, 0x7fff]`: `-0x7fff` corresponds to the far left/top of the screen, `0x7fff` to the far right/bottom of the screen. The "screen" is defined as area that is passed to the frontend and later displayed on the monitor. The frontend is free to scale/resize this screen as it sees fit but `(X, Y) = (-0x7fff, -0x7fff)` will always correspond to the top-left pixel of the display. 
+Coordinates in X and Y are reported as `[-0x7fff, 0x7fff]`: `-0x7fff` corresponds to the far left/top of the screen, `0x7fff` to the far right/bottom of the screen. The "screen" is defined as area that is passed to the frontend and later displayed on the monitor. The frontend is free to scale/resize this screen as it sees fit but `(X, Y) = (-0x7fff, -0x7fff)` will always correspond to the top-left pixel of the display.
 
 ## Keyboard Input
 The libretro API allows a core to poll the frontend for the raw current pressed state of keys. There is also a callback available which is called by the frontend in response to keyboard events. `down` is set if the key is being pressed and `false` if it is being released.

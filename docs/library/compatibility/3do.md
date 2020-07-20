@@ -1,5 +1,5 @@
-# 3DO Core Compatibility 
+# 3DO Core Compatibility
 
-## Opera 
+## Opera
 
 [Opera Core Compatibility List](http://wiki.fourdo.com/Compatibility_List)

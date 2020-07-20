@@ -2,7 +2,7 @@
 
 ## Background
 
-Multi-purpose video game console music player. 
+Multi-purpose video game console music player.
 
 ### Author/License
 
@@ -12,7 +12,7 @@ The Game Music Emu core has been authored by
 
 The Game Music Emu core is licensed under
 
-- [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE) 
+- [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 

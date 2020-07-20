@@ -108,7 +108,7 @@ The FCEUmm core saves/loads to/from these directories.
 
 ### Custom color palettes
 
-To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the FCEUmm core, the ['Color Palette' core option](#core-options) must be set to custom and the custom color palette file you want to use must be in RetroArch's system directory.
 
 Make sure the custom palette file is named 'nes.pal'
 
@@ -119,28 +119,28 @@ Custom color palettes for the NES can be generated with either of these tools.
 
 ## Core options
 
-The FCEUmm core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The FCEUmm core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Region** [fceumm_region] (**Auto**|NTSC|PAL|Dendy)
 
 	Force core to use NTSC, PAL or Dendy system audio / video timings.
-	
+
 - **Preferred aspect ratio** [fceumm_aspect] (**8:7 PAR**|4:3)
 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
-	
+
 ??? note "Preferred aspect ratio - 8:7 PAR"
 	![](../image/core/fceumm/8by7_PAR.png)
-	
+
 ??? note "Preferred aspect ratio - 4:3"
 	![](../image/core/fceumm/4by3.png)
-	
+
 - **Color Palette** [fceumm_palette] (**default**|asqrealc|nintendo-vc|rgb|yuv-v3|unsaturated-final|sony-cxa2025as-us|pal|bmf-final2|bmf-final3|smooth-fbx|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|nescap|wavebeam|raw|custom)
 
 	Choose which color palette is going to be used. The raw palette can used in combination with the nes-decoder shader to give colors based off on Bisqwit's NES palette generator and applies either an FCC color conversion matrix or specific Sony US matrix.
-	
+
 !!! attention "Disclaimer"
 	These 'Color Palette core option screenshots have been taken with the 'Use NTSC Palette' core option set to Off.
 
@@ -176,7 +176,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Color Palette - smooth-fbx"
 	![](../image/core/fceumm/smooth_fbx.png)
-	
+
 ??? note "Color Palette - composite-direct-fbx"
 	![](../image/core/fceumm/direct_fbx.png)
 
@@ -196,56 +196,56 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	![](../image/core/fceumm/wavebeam.png)
 
 ??? note "Color Palette - raw"
-	![](../image/core/fceumm/raw.png)		
+	![](../image/core/fceumm/raw.png)
 
 - **Allow Opposing Directions** [fceumm_up_down_allowed] (**disabled**|enabled)
 
-	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
-	
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+
 	This may cause movement based glitches to occur in certain games.
-	
+
 	It's best to keep this core option disabled.
-	
+
 - **Crop Overscan (Horizontal)** [fceumm_overscan_h] (**disabled**|enabled)
 
 	Crop out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
+
 ??? note "Crop Overscan (Horiontal) - Off"
 	![](../image/core/fceumm/horiz_off.png)
-	
+
 ??? note "Crop Overscan (Horizontal) - On"
-	![](../image/core/fceumm/horiz_on.png)		
-	
+	![](../image/core/fceumm/horiz_on.png)
+
 - **Crop Overscan (Vertical)** [fceumm_overscan_v] (**enabled**|disabled)
 
 	Crop out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Crop Overscan (Vertical) - On"
 	![](../image/core/fceumm/vert_on.png)
-	
+
 ??? note "Crop Overscan (Vertical) - Off"
-	![](../image/core/fceumm/vert_off.png)	
-	
+	![](../image/core/fceumm/vert_off.png)
+
 - **No Sprite Limit** [fceumm_nospritelimit] (**disabled**|enabled)
 
 	Removes 8-sprites-per-scanline hardware limit.
-	
+
 - **Sound Volume** [fceumm_sndvolume] (0|1|2|3|4|5|6|**7**|8|9|10)
 
 	Self-explanatory.
-	
+
 - **Sound Quality** [fceumm_sndquality] (**Low**|High|Very High)
 
 	Enables high/higher sound quality for games using expansion audio (MMC5, VRC6, VRC7, Namco, Sunsoft). Use Low for slower devices.
-	
+
 - **Swap Duty Cycles** [fceumm_swapduty] (**disabled**|enabled)
 
 	Replicates the sound of some famiclones that have duty cycles swapped for square channels. A quick sound comparison is in Contra's sound effect when shooting with normal bullets.
-	
+
 - **Turbo Enable** [fceumm_turbo_enable] (**None**|Player 1|Player 2|Both)
 
 	Enable the use of the [Turbo B and Turbo A buttons](#controllers).
-	
+
 - **Turbo Delay (in frames)** [fceumm_turbo_delay] (**3**|5|10|15|30|60|1|2)
 
 	The number of frames between consecutive button presses when the Turbo B or Turbo A buttons are held down.
@@ -253,17 +253,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Zapper Mode** [fceumm_zapper_mode] (**lightgun**|touchscreen|mouse)
 
 	Pointer allows the Zapper Device Type to be used for touch-devices, but still can be used with regular mouse. Pointer and Mouse mode movement behaves differently with different input driver so user can choose which movement feels natural to them.
-	
+
 - **Show Crosshair** [fceumm_show_crosshair] (**enabled**|disabled)
 
 	Show the crosshair for the Zapper device type.
-	
+
 ??? note "Show Crosshair - On"
 	![](../image/core/fceumm/cross_on.png)
-	
+
 ??? note "Show Crosshair - Off"
-	![](../image/core/fceumm/cross_off.png)	
-	
+	![](../image/core/fceumm/cross_off.png)
+
 - **Overclocking** [fceumm_overclocking] (**disabled**|2x-Postrender|2x-VBlank)
 
 	Overclocks the NES using PPU method to minimize ingame slowdowns of some games. Contra Force needs VBlank mode (stage 3 slowdowns). Choose which ever minimizes slowdowns without image distortion.
@@ -277,13 +277,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **NTSC Filter** [fceumm_ntsc_filter] (**disabled**|composite|svideo|rgb|monochrome)
 
 	Enable blargg NTSC filters.
-	
+
 !!! attention "Disclaimer"
 	These 'NTSC Filter' core option screenshots have been taken with the 'Color Palette' core option set to smooth-fbx.
-	
+
 ??? note "NTSC Filter - Off"
 	![](../image/core/fceumm/blargg_off.png)
-	
+
 ??? note "NTSC Filter - composite (color bleeding + artifacts)"
 	![](../image/core/fceumm/blargg_composite_normal.png)
 
@@ -303,7 +303,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Show Advanced Sound Options** [fceumm_show_adv_sound_options] (**disabled**|enabled)
 
 	Show advanced sound controls and tweaks.
-	
+
 ## Controllers
 
 The FCEUmm core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -352,7 +352,7 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 ![](../image/controller/nes.png)
 
-!!! warning 
+!!! warning
 	In order to use the Turbo A and Turbo B buttons, the 'Turbo Enable' core option must be set to On.
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
@@ -399,7 +399,7 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 | Game                         | Issue                                                        |
 |------------------------------|--------------------------------------------------------------|
-| Skull & Crossbones           | Graphical glitches and screen shaking when in 2-player mode. | 
+| Skull & Crossbones           | Graphical glitches and screen shaking when in 2-player mode. |
 
 ## External Links
 

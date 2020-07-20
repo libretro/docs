@@ -18,7 +18,7 @@
 
 Uzem is the official emulator for the Uzebox (A retro-minimalist 8-bit open source game console).
 
-The Uzebox is a minimal system based on a AVR ATmega644 microcontroller. 
+The Uzebox is a minimal system based on a AVR ATmega644 microcontroller.
 
 ### Why use this core?
 

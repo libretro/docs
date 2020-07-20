@@ -62,4 +62,4 @@ The ruby prefix was later deprecated and you could use TexCoord, VertexCoord etc
 
 ## Moving off XML shaders
 
-XML shaders as a whole are deprecated in RetroArch, and will not be selectable in RGUI. You can still use them via video_shader config option. To use GLSL in RetroArch, the new GLSL shaders format is used, which mirrors the Cg shaders implementation quite well. The new GLSL shaders only support modern style, no fixed function. To convert XML shaders into straight GLSL, see GLSL shaders. 
+XML shaders as a whole are deprecated in RetroArch, and will not be selectable in RGUI. You can still use them via video_shader config option. To use GLSL in RetroArch, the new GLSL shaders format is used, which mirrors the Cg shaders implementation quite well. The new GLSL shaders only support modern style, no fixed function. To convert XML shaders into straight GLSL, see GLSL shaders.

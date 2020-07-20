@@ -6,7 +6,7 @@ In order to propose improvements to this document, [visit its corresponding sour
 
 ## Background
 
-Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator. 
+Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator.
 
 ### Why use this core?
 
@@ -175,14 +175,14 @@ The FlyCast core has the following option(s) that can be tweaked from the core o
 
 ??? note "Internal resolution - 640x480"
 	![](../image/core/flycast/640x480.png)
-	
+
 </center>
 
 <center>
-	
+
 ??? note "Internal resolution - 1920x1440"
 	![](../image/core/flycast/1920x1440.png)
-	
+
 </center>
 
 - **Mipmapping** (Off/**On**)
@@ -291,8 +291,8 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 - If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
 - Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Flycast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
 - Polygon sorting issues can make objects appear distorted. Use Per-Pixel Alpha sorting for accurate rendering (at the expense of performance).
-- When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead. 
-- Changing games without closing and reloading RetroArch often leads to RetroArch crashing. 
+- When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead.
+- Changing games without closing and reloading RetroArch often leads to RetroArch crashing.
 
 | Game                                        | Issue                                                                                                                                                                                                                                                                  |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

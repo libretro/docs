@@ -1,7 +1,7 @@
 # Dungeon Crawl Stone Soup
 
 ## Background
-Dungeon Crawl Stone Soup is a free roguelike game of exploration and treasure-hunting in dungeons filled with dangerous and unfriendly monsters in a quest for the mystifyingly fabulous Orb of Zot. 
+Dungeon Crawl Stone Soup is a free roguelike game of exploration and treasure-hunting in dungeons filled with dangerous and unfriendly monsters in a quest for the mystifyingly fabulous Orb of Zot.
 
 The Dungeon Crawl Stone Soup core has been authored by
 
@@ -101,7 +101,7 @@ The Dungeon Crawl Stone Soup core saves/loads to/from these directories.
 
 | RetroPointer Inputs                                                                                                      | Dungeon Crawl Stone Soup inputs |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Cursor                          | 
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Cursor                          |
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Click                           |
 
 ## External Links

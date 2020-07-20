@@ -23,7 +23,7 @@ At this time we can only use the Stable version of 1.8.2, this will be improved 
 
 #### Downloading
 
-You can download a bundle with RetroArch, all the supported cores and all the assets by clicking [here](https://buildbot.libretro.com/stable/1.8.2/playstation/psp/RetroArch.7z). 
+You can download a bundle with RetroArch, all the supported cores and all the assets by clicking [here](https://buildbot.libretro.com/stable/1.8.2/playstation/psp/RetroArch.7z).
 
 #### Installing
 

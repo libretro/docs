@@ -53,9 +53,9 @@ You can then start RetroArch by running:
     $ ./retroarch
 
 !!! tip
-    If you're building frequently you may want to add **ccache** to the mix to speed up the build process. 
-    Install ccache via apt and the prepend the ccache symlink directory to your build environment path as shown below. 
-    
+    If you're building frequently you may want to add **ccache** to the mix to speed up the build process.
+    Install ccache via apt and the prepend the ccache symlink directory to your build environment path as shown below.
+
     For further instructions check the [documentation](https://ccache.samba.org/manual.html#_run_modes)
 
 Install **ccache**:
@@ -72,7 +72,7 @@ Configure paths:
 
 ### Fetching Cores
 
-You can find the cores on libretro's [GitHUB organization](https://github.com/libretro/). 
+You can find the cores on libretro's [GitHUB organization](https://github.com/libretro/).
 
 We have an all-in-one tool to fetch and compile cores which you can use to streamline the process.
 You can obtain the tool by using these commands:
@@ -113,7 +113,7 @@ Get the core's source tree. As an example we'll use [fceumm](https://github.com/
 
     $ git clone https://github.com/libretro/libretro-fceumm.git
 
-Then compile the core: 
+Then compile the core:
 
     $ cd libretro-fceumm
     $ make -f Makefile.libretro
@@ -121,5 +121,5 @@ Then compile the core:
 Optionally strip the build product:
 
     $ strip fceumm_libretro.so
-    
+
 Most cores will build with these instructions. You might need to browse to a subdirectory in some cases.

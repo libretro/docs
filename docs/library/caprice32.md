@@ -120,7 +120,7 @@ Here are some actions you can do in page 2 of the virtual keyboard GUI.
 
 ## Core options
 
-The Caprice32 core has the following option(s) that can be tweaked from the core options menu. 
+The Caprice32 core has the following option(s) that can be tweaked from the core options menu.
 
 !!! tip
     Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
@@ -141,19 +141,19 @@ The Caprice32 core has the following option(s) that can be tweaked from the core
 
 !!! note "cap32_scr_tube = color"
 	![](../image/core/caprice32/tube_off.png)
-	
+
 !!! note "cap32_scr_tube = green"
-	![](../image/core/caprice32/tube_on.png)	
-	
+	![](../image/core/caprice32/tube_on.png)
+
 !!! attention
 	These 'scr_intensity' core option screenshots have been taken with the 'cap32_scr_tube' core option set to 'color'.
 
 !!! note "scr_intensity = 5"
 	![](../image/core/caprice32/5.png)
-	
+
 !!! note "scr_intensity = 15"
 	![](../image/core/caprice32/15.png)
-	
+
 ## Controllers
 
 The Caprice32 core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

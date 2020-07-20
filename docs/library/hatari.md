@@ -97,7 +97,7 @@ The Hatari core saves/loads to/from these directories.
 This was written using Lakka 2.1 rc6 x86_64
 
 I was excited to find out Lakka has an Atari ST core, but then disappointed that it chucked out some errors when I tried to “just load an .st image”. There really was not much of a guide out there, even to get started, So I picked apart a handful of posts and docs and wrote my own mini guide below.
-	
+
 ### Quick Start
 
 - Get a copy of US TOS 1.02 , name and put it here; “/storage/system/tos.img”
@@ -120,7 +120,7 @@ szDiskBZipPath =
 
 [ROM]
 szCartridgeImageFileName =
-szTosImageFileName = /storage/system/tos.img 
+szTosImageFileName = /storage/system/tos.img
 ```
 
 - Changing Floppy disks can be achieved by accessing the Hatari menu and selecting the “Floppy” menu (see long winded explanation below)
@@ -138,7 +138,7 @@ szTosImageFileName = /storage/system/tos.img
 ```
 [ROM]
 szCartridgeImageFileName =
-szTosImageFileName = /storage/system/tos.img 
+szTosImageFileName = /storage/system/tos.img
 ```
 
 - Hatari does not seem to have a default hatari.cfg in place when first loaded (Hence the error above), It expects it to be read from two places by default, /storage/.hatari/hatari.cfg and /storage/system/hatari.cfg, I prefer the latter as it is more visible, once you load your first game you can then access the Hatari menu and save over your first base config in either location with whatever settings you change.
@@ -160,10 +160,10 @@ szTosImageFileName = /storage/system/tos.img
 	- There is also a save state option in the memory menu (Save state is not available directly from Lakka for Hatari, but it is inside the emulator :slight_smile: )
 
 - Once you have finished setting up your settings you can now save them using the save config button , rather than use the default location of /storage/.hatari/hatari.cfg I would navigate back to your initial basic config file /storage/hatari.cfg as it is more accessible and visible, Note if you like, you can have as many config files as you want, as long as you remember where you put them :blush: , "The Immortal (one of the hardest games ever made), for instance, needs its memory setting back to 512k with a 68000 cpu in st mode 1.02 TOS, so why not create an “immortal.cfg” with the right system settings and floppy already in the drive, then you can load it and it is all just done.
-	
+
 ## Core options
 
-The Hatari core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Hatari core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 

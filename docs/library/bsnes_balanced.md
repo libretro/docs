@@ -6,7 +6,7 @@ bsnes is a Super Nintendo emulator that began development on 2004-10-14. It focu
 
 This core has been compiled with the Balanced profile.
 
-Highly accurate SNES emulation. Whether to use the Accuracy, or Balanced or Performance core depends on how much accuracy you want to give up for game performance. 
+Highly accurate SNES emulation. Whether to use the Accuracy, or Balanced or Performance core depends on how much accuracy you want to give up for game performance.
 
 Please check the [compatibility section](#compatibility) for more information.
 
@@ -45,7 +45,7 @@ Required or optional firmware files go in the frontend's system directory.
 !!! attention
 	The bsnes Balanced core uses split ROMS for [special chip games](https://en.wikipedia.org/wiki/List_of_Super_NES_enhancement_chips#List_of_Super_NES_games_that_use_enhancement_chips).
 
-Notable DSP1/DSP1B Games: 
+Notable DSP1/DSP1B Games:
 
 - Super Mario Kart
 - Pilotwings
@@ -58,7 +58,7 @@ Notable DSP3 Games:
 
 - SD Gundam GX
 
-Notable DSP4 Games: 
+Notable DSP4 Games:
 
 - Top Gear 3000
 
@@ -147,7 +147,7 @@ The bsnes Balanced core saves/loads to/from these directories.
 For Super GameBoy support, you need sgb.boot.rom (in RetroArch's System directory), a GameBoy ROM and a Super GameBoy ROM.
 
 Please note that the Game Boy and Super GameBoy ROMs have to be unzipped.
-	
+
 Super GameBoy is supported via the Subsystem API.
 
 There are two ways to access the Subsystem API.
@@ -184,7 +184,7 @@ retroarch -L {path to bsnes core} {path to Super GameBoy ROM} --subsystem sgb {p
 MSU-1 support can be used by loading a correct .bml file.
 
 There's documentation for loading MSU-1 games in standalone higan [here](https://higan.readthedocs.io/en/stable/guides/import/#msu-1-games).
-	
+
 ## Controllers
 
 The bsnes Balanced core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

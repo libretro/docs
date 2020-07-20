@@ -93,7 +93,7 @@ The Beetle GBA core saves/loads to/from these directories.
 
 ## Core options
 
-The Beetle GBA core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle GBA core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -127,7 +127,7 @@ The Beetle GBA core supports the following device type(s) in the controls menu, 
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)     |
 | D-Pad Right              | ![](../image/retropad/retro_dpad_right.png)    |
 | A                        | ![](../image/retropad/retro_a.png)             |
-| L                        | ![](../image/retropad/retro_l1.png)            | 
+| L                        | ![](../image/retropad/retro_l1.png)            |
 | R                        | ![](../image/retropad/retro_r1.png)            |
 
 ## External Links

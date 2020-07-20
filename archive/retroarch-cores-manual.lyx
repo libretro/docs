@@ -244,7 +244,7 @@ Author(s): Dave, FBA Team (Barry Harris & co)
 \begin_inset Newline newline
 \end_inset
 
-Extensions supported: 
+Extensions supported:
 \begin_inset Quotes eld
 \end_inset
 
@@ -288,7 +288,7 @@ Author(s): Caitlin Shaw (rogueeve)
 \begin_inset Newline newline
 \end_inset
 
-Extensions supported: 
+Extensions supported:
 \begin_inset Quotes eld
 \end_inset
 
@@ -699,7 +699,7 @@ Famicom Disk System loading is slow, so you might be tempted to fast forward
  through most of it.
  However, I'd advise caution when doing so and to savestate regularly in
  case 'fast forwarding' can negatively affect disk loading.
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -727,7 +727,7 @@ Famicom Disk System support.
  For Android users - put disksys.rom into the same folder as the FDS ROM
  you're trying to load.
  For everyone else - put disksys.rom into your system directory.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -946,7 +946,7 @@ Controls have been revised - most of the controls should now be properly
 \end_layout
 
 \begin_layout Itemize
-Button combos have been changed - 
+Button combos have been changed -
 \begin_inset Newline newline
 \end_inset
 
@@ -1603,7 +1603,7 @@ dm2ttl.mp3
 \end_layout
 
 \begin_layout Standard
-dm2int.mp3 
+dm2int.mp3
 \end_layout
 
 \begin_layout Subsection
@@ -1721,7 +1721,7 @@ The music is incorrect on Xbox 360.
 Because Wonderswan has a 75Hz refresh rate, V-sync is specifically disabled
  for this core so that the framerate and sound is as it should be - that's
  why you might notice some negligible tearing.
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1920,7 +1920,7 @@ About Us
 \end_layout
 
 \begin_layout Standard
-Homepage: 
+Homepage:
 \begin_inset Flex URL
 status collapsed
 
@@ -1939,7 +1939,7 @@ IRC: #retroarch at freenode
 \begin_inset Newline newline
 \end_inset
 
-Github (libretro organization): 
+Github (libretro organization):
 \begin_inset Flex URL
 status collapsed
 
@@ -1954,7 +1954,7 @@ https://github.com/libretro
 \begin_inset Newline newline
 \end_inset
 
-RetroArch @ Github: 
+RetroArch @ Github:
 \begin_inset Flex URL
 status collapsed
 
@@ -1969,7 +1969,7 @@ https://github.com/Themaister/RetroArch
 \begin_inset Newline newline
 \end_inset
 
-Libretro @ Twitter: 
+Libretro @ Twitter:
 \begin_inset Flex URL
 status collapsed
 
@@ -1984,7 +1984,7 @@ https://twitter.com/libretro
 \begin_inset Newline newline
 \end_inset
 
-Libretro @ Facebook: 
+Libretro @ Facebook:
 \begin_inset Flex URL
 status collapsed
 

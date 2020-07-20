@@ -79,34 +79,34 @@ The CrocoDS core saves/loads to/from these directories.
 
 ## Core options
 
-The CrocoDS core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The CrocoDS core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Color Monitor** [crocods_greenmonitor] (**color**|green)
 
 	Self-explanatory.
-	
+
 ??? note "Color Monitor - color"
 	![](../image/core/crocods/color.png)
-	
+
 ??? note "Color Monitor - green"
-	![](../image/core/crocods/green.png)	
-	
+	![](../image/core/crocods/green.png)
+
 - **Resize** [crocods_resize] (**Auto**|320x200|Overscan)
 
 	Self-explanatory.
-	
+
 ??? note "Resize - 320x200"
 	![](../image/core/crocods/320x200.png)
-	
+
 ??? note "Resize - Overscan"
-	![](../image/core/crocods/overscan.png)	
-	
+	![](../image/core/crocods/overscan.png)
+
 - **Speed hack** [crocods_hack] (**no**|yes)
 
 	Awaiting description.
-	
+
 ## Controllers
 
 The CrocoDS core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

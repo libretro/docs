@@ -2,7 +2,7 @@
 
 ## Background
 
-The Free Unix Spectrum Emulator (Fuse): an emulator of the 1980s home computer and various clones for Unix, Mac OS X and Windows. 
+The Free Unix Spectrum Emulator (Fuse): an emulator of the 1980s home computer and various clones for Unix, Mac OS X and Windows.
 
 The Fuse core has been authored by
 
@@ -40,8 +40,8 @@ Required or optional firmware files go in the frontend's system directory.
 |:---------------:|:----------------------------:|:--------------------------------:|
 | fuse/128p-0.rom | Pentagon 128K ROM - Required |                                  |
 | fuse/128p-1.rom | Pentagon 128K ROM - Required |                                  |
-| fuse/trdos.rom  | Pentagon 128K ROM - Required |                                  |	
-	
+| fuse/trdos.rom  | Pentagon 128K ROM - Required |                                  |
+
 - Pentagon 512K
 
 |   Filename      |    Description               |              md5sum              |
@@ -144,18 +144,18 @@ There are hundreds of free, legally available ZX Spectrum games at [World of Spe
 
 ## Core options
 
-The Fuse core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Fuse core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Model (needs content load)** [fuse_machine] (**Spectrum 48K**|Spectrum 48K (NTSC)|Spectrum 128K|Spectrum +2|Spectrum +2A|Spectrum +3|Spectrum +3e|Spectrum SE|Timex TC2048|Timex TC2068|Timex TS2068|Spectrum 16K|Pentagon 128K|Pentagon 512K|Pentagon 1024|Scorpion 256K)
 
 	Set the machine to emulate. Note that the this setting will have effect only when a new content is loaded.
-	
+
 - **Hide Video Border** [fuse_hide_border] (**Off**|On)
 
 	Hides the video border, making the game occupy the entire screen area.
-	
+
 - **Tape Fast Load** [fuse_fast_load] (Off|**On**)
 
 	Instantly loads tape files if enabled, or disabled it to see the moving horizontal lines in the video border while the game loads.
@@ -181,65 +181,65 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	How much time to keep a key pressed before releasing it (used when a key is pressed using the keyboard overlay).
 
 - **Joy Left mapping** [fuse_joypad_left] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Left joypad input to a keyboard input.
-	
+
 - **Joy Right mapping** [fuse_joypad_right] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Right joypad input to a keyboard input.
-	
+
 - **Joy Up mapping** [fuse_joypad_up] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Up joypad input to a keyboard input.
-	
+
 - **Joy Down mapping** [fuse_joypad_down] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Down joypad input to a keyboard input.
-	
+
 - **Joy Start mapping** [fuse_joypad_start] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Start joypad input to a keyboard input.
-	
+
 - **Joy A mapping** [fuse_joypad_a] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the A joypad input to a keyboard input.
-	
+
 - **Joy B mapping** [fuse_joypad_b] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the B joypad input to a keyboard input.
-	
+
 - **Joy X mapping** [fuse_joypad_x] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the X joypad input to a keyboard input.
-	
+
 - **Joy Y mapping** [fuse_joypad_y] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the Y joypad input to a keyboard input.
-	
+
 - **Joy L mapping** [fuse_joypad_l] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the L joypad input to a keyboard input.
-	
+
 - **Joy R mapping** [fuse_joypad_r] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the R joypad input to a keyboard input.
-	
+
 - **Joy L2 mapping** [fuse_joypad_l2] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the L2 joypad input to a keyboard input.
-	
+
 - **Joy R2 mapping** [fuse_joypad_r2] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the R2 joypad input to a keyboard input.
-	
+
 - **Joy L3 mapping** [fuse_joypad_l3] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the L3 joypad input to a keyboard input.
-	
+
 - **Joy R3 mapping** [fuse_joypad_r3] (**<none>**|0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|Enter|Caps|Symbol|Space)
-	
+
 	Map the R3 joypad input to a keyboard input.
-	
+
 ## Controllers usage
 
 There are seven types of joysticks emulated:

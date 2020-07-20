@@ -139,7 +139,7 @@ RetroArch Android is an app that has been designed to run and play:
 \end_layout
 
 \begin_layout Itemize
-Games 
+Games
 \end_layout
 
 \begin_layout Itemize
@@ -394,7 +394,7 @@ Author(s): Dave, FBA Team (Barry Harris & co)
 \begin_inset Newline newline
 \end_inset
 
-Extensions supported: 
+Extensions supported:
 \begin_inset Quotes eld
 \end_inset
 
@@ -438,7 +438,7 @@ Author(s): Caitlin Shaw (rogueeve)
 \begin_inset Newline newline
 \end_inset
 
-Extensions supported: 
+Extensions supported:
 \begin_inset Quotes eld
 \end_inset
 
@@ -879,11 +879,11 @@ A list of the gamepads that are supported by autodetection can be found
 \begin_layout Standard
 You connect the device to your tablet/phone.
  You press a button while ingame.
- If your pad is supported, it should bring up a message saying: 
+ If your pad is supported, it should bring up a message saying:
 \begin_inset Quotes eld
 \end_inset
 
-RetroPad #? detected: 
+RetroPad #? detected:
 \begin_inset Quotes eld
 \end_inset
 
@@ -897,7 +897,7 @@ Unsupported gamepads
 \end_layout
 
 \begin_layout Standard
-If your pad is unsupported, it will likely show 
+If your pad is unsupported, it will likely show
 \begin_inset Quotes eld
 \end_inset
 
@@ -1237,7 +1237,7 @@ Auto save state
 
 This will make a save state when you exit the game.
  This auto savestate will be automatically loaded the next time you start
- up the 
+ up the
 \begin_inset Newline newline
 \end_inset
 
@@ -1648,7 +1648,7 @@ About Us
 \end_layout
 
 \begin_layout Standard
-Homepage: 
+Homepage:
 \begin_inset Flex URL
 status collapsed
 
@@ -1667,7 +1667,7 @@ IRC: #retroarch at freenode
 \begin_inset Newline newline
 \end_inset
 
-Github (libretro organization): 
+Github (libretro organization):
 \begin_inset Flex URL
 status collapsed
 
@@ -1682,7 +1682,7 @@ https://github.com/libretro
 \begin_inset Newline newline
 \end_inset
 
-RetroArch @ Github: 
+RetroArch @ Github:
 \begin_inset Flex URL
 status collapsed
 
@@ -1697,7 +1697,7 @@ https://github.com/Themaister/RetroArch
 \begin_inset Newline newline
 \end_inset
 
-Libretro @ Twitter: 
+Libretro @ Twitter:
 \begin_inset Flex URL
 status collapsed
 
@@ -1712,7 +1712,7 @@ https://twitter.com/libretro
 \begin_inset Newline newline
 \end_inset
 
-Libretro @ Facebook: 
+Libretro @ Facebook:
 \begin_inset Flex URL
 status collapsed
 

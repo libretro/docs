@@ -102,27 +102,27 @@ The ChaiLove core saves/loads to/from these directories.
 
 ## Core options
 
-The ChaiLove core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The ChaiLove core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Alpha Blending** [chailove_alphablending] (**enabled**|disabled)
 
 	Enable or disable alpha blending (transparency).
-	
+
 ??? note "Alpha Blending - On"
 	![](../image/core/chailove/alpha_on.png)
-	
+
 ??? note "Alpha Blending - Off"
-	![](../image/core/chailove/alpha_off.png)	
-	
+	![](../image/core/chailove/alpha_off.png)
+
 - **High Quality** [chailove_highquality] (**enabled**|disabled)
 
 	Enable or disable extra visual features.
-	
+
 ??? note "High Quality - On"
 	![](../image/core/chailove/quality_on.png)
-	
+
 ??? note "High Quality - Off"
 	![](../image/core/chailove/quality_off.png)
 
@@ -149,7 +149,7 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 | Y                            | ![](../image/retropad/retro_y.png)             |
 | Select                       | ![](../image/retropad/retro_select.png)        |
 | Start                        | ![](../image/retropad/retro_start.png)         |
-| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       | 
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
 | D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
