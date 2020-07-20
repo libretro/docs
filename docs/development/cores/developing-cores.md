@@ -158,7 +158,7 @@ This function should free all state that was initialized during `retro_init()`. 
 
 ### Thread safety
 
-The libretro API does not make guarantees about thread safety. Therefore the core developer should assume that none of the functions declared in the libretro header are reentrant.
+The libretro API does not make guarantees about thread safety. Therefore the core developer should assume the functions declared in the libretro header are neither reentrant nor safe to be called by multiple threads at the same time.
 If a core is multi-threaded then the core developer is responsible for thread safety when making libretro API calls. 
 
 It is discouraged to do libretro API calls outside of `retro_run()` i.e. outside of the main thread.
