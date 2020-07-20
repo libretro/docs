@@ -135,94 +135,94 @@ chdman createcd --input foo.cue --output foo.chd
 
 ## Core options
 
-The Beetle SuperGrafx core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle SuperGrafx core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CD Image Cache (Restart)** [sgx_cdimagecache] (**disabled**|enabled)
 
 	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
-	
+
 - **CD Bios (Restart)** [sgx_cdbios] (**System Card 3**|Games Express|System Card 1|System Card 2)
 
 	Select which PC Engine CD BIOS to use.
-	
+
 	Look at the [BIOS section](#core-options) for more information.
-	
+
 - **Force SuperGrafx Emulation (Restart)** [sgx_forcesgx] (**disabled**|enabled)
 
 	This is helpful to run homebrew games or isolate games that will not run in SuperGrafx mode. (like Space Harrier).
 
 	**Savestates are not compatible with each mode. It's better to leave this option at default (Off) unless needed. Known Supergrafx games (like Dai-Makaimura, Aldyns) will automatically switch to SuperGrafx regardless of this option.**
-	
+
 - **No Sprite Limit** [sgx_nospritelimit] (**disabled**|enabled)
 
 	Remove 16-sprites-per-scanline hardware limit.
-	
+
 - **CPU Overclock Multiplier (Restart)** [sgx_ocmultiplier] (**1**|2|3|4|5|6|7|8|9|10|20|30|40|50)
 
 	Overclock the emulated CPU.
-	
+
 - **Horizontal Overscan (352 Width Mode Only)** [sgx_hoverscan] (300 to 352 in increments of 2. **352 in default**.)
 
 	Modify the horizontal overscan.
-	
+
 - **Initial scanline** [sgx_initial_scanline] (0 to 40 in increments of 1. **3 is default.**)
 
 	Adjust first display scanline.
-	
+
 - **Last scanline** [sgx_last_scanline] (208 to 242 in increments of 1. **242 is default.**)
 
 	Adjust last display scanline.
-	
+
 - **(CD) CDDA Volume %** [sgx_cddavolume] (0 to 200 in increments of 10. **100 is default**.)
 
 	Modify CDDA Volume %.
-	
+
 - **(CD) ADPCM Volume %** [sgx_adpcmvolume] (0 to 200 in increments of 10. **100 is default**.)
 
 	Modify ADPCM Volume %.
-	
+
 - **(CD) CD PSG Volume %;** [sgx_cdpsgvolume] (0 to 200 in increments of 10. **100 is default**.)
 
 	Modify CD PSG Volume %.
-	
+
 - **(CD) CD Speed** [sgx_cdspeed] (**1**|2|4|8)
 
 	Set the speed of the emulated CD drive.
-	
+
 - **Turbo Delay** [sgx_turbo_delay] (**3**|4|5|6|7|8|9|10|11|12|13|14|15|30|60|2)
 
 	Adjust turbo delay.
-	
+
 - **Turbo ON/OFF Toggle** [sgx_turbo_toggle] (**disabled**|enabled)
 
-	Enables Turbo ON/OFF inputs. 
-	
+	Enables Turbo ON/OFF inputs.
+
 	Look at the [Joypad section](#joypad) for more information.
 
 - **Alternate Turbo Hotkey** [sgx_turbo_toggle_hotkey] (**disabled**|enabled)
 
-	Enables Alternate Turbo ON/OFF inputs. 
-	
-	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this. 
-	
+	Enables Alternate Turbo ON/OFF inputs.
+
+	You can avoid remapping Button III and IV when switching to 6-button gamepad mode with this.
+
 	Look at the [Joypad section](#joypad) for more information.
-	
+
 - **Disable Soft Reset (RUN+SELECT)** [sgx_disable_softreset] (**disabled**|enabled)
 
 	Pressing RUN and SELECT simultaneously on PCE gamepad will SOFT RESET the console. This is a default hardware behaviour.
-	
+
 	Set this to enabled if you want the soft reset functionality turned off.
-	
+
 - **Allow Opposing Directions** [sgx_up_down_allowed] (**disabled**|enabled)
 
-	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time. 
-	
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+
 	This may cause movement based glitches to occur in certain games.
-	
+
 	It's best to keep this core option disabled.
-	
+
 - **Mouse Sensitivity** [sgx_mouse_sensitivity] (1.00 to 5.00 in increments of 0.25. **1.00 is default**.)
 
 	Configure the PCE Mouse device type's sensitivity.
@@ -253,7 +253,7 @@ The Beetle SuperGrafx core supports the following device type(s) in the controls
 |------------------------------------------------|------------------------------|---------------------------|---------------------|
 | ![](../image/retropad/retro_b.png)             | II                           | II                        | II                  |
 | ![](../image/retropad/retro_y.png)             | III                          | II Turbo On/Off           | III                 |
-| ![](../image/retropad/retro_select.png)        | Select                       | Select                    | Select              |  
+| ![](../image/retropad/retro_select.png)        | Select                       | Select                    | Select              |
 | ![](../image/retropad/retro_start.png)         | Run                          | Run                       | Run                 |
 | ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     | D-Pad Up                  | D-Pad Up            |
 | ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   | D-Pad Down                | D-Pad Down          |

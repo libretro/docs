@@ -115,7 +115,7 @@ If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
 
 You can launch px68k to launch a supported game. You can also use px68k without any content by using Load Core and then Run Core. This will directly bring you to the px68k menu.
 
-L2 button or F12 key brings up the original px68k menu where you can change the inserted disks. 
+L2 button or F12 key brings up the original px68k menu where you can change the inserted disks.
 
 They have to be unzipped to be accessible from this menu but can be zipped/archived when launching directly from RetroArch.
 
@@ -160,71 +160,71 @@ PX68k has a few methods to support loading and swapping multi-disk games.
 	The first 2 disks listed in this file are loaded into disk drives FDD0 and FDD1 on the core, respectively. To swap disks for games that use more than 2 disks, use the disk swapping option either from within RetroArch's menu or using the native PX68k menu explained below.
 
 - Use a CMD file
-	
+
 	This method is similar to the m3u playlist and allows loading up to 2 disks at launch. Create a text file and save it as foo.cmd. The format of this file should have all the games on one line and begins with px68k as in the example below.
-	
+
 	"px68k /somewhere/software/x68000/content1.dim /somewhere/software/x68000/content2.dim"
 
 	To swap disks for games that use more than 2 disks, use the native PX68k menu explained below.
 
 - From the command line
-	
+
 	As shown in the usage section, you can use the following format to launch multi-disk games directly from the command line:
-	
+
 	retroarch -L sdlpx68k_libretro.so "px68k /somewhere/software/x68000/content1.dim /somewhere/software/x68000/content2.dim"
-	 
+
 	To swap disks for games that use more than 2 disks, use the native PX68k menu explained below.
 
 ### Swapping Disks
 
 Games that have more than 2 disks will often require swapping disks at some point during gameplay. There are 2 supported methods to swap disks in this core.
 
-- Use the disk swapping option from RetroArch GUI. 
-	
+- Use the disk swapping option from RetroArch GUI.
+
 	Open the RetroArch gui, select Quick Menu ->Disk Control to access the disk controls. Eject the disk using the Disk Cycle Tray Status command, then set the new disk index and load the new disk by selecting Disk Cycle Tray Status again.
 
 	The default disk drive that is swapped is FDD1. If you need to swap the disk loaded in FDD0, change the Core Option "Swap Disks on Drive" first before loading the new disk in this menu.
 
 - Use the native PX68k menu
 
-	Press L2 on the controller or F12 on the keyboard to access the PX68k menu, then select the disk slot and choose the file from here. 
-	
+	Press L2 on the controller or F12 on the keyboard to access the PX68k menu, then select the disk slot and choose the file from here.
+
 	The starting directory for loading disks is determined by the setting StartDir in the system/keropi/config file.
-	
+
 ## Core options
 
-The PX68k core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PX68k core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CPU Speed** [px68k_cpuspeed] (**10Mhz**|16Mhz|25Mhz|33Mhz (OC)|66Mhz (OC)|100Mhz (OC)|150Mhz (OC)|200Mhz (OC))
 
 	Configure the CPU speed. Can be used to slow down games that run too fast or to speed up floppy loading times.
-	
+
 - **RAM Size (Restart)** [px68k_ramsize] (**2MB**|3MB|4MB|5MB|6MB|7MB|8MB|9MB|10MB|11MB|12MB|1MB)
 
 	Amount of RAM used.
-	
+
 - **Use Analog** [px68k_analog] (**OFF**|ON)
 
 	Awaiting description.
-	
+
 - **P1 Joypad Type** [px68k_joytype1] (**Default (2 Buttons)**|CPSF-MD (8 Buttons)|CPSF-SFC (8 Buttons))
 
 	Awaiting description.
-	
+
 - **P2 Joypad Type** [px68k_joytype2] (**Default (2 Buttons)**|CPSF-MD (8 Buttons)|CPSF-SFC (8 Buttons))
 
 	Awaiting description.
-	
+
 - **ADPCM Volume** [px68k_adpcm_vol] (**15**|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14)
 
 	Awaiting description.
-	
+
 - **OPM Volume** [px68k_opm_vol] (**12**|13|14|15|0|1|2|3|4|5|6|7|8|9|10|11)
 
 	Awaiting description.
-	
+
 - **Swap Disks on Drive** [px68k_disk_drive] (**FDD1**|FDD0)
 
 	By default using the native Disk Swap interface within RetroArch's menu will swap the disk in drive FDD1. Change this option to swap disks in drive FDD0.
@@ -249,8 +249,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Frame Skip** [px68k_frameskip] (**Full Frame**|1/2 Frame|1/3 Frame|1/4 Frame|1/5 Frame|1/6 Frame|1/8 Frame1/16 Frame|1/32 Frame|1/60 Frame|Auto Frame Skip)
 
-	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.	
-	
+	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+
 ## Controllers
 
 The PX68k core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

@@ -135,70 +135,70 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 
 ## Core options
 
-The PicoDrive core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PicoDrive core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Input device 1** [picodrive_input1] (**3 button pad**/6 button pad/None)
 
 	Choose which kind of controller is plugged in slot 1.
-	
+
 - **"Input device 2** [picodrive_input2] (**3 button pad**/6 button pad/None)
 
 	Choose which kind of controller is plugged in slot 2.
-	
+
 - **No sprite limit** [picodrive_sprlim] (**disabled**/enabled)
 
 	Enable this to remove the sprite limit.
-	
+
 - **MegaCD RAM cart** [picodrive_ramcart] (**disabled**/enabled)
 
 	Emulate a [MegaCD RAM cart](https://segaretro.org/CD_BackUp_RAM_Cart).
-	
+
 - **Region** [picodrive_region] (**Auto**/Japan NTSC/Japan PAL/US/Europe)
 
 	Force a specific region.
-	
+
 - **Core-provided aspect ratio** [picodrive_aspect] (**PAR**/4/3/CRT)
 
 	Choose the core-provided aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
-	
+
 ??? note "Core-provided aspect ratio - PAR"
 	![](../image/core/picodrive/par.png)
-	
+
 ??? note "Core-provided aspect ratio - 4/3"
 	![](../image/core/picodrive/4by3.png)
 
 ??? note "Core-provided aspect ratio - CRT"
-	![](../image/core/picodrive/crt.png)	
-	
+	![](../image/core/picodrive/crt.png)
+
 - **Show Overscan** [picodrive_overscan] (**disabled**/enabled)
 
 	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
+
 ??? note "Show Overscan - Off"
 	![](../image/core/picodrive/off.png)
-	
+
 ??? note "Show Overscan - On"
-	![](../image/core/picodrive/on.png)	
-	
+	![](../image/core/picodrive/on.png)
+
 - **68k overclock** [picodrive_overclk68k] (**disabled**/+25%/+50%/+75%/+100%/+200%/+400%)
 
 	Overclock the emulated [68k chip](http://segaretro.org/M68000)
-	
+
 - **Dynamic recompilers** [picodrive_drc] (**enabled**/disabled)
-	
+
 	Enable dynamic recompilers which help to improve performance. **This core option is not available on all hardware.**
 
 - **Audio filter** [picodrive_audio_filter] (**disabled**|low-pass)
-	
+
 	Enable a low pass audio filter to better simulate the characteristic sound of a Model 1 Genesis.
-	
+
 !!! attention
 	This option is ignored when running Master System and PICO titles. Only the Genesis and its add-on hardware (Sega CD, 32X) employed a physical low pass filter.
-	
+
 - **Low-pass filter %** [picodrive_lowpass_range] (**60**|65|70|75|80|85|90|95|5|10|15|20|25|30|35|40|45|50|55)
-	
+
 	Specify the cut-off frequency of the audio low pass filter. A higher value increases the perceived 'strength' of the filter, since a wider range of the high frequency spectrum is attenuated.
 
 ## User 1 - 2 device types

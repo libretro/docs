@@ -113,105 +113,105 @@ The Cannonball core saves/loads to/from these directories.
 
 ## Core options
 
-The Cannonball core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Cannonball core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Menu At Start** [cannonball_menu_enabled] (**ON**|OFF)
 
-	When enabled; the Cannonball core shows the main menu upon startup. 
-	
+	When enabled; the Cannonball core shows the main menu upon startup.
+
 	When disabled; the Cannonball core goes into attract mode upon startup.
-	
+
 - **Menu Road Scroll Speed** [cannonball_menu_road_scroll_speed] (**50**|60|70|80|90|100|150|200|300|400|500|5|10|15|20|25|30|40)
 
 	Use this to configure the speed at which the road on the Main Menu scrolls at.
-	
+
 - **Video Widescreen Mode** [cannonball_video_widescreen] (**ON**|OFF)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
-	
+
 - **Video High-Resolution Mode** [cannonball_video_hires] (**OFF**|ON)
 
 	The original game ran at 320x224. This mode doubles that resolution to 640x448. However, rather than simply doubling up the display, the sprites and road are rendered at a higher resolution where possible.
-	
+
 - **Video Framerate** [cannonball_video_fps] (**Smooth (60)**|Ultra Smooth (120)|Original (60/30))
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#video-modes).
-	
+
 - **Advertise Sound** [cannonball_sound_advertise] (**ON**|OFF)
 
 	Play sounds in attract mode.
-	
+
 - **Preview Music** [cannonball_sound_preview] (**ON**|OFF)
 
 	Preview the music tracks at the point of selection in-game. The original game did not have this option and you would not hear the audio track until the game started.
-	
+
 - **Fix Samples (use opr-10188.71f)** [cannonball_sound_fix_samples] (**ON**|OFF)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#fix-corrupted-audio).
-	
+
 - **Gear Mode** [cannonball_gear] (**Manual**|Manual Cabinet|Manual 2 Buttons|Automatic)
 
 	Change the gear shift behaviour. Useful to configure based on your target hardware.
-	
+
 	0 = Manual (Click to shift, for normal play)
 	1 = Manual (Hold to shift, for cabinet play)
 	2 = Manual (Separate Buttons for High/Low)
 	3 = Automatic (No need to change gear)
-	
+
 - **Analog Controls (off to allow digital speed setup)** [cannonball_analog] (**ON**|OFF)
 
 	Self-explanatory.
-	
+
 - **Digital Steer Speed** [cannonball_steer_speed] (**3**|4|5|6|7|8|9|1|2)
 
 	Awaiting description.
-	
+
 - **Digital Pedal Speed** [cannonball_pedal_speed] (**4**|5|6|7|8|9|1|2|3)
 
 	Awaiting description.
-	
+
 - **Time** [cannonball_dip_time] (**Easy (80s)**|Normal (75s)|Hard (72s)|Very Hard (70s)|Infinite Time)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
-	
+
 - **Traffic** [cannonball_dip_traffic] (**Normal**|Hard|Very Hard|No Traffic|Easy)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
-	
+
 - **Freeplay Mode** [cannonball_freeplay] (**OFF**|ON)
 
 	Awaiting description.
-	
+
 - **Use Japanese Tracks Version** [cannonball_jap] (**OFF**|ON)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#japanese-courses)
-	
+
 - **Use Prototype Stage 1** [cannonball_prototype] (**OFF**|ON)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#prototype-coconut-beach).
-	
+
 - **Objects Limit Enhanced** [cannonball_level_objects] (**ON**|OFF)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings)
-	
+
 - **Original Traffic Patterns Randomization** [cannonball_randomgen] (**ON**|OFF)
 
 	Awaiting description.
-	
+
 - **Force AI To Play** [cannonball_force_ai] (**OFF**|ON)
 
 	Awaiting description.
-	
+
 - **Fix Original Game Bugs** [cannonball_fix_bugs] (**ON**|OFF)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#bug-fixes)
-	
+
 - **Fix Timing Bugs** [cannonball_fix_timer] (**OFF**|ON)
 
 	Awaiting description.
-	
+
 - **Display Debug Info For LayOut** [cannonball_layout_debug] (**OFF**|ON)
 
 	Awaiting description.
@@ -219,15 +219,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **New Attract** [cannonball_new_attract] (**ON**|OFF)
 
 	Explained [here](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#outrun-engine-settings).
-	
+
 - **Time Trial Laps** [cannonball_ttrial_laps] (**3**|4|5|1|2)
 
 	Awaiting description.
-	
+
 - **Time Trial Traffic Amount** [cannonball_ttrial_traffic] (**3**|4|5|6|7|8|0|1|2)
 
 	Awaiting description.
-	
+
 - **Continuous Mode Traffic Amount** [cannonball_cont_traffic] (**3**|4|5|6|7|8|0|1|2)
 
 	Awaiting description.

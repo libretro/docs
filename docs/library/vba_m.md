@@ -13,7 +13,7 @@ The VBA-M core has been authored by
 
 The VBA-M core is licensed under
 
-- [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt) 
+- [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -108,7 +108,7 @@ The VBA-M core saves/loads to/from these directories.
 
 ## Core options
 
-The VBA-M core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The VBA-M core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -117,23 +117,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	For use with Boktai games (solar cartridge games). Manually adjust ingame's solar sensor meter.
 
 - **Use BIOS file if found** [vbam_usebios] (Off/**On**)
-	
+
 	Uses BIOS present in RetroArch's system directory.
 
 - **Force enable RTC** [vbam_forceRTCenable] (**Off**/On)
-	
+
 	Forces the internal real-time clock to be enabled regardless of rom. Usuable for rom patches that requires clock to be enabled (aka Pokemon).
 
 - **Sound Interpolation** [vbam_soundinterpolation] (Off/**On**)
-	
+
 	Enable or disable sound filtering.
 
 - **Sound Filtering** [vbam_soundfiltering] (0|1|2|3|4|**5**|6|7|8|9|10)
-	
+
 	Sets the cutoff-frequency for the interpolation filter. Higher value reduces more high frequencies.
 
 - **(GB) Color Palette** [vbam_palettes] (**black and white**|blue sea|dark knight|green forest|hot desert|pink dreams|weird colors|original gameboy|gba sp)
-	
+
 	Set Game Boy palettes to use.
 
 ??? note "(GB) Color Palette - black and white"
@@ -164,13 +164,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	![](../image/core/vba_m/pal_9gbsp.png)
 
 - **(GB) Emulated Hardware (Requires Restart)** [vbam_gbHardware] (Automatic|**Game Boy Color**|Super Game Boy|Game Boy|Game Boy Advance|Super Game Boy)
-	
+
 	Selects the type of game boy handheld to emulate. Automatic will select the most appropriate model for the current game.
 
 - **(GB) Enable Colorizer Hack (Needs Restart)** [vbam_allowcolorizerhack] (**Off**/On)
 
 	Allows some Colorizer/DX patched gb roms to run correctly. NOT RECOMMENDED for non-colorized patched games since this hack relies on inaccurate vram and palette access.
-	
+
 	See: https://github.com/libretro/vbam-libretro/issues/58
 
 - **(GB) Show Borders** [vbam_showborders] (auto|**Off**|On)
@@ -182,11 +182,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Show Borders - On"
 	![](../image/core/vba_m/border_on.png)
-	
+
 - **(GB) Color Correction** [vbam_gbcoloroption] (**Off**/On)
 
 	Applies color correction to palette.
-	
+
 ??? note "(GB) Color Correction - Off"
 	![](../image/core/vba_m/cc_Off.png)
 
@@ -207,11 +207,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Sensor Sensitivity (Gyroscope) (%)** [vbam_gyro_sensitivity] (10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|**100**|105|110|115|120)
 
-	Used to adjust sensitivity level for gyro-enabled games. Default bind is left analog. 
+	Used to adjust sensitivity level for gyro-enabled games. Default bind is left analog.
 
 - **Sensor Sensitivity (Tilt) (%)** [vbam_tilt_sensitivity] (10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|**100**|105|110|115|120)
 
-	Used to adjust sensitivity level for gyro-enabled games. Default bind is right analog. 
+	Used to adjust sensitivity level for gyro-enabled games. Default bind is right analog.
 
 - **Swap Left/Right Analog** [vbam_swap_astick] (**Off**/On)
 
@@ -244,35 +244,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Show layer 1** [vbam_layer_1] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show layer 2** [vbam_layer_2] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show layer 3** [vbam_layer_3] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show layer 4** [vbam_layer_4] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show sprite layer** [vbam_layer_5] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show window layer 1** [vbam_layer_6] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show window layer 2** [vbam_layer_7] (Off/**On**)
 
 	Self-explanatory.
-	
+
 - **Show sprite window layer** [vbam_layer_8] (Off/**On**)
 
 	Self-explanatory.
-	
+
 ## Controllers
 
 The VBA-M core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

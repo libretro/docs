@@ -32,7 +32,7 @@ RetroArch is the libretro "reference frontend" and is available across a wide ra
 [Lakka](http://www.lakka.tv/), based on LibreELEC, is Libretro's reference operating system distribution.
 
 Below is a partial list of external distributions that also use libretro or RetroArch as part of their backend technology:
-  
+
   * [batocera.linux](http://batocera-linux.xorhub.com/)
   * [RetroPie](http://retropie.org.uk/)
   * [Recalbox](http://recalbox.com/)

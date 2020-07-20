@@ -16,7 +16,7 @@ Game ROMs should be placed within the `roms` folder as configured in RetroArch. 
                32X Game 2.zip
           etc.
           etc.
-          
+
 This arrangement is not required and you are free to organize your ROMs as you prefer.
 
 ## Working with Playlists
@@ -52,7 +52,7 @@ Each playlist is a plain text file with an extension of `.lpl`. RetroArch 1.7.5 
 
 The following example is a single-entry MAME 2003-Plus playlist for [Alien Arena](https://www.arcade-museum.com/game_detail.php?game_id=6850) -- the silent version of this game is available through the RetroArch **Content Downloader** found in the **Online Updater** menu.
 
-The playlist is named `MAME 2003-Plus.lpl` which means it will match the existing icon for that core's playlists in the RetroArch assets pack and display it for the playlist for menu drivers that implement playlist icons. 
+The playlist is named `MAME 2003-Plus.lpl` which means it will match the existing icon for that core's playlists in the RetroArch assets pack and display it for the playlist for menu drivers that implement playlist icons.
 
 The **Alien Arena** romset is located at `C:\retroarch\downloads\alienar.zip`; note that the backslashes are doubled in JSON-formatted playlist entries so that the value of the `path` entry is `C:\\retroarch\\downloads\\alienar.zip`.
 
@@ -121,7 +121,7 @@ Users who wish to use their own thumbnails can do so by naming PNG image files a
 #### Thumbnail paths and filenames
 Thumbnails should be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. **Example: If your playlist is named `Atari - 2600.lpl`, then your Atari 2600 root thumbnail folder should be called `thumbnails/Atari - 2600/`.**
 
-Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively. 
+Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively.
 
 The thumbnail filename should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with `_` in the corresponding thumbnail filename:** `` &*/:`<>?\| ``
 

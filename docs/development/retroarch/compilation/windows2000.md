@@ -12,7 +12,7 @@ Prerequisites:
 ### Building RetroArch
 
 !!! Note
-    Setting up a working git shell is beyond the scope of this document. 
+    Setting up a working git shell is beyond the scope of this document.
 
 The first step is to obtain RetroArch's source tree.
 You can clone the repository directly from [GitHub](https://github.com/libretro/RetroArch)

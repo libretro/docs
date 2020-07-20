@@ -9,7 +9,7 @@ This is probably the most straightforward way to install RetroArch.
 
 - FAT32 formatted USB
 
-## Download 
+## Download
 
 You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down until you see the **Steam Link** section.
 
@@ -21,7 +21,7 @@ Getting RetroArch ready to install is very simple. Create the file structure in 
 
 > steamlink/apps/
 
-Unzip the `RetroArch.zip`,  move the `RetroArch` folder into the `apps` folder we just created. 
+Unzip the `RetroArch.zip`,  move the `RetroArch` folder into the `apps` folder we just created.
 
 ## Content Management
 
@@ -38,7 +38,7 @@ Then, enter the `System` directory and create an empty text file named `enable_s
 Within this, create a blank text file, and label it **enable_ssh.txt**. The final directory structure should be as follows:
 
 > steamlink/config/system/enable_ssh.txt
-> 
+>
 ### USBmount
 
 USBmount is an alternative way to connect `/mnt/disk`. You can find more detailed information in the link below.

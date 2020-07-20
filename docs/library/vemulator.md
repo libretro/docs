@@ -67,14 +67,14 @@ The VeMUlator core's internal core name is 'VeMUlator'
 
 ## Core options
 
-The VeMUlator core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The VeMUlator core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Enable flash write (.bin, requires restart)** [enable_flash_write] (**enabled**|disabled)
 
 	Self-explanatory.
-	
+
 ## Controllers
 
 The VeMUlator core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

@@ -2,7 +2,7 @@
 
 ## Sony Playstation 3
 
-!!! Note 
+!!! Note
 	You need to have any-CFW(Rebug, Ferrox etc.) custom firmware to run RetroArch on your PlayStation 3.
 
 !!! Warning

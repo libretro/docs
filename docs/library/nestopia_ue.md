@@ -2,7 +2,7 @@
 
 ## Background
 
-Nestopia is a portable and cycle-accurate NES/Famicom emulator written in C++. Nestopia UE (Undead Edition) is a fork of the original source code, with enhancements from members of the emulation community. This includes support for new platforms, and bug fixes in the emulator core. 
+Nestopia is a portable and cycle-accurate NES/Famicom emulator written in C++. Nestopia UE (Undead Edition) is a fork of the original source code, with enhancements from members of the emulation community. This includes support for new platforms, and bug fixes in the emulator core.
 
 ### Author/License
 
@@ -40,7 +40,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 !!! warning
 	Nestopia UE requires the NstDatabase.xml for general proper emulation. Make sure it's in RetroArch's system directory.
-	
+
 |   Filename      |    Description                                                                |              md5sum              |
 |:---------------:|:-----------------------------------------------------------------------------:|:--------------------------------:|
 | [NstDatabase.xml](#nstdatabasexml) | Nestopia UE Database file - Required  |
@@ -105,7 +105,7 @@ The Nestopia UE core saves/loads to/from these directories.
 
 **It is HIGHLY RECOMMENDED you have NstDatabase.xml in RetroArch's system directory, you can get it from [https://github.com/0ldsk00l/nestopia](https://github.com/0ldsk00l/nestopia)**
 
-The Nestopia UE core relies on the NstDatabase.xml database file for 
+The Nestopia UE core relies on the NstDatabase.xml database file for
 
 - Games that support a custom mapper
 - Games that support multitap accessories
@@ -118,7 +118,7 @@ The Nestopia UE core relies on the NstDatabase.xml database file for
 
 ### Custom color palettes
 
-To use custom color palettes in the Nestopia UE core, the custom color palette file you want to use must be in RetroArch's system directory. 
+To use custom color palettes in the Nestopia UE core, the custom color palette file you want to use must be in RetroArch's system directory.
 
 Make sure the custom palette file is named 'custom.pal'
 
@@ -131,20 +131,20 @@ Custom color palettes for the NES can be generated with either of these tools.
 
 ## Core options
 
-The Nestopia UE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Nestopia UE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Blargg NTSC filter** [nestopia_blargg_ntsc_filter] (**disabled**|composite|svideo|rgb|monochrome)
 
 	Enable Blargg NTSC filters.
-	
+
 !!! attention "Disclaimer"
 	These 'Blargg NTSC filter' core option screenshots have been taken with the 'Palette' core option set to cxa2025as.
-	
+
 ??? note "Blargg NTSC filter - Off"
 	![](../image/core/nestopia_ue/blargg_off.png)
-	
+
 ??? note "Blargg NTSC filter - composite"
 	![](../image/core/nestopia_ue/blargg_composite.png)
 
@@ -155,15 +155,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	![](../image/core/nestopia_ue/blargg_rgb.png)
 
 ??? note "Blargg NTSC filter - monochrome"
-	![](../image/core/nestopia_ue/blargg_monochrome.png)	
-	
+	![](../image/core/nestopia_ue/blargg_monochrome.png)
+
 - **Palette** [nestopia_palette] (**cxa2025as**|consumer|canonical|alternative|rgb|pal|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|raw|custom)
 
 	Choose which color palette is going to be used.
-	
+
 !!! attention "Disclaimer"
 	These 'Palette' core option screenshots have been taken with the 'Blargg NTSC filter' core option set to Off.
-	
+
 ??? note "Palette - cxa2025as"
 	![](../image/core/nestopia_ue/cxa2025as.png)
 
@@ -172,7 +172,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Palette - canonical"
 	![](../image/core/nestopia_ue/canonical.png)
-	
+
 ??? note "Palette - alternative"
 	![](../image/core/nestopia_ue/alternative.png)
 
@@ -196,68 +196,68 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "Palette - raw"
 	![](../image/core/nestopia_ue/raw.png)
-	
+
 - **Remove 8-sprites-per-scanline hardware limit** [nestopia_nospritelimit] (**disabled**|enabled)
 
 	Self-explanatory.
-	
+
 - **CPU Speed (Overclock)** [nestopia_overclock] (**1x**|2x)
 
 	Overclock the emulated CPU.
-	
+
 - **4 Player Adapter** [nestopia_select_adapter] (**auto**|ntsc|famicom)
 
 	Manually select a 4 Player Adapter if needed. Some games will not recognize the adapter correctly through the NstDatabase.xml database, this option should help fix that.
-	
+
 - **Automatically insert first FDS disk on reset** [nestopia_fds_auto_insert] (**enabled**|disabled)
 
 	Self-explanatory.
-	
+
 - **Mask Overscan (Vertical)** [nestopia_overscan_v] (**enabled**|disabled)
 
 	Mask out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
+
 ??? note "Mask Overscan (Vertical) - On"
 	![](../image/core/nestopia_ue/vert_on.png)
-	
+
 ??? note "Mask Overscan (Vertical) - Off"
-	![](../image/core/nestopia_ue/vert_off.png)	
+	![](../image/core/nestopia_ue/vert_off.png)
 
 - **Mask Overscan (Horizontal)** [nestopia_overscan_h] (**disabled**|enabled)
 
 	Mask out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
+
 ??? note "Mask Overscan (Horizontal) - Off"
 	![](../image/core/nestopia_ue/horiz_off.png)
-	
+
 ??? note "Mask Overscan (Horizontal) - On"
-	![](../image/core/nestopia_ue/horiz_on.png)	
+	![](../image/core/nestopia_ue/horiz_on.png)
 
 - **Preferred aspect ratio** [nestopia_aspect] (**auto**|ntsc|pal|4:3)
 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for aspect ratio autodetection. If there is no database present it will default to NTSC for 'auto'.
-	
+
 ??? note "Preferred aspect ratio - ntsc"
 	![](../image/core/nestopia_ue/ratio_ntsc.png)
-	
+
 ??? note "Preferred aspect ratio - pal"
 	![](../image/core/nestopia_ue/ratio_pal.png)
-	
+
 ??? note "Preferred aspect ratio - 4:3"
-	![](../image/core/nestopia_ue/ratio_4by3.png)	
+	![](../image/core/nestopia_ue/ratio_4by3.png)
 
 - **Game Genie Sound Distortion** [nestopia_genie_distortion] (**disabled**|enabled)
 
 	The Game Genie cheat device could inadvertently introduce sound distortion in games. By enabling this, you can simulate the distortion it would add to a game's sound.
-	
+
 - **Favored System** [nestopia_favored_system] (**auto**|ntsc|pal|famicom|dendy)
 
 	Choose which region the system is from. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for region autodetection. If there is no database present it will default to NTSC for 'auto'.
-	
+
 - **RAM Power-on State** [nestopia_ram_power_state] (**0x00**|0xFF|random)
 
 	Awaiting description.
-	
+
 - **Turbo Pulse Speed** [nestopia_turbo_pulse] (**2**|3|4|5|6|7|8|9)
 
 	Set the turbo pulse speed for the Turbo B and Turbo A buttons.

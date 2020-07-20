@@ -31,7 +31,7 @@ If i rename *dog.jpg* to *bios.bin*, how would you know?
 
 If the dump is not the version that the core needs, or if the file integrity is compromised (corrupted), unexpected things (**bad**) can happen.
 
-A file can become corrupted by errors in transmission, write errors during copying or moving, faulty storage media, software bugs, etc. 
+A file can become corrupted by errors in transmission, write errors during copying or moving, faulty storage media, software bugs, etc.
 
 #### *How do i check it?*
 You need two things, a piece of software that can generate a hash from your file and a known valid file hash for the comparison, you will find the correct hash in the corresponding core information page (links below)

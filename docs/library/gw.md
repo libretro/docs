@@ -111,7 +111,7 @@ The GW core supports the following device type(s) in the controls menu, bolded d
 !!! attention
 	What the inputs do are game specific. Without having anything selected, you can use the Start input to see a Controller overlay to see what the game specific inputs are.
 
-![](../image/core/gw/overlay.png)	
+![](../image/core/gw/overlay.png)
 
 | User 1 Remap descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|

@@ -64,7 +64,7 @@ There is no need to disable this before calling \\\texttt{retro\_video\_refresh\
 \item Try to write code which is GLES2 as well as GL2+ (w/ extensions) compliant. This ensures maximum target surface for the libretro core.
 
 \item Libretro treats top-left as origin. OpenGL treats bottom-left as origin. To be compatible with the libretro model, top-left semantics are preserved. Rendering normally will cause the image to be flipped vertically. To avoid this, simply scale the final projection matrix by $[1, -1, 1, 1]$.
-\end{itemize} 
+\end{itemize}
 
 \section*{Test implementations}
 A very basic test implementation of libretro GL interface is available in RetroArch repository on GitHub~\footnote{https://github.com/Themaister/RetroArch/tree/master/libretro-test-gl}.

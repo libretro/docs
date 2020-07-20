@@ -36,7 +36,7 @@ git pull
 
 Each NRO of RetroArch has one and only one core, and each core is a standalone homebrew by itself. That means that building multiple cores means building RetroArch multiple times, once for each core.
 
-Clone the core you want to build from its git repository. 
+Clone the core you want to build from its git repository.
 
 Then, build it:
 
@@ -57,4 +57,3 @@ make -f Makefile.libnx
 That will output `retroarch_switch.nro`: this is your home built copy of RetroArch!
 
 You can then use `nxlink` to send the homebrew to your Switch over Wi-Fi.
-

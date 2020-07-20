@@ -10,7 +10,7 @@ When a user presses the AI Service hotkey, RetroArch will grab the screen of the
 
 The main supported service to use is the vgtranslate project: ( https://gitlab.com/spherebeaker/vgtranslate ).  This project is a python server you can run locally (or on your network) and uses Google Cloud OCR, and Google Text-to-Speech APIs with the Google Cloud keys you provide.
 
-Other supported services are in the Alternative Services section. 
+Other supported services are in the Alternative Services section.
 
 ## How to set it up
 
@@ -49,9 +49,8 @@ There are some other options for translating game screens that don't require a s
 
 ### ZTranslate
 
-[ZTranslate](https://ztranslate.net) uses a standalone client app for Windows or Linux that grabs the screen of the window currently in focus and displays a translated version in the ZTranslate client window.  Besides automatic translation (which needs a ztranslate.net api key), it also supports package-based translations, which is like a translation patch for a rom, but for game screens instead.  For more information see https://ztranslate.net/docs   
+[ZTranslate](https://ztranslate.net) uses a standalone client app for Windows or Linux that grabs the screen of the window currently in focus and displays a translated version in the ZTranslate client window.  Besides automatic translation (which needs a ztranslate.net api key), it also supports package-based translations, which is like a translation patch for a rom, but for game screens instead.  For more information see https://ztranslate.net/docs
 
 ### RetroArch-AI-with-IoTEdge
 
 [RetroArch-AI-with-IoTEdge](https://github.com/toolboc/RetroArch-AI-with-IoTEdge) uses IoTEdge and Azure Cognitive Services Containers (requires microsoft Azure account) to translate RetroArch screenshots and display them on a Lakka device.  For more information see https://github.com/toolboc/RetroArch-AI-with-IoTEdge/blob/master/README.md
-

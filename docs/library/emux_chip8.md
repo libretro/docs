@@ -68,7 +68,7 @@ Awaiting description.
 ## Core options
 
 Awaiting description.
-	
+
 ## Controllers
 
 Awaiting description.

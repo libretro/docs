@@ -94,7 +94,7 @@ The Citra Canary/Experimental core saves/loads to/from these directories.
 
 ## Core options
 
-The Citra Canary/Experimental core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Citra Canary/Experimental core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -103,72 +103,72 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Enable Citra's 'dynarmic' dynamic recomplier. Can improve performance. Instructions that are not implemented by the recompiler fall back into the interpreter CPU core.
 
 	If disabled, Citra will solely use the Interpreter CPU core.
-	
+
 - **Select Renderer** [citra_renderer] (**enabled**|disabled)
 
 	Awaiting description.
-	
+
 - **Enable shader JIT** [citra_use_shader_jit] (**enabled**|disabled)
 
 	Awaiting description.
-	
+
 - **Resolution scale factor** [citra_resolution_factor] (**1x (Native)**|2x|3x|4x|5x|6x|7x|8x|9x|10x)
 
 	Self-explanatory.
-	
+
 ??? note "Screen layout positioning - Default Top-Bottom Screen"
 	![](../image/core/citra/default.png)
-	
+
 ??? note "Screen layout positioning - Single Screen Only"
 	![](../image/core/citra/single.png)
-	
+
 ??? note "Screen layout positioning - Large Screen, Small Screen)"
 	![](../image/core/citra/large.png)
-	
+
 - **Screen layout positioning** [citra_layout_option] (**Default Top-Bottom Screen**|Single Screen Only|Large Screen, Small Screen|Side by Side)
 
 	Awaiting description.
-	
+
 - **Prominent 3DS screen** [citra_swap_screen] (**Top**|Bottom)
 
 	Awaiting description.
-	
+
 - **Right analog function** [citra_analog_function] (**C-Stick and Touchscreen Pointer**|Touchscreen Pointer|C-Stick)
 
 	Awaiting description.
-	
+
 - **Emulated pointer deadzone (%)** [citra_deadzone] (**15**|20|25|30|35|0|5|10)
 
 	Awaiting description.
-	
+
 - **What hardware shaders to enable** [citra_hw_shaders] (**None**|Partial|Full)
 
 	Awaiting description.
 
 - **Enables accurate hardware shaders (infinity * 0 = 0), required for some games, though slow on some hardware** [citra_use_accurate_mul] (**enabled**|disabled)
-		
+
 	Awaiting description.
-	
+
 - **Enable virtual SD card** [citra_use_virtual_sd] (**enabled**|disabled)
 
 	Awaiting description.
-	
+
 - **Savegame location** [citra_use_libretro_save_path] (**LibRetro Default**|Citra Default)
 
 	Awaiting description.
-	
+
 - **3DS system model** [citra_is_new_3ds] (**Old 3DS**|New 3DS)
- 
+
 	Awaiting description.
-	
+
 - **3DS system region** [citra_region_value] (**Auto**|Japan|USA|Europe|Australia|China|Korea|Taiwan)
 
 	Awaiting description.
-	
+
 - **"Enable GDB stub** [citra_use_gdbstub] (**disabled**|enabled)
 
 	Awaiting description.
-	
+
 ## Joypad
 
 | User 1 input descriptors | RetroPad Inputs                                | Citra inputs       |

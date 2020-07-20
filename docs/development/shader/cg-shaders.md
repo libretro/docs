@@ -90,12 +90,12 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0, float2 tex : TEXCOORD) :
 }
 ```
 
-This is arguably simpler than the vertex shader. Important to notice are: 
+This is arguably simpler than the vertex shader. Important to notice are:
 
   * `sampler2D` is a handle to a texture in Cg. The semantic here is `TEXUNIT0`, which means that it refers to the texture in texture unit 0. This is also part of the specification.
   * `float2 tex : TEXCOORD` is the interpolated coordinate we received from the vertex shader.
   * `tex2D(s0, tex);` simply does texture lookup and returns a `COLOR`, which is emitted to the framebuffer.
-  
+
 Practically every fragment does more than one texture lookup. For example, classic pixel shaders look at the neighbor pixels as well to determine the output. But where is the neighbor pixel? We’ll revise the fragment shader and try to make a really blurry shader to demonstrate. We now need to pull up some uniforms. We need to know how to modify our tex coordinates so that it points to a neighbor pixel.
 
 ```c
@@ -238,7 +238,7 @@ filter_linear1 = true
 ```
 
 ### Entry points:
-   
+
    - Vertex: `main_vertex`
    - Fragment: `main_fragment`
 
@@ -256,7 +256,7 @@ The texture coordinate origin is defined to be top-left oriented. A texture coor
 Some parameters will need to be passed to all shaders, both vertex and fragment program. A generic entry point for fragment shader will look like:
 
 ```c
-float4 main_fragment (float2 tex : TEXCOORD0, 
+float4 main_fragment (float2 tex : TEXCOORD0,
    uniform input IN, uniform sampler2D s_p : TEXUNIT0) : COLOR
 {}
 ```
@@ -299,7 +299,7 @@ Rather than putting everything into one file (XML shader format), this format is
 
 ## Format
 
-The meta-shader format is based around the idea of a config file with the format: `key = value`. Values with spaces need to be wrapped in quotes: key = "value stuff". 
+The meta-shader format is based around the idea of a config file with the format: `key = value`. Values with spaces need to be wrapped in quotes: key = "value stuff".
 
 No .ini sections or similar are allowed. Meta-shaders may include comments, prefixed by the "#" character, both on their own in an otherwise empty line or at the end of a key = value pair.
 
@@ -342,7 +342,7 @@ It is possible to set `scale_type_xN` and `scale_type_yN` to specialize the scal
 **Exceptions**
 
    - If no `scale_type` is set for the very last shader, it is assumed to output at the full resolution rather than assuming
-   a scale of `1.0x`, and bypasses any frame-buffer object rendering. 
+   a scale of `1.0x`, and bypasses any frame-buffer object rendering.
    - If there is only one shader, it is also considered to be the very last shader. If any scale option is defined, it has to go through a frame-buffer object, and subsequently rendered to screen. The filtering option used when stretching
    is implementation defined. It is encouraged to not have any scaling parameters in last pass if you care about the filtering
    option here.

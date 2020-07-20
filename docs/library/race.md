@@ -89,7 +89,7 @@ The RACE core saves/loads to/from these directories.
 
 ## Core options
 
-The RACE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The RACE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 

@@ -23,13 +23,13 @@ If your video driver has very bad performance, it is possible to run it on a thr
 Make sure your system meets the requirement of the core you picked.
 
  See if your core options aren't set too high for your system.
- 
+
 Disable shaders.
 
 Lower the video scale setting.
-	
+
 Try another video driver.
-	
+
 Try enabling threaded video in the video options.
 
 ### Windows Vista and up video problems
@@ -42,7 +42,7 @@ RetroArch recently got an option to use a swap/fence sync method in OpenGL drive
 
     RetroArch: Querying GL extension: ARB_sync => exists
     RetroArch: [GL]: Using ARB_sync to reduce latency.
-    
+
 Do note that this sync method can greatly reduce performance, and can turn smooth 60 fps into crawling 30 fps if there was not enough headroom in the performance. If you use KMS mode, using `video_hard_sync` won't help as it already does something like this.
 
 ## Why isn’t my BIOS working?
@@ -70,4 +70,3 @@ If you have questions or issues which cannot be resolved on your own, visit [the
 
 ## "I know my problem is a bug. Where can I report it?"
 You can report issues in the [RetroArch issues tracker](https://github.com/libretro/RetroArch/issues).
-

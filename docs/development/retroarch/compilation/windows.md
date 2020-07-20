@@ -82,7 +82,7 @@ pacman -U mingw-w64-i686-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 ```
 
 For 64-bit builds:
-           
+
 ```bash
 wget https://sourceforge.net/projects/mingw-w64-archlinux/files/x86_64/mingw-w64-nvidia-cg-toolkit-3.1-2-any_4.pkg.tar.xz/download -O mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 pacman -U mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
@@ -156,12 +156,12 @@ windeployqt --release --no-patchqt --no-translations retroarch.exe
 for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 ```
 
-If you really want to get the required libraries for distribution or for personal use on other devices and LDD doesn't work for you for whatever reason, then you can try [Dependency Walker](http://www.dependencywalker.com/). 
+If you really want to get the required libraries for distribution or for personal use on other devices and LDD doesn't work for you for whatever reason, then you can try [Dependency Walker](http://www.dependencywalker.com/).
 
 !!! tip
-    If you're building frequently you may want to add **ccache** to the mix to speed up the build process. 
-    Install ccache via the package manager and the prepend the ccache symlink directory to your build environment path as shown below. 
-    
+    If you're building frequently you may want to add **ccache** to the mix to speed up the build process.
+    Install ccache via the package manager and the prepend the ccache symlink directory to your build environment path as shown below.
+
     For further instructions check the [documentation](https://ccache.samba.org/manual.html#_run_modes)
 
 Install **ccache** for 32-bit builds:
@@ -208,7 +208,7 @@ With **ccache**:
 !!! tip
     You can also strip the debug symbols of the build product to save some space.
 
-Strip **retroarch**: 
+Strip **retroarch**:
 
 ```bash
 strip -s retroarch.exe
@@ -218,7 +218,7 @@ strip -s retroarch.exe
 
 ### Fetching Cores
 
-You can find the cores on libretro's [GitHUB organization](https://github.com/libretro/). 
+You can find the cores on libretro's [GitHUB organization](https://github.com/libretro/).
 
 We have an all-in-one tool to fetch and compile cores which you can use to streamline the process.
 You can obtain the tool by using these commands:
@@ -271,7 +271,7 @@ Get the core's source tree. As an example we'll use [fceumm](https://github.com/
 git clone https://github.com/libretro/libretro-fceumm.git
 ```
 
-Then compile the core: 
+Then compile the core:
 
 ```bash
 cd libretro-fceumm

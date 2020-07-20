@@ -129,7 +129,7 @@ The bsnes-mercury Accuracy core saves/loads to/from these directories.
 For Super GameBoy support, you need sgb.boot.rom (in RetroArch's System directory), a GameBoy ROM and a Super GameBoy ROM.
 
 Please note that the Game Boy and Super GameBoy ROMs have to be unzipped.
-	
+
 Super GameBoy is supported via the Subsystem API.
 
 There are two ways to access the Subsystem API.
@@ -166,55 +166,55 @@ retroarch -L {path to bsnes core} {path to Super GameBoy ROM} --subsystem sgb {p
 MSU-1 support can be used by loading a correct .bml file.
 
 There's documentation for loading MSU-1 games in standalone higan [here](https://higan.readthedocs.io/en/stable/guides/import/#msu-1-games).
-	
+
 ## Core options
 
-The bsnes-mercury Accuracy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The bsnes-mercury Accuracy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Allow settings to reduce accuracy** [bsnes_violate_accuracy] (**disabled**|enabled)
 
 	Respect accuracy-impacting settings.
-	
+
 - **Special chip accuracy** [bsnes_chip_hle] (**LLE**|HLE)
 
 	**The Allow settings to reduce accuracy core option must be enabled in order for this to function properly. **
 
-	Choose whether to use LLE (real BIOS) or HLE (emulated BIOS) for enhancement chips. 
-	
-	HLE is less accurate but also less demanding for the special chips. 
-	
-	The ST-0011 and ST-0018 co-processors cannot be HLE'd. 
-	
+	Choose whether to use LLE (real BIOS) or HLE (emulated BIOS) for enhancement chips.
+
+	HLE is less accurate but also less demanding for the special chips.
+
+	The ST-0011 and ST-0018 co-processors cannot be HLE'd.
+
 - **SuperFX speed** [bsnes_superfx_overclock] (**100%**|150%|200%|300%|400%|500%|1000%)
 
 	**The Allow settings to reduce accuracy core option must be enabled in order for this to function properly.**
 
-	Overclock the [SuperFX chip](https://en.wikipedia.org/wiki/Super_FX). 100% is stock clockspeed. 
-	
+	Overclock the [SuperFX chip](https://en.wikipedia.org/wiki/Super_FX). 100% is stock clockspeed.
+
 - **System region** [bsnes_region] (**auto**|ntsc|pal)
 
 	Choose which region the system is from.
-	
+
 - **Preferred aspect ratio** [bsnes_aspect_ratio] (**auto**|ntsc|pal)
 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
-	
+
 - **Crop overscan** [bsnes_crop_overscan] (**disabled**|enabled)
 
 	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
-	
+
 - **Gamma ramp (requires restart)** [bsnes_gamma_ramp] (**disabled**|enabled)
 
 	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
-	
+
 ??? note "Gamma ramp - Disabled"
     ![](../image/core/higan/gamma_off.png)
-	
+
 ??? note "Gamma ramp - Enabled"
     ![](../image/core/higan/gamma_on.png)
-	
+
 ## Controllers
 
 The bsnes-mercury Accuracy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -280,7 +280,7 @@ Activating multitap support in compatible games can be configured by switching t
 
 ## Compatibility
 
-The bsnes-mercury Accuracy core fully emulates all SNES games that have ever been officially released. 
+The bsnes-mercury Accuracy core fully emulates all SNES games that have ever been officially released.
 
 ## External Links
 

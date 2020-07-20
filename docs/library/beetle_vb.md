@@ -83,20 +83,20 @@ The Beetle VB core saves/loads to/from these directories.
 
 ## Core options
 
-The Beetle VB core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle VB core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Anaglyph preset (restart)** [vb_anaglyph_preset] (**Off**/red & blue/red & cyan/red & electric cyan/red & green/green & magenta/yellow & blue)
 
 	Select anaglyph 3D mode.
-	
+
 !!! attention
 	These Analglyph preset screenshots have been taken with the Palette core option set to black & red.
 
 ??? note "Anaglyph preset - Off"
 	![](../image/core/beetle_vb/off.png)
-	
+
 ??? note "Anaglyph preset - red & blue"
 	![](../image/core/beetle_vb/red&blue.png)
 
@@ -113,18 +113,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	![](../image/core/beetle_vb/green&magenta.png)
 
 ??? note "Anaglyph preset - yellow & blue"
-	![](../image/core/beetle_vb/yellow&blue.png)	
-	
+	![](../image/core/beetle_vb/yellow&blue.png)
+
 - **Palette (restart)** [vb_color_mode] (**black & red**/black & white)
 
 	Choose which color palette to use.
-	
+
 ??? note "Palette - black & red"
 	![](../image/core/beetle_vb/black&red.png)
-	
+
 ??? note "Palette - black & white"
 	![](../image/core/beetle_vb/black&white.png)
-	
+
 - **Right Analog to Digital** [vb_right_analog_to_digital] (**Off**/On/invert x/invert y/invert both)
 
 	Self-explanatory.

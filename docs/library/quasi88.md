@@ -53,7 +53,7 @@ First, load the QUASI88 core. The option "Start Core" will appear on the main me
 
 ![](https://media.discordapp.net/attachments/190711783894417410/629547618644525056/unknown.png)
 
-First, load the QUASI88 core. Options for starting software with between 2 to 6 disks will appear on the main menu. 
+First, load the QUASI88 core. Options for starting software with between 2 to 6 disks will appear on the main menu.
 
 ![](https://cdn.discordapp.com/attachments/190711783894417410/629547869183016971/unknown.png)
 
@@ -144,38 +144,38 @@ The QUASI88 core saves/loads to/from these directories.
 
 ## Core Options
 
-The QUASI88 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The QUASI88 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 - **Basic mode** [q88_basic_mode] (**N88 V2**|N88 V1H|N88 V1S|N)
 
 	This option selects the PC model being emulated. Some games may refuse to boot or behave incorrectly if an inappropriate model is chosen (missing colors, fast game speed).
 
 	Using N BASIC mode for PC-8000 series software requires the **n88n.rom** BIOS.
-	
+
 - **CPU clock** [q88_cpu_clock] (**4 MHz**|8 MHz|16 MHz (overclock)|32 MHz (overclock)|64 MHz (overclock)|1 MHz (underclock)|2 MHz (underclock))
 
 	This option sets the CPU clock speed of the emulated PC. Overclocking options will make most software run faster than normal, though some will instead load faster and exhibit less slowdown (Ys series).
-	
+
 - **Sound board** [q88_sound_board] (**OPN**|OPNA)
 
     This option changes the Yamaha sound board on the emulated PC. [OPN](https://en.wikipedia.org/wiki/Yamaha_YM2203) is the default option. [OPNA](https://en.wikipedia.org/wiki/Yamaha_YM2608) sound supports more FM channels and PCM samples.
-	
+
 - **Use FDC-Wait** [q88_use_fdc_wait] (**enabled**|disabled)
 
 	This option enables more accurate IO timing for the floppy disk controller. Some software will not work properly with this disabled.
-	
+
 - **Use PCG-8100** [q88_pcg-8100] (**disabled**|enabled)
 
 	This option selects whether or not to emulate the PCG-8100. This option may be required for some PC-8000 series software.
-	
+
 - **Save to disk image** [q88_save_to_disk_image] (**disabled**|enabled)
-	
+
 	This option changes the core's saving behavior. By default, if a disk is rewritten to, the differences will be stored to a ".srm" file in the frontend save directory. If this option is enabled, the changes will be written directly to the loaded disk and flushed on exit.
-	
+
 - **Rumble on disk access** [q88_rumble] (**enabled**|disabled)
-	
+
 	This option allows the controller's rumble feature to imitate the read sounds on the floppy disk controller.
-	
+
 ## Joypad
 
 The default RetroPad inputs are based on the keys often used for simple games playable via QUASI88. For full remapping, change the input type from "Retro Joypad" to "Retro Keyboard."

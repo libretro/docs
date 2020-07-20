@@ -31,7 +31,7 @@ The The Powder Toy core has been authored by
 
 The The Powder Toy core is licensed under
 
-- [GPLv3](https://github.com/libretro/ThePowderToy/blob/master/LICENSE) 
+- [GPLv3](https://github.com/libretro/ThePowderToy/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 

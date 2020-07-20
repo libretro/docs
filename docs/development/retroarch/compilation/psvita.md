@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need the homebrew PlayStation Vita SDK and toolchain installed. 
+You need the homebrew PlayStation Vita SDK and toolchain installed.
 
 ## RetroArch Compilation
 

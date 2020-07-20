@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need the homebrew PlayStation 2 SDK and toolchain installed. 
+You need the homebrew PlayStation 2 SDK and toolchain installed.
 You can follow how to install the toolchain over here [ps2toolchain](https://github.com/ps2dev/ps2toolchain)
 
 Additionally you need the PS2 Graphics Synthesizer installed.
@@ -53,7 +53,7 @@ Instead of building each core one by one, you can build all cores as a batch tas
     Make sure that all the libretro cores that you want to compile are inside the 'dist-scripts' directory.
 
 Once inside this directory, run :
-<!-- 
+<!--
     ./dist-cores.sh ps2 -->
 
 This process will also automate the packaging process for you.
@@ -74,11 +74,11 @@ The easiest way to fetch all the cores is to use libretro-super. Run
 ### Building Cores
 
 The easiest way to build all the cores (for PlayStation Portable) is to use libretro-super. Run
-<!-- 
+<!--
     ./libretro-build-ps2.sh -->
 
 In case you only want to build one and/or more cores instead of all, you can specify the cores you want to build after the first command in no particular order. E.g.:
-<!-- 
+<!--
     ./libretro-build-ps2.sh snes9x2010 fceumm -->
 
 Once finished, you can find the libretro cores inside directory `dist/ps2`.

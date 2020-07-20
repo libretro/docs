@@ -44,7 +44,7 @@ The easiest way to fetch all the cores is to use libretro-super. Run
 
 ### Building Cores
 
-The easiest way to build all the cores (for iOS) is to use libretro-super. 
+The easiest way to build all the cores (for iOS) is to use libretro-super.
 
 To build iOS 6 to 8-compatible cores, run
 
@@ -89,7 +89,7 @@ Building and running from Xcode doesn't code sign the cores the first time for s
 
 ##### For iOS 6 to 8
 
-Open Xcode. Open the following project file `pkg/apple/RetroArch_iOS.xcodeproj` in the Xcode IDE and build (**&#8984;-B**) and run (**&#8984;-R**) it there. 
+Open Xcode. Open the following project file `pkg/apple/RetroArch_iOS.xcodeproj` in the Xcode IDE and build (**&#8984;-B**) and run (**&#8984;-R**) it there.
 
 ##### For iOS 10 and up
 

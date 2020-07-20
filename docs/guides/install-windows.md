@@ -3,7 +3,7 @@
 
 ## Downloading
 
-First decide if you want a stable release or a nightly. 
+First decide if you want a stable release or a nightly.
 
 ### Stable
 
@@ -50,7 +50,7 @@ From here you can launch content, change settings and build up your content coll
 ## Keyboard Controls
 
 The RetroArch user interface is designed with gamepad navigation in mind but it also features robust keyboard and mouse support. Learn more about keyboard input at [Input and Controls](input-and-controls.md).
-      
+
 ## Gamepad Controls
 
 XINPUT controllers should work out of the box. If the controller can be autoconfigured the OSD will inform you of the autoconfiguration event. We also include autoconf profiles for many popular controllers. If your controller doesn't auto configure you can follow this procedure:

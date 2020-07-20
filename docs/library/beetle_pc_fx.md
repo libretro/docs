@@ -110,42 +110,42 @@ After that, you can load the `foo.cue` file in RetroArch with the Beetle PC-FX c
 
 ## Core options
 
-The Beetle PC-FX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle PC-FX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **High Dotclock Width (Restart)** [pcfx_high_dotclock_width] (**1024**/256/341)
 
 	Emulated width for 7.16MHz dot-clock mode. Lower values are faster, but will cause some degree of pixel distortion.
-	
+
 - **Suppress Channel Reset Clicks (Restart)** [pcfx_suppress_channel_reset_clicks] (**enabled**/disabled)
 
 	Hack to suppress clicks caused by forced channel resets.
-	
+
 - **Emulate Buggy Codec (Restart)** [pcfx_emulate_buggy_codec] (**disabled**/enabled)
 
 	Hack that emulates the codec a buggy ADPCM encoder used for some games' ADPCM.
-	
+
 - **Sound Quality (Restart)** [pcfx_resamp_quality] (**3**/4/5/0/1/2)
 
 	Higher values correspond to better SNR and better preservation of higher frequencies("brightness"), at the cost of increased computational complexity and a negligible increase in latency.
-	
+
 - **Chroma channel bilinear interpolation  (Restart)** [pcfx_rainbow_chromaip] (**disabled**/enabled)
 
 	Enable bilinear interpolation on the chroma channel of RAINBOW YUV output. Enabling it may cause graphical glitches with some games.
-	
+
 - **No Sprite Limit (Restart)** [pcfx_nospritelimit] (**disabled**/enabled)
 
 	Remove 16-sprites-per-scanline hardware limit.
-	
+
 - **Initial scanline** [pcfx_initial_scanline] ((0 to 40 in increments of 1. **4 is default**.)
 
 	Adjust first display scanline.
-	
+
 - **Last scanline** [pcfx_last_scanline] (208 to 238 in increments of 1. **235 is default**.)
 
 	Adjust last display scanline.
-	
+
 - **Mouse Sensitivity** [pcfx_mouse_sensitivity] (1.00 to 5.00 in increments of 0.25. **1.25 is default**.)
 
 	Configure the sensitivity of the 'PCFX Mouse' device type,
@@ -167,7 +167,7 @@ The Beetle PC-FX core supports the following device type(s) in the controls menu
 | User 1 - 6 Remap descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
 | II                           | ![](../image/retropad/retro_b.png)    |
-| IV                           | ![](../image/retropad/retro_y.png)    | 
+| IV                           | ![](../image/retropad/retro_y.png)    |
 | Select                       | ![](../image/retropad/retro_select.png)     |
 | Run                          | ![](../image/retropad/retro_start.png)      |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)    |
@@ -178,8 +178,8 @@ The Beetle PC-FX core supports the following device type(s) in the controls menu
 | III                          | ![](../image/retropad/retro_x.png)    |
 | V                            | ![](../image/retropad/retro_l1.png)         |
 | VI                           | ![](../image/retropad/retro_r1.png)         |
-| MODE 1 (Switch)              | ![](../image/retropad/retro_l2.png)         | 
-| MODE 2 (Switch)              | ![](../image/retropad/retro_r2.png)         | 
+| MODE 1 (Switch)              | ![](../image/retropad/retro_l2.png)         |
+| MODE 2 (Switch)              | ![](../image/retropad/retro_r2.png)         |
 
 #### Mouse
 

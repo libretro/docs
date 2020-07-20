@@ -150,7 +150,7 @@ The fMSX core saves/loads to/from these directories.
 
 ## Core options
 
-The fMSX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The fMSX core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -161,15 +161,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **MSX Video Mode** (**NTSC**/PAL)
 
 	Awaiting description.
-	
+
 - **MSX Mapper Type Mode** (**Guess Mapper Type A**/Guess Mapper Type B)
 
 	Awaiting description.
-	
+
 - **MSX Main Memory** (**Auto**/64KB/128KB/256KB/512KB)
 
 	Awaiting description.
-	
+
 - **MSX Video Memory** (**Auto**/32KB/64KB/128KB/192KB)
 
 	Awaiting description.
@@ -201,7 +201,7 @@ The fMSX core supports the following device type(s) in the controls menu, bolded
 |--------------------------|------------------------------------------------|
 | Fire B                   | ![](../image/retropad/retro_b.png)             |
 | Stick Up                 | ![](../image/retropad/retro_dpad_up.png)       |
-| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     |
 | Stick Left               | ![](../image/retropad/retro_dpad_left.png)     |
 | Stick Right              | ![](../image/retropad/retro_dpad_right.png)    |
 | Fire A                   | ![](../image/retropad/retro_a.png)             |
@@ -213,7 +213,7 @@ The fMSX core supports the following device type(s) in the controls menu, bolded
 | F2                       | ![](../image/retropad/retro_select.png)        |
 | F1                       | ![](../image/retropad/retro_start.png)         |
 | Stick Up                 | ![](../image/retropad/retro_dpad_up.png)       |
-| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Stick Down               | ![](../image/retropad/retro_dpad_down.png)     |
 | Stick Left               | ![](../image/retropad/retro_dpad_left.png)     |
 | Stick Right              | ![](../image/retropad/retro_dpad_right.png)    |
 | Fire A                   | ![](../image/retropad/retro_a.png)             |
@@ -232,7 +232,7 @@ The fMSX core supports the following device type(s) in the controls menu, bolded
 | F4                       | ![](../image/retropad/retro_select.png)        |
 | F1                       | ![](../image/retropad/retro_start.png)         |
 | Arrow Up                 | ![](../image/retropad/retro_dpad_up.png)       |
-| Arrow Down               | ![](../image/retropad/retro_dpad_down.png)     | 
+| Arrow Down               | ![](../image/retropad/retro_dpad_down.png)     |
 | Arrow Left               | ![](../image/retropad/retro_dpad_left.png)     |
 | Arrow Right              | ![](../image/retropad/retro_dpad_right.png)    |
 | Space                    | ![](../image/retropad/retro_a.png)             |

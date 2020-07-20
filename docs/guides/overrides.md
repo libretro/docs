@@ -36,7 +36,7 @@ The RetroArch loading process is:
 !!! note
     Core-specific or content directory-specific overrides that are not in game-specific overrides persist and will be loaded.
     Also once you have created an override any future changes will need to be saved via the Quick Menu.
-	
+
 ### Options *(.opt)* & Shader Presets *(.cgp|.glslp|.slangp)*
 
 Custom per game core options and shader presets work slightly differently. These are full configurations and are loaded instead of the base shader preset and core option settings.
@@ -77,7 +77,7 @@ The override system activates on loading of content. RetroArch applies config se
 
 - `/config/<name-of-core>/name-of-core.cfg` *(This path is set under `Settings -> Directory -> Config`)*
 
-These settings files are created from the `Quick Menu -> Save Core Overrides` option and contain ANY (supported) settings you have changed since loading content. These settings will be loaded every time you load content with that core.   
+These settings files are created from the `Quick Menu -> Save Core Overrides` option and contain ANY (supported) settings you have changed since loading content. These settings will be loaded every time you load content with that core.
 
 **Per Content Directory Override**
 
@@ -93,10 +93,9 @@ These settings files are created as above with the `Quick Menu -> Save Game Over
 
 ### Input Remaps
 
-Input remaps use the same logic as core/directory/game overrides and use the `.rmp` extension. They can be adjusted and saved from: 
+Input remaps use the same logic as core/directory/game overrides and use the `.rmp` extension. They can be adjusted and saved from:
 - `Quick Menu -> Controls -> Save Core Remap File`
-- `Quick Menu -> Controls -> Save Content Directory Remap File` 
-- `Quick Menu -> Controls -> Save Game Remap File` 
+- `Quick Menu -> Controls -> Save Content Directory Remap File`
+- `Quick Menu -> Controls -> Save Game Remap File`
 
 Set the save directory in `Settings -> Directory -> Input Remapping` *(by default they will save to `/config/remaps/<name-of-core>/`)*
-

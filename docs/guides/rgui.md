@@ -211,11 +211,11 @@ Open the output `WALLPAPER_NAME_indexed.png` file and check that colors/gradient
 - In the `Indexed Color Conversion` pop-up, select:
 
     - `Generate optimum palette`
-    
+
     - `Maximum number of colors:` `16`
-    
+
     - `Color dithering:` EITHER `Floyd-Steinberg (normal)` OR `Floyd-Steinberg (reduced color bleeding` (use whichever looks best, but the other options here will not work)
-    
+
     - Press `Convert`
 
 - Inspect the result. Some manual touch-up may be required. (If the image is disagreeable at this stage, then the wallpaper probably isn't going to work - so start over...)

@@ -2,7 +2,7 @@
 
 ## Background
 
-Port of prboom to libretro - plays Doom, Doom II, Final Doom and other Doom IWAD mods. 
+Port of prboom to libretro - plays Doom, Doom II, Final Doom and other Doom IWAD mods.
 
 The PrBoom core has been authored by
 
@@ -130,9 +130,9 @@ Game saves are numbered from 'prbmsav0.dsg' to 'prbmsav7.dsg'.
 
 The PrBoom core is not able to play the music files inside the wad files (they are in a proprietary midi format).
 
-To enable music in your Doom game(s) you need to copy MP3s with specific names into the same folder as your ROMs are located. You can find a list of names [here](https://github.com/libretro/libretro-prboom/blob/master/src/m_misc.c#L605): 
+To enable music in your Doom game(s) you need to copy MP3s with specific names into the same folder as your ROMs are located. You can find a list of names [here](https://github.com/libretro/libretro-prboom/blob/master/src/m_misc.c#L605):
 
-They follow the scheme e1m1.mp3, e1m2.mp3, ..., e2m1.mp, e2m2.mp3, ... . 
+They follow the scheme e1m1.mp3, e1m2.mp3, ..., e2m1.mp, e2m2.mp3, ... .
 
 Tracks are freely available - find them by searching for "PSX Doom Music".
 
@@ -218,9 +218,9 @@ Many of these settings may be changed from the in-game menu. A few notable optio
 
 - Options → General (page 1) → Framerate (35fps|40fps|50fps|**60fps**|70fps|72fps|75fps|90fps|100fps|
 119fps|120fps|140fps|144fps|240fps|244fps)
-	
+
 	Vanilla Doom has a native framerate of 35fps. This should be considered the 'correct' value, but it can lead to an irregular 'stuttering' effect on 60Hz LCD displays.
-	
+
 	All framerates should maintain the proper game speed.
 
 - Options → General (page 1) → Gamma Correction (**Off**|Lv. 1|Lv. 2|Lv. 3|Lv. 4)
@@ -230,7 +230,7 @@ Many of these settings may be changed from the in-game menu. A few notable optio
 - Options → Screen Size (**Low**|High)
 
 	When set to 'Low', the HUD is shown at the bottom of the screen.
-	
+
 	When set to 'High', the gameplay area fills the screen and no HUD is shown.
 
 - Options → Mouse Sensitivity
@@ -239,24 +239,24 @@ Many of these settings may be changed from the in-game menu. A few notable optio
 
 ## Core options
 
-The PrBoom core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PrBoom core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Internal resolution (restart)** [prboom-resolution] (**320x200**|640x400|960x600|1280x800|1600x1000|1920x1200)
 
 	Configure the resolution. Requires a restart.
-	
+
 ??? note "Internal resolution - 320x200"
 	![](../image/core/prboom/320x200.png)
-	
+
 ??? note "Internal resolution - 1920x1200"
-	![](../image/core/prboom/1920x1200.png)	
-	
+	![](../image/core/prboom/1920x1200.png)
+
 - **Mouse active when using Gamepad** [prboom-mouse_on] (**disabled**|enabled)
 
 	Allows you to use mouse inputs even when User 1's device type isn't set to 'RetroKeyboard/Mouse'.
-	
+
 - **Look on parent folders for IWADs** [prboom-find_recursive_on] (**enabled**|disabled)
 
 	Scans parent folders for IWADs. NOTE: You need to disable this if you want to run SIGIL.
@@ -264,7 +264,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Analog Deadzone (percent)** [prboom-analog_deadzone] (**15**|20|25|30|0|5|10)
 
 	Sets the deadzone of the Gamepad analog sticks when the input device type is set to 'Gamepad Modern'.
-	
+
 ## User 1 device types
 
 The PrBoom core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

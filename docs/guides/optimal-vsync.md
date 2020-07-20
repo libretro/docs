@@ -46,6 +46,6 @@ Windows Vista and up suffer problems with OpenGL in windowed mode where it appea
 
 ## macOS problems
 
-If you are experiencing periodic issues of audio and video stuttering and have multiple displays attached to your computer, this may be the cause. The solution is to limit macOS to a single display. 
+If you are experiencing periodic issues of audio and video stuttering and have multiple displays attached to your computer, this may be the cause. The solution is to limit macOS to a single display.
 
 For example, if you are running on a laptop with a single external display, it is sufficient to close your laptop lid or turn off the external display.

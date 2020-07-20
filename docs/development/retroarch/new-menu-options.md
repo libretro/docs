@@ -2,17 +2,17 @@
 
 ## Files you need to change
 
-msg_hash_us.c  
-msg_hash_us.h  
-msg_hash_\*\*.c (If you speak more than one language)  
-msg_hash_\*\*.h (If you speak more than one language)  
-msg_hash_lbl.h  
-msg_hash.h  
-menu_cbs_sublabel.c  
-menu_setting.c  
-menu_displaylist.c  
-configuration.c  
-configuration.h  
+msg_hash_us.c
+msg_hash_us.h
+msg_hash_\*\*.c (If you speak more than one language)
+msg_hash_\*\*.h (If you speak more than one language)
+msg_hash_lbl.h
+msg_hash.h
+menu_cbs_sublabel.c
+menu_setting.c
+menu_displaylist.c
+configuration.c
+configuration.h
 config.def.h
 
 ## Creating the menu variable
@@ -44,7 +44,7 @@ The variables name must now be configured
 
 The option is now defined but the menu has still not been told to display it.
 
-## Displaying your option 
+## Displaying your option
 
 Now the menu has to be told how to display the option.
 

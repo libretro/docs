@@ -23,10 +23,10 @@ Clone RetroArch's repository from [GitHub](https://github.com/libretro/RetroArch
 
     git clone https://github.com/libretro/RetroArch.git retroarch
     cd retroarch
-    
+
 !!! Note
     Versions of git available for OSX PowerPC might not come with the necessary SSL/TLS support that Github now requires. If you happen to find that you can not clone or pull from Github, perform the following command:
-    git config --global http.sslVerify false. 
+    git config --global http.sslVerify false.
 
 For subsequent builds you only need to pull the changes from the repo
 
@@ -72,7 +72,7 @@ The easiest way to fetch all the cores is to use libretro-super. Run
 
 ### Building Cores
 
-The easiest way to build all the cores (for OSX PowerPC) is to use libretro-super. 
+The easiest way to build all the cores (for OSX PowerPC) is to use libretro-super.
 
 To build all cores for OSX, run
 

@@ -27,25 +27,25 @@ After downloading the core within RetroArch, execute the following steps:
 
 1. Get a copy of the Dolphin `Sys` folder. This can be done downloading the
 current source code. We provide two methods: one using *Git* and one without.
-    * **If you have *Git* (if not, see the next option)**  
+    * **If you have *Git* (if not, see the next option)**
     Just clone the most recent version of the code by running:
     ```
     git clone --depth=1 https://github.com/libretro/dolphin.git
     ```
-    * **If you don't have *Git* **  
-    You can download a *zip* file of the source code with the following URL:  
-    [https://github.com/libretro/dolphin/archive/master.zip](https://github.com/libretro/dolphin/archive/master.zip)  
-    You can then extract it.  
+    * **If you don't have *Git* **
+    You can download a *zip* file of the source code with the following URL:
+    [https://github.com/libretro/dolphin/archive/master.zip](https://github.com/libretro/dolphin/archive/master.zip)
+    You can then extract it.
 
 2. After getting the code, enter in the folder containing it.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
-3. *Find RetroArch's system folder path*  
+3. *Find RetroArch's system folder path*
 Unless you customized your installation, the RetroArch configuration path is
 the one listed in the
-[RGUI page](../guides/rgui/#config-file).  
+[RGUI page](../guides/rgui/#config-file).
 If you didn't change any value, the system folder is:
-`RETROARCH_CONFIG_DIR/system`.  
+`RETROARCH_CONFIG_DIR/system`.
 If you changed the default directory configuration, you should check the
 *system_directory* option in the RetroArch configuration file (usually
 `retroarch.cfg`) to see which folder is used.
@@ -159,34 +159,34 @@ In some cases Direct3D 11 may offer better performance than OpenGL, especially o
 
 ## Core options
 
-The Dolphin core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Dolphin core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CPU Core** [ppsspp_cpu_core] (**jit**|IR jit|interpreter)
 
     The jit setting enables the Dynamic Recomplier (Dynarec) for CPU emulation. The Dynarec is much faster than the interpreter setting and is the default, recommended mode for supported architectures.
- 
+
     The interpreter setting enables the Interpreter for CPU emulation. The Interpreter is a very slow type of emulation and mostly useful for debug, but should work anywhere.
-	
+
 	The IR jit setting might be worth trying against games which are broken in the other two settings.
-	
+
 - **CPU Clock Rate** [ppsspp_locked_cpu_speed] (**off**|222MHz|266MHz|333MHz)
 
-	Allows you to lock the internal CPU clock of the emulator (of the emulated CPU). 
-	
-	Larger clocks can ensure a more stable performance in certain games that present problems even on a real PSP, but it requires more powerful hardware. 
-	
-	Lower clocks can help weak hardware have more comfortable gameplay, limiting FPS to a lower rate. 
-	
+	Allows you to lock the internal CPU clock of the emulator (of the emulated CPU).
+
+	Larger clocks can ensure a more stable performance in certain games that present problems even on a real PSP, but it requires more powerful hardware.
+
+	Lower clocks can help weak hardware have more comfortable gameplay, limiting FPS to a lower rate.
+
 	Changing this option opens the door to several bugs that may compromise some games.
-	
+
 	In case of doubt, keep this on off.
-	
+
 - **Language** [dolphin_language] (**english**|japanese|french|spanish|german|italian|dutch|portuguese|russian|korean|chinese_traditional|chinese_simplified)
 
     Configure the Dolphin core's system language.
-    
+
 ## Joypad
 
 ![](../image/controller/psp.png)

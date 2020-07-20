@@ -89,35 +89,35 @@ The Virtual Jaguar core saves/loads to/from these directories.
 
 ## Core options
 
-The Virtual Jaguar core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Virtual Jaguar core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Fast Blitter** [virtualjaguar_usefastblitter] (**disabled**|enabled)
 
 	This option will force Virtual Jaguar to use the older, less compatible yet faster blitter. Some games will not work properly with this option on.
-	
+
 - **Doom Res Hack** [virtualjaguar_doom_res_hack] (**disabled**|enabled)
 
 	A hack that needs to be enabled for Doom to run at its correct resolution.
-	
+
 ??? note "*Doom Res Hack - Disabled*"
     ![](../image/core/virtual_jaguar/doom_off.png)
 
 ??? note "*Doom Res Hack - Enabled*"
     ![](../image/core/virtual_jaguar/doom_on.png)
-	
+
 - **Bios** [virtualjaguar_bios] (**disabled**|enabled)
 
 	Enables BIOS loading sequence.
-	
+
 ??? note "*Bios - Enabled*"
     ![](../image/core/virtual_jaguar/bios.png)
-	
+
 - **Pal (Restart)** [virtualjaguar_pal] (**disabled**|enabled)
 
 	NTSC to PAL switch. Setting this to on switches to PAL mode.
-	
+
 ## Controllers
 
 The Virtual Jaguar core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -160,14 +160,14 @@ The Virtual Jaguar core supports the following device type(s) in the controls me
 | Numpad 1                     | 1
 | Numpad 2                     | 2
 | Numpad 3                     | 3
-| Numpad 4                     | 4                  
-| Numpad 5                     | 5                    
-| Numpad 6                     | 6                   
+| Numpad 4                     | 4
+| Numpad 5                     | 5
+| Numpad 6                     | 6
 | Numpad 7                     | 7
 | Numpad 8                     | 8
 | Numpad 9                     | 9
 | Numpad *                     | -
-| Numpad #                     | = 
+| Numpad #                     | =
 ## Compatibility
 
 A reference compatibility table can be found on the bottom of this [page](https://icculus.org/virtualjaguar/)

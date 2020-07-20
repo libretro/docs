@@ -93,7 +93,7 @@ If RUNTIME_PHOSPHOR_BLOOM_SIGMA is commented out (faster), this won't matter: Th
 //#define PHOSPHOR_BLOOM_TRIADS_LARGER_THAN_9_PIXELS
 //#define PHOSPHOR_BLOOM_TRIADS_LARGER_THAN_12_PIXELS
 ```
-	
+
 The more you have uncommented, the larger the triads you can blur, but the slower runtime sigmas will be if your GPU can't use dynamic branches. By default, triads up to 6 pixels wide will be bloomed perfectly, and a little beyond that (8 should be fine), but going too far beyond that will create blocking artifacts in the blur due to an insufficient support size.
 
 - tex2Dlod:

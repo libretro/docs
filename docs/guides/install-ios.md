@@ -7,7 +7,7 @@ There are multiple ways of downloading RetroArch for your iOS device. Depending 
 ## Prerequisites
 
 - **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
-- **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android. 
+- **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android.
 
 !!! Warning
     RetroArch or Libretro is not affiliated with Cydia Impactor in anyway. You can also use alternative applications that can do this function.
@@ -20,7 +20,7 @@ ___
 In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The name of this application is Cydia Impactor and is not associated with LibRetro or RetroArch. You need to provide the Cydia Impactor yourself, you can reach the desired result using your favorite search engine.
 
 1. Run the **Cydia Impactor**.
-2. Drag and drop the `.ipa` file onto **Cydia Impactor**. 
+2. Drag and drop the `.ipa` file onto **Cydia Impactor**.
 3. Enter the email for your **iTunes** account.
 4. Enter the password for your **iTunes** account.
 * Note: You will encounter an error and will ask you to create an application-specific password
@@ -40,7 +40,7 @@ We will continue from here on your iOS device. You can see `RetroArch` on your s
 3. You will see your iCloud e-mail address that you entered before, just click on it.
 4. Click Trust "your-email-address@icloud.com"
 
-Now you are free to run RetroArch. 
+Now you are free to run RetroArch.
 
 ## Content transfer via iTunes
 ___

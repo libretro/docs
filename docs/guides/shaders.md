@@ -42,17 +42,17 @@ Note that custom saved presets are always saved as copies and automatic presets 
 The `--set-shader` command line option allows to set shaders directly, bypassing even automatic shader presets.
 
 Example use:
-    
+
     retroarch --set-shader "D:\RetroArch\shaders\shaders_glsl\blurs\kawase_blur_5pass.glslp" -L <core> <content>
-    
+
 The shader path can be relative to the shader directory:
-    
+
     retroarch --set-shader "shaders_glsl\blurs\kawase_blur_5pass.glslp" -L <core> <content>
-    
+
 An empty parameter effectively disables any automatic presets:
-    
+
     retroarch --set-shader "" -L <core> <content>
-    
+
 ### Converting Cg shaders to GLSL
 In some cases, Cg shaders cannot be supported. This goes for OpenGL ES drivers, and when EGL OpenGL contexts are used (KMS mode for instance). Using Nvidia's `cgc` compiler, you can convert Cg shaders to GLSL shaders with the `cg2glsl` tool developed by us [here](https://github.com/Themaister/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as whole folder structures in batch.
 100% compatibility is not guaranteed, but almost all shaders should work fine. Cg presets (.cgp) are not converted at the moment, but converting them is as simple as copying over the .cgp, rename it to .glslp and replace references to .cg files to .glsl.

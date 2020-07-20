@@ -93,11 +93,11 @@ Before attempting to run a game with the ScummVM core, certain preparations are 
 - Run the ScummVM core without content:
 
     - Go to RetroArch's main menu screen.
-    
+
     - Select 'Load Core', then 'ScummVM'.
-    
+
     - Select 'Start Core'.
-    
+
     - The main ScummVM user interface will open:
 
 <center> ![](../image/core/scummvm/scummvm_menu_1st_run.png) </center>
@@ -205,9 +205,9 @@ Once all files are in place, each game may be added as follows:
 - Run the ScummVM core without content:
 
     - Go to RetroArch's main menu screen.
-    
+
     - Select 'Load Core', then 'ScummVM'.
-    
+
     - Select 'Start Core'.
 
 - In the main ScummVM user interface, press the 'Add Game...' button.
@@ -225,7 +225,7 @@ Once all files are in place, each game may be added as follows:
 - **However:** For simplicity, and compatibility with existing `.scummvm` files (discussed in the following section), the 'ID:' entry should be set to the so-called 'short name' of the game. All 'short names' are listed on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
 
     - In most cases, the automatically generated 'ID:' is equal to the 'short name'.
-    
+
     - In some cases, the automatically generated 'ID:' will be the 'short name' with an additional identifying suffix. This suffix should be deleted. If using a gamepad, this may be achieved by clicking at the end of the 'ID:' entry line and using the 'L2' button/trigger to delete unwanted characters.
 
 - Once the 'ID:' has been adjusted (if required), press the 'OK' button to 'register' the game.
@@ -311,7 +311,7 @@ ScummVM.lpl
 
 !!! attention
 	Not all games/configurations are present in the current database. If a particular game is not detected, an entry in the `ScummVM.lpl` playlist file can be added by hand. It should have the format:
-	
+
 	```
 	/path/to/game_directory/game_name.scummvm
 	game_name
@@ -361,9 +361,9 @@ A per-game music device override may be set as follows:
 - Run the ScummVM core without content:
 
     - Go to RetroArch's main menu screen.
-    
+
     - Select 'Load Core', then 'ScummVM'.
-    
+
     - Select 'Start Core'.
 
 - In the main ScummVM user interface, select the appropriate entry in the Launcher game list and press the 'Edit Game...' button.
@@ -470,7 +470,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 !!! attention
 	This hack is considered 'safe' - games should run correctly when it is enabled, and most inaccuracies are imperceptible other than in a few edge cases. It remains a hack, though, and it is strongly recommended that users of desktop class machines keep it disabled.
-	
+
 	**However:** For users of low power hardware (Android devices, single board computers), this hack is essentially **mandatory** for full speed operation of the core. For Android users in particular, the guides in the 'Usage' section of this document assume that the speed hack is enabled.
 
 ## Joypad
@@ -514,25 +514,25 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - Esc:
 
     - Skips cutscenes.
-    
+
     - Opens/closes menus in some games.
 
 - Virtual Numpad + Numpad 5 + Numpad 0:
 
     - Enables control during fight sequences in the 'Indiana Jones' series of games.
-    
+
     - Enables bypass of Monkey Island 2 copy protection.
-    
+
     - Enables saving in games that require text entry when naming a save slot.
-    
+
     - Enables menu navigation in some games (Numpad 8 == up, Numpad 2 == down).
 
 - Enter + Backspace:
 
     - Enables saving in games that require text entry when naming a save slot.
-    
+
     - 'Enter' may be used to attack in 'Full Throttle' fight sequences.
-    
+
     - 'Enter' enables menu item selection in some games.
 
 - . (period): Skips lines of dialogue in SCUMM engine games.
@@ -540,7 +540,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - F1:
 
     - Shows in-game menu in some games.
-    
+
     - Enables saving in some games.
 
 - F10: Shows hotspots in Simon the Sorcerer 1 + 2.
@@ -555,7 +555,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 !!! attention
 	To ensure correct operation when using a RetroMouse, it is recommended that the RetroArch 'Grab Mouse' option be enabled while running content with the ScummVM core. By default, 'Grab Mouse' may be toggled on/off by pressing F11 on the keyboard.
-	
+
 	The 'Grab Mouse' option is not required when using a RetroPad to move the cursor.
 
 ## Pointer
@@ -564,7 +564,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 | RetroPointer Inputs                                                                                                      | ScummVM Inputs |
 |--------------------------------------------------------------------------------------------------------------------------|----------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor   | 
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Mouse Cursor   |
 | ![](../image/retromouse/retro_left.png) or ![](../image/Button_Pack/Gestures/Gesture_Tap.png) Pointer Pressed            | Left Mouse Button   |
 
 ## Compatibility

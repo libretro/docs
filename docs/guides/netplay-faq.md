@@ -23,7 +23,7 @@
 
 - Same RetroArch version, same core version, and the same exact content.
 
-### RetroArch says *Content not found, try loading content manually* 
+### RetroArch says *Content not found, try loading content manually*
 
 - Either load content manually, have the content in your recent history list, or scan your content to a playlist.
 

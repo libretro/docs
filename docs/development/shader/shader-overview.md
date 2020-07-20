@@ -10,14 +10,14 @@ As the reference libretro frontend, RetroArch supports three shader languages:
 | [GLSL](glsl-shaders.md)             | GL Shading Language, OpenGL, OpenGL ES, and EGL contexts including KMS mode in Linux) |
 | [Cg (deprecated)](cg-shaders.md)    | HLSL/GLSL, nVidia |
 | [XML (discontinued)](xml-shaders.md)  | GLSL              |
-  
+
 When possible, it is recommended to use Slang shaders for supporting the widest variety of modern systems.
 
 RetroArch is able to stack these shaders to create a combined effect. These complex effects are saved with a special extension:
 
  - `.slangp` for Slang
  - `.glslp` for GLSL
- - `.cpg` for Cg 
+ - `.cpg` for Cg
 
 ## Common Shaders Repository
 

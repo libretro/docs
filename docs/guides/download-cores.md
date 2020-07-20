@@ -2,7 +2,7 @@
 
 Cores are essentially other programs and games that run through RetroArch. RetroArch requires cores to run any content.
 
-!!! tip 
+!!! tip
     Many game console may have multiple emulator cores, the question of which one is the best may come up. Emulators can be designed to be more accurate at the cost of a performance hit, check out the Emulation General Wiki for a good look at what will suit your needs and hardware.
 
 ## Installing cores through RetroArch interface

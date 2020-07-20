@@ -37,7 +37,7 @@ This core requires that you use OpenGL as the video driver. Go to Settings -> Dr
 
 ![](../image/core/openlara/gl.png)
 
-!!! attention 
+!!! attention
 	There is currently no ‘working’ macOS version available due to the OpenGL requirement.
 
 ## Extensions
@@ -125,7 +125,7 @@ The OpenLara core saves/loads to/from these directories.
 
 ## Core options
 
-The OpenLara core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The OpenLara core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -133,7 +133,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 144fps|240fps|244fps|15fps|30fps)
 
 	Modify framerate. Requires a restart.
-	
+
 - **Internal resolution (restart)** [openlara_resolution] (**320x240**|360x480|480x272|512x384|512x512|640x240|
 640x448|640x480|720x576|800x600|960x720|1024x768|
 1024x1024|1280x720|1280x960|1600x1200|1920x1080|
@@ -141,12 +141,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 3840x2160|7680x4320|15360x8640|16000x9000)
 
 	Modify the internal resolution. Requires a restart.
-	
+
 ??? note "Internal resolution - 320x240"
 	![](../image/core/openlara/320x240.png)
 
 ??? note "Internal resolution - 1920x1080"
-	![](../image/core/openlara/1920x1080.png)	
+	![](../image/core/openlara/1920x1080.png)
 
 ## Joypad
 

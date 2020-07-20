@@ -125,58 +125,58 @@ The Opera core saves/loads to/from these directories.
 
 ## Core options
 
-The Opera core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Opera core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **CPU overclock** [opera_cpu_overclock] (**1.0x (12.50Mhz)**|1.1x (13.75Mhz)|1.2x (15.00Mhz)|1.5x (18.75Mhz)|1.6x (20.00Mhz)|1.8x (22.50Mhz)|2.0x (25.00Mhz))
 
     The 3DO used a 12.5MHz ARM60 CPU as its central processor. We have implemented a CPU overclocking feature in the Opera core so that you can increase performance upto 2x.
-    
+
     **May not have an impact on all games.**
-	
-    [https://www.youtube.com/watch?v=7bT2ecwKdHQ](https://www.youtube.com/watch?v=7bT2ecwKdHQ) 
-	
+
+    [https://www.youtube.com/watch?v=7bT2ecwKdHQ](https://www.youtube.com/watch?v=7bT2ecwKdHQ)
+
 - **High Resolution** [opera_high_resolution] (**disabled**|enabled)
 
 	The default internal resolution is 320x240, but the output resolution is 640x480. This feature makes the system behave as if it has a 640x480 framebuffer.
-	
+
 ??? note "High Resolution - disabled"
 	![](../image/core/opera/high_off.png)
-	
+
 ??? note "High Resolution - enabled"
 	![](../image/core/opera/high_on.png)
-	
+
 - **NVRAM Storage** [opera_nvram_storage] (**per game**|shared)
 
 	Choose whether NVRAM saves are per game or NVRAM saves are shared between all games.
-	
+
 	Look at the [Directories section](#directories) for more information.
-	
+
 - **Active Devices** [opera_active_devices] (**1**|2|3|4|5|6|7|8|0)
 
 	There is a bug (maybe in Opera but possibly in certain games) in which having more than 1 controller emulated causes the game not to respond to input. This allows working around the issue.
-	
+
 - **Timing Hack 1 (Crash 'n Burn)** [opera_hack_timing_1] (**disabled**|enabled)
 
 	Enable this to fix Crash 'n Burn.
-	
+
 - **Timing Hack 3 (Dinopark Tycoon)** [opera_hack_timing_3] (**disabled**|enabled)
 
 	Enable this to fix Dinopark Tycoon.
-	
+
 - **Timing Hack 5 (Microcosm)** [opera_hack_timing_5] (**disabled**|enabled)
 
 	Enable this to fix Microcosm.
-	
+
 - **Timing Hack 6 (Alone in the Dark)** [opera_hack_timing_6] (**disabled**|enabled)
 
     Enable this to fix Alone in the Dark.
-	
+
 - **Graphics Step Y Hack (Samurai Shodown)** [opera_hack_graphics_step_y] (**disabled**|enabled)
 
 	Enable this to fix Samurai Shodown's background rendering.
-	
+
 ## Joypad
 
 ![](../image/controller/3do.png)
@@ -188,7 +188,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | X (Stop)                     | ![](../image/retropad/retro_select.png)        |
 | P (Play/Pause)               | ![](../image/retropad/retro_start.png)         |
 | D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
-| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     | 
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
 | C                            | ![](../image/retropad/retro_a.png)             |

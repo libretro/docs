@@ -106,14 +106,14 @@ Dinothawr is fairly hackable. dinothawr.game is the game file itself. It is a si
 
 ## Core options
 
-The Dinothawr core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Dinothawr core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Timer as FPS reference** [dino_timer] (**enabled**|disabled)
 
 	Use timer as FPS reference.
-	
+
 ## Controllers
 
 The Dinothawr core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

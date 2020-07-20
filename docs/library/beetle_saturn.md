@@ -136,13 +136,13 @@ foo (Disc 2).cue
 foo (Disc 3).cue
 ```
 
-## Swapping disks	
+## Swapping disks
 
 Swapping disks follows this procedure
 
 1. Open tray (Disk Cycle Tray Status)
 
-2. Change the Disk Index to the disk you want to swap to. 
+2. Change the Disk Index to the disk you want to swap to.
 
 3. Close tray (Disk Cycle Tray Status)
 
@@ -152,56 +152,56 @@ After that, you can load the `foo.m3u` file in RetroArch with the Beetle Saturn 
 
 ## Core options
 
-The Beetle Saturn core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Beetle Saturn core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **System Region** [beetle_saturn_region] (**Auto Detect**|Japan|North America|Europe|South Korea|Asia (NTSC)|Asia (PAL)|Brazil|Latin America)
 
 	Choose which region the system is from.
-	
+
 - **Cartridge** [beetle_saturn_cart] (**Auto Detect**|None|Backup Memory|Extended RAM (1MB)|Extended RAM (4MB)|The King of Fighters '95|Ultraman: Hikari no Kyojin Densetsu)
 
 	A list of games that require a cartridge can be found [here](https://www.satakore.com/cartridge.php).
-	
+
 - **6Player Adaptor on Port 1** [beetle_saturn_multitap_port1] (**disabled**|enabled)
 
 	Enable [multitap](https://segaretro.org/Saturn_6_Player_Adaptor) on Saturn port 1.
-	
+
 - **6Player Adaptor on Port 2** [beetle_saturn_multitap_port2] (**disabled**|enabled)
 
 	Enable [multitap](https://segaretro.org/Saturn_6_Player_Adaptor) on Saturn port 2.
-	
+
 - **Analog Stick Deadzone** [beetle_saturn_analog_stick_deadzone] (**15%**|20%|25%|30%|0%|5%|10%)
 
 	Configure the '3D Control Pad' Device Type's analog deadzone.
-	
+
 - **Trigger Deadzone** [beetle_saturn_trigger_deadzone] (**15%**|20%|25%|30%|0%|5%|10%)
 
 	Configure the '3D Control Pad' Device Type's trigger deadzone.
-	
+
 - **Mouse Sensitivity** [beetle_saturn_mouse_sensitivity] (5% to 200% in increments of 5%. **100% is default**)
 
 	Configure the 'Mouse' device type's sensitivity.
-	
+
 - **Gun Crosshair** [beetle_saturn_virtuagun_crosshair] (**Cross**|Dot|Off)
 
 	Choose the crosshair for the 'Stunner' and 'Virtua Gun' device types. Setting it to Off disables the crosshair.
-	
+
 ??? note "Gun - Crosshair - Cross"
 	![](../image/core/beetle_saturn/cross.png)
-	
+
 ??? note "Gun - Crosshair - Dot"
 	![](../image/core/beetle_saturn/dot.png)
 
 ??? note "Gun - Crosshair - Off"
-	![](../image/core/beetle_saturn/off.png)	
-	
+	![](../image/core/beetle_saturn/off.png)
+
 - **CD Image Cache (restart)** [beetle_saturn_cdimagecache] (**disabled**|enabled)
 
-	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time. 
+	Loads the complete image in memory at startup. Can potentially decrease loading times at the cost of increased startup time.
 	Requires a restart in order for a change to take effect.
-	
+
 - **Mid-frame Input Synchronization** [beetle_saturn_midsync] (**disabled**|enabled)
 
 	Mid-frame synchronization can reduce input latency, but it will increase CPU requirements.
@@ -209,41 +209,41 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Automatically set RTC on game load** [beetle_saturn_autortc] (**enabled**|disabled)
 
 	Automatically set the SMPC's emulated Real-Time Clock to the host system's current time and date upon game load.
-	
+
 - **BIOS language** [beetle_saturn_autortc_lang] (**english**|german|french|spanish|italian|japanese)
 
 	Self explanatory. Also affects language used in some games (e.g. the European release of "Panzer Dragoon").
-	
+
 - **Horizontal Overscan Mask** [beetle_saturn_horizontal_overscan] (0 to 60 in increments of 2. **0 is default**)
 
 	Self-explanatory.
-	
+
 - **Initial scanline** [beetle_saturn_initial_scanline] (0 to 40 in increments of 1. **0 is default**)
 
 	Adjust the first displayed scanline in NTSC mode.
-	
+
 - **Last scanline** [beetle_saturn_last_scanline] (210 to 239 in increments of 1. **239 is default**)
 
 	Adjust the last displayed scanline in NTSC mode.
-	
+
 - **Initial scanline PAL** [beetle_saturn_initial_scanline_pal] (0 to 60 in increments of 1. **16 is default**)
 
 	Adjust the first displayed scanline in NTSC mode.
-	
+
 - **Last scanline PAL** [beetle_saturn_last_scanline_pal] (230 to 287 in increments of 1. **271 is default**)
 
 	Adjust the last displayed scanline in PAL mode.
-	
+
 - **Enable Horizontal Blend(blur)** [beetle_saturn_horizontal_blend] (**disabled**|enabled)
 
 	Enable horizontal blend(blur) filter. Has a more noticeable effect with the Saturn's higher horizontal resolution modes(640/704).
-	
+
 ??? note "Enable Horizontal Blend(blur) - Off"
 	![](../image/core/beetle_saturn/blend_off.png)
-	
+
 ??? note "Enable Horizontal Blend(blur) - On"
 	![](../image/core/beetle_saturn/blend_on.png)
-	
+
 ## User 1 - 12 device types
 
 The Beetle Saturn core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

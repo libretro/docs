@@ -90,7 +90,7 @@ LatexCommand tableofcontents
 
 \begin_layout Abstract
 This document explains how to successfully implement a library based on
- the 
+ the
 \begin_inset Index idx
 status open
 
@@ -101,7 +101,7 @@ libretro
 \end_inset
 
 libretro API.
- Several reasons for why more emulators and game engines should run in 
+ Several reasons for why more emulators and game engines should run in
 \begin_inset Index idx
 status open
 
@@ -129,7 +129,7 @@ RetroArch
 \end_inset
 
 RetroArch is a project that aims to be a center for “retro” gaming experiences.
- For your quick fix of 2D gaming goodness, 
+ For your quick fix of 2D gaming goodness,
 \begin_inset Index idx
 status open
 
@@ -154,7 +154,7 @@ libretro
 \end_inset
 
 Libretro is an API that abstracts the inner functionality of a gaming system.
- 
+
 \begin_inset Index idx
 status open
 
@@ -176,7 +176,7 @@ Due to its simple and open API, other frontends can just as easily utilize
 \end_layout
 
 \begin_layout Standard
-While “retro” would often imply an emulator of a classic system, 
+While “retro” would often imply an emulator of a classic system,
 \begin_inset Index idx
 status open
 
@@ -187,7 +187,7 @@ libretro
 \end_inset
 
 libretro can also abstract a game engine.
- Classics such as 
+ Classics such as
 \begin_inset Index idx
 status open
 
@@ -197,7 +197,7 @@ Cave Story
 
 \end_inset
 
-Cave Story (NXEngine) and 
+Cave Story (NXEngine) and
 \begin_inset Index idx
 status open
 
@@ -218,7 +218,7 @@ Portability
 Most emulator authors write both the backend and frontend to their project.
  The question of portability inevitably rises when the frontend is developed.
  Should one target a single platform with high level of integration or take
- a multi-platform approach with libraries like 
+ a multi-platform approach with libraries like
 \begin_inset Index idx
 status open
 
@@ -233,7 +233,7 @@ Qt? Backends for essentials like video, audio and input take a lot of time
 \end_layout
 
 \begin_layout Standard
-By implementing for 
+By implementing for
 \begin_inset Index idx
 status open
 
@@ -254,7 +254,7 @@ In 2012, we would argue that portability has never been more relevant.
  If your system is implemented with software rendering, your implementation
  can run on all systems supported by the frontend, without writing any platform
  specific code.
- In the case of 
+ In the case of
 \begin_inset Index idx
 status open
 
@@ -320,7 +320,7 @@ RetroArch
 RetroArch has been in development for about two years.
  During this time, some features have shown to be quinessential to retro
  gaming systems.
- Implementing the 
+ Implementing the
 \begin_inset Index idx
 status open
 
@@ -341,7 +341,7 @@ Frame-by-frame rewind
 \begin_layout Standard
 A libretro implementation that implements serialization and unserialization
  of internal state is able to transparently support rewind mechanics.
- While many emulators support coarse grained rewind, 
+ While many emulators support coarse grained rewind,
 \begin_inset Index idx
 status open
 
@@ -352,7 +352,7 @@ RetroArch
 \end_inset
 
 RetroArch supports rewind at the frame level, i.e., frames can be rewound
- one frame at a time, similar to the indie-title 
+ one frame at a time, similar to the indie-title
 \begin_inset Index idx
 status open
 
@@ -388,7 +388,7 @@ RetroArch
 
 \end_inset
 
-RetroArch can utilize the 
+RetroArch can utilize the
 \begin_inset Index idx
 status open
 
@@ -400,7 +400,7 @@ libavcodec
 
 libavcodec library to encode video and audio output from a libretro implementati
 on.
- The data is encoded losslessly, with 
+ The data is encoded losslessly, with
 \begin_inset Index idx
 status open
 
@@ -410,7 +410,7 @@ FLAC
 
 \end_inset
 
-FLAC as audio codec, and cutting-edge 
+FLAC as audio codec, and cutting-edge
 \begin_inset Index idx
 status open
 
@@ -421,7 +421,7 @@ H.264
 \end_inset
 
 H.264/RGB (libx264) encoding, with a fallback to FFV1 for older playback
- systems that don't support the modern 
+ systems that don't support the modern
 \begin_inset Index idx
 status open
 
@@ -496,7 +496,7 @@ RetroArch
 
 RetroArch supports two-player action over the network.
  It employs a rollback technique that aims to hide latency as much as possible,
- similar to the method employed by 
+ similar to the method employed by
 \begin_inset Index idx
 status open
 
@@ -541,7 +541,7 @@ Implementing the API
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \begin_inset Index idx
 status open
 
@@ -552,7 +552,7 @@ libretro
 \end_inset
 
 libretro API consists of several functions outlined in libretro.h, found
- in the 
+ in the
 \begin_inset Index idx
 status open
 
@@ -574,7 +574,7 @@ RetroArch source package.
 \end_layout
 
 \begin_layout Standard
-The API header is compatible with 
+The API header is compatible with
 \begin_inset Index idx
 status open
 
@@ -584,7 +584,7 @@ C99
 
 \end_inset
 
-C99 and 
+C99 and
 \begin_inset Index idx
 status open
 
@@ -595,7 +595,7 @@ C++
 \end_inset
 
 C++.
- From 
+ From
 \begin_inset Index idx
 status open
 
@@ -609,7 +609,7 @@ C99, the bool type and <stdint.h> are used.
 \end_layout
 
 \begin_layout Standard
-The program flow of a frontend using the 
+The program flow of a frontend using the
 \begin_inset Index idx
 status open
 
@@ -674,7 +674,7 @@ Environment callback
 \end_layout
 
 \begin_layout Standard
-While 
+While
 \begin_inset Index idx
 status open
 
@@ -686,7 +686,7 @@ libretro
 
 libretro has callbacks for video, audio and input, there's a callback type
  dubbed the environment callback.
- This callback (retro_environment_t) is a generic way for the 
+ This callback (retro_environment_t) is a generic way for the
 \begin_inset Index idx
 status open
 
@@ -698,7 +698,7 @@ libretro
 
 libretro implementation to access features of the API that are considered
  too obscure to deserve its own symbols.
- It can be extended without breaking 
+ It can be extended without breaking
 \begin_inset Index idx
 status open
 
@@ -714,7 +714,7 @@ ABI.
 \end_layout
 
 \begin_layout Standard
-Most implementations of 
+Most implementations of
 \begin_inset Index idx
 status open
 
@@ -823,7 +823,7 @@ This function lets the frontend know essential audio/video properties of
  As this information can depend on the game being loaded, this info will
  only be queried after a valid ROM image has been loaded.
  It is important to accuractely report FPS and audio sampling rates, as
- 
+
 \begin_inset Index idx
 status open
 
@@ -901,7 +901,7 @@ Audio callback considerations
 \end_layout
 
 \begin_layout Standard
-The 
+The
 \begin_inset Index idx
 status open
 
@@ -945,7 +945,7 @@ Using the batch callback, audio will not be copied in a temporary buffer,
 
 \begin_layout Standard
 The data passed to the batch callback should, if possible, be aligned to
- 16 bytes (depends on platform), to allow accelerated 
+ 16 bytes (depends on platform), to allow accelerated
 \begin_inset Index idx
 status open
 
@@ -956,7 +956,7 @@ SIMD
 \end_inset
 
 SIMD operations on audio.
- 
+
 \begin_inset Index idx
 status open
 
@@ -966,7 +966,7 @@ RetroArch
 
 \end_inset
 
-RetroArch implements 
+RetroArch implements
 \begin_inset Index idx
 status open
 
@@ -1023,7 +1023,7 @@ The joypad abstraction is the most interesting.
  Rather than complicating things by mapping input arbitrarily in terms of
  the implementation, which would make input configuration very complex with
  careful configuration on a per-implementation basis, an abstract joypad
- device, the 
+ device, the
 \begin_inset Index idx
 status open
 
@@ -1034,7 +1034,7 @@ Input device abstractions!RetroPad
 \end_inset
 
 RetroPad, was devised.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1044,7 +1044,7 @@ This joypad is essentially the Super Nintendo controller, widely considered
  the PlayStation DualShock are incorporated, with extra shoulder buttons
  (L2/R2), as well as depressable analogs (L3/R3).
  In addition, the RETRO_DEVICE_ANALOG is used for analog stick data.
- An implementation should map its idea of a joypad in terms of the 
+ An implementation should map its idea of a joypad in terms of the
 \begin_inset Index idx
 status open
 
@@ -1113,7 +1113,7 @@ _game().
 \begin_layout Standard
 If possible, the implementation should attempt to serialize data at consistent
  offsets in the memory buffer.
- This will greatly help the rewind implementation in 
+ This will greatly help the rewind implementation in
 \begin_inset Index idx
 status open
 

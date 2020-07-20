@@ -16,7 +16,7 @@ Once **Show Advanced Settings** is on, proceed to the **Network** configurations
 
 ##Setup Guide
 
-The following example of Super Bomberman 2 on the SNES will be used to demonstrate four (4) players using two (2) computers. The host will be controlling players one (1) and three (3), and the client will be controlling players two (2) and four (4). 
+The following example of Super Bomberman 2 on the SNES will be used to demonstrate four (4) players using two (2) computers. The host will be controlling players one (1) and three (3), and the client will be controlling players two (2) and four (4).
 
 ### Host
 #### Input Devices

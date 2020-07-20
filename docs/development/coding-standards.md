@@ -25,7 +25,7 @@ Each new line of a multiline comment should begin with a space and an asterisk:
  *    - to explain the history or special circumstances of a section of code
  */
 ```
-Comment headers for functions should use a maximum column width of 80 characters. 
+Comment headers for functions should use a maximum column width of 80 characters.
 
 ### Indentation
 

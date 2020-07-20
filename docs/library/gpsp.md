@@ -112,7 +112,7 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 | D-Pad Up                 | ![](../image/retropad/retro_dpad_up.png)    |
 | D-Pad Down               | ![](../image/retropad/retro_dpad_down.png)  |
 | D-Pad Left               | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) | 
+| D-Pad Right              | ![](../image/retropad/retro_dpad_right.png) |
 | A                        | ![](../image/retropad/retro_a.png)    |
 
 ## Compatibility

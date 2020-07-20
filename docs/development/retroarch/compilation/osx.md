@@ -1,6 +1,6 @@
 # macOS/OSX Compilation / Development Guide
 
-This compilation guide will teach you how to build RetroArch for macOS/OSX. 
+This compilation guide will teach you how to build RetroArch for macOS/OSX.
 
 The following versions of the operating system are supported:
 
@@ -32,7 +32,7 @@ The following software needs to be installed:
 - (Optional) NVIDIA Cg Toolkit
 
 !!! Note
-    You need to make sure you have the macOS 10.11 SDK or lower when compiling this software, or else the OpenGL driver might have several issues that currently cannot be fixed. 
+    You need to make sure you have the macOS 10.11 SDK or lower when compiling this software, or else the OpenGL driver might have several issues that currently cannot be fixed.
 
 ## RetroArch Compilation
 
@@ -81,7 +81,7 @@ To build a release build :
 
 ### Fetching Cores
 
-The easiest way to fetch all the cores is to use libretro-super. 
+The easiest way to fetch all the cores is to use libretro-super.
 
 To get libretro-super, run:
 
@@ -94,7 +94,7 @@ Now you can run the following command to download the source for all cores:
 
 ### Building Cores
 
-The easiest way to build all the cores (for iOS) is to use libretro-super. 
+The easiest way to build all the cores (for iOS) is to use libretro-super.
 
 To build all cores for OSX, run
 

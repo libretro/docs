@@ -86,7 +86,7 @@ The TGB Dual core saves/loads to/from these directories.
 
 ## Core options
 
-The TGB Dual core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The TGB Dual core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -96,7 +96,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*GB Link Enable - Enabled*"
     ![](../image/core/tgb_dual/link.png)
-	
+
 - **Screen placement** [tgbdual_screen_placement] (**horizontal**|vertical)
 
 	Switches the screen layout for multiplayer support.
@@ -106,11 +106,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ??? note "*Vertical*"
     ![](../image/core/tgb_dual/vert.png)
-	
+
 - **Switch player screens** [tgbdual_switch_screens] (**normal**|switched)
 
 	Switches the player screens for multiplayer support.
-	
+
 - **Show player screens** [tgbdual_single_screen_mp] (**both players**|player 1 only|player 2 only)
 
 	Displays the selected player screens for multiplayer support.

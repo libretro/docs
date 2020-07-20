@@ -92,7 +92,7 @@ The PokeMini core saves/loads to/from these directories.
 
 ## Core options
 
-The PokeMini core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The PokeMini core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -125,11 +125,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **LCD Mode** [pokemini_lcdmode] (**analog**|3shades|2shades)
 
 	Specifies the greyscale 'colour' reproduction characteristics of the emulated liquid crystal display.
-	
+
 	'analog' attempts to simulate the Pokémon Mini hardware by allowing smooth time-dependent transitions between 'colour' values. This option is recommended since most games exploited the analog nature of the Pokémon Mini screen to show different shades of 'colour' on a nominally monochrome display.
-	
+
 	'3shades' reduces the analog greyscale levels to three specific shades and removes all ghosting effects. It is adequate for most games.
-	
+
 	'2shades' causes the screen to behave as a purely digital monochrome display, either full light or full dark. WARNING: This will cause severe flickering in most games.
 
 - **LCD Contrast** [pokemini_lcdcontrast] (**64**|0|16|32|48|80|96)

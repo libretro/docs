@@ -102,47 +102,47 @@ The mGBA core saves/loads to/from these directories.
 
 ## Core options
 
-The mGBA core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The mGBA core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Solar sensor level** [mgba_solar_sensor_level] (**0**|1|2|3|4|5|6|7|8|9|10)
 
 	Can be used by games that employed the use of a solar sensor on their cartridges. E.g.: Boktai games.
-	
+
 - **Allow opposing directional input** [mgba_allow_opposing_directions] (**OFF**|ON)
 
 	Allows opposing directional inputs. Up with Down. Right with Left.
-	
+
 - **Game Boy model (requires restart)** [mgba_gb_model] (**Autodetect**|Game Boy|Super Game Boy|Game Boy Color|Game Boy Advance)
-	
+
 	Runs loaded content with a specific Game Boy model.
-	
+
 	Autodetect will select the most appropriate model for the current game.
-	
+
 - **Use BIOS file if found** [mgba_use_bios] (**ON**|OFF)
-	
+
 	Uses BIOS present in RetroArch's system directory. Look at the [BIOS section](#bios) for more information.
-	
+
 - **Skip BIOS intro** [mgba_skip_bios] (**OFF**|ON)
 
 	**The 'Use BIOS file if found' core option must be set to On for proper operation.**
-	
+
 	Skips the BIOS intro when a BIOS is present in RetroArch's system directory is used.
 
 ??? note "Skip BIOS intro - Off"
-    ![](../image/core/mgba/bios.png)	
+    ![](../image/core/mgba/bios.png)
 
 - **Use Super Game Boy borders (requires restart)** [mgba_sgb_borders] (**ON**|OFF)
 
 	Display Super Game Boy borders for Super Game Boy enhanced games.
-	
+
 - **Idle loop removal** [mgba_idle_optimization] (**Remove Known**|Detect and Remove|Don't Remove)
 
 	Optimizes game performance by driving the GBA's CPU less hard.
-	
+
 	Use this on low-powered hardware if its struggling with game performance.
-	
+
 - **Frameskip** [mgba_frameskip] (**0**|1|2|3|4|5|6|7|8|9|10)
 
 	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.

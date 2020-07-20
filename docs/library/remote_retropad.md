@@ -18,7 +18,7 @@ The Remote RetroPad core has been authored by
 
 The Remote RetroPad core is licensed under
 
-- [MIT](https://github.com/libretro/libretro-samples/blob/master/license) 
+- [MIT](https://github.com/libretro/libretro-samples/blob/master/license)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -69,30 +69,30 @@ Awaiting description.
 
 ## Core options
 
-The Remote RetroPad core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Remote RetroPad core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Port** [net_retropad_port] (55400 to 55420 in increments of 1. **55400 is default.**)
 
 	Awaiting description.
-	
+
 - **IP address part 1** [net_retropad_ip_octet1] (0 to 255 in increments of 1. **0 is default.**)
 
 	Awaiting description.
-	
+
 - **IP address part 2** [net_retropad_ip_octet2] (0 to 255 in increments of 1. **0 is default.**)
 
 	Awaiting description.
-	
+
 - **IP address part 3** [net_retropad_ip_octet3] (0 to 255 in increments of 1. **0 is default.**)
 
 	Awaiting description.
-	
+
 - **IP address part 4** [net_retropad_ip_octet4] (0 to 255 in increments of 1. **0 is default.**)
 
 	Awaiting description.
-	
+
 ## Controllers
 
 The Remote RetroPad core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):

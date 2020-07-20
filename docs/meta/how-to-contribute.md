@@ -33,11 +33,11 @@ There is a To-Do list for libretro/docs [here](todo.md) and you can submit sugge
     ```
     pip install mkdocs-material
     ```
-	
+
 4. Install PyMdown Extensions
     ```
     pip install pymdown-extensions
-    ```	
+    ```
 
 5. Build the site
     ```
@@ -52,7 +52,7 @@ There is a To-Do list for libretro/docs [here](todo.md) and you can submit sugge
 **References**
 
   - [Guide to installing mkdocs ](https://www.mkdocs.org/#installation)
-  
+
 
 ## Adding a new core
 

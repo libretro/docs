@@ -61,7 +61,7 @@ You can also use the "Number of Iterations", "Value Increase Each Iteration", an
 This is useful for things like unlocking all levels, giving yourself 1 of every item, setting all of your RPG stats to 999, etc.
 
 Usually when you have found a cheat for a specific item (e.g. your strength attribute in an RPG), similarly themed values are found in the same memory area.  For example, if the strength attribute
-was found at memory address 0x0000AB04 then the dexterity attribute might be at 0x0000AB08, intelligence at 0x0000AB0C, etc.  
+was found at memory address 0x0000AB04 then the dexterity attribute might be at 0x0000AB08, intelligence at 0x0000AB0C, etc.
 
 This feature is also useful for experimenting.  If you found your strength attribute at memory address 0x0000AB04, then you might increase the number of iterations by 20 to see what changes in the game and if any of those changes are desirable.  Note that experimenting like this has a good chance of crashing your game, so have a save state prepared before blindly attempting to write to memory.
 
@@ -95,10 +95,10 @@ The "Value Increase Each Iteration" would normally be 0 in the above scenario bu
 
 # RetroArch rumble codes
 
-RetroArch also has the ability to make your controller rumble when changes in the emulator/core memory occur.  It is based off of the same RetroArch-handled cheat codes described above.  For example, after 
-finding the memory location for the number of lives in a game (via the cheat searching interface) you can set it up such that every time the value decreases (lose a life) the controller rumbles. 
+RetroArch also has the ability to make your controller rumble when changes in the emulator/core memory occur.  It is based off of the same RetroArch-handled cheat codes described above.  For example, after
+finding the memory location for the number of lives in a game (via the cheat searching interface) you can set it up such that every time the value decreases (lose a life) the controller rumbles.
 
-Rumble tested with X360 controller, input driver dinput, joypad driver xinput. 
+Rumble tested with X360 controller, input driver dinput, joypad driver xinput.
 
 Available rumble controls:
 

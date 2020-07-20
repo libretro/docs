@@ -126,7 +126,7 @@ After that, you can load the `foo.cue` file in RetroArch with the Beetle PSX cor
 
 !!! attention
     Certain PS1 games are multi-track, so their .cue files might be more complicated.
-	
+
 ### Playing PAL copy protected games
 
 PAL copy protected games need a SBI Subchannel file next to the bin/cue files in order to get past the copy protection.
@@ -162,14 +162,14 @@ Here's a m3u example done with Valkryie Profile
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
-#### Swapping disks	
+#### Swapping disks
 
-Disks can be swapped through Quick Menu -> Disk Control in RetroArch. 
+Disks can be swapped through Quick Menu -> Disk Control in RetroArch.
 
 If not using .m3u files, .cue files must be manually selected via the Load New Disk legacy feature.
 
 If using .m3u files, disks can be swapped by selecting Eject Disk, changing the Current Disk Index to your desired disk, and finally selecting Insert Disk.
-	
+
 ### Compressed content
 
 Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .pbp (Playstation Portable update file) or .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
@@ -193,7 +193,7 @@ For multi-disk PAL copy-protected games, change the sbi file syntax from `[filen
 !!! attention
     RetroArch does not currently have .pbp database due to variability in users' conversion methods. All .pbp games will have to be added to playlists manually.
 
-#### CHD	
+#### CHD
 
 To convert content to CHD format, use the chdman tool found inside the latest MAME distribution and point it to a .cue file, like so:
 
@@ -208,7 +208,7 @@ Note that the tool currently does not integrate .sbi files into the .chd, so the
 
 ## Saves
 
-For game savedata storage, the PSX console used memory cards. The PSX console had two slots for memory cards. 
+For game savedata storage, the PSX console used memory cards. The PSX console had two slots for memory cards.
 
 In this doc, the first memory card slot will be referred to as 'Memcard slot 0' and the second slot will be referred to as 'Memcard slot 1'.
 
@@ -234,7 +234,7 @@ For memory card functionality and usage, the Beetle PSX core will either use the
 
 !!! attention
     Memory card behavior can be controlled with the following [core options](#core-options) (Memcard 0 method, Enable memory card 1, Shared memcards).
-	
+
 **By default**, the filenames of the Memcard savedata will match the loaded cue or m3u or pbp filename, like this:
 
 - Loaded content: Breath of Fire III (USA).cue
@@ -261,7 +261,7 @@ or
 
 !!! attention
 	To import your old memory cards from other emulators, you need to rename them to either the Libretro savedata format or the Mednafen savedata format. The Libretro (.srm) savedata format, when used with Beetle PSX, is internally identical to the Mednafen PSX (.mcr) savedata format, and can be converted between one another via renaming.
-	
+
 !!! warning
 	Keep in mind that save states also include the state of the memory card; carelessly loading an old save state will **OVEWRITE** the memory card, potentially resulting in lost saved games.	**You can set the 'Don't overwrite SaveRAM on loading savestate' option in RetroArch's Saving settings to On to prevent this.**
 

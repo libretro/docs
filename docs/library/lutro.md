@@ -2,7 +2,7 @@
 
 ## Background
 
-Lutro is an experimental lua game framework that follows the [LÖVE API](https://love2d.org/wiki/Main_Page). Lutro games can be played with LibRetro/RetroArch through the Lutro core. 
+Lutro is an experimental lua game framework that follows the [LÖVE API](https://love2d.org/wiki/Main_Page). Lutro games can be played with LibRetro/RetroArch through the Lutro core.
 
 #### How to start the Lutro core:
 
@@ -37,7 +37,7 @@ The Lutro core has been authored by
 
 The Lutro core is licensed under
 
-- [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE) 
+- [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 

@@ -148,7 +148,7 @@ HLSL
 
 \end_inset
 
-HLSL (High-Level Shading Language, Direct3D) 
+HLSL (High-Level Shading Language, Direct3D)
 \end_layout
 
 \begin_layout Itemize
@@ -178,7 +178,7 @@ Cg (HLSL/GLSL, nVidia)
 \end_layout
 
 \begin_layout Standard
-The spec is for the 
+The spec is for the
 \begin_inset Index idx
 status open
 
@@ -189,7 +189,7 @@ Cg
 \end_inset
 
 Cg shading language developed by nVidia.
- It 
+ It
 \begin_inset Quotes eld
 \end_inset
 
@@ -197,7 +197,7 @@ wraps
 \begin_inset Quotes erd
 \end_inset
 
- around 
+ around
 \begin_inset Index idx
 status open
 
@@ -207,7 +207,7 @@ OpenGL
 
 \end_inset
 
-OpenGL and 
+OpenGL and
 \begin_inset Index idx
 status open
 
@@ -218,7 +218,7 @@ HLSL
 \end_inset
 
 HLSL to make shaders written in Cg quite portable.
- It is also the shading language implemented on the 
+ It is also the shading language implemented on the
 \begin_inset Index idx
 status open
 
@@ -318,7 +318,7 @@ Essentially, we only need to implement process_pixel() as a single function,
  which is called thousands, even millions of time every frame.
  The only purpose in life for process_pixel() is to process an input, and
  produce an output.
- No state is needed, thus, a 
+ No state is needed, thus, a
 \begin_inset Quotes eld
 \end_inset
 
@@ -349,7 +349,7 @@ Since we're dealing with old school emulators here, which are already 2D,
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -368,7 +368,7 @@ For our emulators this is just 4 times, since we're rendering a quad on
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -395,7 +395,7 @@ main_fragment() takes care of calculating a pixel color for every single
 
 \begin_layout Standard
 Obviously, main_fragment is where the real action happens.
- For many shaders we can stick with a 
+ For many shaders we can stick with a
 \begin_inset Quotes eld
 \end_inset
 
@@ -509,7 +509,7 @@ void main_vertex(
 
 \begin_layout Standard
 This looks vaguely familiar to C, and it is.
- 
+
 \begin_inset Index idx
 status open
 
@@ -519,7 +519,7 @@ Cg
 
 \end_inset
 
-Cg stands for 
+Cg stands for
 \begin_inset Quotes eld
 \end_inset
 
@@ -596,7 +596,7 @@ The COLOR semantic isn't very interesting for us, but the example code in
 \begin_layout Standard
 TEXCOORD is the texture coordinate we get from the emulator, and generally
  we just pass it to the fragment shader directly.
- The coordinate will then be 
+ The coordinate will then be
 \begin_inset Quotes eld
 \end_inset
 
@@ -758,12 +758,12 @@ float4 main_fragment(uniform sampler2D s0 : TEXUNIT0,
 
 \begin_layout Plain Layout
 
-  
+
 \end_layout
 
 \begin_layout Plain Layout
 
-   // Grab some of the neighboring pixels and 
+   // Grab some of the neighboring pixels and
 \end_layout
 
 \begin_layout Plain Layout
@@ -997,7 +997,7 @@ float4 main_fragment(uniform sampler2D s0 : TEXUNIT0,
 
 \begin_layout Plain Layout
 
-  
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1141,7 +1141,7 @@ foo_linear = true # Linear filtering for foo.
 \begin_layout Plain Layout
 
 bar_linear = true # Linear filtering for bar.
- 
+
 \end_layout
 
 \end_inset
@@ -1156,7 +1156,7 @@ RetroArch PS3 uses PNG as the main format, RetroArch can use whatever if
 \end_layout
 
 \begin_layout Standard
-From here on, 
+From here on,
 \begin_inset Quotes eld
 \end_inset
 
@@ -1164,7 +1164,7 @@ foo
 \begin_inset Quotes erd
 \end_inset
 
- and 
+ and
 \begin_inset Quotes eld
 \end_inset
 
@@ -1346,7 +1346,7 @@ The basic idea is that we capture RAM data in a certain way (semantic if
 
 \begin_layout Standard
 As a tool to show this feature, we'll focus on replicating the simple tech
- demo shown on YouTube: 
+ demo shown on YouTube:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.youtube.com/watch?v=4VzaE9q735k"
@@ -1357,7 +1357,7 @@ target "http://www.youtube.com/watch?v=4VzaE9q735k"
 \end_layout
 
 \begin_layout Standard
-What happens is that when Mario jumps in the water, the screen gets a 
+What happens is that when Mario jumps in the water, the screen gets a
 \begin_inset Quotes eld
 \end_inset
 
@@ -1388,7 +1388,7 @@ nt provide the state we need in a certain way.
 \end_layout
 
 \begin_layout Standard
-To capture a RAM value directly, we can use the 
+To capture a RAM value directly, we can use the
 \begin_inset Quotes eld
 \end_inset
 
@@ -1397,7 +1397,7 @@ capture
 \end_inset
 
  semantic.
- To record the time when the RAM value last changed, we can use the 
+ To record the time when the RAM value last changed, we can use the
 \begin_inset Quotes eld
 \end_inset
 
@@ -1407,7 +1407,7 @@ transition
 
  semantic.
  We obviously also need to know where in RAM we can find this information.
- Luckily, the guys over at SMW Central know the answer: 
+ Luckily, the guys over at SMW Central know the answer:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.smwcentral.net/?p=map&type=ram"
@@ -1430,7 +1430,7 @@ status open
 
 $7E:0075, byte, Flag, Player is in water flag.
  #$00 = No; #$01 = Yes.
- 
+
 \end_layout
 
 \end_inset
@@ -1500,7 +1500,7 @@ mario_water_time_wram = 0075
 \end_layout
 
 \begin_layout Standard
-The amount of possible 
+The amount of possible
 \begin_inset Quotes eld
 \end_inset
 
@@ -1518,7 +1518,7 @@ semantics
 \begin_layout Standard
 Now that we got that part down, let's work on the shader design.
  In the fragment shader we simply render both the full water effect, and
- the «normal» texture, and let a 
+ the «normal» texture, and let a
 \begin_inset Quotes eld
 \end_inset
 
@@ -1627,7 +1627,7 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-   uniform float mario_water, 
+   uniform float mario_water,
 \end_layout
 
 \begin_layout Plain Layout
@@ -1657,7 +1657,7 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-   // so every fragment will get the same value 
+   // so every fragment will get the same value
 \end_layout
 
 \begin_layout Plain Layout
@@ -1697,7 +1697,7 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-   float transition_time = 0.5 * 
+   float transition_time = 0.5 *
 \end_layout
 
 \begin_layout Plain Layout
@@ -1707,7 +1707,7 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-  
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1727,12 +1727,12 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-      blend_factor = 1.0; 
+      blend_factor = 1.0;
 \end_layout
 
 \begin_layout Plain Layout
 
-   // Fade out from 1.0 towards 0.0 as 
+   // Fade out from 1.0 towards 0.0 as
 \end_layout
 
 \begin_layout Plain Layout
@@ -1747,7 +1747,7 @@ void main_vertex(
 
 \begin_layout Plain Layout
 
-      blend_factor = exp(-transition_time); 
+      blend_factor = exp(-transition_time);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1931,7 +1931,7 @@ float4 main_fragment
 
 \begin_layout Plain Layout
 
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2038,7 +2038,7 @@ How to test when developing for RetroArch?
 \end_layout
 
 \begin_layout Standard
-To develop these kinds of shaders, I'd recommend using 
+To develop these kinds of shaders, I'd recommend using
 \begin_inset Index idx
 status open
 
@@ -2048,7 +2048,7 @@ RetroArch
 
 \end_inset
 
-RetroArch w/ 
+RetroArch w/
 \begin_inset Index idx
 status open
 
@@ -2059,7 +2059,7 @@ Cg
 \end_inset
 
 Cg support, and a debugging tool for your emulator of choice to peek at
- RAM values (build it for 
+ RAM values (build it for
 \begin_inset Index idx
 status open
 

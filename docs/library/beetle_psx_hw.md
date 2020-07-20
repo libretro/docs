@@ -169,7 +169,7 @@ Here's a m3u example done with Valkryie Profile
 
 #### Swapping disks
 
-Disks can be swapped through Quick Menu -> Disk Control in RetroArch. 
+Disks can be swapped through Quick Menu -> Disk Control in RetroArch.
 
 If not using .m3u files, .cue files must be manually selected via the Load New Disk legacy feature.
 

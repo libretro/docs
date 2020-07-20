@@ -131,7 +131,7 @@ The Mesen-S core saves/loads to/from these directories.
 
 ## Core options
 
-The Mesen-S core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The Mesen-S core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -145,21 +145,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Region** [mesen-s_region] (**Auto**/NTSC/PAL)
 
 	When set to Auto, the emulator will try to detect the game’s region (NTSC or PAL) - however, this is not always possible. When there is nothing to suggest a game is for the PAL region (Australia & Europe), the NTSC region (North America & Japan) will be used by default.
-	
+
 - **Game Boy Model** [mesen-s_gbmodel] (**Auto**/Game Boy/Game Boy Color/Super Game Boy)
 
 	Determines which Game Boy model to emulate when loading a Game Boy or Game Boy Color game. When Auto is selected, Super Game Boy emulation is used for Game Boy games, and Game Boy Color emulation is used for Game Boy Color games.
 
-- **Use SGB2** [mesen-s_sgb2] (Off/**On**) 
+- **Use SGB2** [mesen-s_sgb2] (Off/**On**)
 
 	When enabled, Super Game Boy 2 is used when emulating the SGB. Super Game Boy 2 has corrected CPU timing and some slight differences in behavior.
 
 - **Vertical Overscan** [mesen-s_overscan_vertical] (**None**/8px/16px)
 
 	This overscan setting allow you to cut out pixels vertically on the edge of the screen. On a CRT TV, a few pixels on each side of the screen are usually hidden. Most SNES games output 224 scanlines, while others use the SNES’ 239 scanlines mode. To avoid the window or picture size changing when the game changes between either mode, Mesen-S always outputs 239 scanlines. In the vast majority of games, this results in 7 blank lines on the top and 8 on the bottom. To hide these blank scanlines, set the overscan value to 8.
-	
+
 - **Horizontal Overscan** [mesen-s_overscan_horizontal] (**None**/8px/16px)
-	
+
 	This overscan setting allow you to cut out pixels horizontally on the edge of the screen.
 
 - **Aspect Ratio** [mesen-s_aspect_ratio] (**Auto**/No Stretching/NTSC/PAL/4:3/16:9)
@@ -184,7 +184,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Overclock Type** [mesen-s_overclock_type] (**Before NMI**/After NMI)
 
 	Before NMI: Increases the number of scanlines in the PPU, *before* the NMI signal is triggered at the end of the visible frame. This effectively gives more time for games to perform calculations, which can reduce slowdowns in games. **This is the preferred option for overclocking.**
-	
+
 	After NMI: Increases the number of scanlines in the PPU, *after* the NMI signal is triggered at the end of the visible frame. This effectively gives more time for games to perform calculations, which can reduce slowdowns in games. **This option is less compatible and should only be used if the *Before NMI* variation does not work as expected.**
 
 - **Super FX Clock Speed** [mesen-s_superfx_overclock] (**100%**/200%/300%/400%/500%/1000%)

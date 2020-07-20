@@ -93,28 +93,28 @@ The FFmpeg core's directory name is 'FFmpeg'
 
 ## Core options
 
-The FFmpeg core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. 
+The FFmpeg core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Temporal Interpolation** [ffmpeg_temporal_interp] (**Off**/On)
 
 	'Fake’ a higher framerate by using motion blur.
-	
+
 - **FFT Resolution** [ffmpeg_fft_resolution] (**1280x720**/1920x1080/2560x1440/3840x2160/640x360/320x180)
-	
+
 	Modify the resolution of the music visualizer.
-	
+
 ??? note "FFT Resolution - 320x180"
 	![](../image/core/ffmpeg/320x180.png)
-	
+
 ??? note "FFT Resolution - 3840x2160"
-	![](../image/core/ffmpeg/3840x2160.png)	
-	
+	![](../image/core/ffmpeg/3840x2160.png)
+
 - **FFT Multisample** [ffmpeg_fft_multisample] (**1x**/2x/4x)
 
 	Modify the antialiasing of the music visualizer.
-	
+
 - **Colorspace** [ffmpeg_color_space] (**auto**/BT.70/BT.601/FCC/SMPTE240M)
 
 	Choose [colorspaces](https://trac.ffmpeg.org/wiki/colorspace) from different broadcast regions/standards.

@@ -26,7 +26,7 @@ The following softwares are fine however you can use any other software you want
 
 #### Etcher
 
-Etcher is a free and open-source utility used for burning image files such as .iso and .img files, as well as zipped folders to create live SD cards and USB flash drives. 
+Etcher is a free and open-source utility used for burning image files such as .iso and .img files, as well as zipped folders to create live SD cards and USB flash drives.
 
 • Run **Etcher**
 • Select `Lakka Image`
@@ -38,7 +38,7 @@ Etcher is a free and open-source utility used for burning image files such as .i
 This program is designed to write a raw disk image to a removable device or backup a removable device to a raw image file.
 
 • Click on the **folder icon**
-• Select the **image file** 
+• Select the **image file**
 • Select drive letter **UNDER DEVICE**
 • Click **Write**
 
