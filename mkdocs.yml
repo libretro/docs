@@ -26,6 +26,7 @@ nav:
         - 'PlayStation Vita': 'guides/install-psv.md'
         - 'PlayStation 2': 'guides/install-ps2.md'
         - 'PlayStation 3': 'guides/install-ps3.md'
+        - 'PlayStation Classic': 'guides/install-psc.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md'
         - 'Steam Link': 'guides/install-steamlink.md'
