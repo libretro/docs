@@ -44,4 +44,3 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 - [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
 - [Steam Group](https://steamcommunity.com/groups/libretro)
 - [Steam Developer Page](https://store.steampowered.com/developer/libretro)
-- [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
