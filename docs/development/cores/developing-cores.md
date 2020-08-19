@@ -82,7 +82,7 @@ By default, joypads will be assumed to be inserted into the implementation. If t
 
 #### `retro_get_system_info()`
 
-The frontend will typically request statically known information about the core such as the name of the implementation, version number, etc. The information returned should be stored statically. If dynamic allocation must take place, the implementation must make sure to free this storage in `retro_deinit()` later.
+The frontend will typically request statically known information about the core such as the name of the implementation, version number, etc. The information returned must be allocated statically.
 
 
 #### `retro_load_game()`
