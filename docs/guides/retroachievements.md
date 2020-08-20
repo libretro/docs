@@ -54,7 +54,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                               | Supported | Notes |
 |----------------------------------------------------|:---------:|:------|
 | [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | AES bios is required for most Neo Geo achievements. AES Asia is generally English. |
-| [MAME](https://github.com/libretro/mame)           | ✕         |       |
+| [MAME](https://github.com/libretro/mame)           | ✕         | Support is not likely to ever be possible. The same is true for all MAME variants. |
 
 ### Atari
 
@@ -70,6 +70,12 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                        | Supported | Notes |
 |-------------------------------------------------------------|:---------:|:------|
 | [ProSystem](https://github.com/libretro/prosystem-libretro) | ✔         |       |
+
+#### Jaguar
+
+| Core                                                                 | Supported | Notes |
+|----------------------------------------------------------------------|:---------:|:------|
+| [Virtual Jaguar](https://github.com/libretro/virtualjaguar-libretro) | ✔         | Due to vast core issues, support of this system is extremely limited. |
 
 #### Lynx
 
@@ -171,8 +177,8 @@ You can also check the progress of your friends and add comments on their trophi
 | [mGBA](https://github.com/libretro/mgba)                      | ✔         |       |
 | [VBA-M](https://github.com/libretro/vbam-libretro)            | ✔         |       |
 | [VBA Next](https://github.com/libretro/vba-next)              | ✔         |       |
-| [Beetle GBA](https://github.com/libretro/beetle-gba-libretro) | ✔         |       |
-| [gpSP](https://github.com/libretro/gpsp)                      | ✕         |       |
+| [gpSP](https://github.com/libretro/gpsp)                      | ✔         | Very high speed, but has not been thoroughly tested with achievements. Please prefer other cores when device performance allows. |
+| [Beetle GBA](https://github.com/libretro/beetle-gba-libretro) | ✔         | Experimental core, should not be used without good reason. |
 | [Meteor](https://github.com/libretro/meteor-libretro)         | ✕         |       |
 
 #### NES
@@ -191,7 +197,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                                 | Supported | Notes |
 |----------------------------------------------------------------------|:---------:|:------|
-| [Mupen64Plus-Next](https://github.com/libretro/mupen64plus-libretro) | ✔         | Supports greater graphic customization and upscaling |
+| [Mupen64Plus-Next](https://github.com/libretro/mupen64plus-libretro) | ✔         | Preferred core. Supports greater graphic customization and upscaling. |
 | [ParaLLEl N64](https://github.com/libretro/parallel-n64)             | ✔         | Supports 64DD games. Can play -some- hacks reliant on low accuracy via alternate plugins. |
 
 #### Pokemon Mini
@@ -210,6 +216,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Snes9x 2005](https://github.com/libretro/snes9x2005)                        | ✔         |       |
 | [Snes9x 2002](https://github.com/libretro/snes9x2002)                        | ✔         |       |
 | [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | High accuracy, high performance cost. Actively maintained. |
+| [Beetle Supafaust](https://github.com/libretro/supafaust)                    | ✕         |       |
 | [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✔         |       |
 | [bsnes](https://github.com/libretro/bsnes-libretro)                          | ✕         |       |
 | [bsnes-hd](https://github.com/DerKoun/bsnes-hd)                              | ✕         |       |
@@ -300,8 +307,9 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:------|
 | [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | Identical to Beetle PSX, with extra hardware features. High accuracy. |
-| [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         |       |
+| [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | Identical to Beetle PSX HW in software mode. |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
+| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | High accuracy, extremely high speed. Core is still a work in progress. Not supported on 32-bit systems. |
 
 ### The 3DO Company (various manufacturers)
 
