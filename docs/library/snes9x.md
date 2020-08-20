@@ -39,6 +39,7 @@ Content that can be loaded by the Snes9x core have the following file extensions
 - .swc
 - .fig
 - .bs
+- .st
 
 RetroArch database(s) that are associated with the Snes9x core:
 
