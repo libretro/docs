@@ -140,15 +140,7 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | Boktai Trilogy 	                                | The solar sensor is not emulated.                                                                  |
 | Croket! 2 – Yami no Bank to Banqueen              | Heavy slowdown when approaching the snowman in the beginning.                                      |
-| Digimon Racing (Europe) 	                        | Freezes during the intro. This can be avoided by enabling linking in the standalone VBA-M release. |
-| Drome Racers 	                                    | Only shows a black screen after the THQ logo.                                                      |
-| Hamtaro: Ham-Ham Games 	                        | Locks up if the opening cinematics aren’t skipped.                                                 |
-| Hot Wheels - Stunt Track Challenge                | Resets itself when trying to go in-game.                                                           |
-| Jurassic Park III: Park Builder 	                | Unreadable glitched text.                                                                          |
 | Koro Koro Puzzle Happy Panechu! 	                | The tilt sensor is not emulated.                                                                   |
-| Moto GP 	                                        | Black screen, loud screeching noise.                                                               |
-| Phantasy Star Collection 	                        | Digital Eclipse logo sound effect is missing. Phantasy Star 1 flickers.                            |
-| SSX 3 	                                        | Graphics glitches. Seems pitch-related. (1)                                                        |
 | Super Mario Advance 2: Super Mario World (Europe) | The program crashes during the final fight, when Bowser approaches (zoom mode 7)                   |
 | WarioWare: Twisted!                               | The tilt sensor is not emulated.                                                                   |
 | Yoshi’s Universal Gravitation                     | The tilt sensor is not emulated.                                                                   |
