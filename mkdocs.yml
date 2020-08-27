@@ -31,6 +31,7 @@ nav:
         - 'Lakka-PC': 'guides/install-lakka.md'
         - 'Steam Link': 'guides/install-steamlink.md'
         - 'Web Player': 'guides/web-player.md'
+        - 'Sega Genesis Mini': 'guides/install-genesismini.md'        
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
