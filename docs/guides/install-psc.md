@@ -36,7 +36,7 @@ Installation may sound complicated but it's not. Format your USB to `exFat` or `
 
 #### Video Tutorial for RetroBoot
 
-[![Quick Video Demonstration](https://i.ytimg.com/vi/qwL-H0-K4Wo/hqdefault.jpg)](https://www.youtube.com/watch?v=qwL-H0-K4Wo)
+[![Quick Video Demonstration](https://i.ytimg.com/vi/z3qT9X5698s/hqdefault.jpg)](https://www.youtube.com/watch?v=z3qT9X5698s)
 
 | :warning: DISCLAIMER:          |
 |:---------------------------|
