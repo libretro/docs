@@ -30,7 +30,7 @@ Extract the downloaded archive file from the zip. There will be an executable fi
 
 Remove your USB from your computer and insert it into the second USB port while your device is turned off, or you can plug it in from the back of the device with an OTG cable, so you can plug the controller to the second USB port. When the system is turned on, you can click on the RetroArch icon and continue.
 
-#### Video Tutorial for RetroBoot
+#### Video Tutorial
 
 [![Quick Video Demonstration](https://i.ytimg.com/vi/kCyTlMjvzWA/hqdefault.jpg)](https://www.youtube.com/watch?v=kCyTlMjvzWA)
 
