@@ -32,7 +32,7 @@ Remove your USB from your computer and insert it into the second USB port while 
 
 #### Video Tutorial for RetroBoot
 
-[![Quick Video Demonstration](https://www.youtube.com/watch?v=kCyTlMjvzWA)
+[![Quick Video Demonstration](https://i.ytimg.com/vi/kCyTlMjvzWA/hqdefault.jpg)](https://www.youtube.com/watch?v=kCyTlMjvzWA)
 
 | :warning: DISCLAIMER:          |
 |:---------------------------|
