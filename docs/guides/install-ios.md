@@ -9,8 +9,9 @@ There are multiple ways of downloading RetroArch for your iOS device. Depending 
 - **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
 - **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android.
 
-!!! Warning
-    RetroArch or Libretro is not affiliated with Cydia Impactor in anyway. You can also use alternative applications that can do this function.
+| :warning: WARNING          |
+|:---------------------------|
+| RetroArch or Libretro is not affiliated with Cydia Impactor in anyway. You can also use alternative applications that can do this function.      |
 
 ## Installation
 
@@ -58,6 +59,6 @@ ___
 You can find your content under `Load Content > /var/mobile/containers/dat`.
 
 
-### Video Tutorial
+## Video Tutorial
 ___
 [![Quick Video Demonstration](http://img.youtube.com/vi/QMCXXabUR5k/0.jpg)](http://www.youtube.com/watch?v=QMCXXabUR5k)

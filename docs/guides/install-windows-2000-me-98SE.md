@@ -21,6 +21,6 @@ If you pick the 7z archive package, extract it in a folder that doesn't require 
 
 If you pick the executable file, double click exe file and follow the instructions on-screen to install...
 
-#### Video Tutorial
+## Video Tutorial
 
 [![Quick Video Demonstration](http://img.youtube.com/vi/M8pNxq_vifQ/0.jpg)](http://www.youtube.com/watch?v=M8pNxq_vifQ)

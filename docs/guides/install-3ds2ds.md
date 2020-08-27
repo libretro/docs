@@ -3,16 +3,18 @@
 ## Prerequisites
 
 - **CFW** You must have custom firmware to run RetroArch on your 3DS or 2DS.
-- **Installer** You can either use `FBI installer` or `Rosalina Menu` from `Luma`.
+- **Installer** You can either use `FBI installer` or `Rosalina Menu` from `Luma`.  
 
-!!! Warning
-    Hardware or software changes on your device may damage your device.
+| :warning: WARNING          |
+|:---------------------------|
+| Hardware or software changes on your device may damage your device.      |
+    
 
-### Downloading and installing
+## Downloading and installing
 
 There are multiple ways of downloading RetroArch for your 3DS or 2DS.
 
-#### Installation
+### Installation
 
 You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `nintendo/3ds` and download `RetroArch_3dsx.7z` or `RetroArch_cia.7z`.
 
@@ -45,7 +47,7 @@ This approach will work fine as long as the MAME Content romset is a **Full Non-
 
 **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**  For more information, please refer to [Getting started with arcade emulation](arcade-getting-started.md).
 
-#### Control Configuration for MAME Cores
+##### Control Configuration for MAME Cores
 
 Much of the Content loaded by the RetroArch MAME Cores uses a `Vertical display perspective` for the top 3DS screen, requiring the user to rotate the 3DS counter-clockwise in order to properly see the game content and access the game controls.  When using Content in this configuration, the default controls won't be suitable (as the controls are typically configured for `Horizontal display perspective`).
 
@@ -59,6 +61,6 @@ A simple configuration example follows, in case the majority of Content uses a V
 
 Following the above ensures all Content may use the proper control configuration.
 
-### Video Tutorial
+## Video Tutorial
 
 [![Quick Video Demonstration](http://img.youtube.com/vi/4TnjFE9t1a4/0.jpg)](http://www.youtube.com/watch?v=4TnjFE9t1a4)
