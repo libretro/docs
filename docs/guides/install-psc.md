@@ -2,16 +2,20 @@
 
 ## PlayStation Classic
 
-**Note:** You currently need the have a way to execute homebrew to run RetroArch on your PlayStation 2.
+**Note:** You currently need the have a way to execute homebrew to run RetroArch on your PlayStation Classic.
 
 ## Prerequisites
 
 - FAT32 or exFat formatted USB2.0(some USB 3.0 are working as well)
 - USB needs to be renamed as "SONY"
 
+| :warning: DISCLAIMER:          |
+|:---------------------------|
+| Project Eris made by ModMyClassic and RetroBoot made by u/genderbent, at RetroArch/LibRetro we all love community works. We think Project Eris and RetroBoot is as valuable for PlayStation Classic.      |
+
 ### Downloading and installing
 
-Project Eris version of RetroArch is building by the ModMyClassic team. It may have a different version than RetroArch's current version. As Project Eris is updated, the RetroArch it contains may be close to the current version.
+Project Eris version of RetroArch is built by the ModMyClassic team. It may have a different version than RetroArch's current version. As Project Eris is updated, the RetroArch it contains may be close to the current version.
 
 #### Downloading
 
@@ -33,3 +37,7 @@ Installation may sound complicated but it's not. Format your USB to `exFat` or `
 #### Video Tutorial for RetroBoot
 
 [![Quick Video Demonstration](https://i.ytimg.com/vi/qwL-H0-K4Wo/hqdefault.jpg)](https://www.youtube.com/watch?v=qwL-H0-K4Wo)
+
+| :warning: DISCLAIMER:          |
+|:---------------------------|
+| The installation steps or dowloading file parts of the project may differ over time.      |
