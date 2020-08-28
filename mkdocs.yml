@@ -61,6 +61,7 @@ nav:
       - 'Creating a Theme': 'guides/themes.md'
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'RGUI Interface': 'guides/rgui.md'
+      - 'Ozone Interface': 'guides/ozone.md'
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
