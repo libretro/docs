@@ -2,7 +2,7 @@
 
 ## What is it?
 ___
-Lakka is a lightweight Linux distribution that transforms a small computer into a full blown retrogaming console.
+Lakka is the official Linux distribution of RetroArch and the libretro ecosystem. Each game system is implemented as a libretro core, while the frontend RetroArch takes care of inputs and display. This clear separation ensures modularity and centralized configuration. Lakka is a lightweight Linux distribution that transforms a small computer into a full blown retrogaming console.
 
 | :warning: DISCLAIMER          |
 |:---------------------------|
