@@ -29,6 +29,9 @@ nav:
         - 'PlayStation Classic': 'guides/install-psc.md'
       - 'Others':
         - 'Lakka-PC': 'guides/install-lakka.md'
+        - 'Ludo':
+          - 'Installing': 'guides/install-ludo.md'
+          - 'Building': 'guides/building-ludo.md'
         - 'Steam Link': 'guides/install-steamlink.md'
         - 'Web Player': 'guides/web-player.md'
         - 'Sega Genesis Mini': 'guides/install-genesismini.md'        
