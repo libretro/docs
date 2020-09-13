@@ -12,5 +12,5 @@ Enter the following commands (from the Dolphin source directory):
 
     mkdir build
     cd build
-    cmake .. -DLIBRETRO=ON -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 15 2017 Win64"
+    cmake .. -DLIBRETRO=ON -DENABLE_QT=0 -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 15 2017 Win64"
     cmake --build . --target dolphin_libretro --config Release
