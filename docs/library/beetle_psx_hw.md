@@ -420,6 +420,26 @@ The default setting for each option will be highlighted in bold. Settings with (
 	??? note "*MDEC YUV Chroma Filter On/Off Comparison*"
 	    ![](../image/core/beetle_psx_hw/mdec-yuv-filter.png)
 
+- **Track Textures** [beetle_psx_hw_track_textures] (**disabled**/enabled)
+	
+	Vulkan Only
+	
+	Tracks texture to enable texture dumping/replacing.
+	
+- **Dump Textures** [beetle_psx_hw_dump_textures] (**disabled**/enabled)
+	
+	Vulkan Only
+	
+	Dumps textures when they are accessed. To dump textures properly, it is necessary to create a folder named <cd>-texture-dump/ in the same folder as the game disk.
+	
+- **Replace Textures** [beetle_psx_hw_replace_textures] (**disabled**/enabled)
+	
+	Vulkan Only
+	
+	Replaces textures with files given in the folder <cd>-texture-replacements/ with the same name as dumped textures. 
+	
+	**The replacement texture has to be a PNG file with bit depth of a maximum of 8 and the resolution must be a multiple of 2 based on the original texture.**
+
 - **Wireframe Mode** [beetle_psx_hw_wireframe] (**disabled**/enabled)
 
 	OpenGL Only
