@@ -12,17 +12,21 @@ This is probably the most straightforward way to install RetroArch.
 
 - Pro CFW (latest version)
 
-## Downloading and installing
+## Downloading, Installing and Updating
 
-At this time we can only use the Stable version of 1.8.2, this will be improved in the future.
+At this time we can only use the Stable version of 1.9.0, this will be improved in the future.
 
 ### Downloading
 
-You can download a bundle with RetroArch, all the supported cores and all the assets by clicking [here](https://buildbot.libretro.com/stable/1.8.2/playstation/psp/RetroArch.7z).
+You can download a bundle with RetroArch, all the supported cores and all the assets by clicking [here](http://buildbot.libretro.com/stable/1.9.0/playstation/psp/RetroArch.7z).
 
 ### Installing
 
 Installation is also very simple. Just create `RetroArch` folder under `PSP/Game` directory and transfer the archive files to the `PSP/Game/RetroArch` then go to `Memory Stick™` under **Game** press **X** and first or last application is must be RetroArch.
+
+### Updating
+
+Download the latest version and unzip it into 'PSP/Game/RetroArch'. Accept when prompted to overwrite.
 
 ## Video Tutorial
 
