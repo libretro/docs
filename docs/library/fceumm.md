@@ -411,6 +411,7 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 
 ## Other Links
 - [NES Header Database](http://nes.dnsabr.com/) - Verify, remove or add headers for known No-Intro roms.
+- [FCEUmm Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfFhmpqSJMJgst6QCsWwxdD) - Check the gameplay videos made by using this core.
 
 ### See also
 

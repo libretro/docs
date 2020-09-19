@@ -190,6 +190,10 @@ Please file game bugs on the issue tracker [here](https://github.com/mgba-emu/mg
 - [Libretro mGBA Github Repository](https://github.com/libretro/mgba)
 - [Report Libretro mGBA Core Issues Here](https://github.com/mgba-emu/mgba/issues)
 
+## Other Links
+
+- [mGBA Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0Id2gXuMPiXpnjQmDuvg7Wli) - Check the gameplay videos made by using this core.
+
 ### See also
 
 #### Nintendo - Game Boy Advance

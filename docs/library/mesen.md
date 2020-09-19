@@ -416,6 +416,10 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 - [Official Mesen Github Repository](https://github.com/SourMesen/Mesen)
 - [Report Libretro Mesen Core Issues Here](https://github.com/SourMesen/Mesen/issues)
 
+## Other Links
+
+- [Mesen Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdbTgE4bID9L5s5f323IewO) - Check the gameplay videos made by using this core.
+
 ### See also
 
 #### Nintendo - Family Computer Disk System

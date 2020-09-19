@@ -410,6 +410,10 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 - [Libretro Genesis Plus GX Github Repository](https://github.com/libretro/Genesis-Plus-GX)
 - [Report Libretro Genesis Plus GX Core Issues Here](https://github.com/libretro/Genesis-Plus-GX/issues)
 
+## Other Links
+
+- [Genesis Plus GX Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0If0UWkhjPbRmWUBcGaRiPZt) - Check the gameplay videos made by using this core.
+
 ## Sega 16-bit
 
 - [Sega - Master System (Emux SMS)](emux_sms.md)

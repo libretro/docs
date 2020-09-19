@@ -556,6 +556,10 @@ Activating multitap support in compatible games can be configured by the ['Multi
 - [Libretro PCSX ReARMed Github Repository](https://github.com/libretro/pcsx_rearmed)
 - [Report Libretro PCSX ReARMed Core Issues Here](https://github.com/libretro/pcsx_rearmed/issues)
 
+## Other Links
+
+- [PCSX ReArmed Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ie5y2yx-sl5xn6KRbo5VUMf) - Check the gameplay videos made by using this core.
+
 ## PSX
 
 - [Sony - PlayStation (Beetle PSX)](beetle_psx.md)

@@ -399,6 +399,10 @@ Same as upstream standalone.
 - [Libretro DeSmuME Github Repository](https://github.com/libretro/desmume)
 - [Report Libretro DeSmuME Core Issues Here](https://github.com/libretro/desmume/issues)
 
+## Other Links
+
+- [DeSmuME Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0Icim_vEjB_0GeF18zkMBiqU) - Check the gameplay videos made by using this core.
+
 ### See also
 
 #### Nintendo - Nintendo DS + Decrypted + (Download Play)

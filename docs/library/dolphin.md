@@ -218,3 +218,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Official Dolphin Github Repository](https://github.com/dolphin-emu/dolphin)
 - [Libretro Dolphin Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dolphin_libretro.info)
 - [Report Libretro Dolphin Core Issues Here](https://github.com/libretro/dolphin/issues)
+
+## Other Links
+
+- [Dolphin Gameplays](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcC4j9ggvxzZm2GiuufDMeU) - Check the gameplay videos made by using this core.
