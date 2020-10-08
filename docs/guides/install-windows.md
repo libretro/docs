@@ -75,7 +75,7 @@ Configuring directories is an important aspect to get the best RetroArch experie
 To configure the directories follow these steps:
 
 - Navigate to **Settings**
-- Navigate to **Directories**
+- Navigate to **Directory**
 - Select the directory you want to changed
 - Navigate to the desired location
 
