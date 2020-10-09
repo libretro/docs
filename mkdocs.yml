@@ -105,6 +105,8 @@ nav:
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
       - 'ColecoVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
+      - 'Commodore Emulation':
+        - 'Commodore 8-bit (VICE)': 'library/vice.md'
       - 'DOS Emulation':
         - 'DOS (DOSBox)': 'library/dosbox.md'
       - 'GCE Emulation':
