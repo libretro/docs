@@ -106,7 +106,8 @@ nav:
       - 'ColecoVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Commodore Emulation':
-        - 'Commodore 8-bit (VICE)': 'library/vice.md'
+        - 'Commodore - 8-bit (VICE)': 'library/vice.md'
+        - 'Commodore - Amiga (PUAE)': 'library/puae.md'
       - 'DOS Emulation':
         - 'DOS (DOSBox)': 'library/dosbox.md'
       - 'GCE Emulation':
