@@ -267,6 +267,7 @@ The PUAE core has a virtual keyboard that can be accessed by default through Ret
 
 The virtual keyboard can be controlled with:
 - **RetroPad**
+
     |Button  |Action             |
     |--------|-------------------|
     |D-Pad   |Move               |
@@ -275,12 +276,15 @@ The virtual keyboard can be controlled with:
     |Y       |Toggle CapsLock    |
     |X       |Toggle position    |
     |Start   |Press Return       |
+
 - **Keyboard**
+
     |Key     |Action             |
     |--------|-------------------|
     |Cursors |Move               |
     |Enter   |Keypress           |
     |CapsLock|Toggle CapsLock    |
+
 - **Mouse**
 - **Touch screen**
 

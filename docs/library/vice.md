@@ -231,6 +231,7 @@ The VICE cores have a virtual keyboard that can be accessed by default through R
 
 The virtual keyboard can be controlled with:
 - **RetroPad**
+
     |Button  |Action             |
     |--------|-------------------|
     |D-Pad   |Move               |
@@ -238,12 +239,15 @@ The virtual keyboard can be controlled with:
     |A       |Toggle transparency|
     |Y       |Toggle ShiftLock   |
     |Start   |Press Return       |
+
 - **Keyboard**
+
     |Key     |Action             |
     |--------|-------------------|
     |Cursors |Move               |
     |Enter   |Keypress           |
     |CapsLock|Toggle ShiftLock   |
+
 - **Mouse**
 - **Touch screen**
 
