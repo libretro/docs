@@ -136,6 +136,7 @@ Frontend-level settings or features that the VICE cores respect.
 ### Directories
 
 The VICE cores' internal core names are:
+
 - vice_x64
 - vice_x64sc
 - vice_x128
@@ -192,6 +193,7 @@ Ultima VI - The False Prophet (1990)(Origin Systems)(Disk 3 of 3 Side B)(Populac
 Path can be absolute or relative to the location of the M3U file.
 
 When the game asks for it, you can change the current disk in the RetroArch "Disc Control" menu:
+
 - Eject the current disk with "Eject Disc"
 - Select the right disk index with "Current Disc Index"
 - Insert the new disk with "Insert Disc"
@@ -201,6 +203,7 @@ When the game asks for it, you can change the current disk in the RetroArch "Dis
 ZIPs will be extracted to a temporary directory in `saves`, bypassing the default frontend extraction. The temporary directory will be removed on exit.
     
 This allows:
+
 - Automatic M3U playlist generation of all files
 - The use of zipped images in M3Us
 
@@ -230,6 +233,7 @@ This allows:
 The VICE cores have a virtual keyboard that can be accessed by default through RetroPad Select or keyboard key F11.
 
 The virtual keyboard can be controlled with:
+
 - **RetroPad**
 
     |Button  |Action             |
@@ -252,6 +256,7 @@ The virtual keyboard can be controlled with:
 - **Touch screen**
 
 The virtual keyboard has these additional actions:
+
 - `STB` = Toggle statusbar
 - `JOY` = Switch joystick ports
 - `TTF` = Toggle turbo fire
@@ -263,6 +268,7 @@ Long press for sticky keys. Stickying the third key will replace the second.
 ### Joyport control
 
 Older C64 games tend to use joystick port 1 and newer ones tend to use port 2 for player 1. There are several ways to switch ports in this core:
+
 - Use the core option: `Quick Menu -> Options -> RetroPad Port`.
 - Bring up the virtual keyboard with `Select` button, and press the key labeled `JOY`.
 - Press the default keyboard shortcut `Right Control`.
