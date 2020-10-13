@@ -66,41 +66,41 @@ RetroArch database(s) that are associated with the VICE cores:
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory ('system/vice').
+Required or optional firmware files go in the frontend's system directory (`system/vice`).
 
 All required files are embedded, ergo these files are optional.
 
 ### C64 (fast/accurate)
 
-| Filename                     | Description                            | md5sum                           |
-|:----------------------------:|:--------------------------------------:|:--------------------------------:|
-| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal                    | be09394f0576cf81fa8bacf634daf9a2 |
-| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS               | 1b1e985ea5325a1f46eb7fd9681707bf |
-| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS               | 41c6cc528e9515ffd0ed9b180f8467c0 |
-| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS               | 20b6885c6dc2d42c38754a365b043d71 |
+| Filename                     | Description                  | md5sum                           |
+|------------------------------|------------------------------|----------------------------------|
+| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal          | be09394f0576cf81fa8bacf634daf9a2 |
+| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS     | 1b1e985ea5325a1f46eb7fd9681707bf |
+| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS     | 41c6cc528e9515ffd0ed9b180f8467c0 |
+| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS     | 20b6885c6dc2d42c38754a365b043d71 |
 
 ### C64 SuperCPU
 
-| Filename                     | Description                            | md5sum                           |
-|:----------------------------:|:--------------------------------------:|:--------------------------------:|
-| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal                    | be09394f0576cf81fa8bacf634daf9a2 |
-| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS               | 1b1e985ea5325a1f46eb7fd9681707bf |
-| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS               | 41c6cc528e9515ffd0ed9b180f8467c0 |
-| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS               | 20b6885c6dc2d42c38754a365b043d71 |
-| scpu-dos-1.4.bin             | CMD SuperCPU Kernal 1.4                | cda2fcd2e1f0412029383e51dd472095 |
-| scpu-dos-2.04.bin            | CMD SuperCPU Kernal 2.04               | b2869f8678b8b274227f35aad26ba509 |
+| Filename                     | Description                  | md5sum                           |
+|------------------------------|------------------------------|----------------------------------|
+| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal          | be09394f0576cf81fa8bacf634daf9a2 |
+| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS     | 1b1e985ea5325a1f46eb7fd9681707bf |
+| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS     | 41c6cc528e9515ffd0ed9b180f8467c0 |
+| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS     | 20b6885c6dc2d42c38754a365b043d71 |
+| scpu-dos-1.4.bin             | CMD SuperCPU Kernal 1.4      | cda2fcd2e1f0412029383e51dd472095 |
+| scpu-dos-2.04.bin            | CMD SuperCPU Kernal 2.04     | b2869f8678b8b274227f35aad26ba509 |
 
-SuperCPU Kernal files go in 'system/vice/SCPU64'.
+SuperCPU Kernal files go in `system/vice/SCPU64`.
 
 ### C128
 
-| Filename                     | Description                            | md5sum                           |
-|:----------------------------:|:--------------------------------------:|:--------------------------------:|
-| JiffyDOS_C128.bin            | JiffyDOS C128 Kernal                   | cbbd1bbcb5e4fd8046b6030ab71fc021 |
-| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal                    | be09394f0576cf81fa8bacf634daf9a2 |
-| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS               | 1b1e985ea5325a1f46eb7fd9681707bf |
-| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS               | 41c6cc528e9515ffd0ed9b180f8467c0 |
-| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS               | 20b6885c6dc2d42c38754a365b043d71 |
+| Filename                     | Description                  | md5sum                           |
+|------------------------------|------------------------------|----------------------------------|
+| JiffyDOS_C128.bin            | JiffyDOS C128 Kernal         | cbbd1bbcb5e4fd8046b6030ab71fc021 |
+| JiffyDOS_C64.bin             | JiffyDOS C64 Kernal          | be09394f0576cf81fa8bacf634daf9a2 |
+| JiffyDOS_1541-II.bin         | JiffyDOS 1541 drive BIOS     | 1b1e985ea5325a1f46eb7fd9681707bf |
+| JiffyDOS_1571_repl310654.bin | JiffyDOS 1571 drive BIOS     | 41c6cc528e9515ffd0ed9b180f8467c0 |
+| JiffyDOS_1581.bin            | JiffyDOS 1581 drive BIOS     | 20b6885c6dc2d42c38754a365b043d71 |
 
 ## Features
 
@@ -197,36 +197,61 @@ When the game asks for it, you can change the current disk in the RetroArch "Dis
 - Insert the new disk with "Insert Disc"
 
 ### ZIP support
+
+ZIPs will be extracted to a temporary directory in `saves`, bypassing the default frontend extraction. The temporary directory will be removed on exit.
     
-ZIP support is provided by the core, which allows:
+This allows:
 - Automatic M3U playlist generation of all files
 - The use of zipped images in M3Us
 
 ## Usage
+
+### Default controls
+
+|RetroPad button|Action                 |
+|---------------|-----------------------|
+|D-Pad          |Joystick               |
+|Left Analog    |Mouse/paddles          |
+|B              |Fire button            |
+|X              |Space                  |
+|L2             |Escape (RUN/STOP)      |
+|R2             |Enter (RETURN)         |
+|Select         |Toggle virtual keyboard|
+
+|Keyboard key   |Action                 |
+|---------------|-----------------------|
+|F11            |Toggle virtual keyboard|
+|F12            |Toggle statusbar       |
+|RControl       |Switch between joyports|
+|End            |Reset                  |
 
 ### Virtual keyboard
 
 The VICE cores have a virtual keyboard that can be accessed by default through RetroPad Select or keyboard key F11.
 
 The virtual keyboard can be controlled with:
-- RetroPad
-  - `D-Pad` = Move
-  - `B` = Press key
-  - `A` = Toggle transparency
-  - `Y` = Toggle ShiftLock
-  - `Start` = Press Return
-- Keyboard
-  - `Cursors` = Move
-  - `Enter` = Press key
-  - `CapsLock` = Toggle ShiftLock
-- Mouse
-- Touch screen
+- **RetroPad**
+    |Button  |Action             |
+    |--------|-------------------|
+    |D-Pad   |Move               |
+    |B       |Keypress           |
+    |A       |Toggle transparency|
+    |Y       |Toggle ShiftLock   |
+    |Start   |Press Return       |
+- **Keyboard**
+    |Key     |Action             |
+    |--------|-------------------|
+    |Cursors |Move               |
+    |Enter   |Keypress           |
+    |CapsLock|Toggle ShiftLock   |
+- **Mouse**
+- **Touch screen**
 
 The virtual keyboard has these additional actions:
-- `STB` Toggle statusbar
-- `JOY` Swap joystick ports
-- `TTF` Toggle turbofire
-- Reset (Undo icon)
+- `STB` = Toggle statusbar
+- `JOY` = Switch joystick ports
+- `TTF` = Toggle turbo fire
+- Reset (Red key with undo icon, obeys 'Reset Type' core option)
 - Datasette controls (Reset, Play, Rewind, Forward, Stop)
 
 Long press for sticky keys. Stickying the third key will replace the second.
@@ -237,7 +262,7 @@ Older C64 games tend to use joystick port 1 and newer ones tend to use port 2 fo
 - Use the core option: `Quick Menu -> Options -> RetroPad Port`.
 - Bring up the virtual keyboard with `Select` button, and press the key labeled `JOY`.
 - Press the default keyboard shortcut `Right Control`.
-- Assign `SWITCH_JOYPORT` to any RetroPad button under `Quick Menu -> Options`.
+- Assign `Switch Joyport` to any RetroPad button under `Quick Menu -> Options`.
 - Rename the game, eg. `Bruce_Lee_j1.tap` or `Bruce_Lee_(j1).tap` for port 1, and similarly `Bruce_Lee_j2.tap` or `Bruce_Lee_(j2).tap` for port 2.
 - Add `-j1` or `-j2` parameters in custom command line `.cmd`
 
@@ -391,16 +416,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Statusbar Mode** [vice_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
 
-    - Full: Joyports + Current image + LEDs
-    - Basic: Current image + LEDs
-    - Minimal: Track number + FPS hidden
+    - 'Full': Joyports + Current image + LEDs
+    - 'Basic': Current image + LEDs
+    - 'Minimal': Track number + FPS hidden
 
 - **Virtual KBD Theme** [vice_vkbd_theme] (**0**|1|2|3)
 
-    - 0 = `C64`
-    - 1 = `C64C`
-    - 2 = `Dark`
-    - 3 = `Light`
+    | Value | Label |
+    |-------|-------|
+    | 0     | C64   |
+    | 1     | C64C  |
+    | 2     | Dark  |
+    | 3     | Light |
 
 - **Virtual KBD Transparency** [vice_vkbd_alpha] (0|5|10|15|**20**|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95)
 
@@ -498,7 +525,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Shows/hides audio related options. Core options page refresh required.
 
-- **Drive Sound Emulation** [vice_drive_sound_emulation] (**disabled**|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)
+- **Drive Sound Emulation** [vice_drive_sound_emulation] (disabled|5|10|15|**20**|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)
 
     'True Drive Emulation' & D64/D71 disk image required.
 
@@ -634,40 +661,48 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10)
 
-    - 1  = `Joystick`
-    - 2  = `Paddles`
-    - 3  = `Mouse (1351)`
-    - 4  = `Mouse (NEOS)`
-    - 5  = `Mouse (Amiga)`
-    - 6  = `Trackball (Atari CX-22)`
-    - 7  = `Mouse (Atari ST)`
-    - 8  = `Mouse (SmartMouse)`
-    - 9  = `Mouse (Micromys)`
-    - 10 = `Koalapad`
+    | Value | Label                   |
+    |-------|-------------------------|
+    | 1     | Joystick                |
+    | 2     | Paddles                 |
+    | 3     | Mouse (1351)            |
+    | 4     | Mouse (NEOS)            |
+    | 5     | Mouse (Amiga)           |
+    | 6     | Trackball (Atari CX-22) |
+    | 7     | Mouse (Atari ST)        |
+    | 8     | Mouse (SmartMouse)      |
+    | 9     | Mouse (Micromys)        |
+    | 10    | Koalapad                |
 
 - **RetroPad Face Button Options** [vice_retropad_options] (**disabled**|jump|rotate|rotate_jump)
 
     Rotates face buttons clockwise and/or makes 2nd fire press up.
 
-    - 'disabled'    = `B = Fire`
-    - 'jump'        = `B = Fire, A = Up`
-    - 'rotate'      = `Y = Fire`
-    - 'rotate_jump' = `Y = Fire, B = Up`
+    | Value       | Label            |
+    |-------------|------------------|
+    | disabled    | B = Fire         |
+    | jump        | B = Fire, A = Up |
+    | rotate      | Y = Fire         |
+    | rotate_jump | Y = Fire, B = Up |
 
-## User 1 - 5 device types
+## Controllers
 
 The VICE cores support the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
+### User 1 - 5 device types
+
 - None - Input disabled.
-- **RetroPad** - Joypad - Standard one fire button joystick + customizable buttons with keyboard keys and hotkeys
-- Joystick - Joypad - Standard one fire button joystick
+- **RetroPad** - Joypad - Standard one fire button joystick + customizable buttons with keyboard keys and hotkeys.
+- Joystick - Joypad - Standard one fire button joystick.
 - Keyboard - Keyboard - Keyboard input are always active. Has keymapper support.
 
 ### Other controllers
 
-- Mouse - Paddles and mice
+- Mouse - Paddles and mice, enabled only when 'RetroPad Port Type' has a non-joystick selected.
 
-## Joypad
+### Controller tables
+
+#### Joypad
 
 ![](../image/controller/psx.png)
 
@@ -694,15 +729,15 @@ The VICE cores support the following device type(s) in the controls menu, bolded
 | Right Analog X                 | ![](../image/retropad/retro_right_stick.png) X |
 | Right Analog Y                 | ![](../image/retropad/retro_right_stick.png) Y |
 
-| Input descriptors for Joystick 1 Button | RetroPad Inputs                             |
-|-----------------------------------------|---------------------------------------------|
-| D-Pad Up                                | ![](../image/retropad/retro_dpad_up.png)    |
-| D-Pad Down                              | ![](../image/retropad/retro_dpad_down.png)  |
-| D-Pad Left                              | ![](../image/retropad/retro_dpad_left.png)  |
-| D-Pad Right                             | ![](../image/retropad/retro_dpad_right.png) |
-| B / Fire                                | ![](../image/retropad/retro_b.png)          |
+| Input descriptors for Joystick | RetroPad Inputs                                |
+|--------------------------------|------------------------------------------------|
+| D-Pad Up                       | ![](../image/retropad/retro_dpad_up.png)       |
+| D-Pad Down                     | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                     | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                    | ![](../image/retropad/retro_dpad_right.png)    |
+| B / Fire                       | ![](../image/retropad/retro_b.png)             |
 
-## Keyboard
+#### Keyboard
 
 English positional layout
 
@@ -724,5 +759,5 @@ English positional layout
 ## External Links
 
 - [Official VICE Website](https://vice-emu.sourceforge.io/)
-- [Libretro VICE Github Repository](https://github.com/libretro/vice-libretro)
-- [Report Libretro VICE Core Issues Here](https://github.com/libretro/vice-libretro/issues)
+- [Libretro VICE Github repository](https://github.com/libretro/vice-libretro)
+- [Report Libretro VICE core issues here](https://github.com/libretro/vice-libretro/issues)
