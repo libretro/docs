@@ -71,8 +71,11 @@ Required or optional firmware files go in the frontend's system directory.
 
 The core has a built-in AROS fallback Kickstart, which is used when the real Kickstart is not found. It can be compatible enough for some A500 games.
 
+Amiga Forever BIOS files must be renamed accordingly.
+
 | Filename                     | Description                            | md5sum                           |
 |------------------------------|----------------------------------------|----------------------------------|
+| kick33180.A500               | Kickstart v1.2 rev 33.180 (!)          | 85ad74194e87c08904327de1a9443b7a |
 | kick34005.A500               | Kickstart v1.3 rev 34.005              | 82a21c1890cae844b3df741f2762d48d |
 | kick37175.A500               | Kickstart v2.04 rev 37.175             | dc10d7bdd1b6f450773dfb558477c230 |
 | kick40063.A600               | Kickstart v3.1 rev 40.063              | e40a5dfb3d017ba8779faba30cbd1c8e |
@@ -82,6 +85,8 @@ The core has a built-in AROS fallback Kickstart, which is used when the real Kic
 | kick40060.CD32               | CD32 Kickstart v3.1 rev 40.060         | 5f8924d013dd57a89cf349f4cdedc6b1 |
 | kick40060.CD32.ext           | CD32 extended ROM rev 40.060           | bb72565701b1b6faece07d68ea5da639 |
 | kick40060.CD32               | CD32 KS + extended v3.1 rev 40.060     | f2f241bf094168cfb9e7805dc2856433 |
+
+- (!) Kickstart v1.2 only needed for WHDLoad Arcadia games
 
 ## Features
 
@@ -118,7 +123,7 @@ Frontend-level settings or features that the PUAE core respect.
 
 The PUAE core's internal core name is 'puae'.
 
-The PUAE core save/load to/from these directories.
+The PUAE core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -246,48 +251,47 @@ Please be aware that there are 32-bits and 64-bits versions of the library. Choo
 
 ### Default controls
 
-|RetroPad button|Action                       |
-|---------------|-----------------------------|
-|D-Pad          |Joystick                     |
-|Left Analog    |Mouse                        |
-|Right Analog   |Mouse                        |
-|B              |Fire button 1 / Red          |
-|A              |Fire button 2 / Blue         |
-|X              |Space                        |
-|L2             |Left mouse button            |
-|R2             |Right mouse button           |
-|Select         |Toggle virtual keyboard      |
+| RetroPad button | Action                        |
+|-----------------|-------------------------------|
+| D-Pad           | Joystick                      |
+| Left Analog     | Mouse                         |
+| Right Analog    | Mouse                         |
+| B               | Fire button 1 / Red           |
+| A               | Fire button 2 / Blue          |
+| X               | Space                         |
+| L2              | Left mouse button             |
+| R2              | Right mouse button            |
+| Select          | Toggle virtual keyboard       |
 
-|Keyboard key   |Action                       |
-|---------------|-----------------------------|
-|F11            |Toggle virtual keyboard      |
-|F12            |Toggle statusbar             |
-|RControl       |Switch between joystick/mouse|
+| Keyboard key    | Action                        |
+|-----------------|-------------------------------|
+| F12             | Toggle statusbar              |
+| RControl        | Switch between joystick/mouse |
 
 ### Virtual keyboard
 
-The PUAE core has a virtual keyboard that can be accessed by default through RetroPad Select or keyboard key F11.
+The PUAE core has a virtual keyboard that can be accessed by default through RetroPad Select.
 
 The virtual keyboard can be controlled with:
 
 - **RetroPad**
 
-    |Button  |Action             |
-    |--------|-------------------|
-    |D-Pad   |Move               |
-    |B       |Keypress           |
-    |A       |Toggle transparency|
-    |Y       |Toggle CapsLock    |
-    |X       |Toggle position    |
-    |Start   |Press Return       |
+    | Button   | Action              |
+    |----------|---------------------|
+    | D-Pad    | Move                |
+    | B        | Keypress            |
+    | A        | Toggle transparency |
+    | Y        | Toggle CapsLock     |
+    | X        | Toggle position     |
+    | Start    | Press Return        |
 
 - **Keyboard**
 
-    |Key     |Action             |
-    |--------|-------------------|
-    |Cursors |Move               |
-    |Enter   |Keypress           |
-    |CapsLock|Toggle CapsLock    |
+    | Key      | Action              |
+    |----------|---------------------|
+    | Cursors  | Move                |
+    | Enter    | Keypress            |
+    | CapsLock | Toggle CapsLock     |
 
 - **Mouse**
 - **Touch screen**
@@ -308,10 +312,10 @@ Long press for sticky keys. Stickying the third key will replace the second.
 
 Some games use mouse instead of joystick. D-Pad can be switched between joystick and mouse control in several ways:
 
-- Use the core option: `Quick Menu -> Options -> RetroPad Joystick/Mouse`.
-- Bring up the virtual keyboard with `Select` button, and press the key labeled `J/M`.
-- Press the default keyboard shortcut `Right Control`.
-- Assign `Switch Joystick/Mouse` to any RetroPad button under `Quick Menu -> Options`.
+- Use the core option: `Quick Menu -> Options -> RetroPad Joystick/Mouse`
+- Bring up the virtual keyboard with `Select` button, and press the key labeled `J/M`
+- Press the default keyboard shortcut `Right Control`
+- Assign `Switch Joystick/Mouse` to any RetroPad button under `Quick Menu -> Options`
 
 ### Model overriding
 
@@ -321,23 +325,26 @@ The "Model" core option at "**Automatic**" will default to A500 when booting flo
 
 The whole path (filename and directory) will be searched for the following tags if the model is "**Automatic**":
 
-|Floppy/HD/LHA|CD|String|Result|
-|---|---|---|---|
-|**x**| |**(A500OG)** or **(512K)**|Amiga 500, 0.5MB Chip RAM|
-|**x**| |**(A500)** or **OCS**|Amiga 500, 0.5MB Chip RAM + 0.5MB Slow RAM|
-|**x**| |**(A500+)** or **(A500PLUS)**|Amiga 500+, 1MB Chip RAM|
-|**x**| |**(A600)** or **ECS**|Amiga 600, 2MB Chip RAM + 8MB Fast RAM|
-|**x**| |**(A1200OG)** or **(A1200NF)**|Amiga 1200, 2MB Chip RAM|
-|**x**| |**(A1200)** or **AGA** or **CD32** or **AmigaCD**|Amiga 1200, 2MB Chip RAM + 8MB Fast RAM|
-|**x**| |**(A4030)** or **(030)**|Amiga 4000/030, 2MB Chip RAM + 8MB Fast RAM|
-|**x**| |**(A4040)** or **(040)**|Amiga 4000/040, 2MB Chip RAM + 8MB Fast RAM|
-|**x**| |**(MD)**|*Insert each disk in different drives (**Maximum 4 disks**)*|
-| |**x**|**CDTV**|Amiga CDTV, 1MB Chip RAM|
-| |**x**|**(CD32)** or **(CD32NF)**|Amiga CD32, 2MB Chip RAM|
-| |**x**|**(CD32FR)** or **FastRAM**|Amiga CD32, 2MB Chip RAM + 8MB Fast RAM|
-|**x**|**x**|**NTSC** or **(USA)**|NTSC 60Hz|
-|**x**|**x**|**PAL** or **(Europe)** or **(Denmark)** or **(Finland)** or **(France)** or **(Germany)** or **(Italy)** or **(Spain)** or **(Sweden)**|PAL 50Hz|
-|**x**|**x**|**(CE)**|Force CPU Cycle-exact|
+| Floppy | HD/LHA | CD    | String                                      | Result                                       |
+|--------|--------|-------|---------------------------------------------|----------------------------------------------|
+| **x**  | **x**  |       | **(A500OG)**, **(512K)**                    | Amiga 500 (0.5MB Chip RAM)                   |
+| **x**  | **x**  |       | **(A500)**, **OCS**                         | Amiga 500 (0.5MB Chip RAM + 0.5MB Slow RAM)  |
+| **x**  | **x**  |       | **(A500+)**, **(A500PLUS)**                 | Amiga 500+ (1MB Chip RAM)                    |
+| **x**  | **x**  |       | **(A600)**, **ECS**                         | Amiga 600 (2MB Chip RAM + 8MB Fast RAM)      |
+| **x**  | **x**  |       | **(A1200OG)**, **(A1200NF)**                | Amiga 1200 (2MB Chip RAM)                    |
+| **x**  | **x**  |       | **(A1200)**, **AGA**, **CD32**, **AmigaCD** | Amiga 1200 (2MB Chip RAM + 8MB Fast RAM)     |
+| **x**  | **x**  |       | **(A4030)**, **(030)**                      | Amiga 4000/030 (2MB Chip RAM + 8MB Fast RAM) |
+| **x**  | **x**  |       | **(A4040)**, **(040)**                      | Amiga 4000/040 (2MB Chip RAM + 8MB Fast RAM) |
+|        |        | **x** | **CDTV**                                    | Amiga CDTV (1MB Chip RAM)                    |
+|        |        | **x** | **(CD32)**, **(CD32NF)**                    | Amiga CD32 (2MB Chip RAM)                    |
+|        |        | **x** | **(CD32FR)**, **FastRAM**                   | Amiga CD32 (2MB Chip RAM + 8MB Fast RAM)     |
+| **x**  | **x**  | **x** | **NTSC**, **(USA)**                         | NTSC 60Hz                                    |
+| **x**  | **x**  | **x** | **PAL**, **(Europe)** (!)                   | PAL 50Hz                                     |
+| **x**  |        |       | **(MD)** (!!)                               | Insert each disk in different drives         |
+| **x**  | **x**  | **x** | **(CE)**                                    | Force CPU Cycle-exact                        |
+
+- (!) Additional tags: **(Denmark)**, **(Finland)**, **(France)**, **(Germany)**, **(Italy)**, **(Spain)**, **(Sweden)**
+- (!!) **Maximum 4 disks**
 
 Example: When launching "Alien Breed 2 AGA.hdf" or "AGA/Alien Breed 2.hdf" the model will be Amiga 1200.
 
@@ -355,18 +362,18 @@ Pre-installed WHDLoad LHA archives can be launched directly without any kind of 
 #### Overrides at startup
 
 - **(Red)** Hold fire button for launch selector
-  - For alternate `.info` launching
+    - For alternate `.info` launching
 - **(Red+Blue)** Hold fire + 2nd fire for `ReadMe` + `MkCustom`
-  - For creating default `CUSTOM` parameters
+    - For creating default `CUSTOM` parameters
 
 #### 'WHDLoad Splash Screen' core option overrides
 
 - **(Blue)** Hold 2nd fire for WHDLoad Config
-  - Waits for user input if the slave supports splash screen configurations
+    - Waits for user input if the slave supports splash screen configurations
 - **(LMB)** Hold left mouse button for WHDLoad Splash
-  - Briefly shows the splash screen while preloading (default WHDLoad behavior)
+    - Briefly shows the splash screen while preloading (default WHDLoad behavior)
 - **(RMB)** Hold right mouse button for WHDLoad Config+Splash
-  - Always waits for user input at the splash screen
+    - Always waits for user input at the splash screen
 
 For more detailed history of WHDLoad support visit the [Github repository](https://github.com/libretro/libretro-uae#whdload).
 
@@ -394,9 +401,11 @@ filesystem2=rw,DH0:data:/emuroms/amiga/,0
 ```
 
 Windows tip:
+
 - If paths are enclosed with quotes, Windows needs double backslashes: `filesystem2=rw,DH0:data:"c:\\emuroms\\amiga",0`.
 
 Linux tip:
+
 - Leave the ending slash to the path to make sure UAE sees it as a directory.
 
 If you are using RDB HDF files, please use `0,0,0,0` instead of geometry numbers like `32,1,2,512`. The geometry will then be read from the file. This only works for RDB HDF files.
@@ -684,7 +693,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Shows/hides hotkey & RetroPad mapping options. Core options page refresh required.
 
-- **Toggle Virtual Keyboard** [puae_mapper_vkbd] (**RETROK_F11**)
+- **Toggle Virtual Keyboard** [puae_mapper_vkbd] (**---**)
 
 - **Toggle Statusbar** [puae_mapper_statusbar] (**RETROK_F12**)
 
@@ -870,8 +879,8 @@ English layout
 |------------------------------|-----------------------------|
 | Keyboard Left Meta/Super     | Left Amiga                  |
 | Keyboard Right Meta/Super    | Right Amiga                 |
-| Keyboard Page Down           | Left Amiga                  |
-| Keyboard Page Up             | Right Amiga                 |
+| Keyboard Page Up             | Left Amiga                  |
+| Keyboard Page Down           | Right Amiga                 |
 | Keyboard Insert              | Help                        |
 | Keyboard Home                | [                           |
 | Keyboard End                 | ]                           |

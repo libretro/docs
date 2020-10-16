@@ -18,34 +18,45 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Content that can be loaded by the VICE cores have the following file extensions:
 
+### Floppies
+
 - .d64
+- .d6z
 - .d71
+- .d7z
 - .d80
 - .d81
 - .d82
+- .d8z
 - .g64
+- .g6z
 - .g41
+- .g4z
 - .x64
+- .x6z
+- .nib
+- .nbz
+
+### Tapes
+
 - .t64
 - .tap
+
+### Read-only memory
+
 - .prg
 - .p00
 - .crt
 - .bin
-- .zip
-- .gz
-- .d6z
-- .d7z
-- .d8z
-- .g6z
-- .g4z
-- .x6z
+
+### Other
+
 - .cmd
 - .m3u
 - .vfl
 - .vsf
-- .nib
-- .nbz
+- .zip
+- .gz
 
 Additional extensions for VIC-20:
 
@@ -211,46 +222,45 @@ This allows:
 
 ### Default controls
 
-|RetroPad button|Action                 |
-|---------------|-----------------------|
-|D-Pad          |Joystick               |
-|Left Analog    |Mouse/paddles          |
-|B              |Fire button            |
-|X              |Space                  |
-|L2             |Escape (RUN/STOP)      |
-|R2             |Enter (RETURN)         |
-|Select         |Toggle virtual keyboard|
+| RetroPad button | Action                  |
+|-----------------|-------------------------|
+| D-Pad           | Joystick                |
+| Left Analog     | Mouse/paddles           |
+| B               | Fire button             |
+| X               | Space                   |
+| L2              | Escape (RUN/STOP)       |
+| R2              | Enter (RETURN)          |
+| Select          | Toggle virtual keyboard |
 
-|Keyboard key   |Action                 |
-|---------------|-----------------------|
-|F11            |Toggle virtual keyboard|
-|F12            |Toggle statusbar       |
-|RControl       |Switch between joyports|
-|End            |Reset                  |
+| Keyboard key    | Action                  |
+|-----------------|-------------------------|
+| F12             | Toggle statusbar        |
+| RControl        | Switch between joyports |
+| End             | Reset                   |
 
 ### Virtual keyboard
 
-The VICE cores have a virtual keyboard that can be accessed by default through RetroPad Select or keyboard key F11.
+The VICE cores have a virtual keyboard that can be accessed by default through RetroPad Select.
 
 The virtual keyboard can be controlled with:
 
 - **RetroPad**
 
-    |Button  |Action             |
-    |--------|-------------------|
-    |D-Pad   |Move               |
-    |B       |Keypress           |
-    |A       |Toggle transparency|
-    |Y       |Toggle ShiftLock   |
-    |Start   |Press Return       |
+    | Button   | Action              |
+    |----------|---------------------|
+    | D-Pad    | Move                |
+    | B        | Keypress            |
+    | A        | Toggle transparency |
+    | Y        | Toggle ShiftLock    |
+    | Start    | Press Return        |
 
 - **Keyboard**
 
-    |Key     |Action             |
-    |--------|-------------------|
-    |Cursors |Move               |
-    |Enter   |Keypress           |
-    |CapsLock|Toggle ShiftLock   |
+    | Key      | Action              |
+    |----------|---------------------|
+    | Cursors  | Move                |
+    | Enter    | Keypress            |
+    | CapsLock | Toggle ShiftLock    |
 
 - **Mouse**
 - **Touch screen**
@@ -269,11 +279,11 @@ Long press for sticky keys. Stickying the third key will replace the second.
 
 Older C64 games tend to use joystick port 1 and newer ones tend to use port 2 for player 1. There are several ways to switch ports in this core:
 
-- Use the core option: `Quick Menu -> Options -> RetroPad Port`.
-- Bring up the virtual keyboard with `Select` button, and press the key labeled `JOY`.
-- Press the default keyboard shortcut `Right Control`.
-- Assign `Switch Joyport` to any RetroPad button under `Quick Menu -> Options`.
-- Rename the game, eg. `Bruce_Lee_j1.tap` or `Bruce_Lee_(j1).tap` for port 1, and similarly `Bruce_Lee_j2.tap` or `Bruce_Lee_(j2).tap` for port 2.
+- Use the core option: `Quick Menu -> Options -> RetroPad Port`
+- Bring up the virtual keyboard with `Select` button, and press the key labeled `JOY`
+- Press the default keyboard shortcut `Right Control`
+- Assign `Switch Joyport` to any RetroPad button under `Quick Menu -> Options`
+- Rename the game, eg. `Bruce_Lee_j1.tap` or `Bruce_Lee_(j1).tap` for port 1, and similarly `Bruce_Lee_j2.tap` or `Bruce_Lee_(j2).tap` for port 2
 - Add `-j1` or `-j2` parameters in custom command line `.cmd`
 
 ## Core options
@@ -599,7 +609,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Shows/hides hotkey & RetroPad mapping options. Core options page refresh required.
 
-- **Toggle Virtual Keyboard** [vice_mapper_vkbd] (**RETROK_F11**)
+- **Toggle Virtual Keyboard** [vice_mapper_vkbd] (**---**)
 
 - **Toggle Statusbar** [vice_mapper_statusbar] (**RETROK_F12**)
 
@@ -608,6 +618,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Reset** [vice_mapper_reset] (**RETROK_END**)
 
 - **Hold Warp Mode** [vice_mapper_warp_mode] (**---**)
+
+- **Toggle Aspect Ratio** [vice_mapper_aspect_ratio_toggle] (**---**)
 
 - **Toggle Zoom Mode** [vice_mapper_zoom_mode_toggle] (**---**)
 
