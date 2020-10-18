@@ -87,6 +87,7 @@ nav:
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
       - 'Arcade Emulation':
+        - 'Arcade (FinalBurn Neo)': 'library/fbneo.md'
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
