@@ -54,8 +54,8 @@ DAT files describe the exact ROM contents that the emulator needs including file
 
 In order to build a complete MAME 2003-Plus collection, the ingredients are:
 
-* A complete MAME 0.193 or later romset collection
-* A complete MAME 0.193 or later "rollback" romset collection
+* A complete MAME 0.223 or later romset collection
+* A complete MAME 0.223 or later "rollback" romset collection
 * MAME 0.78 CHD collection
 * The NeoGeo UniBIOS 3.3, freely available at http://unibios.free.fr/
 
