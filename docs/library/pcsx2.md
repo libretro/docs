@@ -92,11 +92,11 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
-| Rewind            | ✔         |
+| Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✔         |
-| RetroArch Cheats  | ✔         |
+| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✕         |
+| RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -107,7 +107,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✔         |
+| Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan *   | ✕         |
