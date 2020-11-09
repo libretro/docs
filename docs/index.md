@@ -20,10 +20,10 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 ## Official Links
 
 - [Website](https://www.retroarch.com/)
+- [Forum](https://forums.libretro.com/)
 - [Patreon](https://www.patreon.com/libretro)
 - [F.A.Q](https://www.retroarch.com/?page=faq)
 - [Github Repository](https://github.com/libretro/RetroArch)
-- [Forum](https://forums.libretro.com/)
 - [Facebook](https://www.facebook.com/libretro)
 - [Facebook Group](https://www.facebook.com/groups/retroarch/)
 - [Facebook Watch](https://www.facebook.com/watch/libretro/)
