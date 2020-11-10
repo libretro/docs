@@ -76,6 +76,8 @@ The Citra core's library name is 'Citra'
 
 The Citra core saves/loads to/from these directories.
 
+The Citra Shaders should be in ../cores/savefilesCitra/shaders/opengl/transferable
+
 **Frontend's Save directory**
 
 - [Citra System and Save files](https://citra-emu.org/wiki/user-directory/)
