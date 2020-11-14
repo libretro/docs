@@ -64,12 +64,12 @@ Frontend-level settings or features that the PCSX ReARMed core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | ✕         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -270,117 +270,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	`pcsx-card2.mcd` file in the saves directory.
 	All games will share the same second memory card.
 
-- **Pad 1 Type** [pcsx_rearmed_pad1type] (**standard**|analog|dualshock|negcon|none)
-
-	Choose the Pad Type for User 1.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 2 Type** [pcsx_rearmed_pad2type] (**standard**|analog|dualshock|negcon|none)
-
-	Choose the Pad Type for User 2.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 3 Type** [pcsx_rearmed_pad3type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 3.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 4 Type** [pcsx_rearmed_pad4type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 4.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 5 Type** [pcsx_rearmed_pad5type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 5.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 6 Type** [pcsx_rearmed_pad6type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 6.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 7 Type** [pcsx_rearmed_pad7type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 7.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
-
-- **Pad 8 Type** [pcsx_rearmed_pad8type] (**none**|standard|analog|dualshock|negcon)
-
-	Choose the Pad Type for User 8.
-
-	With the none setting, input is disabled.
-
-	With the standard setting, a standard [PlayStation Controller](https://en.wikipedia.org/wiki/PlayStation_Controller) is emulated.
-
-	With the analog setting, a [PlayStation Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick) or [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the green led on is emulated.
-
-	With the dualshock setting, a [Dual Analog Controller](https://en.wikipedia.org/wiki/Dual_Analog_Controller) with the red led on or [DualShock](https://en.wikipedia.org/wiki/DualShock) is emulated.
-
-	With the negcon setting, a [neGcon Controller](https://en.wikipedia.org/wiki/NeGcon) is emulated.
+- **Emulated Mouse Sensitivity** [pcsx_rearmed_input_sensitivity] (**1.00**|0.05 - 2.00)
+	Asjust movement responsiveness for the emulated mouse device.
 
 - **Multitap 1** [pcsx_rearmed_multitap1] (**auto**|disabled|enabled)
 
@@ -427,6 +318,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
 
+- **Analog axis bounds** [pcsx_rearmed_analog_axis_modifier] (**circle**|square)
+
+	Range bounds for analog axis. Square bounds help controllers with highly circular ranges that are unable to fully saturate the x and y axis at 45degree deflections.
+
+- **Guncon Adjust X** [pcsx_rearmed_gunconadjustx] (**0**|-25 - 25)
+- **Guncon Adjust Y** [pcsx_rearmed_gunconadjustx] (**0**|-25 - 25)
+
+	When using Guncon mode, you can override aim in emulator if shots misaligned, this applies an increment on the x or y axis.
+
+- **Guncon Adjust Ratio X** [pcsx_rearmed_gunconadjustratiox] (**1**|0.75 - 1.25)
+- **Guncon Adjust Ratio Y** [pcsx_rearmed_gunconadjustratioy] (**1**|0.75 - 1.25)
+
+	When using Guncon mode, you can override aim in emulator if shots misaligned, this applies a ratio on the x or y axis.
+
 - **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
 
 	Enables Rumble. Look at the [Rumble section](#rumble-support) for more information.
@@ -445,6 +350,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	A speedup, redraws/reuses the last frame if there was no new data.
 
+- **Display Internal FPS** [pcsx_rearmed_display_internal_fps] (**disabled**|enabled)
+
+	Shows an on-screen frames per second counter.
+
+- **Threaded Rendering** [pcsx_rearmed_gpu_thread_rendering] (**disabled**|sync|async)
+
+	When enabled, runs GPU commands in a thread. Sync waits for drawing to finish before vsync. Async will not wait unless there's another frame behind it.
+
 - **Show Bios Bootlogo(Breaks some games)** [pcsx_rearmed_show_bios_bootlogo] (**disabled**|enabled)
 
 	Show the BIOS bootlogo.
@@ -460,6 +373,38 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Modify sound interpolation.
 
+- **CD Access Method (Restart)** [pcsx_rearmed_async_cd] (**sync**|sync|async|precache)
+
+	Select method used to read data from content disk images.
+
+	**Synchronous** mimics original hardware.
+	
+	**Asynchronous** can reduce stuttering on devices with slow storage.
+	
+	**Precache** loads disk image into memory for faster access (**Note:CHD only**).
+
+**Advanced System Options**
+
+- **XA Decoding** [pcsx_rearmed_noxadecoding] (**enabled**|disabled)
+
+	Disables XA sound, which can sometimes improve performance.
+
+- **CD Audio** [pcsx_rearmed_nocdaudio] (**enabled**|disabled)
+
+	Disables XA sound, which can sometimes improve performance.
+
+- **SPU IRQ Always Enabled** [pcsx_rearmed_spuirq] (**disabled**|enabled)
+
+	Compatibility tweak, should be left to off in most cases. This can be momentarily turned on at any point to try and fix some bugs.
+	
+	Few examples inclides **Alien Resurrection** bug where doors can remained closed until the option it turned on. **Legend of Mana** audio bug during FMV sequences can also be fixed by momentarily switching the option on, then off when sound is normal.
+     
+- **Additional game fixes options**
+
+- **Diablo Music Fix** [pcsx_rearmed_idiablofix] (**disabled**|enabled)
+
+	Fix for music randomly cuts out when pressing start or interact with somebody.
+
 - **Parasite Eve 2/Vandal Hearts 1/2 Fix** [pcsx_rearmed_pe2_fix] (**disabled**|enabled)
 
 	Enable this to fit Parasite Eve 2 and Vandal Hearts 1/2
@@ -468,11 +413,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Enable this to fix InuYasha.
 
-- **Additional core options for DynaRec (Dynamic recompiler) builds:**
+- **Additional core options for DynaRec (ari64) builds:**
 
 - **Dynamic recompiler** [pcsx_rearmed_drc] (**enabled**|disabled)
 
 	Enables core to use dynamic recompiler or interpreter (slower) cpu instructions.
+
+	When enabled, dynarec can use either one below:
+
+	Dynarec can either be **ari64** for arm 32-bit devices while **lightrec** i used for 64-bit capable devices or platforms.
 
 - **PSX cpu clock** [pcsx_rearmed_psxclock] (30 - 100, **default 57**)
 
@@ -500,6 +449,27 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Causes game glitches.
 
+- **Additional core options for devices using PEOPS GPU plugin** (some options may or may not have effect or need core restart)
+
+- **(GPU) Odd/Even Bit Hack** [pcsx_rearmed_gpu_peops_odd_even_bit] (**disabled**|enabled)
+- **(GPU) Expand Screen Width** [pcsx_rearmed_gpu_peops_expand_screen_width] (**disabled**|enabled)
+- **(GPU) Ignore Brightness Color** [pcsx_rearmed_gpu_peops_ignore_brightness] (**disabled**|enabled)
+- **(GPU) Disable Coordinate Check** [pcsx_rearmed_gpu_peops_disable_coord_check] (**disabled**|enabled)
+- **(GPU) Lazy Screen Update** [pcsx_rearmed_gpu_peops_lazy_screen_update] (**disabled**|enabled)
+- **(GPU) Old Frame Skipping** [pcsx_rearmed_gpu_peops_old_frame_skip] (**enabled**|disabled)
+- **(GPU) Repeated Flat Tex Triangles** [pcsx_rearmed_gpu_peops_repeated_triangles] (**disabled**|enabled)
+- **(GPU) Draw Quads with Triangles** [pcsx_rearmed_gpu_peops_quads_with_triangles] (**disabled**|enabled)
+- **(GPU) Fake 'Gpu Busy' States** [pcsx_rearmed_gpu_peops_fake_busy_state] (**disabled**|enabled)
+
+- **Additional core options for devices using UNAI GPU plugin** (some options may or may not have effect or need core restart)
+
+- **(GPU) Enable Blending** [pcsx_rearmed_gpu_unai_blending] (**enabled**|disabled)
+- **(GPU) Enable Lighting** [pcsx_rearmed_gpu_unai_lighting] (**enabled**|enabled)
+- **(GPU) Enable Fast Lighting** [pcsx_rearmed_gpu_unai_fast_lighting] (**disabled**|enabled)
+- **(GPU) Enable Forced Interlace** [pcsx_rearmed_gpu_unai_ilace_force] (**disabled**|enabled)
+- **(GPU) Enable Pixel Skip** [pcsx_rearmed_gpu_unai_pixel_skip] (**disabled**|enabled)
+- **(GPU) Enable Hi-Res Downscaling** [pcsx_rearmed_gpu_unai_scale_hires] (**disabled**|enabled)
+
 ## Rumble
 
 Rumble only works in the PCSX ReARMed core when
@@ -513,6 +483,20 @@ Rumble only works in the PCSX ReARMed core when
 ## Multitap
 
 Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](#core-options).
+
+When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
+
+When either multitap1 and/or multitap2 are on user input will be assigned indicated below:
+
+- User 1: Player 1
+- User 2: Player 3
+- User 3: Player 4
+- User 4: Player 5
+- User 5: Player 2
+- User 6: Player 6
+- User 7: Player 7
+- User 8: Player 8
+
 
 ## Joypad
 
