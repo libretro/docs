@@ -32,28 +32,37 @@ cd retroarch
 git pull
 ```
 
-### Fetching a core
+### Building Cores
 
-Each NRO of RetroArch has one and only one core, and each core is a standalone homebrew by itself. That means that building multiple cores means building RetroArch multiple times, once for each core.
-
-Clone the core you want to build from its git repository.
-
-Then, build it:
-
-```
-make platform=libnx
-```
-
-That will give you a file called `<corename>_libretro_libnx.a`, where `<corename>` is the name of the core you just built. Take it and copy it to the `retroarch` directory, and rename it to `libretro_libnx.a`.
-
-### Building RetroArch
-
-Now that you have your core in the RetroArch directory, move here using `cd` and run this command:
+The easiest way to build all the cores (for Switch) is to use [libretro-super](https://github.com/libretro/libretro-super). `git clone` and `cd` into the base directory, then run:
 
 ```
 make -f Makefile.libnx
 ```
 
-That will output `retroarch_switch.nro`: this is your home built copy of RetroArch!
+In case you only want to build one and/or more cores instead of all, you can specify the cores you want to build using the commands below. E.g.:
+
+```
+./libretro-fetch.sh snes9x2010 fceumm
+platform=libnx ./libretro-build.sh snes9x2010 fceumm
+```
+
+Once finished, you can find the libretro cores inside directory `dist/libnx`.
+
+### Building RetroArch
+
+Each NRO of RetroArch has one and only one core, and each core is a standalone homebrew by itself. That means that building multiple cores means building RetroArch multiple times, once for each core.
+
+The cores you previously built will be called `<corename>_libretro_libnx.a`, where `<corename>` is the name of the core that was used to build it.
+
+For each core you wish to build, you will need to copy it to the `retroarch` directory, and rename it to `libretro_libnx.a`.
+
+Once the core has been moved and renamed, move to the `retroarch` directory using `cd` and run this command:
+
+```
+make -f Makefile.libnx
+```
+
+That will output `retroarch_switch.nro`: this is your home built copy of RetroArch! It is recommended to rename your '.nro' file so you can remember which core it contains.
 
 You can then use `nxlink` to send the homebrew to your Switch over Wi-Fi.
