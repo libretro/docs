@@ -271,9 +271,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	All games will share the same second memory card.
 
 - **Emulated Mouse Sensitivity** [pcsx_rearmed_input_sensitivity] (**1.00**|0.05 - 2.00)
-	Asjust movement responsiveness for the emulated mouse device.
 
-- **Multitap 1** [pcsx_rearmed_multitap1] (**auto**|disabled|enabled)
+	Adjust movement responsiveness for the emulated mouse device.
+
+- **Multitap 1** [pcsx_rearmed_multitap1] (auto|**disabled**|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
 
@@ -281,7 +282,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
 
-- **Multitap 2** [pcsx_rearmed_multitap2] (**auto**|disabled|enabled)
+- **Multitap 2** [pcsx_rearmed_multitap2] (auto|**disabled**|enabled)
 
 	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
 
@@ -356,7 +357,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Threaded Rendering** [pcsx_rearmed_gpu_thread_rendering] (**disabled**|sync|async)
 
-	When enabled, runs GPU commands in a thread. Sync waits for drawing to finish before vsync. Async will not wait unless there's another frame behind it.
+	When enabled, runs GPU commands in a thread.
+
+	'Sync' waits for drawing to finish before vsync.
+
+	'Async' will not wait unless there's another frame behind it.
 
 - **Show Bios Bootlogo(Breaks some games)** [pcsx_rearmed_show_bios_bootlogo] (**disabled**|enabled)
 
@@ -377,13 +382,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select method used to read data from content disk images.
 
-	**Synchronous** mimics original hardware.
+	'Synchronous': Mimics original hardware.
 	
-	**Asynchronous** can reduce stuttering on devices with slow storage.
+	'Asynchronous': Reduce stuttering on devices with slow storage.
 	
-	**Precache** loads disk image into memory for faster access (**Note:CHD only**).
+	'Precache': Loads disk image into memory for faster access (**Note: CHD only**).
 
-**Advanced System Options**
+- **Advanced System Options**
 
 - **XA Decoding** [pcsx_rearmed_noxadecoding] (**enabled**|disabled)
 
@@ -397,7 +402,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Compatibility tweak, should be left to off in most cases. This can be momentarily turned on at any point to try and fix some bugs.
 	
-	Few examples inclides **Alien Resurrection** bug where doors can remained closed until the option it turned on. **Legend of Mana** audio bug during FMV sequences can also be fixed by momentarily switching the option on, then off when sound is normal.
+	Few examples includes:
+
+	'Alien Resurrection': bug where doors can remain closed until the option is turned on.
+
+	'Legend of Mana': audio out-of-sync bug during FMV sequences can also be fixed by momentarily switching the option on, then off when sound is normal.
      
 - **Additional game fixes options**
 
@@ -452,23 +461,56 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Additional core options for devices using PEOPS GPU plugin** (some options may or may not have effect or need core restart)
 
 - **(GPU) Odd/Even Bit Hack** [pcsx_rearmed_gpu_peops_odd_even_bit] (**disabled**|enabled)
+
+	Needed for Chrono Chross.
+
 - **(GPU) Expand Screen Width** [pcsx_rearmed_gpu_peops_expand_screen_width] (**disabled**|enabled)
+
+	Capcom fighting games.
+
 - **(GPU) Ignore Brightness Color** [pcsx_rearmed_gpu_peops_ignore_brightness] (**disabled**|enabled)
+
+	Black screens in Lunar.
+
 - **(GPU) Disable Coordinate Check** [pcsx_rearmed_gpu_peops_disable_coord_check] (**disabled**|enabled)
+
+	Enables compatibility mode.
+
 - **(GPU) Lazy Screen Update** [pcsx_rearmed_gpu_peops_lazy_screen_update] (**disabled**|enabled)
+
+	Pandemonium 2
+
 - **(GPU) Old Frame Skipping** [pcsx_rearmed_gpu_peops_old_frame_skip] (**enabled**|disabled)
+
+	Skips every second frame.
+
 - **(GPU) Repeated Flat Tex Triangles** [pcsx_rearmed_gpu_peops_repeated_triangles] (**disabled**|enabled)
+
+	Needed by Dark Forces.
+
 - **(GPU) Draw Quads with Triangles** [pcsx_rearmed_gpu_peops_quads_with_triangles] (**disabled**|enabled)
+
+	Better G-colors, worse textures.
+
 - **(GPU) Fake 'Gpu Busy' States** [pcsx_rearmed_gpu_peops_fake_busy_state] (**disabled**|enabled)
+
+	Toggle busy flag after drawing.
 
 - **Additional core options for devices using UNAI GPU plugin** (some options may or may not have effect or need core restart)
 
 - **(GPU) Enable Blending** [pcsx_rearmed_gpu_unai_blending] (**enabled**|disabled)
+
 - **(GPU) Enable Lighting** [pcsx_rearmed_gpu_unai_lighting] (**enabled**|enabled)
+
 - **(GPU) Enable Fast Lighting** [pcsx_rearmed_gpu_unai_fast_lighting] (**disabled**|enabled)
+
 - **(GPU) Enable Forced Interlace** [pcsx_rearmed_gpu_unai_ilace_force] (**disabled**|enabled)
+
 - **(GPU) Enable Pixel Skip** [pcsx_rearmed_gpu_unai_pixel_skip] (**disabled**|enabled)
+
 - **(GPU) Enable Hi-Res Downscaling** [pcsx_rearmed_gpu_unai_scale_hires] (**disabled**|enabled)
+
+	When enabled, will scale hi-res modes to 320x240, skipping unrendered pixels.
 
 ## Rumble
 
@@ -484,9 +526,9 @@ Rumble only works in the PCSX ReARMed core when
 
 Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](#core-options).
 
-When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
+- When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
 
-When either multitap1 and/or multitap2 are on user input will be assigned indicated below:
+- When either multitap1 and/or multitap2 are on user input will be assigned indicated below:
 
 - User 1: Player 1
 - User 2: Player 3
