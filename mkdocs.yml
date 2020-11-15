@@ -50,6 +50,7 @@ nav:
       - 'Overrides: Content/Folder/Core-Specific Settings': 'guides/overrides.md'
       - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
       - 'Input Overlays': 'guides/libretro-overlays.md'
+      - 'What is BIOS?': 'guides/bios.md'
       - 'Netplay':
         - 'FAQ': 'guides/netplay-faq.md'
         - 'Getting Started': 'guides/netplay-getting-started.md'
