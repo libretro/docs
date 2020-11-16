@@ -22,6 +22,11 @@ Some other libraries can be built support for as well, please refer to `./config
 sudo dnf install make automake gcc gcc-c++ kernel-devel mesa-libEGL-devel libv4l-devel libxkbcommon-devel mesa-libgbm-devel Cg libCg zlib-devel freetype-devel libxml2-devel ffmpeg-devel SDL2-devel SDL-devel perl-X11-Protocol perl-Net-DBus pulseaudio-libs-devel openal-soft-devel libusb-devel
 ```
 
+#### Satisfying additional dependencies under Fedora 33
+```bash
+sudo dnf install egl-wayland-devel wayland-devel wayland-protocols-devel mesa-vulkan-devel libXxf86vm-devel flac-devel qt5-qtbase-devel
+```
+
 #### Satisfying dependencies under Debian/Ubuntu
 ```bash
 apt-get -y install build-essential libxkbcommon-dev zlib1g-dev libfreetype6-dev libegl1-mesa-dev libgles2-mesa-dev libgbm-dev nvidia-cg-toolkit nvidia-cg-dev libavcodec-dev libsdl2-dev libsdl-image1.2-dev libxml2-dev yasm
