@@ -9,10 +9,14 @@ Compilation on Linux and BSD does not have many surprises, as its foundation is 
 
 ### Optional dependencies
 - libxml2-devel - For XML shaders and cheat support.
+- libcaca-devel - Color AsCii Art library
 - freetype-devel - TTF font rendering
 - ffmpeg/libavcodec - FFmpeg recording
+- flac-devel - Free Lossless Audio Codec
 - nvidia-cg-toolkit - Cg shaders
+- slang-devel - Slang shaders
 - libudev-devel
+- qt5-qtbase-devel - For Qt GUI (Desktop)
 - zlib-devel
 
 Some other libraries can be built support for as well, please refer to `./configure --help`.
@@ -24,7 +28,7 @@ sudo dnf install make automake gcc gcc-c++ kernel-devel mesa-libEGL-devel libv4l
 
 #### Satisfying additional dependencies under Fedora 33
 ```bash
-sudo dnf install egl-wayland-devel wayland-devel wayland-protocols-devel mesa-vulkan-devel libXxf86vm-devel flac-devel qt5-qtbase-devel
+sudo dnf install egl-wayland-devel wayland-devel wayland-protocols-devel mesa-vulkan-devel libXxf86vm-devel flac-devel slang-devel libcaca-devel qt5-qtbase-devel
 ```
 
 #### Satisfying dependencies under Debian/Ubuntu
