@@ -123,13 +123,14 @@ However, libretro targets classic systems where one can assume that 100% real-ti
 
 The libretro API has two different audio callbacks. Only one of these should be used; the implementation must choose which callback is best suited.
 
+One _audio frame_ is always made up of 2 int16_t samples, corresponding to the left and right channels, respectively.
 
 ##### Per-sample audio
-The first audio callback is per-sample, and has the type `void (*)(int16_t, int16_t)`. This should be used if the implementation outputs audio on a per-sample basis. The frontend will make sure to partition the audio data into suitable chunks to avoid incurring too much syscall overhead.
+The first audio callback is called _per-sample_, but actually deals with a single _audio frame_. It has the prototype `void (*retro_audio_sample_t)(int16_t left, int16_t right)`. This should be used if the implementation generates a single audio frame at a time. The frontend will make sure to partition the audio data into suitable chunks to avoid incurring too much syscall overhead.
 
 
 ##### Batch audio
-If audio is output in a "batch" fashion, i.e. 1 / fps seconds worth of audio data at a time, the batch approach should be considered. Rather than looping over all samples and calling per-sample callback every time, the batch callback should be used instead, `size_t (*)(const int16_t *, size_t)`. Using the batch callback, audio will not be copied in a temporary buffer, which can buy a slight performance gain. Also, all data will be pushed to audio driver in one go, saving some slight overhead.
+If audio is output in a "batch" fashion, i.e. 1 / fps seconds worth of audio data at a time, the batch approach should be considered. Rather than looping over all audio frames and calling the per-sample callback every time, the _batch callback_ should be used instead. Its prototype is `size_t (*retro_audio_sample_batch_t)(const int16_t * samples, size_t num_frames)`. The number of samples should be `2 * num_frames`, with left and right channels interleaved every frame. Using the batch callback, audio will not be copied in a temporary buffer, which can buy a slight performance gain. Also, all data will be pushed to audio driver in one go, saving some slight overhead.
 
 It is not recommended to use the batch callback for very small (< 32 frames) amounts of data. The data passed to the batch callback should, if possible, be aligned to 16 bytes (depends on platform), to allow accelerated SIMD operations on audio.
 
