@@ -30,9 +30,11 @@ You can now launch make, set the PROJECT and ARCH variables to fit your needs:
 
 ```sh
 $ cd Lakka-LibreELEC
-$ DISTRO=Lakka PROJECT=RPi ARCH=arm make image         # for the Raspberry Pi
-$ DISTRO=Lakka PROJECT=RPi2 ARCH=arm make image        # for the Raspberry Pi2/ Pi3
-$ DISTRO=Lakka PROJECT=imx6 ARCH=arm make image        # for the Hummingboard and Cubox-i
+$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi ARCH=arm make image         # for the Raspberry Pi
+$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi2 ARCH=arm make image        # for the Raspberry Pi2/ Pi3
+$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi4 ARCH=arm make image        # for the Raspberry Pi4 (arm 32bit)
+$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi4 ARCH=aarch64 make image    # for the Raspberry Pi4 (arm 64bit)
+$ DISTRO=Lakka PROJECT=NXP DEVICE=imx6 ARCH=arm make image        # for the Hummingboard and Cubox-i
 $ DISTRO=Lakka PROJECT=Generic ARCH=x86_64 make image  # for 64 bits PCs
 $ DISTRO=Lakka PROJECT=Generic ARCH=i386 make image    # for 32 bits PCs
 ```
@@ -58,13 +60,13 @@ If some time passed and you want to rebuild from newer sources:
 $ cd Lakka-LibreELEC
 $ git pull
 $ rm -rf target
-$ DISTRO=Lakka PROJECT=RPi ARCH=arm make image
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi ARCH=arm make image
 ```
 But if you just want to rebuild a particular package, for example a package you are trying to port to Lakka, you can just remove it like this and rebuild.
 
 ```sh
-$ DISTRO=Lakka PROJECT=RPi ARCH=arm scripts/clean yourpackage
-$ DISTRO=Lakka PROJECT=RPi ARCH=arm scripts/build yourpackage
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi ARCH=arm scripts/clean yourpackage
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi ARCH=arm scripts/build yourpackage
 ```
 
 If you want to rebuild all from scratch, remove the build* folders
