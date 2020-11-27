@@ -25,7 +25,7 @@ in the proper location.
 
 After downloading the core within RetroArch, execute the following steps:
 
-1. Get a copy of the Dolphin `Sys` folder. This can be done downloading the
+1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
     * **If you have *Git* (if not, see the next option)**
     Just clone the most recent version of the code by running:
