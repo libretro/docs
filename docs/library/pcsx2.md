@@ -45,6 +45,9 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 !!! TIP
 	Interesting fact: For maximum compatibility it is recommended that you use a BIOS image different than SCPH10000.BIN which is the oldest one
+	
+!!! TIP
+	Transfer your BIOS files to the retroarch/system/PCSX2/bios/ directory.
 
 There is no region locking so if you have a PAL BIOS on your PS2 you can still play NTSC games, and vice versa. You'll also need the BIOS dumped from your PS2. Unlike the PS2 PCSX2 does not implement region locking so if you have a PAL BIOS in your PS2 you can still play NTSC games, and vice versa.
 
