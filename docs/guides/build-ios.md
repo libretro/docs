@@ -1,26 +1,23 @@
 # iOS/tvOS Installation Guide
 
-The following is a non-developer guide to install RetroArch on non-jailbroken iOS devices. We're going to try to improve the process and possibly include the iOS cores in a download, but until then, here is a way to build RetroArch to get it running on your iPhone, iPad, or Apple TV.
+The following is a non-developer guide to install RetroArch on non-jailbroken iOS or tvOS devices. We're going to try to improve the process and possibly include the iOS cores in a download, but until then, here is a way to build RetroArch to get it running on your iPhone, iPod Touch, iPad, or Apple TV.
 
 !!! note
-    You can find latest built in [here](http://buildbot.libretro.com/stable/1.8.8/apple/tvos/RetroArch-tvOS.ipa)
+    If you just want to sideload from an IPA file, then you can find a working build (version 1.9.0) [here for tvOS](http://buildbot.libretro.com/stable/1.9.0/apple/tvos/RetroArch-tvOS.ipa) and [here for iOS](http://buildbot.libretro.com/stable/1.9.0/apple/ios/RetroArch.ipa)
 
 ## Building From Source using Xcode
 
 This is probably the most straightforward way to install RetroArch without having to resort to 3rd party tools. It does however require:
 
 - a Mac capable of running the latest Xcode
-- Xcode
+- Xcode (downloaded from the App Store)
 - an Apple ID
-
-### Get Xcode
-
-Download Xcode from the Mac App Store.
 
 ### Clone the RetroArch repository
 
-Open Terminal (it's in Applications/Utilities) and run the following command:
-```
+Open Terminal (it's in `/Applications/Utilities`) and run the following command:
+
+```shell
 git clone https://github.com/libretro/RetroArch.git
 ```
 
@@ -43,21 +40,29 @@ Open the Xcode project located at `pkg/apple/iOS/RetroArch_iOS11.xcodeproj`
 - Open Xcode Preferences (Xcode -> Preferences)
 - Click the "Accounts" tab
 - Hit the "+" at the bottom left and choose "Apple ID" and sign in with your Apple ID
-- Once you’ve successfully logged in, a new "Personal Team" with the role "Free" will appear beneath your Apple ID.
+- Once you’ve successfully logged in, a new team called "(Your Name) Personal Team" with the role "User" will appear beneath your Apple ID.
+
+### Pair Xcode with your iOS or tvOS Device
+
+Follow the [instructions in this Apple support article](https://support.apple.com/en-gb/HT208088) to pair your device in Xcode. When finished, you should see your specific device when you go, in Xcode, to Windows -> Devices & Simulators.
 
 ### Xcode Project Setup
 
-You'll need to assign the Developer credentials you just created above to the RetroArch project before you can run it on your device.
+Before you can build or run RetroArch on your device, you'll need to change the project's code-signing settings to build it with your Apple Developer Team.
 
-Click on the project name, select the target you're interested in (RetroArchiOS11 for iOS, RetroArch TV) and change the "Team" to the role you created above.
+Click on the project name, select the target you're interested in (RetroArchiOS11 for iOS, RetroArch TV for tvOS) and click on the "Signing & Capabilities" tab.
 
-Then choose your run target (RetroArch iOS Release for iOS, RetroArch tvOS for AppleTV) and build and run:
+Change the "Team" to your Personal Team that you created above. Change the "Identifier" string to an arbitrary identifier in reverse-DNS notation, like `com.whatever.retroarch` and hit `Enter`. At this point Xcode should automatically create the necessary Provisioning Profile. If it does not, then you may not have correctly registered and paired your iOS or tvOS device in the last step. Note that there might be separate settings for Debug and for Release here, so change them both if needed.
+
+Next, change the project target to be your device, specifically. To do this, click at the center-left area of the Xcode window where it says `RetroArch iOS` (hover tooltip: `Set the active scheme`) and choose the desired combination of platform and _your device specifically_.
+
+Finally, build and run:
 
 ![Xcode Steps](../image/guides/ios-install-pic-1.png)
 
 ### Using RetroArch
 
-On the iPhone and iPad, you'll be presented with a touch interface. If you have an mFi controller, you can control the interface that way as well.
+On an iOS device, you'll be presented with a touch interface. If you have an mFi controller, you can control the interface that way as well.
 
 On the Apple TV, you'll be shown the "XMB" (PS3-like) interface. You need to use an mFi controller with an Apple TV. The Siri Remote is not supported yet.
 
