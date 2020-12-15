@@ -1,5 +1,5 @@
 site_name: Libretro Docs
-site_url: 'https://docs.libretro.com'
+site_url: 'https://docs.libretro.com/'
 site_description: >-
   This is RetroArch's document page, modification or development information outside of this repo may be incorrect.
 repo_name: 'libretro/docs'
