@@ -416,29 +416,37 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "*Mix frames: fast*"
     ![](../image/core/gambatte/mix_frames_fast.gif)
 
-- **GameBoy Link Mode** [gambatte_gb_link_mode] (**Not Connected**|Network Server|Network Client)
+- **GameBoy Link Mode** - New config options
 
-	Awaiting description.
+| Core Option                                       | Description                                               |
+|---------------------------------------------------|-----------------------------------------------------------|
+| gambatte_gb_link_mode                             | **Not Connected** / Network Server / Network Client       |
+| gambatte_gb_link_network_port                     | 56400 to 56420 in increments of 1. **56400 is default**   |
+| gambatte_show_gb_link_settings                    | enabled / **disabled**                                    |
+| gambatte_gb_link_network_server_ip_1              | (client only) 0 to 9, 1st digit of ipv4 address, (eg. 1)  |
+| gambatte_gb_link_network_server_ip_2              | (client only) 0 to 9, 2nd digit of ipv4 address, (eg. 9)  |
+| gambatte_gb_link_network_server_ip_3              | (client only) 0 to 9, 3rd digit of ipv4 address, (eg. 2)  |
+| gambatte_gb_link_network_server_ip_4              | (client only) 0 to 9, 4th digit of ipv4 address, (eg. 1)  |
+| gambatte_gb_link_network_server_ip_5              | (client only) 0 to 9, 5th digit of ipv4 address, (eg. 6)  |
+| gambatte_gb_link_network_server_ip_6              | (client only) 0 to 9, 6th digit of ipv4 address, (eg. 8)  |
+| gambatte_gb_link_network_server_ip_7              | (client only) 0 to 9, 7th digit of ipv4 address, (eg. 0)  |
+| gambatte_gb_link_network_server_ip_8              | (client only) 0 to 9, 8th digit of ipv4 address, (eg. 0)  |
+| gambatte_gb_link_network_server_ip_9              | (client only) 0 to 9, 9th digit of ipv4 address, (eg. 1)  |
+| gambatte_gb_link_network_server_ip_10             | (client only) 0 to 9, 10th digit of ipv4 address, (eg. 0) |
+| gambatte_gb_link_network_server_ip_11             | (client only) 0 to 9, 11th digit of ipv4 address, (eg. 0) |
+| gambatte_gb_link_network_server_ip_12             | (client only) 0 to 9, 12th digit of ipv4 address, (eg. 1) |
 
-- **Network Link Port** [gambatte_gb_link_network_port] (56400 to 56420 in increments of 1. **56400 is default**.)
+- **GameBoy Link Mode** - Old config options
 
-	Awaiting description.
+| Core Option                                  | Description, values                                                                                 
+|----------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| gambatte_gb_link_mode                        | Mode, **Not Connected** / Network Server / Network Client                                                 |
+| gambatte_gb_link_network_port                | Network link port, 56400 to 56420 in increments of 1. **56400 is default**                          |
+| gambatte_gb_link_network_server_ip_octet1    | (client only) Network link server address part 1, (0 to 255 in increments of 1. **0 is default**.)  |
+| gambatte_gb_link_network_server_ip_octet2    | (client only) Network link server address part 2, (0 to 255 in increments of 1. **0 is default**.)  |
+| gambatte_gb_link_network_server_ip_octet3    | (client only) Network link server address part 3, (0 to 255 in increments of 1. **0 is default**.)  |
+| gambatte_gb_link_network_server_ip_octet4    | (client only) Network link server address part 4, (0 to 255 in increments of 1. **0 is default**.)  |
 
-- **Network link server address part 1 (client only)** [gambatte_gb_link_network_server_ip_octet1] (0 to 255 in increments of 1. **0 is default**.)
-
-	Awaiting description.
-
-- **Network link server address part 2 (client only)** [gambatte_gb_link_network_server_ip_octet2] (0 to 255 in increments of 1. **0 is default**.)
-
-	Awaiting description.
-
-- **Network link server address part 3 (client only)** [gambatte_gb_link_network_server_ip_octet3] (0 to 255 in increments of 1. **0 is default**.)
-
-	Awaiting description.
-
-- **Network link server address part 4 (client only)** [gambatte_gb_link_network_server_ip_octet4] (0 to 255 in increments of 1. **0 is default**.)
-
-	Awaiting description.
 
 ## Joypad
 
