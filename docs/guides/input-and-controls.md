@@ -42,7 +42,7 @@ If your gamepad does not have an autoconfiguration or if you would like to chang
 
 ## Controls for multi-player
 
-If you want to set-up local multi-player with games that supports it:
+If you want to set-up local multi-player with games that support it:
 
 - Navigate to **Settings**
 - Navigate to **Input**
@@ -60,6 +60,9 @@ After you finish, go back, select **Input User 2 Binds** and repeat for user 2.
 
 ## Hotkeys
 Hotkeys are combinations of buttons you can press in order to access options such as saving, loading, and exiting games. Hotkey binds can be configured at `Settings` → `Input` → `Input Hotkey Binds`. If you map `Enable Hotkeys` to a button, it will require that button to be held in order to trigger any hotkeys.
+
+!!! tip
+    To unbind (effectively, disable) a hotkey, press **Del** on your keyboard or the **Y button** (the left one of the 4 buttons) on the RetroPad. To reset a hotkey to its default, press **Space** on your keyboard or the **Start** button on the RetroPad.
 
 ## Remapping controls for individual cores or content
 Core Controls Remapping alters how the core receives input rather than how the gamepad is coded, for example you can tell an individual core to switch button A and B on the RetroPad for gameplay, but you can still use "A" to select in the RetroArch menu and "B" to go back. This is opposed to changing the gamepad bindings in RetroArch itself which would swap "A" and "B" in the core but would also make "B" select and "A" back in the RetroArch menu.
