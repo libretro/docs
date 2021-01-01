@@ -14,7 +14,7 @@ The DOSBox core is licensed under
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I presume?)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Hope this link works?)
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (This is a relative URL, so I'm guessing it will work correctly when this file lands on the master?)
 
 ## Extensions
 
@@ -34,6 +34,7 @@ RetroArch database(s) that are associated with the DOSBox core:
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (We should embed the [YouTube video](https://www.youtube.com/watch?v=rHkIz4-SewI) here!)
 
 Frontend-level settings or features that the DOSBox Pure core respects.
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Is this correct? Should we expand this table?)
 
 | Feature           | Supported |
 |-------------------|:---------:|
