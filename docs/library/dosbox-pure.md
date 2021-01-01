@@ -1,3 +1,5 @@
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (So, to create this document, I copied the [original Libretro DOSBox documentation](https://docs.libretro.com/library/dosbox/) and overwrote/expanded it. There's still many chunks of content in here that come straight from the original document and that probably need revision, and then most of the extra stuff in here comes from [Bernhard Schelling's readme for DOSBox Pure](https://github.com/schellingb/dosbox-pure). Lastly, a few additions by me. I annotated this whole thing, look for the read squares. - Matt)
+
 # DOS (DOSBox Pure)
 
 ## Background
