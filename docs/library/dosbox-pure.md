@@ -129,6 +129,9 @@ These can be assigned to any port and the button layout can be remapped as with 
 
 By pressing L3 on the gamepad (usually by pushing in the left analog stick) the on-screen keyboard will open. The cursor can be controlled with the controller (or mouse or keyboard) and L2/R2 will speed up or slow down the move speed.
 
+!!!tip
+	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
+
 If the cursor is moved above the middle of the screen the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core options to disable it entirely.
 
 ### MIDI playback with SoundFonts
