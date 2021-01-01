@@ -132,7 +132,9 @@ By pressing L3 on the gamepad (usually by pushing in the left analog stick) the 
 !!!tip
 	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
 
-If the cursor is moved above the middle of the screen the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core options to disable it entirely.
+If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
+
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Note, the button can't be remapped (at present?) when using `Custom Keyboard Bindings`. cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25)
 
 ### MIDI playback with SoundFonts
 
