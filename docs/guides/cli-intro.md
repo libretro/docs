@@ -6,7 +6,7 @@ Note: please be aware of whether your system uses DOS/Windows style paths with b
 
 [![Quick Video Demonstration for Windows](http://img.youtube.com/vi/W-fRcamSp-c/0.jpg)](http://www.youtube.com/watch?v=W-fRcamSp-c)
 
-#### On macOS: Invoking the RetroArch CLI executable
+#### On macOS: invoking the RetroArch CLI executable
     /Applications/RetroArch.app/Contents/MacOS/RetroArch
 
 #### Example: loading a ROM and libretro core (Unix-style path)
