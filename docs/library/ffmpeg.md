@@ -2,7 +2,7 @@
 
 ## Background
 
-Video/music player implemented in libretro.
+Video/music player implemented in libretro. FFmpeg can play video and audio files of different formats in RetroArch. If a video file has more than one audio input, FFmpeg can switch between them. If there is a hard coded subtitle file in the video file, FFmpeg can switch between them in the same way.
 
 ### Author/License
 
@@ -16,6 +16,41 @@ The FFmpeg core is licensed under
 - [LGPLv2, GPLv2](https://github.com/libretro/FFmpeg/blob/master/LICENSE.md)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
+
+## Experience
+
+!!! important
+	RetroArch and LibRetro do not share any copyrighted content. RetroArch does not download any video or audio files. It does not stream content you have on different platforms.
+
+### Watching Movies with Subtitles
+
+You can open video files in the following formats(see: [Extensions](../ffmpeg/#extensions)). If your video file in these formats has a subtitle file encoded with .SSA type, these subtitle files will appear automatically. External subtitles are currently not supported. The video files you have played will be added to the Videos section in the main menu.
+
+??? note "Turkish subtitles encoded 95's Ghost in the Shell"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/ffmpeg/subtitle.png)
+
+#### Setup
+
+Watch the video below for details:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zget1P8ptho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Listening to Music
+
+You can open audio files in the following formats (see: [Extensions](../ffmpeg/#extensions)). In the example below, you can see and listen to an mp3 file running at the lowest settings. File quality will affect sound quality. The audio files you have played will be added to the Music section in the main menu.
+
+??? note "Example"
+	<video width="320" height="240" controls>
+	  <source src="/image/core/ffmpeg/audio-preview.mp4" type="video/mp4">
+	  <source src="/image/core/ffmpeg/audio-preview.ogg" type="video/ogg">
+	Your browser does not support the video tag.
+	</video>
+
+#### Setup
+
+Watch the video below for details:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5f6nWBpagaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Extensions
 
@@ -58,6 +93,7 @@ Frontend-level settings or features that the FFmpeg core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
+| [Shaders](../ffmpeg/#shaders)       | ✔         |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
@@ -91,6 +127,13 @@ The FFmpeg core's directory name is 'FFmpeg'
 - The FFmpeg core's core provided sample rate is dependant on the loaded media.
 - The FFmpeg core's core provided aspect ratio is dependant on the loaded media.
 
+### Shaders
+
+Shaders can improve your viewing quality as well as deliver the excitement of the 80s or 90s. In the example below you can see how a VHS shader can affect view quality. You can also provide more innovative watching possibilities by stacking shaders on top of each other.
+
+??? note "VHSPro Shader"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/ffmpeg/shader1.png)
+
 ## Core options
 
 The FFmpeg core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
@@ -118,6 +161,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Colorspace** [ffmpeg_color_space] (**auto**/BT.70/BT.601/FCC/SMPTE240M)
 
 	Choose [colorspaces](https://trac.ffmpeg.org/wiki/colorspace) from different broadcast regions/standards.
+
+??? note "Colorspace"
+	![](../image/core/ffmpeg/BT.601.png)
+	![](../image/core/ffmpeg/BT.709.png)
+	![](../image/core/ffmpeg/FCC.png)
+	![](../image/core/ffmpeg/SMPTE240M.png)
+
 
 ## Controllers
 
@@ -161,3 +211,5 @@ The FFmpeg core supports the following device type(s) in the controls menu, bold
 - [Internal Libretro FFmpeg Github Repository](https://github.com/libretro/RetroArch/tree/master/cores/libretro-ffmpeg)
 - [Buildbot Libretro FFmpeg Github repository](https://github.com/libretro/FFmpeg)
 - [Report Libretro FFmpeg Core Issues Here](https://github.com/libretro/RetroArch/issues)
+- [Video Setup](https://www.youtube.com/watch?v=zget1P8ptho)
+- [Audio Setup](https://www.youtube.com/watch?v=5f6nWBpagaM)
