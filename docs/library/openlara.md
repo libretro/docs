@@ -52,6 +52,86 @@ RetroArch dat that is associated with the OpenLara core:
 
 - [Tomb Raider](https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Tomb%20Raider.dat)
 
+## Setup
+
+TR1 is officially supported while 2 or 3 is not. You can still load the levels of 2 or 3 and play them with the proper file scheme. You can download the demo from Online Updater > Content Downloader > Tomb Raider and test Level 2. You can also experience the OpenLara's features in the demo. Apart from that, you can buy it [here on GOG](https://www.gog.com/game/tomb_raider_123) or [here on Steam](https://store.steampowered.com/app/224960/Tomb_Raider_I/). Tomb Raider has differences between ports. The Steam and GOG version do not install the DATA and FMV folders directly into the directory. In Console versions, these files are in the image file.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F2GFAzouWQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Files
+
+- DATA, with .phd and .pcx files inside. These are the level files and title screen textures.
+- FMV, which contains a couple of .rpl files. These are the movies.
+
+Not all audio files are available in the Steam/GOG distribution. In this case, you cannot hear some audio streams. For example, in the GYM level, you cannot hear Lara's instructions, but you can hear the sounds of walking, jumping and taking damage.
+
+## Getting Tomb Raider files
+
+First, make sure these steps are permissible in your locale RetroArch or LibRetro do not share copyrighted content. 
+
+### Rip Tomb Raider 1 Image from Steam/GOG
+
+When you get Tomb Raider on digital platforms, you will see *GAME.GOG*(game file), *GAME.DAT*, dosbox.exe and configuration file of dosbox inside the folder.
+
+??? note "Files inside Tomb Raider 1 from Steam"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/openlara/files.png)
+
+GOG files store audio samples in Drumagog format. This format was developed by WaveMachine Labs for a software plugin that offers access to acoustic drums samples. GOG files are associated with VST technology and are compatible with any software that supports it. GOG format was originally developed in 1999 and is regularly updated. 
+
+Open the **dosbox.conf** file with a text editing file. Scroll down to until **[autoexec]**, lines in this section will be run at startup.
+
+```
+mount C .
+        imgmount d ".\game.dat" -t iso -fs iso
+        xcopy D:\DATA\ C:\DATA\
+        xcopy D:\FMV\ C:\FMV\
+```
+
+When you paste the code above, **dosbox.exe** will boot the image and copy the **DATA** and **FMV** files in it to the local machine each time it is opened. The computer version does not contain most audio files. For example, when you export existing audio files, you cannot hear Lara's instructions at the GYM level.
+
+??? note "Folders from Tomb Raider 1 image"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/openlara/steam-folder.png)
+
+You must convert the audio files in the main folder of TR1 to .ogg format. You can do this with the small [FFmpeg](https://github.com/FFmpeg/FFmpeg) script below. Apart from that, you can use console audio files with PC port.
+
+??? note "Converting to OGG"
+	```
+	for f in ./*.mp3; do ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
+	```
+	This will convert files from mp3 to ogg
+
+The PC Port also missing title and loading images, you can get them from the console version. Place the **DELDATA** folder from the Console port into the main TR1 directory.
+
+??? note "Missing Title Screen / Title Screen from Console"
+	![Missing Title Screen](../image/core/openlara/missing-title-screen.png)
+	![Title Screen from Console](../image/core/openlara/title-screen-from-console.png)
+
+
+### Rip Tomb Raider 1 Image from Console
+
+[jPSXdec](https://github.com/m35/jpsxdec) is a modern, cross-platform PlayStation 1 audio/video converter. Check their documentation to understand how to use it.
+
+## Folder Setup
+
+To achieve a continuous game that loads from one level to the next you can load directly from CD
+or preferably setup the content folder like this:
+
+| Folder   | File Type(s)                             | Description                             |
+|:--------:|:----------------------------------------:|:---------------------------------------:|
+| audio/1/ | track_XX.ogg or XXX.ogg                  | X represents a number                   |
+| audio/2/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
+| audio/3/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
+| level/1/ | *.PNG and *.PHD or *.PSX or *.SAT        | Load-screens and levels                 |
+| level/2/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
+| level/3/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
+| video/1/ | *.RPL or *.FMV                           | Video cut-scenes                        |
+| video/2/ | *.RPL or *.FMV                           | Video cut-scenes                        |
+| video/3/ | *.RPL or *.FMV                           | Video cut-scenes                        |
+
+!!! note
+    if you load from CD you won't have soundtrack in TR1
+
+
 ## Features
 
 Frontend-level settings or features that the OpenLara core respects.
@@ -82,28 +162,24 @@ Frontend-level settings or features that the OpenLara core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
+
+### FPS mode
+
+With OpenLara, you can experience Tomb Raider like you've never played before. You can try it through the eyes of Lara Croft with the primary person camera, for this you can switch to this mode by pressing L1 + A and exit this mode with the same combination. FPS also available in 2-Player Mode.
+
+??? note "FPS mode"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/openlara/fps.png)
+
+### 2-Player Mode
+
+You can include your friend with whom you want to pass TR levels together. Press Start from Second Controller in order to go 2-Payer Mode.
+
+??? note "2-Player Mode"
+	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/openlara/2-player-mode.png)
+
 ## Directories
 
 The OpenLara core's library name is 'OpenLara'
-
-To achieve a continuous game that loads from one level to the next you can load directly from CD
-or preferably setup the content folder like this:
-
-| Folder   | File Type(s)                             | Description                             |
-|:--------:|:----------------------------------------:|:---------------------------------------:|
-| audio/1/ | track_XX.ogg or XXX.ogg                  | X represents a number                   |
-| audio/2/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
-| audio/3/ | track_XX.ogg and MAIN.SFX                | Both tracks and MAIN.SFX are required   |
-| level/1/ | *.PNG and *.PHD or *.PSX or *.SAT        | Load-screens and levels                 |
-| level/2/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
-| level/3/ | *.PNG and *.TR2 or *.PSX                 | Load-screens and levels                 |
-| video/1/ | *.RPL or *.FMV                           | Video cut-scenes                        |
-| video/2/ | *.RPL or *.FMV                           | Video cut-scenes                        |
-| video/3/ | *.RPL or *.FMV                           | Video cut-scenes                        |
-
-!!! note
-    if you load from CD you won't have soundtrack in TR1
-
 
 The OpenLara core saves/loads to/from these directories.
 
@@ -143,10 +219,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Modify the internal resolution. Requires a restart.
 
 ??? note "Internal resolution - 320x240"
-	![](../image/core/openlara/320x240.png)
+	![](../image/core/openlara/320x240_2.png)
 
 ??? note "Internal resolution - 1920x1080"
-	![](../image/core/openlara/1920x1080.png)
+	![](../image/core/openlara/1920x1080_2.png)
 
 ## Joypad
 
