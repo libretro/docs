@@ -4,7 +4,7 @@ RetroArch can be used from its robust graphical interfaces as well as a powerful
 
 Note: please be aware of whether your system uses DOS/Windows style paths with backslashes `\` or Unix-style paths with forward slashes: `/`.
 
-[![Quick Video Demonstration for Windows](http://img.youtube.com/vi/W-fRcamSp-c/0.jpg)](http://www.youtube.com/watch?v=W-fRcamSp-c)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/W-fRcamSp-c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### On macOS: invoking the RetroArch CLI executable
     /Applications/RetroArch.app/Contents/MacOS/RetroArch

@@ -400,13 +400,17 @@ theme:
   favicon: 'image/branding/invader.png'
 
 markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       linenums: true
       guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
   - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
@@ -419,7 +423,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
+  - pymdownx.highlight
   #     linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -431,7 +435,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true

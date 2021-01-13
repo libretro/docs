@@ -1,6 +1,8 @@
 # Sony - PlayStation (PCSX2) WIP
 
-*Last Updated: November 01, 2020*
+==Last Updated: January 13, 2021==
+
+PCSX2 is still under construction. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content.
 
 ## Background
 
@@ -26,17 +28,23 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ### Requirements
 
-- CPU:
-	- Supports SSE2/AVX2
-	- PassMark Single Thread Performance rating near or greater than 1600/2100
-	- Two physical cores, with hyperthreading
-	- Four physical cores, with or without hyperthreading
-- GPU:
-	- Direct3D10/11 support
-	- OpenGL 3.x/4.5 support
-	- PassMark G3D Mark rating around 3000 (GeForce GTX 750)
-	- 2 GB/4 GB Video Memory
-- RAM: 4GB/8GB
+=== "CPU"
+
+    * Supports SSE2/AVX2
+    * PassMark Single Thread Performance rating near or greater than 1600/2100
+    * Two physical cores, with hyperthreading
+    * Four physical cores, with or without hyperthreading
+
+=== "GPU"
+
+	* Direct3D10/11 support
+	* OpenGL 3.x/4.5 support
+	* PassMark G3D Mark rating around 3000 (GeForce GTX 750)
+	* 2 GB/4 GB Video Memory
+
+=== "RAM"
+
+	* 4GB/8GB
 
 !!! Attention
 	Because of the complex nature of emulation, even if you meet the recommended requirements there will be games that will NOT run at full speed due to emulation imperfection, floating point emulation differences, issues with emulator itself or other problems.
@@ -46,7 +54,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 !!! TIP
 	Interesting fact: For maximum compatibility it is recommended that you use a BIOS image different than SCPH10000.BIN which is the oldest one
 	
-!!! TIP
+!!! info
 	Transfer your BIOS files to the retroarch/system/PCSX2/bios/ directory.
 
 There is no region locking so if you have a PAL BIOS on your PS2 you can still play NTSC games, and vice versa. You'll also need the BIOS dumped from your PS2. Unlike the PS2 PCSX2 does not implement region locking so if you have a PAL BIOS in your PS2 you can still play NTSC games, and vice versa.
@@ -94,7 +102,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✔         |
+| States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
@@ -104,7 +112,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✔         |
-| Rumble            | ✔         |
+| Rumble[^1]            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
@@ -113,10 +121,8 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan *   | ✕         |
+| Crop Overscan[^2]   | ✕         |
 | LEDs              | ✕         |
-
-\* Overscan cropping available via Core Options instead of frontend settings
 
 ### Directories
 
@@ -127,6 +133,8 @@ PCSX2 core saves/loads to/from these directories.
 **Frontend's Save directory**
 
 - Memory cards
+
+..\system\PCSX2\memcards\
 
 **Frontend's State directory**
 
@@ -186,3 +194,7 @@ The current standalone development version is reported to be compatible with app
 ## Libretro PS2 cores
 
 - Play!
+
+
+[^1]: Rumble is broken right now. It doesn't stop when triggered. You can fix it by opening and closing Quick Menu.
+[^2]: Overscan cropping available via Core Options instead of frontend settings
