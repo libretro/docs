@@ -19,29 +19,51 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 
 ## Official Links
 
-- [Website](https://www.retroarch.com/)
-- [Forum](https://forums.libretro.com/)
-- [Patreon](https://www.patreon.com/libretro)
-- [F.A.Q](https://www.retroarch.com/?page=faq)
-- [Github Repository](https://github.com/libretro/RetroArch)
-- [Facebook](https://www.facebook.com/libretro)
-- [Facebook Group](https://www.facebook.com/groups/retroarch/)
-- [Facebook Watch](https://www.facebook.com/watch/libretro/)
-- [Twitter](https://twitter.com/libretro)
-- [YouTube](https://www.youtube.com/Libretro)
-- [Facebook](https://www.facebook.com/libretro)
-- [Facebook Watch](https://www.facebook.com/watch/libretro/)
-- [Facebook Gaming](https://www.facebook.com/gaming/libretro/)
-- [Facebook Group](https://www.facebook.com/groups/retroarch/)
-- [RetroArch Gameplays](https://www.youtube.com/RetroArchOfficial)
-- [Dailymotion](https://dailymotion.com/retroarch)
-- [Discord](https://discord.gg/27Xxm2h)
-- [Teespring](https://teespring.com/stores/retroarch)
-- [Lakka's Website](https://lakka.tv/)
-- [Lakka's YouTube](https://www.youtube.com/channel/UCsFAXPsgzbU-6KRKqumtbXA)
-- [Lakka's Twitter](https://twitter.com/lakkatv)
-- [Libretro Documentation](https://docs.libretro.com/)
-- [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
-- [Steam Group](https://steamcommunity.com/groups/libretro)
-- [Steam Developer Page](https://store.steampowered.com/developer/libretro)
-- [Itch.io](https://retroarchofficial.itch.io/retroarch)
+=== "Main"
+
+	- [Website](https://www.retroarch.com/)
+	- [Twitter](https://twitter.com/libretro)	
+	- [Facebook](https://www.facebook.com/libretro)
+	- [Forum](https://forums.libretro.com/)
+	- [Discord](https://discord.gg/27Xxm2h)
+	- [YouTube](https://www.youtube.com/Libretro)
+	- [Lakka's Website](https://lakka.tv/)
+	- [Github Repository](https://github.com/libretro/RetroArch)
+	- [Lakka's Twitter](https://twitter.com/lakkatv)
+
+=== "Help"
+
+	- [F.A.Q](https://www.retroarch.com/?page=faq)
+	- [Libretro Documentation](https://docs.libretro.com/)
+	- [Lakka Doc](http://www.lakka.tv/doc/Home/)
+	- [Facebook Group](https://www.facebook.com/groups/retroarch/)
+	- [Steam Group](https://steamcommunity.com/groups/libretro)
+
+=== "Support"
+
+	- [Teespring](https://teespring.com/stores/retroarch)
+	- [Patreon](https://www.patreon.com/libretro)
+	- [YouTube Membership](https://www.youtube.com/channel/UCjAimkVp-G_o6HK5MXujk9A/join)
+
+=== "Video"
+
+	- [RetroArch Gameplays](https://www.youtube.com/RetroArchOfficial)
+	- [Dailymotion](https://dailymotion.com/retroarch)
+	- [Facebook Watch](https://www.facebook.com/watch/libretro/)
+	- [Facebook Gaming](https://www.facebook.com/gaming/libretro/)
+	- [Lakka's YouTube](https://www.youtube.com/channel/UCsFAXPsgzbU-6KRKqumtbXA)
+
+=== "Storefronts"
+
+	- [Steam](https://store.steampowered.com/app/1118310/RetroArch/)
+	- [Itch.io](https://retroarchofficial.itch.io/retroarch)
+	- [Steam Developer Page](https://store.steampowered.com/developer/libretro)
+
+
+
+
+
+
+
+
+	
