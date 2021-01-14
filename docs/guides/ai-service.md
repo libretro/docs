@@ -1,5 +1,7 @@
 # RetroArch AI Service
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wJvbxurnzPg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## What is the AI Service
 
 This feature allows users to play games written in a foreign language, or add text voice-overs automatically.  This uses OCR (optical character recognition), machine translation, and text-to-speech.  While these technologies can't provide the same level of accuracy as curated content, it can go quite far.  Machine translation can give a good gist of what's being said, especially for some language pairs, and text-to-speech can be of great benefit for accessibility.
