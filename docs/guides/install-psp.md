@@ -1,16 +1,14 @@
 # Downloading and Installing RetroArch for PlayStation Portable
 
-## PlayStation Portable
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VXY7HjvMfnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| :warning: WARNING          |
-|:---------------------------|
-| You currently need the have custom firmware(PRO-C) to run RetroArch on your PlayStation Portable. Hardware or software changes on your device may damage your device. PRO-C must be running before running RetroArch, if you run RetroArch before running PRO-C, data corrupt error will occur.    |
+==You currently need the have custom firmware(PRO-C) to run RetroArch on your PlayStation Portable. Hardware or software changes on your device may damage your device. PRO-C must be running before running RetroArch, if you run RetroArch before running PRO-C, data corrupt error will occur.==
 
 ## Prerequisites
 
 This is probably the most straightforward way to install RetroArch.
 
-- Pro CFW (latest version)
+- Pro CFW(latest version)[^1]
 
 ## Downloading, Installing and Updating
 
@@ -28,6 +26,4 @@ Installation is also very simple. Just create `RetroArch` folder under `PSP/Game
 
 Download the latest version and unzip it into 'PSP/Game/RetroArch'. Accept when prompted to overwrite.
 
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/VXY7HjvMfnU/0.jpg)](http://www.youtube.com/watch?v=VXY7HjvMfnU)
+[^1]: https://code.google.com/archive/p/procfw/downloads

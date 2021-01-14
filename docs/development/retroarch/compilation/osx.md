@@ -14,7 +14,7 @@ The following versions of the operating system are supported:
 
 RetroArch can work on both 32bit and 64bit Intel processor-powered Macs.
 
-[![Build in Osx](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fPO-9jescmo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video covers a quick demonstration of these subjects;
 
@@ -105,7 +105,3 @@ In case you only want to build one and/or more cores instead of all, you can spe
     ./libretro-build.sh snes9x2010 fceumm
 
 Once finished, you can find the libretro cores inside directory `dist/osx`.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)

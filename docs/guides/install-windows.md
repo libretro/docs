@@ -1,23 +1,22 @@
+# Downloading, Installing and Updating RetroArch for Windows 7 and Later
 
-# Getting Started with RetroArch: Windows 7 and Later
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hu-TW02bhhY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Downloading
 
 First decide if you want a stable release or a nightly.
 
-### Stable
+=== "Stable"
 
-The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
+	The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
 
-Stable release are [here](https://buildbot.libretro.com/stable), Simply click on the latest version, navigate to *Windows*, and then select the architecture of your computer.
+	Stable release are [here](https://buildbot.libretro.com/stable), Simply click on the latest version, navigate to *Windows*, and then select the architecture of your computer.
 
-### Nightly
+=== "Nightly"
 
-This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
+	This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
 
-The current nightly is [here](https://buildbot.libretro.com/nightly/windows/).
-
-There are several files you can download in these folders. For a new installation you want **RetroArch.7z** or the setup package (**RetroArch-20XX-XX-XX-setup.exe**).
+	The current nightly is [here](https://buildbot.libretro.com/nightly/windows/). There are several files you can download in these folders. For a new installation you want **RetroArch.7z** or the setup package (**RetroArch-20XX-XX-XX-setup.exe**).
 
 Both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually. Both are portable installation which means the RetroArch setup is:
 - It's self-contained
@@ -118,30 +117,26 @@ After you have installed one or more cores you can run your content following th
 
 ## Glossary
 
-#### frontend
-A frontend is a program designed to run libretro cores such as Kodi's RetroPlayer, RetroArch, Phoenix, Minir
+=== "frontend"
+	A frontend is a program designed to run libretro cores such as Kodi's RetroPlayer, RetroArch, Phoenix, Minir
 
-#### core
-A core is a program that has been ported to the libretro API and runs inside a libretro frontend
+=== "core"
+	A core is a program that has been ported to the libretro API and runs inside a libretro frontend
 
-#### content
-Content can be a game, an image, a video, an audio file that is executed by a core. In most cases contents are the ROMs of an emulated platform
+=== "content"
+	Content can be a game, an image, a video, an audio file that is executed by a core. In most cases contents are the ROMs of an emulated platform
 
-#### retropad
-RetroPad is libretro’s input abstraction controller, it’s the interface between the physical controller and the core inputs
+=== "retropad"
+	RetroPad is libretro’s input abstraction controller, it’s the interface between the physical controller and the core inputs
 
-#### save files
-Save files are saves that are made from within a game, usually cross platform and should work across emulators in most cases
+=== "save files"
+	Save files are saves that are made from within a game, usually cross platform and should work across emulators in most cases
 
-#### save states
-Save states are snapshots of the content menory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator that the one used to create them
+=== "save states"
+	Save states are snapshots of the content menory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator that the one used to create them
 
-#### system files
-Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
+=== "system files"
+	Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
 
-#### autoconf
-A configuration file that has button definitions for a particular gamepad
-
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/hu-TW02bhhY/0.jpg)](http://www.youtube.com/watch?v=hu-TW02bhhY)
+=== "autoconf"
+	A configuration file that has button definitions for a particular gamepad

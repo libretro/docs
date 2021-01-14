@@ -4,7 +4,7 @@ Imagine a libretro core playing a game or video on your screen. Now imagine atta
 
 That layer of glass would be the **overlay** -- a virtual 'layer' between you and the video signal.
 
-[![Quick Video Demonstration for Overlays and Shaders](http://img.youtube.com/vi/bRNbA-4wuSc/0.jpg)](http://www.youtube.com/watch?v=bRNbA-4wuSc)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bRNbA-4wuSc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### What's the difference between an Overlay and a Bezel?
 

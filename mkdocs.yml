@@ -11,7 +11,7 @@ nav:
   - 'For Users':
     - 'Getting Started':
       - 'Windows':
-        - 'Windows 10': 'guides/install-windows.md'
+        - 'Windows 7/8/8.1/10': 'guides/install-windows.md'
         - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'Apple':
@@ -380,6 +380,8 @@ extra:
       link: https://facebook.com/libretro
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/libretro
+  unit:
+    version: 1.9.0
 
 theme:
   name: 'material'

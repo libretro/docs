@@ -1,18 +1,15 @@
 # Downloading and Installing RetroArch for PlayStation Vita
 
-## PlayStation Vita
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/K8iP_L49QdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| :warning: WARNING          |
-|:---------------------------|
-| You need to have custom firmware(HENkaku) to run RetroArch on your PlayStation Vita. Hardware or software changes on your device may damage your device.   |
-    
+==You need to have custom firmware(HENkaku) to run RetroArch on your PlayStation Vita. Hardware or software changes on your device may damage your device.== 
 
 ## Prerequisites
 
 This is probably the most straightforward way to install RetroArch.
 
-- HENkaku (latest version)
-- VitaShell
+- HENkaku (latest version)[^1]
+- VitaShell[^2]
 
 ## Downloading and Installing
 
@@ -46,6 +43,5 @@ Connect your PS Vita with your PC via _VitaShell_. Move your `RetroArch.vpk` to 
 
 Once the installation is complete, run the **RetroArch** once and you will see that Fonts and Images are missing. Close `RetroArch` and connect PS Vita to PC with `VitaShell`. Once you have made the connection, move the files of the downloaded `Bundle` archive to` data/retroarch/`. After successful file transfers, close the application and run RetroArch again.
 
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/K8iP_L49QdI/0.jpg)](http://www.youtube.com/watch?v=K8iP_L49QdI)
+[^1]: https://github.com/henkaku
+[^2]: https://github.com/TheOfficialFloW/VitaShell

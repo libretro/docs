@@ -1,5 +1,7 @@
 # Downloading, Installing and Updating Ludo for PC.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TvvylIT1-wM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## What is it?
 ___
 Ludo is an Emulator Frontend able to run retro video games. Ludo does not emulate the consoles itself, but does it through emulator plugins called libretro cores. Libretro cores are well known emulators (like Snes9x or Genesis Plus GX or PCSX) stripped from their user interface. They contain only console specific logic.
@@ -142,7 +144,3 @@ Atari 5200, Atari 7800, Atari Jaguar, Atari Lynx, GCE Vectrex, MSX, MSX2, Variou
 ## Conclusion
 ___
 Ludo is still under heavy development. In its current state, the project allows you to play most games on most platforms. More information can be found in the [Ludo documents](https://github.com/libretro/ludo/wiki).
-
-## Video Tutorial
-___
-[![Quick Video Demonstration](http://img.youtube.com/vi/TvvylIT1-wM/0.jpg)](http://www.youtube.com/watch?v=TvvylIT1-wM)

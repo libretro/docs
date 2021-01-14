@@ -3,6 +3,8 @@
 
 ## Getting Started
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z3CTuTx0nnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Configure a Nickname
 
 - Navigate to **Settings**
@@ -38,7 +40,3 @@ You don't need to configure anything to connect to netplay rooms. Browse to the 
 ![Screenshot](../image/retroarch/netplay/rooms.png)
 
 You will be asked for a password if one is required, and if you have matching content scanned or in the **Content History** it will connect right away. Otherwise, it will tell you to load the core and content manually and it will attempt to connect right away.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/Z3CTuTx0nnc/0.jpg)](http://www.youtube.com/watch?v=Z3CTuTx0nnc)

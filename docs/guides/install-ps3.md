@@ -1,6 +1,6 @@
 # Downloading and Installing RetroArch for PlayStation 3
 
-## Sony Playstation 3
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8O-jcykRX6w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | :warning: DISCLAIMER          |
 |:---------------------------|
@@ -26,7 +26,3 @@ You can find a bundle with RetroArch, all the cores and all the assets for `CEX`
 ## Installing
 
 Installation is also very simple. Just extract the archive to the root of your USB. Put your USB to right USB port. Use the CFW package installer to select and install RetroArch's pkg file. You can watch the short video Demonstration by clicking on the image below.
-
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/8O-jcykRX6w/0.jpg)](http://www.youtube.com/watch?v=8O-jcykRX6w)

@@ -1,7 +1,9 @@
 
 # Downloading and Installing RetroArch for Steam Link
 
-The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon and shaderpipeline are disabled, RGUI theme is pre-configured and most Cores installed into the `Cores` folder for full efficiency.
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/02M9SdUKLa0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+==The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon and shaderpipeline are disabled, RGUI theme is pre-configured and most Cores installed into the `Cores` folder for full efficiency.==
 
 ## Prerequisites
 
@@ -82,7 +84,3 @@ Go to root folder and open `apps` folder, you will see RetroArch folder in there
 Install USBmount the same way we install RetroArch. Remove the `RetroArch` folder from the `apps` directory before installation. Otherwise it will re-install on every boot.
 
 After completing the installation, create a folder on your USB and move your contents. Then plug the USB into your SteamLink and run the installed `USBmount` application.
-
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/02M9SdUKLa0/0.jpg)](http://www.youtube.com/watch?v=02M9SdUKLa0)

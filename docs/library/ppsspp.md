@@ -1,5 +1,7 @@
 # Sony - PlayStation Portable (PPSSPP)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KYt6oXA1Bws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 A PSP emulator for Android, Windows, Mac and Linux, written in C++.
@@ -337,10 +339,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ## Compatibility
 
 - [PPSSPP Compatibility List](http://report.ppsspp.org/games)
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/KYt6oXA1Bws/0.jpg)](http://www.youtube.com/watch?v=KYt6oXA1Bws)
 
 ## External Links
 

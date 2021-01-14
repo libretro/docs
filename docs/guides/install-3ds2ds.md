@@ -1,5 +1,7 @@
 # Downloading, Installing and Updating RetroArch for both 3DS and 2DS Family
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4TnjFE9t1a4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Prerequisites
 
 - **CFW** You must have custom firmware to run RetroArch on your 3DS or 2DS.
@@ -60,7 +62,3 @@ A simple configuration example follows, in case the majority of Content uses a V
 - **Configure In-Game Control for a piece of Horizontal Content** Load the content, then press the defined `Hotkey` to display the `Quick Menu`. Scroll down and select `Options`, then scroll down to select `Display MAME menu`; change to `ON`, then resume content.  On the `MAME menu` select `Input (this game)` and adjust the settings as desired. Finally, use the previous steps to set `Display MAME menu` back to `OFF`.  Controls are now set properly for the game.
 
 Following the above ensures all Content may use the proper control configuration.
-
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/4TnjFE9t1a4/0.jpg)](http://www.youtube.com/watch?v=4TnjFE9t1a4)

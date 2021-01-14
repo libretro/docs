@@ -5,7 +5,7 @@ RetroArch uses two methods of applying cheat codes:
 - **Emulator Handled** are codes that are sent to the emulator/core and it is up to the emulator/core to apply them.
 - **RetroArch Handled** are codes that RetroArch itself handles by directly scanning/manipulating the emulator/core memory area.
 
-[![Quick Video Demonstration for Windows](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xDFipsbsd2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Adding a new cheat code
 
@@ -112,8 +112,3 @@ Available rumble controls:
 - Rumble when memory value > value
 - Rumble when memory value decreases by a specific amount
 - Rumble when memory value increases by a specific amount
-
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)

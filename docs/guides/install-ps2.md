@@ -1,6 +1,6 @@
 # Downloading and Installing RetroArch for PlayStation 2
 
-## PlayStation 2
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qwL-H0-K4Wo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | :warning: DISCLAIMER          |
 |:---------------------------|
@@ -23,7 +23,3 @@ You can download a bundle with RetroArch, all the supported cores and all the as
 ### Installing
 
 Installation is also very simple. Just create `RetroArch` folder where put all the cores (.elf). Copy this folder into a USB stick. Finally, use your favorite file explorer (usually `UlaunchELF`) to navigate to `mass0:\`, then enter in `RetroArch` folder and launch the core you wish.
-
-## Video Tutorial
-
-[![Quick Video Demonstration](https://i.ytimg.com/vi/qwL-H0-K4Wo/hqdefault.jpg)](https://www.youtube.com/watch?v=qwL-H0-K4Wo)

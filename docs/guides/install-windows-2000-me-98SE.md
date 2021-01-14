@@ -1,9 +1,8 @@
 # Downloading, Installing and Updating RetroArch for Windows 2000 / ME / 98SE operating systems.
 
-| :warning: WARNING          |
-|:---------------------------|
-| You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.7z` in Windows 2000.      |
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M8pNxq_vifQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+==You must have `WinRAR 4.11 (32-bit)` in order to unzip `RetroArch.7z` in Windows 2000.==
 
 ## Downloading and installing
 
@@ -20,7 +19,3 @@ For Nightlies [here](http://buildbot.libretro.com/nightly/windows-msvc2005/x86/)
 If you pick the 7z archive package, extract it in a folder that doesn't require administrator permissions such as C:\Users\yourusername\RetroArch. Don't extract it to Program Files or your Windows folder.
 
 If you pick the executable file, double click exe file and follow the instructions on-screen to install...
-
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/M8pNxq_vifQ/0.jpg)](http://www.youtube.com/watch?v=M8pNxq_vifQ)
