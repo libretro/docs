@@ -140,6 +140,9 @@ At the moment there are no logging docs available for other Nintendo consoles. P
 ### Generating Logs with PlayStation Consoles
 At the moment there are no logging docs available for PlayStation consoles. Please feel free to post about your situation in the libretro forums.
 
+### Generating Logs in OpenDingux (GCW-Zero and RG350)
+At the moment there are no logging docs available for OpenDingux. Please feel free to post about your situation in the libretro forums.
+
 
 -------------------------
 
