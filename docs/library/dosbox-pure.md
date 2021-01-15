@@ -479,3 +479,11 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Not sure what the correct one here would be)
 - [Libretro DOSBox Pure GitHub Repository](https://github.com/schellingb/dosbox-pure)
 - [Report Libretro DOSBox Pure core Issues Here](https://github.com/schellingb/dosbox-pure/issues)
+
+## Notes by Matt
+To do:
+
+- Add info re. Humans installer (needs VGA)
+- Add info re. Boppin' (disable 2nd port)
+- Include default generic bindings (bug #57)
+- Add MIDI instructions [MUNT source code](https://github.com/munt/munt/blob/master/mt32emu/src/ROMInfo.cpp#L28)
