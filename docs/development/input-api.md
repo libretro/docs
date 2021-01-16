@@ -5,7 +5,7 @@
 Libretro's input system is based on abstracted input device types:
 
  * RetroPad
-    - Digitial Joypad
+    - Digital Joypad
     - Analog and Digital Joypad
  * Mouse
  * Pointer
