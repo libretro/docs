@@ -1,5 +1,7 @@
 # RPG Maker 2000/2003 (EasyRPG)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SxEJyXNNDck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 EasyRPG Player is a game interpreter to play RPG Maker 2000, 2003 and EasyRPG games. It uses the LCF parser library (liblcf) to read RPG Maker game data.
@@ -22,7 +24,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Content that can be loaded by the EasyRPG core have the following file extensions:
 
-- .ini
+- .ldb
 
 ## Databases
 
@@ -42,7 +44,7 @@ Frontend-level settings or features that the EasyRPG core respects.
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
