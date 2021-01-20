@@ -26,6 +26,15 @@ Content that can be loaded by the EasyRPG core have the following file extension
 
 - .ldb
 
+### RTP files
+
+You must download the RTP2000 and RTP2003 from [here](https://www.rpgmakerweb.com/run-time-package). They are exe/zip files but can be extracted with e.g. 7zip. Create `rtp` folder in `system` folder. Put the extracted data in "rtp/2000" and "rtp/2003" to `system/rtp` accordingly.
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+| retroarch  |  system |  rtp | 2000   |   |
+|   |   |   | 2003  |   |
+
 ## Databases
 
 RetroArch database(s) that are associated with the EasyRPG core:
