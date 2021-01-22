@@ -98,9 +98,9 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✔         |       |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✔         | Requires games in `coleco` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
-| [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✕         | Coleco games aren't fully playable in this core yet. |
 
 ### GCE
 
@@ -109,6 +109,22 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                              | Supported | Notes |
 |---------------------------------------------------|:---------:|:------|
 | [vecx](https://github.com/libretro/libretro-vecx) | ✔         |       |
+
+### Magnavox
+
+#### Odyssey 2
+
+| Core                                              | Supported | Notes |
+|---------------------------------------------------|:---------:|:------|
+| [o2em](https://github.com/libretro/libretro-o2em) | ✔         |       |
+
+### Mattel
+
+#### Intellivision
+
+| Core                                             | Supported | Notes |
+|--------------------------------------------------|:---------:|:------|
+| [FreeIntV](https://github.com/libretro/FreeIntv) | ✔         | Controls involve an on-screen overlay that may not be easy to use for all games. |
 
 ### Microsoft
 
@@ -149,16 +165,16 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
+| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | BIOS required |
 | [DeSmuME](https://github.com/libretro/desmume)          | ✔         | External BIOS recommended, needs to be enabled in core options |
 | [DeSmuME 2015](https://github.com/libretro/desmume2015) | ✔         |       |
-| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | BIOS required |
 
 #### Game Boy / Game Boy Color
 
 | Core                                                      | Supported | Notes |
 |-----------------------------------------------------------|:---------:|:------|
-| [SameBoy](https://github.com/libretro/SameBoy)            | ✔         |       |
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         |       |
+| [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | Highest accuracy, may have issues with some achievement sets for the time being |
 | [Gearboy](https://github.com/libretro/gearboy)            | ✔         |       |
 | [VBA-M](https://github.com/libretro/vbam-libretro)        | ✔         | Has gyro support via analog sticks |
 | [mGBA](https://github.com/libretro/mgba)                  | ✔         |       |
@@ -185,8 +201,8 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                  | Supported | Notes |
 |-------------------------------------------------------|:---------:|:------|
+| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | Supports FDS, very high accuracy, relatively high performance cost |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Supports FDS |
-| [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | Supports FDS, very high accuracy |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         |       |
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         |       |
@@ -215,8 +231,8 @@ You can also check the progress of your friends and add comments on their trophi
 | [Snes9x 2005 Plus](https://github.com/libretro/snes9x2005)                   | ✔         |       |
 | [Snes9x 2005](https://github.com/libretro/snes9x2005)                        | ✔         |       |
 | [Snes9x 2002](https://github.com/libretro/snes9x2002)                        | ✔         |       |
-| [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | High accuracy, high performance cost. Actively maintained. |
-| [Beetle Supafaust](https://github.com/libretro/supafaust)                    | ✕         |       |
+| [Mesen-S](https://github.com/SourMesen/Mesen-S)                              | ✔         | High accuracy, high performance cost. |
+| [Beetle Supafaust](https://github.com/libretro/supafaust)                    | ✕         | Only SRAM is exposed currently. |
 | [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✔         |       |
 | [bsnes](https://github.com/libretro/bsnes-libretro)                          | ✕         |       |
 | [bsnes-hd](https://github.com/DerKoun/bsnes-hd)                              | ✕         |       |
@@ -245,8 +261,8 @@ You can also check the progress of your friends and add comments on their trophi
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |       |
 | [BlastEm](https://github.com/libretro/blastem)                 | ✔         | Cycle accurate. Genesis/MegaDrive only. |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         |       |
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | Master System only |
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `megadriv` or `sms` subdirectories, exact archives just like arcade. Not supported at this time. |
 
@@ -261,8 +277,8 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                           | Supported | Notes |
 |----------------------------------------------------------------|:---------:|:------|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |       |
-| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         |       |
+| [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `gamegear` subdirectory, exact archives just like arcade. Not supported at this time. |
 
 #### SG-1000
@@ -270,6 +286,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                           | Supported | Notes |
 |----------------------------------------------------------------|:---------:|:------|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |       |
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         |       |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro)        | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✔         | Requires games in `sg1000` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
@@ -286,9 +303,9 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                                | Supported | Notes |
 |---------------------------------------------------------------------|:---------:|:------|
 | [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         |       |
-| [Yabause](https://github.com/libretro/yabause)                      | x         |       |
-| [Yabasanshiro](https://github.com/libretro/yabause)                 | x         |       |
-| [Kronos](https://github.com/libretro/yabause)                       | x         |       |
+| [Yabause](https://github.com/libretro/yabause)                      | ✕         |       |
+| [Yabasanshiro](https://github.com/libretro/yabause)                 | ✕         |       |
+| [Kronos](https://github.com/libretro/yabause)                       | ✕         |       |
 
 ### SNK
 
@@ -308,8 +325,8 @@ You can also check the progress of your friends and add comments on their trophi
 |------------------------------------------------------------------|:---------:|:------|
 | [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | Identical to Beetle PSX, with extra hardware features. High accuracy. |
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | Identical to Beetle PSX HW in software mode. |
+| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | Fairly high accuracy, extremely high speed. |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
-| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | High accuracy, extremely high speed. Core is still a work in progress. Not supported on 32-bit systems. |
 
 ### The 3DO Company (various manufacturers)
 

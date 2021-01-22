@@ -53,7 +53,7 @@ Frontend-level settings or features that the ProSystem core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✕         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
