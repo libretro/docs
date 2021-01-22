@@ -1,5 +1,7 @@
 # TIC-80
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cC-bitICk3w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 [TIC-80](https://tic.computer) is a fantasy computer for making, playing and sharing tiny games.
@@ -82,8 +84,9 @@ The TIC-80 core's internal core name is `tic80`.
 
 The TIC-80 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-- **Mouse API instead of Pointer** [tic80_mouse] (**disabled**|enabled)
+- **Touch Interface for Mouse** [tic80_mouse] (**disabled**|enabled)
 - **Mouse Cursor** [tic80_mouse_cursor] (**disabled**|dot|cross|arrow)
+- **Mouse Cursor Hide Delay** [tic80_mouse_cursor] (**disabled**|1|2|3|4|5|6|7|8|9|10)
 
 ## Controllers
 
