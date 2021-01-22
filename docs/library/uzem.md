@@ -1,40 +1,10 @@
 # Uzebox (Uzem)
 
-**[This core currently doesn't start](https://github.com/libretro/libretro-uzem/issues/2) so this documentation will remain incomplete until it is fixed.**
-
-**[This core currently doesn't start](https://github.com/libretro/libretro-uzem/issues/2) so this documentation will remain incomplete until it is fixed.**
-
-**[This core currently doesn't start](https://github.com/libretro/libretro-uzem/issues/2) so this documentation will remain incomplete until it is fixed.**
-
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/uzem.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
 Uzem is the official emulator for the Uzebox (A retro-minimalist 8-bit open source game console).
 
 The Uzebox is a minimal system based on a AVR ATmega644 microcontroller.
-
-### Why use this core?
-
-Awaiting description.
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'Uzebox (Uzem)'.
-
-The content should now start running!
 
 ### Authors
 
@@ -52,7 +22,7 @@ The Uzem core is licensed under
 
 Content that can be loaded by the Uzem core have the following file extensions:
 
-- uze
+- .uze
 
 ## Databases
 
@@ -62,11 +32,37 @@ RetroArch database(s) that are associated with the Uzem core:
 
 ## Features
 
-Awaiting description.
+Frontend-level settings or features that the PPSSPP core respects.
+
+| Feature           | Supported |
+|-------------------|:---------:|
+| Restart           | ✕         |
+| Saves             | ✕         |
+| States            | ✔         |
+| Rewind            | ✔         |
+| Netplay           | ✕         |
+| Core Options      | ✕         |
+| RetroAchievements | ✕         |
+| RetroArch Cheats  | ✕         |
+| Native Cheats     | ✕         |
+| Controls          | ✕         |
+| Remapping         | ✕         |
+| Multi-Mouse       | ✕         |
+| Rumble            | ✕         |
+| Sensors           | ✕         |
+| Camera            | ✕         |
+| Location          | ✕         |
+| Subsystem         | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
+| Disk Control      | ✕         |
+| Username          | ✕         |
+| Language          | ✕         |
+| Crop Overscan     | ✕         |
+| LEDs              | ✕         |
 
 ### Directories
 
-Awaiting description.
+The Uzem core's library name is 'UZEM'.
 
 ### Geometry and timing
 
@@ -78,11 +74,34 @@ Awaiting description.
 
 ## Core options
 
-Awaiting description.
+There is no Core Options available.
 
 ## Controllers
 
-Awaiting description.
+The Uzem core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+
+### User 1 - 2 device types
+
+- None - Doesn't disable input.
+- **RetroPad**
+- RetroPad w/Analog
+
+### Controller tables
+
+#### Joypad
+
+| User 1 - 2 Remap descriptors | RetroPad Inputs                                |
+|------------------------------|------------------------------------------------|
+| A                            | ![](../image/retropad/retro_b.png)             |
+| B                            | ![](../image/retropad/retro_a.png)             |
+| Start                        | ![](../image/retropad/retro_start.png)        |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)     |
+| D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
+| D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
+| D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
+|           | ![](../image/retropad/retro_l3.png)         |
+|         | ![](../image/retropad/retro_r3.png)         |
+
 
 ## Compatibility
 
