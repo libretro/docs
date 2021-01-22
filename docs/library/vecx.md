@@ -30,7 +30,7 @@ The vecx core does not feature BIOS use.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✕         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controllers       | ✔         |

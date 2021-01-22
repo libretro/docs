@@ -10,7 +10,7 @@ Here are a few common examples:
 
 Shaders can also be used to display the handheld border:
 
-![Shader Handheld Presentation](../image/shader/shaders-presentation-handheld.png.png)
+![Shader Handheld Presentation](../image/shader/shaders-presentation-handheld.png)
 
 ## Shader languages and shader presets
 

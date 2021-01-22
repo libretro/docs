@@ -60,7 +60,7 @@ Thumbnails appear on the right side of the screen. To get these pictures to full
 
 After loading a libretro core, you will see the name and version of the core in lower part of screen. You can then browse for a ROM with `Load Content`. To control where Ozone starts to browse for contents, set `File Browser` in `Settings > Directory`. If not set, it'll start in root.
 
-See the [File Browser](file-browser.md) and [Import Content](import-conten.md)
+See the [File Browser](file-browser.md) and [Import Content](import-content.md)
 
 ## Applying shaders
 

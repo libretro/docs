@@ -55,7 +55,7 @@ Frontend-level settings or features that the FreeIntv core respects.
 | Rewind            | ✕         |
 | Netplay (State based) | ✕         |
 | Core Options      | ✕         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | Cheats (Cheats menu) | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

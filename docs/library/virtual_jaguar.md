@@ -48,7 +48,7 @@ Frontend-level settings or features that the Virtual Jaguar core respects.
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
