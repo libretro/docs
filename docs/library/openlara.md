@@ -1,5 +1,9 @@
 # Tomb Raider (OpenLara)
 
+==First, make sure these steps are permissible in your locale. RetroArch and LibRetro do not share any copyrighted content.==
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F2GFAzouWQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 A new work-in-progress Tomb Raider game engine ported to libretro.
@@ -55,8 +59,6 @@ RetroArch dat that is associated with the OpenLara core:
 ## Setup
 
 TR1 is officially supported while 2 or 3 is not. You can still load the levels of 2 or 3 and play them with the proper file scheme. You can download the demo from Online Updater > Content Downloader > Tomb Raider and test Level 2. You can also experience the OpenLara's features in the demo. Apart from that, you can buy it [here on GOG](https://www.gog.com/game/tomb_raider_123) or [here on Steam](https://store.steampowered.com/app/224960/Tomb_Raider_I/). Tomb Raider has differences between ports. The Steam and GOG version do not install the DATA and FMV folders directly into the directory. In Console versions, these files are in the image file.
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F2GFAzouWQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Files
 
