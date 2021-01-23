@@ -1,5 +1,9 @@
 # Flashback (REminiscence)
 
+==First, make sure these steps are permissible in your locale. RetroArch and LibRetro do not share any copyrighted content.==
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/46S-FDjSjfo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 Stuart Carnie has ported REminiscence ,Gregory Montoir’s Flashback emulator, over to libretro! REminiscence is a game engine recreation of the 1992/1993 action adventure game Flashback. It is the spiritual successor of Another World/Out Of This World and it distinguishes itself with rotoscoped graphics, polygonal cutscenes, and a Prince of Persia-style gameplay system.
@@ -19,9 +23,11 @@ The REminiscence core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-## How to start the REminiscence core:
+## Setup
 
-A visual demonstration of loading content with the REminiscence core can be found [here](https://www.youtube.com/watch?v=_r7ex9WqGIk).
+REminiscence is a rewrite of the engine used in the game Flashback from Delphine Software. This program is designed as a cross-platform replacement for the original executable. The game data files (DOS, PC-CD, Amiga, Macintosh) are required. Apart from that, you can buy it [here on GOG](https://www.gog.com/game/flashback) or [here on Steam](https://store.steampowered.com/app/961620/Flashback/). Create a folder with proper naming. Then follow the `Flashback_Data\StreamingAssets\data` folder to access the data of the Flashback you have. Copy all of the files in the data folder to the folder you just created.
+
+A visual demonstration of setup REminiscence core can be found [here](https://www.youtube.com/watch?v=46S-FDjSjfo).
 
 ## Extensions
 
@@ -44,8 +50,8 @@ Frontend-level settings or features that the REminiscence core respects.
 |-------------------|:---------:|
 | Restart           | ✕         |
 | Saves             | -         |
-| States            | ✕         |
-| Rewind            | ✕         |
+| States            | ✔         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✕         |
 | RetroAchievements | ✕         |
@@ -95,4 +101,5 @@ Frontend-level settings or features that the REminiscence core respects.
 - [Libretro REminiscence Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/reminiscence_libretro.info)
 - [Libretro REminiscence Github Repository](https://github.com/libretro/REminiscence)
 - [Report Libretro REminiscence Core Issues Here](https://github.com/libretro/REminiscence/issues)
-- [You can buy a copy of Flashback that works with the REminiscence core here](https://www.gog.com/game/flashback)
+- [You can buy a copy of Flashback from GOG](https://www.gog.com/game/flashback)
+- [You can buy a copy of Flashback from Steam](https://store.steampowered.com/app/961620/Flashback/)
