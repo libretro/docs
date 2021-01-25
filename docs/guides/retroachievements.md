@@ -7,8 +7,8 @@
 !!! Warning
     The service is not maintained by RetroArch or the Libretro team.
 
-!!! Note
-    If you want to contribute, please update RetroArch and cores to get the latest fixes on the RetroAchievements feature, then in order to propose improvements to this document, [do it via GitHub](https://github.com/libretro/docs/tree/master/docs/guides/retroachievements.md) using "Pull Requests".
+!!! Warning
+    In order to get better compatibility with the RetroAchievements feature it's recommended to always use the latest version of RetroArch and the cores.
 
 ## **How to setup achievements**
 
