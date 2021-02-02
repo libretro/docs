@@ -1,5 +1,7 @@
 # Cave Story (NXEngine)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/whm7SmNhziI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 NXEngine is a open source reproduction of the [Cave Story game engine](https://en.wikipedia.org/wiki/Cave_Story).
