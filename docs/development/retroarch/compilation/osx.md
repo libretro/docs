@@ -5,7 +5,7 @@ This compilation guide will teach you how to build RetroArch for macOS/OSX.
 The following versions of the operating system are supported:
 
 - OSX 10.6    (Snow Leopard)
-- OSX 10.7    (Tiger)
+- OSX 10.7    (Lion)
 - OSX 10.8    (Mountain Lion)
 - OSX 10.9    (Mavericks)
 - OSX 10.10   (Yosemite)
