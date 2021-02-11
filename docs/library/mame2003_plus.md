@@ -164,7 +164,7 @@ Because MAME 2003-Plus does not yet implement the libretro lightgun API, the cor
 
 ### Analog and digital controller support
 
-MAME 2003-Plus supports analog and digital controls, it comes with analog by default and you can switch to digital thanks to the Retroarch following setting ```Quick menu``` -> ```Options``` -> ```Control mapping``` -> ```digital```.
+MAME 2003-Plus natively supports analog and digital controls.
 
 ### 4-way joystick simulation
 
@@ -272,9 +272,6 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 |Specify Sega ST-V BIOS (Restart core) | Manually specify your choice of ST-V BIOS from among those supported. ```mame2003-plus_stv_bios = "default|japan|japana|us|japan_b|taiwan|europe"``` |
 |Use CD soundtrack (Restart core) | See **Alternate CD soundtrack support** in the **Audio samples** section of this doc. ```mame2003-plus_use_alt_sound = "enabled|disabled"``` |
 |Share 2 player dial controls across one X/Y device | See the **2-player dial and spinner devices** section of this doc. ```mame2003-plus_dialsharexy = "disabled|enabled"``` |
-|Control Mapping | See the **Analog and digital controller support** section of this doc. ```mame2003-plus_analog = "analog|digital"``` |
-|Dual joystick mode | _Note: This option may affect stateless netplay between two users with the option set differently._ Reassigns the Player 2 joystick as a second joystick for Player 1. This is intended for emulating cabints with **Dual Joystick** designs. |
-|Map right analog stick as but  tons | Provides an alternative mapping for users with unused right analog sticks. |
 |Vector resolution multiplier (Restart core)| Attempts to create a higher quality emulation of vector display hardware by upscaling the emulated display to a higher resolution. ```mame2003-plus_vector_resolution = "1024x768|640x480|1280x960|1440x1080|1600x1200|original"``` |
 |Vector antialiasing| Enables or disables the **anti-aliasing** for vector games. ```mame2003-plus_vector_antialias = "enabled|disabled"``` |
 |Vector beam width | Sets the emulated width of the vector beam in pixels. This setting is only effective when **anti-aliasing** is enabled. ```mame2003-plus_vector_beam_width = "2|1|1.2|1.4|1.6|1.8|2.5|3|4|5|6|7|8|9|10|11|12"``` |
@@ -296,6 +293,7 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 |NVRAM Bootstraps | _Advanced feature: changing from the default is not recommended in most cases._ ```mame2003-plus_nvram_bootstraps = "enabled|disabled"```|
 |Dip switch/Cheat input ports| _Advanced feature: changing from the default is not recommended in most cases._ Activates a few specific cheats that manipulate the dipswitch input system. ```mame2003-plus_cheat_input_ports = "disabled|enabled"``` |
 |Bypass audio skew (Restart core) | _Advanced feature: changing from the default is not recommended in most cases._ Bypass the frontend's "audio skew" feature which attempts to adjust the audio for games which displayed at framerates not native to modern displays. ```mame2003-plus_machine_timing = "enabled|disabled"``` |
+|Center joystick axis for digital controls | Emulates the center position of an analog joystick to allow digital joysticks to play analog based games. This is only applied when the AD Stick type is used. ```mame2003-plus_digital_joy_centering = "enabled|disabled"``` |
 
 -----------
 
