@@ -492,4 +492,3 @@ To do:
 - Add info re. Humans installer (needs VGA)
 - Add info re. Boppin' (disable 2nd port)
 - Include default generic bindings (bug #57)
-- Add MIDI instructions [MUNT source code](https://github.com/munt/munt/blob/master/mt32emu/src/ROMInfo.cpp#L28)
