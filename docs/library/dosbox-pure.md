@@ -475,8 +475,8 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 
 - [Official DOSBox Website](https://www.dosbox.com/)
 - [Official/Original DOSBox SourceForge Repository](https://sourceforge.net/projects/dosbox/)
-- [Libretro DOSBox Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dosbox_libretro.info)
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Not sure what the correct one here would be)
+- [Libretro DOSBox Pure info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dosbox_pure_libretro.info)
+![#f03c15]
 - [Libretro DOSBox Pure GitHub Repository](https://github.com/schellingb/dosbox-pure)
 - [Report Libretro DOSBox Pure core Issues Here](https://github.com/schellingb/dosbox-pure/issues)
 
