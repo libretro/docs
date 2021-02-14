@@ -253,10 +253,6 @@ When modifications to the file system loaded from a ZIP file happen, these modif
 
 It would be nice to be able to load a dosbox.conf file if it exists in the loaded game directory (for example inside the ZIP file). Ideally this would then hide all the options that have been overwritten by that .conf file in the core options list.
 
-### Roland MT-32, CM32-L and LAPC-I emulation
-
-This feature is currently not available in DOSBox Pure, but may be implemeted through [Munt](https://github.com/munt/munt) in the future. For now, you can use the [DOSBox-Core](https://github.com/realnc/dosbox-core) core to get this feature.
-
 ### Store ZIP seek index into save file
 
 When a DOS game opens a large file and wants to read some data from near the end of the file, DOSBox Pure needs to decompress the entire file to do that. This can be most noticeable when mounting CD-ROM images from inside ZIP files.
