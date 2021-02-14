@@ -140,6 +140,12 @@ If the cursor is moved above the middle of the screen, the keyboard will move to
 
 If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI SoundFont` core option. This sound font will then be used to play General Midi and Sound Canvas music.
 
+###  MPU-401 MIDI device emulation through MUNT
+
+To emulate pre-General MIDI (MPU-401) devices such as the Roland MT-32, CM-32L, CM-64 and LAPC-I, you need the correct ROM files, e.g., MT32_CONTROL.ROM and MT32_PCM.ROM (more details about necessary files [here](https://github.com/munt/munt/blob/master/mt32emu/src/ROMInfo.cpp#L28)). Place them in the RetroArch `system` directory.
+
+Then, bring up DOSBox Pure's options and in `Audio > MIDI Output`, select the device you want to emulate (e.g., `Roland MT-32`).
+
 ### Cheats support
 
 DOSBox Pure exposes its memory for cheats in the libretro frontend.
