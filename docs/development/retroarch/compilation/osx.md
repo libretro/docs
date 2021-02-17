@@ -11,8 +11,16 @@ The following versions of the operating system are supported:
 - OSX 10.10   (Yosemite)
 - OSX 10.11   (El Capitan)
 - macOS 10.12 (Sierra)
+- macOS 10.13 (High Sierra)
+- macOS 10.14 (Mojave)
+- macOS 10.15 (Catalina)
+- macOS 11 Big Sur
 
-RetroArch can work on both 32bit and 64bit Intel processor-powered Macs.
+RetroArch can work on:
+
+- 32bit Intel processor-powered Macs
+- 64bit Intel processor-powered Macs
+- 64bit ARM   processor-powered Macs
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fPO-9jescmo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
