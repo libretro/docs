@@ -152,7 +152,7 @@ for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2
 If Qt is enabled for your build (detected automatically by default), the following is also needed:
 
 ```bash
-windeployqt --release --no-patchqt --no-translations retroarch.exe
+windeployqt --no-patchqt --no-translations retroarch.exe
 for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 ```
 
