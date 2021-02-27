@@ -20,15 +20,15 @@ cd mame
 
 | Build type | Command |
 | --- | --- |
-| Complete build     | `make -f -j3 Makefile.libretro`   |
-| Arcade-only build | `make -f -j3 Makefile.libretro SUBTARGET=arcade` |
-| Softlist-only build | `make -f -j3 Makefile.libretro SUBTARGET=mess`   |
+| Complete build     | `make -f Makefile.libretro -j$(nproc)`   |
+| Arcade-only build | `make -f Makefile.libretro -j$(nproc) SUBTARGET=arcade` |
+| Softlist-only build | `make -f Makefile.libretro -j$(nproc) SUBTARGET=mess`   |
 
 ### Platform-specific `make` syntax
 
 | Platform | Command |
 | --- | --- |
-| 64-bit processors | `make -f -j3 Makefile.libretro PTR64=1` |
+| 64-bit processors | `make -f Makefile.libretro -j$(nproc) PTR64=1` |
 
 ## Building a previous version
 
