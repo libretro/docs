@@ -154,3 +154,4 @@ There is a F.A.Q available from [the FBNeo libretro readme](https://github.com/l
 * [Official FBNeo forum](https://neo-source.com/)
 * [Official FBNeo github repository](https://github.com/finalburnneo/FBNeo)
 * [Libretro FBNeo github repository](https://github.com/libretro/FBNeo)
+* [[GUIDE] Setting up RetroArch playlists with FBNeo](https://neo-source.com/index.php?topic=3725.0)
