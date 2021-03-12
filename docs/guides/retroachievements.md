@@ -157,7 +157,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
-| [QUASI88](https://github.com/libretro/quasi88-libretro) | ✔         | Some games may be unsupported in Retroarch due to missing options. Sets generally expect the MkIISR bios. |
+| [QUASI88](https://github.com/libretro/quasi88-libretro) | ✔         | Some games may be unsupported in Retroarch due to missing options. Sets generally expect the MkIISR bios. Games should be run from within archives to prevent overwrite breaking achievement support [until a bug is fixed](https://github.com/libretro/quasi88-libretro/issues/44). |
 
 ### Nintendo
 
@@ -193,7 +193,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [mGBA](https://github.com/libretro/mgba)                      | ✔         |       |
 | [VBA-M](https://github.com/libretro/vbam-libretro)            | ✔         |       |
 | [VBA Next](https://github.com/libretro/vba-next)              | ✔         |       |
-| [gpSP](https://github.com/libretro/gpsp)                      | ✔         | Very high speed, but has not been thoroughly tested with achievements. Please prefer other cores when device performance allows. |
+| [gpSP](https://github.com/libretro/gpsp)                      | ✔         | Very high speed, but has not been thoroughly tested with achievements. A few games will fail to start or crash frequently. Please prefer other cores when device performance allows. |
 | [Beetle GBA](https://github.com/libretro/beetle-gba-libretro) | ✔         | Experimental core, should not be used without good reason. |
 | [Meteor](https://github.com/libretro/meteor-libretro)         | ✕         |       |
 
@@ -236,13 +236,13 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle bsnes](https://github.com/libretro/beetle-bsnes-libretro)            | ✔         |       |
 | [bsnes](https://github.com/libretro/bsnes-libretro)                          | ✕         |       |
 | [bsnes-hd](https://github.com/DerKoun/bsnes-hd)                              | ✕         |       |
-| [bsnes-mercury Accuracy](https://github.com/libretro/bsnes-mercury)          | ✔         |       |
-| [bsnes-mercury Balanced](https://github.com/libretro/bsnes-mercury)          | ✔         |       |
-| [bsnes-mercury Performance](https://github.com/libretro/bsnes-mercury)       | ✔         |       |
+| [bsnes-mercury Accuracy](https://github.com/libretro/bsnes-mercury)          | ✔         | [SRAM is not exposed currently](https://github.com/libretro/bsnes-mercury/issues/88) |
+| [bsnes-mercury Balanced](https://github.com/libretro/bsnes-mercury)          | ✔         | [SRAM is not exposed currently](https://github.com/libretro/bsnes-mercury/issues/88) |
+| [bsnes-mercury Performance](https://github.com/libretro/bsnes-mercury)       | ✔         | [SRAM is not exposed currently](https://github.com/libretro/bsnes-mercury/issues/88) |
 | [bsnes 2014 Accuracy](https://github.com/libretro/bsnes-libretro)            | ✔         |       |
 | [bsnes 2014 Balanced](https://github.com/libretro/bsnes-libretro)            | ✔         |       |
 | [bsnes 2014 Performance](https://github.com/libretro/bsnes-libretro)         | ✔         |       |
-| [bsnes C++98 (v085)](https://github.com/libretro/bsnes-libretro-cplusplus98) | ✔         |       |
+| [bsnes C++98 (v085)](https://github.com/libretro/bsnes-libretro-cplusplus98) | ✔         | Has some color rendering issues |
 | [higan Accuracy](https://gitlab.com/higan/higan)                             | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
 | [nSide Balanced](https://github.com/libretro/nSide)                          | ✕         | [Achievement support isn't going to be added](https://forums.libretro.com/t/is-higan-105-accuracy-supposed-to-be-slow-on-a-3-ghz-ivy-bridge-i7/13405/7?u=esoptron) |
 
