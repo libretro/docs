@@ -4,7 +4,7 @@
 
 ## Downloading and installing
 ___
-There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/1.8.8/apple/ios/RetroArch.ipa)(iOS11+) to download now.
+There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/1.9.0/apple/ios/RetroArch.ipa)(iOS11+) to download now.
 
 ## Prerequisites
 
