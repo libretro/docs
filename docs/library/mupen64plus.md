@@ -1,4 +1,4 @@
-# Nintendo 64 (Mupen64Plus)
+# Nintendo 64 (Mupen64Plus-Next)
 
 ## Contribute to this documentation
 
@@ -12,24 +12,24 @@
 
 ## Background
 
-Mupen64Plus for libretro is the port of Mupen64Plus, a Nintendo 64 emulator. Mupen64Plus for libretro uses GLideN64 as graphic plugin.
-The original Mupen64Plus can use one of the several available graphic plugins (Rice, Glide64, ect.).
-By choosing one graphics plugin (GLideN64), it will be possible to keep the code in line with upstream, and maintaining the code will be much simpler.
+Mupen64Plus-Next for libretro is an up-to-date port of Mupen64Plus, a Nintendo 64 emulator. Mupen64Plus-Next for libretro uses GLideN64 as its default graphic plugin, though Angrylion and ParaLLEl-RDP plugs are also available.
 
-For Android there are two versions of Mupen64Plus. One is designed to work with GLES 2.0 and another one with GLES 3.0.
+For Android there are two versions of Mupen64Plus-Next. One is designed to work with GLES 2.0 and another one with GLES 3.0, and the GLES 2.0 version will have graphical issues on a GLES 3.0-compatible system.
 
 How is this different from Parallel-N64?
 
-Parallel-N64 implements multiple Graphics plugins including the new Parallel plugin. There are also code modifications that make it different from the standalone Mupen64Plus.
-The graphic plugin GLideN64 is not available in Parallel-N64.
+Parallel-N64 was forked off from the standalone Mupen64Plus codebase a number of years ago, and it has diverged fairly significantly since then. Also, the graphic plugin GLideN64 is not available in Parallel-N64.
 
 ### Why use this core?
 
-The GlideN64 video plugin is very capable. Outstanding support of Hires Textures. Multi-plugin support is in the making.
+This core has the latest upstream accuracy improvements, along with the latest and greatest HLE improvements in GLideN64 and the latest LLE developments in ParaLLEl-RDP/RSP. Outstanding support of Hires Textures.
 
 
 ### Authors
 
+- m4xw
+- gillou
+- gonetz
 - Hacktarux
 - Mupen64Plus Team
 
@@ -44,13 +44,13 @@ The GlideN64 video plugin is very capable. Outstanding support of Hires Textures
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-The Mupen64Plus core is licensed under
+The Mupen64Plus-Next core is licensed under
 
 - [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)
 
 ## Extensions
 
-Content that can be loaded by the Mupen64Plus core have the following file extensions:
+Content that can be loaded by the Mupen64plus-Next core have the following file extensions (*.gb via Transfer Pak emulation):
 
 - .n64
 - .v64
@@ -58,17 +58,18 @@ Content that can be loaded by the Mupen64Plus core have the following file exten
 - .bin
 - .u1
 - .ndd
+- .gb
 
 ## Databases
 
-RetroArch database(s) that are associated with the Mupen64Plus core:
+RetroArch database(s) that are associated with the Mupen64plus-Next core:
 
 - [Nintendo - Nintendo 64](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%2064.rdb)
 - [Nintendo - Nintendo 64DD](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%2064DD.rdb)
 
 ## Features
 
-RetroArch-level settings or features that the Mupen64Plus core respects.
+RetroArch-level settings or features that the Mupen64plus-Next core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -89,7 +90,7 @@ RetroArch-level settings or features that the Mupen64Plus core respects.
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
@@ -98,9 +99,9 @@ RetroArch-level settings or features that the Mupen64Plus core respects.
 
 ### Directories
 
-The Mupen64Plus core's directory name is 'Mupen64Plus OpenGL'
+The Mupen64plus-Next core's directory name is 'Mupen64Plus-Next'
 
-The Mupen64Plus core saves/loads to/from these directories.
+The Mupen64plus-Next core saves/loads to/from these directories.
 
 **RetroArch's Save directory**
 
@@ -120,9 +121,9 @@ The Mupen64Plus core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Mupen64Plus core's internal FPS is (FPS)
-- The Mupen64Plus core's internal sample rate is 44100 Hz
-- The Mupen64Plus core's core provided aspect ratio is (Ratio)
+- The Mupen64plus-Next core's internal FPS is (FPS)
+- The Mupen64plus-Next core's internal sample rate is 44100 Hz
+- The Mupen64plus-Next core's core provided aspect ratio is (Ratio)
 
 ###  Hires Textures
 
@@ -142,9 +143,41 @@ For a compilation of your own hires texture pack, you need the high resolution t
 If you compile your own texture pack, you should be sure to enable the further three for Alpha Channel and Enhanced Storage, which will then produce a hires texture pack with the *.hts extension.
 Compilation under Windows seems to be more complicated than under Linux or iOS. Rice texture packs must be converted to 32bit PNG.
 
+## Using the Transfer Pak
+
+First you have to virtually plug the Transfer Pak, so start a N64 game, then **Quick Menu > Options > Player 1 Pak > transfer** and close content, then there are 2 ways of loading:
+
+### Renaming the GB save and the GB rom to match the N64 rom filename and having the 3 files in the same folder
+
+So for example if you have Pokemon Stadium (USA).z64, in the same folder you'll have:
+
+ - Pokemon Stadium (USA).z64 (the N64 rom).
+
+ - Pokemon Stadium (USA).z64.sav (the GB save, change the .srm extension to .sav if needed, it won't work with .srm).
+
+ - Pokemon Stadium (USA).z64.gb (the GB rom, if it's a GBC rom you'll need to rename .gbc to .gb).
+
+ - So it should look [like this](https://i.imgur.com/U4fBma3.png). If you're on Windows, [make sure you don't have the extensions hidden](https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions/)
+
+ - And then just load the .z64 file with Mupen64 core :)
+
+### Using subsystems
+
+ - Go to **retroarch/saves/**, make a copy of your GB *.srm save file and rename it to *.sav (e.g. Pokemon Red.srm -> Pokemon Red.sav).
+
+ - Now go to **Main Menu > Load Core** and load Mupen64Plus-Next. It will load the core without content.
+
+ - Go to **Main Menu > Subsystems > Load N64 Transferpak** and load the .sav file.
+
+ - Now, go back to **Subsystems** menu and load the *.gb file this time.
+
+ - Go back to **Subsystems** menu again and this time load the N64 rom.
+
+ - Go to **Subsystems** AGAIN (last time!) and click **Start N64 Transferpak**. If done properly [you should see the .sav, the .gb and the .z64 listed](https://i.imgur.com/v1vTGQT.png).
+
 ## Core options
 
-The Mupen64Plus core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The Mupen64plus-Next core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -324,7 +357,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ### Device types
 
-The Mupen64Plus core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Mupen64plus-Next core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 #### User 1 - 4 device types
 
@@ -333,7 +366,7 @@ The Mupen64Plus core supports the following device type(s) in the controls menu,
 
 ### Rumble support
 
-Rumble only works in the Mupen64Plus core when
+Rumble only works in the Mupen64plus-Next core when
 
 - The content being ran has rumble support.
 - The joypad input driver being used has rumble support. (e.g. Xinput)
@@ -372,8 +405,8 @@ Awaiting description.
 
 ## External Links
 
-- [Libretro Mupen64Plus Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mupen64plus_libretro.info)
-- [Libretro Mupen64Plus Github Repository](https://github.com/libretro/mupen64plus-libretro)
-- [Report Libretro Mupen64Plus Core Issues Here](https://github.com/libretro/mupen64plus-libretro/issues)
+- [Libretro Mupen64plus-Next Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mupen64plus_next_libretro.info)
+- [Libretro Mupen64plus-Next Github Repository](https://github.com/libretro/mupen64plus-libretro-nx)
+- [Report Libretro Mupen64plus-Next Core Issues Here](https://github.com/libretro/mupen64plus-libretro-nx/issues)
 - [Official Mupen64Plus Website](http://www.mupen64plus.org/)
 - [Official Mupen64Plus Github Organization](https://github.com/mupen64plus)
