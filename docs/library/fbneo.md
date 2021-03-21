@@ -16,7 +16,7 @@ zip, 7z
 
 ## Building romsets for FBNeo
 
-Being an emulator under active development, they change regularily and are mostly based on the latest dumps available for a given game.
+Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, they change regularily and are mostly based on the latest dumps available for a given game.
 
 ### Step 1: Obtaining an XML DAT
 
@@ -24,12 +24,12 @@ You can download them from the [dats](https://github.com/libretro/FBNeo/tree/mas
 
 ### Step 2: Gathering the ingredients
 
-It mostly consist of latest dumps available for MAME.
-The other romsets are usually a mix of hacks and homebrews, most of them are based on HBMAME romsets.
+It mostly consists of latest dumps available for MAME.
+The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
 
 ### Step 3: Building the romsets
 
-Refer to [Validating, Rebuilding, and Filtering ROM Collections](https://github.com/RetroPie/RetroPie-Setup/wiki/Validating,-Rebuilding,-and-Filtering-ROM-Collections) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
+Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting-started/#optional--clrmamepro-tutorial) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
 
 ## Features
 
