@@ -2,7 +2,9 @@
 
 ## Overview
 
-Libretro's input system is based on abstracted input device types:
+Libretro's input system is based on abstracted input device types which are polled via callbacks provided by the libretro API.
+
+Libretro input device abstractions include:
 
  * RetroPad
     - Digital Joypad
@@ -12,28 +14,30 @@ Libretro's input system is based on abstracted input device types:
  * Keyboard
  * Lightgun
 
+### Reference implementations
+The [`libretro-test` core](https://github.com/libretro/libretro-samples/tree/master/tests/test) provides a reference implementation in the C programming language for many aspects of the libretro input API. As of March 2021, `libretro-test` does not yet incorporate the latest additions to the input API, but still serves as an important resource.
+
+# Input Abstractions
+
 ## RetroPad
 The **RetroPad** is a joypad abstraction interface defined by the Libretro API. It is the primary input device for a libretro frontend. Unless a core absolutely requires the use of a keyboard with no possible fallback for gamepad-type controls, a [[Libretro core]] should always be implemented as such that it is directly controllable by the RetroPad.
 
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
-In terms of button layout and functionality, the RetroPad is based on a PlayStation/Super Nintendo joypad.
-
-### Specification
-The minimum implementation required for the RetroPad abstraction:
-
-* At least two shoulder buttons
-* At least four face buttons
-* At least one D-pad
-* At least one analogue stick
-* A `Start` button and a `Select`/`Back` button.
-
+In terms of button layout and functionality, the RetroPad is based on the original PlayStation joypad and the Super Nintendo joypad.
 
 ![Mega Drive 6-Button Gamepad](../image/controller/md6.png)
 Above: An example of the RetroPad joypad abstraction mapped to the Megadrive 6-Button gamepad.
 
 ### Digital RetroPad
 `RETRO_DEVICE_JOYPAD`: A RetroPad abstraction with all digital controls can be used. The conceptual arrangement for the buttons for the RetroPad is inspired by the Super Nintendo controller and the Sony Playstation DualShock.
+
+The minimum implementation required for the digital RetroPad abstraction:
+
+* At least two shoulder buttons
+* At least four face buttons
+* At least one D-pad
+* A `Start` button and a `Select`/`Back` button.
 
 ### Analog RetroPad
 `RETRO_DEVICE_ANALOG`: An analog subtype of the RetroPad abstraction with one or more analog inputs can be used. Conceptually inspired by the Sony DualShock2, this adds two analog sticks to the digital RetroPad and allows all buttons to return analog values in the range of `[-0x7fff, 0x7fff]`, although some devices may return `-0x8000`. Positive X axis is right. Positive Y axis is down. Buttons are returned in the range `[0, 0x7fff]`.
