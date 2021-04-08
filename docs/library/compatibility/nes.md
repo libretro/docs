@@ -4,7 +4,7 @@
 
 | Game                   | Issue                                                            |
 |------------------------|----------------------------------------------------------------- |
-| Skull & Crossbones     | Graphical glitches and screen shaking when in 2-player mode.     |
+| ~~Skull & Crossbones~~ | ~~Graphical glitches and screen shaking when in 2-player mode.~~ Fixed! |
 
 ## FCEUmm
 
