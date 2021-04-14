@@ -66,22 +66,24 @@ The following "device type" also exist, but they won't be compatible with every 
 ## Emulating consoles and computers
 
 You can use specific folder's name for detection, it's the recommended method if you are using RetroArch playlists or device not compatible with subsystems (android and consoles) :
-* CBS ColecoVision : `coleco`
-* MSX 1 : `msx`
-* Nec PC-Engine : `pce`
-* Nec SuperGrafX : `sgx`
+* CBS ColecoVision : `coleco` | `colecovision`
+* Fairchild ChannelF : `chf` | `channelf`
+* MSX 1 : `msx` | `msx1`
+* Nec PC-Engine : `pce` | `pcengine`
+* Nec SuperGrafX : `sgx` | `supergrafx`
 * Nec TurboGrafx-16 : `tg16`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
 * Sega GameGear : `gamegear`
-* Sega Master System : `sms`
-* Sega Megadrive : `megadriv`
+* Sega Master System : `sms` | `mastersystem`
+* Sega Megadrive : `megadriv` | `megadrive` | `genesis`
 * Sega SG-1000 : `sg1000`
 * SNK Neo-Geo Pocket : `ngp`
-* ZX Spectrum : `spectrum`
+* ZX Spectrum : `spectrum` | `zxspectrum`
 
 You can emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension, or using the `--subsystem XXX` argument in the command line, here is the list of available prefixes :
 * CBS ColecoVision : `cv`
+* Fairchild ChannelF : `chf`
 * MSX 1 : `msx`
 * Nec PC-Engine : `pce`
 * Nec SuperGrafX : `sgx`
@@ -102,7 +104,7 @@ Bioses will be searched through 3 folders :
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
 
-The following bioses are used :
+The following bioses are required for some of the emulated systems :
 * neogeo.zip (Neo Geo BIOS)
 * neocdz.zip (Neo Geo CDZ System BIOS)
 * decocass.zip (DECO Cassette System BIOS)
@@ -114,12 +116,16 @@ The following bioses are used :
 * ym2608.zip (YM2608 Internal ROM)
 * cchip.zip (C-Chip Internal ROM)
 * bubsys.zip (Bubble System BIOS)
+* namcoc69.zip (Namco C69 BIOS)
+* namcoc70.zip (Namco C70 BIOS)
+* namcoc75.zip (Namco C75 BIOS)
 * coleco.zip (ColecoVision System BIOS)
 * fdsbios.zip (FDS System BIOS)
 * msx.zip (MSX1 System BIOS)
 * ngp.zip (NeoGeo Pocket BIOS)
 * spectrum.zip (ZX Spectrum BIOS)
 * spec128.zip (ZX Spectrum 128 BIOS)
+* channelf.zip (Fairchild Channel F BIOS)
 
 ## Samples
 
