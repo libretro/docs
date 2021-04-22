@@ -2,7 +2,9 @@
 
 ## Overview
 
-Libretro's input system is based on abstracted input device types which are polled via callbacks provided by the libretro API.
+Libretro's input system is based on abstracted input device types which are polled via callbacks provided by the libretro API. For core developers, the value of these abstractions is that cores can be coded with an 'ideal' input type abstraction in mind while giving frontend developers and users the freedom to map that abstraction to any number of hardware or software input sources.
+
+For example, native libretro cores and source ports could be written to poll the RetroPad, the gamepad abstraction, while the frontend allows the user to map the RetroPad to their physical keyboard or mouse. This is also an advantage for emulator cores, where the input abstraction is selected to match the type or types of input available on the emulated system. For example, the libretro pointer abstraction is available for emulating input for systems like the Nintendo DS; frontends can allow the user to map a mouse or other suitable input device in addition to a hardware touchscreen. Meanwhile, on platforms like smartphones and tablets, the user can utilize their touch hardware for a more authentic emulation experience without as much code for the core to maintain.
 
 Libretro input device abstractions include:
 
@@ -41,6 +43,7 @@ The minimum implementation required for the digital RetroPad abstraction:
 
 ### Analog RetroPad
 `RETRO_DEVICE_ANALOG`: An analog subtype of the RetroPad abstraction with one or more analog inputs can be used. Conceptually inspired by the Sony DualShock2, this adds two analog sticks to the digital RetroPad and allows all buttons to return analog values in the range of `[-0x7fff, 0x7fff]`, although some devices may return `-0x8000`. Positive X axis is right. Positive Y axis is down. Buttons are returned in the range `[0, 0x7fff]`.
+
 **hiddenasbestos**, author of the current revision of the analog RetroPad API, [provides a reference implementation in C](https://github.com/libretro/libretro-common/pull/50#issue-153412324) that checks for analog button values before falling back to the digital `RETRO_DEVICE_JOYPAD`. This approach supports frontends that do not implement the analog input API.
 ```c
 static uint16_t get_analog_button( retro_input_state_t input_state_cb,
