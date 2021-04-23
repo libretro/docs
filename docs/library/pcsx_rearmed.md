@@ -528,18 +528,6 @@ Activating multitap support in compatible games can be configured by the ['Multi
 
 - When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
 
-- When either multitap1 and/or multitap2 are on user input will be assigned indicated below:
-
-- User 1: Player 1
-- User 2: Player 3
-- User 3: Player 4
-- User 4: Player 5
-- User 5: Player 2
-- User 6: Player 6
-- User 7: Player 7
-- User 8: Player 8
-
-
 ## Joypad
 
 ![](../image/controller/psx.png)
