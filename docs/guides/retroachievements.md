@@ -303,7 +303,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                                | Supported | Notes |
 |---------------------------------------------------------------------|:---------:|:------|
 | [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         |       |
-| [Yabause](https://github.com/libretro/yabause)                      | ✕         |       |
+| [Yabause](https://github.com/libretro/yabause)                      | ✔         |       |
 | [Yabasanshiro](https://github.com/libretro/yabause)                 | ✕         |       |
 | [Kronos](https://github.com/libretro/yabause)                       | ✕         |       |
 
@@ -335,3 +335,11 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                | Supported | Notes |
 |-----------------------------------------------------|:---------:|:------|
 | [Opera](https://github.com/libretro/opera-libretro) | ✔         |       |
+
+### Watara
+
+#### Supervision
+
+| Core                                           | Supported | Notes |
+|------------------------------------------------|:---------:|:------|
+| [Potator](https://github.com/libretro/potator) | ✔         | A nightly of RetroArch 1.9.1 or newer is needed for achievement support. |
