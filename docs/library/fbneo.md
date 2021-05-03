@@ -29,7 +29,7 @@ The other romsets are usually a mix of hacks and homebrews, most of them can be 
 
 ### Step 3: Building the romsets
 
-Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting-started/#optional--clrmamepro-tutorial) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
+Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting-started/#optional-clrmamepro-tutorial) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
 
 ## Features
 
