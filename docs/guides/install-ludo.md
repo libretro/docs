@@ -19,7 +19,7 @@ Ludo is an Emulator Frontend able to run retro video games. Ludo does not emulat
 ## Download Ludo
 ___
 
-Click here to get the [Windows](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-Windows-x86_64-0.11.2.zip) version, here to get the [Mac](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-OSX-x86_64-0.11.2.dmg) version or click here for [Linux](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-Linux-x86_64-0.11.2.tar.gz).
+Click here to get the [latest](https://github.com/libretro/ludo/releases/latest) version.
 
 Please note that due to early development phase, Ludo _may_ not work on your OS as expected. In most scenarios, Ludo works as intended.
 

@@ -13,35 +13,22 @@ This is probably the most straightforward way to install RetroArch.
 
 ## Downloading and Installing
 
-We're gonna download two files to get the full experience. One of these files is the `.vpk` version of RetroArch and the other is the `bundle` package with assets.
+We're gonna download two files to get the full experience. One of these files is the `.vpk` version of RetroArch and the other is the `data` package with assets. **RetroArch.vpk** by itself does not have any important assets. Thus, it is lighter than other versions. We will need the data file for the assets.
 
 ### Downloading
 
-You can download a stable RetroArch by clicking [here](http://buildbot.libretro.com/stable/1.9.0/playstation/vita/RetroArch.vpk). If you want to install the Nightly version, you can also use [this link](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch.vpk).
+!!! info inline end
+    A Piglet/ShaccCg Wrapper Library for OpenGL ES 2.0 Support on the Vita. RetroArch Piglet is still WIP and not finished however you can try it but you will need [PIB-Configuration-Tool](https://github.com/SonicMastr/PIB-Configuration-Tool).
+You can download a stable RetroArch by clicking [here](http://buildbot.libretro.com/stable/1.9.2/playstation/vita/RetroArch.vpk). If you want to install the Nightly version, you can also use [this link](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch.vpk). Nightly files will give you the latest developments. This is sometimes dangerous and sometimes innovative. We will use the Stable version and recommend it. You can download `RetroArch's data` file from [this link](http://buildbot.libretro.com/stable/1.9.2/playstation/vita/RetroArch_data.7z) or [nightly](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch_data.7z).
 
-From now on, there are two ways to download our assets. This option will affect your setup method. We're going use the **bundle** this time.
-
-**RetroArch's data**
-
-You can download `RetroArch's data` file from [this link](http://buildbot.libretro.com/stable/1.9.0/playstation/vita/RetroArch_data.7z) or [nightly](http://buildbot.libretro.com/nightly/playstation/vita/RetroArch_data.7z).
-
-**Bundle**
-
-You can download `bundle` file from [this link](http://buildbot.libretro.com/assets/frontend/bundle.zip).
+!!! info
+	Nightly files will give you the latest developments. This is sometimes dangerous and sometimes innovative. We will use the Stable version and recommend it.
 
 ### Installing
 
-Both installation methods will give you the same result. Nightly files will give you the latest developments. This is sometimes dangerous and sometimes innovative. We will use the Stable version and recommend it.
+Connect your PS Vita with your PC via _VitaShell_. Move your `RetroArch.vpk` to root of your sdcard. Disconnect PS Vita from your PC. Enter the `ux0:` directory, you will see a lot of files, scroll down to the bottom until you see `RetroArch.vpk`. Press your action key, it can be _O_ or _X_. You may receive a warning asking for the reliability of the file you downloaded, if you downloaded this file from our channels, you can accept and continue.
 
-#### Installing with RetroArch's Data
-
-Connect your PS Vita with your PC via _VitaShell_. Just move `RetroArch` folder inside downloaded `data` archive to PS Vita `data` directory. Move your `RetroArch.vpk` to root of your sdcard. Disconnect PS Vita from your PC. Enter the `ux0:` directory, you will see a lot of files, scroll down to the bottom until you see `RetroArch.vpk`. Press your selection key, it can be _O_ or _X_. You may receive a warning asking for the reliability of the file you downloaded, if you downloaded this file from our channels, you can accept and continue.
-
-#### Installing with Bundle
-
-Connect your PS Vita with your PC via _VitaShell_. Move your `RetroArch.vpk` to root of your sdcard. Disconnect PS Vita from your PC. Enter the `ux0:`directory, you will see a lot of files, scroll down to the bottom until you see `RetroArch.vpk`. Press your selection key, it can be _O_ or _X_. You may receive a warning asking for the reliability of the file you downloaded, if you downloaded this file from our channels, you can accept and continue.
-
-Once the installation is complete, run the **RetroArch** once and you will see that Fonts and Images are missing. Close `RetroArch` and connect PS Vita to PC with `VitaShell`. Once you have made the connection, move the files of the downloaded `Bundle` archive to` data/retroarch/`. After successful file transfers, close the application and run RetroArch again.
+Once the installation is complete, run the **RetroArch** once and you will see that Fonts and Images are missing. Close `RetroArch` and connect PS Vita to PC with `VitaShell`. Once you have made the connection, move the files of the downloaded `data.7z` archive to `ux0:/data/retroarch/`. After successful file transfers, close the application and run RetroArch again.
 
 [^1]: https://github.com/henkaku
 [^2]: https://github.com/TheOfficialFloW/VitaShell
