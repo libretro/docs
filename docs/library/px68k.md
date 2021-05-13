@@ -85,6 +85,9 @@ Frontend-level settings or features that the PX68k core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
+**NOTE:**
+Saves are directly writted to the disks used. So make sure to have a backup of roms before using them. This will make it easier to restore the files incase the roms get corrupted.
+
 ### Directories
 
 The PX68k core's library name is 'PX68K'
@@ -100,6 +103,8 @@ The PX68k core saves/loads to/from these directories.
 
 **NOTE:**
 If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
+In some cases, you may also need to delete <system>keropi/config.
+When prompted, use internal audio option if possible. All other audio/midi are not available (MT-xx, CM-xx, SC-xx etc).
 
 ### Geometry and timing
 
