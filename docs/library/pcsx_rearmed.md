@@ -276,7 +276,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Multitap Mode (Restart)** [pcsx_rearmed_multitap] (**disabled**|port 1 only|port 2 only|both)
 
-	Sets the multitap device in either port 1/2 to allowing upto 5 players, or on both for 8 players.
+	Sets the multitap device in either port 1 or port 2 allowing support of upto 5 players, or on both for 8 players.
 
 !!! attention
 	Multitap option works depending on the game. Setting any mode on a game that does not use multitap will make inputs not working. Leave mode at **disabled** unless supported by game and you really to play in multiplayer modes.
