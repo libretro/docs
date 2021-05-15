@@ -274,21 +274,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Adjust movement responsiveness for the emulated mouse device.
 
-- **Multitap 1** [pcsx_rearmed_multitap1] (auto|**disabled**|enabled)
+- **Multitap Mode (Restart)** [pcsx_rearmed_multitap] (**disabled**|port 1 only|port 2 only|both)
 
-	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
+	Sets the multitap device in either port 1 or port 2 allowing support of upto 5 players, or on both for 8 players.
 
-	**auto** - Enables multitap 1 when Pad 3-8 is not set to none.
-
-	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
-
-- **Multitap 2** [pcsx_rearmed_multitap2] (auto|**disabled**|enabled)
-
-	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
-
-	**auto** - Enables multitap 2 when Pad 5-8 is not set to none.
-
-	**enabled/disabled** - Forces multitap 2 to be enabled or disabled regardless if pads 5-8 is used.
+!!! attention
+	Multitap option works depending on the game. Setting any mode on a game that does not use multitap will make inputs not working. Leave mode at **disabled** unless supported by game and you really to play in multiplayer modes.
 
 - **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
 
