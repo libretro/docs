@@ -2,7 +2,7 @@
 Libretro frontends are programs that have implemented the [libretro API](libretro-overview.md) specification. If fully implemented, this allows the program to run any libretro core that has been developed.
 
 ## Frontend Development Guides
-  * [A Libretro retrospective](https://genodians.org/ehmry/2019-03-28-libretro) - Developer Emery Hemingway's detailed look back on implementing a new libretro frontend for the Genode Operating System.
+  * [A Libretro retrospective](https://web.archive.org/web/20190404052149/https://genodians.org/ehmry/2019-03-28-libretro) - Developer Emery Hemingway's detailed look back on implementing a new libretro frontend for the Genode Operating System.
 
 ## Reference frontend
 [RetroArch](http://retroarch.com) is the official reference [libretro](http://libretro.com) frontend, developed in-house. It is usually the first in implementing new features added to the libretro API. Written almost entirely in C, targets a large amount of platforms.
