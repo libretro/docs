@@ -28,7 +28,7 @@ Required or optional firmware files go in the frontend's system directory.
 | scph101.bin   | Version 4.4 03/24/00 A | 6E3735FF4C7DC899EE98981385F6F3D0 |
 | scph7001.bin  | Version 4.1 12/16/97 A | 1e68c231d0896b7eadcad1d7d8e76129 |
 | scph5501.bin  | Version 3.0 11/18/96 A | 490f666e1afb15b7362b406ed1cea246 |
-| scph1001.bin  | Version 2.0 05/07/95 A | dc2b9bf8da62ec93e868cfd29f0d067d |
+| scph1001.bin  | Version 2.0 05/07/95 A | 924e392ed05558ffdb115408c263dccf |
 
 In the event that none of the above is found, PCSX_ReARMed will search for filenames starting with "scph" and use that instead.
 It doesnt seem to matter whatever bios version is used and from what region as long as its from a retail psx/ps-one.
