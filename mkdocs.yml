@@ -76,6 +76,7 @@ nav:
       - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
       - 'Run Ahead': 'guides/runahead.md'
       - 'Latency': 'guides/latency.md'
+      - 'CRT SwitchRes': 'guides/crtswitchres.md'
     - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
     - 'Core Library: Emulation':
       - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
