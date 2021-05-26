@@ -8,7 +8,7 @@ Windows required CRTEmuDriver available [here](https://geedorah.com/eiusdemmodi/
 
 ### Linux
 
-Ne pre setup required here. Although X11 is a requirment at the momnet. Simply install/compile RetroArch choose you CRTSwitchRes setting and your off.
+No pre setup required here. Although X11 is a requirment at the momnet. Simply install/compile RetroArch choose you CRTSwitchRes setting and your off.
 
 This is also compatibale with Raspberry Pi, X11 is not a reauiment here.
 
