@@ -30,5 +30,11 @@ Connect your PS Vita with your PC via _VitaShell_. Move your `RetroArch.vpk` to 
 
 Once the installation is complete, run the **RetroArch** once and you will see that Fonts and Images are missing. Close `RetroArch` and connect PS Vita to PC with `VitaShell`. Once you have made the connection, move the files of the downloaded `data.7z` archive to `ux0:/data/retroarch/`. After successful file transfers, close the application and run RetroArch again.
 
+!!! info
+	If you want higher resolution you could use Sharpscale[^3] plugin.
+	
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QKTpZgfc-d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 [^1]: https://github.com/henkaku
 [^2]: https://github.com/TheOfficialFloW/VitaShell
+[^3]: https://github.com/cuevavirus/Sharpscale
