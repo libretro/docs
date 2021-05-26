@@ -48,8 +48,8 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename          |    Description           |              md5sum              |
 |:-------------------:|:------------------------:|:--------------------------------:|
-| keropi/iplrom.dat   | X68000 BIOS - Required   |                                  |
-| keropi/cgrom.dat    | Font file - Required     |                                  |
+| keropi/iplrom.dat   | X68000 BIOS - Required   | 7fd4caabac1d9169e289f0f7bbf71d8e |
+| keropi/cgrom.dat    | Font file - Required     | cb0a5cfcf7247a7eab74bb2716260269 |
 | keropi/iplrom30.dat | X68000 BIOS 2 - Optional |                                  |
 | keropi/iplromco.dat | X68000 BIOS 3 - Optional |                                  |
 | keropi/iplromxv.dat | X68000 BIOS 4 - Optional |                                  |
