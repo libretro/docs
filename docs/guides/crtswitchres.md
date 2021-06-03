@@ -4,13 +4,13 @@
 
 ### Windows 
 
-Windows required CRTEmuDriver available [here](https://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning SRTSwitchRes on and choosing your settings.
+Windows required CRTEmuDriver available [here](https://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning CRTSwitchRes on and choosing your settings.
 
 ### Linux
 
 No pre setup required here. Although X11 is a requirment at the momnet. Simply install/compile RetroArch choose you CRTSwitchRes setting and your off.
 
-This is also compatibale with Raspberry Pi, X11 is not a reauiment here.
+This is also compatibale with Raspberry Pi, X11 is not a requirement here.
 
 ## Enabling and Changing Settings
 
@@ -34,24 +34,24 @@ To enable CRTSwitchRes or change settings
 | Porch Adjust            | Currently not in use                            |
 | Use Custom refresh rate | Currently not in use                            |
 
-## Option 1. CRT SwithRes
+## Option 1. CRT SwitchRes
 
-This option is where you will turn on Switchres and choose your main ouput hardware. 
+This option is where you will turn on SwitchRes and choose your main ouput hardware. 
 
-| CRT SwithRes Value      | Description                                                                              |
+| CRT SwitchRes Value     | Description                                                                              |
 | ----------------------- |:----------------------------------------------------------------------------------------:|
-| off                     | This setting turns Swicthres off                                                         |
+| off                     | This setting turns SwicthRes off                                                         |
 | 15KHz                   | This will request SR to be setup for 15KHz monitors/TVs output                           |
 | 31KHz                   | This will request SR to be setup to output for 31KHz monitors/TVs output                 |
 | 31KHz, 120z             | This will request SR to be setup to output for 31KHz @120HZ monitors/TVs output for 240p |
 | INI                     | Thsi will request SR to look at the switchres.ini for the monitors/TVs output            |
 
 !!! tip
-    This can not be changed on-the-fly once Switchres is active. A restart is required for this setting to take effect.
+    This can not be changed on-the-fly once SwitchRes is active. A restart is required for this setting to take effect.
 
 ## Option 2. CRT Super Resolution
 
-| CRT Super resolution values | Desctriotion                                           |
+| CRT Super resolution values | Description                                            |
 | --------------------------- |:------------------------------------------------------:|
 | Native                      | This will pass the cores native resolution to SR       |
 | Dynamic                     | Currently not in use                                   |
@@ -60,11 +60,11 @@ This option is where you will turn on Switchres and choose your main ouput hardw
 | 3840                        | This will pass a hard set super width of 3840 to SR    |
 
 !!! note
-    All resolution are integer scaled and aspect ratio corrected to match the original resolution. Unless you realy need a locked super width only choose native and let SR do all the work. Even if you monitor does not support native reoluitons the best optopn to choose will be Native. For windows Swicthres will look for compatibale modes with an dwithout super widths. Fo Linux you can add the swithres.ini **(see Adnavced Settings below)** into you retroarch folder. Edit this file and change the dotclock_min form 0 to 25.0. This will then calculate dynamic super widths for cards that do not support low dotclocks (native width produce low dotclocks).
+    All resolution are integer scaled and aspect ratio corrected to match the original resolution. Unless you realy need a locked super width only choose native and let SR do all the work. Even if you monitor does not support native resolutions the best optopn to choose will be Native. For windows SwicthRes will look for compatibale modes with an dwithout super widths. Fo Linux you can add the switchres.ini **(see Advanced Settings below)** into you retroarch folder. Edit this file and change the dotclock_min form 0 to 25.0. This will then calculate dynamic super widths for cards that do not support low dotclocks (native width produce low dotclocks).
 
-## Adnavced Settings
+## Advanced Settings
 
-As CRTSwitchRes is now using Switchres by Calamity. There are many options to customise you enviroment within the switchres.ini. However, some options are available with the CRTSwicthres settings menu in RetroArch. Although more setting can been set in theswitchres.ini it is not a required. It does however allow for more customisation. For more details on how to configure and use the [swicthre.ini go here](https://gitlab.com/groovyarcade/support/-/wikis/3-Post-Installation-and-Maintenance/3.9-Configure-System-Wide-Switchres).
+As CRTSwitchRes is now using Switchres by Calamity, there are many options to customise you enviroment within the switchres.ini. However, some options are available with the CRTSwicthres settings menu in RetroArch. Although more setting can been set in the switchres.ini it is not a required. It does however allow for more customisation. For more details on how to configure and use the swicthres.ini, [go here](https://gitlab.com/groovyarcade/support/-/wikis/3-Post-Installation-and-Maintenance/3.9-Configure-System-Wide-Switchres).
 
 Currently, the switchres.ini is not supplied with RetoArch. This will change in the near future. In the meantime you can downlaod this file from [here](https://raw.githubusercontent.com/antonioginer/switchres/master/switchres.ini).
 
@@ -79,3 +79,14 @@ Currently, the switchres.ini is not supplied with RetoArch. This will change in 
 | crt_switch_resolution_use_custom_refresh_rate   | Not currently in use                                   | false                            |
 | crt_switch_timings                              | Do not Chnage                                          |                                  |
 | crt_video_refresh_rate                          | Do not change                                          | Set by Switchres                 |
+
+## Core and directory overrides
+
+If you are using a `switchres.ini` configuration file and wish to fine-tune specific setting for certain cores or directories, it is possible to use core and directory overrides for this. These files can be placed at the same locations as the usual `.cfg` files for RetroArch's core and directory overrides, only replacing the `.cfg` with `.switchres.ini`.
+
+For example, if you are using native resolution on your configuration but want to user a 2560 super resolution on the Gambatte core, you can create the file `CONFIG_DIR/config/Gambatte/Gambatte.switchres.ini` with the content `user_mode    2560x0` in it. This setting will override the one on the original switchres.ini file when running this specific core, and when closing it, or switching to a different core, the default `switchres.ini` file will be re-loaded to undo the change.
+
+The same works for directory overrides; for example, if you want to use a super resolution of 2560 for roms in the "Sega - Game Gear" directory while using the Genesis Plus GX core, you can create the file `CONFIG_DIR/config/Genesis Plus GX/Sega - Game Gear.switchres.ini` and add the user mode to that file.
+
+!!! note
+    You have to be using a full, complete `switchres.ini` base file for the overriding files to work properly, otherwise overriding settings will persist until you restart RetroArch.
