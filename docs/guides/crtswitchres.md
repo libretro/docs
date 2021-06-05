@@ -4,7 +4,9 @@
 
 ### Windows 
 
-Windows required CRTEmuDriver available [here](https://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning CRTSwitchRes on and choosing your settings.
+Windows works best CRTEmuDriver available [here](https://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning CRTSwitchRes on and choosing your settings.
+
+Other options are available. Its a simple case of getting the rersoluitons installed on you Windows PC.
 
 ### Linux
 
