@@ -34,7 +34,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename    |    Description             |              md5sum              |
 |:-------------:|:--------------------------:|:--------------------------------:|
-| lynxboot.img  | Lynx Boot Image - Optional | fcd403db69f54290b51035d82f835e7b |
+| lynxboot.img  | Lynx Boot Image - Required | fcd403db69f54290b51035d82f835e7b |
 
 ## Features
 
