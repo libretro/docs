@@ -115,7 +115,7 @@ cd retroarch
 git pull
 ```
 
-To compile RetroArch run the following commands inside RetroArch's source tree:
+To compile RetroArch, run the following commands inside RetroArch's source tree:
 
 ```bash
 ./configure
