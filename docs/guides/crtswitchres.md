@@ -70,6 +70,9 @@ As CRTSwitchRes is now using Switchres by Calamity, there are many options to cu
 
 Currently, the switchres.ini is not supplied with RetoArch. This will change in the near future. In the meantime you can downlaod this file from [here](https://raw.githubusercontent.com/antonioginer/switchres/master/switchres.ini).
 
+!!! Note
+    A default switchres.ini file will be searched in the current working directory, then in .\ini on Windows, ./ini then /etc on Linux. The repo has a switchres.ini example.
+
 ## CRTSwitchRes Options Via retroarch.cfg
 
 | Config Option Name                              | Desctriotion                                           | Values                           | 
