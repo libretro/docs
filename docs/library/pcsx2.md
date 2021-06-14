@@ -80,6 +80,35 @@ Required or optional firmware files go in the frontend's system directory.
 | SCPH-70004_BIOS_V12_PAL_200.ROM1 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.ROM2 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.NVM | - | - |
+| `SCPH-77006_BIOS_VX_HK _220.BIN` | Japan v02.20(10/02/2006) console BIOS | 5b1ba4bb914406fae75ab8e38901684d |
+| `SCPH-77006_BIOS_VX_HK _220.EROM` | Japan v02.20(10/02/2006) console BIOS | 4f84fc8c2f1080a3f5f5859b403c62f3 |
+| `SCPH-77006_BIOS_VX_HK _220.mec` | Japan v02.20(10/02/2006) console BIOS | 3faf7c064a4984f53e2ef5e80ed543bc |
+| `SCPH-77006_BIOS_VX_HK _220.NVM` | Japan v02.20(10/02/2006) console BIOS | 5cc8e272eebfcc0f9efb9340e9644c57 |
+| `SCPH-77006_BIOS_VX_HK _220.ROM1` | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+| `SCPH-77006_BIOS_VX_HK _220.ROM2` | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+
+## Other required files and directories
+
+Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
+
+..\pcsx2\bios\
+
+..\pcsx2\cheats\
+
+..\pcsx2\cheats_ws\
+
+..\system\pcsx2\inis\
+
+..\pcsx2\logs\
+
+..\pcsx2\memcards\
+
+..\pcsx2\snaps\
+
+..\pcsx2\sstates\
+
+It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory.
+Simply create a portable.txt file and change its extension to .ini.
 
 ## Extensions
 
@@ -134,9 +163,13 @@ PCSX2 core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- Memory cards
+- Memory card - slot 1
 
-..\system\PCSX2\memcards\
+..\retroarch\saves\pcsx2\Slot 1\
+
+- Memory card - slot 1
+
+..\retroarch\saves\pcsx2\Slot 2\
 
 **Frontend's State directory**
 
