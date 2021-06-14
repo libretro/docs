@@ -89,6 +89,9 @@ Required or optional firmware files go in the frontend's system directory.
 
 ## Other required files and directories
 
+!!! info
+	On Windows, if you previously installed the stand-alone PCSX2, Retroarch can detect the stand-alone files, so you only need to have the \pcsx2\bios\ folder in the System/BIOS directory. This doesn't work with the portable version or the stand-alone Linux version.
+
 Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
 
 ..\pcsx2\bios\
@@ -97,7 +100,7 @@ Currently, PCSX2 requires these directories in the folder set as frontend's Syst
 
 ..\pcsx2\cheats_ws\
 
-..\system\pcsx2\inis\
+..\pcsx2\inis\
 
 ..\pcsx2\logs\
 
@@ -107,8 +110,20 @@ Currently, PCSX2 requires these directories in the folder set as frontend's Syst
 
 ..\pcsx2\sstates\
 
-It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory.
-Simply create a portable.txt file and change its extension to .ini.
+It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory. Simply create a portable.txt file and change its extension to .ini.
+
+- Linux version:
+
+Besides the files and folders above, currently, the Linux version of the PCSX2 core requires libpng12-0, which isn't available in the repositories of some distributions.
+One workaround that may help, if your distro supports PPAs, is using the following commands:
+
+> sudo add-apt-repository ppa:linuxuprising/libpng12
+> 
+> sudo apt update
+> 
+> sudo apt install libpng12-0
+
+Tested only in Ubuntu 20.04.2 LTS. May need to adapt to other distros.
 
 ## Extensions
 
