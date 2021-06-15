@@ -2,8 +2,6 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-EnWeztB8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-==Last Updated: January 13, 2021==
-
 PCSX2 is still under development. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content. There’s a working OpenGL renderer and a Direct3D11 renderer option. Direct3D 11 renderer can be faster than OpenGL but also has less features. Pick whichever works best for you. On Xbox you will only be able to use Direct3D11 anyways. This core uses the x86_64 dynarec which was added to PCSX2 a year ago. It is still less compatible than the 32bit x86 dynarec in PCSX2, so keep that in mind. It’s for similar reasons that the software renderer right now won’t work (it’s not compatible yet with x86_64, not in upstream either). There’s a bug that can happen right now upon closing content or exiting RetroArch with the PCSX2 core on Windows – the RetroArch process might not completely cleanly shut itself off and you might still be able to see a 0% CPU process remaining in the Task Manager. We have not been able to figure out how to fix that yet as the PCSX2 codebase is a definite case of ‘here be dragons’, but for now when this happens, you can just bring up the Task Manager and close it manually. It shouldn’t have a real detriment on performance but it is of course far from ideal and hopefully something we can fix soon with the help of some contributors. We have found this happens the most with the Direct3D 11 renderers. Switching resolution at runtime right now can be a bit unstable, so does switching fullscreen resolution. We might just make resolution switching require a restart since this tends to be too unstable for now.
 
 ## Background
@@ -80,12 +78,12 @@ Required or optional firmware files go in the frontend's system directory.
 | SCPH-70004_BIOS_V12_PAL_200.ROM1 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.ROM2 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.NVM | - | - |
-| `SCPH-77006_BIOS_VX_HK _220.BIN` | Japan v02.20(10/02/2006) console BIOS | 5b1ba4bb914406fae75ab8e38901684d |
-| `SCPH-77006_BIOS_VX_HK _220.EROM` | Japan v02.20(10/02/2006) console BIOS | 4f84fc8c2f1080a3f5f5859b403c62f3 |
-| `SCPH-77006_BIOS_VX_HK _220.mec` | Japan v02.20(10/02/2006) console BIOS | 3faf7c064a4984f53e2ef5e80ed543bc |
-| `SCPH-77006_BIOS_VX_HK _220.NVM` | Japan v02.20(10/02/2006) console BIOS | 5cc8e272eebfcc0f9efb9340e9644c57 |
-| `SCPH-77006_BIOS_VX_HK _220.ROM1` | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
-| `SCPH-77006_BIOS_VX_HK _220.ROM2` | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+| SCPH-77006_BIOS_VX_HK _220.BIN | Japan v02.20(10/02/2006) console BIOS | 5b1ba4bb914406fae75ab8e38901684d |
+| SCPH-77006_BIOS_VX_HK _220.EROM | Japan v02.20(10/02/2006) console BIOS | 4f84fc8c2f1080a3f5f5859b403c62f3 |
+| SCPH-77006_BIOS_VX_HK _220.mec | Japan v02.20(10/02/2006) console BIOS | 3faf7c064a4984f53e2ef5e80ed543bc |
+| SCPH-77006_BIOS_VX_HK _220.NVM | Japan v02.20(10/02/2006) console BIOS | 5cc8e272eebfcc0f9efb9340e9644c57 |
+| SCPH-77006_BIOS_VX_HK _220.ROM1 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+| SCPH-77006_BIOS_VX_HK _220.ROM2 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
 
 ## Other required files and directories
 
@@ -158,7 +156,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✔         |
-| Rumble[^1]            | ✔         |
+| Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
@@ -246,5 +244,4 @@ The current standalone development version is reported to be compatible with app
 - Play!
 
 
-[^1]: Rumble is broken right now. It doesn't stop when triggered. You can fix it by opening and closing Quick Menu.
 [^2]: Overscan cropping available via Core Options instead of frontend settings
