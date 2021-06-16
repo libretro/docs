@@ -61,6 +61,8 @@ There is no region locking so if you have a PAL BIOS on your PS2 you can still p
 
 Required or optional firmware files go in the frontend's system directory.
 
+A PlayStation 2 BIOS consists of multiple files. All files of the same version (e.g. the 6 files of "Japan v02.20") must be included in the BIOS directory for that specific version of the BIOS to work properly.
+
 |   Filename   | Description                         |              md5sum              |
 |:------------:|:-----------------------------------:|:--------------------------------:|
 | PS2 Bios 30004R V6 Pal.bin | - | - |
@@ -113,7 +115,8 @@ It also requires a file 'portable.ini' in the the \pcsx2\ directory in the front
 - Linux version:
 
 Besides the files and folders above, currently, the Linux version of the PCSX2 core requires libpng12-0, which isn't available in the repositories of some distributions.
-One workaround that may help, if your distro supports PPAs, is using the following commands:
+
+One workaround that may help, if your distro supports PPAs, is using commands such as the following ones:
 
 > sudo add-apt-repository ppa:linuxuprising/libpng12
 > 
