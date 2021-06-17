@@ -51,7 +51,7 @@ Frontend-level settings or features that the gpSP core respects.
 | Netplay           | ✕         |
 | Core Options      | ✕         |
 | RetroAchievements | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
