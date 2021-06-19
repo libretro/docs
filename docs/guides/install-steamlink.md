@@ -3,7 +3,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/02M9SdUKLa0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-==The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon and shaderpipeline are disabled, RGUI theme is pre-configured and most Cores installed into the `Cores` folder for full efficiency.==
+==Steam Link build isn't in automated build due both SteamLink SDK and LibRetro changes. However you can download [here](https://github.com/fpscan/RetroArch-AppImage/releases/tag/steam) for decent version. The download and installation process is as follows, and may change in the future. Threads, alsa, pulse, neon and shaderpipeline are disabled, RGUI theme is pre-configured and most Cores installed into the root folder for full efficiency.==
 
 ## Prerequisites
 
