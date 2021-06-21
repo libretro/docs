@@ -103,8 +103,8 @@ Frontend-level settings or features that the PUAE core respect.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroAchievements | ✔         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -129,8 +129,7 @@ The PUAE core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.nvr (CD32/CDTV NvRAM)
-- `puae_libretro.uae` (Temporary startup configuration)
+- 'content-name'.nvr (CD32/CDTV NVRAM)
 - `BootHD`/`puae_libretro.hdf` (Optional global boot hard drive image directory/file)
 - `WHDLoad`/`WHDLoad.hdf` (WHDLoad helper image directory/file)
 - `WHDSaves`/`WHDSaves.hdf` (WHDLoad save image directory/file)
@@ -398,11 +397,11 @@ For more detailed history of WHDLoad support visit the [Github repository](https
 
 ### Using configuration files
 
-You can pass an ".uae" configuration file and the core will load the settings and start emulation.
+You can pass `.uae` configuration files and they will be appended to the core option configuration.
 
-Look at the temporary configuration file `puae_libretro.uae` in RetroArch `saves` as a starting point for your own configuration files.
+If the file `puae_libretro_global.uae` exists in RetroArch `saves` it will be appended to the configuration.
 
-If the file `puae_libretro_global.uae` exists in RetroArch `saves` it will be appended to the temporary configuration file.
+The final generated configuration output is available in debug level log.
 
 ***Note that the use of configuration files is no longer encouraged or necessary. The core has been modified to always use the core options as a base, so that all custom configurations will be appended to the created configuration, effectively overriding the core options. The problem with this is that changing any core option while the core is running will reset all duplicate configurations. Therefore only add configurations which will require a restart or do not exist in the core options, if you must use a custom uae. If there is an option missing that is a must have, please make an issue about it.***
 
@@ -427,7 +426,7 @@ Linux tip:
 
 - Leave the ending slash to the path to make sure UAE sees it as a directory.
 
-If you are using RDB HDF files, please use `0,0,0,0` instead of geometry numbers like `32,1,2,512`. The geometry will then be read from the file. This only works for RDB HDF files.
+If you are using RDB HDF files, please use `0,0,0,512` instead of geometry numbers like `32,1,2,512`. The geometry will then be read from the file. This only works for RDB HDF files.
 
 ## Core options
 

@@ -36,6 +36,8 @@ Content that can be loaded by the VICE cores have the following file extensions:
 - .x6z
 - .nib
 - .nbz
+- .d2m
+- .d4m
 
 ### Tapes
 
@@ -127,7 +129,7 @@ Frontend-level settings or features that the VICE cores respect.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -150,6 +152,7 @@ Frontend-level settings or features that the VICE cores respect.
 The VICE cores' internal core names are:
 
 - vice_x64
+- vice_x64dtv
 - vice_x64sc
 - vice_x128
 - vice_xcbm2
@@ -548,9 +551,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     '24-bit' is slower and not available on all platforms. Full restart required.
 
+- **Light Pen/Gun Pointer Color** [vice_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
+
+    Crosshair color for light pens and guns.
+
 #### Color palette options
 
 ##### VIC-II (C64, C128, CBM-II 5x0)
+
+- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
 
 - **VIC-II Color Palette** [vice_external_palette] (default|**colodore**|pepto-pal|pepto-ntsc|pepto-ntsc-sony|cjam|c64hq|c64s|ccs64|community-colors|deekay|frodo|godot|pc64|ptoing|rgb|vice)
 
@@ -578,6 +589,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### VIC (VIC-20)
 
+- **VIC Filter** [vice_vic_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
+
 - **VIC Color Palette** [vice_vic20_external_palette] (default|**colodore_vic**|mike-pal|mike-ntsc|vice)
 
     'Colodore' is recommended for the most accurate colors.
@@ -603,6 +618,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     Tint for the internal palette.
 
 ##### TED (PLUS/4)
+
+- **TED Filter** [vice_ted_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
 
 - **TED Color Palette** [vice_plus4_external_palette] (default|**colodore_ted**|yape-pal|yape-ntsc)
 
@@ -630,6 +649,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### CRTC (CBM-II, PET)
 
+- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
+
 - **CRTC Color Palette** [vice_cbm2_external_palette] (**default**|green|amber|white)
 
 - **CRTC Color Palette** [vice_pet_external_palette] (**default**|green|amber|white)
@@ -640,9 +663,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Page refresh by menu toggle required!
 
-- **Drive Sound Emulation** [vice_drive_sound_emulation] (disabled|5|10|15|**20**|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)
+- **Drive Sound Emulation** [vice_drive_sound_emulation] (disabled|5%|10%|15%|**20%**|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|100%)
 
     'True Drive Emulation' & D64/D71 disk image required.
+
+- **Datasette Sound** [vice_datasette_sound] (**disabled**|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|100%|-1)
+
+    TAP tape image required.
+
+    '-1': 100% + Mute
 
 - **(VIC-II/VIC/TED) Audio Leak Emulation** [vice_audio_leak_emulation] (**disabled**|1|2|3|4|5|6|7|8|9|10)
 
@@ -675,6 +704,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Output Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
 
 ### Input options
+
+- **Analog Stick Mouse** [vice_analogmouse] (disabled|**left**|right|both)
+
+    Override analog stick remappings when non-joysticks are used.
+    'OFF' controls mouse/paddles with both analogs when remappings are empty.
 
 - **Analog Stick Mouse Deadzone** [vice_analogmouse_deadzone] (0|5|10|15|**20**|25|30|35|40|45|50)
 
@@ -794,20 +828,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Most games use port 2, some use port 1. Filename forcing or hotkey toggling disables this option until core restart.
 
-- **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10)
+- **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)
 
-    | Value | Label                   |
-    |-------|-------------------------|
-    | 1     | Joystick                |
-    | 2     | Paddles                 |
-    | 3     | Mouse (1351)            |
-    | 4     | Mouse (NEOS)            |
-    | 5     | Mouse (Amiga)           |
-    | 6     | Trackball (Atari CX-22) |
-    | 7     | Mouse (Atari ST)        |
-    | 8     | Mouse (SmartMouse)      |
-    | 9     | Mouse (Micromys)        |
-    | 10    | Koalapad                |
+    | Value | Label                           |
+    |-------|---------------------------------|
+    | 1     | Joystick                        |
+    | 2     | Paddles                         |
+    | 3     | Mouse (1351)                    |
+    | 4     | Mouse (NEOS)                    |
+    | 5     | Mouse (Amiga)                   |
+    | 6     | Trackball (Atari CX-22)         |
+    | 7     | Mouse (Atari ST)                |
+    | 8     | Mouse (SmartMouse)              |
+    | 9     | Mouse (Micromys)                |
+    | 10    | Koalapad                        |
+    | 11    | Light Pen (Up trigger)          |
+    | 12    | Light Pen (Left trigger)        |
+    | 13    | Light Pen (Datel)               |
+    | 16    | Light Pen (Inkwell)             |
+    | 14    | Light Gun (Magnum Light Phaser) |
+    | 15    | Light Gun (Stack Light Rifle)   |
 
 - **RetroPad Face Button Options** [vice_retropad_options] (**disabled**|jump|rotate|rotate_jump)
 
