@@ -100,14 +100,6 @@ An example folder structure would be like so:
 
 ```
 └── contents/
-    └── dooms
-        └── doom
-	   └── doom.wad
-        └── doom2
-            └── doom2.wad
-```
-```
-└── contents/
     └── dooms/
         ├── doom/
         │   └── doom.wad
@@ -155,8 +147,8 @@ An example folder structure would be like so:
 └── contents/
     └── dooms/
         └── doom/
-           ├── doom.wad
- 	   └── SIGIL.WAD
+            ├── doom.wad
+            └── SIGIL.WAD
 ```
 
 ```
