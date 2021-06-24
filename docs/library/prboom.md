@@ -1,4 +1,5 @@
 # Doom (PrBoom)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4qNr0DZWrQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
 
@@ -20,7 +21,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 | Filename                                                                         | Description           |
 |:--------------------------------------------------------------------------------:|:---------------------:|
-| [prboom.wad](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) | PrBoom requires data ROM 'prboom.wad' inside the ROM directory. |
+| [prboom.wad](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) | PrBoom requires data ROM 'prboom.wad' inside the SYSTEM directory. |
 
 ## Extensions
 
@@ -90,24 +91,28 @@ The PrBoom core saves/loads to/from these directories.
 
 ## Loading DOOM
 
-PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's directory.
+PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's or system directory.
 
-You must use a separate folder for each wad to be able to have all Dooms use their correct music
+!!! TIP
+	If you start the games by loading prboom.wad they will all share the same content name ("prboom" in this case), so the core will put the saves for every game in a single retroarch/saves/prboom/ folder and when playing Doom 2 for example you'll see Doom 1 saves, etc. which will cause confusion for the user. The games will also share the same game overrides/options files/remaps/etc. History tab will also lists each game as "prboom".	
 
 An example folder structure would be like so:
 
 ```
-└── roms/
-    └── ports/
-        ├── doom/
-        │   ├── doom.wad
-        │   ├── prboom.wad
-        │   └── doommusic.mp3
+└── contents/
+    └── dooms/
+        └── doom/
+	   └── doom.wad
         └── doom2/
-            ├── doom2.wad
-            ├── prboom.wad
-            └── doom2music.mp3
+            └── doom2.wad
 ```
+
+```
+└── retroarch/
+    └── system/
+	 └── prboom.wad
+```
+
 
 Game saves and internal configuration files will be created in the frontend-defined save directory, organised in folders matching the filenames of loaded content - for example:
 
@@ -126,89 +131,31 @@ Game saves and internal configuration files will be created in the frontend-defi
 
 Game saves are numbered from 'prbmsav0.dsg' to 'prbmsav7.dsg'.
 
-## Music
+## SIGIL
 
-The PrBoom core is not able to play the music files inside the wad files (they are in a proprietary midi format).
+Sigil (stylized as SIGIL) is the unofficial fifth episode of the 1993 video game Doom. Published by Romero Games on May 31, 2019, the Megawad was created by an original co-creator of Doom, John Romero, independently of the main game's then-current owner, Bethesda Softworks. It has nine missions, each with a deathmatch version, and a new soundtrack created by James Paddock and Buckethead.
 
-To enable music in your Doom game(s) you need to copy MP3s with specific names into the same folder as your ROMs are located. You can find a list of names [here](https://github.com/libretro/libretro-prboom/blob/master/src/m_misc.c#L605):
+You can get SIGIL [here](https://romero.com/)
 
-They follow the scheme e1m1.mp3, e1m2.mp3, ..., e2m1.mp, e2m2.mp3, ... .
+Turn off 'Look on parent folders for IWADs' inside Quick Menu - Options. This is usually enabled by default, so disable it.
 
-Tracks are freely available - find them by searching for "PSX Doom Music".
+Make sure that you place the SIGIL wad files inside the same directory as your Doom/Ultimate Doom WAD file. You can name this either doomu.wad or doom.wad. Make sure there are NO doom2.wad files inside this same directory, or Sigil might not work properly.
 
-If you are having trouble with the audio not playing after you have renamed all the MP3s, try clearing all the ID3 tag information for each of the MP3s.
+An example folder structure would be like so:
 
-Below are the corresponding tracks if the MP3s are named:
+```
+└── contents/
+    └── dooms/
+        └── doom/
+           ├── doom.wad
+ 	   └── SIGIL.WAD
+```
 
-| File Name  | mp3                                 |
-|------------|-------------------------------------|
-| mus_e1m1   | "level 01 (hangar).mp3"             |
-| mus_e1m2   | "level 02 (plant).mp3"              |
-| mus_e1m3   | "level 03 (toxin refinery).mp3"     |
-| mus_e1m4   | "level 04 (command control).mp3"    |
-| mus_e1m5   | "level 05 (phobos lab).mp3"         |
-| mus_e1m6   | "level 06 (central processing).mp3" |
-| mus_e1m7   | "level 07 (computer station).mp3"   |
-| mus_e1m8   | "level 08 (phobos anomaly).mp3"     |
-| mus_e1m9   | "level 06 (fistula).mp3"            |
-| mus_e2m1   | "level 09 (deimos anomaly).mp3"     |
-| mus_e2m2   | "level 10 (containment area).mp3"   |
-| mus_e2m3   | "level 11 (refinery).mp3"           |
-| mus_e2m4   | "level 12 (deimos lab).mp3"         |
-| mus_e2m5   | "level 13 (command center).mp3"     |
-| mus_e2m6   | "level 02 (plant).mp3"              |
-| mus_e2m7   | "level 01 (hangar).mp3"             |
-| mus_e2m8   | "level 03 (toxin refinery).mp3"     |
-| mus_e2m9   | "level 02 (virgil).mp3"             |
-| mus_e3m1   | "level 17 (hell keep).mp3"          |
-| mus_e3m2   | "level 03 (canyon).mp3"             |
-| mus_e3m3   | "level 18 (pandemonium).mp3"        |
-| mus_e3m4   | "level 06 (central processing).mp3" |
-| mus_e3m5   | "level 20 (unholy cathedral).mp3"   |
-| mus_e3m6   | "level 21 (mt erebus).mp3"          |
-| mus_e3m7   | "level 22 (limbo).mp3"              |
-| mus_e3m8   | "level 09 (nessus).mp3"             |
-| mus_e3m9   | "level 10 (paradox).mp3"            |
-| mus_inter  | "e2m3.mp3"                          |
-| mus_intro  | "track 02 title screen.mp3"         |
-| mus_bunny  | "track 03 main menu.mp3"            |
-| mus_victor | "track 09 endgame.mp3"              |
-| mus_introa | "track 02 title screen.mp3"         |
-| mus_runnin | "level 01 (hangar).mp3"             |
-| mus_stalks | "level 10 (containment area).mp3"   |
-| mus_countd | "level 22 (limbo).mp3"              |
-| mus_betwee | "level 16 (hell gate).mp3"          |
-| mus_doom   | "level 08 (phobos anomaly).mp3"     |
-| mus_the_da | "level 21 (mt erebus).mp3"          |
-| mus_shawn  | "level 20 (unholy cathedral).mp3"   |
-| mus_ddtblu | "level 24 (hell beneath).mp3"       |
-| mus_in_cit | "level 11 (refinery).mp3"           |
-| mus_dead   | "level 13 (command center).mp3"     |
-| mus_stlks2 | "level 09 (deimos anomaly).mp3"     |
-| mus_theda2 | "level 17 (hell keep).mp3"          |
-| mus_doom2  | "level 08 (minos).mp3"              |
-| mus_ddtbl2 | "level 16 (hell gate).mp3"          |
-| mus_runni2 | "level 04 (combine).mp3"            |
-| mus_dead2  | "level 18 (pandemonium).mp3"        |
-| mus_stlks3 | "level 06 (central processing).mp3" |
-| mus_romero | "level 05 (phobos lab).mp3"         |
-| mus_shawn2 | "level 10 (containment area).mp3"   |
-| mus_messag | "level 01 (attack).mp3"             |
-| mus_count2 | "level 02 (plant).mp3"              |
-| mus_ddtbl3 | "level 03 (toxin refinery).mp3"     |
-| mus_ampie  | "level 01 (hangar).mp3"             |
-| mus_theda3 | "level 06 (fistula).mp3"            |
-| mus_adrian | "level 07 (computer station).mp3"   |
-| mus_messg2 | "level 08 (phobos anomaly).mp3"     |
-| mus_romer2 | "level 11 (refinery).mp3"           |
-| mus_tense  | "level 07 (geryon).mp3"             |
-| mus_shawn3 | "level 05 (catwalk).mp3"            |
-| mus_openin | "level 04 (command control).mp3"    |
-| mus_evil   | "level 16 (hell gate).mp3"          |
-| mus_ultima | "level 03 (toxin refinery).mp3"     |
-| mus_read_m | "track 03 main menu.mp3"            |
-| mus_dm2ttl | "track 02 title screen.mp3"         |
-| mus_dm2int | "track 05 stats screen.mp3"         |
+```
+└── retroarch/
+    └── system/
+	 └── prboom.wad
+```
 
 ## Config
 
