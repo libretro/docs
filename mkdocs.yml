@@ -292,6 +292,7 @@ nav:
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
       - 'Input':
+        - 'Input Driver Specification': 'development/retroarch/input/input-drivers.md'
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
         - 'Parallel Port Joypads': 'development/retroarch/input/parallel-port-joypads.md'
       - 'Adding Translations(not active)': 'development/retroarch/new-translations.md'
