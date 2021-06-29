@@ -152,7 +152,15 @@ Here's a cue file example done with Lunar - Eternal Blue (USA)
 ![](../image/core/genesis_plus_gx/cue.png)
 
 !!! warning ""
-	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported.
+	For Sega-CD games, ISO + WAV, BIN + CUE and ISO + OGG formats are supported; ISO + MP3 is not supported. Audio files must be in the 16-bit stereo 44100Hz format. If using a cue sheet, WAV or OGG tracks should be denoted as AUDIO.
+
+When loading ISO + WAV or ISO + OGG format games, the core will attempt to load a cue named the same as the iso first. If one is not found, the following audio track naming formats are accepted for a data track of "game.iso":
+
+- game02.ogg
+- game 02.ogg
+- game-02.ogg
+- game - 02.ogg
+- game_02.ogg
 
 ## Core options
 

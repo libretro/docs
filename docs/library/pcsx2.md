@@ -55,7 +55,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 	Interesting fact: For maximum compatibility it is recommended that you use a BIOS image different than SCPH10000.BIN which is the oldest one
 	
 !!! info
-	Transfer your BIOS files to the retroarch/system/PCSX2/bios/ directory.
+	Transfer your BIOS files to the retroarch/system/pcsx2/bios/ directory.
 
 There is no region locking so if you have a PAL BIOS on your PS2 you can still play NTSC games, and vice versa. You'll also need the BIOS dumped from your PS2. Unlike the PS2 PCSX2 does not implement region locking so if you have a PAL BIOS in your PS2 you can still play NTSC games, and vice versa.
 
@@ -94,47 +94,41 @@ A PlayStation 2 BIOS consists of multiple files. All files of the same version (
 
 Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
 
-..\pcsx2\bios\
+.\pcsx2\bios\
 
-..\pcsx2\cheats\
+.\pcsx2\cheats\
 
-..\pcsx2\cheats_ws\
+.\pcsx2\cheats_ws\
 
-..\pcsx2\inis\
+.\pcsx2\inis\
 
-..\pcsx2\logs\
+.\pcsx2\logs\
 
-..\pcsx2\memcards\
+.\pcsx2\memcards\
 
-..\pcsx2\snaps\
+.\pcsx2\snaps\
 
-..\pcsx2\sstates\
+.\pcsx2\sstates\
 
 It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory. Simply create a portable.txt file and change its extension to .ini.
 
-- Linux version:
-
-Besides the files and folders above, currently, the Linux version of the PCSX2 core requires libpng12-0, which isn't available in the repositories of some distributions.
-
-One workaround that may help, if your distro supports PPAs, is using commands such as the following ones:
-
-> sudo add-apt-repository ppa:linuxuprising/libpng12
-> 
-> sudo apt update
-> 
-> sudo apt install libpng12-0
-
-Tested only in Ubuntu 20.04.2 LTS. May need to adapt to other distros.
-
 ## Extensions
 
-Content that can be loaded by the PCSX2 core have the following file extensions: elf|iso|ciso|cue|bin
+Content that can be loaded by the PCSX2 core have the following file extensions:
 
 - .elf
 - .iso
 - .ciso
+- .chd
+- .cso
 - .cue
 - .bin
+- .mdf
+- .nrg
+- .dump
+- .gz
+- .img
+- .m3u
 
 RetroArch database(s) that are associated with the PCSX2 core:
 
@@ -153,7 +147,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✕         |
+| RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
@@ -168,7 +162,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan[^2]   | ✕         |
+| Crop Overscan[^2] | ✕         |
 | LEDs              | ✕         |
 
 ### Directories
