@@ -53,7 +53,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                               | Supported | Notes |
 |----------------------------------------------------|:---------:|:------|
-| [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | AES bios is required for most Neo Geo achievements. AES Asia is generally English. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | AES bios is required for many Neo Geo achievements. AES Asia (neo-epo.bin) is generally English. |
 | [MAME](https://github.com/libretro/mame)           | ✕         | Support is not likely to ever be possible. The same is true for all MAME variants. |
 
 ### Atari
@@ -157,7 +157,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
-| [QUASI88](https://github.com/libretro/quasi88-libretro) | ✔         | Some games may be unsupported in Retroarch due to missing options. Sets generally expect the MkIISR bios. Games should be run from within archives to prevent overwrite breaking achievement support [until a bug is fixed](https://github.com/libretro/quasi88-libretro/issues/44). |
+| [QUASI88](https://github.com/libretro/quasi88-libretro) | ✔         | Some games may be unsupported in Retroarch due to missing options. Sets generally expect the MkIISR bios. |
 
 ### Nintendo
 
@@ -207,7 +207,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         |       |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         |       |
-| [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✕         | Requires games in `nes` or `fds` subdirectories, exact archives just like arcade. Not supported at this time. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✔         | Requires games in `nes` or `fds` subdirectories, exact archives just like arcade. Not all games may be linked for this core. |
 
 #### Nintendo 64
 
@@ -264,7 +264,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | Master System only |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
 | [Emux SMS](https://github.com/libretro/emux)                   | ✕         |       |
-| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `megadriv` or `sms` subdirectories, exact archives just like arcade. Not supported at this time. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✔         | Requires games in `megadriv` or `sms` subdirectories, exact archives just like arcade. Not all games may be linked for this core. |
 
 #### 32X / 32X CD
 
@@ -279,7 +279,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |       |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         |       |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         |       |
-| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✕         | Requires games in `gamegear` subdirectory, exact archives just like arcade. Not supported at this time. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)             | ✔         | Requires games in `gamegear` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
 
 #### SG-1000
 
@@ -302,10 +302,10 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                                | Supported | Notes |
 |---------------------------------------------------------------------|:---------:|:------|
-| [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         |       |
-| [Yabause](https://github.com/libretro/yabause)                      | ✔         |       |
+| [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         | High accuracy, but low speed |
+| [Yabause](https://github.com/libretro/yabause)                      | ✔         | Higher speed |
+| [Kronos](https://github.com/libretro/yabause)                       | ✔         | High speed, supports graphic enhancements, but requires a GPU that supports at least OpenGL 4.2 |
 | [Yabasanshiro](https://github.com/libretro/yabause)                 | ✕         |       |
-| [Kronos](https://github.com/libretro/yabause)                       | ✕         |       |
 
 ### SNK
 
@@ -315,7 +315,7 @@ You can also check the progress of your friends and add comments on their trophi
 |------------------------------------------------------------------|:---------:|:------|
 | [Beetle NeoPop](https://github.com/libretro/beetle-ngp-libretro) | ✔         |       |
 | [RACE](https://github.com/libretro/RACE)                         | ✔         |       |
-| [FinalBurn Neo](https://github.com/libretro/FBNeo)               | ✕         | Requires games in `ngp` subdirectory, exact archives just like arcade. Not supported at this time. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)               | ✔         | Requires games in `ngp` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
 
 ### Sony
 
@@ -326,6 +326,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | Identical to Beetle PSX, with extra hardware features. High accuracy. |
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | Identical to Beetle PSX HW in software mode. |
 | [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | Fairly high accuracy, extremely high speed. |
+| [SwanStation](https://github.com/libretro/swanstation)           | ✔         | Forked from DuckStation, similar functionality. No longer receiving updates. |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
 
 ### The 3DO Company (various manufacturers)

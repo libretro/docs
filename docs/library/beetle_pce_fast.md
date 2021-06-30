@@ -124,6 +124,8 @@ After that, you can load the `foo.cue` file in RetroArch with the Beetle PCE FAS
 !!! warning ""
     Certain PC Engine content are multi-track, so their .cue files might be more complicated.
 
+ISO + OGG and ISO + WAV format games are supported, but they require a properly formatted cue sheet. For iso files, tracks should be denoted as BINARY, for ogg files, they should be denoted as OGG, and for wav files, they should be denoted as WAVE.
+
 ## CHD
 
 Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .chd (MAME Compressed Hunks of Data) to reduce file sizes and neaten up your game folder.
