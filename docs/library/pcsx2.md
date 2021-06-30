@@ -231,6 +231,7 @@ The current standalone development version is reported to be compatible with app
 ## External Links
 
 - [Official PCSX2 Website](https://pcsx2.net/)
+- [PS2 Bios](https://ps2-bios.com/)
 - [Official PCSX2 Downloads](https://pcsx2.net/download.html)
 - [PCSX2 Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/pcsx2_libretro.info)
 - [PCSX2 Github Repository](https://github.com/libretro/pcsx2)
