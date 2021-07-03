@@ -172,6 +172,8 @@ You need to load Boom 3 xp core instead of Boom3 core. After Core is loaded you 
             └── pak001.pk4
 ```
 
+You can get Boom 3 xp core [here](https://github.com/fpscan/RetroArch-AppImage/releases/download/A-cores/boom3_xp_libretro.zip) for now.
+
 ## Config
 
 Boom 3's internal game settings can be found in the 'libretro.cfg' file inside each game's directory.
