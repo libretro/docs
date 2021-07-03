@@ -189,10 +189,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Modify framerate. Requires a restart.
 
 ??? note "Internal resolution - 640x368"
-    ![](../image/core/prboom/640x368.png)
+    ![](../image/core/boom3/640x368.png)
 
 ??? note "Internal resolution - 1920x1080"
-    ![](../image/core/prboom/1920x1080.png)
+    ![](../image/core/boom3/1920x1080.png)
 
 - **Internal Resolution (restart)** [boom3-resolution] (480x272|**640x368**|720x408|960x544|1280x720|1920x1080|2560x1440|3840x2160)
 
