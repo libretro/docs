@@ -47,6 +47,7 @@ You can see a list sorted by hardware maker under *For Users > Core Library: Emu
 
 === "Video"
 
+	- [LibRetro](https://www.youtube.com/Libretro)
 	- [RetroArch Gameplays](https://www.youtube.com/RetroArchOfficial)
 	- [Dailymotion](https://dailymotion.com/retroarch)
 	- [Facebook Watch](https://www.facebook.com/watch/libretro/)

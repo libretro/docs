@@ -222,6 +222,7 @@ nav:
       - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
       - 'Dinothawr': 'library/dinothawr.md'
       - 'Doom (PrBoom)': 'library/prboom.md'
+      - 'Doom 3 (Boom3)': 'library/boom3.md'
       - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
       - 'Flashback (REminiscence)': 'library/reminiscence.md'
       - 'Handheld Electronic (GW)': 'library/gw.md'
