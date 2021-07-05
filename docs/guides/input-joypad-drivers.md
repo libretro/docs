@@ -1,4 +1,4 @@
-# RetroArch input and joypad drivers
+# RetroArch input and controller drivers
 
 RetroArch makes use of two input systems in order to support the full range of input devices available across RetroArch's supported platforms.
 
