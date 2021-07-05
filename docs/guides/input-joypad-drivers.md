@@ -3,12 +3,15 @@
 RetroArch makes use of two input systems in order to support the full range of input devices available across RetroArch's supported platforms.
 
 - **Input Drivers** provide access to keyboards, mice, and mouse-like devices such as lightguns, spinners, steering wheels, etc.
-- **Joypad Drivers** provide access to gamepads and joysticks.
+- **Controller Drivers** provide access to gamepads and joysticks. 
+
+!!! Note
+    Controller drivers were previously referred to as joypad drivers. Some documentation may still use the older "joypad" terminology.
 
 **Absolute mouse devices** in the tables below refers to input drivers which support mouse-like devices such as light guns, air mice, and Wiimotes that use 'absolute' coordinate systems. Certain input drivers only support mouse devices with 'relative' coordinate systems.
 
 ## Linux
-`udev` is the most full-featured Input Driver and Joypad Driver for Linux.
+`udev` is the most full-featured Input Driver and Controller Driver for Linux.
 
 **Linux Input Drivers**
 
@@ -17,7 +20,7 @@ RetroArch makes use of two input systems in order to support the full range of i
 - udev
 - wayland
 
-**Linux Joypad Drivers**
+**Linux Controller Drivers**
 
 - hid
 - linuxraw
@@ -77,7 +80,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 | No          |  No            |
 
 
-### hid joypad driver
+### hid controller driver
 
 #### Features
 
@@ -85,7 +88,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | -      |
 
-### linuxraw joypad driver
+### linuxraw controller driver
 
 #### Features
 
@@ -94,7 +97,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 | -      |
 
 
-### sdl2 joypad driver
+### sdl2 controller driver
 
 #### Features
 
@@ -102,7 +105,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | Yes    |
 
-### udev joypad driver
+### udev controller driver
 
 #### Features
 
@@ -110,7 +113,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | Yes    |
 
-### xinput joypad driver
+### xinput controller driver
 
 #### Features
 
@@ -128,7 +131,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 - raw
 - sdl2
 
-**Windows Joypad Drivers**
+**Windows Controller Drivers**
 
 - dinput
 - hid
@@ -161,7 +164,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |-------------|---------------|
 | -           |  -            |
 
-### dinput joypad driver
+### dinput controller driver
 
 #### Features
 
@@ -169,7 +172,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | No    |
 
-### hid joypad driver
+### hid controller driver
 
 #### Features
 
@@ -177,7 +180,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | -      |
 
-### sdl2 joypad driver
+### sdl2 controller driver
 
 #### Features
 
@@ -185,7 +188,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | Yes    |
 
-### xinput joypad driver
+### xinput controller driver
 
 #### Features
 
@@ -203,7 +206,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 - linuxraw
 - udev
 
-**Android Joypad Drivers**
+**Android Controller Drivers**
 
 - android
 - hid
@@ -234,7 +237,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 | Yes         |  No           |
 
 
-### android joypad driver
+### android controller driver
 
 #### Features
 
@@ -242,7 +245,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | -      |
 
-### hid joypad driver
+### hid controller driver
 
 #### Features
 
@@ -250,7 +253,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | -      |
 
-### udev joypad driver
+### udev controller driver
 
 #### Features
 
@@ -264,7 +267,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 
 - cocoa
 
-**OS X Joypad Drivers**
+**OS X Controller Drivers**
 
 - hid
 
@@ -277,7 +280,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |-------------|---------------|
 | -           |  -            |
 
-### hid joypad driver
+### hid controller driver
 
 #### Features
 
@@ -285,7 +288,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |--------|
 | -    |
 
-### sdl2 joypad driver
+### sdl2 controller driver
 
 #### Features
 
@@ -306,7 +309,7 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 |-------------|---------------|
 | -           |  -            |
 
-### DOS joypad driver
+### DOS controller driver
 
 #### Features
 
