@@ -2,24 +2,23 @@
 
 ## Background
 
-Gearboy is an open source, multi-platform, Nintendo Game Boy (DMG) / Game Boy Color (CGB) emulator written in C++.
+Gearboy is an open source, cross-platform, Nintendo Game Boy (DMG) / Game Boy Color (GBC) emulator written in C++.
 
-- Highly accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
+- Accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
 - Accurate instruction and memory timing, passes instr_timing.gb and mem_timing.gb from blargg's tests.
-- Memory Bank Controllers (MBC1, MBC2, MBC3 with RTC, MBC5), ROM + RAM and multicart cartridges.
-- Accurate LCD controller emulation. Background, window and sprites, with correct timings and priorities including mid-scanline timing.
-- Mix frames: Mimics the LCD ghosting effect seen in the original Game Boy.
+- Supported cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3 + RTC, MBC5, HuC-1 and MBC1M (multicart).
+- Accurate LCD controller emulation with correct timings and priorities including mid-scanline effects.
 - Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
 - Battery powered RAM save support.
 - Save states.
 - Game Genie and GameShark cheat support.
-- Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...) and QNX.
 
-The Gearboy core has been authored by
+The Gearboy core has been authored by:
 
-- Ignacio Sanchez
+- Ignacio Sanchez (drhelius)
 
-The Gearboy core is licensed under
+The Gearboy core is licensed under:
 
 - [GPLv3](https://github.com/libretro/Gearboy/blob/master/LICENSE)
 
@@ -111,12 +110,13 @@ The Gearboy core has the following option(s) that can be tweaked from the core o
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Emulated Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG)
+- **Emulated Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
 
 	Select which hardware/model is emulated.
 
     - Auto selects the best hardware based in the rom.
     - Game Boy DMG forces original Game Boy hardware.
+	- Game Boy Advance enables Game Boy Advance hardware.
 
 - **Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
 
