@@ -87,10 +87,10 @@ A PlayStation 2 BIOS consists of multiple files. All files of the same version (
 | SCPH-77006_BIOS_VX_HK _220.ROM1 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
 | SCPH-77006_BIOS_VX_HK _220.ROM2 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
 
-## Other required files and directories
+### Other required files and directories
 
 !!! info
-	On Windows, if you previously installed the stand-alone PCSX2, Retroarch can detect the stand-alone files, so you only need to have the \pcsx2\bios\ folder in the System/BIOS directory. This doesn't work with the portable version or the stand-alone Linux version.
+	On Windows, if you previously installed the stand-alone PCSX2, Retroarch can detect the stand-alone files, so you only need to have the \pcsx2\bios\ folder in the System/BIOS directory. This doesn't work with PCSX2's portable version for Windows or the stand-alone Linux version.
 
 Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
 
@@ -111,6 +111,23 @@ Currently, PCSX2 requires these directories in the folder set as frontend's Syst
 .\pcsx2\sstates\
 
 It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory. Simply create a portable.txt file and change its extension to .ini.
+
+The file structure should look like this:
+
+```
+RetroArch/
+         └── system/
+		   └── pcsx2/
+		   	    └── bios/
+			    └── cheats/
+			    └── cheats_ws/
+			    └── inis/
+			    └── logs/
+			    └── memcards/
+			    └── snaps/
+			    └── sstates/
+			    └── portable.ini
+```
 
 ## Extensions
 
