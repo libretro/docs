@@ -28,7 +28,7 @@ Only Ozone has background music, **OK**, **Cancel** and **Notice** sounds. The b
 
 ### Navigating the menu
 
-Ozone is controlled like any other user interface. Regular input binds will apply, and binds here are defined in terms of the RetroPad, RetroArch's joypad abstraction.
+Ozone is controlled like any other user interface. Regular input binds will apply, and binds here are defined in terms of the RetroPad, RetroArch's gamepad and joystick abstraction.
 
 - **A button** (Default PC: Z&ENTER&Left mouse click): Accept/OK
 - **B button** (Default PC: X&Backspace&Right mouse click): Back/Cancel

@@ -9,7 +9,7 @@ supports up to 16 players and many spectators. Netplay in RetroArch is
 guaranteed¹ to work with perfect synchronization given a few minor constraints:
 
 1. The core is deterministic,
-2. The only input devices the core interacts with are the joypad and analog sticks, and
+2. The only input devices the core interacts with are the gamepad and analog sticks, and
 3. Both the core and the loaded content are identical on host and client.
 
 Cores are expected to support serialization for proper netplay behavior, but
@@ -231,7 +231,7 @@ Payload:
        frame number: uint32
        is server data: 1 bit
        player: 31 bits
-       joypad input: uint32
+       controller input: uint32
        analog 1 input: uint32
        analog 2 input: uint32
     }

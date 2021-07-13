@@ -40,7 +40,7 @@ nav:
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
-      - 'Joypad Auto-Configuration': 'guides/joypad-autoconfiguration.md'
+      - 'Controller Auto-Configuration': 'guides/controller-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
       - 'Directory Configuration': 'guides/change-directories.md'
       - 'File Browser': 'guides/file-browser.md'
@@ -71,7 +71,7 @@ nav:
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
-      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
+      - 'Input and Controller Drivers': 'guides/input-controller-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
       - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
       - 'Run Ahead': 'guides/runahead.md'
@@ -295,7 +295,7 @@ nav:
       - 'Input':
         - 'Input Driver Specification': 'development/retroarch/input/input-drivers.md'
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
-        - 'Parallel Port Joypads': 'development/retroarch/input/parallel-port-joypads.md'
+        - 'Parallel Port Controllers': 'development/retroarch/input/parallel-port-controllers.md'
       - 'Adding Translations(not active)': 'development/retroarch/new-translations.md'
       - 'Adding Translations with Crowdin': 'development/retroarch/new-translations-crowdin.md'
       - 'Network Protocols':

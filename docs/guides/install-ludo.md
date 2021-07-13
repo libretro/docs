@@ -33,7 +33,7 @@ Please note that due to early development phase, Ludo _may_ not work on your OS 
 - Gamers can configure emulators all at once
 - The user interface, configuration, and storage are consistent across emulators
 
-From the gamer perspective, Ludo is a universal retro game browser and player. It offers a gaming experience optimized for TV and joypads, but can also be used on a traditional PC with a keyboard.
+From the gamer perspective, Ludo is a universal retro game browser and player. It offers a gaming experience optimized for TV and gamepads, but can also be used on a traditional PC with a keyboard.
 
 Currently, Ludo can run on the following platforms:
 
@@ -48,9 +48,9 @@ There is also an Operating System version of Ludo called LudOS. It looks and beh
 
 Ludo's User Interface has the following functionalities:
 
-- Joypad driven: everything can be done through the joypad instead of the mouse
+- Gamepad driven: everything can be done through the gamepad instead of the mouse
 - TV optimized: looks nice on a wide screen
-- Joypads auto configuration when plugged
+- Controller auto configuration when plugged
 - Automatic configuration of literally everything
 - Game collection scanner for generating playlists with thumbnails
 - Video filters through simple shaders
@@ -109,7 +109,7 @@ Some design choices are different, for example we support less cores, and choose
 ### How is Ludo similar to RetroArch?
 
 As RetroArch, Ludo is a libretro frontend, so the way of communicating with the emulators is the same.
-Same cores, similar UI patterns, joypad driven UI, same game thumbnails, mostly the same game database, same terminology. I think we can also say same developers, as I am an important contributor of the libretro team, and all the people who provided me with help are also member of the libretro community.
+Same cores, similar UI patterns, gamepad driven UI, same game thumbnails, mostly the same game database, same terminology. I think we can also say same developers, as I am an important contributor of the libretro team, and all the people who provided me with help are also member of the libretro community.
 It definitely shares the same values.
 
 ### Why not implementing Ludo as a menu driver in RetroArch?

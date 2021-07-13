@@ -2,7 +2,7 @@
 
 ### Libretro API
 
-The Libretro API is a lightweight C-based Application Programming Interface (API) that exposes generic audio, video, and input callbacks. Developers of "cores" such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, joypads, etc.
+The Libretro API is a lightweight C-based Application Programming Interface (API) that exposes generic audio, video, and input callbacks. Developers of "cores" such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, gamepads, etc.
 
 When you choose to use the libretro API, your program gets turned into a single library file (called a ‘libretro core’). A frontend that supports the libretro API can then load that library file and run the app. The frontend’s responsibility is to provide all the implementation-specific details. The libretro core’s responsibility is solely to provide the main program.
 
@@ -77,7 +77,7 @@ While libretro has callbacks for video, audio and input, there’s a callback ty
 
 #### `retro_set_controller_port_device()`
 
-By default, joypads will be assumed to be inserted into the implementation. If the engine is sensitive to which type of input device is plugged in, the frontend may call this function to set the device to be used for a certain player. The implementation should try to auto-detect this if possible.
+By default, gamepads will be assumed to be inserted into the implementation. If the engine is sensitive to which type of input device is plugged in, the frontend may call this function to set the device to be used for a certain player. The implementation should try to auto-detect this if possible.
 
 
 #### `retro_get_system_info()`
@@ -106,7 +106,7 @@ This function lets the frontend know essential audio/video properties of the gam
 After a game has been loaded successfully, retro_run() will be called repeatedly as long as the user desires. When called, the implementation will perform its inner functionality for one video frame. During this time, the implementation is free to call callbacks for video frames, audio samples, as well as polling input, and querying current input state. The requirements for the callbacks are that video callback is called exactly once, i.e. it does not have to come last. Also, input polling must be called at least once.
 
 #### Input
-Abstracting joypad and other input devices is the hardest part of defining a multi-system API as it differs across every system. The libretro API therefore provides the RetroPad -- a joypad abstraction available with digital and analog controls -- to allow cores to be written without platform-specific input code.
+Abstracting gamepad and other input devices is the hardest part of defining a multi-system API as it differs across every system. The libretro API therefore provides the RetroPad -- a gamepad/joystick abstraction available with digital and analog controls -- to allow cores to be written without platform-specific input code.
 
 Input device abstractions are also available for keyboards, mice, pointers, and lightguns.
 

@@ -9,7 +9,7 @@ There are two sides to Libretro development:
   - **frontends** are programs that can run libretro-compatible cores.
   - **cores** are program (such as a game, emulator, or media player) that has been ported to the libretro API so that it can be executed by libretro frontends.
 
-Developers of cores such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, joypads, etc.
+Developers of cores such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, gamepads, etc.
 
 Cores are built as a single library file which can be executed by any frontend that supports the libretro API. The frontend's responsibility is to provide all the implementation-specific details. The core's responsibility is solely to provide the main program.
 

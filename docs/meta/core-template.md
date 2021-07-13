@@ -232,7 +232,7 @@ The [Core name] core supports the following device type(s) in the controls menu,
 
 // Add [Core name] and device types
 /// Possible device types
-/// Joypad
+/// Gamepad
 /// Analog
 /// Keyboard
 /// Mouse
@@ -259,7 +259,7 @@ Rumble only works in the [Core name] core when
 
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
-- The joypad device being used has rumble support.
+- The controller device being used has rumble support.
 
 ## Multitap
 
