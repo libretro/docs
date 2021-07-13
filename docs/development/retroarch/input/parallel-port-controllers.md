@@ -1,8 +1,8 @@
-# Parallel port joypads
+# Parallel port controllers
 
-## Linux parport joypad driver
+## Linux parport controller driver
 
-RetroArch supports parallel port joypads on Linux via the "parport" joypad driver. It uses an extended version of the Linux Multisystem 2-button joystick protocol.
+RetroArch supports parallel port controllers on Linux via the "parport" controller driver. It uses an extended version of the Linux Multisystem 2-button joystick protocol.
 
 | Function | Pin | Register | Bit | Active |
 |----------|-----|----------|-----|--------|
@@ -24,4 +24,4 @@ RetroArch supports parallel port joypads on Linux via the "parport" joypad drive
 
 RetroArch does not perform debouncing, and so long as the button settling time is less than the frame time no bouncing will be observed. This replicates the latching behavior common in old games consoles. For optimum latency and jitter a high performance debouncing routine should be implemented in the controller hardware.
 
-Parallel port hardware does not provide a way to detect non-connected pins. To avoid rendering the menu usable with spurious button presses, RetroArch checks each pin on startup and assumes any active pin is not connected. Avoid holding joypad buttons while starting RetroArch or those buttons will be disabled.
+Parallel port hardware does not provide a way to detect non-connected pins. To avoid rendering the menu usable with spurious button presses, RetroArch checks each pin on startup and assumes any active pin is not connected. Avoid holding controller buttons while starting RetroArch or those buttons will be disabled.

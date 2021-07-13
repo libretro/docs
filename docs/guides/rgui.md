@@ -43,7 +43,7 @@ By design, the config file is considered immutable as it is likely maintained by
 * To exit the menu, use F1 or `Resume Game`.
 * To start immediately in RGUI without any game or core loaded, use the `--menu` command line option. As a special case, if no arguments are received, it is treated the same as running `retroarch --menu`.
 
-Menu toggle button can be mapped to joypad as well, see option `input_menu_toggle` option in `retroarch.cfg`.
+Menu toggle button can be mapped to a controller as well, see option `input_menu_toggle` option in `retroarch.cfg`.
 
 ## Navigating the menu
 
@@ -114,8 +114,8 @@ Currently you can configure two settings per player (on PC):
 - **Device**: Picks which gamepad to use for player N. The name of the pad is available.
 - **Device Type**: Picks which device type to use. This is relevant for the libretro core itself, and mostly useful for PlayStation, which needs to know if you're using a DualAnalog device or not.
 
-### Configuring joypad input
-Configuring joypad input is supported from within RGUI.
+### Configuring controller input
+Configuring controller input is supported from within RGUI.
 Normal gameplay binds as well as RGUI hotkey binding is supported. It is possible to bind everything in succession for convenience.
 
 ### Configuring keyboard input

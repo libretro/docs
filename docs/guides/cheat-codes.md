@@ -98,7 +98,7 @@ The "Value Increase Each Iteration" would normally be 0 in the above scenario bu
 RetroArch also has the ability to make your controller rumble when changes in the emulator/core memory occur.  It is based off of the same RetroArch-handled cheat codes described above.  For example, after
 finding the memory location for the number of lives in a game (via the cheat searching interface) you can set it up such that every time the value decreases (lose a life) the controller rumbles.
 
-Rumble tested with X360 controller, input driver dinput, joypad driver xinput.
+Rumble tested with X360 controller, input driver dinput, controller driver xinput.
 
 Available rumble controls:
 
