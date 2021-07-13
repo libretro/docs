@@ -4,16 +4,22 @@
 RetroArch strives to be available on as many different platforms as possible. RetroArch runs and is supported on GNU/Linux, BSD, Windows, Mac OSX, Haiku, PlayStation Classic, PlayStation 2, PlayStation 3, Playstation Vita, Playstation Portable, Xbox 360, Xbox One, Raspberry Pi, Nintendo GameCube, Nintendo Wii, Nintendo Wii U, Nintendo 3DS & 2DS Family, Nintendo Switch, Steam Link, Android, iOS, Open Pandora, Blackberry, and in web browsers via the Emscripten compiler.
 
 ### Purpose of input drivers
-RetroArch uses a modular "driver" system to allow the software to be ported to new platforms. One or more RetroArch input drivers must be available on a system in order to run the frontend. In addition to input drivers, RetroArch uses a variety of other platform-specific drivers including video drivers, audio drivers, and video recording drivers.
+RetroArch uses a modular "driver" system to allow the software to be ported to new platforms. One or more RetroArch input drivers must be available on a system in order to run the frontend. In addition to input drivers, RetroArch uses a variety of other platform-specific drivers including video drivers, audio drivers, and video recording drivers. 
+
+In RetroArch, choosing an input driver generally corresponds to choosing an input API on the host system. A RetroArch input driver might be written for the API of a piece of hardware, such as `input_wiiu`; it might be specific to an operating system, such as `input_linuxraw` or `input_dos`; or the driver might be available on several platforms, such as `input_sdl`. The input drivers implement access to user keyboards, mice, pointers, and lightguns. A "controller driver" is also necessary if the input driver implements access to user joysticks or gamepads.
+
+!!! Note
+    Controller drivers were previously referred to as joypad drivers. Some documentation and code may still use the older "joypad" terminology.
 
 ### Purpose of this document
 This document organizes the information needed to develop and debug RetroArch input drivers, such as when porting RetroArch to a new platform.
 
 ### See also
 Other documentation that contextualizes this input driver specification includes:
-* [libretro overview](./libretro-overview.md)
-* [libretro frontends](./frontends.md)
-* [input API](./input-api.md)
+
+- [libretro overview](./libretro-overview.md)
+- [libretro frontends](./frontends.md)
+- [input API](./input-api.md)
 
 ## libretro input device abstractions
 RetroArch's input system is based on abstracted input device types which are polled via callbacks provided by the libretro API. Libretro input device abstractions include:
@@ -80,7 +86,7 @@ These tables presents RetroArch's input driver functionality organized into cate
 | Map physical keyboard to taps/controls                   |           |                                         |
 
 | Lightgun Function                                     | Supported | Notes                                   |
-| ----------------------------------------------------- | --------- | -------------------------------00------ |
+| ----------------------------------------------------- | --------- | --------------------------------------- |
 | Map physical pointer/touchpad to Lightgun (Port 0)    |           |                                         |
 | Map physical mouse to Lightgun (Port 0)               |           |                                         |
 | Map physical analog joysticks to Lightguns            |           |                                         |
@@ -130,3 +136,4 @@ input_driver_t input_winraw = {
 
 ## Documentation TODO
 * Some RetroArch video drivers also serve as input drivers. In cases when the video driver relies on input driver for event handling, the video driver can preinitialize an input driver.
+* Describe controller drivers and their implementation
