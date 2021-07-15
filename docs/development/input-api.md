@@ -9,8 +9,8 @@ For example, native libretro cores and source ports could be written to poll the
 Libretro input device abstractions include:
 
  * RetroPad
-    - Digital Joypad
-    - Analog and Digital Joypad
+    - Digital Gamepad or Joystick
+    - Digital Gamepad or Joystick with Analog Controls
  * Mouse
  * Pointer
  * Keyboard
@@ -22,14 +22,14 @@ The [`libretro-test` core](https://github.com/libretro/libretro-samples/tree/mas
 # Input Abstractions
 
 ## RetroPad
-The **RetroPad** is a joypad abstraction interface defined by the Libretro API. It is the primary input device for a libretro frontend. Unless a core absolutely requires the use of a keyboard with no possible fallback for gamepad-type controls, a [[Libretro core]] should always be implemented as such that it is directly controllable by the RetroPad.
+The **RetroPad** is a controller abstraction interface defined by the Libretro API. It is the primary input device for a libretro frontend. Unless a core absolutely requires the use of a keyboard with no possible fallback for gamepad-type controls, a [[Libretro core]] should always be implemented as such that it is directly controllable by the RetroPad.
 
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
-In terms of button layout and functionality, the RetroPad is based on the original PlayStation joypad and the Super Nintendo joypad.
+In terms of button layout and functionality, the RetroPad is based on the original PlayStation gamepad and the Super Nintendo gamepad.
 
 ![Mega Drive 6-Button Gamepad](../image/controller/md6.png)
-Above: An example of the RetroPad joypad abstraction mapped to the Megadrive 6-Button gamepad.
+Above: An example of the RetroPad gamepad abstraction mapped to the Megadrive 6-Button gamepad.
 
 ### Digital RetroPad
 `RETRO_DEVICE_JOYPAD`: A RetroPad abstraction with all digital controls can be used. The conceptual arrangement for the buttons for the RetroPad is inspired by the Super Nintendo controller and the Sony Playstation DualShock.
