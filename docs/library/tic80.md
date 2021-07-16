@@ -1,5 +1,7 @@
 # TIC-80
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cC-bitICk3w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 [TIC-80](https://tic.computer) is a fantasy computer for making, playing and sharing tiny games.
@@ -82,8 +84,9 @@ The TIC-80 core's internal core name is `tic80`.
 
 The TIC-80 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-- **Mouse API instead of Pointer** [tic80_mouse] (**disabled**|enabled)
+- **Touch Interface for Mouse** [tic80_mouse] (**disabled**|enabled)
 - **Mouse Cursor** [tic80_mouse_cursor] (**disabled**|dot|cross|arrow)
+- **Mouse Cursor Hide Delay** [tic80_mouse_cursor] (**disabled**|1|2|3|4|5|6|7|8|9|10)
 
 ## Controllers
 
@@ -104,16 +107,14 @@ The TIC-80 core supports the following device type(s) in the controls menu, bold
 
 | User 1 - 4 Remap descriptors | RetroPad Inputs                                |
 |------------------------------|------------------------------------------------|
-| A                            | ![](../image/retropad/retro_b.png)             |
-| X                            | ![](../image/retropad/retro_y.png)             |
-| Select                       | ![](../image/retropad/retro_select.png)        |
+| D-Pad Up                     | ![](../image/retropad/retro_dpad_up.png)       |
 | D-Pad Down                   | ![](../image/retropad/retro_dpad_down.png)     |
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)     |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)    |
+| A                            | ![](../image/retropad/retro_b.png)             |
+| X                            | ![](../image/retropad/retro_y.png)             |
 | B                            | ![](../image/retropad/retro_a.png)             |
 | Y                            | ![](../image/retropad/retro_x.png)             |
-| L                            | ![](../image/retropad/retro_l1.png)            |
-| R                            | ![](../image/retropad/retro_r1.png)            |
 
 ## External Links
 

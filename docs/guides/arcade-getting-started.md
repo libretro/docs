@@ -71,16 +71,70 @@ In general, you will only get good results with a full collection of arcade roms
 | :---: | :---: | :---: |
 | FB Neo | FBNeo (latest version) | [here](https://github.com/libretro/FBNeo/blob/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat) |
 | FB Alpha 2012 | FBA 0.2.97.24 | N/A |
-| MAME 2000 | MAME 0.37b5 | N/A |
-| MAME 2003 | MAME 0.78 | N/A |
-| MAME 2003-Plus | MAME 2003-Plus (latest version) | N/A |
-| MAME 2010 | MAME 0.139 | N/A |
-| MAME 2015 | MAME 0.160 | N/A |
-| MAME 2016 | MAME 0.174 | N/A |
-| MAME (latest version) | MAME (latest version) | N/A |
+| MAME 2000 | MAME 0.37b5 | [here](https://github.com/libretro/mame2000-libretro/blob/master/metadata/MAME%200.37b5%20XML.dat) |
+| MAME 2003 | MAME 0.78 | [here](https://github.com/libretro/mame2003-libretro/blob/master/metadata/mame2003.xml) |
+| MAME 2003-Plus | MAME 2003-Plus (latest version) | [here](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/mame2003-plus.xml) |
+| MAME 2010 | MAME 0.139 | [here](https://github.com/libretro/mame2010-libretro/blob/master/metadata/mame2010.xml) |
+| MAME 2015 | MAME 0.160 | [here](https://github.com/libretro/mame2015-libretro/blob/master/metadata/mame2015-xml.zip) |
+| MAME 2016 | MAME 0.174 | [here](https://github.com/libretro/mame2016-libretro/blob/master/metadata/MAME%200.174%20Arcade%20XML%20DAT.zip) |
+| MAME (latest version) | MAME (latest version) | [here (click XML link)](https://www.mamedev.org/release.html) |
 
 !!! Warning "Warning: Keep arcade romsets zipped"
     Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
+
+###  Optional : ClrMamePro tutorial
+
+!!! Credit : this tutorial is based on RetroPie's
+
+#### Step 1 - Back up your ROMs
+It is possible with ClrMamePro to change one or two options and when it runs it will delete all your existing ROMs. OK, not really - using the default options it will make backups of any files it removes, but it is still possible to mess up their ROMs beyond repair when getting started with ClrMamePro.
+
+#### Step 2 - Download [ClrMamePro](http://mamedev.emulab.it/clrmamepro/#downloads)
+
+#### Step 3 - Acquire DAT files
+You can download most DAT files from above.
+
+#### Step 4 - Run ClrMamePro for the first time
+* Run it.  The welcome screen explains that common first steps are to 1) Create a Profile, 2) Set up your paths and 3) Scan your ROMs. We will be doing things slightly differently, in order to leave your source ROMs intact.  
+* Click OK to the Welcome screen
+* Click **"Add DatFile..."**, search and open the DAT file you downloaded
+* Accept the default profile location of [PROFILES], click **"OK"**
+* Select **"[NEW DATFILES]"** in the left-hand pane and select the one jou just added in the right-hand panel
+* Click **"Load / Update"**
+* ClrMamePro will ask you how to generate the settings for this datfile, click **"Default"** (it is possible it will throw a warning but just select **"ok to all"** and continue on)
+* You are now at the main window for clrmamepro.  We still need to set our paths, so click **"Settings"**
+* Verify **"ROM-Paths"** is the selected option in the upper-left corner drop down menu
+* Click the **"Add..."** button
+* Create a folder where you'll store your romsets, select it and click **"OK"**
+* Close the settings window with the **"X"** button in the upper right
+
+At this point, you could scan the ROMs folder you just selected, but we just created this folder and it is empty.  Instead, we will rebuild into this folder.
+
+#### Step 5- Rebuild a ROM set
+
+* In the main ClrMamePro window, select **"Rebuilder"**
+* The destination should already be filled in for you - it is the same as the ROM path you defined above
+* Use the browse button **"..."** to select your source path. For example you might have a folder where you stored various arcade ROM sets you got from various sources - point ClrMamePro to that directory as your source.
+* When rebuilding there are three options: **Non-Merged, Merged, and Split**. Pick the one you prefer. If you select "Non-Merged" in this menu, it is recommended to click the "Advanced" button and deselect "Separate BIOS sets", so that ROM sets will also be self-sufficient with BIOS.
+* Click **"Rebuild..."**.  Depending on the size of the directory you chose as a source, this could take some time
+* When ClrMamePro is finished rebuilding, you will see a window with statistics showing how many matching files were found, how many files were created and how many were skipped.  Click "OK" 
+* Repeat for any other source paths you might have.  You can rebuild from multiple sources, but leave the Destination path the same
+* When finished, close the Rebuilder with the **"X"** in the upper right corner of the window
+
+Time to find out how well your source ROMs matched up...
+
+#### Step 6 - Scan a ROM set
+* In the main ClrMamePro window, select **"Scanner"**
+* Leave all settings at default and click **"New Scan..."**
+* When ClrMamePro finishes scanning, you will see a "Statistics" window with high level information and a "Scan Results" window with detailed information about your missing ROMs
+
+#### Notes
+
+* Typically you cannot completely 'roll forward' from an old ROM collection version to a new version, since these will often feature entirely new roms or dumps that weren't present in your older version. The same is true for 'rolling back' from a new version to an older version, but there are 'rollback' sets available that collect all the previously deleted ROMs from old versions that you can use to fill in the gaps.
+* Be careful with the "Fix" settings in the Scanner window and the "Remove Matched Sourcefiles" setting in the Rebuilder window. These settings will remove and rename your ROMs.
+* If ClrMamePro does delete any ROMs (because you told it to), you should be able to find backups in C:\clrmamepro\backup as long as you didn't change the default settings.
+* ClrMamePro is very stable.  It has been around for a long time, it is regularly updated and it is widely used.  If it reports problems reading your ROMs, you most likely have corrupt ROM archives (zip files) or a failing hard drive.
+* If you feel the need to reset ClrMamePro's settings, just delete your existing profile(s) and reload your DAT file, selecting **"Default"** settings for the new profile.  Almost all of ClrMamePro's settings are per-profile.
 
 ---
 

@@ -1,8 +1,10 @@
 # Downloading, Installing and Updating RetroArch for iOS devices.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QMCXXabUR5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Downloading and installing
 ___
-There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/1.8.8/apple/ios/RetroArch.ipa)(iOS11+) to download now.
+There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/1.9.0/apple/ios/RetroArch.ipa)(iOS11+) to download now.
 
 ## Prerequisites
 
@@ -61,4 +63,4 @@ You can find your content under `Load Content > /var/mobile/containers/dat`.
 
 ## Video Tutorial
 ___
-[![Quick Video Demonstration](http://img.youtube.com/vi/QMCXXabUR5k/0.jpg)](http://www.youtube.com/watch?v=QMCXXabUR5k)
+[![Quick Video Demonstration](http://img.youtube.com/vi/QMCXXabUR5k/0.jpg)](http://www.youtube.com/watch?v=)

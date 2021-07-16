@@ -38,6 +38,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 !!! warning
 	In order for the firmware files to be loaded by the DeSmuME core, the 'Use External BIOS/Firmware (restart)' core option must be set to enabled.
+The md5sum of firmware.bin will vary from dump to dump. bios7 and bios9 should be the exact same as here. firmware.bin may not be the same.
 
 |   Filename   |    Description          |              md5sum              |
 |:------------:|:-----------------------:|:--------------------------------:|
@@ -58,7 +59,7 @@ Frontend-level settings or features that the DeSmuME core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔ (Not Download Play, Link-Cable or Wi-Fi emulation)         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

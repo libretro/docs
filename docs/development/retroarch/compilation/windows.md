@@ -4,7 +4,7 @@
     The MinGW toolchain we use in this guide no longer supports targeting Windows Vista or earlier.
     Please refer to one of the MSVC guides for how to target older Windows versions with Visual Studio.
 
-[![Build in Windows](http://img.youtube.com/vi/OaYvc3y3VLI/0.jpg)](http://www.youtube.com/watch?v=OaYvc3y3VLI)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OaYvc3y3VLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video covers quick demonstrations of these subjects;
 
@@ -115,7 +115,7 @@ cd retroarch
 git pull
 ```
 
-To compile RetroArch run the following commands inside RetroArch's source tree:
+To compile RetroArch, run the following commands inside RetroArch's source tree:
 
 ```bash
 ./configure
@@ -152,7 +152,7 @@ for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2
 If Qt is enabled for your build (detected automatically by default), the following is also needed:
 
 ```bash
-windeployqt --release --no-patchqt --no-translations retroarch.exe
+windeployqt --no-patchqt --no-translations retroarch.exe
 for i in $(seq 3); do for bin in $(ntldd -R imageformats/*dll | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
 ```
 
@@ -285,7 +285,3 @@ strip fceumm_libretro.dll
 ```
 
 Most cores will build with these instructions. You might need to browse to a subdirectory in some cases.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/OaYvc3y3VLI/0.jpg)](http://www.youtube.com/watch?v=OaYvc3y3VLI)

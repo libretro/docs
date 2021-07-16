@@ -35,7 +35,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename    |    Description                    |              md5sum              |
 |:-------------:|:---------------------------------:|:--------------------------------:|
-| gba_bios.bin  | Game Boy Advance Image - Required | a860e8c0b6d573d191e4ec7db1b1e4f6 |
+| gba_bios.bin  | Game Boy Advance Image - Optional | a860e8c0b6d573d191e4ec7db1b1e4f6 |
 
 ## Features
 
@@ -50,8 +50,8 @@ Frontend-level settings or features that the gpSP core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✕         |
-| RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroAchievements | ✔         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |

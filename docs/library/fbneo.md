@@ -16,7 +16,7 @@ zip, 7z
 
 ## Building romsets for FBNeo
 
-Being an emulator under active development, they change regularily and are mostly based on the latest dumps available for a given game.
+Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, they change regularily and are mostly based on the latest dumps available for a given game.
 
 ### Step 1: Obtaining an XML DAT
 
@@ -24,12 +24,12 @@ You can download them from the [dats](https://github.com/libretro/FBNeo/tree/mas
 
 ### Step 2: Gathering the ingredients
 
-It mostly consist of latest dumps available for MAME.
-The other romsets are usually a mix of hacks and homebrews, most of them are based on HBMAME romsets.
+It mostly consists of latest dumps available for MAME.
+The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
 
 ### Step 3: Building the romsets
 
-Refer to [Validating, Rebuilding, and Filtering ROM Collections](https://github.com/RetroPie/RetroPie-Setup/wiki/Validating,-Rebuilding,-and-Filtering-ROM-Collections) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
+Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting-started/#optional-clrmamepro-tutorial) for details on how to configure ClrMamePro to use your sources as "rebuild" folders.
 
 ## Features
 
@@ -66,22 +66,24 @@ The following "device type" also exist, but they won't be compatible with every 
 ## Emulating consoles and computers
 
 You can use specific folder's name for detection, it's the recommended method if you are using RetroArch playlists or device not compatible with subsystems (android and consoles) :
-* CBS ColecoVision : `coleco`
-* MSX 1 : `msx`
-* Nec PC-Engine : `pce`
-* Nec SuperGrafX : `sgx`
+* CBS ColecoVision : `coleco` | `colecovision`
+* Fairchild ChannelF : `chf` | `channelf`
+* MSX 1 : `msx` | `msx1`
+* Nec PC-Engine : `pce` | `pcengine`
+* Nec SuperGrafX : `sgx` | `supergrafx`
 * Nec TurboGrafx-16 : `tg16`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
 * Sega GameGear : `gamegear`
-* Sega Master System : `sms`
-* Sega Megadrive : `megadriv`
+* Sega Master System : `sms` | `mastersystem`
+* Sega Megadrive : `megadriv` | `megadrive` | `genesis`
 * Sega SG-1000 : `sg1000`
 * SNK Neo-Geo Pocket : `ngp`
-* ZX Spectrum : `spectrum`
+* ZX Spectrum : `spectrum` | `zxspectrum`
 
 You can emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension, or using the `--subsystem XXX` argument in the command line, here is the list of available prefixes :
 * CBS ColecoVision : `cv`
+* Fairchild ChannelF : `chf`
 * MSX 1 : `msx`
 * Nec PC-Engine : `pce`
 * Nec SuperGrafX : `sgx`
@@ -102,7 +104,7 @@ Bioses will be searched through 3 folders :
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
 
-The following bioses are used :
+The following bioses are required for some of the emulated systems :
 * neogeo.zip (Neo Geo BIOS)
 * neocdz.zip (Neo Geo CDZ System BIOS)
 * decocass.zip (DECO Cassette System BIOS)
@@ -114,12 +116,16 @@ The following bioses are used :
 * ym2608.zip (YM2608 Internal ROM)
 * cchip.zip (C-Chip Internal ROM)
 * bubsys.zip (Bubble System BIOS)
+* namcoc69.zip (Namco C69 BIOS)
+* namcoc70.zip (Namco C70 BIOS)
+* namcoc75.zip (Namco C75 BIOS)
 * coleco.zip (ColecoVision System BIOS)
 * fdsbios.zip (FDS System BIOS)
 * msx.zip (MSX1 System BIOS)
 * ngp.zip (NeoGeo Pocket BIOS)
 * spectrum.zip (ZX Spectrum BIOS)
 * spec128.zip (ZX Spectrum 128 BIOS)
+* channelf.zip (Fairchild Channel F BIOS)
 
 ## Samples
 
@@ -143,7 +149,7 @@ They are either directly available from `Quick Menu > Core Options`, or from the
 
 ## Cheats
 
-You can either use the RetroArch cheat feature, or download a pack of FBNeo native cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip) and uncompress them into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder, then they'll become available through core options.
+You can either use the RetroArch cheat feature, or download a pack of FBNeo native cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip) and uncompress them into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder, then they'll become available through core options, using a MAME `cheat.dat` file should also work.
 
 ## F.A.Q
 
@@ -154,3 +160,4 @@ There is a F.A.Q available from [the FBNeo libretro readme](https://github.com/l
 * [Official FBNeo forum](https://neo-source.com/)
 * [Official FBNeo github repository](https://github.com/finalburnneo/FBNeo)
 * [Libretro FBNeo github repository](https://github.com/libretro/FBNeo)
+* [[GUIDE] Setting up RetroArch playlists with FBNeo](https://neo-source.com/index.php?topic=3725.0)

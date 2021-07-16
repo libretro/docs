@@ -3,7 +3,10 @@
 
 ## Getting Started
 
-### Configuring Nickname
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z3CTuTx0nnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Configure a Nickname
+
 - Navigate to **Settings**
 - Navigate to **User**
 - Select **Username**
@@ -11,25 +14,24 @@
 
 ![Screenshot](../image/retroarch/netplay/nickname.png)
 
-### Configure Netplay Server
+### Host a Netplay Server
 
-If you are gonna host a game you don't need to scan content or to build databases. The only thing you need to do is to configure your network parameters and "Start Hosting" from the netplay menu. After doing that just load the content you want to netplay and wait for players.
+If you are going to host a game, simply configure your network parameters and "Start Hosting" from the netplay menu. After doing that, load the content you want to netplay and wait for players to connect.
 
 ![Screenshot](../image/retroarch/netplay/netplay.jpg)
 
 #### Check your lobby
 
-Once you start hosting you can check to see if your lobby is visible [at lobby.libretro.com](http://lobby.libretro.com/).
+Once you start hosting, you can check to see if your lobby is visible [at lobby.libretro.com](http://lobby.libretro.com/).
 
 !!! tip
-    If your router doesn't support UPnP or you can't forward your ports or you are uncertain, enable the **Use Relay Server** option. This routes both sides of the connection through our man-in-the-middle server.
+    If your router doesn't support UPnP, you can't forward your ports, or you are just uncertain how, enable the **Use Relay Server** option. This routes both sides of the connection through one of the public proxy servers.
 
 !!! tip
-    If you want to run a private game you can setup a **Server Password** to prevent random people from connecting. Alternatively you can disable the **Publicly Announce Netplay** option. The clients will need to enter your IP address or hostname directly.
+    If you want to run a private game, set up a **Server Password** to prevent random people from connecting. Alternatively, you can disable the **Publicly Announce Netplay** option. The clients will need to enter your IP address or hostname directly.
 
 !!! Warning
-    RetroArch doesn't check if you managed to open your ports manually, the lobby server doesn't either so make sure you do that properly or enable the Relay Server or people won't be able to connect to your session. You can use [this tool](http://www.yougetsignal.com/tools/open-ports/), enter your **Netplay TCP Port** once you are hosting and it will tell you if the port is open or not.
-
+    By default, RetroArch attempts to use UPnP to automatically port-forward (it asks the gateway to forward incoming connections on TCP 55435 to itself), but it doesn't check to see if it succeeded (i.e., if it is actually reachable on TCP 55435 from elsewhere on the internet). The lobby server doesn't verify the host's reachability either. Make sure you have correctly port-forwarded, using [this tool](http://www.yougetsignal.com/tools/open-ports/): enter your **Netplay TCP Port** once you are hosting, and it will tell you if the port is open or not. If this port is not open, people won't be able to connect to your session, and you might have to enable the use of a Relay Server.
 
 ### Configure Netplay Clients
 
@@ -37,9 +39,4 @@ You don't need to configure anything to connect to netplay rooms. Browse to the 
 
 ![Screenshot](../image/retroarch/netplay/rooms.png)
 
-You will be asked for a password if one is required, and if you have matching content scanned or in the **Content History** it will connect right away. Otherwise it will tell you to load the core and content manually and it will attempt to connect right away.
-
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/Z3CTuTx0nnc/0.jpg)](http://www.youtube.com/watch?v=Z3CTuTx0nnc)
+You will be asked for a password if one is required, and if you have matching content scanned or in the **Content History** it will connect right away. Otherwise, it will tell you to load the core and content manually and it will attempt to connect right away.

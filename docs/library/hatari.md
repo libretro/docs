@@ -36,7 +36,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 | Filename | Description               | md5sum                           |
 |:--------:|:-------------------------:|:--------------------------------:|
-| tos.img  | TOS Boot Image - Required |                                  |
+| tos.img  | TOS Boot Image - Required | c1c57ce48e8ee4135885cee9e63a68a2 |
 
 ## Features
 

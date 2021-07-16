@@ -4,7 +4,7 @@ This compilation guide will teach you how to build RetroArch for Haiku.
 
 It is more than recommended to keep your Haiku system up to date and use Nightlybuilds with upgraded packages.
 
-[![Build in Haiku](http://img.youtube.com/vi/jrrssHG_9uo/0.jpg)](http://www.youtube.com/watch?v=jrrssHG_9uo)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jrrssHG_9uo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video covers a quick demonstration of these subjects;
 
@@ -79,7 +79,3 @@ In case you only want to build one and/or more cores instead of all, you can spe
     ./libretro-build.sh snes9x2010 fceumm
 
 Once finished, you can find the libretro cores inside directory `dist/haiku`.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/jrrssHG_9uo/0.jpg)](http://www.youtube.com/watch?v=jrrssHG_9uo)

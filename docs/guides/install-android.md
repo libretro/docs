@@ -1,5 +1,7 @@
 # Downloading, Installing and Updating RetroArch for Android devices.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dqx5c28pT3o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Downloading and installing
 ___
 There are multiple ways of downloading RetroArch for your Android device. Depending on your Android phone's architecture, you may want to install 64 bit instead of 32 bit.
@@ -53,7 +55,3 @@ You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with
 
 For Nightlies [here](https://buildbot.libretro.com/nightly/android/) - pick the latest version(based on date), and download `...RetroArch.apk` or `...RetroArch_aarch64.apk`.
 (*where ... represents the date*)
-
-## Video Tutorial
-___
-[![Quick Video Demonstration](http://img.youtube.com/vi/dqx5c28pT3o/0.jpg)](http://www.youtube.com/watch?v=dqx5c28pT3o)

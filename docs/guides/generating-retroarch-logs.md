@@ -71,7 +71,7 @@ If you **haven't installed** RetroArch and have a folder with it:
  `.\retroarch.exe --log-file .\retroarch-log.txt -v`
 4. Once you exit RetroArch, a file called `retroarch-log.txt` should be stored in the folder.
 
-[![Quick Video Demonstration](http://img.youtube.com/vi/oz9QNBtYrr8/0.jpg)](http://www.youtube.com/watch?v=oz9QNBtYrr8)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oz9QNBtYrr8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Generating Logs in OS X
 1. Open a console window with the OS X "Terminal" app.
@@ -139,6 +139,9 @@ At the moment there are no logging docs available for other Nintendo consoles. P
 
 ### Generating Logs with PlayStation Consoles
 At the moment there are no logging docs available for PlayStation consoles. Please feel free to post about your situation in the libretro forums.
+
+### Generating Logs in OpenDingux (GCW-Zero and RG350)
+At the moment there are no logging docs available for OpenDingux. Please feel free to post about your situation in the libretro forums.
 
 
 -------------------------

@@ -48,8 +48,8 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename          |    Description           |              md5sum              |
 |:-------------------:|:------------------------:|:--------------------------------:|
-| keropi/iplrom.dat   | X68000 BIOS - Required   |                                  |
-| keropi/cgrom.dat    | Font file - Required     |                                  |
+| keropi/iplrom.dat   | X68000 BIOS - Required   | 7fd4caabac1d9169e289f0f7bbf71d8e |
+| keropi/cgrom.dat    | Font file - Required     | cb0a5cfcf7247a7eab74bb2716260269 |
 | keropi/iplrom30.dat | X68000 BIOS 2 - Optional |                                  |
 | keropi/iplromco.dat | X68000 BIOS 3 - Optional |                                  |
 | keropi/iplromxv.dat | X68000 BIOS 4 - Optional |                                  |
@@ -85,6 +85,11 @@ Frontend-level settings or features that the PX68k core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
+
+**IMPORTANT NOTICE BEFORE YOU START PLAYING:**
+
+**Saves are directly written to the disks used**. Make sure to have a backup of roms before using them. This will make it easier to restore the files incase the roms get corrupted.
+
 ### Directories
 
 The PX68k core's library name is 'PX68K'
@@ -98,8 +103,12 @@ The PX68k core saves/loads to/from these directories.
 | keropi/config   | Config      |
 | keropi/sram.dat | SRAM        |
 
+
 **NOTE:**
+
 If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
+In some cases, you may also need to delete <system>keropi/config.
+When prompted, use internal audio option if possible. All other audio/midi are not available (MT-xx, CM-xx, SC-xx etc).
 
 ### Geometry and timing
 
@@ -113,15 +122,19 @@ If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
 
 ## Usage
 
-You can launch px68k to launch a supported game. You can also use px68k without any content by using Load Core and then Run Core. This will directly bring you to the px68k menu.
+You can launch px68k to run a supported game. You can also use px68k without any content by using Load Core and then Run Core. This will directly bring you to the px68k menu.
 
-L2 button or F12 key brings up the original px68k menu where you can change the inserted disks.
-
-They have to be unzipped to be accessible from this menu but can be zipped/archived when launching directly from RetroArch.
+L2 button or F12 key brings up the original px68k menu where you can change the inserted disks. Disks or games have to be unzipped to be accessible from this menu but can be zipped/archived when launching directly from RetroArch.
 
 After the first boot a “config” file will be generated in the “keropi” folder. You can enter your rom folder into the “StartDir” line to make it accessible from the PX68k-libretro core’s in-game menu.
 
-Define your disks path in system/keropi/config StartDir line.
+Define your disks path in system/keropi/config StartDir line. e.g.
+
+	`retroarch/system/keropi/config`
+	```
+	[WinX68k]
+	StartDir=/emulator/x68000/
+	```	
 
 You can launch content with:
 

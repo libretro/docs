@@ -1,6 +1,8 @@
 # Sony - PlayStation (PCSX2) WIP
 
-*Last Updated: November 01, 2020*
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-EnWeztB8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+PCSX2 is still under development. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content. There’s a working OpenGL renderer and a Direct3D11 renderer option. Direct3D 11 renderer can be faster than OpenGL but also has less features. Pick whichever works best for you. On Xbox you will only be able to use Direct3D11 anyways. This core uses the x86_64 dynarec which was added to PCSX2 a year ago. It is still less compatible than the 32bit x86 dynarec in PCSX2, so keep that in mind. It’s for similar reasons that the software renderer right now won’t work (it’s not compatible yet with x86_64, not in upstream either). There’s a bug that can happen right now upon closing content or exiting RetroArch with the PCSX2 core on Windows – the RetroArch process might not completely cleanly shut itself off and you might still be able to see a 0% CPU process remaining in the Task Manager. We have not been able to figure out how to fix that yet as the PCSX2 codebase is a definite case of ‘here be dragons’, but for now when this happens, you can just bring up the Task Manager and close it manually. It shouldn’t have a real detriment on performance but it is of course far from ideal and hopefully something we can fix soon with the help of some contributors. We have found this happens the most with the Direct3D 11 renderers. Switching resolution at runtime right now can be a bit unstable, so does switching fullscreen resolution. We might just make resolution switching require a restart since this tends to be too unstable for now.
 
 ## Background
 
@@ -26,17 +28,23 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ### Requirements
 
-- CPU:
-	- Supports SSE2/AVX2
-	- PassMark Single Thread Performance rating near or greater than 1600/2100
-	- Two physical cores, with hyperthreading
-	- Four physical cores, with or without hyperthreading
-- GPU:
-	- Direct3D10/11 support
-	- OpenGL 3.x/4.5 support
-	- PassMark G3D Mark rating around 3000 (GeForce GTX 750)
-	- 2 GB/4 GB Video Memory
-- RAM: 4GB/8GB
+=== "CPU"
+
+    * Supports SSE2/AVX2
+    * PassMark Single Thread Performance rating near or greater than 1600/2100
+    * Two physical cores, with hyperthreading
+    * Four physical cores, with or without hyperthreading
+
+=== "GPU"
+
+	* Direct3D10/11 support
+	* OpenGL 3.x/4.5 support
+	* PassMark G3D Mark rating around 3000 (GeForce GTX 750)
+	* 2 GB/4 GB Video Memory
+
+=== "RAM"
+
+	* 4GB/8GB
 
 !!! Attention
 	Because of the complex nature of emulation, even if you meet the recommended requirements there will be games that will NOT run at full speed due to emulation imperfection, floating point emulation differences, issues with emulator itself or other problems.
@@ -46,12 +54,14 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 !!! TIP
 	Interesting fact: For maximum compatibility it is recommended that you use a BIOS image different than SCPH10000.BIN which is the oldest one
 	
-!!! TIP
-	Transfer your BIOS files to the retroarch/system/PCSX2/bios/ directory.
+!!! info
+	Transfer your BIOS files to the retroarch/system/pcsx2/bios/ directory.
 
 There is no region locking so if you have a PAL BIOS on your PS2 you can still play NTSC games, and vice versa. You'll also need the BIOS dumped from your PS2. Unlike the PS2 PCSX2 does not implement region locking so if you have a PAL BIOS in your PS2 you can still play NTSC games, and vice versa.
 
 Required or optional firmware files go in the frontend's system directory.
+
+A PlayStation 2 BIOS consists of multiple files. All files of the same version (e.g. the 6 files of "Japan v02.20") must be included in the BIOS directory for that specific version of the BIOS to work properly.
 
 |   Filename   | Description                         |              md5sum              |
 |:------------:|:-----------------------------------:|:--------------------------------:|
@@ -70,16 +80,72 @@ Required or optional firmware files go in the frontend's system directory.
 | SCPH-70004_BIOS_V12_PAL_200.ROM1 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.ROM2 | - | - |
 | SCPH-70004_BIOS_V12_PAL_200.NVM | - | - |
+| SCPH-77006_BIOS_VX_HK _220.BIN | Japan v02.20(10/02/2006) console BIOS | 5b1ba4bb914406fae75ab8e38901684d |
+| SCPH-77006_BIOS_VX_HK _220.EROM | Japan v02.20(10/02/2006) console BIOS | 4f84fc8c2f1080a3f5f5859b403c62f3 |
+| SCPH-77006_BIOS_VX_HK _220.mec | Japan v02.20(10/02/2006) console BIOS | 3faf7c064a4984f53e2ef5e80ed543bc |
+| SCPH-77006_BIOS_VX_HK _220.NVM | Japan v02.20(10/02/2006) console BIOS | 5cc8e272eebfcc0f9efb9340e9644c57 |
+| SCPH-77006_BIOS_VX_HK _220.ROM1 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+| SCPH-77006_BIOS_VX_HK _220.ROM2 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+
+### Other required files and directories
+
+!!! info
+	On Windows, if you previously installed the stand-alone PCSX2, Retroarch can detect the stand-alone files, so you only need to have the \pcsx2\bios\ folder in the System/BIOS directory. This doesn't work with PCSX2's portable version for Windows or the stand-alone Linux version.
+
+Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
+
+.\pcsx2\bios\
+
+.\pcsx2\cheats\
+
+.\pcsx2\cheats_ws\
+
+.\pcsx2\inis\
+
+.\pcsx2\logs\
+
+.\pcsx2\memcards\
+
+.\pcsx2\snaps\
+
+.\pcsx2\sstates\
+
+It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory. Simply create a portable.txt file and change its extension to .ini.
+
+The file structure should look like this:
+
+```
+RetroArch/
+         └── system/
+		   └── pcsx2/
+		   	    └── bios/
+			    └── cheats/
+			    └── cheats_ws/
+			    └── inis/
+			    └── logs/
+			    └── memcards/
+			    └── snaps/
+			    └── sstates/
+			    └── portable.ini
+```
 
 ## Extensions
 
-Content that can be loaded by the PCSX2 core have the following file extensions: elf|iso|ciso|cue|bin
+Content that can be loaded by the PCSX2 core have the following file extensions:
 
 - .elf
 - .iso
 - .ciso
+- .chd
+- .cso
 - .cue
 - .bin
+- .mdf
+- .nrg
+- .dump
+- .gz
+- .img
+- .m3u
 
 RetroArch database(s) that are associated with the PCSX2 core:
 
@@ -94,11 +160,11 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✔         |
+| States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✕         |
+| RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
@@ -113,10 +179,8 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan *   | ✕         |
+| Crop Overscan[^2] | ✕         |
 | LEDs              | ✕         |
-
-\* Overscan cropping available via Core Options instead of frontend settings
 
 ### Directories
 
@@ -126,7 +190,13 @@ PCSX2 core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- Memory cards
+- Memory card - slot 1
+
+..\retroarch\saves\pcsx2\Slot 1\
+
+- Memory card - slot 1
+
+..\retroarch\saves\pcsx2\Slot 2\
 
 **Frontend's State directory**
 
@@ -186,3 +256,6 @@ The current standalone development version is reported to be compatible with app
 ## Libretro PS2 cores
 
 - Play!
+
+
+[^2]: Overscan cropping available via Core Options instead of frontend settings

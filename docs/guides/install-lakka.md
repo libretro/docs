@@ -1,5 +1,7 @@
 # Downloading, Installing and Updating Lakka for PC.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8rMvf3tfjFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## What is it?
 ___
 Lakka is the official Linux distribution of RetroArch and the libretro ecosystem. Each game system is implemented as a libretro core, while the frontend RetroArch takes care of inputs and display. This clear separation ensures modularity and centralized configuration. Lakka is a lightweight Linux distribution that transforms a small computer into a full blown retrogaming console.
@@ -83,7 +85,3 @@ Your computer will launch Lakka on the next Boot.
 ## Conclusion
 ___
 Lakka is still under heavy development. In its current state, the project allows you to play most games on most platforms. More information can be found in the [Lakka documents](http://www.lakka.tv/doc/Home/). You may also want to check the [Official Forum](https://forums.libretro.com/c/libretro/lakka-tv-general).
-
-## Video Tutorial
-___
-[![Quick Video Demonstration](http://img.youtube.com/vi/8rMvf3tfjFk/0.jpg)](http://www.youtube.com/watch?v=8rMvf3tfjFk)

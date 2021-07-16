@@ -1,5 +1,9 @@
 # Downloading and Installing RetroArch for Sega Genesis Mini - Genesis
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kCyTlMjvzWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+==The installation steps or dowloading file parts of the project may differ over time.==
+
 ## Sega Genesis Mini - Genesis
 
 **Note:** You currently need the have a way to execute homebrew to run RetroArch on your Sega Genesis Mini.
@@ -29,11 +33,3 @@ You can download a bundle with RetroArch, all the supported cores and all the as
 Extract the downloaded archive file from the zip. There will be an executable file which called **ProjectLunarUI.exe**. After running the program, choose **Install/Uninstall**. The system will warn you that it has not detected a device. When prompted, accept interactive setup support. Then follow the steps on the screen. After completing the setup, plug your USB into the second port of your device. Then click **Tools > Get RetroArch** and download the **_ALLCORES.ZIP** file from the page you went to. Thanks to this file, you will not have to download one by one. To transfer the cores, first turn off your device and remove your USB after making sure it is completely turned off. Plug in your USB to the computer and move the contents of the downloaded archive file into the **project_lunar > retroarch > cores** folder. Move your contents to **project_lunar > roms** as well.
 
 Remove your USB from your computer and insert it into the second USB port while your device is turned off, or you can plug it in from the back of the device with an OTG cable, so you can plug the controller to the second USB port. When the system is turned on, you can click on the RetroArch icon and continue.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](https://i.ytimg.com/vi/kCyTlMjvzWA/hqdefault.jpg)](https://www.youtube.com/watch?v=kCyTlMjvzWA)
-
-| :warning: DISCLAIMER:          |
-|:---------------------------|
-| The installation steps or dowloading file parts of the project may differ over time.      |

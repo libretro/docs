@@ -1,5 +1,7 @@
 # BIOS
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VoZPbBp6sco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 A BIOS file is a copy of the operating system used by the hardware that a Core is emulating. Some Cores need BIOS files in order to correctly emulate hardware and/or software as needed by the content. RetroArch and LibRetro do not share any copyrighted system files or game content. You must provide your own BIOS and content in accordance with your local laws as applicable.
 
 **Example**
@@ -20,7 +22,3 @@ HLE tries to reproduce the console's outputs instead of its actual behavior, tho
 ## Where do BIOS files go?
 
 Usually RetroArch's "system" directory. Check settings > directory and the core documentation to be sure.
-
-## Video Tutorial for RetroBoot
-
-[![Quick Video Demonstration](https://i.ytimg.com/vi/VoZPbBp6sco/hqdefault.jpg)](https://www.youtube.com/watch?v=VoZPbBp6sco)

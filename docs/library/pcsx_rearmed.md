@@ -28,7 +28,7 @@ Required or optional firmware files go in the frontend's system directory.
 | scph101.bin   | Version 4.4 03/24/00 A | 6E3735FF4C7DC899EE98981385F6F3D0 |
 | scph7001.bin  | Version 4.1 12/16/97 A | 1e68c231d0896b7eadcad1d7d8e76129 |
 | scph5501.bin  | Version 3.0 11/18/96 A | 490f666e1afb15b7362b406ed1cea246 |
-| scph1001.bin  | Version 2.0 05/07/95 A | dc2b9bf8da62ec93e868cfd29f0d067d |
+| scph1001.bin  | Version 2.0 05/07/95 A | 924e392ed05558ffdb115408c263dccf |
 
 In the event that none of the above is found, PCSX_ReARMed will search for filenames starting with "scph" and use that instead.
 It doesnt seem to matter whatever bios version is used and from what region as long as its from a retail psx/ps-one.
@@ -274,21 +274,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Adjust movement responsiveness for the emulated mouse device.
 
-- **Multitap 1** [pcsx_rearmed_multitap1] (auto|**disabled**|enabled)
+- **Multitap Mode (Restart)** [pcsx_rearmed_multitap] (**disabled**|port 1 only|port 2 only|both)
 
-	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 1, allowing 3-8 player support in games that permit it.
+	Sets the multitap device in either port 1 or port 2 allowing support of upto 5 players, or on both for 8 players.
 
-	**auto** - Enables multitap 1 when Pad 3-8 is not set to none.
-
-	**enabled/disabled** - Forces multitap 1 to be enabled or disabled regardless if pads 3-8 is used.
-
-- **Multitap 2** [pcsx_rearmed_multitap2] (auto|**disabled**|enabled)
-
-	Enables/Disables [multitap](https://en.wikipedia.org/wiki/PlayStation_Multitap) functionality on port 2, allowing 3-8 player support in games that permit it.
-
-	**auto** - Enables multitap 2 when Pad 5-8 is not set to none.
-
-	**enabled/disabled** - Forces multitap 2 to be enabled or disabled regardless if pads 5-8 is used.
+!!! attention
+	Multitap option works depending on the game. Setting any mode on a game that does not use multitap will make inputs not working. Leave mode at **disabled** unless supported by game and you really to play in multiplayer modes.
 
 - **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
 
@@ -527,18 +518,6 @@ Rumble only works in the PCSX ReARMed core when
 Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](#core-options).
 
 - When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
-
-- When either multitap1 and/or multitap2 are on user input will be assigned indicated below:
-
-- User 1: Player 1
-- User 2: Player 3
-- User 3: Player 4
-- User 4: Player 5
-- User 5: Player 2
-- User 6: Player 6
-- User 7: Player 7
-- User 8: Player 8
-
 
 ## Joypad
 

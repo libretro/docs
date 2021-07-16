@@ -1,6 +1,6 @@
-# Downloading, Installing and Updating RetroArch
+# Downloading, Installing and Updating RetroArch for Switch
 
-## Nintendo Switch
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8onZ4H8h3iE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | :warning: WARNING          |
 |:---------------------------|
@@ -34,6 +34,4 @@ Atmosphère now contains everything needed to run homebrews out of the box. To d
 
 If you wish to change the key, you can edit `/atmosphere/loader.ini` and change `override_key` here. You can add a `!` in front of the key to flip the condition ("run homebrew if the key is pressed" versus "run homebrew if the key isn't pressed").
 
-## Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/8onZ4H8h3iE/0.jpg)](http://www.youtube.com/watch?v=8onZ4H8h3iE)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6yPROWaCY9g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

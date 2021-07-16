@@ -6,7 +6,8 @@ A list of known emulation bugs can be found here [https://forum.fobby.net/index.
 
 ## PCSX ReARMed
 
-| Game            | Issue                                                  |
-|-----------------|--------------------------------------------------------|
-| Jumping Flash 2 | Graphics glitches. Geometry issues.                    |
-| Tobal 2         | Graphics glitch. Garbled Dream Factory intro sequence. |
+| Game                     | Issue                                                  |
+|--------------------------|--------------------------------------------------------|
+| Jumping Flash 2          | Graphics glitches. Geometry issues.                    |
+| Tobal 2                  | Graphics glitch. Garbled Dream Factory intro sequence. |
+| Hot Wheels: Turbo Racing | Black screen after intro video                         |

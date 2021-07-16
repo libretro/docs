@@ -45,7 +45,7 @@ Frontend-level settings or features that the DeSmuME 2015 core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔ (Not Download Play, Link-Cable or Wi-Fi emulation)         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

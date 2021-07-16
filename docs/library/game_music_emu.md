@@ -1,5 +1,7 @@
 # Game Music Emu
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vxbRDG2TTIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 Multi-purpose video game console music player.
@@ -92,10 +94,6 @@ The Game Music Emu core supports the following device type(s) in the controls me
 | ![](../image/retropad/retro_start.png)         | Pause                      |
 | ![](../image/retropad/retro_l1.png)            | Previous Track             |
 | ![](../image/retropad/retro_r1.png)            | Next Track                 |
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/vxbRDG2TTIM/0.jpg)](http://www.youtube.com/watch?v=vxbRDG2TTIM)
 
 ## External Links
 

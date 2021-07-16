@@ -1,5 +1,9 @@
 # PocketCDG
 
+==You have to provide both .cdg and .mp3 file. RetroArch and LibRetro do not share any copyrighted content.==
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9YBR0K4ceiY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 A MP3 karaoke music player.
@@ -34,7 +38,7 @@ Frontend-level settings or features that the PocketCDG core respects.
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
-| Core Options      | ✔         |
+| Core Options      | ✕         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
@@ -63,15 +67,9 @@ The PocketCDG core's internal core name is 'pocketcdg'
 - The PocketCDG core's core provided sample rate is 44100 Hz
 - The PocketCDG core's core provided aspect ratio is 1
 
-## Usage
+## Setup
 
-The PocketCDG core can load any MP3+CDG file combination. It will then show the lyrics onscreen and on-cue like a true karaoke player, and it will also highlight the text which should be currently sung.
-
-## Core options
-
-The PocketCDG core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
-
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+Create a folder or put files with both .mp3 and .cdg extensions in the existing folder. The PocketCDG core can load any MP3+CDG file combination. It will then show the lyrics onscreen and on-cue like a true karaoke player, and it will also highlight the text which should be currently sung.
 
 ## Controllers
 

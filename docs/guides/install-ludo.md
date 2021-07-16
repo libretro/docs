@@ -1,5 +1,7 @@
 # Downloading, Installing and Updating Ludo for PC.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TvvylIT1-wM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## What is it?
 ___
 Ludo is an Emulator Frontend able to run retro video games. Ludo does not emulate the consoles itself, but does it through emulator plugins called libretro cores. Libretro cores are well known emulators (like Snes9x or Genesis Plus GX or PCSX) stripped from their user interface. They contain only console specific logic.
@@ -17,7 +19,7 @@ Ludo is an Emulator Frontend able to run retro video games. Ludo does not emulat
 ## Download Ludo
 ___
 
-Click here to get the [Windows](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-Windows-x86_64-0.11.2.zip) version, here to get the [Mac](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-OSX-x86_64-0.11.2.dmg) version or click here for [Linux](https://github.com/libretro/ludo/releases/download/v0.11.2/Ludo-Linux-x86_64-0.11.2.tar.gz).
+Click here to get the [latest](https://github.com/libretro/ludo/releases/latest) version.
 
 Please note that due to early development phase, Ludo _may_ not work on your OS as expected. In most scenarios, Ludo works as intended.
 
@@ -31,7 +33,7 @@ Please note that due to early development phase, Ludo _may_ not work on your OS 
 - Gamers can configure emulators all at once
 - The user interface, configuration, and storage are consistent across emulators
 
-From the gamer perspective, Ludo is a universal retro game browser and player. It offers a gaming experience optimized for TV and joypads, but can also be used on a traditional PC with a keyboard.
+From the gamer perspective, Ludo is a universal retro game browser and player. It offers a gaming experience optimized for TV and gamepads, but can also be used on a traditional PC with a keyboard.
 
 Currently, Ludo can run on the following platforms:
 
@@ -46,9 +48,9 @@ There is also an Operating System version of Ludo called LudOS. It looks and beh
 
 Ludo's User Interface has the following functionalities:
 
-- Joypad driven: everything can be done through the joypad instead of the mouse
+- Gamepad driven: everything can be done through the gamepad instead of the mouse
 - TV optimized: looks nice on a wide screen
-- Joypads auto configuration when plugged
+- Controller auto configuration when plugged
 - Automatic configuration of literally everything
 - Game collection scanner for generating playlists with thumbnails
 - Video filters through simple shaders
@@ -107,7 +109,7 @@ Some design choices are different, for example we support less cores, and choose
 ### How is Ludo similar to RetroArch?
 
 As RetroArch, Ludo is a libretro frontend, so the way of communicating with the emulators is the same.
-Same cores, similar UI patterns, joypad driven UI, same game thumbnails, mostly the same game database, same terminology. I think we can also say same developers, as I am an important contributor of the libretro team, and all the people who provided me with help are also member of the libretro community.
+Same cores, similar UI patterns, gamepad driven UI, same game thumbnails, mostly the same game database, same terminology. I think we can also say same developers, as I am an important contributor of the libretro team, and all the people who provided me with help are also member of the libretro community.
 It definitely shares the same values.
 
 ### Why not implementing Ludo as a menu driver in RetroArch?
@@ -142,7 +144,3 @@ Atari 5200, Atari 7800, Atari Jaguar, Atari Lynx, GCE Vectrex, MSX, MSX2, Variou
 ## Conclusion
 ___
 Ludo is still under heavy development. In its current state, the project allows you to play most games on most platforms. More information can be found in the [Ludo documents](https://github.com/libretro/ludo/wiki).
-
-## Video Tutorial
-___
-[![Quick Video Demonstration](http://img.youtube.com/vi/TvvylIT1-wM/0.jpg)](http://www.youtube.com/watch?v=TvvylIT1-wM)

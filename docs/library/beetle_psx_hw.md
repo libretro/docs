@@ -68,7 +68,7 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| [RetroAchievements](https://retroachievements.org/viewtopic.php?t=9302) | ✔         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

@@ -36,6 +36,8 @@ Content that can be loaded by the VICE cores have the following file extensions:
 - .x6z
 - .nib
 - .nbz
+- .d2m
+- .d4m
 
 ### Tapes
 
@@ -150,6 +152,7 @@ Frontend-level settings or features that the VICE cores respect.
 The VICE cores' internal core names are:
 
 - vice_x64
+- vice_x64dtv
 - vice_x64sc
 - vice_x128
 - vice_xcbm2
@@ -308,6 +311,7 @@ The virtual keyboard can be controlled with:
     | B        | Keypress            |
     | A        | Toggle transparency |
     | Y        | Toggle ShiftLock    |
+    | X        | Press Space         |
     | Start    | Press Return        |
 
 - **Keyboard**
@@ -323,9 +327,15 @@ The virtual keyboard can be controlled with:
 
 The virtual keyboard has these additional actions:
 
-- `STB` = Toggle statusbar
-- `JOY` = Switch joystick ports
-- `TRF` = Toggle turbo fire
+- ShiftLock off:
+    - `STB` = Toggle statusbar
+    - `JOY` = Switch joystick ports
+    - `TRF` = Toggle turbo fire
+- ShiftLock on:
+    - `SVD` = Create/Insert & remove save disk
+    - `ASR` = Toggle aspect ratio
+    - `ZOM` = Toggle zoom mode
+
 - Reset (Red key with undo icon, obeys 'Reset Type' core option)
 - Datasette controls (Reset, Play, Rewind, Forward, Stop)
 
@@ -372,6 +382,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 #### C64 SuperCPU specific
 
+- **SuperCPU SIMM Size** [vice_supercpu_simm_size] (0|1|2|4|8|**16**)
+
+    Changing while running resets the system!
+
+- **SuperCPU Speed Switch** [vice_supercpu_speed_switch] (disabled|**enabled**)
+
 - **SuperCPU Kernal** [vice_supercpu_kernal] (**0**|1|2)
 
     JiffyDOS does not work with the internal kernal!
@@ -388,13 +404,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **GO64 (Restart)** [vice_c128_go64] (**disabled**|enabled)
 
-    Starts in C64 compatibility mode.
+    Start in C64 compatibility mode.
 
 - **JiffyDOS** [vice_jiffydos] (**disabled**|enabled)
 
-    For D64/D71/D81 disk images only!
-
-    ROMs required in `system/vice`:
+    'True Drive Emulation' & 1541/1571/1581 drive & ROMs required in `system/vice`:
     - `JiffyDOS_C128.bin`
     - `JiffyDOS_C64.bin`
     - `JiffyDOS_1541-II.bin`
@@ -461,7 +475,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Automatic Load Warp** [vice_autoloadwarp] (**disabled**|enabled|disk|tape)
 
-    Toggles warp mode during disk and/or tape access.
+    Toggle warp mode during disk and/or tape access.
 
     Mutes 'Drive Sound Emulation'. 'True Drive Emulation' required!
 
@@ -479,11 +493,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Floppy Write Protection** [vice_floppy_write_protection] (**disabled**|enabled)
 
-    Makes device 8 read only.
+    Set device 8 read only.
 
 - **EasyFlash Write Protection** [vice_easyflash_write_protection] (**disabled**|enabled)
 
-    Makes EasyFlash cartridges read only.
+    Set EasyFlash cartridges read only.
 
 - **Global Work Disk** [vice_work_disk] (**disabled**|8_d64|9_d64|8_d71|9_d71|8_d81|9_d81)
 
@@ -493,15 +507,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Video Options** [vice_video_options_display] (**disabled**|enabled)
 
-    Shows/hides video related options. Core options page refresh required.
+    Page refresh by menu toggle required!
 
 - **Pixel Aspect Ratio** [vice_aspect_ratio] (**auto**|pal|ntsc|raw)
 
-    Dictates the core provided aspect ratio.
+    Hotkey toggling disables this option until core restart.
 
-- **Zoom Mode** [vice_zoom_mode] (**none**|small|medium|maximum|manual)
+- **Zoom Mode** [vice_zoom_mode] (**disabled**|small|medium|maximum|manual)
 
-    Crops the borders to fit various host screens.
+    Crop borders to fit various host screens.
 
     Requirements in RetroArch settings:
     - Aspect Ratio: Core provided
@@ -509,7 +523,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Zoom Mode Crop** [vice_zoom_mode_crop] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
 
-    Use 'Horizontal + Vertical' & 'Maximum' to remove borders completely. Ignored with 'Manual' zoom.
+    'Horizontal + Vertical' & 'Maximum' removes borders completely. Ignored with 'Manual' zoom.
 
 - **Manual Crop Top** [vice_manual_crop_top] (**0**-60)
 
@@ -525,22 +539,29 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'Basic': Current image + LEDs
     - 'Minimal': Track number + FPS hidden
 
-- **Virtual KBD Theme** [vice_vkbd_theme] (**0**|1|2|3)
+- **Virtual KBD Theme** [vice_vkbd_theme] (**auto**|auto_outline|brown|brown_outline|beige|beige_outline|dark|dark_outline|light|light_outline)
 
-    | Value | Label |
-    |-------|-------|
-    | 0     | C64   |
-    | 1     | C64C  |
-    | 2     | Dark  |
-    | 3     | Light |
+    By default, the keyboard comes up with RetroPad Select.
 
 - **Virtual KBD Transparency** [vice_vkbd_transparency] (0%|**25%**|50%|75%|100%)
 
+    Keyboard transparency can be toggled with RetroPad A.
+
 - **Color Depth (Restart)** [vice_gfx_colors] (**16bit**|24bit)
+
+    '24-bit' is slower and not available on all platforms. Full restart required.
+
+- **Light Pen/Gun Pointer Color** [vice_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
+
+    Crosshair color for light pens and guns.
 
 #### Color palette options
 
 ##### VIC-II (C64, C128, CBM-II 5x0)
+
+- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
 
 - **VIC-II Color Palette** [vice_external_palette] (default|**colodore**|pepto-pal|pepto-ntsc|pepto-ntsc-sony|cjam|c64hq|c64s|ccs64|community-colors|deekay|frodo|godot|pc64|ptoing|rgb|vice)
 
@@ -568,6 +589,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### VIC (VIC-20)
 
+- **VIC Filter** [vice_vic_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
+
 - **VIC Color Palette** [vice_vic20_external_palette] (default|**colodore_vic**|mike-pal|mike-ntsc|vice)
 
     'Colodore' is recommended for the most accurate colors.
@@ -593,6 +618,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     Tint for the internal palette.
 
 ##### TED (PLUS/4)
+
+- **TED Filter** [vice_ted_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
 
 - **TED Color Palette** [vice_plus4_external_palette] (default|**colodore_ted**|yape-pal|yape-ntsc)
 
@@ -620,6 +649,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### CRTC (CBM-II, PET)
 
+- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+
+    CRT emulation filter with custom horizontal blur.
+
 - **CRTC Color Palette** [vice_cbm2_external_palette] (**default**|green|amber|white)
 
 - **CRTC Color Palette** [vice_pet_external_palette] (**default**|green|amber|white)
@@ -628,25 +661,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Audio Options** [vice_audio_options_display] (**disabled**|enabled)
 
-    Shows/hides audio related options. Core options page refresh required.
+    Page refresh by menu toggle required!
 
-- **Drive Sound Emulation** [vice_drive_sound_emulation] (disabled|5|10|15|**20**|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)
+- **Drive Sound Emulation** [vice_drive_sound_emulation] (disabled|5%|10%|15%|**20%**|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|100%)
 
     'True Drive Emulation' & D64/D71 disk image required.
 
-- **(VIC-II/VIC/TED) Audio Leak Emulation** [vice_audio_leak_emulation] (**disabled**|1|2|3|4|5|6|7|8|9|10)
+- **Datasette Sound** [vice_datasette_sound] (**disabled**|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|100%|-1)
 
-- **Output Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
+    TAP tape image required.
+
+    '-1': 100% + Mute
+
+- **(VIC-II/VIC/TED) Audio Leak Emulation** [vice_audio_leak_emulation] (**disabled**|1|2|3|4|5|6|7|8|9|10)
 
 - **SID Engine** [vice_sid_engine] (FastSID|**ReSID**|ReSID-FP)
 
+    'ReSID' is accurate, 'ReSID-FP' is more accurate, 'FastSID' is the last resort.
+
 - **SID Model** [vice_sid_model] (**default**|6581|8580|8580RD)
+
+    C64 has '6581', C64C has '8580'.
 
 - **SID Extra** [vice_sid_extra] (**disabled**|0xd420|0xd500|0xde00|0xdf00)
 
+    Second SID base address.
+
 - **ReSID Sampling** [vice_resid_sampling] (fast|interpolation|fast resampling|**resampling**)
 
-    Defaults to 'fast' on low-power systems and x64-core.
+    'Resampling' provides best quality. Defaults to 'fast' on low-power systems and x64-core.
 
 - **ReSID Filter Passband** [vice_resid_passband] (0|10|20|30|40|50|60|70|80|**90**)
 
@@ -658,7 +701,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **SFX Sound Expander** [vice_sfx_sound_expander] (**disabled**|3526|3812)
 
+- **Output Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
+
 ### Input options
+
+- **Analog Stick Mouse** [vice_analogmouse] (disabled|**left**|right|both)
+
+    Override analog stick remappings when non-joysticks are used.
+    'OFF' controls mouse/paddles with both analogs when remappings are empty.
 
 - **Analog Stick Mouse Deadzone** [vice_analogmouse_deadzone] (0|5|10|15|**20**|25|30|35|40|45|50)
 
@@ -672,7 +722,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Userport Joystick Adapter** [vice_userport_joytype] (**disabled**|CGA|HIT|Kingsoft|Starbyte|Hummer|OEM|PET)
 
-    Essential when 2 joysticks are not enough, for example IK+ Gold with 3 players.
+    Required for more than 2 joysticks, for example IK+ Gold with 3 players.
 
 - **Keyrah Keypad Mappings** [vice_keyrah_keypad_mappings] (**disabled**|enabled)
 
@@ -690,11 +740,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Datasette Hotkeys** [vice_datasette_hotkeys] (**disabled**|enabled)
 
-    Toggles all Datasette hotkeys.
+    Toggle all Datasette hotkeys.
 
 - **Show Mapping Options** [vice_mapping_options_display] (disabled|**enabled**)
 
-    Shows/hides hotkey & RetroPad mapping options. Core options page refresh required.
+    Page refresh by menu toggle required!
 
 - **Toggle Virtual Keyboard** [vice_mapper_vkbd] (**---**)
 
@@ -764,30 +814,44 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **RetroPad Turbo Fire** [vice_turbo_fire] (**disabled**|enabled)
 
+    Hotkey toggling disables this option until core restart.
+
 - **RetroPad Turbo Button** [vice_turbo_fire_button] (**B**|A|Y|X|L|R|L2|R2)
+
+    Replace the mapped button with turbo fire button.
 
 - **RetroPad Turbo Pulse** [vice_turbo_pulse] (2|4|**6**|8|10|12)
 
+    Frames in a button cycle.
+
 - **RetroPad Port** [vice_joyport] (1|**2**)
 
-- **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10)
+    Most games use port 2, some use port 1. Filename forcing or hotkey toggling disables this option until core restart.
 
-    | Value | Label                   |
-    |-------|-------------------------|
-    | 1     | Joystick                |
-    | 2     | Paddles                 |
-    | 3     | Mouse (1351)            |
-    | 4     | Mouse (NEOS)            |
-    | 5     | Mouse (Amiga)           |
-    | 6     | Trackball (Atari CX-22) |
-    | 7     | Mouse (Atari ST)        |
-    | 8     | Mouse (SmartMouse)      |
-    | 9     | Mouse (Micromys)        |
-    | 10    | Koalapad                |
+- **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)
+
+    | Value | Label                           |
+    |-------|---------------------------------|
+    | 1     | Joystick                        |
+    | 2     | Paddles                         |
+    | 3     | Mouse (1351)                    |
+    | 4     | Mouse (NEOS)                    |
+    | 5     | Mouse (Amiga)                   |
+    | 6     | Trackball (Atari CX-22)         |
+    | 7     | Mouse (Atari ST)                |
+    | 8     | Mouse (SmartMouse)              |
+    | 9     | Mouse (Micromys)                |
+    | 10    | Koalapad                        |
+    | 11    | Light Pen (Up trigger)          |
+    | 12    | Light Pen (Left trigger)        |
+    | 13    | Light Pen (Datel)               |
+    | 16    | Light Pen (Inkwell)             |
+    | 14    | Light Gun (Magnum Light Phaser) |
+    | 15    | Light Gun (Stack Light Rifle)   |
 
 - **RetroPad Face Button Options** [vice_retropad_options] (**disabled**|jump|rotate|rotate_jump)
 
-    Rotates face buttons clockwise and/or makes 2nd fire press up.
+    Rotate face buttons clockwise and/or make 2nd fire press up.
 
     | Value       | Label            |
     |-------------|------------------|

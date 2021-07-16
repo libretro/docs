@@ -1,8 +1,8 @@
 # Downloading and Installing RetroArch for PlayStation Classic
 
-## PlayStation Classic
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z3qT9X5698s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Note:** You currently need the have a way to execute homebrew to run RetroArch on your PlayStation Classic.
+==You currently need the have a way to execute homebrew to run RetroArch on your PlayStation Classic.==
 
 ## Prerequisites
 
@@ -12,6 +12,10 @@
 | :warning: DISCLAIMER          |
 |:---------------------------|
 | Project Eris made by ModMyClassic and RetroBoot made by u/genderbent, at RetroArch/LibRetro we all love community works. We think Project Eris and RetroBoot is as valuable for PlayStation Classic.      |
+
+| :warning: DISCLAIMER          |
+|:---------------------------|
+| The installation steps or dowloading file parts of the project may differ over time.      |
 
 ## Downloading and installing
 
@@ -33,11 +37,3 @@ https://www.reddit.com/r/PlaystationClassic/comments/g8ht0y/release_retroboot_11
 ### Installing
 
 Installation may sound complicated but it's not. Format your USB to `exFat` or `FAT32` and rename as `SONY`. Transfer all files in Package to USB. Make sure your device fully power-off, **you should remove power cable**, then plug your USB to second port or use OTG cable then plug into power socket. Plug back power cable, you will see **Power** led will turn *Amber* then press power button. Follow on screen instruction if you use Project Eris, RetroBoot will boot directly RetroArch.
-
-## Video Tutorial for RetroBoot
-
-[![Quick Video Demonstration](https://i.ytimg.com/vi/z3qT9X5698s/hqdefault.jpg)](https://www.youtube.com/watch?v=z3qT9X5698s)
-
-| :warning: DISCLAIMER          |
-|:---------------------------|
-| The installation steps or dowloading file parts of the project may differ over time.      |

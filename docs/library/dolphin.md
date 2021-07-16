@@ -62,7 +62,7 @@ The Dolphin core will now work without issues.
 
 ## BIOS
 
-TODO/FIXME
+The (optional) BIOS file goes in the directory `retroarch/saves/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
 
 ## Extensions
 

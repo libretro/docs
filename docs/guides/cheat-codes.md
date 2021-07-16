@@ -5,7 +5,7 @@ RetroArch uses two methods of applying cheat codes:
 - **Emulator Handled** are codes that are sent to the emulator/core and it is up to the emulator/core to apply them.
 - **RetroArch Handled** are codes that RetroArch itself handles by directly scanning/manipulating the emulator/core memory area.
 
-[![Quick Video Demonstration for Windows](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xDFipsbsd2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Adding a new cheat code
 
@@ -98,7 +98,7 @@ The "Value Increase Each Iteration" would normally be 0 in the above scenario bu
 RetroArch also has the ability to make your controller rumble when changes in the emulator/core memory occur.  It is based off of the same RetroArch-handled cheat codes described above.  For example, after
 finding the memory location for the number of lives in a game (via the cheat searching interface) you can set it up such that every time the value decreases (lose a life) the controller rumbles.
 
-Rumble tested with X360 controller, input driver dinput, joypad driver xinput.
+Rumble tested with X360 controller, input driver dinput, controller driver xinput.
 
 Available rumble controls:
 
@@ -112,8 +112,3 @@ Available rumble controls:
 - Rumble when memory value > value
 - Rumble when memory value decreases by a specific amount
 - Rumble when memory value increases by a specific amount
-
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/xDFipsbsd2Q/0.jpg)](http://www.youtube.com/watch?v=xDFipsbsd2Q)

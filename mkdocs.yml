@@ -11,7 +11,7 @@ nav:
   - 'For Users':
     - 'Getting Started':
       - 'Windows':
-        - 'Windows 10': 'guides/install-windows.md'
+        - 'Windows 7/8/8.1/10': 'guides/install-windows.md'
         - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'Apple':
@@ -40,7 +40,7 @@ nav:
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
-      - 'Joypad Auto-Configuration': 'guides/joypad-autoconfiguration.md'
+      - 'Controller Auto-Configuration': 'guides/controller-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
       - 'Directory Configuration': 'guides/change-directories.md'
       - 'File Browser': 'guides/file-browser.md'
@@ -71,11 +71,12 @@ nav:
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
-      - 'Input and Joypad Drivers': 'guides/input-joypad-drivers.md'
+      - 'Input and Controller Drivers': 'guides/input-controller-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
       - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
       - 'Run Ahead': 'guides/runahead.md'
       - 'Latency': 'guides/latency.md'
+      - 'CRT SwitchRes': 'guides/crtswitchres.md'
     - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
     - 'Core Library: Emulation':
       - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
@@ -221,6 +222,7 @@ nav:
       - 'CHIP-8 (Emux CHIP-8)': 'library/emux_chip8.md'
       - 'Dinothawr': 'library/dinothawr.md'
       - 'Doom (PrBoom)': 'library/prboom.md'
+      - 'Doom 3 (Boom3)': 'library/boom3.md'
       - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
       - 'Flashback (REminiscence)': 'library/reminiscence.md'
       - 'Handheld Electronic (GW)': 'library/gw.md'
@@ -291,8 +293,9 @@ nav:
       - 'Debugging': 'development/retroarch/debugging.md'
       - 'Adding Menu Entries': 'development/retroarch/new-menu-options.md'
       - 'Input':
+        - 'Input Driver Specification': 'development/retroarch/input/input-drivers.md'
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
-        - 'Parallel Port Joypads': 'development/retroarch/input/parallel-port-joypads.md'
+        - 'Parallel Port Controllers': 'development/retroarch/input/parallel-port-controllers.md'
       - 'Adding Translations(not active)': 'development/retroarch/new-translations.md'
       - 'Adding Translations with Crowdin': 'development/retroarch/new-translations-crowdin.md'
       - 'Network Protocols':
@@ -359,6 +362,8 @@ nav:
     - 'Core Template': 'meta/core-template.md'
     - 'Shader Preview Template': 'meta/shader-preview-template.md'
     - 'See Also': 'meta/see-also.md'
+  - 'Support':
+    - 'Privacy Policy': 'support/privacy-policy.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
@@ -380,6 +385,8 @@ extra:
       link: https://facebook.com/libretro
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/libretro
+  unit:
+    version: 1.9.0
 
 theme:
   name: 'material'
@@ -400,13 +407,17 @@ theme:
   favicon: 'image/branding/invader.png'
 
 markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       linenums: true
       guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
   - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
@@ -419,7 +430,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
+  - pymdownx.highlight
   #     linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -431,7 +442,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true

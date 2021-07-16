@@ -28,7 +28,7 @@ Only Ozone has background music, **OK**, **Cancel** and **Notice** sounds. The b
 
 ### Navigating the menu
 
-Ozone is controlled like any other user interface. Regular input binds will apply, and binds here are defined in terms of the RetroPad, RetroArch's joypad abstraction.
+Ozone is controlled like any other user interface. Regular input binds will apply, and binds here are defined in terms of the RetroPad, RetroArch's gamepad and joystick abstraction.
 
 - **A button** (Default PC: Z&ENTER&Left mouse click): Accept/OK
 - **B button** (Default PC: X&Backspace&Right mouse click): Back/Cancel
@@ -60,7 +60,7 @@ Thumbnails appear on the right side of the screen. To get these pictures to full
 
 After loading a libretro core, you will see the name and version of the core in lower part of screen. You can then browse for a ROM with `Load Content`. To control where Ozone starts to browse for contents, set `File Browser` in `Settings > Directory`. If not set, it'll start in root.
 
-See the [File Browser](file-browser.md) and [Import Content](import-conten.md)
+See the [File Browser](file-browser.md) and [Import Content](import-content.md)
 
 ## Applying shaders
 

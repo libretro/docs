@@ -5,16 +5,24 @@ This compilation guide will teach you how to build RetroArch for macOS/OSX.
 The following versions of the operating system are supported:
 
 - OSX 10.6    (Snow Leopard)
-- OSX 10.7    (Tiger)
+- OSX 10.7    (Lion)
 - OSX 10.8    (Mountain Lion)
 - OSX 10.9    (Mavericks)
 - OSX 10.10   (Yosemite)
 - OSX 10.11   (El Capitan)
 - macOS 10.12 (Sierra)
+- macOS 10.13 (High Sierra)
+- macOS 10.14 (Mojave)
+- macOS 10.15 (Catalina)
+- macOS 11 Big Sur
 
-RetroArch can work on both 32bit and 64bit Intel processor-powered Macs.
+RetroArch can work on:
 
-[![Build in Osx](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)
+- 32bit Intel processor-powered Macs
+- 64bit Intel processor-powered Macs
+- 64bit ARM   processor-powered Macs
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fPO-9jescmo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video covers a quick demonstration of these subjects;
 
@@ -105,7 +113,3 @@ In case you only want to build one and/or more cores instead of all, you can spe
     ./libretro-build.sh snes9x2010 fceumm
 
 Once finished, you can find the libretro cores inside directory `dist/osx`.
-
-#### Video Tutorial
-
-[![Quick Video Demonstration](http://img.youtube.com/vi/fPO-9jescmo/0.jpg)](http://www.youtube.com/watch?v=fPO-9jescmo)
