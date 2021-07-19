@@ -26,6 +26,12 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .com
 - .bat
 - .conf
+- .iso
+- .cue
+- .img
+- .ima
+- .vhd
+- .zip
 
 RetroArch database(s) that are associated with the DOSBox core:
 
@@ -65,31 +71,9 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Load games from ZIP
-
-DOSBox Pure can load games directly from ZIP files without the need to extract them.
-
 ### Store modifications in separate save files
 
 Changes made to a loaded ZIP file will be stored as a separate ZIP file into the libretro saves directory. If a game is loaded directly without using a ZIP file the saves directory is not used.
-
-### Mount disc images from inside ZIP files
-
-CD images (ISO or CUE) and floppy disk images (IMG/IMA/VHD) can be mounted directly from inside ZIP files. The system will automatically mount the first found disk image as the A: or D: drive. Additional disks can be loaded or swapped by using the `Disc Control` menu in RetroArch.
-
-The start menu also offers the option to mount or unmount an image.
-
-### Start menu with auto start
-
-![The DOSBox Pure Start Menu](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/startmenu.png)
-
-This is the first screen that appears when loading a game. It offers a gamepad controllable list of all executable files for the loaded game. By pressing right an item can be selected as the default which will skip the menu on the next launch.
-
-By pressing right multiple times, a number of frames can be specified that will automatically be skipped on start. This can be used to skip over loading screens or start-up sequences.
-
-If there is only a single executable, the menu will not show and directly run the file.
-
-To force the menu to be shown, hold shift on the keyboard or L2 or R2 on the gamepad while selecting `Restart` in the core menu.
 
 ### Automated controller mappings
 
@@ -185,18 +169,37 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 ## Loading content
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
 
-- To use you can either load an exe/com/bat file or a *.conf file. ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Also .iso, .cue, ...?)
-- If loading exe/com/bat the system directory will be searched for a 'dosbox.conf' file to load. If one isn't available default values will be used. This mode is equivalent to running a DOSBox binary with the specified file as the command line argument.
-- If loading a conf file DOSBox will be loaded with the options in the config file. This mode is useful if you just want to be dumped at a command prompt, but can also be used to load a game by putting commands in the autoexec section.
-- To be useful the frontend will need to have keyboard+mouse support, and all keyboard shortcuts need to be remapped.
+### Load games from ZIP
+
+DOSBox Pure can load games directly from ZIP files without the need to extract them.
+
+### Mount disc images from inside ZIP files
+
+CD images (ISO or CUE) and floppy disk images (IMG/IMA/VHD) can be mounted directly from inside ZIP files. The system will automatically mount the first found disk image as the A: or D: drive. Additional disks can be loaded or swapped by using the `Disc Control` menu in RetroArch.
+
+The start menu also offers the option to mount or unmount an image.
+
+### Start menu with auto start
+
+![The DOSBox Pure Start Menu](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/startmenu.png)
+
+This is the first screen that appears when loading a game. It offers a gamepad controllable list of all executable files for the loaded game. By pressing right an item can be selected as the default which will skip the menu on the next launch.
+
+By pressing right multiple times, a number of frames can be specified that will automatically be skipped on start. This can be used to skip over loading screens or start-up sequences.
+
+If there is only a single executable, the menu will not show and directly run the file.
+
+To force the menu to be shown, hold shift on the keyboard or L2 or R2 on the gamepad while selecting `Restart` in the core menu.
 
 ### Installing CD-ROM games from disc images (ISO etc.) and running them
 
 In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
 
-From the start menu, select the executable on the CD-ROM to install the game (probably something like `SETUP.EXE`, `INSTALL.EXE`, `START.EXE`...). Follow the installer's instructions to install the game in any local directory of your choice (e.g., `C:\`, `C:\GAMES\PATRIZ`, ...).
+From the start menu, select the executable on the CD-ROM to install the game (probably something like `SETUP.EXE`, `INSTALL.EXE`, `START.EXE`...). Follow the installer's instructions to install the game in any local directory of your choice (e.g., `C:\`, `C:\C&C\`, ...).
 
-Now, the next time you run the ISO in DOSBox Pure (same way as above), the start menu will feature the "local" executables, e.g.: `C:\GAMES\PATRIZ\PATRIZ.EXE`. They'll be available to select alongside the executables from the CD-ROM. Launch the correct executable to run the game.
+Now, the next time you run the ISO in DOSBox Pure (same way as above), the start menu will feature the "local" executables, e.g.: `C:\C&C\C&C.EXE`. They'll be available to select above the executables from mounted discs. Launch the correct executable to run the game.
+
+See screenshot in "Start menu with auto start" section above for reference.
 
 ## Usage
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
