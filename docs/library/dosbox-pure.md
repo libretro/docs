@@ -99,10 +99,6 @@ Rewind support
 
 Using the core option `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
 
-### Loading M3U8 files
-
-If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
-
 ## Directories
 
 The DOSBox Pure core's library name is 'DOSBox-Pure'.
@@ -118,7 +114,6 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 - The DOSBox Pure core's core provided aspect ratio is 4/3
 
 ## Loading content
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
 
 ### Load games from ZIP
 
@@ -156,23 +151,11 @@ Now, the next time you run the ISO in DOSBox Pure (same way as above), the start
 
 See screenshot in "Start menu with auto start" section above for reference.
 
-## Usage
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
+### Loading M3U8 files
 
-DOSBox can load DOS executables or custom config files. To get started you can generate a config file by creating the DOSbox folder in your libretro SYSTEM directory, and then loading any DOS application, exit back to the command interpreter and then run config -wcd, Configuration files allow you far better control than core options so far. Eventually every single useable option will be exposed but in the meantime combining both is the best alternative.
+If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
 
-If you generate a default config it will always be loaded by default, but you can override it by saving your custom settings, preferably in the game folder. You can create a config like this:
-
-```
-[autoexec]
-@echo off
-mount d "/storage/roms/dos/game"
-d:
-game.exe
-```
-Then you can store this config in the game folder (or any other directory) and just the config instead of the exe file. Once you change a setting using the config command or via core options, you can always update the config file by using config -wc
-
-## Tips
+## Tips, Q&A, Troubleshooting
 
 ### Playing with keyboard and mouse
 
@@ -356,26 +339,26 @@ If the cursor is moved above the middle of the screen, the keyboard will move to
 
 | Input descriptors for Keyboard - Port 1 | RetroPad Inputs                                |
 |-----------------------------------------|------------------------------------------------|
-| Kbd Up                                  | ![](https://docs.libretro.com/image/retropad/retro_dpad_up.png)       |
-| Kbd Down                                | ![](https://docs.libretro.com/image/retropad/retro_dpad_down.png)     |
-| Kbd Left                                | ![](https://docs.libretro.com/image/retropad/retro_dpad_left.png)     |
-| Kbd Right                               | ![](https://docs.libretro.com/image/retropad/retro_dpad_right.png)    |
-| Esc                                     | ![](https://docs.libretro.com/image/retropad/retro_select.png)        |
-| Enter                                   | ![](https://docs.libretro.com/image/retropad/retro_start.png)         |
-| Space                                   | ![](https://docs.libretro.com/image/retropad/retro_x.png)             |
-| Left Shift                              | ![](https://docs.libretro.com/image/retropad/retro_y.png)             |
-| Left Ctrl                               | ![](https://docs.libretro.com/image/retropad/retro_b.png)             |
-| Left Alt                                | ![](https://docs.libretro.com/image/retropad/retro_a.png)             |
-| 1                                       | ![](https://docs.libretro.com/image/retropad/retro_l1.png)            |
-| 2                                       | ![](https://docs.libretro.com/image/retropad/retro_r1.png)            |
-| 3                                       | ![](https://docs.libretro.com/image/retropad/retro_l2.png)            |
-| 4                                       | ![](https://docs.libretro.com/image/retropad/retro_r2.png)            |
-| F1                                      | ![](https://docs.libretro.com/image/retropad/retro_l3.png)            |
-| F2                                      | ![](https://docs.libretro.com/image/retropad/retro_r3.png)            |
-| Kbd Left/Right                          | ![](https://docs.libretro.com/image/retropad/retro_left_stick.png) X  |
-| Kbd Up/Down                             | ![](https://docs.libretro.com/image/retropad/retro_left_stick.png) Y  |
-| Home/End                                | ![](https://docs.libretro.com/image/retropad/retro_right_stick.png) X |
-| PgUp/PgDn                               | ![](https://docs.libretro.com/image/retropad/retro_right_stick.png) Y |
+| Kbd Up                                  | ![](../image/retropad/retro_dpad_up.png)       |
+| Kbd Down                                | ![](../image/retropad/retro_dpad_down.png)     |
+| Kbd Left                                | ![](../image/retropad/retro_dpad_left.png)     |
+| Kbd Right                               | ![](../image/retropad/retro_dpad_right.png)    |
+| Esc                                     | ![](../image/retropad/retro_select.png)        |
+| Enter                                   | ![](../image/retropad/retro_start.png)         |
+| Space                                   | ![](../image/retropad/retro_x.png)             |
+| Left Shift                              | ![](../image/retropad/retro_y.png)             |
+| Left Ctrl                               | ![](../image/retropad/retro_b.png)             |
+| Left Alt                                | ![](../image/retropad/retro_a.png)             |
+| 1                                       | ![](../image/retropad/retro_l1.png)            |
+| 2                                       | ![](../image/retropad/retro_r1.png)            |
+| 3                                       | ![](../image/retropad/retro_l2.png)            |
+| 4                                       | ![](../image/retropad/retro_r2.png)            |
+| F1                                      | ![](../image/retropad/retro_l3.png)            |
+| F2                                      | ![](../image/retropad/retro_r3.png)            |
+| Kbd Left/Right                          | ![](../image/retropad/retro_left_stick.png) X  |
+| Kbd Up/Down                             | ![](../image/retropad/retro_left_stick.png) Y  |
+| Home/End                                | ![](../image/retropad/retro_right_stick.png) X |
+| PgUp/PgDn                               | ![](../image/retropad/retro_right_stick.png) Y |
 
 Above are the default keyboard to RetroPad mappings. Note that by using the Quick Menu, you can choose from various presets in the Controls > Port # Controls section.
 
