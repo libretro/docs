@@ -185,10 +185,18 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 ## Loading content
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
 
-- To use you can either load an exe/com/bat file or a *.conf file.
+- To use you can either load an exe/com/bat file or a *.conf file. ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Also .iso, .cue, ...?)
 - If loading exe/com/bat the system directory will be searched for a 'dosbox.conf' file to load. If one isn't available default values will be used. This mode is equivalent to running a DOSBox binary with the specified file as the command line argument.
 - If loading a conf file DOSBox will be loaded with the options in the config file. This mode is useful if you just want to be dumped at a command prompt, but can also be used to load a game by putting commands in the autoexec section.
 - To be useful the frontend will need to have keyboard+mouse support, and all keyboard shortcuts need to be remapped.
+
+### Installing CD-ROM games from disc images (ISO etc.) and running them
+
+In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
+
+From the start menu, select the executable on the CD-ROM to install the game (probably something like `SETUP.EXE`, `INSTALL.EXE`, `START.EXE`...). Follow the installer's instructions to install the game in any local directory of your choice (e.g., `C:\`, `C:\GAMES\PATRIZ`, ...).
+
+Now, the next time you run the ISO in DOSBox Pure (same way as above), the start menu will feature the "local" executables, e.g.: `C:\GAMES\PATRIZ\PATRIZ.EXE`. They'll be available to select alongside the executables from the CD-ROM. Launch the correct executable to run the game.
 
 ## Usage
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I'm guessing this whole section needs to be amended/extended/rewritten?)
@@ -285,7 +293,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 
-- **PU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
+- **CPU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 
@@ -351,14 +359,30 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 | Right Analog X                          | ![](../image/retropad/retro_right_stick.png) X |
 | Right Analog Y                          | ![](../image/retropad/retro_right_stick.png) Y |
 
-| Input descriptors for Keyboard | RetroPad Inputs                             |
-|--------------------------------|---------------------------------------------|
-| Esc                            | ![](../image/retropad/retro_select.png)     |
-| Enter                          | ![](../image/retropad/retro_start.png)      |
-| Kbd Up                         | ![](../image/retropad/retro_dpad_up.png)    |
-| Kbd Down                       | ![](../image/retropad/retro_dpad_down.png)  |
-| Kbd Left                       | ![](../image/retropad/retro_dpad_left.png)  |
-| Kbd Right                      | ![](../image/retropad/retro_dpad_right.png) |
+| Input descriptors for Keyboard - Port 1 | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| Kbd Up                                  | ![](https://docs.libretro.com/image/retropad/retro_dpad_up.png)       |
+| Kbd Down                                | ![](https://docs.libretro.com/image/retropad/retro_dpad_down.png)     |
+| Kbd Left                                | ![](https://docs.libretro.com/image/retropad/retro_dpad_left.png)     |
+| Kbd Right                               | ![](https://docs.libretro.com/image/retropad/retro_dpad_right.png)    |
+| Esc                                     | ![](https://docs.libretro.com/image/retropad/retro_select.png)        |
+| Enter                                   | ![](https://docs.libretro.com/image/retropad/retro_start.png)         |
+| Space                                   | ![](https://docs.libretro.com/image/retropad/retro_x.png)             |
+| Left Shift                              | ![](https://docs.libretro.com/image/retropad/retro_y.png)             |
+| Left Ctrl                               | ![](https://docs.libretro.com/image/retropad/retro_b.png)             |
+| Left Alt                                | ![](https://docs.libretro.com/image/retropad/retro_a.png)             |
+| 1                                       | ![](https://docs.libretro.com/image/retropad/retro_l1.png)            |
+| 2                                       | ![](https://docs.libretro.com/image/retropad/retro_r1.png)            |
+| 3                                       | ![](https://docs.libretro.com/image/retropad/retro_l2.png)            |
+| 4                                       | ![](https://docs.libretro.com/image/retropad/retro_r2.png)            |
+| F1                                      | ![](https://docs.libretro.com/image/retropad/retro_l3.png)            |
+| F2                                      | ![](https://docs.libretro.com/image/retropad/retro_r3.png)            |
+| Kbd Left/Right                          | ![](https://docs.libretro.com/image/retropad/retro_left_stick.png) X  |
+| Kbd Up/Down                             | ![](https://docs.libretro.com/image/retropad/retro_left_stick.png) Y  |
+| Home/End                                | ![](https://docs.libretro.com/image/retropad/retro_right_stick.png) X |
+| PgUp/PgDn                               | ![](https://docs.libretro.com/image/retropad/retro_right_stick.png) Y |
+
+Above are the default keyboard to RetroPad mappings. Note that by using the Quick Menu, you can choose from various presets in the Controls > Port # Controls section.
 
 | Input descriptors for Emulated mouse | RetroPad Inputs                                |
 |--------------------------------------|------------------------------------------------|
@@ -473,6 +497,11 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 | Keyboard Left Alt             | Left Alt           |
 | Keyboard Sys Req              | Print Screen       |
 
+## Compatibility
+
+### Boppin'
+If the game quickly cycles through the main menu options indefinitely, open the RetroArch Quick Menu and select Controls > Port 2 Controls > Device Type > Disabled.
+
 ## External Links
 
 - [Official DOSBox Website](https://www.dosbox.com/)
@@ -481,10 +510,3 @@ The DOSBox core supports the following device type(s) in the controls menu, bold
 ![#f03c15]
 - [Libretro DOSBox Pure GitHub Repository](https://github.com/schellingb/dosbox-pure)
 - [Report Libretro DOSBox Pure core Issues Here](https://github.com/schellingb/dosbox-pure/issues)
-
-## Notes by Matt
-To do:
-
-- Add info re. Humans installer (needs VGA)
-- Add info re. Boppin' (disable 2nd port)
-- Include default generic bindings (bug #57)
