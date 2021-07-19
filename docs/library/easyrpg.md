@@ -1,6 +1,6 @@
 # RPG Maker 2000/2003 (EasyRPG)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SxEJyXNNDck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PujdH2H_nm0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
 
