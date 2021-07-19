@@ -71,55 +71,6 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Store modifications in separate save files
-
-Changes made to a loaded ZIP file will be stored as a separate ZIP file into the libretro saves directory. If a game is loaded directly without using a ZIP file the saves directory is not used.
-
-### Automated controller mappings
-
-When a game is loaded, DOSBox Pure will try to detect the game and apply a controller mapping. 
-
-To see the applied mapping, check the `Port 1 Controls` screen in the RetroArch menu. It will show `Detected Automatic Key Mapping: <GAMENAME>`. Additionally you can set the core option `Input > Advanced > Automatic Game Pad Mappings` to `Enable with notification on game detection`.
-
-### Mouse emulation
-
-On the `Controls` screen in the RetroArch menu, there are 2 mouse emulation modes available by switching the `Device Type` setting of any port with left/right. There is `Mouse with Left Analog Stick` and `Mouse with Right Analog Stick`.
-
-- When choosing left stick, the face buttons (B/A) will be used as left/right mouse buttons.
-- For the right stick, the shoulder buttons L/R will be used as left/right mouse buttons.
-- The X button is the middle mouse button and L2/R2 can be used to speed up or slow down mouse movement.
-
-There is also the core option `Input > Mouse Sensitivity` to increase/decrease mouse movement speed.
-
-### Keyboard emulation
-
-For games that don't have automated controller mappings or are not detected successfully, by default the option `Input > Bind Unused Buttons` will assign all unused buttons on the game pad with some default key.
-
-If the `Device Type` on the `Controls` screen in the RetroArch menu of any port is set to `Generic Keyboard Bindings`, all buttons will be assigned with a keyboard key.
-
-Additionally, it can be set to `Custom Keyboard Bindings` which will allow fully customizable mappings.
-
-### Joystick emulation
-
-There are multiple DOS era joysticks available as mappings on the `Controls` screen in the RetroArch menu.
-
-`Gravis GamePad (1 D-Pad, 4 Buttons)`, `Basic joystick (2 Axes, 2 Buttons)`, `ThrustMaster Flight Stick (3 axes, 4 buttons, 1 hat)` and `Control both DOS joysticks (4 axes, 4 buttons)`.
-
-These can be assigned to any port and the button layout can be remapped as with any other device type.
-
-### On-screen keyboard
-
-![DOSBox Pure On-Screen Keyboard](https://github.com/schellingb/dosbox-pure/blob/main/images/onscreenkeyboard.png)
-
-By pressing L3 on the gamepad (usually by pushing in the left analog stick) the on-screen keyboard will open. The cursor can be controlled with the controller (or mouse or keyboard) and L2/R2 will speed up or slow down the move speed.
-
-!!!tip
-	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
-
-If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
-
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Note, the button can't be remapped (at present?) when using `Custom Keyboard Bindings`. cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25)
-
 ### MIDI playback with SoundFonts
 
 If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI SoundFont` core option. This sound font will then be used to play General Midi and Sound Canvas music.
@@ -172,6 +123,10 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 ### Load games from ZIP
 
 DOSBox Pure can load games directly from ZIP files without the need to extract them.
+
+### Store modifications in separate save files
+
+Changes made to a loaded ZIP file will be stored as a separate ZIP file into the libretro saves directory. If a game is loaded directly without using a ZIP file the saves directory is not used.
 
 ### Mount disc images from inside ZIP files
 
@@ -308,17 +263,54 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
 
-## User 1 - 2 device types
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Is this correct?)
+## Controls
 
-The DOSBox core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+### Automated controller mappings
 
-- None - Input disabled.
-- **Gamepad** - Joypad
-- Joystick - Analog
-- Keyboard - Keyboard - Keyboard inputs are always active. Has keymapper support.
+When a game is loaded, DOSBox Pure will try to detect the game and apply a controller mapping. 
 
-## Joypad
+To see the applied mapping, check the `Port 1 Controls` screen in the RetroArch menu. It will show `Detected Automatic Key Mapping: <GAMENAME>`. Additionally you can set the core option `Input > Advanced > Automatic Game Pad Mappings` to `Enable with notification on game detection`.
+
+### Mouse emulation
+
+On the `Controls` screen in the RetroArch menu, there are 2 mouse emulation modes available by switching the `Device Type` setting of any port with left/right. There is `Mouse with Left Analog Stick` and `Mouse with Right Analog Stick`.
+
+- When choosing left stick, the face buttons (B/A) will be used as left/right mouse buttons.
+- For the right stick, the shoulder buttons L/R will be used as left/right mouse buttons.
+- The X button is the middle mouse button and L2/R2 can be used to speed up or slow down mouse movement.
+
+There is also the core option `Input > Mouse Sensitivity` to increase/decrease mouse movement speed.
+
+### Keyboard emulation
+
+For games that don't have automated controller mappings or are not detected successfully, by default the option `Input > Bind Unused Buttons` will assign all unused buttons on the game pad with some default key.
+
+If the `Device Type` on the `Controls` screen in the RetroArch menu of any port is set to `Generic Keyboard Bindings`, all buttons will be assigned with a keyboard key.
+
+Additionally, it can be set to `Custom Keyboard Bindings` which will allow fully customizable mappings.
+
+### Joystick emulation
+
+There are multiple DOS era joysticks available as mappings on the `Controls` screen in the RetroArch menu.
+
+`Gravis GamePad (1 D-Pad, 4 Buttons)`, `Basic joystick (2 Axes, 2 Buttons)`, `ThrustMaster Flight Stick (3 axes, 4 buttons, 1 hat)` and `Control both DOS joysticks (4 axes, 4 buttons)`.
+
+These can be assigned to any port and the button layout can be remapped as with any other device type.
+
+### On-screen keyboard
+
+![DOSBox Pure On-Screen Keyboard](https://github.com/schellingb/dosbox-pure/blob/main/images/onscreenkeyboard.png)
+
+By pressing L3 on the gamepad (usually by pushing in the left analog stick) the on-screen keyboard will open. The cursor can be controlled with the controller (or mouse or keyboard) and L2/R2 will speed up or slow down the move speed.
+
+!!!tip
+	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
+
+If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
+
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Note, the button can't be remapped (at present?) when using `Custom Keyboard Bindings`. cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25)
+
+## Joypad (RetroPad)
 !!!tip
 	There should be a run-down here of how the DOSBox Pure-specific features are mapped, e.g. the on-screen keyboard or the button combos to do things like force-open the start menu. Also, perhaps a quick guide to remapping. I noticed that only the custom mapping feature (cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25) and [bug #14](https://github.com/schellingb/dosbox-pure/issues/14)) allows mapping of any keyboard key to any button, while it doesn't allow mapping the on-screen keyboard to a button. The others, like "Generic Keyboard Mapping", do allow mapping the on-screen keyboard, but they don't offer the full range of keyboard keys. For instance, in Generic Mapping, a user wouldn't be able to map the tab key to a controller button; they can only shuffle around the pre-defined keys.
 
