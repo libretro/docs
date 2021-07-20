@@ -360,7 +360,77 @@ If the cursor is moved above the middle of the screen, the keyboard will move to
 | Home/End                                | ![](../image/retropad/retro_right_stick.png) X |
 | PgUp/PgDn                               | ![](../image/retropad/retro_right_stick.png) Y |
 
-Above are the default keyboard to RetroPad mappings. Note that by using the Quick Menu, you can choose from various presets in the Controls > Port # Controls section.
+| Input descriptors for Keyboard - Port 2 | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| 8                                       | ![](../image/retropad/retro_dpad_up.png)       |
+| 2                                       | ![](../image/retropad/retro_dpad_down.png)     |
+| 4                                       | ![](../image/retropad/retro_dpad_left.png)     |
+| 6                                       | ![](../image/retropad/retro_dpad_right.png)    |
+| Period                                  | ![](../image/retropad/retro_select.png)        |
+| Enter                                   | ![](../image/retropad/retro_start.png)         |
+| 5                                       | ![](../image/retropad/retro_x.png)             |
+| 1                                       | ![](../image/retropad/retro_y.png)             |
+| 0                                       | ![](../image/retropad/retro_b.png)             |
+| 3                                       | ![](../image/retropad/retro_a.png)             |
+| 7                                       | ![](../image/retropad/retro_l1.png)            |
+| 9                                       | ![](../image/retropad/retro_r1.png)            |
+| Minus                                   | ![](../image/retropad/retro_l2.png)            |
+| Plus                                    | ![](../image/retropad/retro_r2.png)            |
+| Divide                                  | ![](../image/retropad/retro_l3.png)            |
+| Multiply                                | ![](../image/retropad/retro_r3.png)            |
+| 4/6                                     | ![](../image/retropad/retro_left_stick.png) X  |
+| 8/2                                     | ![](../image/retropad/retro_left_stick.png) Y  |
+| Minus/Plus                              | ![](../image/retropad/retro_right_stick.png) X |
+| Divide/Multiply                         | ![](../image/retropad/retro_right_stick.png) Y |
+
+| Input descriptors for Keyboard - Port 3 | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| Q                                       | ![](../image/retropad/retro_dpad_up.png)       |
+| A                                       | ![](../image/retropad/retro_dpad_down.png)     |
+| Z                                       | ![](../image/retropad/retro_dpad_left.png)     |
+| X                                       | ![](../image/retropad/retro_dpad_right.png)    |
+| G                                       | ![](../image/retropad/retro_select.png)        |
+| H                                       | ![](../image/retropad/retro_start.png)         |
+| D                                       | ![](../image/retropad/retro_x.png)             |
+| F                                       | ![](../image/retropad/retro_y.png)             |
+| C                                       | ![](../image/retropad/retro_b.png)             |
+| S                                       | ![](../image/retropad/retro_a.png)             |
+| W                                       | ![](../image/retropad/retro_l1.png)            |
+| E                                       | ![](../image/retropad/retro_r1.png)            |
+| R                                       | ![](../image/retropad/retro_l2.png)            |
+| T                                       | ![](../image/retropad/retro_r2.png)            |
+| V                                       | ![](../image/retropad/retro_l3.png)            |
+| B                                       | ![](../image/retropad/retro_r3.png)            |
+| Z/X                                     | ![](../image/retropad/retro_left_stick.png) X  |
+| Q/A                                     | ![](../image/retropad/retro_left_stick.png) Y  |
+| J/L                                     | ![](../image/retropad/retro_right_stick.png) X |
+| I/K                                     | ![](../image/retropad/retro_right_stick.png) Y |
+
+| Input descriptors for Keyboard - Port 4 | RetroPad Inputs                                |
+|-----------------------------------------|------------------------------------------------|
+| Backspace                               | ![](../image/retropad/retro_dpad_up.png)       |
+| Backslash                               | ![](../image/retropad/retro_dpad_down.png)     |
+| Semicolon                               | ![](../image/retropad/retro_dpad_left.png)     |
+| Quote                                   | ![](../image/retropad/retro_dpad_right.png)    |
+| O                                       | ![](../image/retropad/retro_select.png)        |
+| P                                       | ![](../image/retropad/retro_start.png)         |
+| Slash                                   | ![](../image/retropad/retro_x.png)             |
+| Right Shift                             | ![](../image/retropad/retro_y.png)             |
+| Right Ctrl                              | ![](../image/retropad/retro_b.png)             |
+| Right Alt                               | ![](../image/retropad/retro_a.png)             |
+| Left Bracket                            | ![](../image/retropad/retro_l1.png)            |
+| Right Bracket                           | ![](../image/retropad/retro_r1.png)            |
+| Comma                                   | ![](../image/retropad/retro_l2.png)            |
+| Period                                  | ![](../image/retropad/retro_r2.png)            |
+| Minus                                   | ![](../image/retropad/retro_l3.png)            |
+| Equals                                  | ![](../image/retropad/retro_r3.png)            |
+| Semicolon/Quote                         | ![](../image/retropad/retro_left_stick.png) X  |
+| Backspace/Backslash                     | ![](../image/retropad/retro_left_stick.png) Y  |
+| Left/Right Bracket                      | ![](../image/retropad/retro_right_stick.png) X |
+| Minus/Equals                            | ![](../image/retropad/retro_right_stick.png) Y |
+
+!!!tip
+	Above are the default keyboard to RetroPad mappings for all 4 ports. Note that by using the Quick Menu, you can choose from various presets in the `Controls` > `Port # Controls` section.
 
 | Input descriptors for Emulated mouse | RetroPad Inputs                                |
 |--------------------------------------|------------------------------------------------|
