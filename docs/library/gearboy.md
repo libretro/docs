@@ -12,11 +12,12 @@ Gearboy is an open source, cross-platform, Nintendo Game Boy (DMG) / Game Boy Co
 - Battery powered RAM save support.
 - Save states.
 - Game Genie and GameShark cheat support.
+- Bootrom (BIOS) support.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...) and QNX.
 
 The Gearboy core has been authored by:
 
-- Ignacio Sanchez (drhelius)
+- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearboy core is licensed under:
 
@@ -26,7 +27,19 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Not required.
+Gearboy does not require bootrom (BIOS) files to work but they can be used optionally.
+
+When the bootrom is enabled it will execute as in original hardware, causing invalid roms to lock or forcing hardware like GB Pocket or GBA, depending on the bootrom file.
+
+Required or optional firmware files go in the frontend's system directory.
+
+!!! attention
+	 If you’d like to use any bootrom, you can place the following files in RetroArch's system directory. Then, you need to enable [DMG Bootrom](#core-options) and/or [Game Boy Color Bootrom](#core-options) core options for these bootrom files to be used.
+
+| Filename     | Description                        | md5sum                           |
+|:------------:|:----------------------------------:|:--------------------------------:|
+| dmg_boot.bin | Game Boy boot ROM - Optional       | 32fbbd84168d3482956eb3c5051637f5 |
+| cgb_boot.bin | Game Boy Color boot ROM - Optional | dbfce9db9deaa2567f6a84fde55f9680 |
 
 ## Extensions
 
@@ -106,21 +119,41 @@ The Gearboy core saves/loads to/from these directories.
 
 ## Core options
 
-The Gearboy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The Gearboy core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Emulated Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
+- **Game Boy Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
 
 	Select which hardware/model is emulated.
 
-    - Auto selects the best hardware based in the rom.
-    - Game Boy DMG forces original Game Boy hardware.
-	- Game Boy Advance enables Game Boy Advance hardware.
+    - *Auto* selects the best hardware based in the rom.
+    - *Game Boy DMG* forces original Game Boy hardware.
+    - *Game Boy Advance* enables Game Boy Advance hardware.
 
-- **Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
+- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart)
+
+	Select which Memory Bank Controller (MBC or mapper) is emulated.
+
+    - *Auto* selects the best MBC based in the rom.
+    - *ROM Only* forces no MBC.
+    - *MBC 1* forces MBC 1.
+    - *MBC 2* forces MBC 2.
+    - *MBC 3* forces MBC 3 + RTC.
+    - *MBC 5* forces MBC 5.
+    - *MBC 1 Multicart* forces MBC 1 Multicart.
+
+- **DMG Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
 
 	Select a color palette for Game Boy DMG games.
+
+- **DMG Bootrom** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
+
+	This option will enable/disable bootrom for Game Boy DMG model. For this to work, the `dmg_boot.bin` file must exist in the Retro Arch's system directory.
+
+- **Game Boy Color Bootrom** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
+
+	This option will enable/disable bootrom for Game Boy Color model. For this to work, the `cgb_boot.bin` file must exist in the Retro Arch's system directory.
 
 - **Allow Up+Down / Left+Right** [gearboy_up_down_allowed] (**Disabled**|Enabled)
 
