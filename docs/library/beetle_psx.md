@@ -34,12 +34,14 @@ Required or optional firmware files go in the frontend's system directory.
 | scph5501.bin    | PS1 US BIOS - Required for US games   | 490f666e1afb15b7362b406ed1cea246 |
 | scph5502.bin    | PS1 EU BIOS - Required for EU games   | 32736f17079d0b2b7024407c39bd3050 |
 | PSXONPSP660.bin | PSP PS1 BIOS - Works with all regions | c53ca5908936d412331790f4426c6c33 |
+| ps1_rom.bin     | PS3 PS1 BIOS - Works with all regions | 81bbe60ba7a3d1cea1d48c14cbcc647b |
 
 As a replacement for any of the BIOS files mentioned above, it is also possible
-to use the `PSXONPSP660.bin` BIOS. This BIOS comes from the PSP, is region-free
-and can sometimes offer better performance. For Beetle PSX to recognize this
-BIOS, it must be renamed to any of the names mentioned above (such as
-`scph5501.bin` for running US games).
+to use either the `PSXONPSP660.bin` or `ps1_rom.bin` BIOS.  The `PSXONPSP660.bin` BIOS
+comes from the PSP, and the `ps1_rom.bin` BIOS comes from the PS3, both are region-free
+and can sometimes offer better performance. For Beetle PSX to recognize either of these
+BIOS, it must be renamed to any of the first three names mentioned in the table above
+(such as `scph5501.bin` for running US games).
 
 ## Extensions
 
