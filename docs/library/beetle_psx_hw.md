@@ -33,11 +33,18 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Required or optional firmware files go in the frontend's system directory.
 
-|   Filename   | Description                         |              md5sum              |
-|:------------:|:-----------------------------------:|:--------------------------------:|
-| scph5500.bin | PS1 JP BIOS - Required for JP games | 8dd7d5296a650fac7319bce665a6a53c |
-| scph5501.bin | PS1 US BIOS - Required for US games | 490f666e1afb15b7362b406ed1cea246 |
-| scph5502.bin | PS1 EU BIOS - Required for EU games | 32736f17079d0b2b7024407c39bd3050 |
+|   Filename      | Description                           |              md5sum              |
+|:---------------:|:-------------------------------------:|:--------------------------------:|
+| scph5500.bin    | PS1 JP BIOS - Required for JP games   | 8dd7d5296a650fac7319bce665a6a53c |
+| scph5501.bin    | PS1 US BIOS - Required for US games   | 490f666e1afb15b7362b406ed1cea246 |
+| scph5502.bin    | PS1 EU BIOS - Required for EU games   | 32736f17079d0b2b7024407c39bd3050 |
+| PSXONPSP660.bin | PSP PS1 BIOS - Works with all regions | c53ca5908936d412331790f4426c6c33 |
+
+As a replacement for any of the BIOS files mentioned above, it is also possible
+to use the `PSXONPSP660.bin` BIOS. This BIOS comes from the PSP, is region-free
+and can sometimes offer better performance. For Beetle PSX to recognize this
+BIOS, it must be renamed to any of the names mentioned above (such as
+`scph5501.bin` for running US games).
 
 ## Extensions
 
