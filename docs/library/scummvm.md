@@ -128,7 +128,7 @@ Some games only contain music in the form of MIDI data. By default, ScummVM will
 
 - Press the 'SoundFont:' button and navigate to the RetroArch `system` directory. Enter the `scummvm/extra/` folder. (NB: If the steps of this guide have been followed in order, the `scummvm/extra/` folder will be selected automatically upon pressing the 'SoundFont:' button)
 
-- Select the file `Roland_SC-55.sf2` and press the 'Choose' button. Another good soundfont is the [FatBoy SoundFont](https://fatboy.site/), you can download that and place it in the same folder (`scummvm/extra/`) to be able to select it.
+- Select the file `Roland_SC-55.sf2` and press the 'Choose' button. Another good soundfont is the [FatBoy SoundFont](https://brandartery.com/coolstuff/FatBoy-v0.790.zip), you can download that and place it in the same folder (`scummvm/extra/`) to be able to select it.
 
 - Tick the 'Mixed AdLib/MIDI mode' checkbox.
 
@@ -580,7 +580,7 @@ To run these Westwood games, you need a special file called, `kyra.dat`. To obta
 - Navigate to ScummVM's [GitHub page for kyra.dat](https://github.com/scummvm/scummvm/blob/master/dists/engine-data/kyra.dat)
 - On the button that says "master" at the top left, select the branch that matches your version number:
 
-![](https://www.brandartery.com/coolstuff/scummvm-kyradat-branch-selection.png)
+![](../image/core/scummvm/scummvm_kyradat_branch_selection.png)
 
 - Download that kyra.dat file and place it in the `scummvm/extra/` folder.
 
