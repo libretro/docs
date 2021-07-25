@@ -580,7 +580,7 @@ To run these Westwood games, you need a special file called, `kyra.dat`. To obta
 - Navigate to ScummVM's [GitHub page for kyra.dat](https://github.com/scummvm/scummvm/blob/master/dists/engine-data/kyra.dat)
 - On the button that says "master" at the top left, select the branch that matches your version number:
 
-![](https://www.brandartery.com/coolstuff/scummvm-kyradat-branch-selection.png)
+![](../image/core/scummvm/scummvm_kyradat_branch_selection.png)
 
 - Download that kyra.dat file and place it in the `scummvm/extra/` folder.
 
