@@ -2,22 +2,22 @@
 
 ## Background
 
-Gearsystem is an open source, multi-platform, Sega Master System / Game Gear / SG-1000 emulator written in C++.
+Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
 
-- Highly accurate Z80 core, including undocumented opcodes and behaviour like R and MEMPTR registers.
-- Multi-Mapper support: SEGA, Codemasters, SG-1000 and ROM only cartridges.
+- Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
+- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX, SG-1000.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
-- Internal database for rom detection
-- Highly accurate VDP emulation including timing and SMS2 only 224 mode support.
-- Audio emulation using SDL Audio and Sms_Snd_Emu library.
+- Accurate VDP emulation including timing and Master System 2 only 224 video mode support.
+- Internal database for rom detection.
+- Sound emulation using SDL Audio and Sms_Snd_Emu library.
 - Battery powered RAM save support.
 - Save states.
 - Game Genie and Pro Action Replay cheat support.
-- Runs on Windows, Linux, Mac OS X, Raspberry Pi, iOS and as a libretro core (RetroArch).
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux and QNX.
 
 The Gearsystem core has been authored by
 
-- Ignacio Sanchez
+- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearsystem core is licensed under
 
@@ -27,7 +27,19 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Not required.
+Gearsystem does not require BIOS (bootrom) files to work but they can be used optionally.
+
+When the BIOS is enabled it will execute as in original hardware, causing invalid roms to lock or preventing them to boot, depending on the BIOS file and rom region and system. If you experience issues disable the BIOS.
+
+Required or optional firmware files go in the frontend's system directory.
+
+!!! attention
+	 If you’d like to use any BIOS, you can place the following files in RetroArch's system directory. Then, you need to enable [Master System BIOS](#core-options) and/or [Game Gear BIOS](#core-options) core options for these BIOS files to be used.
+
+| Filename     | Description                        | md5sum                           |
+|:------------:|:----------------------------------:|:--------------------------------:|
+| bios.sms     | Master System BIOS - Optional      | 840481177270d5642a14ca71ee72844c |
+| bios.gg      | Game Gear BIOS - Optional          | 672e104c3be3a238301aceffc3b23fd6 |
 
 ## Extensions
 
@@ -36,6 +48,7 @@ Content that can be loaded by the Gearsystem core have the following file extens
 - .sms
 - .gg
 - .sg
+- .mv
 - .bin
 - .rom
 
@@ -104,6 +117,67 @@ The Gearsystem core saves/loads to/from these directories.
 - The Gearsystem core's max width is 256 for Master System games and 160 for Game Gear games
 - The Gearsystem core's max height is 224 for Master System games and 144 for Game Gear games
 - The Gearsystem core's core provided aspect ratio is 4:3 for Master System / SG-1000 games and 10:9 for Game Gear games
+
+## Core options
+
+The Gearsystem core has the following options that can be tweaked from the core options menu. The default setting is bolded.
+
+Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+- **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear|SG-1000 / Multivision)
+
+	Select which hardware/model is emulated.
+
+    - *Auto* selects the best hardware based in the rom.
+    - *Master System / Mark III* forces original Master System / Mark III hardware.
+    - *Game Gear* forces Game Gear hardware.
+    - *SG-1000 / Multivision* forces SG-1000 / Multivision hardware.
+
+- **Region (restart)** [gearsystem_region] (**Auto**|Master System Japan|Master System Export|Game Gear Japan|Game Gear Export|Game Gear International)
+
+	Select which region is emulated.
+
+    - *Auto* selects the best region based in the rom.
+    - *Master System Japan* forces Master System Japan region.
+    - *Master System Export* forces Master System Export region.
+    - *Game Gear Japan* forces Game Gear Japan region.
+    - *Game Gear Export* forces Game Gear Export region.
+    - *Game Gear International* forces Game Gear International region.
+
+- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|SG-1000)
+
+	Select which mapper (memory bank controller) is emulated.
+
+    - *Auto* selects the best mapper based in the rom.
+    - *ROM* forces no mapper.
+    - *SEGA* forces SEGA mapper.
+    - *Codemasters* forces Codemasters mapper.
+    - *Korean* forces Korean mapper.
+    - *SG-1000* forces SG-1000 mapper.
+
+- **Refresh Rate (restart)** [gearsystem_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
+
+	Select which refresh rate will be used in emulation.
+
+    - *Auto* selects the best refresh rate based in the rom.
+    - *NTSC (60 Hz)* forces 60 Hz.
+    - *PAL (50 Hz)* forces 50 Hz.
+
+- **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
+
+	This option will enable/disable BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in the Retro Arch's system directory.
+
+- **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
+
+	This option will enable/disable BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the Retro Arch's system directory.
+
+- **Allow Up+Down / Left+Right** [gearsystem_up_down_allowed] (**Disabled**|Enabled)
+
+	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+
+	This may cause movement based glitches to occur in certain games.
+
+	It's best to keep this core option disabled.
 
 ### Joypad
 
