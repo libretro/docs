@@ -171,6 +171,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	This option will enable/disable BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the Retro Arch's system directory.
 
+- **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
+
+	For games with 3D glasses support this option will let you choose to display only left or right eye.
+
+    - *Both Eyes / OFF* is required for games with NO 3D support or if you want to display both eyes in 3D games.
+    - *Left Eye* displays the left eye only.
+    - *Right Eye* displays the right eye only.
+
 - **Allow Up+Down / Left+Right** [gearsystem_up_down_allowed] (**Disabled**|Enabled)
 
 	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
