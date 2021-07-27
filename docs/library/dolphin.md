@@ -1,5 +1,7 @@
 # Nintendo Gamecube/Wii (Dolphin)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ayv-zf04HsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 A Nintendo Gamecube/Wii emulator for Android, Windows, Mac and Linux, written in C++.
