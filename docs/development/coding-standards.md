@@ -117,9 +117,16 @@ typedef struct input_driver_state
 | Abbreviation  | Meaning        |
 | ------------- | -------------- |
 | ra, rarch     | RetroArch      |
+| av            | Audio-Visual   |
+| cb            | Callback       |
 | ctx           | Context        |
+| gfx           | Graphics       |
+| hw            | Hardware       |
 | idx           | Index          |
 | ptr           | Pointer        |
+| st            | State          |
+| sw            | Software       |
+| ui            | User interface |
 
 
 ### vim configuration for Libretro style
