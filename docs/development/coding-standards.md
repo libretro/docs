@@ -15,17 +15,28 @@ To maintain C89 compatibility, declare all local variables at the beginning of t
 #### Comments
 To maintain C89 compatibility, comments should be written in legacy using `/*` at the beginning and `*/` and the end.
 
-Each new line of a multiline comment should begin with a space and an asterisk:
+Sometimes it is useful to incorporate a lengthy comment in source. For example:
+ - providing specifications for a function preceding its declaration
+ - to explain a complex or unintuitive algorithm
+ - to explain the history or special circumstances of a section of code
+ - 
+
+Comments use a maximum column width of 80 characters, and each new line of a multiline comment should begin with a space and an asterisk:
 
 ```c
-/* Sometimes it is useful to incorporate a lengthy comment in source.
- * For example:
- *    - providing specifications for a function preceding its declaration
- *    - to explain a complex or unintuitive algorithm
- *    - to explain the history or special circumstances of a section of code
- */
+/**
+  * Retrieves the sensor state associated with the provided port and ID. This
+  * function pointer may be set to NULL if retreiving sensor state is not
+  * supported.
+  * 
+  * @param data  The input state struct
+  * @param port
+  * @param id    Sensor ID
+  * 
+  * @return The current state associated with the port and ID as a float
+ **/
+float (*get_sensor_input)(void *data, unsigned port, unsigned id);
 ```
-Comment headers for functions should use a maximum column width of 80 characters.
 
 ### Indentation
 
@@ -70,8 +81,6 @@ if (seq == 1157460427127406720ULL)
    content_info.argv                   = NULL;
    content_info.args                   = NULL;
    content_info.environ_get            = NULL;
-
-   ...
 }
 ```
 
@@ -89,6 +98,29 @@ if (recording_driver_get_data_ptr())
    command_event(CMD_EVENT_RECORD_INIT, NULL);
 }
 ```
+
+### Naming conventions
+
+#### naming typedefs
+typedefs should have the suffix `_t`. For example, the case of using `typedef` with a `struct`:
+
+```c
+typedef struct input_driver_state
+{
+   input_driver_t *current_driver;
+   void *current_input_data;
+} input_driver_state_t;
+```
+
+#### Common RetroArch source abbreviations
+
+| Abbreviation  | Meaning        |
+| ------------- | -------------- |
+| ra, rarch     | RetroArch      |
+| ctx           | Context        |
+| idx           | Index          |
+| ptr           | Pointer        |
+
 
 ### vim configuration for Libretro style
 
