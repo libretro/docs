@@ -35,16 +35,7 @@ Close MSYS2 shell and start it again, and:
 pacman --noconfirm -Su
 ```
 
-Restart MSYS2 once again. In some cases you may find out that the shell starting scripts don't work. If so check the following Note.
-
-!!! Warning
-    If you are updating from a very old MSYS2 installation you may need to update your shortcuts to reflect changes in MSYS2's subsystem. If the shell no longer works properly you need to update your shortcuts with the following targets:
-
-    - MinGW-w64 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw64`
-    - MinGW-w32 Shell: `MSYS2_ROOT\msys2_shell.cmd -mingw32`
-    - MSYS2 Shell: `MSYS2_ROOT\msys2_shell.cmd -msys`
-
-Now we can start installing the packages we actually need.
+Restart MSYS2 once again. Now we can start installing the packages we actually need.
 
 For 32-bit builds:
 
@@ -186,6 +177,12 @@ Configure paths for 64-bit builds:
 
 ```bash
 export PATH=/mingw64/lib/ccache/bin/:$PATH
+```
+
+Build with both `ccache` and the `-j5` flag to specify five concurrent tasks:
+
+```bash
+ccache make -j5
 ```
 
 !!! tip
