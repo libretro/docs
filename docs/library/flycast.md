@@ -65,7 +65,6 @@ Content that can be loaded by the flycast core have the following file extension
 - .chd
 - .cue
 - .bin
-- .iso
 - .elf
 - .zip
 - .7z
