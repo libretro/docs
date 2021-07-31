@@ -23,7 +23,7 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
 
 ### `skeletor` sample core
 
-RetroArch contributor **bparker06** created [`skeletor`](https://github.com/bparker06/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
+RetroArch contributor **bparker06** created [`skeletor`](https://github.com/libretro/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
 
 
 ### Vectrexia codebase and development log
