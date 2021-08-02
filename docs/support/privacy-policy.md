@@ -9,3 +9,9 @@ On some of our websites, third party vendors, including Google, use cookies to s
 Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit(s) to our site(s) and/or other sites on the Internet.
 
 Opting out: Users can set preferences for how Google advertises to you using the Google Ad Settings page. Alternatively, you can opt out by visiting the Network Advertising initiative opt out page or permanently using the Google Analytics Opt Out Browser add on.
+
+# Google Analytics
+
+This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.
+
+For more information on Google cookies, see the official [Google page](https://policies.google.com/technologies/cookies?hl=en-US).
