@@ -11,6 +11,7 @@
 * `intl/msg_hash_us.h`
 * `menu/menu_setting.c`
 * `griffin/griffin.c`
+* `retroarch.c`
 
 ## Instructions
 
@@ -68,6 +69,11 @@
 26. Open `griffin/griffin.c`
 27. Add a `#include "../intl/msg_hash_xx.c"` line below the existing, similar
     ones for other languages.
+28. Open `retroarch.c`
+29. Add you language for the first startup in `enum retro_language rarch_get_language_from_iso(const char *iso639)`
+     ```c
+     {"XX", RETRO_LANGUAGE_XXXXX},
+     ```
 
 ### Encoding of translation files
 
