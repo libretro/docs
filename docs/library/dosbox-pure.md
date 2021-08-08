@@ -44,10 +44,9 @@ RetroArch database(s) that are associated with the DOSBox core:
 
 ## Features
 !!!tip
-	DOSBox Pure has its own [trailer on YouTube](https://www.youtube.com/watch?v=rHkIz4-SewI)
+	DOSBox Pure has its own [trailer on YouTube](https://www.youtube.com/watch?v=rHkIz4-SewI).
 
 Frontend-level settings or features that the DOSBox Pure core respects.
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Is this correct? Should we expand this table?)
 
 | Feature           | Supported |
 |-------------------|:---------:|
