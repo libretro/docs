@@ -8,7 +8,8 @@ DOSBox Pure is fork of the multiplatform MS-DOS emulator, DOSBox. It was built b
 
 The DOSBox-Pure core has been authored by
 
-- Bernhard Schelling
+- DOSBox Team
+- Psyraven
 
 The DOSBox core is licensed under
 
@@ -22,16 +23,19 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Content that can be loaded by the DOSBox Pure core has the following file extensions:
 
+- .zip
+- .dosz (alternative extension to .ZIP)
 - .exe
 - .com
 - .bat
-- .conf
 - .iso
 - .cue
+- .ins
 - .img
 - .ima
 - .vhd
-- .zip
+- .m3u
+- .m3u8
 
 RetroArch database(s) that are associated with the DOSBox core:
 
@@ -39,7 +43,8 @@ RetroArch database(s) that are associated with the DOSBox core:
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Others?)
 
 ## Features
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (We should embed the [YouTube video](https://www.youtube.com/watch?v=rHkIz4-SewI) here!)
+!!!tip
+	DOSBox Pure has its own [trailer on YouTube](https://www.youtube.com/watch?v=rHkIz4-SewI)
 
 Frontend-level settings or features that the DOSBox Pure core respects.
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Is this correct? Should we expand this table?)
@@ -54,7 +59,7 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -105,13 +110,13 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 
 ## Geometry and timing
 
-- The DOSBox Pure core's core provided FPS is 60.0
-- The DOSBox Pure core's core provided sample rate is (Rate)
+- The DOSBox Pure core's core provided FPS is dependent on the DOS application
+- The DOSBox Pure core's core provided sample rate is dependent on the 'Audio > Audio Sample Rate' core option
 - The DOSBox Pure core's base width is 320
 - The DOSBox Pure core's base height is 200
-- The DOSBox Pure core's max width is 1024
-- The DOSBox Pure core's max height is 768
-- The DOSBox Pure core's core provided aspect ratio is 4/3
+- The DOSBox Pure core's max width is 1280
+- The DOSBox Pure core's max height is 1024
+- The DOSBox Pure core's core provided aspect ratio is dependent on the DOS application and the 'Video > Aspect Ratio Correction' core option
 
 ## Loading content
 
@@ -156,6 +161,15 @@ See screenshot in "Start menu with auto start" section above for reference.
 If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
 
 ## Tips, Q&A, Troubleshooting
+
+### Smooth scrolling
+
+You might have trouble getting stutter-free scrolling in some games (cf. https://github.com/schellingb/dosbox-pure/issues/128). There are a number of things you can try to remedy this:
+
+- In RetroArch's settings, navigate to `Video` and set `Threaded Video` to OFF.
+- Try `Video` > `Output` > `Set Display-Reported Refresh Rate`.
+- Try setting `Video` > `Synchronization` > `Vertical Sync` to ON.
+- If using a variable refresh rate screen (G-Sync, FreeSync, HDMI 2.1 VRR): navigate to `Video` > `Synchronization` and set `Sync to Exact Content Framerate (G-Sync, FreeSync)` to ON.
 
 ### Playing with keyboard and mouse
 
