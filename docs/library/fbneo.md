@@ -65,6 +65,8 @@ The following "device type" also exist, but they won't be compatible with every 
 
 ## Emulating consoles and computers
 
+It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name (the instructions to build those romsets don't differ from arcade's).
+
 You can use specific folder's name for detection, it's the recommended method if you are using RetroArch playlists or device not compatible with subsystems (android and consoles) :
 * CBS ColecoVision : `coleco` | `colecovision`
 * Fairchild ChannelF : `chf` | `channelf`
