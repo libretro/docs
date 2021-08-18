@@ -1,20 +1,23 @@
 # Getting started: Input and controls
 
-## RetroPad Concept
-RetroArch controls map real-world controller buttons to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES gamepad plus four shoulder buttons and dual analog sticks like a Sony DualShock.
+## Game controllers
+RetroArch is intended to be easily controlled with a controller. RetroArch uses the overall term **controller** which encompasses all input hardware that could be described by the terms **joypad**, **gamepad**, **joystick**, and others.
+
+!!! info "Map controls by controller, core, or game"
+    RetroArch allows users to configure a controller once for many cores instead of having to configure each core individually. RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
+
+### What is a RetroPad?
+RetroArch controls map real-world controller inputs to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES gamepad plus four shoulder buttons and dual analog sticks like a Sony DualShock.
 
 You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
 
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
-## Gamepad setup
-RetroArch is intended to be easily controlled with a gamepad. RetroArch and libretro provide ability to configure a gamepad once for many cores instead of having to configure each core individually. However, RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
-
-### Gamepad autoconfiguration
-Many gamepads should work out of the box via the RetroArch autoconfiguration profile database. If the gamepad can be autoconfigured the OSD will inform you of the autoconfiguration event.
+### Controller autoconfiguration
+Many controllers should work out of the box via the RetroArch autoconfiguration profile database. If the controller  can be autoconfigured the OSD will inform you of the autoconfiguration event.
 
 !!! info "Manual RetroPad binding"
-    Not all gamepads have autoconfigs. If that is the case for your gamepad, please refer to the **Manual RetroPad binding** section below.
+    Not all controllers have autoconfigs. If that is the case for your controller, please refer to the **Manual RetroPad binding** section below.
 
 ## Keyboard controls
 RetroArch provides a remappable set of bindings between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys. Please refer to **Default RetroArch keyboard bindings** in this doc as a reference.
