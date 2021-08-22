@@ -255,7 +255,7 @@ The current standalone development version is reported to be compatible with app
 
 ## Libretro PS2 cores
 
-- Play!
+- [PlayStation 2 (Play!)](play.md)
 
 
 [^2]: Overscan cropping available via Core Options instead of frontend settings

@@ -208,6 +208,7 @@ nav:
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
         - 'Sony - PlayStation 2 (PCSX2)': 'library/pcsx2.md'
+        - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
