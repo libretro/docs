@@ -27,6 +27,7 @@ Name | Author(s) |  Description
 [nanoarch](https://github.com/heuripedes/nanoarch) | heuripedes | Small frontend providing video, audio and basic input features to run non-libretro-GL cores. Built on GLFW.
 [New Retro Arcade](http://digitalcybercherries.com/) | Digital Cyber Cherries | |
 [noarch](https://github.com/robloach/noarch) | RobLoach | Minimalist frontend which does not provide video, audio or even basic input. It loads a libretro core, runs an iteration, and then exits. Good for unit testing.
+[picoarch](https://git.crowdedwood.com/picoarch/about) | neonloop | picoarch uses libpicofe and SDL to create a small frontend to libretro cores. It's designed for small (320x240 2.0-2.4") screen, low-powered devices like the Trimui Model S (PowKiddy A66).
 [Phoenix](http://phoenix.vg/) | Phoenix | Upcoming libretro frontend written with the Qt5 cross-platform application framework.
 [raylib-libretro](https://github.com/RobLoach/raylib-libretro) | RobLoach |  Libretro frontend using raylib.
 [retro_frontend](https://github.com/ehmry/genode-libretro) | Ehmry  | Frontend for the [Genode](http://genode.org) operating system framework. Following the Genode philosophy this frontend strives to be a minimal implemention that is extensible via the abstract OS services provided to it.
