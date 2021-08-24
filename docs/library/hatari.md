@@ -112,7 +112,7 @@ I was excited to find out Lakka has an Atari ST core, but then disappointed that
 bAutoInsertDiskB = TRUE
 FastFloppy = TRUE
 nWriteProtection = 0
-szDiskAFileName = /storage/roms/Atari\ -\ ST//game.st
+szDiskAFileName = /storage/roms/Atari\ -\ ST/game.st
 szDiskBFileName =
 szDiskImageDirectory = /storage/roms/Atari\ -\ ST/
 szDiskAZipPath =
