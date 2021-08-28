@@ -346,6 +346,7 @@ nav:
       - 'Core-Specific Docs':
         - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
+        - 'Sony - PlayStation2 (PCSX2)': 'development/cores/core-specific/pcsx2.md'
         - 'MAME (0.181-current)': 'development/cores/core-specific/mame.md'
         - 'MAME 2016': 'development/cores/core-specific/mame-2016.md'
         - 'MAME 2003-Plus': 'development/cores/core-specific/mame-2003-plus.md'
