@@ -23,5 +23,5 @@ Enter the following commands (from the Dolphin source directory):
 
     mkdir build
     cd build
-    cmake .. -DLIBRETRO=ON -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 15 2019 Win64"
+    cmake .. -DLIBRETRO=ON -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 17 2019 Win64"
     cmake --build . --target pcsx2_libretro --config Release
