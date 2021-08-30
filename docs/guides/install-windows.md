@@ -10,7 +10,7 @@ First decide if you want a stable release or a nightly.
 
 	The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
 
-	Stable release are [here](https://buildbot.libretro.com/stable), Simply click on the latest version, navigate to *Windows*, and then select the architecture of your computer.
+	Stable release are [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/windows/), and then select the architecture of your computer.
 
 === "Nightly"
 

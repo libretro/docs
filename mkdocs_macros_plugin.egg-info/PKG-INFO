@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mkdocs-macros-plugin
+Version: 0.5.0
+Summary: Unleash the power of MkDocs with macros and variables
+Home-page: https://github.com/fralau/mkdocs_macros_plugin
+Author: Laurent Franceschetti
+Author-email: info@settlenext.com
+License: MIT
+Description: # Libretro Docs
+        
+        WIP.
+        
+Keywords: mkdocs python markdown macros
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

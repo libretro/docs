@@ -18,7 +18,7 @@ There are multiple ways of downloading RetroArch for your 3DS or 2DS.
 
 ### Installation
 
-You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `nintendo/3ds` and download `RetroArch_3dsx.7z` or `RetroArch_cia.7z`.
+You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/nintendo/3ds/), and download `RetroArch_3dsx.7z` or `RetroArch_cia.7z`.
 
 For Nightlies [here](http://buildbot.libretro.com/nightly/nintendo/3ds/) - pick the latest version(based on date), and download `...RetroArch_3dsx.7z` or `...RetroArch_cia.7z`.
 

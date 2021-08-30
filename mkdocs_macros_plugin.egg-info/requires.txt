@@ -1,0 +1,7 @@
+mkdocs>=0.17
+jinja2
+termcolor
+pyyaml
+mkdocs-material
+python-dateutil
+mkdocs-macros-test

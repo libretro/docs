@@ -387,8 +387,6 @@ extra:
       link: https://facebook.com/libretro
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/libretro
-  unit:
-    version: 1.9.0
 
 theme:
   name: 'material'
@@ -407,6 +405,15 @@ theme:
     code: Roboto Mono
   logo: 'image/branding/invader.png'
   favicon: 'image/branding/invader.png'
+
+plugins:
+    - search
+    - macros
+
+extra:
+  unit:
+    stable: 1.9.8
+
 
 markdown_extensions:
   - admonition

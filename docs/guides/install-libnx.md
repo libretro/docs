@@ -12,7 +12,7 @@ There are multiple ways of downloading RetroArch for your Switch.
 
 ### Using the stable bundle (recommended)
 
-You can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `nintendo/switch/libnx` and download `RetroArch.7z`.
+You can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/nintendo/switch/libnx/RetroArch.7z).
 
 Just extract the archive to the root of your SD card to install or update your copy of RetroArch (overwrite any existing file).
 

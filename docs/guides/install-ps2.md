@@ -19,7 +19,7 @@ This is probably the most straightforward way to install RetroArch.
 !!! info
 	Nightly files will give you the latest developments. This is sometimes dangerous and sometimes innovative. We will use the Stable version and recommend it.
 
-You can download a bundle with **Stable** version of RetroArch, all the supported cores and all the assets by clicking [here](http://buildbot.libretro.com/stable/1.9.2/playstation/ps2/RetroArch.7z). You can download **Nightly** version of RetroArch by clicking [here](http://buildbot.libretro.com/nightly/playstation/ps2/RetroArch_elf.7z).
+You can download a bundle with **Stable** version of RetroArch, all the supported cores and all the assets by clicking [here](http://buildbot.libretro.com/stable/{{ unit.stable }}/playstation/ps2/RetroArch_elf.7z). You can download **Nightly** version of RetroArch by clicking [here](http://buildbot.libretro.com/nightly/playstation/ps2/RetroArch_elf.7z).
 
 ### Installing
 

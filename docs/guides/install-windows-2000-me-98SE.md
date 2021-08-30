@@ -10,7 +10,7 @@ There are multiple ways of downloading RetroArch for your Windows 2000 / ME / 98
 
 ## Downloading
 
-You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `windows-msvc2005` and download `RetroArch.7z` or `RetroArch-MSVC05-Win32-setup.exe`.
+You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/windows-msvc2005/x86/), and download `RetroArch.7z` or `RetroArch-MSVC05-Win32-setup.exe`.
 
 For Nightlies [here](http://buildbot.libretro.com/nightly/windows-msvc2005/x86/) - pick the latest version(based on date), and download `...RetroArch.7z` or `RetroArch-...-msvc2005-x86-setup.exe`.
 

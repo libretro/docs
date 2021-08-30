@@ -51,7 +51,7 @@ You can also download older builds using `https://fdroid.libretro.com/archive` a
 
 ## Download with Buildbot
 ___
-You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/) - pick the latest version, go to `android` and download `RetroArch.apk` or `RetroArch_aarch64.apk`.
+You can either choose `Nightlies` or `Stable` bundle, you can find a bundle with RetroArch, all the cores and all the assets [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/android/), and download `RetroArch.apk` or `RetroArch_aarch64.apk`.
 
 For Nightlies [here](https://buildbot.libretro.com/nightly/android/) - pick the latest version(based on date), and download `...RetroArch.apk` or `...RetroArch_aarch64.apk`.
 (*where ... represents the date*)

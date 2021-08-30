@@ -3,7 +3,7 @@
 The following is a non-developer guide to install RetroArch on non-jailbroken iOS or tvOS devices. We're going to try to improve the process and possibly include the iOS cores in a download, but until then, here is a way to build RetroArch to get it running on your iPhone, iPod Touch, iPad, or Apple TV.
 
 !!! note
-    If you just want to sideload from an IPA file, then you can find a working build (version 1.9.0) [here for tvOS](http://buildbot.libretro.com/stable/1.9.0/apple/tvos/RetroArch-tvOS.ipa) and [here for iOS](http://buildbot.libretro.com/stable/1.9.0/apple/ios/RetroArch.ipa)
+    If you just want to sideload from an IPA file, then you can find a working build (version 1.9.0) [here for tvOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/tvos/RetroArch-tvOS.ipa) and [here for iOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios/RetroArch.ipa)
 
 ## Building From Source using Xcode
 
