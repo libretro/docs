@@ -6,13 +6,21 @@
 
 ## How to compile (for Windows)
 
+Enter the following commands (from the Flycast source directory):
+
 ```
+mkdir build
+cd build
 cmake -DLIBRETRO=ON -G "MinGW Makefiles"
 ```
 
 ## How to compile (for Linux)
 
+Enter the following commands (from the Flycast source directory):
+
 ```
+mkdir build
+cd build
 cmake -DLIBRETRO=ON -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE
 ```
 
