@@ -376,9 +376,6 @@ extra:
   i18n:
     prev: 'Previous'
     next: 'Next'
-  palette:
-    primary: 'blue'
-    accent:  'blue'
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/libretro
