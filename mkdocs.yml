@@ -370,9 +370,6 @@ nav:
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
-  analytics:
-    provider: google
-    property: UA-170150040-2
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -468,3 +465,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+google_analytics:
+  - 'UA-170150040-2'
+  - 'auto'
