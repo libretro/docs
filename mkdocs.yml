@@ -370,6 +370,9 @@ nav:
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
+  analytics:
+    provider: google
+    property: UA-170150040-2
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
@@ -390,17 +393,19 @@ extra:
       link: https://youtube.com/libretro
 
 theme:
-  name: 'material'
-  custom_dir: overrides
+  name: material
+  custom_dir: docs/overrides/
+  # 404 page
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
+  # Default values, taken from mkdocs_theme.yml
   language: en
   features:
-    - tabs
-    #- instant
-  palette:
-    primary: indigo
-    accent: indigo
+    - navigation.tabs
+    - navigation.top
   font:
     text: Roboto
     code: Roboto Mono
@@ -415,6 +420,8 @@ extra:
   unit:
     stable: 1.9.8
 
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
