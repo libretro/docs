@@ -32,7 +32,8 @@ Assets such as fonts and backgrounds that are required for memory card screens.
 
 In order to acquire PPSSPP's assets files and install them succcessfully, follow these steps.
 
-**Note:** *Lakka users do not need to follow these steps. Lakka image ships with the assets already included. Those assets are compatible with the version of the core provided in the Lakka image. Using not compatible assets may lead to unexpected results.*
+!!! info
+	Lakka users do not need to follow these steps. Lakka image ships with the assets already included. Those assets are compatible with the version of the core provided in the Lakka image. Using not compatible assets may lead to unexpected results.
 
 1 . Create a directory named PPSSPP in RetroArch's System directory.
 
