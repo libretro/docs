@@ -220,6 +220,37 @@ Note that the tool currrently does not integrate .sbi files into the .chd, so th
 !!! attention
 	For multi-disc content, make an .m3u file that lists all the .chd files instead of .cue files. Like the PBP files, content must be added to playlists manually.
 
+## Texture replacements (Vulkan only)
+
+To use a textures pack you'll have to extract the textures in a `[game_filename]-texture-replacements/` folder inside your game directory, where "[game_filename]" matches the actual filename of the file you're using to load the game.
+
+Here's an example with Suikoden II:
+```
+Suikoden II (USA).bin
+Suikoden II (USA).cue
+Suikoden II (USA)-texture-replacements/
+```
+
+Another example with Chrono Cross, a multi-discs game:
+```
+Chrono Cross (USA) (Disc 1).bin
+Chrono Cross (USA) (Disc 1).cue
+Chrono Cross (USA) (Disc 2).bin
+Chrono Cross (USA) (Disc 2).cue
+Chrono Cross (USA).m3u
+Chrono Cross (USA)-texture-replacements/
+```
+
+For multi-discs games you will be loading the game with the .m3u (if you followed the ['Multiple-disk games'](#multiple-disk-games) section properly) so the textures folder name has to match the .m3u filename.
+
+!!! Tips
+	If you still can't see any difference with your folder set up properly:
+	
+	- The .png files need to be inside `[game_filename]-texture-replacements/` directly, not in another subfolder and not inside a .zip file!
+	- Both `Track Textures` and `Replace Textures` core options have to be enabled.
+	- `Internal GPU Resolution` core option should be set to anything higher than '1x (Native)' and `Supersampling (Downsample to Native Resolution)` core option should be disabled, or you probably won't notice any difference at such low resolution.
+	- Custom textures may not be applied directly when loading a save state, in this case you may have to trigger a scene change ingame (leaving or entering a new room for example) to force the textures to "refresh".
+
 ## Saves
 
 For game savedata storage, the PSX console used memory cards. The PSX console had two slots for memory cards.
