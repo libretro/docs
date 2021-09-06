@@ -176,7 +176,7 @@ You can also check the progress of your friends and add comments on their trophi
 |-----------------------------------------------------------|:---------:|:------|
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         |       |
 | [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | Highest accuracy, may have issues with some achievement sets for the time being |
-| [Gearboy](https://github.com/libretro/gearboy)            | ✔         |       |
+| [Gearboy](https://github.com/drhelius/Gearboy)            | ✔         |       |
 | [VBA-M](https://github.com/libretro/vbam-libretro)        | ✔         | Has gyro support via analog sticks |
 | [mGBA](https://github.com/libretro/mgba)                  | ✔         |       |
 | [Mesen-S](https://github.com/SourMesen/Mesen-S)           | ✔         | Currently the only supported core with complete SGB support. Supports GB and GBC without SGB as well. |
