@@ -107,6 +107,7 @@ nav:
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
       - 'ColecoVision Emulation':
+        - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Commodore Emulation':
         - 'Commodore - 8-bit (VICE)': 'library/vice.md'

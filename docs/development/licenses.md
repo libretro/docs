@@ -117,6 +117,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Gambatte](../library/gambatte.md)                                               | [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)                |                |
 | [Game Music Emu](../library/game_music_emu.md)            		           | [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)                     |                |
 | [Gearboy](../library/gearboy.md)                                                 | [GPLv3](https://github.com/drhelius/Gearboy/blob/master/LICENSE)                          |                |
+| [Gearcoleco](../library/gearcoleco.md)                                           | [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)                       |                |
 | [Gearsystem](../library/gearsystem.md)                                           | [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)                       |                |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)          		           | [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)     | Non-commercial |
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |

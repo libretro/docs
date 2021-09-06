@@ -48,6 +48,7 @@ System                        | Core               | Link |
 Arcade                        | MAME2003           | [BIOS information](mame_2003.md#bios)
 Arcade                        | MAME2003+          | [BIOS information](mame2003_plus.md#bios)
 Arcade                        | MAME2010           | [BIOS information](mame_2010.md#bios)
+ColecoVision                  | Gearcoleco         | [BIOS information](gearcoleco.md#bios)
 Dreamcast                     | Flycast            | [BIOS information](flycast.md#bios)
 DS                            | DeSmuME            | [BIOS information](desmume.md#bios)
 GameBoy/GameBoy Color         | Emux GB            | [BIOS information](emux_gb.md#bios)

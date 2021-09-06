@@ -10,6 +10,12 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 |--------------------------------------------|:---------:|
 | [Beetle Cygne](../library/beetle_cygne.md) | ✔         |
 
+### Coleco - ColecoVision
+
+| Core                               | Supported |
+|--------------------------------------------|:---------:|
+| [Gearcoleco](../library/gearcoleco.md)     | ✔         |
+
 ### Nintendo - Game Boy / Color
 
 | Core                               | Supported |

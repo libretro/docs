@@ -151,3 +151,7 @@ This is a list of cores that are related to each other in some way.
 - [FB Alpha 2012 CPS-2](../library/fb_alpha_cps2.md)
 - [FB Alpha 2012 CPS-3](../library/fb_alpha_cps3.md)
 - [FB Alpha 2012 Neo Geo](../library/fb_alpha_neogeo.md)
+
+## ColecoVision
+
+- [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
