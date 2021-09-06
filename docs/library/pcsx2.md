@@ -26,7 +26,7 @@ PCSX2 core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-### Requirements
+## Requirements
 
 === "CPU"
 
@@ -51,83 +51,56 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-!!! TIP
-	Interesting fact: For maximum compatibility it is recommended that you use a BIOS image different than SCPH10000.BIN which is the oldest one
-	
-!!! info
-	Transfer your BIOS files to the retroarch/system/pcsx2/bios/ directory.
+!!! Attention
+	For compatibility reasons, it is recommended to not use a SCPH-10000 BIOS.
 
-There is no region locking so if you have a PAL BIOS on your PS2 you can still play NTSC games, and vice versa. You'll also need the BIOS dumped from your PS2. Unlike the PS2 PCSX2 does not implement region locking so if you have a PAL BIOS in your PS2 you can still play NTSC games, and vice versa.
+!!! Notes
+	- No specific filename required, as long as the BIOS was properly dumped the core will be able to find it.
+	- The BIOS files must be extracted, the core will not be able to find them if they're zipped.
+	- PCSX2 does not implement region locking, so if you have a PAL BIOS you can play NTSC games, and vice versa.
 
-Required or optional firmware files go in the frontend's system directory.
+PCSX2 requires a BIOS to work, the BIOS can be provided as a single 4MB .bin file or with additional files (usually .erom, .nvm, .rom1 and .rom2).
 
-A PlayStation 2 BIOS consists of multiple files. All files of the same version (e.g. the 6 files of "Japan v02.20") must be included in the BIOS directory for that specific version of the BIOS to work properly.
+In case you're having additional files with the .bin, make sure they're sharing the same filename or they'll be ignored.
+So as an example let's say you have a `SCPH-70004_BIOS_V12_EUR_200.BIN` file with an EROM file, a ROM1 file and a ROM2 file, it should look like this:
 
-|   Filename   | Description                         |              md5sum              |
-|:------------:|:-----------------------------------:|:--------------------------------:|
-| PS2 Bios 30004R V6 Pal.bin | - | - |
-| PS2 Bios 30004R V6 Pal.MEC | - | - |
-| PS2 Bios 30004R V6 Pal.NVM | - | - |
-| rom1.bin | - | - |
-| scph10000.bin | - | - |
-| scph10000.NVM | - | - |
-| scph39001.bin | - | - |
-| scph39001.MEC | - | - |
-| scph39001.NVM | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.BIN | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.EROM | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.NVM | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.ROM1 | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.ROM2 | - | - |
-| SCPH-70004_BIOS_V12_PAL_200.NVM | - | - |
-| SCPH-77006_BIOS_VX_HK _220.BIN | Japan v02.20(10/02/2006) console BIOS | 5b1ba4bb914406fae75ab8e38901684d |
-| SCPH-77006_BIOS_VX_HK _220.EROM | Japan v02.20(10/02/2006) console BIOS | 4f84fc8c2f1080a3f5f5859b403c62f3 |
-| SCPH-77006_BIOS_VX_HK _220.mec | Japan v02.20(10/02/2006) console BIOS | 3faf7c064a4984f53e2ef5e80ed543bc |
-| SCPH-77006_BIOS_VX_HK _220.NVM | Japan v02.20(10/02/2006) console BIOS | 5cc8e272eebfcc0f9efb9340e9644c57 |
-| SCPH-77006_BIOS_VX_HK _220.ROM1 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
-| SCPH-77006_BIOS_VX_HK _220.ROM2 | Japan v02.20(10/02/2006) console BIOS | 905ebe2358502f8aaeeeac96d023f4d9 |
+```
+SCPH-70004_BIOS_V12_EUR_200.BIN
+SCPH-70004_BIOS_V12_EUR_200.EROM
+SCPH-70004_BIOS_V12_EUR_200.ROM1
+SCPH-70004_BIOS_V12_EUR_200.ROM2
+```
 
-### Other required files and directories
+### How to set up your BIOS:
 
-!!! info
-	On Windows, if you previously installed the stand-alone PCSX2, Retroarch can detect the stand-alone files, so you only need to have the \pcsx2\bios\ folder in the System/BIOS directory. This doesn't work with PCSX2's portable version for Windows or the stand-alone Linux version.
+1. Go inside your RetroArch "system" folder (usually `retroarch/system/`, but if you're not sure check the path from `Settings > Directory > System/BIOS`).
+2. Create a `pcsx2` folder.
+3. Go inside the `pcsx2` folder and create a `bios` folder.
+4. Go inside the `bios` folder and paste your BIOS file(s) here.
 
-Currently, PCSX2 requires these directories in the folder set as frontend's System/BIOS directory:
+If you're on a case-sensitive OS, make sure both `pcsx2` and `bios` folders are lowercase.
 
-.\pcsx2\bios\
-
-.\pcsx2\cheats\
-
-.\pcsx2\cheats_ws\
-
-.\pcsx2\inis\
-
-.\pcsx2\logs\
-
-.\pcsx2\memcards\
-
-.\pcsx2\snaps\
-
-.\pcsx2\sstates\
-
-It also requires a file 'portable.ini' in the the \pcsx2\ directory in the frontend's System/BIOS directory. Simply create a portable.txt file and change its extension to .ini.
+## Other required files and directories
 
 The file structure should look like this:
 
 ```
-RetroArch/
-         └── system/
-		   └── pcsx2/
-		   	    └── bios/
-			    └── cheats/
-			    └── cheats_ws/
-			    └── inis/
-			    └── logs/
-			    └── memcards/
-			    └── snaps/
-			    └── sstates/
-			    └── portable.ini
+retroarch/
+└── system/
+	└── pcsx2/
+		├── bios/
+		├── cheats/
+		├── cheats_ws/
+		└── memcards/	(optional)
 ```
+
+* `bios/` is where the BIOS files are located (see the ['BIOS'](#bios) section above), this should be created by the user.
+* `cheats/` is where you can store cheat patches, the folder is created on the first boot automatically.
+* `cheats_ws/` is where you can store additional widescreen patches, the folder is created on the first boot automatically.
+* `memcards/` is where the "legacy" memory cards are stored. This folder is optional, see the ['Directories'](#directories) section below.
+
+!!! Info
+	Although the `cheats_ws` folder is empty when created, a very large number of widescreen patches are already included in the core itself.
 
 ## Extensions
 
@@ -138,7 +111,6 @@ Content that can be loaded by the PCSX2 core have the following file extensions:
 - .ciso
 - .chd
 - .cso
-- .cue
 - .bin
 - .mdf
 - .nrg
@@ -157,7 +129,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✔         |
+| Restart           | ✕         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✕         |
@@ -169,7 +141,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | ✔         |
+| Multi-Mouse       | ✕         |
 | Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -182,7 +154,7 @@ Frontend-level settings or features that the PCSX2 core respects.
 | Crop Overscan[^2] | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
 PCSX2's library name is 'pcsx2'
 
@@ -192,17 +164,20 @@ PCSX2 core saves/loads to/from these directories.
 
 - Memory card - slot 1
 
-..\retroarch\saves\pcsx2\Slot 1\
+`retroarch/saves/pcsx2/Slot 1/`
 
-- Memory card - slot 1
+- Memory card - slot 2
 
-..\retroarch\saves\pcsx2\Slot 2\
+`retroarch/saves/pcsx2/Slot 2/`
 
-**Frontend's State directory**
+**Frontend's System directory**
 
-| File     | Description |
-|:--------:|:-----------:|
-| *.state# | State      |
+- Legacy memory cards
+
+`retroarch/system/pcsx2/memcards/`
+
+The legacy memory cards folder is only used if `Mcd001.ps2` and/or `Mcd002.ps2` is detected in `retroarch/system/pcsx2/memcards/` and the "Memory Card: Slot N" core option is set to "Legacy".
+This can be useful if you were using an older version of the core that didn't use the `saves` folder yet, or if you transferred the `memcards` folder directly from standalone.
 
 ## Rumble support
 
@@ -211,7 +186,6 @@ Rumble only works in the PCSX2 core when
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
-- The corresponding user's device type is set to **DualShock**
 - The corresponding user's device type is set to **DualShock 2**
 
 ## Joypad
