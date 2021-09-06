@@ -184,3 +184,4 @@ The SMS Plus GX core supports the following device type(s) in the controls menu,
 - [Sega - MS/MD/CD/32X (PicoDrive)](picodrive.md)
 - [Sega - MS/GG/SG-1000 (Gearsystem)](gearsystem.md)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)
+- [Coleco - ColecoVision (Gearcoleco)](gearcoleco.md)

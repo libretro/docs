@@ -344,3 +344,7 @@ Supported combinations
 #### Microsoft - MSX2
 
 - [Microsoft - MSX (fMSX)](fmsx.md)
+
+#### ColecoVision
+
+- [Coleco - ColecoVision (Gearcoleco)](gearcoleco.md)

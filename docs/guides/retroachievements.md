@@ -101,6 +101,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✔         |       |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✔         | Requires games in `coleco` subdirectory, exact archives just like arcade. Not all games may be linked for this core. |
+| [Gearcoleco](https://github.com/drhelius/Gearcoleco)    | ✔         |       |
 
 ### GCE
 
