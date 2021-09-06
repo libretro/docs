@@ -21,7 +21,7 @@ The Gearboy core has been authored by:
 
 The Gearboy core is licensed under:
 
-- [GPLv3](https://github.com/libretro/Gearboy/blob/master/LICENSE)
+- [GPLv3](https://github.com/drhelius/Gearboy/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -186,7 +186,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - [Official Gearboy Github Repository](https://github.com/drhelius/Gearboy)
 - [Libretro Gearboy Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/gearboy_libretro.info)
-- [Libretro Gearboy Github Repository](https://github.com/libretro/Gearboy)
 - [Report Libretro Gearboy Core Issues Here](https://github.com/drhelius/Gearboy/issues)
 
 ### See also
