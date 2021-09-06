@@ -65,6 +65,7 @@ Lynx                          | Handy              | [BIOS information](handy.md
 Master System                 | Emux SMS           | [BIOS information](emux_sms.md#bios)
 MS/GG                         | SMS Plus GX        | [BIOS information](smsplus.md#bios)
 MS/GG/MD/CD                   | Genesis Plus GX    | [BIOS information](genesis_plus_gx.md#bios)
+MS/GG/SG-1000                 | Gearsystem         | [BIOS information](gearsystem.md#bios)
 MS/MD/CD/32X                  | PicoDrive          | [BIOS information](picodrive.md#bios)
 MSX/SVI/ColecoVision/SG-1000  | blueMSX            | [BIOS information](bluemsx.md#bios)
 MSX                           | fMSX               | [BIOS information](fmsx.md#bios)
