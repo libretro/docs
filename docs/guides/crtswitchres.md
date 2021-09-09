@@ -12,6 +12,10 @@ Other options are available. It's a simple case of getting the resolutions insta
 
 No pre setup required here, although X11 is a requirement at the moment. Simply install/compile RetroArch choose you CRTSwitchRes setting, and you're off.
 
+!!! note
+    in some cases your disrobution may be missing some X libraries in this case make sure you install the 
+    folling `libx11-dev libxrandr-dev`
+
 This is also compatible with Raspberry Pi, X11 is not a requirement here.
 
 ## Enabling and Changing Settings
