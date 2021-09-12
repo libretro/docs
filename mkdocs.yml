@@ -409,6 +409,7 @@ theme:
 
 plugins:
     - search
+    - git-revision-date
     - macros
 
 extra:
