@@ -98,7 +98,7 @@ ___
 
 ## Frequently Asked Questions
 
-You may have a lot of questions or ideas about Ludo, some of which we tried to answer below. Apart from that, you can also ask your questions via [Discord](https://discord.gg/2gChcFZ).
+You may have a lot of questions or ideas about Ludo, some of which we tried to answer below. Apart from that, you can also ask your questions via [Discord](https://ra-link.web.app/discord).
 
 ### How is Ludo different from RetroArch?
 
