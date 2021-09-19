@@ -57,7 +57,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 !!! Notes
 	- No specific filename required, as long as the BIOS was properly dumped the core will be able to find it.
 	- The BIOS files must be extracted, the core will not be able to find them if they're zipped.
-	- PCSX2 does not implement region locking, so if you have a PAL BIOS you can play NTSC games, and vice versa.
+	- PCSX2 does not implement region locking, so if you have a PAL BIOS you can play NTSC games, and vice versa. However, this only applies with the `Fast Boot` core option enabled.
 
 PCSX2 requires a BIOS to work, the BIOS can be provided as a single 4MB .bin file or with additional files (usually .erom, .nvm, .rom1 and .rom2).
 
