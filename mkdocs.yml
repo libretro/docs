@@ -8,6 +8,10 @@ edit_uri: 'edit/master/docs'
 copyright: Copyright &copy; 2010 <a href="https://libretro.com">Libretro</a>
 nav:
   - 'About': 'index.md'
+  - 'Start':
+      - 'Understanding': 'start/understanding.md'
+      - 'Installation': 'start/installation.md'
+      - 'Love at first sight': 'start/love-at-first-sight.md'
   - 'For Users':
     - 'Getting Started':
       - 'Windows':
