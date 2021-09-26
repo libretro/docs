@@ -235,7 +235,10 @@ The DOSBox core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
 
-### Save States Support (**Enable save states** | Enable save states with rewind | Off)
+### Save States Support
+
+[dosbox_pure_savestate]
+(**Enable save states** | Enable save states with rewind | Off)
 
 Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer. Save states might not be compatible with new versions of this core.
 
