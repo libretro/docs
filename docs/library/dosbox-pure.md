@@ -233,7 +233,36 @@ For now, serial port and IPX emulation from base DOSBox have been removed.
 
 The DOSBox core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
+
+### Save States Support (**Enable save states** | Enable save states with rewind | Off)
+
+Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer. Save states might not be compatible with new versions of this core.
+
+### Input Options
+
+- **Bind Unused Buttons** [dosbox_pure_bind_unused] (**On** | Off)
+
+	Bind all unused controller buttons to keyboard keys. Can be remapped in the Controls section of the core settings.
+
+- **Enable On Screen Keyboard** [dosbox_pure_on_screen_keyboard] (**On** | Off)
+
+	 Enable the On Screen Keyboard feature which can be activated with the L3 button on the controller.
+
+- **Bind Mouse Wheel To Key** [dosbox_pure_mouse_wheel] (**Left-Bracket/Right-Bracket** | Comma/Period | Page-Up/Page-Down | Home/End | Delete/Page-Down | Minus/Equals | Semicolon/Quote | Numpad Minus/Plus | Numpad Divide/Multiply | Up/Down | Left/Right | Q/E | Disable)
+
+	Bind mouse wheel up and down to two keyboard keys to be able to use it in DOS games.
+
+- **Mouse Sensitivity** [dosbox_pure_mouse_speed_factor] (**1.0** | 0.2 to 1.0 in .05 increments | 1.0 to 5.0 in .1 increments)
+
+	Sets the overall mouse cursor movement speed.
+ 
+- **Advanced > Horizontal Mouse Sensitivity** [dosbox_pure_mouse_speed_factor_x] (**1.0** | 0.2 to 1.0 in .05 increments | 1.0 to 5.0 in .1 increments)
+
+	Experiment with this value if the mouse is too fast/slow when moving left/right.
+
+
+================================================
 
 - **Machine type** [dosbox_machine_type] (**vgaonly**|svga_s3|svga_et3000|svga_et4000|svga_paradise|hercules|cga|tandy|pcjr|ega)
 
