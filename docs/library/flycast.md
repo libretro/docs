@@ -85,7 +85,6 @@ Required or optional firmware files go in RetroArch's system directory.
 |   Filename      |    Description                                                     |              md5sum              |
 |:---------------:|:------------------------------------------------------------------:|:--------------------------------:|
 | dc/dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
-| dc/dc_flash.bin | Date/Time/Language - Required for Dreamcast                        | 0a93f7940c455905bea6e392dfde92a4 |
 | dc/naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
 | dc/hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
 | dc/f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
@@ -94,8 +93,7 @@ Required or optional firmware files go in RetroArch's system directory.
 | dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
 
 !!! attention
-        1. naomi.zip must include the epr-21576g.ic27 file (md5sum:3bffafac42a7767d8dcecf771f5552ba)
-	2. All bios files need to be in a directory named 'dc' in RetroArch's system directory.
+    All bios files need to be in a directory named 'dc' in RetroArch's system directory.
 
 ## Features
 
