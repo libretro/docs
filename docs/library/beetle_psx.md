@@ -38,7 +38,7 @@ As a replacement for any of the BIOS files mentioned above, it is also possible 
 - `ps1_rom.bin` (MD5: 81bbe60ba7a3d1cea1d48c14cbcc647b)
 
 The `PSXONPSP660.bin` BIOS comes from the PSP, and the `ps1_rom.bin` BIOS comes from the PS3, both are region-free.
-For Beetle PSX to recognize either of these BIOSes, it must be renamed to any of the first three names mentioned in the table above (such as `scph5501.bin` for running US games).
+For Beetle PSX to recognize either of these BIOSes, you need to enable the "Override BIOS" option.
 
 ## Extensions
 
