@@ -10,13 +10,13 @@ hide:
 
 RetroArch is a frontend for emulators, game engines and media players.
 
-## What is RetroArch
+## What RetroArch is
 
 It runs programs converted into dynamic libraries called libretro cores, using several user interfaces such as command-line interface, a few graphical user interfaces optimized for gamepads, several input, audio and video drivers, plus other sophisticated features like dynamic rate control, audio filters, multi-pass shaders, netplay, gameplay rewinding, cheats, etc.Settings are also unified so configuration is done once and for all.
 
 In addition to this, you are able to run original game discs (CDs) from RetroArch.
 
-### What is not RetroArch
+### What RetroArch is not 
 
 RetroArch is not a computer program that includes all consoles and games. It is not a service that allows you to download copyrighted games or content. It is not an application that will cause you to modify the application to the platform on which you will install it, but in order to run unsigned applications on some platforms, the default firmware needs to be modified.
 
