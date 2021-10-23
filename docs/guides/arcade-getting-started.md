@@ -62,6 +62,9 @@ Users with modern desktop and laptop processors, and other full power systems, h
 ## Step 2: Use the correct version romsets for that emulator
 **For best results, start with a full ROM collection with a version that matches the emulator you're using.**
 
+!!! Note
+    A romset is an archive (zip; 7z might or might not be supported depending on your core and/or platform and will be way slower to load) named in a specific way containing a set of file(s) each having their signature (crc). The emulator will know which game you are trying to load by the name of the archive (hence why you must never rename them), then will use the crcs in its database to search for files and map them into memory, usually it doesn't care much about the names inside the archive but some emulators will allow searching by name as a fallback if a crc can't be found.
+
 In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
 
 !!! tip
