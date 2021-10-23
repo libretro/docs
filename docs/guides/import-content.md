@@ -17,7 +17,11 @@ Wait for this to finish downloading
 
 From the RetroArch Main Menu navigate to "Import content". You will be met by three options, "Scan Directory" , "Scan File" and "Manual Scan".
 
-To import a collection of Contents, you should select "Scan Directory". Using the file browser, navigate to the folder with your Content collection and select **"<Scan This Directory>"**. If you like to import single file, you can use "Scan File" then navigate to file and select it. You can also "Manual Scan" it scan based on content file names and does not require content to match database.
+***1) Scan Directory:***  for importing a collection of Contents. Using the file browser, navigate to the folder of the Content collection and select **"Scan This Directory"**.
+    
+***2) Scan File:*** for importing a single file. Navigate to file and select it.
+    
+***3) Manual Scan:*** it scans based on content file names and does not require content to match the database.
 
 Please be patient while it scans, large collections could take a few minutes.
 
