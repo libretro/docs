@@ -20,20 +20,24 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Required or optional firmware files go in the frontend's system directory.
 
+If more than one BIOS file exists, the PCSX ReARMed core uses the BIOS above the table below.
+
 !!! attention
 	In case the PCSX ReARMed core can find no BIOS files named like this in RetroArch's system directory, it will default to a High-Level Emulation BIOS. This decreases the level of compatibility of the emulator, so it is recommended that you always supply valid BIOS images inside the system directory.
 
 |   Filename      |      Description       |              md5sum              |
 |:---------------:|:----------------------:|:--------------------------------:|
+| PSXONPSP660.bin | Extracted from a PSP   | c53ca5908936d412331790f4426c6c33 |
 | scph101.bin     | Version 4.4 03/24/00 A | 6E3735FF4C7DC899EE98981385F6F3D0 |
 | scph7001.bin    | Version 4.1 12/16/97 A | 1e68c231d0896b7eadcad1d7d8e76129 |
 | scph5501.bin    | Version 3.0 11/18/96 A | 490f666e1afb15b7362b406ed1cea246 |
 | scph1001.bin    | Version 2.0 05/07/95 A | 924e392ed05558ffdb115408c263dccf |
-| PSXONPSP660.bin | Extracted from a PSP   | c53ca5908936d412331790f4426c6c33 |
 
+<!--
 As a replacement for any of the first 3 BIOS files mentioned above, it is also possible
 to use the `PSXONPSP660.bin` BIOS. This BIOS comes from the PSP, is region-free
 and can sometimes offer better performance.
+-->
 
 If none of the above is found, PCSX_ReARMed will search for filenames starting with "scph" and use that instead.
 It doesn't seem to matter whatever BIOS version is used and from what region, as long as it's from a retail PSX/PS one.
