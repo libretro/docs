@@ -39,7 +39,8 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename    |    Description                                                                                                               | md5sum                           |
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------:|:--------------------------------:|
-| disksys.rom   | Family Computer Disk System BIOS - Required for Famicom Disk System emulation                                                | ca30b50f880eb660a320674ed365ef7a |
+| disksys.rom   | Family Computer Disk System BIOS - Required for Famicom Disk System emulation                                                | ca30b50f880eb660a320674ed365ef7a | 
+|gamegenie.nes  | Game Genie add-on cartridge - Required for Game Genei Add-on emulation                                                       | 7f98d77d7a094ad7d069b74bd553ec98 |
 
 ## Features
 
