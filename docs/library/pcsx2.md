@@ -73,10 +73,12 @@ SCPH-70004_BIOS_V12_EUR_200.ROM2
 
 ### How to set up your BIOS:
 
-1. Go inside your RetroArch "system" folder (usually `retroarch/system/`, but if you're not sure check the path from `Settings > Directory > System/BIOS`).
+1. Go inside your RetroArch "system" folder (usually `retroarch/system/`, but if you're not sure check the path in `Settings > Directory > System/BIOS`).
 2. Create a `pcsx2` folder.
 3. Go inside the `pcsx2` folder and create a `bios` folder.
 4. Go inside the `bios` folder and paste your BIOS file(s) here.
+
+For example, the default path would look like this: `system\pcsx2\bios\[bios_file_name].bin`
 
 If you're on a case-sensitive OS, make sure both `pcsx2` and `bios` folders are lowercase.
 
