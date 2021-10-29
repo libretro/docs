@@ -374,6 +374,7 @@ nav:
     - 'See Also': 'meta/see-also.md'
   - 'Support':
     - 'Privacy Policy': 'support/privacy-policy.md'
+    - 'Quick informations': 'support/quick-informations.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
@@ -407,6 +408,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - tables
   font:
     text: Roboto
     code: Roboto Mono
