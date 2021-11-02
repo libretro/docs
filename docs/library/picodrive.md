@@ -257,6 +257,7 @@ The PicoDrive core supports the following device type(s).
 - [Libretro PicoDrive Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/picodrive_libretro.info)
 - [Libretro PicoDrive Github Repository](https://github.com/libretro/picodrive)
 - [Report Libretro PicoDrive Core Issues Here](https://github.com/libretro/picodrive/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcA87w16rzmzbYJrnxgJJgP)
 
 ## Sega 16-bit
 

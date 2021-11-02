@@ -922,3 +922,4 @@ English layout
 
 - [Libretro PUAE Github repository](https://github.com/libretro/libretro-uae)
 - [Report Libretro PUAE core issues here](https://github.com/libretro/libretro-uae/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeRAk8nYYneBAHZhbPLvHEz)

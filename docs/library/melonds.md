@@ -139,6 +139,7 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 - [Libretro melonDS Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/melonds_libretro.info)
 - [Libretro melonDS Github Repository](https://github.com/libretro/melonds)
 - [Report Libretro melonDS Core Issues Here](https://github.com/libretro/melonds/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfJciIgm46lbEVafdpVyyNA)
 
 ### See also
 

@@ -160,6 +160,7 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 - [Libretro gpSP Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/gpsp_libretro.info)
 - [Libretro gpSP Github Repository](https://github.com/libretro/gpsp)
 - [Report Libretro gpSP Core Issues Here](https://github.com/libretro/gpsp/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Iczn5l7AfS11JNbXUv5Widl)
 
 ### See also
 

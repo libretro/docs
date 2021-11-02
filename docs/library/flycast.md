@@ -304,3 +304,4 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 - [Libretro Flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
 - [Libretro Flycast Github Repository](https://github.com/libretro/flycast)
 - [Report Flycast Core Issues Here](https://github.com/libretro/flycast/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)

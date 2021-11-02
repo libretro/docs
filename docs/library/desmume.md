@@ -399,6 +399,7 @@ Same as upstream standalone.
 - [Libretro DeSmuME Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/desmume_libretro.info)
 - [Libretro DeSmuME Github Repository](https://github.com/libretro/desmume)
 - [Report Libretro DeSmuME Core Issues Here](https://github.com/libretro/desmume/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Icim_vEjB_0GeF18zkMBiqU)
 
 ### See also
 

@@ -126,6 +126,7 @@ Play! core is still experimental but promising. Some games are already [playable
 - [Official Play! Website](https://purei.org)
 - [Official Play! Github Repository](https://github.com/jpd002/Play-)
 - [Libretro Play! Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/play_libretro.info)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0If5ArC48Kw2vSC0NmTOdivu)
 
 ## Libretro PS2 cores
 

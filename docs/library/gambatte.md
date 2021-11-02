@@ -480,6 +480,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Libretro Gambatte Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/gambatte_libretro.info)
 - [Libretro Gambatte Github Repository](https://github.com/libretro/gambatte-libretro)
 - [Report Libretro Gambatte Core Issues Here](https://github.com/libretro/gambatte-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdJ4pq_2h9d8Q0QO7FA7Ukd)
 
 ## Nintendo - Game Boy (+ Color)
 

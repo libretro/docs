@@ -410,3 +410,4 @@ Awaiting description.
 - [Report Libretro Mupen64plus-Next Core Issues Here](https://github.com/libretro/mupen64plus-libretro-nx/issues)
 - [Official Mupen64Plus Website](http://www.mupen64plus.org/)
 - [Official Mupen64Plus Github Organization](https://github.com/mupen64plus)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeBgJ8wFAH6Oh9aDNC-MBuU)

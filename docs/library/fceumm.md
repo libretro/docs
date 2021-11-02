@@ -409,6 +409,7 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 - [Libretro FCEUmm Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/fceumm_libretro.info)
 - [Libretro FCEUmm Github Repository](https://github.com/libretro/libretro-fceumm)
 - [Report Libretro FCEUmm Core Issues Here](https://github.com/libretro/libretro-fceumm/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfFhmpqSJMJgst6QCsWwxdD)
 
 ## Other Links
 - [NES Header Database](http://nes.dnsabr.com/) - Verify, remove or add headers for known No-Intro roms.

@@ -647,6 +647,7 @@ A list of known emulation bugs can be found here [https://forum.fobby.net/index.
 - [Beetle PSX Libretro Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_psx_libretro.info)
 - [Beetle PSX Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeQOnw9bnjwthht0iUvs2wk)
 
 ## Libretro PSX cores
 

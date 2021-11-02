@@ -871,6 +871,7 @@ Issue tracker for the hardware renderer can be found here [https://github.com/li
 - [Beetle PSX HW Libretro Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_psx_hw_libretro.info)
 - [Beetle PSX HW Libretro Github Repository](https://github.com/libretro/beetle-psx-libretro)
 - [Report Beetle PSX HW Core Issues Here](https://github.com/libretro/beetle-psx-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ie3vgCI_d3bslkumKT06AQa)
 
 ## Libretro PSX cores
 

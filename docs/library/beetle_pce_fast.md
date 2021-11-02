@@ -293,6 +293,7 @@ The Beetle PCE FAST core supports the following device type(s) in the controls m
 - [Libretro Beetle PCE FAST Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_pce_fast_libretro.info)
 - [Libretro Beetle PCE FAST Github Repository](https://github.com/libretro/beetle-pce-fast-libretro)
 - [Report Libretro Beetle PCE FAST Core Issues Here](https://github.com/libretro/beetle-pce-fast-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcICSGZARi72aNezAyfpKzJ)
 
 ## TG-16
 

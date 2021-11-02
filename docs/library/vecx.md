@@ -83,6 +83,7 @@ Unknown
 
 ## External Links
 
-* [Libretro Repository](https://github.com/libretro/libretro-vecx)
-* [Report Core Issues Here](https://github.com/libretro/libretro-meta/issues)
-* [Official GitHub Repository of the SDL port](https://github.com/jhawthorn/vecx)
+- [Libretro Repository](https://github.com/libretro/libretro-vecx)
+- [Report Core Issues Here](https://github.com/libretro/libretro-meta/issues)
+- [Official GitHub Repository of the SDL port](https://github.com/jhawthorn/vecx)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcpjAFyTq8c2ZvV-dKqwtox)

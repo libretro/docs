@@ -207,3 +207,4 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Libretro Opera Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/opera_libretro.info)
 - [Libretro Opera Github Repository](https://github.com/libretro/opera-libretro)
 - [Report Libretro Opera Core Issues Here](https://github.com/libretro/opera-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeD-Mj2GG13qsYasGgRNQg4)

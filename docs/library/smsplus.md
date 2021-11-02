@@ -176,6 +176,7 @@ The SMS Plus GX core supports the following device type(s) in the controls menu,
 - [Libretro SMS Plus GX Github Repository](https://github.com/libretro/smsplus-gx)
 - [Libretro SMS Plus GX Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/smsplus_libretro.info)
 - [Report Libretro SMS Plus GX Core Issues Here](https://github.com/libretro/smsplus-gx/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeQQFDtJZI8xpOvbY-yqJhA)
 
 ### See also
 

@@ -153,6 +153,7 @@ The VBA Next core supports the following device type(s) in the controls menu, bo
 - [Libretro VBA Next Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/vba_next_libretro.info)
 - [Libretro VBA Next Github Repository](https://github.com/libretro/vba-next)
 - [Report Libretro VBA Next Core Issues Here](https://github.com/libretro/vba-next/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdpkFrAP_ZvZFlLTXuXU7mM)
 
 ### See also
 

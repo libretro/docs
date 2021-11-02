@@ -471,3 +471,4 @@ The PX68k core supports the following device type(s) in the controls menu, bolde
 - [Libretro PX68k Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/px68k_libretro.info)
 - [Libretro PX68k Github Repository](https://github.com/libretro/px68k-libretro)
 - [Report Libretro PX68k Core Issues Here](https://github.com/libretro/px68k-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfwIYfwg82vaMlMDNU1tdlZ)

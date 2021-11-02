@@ -189,6 +189,7 @@ Please file game bugs on the issue tracker [here](https://github.com/mgba-emu/mg
 - [Libretro mGBA Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mgba_libretro.info)
 - [Libretro mGBA Github Repository](https://github.com/libretro/mgba)
 - [Report Libretro mGBA Core Issues Here](https://github.com/mgba-emu/mgba/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Id2gXuMPiXpnjQmDuvg7Wli)
 
 ### See also
 

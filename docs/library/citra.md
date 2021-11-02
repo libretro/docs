@@ -211,6 +211,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Libretro Citra Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/citra_libretro.info)
 - [Libretro Citra Github Repository](https://github.com/libretro/citra)
 - [Report Libretro Citra Core Issues Here](https://github.com/libretro/citra/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdQ7GmDs1jE7DbI18inc73c)
 
 ## Nintendo - Nintendo 3DS
 

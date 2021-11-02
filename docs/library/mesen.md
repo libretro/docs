@@ -415,6 +415,7 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 - [Libretro Mesen Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mesen_libretro.info)
 - [Official Mesen Github Repository](https://github.com/SourMesen/Mesen)
 - [Report Libretro Mesen Core Issues Here](https://github.com/SourMesen/Mesen/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdbTgE4bID9L5s5f323IewO)
 
 ### See also
 

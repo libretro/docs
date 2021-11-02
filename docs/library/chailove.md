@@ -167,6 +167,7 @@ The ChaiLove core supports the following device type(s) in the controls menu, bo
 - [Libretro ChaiLove Github Repository](https://github.com/libretro/libretro-chailove)
 - [Report Libretro ChaiLove Core Issues Here](https://github.com/libretro/libretro-chailove/issues)
 - [Floppy Bird](https://github.com/robloach/chailove-floppybird)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfOE39vx0sftVugNnMgC67o)
 
 ### See also
 

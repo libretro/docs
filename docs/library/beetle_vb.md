@@ -177,3 +177,4 @@ Awaiting description.
 - [Libretro Beetle VB Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_vb_libretro.info)
 - [Libretro Beetle VB Github Repository](https://github.com/libretro/beetle-vb-libretro)
 - [Report Libretro Beetle VB Core Issues Here](https://github.com/libretro/beetle-vb-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ie8JxLxnW6r6_OeI8TSBPH_)

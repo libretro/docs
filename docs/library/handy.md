@@ -139,6 +139,7 @@ Supported combinations
 - [Libretro Handy Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/handy_libretro.info)
 - [Libretro Handy Github Repository](https://github.com/libretro/libretro-handy)
 - [Report Libretro Handy Core Issues Here](https://github.com/libretro/libretro-handy/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfDlFKLg0HMDXbn8BrcxbJV)
 
 ### See also
 

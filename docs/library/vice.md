@@ -936,3 +936,5 @@ English positional layout
 - [Official VICE Website](https://vice-emu.sourceforge.io/)
 - [Libretro VICE Github repository](https://github.com/libretro/vice-libretro)
 - [Report Libretro VICE core issues here](https://github.com/libretro/vice-libretro/issues)
+- [Vice x64sc, accurate Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfWfrlBNh0qEMRsZf-zyQVc)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcOB8hkwWn3HmfTMBwz5Bij)

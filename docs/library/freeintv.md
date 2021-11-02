@@ -117,3 +117,4 @@ Awaiting description.
 - [Intellivision RetroPie Wiki page](https://github.com/RetroPie/RetroPie-Setup/wiki/Intellivision)
 - [FreeIntv RetroPie Forums Topic](https://retropie.org.uk/forum/topic/15665/libretro-intellivision-emulator)
 - [FreeIntv Libretro Forums Topic](https://forums.libretro.com/t/video-demonstration-of-the-new-freeintv-intellivision-core/14389)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ie3IvIC1OLrsG-9qJ-RbP7r)

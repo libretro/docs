@@ -242,3 +242,4 @@ Rumble only works in the PokeMini core when
 - [Libretro PokeMini Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/pokemini_libretro.info)
 - [Libretro PokeMini Github Repository](https://github.com/libretro/PokeMini)
 - [Report Libretro PokeMini Core Issues Here](https://github.com/libretro/PokeMini/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcaGNn2eEveCloqDgw0G31P)
