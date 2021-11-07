@@ -69,6 +69,7 @@ Click on any string to see them in the middle area. The **Source String** (the o
 In the very few cases where the source string can be kept as-is, you can click the ‘**Copy Source**’ button ![Copy Source](../../image/development/crowdin-copy-source.png) to do so.
 
 In the string list (on the left side of the screen) some strings have a balloon icon ![Comments icon](../../image/development/crowdin-comments-icon.png). This icon shows that the string has comments written by other translators and developers. Comments may include interesting and/or important information that could help you decide on how best to translate a specific string. You can also write comments in case you have questions or additional information regarding any particular string.
+
 Please make sure that any comment you write is in __English__, as that is the official project language and the comments are visible to _everyone_. Comments will be displayed at Crowdin’s right column. In case there are no comments being displayed there, make sure that the left-most button of that column is active.
 
 <figure markdown>

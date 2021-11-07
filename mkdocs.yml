@@ -303,8 +303,8 @@ nav:
         - 'Input Driver Specification': 'development/retroarch/input/input-drivers.md'
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
         - 'Parallel Port Controllers': 'development/retroarch/input/parallel-port-controllers.md'
-      - 'Adding Translations(not active)': 'development/retroarch/new-translations.md'
-      - 'Adding Translations with Crowdin': 'development/retroarch/new-translations-crowdin.md'
+      - 'Adding New Languages or New Strings': 'development/retroarch/new-translations.md'
+      - 'Helping with RetroArch translations': 'development/retroarch/new-translations-crowdin.md'
       - 'Network Protocols':
         - 'Netplay': 'development/retroarch/netplay.md'
         - 'Network Control Interface': 'development/retroarch/network-control-interface.md'

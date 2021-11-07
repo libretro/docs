@@ -1,6 +1,6 @@
-# Adding a translation to a new language
+# Adding a new language to RetroArch
 
-## Files you need to change
+## Files to change
 
 * `libretro-common/include/libretro.h`
 * `msg_hash.h`
@@ -96,20 +96,29 @@
 * Be careful when creating and editing your new translation files as some text
   editors do strip the BOM without warning.
 
-### Translation
-
-If you speak the target language xx then you could start translating literals in
-
-* `intl/msg_hash_xx.c`
-* `intl/msg_hash_xx.h`
-
-by replacing the English original ones with its translations.
-
 ### Example: Addition of Arabic language:
 
 * Commit [45580cb](https://github.com/libretro/RetroArch/commit/45580cb9a8f0fcd0a87f00eadf26d87f05289485)
 * Commit [d8f1a08](https://github.com/libretro/RetroArch/commit/d8f1a08a4758851d5530d311303146257cbf8216)
 * Commit [7a0428f](https://github.com/libretro/RetroArch/commit/7a0428fc769fd0eca663207134bec311aa3e30f3)
+
+### Translation
+
+If you speak the target language xx then you could start translating literals in
+
+* `intl/msg_hash_xx.c`
+
+by replacing the English original one with its translations.
+
+The main file for RetroArch is located here:
+
+* `intl/msg_hash_xx.h`
+
+But .h files are periodically updated and overwritten by the Crowdin translations website 
+([Link here](https://crowdin.com/project/retroarch), so it's best to do any changes to 
+non-English languages there. If you want to know more, go to the 
+([Helping with RetroArch translations](https://docs.libretro.com/development/retroarch/new-translations-crowdin/)
+doc.
 
 ## See also
 
