@@ -422,7 +422,7 @@ plugins:
 
 extra:
   unit:
-    stable: 1.9.12
+    stable: 1.9.13
 
 extra_css:
   - stylesheets/extra.css
