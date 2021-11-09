@@ -54,10 +54,10 @@ Frontend-level settings or features that the melonDS core respects.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
-| Rewind            | ✕         |
+| States            | ✔         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
@@ -127,6 +127,8 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 | X                        | ![](../image/retropad/retro_x.png)          |
 | L                        | ![](../image/retropad/retro_l1.png)         |
 | R                        | ![](../image/retropad/retro_r1.png)         |
+| Swap Screens             | ![](../image/retropad/retro_r2.png)         |
+| Close Lid                | ![](../image/retropad/retro_l3.png)         |
 
 ## Compatibility
 
