@@ -1,5 +1,7 @@
 # Helping with RetroArch translations
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V-j08aSegHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 As libretro, it is very important for us that RetroArch can be easily understood by everyone. Making multiple languages available in RetroArch will ensure a better understanding of the options and a better experience for more people. Currently, RetroArch is in the process of being translated into 33 languages. In the pursuit of streamlining the process and making it more accessible for new contributors we decided to utilise the crowdsourced translation service **Crowdin**[^1].
 
 [^1]: RetroArch and libretro are not affiliated in any way with Crowdin.
