@@ -75,8 +75,8 @@ The TIC-80 core's internal core name is `tic80`.
 
 ## Usage
 
-1. Download a [TIC-80 cart](https://tic.computer/play)
-    - Example: [TIC-80 Mario Bros?](https://tic.computer/play?cart=223)
+1. Download a [TIC-80 cart](https://tic80.com/play)
+    - Example: [TIC-80 Mario Bros?](https://tic80.com/play?cart=223)
 
 2. Launch the cart through the TIC-80 core
 
