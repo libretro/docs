@@ -6,9 +6,6 @@
 
 ## Prerequisites
 
-The following things are required before starting
-
-- A PSP (duh)
 - Pro CFW(latest version)[^1]
 
 ## Downloading, Installing and Updating
