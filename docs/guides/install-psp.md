@@ -2,13 +2,9 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VXY7HjvMfnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-==You currently need the have custom firmware(PRO-C) to run RetroArch on your PlayStation Portable. Hardware or software changes on your device may damage your device. PRO-C must be running before running RetroArch, if you run RetroArch before running PRO-C, data corrupt error will occur.==
-
 ## Prerequisites
 
-This is probably the most straightforward way to install RetroArch.
-
-- Pro CFW(latest version)[^1]
+RetroArch requires PRO CFW to function. The easiest (and safest) way to get this is to install [Infinity](https://github.com/DaveeFTW/Infinity) on your PSP.
 
 ## Downloading, Installing and Updating
 
@@ -21,10 +17,8 @@ You can download a bundle with **Stable** version of RetroArch, all the supporte
 
 ### Installing
 
-Installation is also very simple. Just create `RetroArch` folder under `PSP/Game` directory and transfer the archive files to the `PSP/Game/RetroArch` then go to `Memory Stick™` under **Game** press **X** and first or last application is must be RetroArch.
+Installation is also very simple. With the Memory Stick inserted into the console, plug in a Mini-USB cable to the console. Connect the other end to a computer. On the console, go to the XMB --> Settings --> USB Mode. Go to the PSP/GAME directory of the Memory Stick on your computer and create a new folder there called RetroArch. Place the contents of the archive you downloaded in the previous step into this RetroArch folder. Wait for the progress bar on the PSP's display to disappear, then unplug the Mini USB cable. Press the circle button to exit to the XMB if the console didn't already send you there.
 
 ### Updating
 
-Download the latest version and unzip it into 'PSP/Game/RetroArch'. Accept when prompted to overwrite.
-
-[^1]: https://code.google.com/archive/p/procfw/downloads
+Download the latest version and unzip it into 'PSP/GAME/RetroArch'. Accept when prompted to overwrite.
