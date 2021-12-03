@@ -33,8 +33,6 @@ You can update the installation by downloading the latest **20XX-XX-XX-RetroArch
 
 If you pick the installer package we recommend to use the default location, follow the installation steps and you should be good to go. You can update the installer version by downloading the latest version and re-running the installer.
 
-You can also update to nightly via _Desktop Menu_ by pressing F5 which is default key. `Tools > Online Updater > Update RetroArch (nightly)`. This will update current release to latest built from buildbot which you can find [here](http://buildbot.libretro.com/nightly/windows/).
-
 | :warning: WARNING          |
 |:---------------------------|
 | If you were running a stable release prior to 1.4.0. you will need to update the system libraries. You can do so by downloading the full **RetroArch.7z** package or **redist.7z** from the download locations.      |
