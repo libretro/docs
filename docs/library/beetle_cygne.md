@@ -125,3 +125,4 @@ The Beetle Cygne core supports the following device type(s) in the controls menu
 - [Libretro Beetle Cygne Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mednafen_wswan_libretro.info)
 - [Libretro Beetle Cygne Github Repository](https://github.com/libretro/beetle-wswan-libretro)
 - [Report Libretro Beetle Cygne Core Issues Here](https://github.com/libretro/beetle-wswan-libretro/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IdmXFd9hF4bXjsk_zKwT8Yz)
