@@ -95,11 +95,9 @@ For details how to use it and how to find new cheats while playing the game, che
 
 The DOSBox Pure core fully supports libretro save states. Make sure to test it in each game before using it. Complex late era DOS games might have problems.
 
-Be aware that states saved with different video or cpu settings are not loadable.
+Be aware that states saved with different video or cpu settings are not loadable. Also, save states might not be compatible across different versions of DOSBox Pure.
 
-Save states might not be compatible across different versions of DOSBox Pure.
-
-Rewind support
+### Rewind support
 
 Using the core option `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
 
@@ -226,13 +224,9 @@ This index buffer should be stored into the game save file to avoid having to sl
 
 For now, serial port and IPX emulation from base DOSBox have been removed.
 
-!!! tip
-    **Thoughts by Matt** I seem to remember this core looks up games in an extensive online database of DOS games, so it enables RetroArch to easily create playlists from a user's collection of DOS games? In general, it might be useful to have a section about creating playlists here, I'll be happy to write it but I need to understand it better myself first.
-
 ## Core options
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Still need to re-write this whole section)
 
-The DOSBox core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The DOSBox core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
 
@@ -325,6 +319,7 @@ Adjust the performance of the emulated CPU.
 	Fine tune the emulated performance for specific needs.
 
 ### Video Options
+Settings for the emulated graphics card and aspect ratio.
 
 - **Emulated Graphics Chip (restart required)** [dosbox_pure_machine] (**SVGA (Super Video Graphics Array) (default)** | VGA (Video Graphics Array) | EGA (Enhanced Graphics Adapter | CGA (Color Graphics Adapter) | Tandy (Tandy Graphics Adapter | Hercules (Hercules Graphics Card) | PCjr)
 
@@ -442,13 +437,7 @@ By clicking a key on the on-screen keyboard for 0.5 seconds, it will be held dow
 
 If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
 
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Note, the button can't be remapped (at present?) when using `Custom Keyboard Bindings`. cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25)
-
 ## Joypad (RetroPad)
-!!!tip
-	There should be a run-down here of how the DOSBox Pure-specific features are mapped, e.g. the on-screen keyboard or the button combos to do things like force-open the start menu. Also, perhaps a quick guide to remapping. I noticed that only the custom mapping feature (cf. [bug #25](https://github.com/schellingb/dosbox-pure/issues/25) and [bug #14](https://github.com/schellingb/dosbox-pure/issues/14)) allows mapping of any keyboard key to any button, while it doesn't allow mapping the on-screen keyboard to a button. The others, like "Generic Keyboard Mapping", do allow mapping the on-screen keyboard, but they don't offer the full range of keyboard keys. For instance, in Generic Mapping, a user wouldn't be able to map the tab key to a controller button; they can only shuffle around the pre-defined keys.
-
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (This whole section needs to be double-checked/amended)
 
 | Input descriptors for Gamepad 2 Button | RetroPad Inputs                             |
 |----------------------------------------|---------------------------------------------|
