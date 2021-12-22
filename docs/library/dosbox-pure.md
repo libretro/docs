@@ -165,6 +165,7 @@ If the core gets loaded with a `.m3u8` file, all files listed in it will be adde
 
 You might have trouble getting stutter-free scrolling in some games (cf. https://github.com/schellingb/dosbox-pure/issues/128). There are a number of things you can try to remedy this:
 
+- In `Quick Menu > Options > Emulation Options`, set `Force 60 FPS Output` to ON.
 - In RetroArch's settings, navigate to `Video` and set `Threaded Video` to OFF.
 - Try `Video` > `Output` > `Set Display-Reported Refresh Rate`.
 - Try setting `Video` > `Synchronization` > `Vertical Sync` to ON.
@@ -199,7 +200,7 @@ This label is not saved anywhere and needs to be reapplied on every launch so it
 
 ### Keyboard layout defaults to US
 
-The keyboard layout defaults to the US Layout (QWERTY). If you need a different layout, you can change the core option `Input > Advanced > Keyboard Layout`.
+The keyboard layout defaults to the US Layout (QWERTY). If you need a different layout, you can change the core option `Input Options > Advanced > Keyboard Layout`.
 
 ### Save file handling
 
@@ -235,12 +236,38 @@ The DOSBox core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
 
-### Save States Support
+### Manage Core Options
 
-[dosbox_pure_savestate]
-(**Enable save states** | Enable save states with rewind | Off)
+- **Reset Options**
 
-Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer. Save states might not be compatible with new versions of this core.
+	Reset all core options to default values.
+
+### Emulation Options
+Core specific settings (latency, save states, start menu).
+
+- **Force 60 FPS Output** [dosbox_pure_force60fps] (**OFF** | ON)
+
+	Enable this to force output at 60FPS. Use this if you encounter screen tearing or vsync issues.
+	
+- **Show Performance Statistics** [dosbox_pure_perfstats] (**Disabled** | Simple | Detailed information)
+
+	Enable this to show statistics about performance and framerate and check if emulation runs at full speed.
+
+- **Save States Support** [dosbox_pure_savestate]  (**Enable save states** | Enable save states with rewind | OFF)
+
+	Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer. Save states might not be compatible with new versions of this core.
+	
+- **Start Menu** [dosbox_pure_menu_time] (**Show at start, shut down core 5 seconds after auto started game exit** | Show at start, shut down core 3 seconds after auto started game exit | Show at start, shut down core immediately after auto started game exit | Show at start, show again after game exit (default) | Always show menu on startup and after game exit, ignore auto start setting)
+
+	Set the behavior of the start menu before and after launching a game. You can also force it to open by holding shift or L2/R2 when selecting 'Restart'.
+
+- **Advanced > Input Latency** [dosbox_pure_latency] (**Default** | Lowest latency - See CPU usage setting below! | Irregular latency - Might improve performance on low-end devices)
+
+	By default the core operates in a high performance mode with good input latency. There is a special mode available which minimizes input latency further requiring manual tweaking.
+
+- **Advanced > Low latency CPU usage** [dosbox_pure_auto_target] (**90%** | 50% > 100%)
+
+	In low latency mode when emulating DOS as fast as possible, how much time per frame should be used by the emulation. If the video is stuttering, lower this or improve render performance in the frontend (for example by disabling vsync or video processing). Use the performance statistics to easily find the maximum that still hits the emulated target framerate.
 
 ### Input Options
 
@@ -256,13 +283,114 @@ Make sure to test it in each game before using it. Complex late era DOS games mi
 
 	Bind mouse wheel up and down to two keyboard keys to be able to use it in DOS games.
 
-- **Mouse Sensitivity** [dosbox_pure_mouse_speed_factor] (**1.0** | 0.2 to 1.0 in .05 increments | 1.0 to 5.0 in .1 increments)
+- **Mouse Sensitivity** [dosbox_pure_mouse_speed_factor] (**100%** | 20% to 100% in 5% increments | 100% to 500% in 10% increments)
 
 	Sets the overall mouse cursor movement speed.
  
-- **Advanced > Horizontal Mouse Sensitivity** [dosbox_pure_mouse_speed_factor_x] (**1.0** | 0.2 to 1.0 in .05 increments | 1.0 to 5.0 in .1 increments)
+- **Advanced > Horizontal Mouse Sensitivity** [dosbox_pure_mouse_speed_factor_x] (**100%** | 20% to 100% in 5% increments | 100% to 500% in 10% increments)
 
 	Experiment with this value if the mouse is too fast/slow when moving left/right.
+
+- **Advanced > Use Mouse Input** [dosbox_pure_mouse_input] (**ON** | OFF)
+
+	You can disable input handling from a mouse or a touchscreen (emulated mouse through joypad will still work).
+
+- **Advanced > Automatic Game Pad Mappings** [dosbox_pure_auto_mapping] (**On (default)** | Enable with notification on game detection | Off)
+
+	DOSBox Pure can automatically apply a gamepad control mapping scheme when it detects a game. These button mappings are provided by the Keyb2Joypad Project (by Jemy Murphy and bigjim).
+
+- **Advanced > Keyboard Layout** [dosbox_pure_keyboard_layout] (**US (default)** | UK | Belgium | Brazil | Croatia | Czech Republic | Denmark | Finland | France | Germany | Greece | Hungary | Iceland | Italy | Netherlands | Norway | Poland | Portugal | Russia | Slovakia | Slovenia | Spain | Sweden | Switzerland (German) | Switzerland (French) | Turkey)
+
+	Select the keyboard layout (will not change the On Screen Keyboard).
+
+- **Advanced > Joystick Analog Deadzone** [dosbox_pure_joystick_analog_deadzone] (**15%** | 0% to 35% in 5% increments)
+
+	Set the deadzone of the joystick analog sticks. May be used to eliminate drift caused by poorly calibrated joystick hardware.
+
+- **Advanced > Enable Joystick Timed Intervals** [dosbox_pure_joystick_timed] (**On (default)** | Off)
+
+	Enable timed intervals for joystick axes. Experiment with this option if your joystick drifts.
+
+### Performance Options
+
+- **Emulated Performance** [dosbox_pure_cycles] (**AUTO - DOSBox will try to detect performance needs (default)** | MAX - Emulate as many instructions as possible | 8086/8088, 4.77 MHz from 1980 (315 cps) | 286, 6 MHz from 1982 (1320 cps) | 286, 12.5 MHz from 1985 (2750 cps) | 386, 20 MHz from 1987 (4720 cps) |  | 386DX, 33 MHz from 1989 (7800 cps) | 486DX, 33 MHz from 1990 (13400 cps) | 486DX2, 66 MHz from 1992 (26800 cps) | Pentium, 100 MHz from 1995 (77000 cps) | Pentium II, 300 MHz from 1997 (200000 cps) | Pentium III, 600 MHz from 1999 (500000 cps) | AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
+
+	The raw performance that DOSBox will try to emulate.
+
+- **Detailed > Performance Scale** [dosbox_pure_cycles_scale] (**100%** | 20% to 200% in 5% increments)
+
+	Fine tune the emulated performance for specific needs.
+
+### Video Options
+
+- **** [] (**** |  |  |  |)
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+- **** [] (**** |  |  |  |)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ================================================
