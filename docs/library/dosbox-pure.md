@@ -4,7 +4,7 @@
 
 ## Background
 
-DOSBox Pure is fork of the multiplatform MS-DOS emulator, DOSBox. It was built by Bernhard Schelling in 2020 specifically for RetroArch/Libretro and implements advanced features like save states, an on-screen keyboard, easy controller setup or rewinding. DOSBox Pure aims for simplicity and ease of use.
+DOSBox Pure is fork of the multiplatform MS-DOS emulator, DOSBox. It was built by Psyraven in 2020 specifically for RetroArch/Libretro and implements advanced features like save states, an on-screen keyboard, easy controller setup or rewinding. DOSBox Pure aims for simplicity and ease of use.
 
 The DOSBox-Pure core has been authored by
 
