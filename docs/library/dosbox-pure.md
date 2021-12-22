@@ -14,7 +14,6 @@ The DOSBox-Pure core has been authored by
 The DOSBox core is licensed under
 
 - [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (I presume?)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (This is a relative URL, so I'm guessing it will work correctly when this file lands on the master?)
