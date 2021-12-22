@@ -237,6 +237,7 @@ The DOSBox core has the following option(s) that can be tweaked from the core op
 Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
 
 ### Manage Core Options
+Save or remove option overrides for the current content.
 
 - **Reset Options**
 
@@ -270,6 +271,7 @@ Core specific settings (latency, save states, start menu).
 	In low latency mode when emulating DOS as fast as possible, how much time per frame should be used by the emulation. If the video is stuttering, lower this or improve render performance in the frontend (for example by disabling vsync or video processing). Use the performance statistics to easily find the maximum that still hits the emulated target framerate.
 
 ### Input Options
+Keyboard, mouse and joystick settings.
 
 - **Bind Unused Buttons** [dosbox_pure_bind_unused] (**On** | Off)
 
@@ -312,8 +314,9 @@ Core specific settings (latency, save states, start menu).
 	Enable timed intervals for joystick axes. Experiment with this option if your joystick drifts.
 
 ### Performance Options
+Adjust the performance of the emulated CPU.
 
-- **Emulated Performance** [dosbox_pure_cycles] (**AUTO - DOSBox will try to detect performance needs (default)** | MAX - Emulate as many instructions as possible | 8086/8088, 4.77 MHz from 1980 (315 cps) | 286, 6 MHz from 1982 (1320 cps) | 286, 12.5 MHz from 1985 (2750 cps) | 386, 20 MHz from 1987 (4720 cps) |  | 386DX, 33 MHz from 1989 (7800 cps) | 486DX, 33 MHz from 1990 (13400 cps) | 486DX2, 66 MHz from 1992 (26800 cps) | Pentium, 100 MHz from 1995 (77000 cps) | Pentium II, 300 MHz from 1997 (200000 cps) | Pentium III, 600 MHz from 1999 (500000 cps) | AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
+- **Emulated Performance** [dosbox_pure_cycles] (**AUTO - DOSBox will try to detect performance needs (default)** | MAX - Emulate as many instructions as possible | 8086/8088, 4.77 MHz from 1980 (315 cps) | 286, 6 MHz from 1982 (1320 cps) | 286, 12.5 MHz from 1985 (2750 cps) | 386, 20 MHz from 1987 (4720 cps) | 386DX, 33 MHz from 1989 (7800 cps) | 486DX, 33 MHz from 1990 (13400 cps) | 486DX2, 66 MHz from 1992 (26800 cps) | Pentium, 100 MHz from 1995 (77000 cps) | Pentium II, 300 MHz from 1997 (200000 cps) | Pentium III, 600 MHz from 1999 (500000 cps) | AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
 
 	The raw performance that DOSBox will try to emulate.
 
@@ -323,101 +326,74 @@ Core specific settings (latency, save states, start menu).
 
 ### Video Options
 
-- **** [] (**** |  |  |  |)
+- **Emulated Graphics Chip (restart required)** [dosbox_pure_machine] (**SVGA (Super Video Graphics Array) (default)** | VGA (Video Graphics Array) | EGA (Enhanced Graphics Adapter | CGA (Color Graphics Adapter) | Tandy (Tandy Graphics Adapter | Hercules (Hercules Graphics Card) | PCjr)
 
+	The type of graphics chip that DOSBox will emulate.
 
+- **CGA Mode** [dosbox_pure_cga] (**Early model, composite mode auto (default)** | Early model, composite mode on | Early model, composite mode off | Late model, composite mode auto | Late model, composite mode on | Late model, composite mode off)
 
-- **** [] (**** |  |  |  |)
+	The CGA variation that is being emulated.
 
+- **Hercules Color Mode** [dosbox_pure_hercules] (**Black & white (default)** | Black & amber | Black & green)
 
+	The color scheme for Hercules emulation.
 
-- **** [] (**** |  |  |  |)
+- **SVGA Mode (restart required)** [dosbox_pure_svga] (**S3 Trio64 (default)** | S3 Trio64 no-line buffer hack (reduces flickering in some games) | S3 Trio64 VESA 1.3 | Tseng Labs ET3000 | Tseng Labs ET4000 | Paradise PVGA1A)
 
+	The SVGA variation that is being emulated. Try changing this if you encounter graphical glitches.
 
+- **Aspect Ratio Correction** [dosbox_pure_aspect_correction] (**Off (default)** | On)
 
-- **** [] (**** |  |  |  |)
+	When enabled, the core's aspect ratio is set to what a CRT monitor would display.
 
+### System Options
+Other system settings for emulated RAM and CPU.
 
-- **** [] (**** |  |  |  |)
+- **Memory Size (restart required)** [dosbox_pure_memory_size] (**16 MB (default)** | Disable extended memory (no EMS/XMS) | 4 MB | 8 MB | 24 MB | 32 MB (unsafe) | 48 MB (unsafe) | 64 MB (unsafe) | 96 MB (unsafe) | 128 MB (unsafe) | 224 MB (unsafe))
 
+	The amount of (high) memory that the emulated machine has. You can also disable extended memory (EMS/XMS). Using more than the default is not recommended, due to incompatibility with certain games and applications.
 
-- **** [] (**** |  |  |  |)
+- **CPU Type (restart required)** [dosbox_pure_cpu_type] (**Auto - Mixed feature set with maximum performance and compatibility** | 386 - 386 instruction with fast memory access | 386 (slow) - 386 instruction set with memory privilege checks | 386 (prefetch) - With prefetch queue emulation (only on 'auto' and 'normal' core) | 486 (slow) - 486 instruction set with memory privilege checks | Pentium (slow) - 586 instruction set with memory privilege checks)
 
+	Emulated CPU type. Auto is the fastest choice. Games that require specific CPU type selection:
+	386 (prefetch): X-Men: Madness in The Murderworld, Terminator 1, Contra, Fifa International Soccer 1994
+	486 (slow): Betrayal in Antara
+	Pentium (slow): Fifa International Soccer 1994, Windows 95/Windows 3.x games
 
+- **Advanced > CPU Core (restart required)** [dosbox_pure_cpu_core] (**Auto - Real-mode games use normal, protected-mode games use dynamic** | Dynamic - Dynamic recompilation (fast, using dynamic_x86 implementation) | Auto - Real-mode games use normal, protected-mode games use dynamic | Dynamic - Dynamic recompilation (fast, using dynrec implementation) | **Normal (interpreter)** | Simple (interpreter optimized for old real-mode games))
 
-- **** [] (**** |  |  |  |)
+	Emulation method (DOSBox CPU core) used.
 
+### Audio Options
+MIDI, SoundBlaster and other audio settings.
 
+- **Audio Sample Rate (restart required)** [dosbox_pure_audiorate] (48000 | 44100 | 32730 | 32000 | 22050 | 16000 | 11025 | 8000 | 49716)
 
-- **** [] (**** |  |  |  |)
+	This should match the frontend audio output rate (Hz) setting. 49716 is for perfect OPL emulation.
 
+- **SoundBlaster Settings** [dosbox_pure_sblaster_conf] (**Port 0x220, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5** | Port 0x220, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 7, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x240, IRQ 2, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x240, IRQ 5, 8-Bit DMA 3, 16-bit DMA 5 | Port 0x240, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 10, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x280, IRQ 10, 8-Bit DMA 0, 16-bit DMA 6 | Port 0x210, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5)
 
+	Set the address, interrupt, low 8-bit and high 16-bit DMA.
 
+- **MIDI Output** [dosbox_pure_midi] (will cycle through the .ROMs or .SF2s you have installed, + frontend MIDI driver)
 
+	Select the .SF2 SoundFont file, .ROM file or interface used for MIDI output. To add SoundFonts or ROM files, copy them into the 'system' directory of the frontend. To use the frontend MIDI driver, make sure it's set up correctly.
 
-- **** [] (**** |  |  |  |)
+- **Advanced > SoundBlaster Type** [dosbox_pure_sblaster_type] (**SoundBlaster 16 (default)** | SoundBlaster Pro 2 | SoundBlaster Pro | SoundBlaster 2.0 | SoundBlaster 1.0 | GameBlaster | none)
 
+	Type of emulated SoundBlaster card.
 
+- **Advanced > SoundBlaster Adlib/FM Mode** [dosbox_pure_sblaster_adlib_mode] (**Auto (select based on the SoundBlaster type) (default)** | CMS (Creative Music System / GameBlaster) | OPL-2 (AdLib / OPL-2 / Yamaha 3812) | Dual OPL-2 (Dual OPL-2 used by SoundBlaster Pro 1.0 for stereo sound) | OPL-3 (AdLib / OPL-3 / Yamaha YMF262) | OPL-3 Gold (AdLib Gold / OPL-3 / Yamaha YMF262))
 
+	The SoundBlaster emulated FM synth mode. All modes are Adlib compatible except CMS.
 
-- **** [] (**** |  |  |  |)
+- **Advanced > SoundBlaster Adlib Provider** [dosbox_pure_sblaster_adlib_emu] (**Default** | High quality Nuked OPL3)
 
+	Provider for the Adlib emulation. Default has good quality and low performance requirements.
 
+- **Advanced > Enable Gravis Ultrasound (restart required)** [dosbox_pure_gus] (**Off (default)** | On)
 
-
-- **** [] (**** |  |  |  |)
-
-
-- **** [] (**** |  |  |  |)
-
-
-- **** [] (**** |  |  |  |)
-
-
-- **** [] (**** |  |  |  |)
-
-
-- **** [] (**** |  |  |  |)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================
-
-- **Machine type** [dosbox_machine_type] (**vgaonly**|svga_s3|svga_et3000|svga_et4000|svga_paradise|hercules|cga|tandy|pcjr|ega)
-
-	Select what machine will be emulated.
-
-- **Gamepad emulated mouse** [dosbox_emulated_mouse] (**enable**|disable)
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-- **CPU cycles x 100000** [dosbox_cpu_cycles_0] (**0**|1|2|3|4|5|6|7|8|9)
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-- **CPU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-- **CPU cycles x 1000** [dosbox_cpu_cycles_2] (**1**|2|3|4|5|6|7|8|9|0)
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-- **CPU cycles x 100** [dosbox_cpu_cycles_3] (**0**|1|2|3|4|5|6|7|8|9")
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+	Enable Gravis Ultrasound emulation. Settings are fixed at port 0x240, IRQ 5, DMA 3. If the ULTRADIR variable needs to be different than the default 'C:\\ULTRASND' you need to issue 'SET ULTRADIR=...' in the command line or in a batch file.
 
 ## Controls
 
