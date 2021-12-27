@@ -1,20 +1,10 @@
-
 # Cannonball
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ILGQqmpbg6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
 
-This is an OutRun game engine recreation written by Chris White in 2014. It has been ported to the libretro API.
-
-## Features
-
-- Smoother 60fps gameplay
-- True Widescreen Play Mode
-- Force Feedback support
-- Custom Track support from [LayOut](https://github.com/djyt/layout/wiki)
-- New Game Modes (Continuous Mode & Time Trial Mode)
-- [Many, many more enhancements](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#enhancements)
-
-The Cannonball core has been authored by
+This is an OutRun game engine recreation written by Chris White in 2014. It has been ported to the libretro API. The Cannonball core has been authored by
 
 - Chris White
 
@@ -56,6 +46,13 @@ RetroArch database(s) that are associated with the Cannonball core:
 - [Cannonball](https://github.com/libretro/libretro-database/blob/master/rdb/Cannonball.rdb)
 
 ## Features
+
+- Smoother 60fps gameplay
+- [True Widescreen Play Mode](https://youtube.com/clip/UgkxU6mqSPJX9ZAiAyd8N0oXCmHk8rRVHTdS)
+- Force Feedback support
+- Custom Track support from [LayOut](https://github.com/djyt/layout/wiki)
+- New Game Modes (Continuous Mode & Time Trial Mode)
+- [Many, many more enhancements](https://github.com/djyt/cannonball/wiki/Cannonball-Manual#enhancements)
 
 Frontend-level settings or features that the Cannonball core respects.
 
@@ -258,3 +255,4 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Libretro Cannonball Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/cannonball_libretro.info)
 - [Libretro Cannonball Github Repository](https://github.com/libretro/cannonball)
 - [Report Libretro Cannonball Core Issues Here](https://github.com/libretro/cannonball/issues)
+- [How to setup video](https://www.youtube.com/watch?v=ILGQqmpbg6E)
