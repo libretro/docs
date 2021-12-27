@@ -4,9 +4,17 @@
 
 ## Background
 
-NXEngine is a open source reproduction of the [Cave Story game engine](https://en.wikipedia.org/wiki/Cave_Story).
+NXEngine is a open source reproduction of the [Cave Story game engine](https://en.wikipedia.org/wiki/Cave_Story). The NXEngine core has been authored by
 
-#### How to start the NXEngine core:
+- Caitlin Shaw
+
+The NXEngine core is licensed under
+
+- [GPLv3](https://github.com/gameblabla/nxengine-nspire/blob/master/LICENSE)
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
+
+## How to start the NXEngine core:
 
 - To start the NXEngine core, you need to obtain NXEngine's data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
@@ -27,18 +35,6 @@ NXEngine is a open source reproduction of the [Cave Story game engine](https://e
 - If you are asked which core to select, choose 'Cave Story (NXEngine)'.
 
 The content should now start running!
-
-### Author/License
-
-The NXEngine core has been authored by
-
-- Caitlin Shaw
-
-The NXEngine core is licensed under
-
-- [GPLv3](https://github.com/gameblabla/nxengine-nspire/blob/master/LICENSE)
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
