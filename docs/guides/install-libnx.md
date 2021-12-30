@@ -6,6 +6,13 @@
 |:---------------------------|
 | You need to have Atmosphère custom firmware to run RetroArch on your Switch. Hardware or software changes on your device may damage your device.     |   
 
+## Prerequisites
+
+Neither RetroArch nor LibRetro support or recommend that your device run CFW.
+
+- Atmosphère [^1]
+- FAT32 formatted SD card
+
 ## Downloading and installing
 
 There are multiple ways of downloading RetroArch for your Switch.
@@ -34,4 +41,18 @@ Atmosphère now contains everything needed to run homebrews out of the box. To d
 
 If you wish to change the key, you can edit `/atmosphere/loader.ini` and change `override_key` here. You can add a `!` in front of the key to flip the condition ("run homebrew if the key is pressed" versus "run homebrew if the key isn't pressed").
 
+## Updating
+
+Updating RetroArch is the same as installing it, download a higher or lower version (in this case, downgrade) than the version you have and overwrite existing files.
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6yPROWaCY9g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Glossary
+
+=== "Atmosphère"
+	Atmosphère is a work-in-progress customized firmware for the Nintendo Switch.
+
+=== "NRO"
+	An NRO file is an executable file used by the Nintendo Switch. It contains compiled code for an application or game. NRO files may also store assets for Homebrew Launcher, such as a icon and metadata.
+
+[^1]: https://github.com/Atmosphere-NX/Atmosphere
