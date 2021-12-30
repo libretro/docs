@@ -16,16 +16,17 @@ zip, 7z
 
 ## Building romsets for FBNeo
 
-Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, they change regularily and are mostly based on the latest dumps available for a given game.
+Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game. **All of this is to offer you the best gaming experience possible, because older bad dumps can prevent the game from working as it should**.
 
 ### Step 1: Obtaining an XML DAT
 
-You can download them from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory.
+You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory.
 
 ### Step 2: Gathering the ingredients
 
 It mostly consists of latest dumps available for MAME.
 The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
+Having an older FBAlpha/FBNeo set among your ingredients will also help a lot.
 
 ### Step 3: Building the romsets
 
@@ -67,7 +68,7 @@ The following "device type" also exist, but they won't be compatible with every 
 
 It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name (the instructions to build those romsets don't differ from arcade's).
 
-You can use specific folder's name for detection, it's the recommended method if you are using RetroArch playlists or device not compatible with subsystems (android and consoles) :
+You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :
 * CBS ColecoVision : `coleco` | `colecovision`
 * Fairchild ChannelF : `chf` | `channelf`
 * MSX 1 : `msx` | `msx1`
@@ -83,7 +84,7 @@ You can use specific folder's name for detection, it's the recommended method if
 * SNK Neo-Geo Pocket : `ngp`
 * ZX Spectrum : `spectrum` | `zxspectrum`
 
-You can emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension, or using the `--subsystem XXX` argument in the command line, here is the list of available prefixes :
+You can also emulate consoles by prefixing the name of the roms with `XXX_` and removing the `zip|7z` extension in the command line, or adding the `--subsystem XXX` argument, here is the list of available prefixes :
 * CBS ColecoVision : `cv`
 * Fairchild ChannelF : `chf`
 * MSX 1 : `msx`
@@ -135,7 +136,7 @@ Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`
 
 ## Hiscores
 
-Copy [hiscore.dat](https://github.com/libretro/FBNeo/tree/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/`.
+Copy [hiscore.dat](https://github.com/libretro/FBNeo/tree/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled. It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for hiscores (or hiscore.dat might not be listing that romset). You can request support in the issue tracker as long as the request is reasonable (avoid making a list of several dozens/hundreds of games if you don't want to be ignored). There are also some cases where libretro features will prevent hiscores from working, runahead is a well-known case but there might be other savestates-related features causing issues.
 
 ## Run Ahead input lag reduction
 
@@ -143,7 +144,7 @@ This core widely supports the RetroArch "Run Ahead" input latency reduction feat
 
 ## RetroAchievements
 
-This core provide support for RetroAchievements, and some were added for popular games.
+This core provides support for RetroAchievements, and some were added for popular games.
 
 ## Dipswitches
 
