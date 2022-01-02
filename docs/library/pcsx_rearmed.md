@@ -1,5 +1,7 @@
 # Sony - PlayStation (PCSX ReARMed)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Up5ylMKFxZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 PCSX ReARMed is a fork of PCSX Reloaded. It differs from the latter in that it has special optimizations for systems that have an ARM architecture-based CPU.
@@ -91,7 +93,7 @@ Frontend-level settings or features that the PCSX ReARMed core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-## Directories
+### Directories
 
 The PCSX ReARMed core's library name is 'PCSX-ReARMed'
 
@@ -110,7 +112,7 @@ The PCSX ReARMed core saves/loads to/from these directories.
 |:--------:|:-----------:|
 | *.state# | State       |
 
-## Geometry and timing
+### Geometry and timing
 
 - The PCSX ReARMed core's core provided FPS is 60 for NTSC games. 50 for PAL games.
 - The PCSX ReARMed core's core provided sample rate is 44100 Hz
@@ -120,7 +122,7 @@ The PCSX ReARMed core saves/loads to/from these directories.
 - The PCSX ReARMed core's max height is 512
 - The PCSX ReARMed core's core provided aspect ratio is 4/3
 
-## Loading content
+### Loading content
 
 PCSX ReARMed needs a cue-sheet that points to an image file. A cue sheet, or cue file, is a metadata file which describes how the tracks of a CD or DVD are laid out.
 
@@ -138,7 +140,7 @@ After that, you can load the `foo.cue` file in RetroArch with the PCSX ReARMed c
 !!! attention
     Certain PS1 games are multi-track, so their .cue files might be more complicated.
 
-## Playing PAL copy protected games
+#### Playing PAL copy protected games
 
 PAL copy protected games need a SBI Subchannel file next to the bin/cue files in order to get past the copy protection.
 
@@ -146,7 +148,7 @@ PAL copy protected games need a SBI Subchannel file next to the bin/cue files in
 - Ape Escape (Europe).cue
 - **Ape Escape (Europe).sbi**
 
-## Multiple-disk games
+#### Multiple-disk games
 
 If foo is a multiple-disk game, you should have .cue files for each one, e.g. `foo (Disc 1).cue`, `foo (Disc 2).cue`, `foo (Disc 3).cue`.
 
@@ -176,7 +178,7 @@ Valkyrie Profile (USA) (Disc 2).cue
 !!! attention
 	Adding multi-track games to a RetroArch playlist is recommended. (Manually add an entry a playlist that points to `foo.m3u`)
 
-## Swapping disks
+### Swapping disks
 
 Swapping disks follows this procedure
 
@@ -188,7 +190,7 @@ Swapping disks follows this procedure
 
 4. Return to the game and wait a few seconds to let it take effect
 
-## PBP
+### PBP
 
 Alternatively to using cue sheets with .bin/.iso files, you can convert your games to .pbp (Playstation Portable update file).
 
