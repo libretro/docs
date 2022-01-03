@@ -1,60 +1,29 @@
-# Sega - Dreamcast/NAOMI (Flycast)
-
-## Contribute to this documentation
-
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/flycastc.md). Changes are proposed using "Pull Requests."
+# Sega - Dreamcast|NAOMI (Flycast)
 
 ## Background
 
-Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator.
+Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator. The Flycast core has been authored by
 
-### Why use this core?
+- flyinghead
 
-Awaiting description.
+The Flycast core is licensed under
 
-### How to get and install the flycast core:
+- [GPLv2](https://github.com/libretro/flycast/blob/master/LICENSE)
 
-1. Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-2. Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-3. Browse through the list and select 'Sega Dreamcast (flycast)'.
+## How to play NAOMI Games
 
-After this has finished downloading, the core should now be ready for use!
-
-#### How to play (after installation):
-
-1. Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-2. Browse to the folder that contains the content you want to run.
-
-3. Select the content that you want to run.
-
-4. If you are asked which core to select, choose 'Sega Dreamcast (flycast)'.
-
-The game should now start running!
-
-#### How to play NAOMI Games:
 1. Run NAOMI games stored in MAME format zip files by following the same process as standard Dreamcast games
 
 2. Run NAOMI GD-ROM format games stored in MAME zip + chd format by running the zip file through RetroArch.  The zip file should be stored in your roms folder with the chd file in a subdirectory of the roms folder named after the mame ID.
 
+{==
 Example (MAME ID=ikaruga)
-- [ROM FOLDER]/ikaruga.zip
-- [ROM FOLDER]/ikaruga/gdl-0010.chd
-
-
-### Authors
-
-- flyinghead
-
-## See also
-
-## License
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
-
-- [GPLv2](https://github.com/libretro/flycast/blob/master/LICENSE)
+- [ROM FOLDER]|ikaruga.zip
+- [ROM FOLDER]|ikaruga|gdl-0010.chd
+==}
 
 ## Extensions
 
@@ -84,13 +53,13 @@ Required or optional firmware files go in RetroArch's system directory.
 
 |   Filename      |    Description                                                     |              md5sum              |
 |:---------------:|:------------------------------------------------------------------:|:--------------------------------:|
-| dc/dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
-| dc/naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
-| dc/hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
-| dc/f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
-| dc/f355bios.zip | Naomi Ferrari F355 Challenge twin/deluxe Bios from MAME - Optional |                                  |
-| dc/airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
-| dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
+| dc|dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
+| dc|naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
+| dc|hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
+| dc|f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
+| dc|f355bios.zip | Naomi Ferrari F355 Challenge twin|deluxe Bios from MAME - Optional |                                  |
+| dc|airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
+| dc|awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
 
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
@@ -128,11 +97,11 @@ The FlyCast core's directory name is 'Flycast'
 
 The FlyCast core creates these files in RetroArch's system directory.
 
-- dc/vmu_save_A1.bin
-- dc/vmu_save_B1.bin
-- dc/vmu_save_C1.bin
-- dc/vmu_save_D1.bin
-- dc/data/dc_nvmem.bin
+- dc|vmu_save_A1.bin
+- dc|vmu_save_B1.bin
+- dc|vmu_save_C1.bin
+- dc|vmu_save_D1.bin
+- dc|data|dc_nvmem.bin
 
 - dc directory ()
 -- vmu_save_A1.bin ()
@@ -144,7 +113,7 @@ The FlyCast core creates these files in RetroArch's system directory.
 
 ### Core provided aspect ratio
 
-FlyCast's core provided aspect ratio is 4/3.
+FlyCast's core provided aspect ratio is 4|3.
 
 ### Rumble
 
@@ -154,79 +123,233 @@ Rumble only works when the Joypad being used has rumble functionality and the Jo
 
 The FlyCast core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **CPU Mode (restart)** (**dynamic_recomplier**/generic_recomplier)
+### System
 
-<center> Awaiting description. </center>
+Configure region, language, BIOS and base hardware settings.
 
-- **Boot to BIOS (restart)** (**Off**/On)
+**Region** [flycast_region] (**Default**|Japan|USA|Europe)
 
-<center> Boot directly into the Dreamcast BIOS menu. </center>
+**Language** [flycast_language] (**Default**|Japanese|English|German|French|Spanish|Italian)
 
-- **Internal resolution (restart)** (**640x480**/1280x960/1920x1440/2560x1920/3200x2400/3840x2880/
-4480x3360/5120x3840/5760x4320/6400x4800/7040x5280/7680x5760/8320x6240/8960x6720/
-9600x7200/10240x7680/10880x8160/11520x8640/12160x9120/12800x9600)
+!!! regular ""
 
-<center> Self explanatory. </center>
+	Changes the language used by the BIOS and by any games that contain multiple languages.
 
-<center>
+**HLE BIOS** [flycast_hle_bios] (**disabled**|enabled)
+
+!!! regular ""
+
+	Force use of high-level emulation BIOS.
+
+**Boot to BIOS** [flycast_boot_to_bios] (**disabled**|enabled)
+
+!!! regular ""
+
+	Boot directly into the Dreamcast BIOS menu.
+
+**Enable DSP** [flycast_enable_dsp] (**enabled**|disabled)
+
+!!! regular ""
+
+	Enable emulation of the Dreamcast's audio DSP (digital signal processor). Improves the accuracy of generated sound, but increases performance requirements.
+
+**Force Windows CE Mode** [flycast_force_windows_ce_modee] (**disabled**|enabled)
+
+!!! regular ""
+
+	Enable full MMU (Memory Management Unit) emulation and other settings for Windows CE games.
+
+### Video
+
+Configure visual buffers & effects, display parameters, framerate/-skip and rendering/texture parameters.
+
+**Internal resolution (restart)** [flycast_internal_resolution] (**640x480**|1280x960|1920x1440|2560x1920|3200x2400|3840x2880|
+4480x3360|5120x3840|5760x4320|6400x4800|7040x5280|7680x5760|8320x6240|8960x6720|
+9600x7200|10240x7680|10880x8160|11520x8640|12160x9120|12800x9600)
+
+!!! regular ""
+
+	Modify rendering resolution.
 
 ??? note "Internal resolution - 640x480"
 	![](../image/core/flycast/640x480.png)
 
-</center>
-
-<center>
-
 ??? note "Internal resolution - 1920x1440"
-	![](../image/core/flycast/1920x1440.png)
+	![](../image/core/flycast/1920x1440.png)	
 
-</center>
+**Cable Type** [flycast_cable_type] (**TV (Composite)**[^cable]|TV (RGB)|VGA(RGB))
 
-- **Mipmapping** (Off/**On**)
+!!! regular ""
 
-<center> Awaiting description. </center>
+	The output signal type. 'TV (Composite)' is the most widely supported.	
 
-- **Volume modifier** (**On**/off)
+**Broadcast Standard** [flycast_brodcast] (**Default**|PAL-M (Brazil)|PAL-N (Argentina, Paraguay, Uruguay)|NTSC|PAL (World))
 
-<center> A GPU feature that is typically used by games to draw shadows of objects. You should typically leave this on - performance impact should be minimal to negligible. </center>
+**Screen Orientation** [flycast_screen_orientation] (**Horizontal**|Vertical)	
 
-- **Widescreen hack** (**Off**/On)
+**Alpha Sorting** [flycast_alpha_sorting] (Per-Strip (fast, least accurate)|Per-Triangle (normal)|"Per-Pixel (accurate, but slowest)[^vulkan])
 
-<center> Awaiting description. </center>
+**Enable RTT (Render To Texture) Buffer** (**Off**|On)
 
-- **Audio buffer size** (**1024**/2048)
+**Mipmapping** (Off|**On**)
 
-<center> Awaiting description. </center>
 
-- **Cable type** (**TV (VBS/Y+S/C)**/TV (RGB)/VGA (RGB))
+**Volume modifier** (**On**|off)
 
-<center> Awaiting description. </center>
+!!! regular ""
 
-- **Broadcast** (**2**/3/4/0/1)
+	A GPU feature that is typically used by games to draw shadows of objects. You should typically leave this on - performance impact should be minimal to negligible.
 
-<center> Awaiting description. </center>
+**Anisotropic Filtering** [flycast_anistropic_filtering] (**4**|2|8|16)
 
-- **Framerate** (**fullspeed**/normal)
+!!! regular ""
 
-<center> Awaiting description. </center>
+	Enhance the quality of textures on surfaces that are at oblique viewing angles with respect to the camera.
 
-- **Region** (**3**/0/1/2)
+**Delay Frame Swapping** [flycast_delay_frame_swapping] (**disabled**|enabled)
 
-<center> Awaiting description. </center>
+!!! regular ""
 
-- **Precompile shaders** (**Off**/On)
+	Useful to avoid flashing screens or glitchy videos. Not recommended on slow platforms. Note: This setting only applies when 'Threaded Rendering' is enabled.
 
-<center> Awaiting description. </center>
+**PowerVR2 Post-processing Filter** [flycast_pvr2_filtering] (**disabled**|enabled)
 
-- **"Enable RTT (Render To Texture)** (Off/**On**)
+!!! regular ""
 
-<center> Awaiting description. </center>
+	Post-process the rendered image to simulate effects specific to the PowerVR2 GPU and analog video signals.
 
-- **Purupuru Pack (restart)** (Off/**On**)
+### Performance
 
-<center> Awaiting description. </center>
+Configure threaded rendering, integer division optimisations and frame skip settings
+
+**Threaded Rendering (Restart Required)** [flycast_threaded_rendering] (**enabled**|disabled)
+
+!!! regular ""
+
+	Runs the GPU and CPU on different threads. Highly recommended.
+
+**Auto Skip Frame** [flycast_skip_frame] (**disabled**|enabled)
+
+!!! regular ""
+
+	Automatically skip frames when the emulator is running slow. Note: This setting only applies when 'Threaded Rendering' is enabled.
+
+**Frame Skipping** [flycast_frame_skipping] (**disabled**|1|2|3|4|5|6)
+
+!!! regular ""
+
+	Sets the number of frames to skip between each displayed frame.
+
+**Widescreen Cheats (Restart Required)** [flycast_widescreen_cheats] (**Off**|On)
+
+!!! regular ""
+
+	Activates cheats that allow certain games to display in widescreen format.
+
+**Widescreen Hack** [flycast_widescreen_hack] (**Off**|On)
+
+!!! regular ""
+
+	Draw geometry outside of the normal 4:3 aspect ratio. May produce graphical glitches in the revealed areas.
+
+**GD-ROM Fast Loading (inaccurate)** [flycast_gdrom_fast_loading] (**On**|Off)
+
+!!! regular ""
+
+	Speeds up GD-ROM loading.
+
+**Load Custom Textures** [flycast_custom_textures] (**Off**|On)
+
+**Dump Textures** [flycast_dump_textures] (**Off**|On)
+
+### Input
+
+!!! regular ""
+
+	Configure gamepad and light gun settings.
+
+**Analog Stick Deadzone** [flycast_analog_stick_deadzone] (**15%**|0%|5%|10%|20%|25%|30%)
+
+**Trigger Deadzone** [flycast_trigger_deadzone] (**0%**|5%|10%|15%|20%|25%|30%)
+
+**Digital Triggers** [flycast_digital_triggers] (**Off**|On)
+
+**Purupuru Pack/Vibration Pack** [flycast_enable_purupuru] (**On**|Off)
+
+!!! regular ""
+
+	Enables controller force feedback.
+
+**Gun crosshair 1 Display** [flycast_lightgun1_crosshair] (**Off**|White|Red|Green|Blue)
+
+**Gun crosshair 2 Display** [flycast_lightgun2_crosshair] (**Off**|White|Red|Green|Blue)
+
+**Gun crosshair 3 Display** [flycast_lightgun3_crosshair] (**Off**|White|Red|Green|Blue)
+
+**Gun crosshair 4 Display** [flycast_lightgun4_crosshair] (**Off**|White|Red|Green|Blue)
+
+### Visual Memory Unit
+
+!!! regular ""
+
+	Configure per-game VMU save files and on-scren VMU visibility sttings.
+
+**Per-Game VMUs** [flycast_per_content_vmus] (**disabled**|VMU A1|All VMUs)
+
+!!! regular ""
+
+	When disabled, all games share 4 VMU save files (A1, B1, C1, D1) located in RetroArch's system directory. The 'VMU A1' setting creates a unique VMU 'A1' file in RetroArch's save directory for each game that is launched. The 'All VMUs' setting creates 4 unique VMU files (A1, B1, C1, D1) for each game that is launched.
+
+**VMU Screen 1 Display** [flycast_vmu1_screen_display] (**Off**|enabled)
+
+**VMU Screen 1 Position** [flycast_vmu1_screen_position] (**Upper Left**|Upper Right|Lower Left|Lower Right)
+
+**VMU Screen 1 Size** [flycast_vmu1_screen_size] (**1x**|2x|3x|4x|5x)
+
+**VMU Screen 1 Pixel On Color** [flycast_vmu1_pixel_on_color] (**Default ON**|Default OFF|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 1 Pixel Off Color** [flycast_vmu1_pixel_off_color] (**Default OFF**|Default ON|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 1 Opacity** [flycast_vmu1_screen_opacity] (**100%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
+
+**VMU Screen 2 Display** [flycast_vmu2_screen_display] (**Off**|enabled)
+
+**VMU Screen 2 Position** [flycast_vmu2_screen_position] (**Upper Left**|Upper Right|Lower Left|Lower Right)
+
+**VMU Screen 2 Size** [flycast_vmu2_screen_size] (**1x**|2x|3x|4x|5x)
+
+**VMU Screen 2 Pixel On Color** [flycast_vmu2_pixel_on_color] (**Default ON**|Default OFF|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 2 Pixel Off Color** [flycast_vmu2_pixel_off_color] (**Default OFF**|Default ON|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 2 Opacity** [flycast_vmu2_screen_opacity] (**100%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
+
+**VMU Screen 3 Display** [flycast_vmu3_screen_display] (**Off**|enabled)
+
+**VMU Screen 3 Position** [flycast_vmu3_screen_position] (**Upper Left**|Upper Right|Lower Left|Lower Right)
+
+**VMU Screen 3 Size** [flycast_vmu3_screen_size] (**1x**|2x|3x|4x|5x)
+
+**VMU Screen 3 Pixel On Color** [flycast_vmu3_pixel_on_color] (**Default ON**|Default OFF|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 3 Pixel Off Color** [flycast_vmu3_pixel_off_color] (**Default OFF**|Default ON|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 3 Opacity** [flycast_vmu3_screen_opacity] (**100%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
+
+**VMU Screen 4 Display** [flycast_vmu4_screen_display] (**Off**|enabled)
+
+**VMU Screen 4 Position** [flycast_vmu4_screen_position] (**Upper Left**|Upper Right|Lower Left|Lower Right)
+
+**VMU Screen 4 Size** [flycast_vmu4_screen_size] (**1x**|2x|3x|4x|5x)
+
+**VMU Screen 4 Pixel On Color** [flycast_vmu4_pixel_on_color] (**Default ON**|Default OFF|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 4 Pixel Off Color** [flycast_vmu4_pixel_off_color] (**Default OFF**|Default ON|Black|Blue|Light Blue|Green|Cyan|Cyan Blue|Light Green|Cyan Green|Light Cyan|Red|Purple|Light Purple|Yellow|Gray|Light Purple (2)|Light Green (2)|Light Green (3)|Light Cyan (2)|Light Red(2)|Magenta|Light Purple (3)|Light Oragen|Orange|Light Purple(4)|Light Yellow|Light Yellow (2)|White)
+
+**VMU Screen 4 Opacity** [flycast_vmu4_screen_opacity] (**100%**|10%|20%|30%|40%|50%|60%|70%|80%|90%)
 
 ## Controllers
+
 
 ### Device types
 
@@ -236,7 +359,7 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 - None - Input disabled.
 - **RetroPad** - Joypad
-- RetroPad w/Analog - Joypad - **There is no reason to switch to this.**
+- RetroPad w|Analog - Joypad - **There is no reason to switch to this.**
 
 ### Controller tables
 
@@ -264,11 +387,11 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 ## Multiple-disc games
 
-If foo is a multiple-disc game, you should have .chd/cue/cdi/gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
+If foo is a multiple-disc game, you should have .chd|cue|cdi|gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
 
 To take advantage of Flycast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
 
-Create a text file and save it as `foo.m3u`. Then enter your game's .chd/cue/cdi/gdi files on it. The m3u file contents should look something like this:
+Create a text file and save it as `foo.m3u`. Then enter your game's .chd|cue|cdi|gdi files on it. The m3u file contents should look something like this:
 
 `foo.m3u`
 ```
@@ -285,8 +408,8 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ### General Flycast Issues
 
-- If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
-- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Flycast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
+- If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system|dc directory.
+- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA|Flycast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted|intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
 - Polygon sorting issues can make objects appear distorted. Use Per-Pixel Alpha sorting for accurate rendering (at the expense of performance).
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead.
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing.
@@ -301,7 +424,12 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ## External Links
 
-- [Libretro Flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
-- [Libretro Flycast Github Repository](https://github.com/libretro/flycast)
-- [Report Flycast Core Issues Here](https://github.com/libretro/flycast/issues)
-- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)
+- [Libretro Flycast Core info file](https:/github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
+- [Libretro Flycast Github Repository](https:/github.com/libretro/flycast)
+- [Report Flycast Core Issues Here](https:/github.com/libretro/flycast/issues)
+- [Gameplay Videos](https:/www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)
+- [Steam page](https://store.steampowered.com/app/1222633/RetroArch___Flycast/)
+
+
+[^vulkan]: If video driver is vulkan. 
+[^cable]: If low end then VGA (RGB), otherwise TV (Composite).
