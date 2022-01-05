@@ -17,12 +17,12 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 1. Run NAOMI games stored in MAME format zip files by following the same process as standard Dreamcast games
 
-2. Run NAOMI GD-ROM format games stored in MAME zip + chd format by running the zip file through RetroArch.  The zip file should be stored in your roms folder with the chd file in a subdirectory of the roms folder named after the mame ID.
+2. Run NAOMI GD-ROM format games stored in MAME zip + chd format by running the zip file through RetroArch. The zip file should be stored in your roms folder with the chd file in a subdirectory of the roms folder named after the mame ID.
 
 {==
 Example (MAME ID=ikaruga)
-- [ROM FOLDER]|ikaruga.zip
-- [ROM FOLDER]|ikaruga|gdl-0010.chd
+- [ROM FOLDER]/ikaruga.zip
+- [ROM FOLDER]/ikaruga/gdl-0010.chd
 ==}
 
 ## Extensions
@@ -53,13 +53,13 @@ Required or optional firmware files go in RetroArch's system directory.
 
 |   Filename      |    Description                                                     |              md5sum              |
 |:---------------:|:------------------------------------------------------------------:|:--------------------------------:|
-| dc|dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
-| dc|naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
-| dc|hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
-| dc|f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
-| dc|f355bios.zip | Naomi Ferrari F355 Challenge twin|deluxe Bios from MAME - Optional |                                  |
-| dc|airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
-| dc|awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
+| dc/dc_boot.bin  | Dreamcast BIOS - Requried for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
+| dc/naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
+| dc/hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
+| dc/f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
+| dc/f355bios.zip | Naomi Ferrari F355 Challenge twin/deluxe Bios from MAME - Optional |                                  |
+| dc/airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
+| dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
 
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
@@ -97,23 +97,18 @@ The FlyCast core's directory name is 'Flycast'
 
 The FlyCast core creates these files in RetroArch's system directory.
 
-- dc|vmu_save_A1.bin
-- dc|vmu_save_B1.bin
-- dc|vmu_save_C1.bin
-- dc|vmu_save_D1.bin
-- dc|data|dc_nvmem.bin
-
-- dc directory ()
--- vmu_save_A1.bin ()
--- vmu_save_B1.bin ()
--- vmu_save_C1.bin ()
--- vmu_save_D1.bin ()
--- data directory ()
---- dc_nvmem.bin ()
+```
+dc/
+├── vmu_save_A1.bin
+├── vmu_save_B1.bin
+├── vmu_save_C1.bin
+├── vmu_save_D1.bin
+└── dc_nvmem.bin
+```
 
 ### Core provided aspect ratio
 
-FlyCast's core provided aspect ratio is 4|3.
+FlyCast's core provided aspect ratio is 4/3.
 
 ### Rumble
 
@@ -359,7 +354,7 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 - None - Input disabled.
 - **RetroPad** - Joypad
-- RetroPad w|Analog - Joypad - **There is no reason to switch to this.**
+- RetroPad w/Analog - Joypad - **There is no reason to switch to this.**
 
 ### Controller tables
 
@@ -387,11 +382,11 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 ## Multiple-disc games
 
-If foo is a multiple-disc game, you should have .chd|cue|cdi|gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
+If foo is a multiple-disc game, you should have .chd/cue/cdi/gdi files for each one, e.g. `foo (Disc 1).chd`, `foo (Disc 2).chd`, `foo (Disc 3).chd`.
 
 To take advantage of Flycast's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
 
-Create a text file and save it as `foo.m3u`. Then enter your game's .chd|cue|cdi|gdi files on it. The m3u file contents should look something like this:
+Create a text file and save it as `foo.m3u`. Then enter your game's .chd/cue/cdi/gdi files on it. The m3u file contents should look something like this:
 
 `foo.m3u`
 ```
@@ -408,8 +403,8 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ### General Flycast Issues
 
-- If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values).  Also try deleting all of the dc_nvmem.bin files in the system|dc directory.
-- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA|Flycast.  It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted|intialized.  Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
+- If the date and time are not being saved properly, please ensure you have the correct dc_flash.bin and dc_bios.bin files (check the md5sum values). Also try deleting all of the dc_nvmem.bin files in the system/dc directory.
+- Once you save to a VMU slot with any game, that VMU becomes inaccessible the next time you load the emulator. The fix for this is to enable the Core Option for "Boot to BIOS", exit RA, delete all of the vmu_save*.bin files, start RA/Flycast. It will boot to BIOS where you can select the VMU option, select one of the VMUs, click the "All" icon in upper-left, click Delete All and the VMU will be formatted/intialized. Disable the "Boot to BIOS" option, restart RA, and everything should be fine.
 - Polygon sorting issues can make objects appear distorted. Use Per-Pixel Alpha sorting for accurate rendering (at the expense of performance).
 - When using an Xbox 360 Controller, analog triggers don't work properly. Use the bumpers instead.
 - Changing games without closing and reloading RetroArch often leads to RetroArch crashing.
@@ -424,10 +419,10 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 
 ## External Links
 
-- [Libretro Flycast Core info file](https:/github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
-- [Libretro Flycast Github Repository](https:/github.com/libretro/flycast)
-- [Report Flycast Core Issues Here](https:/github.com/libretro/flycast/issues)
-- [Gameplay Videos](https:/www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)
+- [Libretro Flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
+- [Libretro Flycast Github Repository](https://github.com/libretro/flycast)
+- [Report Flycast Core Issues Here](https://github.com/libretro/flycast/issues)
+- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)
 - [Steam page](https://store.steampowered.com/app/1222633/RetroArch___Flycast/)
 
 
