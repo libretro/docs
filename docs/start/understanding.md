@@ -29,6 +29,6 @@ When you choose to use the libretro API, your program gets turned into a single 
 ## Logo/Mascott
 
 ![Invader](../image/start/icon.png){ align=left }
-We call them as Invader but you can call it *Nice Little Pixel*, it was drawn from scratch by talented [Agnes Heyer](https://twitter.com/agnesheyer) and it has a completely different visual style.
+We call them Invader but you can call it *Nice Little Pixel*, it was drawn from scratch by talented [Runar Heyer](https://twitter.com/runarheyer) and it has a completely different visual style.
 
 Let's continue if we understood LibRetro and RetroArch. Click [here](installation.md) to get started.
