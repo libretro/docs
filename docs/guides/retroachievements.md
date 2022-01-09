@@ -56,6 +56,14 @@ You can also check the progress of your friends and add comments on their trophi
 | [FinalBurn Neo](https://github.com/libretro/FBNeo) | ✔         | AES bios is required for many Neo Geo achievements. AES Asia (neo-epo.bin) is generally English. |
 | [MAME](https://github.com/libretro/mame)           | ✕         | Support is not likely to ever be possible. The same is true for all MAME variants. |
 
+### Apple
+
+#### Apple II
+
+| Core                                            | Supported | Notes |
+|-------------------------------------------------|:---------:|:------|
+| [AppleWin](https://github.com/audetto/AppleWin) | ✔         | Libretro core is still fairly new, but should be fully supported. Please report any issues. |
+
 ### Atari
 
 #### 2600
@@ -134,8 +142,8 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         |       |
+| [fMSX](https://github.com/libretro/fmsx-libretro)       | ✔         | Some games may require mapper adjustment in core options to run. |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✔         | Requires games in `msx` subdirectory, exact archives just like arcade. Not all games may be linked for this core. MSX2 is not supported. |
-| [fMSX](https://github.com/libretro/fmsx-libretro)       | ✕         | Emulation is too unstable to support. |
 
 ### NEC
 
@@ -166,7 +174,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
-| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | BIOS required |
+| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | External BIOS recommended, but no longer required. RetroArch 1.9.14 nightly or newer required for hashing to work. DSi mode currently is not supported for achievements. |
 | [DeSmuME](https://github.com/libretro/desmume)          | ✔         | External BIOS recommended, needs to be enabled in core options |
 | [DeSmuME 2015](https://github.com/libretro/desmume2015) | ✔         |       |
 
@@ -177,8 +185,8 @@ You can also check the progress of your friends and add comments on their trophi
 | [Gambatte](https://github.com/libretro/gambatte-libretro) | ✔         |       |
 | [SameBoy](https://github.com/libretro/SameBoy)            | ✔         | Highest accuracy, may have issues with some achievement sets for the time being |
 | [Gearboy](https://github.com/drhelius/Gearboy)            | ✔         |       |
-| [VBA-M](https://github.com/libretro/vbam-libretro)        | ✔         | Has gyro support via analog sticks |
-| [mGBA](https://github.com/libretro/mgba)                  | ✔         |       |
+| [mGBA](https://github.com/libretro/mgba)                  | ✔         | Robust feature set. Currently the only core with GB Camera support. |
+| [VBA-M](https://github.com/libretro/vbam-libretro)        | ✔         | Currently the only core with gyro support via analog sticks |
 | [Mesen-S](https://github.com/SourMesen/Mesen-S)           | ✔         | Currently the only supported core with complete SGB support. Supports GB and GBC without SGB as well. |
 | [Emux GB](https://github.com/libretro/emux)               | ✕         |       |
 | [TGB Dual](https://github.com/libretro/tgbdual-libretro)  | ✕         |       |
@@ -326,9 +334,15 @@ You can also check the progress of your friends and add comments on their trophi
 |------------------------------------------------------------------|:---------:|:------|
 | [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) | ✔         | Identical to Beetle PSX, with extra hardware features. High accuracy. |
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | Identical to Beetle PSX HW in software mode. |
-| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | Fairly high accuracy, extremely high speed. |
-| [SwanStation](https://github.com/libretro/swanstation)           | ✔         | Forked from DuckStation, similar functionality. No longer receiving updates. |
+| [SwanStation](https://github.com/libretro/swanstation)           | ✔         | Fork of DuckStation. Fairly high accuracy, extremely high speed. |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
+| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | No longer receiving updates. |
+
+#### PlayStation Portable
+
+| Core                                          | Supported | Notes |
+|-----------------------------------------------|:---------:|:------|
+| [PPSSPP](https://github.com/hrydgard/ppsspp/) | ✔         | RetroArch 1.9.9 or higher required |
 
 ### The 3DO Company (various manufacturers)
 
@@ -344,4 +358,4 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                           | Supported | Notes |
 |------------------------------------------------|:---------:|:------|
-| [Potator](https://github.com/libretro/potator) | ✔         | A nightly of RetroArch 1.9.1 or newer is needed for achievement support. |
+| [Potator](https://github.com/libretro/potator) | ✔         | RetroArch 1.9.2 or higher required |
