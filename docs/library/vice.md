@@ -171,6 +171,7 @@ The VICE cores save/load to/from these directories.
 - `vice_work.d64` (Work disk in D64 format)
 - `vice_work.d71` (Work disk in D71 format)
 - `vice_work.d81` (Work disk in D81 format)
+- `vice_work/` (Work disk in Directory FileSystem format)
 
 **Frontend's State directory**
 
@@ -285,11 +286,14 @@ This allows:
 |-----------------|-------------------------|
 | D-Pad           | Joystick                |
 | Left Analog     | Mouse/paddles           |
-| B               | Fire button             |
+| B               | Fire button 1 / Handle  |
+| A               | Fire button 2 / Base    |
 | X               | Space                   |
 | L2              | Escape (RUN/STOP)       |
 | R2              | Enter (RETURN)          |
-| Select          | Toggle virtual keyboard |
+| Select (Short)  | Toggle virtual keyboard |
+| Select (Long)   | Toggle statusbar        |
+| Select (Hold)   | Fast-Forward            |
 
 | Keyboard key    | Action                  |
 |-----------------|-------------------------|
@@ -473,11 +477,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'ON' always runs content, 'OFF' runs only PRG/CRT, 'Warp' turns warp mode on during autostart loading.
 
-- **Automatic Load Warp** [vice_autoloadwarp] (**disabled**|enabled|disk|tape)
+- **Automatic Load Warp** [vice_autoloadwarp] (**disabled**|enabled|mute|disk|disk_mute|tape|tape_mute)
 
-    Toggle warp mode during disk and/or tape access.
+    Toggle warp mode during disk and/or tape access if there is no audio output.
 
-    Mutes 'Drive Sound Emulation'. 'True Drive Emulation' required!
+    Mutes 'Drive Sound Emulation', 'Datasette Sound' and 'Audio Leak Emulation' when not ignoring audio.
+
+    'True Drive Emulation' required with disks!
+
+- **Warp Boost** [vice_warp_boost] (disabled|**enabled**)
+
+    Make Warp Mode much faster by temporary changing SID emulation to 'FastSID' while warping.
 
 - **True Drive Emulation** [vice_drive_true_emulation] (disabled|**enabled**)
 
@@ -499,9 +509,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Set EasyFlash cartridges read only.
 
-- **Global Work Disk** [vice_work_disk] (**disabled**|8_d64|9_d64|8_d71|9_d71|8_d81|9_d81)
+- **Global Work Disk** [vice_work_disk] (**disabled**|8_d64|9_d64|8_d71|9_d71|8_d81|9_d81|8_fs|9_fs)
 
-    Global disk in device 8 is only inserted when the core is started without content.
+    Work disk in device 8 will not be inserted when floppy content is launched.
 
 ### Video options
 
@@ -513,7 +523,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Hotkey toggling disables this option until core restart.
 
-- **Zoom Mode** [vice_zoom_mode] (**disabled**|small|medium|maximum|manual)
+- **Zoom Mode** [vice_zoom_mode] (**disabled**|small|medium|maximum|auto|auto_disable|manual)
 
     Crop borders to fit various host screens.
 
@@ -533,35 +543,25 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Manual Crop Right** [vice_manual_crop_right] (**0**-60)
 
-- **Statusbar Mode** [vice_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
-
-    - 'Full': Joyports + Current image + LEDs
-    - 'Basic': Current image + LEDs
-    - 'Minimal': Track number + FPS hidden
-
-- **Virtual KBD Theme** [vice_vkbd_theme] (**auto**|auto_outline|brown|brown_outline|beige|beige_outline|dark|dark_outline|light|light_outline)
-
-    By default, the keyboard comes up with RetroPad Select.
-
-- **Virtual KBD Transparency** [vice_vkbd_transparency] (0%|**25%**|50%|75%|100%)
-
-    Keyboard transparency can be toggled with RetroPad A.
-
 - **Color Depth (Restart)** [vice_gfx_colors] (**16bit**|24bit)
 
     '24-bit' is slower and not available on all platforms. Full restart required.
-
-- **Light Pen/Gun Pointer Color** [vice_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
-
-    Crosshair color for light pens and guns.
 
 #### Color palette options
 
 ##### VIC-II (C64, C128, CBM-II 5x0)
 
-- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
 
-    CRT emulation filter with custom horizontal blur.
+    PAL emulation filter with custom horizontal blur.
+
+- **VIC-II Filter Oddline Phase** [vice_vicii_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
+
+- **VIC-II Filter Oddline Offset** [vice_vicii_filter_oddline_offset] (**1000**|20-2000)
+
+    PAL emulation filter oddline offset.
 
 - **VIC-II Color Palette** [vice_external_palette] (default|**colodore**|pepto-pal|pepto-ntsc|pepto-ntsc-sony|cjam|c64hq|c64s|ccs64|community-colors|deekay|frodo|godot|pc64|ptoing|rgb|vice)
 
@@ -589,9 +589,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### VIC (VIC-20)
 
-- **VIC Filter** [vice_vic_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+- **VIC Filter** [vice_vic_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
 
-    CRT emulation filter with custom horizontal blur.
+    PAL emulation filter with custom horizontal blur.
+
+- **VIC Filter Oddline Phase** [vice_vic_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
+
+- **VIC Filter Oddline Offset** [vice_vic_filter_oddline_offset] (**1000**|20-2000)
+
+    PAL emulation filter oddline offset.
 
 - **VIC Color Palette** [vice_vic20_external_palette] (default|**colodore_vic**|mike-pal|mike-ntsc|vice)
 
@@ -619,9 +627,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### TED (PLUS/4)
 
-- **TED Filter** [vice_ted_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+- **TED Filter** [vice_ted_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
 
-    CRT emulation filter with custom horizontal blur.
+    PAL emulation filter with custom horizontal blur.
+
+- **TED Filter Oddline Phase** [vice_ted_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
+
+- **TED Filter Oddline Offset** [vice_ted_filter_oddline_offset] (**1000**|20-2000)
+
+    PAL emulation filter oddline offset.
 
 - **TED Color Palette** [vice_plus4_external_palette] (default|**colodore_ted**|yape-pal|yape-ntsc)
 
@@ -649,13 +665,41 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### CRTC (CBM-II, PET)
 
-- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur)
+- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
 
-    CRT emulation filter with custom horizontal blur.
+    PAL emulation filter with custom horizontal blur.
+
+- **CRTC Filter Oddline Phase** [vice_crtc_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
+
+- **CRTC Filter Oddline Offset** [vice_crtc_filter_oddline_offset] (**1000**|20-2000)
+
+    PAL emulation filter oddline offset.
 
 - **CRTC Color Palette** [vice_cbm2_external_palette] (**default**|green|amber|white)
 
 - **CRTC Color Palette** [vice_pet_external_palette] (**default**|green|amber|white)
+
+### On-Screen Display options
+
+- **Virtual KBD Theme** [vice_vkbd_theme] (**auto**|auto_outline|brown|brown_outline|beige|beige_outline|dark|dark_outline|light|light_outline)
+
+    The keyboard comes up with RetroPad Select by default.
+
+- **Virtual KBD Transparency** [vice_vkbd_transparency] (0%|**25%**|50%|75%|100%)
+
+    Keyboard transparency can be toggled with RetroPad A.
+
+- **Statusbar Mode** [vice_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
+
+    - 'Full': Joyports + Current image + LEDs
+    - 'Basic': Current image + LEDs
+    - 'Minimal': Track number + FPS hidden
+
+- **Light Pen/Gun Pointer Color** [vice_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
+
+    Crosshair color for light pens and guns.
 
 ### Audio options
 
@@ -675,6 +719,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **(VIC-II/VIC/TED) Audio Leak Emulation** [vice_audio_leak_emulation] (**disabled**|1|2|3|4|5|6|7|8|9|10)
 
+    Graphic chip to audio leak emulation.
+
 - **SID Engine** [vice_sid_engine] (FastSID|**ReSID**|ReSID-FP)
 
     'ReSID' is accurate, 'ReSID-FP' is more accurate, 'FastSID' is the last resort.
@@ -693,15 +739,27 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **ReSID Filter Passband** [vice_resid_passband] (0|10|20|30|40|50|60|70|80|**90**)
 
+    Resampling filter passband in percentage of the total bandwidth.
+
 - **ReSID Filter Gain** [vice_resid_gain] (90|91|92|93|94|95|96|**97**|98|99|100)
+
+    Filter gain in percent.
 
 - **ReSID Filter 6581 Bias** [vice_resid_filterbias] (-5000|-4500|-4000|-3500|-3000|-2500|-2000|-1500|-1000|-500|0|**500**|1000|1500|2000|2500|3000|3500|4000|4500|5000)
 
+    Filter bias for 6581, which can be used to adjust DAC bias in millivolts.
+
 - **ReSID Filter 8580 Bias** [vice_resid_8580filterbias] (-5000|-4500|-4000|-3500|-3000|-2500|-2000|-1500|-1000|-500|0|500|1000|**1500**|2000|2500|3000|3500|4000|4500|5000)
+
+    Filter bias for 8580, which can be used to adjust DAC bias in millivolts.
 
 - **SFX Sound Expander** [vice_sfx_sound_expander] (**disabled**|3526|3812)
 
+    Sound synthesizer cartridge with 9 voices.
+
 - **Output Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
+
+    Sound sample rate in Hz.
 
 ### Input options
 
@@ -712,13 +770,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Analog Stick Mouse Deadzone** [vice_analogmouse_deadzone] (0|5|10|15|**20**|25|30|35|40|45|50)
 
-- **Analog Stick Mouse Speed** [vice_analogmouse_speed] (0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0)
+    Required distance from stick center to register input.
 
-- **D-Pad Mouse Speed** [vice_dpadmouse_speed] (3|4|5|**6**|7|8|9|10|11|12)
+- **Analog Stick Mouse Speed** [vice_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-- **Mouse Speed** [vice_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200)
+    Mouse movement speed multiplier for analog stick.
 
-    Affects mouse speed globally.
+- **D-Pad Mouse Speed** [vice_dpadmouse_speed] (1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+
+    Mouse movement speed multiplier for directional pad.
+
+- **Mouse Speed** [vice_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300)
+
+    Global mouse speed.
 
 - **Userport Joystick Adapter** [vice_userport_joytype] (**disabled**|CGA|HIT|Kingsoft|Starbyte|Hummer|OEM|PET)
 
@@ -853,12 +917,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Rotate face buttons clockwise and/or make 2nd fire press up.
 
-    | Value       | Label            |
-    |-------------|------------------|
-    | disabled    | B = Fire         |
-    | jump        | B = Fire, A = Up |
-    | rotate      | Y = Fire         |
-    | rotate_jump | Y = Fire, B = Up |
+    | Value       | Label                  |
+    |-------------|------------------------|
+    | disabled    | B = Fire, A = 2nd fire |
+    | jump        | B = Fire, A = Up       |
+    | rotate      | Y = Fire, B = 2nd fire |
+    | rotate_jump | Y = Fire, B = Up       |
 
 ## Controllers
 

@@ -71,24 +71,27 @@ RetroArch database(s) that are associated with the PUAE core:
 
 Required or optional firmware files go in the frontend's system directory.
 
-The core has a built-in AROS fallback Kickstart, which is used when the real Kickstart is not found. It can be compatible enough for some A500 games.
+The core has a somewhat compatible built-in AROS Kickstart, which is used as a fallback when the proper Kickstart is not found.
 
-Amiga Forever BIOS files must be renamed accordingly.
+Amiga Forever and TOSEC filenames are also accepted.
 
-| Filename                     | Description                            | md5sum                           |
-|------------------------------|----------------------------------------|----------------------------------|
-| kick33180.A500               | Kickstart v1.2 rev 33.180 (!)          | 85ad74194e87c08904327de1a9443b7a |
-| kick34005.A500               | Kickstart v1.3 rev 34.005              | 82a21c1890cae844b3df741f2762d48d |
-| kick37175.A500               | Kickstart v2.04 rev 37.175             | dc10d7bdd1b6f450773dfb558477c230 |
-| kick40063.A600               | Kickstart v3.1 rev 40.063              | e40a5dfb3d017ba8779faba30cbd1c8e |
-| kick40068.A1200              | Kickstart v3.1 rev 40.068              | 646773759326fbac3b2311fd8c8793ee |
-| kick40068.A4000              | Kickstart v3.1 rev 40.068              | 9bdedde6a4f33555b4a270c8ca53297d |
-| kick34005.CDTV               | CDTV extended ROM v1.00                | 89da1838a24460e4b93f4f0c5d92d48d |
-| kick40060.CD32               | CD32 Kickstart v3.1 rev 40.060         | 5f8924d013dd57a89cf349f4cdedc6b1 |
-| kick40060.CD32.ext           | CD32 extended ROM rev 40.060           | bb72565701b1b6faece07d68ea5da639 |
-| kick40060.CD32               | CD32 KS + extended v3.1 rev 40.060     | f2f241bf094168cfb9e7805dc2856433 |
-
-- (!) Kickstart v1.2 only required for WHDLoad Arcadia games
+| Filename           | Amiga Forever             | Description                        | md5sum                           |
+|--------------------|---------------------------|------------------------------------|----------------------------------|
+| kick33180.A500     | amiga-os-120.rom          | Kickstart v1.2 rev 33.180          | 85ad74194e87c08904327de1a9443b7a |
+| kick34005.A500     | amiga-os-130.rom          | Kickstart v1.3 rev 34.005          | 82a21c1890cae844b3df741f2762d48d |
+| kick37175.A500     | amiga-os-204.rom          | Kickstart v2.04 rev 37.175         | dc10d7bdd1b6f450773dfb558477c230 |
+| kick37350.A600     | amiga-os-205-a600.rom     | Kickstart v2.05 rev 37.350         | 465646c9b6729f77eea5314d1f057951 |
+| kick40063.A600     | amiga-os-310-a600.rom     | Kickstart v3.1 rev 40.063          | e40a5dfb3d017ba8779faba30cbd1c8e |
+| kick39106.A1200    | amiga-os-300-a1200.rom    | Kickstart v3.0 rev 39.106          | b7cc148386aa631136f510cd29e42fc3 |
+| kick40068.A1200    | amiga-os-310-a1200.rom    | Kickstart v3.1 rev 40.068          | 646773759326fbac3b2311fd8c8793ee |
+| kick33180.A500     | amiga-os-120.rom          | Kickstart v1.2 rev 33.180          | 85ad74194e87c08904327de1a9443b7a |
+| kick40063.A600     | amiga-os-310-a600.rom     | Kickstart v3.1 rev 40.063          | e40a5dfb3d017ba8779faba30cbd1c8e |
+| kick39106.A4000    | amiga-os-300-a4000.rom    | Kickstart v3.0 rev 39.106          | 9b8bdd5a3fd32c2a5a6f5b1aefc799a5 |
+| kick40068.A4000    | amiga-os-310-a4000.rom    | Kickstart v3.1 rev 40.068          | 9bdedde6a4f33555b4a270c8ca53297d |
+| kick34005.CDTV     | amiga-os-130-cdtv-ext.rom | CDTV extended ROM v1.00            | 89da1838a24460e4b93f4f0c5d92d48d |
+| kick40060.CD32     | amiga-os-310-cd32.rom     | CD32 Kickstart v3.1 rev 40.060     | 5f8924d013dd57a89cf349f4cdedc6b1 |
+| kick40060.CD32.ext | amiga-os-310-cd32-ext.rom | CD32 extended ROM rev 40.060       | bb72565701b1b6faece07d68ea5da639 |
+| kick40060.CD32     |                           | CD32 KS + extended v3.1 rev 40.060 | f2f241bf094168cfb9e7805dc2856433 |
 
 ## Features
 
@@ -273,7 +276,9 @@ Please be aware that there are 32-bits and 64-bits versions of the library. Choo
 | X               | Space                         |
 | L2              | Left mouse button             |
 | R2              | Right mouse button            |
-| Select          | Toggle virtual keyboard       |
+| Select (Short)  | Toggle virtual keyboard       |
+| Select (Long)   | Toggle statusbar              |
+| Select (Hold)   | Fast-Forward                  |
 
 | Keyboard key    | Action                        |
 |-----------------|-------------------------------|
@@ -345,7 +350,7 @@ The whole path (filename and directory) will be searched for the following tags 
 
 | Floppy | HD/LHA | CD    | String                                      | Result                                       |
 |--------|--------|-------|---------------------------------------------|----------------------------------------------|
-| **x**  | **x**  |       | **(A500OG)**, **(512K)**                    | Amiga 500 (0.5MB Chip RAM)                   |
+| **x**  | **x**  |       | **(A500OG)**, **(512K)**, **(512KB)**       | Amiga 500 (0.5MB Chip RAM)                   |
 | **x**  | **x**  |       | **(A500)**, **OCS**                         | Amiga 500 (0.5MB Chip RAM + 0.5MB Slow RAM)  |
 | **x**  | **x**  |       | **(A500+)**, **(A500PLUS)**                 | Amiga 500+ (1MB Chip RAM)                    |
 | **x**  | **x**  |       | **(A600)**, **ECS**                         | Amiga 600 (2MB Chip RAM + 8MB Fast RAM)      |
@@ -434,33 +439,35 @@ The PUAE core has the following option(s) that can be tweaked from the core opti
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Model** [puae_model] (**auto**|A500OG|A500|A500PLUS|A600|A1200OG|A1200|A4030|A4040|CDTV|CD32|CD32FR)
+- **Model** [puae_model] (**auto**|A500OG|A500|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040|CDTV|CD32|CD32FR)
 
     'Automatic' switches region per file path tags.
 
-    | Value    | Label                           |
-    |----------|---------------------------------|
-    | A500OG   | A500 (512KB Chip)               |
-    | A500     | A500 (512KB Chip + 512KB Slow)  |
-    | A500PLUS | A500+ (1MB Chip)                |
-    | A600     | A600 (2MB Chip + 8MB Fast)      |
-    | A1200OG  | A1200 (2MB Chip)                |
-    | A1200    | A1200 (2MB Chip + 8MB Fast)     |
-    | A4030    | A4000/030 (2MB Chip + 8MB Fast) |
-    | A4040    | A4000/040 (2MB Chip + 8MB Fast) |
-    | CDTV     | CDTV (1MB Chip)                 |
-    | CD32     | CD32 (2MB Chip)                 |
-    | CD32FR   | CD32 (2MB Chip + 8MB Fast)      |
+    | Value    | Label                               |
+    |----------|-------------------------------------|
+    | A500OG   | A500 (v1.2, 0.5M Chip)              |
+    | A500     | A500 (v1.3, 0.5M Chip + 0.5M Slow)  |
+    | A500PLUS | A500+ (v2.04, 1M Chip)              |
+    | A600     | A600 (v3.1, 2M Chip + 8M Fast)      |
+    | A1200OG  | A1200 (v3.1, 2M Chip)               |
+    | A1200    | A1200 (v3.1, 2M Chip + 8M Fast)     |
+    | A2000OG  | A2000 (v1.2, 0.5M Chip + 0.5M Slow) |
+    | A2000    | A2000 (v3.1, 1M Chip)               |
+    | A4030    | A4000/030 (v3.1, 2M Chip + 8M Fast) |
+    | A4040    | A4000/040 (v3.1, 2M Chip + 8M Fast) |
+    | CDTV     | CDTV (1M Chip)                      |
+    | CD32     | CD32 (2M Chip)                      |
+    | CD32FR   | CD32 (2M Chip + 8M Fast)            |
 
 - **Show Automatic Model Options** [puae_model_options_display] (**disabled**|enabled)
 
     Show/hide default model options (Floppy/HD/CD) for 'Automatic' model. Page refresh by menu toggle required!
 
-- **Automatic Floppy** [puae_model_fd] (A500OG|**A500**|A500PLUS|A600|A1200OG|A1200|A4030|A4040)
+- **Automatic Floppy** [puae_model_fd] (A500OG|**A500**|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040)
 
     Default model when floppies are launched with 'Automatic' model. Core restart required.
 
-- **Automatic HD** [puae_model_hd] (**A600**|A1200OG|A1200|A4030|A4040)
+- **Automatic HD** [puae_model_hd] (**A600**|A1200OG|A1200|A2000|A4030|A4040)
 
     Default model when HD interface is used with 'Automatic' model. Affects WHDLoad installs and other hard drive images. Core restart required.
 
@@ -468,11 +475,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Default model when compact discs are launched with 'Automatic' model. Core restart required.
 
-- **CPU Compatibility** [puae_cpu_compatibility] (**normal**|compatible|exact)
+- **Kickstart ROM** [puae_kickstart] (**auto**|aros|kick33180.A500|kick34005.A500|kick37175.A500|kick37350.A600|kick40063.A600|kick39106.A1200|kick40068.A1200|kick39106.A4000|kick40068.A4000)
+
+    'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility. Core restart required.
+
+- **CPU Compatibility** [puae_cpu_compatibility] (normal|**compatible**|exact)
 
     Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.
 
-- **CPU Speed** [puae_cpu_throttle] (**0.0**|-900.0-+1000.0)
+- **CPU Speed** [puae_cpu_throttle] (-900.0|**0.0**|10000.0)
 
     Ignored with 'Cycle-exact'.
 
@@ -492,6 +503,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | 16    | 56.750320 MHz         |
 
 ### Media options
+
+- **Automatic Load Fast-Forward** [puae_autoloadfastforward] (**disabled**|enabled|fd|hd|cd)
+
+    Toggle frontend fast-forward during media access if there is no audio output. Mutes 'Floppy Sound Emulation'.
 
 - **Floppy Speed** [puae_floppy_speed] (**100**|200|400|800|0)
 
@@ -562,9 +577,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Page refresh by menu toggle required!
 
-- **Allow PAL/NTSC Hz Change** [puae_video_allow_hz_change] (disabled|**enabled**)
+- **Allow PAL/NTSC Hz Change** [puae_video_allow_hz_change] (disabled|enabled|**locked**)
 
-    Let Amiga decide the exact output Hz.
+    Let Amiga decide the exact refresh rate when interlace mode or PAL/NTSC changes.
+
+    'Locked' changes only when video standard changes.
 
 - **Standard** [puae_video_standard] (**PAL auto**|NTSC auto|PAL|NTSC)
 
@@ -632,23 +649,29 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Not compatible with 'Cycle-exact'.
 
-- **Statusbar Mode** [puae_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
+- **Color Gamma** [puae_gfx_gamma] (-500|**0**|500)
 
-    - 'Full': Joyports + Current image + LEDs
-    - 'Basic': Current image + LEDs
-    - 'Minimal': Track number + FPS hidden
+    Adjust color gamma.
+
+- **Color Depth (Restart)** [puae_gfx_colors] (**16bit**|24bit)
+
+    '24-bit' is slower and not available on all platforms. Full restart required.
+
+### On-Screen Display options
 
 - **Virtual KBD Theme** [puae_vkbd_theme] (**auto**|auto_outline|beige|beige_outline|cd32|cd32_outline|light|light_outline|dark|dark_outline)
 
-    By default, the keyboard comes up with RetroPad Select.
+    The keyboard comes up with RetroPad Select by default.
 
 - **Virtual KBD Transparency** [puae_vkbd_transparency] (0%|**25%**|50%|75%|100%)
 
     Keyboard transparency can be toggled with RetroPad A.
 
-- **Color Depth (Restart)** [puae_gfx_colors] (**16bit**|24bit)
+- **Statusbar Mode** [puae_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
 
-    '24-bit' is slower and not available on all platforms. Full restart required.
+    - 'Full': Joyports + Current image + LEDs
+    - 'Basic': Current image + LEDs
+    - 'Minimal': Track number + FPS hidden
 
 ### Audio options
 
@@ -662,9 +685,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Interpolation** [puae_sound_interpol] (none|**anti**|sinc|rh|crux)
 
+    Paula sound chip interpolation type.
+
 - **Filter** [puae_sound_filter] (**emulated**|off|on)
 
+    'Emulated' allows states between ON/OFF.
+
 - **Filter Type** [puae_sound_filter_type] (**auto**|standard|enhanced)
+
+    'Automatic' picks the filter type for the hardware.
 
     | Value    | Label     |
     |----------|-----------|
@@ -673,6 +702,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | enhanced | A1200     |
 
 - **CD Audio Volume** [puae_sound_volume_cd] (0%|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**)
+
+    CD volume in percent.
 
 - **Floppy Sound Emulation** [puae_floppy_sound] (100|95|90|85|**80**|75|70|65|60|55|50|45|40|35|30|25|20|15|10|5|0)
 
@@ -690,15 +721,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Analog Stick Mouse** [puae_analogmouse] (disabled|left|right|**both**)
 
+    Default mouse control stick when remappings are empty.
+
 - **Analog Stick Mouse Deadzone** [puae_analogmouse_deadzone] (0|5|10|15|**20**|25|30|35|40|45|50)
 
-- **Analog Stick Mouse Speed** [puae_analogmouse_speed] (0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0)
+    Required distance from stick center to register input.
 
-- **D-Pad Mouse Speed** [puae_dpadmouse_speed] (3|4|5|**6**|7|8|9|10|11|12)
+- **Analog Stick Mouse Speed** [puae_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-- **Mouse Speed** [puae_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200)
+    Mouse movement speed multiplier for analog stick.
 
-    Affects mouse speed globally.
+- **D-Pad Mouse Speed** [puae_dpadmouse_speed] (1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+
+    Mouse movement speed multiplier for directional pad.
+
+- **Mouse Speed** [puae_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300)
+
+    Global mouse speed.
 
 - **Physical Mouse** [puae_physicalmouse] (disabled|**enabled**|double)
 
@@ -792,12 +831,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Rotate face buttons clockwise and/or make 2nd fire press up.
 
-    | Value       | Label            |
-    |-------------|------------------|
-    | disabled    | B = Fire         |
-    | jump        | B = Fire, A = Up |
-    | rotate      | Y = Fire         |
-    | rotate_jump | Y = Fire, B = Up |
+    | Value       | Label                  |
+    |-------------|------------------------|
+    | disabled    | B = Fire, A = 2nd fire |
+    | jump        | B = Fire, A = Up       |
+    | rotate      | Y = Fire, B = 2nd fire |
+    | rotate_jump | Y = Fire, B = Up       |
 
 - **CD32 Pad Face Button Options** [puae_cd32pad_options] (**disabled**|jump|rotate|rotate_jump)
 
