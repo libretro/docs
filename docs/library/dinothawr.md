@@ -1,10 +1,23 @@
 # Dinothawr
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XajGfVaRdFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 Dinothawr is a block pushing puzzle game on slippery surfaces. Our hero is a dinosaur whose friends are trapped in ice. Through puzzles it is your task to free the dinos from their ice prison.
 
-#### How to start the Dinothawr core:
+The Dinothawr core has been authored by
+
+- Themaister (programming, music, some level design)
+- Runar Heyer (art, level design, some code)
+
+The Dinothawr core is licensed under
+
+- [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
+
+## Setup
 
 - To start the Dinothawr core, you need to obtain Dinothawr's data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
 
@@ -25,19 +38,6 @@ Dinothawr is a block pushing puzzle game on slippery surfaces. Our hero is a din
 - If you are asked which core to select, choose 'Dinothawr'.
 
 The content should now start running!
-
-### Author/License
-
-The Dinothawr core has been authored by
-
-- Themaister (programming, music, some level design)
-- Agnes Heyer ((art, level design, some code)
-
-The Dinothawr core is licensed under
-
-- [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -124,9 +124,8 @@ The Dinothawr core supports the following device type(s) in the controls menu, b
 - **RetroPad** - Joypad - Stay on this.
 - RetroPad w/Analog - Joypad - There's no reason to switch to this.
 
-### Controller tables
 
-#### Joypad
+## Joypad
 
 ![](http://themaister.net/dinothawr/shield.png)
 
@@ -144,3 +143,4 @@ The Dinothawr core supports the following device type(s) in the controls menu, b
 
 - [Official/Libretro Dinothawr Github Repository](https://github.com/libretro/Dinothawr)
 - [Report Libretro Dinothawr Core Issues Here](https://github.com/libretro/Dinothawr/issues)
+- [Steam](https://store.steampowered.com/app/1222639/RetroArch__Dinothawr/)
