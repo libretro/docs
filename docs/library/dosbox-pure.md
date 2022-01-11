@@ -317,6 +317,10 @@ Adjust the performance of the emulated CPU.
 
 	Fine tune the emulated performance for specific needs.
 
+- **Detailed > Limit CPU Usage** [dosbox_pure_cycle_limit] (**100%** | 20% to 100% in 1% increments)
+
+	When emulating DOS as fast as possible, how much time per frame should be used by the emulation. Lower this if your device becomes hot while using this core.
+
 ### Video Options
 Settings for the emulated graphics card and aspect ratio.
 
