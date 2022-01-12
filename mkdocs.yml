@@ -110,9 +110,6 @@ nav:
       - 'Bandai Emulation':
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
-      - 'CHIP-8 Emulation':
-        - 'XO-CHIP/CHIP-8 (JAXE)': 'library/jaxe.md'
-        - 'CHIP-8 (Emux)': 'library/emux_chip8.md'
       - 'ColecoVision Emulation':
         - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
@@ -229,6 +226,9 @@ nav:
       - 'Cave Story (NXEngine)': 'library/nxengine.md'
       - 'Cannonball': 'library/cannonball.md'
       - 'ChaiLove': 'library/chailove.md'
+      - 'CHIP-8 Emulation':
+        - 'XO-CHIP/CHIP-8 (JAXE)': 'library/jaxe.md'
+        - 'CHIP-8 (Emux)': 'library/emux_chip8.md'      
       - 'Dinothawr': 'library/dinothawr.md'
       - 'Doom (PrBoom)': 'library/prboom.md'
       - 'Doom 3 (Boom3)': 'library/boom3.md'
