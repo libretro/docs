@@ -87,3 +87,7 @@ Awaiting description.
 - [Libretro Emux CHIP-8 Github Repository](https://github.com/libretro/emux)
 - [Report Libretro Emux CHIP-8 Core Issues Here](https://github.com/libretro/libretro-meta/issues)
 - [Official Emux CHIP-8 Github Repository](https://github.com/sronsse/emux)
+
+## CHIP-8
+
+- [XO-CHIP/CHIP-8 (JAXE)](jaxe.md)
