@@ -2,7 +2,7 @@
 
 ## Background
 
-A fully-featured, cross platform XO-CHIP/S-CHIP/CHIP-8 emulator written in C and SDL. The JAXE core has been authored by
+A fully-featured, cross platform XO-CHIP/S-CHIP/CHIP-8 emulator written in C. The JAXE core has been authored by
 
 - phcoder (Vladimir Serbinenko)
 - kurtjd (Kurtis Dinelle)
@@ -79,7 +79,7 @@ JAXE does not require BIOS (bootrom) files to work.
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -89,8 +89,8 @@ JAXE does not require BIOS (bootrom) files to work.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| Softpatching      | ✕         |
-| Disk Control      | ✔         |
+| Softpatching      | ✔         |
+| Disk Control      | ✕         |
 | Username          | ✕         |
 | Crop Overscan (in RetroArch's Video settings) | ✕         |
 
@@ -101,9 +101,6 @@ The JAXE core's directory name is 'JAXE'
 ### Core provided aspect ratio
 
 JAXE's core provided aspect ratio is 2/1.
-
-### Rumble
-
 
 ## Core options
 
@@ -119,7 +116,7 @@ The JAXE core has the following option(s) that can be tweaked from the core opti
 
 **Big Sprite LORES quirk** [] (**ON**|OFF)
 
-**00FE/00F quirk** [] (**ON**|OFF)
+**00FE/00FF quirk** [] (**ON**|OFF)
 
 **Sprite Wrapping** [] (**ON**|OFF)
 
