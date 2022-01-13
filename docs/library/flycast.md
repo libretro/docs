@@ -1,4 +1,4 @@
-# Sega - Dreamcast|NAOMI (Flycast)
+# Sega - Dreamcast/NAOMI (Flycast)
 
 ## Background
 
