@@ -42,10 +42,10 @@ WASM-4 does not require BIOS (bootrom) files to work.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | ✕          |
+| Saves             | ✔          |
 | States            | ✔         |
-| Rewind            | ✕        |
-| Netplay           | ✕         |
+| Rewind            | ✔        |
+| Netplay           | ✔         |
 | Core Options      | ✕         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
