@@ -99,7 +99,8 @@ Mattel Intellivision games were often meant to be played with game-specific card
 | D-Pad| 8-way movement |
 | Left Analog Stick | 16-way disc |
 | Right Analog Stick | Keypad 1-9 |
-| A | Left Action Button |
+| A | Right Action Button |
+| B | Left Action Button |
 | Y | Top Action Button |
 | X | Use the Last Selected Intellivision Keypad Button. In Astrosmash, for example, you can leave "3" selected to enable instant access to hyperspace. |
 | L/R | Activate the Mini-Keypad |
