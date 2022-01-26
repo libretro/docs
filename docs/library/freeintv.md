@@ -5,7 +5,7 @@
 FreeIntv is a libretro emulation core for the Mattel Intellivision designed to be compatible with joypads from the SNES era forward even if they originally required a number pad.
 
 !!! attention
-	FreeIntv does not currently emulate Entertainment Computer System (ECS) and Intellivoice functionality. Contributions to the source are welcome!
+	FreeIntv does not currently emulate Entertainment Computer System (ECS) functionality. Contributions to the source are welcome!
 
 ### Author/License
 
@@ -51,7 +51,7 @@ Frontend-level settings or features that the FreeIntv core respects.
 | Restart           | ✕         |
 | Screenshots       | ✔         |
 | Saves             | ✕         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay (State based) | ✕         |
 | Core Options      | ✕         |
@@ -59,7 +59,7 @@ Frontend-level settings or features that the FreeIntv core respects.
 | Cheats (Cheats menu) | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
-| Remapping         | ✕         |
+| Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
@@ -98,10 +98,15 @@ Mattel Intellivision games were often meant to be played with game-specific card
 | --- | --- |
 | D-Pad| 8-way movement |
 | Left Analog Stick | 16-way disc |
+| Right Analog Stick | Keypad 1-9 |
 | A | Left Action Button |
 | Y | Top Action Button |
 | X | Use the Last Selected Intellivision Keypad Button. In Astrosmash, for example, you can leave "3" selected to enable instant access to hyperspace. |
 | L/R | Activate the Mini-Keypad |
+| LT | Keypad Clear |
+| RT | Keypad Enter |
+| Left Thumb | Keypad 0 |
+| Right Thumb | Keypad 5 |
 | Start | Pause Game |
 | Select | Controller Swap |
 
