@@ -100,6 +100,15 @@ MAME 2003-Plus.lpl
 5. CRC or Serial number for database and other matching purposes. **You can omit the CRC or Serial for a manually created playlist entry by using the word DETECT here instead, although it may limit your ability to use Netplay for this playlist entry.**
 6. The name of this playlist, ending in the extension .lpl
 
+### Advanced Playlist Management
+
+- The 3rd party web app [Retroarch Playlist Editor](https://www.marcrobledo.com/retroarch-playlist-editor/) let's you do just what the name tells.
+- You can either edit your existing playlists or create new playlists by mixing/merging existing playlists.
+- You can reorder one or multiple entries by drag-n-drop.
+- You can rename individually or per find and replace (also RegEx).
+- It let's you do batch operations such as "Sort by name" or "Change core for selected".
+- Very handy to customize your playlists. (Until one day RetroArch may offer that itself).
+
 ## Thumbnails
 
 RetroArch can display three types of thumbnails for games in playlists, depending on the specific RetroArch menu driver in use:
