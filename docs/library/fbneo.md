@@ -140,7 +140,7 @@ Copy [hiscore.dat](https://github.com/libretro/FBNeo/tree/master/metadata/hiscor
 
 ## Run Ahead input lag reduction
 
-This core widely supports the RetroArch "Run Ahead" input latency reduction feature, with or without `Second Instance` enabled.
+This core widely supports the RetroArch "Run Ahead" input latency reduction feature, with or without `Second Instance` enabled. However, single instance is the recommended mode because it is the mode used in standalone FBNeo's runahead.
 
 ## RetroAchievements
 
