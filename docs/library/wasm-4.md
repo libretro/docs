@@ -30,7 +30,7 @@ Content that can be loaded by the WASM-4 core have the following file extensions
 
 RetroArch database(s) that are associated with the WASM-4 core:
 
-- [WASM-4](https://github.com/libretro/libretro-database/blob/master/rdb/)
+- [WASM-4](https://github.com/libretro/libretro-database/blob/master/rdb/WASM-4.rdb)
 
 ## BIOS
 
