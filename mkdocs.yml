@@ -247,6 +247,7 @@ nav:
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - 'Uzebox (Uzem)': 'library/uzem.md'
       - 'WebAssembly (WASM-4)': 'library/wasm-4.md'
+      - 'Wolfenstein 3D (ECWolf)': 'library/ecwolf.md'      
     - 'Core Library: Media':
       - 'Imageviewer': 'library/imageviewer.md'
       - 'FFmpeg': 'library/ffmpeg.md'
