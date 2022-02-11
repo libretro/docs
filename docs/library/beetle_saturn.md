@@ -1,8 +1,10 @@
 # Sega - Saturn (Beetle Saturn)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QTIRtZ9q5PM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
-Port of standalone Mednafen Saturn to libretro.
+This is fork of Mednafen Saturn. It has been ported to the libretro API. It currently runs on Linux, OSX and Windows.
 
 The Beetle Saturn core has been authored by
 
