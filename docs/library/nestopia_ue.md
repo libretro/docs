@@ -39,11 +39,10 @@ RetroArch database(s) that are associated with the Nestopia UE core:
 Required or optional firmware files go in the frontend's system directory.
 
 !!! warning
-	Nestopia UE requires the NstDatabase.xml for general proper emulation. Make sure it's in RetroArch's system directory.
+	Prior to Nestopia UE 1.50, it required the [NstDatabase.xml](#nstdatabasexml) file for general proper emulation. In version 1.50 or higher, it's baked into the core.
 
 |   Filename      |    Description                                                                |              md5sum              |
 |:---------------:|:-----------------------------------------------------------------------------:|:--------------------------------:|
-| [NstDatabase.xml](#nstdatabasexml) | Nestopia UE Database file - Required  |
 | disksys.rom     | Family Computer Disk System BIOS - Required for Famicom Disk System emulation | ca30b50f880eb660a320674ed365ef7a |
 
 ## Features
@@ -103,9 +102,7 @@ The Nestopia UE core saves/loads to/from these directories.
 
 ### NstDatabase.xml
 
-**It is HIGHLY RECOMMENDED you have NstDatabase.xml in RetroArch's system directory, you can get it from [https://github.com/0ldsk00l/nestopia](https://github.com/0ldsk00l/nestopia)**
-
-The Nestopia UE core relies on the NstDatabase.xml database file for
+The Nestopia UE core relies on the internal database (built from the NstDatabase.xml file) for
 
 - Games that support a custom mapper
 - Games that support multitap accessories
@@ -113,8 +110,6 @@ The Nestopia UE core relies on the NstDatabase.xml database file for
 - ROM Hacks
 - Famicom Disk System games
 - General proper emulation of games
-
-**Many games will have issues if NstDatabase.xml is not present in RetroArch's system directory.**
 
 ### Custom color palettes
 
@@ -197,9 +192,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ??? note "Palette - raw"
 	![](../image/core/nestopia_ue/raw.png)
 
-- **Remove 8-sprites-per-scanline hardware limit** [nestopia_nospritelimit] (**disabled**|enabled)
+- **Remove Sprite Limit** [nestopia_nospritelimit] (**disabled**|enabled)
 
-	Self-explanatory.
+	Remove 8-sprites-per-scanline hardware limit.
 
 - **CPU Speed (Overclock)** [nestopia_overclock] (**1x**|2x)
 
@@ -207,11 +202,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **4 Player Adapter** [nestopia_select_adapter] (**auto**|ntsc|famicom)
 
-	Manually select a 4 Player Adapter if needed. Some games will not recognize the adapter correctly through the NstDatabase.xml database, this option should help fix that.
+	Manually select a 4 Player Adapter if needed. Some games will not recognize the adapter correctly through the internal database, this option should help fix that.
 
-- **Automatically insert first FDS disk on reset** [nestopia_fds_auto_insert] (**enabled**|disabled)
+- **FDS Auto Insntert** [nestopia_fds_auto_insert] (**enabled**|disabled)
 
-	Self-explanatory.
+	Automatically insert first FDS disk on reset.
 
 - **Mask Overscan (Vertical)** [nestopia_overscan_v] (**enabled**|disabled)
 
@@ -235,7 +230,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Preferred aspect ratio** [nestopia_aspect] (**auto**|ntsc|pal|4:3)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for aspect ratio autodetection. If there is no database present it will default to NTSC for 'auto'.
+	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings. 'auto' will use the [internal database](#nstdatabasexml) for aspect ratio autodetection.
 
 ??? note "Preferred aspect ratio - ntsc"
 	![](../image/core/nestopia_ue/ratio_ntsc.png)
@@ -250,9 +245,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	The Game Genie cheat device could inadvertently introduce sound distortion in games. By enabling this, you can simulate the distortion it would add to a game's sound.
 
-- **Favored System** [nestopia_favored_system] (**auto**|ntsc|pal|famicom|dendy)
+- **System Region** [nestopia_favored_system] (**auto**|ntsc|pal|famicom|dendy)
 
-	Choose which region the system is from. 'auto' will use the [NstDatabase.xml](#nstdatabasexml) database file for region autodetection. If there is no database present it will default to NTSC for 'auto'.
+	Choose which region the system is from. 'auto' will use the internal database for region autodetection.
 
 - **RAM Power-on State** [nestopia_ram_power_state] (**0x00**|0xFF|random)
 
@@ -268,17 +263,15 @@ The Nestopia UE core supports the following device type(s) in the controls menu,
 
 ### User 1 - 4 device types
 
-- None - Doesn't disable input. There's no reason to switch to this.
-- **RetroPad** - Joypad - Stay on this.
-- RetroPad w/Analog - Joypad - Same as RetroPad. There's no reason to switch to this.
-
-### Other controllers
-
-- Zapper - Lightgun - The Nestopia UE core can emulate Zapper inputs but this is done automatically based off of the NstDatabase.xml Database file and cannot be manually selected a device type.
+- None - Disables input.
+- **Auto** - Automatically detects the device to use based on the internal database.
+- Gamepad - Joypad
+- Arkanoid - Arkanoid paddle -  This should be automatic from the internal database, but this can be changed to Gamepad if you'd prefer using a joypad rather than a paddle. (Port 2 only)
+- Zapper - Lightgun - The Nestopia UE core can emulate Zapper inputs.  This is generally done automatically based off of the internal database, but can be manually selected as a device type. (Port 2 only)
 
 ### Multitap support
 
-The Nestopia UE core uses the NstDatabase.xml database file to detect which games have multitap support.
+The Nestopia UE core uses the internal database to detect which games have multitap support.
 
 ### Controller tables
 
@@ -321,11 +314,11 @@ The Nestopia UE core uses the NstDatabase.xml database file to detect which game
 
 #### Lightgun
 
-| RetroLightgun Inputs                                 | Zapper           |
-|------------------------------------------------------|------------------|
+| RetroLightgun Inputs                                   | Zapper           |
+|--------------------------------------------------------|------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Zapper Crosshair |
-| Gun Trigger                                          | Zapper Trigger   |
-| Gun Aux B                                            | Zapper Light On  |
+| Gun Trigger                                            | Zapper Trigger   |
+| Gun Aux B                                              | Zapper Light On  |
 
 ## Compatibility
 
