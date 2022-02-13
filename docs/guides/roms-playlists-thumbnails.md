@@ -121,6 +121,17 @@ Maybe you want to create custom playlists not limited within game-platforms or R
   - Go to: Settings > Playlists
   - Set options **Truncate Playlist Names** and **Sort Playlists After Name Truncation** to your liking.
 
+### How to set up custom playlists (Screenshots)
+
+![](../image/retroarch/playlists/playlist-folder-with-lpl-files-and-relevant-settings.png)
+
+![](../image/retroarch/playlists/playlists-in-ui-1a-in-custom-playlist.png)
+
+![](../image/retroarch/playlists/playlists-in-ui-1a2-in-custom-playlist-entry-with-thumbnail.png)
+
+![](../image/retroarch/playlists/playlists-in-ui-1a3-in-custom-playlist-entry-with-thumbnail.png)
+
+![](../image/retroarch/playlists/playlists-in-ui-2-in-other-custom-playlist.png)
 
 ## Thumbnails
 
