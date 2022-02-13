@@ -108,4 +108,3 @@ The PocketCDG core supports the following device type(s) in the controls menu, b
 - [FFmpeg](ffmpeg.md)
 - [Game Music Emu](game_music_emu.md)
 - [Imageviewer](imageviewer.md)
-- [mpv](mpv.md)

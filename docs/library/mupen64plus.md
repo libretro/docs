@@ -392,7 +392,3 @@ Awaiting description.
 - [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeBgJ8wFAH6Oh9aDNC-MBuU)
 
 ## See also
-
-### N64
-
-- [Nintendo 64 (ParaLLEl N64)](parallel.md)

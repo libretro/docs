@@ -50,7 +50,7 @@ These shaders attempt to reproduce aspects and characteristics of cathode ray tu
 
 ## crt-pi
   * A nice-looking shader designed to run full speed on all Raspberry Pi models at 4:3 aspect and 1080p, though RPi1 and Zero models may need overclocking to achieve this, and some settings may be too demanding on some models. Aside from RPi hardware, this is just an all-around good shader for weak/mobile GPUs.
-    + ![crt-pi](../image/shader/crt/crt-pi.png)
+   
 
 ## crt-potato
   * An attempt to reproduce the very demanding effects of the popular Kurozumi variation of CRT-Royale through a simple lookup texture. It does not capture much of the nuances of the demanding shader it tries to copy, but it runs very fast and comes with **-Warm** and **-Cool** flavors, which describe their warmer and cooler white points, respectively.

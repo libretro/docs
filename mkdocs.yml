@@ -12,6 +12,7 @@ nav:
       - 'Understanding': 'start/understanding.md'
       - 'Installation': 'start/installation.md'
       - 'Love at first sight': 'start/love-at-first-sight.md'
+      - 'Last Station': 'start/last-station.md'
   - 'For Users':
     - 'Getting Started':
       - 'Windows':
@@ -72,6 +73,7 @@ nav:
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'RGUI Interface': 'guides/rgui.md'
       - 'Ozone Interface': 'guides/ozone.md'
+      - 'XMB Menu Map': 'guides/xmb-menu-map.md'
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
@@ -142,6 +144,7 @@ nav:
         - 'Nintendo - Game Boy Advance (gpSP)': 'library/gpsp.md'
         - 'Nintendo - Game Boy Advance (Meteor)': 'library/meteor.md'
         - 'Nintendo - Game Boy Advance (mGBA)': 'library/mgba.md'
+        - 'Nintendo - Game Boy Advance (TempGBA)': 'library/tempgba.md'
         - 'Nintendo - Game Boy Advance (VBA Next)': 'library/vba_next.md'
         - 'Nintendo - Game Boy Advance (VBA-M)': 'library/vba_m.md'
         - 'Nintendo - GameCube/Wii (Dolphin)': 'library/dolphin.md'
@@ -193,6 +196,7 @@ nav:
         - 'Sega - Dreamcast Compatibility List': 'library/compatibility/dc.md'
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
+        - 'Sega - Dreamcast (redream)': 'library/redream.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
         - 'Sega - MS/GG (SMS Plus GX)': 'library/smsplus.md'
         - 'Sega - MS/GG/SG-1000 (Gearsystem)': 'library/gearsystem.md'
@@ -261,7 +265,10 @@ nav:
       - 'Introduction': 'shader/introduction.md'
       - '3dfx': 'shader/3dfx.md'
       - 'antialiasing': 'shader/antialiasing.md'
+      - 'autobox': 'shader/auto-box.md'
       - 'border': 'shader/border.md'
+      - 'blurs': 'shader/blurs.md'
+      - 'cel': 'shader/cel.md'
       - 'cgp': 'shader/cgp.md'
       - 'crt': 'shader/crt.md'
       - 'crt-royale': 'shader/crt_royale.md'
@@ -379,6 +386,7 @@ nav:
   - 'Support':
     - 'Privacy Policy': 'support/privacy-policy.md'
     - 'Quick informations': 'support/quick-informations.md'
+    - 'Developing Cores': 'tech/developing-cores.md'
 extra:
   version: '0.1.0'
   adsense: "ca-pub-9447404270680650"
