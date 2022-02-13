@@ -52,9 +52,9 @@ Each playlist is a plain text file with an extension of `.lpl`. RetroArch 1.7.5 
 
 The following example is a single-entry MAME 2003-Plus playlist for [Alien Arena](https://www.arcade-museum.com/game_detail.php?game_id=6850) -- the silent version of this game is available through the RetroArch **Content Downloader** found in the **Online Updater** menu.
 
-The playlist is named `MAME 2003-Plus.lpl` which means it will match the existing icon for that core's playlists in the RetroArch assets pack and display it for the playlist for menu drivers that implement playlist icons.
+The romset with the `label` **Alien Arena** is located at `path` being `C:\retroarch\downloads\alienar.zip`; note that the backslashes are doubled in JSON-formatted playlist entries so that the value of the `path` entry is `C:\\retroarch\\downloads\\alienar.zip`.
 
-The **Alien Arena** romset is located at `C:\retroarch\downloads\alienar.zip`; note that the backslashes are doubled in JSON-formatted playlist entries so that the value of the `path` entry is `C:\\retroarch\\downloads\\alienar.zip`.
+The ROM's corresponding `db_name` is `MAME 2003-Plus.lpl` which tells the menu driver which ROM database to use for looking up the game's metadata, thumbnails and game-system-specific icon-type. Menu drivers which implement playlist icons will use it to display it next to the ROM's name.
 
 ##### `MAME 2003-Plus.lpl`
 ```json
@@ -98,7 +98,29 @@ MAME 2003-Plus.lpl
 3. The path to the core, this libretro core will be used to launch the ROM. **You can use the word DETECT in place of the core path here. Once this is done you can set the core to be used for this playlist via the RetroArch GUI.**
 4. The displayname of the core, not really useful, we keep it there because the history list is also using this format
 5. CRC or Serial number for database and other matching purposes. **You can omit the CRC or Serial for a manually created playlist entry by using the word DETECT here instead, although it may limit your ability to use Netplay for this playlist entry.**
-6. The name of this playlist, ending in the extension .lpl
+6. The name of the system playlist to which this ROM is associated for looking up database metadata and thumbnails.
+
+## Creating custom playlists (cross-platform, cross-folders)
+
+The standard playlists in RetroArch are usually platform-specific, i.e. `Nintendo - Game Boy.lpl` or `Sony - PlayStation.lpl`.
+
+Maybe you want to create custom playlists not limited within game-platforms or ROM-folders, e.g. "Multiplayer Racing Games" or "Medieval Themed Games".
+
+`content_favorites.lpl` and `content_history.lpl` are examples of default playlists which have this cross-platform behavior. So study them as an example first.
+
+### To create a custom playlist
+
+- Copy/merge content from platform-playlists files into a fresh playlist file inside `<RetroArchRoot>/playlists/` entitled `My Sorting Prefix - My Playlist Name.lpl`.
+- Be sure that the ROM entries follow the syntax as described in section: [JSON Playlist Format](#json-playlist-format).
+- The `db_name` attribute entry must be the ROM's corresponding `Exact Game Platform Playlists Name.lpl` (e.g. `Nintendo - Game Boy.lpl`) in order to be associated with the correct metadata and thumbnails.
+
+### Customize how/where your playlists are shown
+
+- Name your playlist in the scheme `My Sorting Prefix - My Playlist Name.lpl` or just `My Playlist Name.lpl`.
+- To tweak how playlists are displayed (with or without prefix) and how they are sorted (by prefix or by main name):
+  - Go to: Settings > Playlists
+  - Set options **Truncate Playlist Names** and **Sort Playlists After Name Truncation** to your liking.
+
 
 ## Thumbnails
 
