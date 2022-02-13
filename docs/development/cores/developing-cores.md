@@ -26,10 +26,15 @@ The [most current canonical copy of `libretro.h`](https://raw.githubusercontent.
 RetroArch contributor **bparker06** created [`skeletor`](https://github.com/libretro/skeletor) as a minimal libretro core implementation. `skeletor` can also be useful by furnishing the stub libretro `Makefile` and `Makefile.common` files.
 
 
-### Vectrexia codebase and development log
+### Development log of Libretro cores
 
-**beardypig** published a two-part guide ([Part 1](https://web.archive.org/web/20190219134430/http://www.beardypig.com/2016/01/15/emulator-build-along-1/), [Part 2](https://web.archive.org/web/20190219134028/http://www.beardypig.com/2016/01/22/emulator-build-along-2/)) describing the process of implementing `libretro.h` as part of creating [Vectrexia](https://github.com/beardypig/vectrexia-emulator/), an original emulator core designed for libretro from the ground up.
+Thank you for those blog posts :
 
+**Beardypig** published a two-part guide ([Part 1](https://web.archive.org/web/20190219134430/http://www.beardypig.com/2016/01/15/emulator-build-along-1/), [Part 2](https://web.archive.org/web/20190219134028/http://www.beardypig.com/2016/01/22/emulator-build-along-2/)) describing the process of implementing `libretro.h` as part of creating [Vectrexia](https://github.com/beardypig/vectrexia-emulator/), an original emulator core designed for libretro from the ground up.
+
+**James Roeder** has written a seven parts blog posts entitled [An Arduous Endeavor](https://www.jroeder.net/2021/08/10/arduous-endeavor-part-1/).
+
+**Natesh** has written a blog post about [GameboyCore as a libretro core](https://nnarain.github.io/2017/07/13/GameboyCore-as-a-libretro-core!.html).
 
 ### `libretro-common`
 
@@ -163,3 +168,12 @@ The libretro API does not make guarantees about thread safety. Therefore the cor
 If a core is multi-threaded then the core developer is responsible for thread safety when making libretro API calls. 
 
 It is discouraged to do libretro API calls outside of `retro_run()` i.e. outside of the main thread.
+
+## Add your core to Libretro infrastructure
+
+There are several steps before your core can be available to user via the Online Updater > Core Downloader :
+
+ 1. Add your Libretro core info to [libretro-super repository](https://github.com/libretro/libretro-super/tree/master/dist/info)
+ 2. Add [.gitlab-ci.yml](https://github.com/search?q=org%3Alibretro+.gitlab-ci.yml&type=commits) to the root directory of your source code so it can be added to Libretro CI/CD.
+ 3. If you want your core to be compatible with [RetroArch's playlist](/guides/roms-playlists-thumbnails) :
+    - Add at least icons playlist and content for your core in [RetroArch assets repository](https://github.com/libretro/retroarch-assets/tree/master/src/xmb/monochrome)
