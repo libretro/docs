@@ -1,74 +1,18 @@
-# Game Boy/Game Boy Color (Emux GB)
-
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/emux_gb.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
+# Game Boy/Game Boy Color (Emux GB) *WIP*
 
 ## Background
 
 Emux is a cross-platform emulator project with a goal of emulating multiple kinds of machines related to gaming, such as consoles or arcades. Its philosophy is very much inspired by the Linux kernel (hence the name), which brilliantly manages to support multiple machines while keeping drivers entirely platform-independent. Emux is designed in the same way, keeping a code base of CPUs and controllers separate from machines.
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the Emux GB core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](../image/core/all/updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](../image/core/all/info.png) </center>
-
-- Browse through the list and select 'Game Boy/Game Boy Color (Emux GB)'.
-
-<center> ![](../image/core/emux/emux_gb.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](../image/core/all/load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-<center> ![](../image/core/all/gb.png) </center>
-
-- If you are asked which core to select, choose 'Game Boy/Game Boy Color (Emux GB)'.
-
-The content should now start running!
-
-### Authors
+The Emux GB core has been authored by
 
 - Sebastien Ronsse
-
-## See also
-
-### GB/GBC
-
-- [Game Boy / Game Boy Color (Gambatte)](gambatte.md)
-- [Game Boy / Game Boy Color (SameBoy)](sameboy.md)
-- [Game Boy / Game Boy Color (TGB Dual)](tgb_dual.md)
-- [Game Boy / Game Boy Color (Gearboy)](gearboy.md)
-- [Game Boy Advance (mGBA)](mgba.md)
-
-## License
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 The Emux GB core is licensed under
 
 - [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 

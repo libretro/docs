@@ -64,12 +64,8 @@ The main menu will be where you launch games, download and update cores, start o
 
 ### Playlists
 
-![Playlist](../image/retroarch/materialui/playlist.jpg)
-
 Handles anything to do with creating and maintaining playlists. It gives you scanning options to recognise your game collection. It also provides access to your images, music and videos.
 
 ### Settings
-
-![Settings](../image/retroarch/materialui/settings.jpg)
 
 Here you will find all the options available to configure RetroArch, from Graphics, Input, Sound and everything else.

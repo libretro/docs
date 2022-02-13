@@ -23,7 +23,7 @@ Another way that **shaders** and **overlays** are used together is to 1) use a *
 
 Overlay touch functionality allows users to create an input interface that is mouse or touch oriented regardless of whether the original system or libretro core was built for these forms of input. The overlay images are displayed with transparency over the regular game image, and the user is able to trigger input by pressing on designated parts of the overlay.
 
-Overlays are built from a collection of images and a text configuration file which makes it straightforward to change both the look and functionality of this overlay. Learn more about this aspect of Libretro's Overlay tech over in the [Overlay Spec](../specs/overlay.md).
+Overlays are built from a collection of images and a text configuration file which makes it straightforward to change both the look and functionality of this overlay. Learn more about this aspect of Libretro's Overlay tech over in the Overlay Spec.
 
 An example of a touchscreen overlay, demonstrated with the Dinothawr core:
 ![Dinothawr overlay example](https://wiki.libretro.com/images/5/5c/Retroarch-dinothawr-overlay.jpg "Dinothawr overlay example")
@@ -89,5 +89,4 @@ The first time you set up a per-game overlay:
 # More about Overlays
 
 - Visit the official [Libretro Overlays Forum](https://forums.libretro.com/c/retroarch-additions/retroarch-overlays)
-- [Overlay technology and customization specification](../specs/overlay.md)
 - [RetroArch Overlay Guide at emulationguide.com](http://emulationguide.com/retroarch-overlays)

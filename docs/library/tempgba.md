@@ -1,28 +1,46 @@
-# Nintendo - Game Boy Advance (Meteor)
+# Nintendo - Game Boy Advance (TempGBA)
 
 ## Background
 
-Meteor is a Gameboy Advance emulator.
+TempGBA is a Gameboy Advance emulator. A fork of the PSP-specific TempGBA emulator for the Game Boy Advance console, ported to libretro. This core is only intended for use on Playstation Portable hardware, and, as a device-optimized fork of gpSP, it is intended to provide a better, more playable experience for GBA games on this low-powered device. Anyone using any other device should stick with the regular gpSP core or--even better--a more accurate core, such as mGBA.
 
 The Meteor core has been authored by
 
-- Philippe Daouadi
+- Exophase
+- Takka
+- Nebuleon
+- Normmatt
+- BassAceGold
 
 The Meteor core is licensed under
 
-- [GPLv3](https://github.com/libretro/meteor-libretro/blob/master/COPYING)
+- [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
+
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+!!! warning
+	In order for the BIOS to be used, the 'Use BIOS file if found' core option must be set to On.
+
+|   Filename   |    Description                   |              md5sum              |
+|:------------:|:--------------------------------:|:--------------------------------:|
+| gba_bios.bin | Game Boy Advance BIOS - Optional | a860e8c0b6d573d191e4ec7db1b1e4f6 |
 
 ## Extensions
 
 Content that can be loaded by the Meteor core have the following file extensions:
 
-- .gba
+- gba
+- bin
+- agb
+- gbz
 
 ## Databases
 
-RetroArch database(s) that are associated with the Meteor core:
+RetroArch database(s) that are associated with the TempGBA core:
 
 - [Nintendo - Game Boy Advance](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Game%20Boy%20Advance.rdb)
 
@@ -59,7 +77,7 @@ Frontend-level settings or features that the Meteor core respects.
 
 ### Directories
 
-The Meteor core's internal core name is 'Meteor GBA'
+The Meteor core's internal core name is 'TempGBA'
 
 The Meteor core saves/loads to/from these directories.
 
@@ -124,6 +142,6 @@ Awaiting description.
 - [Nintendo - Game Boy Advance (Beetle GBA)](beetle_gba.md)
 - [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
-- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
+- [Nintendo - Game Boy Advance (meteor)](meteor.md)
 - [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)

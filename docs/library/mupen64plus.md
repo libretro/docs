@@ -1,15 +1,5 @@
 # Nintendo 64 (Mupen64Plus-Next)
 
-## Contribute to this documentation
-
-**DOCUMENTATION IS A WORK IN PROGRESS**
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/mupen64plus.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
 Mupen64Plus-Next for libretro is an up-to-date port of Mupen64Plus, a Nintendo 64 emulator. Mupen64Plus-Next for libretro uses GLideN64 as its default graphic plugin, though Angrylion and ParaLLEl-RDP plugs are also available.
@@ -20,12 +10,9 @@ How is this different from Parallel-N64?
 
 Parallel-N64 was forked off from the standalone Mupen64Plus codebase a number of years ago, and it has diverged fairly significantly since then. Also, the graphic plugin GLideN64 is not available in Parallel-N64.
 
-### Why use this core?
-
 This core has the latest upstream accuracy improvements, along with the latest and greatest HLE improvements in GLideN64 and the latest LLE developments in ParaLLEl-RDP/RSP. Outstanding support of Hires Textures.
 
-
-### Authors
+The Meteor core has been authored by
 
 - m4xw
 - gillou
@@ -33,20 +20,12 @@ This core has the latest upstream accuracy improvements, along with the latest a
 - Hacktarux
 - Mupen64Plus Team
 
-
-## See also
-
-### N64
-
-- [Nintendo 64 (ParaLLEl N64)](parallel.md)
-
-## License
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
-
 The Mupen64Plus-Next core is licensed under
 
 - [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)
+
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -411,3 +390,9 @@ Awaiting description.
 - [Official Mupen64Plus Website](http://www.mupen64plus.org/)
 - [Official Mupen64Plus Github Organization](https://github.com/mupen64plus)
 - [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IeBgJ8wFAH6Oh9aDNC-MBuU)
+
+## See also
+
+### N64
+
+- [Nintendo 64 (ParaLLEl N64)](parallel.md)

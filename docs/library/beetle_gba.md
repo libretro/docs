@@ -145,6 +145,6 @@ The Beetle GBA core supports the following device type(s) in the controls menu, 
 - [Nintendo - Game Boy Advance (gpSP)](gpsp.md)
 - [Nintendo - Game Boy Advance (Meteor)](meteor.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
-- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)
 - [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
 - [Nintendo - Game Boy Advance (VBA Next)](vba_next.md)
+- [Nintendo - Game Boy Advance (TempGBA)](tempgba.md)

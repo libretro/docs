@@ -107,5 +107,4 @@ The Imageviewer core supports the following device type(s) in the controls menu,
 
 - [FFmpeg](ffmpeg.md)
 - [Game Music Emu](game_music_emu.md)
-- [mpv](mpv.md)
 - [PocketCDG](pocketcdg.md)

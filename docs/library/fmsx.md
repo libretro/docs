@@ -1,70 +1,18 @@
 # MSX (fMSX)
 
-## Contribute to this documentation
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/fmsx.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
-
 ## Background
 
-fMSX is a program that emulates MSX, MSX2, and MSX2+ 8bit home computers.
+This is a port of Marat Fayzullin's fMSX 6.0 (21-Feb-2021) to the libretro API. fMSX is a program that emulates MSX, MSX2, and MSX2+ 8bit home computers. It runs MSX/MSX2/MSX2+ software on many different platforms including Windows, Android, Symbian, MacOS, Unix, MSDOS, AmigaOS, etc. I started developing fMSX in 1993 when there were only two other MSX emulators available, both exclusively for MSDOS. From the very beginning, I developed fMSX as a portable program able to run on many different computers. The initial development, for example, was done on DEC Alpha workstations running Unix. Since then, fMSX has seen quite a lot of updates and been ported to many systems. It is still being developed, although not as actively as before because most features are pretty much complete now.
 
-### Why use this core?
-
-Awaiting description.
-
-### How to get and install the fMSX core:
-
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-<center> ![](../image/core/all/updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](../image/core/all/info.png) </center>
-
-- Browse through the list and select 'MSX (fMSX)'.
-
-<center> ![](../image/core/updater/fmsx.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start (after installation):
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](../image/core/all/load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-<center> ![](../image/core/all/screenshot_name.png) </center>
-
-- If you are asked which core to select, choose 'MSX (fMSX)'.
-
-The content should now start running!
-
-### Authors
+The Meteor core has been authored by
 
 - Marat Fayzullin
-
-## See also
-
-### MSX
-
-- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)
-
-## License
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 The fMSX core is licensed under
 
 - [Non-commercial](https://github.com/libretro/fmsx-libretro/blob/master/LICENSE)
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -359,3 +307,7 @@ Awaiting description.
 - [Report Libretro fMSX Core Issues Here](https://github.com/libretro/fmsx-libretro/issues)
 - [Official fMSX Website](http://fms.komkon.org/fMSX/)
 - [Official fMSX Downloads](https://fms.komkon.org/fMSX/#Downloads)
+
+### MSX
+
+- [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)

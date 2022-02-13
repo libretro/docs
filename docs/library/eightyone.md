@@ -1,18 +1,18 @@
-# ZX81 (EightyOne)
-
-## Contribute to this documentation
-
-**DOCUMENTATION IS A WORK IN PROGRESS**
-
-**In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/eightyone.md). Changes are proposed using "Pull Requests."**
-
-**There is a To-Do list for libretro/docs [here](../docguide/todo.md)**
-
-**You can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) or in our [forum thread](https://forums.libretro.com/t/wip-adding-pages-to-documentation-site/10078/).**
+# ZX81 (EightyOne) *WIP*
 
 ## Background
 
-EightyOne is a port of the EightyOne (a.k.a. THE Sinclair Emulator) to libretro.
+81-libretro is an work in progress port of the EightyOne (a.k.a. THE Sinclair Emulator) to libretro. The classic ZX81 games are all over the Internet, but check the colorized folder for games with Chroma 81 support. There are also many original games for the Zeddy, check Bob's Stuff for some high quality games.
+
+The EightyOne core has been authored by
+
+- Michael D Wynne
+
+The EightyOne core is licensed under
+
+- [GPLv3](https://github.com/libretro/81-libretro/blob/master/LICENSE)
+
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 EightyOne emulates a number of ZX80, ZX81, clones, and other computers based on the same hardware:
 
@@ -25,47 +25,11 @@ EightyOne emulates a number of ZX80, ZX81, clones, and other computers based on 
 - MicroDigital TK85
 - Jupiter ACE
 
-### How to install the EightyOne core:
+However, 81-libretro only emulates the Sinclair ZX81 with 16Kb RAM for now. Other machines will be added as time permits. Push requests are welcome.
 
-- Start up RetroArch. Inside the main menu, go to 'Online Updater'.
+The port correctly loads and runs some many games I have around in the p format. tzx format is also supported.
 
-<center> ![](../image/core/all/updater.png) </center>
-
-- Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-<center> ![](../image/core/all/info.png) </center>
-
-- Browse through the list and select 'ZX81 (EightyOne)'.
-
-<center> ![](../image/core/updater/eightyone.png) </center>
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to start the (Core name) core:
-
-- Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-<center> ![](../image/core/all/load.png) </center>
-
-- Browse to the folder that contains the content you want to run.
-
-- Select the content that you want to run.
-
-- If you are asked which core to select, choose 'ZX81 (EightyOne)'.
-
-The content should now start running!
-
-### Authors
-
-- Michael D Wynne
-
-## License
-
-A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
-
-The EightyOne core is licensed under
-
-- [GPLv3](https://github.com/libretro/81-libretro/blob/master/LICENSE)
+EightyOne also emulates some ZX Spectrum machines, but those were left out of this core on purpose.
 
 ## Extensions
 

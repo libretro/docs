@@ -128,8 +128,6 @@ Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's 
 
 Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
 
-![](../image/core/sameboy/start.png)
-
 !!! warning
 You have to load any game in the core for the '2 Player Game Boy Link' entries to show up, this is a RetroArch limitation, not a core limitation
 

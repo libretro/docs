@@ -70,11 +70,9 @@ These shaders attempt to reproduce aspects and characteristics of cathode ray tu
 
 ## crt-torridgristle
   * A very fast, high-contrast CRT effect with a prominent phosphor mask.
-    + ![crt-torridgristle](../image/shader/crt/crt-torridgristle.png)
 
 ## crt-yo6-kv-m14208b
   * One of the few shaders based directly on a specific model (and size) of CRT display, this shader was created using [a unique, data-driven methodology](https://forums.libretro.com/t/sony-tv-trinitron-kv-m1420b/22901/14) resulting in a very realistic image. It also comes in a **-Sharp** variant.
-    + ![crt-yo6-kv-m14208b](../image/shader/crt/crt-yo6-kv-m14208b.png)
 
 ## dotmask
   * A basic shader that collects just the isolated dotmask code from several different shaders.

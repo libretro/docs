@@ -52,8 +52,6 @@ This is a list of cores that are related to each other in some way.
 ## N64
 
 - [Nintendo - Nintendo 64 (Mupen64Plus)](../library/mupen64plus.md)
-- [Nintendo - Nintendo 64 (Mupen64Plus GLES3)](../library/mupen64plus_gles3.md)
-- [Nintendo - Nintendo 64 (ParaLLEl N64)](../library/parallel_n64.md)
 
 ## NDS
 
@@ -124,7 +122,6 @@ This is a list of cores that are related to each other in some way.
 - [FFmpeg](../library/ffmpeg.md)
 - [Game Music Emu](../library/game_music_emu.md)
 - [Imageviewer](../library/imageviewer.md)
-- [mpv](../library/mpv.md)
 - [PocketCDG](../library/pocketcdg.md)
 
 ## id Software
@@ -134,23 +131,9 @@ This is a list of cores that are related to each other in some way.
 
 ## Arcade
 
-- [MAME](../library/mame.md)
-- [MAME 2000](../library/mame_2000.md)
 - [MAME 2003](../library/mame_2003.md)
-- [MAME 2003 Midway](../library/mame_2003_midway.md)
-- [MAME 2003-Plus](../library/mame_2003_plus.md)
-- [MAME 2009](../library/mame_2009.md)
-- [MAME 2010](../library/mame_2010.md)
-- [MAME 2014](../library/mame_2014.md)
-- [MAME 2016](../library/mame_2016.md)
-- [MESS 2014](../library/mess_2014.md)
-- [UME 2014](../library/ume_2014.md)
-- [FB Alpha](../library/fb_alpha.md)
-- [FB Alpha 2012](../library/fb_alpha_2012.md)
-- [FB Alpha 2012 CPS-1](../library/fb_alpha_cps1.md)
-- [FB Alpha 2012 CPS-2](../library/fb_alpha_cps2.md)
-- [FB Alpha 2012 CPS-3](../library/fb_alpha_cps3.md)
-- [FB Alpha 2012 Neo Geo](../library/fb_alpha_neogeo.md)
+- [MAME 2003-Plus](../library/mame2003_plus.md)
+- [FB Neo](../library/fbneo.md)
 
 ## ColecoVision
 

@@ -14,13 +14,6 @@ In RetroArch, choosing an input driver generally corresponds to choosing an inpu
 ### Purpose of this document
 This document organizes the information needed to develop and debug RetroArch input drivers, such as when porting RetroArch to a new platform.
 
-### See also
-Other documentation that contextualizes this input driver specification includes:
-
-- [libretro overview](./libretro-overview.md)
-- [libretro frontends](./frontends.md)
-- [input API](./input-api.md)
-
 ## libretro input device abstractions
 RetroArch's input system is based on abstracted input device types which are polled via callbacks provided by the libretro API. Libretro input device abstractions include:
 
