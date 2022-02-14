@@ -133,6 +133,13 @@ Maybe you want to create custom playlists not limited within game-platforms or R
 
 ![](../image/retroarch/playlists/playlists-in-ui-2-in-other-custom-playlist.png)
 
+### Third-Party Applications
+
+Since playlists are managed in text-only JSON format, there are a few third-party applications to help manage your playlists.
+
+- [RetroArch Playlist Editor](https://www.marcrobledo.com/retroarch-playlist-editor/) ([Source](https://github.com/marcrobledo/retroarch-playlist-editor))
+- [RetroArch Playlist Buddy](https://forums.libretro.com/t/retroarch-playlist-buddy-playlist-and-thumbnail-generation-app/8417) ([Source](https://github.com/markwkidd/ahk-retroarch-playlist-helpers))
+
 ## Thumbnails
 
 RetroArch can display three types of thumbnails for games in playlists, depending on the specific RetroArch menu driver in use:
