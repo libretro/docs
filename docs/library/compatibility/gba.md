@@ -12,7 +12,7 @@
 | Dragon Ball Z - The Legacy of Goku  |Graphics glitches. |
 | Final Fantasy VI                    |Background/tiling order issues.  |
 | Game Boy Advance Video - Dragon Ball GT - Volume 1 |White screen.     |
-| Grand Theft Auto Advance            |Crashes after first dialog.      |
+| Grand Theft Auto Advance            |Crashes after first dialog. Never can be worked.      |
 | Harry Potter - Quidditch World Cup  |Crashes when going ingame.       |
 | Koro Koro Puzzle Happy Panechu!     |The tilt sensor is not emulated. |
 | Mario & Luigi - Superstar Saga      |Crashes when entering a battle.  |
@@ -53,6 +53,7 @@
 | Jurassic Park III: Park Builder 	                | Unreadable glitched text.                                                                          |
 | Koro Koro Puzzle Happy Panechu! 	                | The tilt sensor is not emulated.                                                                   |
 | Moto GP 	                                        | Black screen, loud screeching noise.                                                               |
+| Sanrio Puroland: All Characters                   | Loads Indefinitely. Very slow.                                                                     |
 | Phantasy Star Collection 	                        | Digital Eclipse logo sound effect is missing. Phantasy Star 1 flickers.                            |
 | SSX 3 	                                        | Graphics glitches. Seems pitch-related.                                                            |
 | Super Mario Advance 2: Super Mario World (Europe) | The program crashes during the final fight, when Bowser approaches (zoom mode 7)                   |
