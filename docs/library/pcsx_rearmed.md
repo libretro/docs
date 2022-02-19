@@ -563,6 +563,7 @@ Activating multitap support in compatible games can be configured by the ['Multi
 |-----------------|--------------------------------------------------------|
 | Jumping Flash 2 | Graphics glitches. Geometry issues.                    |
 | Tobal 2         | Graphics glitch. Garbled Dream Factory intro sequence. |
+| Kitty the Kool! | No issues.                                             |
 
 ## External Links
 
