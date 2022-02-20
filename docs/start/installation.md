@@ -10,7 +10,7 @@ RetroArch has been ported to many platforms. It can run on several PC operating 
 
 ## Downloading
 
-First of all, you need to download RetroArch, in some systems you can find the application in their respective stores or alternative stores. First of all, you need to download RetroArch. In some systems, you can find the RetroArch in their respective stores or homebrew stores, and you can download them from our website. You may not hesitate to download when the source is a member approved by LibRetro or LibRetro itself.
+First of all, you need to download RetroArch. In some systems you can find the application in the system's official store or in an alternative store. You can also download RetroArch from our website. You may not hesitate to download when the source is a member approved by LibRetro or LibRetro itself.
 
 !!! example
 
