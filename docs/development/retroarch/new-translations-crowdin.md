@@ -2,9 +2,9 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V-j08aSegHM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-As libretro, it is very important for us that RetroArch can be easily understood by everyone. Making multiple languages available in RetroArch will ensure a better understanding of the options and a better experience for more people. Currently, RetroArch is in the process of being translated into 33 languages. In the pursuit of streamlining the process and making it more accessible for new contributors we decided to utilise the crowdsourced translation service **Crowdin**[^1].
+As libretro, it is very important for us that RetroArch can be easily understood by everyone. Making multiple languages available in RetroArch will ensure a better understanding of the options and a better experience for more people. Currently, RetroArch is in the process of being translated into over 35 languages. In the pursuit of streamlining the process and making it more accessible for new contributors we decided to utilise the crowdsourced translation service **Crowdin**[^1].
 
-[^1]: RetroArch and libretro are not affiliated in any way with Crowdin.
+[^1]: https://crowdin.com/ - RetroArch and libretro are not affiliated in any way with Crowdin.
 
 ## What is Crowdin?
 
@@ -42,7 +42,9 @@ You can add translations and suggestions to the project regardless of whether yo
 
 ### How to translate strings
 
-After selecting the language you want to translate to, you will be welcomed by the file selection page. At the moment the most important files are _msg\_hash\_us.json_, which contains the (options) texts of the RetroArch program, as well as _googleplay\_us.json_ and _steam\_us.json_, which contain RetroArch’s Google Store and Steam page descriptions, respectively.
+After selecting the language you want to translate to (you may request additional languages at the `#retroarch-translations` channel of our Discord[^2]), you will be welcomed by the file selection page. At the moment the most important files are _msg\_hash\_us.json_, which contains the (options) texts of the RetroArch program, as well as _googleplay\_us.json_ and _steam\_us.json_, which contain RetroArch’s Google Store and Steam page descriptions, respectively.
+
+[^2]: The official RetroArch Discord server: https://discord.gg/2E8pNrCR
 
 <figure markdown>
    <center>
@@ -121,11 +123,16 @@ Voting is very simple:  At the bottom half of the middle section of the translat
 
 But even with a voting system in place, at some point we would probably want to just decide on an official translation, which will be chosen regardless of the votes. That’s where proofreaders come into play.
 
-First things first: **in order to become a proofreader, translators will need additional authorization by RetroArch’s translation managers.** We suggest you contact us at the _#retroarch-translations_ channel, located in RetroArch’s Discord server, in order to discuss this authorization.
+First things first: **in order to become a proofreader, translators will need additional authorization by RetroArch’s translation managers.** We suggest you contact us at the `#retroarch-translations` channel, located in RetroArch’s Discord server[^2], in order to discuss this authorization.
 
 As a proofreader, you don’t get to vote on the translations any more. Instead, if you find a translation to be suitable and free of errors you can click on the ![Approve button](../../image/development/crowdin-approve-button.png) button to _approve_ it. Approving a translation makes it the ‘default’ and elevates it above all others. Only one translation can be approved at a time for each source string and language. Translators can still vote on it, though, and it would be wise to rethink one's choice if the votes demand it.
 
 In addition to approving translations, proofreaders also may delete _any_ suggested translation, not just their own. It should be easy to see why additional authorization is needed for this position.
+
+### Seeing results in the app
+
+For languages already included in RetroArch the translations are updated daily for the main app and weekly every Friday for cores.
+Other languages will need to be incorporated into the code of RetroArch and the cores. Once at least 15% of the `msg_hash_us.h` file is translated, the Crowdin managers will start work on including this language in the app. If you'd like to take matters in your own hands, you can find instructions [here](new-translations.md).
 
 ## Advanced Instructions
 
@@ -154,7 +161,7 @@ Since RetroArch and libretro are C/C++ projects, the strings will sometimes cont
    </figcaption>
 </figure>
 
-This is not a complete list — there are quite a few more. But don't worry: in Crowdin these special elements are marked accordingly, and you will receive reminders should you forget to use them in your translations. And always remember: if there is something unclear about a source text, just ask about it in a comment on Crowdin or on Discord!
+This is not a complete list — there are quite a few more. But don't worry: in Crowdin these special elements are marked accordingly, and you will receive reminders should you forget to use them in your translations. And always remember: if there is something unclear about a source text, just ask about it in a comment on Crowdin or on Discord[^2]!
 
 <figure markdown>
    <center>
@@ -191,7 +198,7 @@ The best way to check for other translations, without having to leave the curren
 
 In the ‘Source String’ area you’ll find some words that are underlined. These are words that contain references to existing translations. Hover your mouse over these words to see the current translation references. As of the writing of this document, there are two types of references:
 
-- **Glossary terms**: These terms have been selected/translated by other members of the translation team (or other language teams, depending on the case) and should be used as much as possible. If you'd like to change an existing glossary term translation, please talk about it with any active translators of your language first. If your language currently does not have translators, but its progress is very high, do not change the existing terms on your own. Please contact other people on e.g. Discord and try to reach a consensus.
+- **Glossary terms**: These terms have been selected/translated by other members of the translation team (or other language teams, depending on the case) and should be used as much as possible. If you'd like to change an existing glossary term translation, please talk about it with any active translators of your language first. If your language currently does not have translators, but its progress is very high, do not change the existing terms on your own. Please contact other people on e.g. Discord[^2] and try to reach a consensus.
 - **Previous translations**: Crowdin will routinely check for repeated words and show what it thinks is a good translation based on previous input. These suggestions are marked with "Previously translated as:". This system is not perfect and should not be entirely trusted.
 
 <figure markdown>

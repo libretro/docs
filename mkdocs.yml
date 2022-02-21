@@ -314,7 +314,7 @@ nav:
         - 'Input Driver Specification': 'development/retroarch/input/input-drivers.md'
         - 'Input Overlays': 'development/retroarch/input/overlay.md'
         - 'Parallel Port Controllers': 'development/retroarch/input/parallel-port-controllers.md'
-      - 'Adding New Languages or New Strings': 'development/retroarch/new-translations.md'
+      - 'Adding new languages to RetroArch': 'development/retroarch/new-translations.md'
       - 'Helping with RetroArch translations': 'development/retroarch/new-translations-crowdin.md'
       - 'Network Protocols':
         - 'Netplay': 'development/retroarch/netplay.md'
