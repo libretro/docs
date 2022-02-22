@@ -1,4 +1,4 @@
-# Adding new languages to RetroArch
+# Adding New Languages to RetroArch
 
 While translation is handled via the Crowdin[^1] platform ([more here](new-translations-crowdin.md)), RetroArch's code must be adjusted for it to display new languages.
 
@@ -21,7 +21,7 @@ While translation is handled via the Crowdin[^1] platform ([more here](new-trans
 
 ## Main Instructions
 
-To add a language with the English name `XXXXX` and two-letter code `xx` follow these steps:
+To add a language with the English name `XXXXX` and two-letter code `xx` (be sure to use the same one as in the corresponding `intl/msg_hash_xx.h` file) follow these steps:
 
 1. Open `libretro-common/include/libretro.h`.
     1. Add a `RETRO_LANGUAGE_XXXXX` item to the `retro_language` enum just above `RETRO_LANGUAGE_LAST`, using the next available integer value.
@@ -88,7 +88,7 @@ To make the new language usable with the RGUI menu driver:
 1. Open `menu/drivers/rgui.c`.
 2. Navigate to the `rgui_fonts_init(rgui_t *rgui)` function.
 3. Add `case RETRO_LANGUAGE_XXXXX:` to
-    1. the extended ASCII section if the new language uses the Latin alphabet (+ some extra chars), or
+    1. the extended ASCII section if the new language uses the Basic Latin/ASCII + Latin-1 Supplement range of UTF-8 or
     2. any other present language the new language shares the alphabet with (like Russian).
 4. If a new language was added, it is important to compile RetroArch with the changes and ensure the new language works correctly with RGUI.
 5. If your language uses a different range of symbols, an RGUI compatible font must be added first. This is an extensive process, which is outside the scope of this article.
@@ -103,10 +103,12 @@ To do that for cores which have been added to Crowdin, follow these steps:
 2. Locate the `libretro_core_options.h` file and open it.
     1. Add `&options_xx,` at the end of the `retro_core_options_v2` struct. Remember to keep the same order as in the `retro_language` enum.
 
+> Adding cores to Crowdin is a whole other elaborate process and, currently, can only be performed by a Crowdin manager. Suggestions/Requests can be submitted on Discord to DisasterMo#0389.
+
 ## Encoding of translation files
 
 Translation files (`intl/msg_hash_xx.{c,h}`) in general must be UTF-8 encoded.
-For some languages, these files need to have a "UTF-8 Unicode (with [BOM](https://en.wikipedia.org/wiki/Byte_order_mark))" encoding. AFAIK, this is because of a requirement of the MSVC compilers for the Windows platform. Examples of this as of now are:
+For some languages, these files need to have a "UTF-8 Unicode (with [BOM](https://en.wikipedia.org/wiki/Byte_order_mark))" encoding. This can be done using the 'Encoding' option of editors like Notepad++ and Notepadqq. AFAIK, this is because of a requirement of the MSVC compilers for the Windows platform. Examples of this as of now are:
 
 * `msg_hash_ar.{c,h}`
 * `msg_hash_chs.{c,h}`
