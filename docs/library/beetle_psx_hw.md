@@ -1,7 +1,5 @@
 # PlayStation (Beetle PSX HW)
 
-*Last Updated: March 21, 2020*
-
 ## Background
 
 Beetle PSX HW is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode, excluding the Vulkan renderer, which is written in C++11 for the time being. Beetle PSX HW currently runs on Linux, OSX and Windows.
