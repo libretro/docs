@@ -30,7 +30,7 @@ Next We'll activate the logging option:
 2. Navigate to the RetroArch folder with the `cd` command.
 3. Start retroarch in 'verbose' mode with this command:<br />
  `retroarch --menu --verbose >> retroarch.log 2>&1`
-4. Once you exit RetroArch, a file called `retroarch.log` should be stored in your home directory.
+4. Once you exit RetroArch, a file called `retroarch.log` should be stored in your `logs` directory.
 
 #### Graphic card logs
 `lspci -nnk | grep -A 3 VGA` will give information about your graphic card.
