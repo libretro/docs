@@ -171,6 +171,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | RemoteJoy                                                                        | [GPLv2](https://github.com/libretro/libretro-remotejoy/blob/master/LICENSE)               |                |
 | Remote RetroPad                                                                  | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)                   |                |
 | [SameBoy](../library/sameboy.md)                                                 | [MIT](https://github.com/libretro/SameBoy/blob/master/LICENSE)                            |                |
+| [SAME_CDI](../library/same_cdi.md)                                                 | [GPLv2](https://github.com/libretro/same_cdi/blob/master/COPYING)                            |                |
 | [ScummVM](../library/scummvm.md)                                                 | [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)                          |                |
 | [Snes9x](../library/snes9x.md)                                                   | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2002](../library/snes9x_2002.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |

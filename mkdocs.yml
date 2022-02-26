@@ -99,6 +99,7 @@ nav:
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
+        - 'Arcade (SAME_CDI)': 'library/same_cdi.md'
       - 'Atari Emulation':
         - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
         - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'

@@ -158,6 +158,7 @@
 | Rustation                 | Sony PlayStation       |                    |
 | SameBoy                   | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) |                    |
+| SAME_CDI                  | Arcade         | SAME_CDI is a libretro core to play CD-i games.                   |
 | ScummVM                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
 | SimCoupe                  | SAM Coupe              |                    |
 | SMS Plus GX               | Sega MS/GG             |                    |
