@@ -12,6 +12,16 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ---
 
+## Introduction : demystifying arcade emulation, accuracy, emulator and romset versioning
+
+What we refer as "arcade emulation" is the emulation of thousands of different machines. While it is considered that a console emulator emulating a single machine is never 100% finished, imagine this for an arcade emulator, this is why ongoing arcade emulators like MAME or FinalBurn have received updates basically every day for the past 25 years. 
+
+You often read that more recent emulators are more "accurate" : this is such a vague word whose real meaning is that graphics, sound and gameplay are more likely to be faithful to the real machine. The vintaged cores are meant as a workaround for performance issues, because emulating a machine properly is likely to be more demanding, so the older the year in the core's name the more likely the core will be faster while having additional more or less noticeable glitches. MAME2003-Plus is somehow an exception to that rule, because it mixes emulation code from back in 2003 with more recent emulation code, so sometimes it will emulate games more properly than more recent vintages of mame.
+
+Part of the reason older emulators are more likely to have major bugs is that they are using a lot of bad dumps. What we refer as a dump is the digital representation of a chip, a romset is a collection of those dumps, 1 dump for each chip. Sometimes the attempts at digitalizing some of those chips failed, and instead of having the game totally unplayable because the romset was only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable, those workarounds are known for going as far as changing gameplay by causing different enemy patterns from the real game. Every time one of those chips finally gets a proper dump, which can happen decades later (some of those boards are rare and pricy, dumping the chips is a complex process which can be harmful, meaning those new romset versions aren't made just for fun), ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump.
+
+---
+
 ## Step 1: Choose an arcade emulator to match your system
 
 There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
