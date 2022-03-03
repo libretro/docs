@@ -140,3 +140,7 @@ This is a list of cores that are related to each other in some way.
 ## ColecoVision
 
 - [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
+
+## Mega Duck / Cougar Boy
+
+- [Mega Duck / Cougar Boy (SameDuck)](../library/sameduck.md)
