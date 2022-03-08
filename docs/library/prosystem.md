@@ -84,7 +84,11 @@ The ProSystem core saves/loads to/from these directories.
 ### Geometry and timing
 
 - The ProSystem core's core provided FPS is 60 for NTSC games and 50 for PAL games.
-- The ProSystem core's core provided sample rate is 48000 Hz
+- The ProSystem core's core provided sample rate is 32640 Hz for NTSC games and 31200 Hz for PAL games
+- The ProSystem core's core provided base width is 320
+- The ProSystem core's core provided base height is 223 for NTSC games and 272 for PAL games
+- The ProSystem core's core provided max width is 320
+- The ProSystem core's core provided max height is 292
 - The ProSystem core's core provided aspect ratio is 4/3
 
 ## Controllers
