@@ -90,12 +90,12 @@ Core Controls Remapping alters how the core receives input rather than how the g
 | ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png)    |
 | ![Q](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Q.png)                     | ![RetroPad L1](../image/retropad/retro_l1.png)               |
 | ![W](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_W.png)                     | ![RetroPad R1](../image/retropad/retro_r1.png)               |
-| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       |
-| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         |
 | ![Z](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Z.png)                     | ![RetroPad B](../image/retropad/retro_b.png)                 |
 | ![X](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_X.png)                     | ![RetroPad A](../image/retropad/retro_a.png)                 |
 | ![A](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_A.png)                     | ![RetroPad Y](../image/retropad/retro_y.png)                 |
-| ![S](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetoPad X](../image/retropad/retro_x.png)                  |
+| ![S](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetroPad X](../image/retropad/retro_x.png)                 |
+| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       |
+| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         |
 
 ### Menu controls
 
@@ -111,11 +111,11 @@ The keyboard inputs shown here are active only when `Settings` → `Input` → `
 | ![Page Down](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Down.png)     | ![RetroPad R1](../image/retropad/retro_r1.png)            | Scroll one page down          |
 | ![Backspace](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Backspace.png)     | ![RetroPad B](../image/retropad/retro_b.png)              | Return to the previous screen |
 | ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad A](../image/retropad/retro_a.png)              | Select Item                   |
-| -                                                                                     | ![RetroPad Y](../image/retropad/retro_y.png)              | Scan content                  |
+| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | ![RetroPad Y](../image/retropad/retro_y.png)              | Scan content                  |
 | ![/](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Slash.png)                 | ![RetroPad X](../image/retropad/retro_x.png)              | Search                        |
 | ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)    | Help                          |
-| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | -                                                         | Remove highlighted input bind |
 | ![Space](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png)             | ![RetroPad Start](../image/retropad/retro_start.png)      | Reset to default              |
+| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | ![RetroPad Y](../image/retropad/retro_y.png)              | Remove highlighted input bind |
 | ![Esc](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Esc.png)                 | -                                                         | Exit RetroArch                |
 
 ### Hotkey controls
