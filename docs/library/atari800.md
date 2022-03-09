@@ -1,48 +1,20 @@
 # Atari 8-bit computer systems and 5200 (Atari800)
 
-## Contribute to this documentation
-
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/atari800.md). Changes are proposed using "Pull Requests."
 
 ## Background
 
 Atari 8-bit computer systems (400, 800, 600 XL, 800XL, 130XE) and 5200 game console emulator.
 
-### How to get and install the Atari800 core:
-
-1. Start up RetroArch. Inside the main menu, go to 'Online Updater'.
-
-2. Just to make sure we have the latest info files, select 'Update Core Info FIles'. Wait until this is done. Then, select 'Core Updater'.
-
-3. Browse through the list and select 'Atari 8-bit computer systems and 5200 (Atari800)'.
-
-After this has finished downloading, the core should now be ready for use!
-
-#### How to play (after installation):
-
-1. Go back to RetroArch's main menu screen. Select 'Load Content'.
-
-2. Browse to the folder that contains the content you want to run.
-
-3. Select the content that you want to run.
-
-4. If you are asked which core to select, choose 'Atari 8-bit computer systems and 5200 (Atari800)'.
-
-The game should now start running!
-
-### Authors
+The Atari800 core has been authored by
 
 - Petr Stehlik
 
-## See also
+The Atari800 core is licensed under
 
-Awaiting description.
-
-## License
+- [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-- [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)
 
 ## Extensions
 
