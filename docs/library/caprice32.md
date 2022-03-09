@@ -100,8 +100,8 @@ When a game ask for it, you can change the current disk in the RetroArch 'Disk C
 ### Geometry and timing
 
 * The Caprice32 core's core provided FPS is 50
-* The Caprice32 core's core provided sample rate is 44.100
-* The Caprice32 core's core provided aspect ratio is 3/4
+* The Caprice32 core's core provided sample rate is 44100 Hz
+* The Caprice32 core's core provided aspect ratio is 4/3
 
 ## Usage
 

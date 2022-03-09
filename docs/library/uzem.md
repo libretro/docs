@@ -10,7 +10,7 @@ The Uzebox is a minimal system based on a AVR ATmega644 microcontroller.
 
 ### Authors
 
-- Awaiting description.
+- David Etherton
 
 ## License
 
@@ -34,7 +34,7 @@ RetroArch database(s) that are associated with the Uzem core:
 
 ## Features
 
-Frontend-level settings or features that the PPSSPP core respects.
+Frontend-level settings or features that the Uzem core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -68,7 +68,13 @@ The Uzem core's library name is 'UZEM'.
 
 ### Geometry and timing
 
-Awaiting description.
+- The Uzem core's core provided FPS is 59.94
+- The Uzem core's core provided sample rate is 15734 Hz
+- The Uzem core's base width is 360
+- The Uzem core's base height is 224
+- The Uzem core's max width is 720
+- The Uzem core's max height is 448
+- The Uzem core's core provided aspect ratio is 630/448 (1.40625)
 
 ### Usage
 
@@ -76,7 +82,7 @@ Awaiting description.
 
 ## Core options
 
-There is no Core Options available.
+There are no Core Options available.
 
 ## Controllers
 

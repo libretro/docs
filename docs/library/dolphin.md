@@ -133,7 +133,7 @@ TODO/FIXME
 
 ## Language
 
-When the 'Language' core option is set to automatic, the default PPSSPP language setting will be pulled from RetroArch's Language setting.
+When the 'Language' core option is set to automatic, the default Dolphin language setting will be pulled from RetroArch's Language setting.
 
 ## Internal Cheats
 
