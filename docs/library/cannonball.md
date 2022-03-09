@@ -97,14 +97,15 @@ The Cannonball core saves/loads to/from these directories.
 
 ## Geometry and timing
 
-- The Cannonball core's core provided FPS is 60 when the [Video Framerate core option](#core-options) is set to Smooth (60)
+- The Cannonball core's core provided FPS is 60 when the [Video Framerate core option](#core-options) is set to Smooth (60) or Original (60/30)
 - The Cannonball core's core provided FPS is 120 when the [Video Framerate core option](#core-options) is set to Ultra Smooth (120)
-- The Cannonball core's core provided FPS is 60 when the [Video Framerate core option](#core-options) is set to Original (60/30)
-- The Cannonball core's core provided sample rate is 44100 Hz
+- The Cannonball core's core provided FPS is 30 when the [Video Framerate core option](#core-options) is set to Low (30)
+- The Cannonball core's core provided sample rate is 44040 Hz when the [Video Framerate core option](#core-options) is set to Ultra Smooth (120)
+- The Cannonball core's core provided sample rate is 44100 Hz when the [Video Framerate core option](#core-options) is not set to Ultra Smooth (120)
 - The Cannonball core's base width is 320
 - The Cannonball core's base height is 224
 - The Cannonball core's max width is 640
-- The Cannonball core's max height is 640
+- The Cannonball core's max height is 448
 - The Cannonball core's core provided aspect ratio is 4/3 when the [Video Widescreen Mode core option](#core-options) is set to Off
 - The Cannonball core's core provided aspect ratio is 16/9 when the [Video Widescreen Mode core option](#core-options) is set to On
 
