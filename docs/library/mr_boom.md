@@ -2,21 +2,19 @@
 
 ## Background
 
-Mr.Boom is an up to 8 player Bomberman clone for LibRetro/RetroArch.
+Mr.Boom is an up to 8 player Bomberman clone ported to the libretro API.
 
 The goal of the game is to bomb away your enemies and other players.
 
-### Author(s):
+The Mr.Boom core has been authored by
 
-Remdy Software
+- Remdy Software
 
-## Contribute to this documentation
+The Mr.Boom core is licensed under
 
-In order to propose improvements to this document, [visit it's corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/mr_boom.md). Changes are proposed using "Pull Requests."
+- [MIT](https://github.com/libretro/mrboom-libretro/blob/master/LICENSE)
 
-## License
-
-MIT
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
@@ -45,6 +43,14 @@ The Mr.Boom core does not feature extension use. Just load and start the core.
 The Mr.Boom core's directory name is 'Mr.Boom'
 
 Save states are saved/loaded to and from where state files are stored.
+
+### Geometry and timing
+
+- The Mr. Boom core's core provided FPS is 60
+- The Mr. Boom core's core provided sample rate is 48000 Hz
+- The Mr. Boom core's core provided base width is 320
+- The Mr. Boom core's core provided base height is 200
+- The Mr. Boom core's core provided aspect ratio is 8/5 (native), 4/3 or 16/9
 
 ## Core options
 
@@ -88,7 +94,8 @@ Save states are saved/loaded to and from where state files are stored.
 
 ## External Links
 
-* [Libretro Repository](https://github.com/libretro/mrboom-libretro)
+* [Libretro Mr.Boom Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/mrboom_libretro.info)
+* [Libretro Mr.Boom Repository](https://github.com/libretro/mrboom-libretro)
 * [Report Core Issues Here](https://github.com/libretro/libretro-meta)
 * [Official Website](http://mrboom.mumblecore.org/)
 * [Upstream Repository](https://github.com/Javanaise/mrboom-libretro)
