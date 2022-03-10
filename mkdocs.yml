@@ -225,6 +225,8 @@ nav:
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
+      - 'MegaDuck Emulation':
+        - 'Welback Holdings - Mega Duck (SameDuck)': 'library/sameduck.md'        
     - 'Core Library: Game and Scripting Engines':
       - '2048': 'library/2048.md'
       - '3D Engine': 'library/3d_engine.md'

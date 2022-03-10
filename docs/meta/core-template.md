@@ -506,5 +506,3 @@ Rumble only works in the [Core name] core when
 
 - // Add links to related core docs here. Use the See Also doc for help
 - // https://docs.libretro.com/meta/see_also
-
-- [Other Core](name.md)
