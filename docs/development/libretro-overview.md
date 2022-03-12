@@ -33,7 +33,7 @@ RetroArch is the libretro "reference frontend" and is available across a wide ra
 
 Below is a partial list of external distributions that also use libretro or RetroArch as part of their backend technology:
 
-  * [batocera.linux](http://batocera-linux.xorhub.com/)
+  * [Batocera.linux](http://batocera.org/)
   * [RetroPie](http://retropie.org.uk/)
   * [Recalbox](http://recalbox.com/)
 
