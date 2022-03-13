@@ -322,4 +322,6 @@ Activating multitap support in compatible games can be configured by the ['6Play
 ## Saturn
 
 - [Sega - Saturn (Beetle Saturn)](beetle_saturn.md)
+- [Sega - Saturn/ST-V (Kronos)](kronos.md)
 - [Sega - Saturn (Yabause)](yabause.md)
+- [Sega - Saturn (YabaSanshiro)](yabasanshiro.md)

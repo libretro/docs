@@ -104,6 +104,8 @@ This is a list of cores that are related to each other in some way.
 ## Saturn
 
 - [Sega - Saturn (Beetle Saturn)](../library/beetle_saturn.md)
+- [Sega - Saturn (Kronos)](../library/kronos.md)
+- [Sega - Saturn (YabaSanshiro)](../library/yabasanshiro.md)
 - [Sega - Saturn (Yabause)](../library/yabause.md)
 
 ## PSX

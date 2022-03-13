@@ -205,7 +205,9 @@ nav:
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
         - 'Sega - MD/CD (BlastEm)': 'library/blastem.md'
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
+        - 'Sega - Saturn/ST-V (Kronos)': 'library/kronos.md'
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
+        - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
         - 'VeMUlator': 'library/vemulator.md'
       - 'Sharp Emulation':
