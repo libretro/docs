@@ -309,12 +309,12 @@ You can also check the progress of your friends and add comments on their trophi
 
 #### Saturn
 
-| Core                                                                | Supported | Notes |
-|---------------------------------------------------------------------|:---------:|:------|
-| [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro) | ✔         | High accuracy, but low speed |
-| [Yabause](https://github.com/libretro/yabause)                      | ✔         | Higher speed |
-| [Kronos](https://github.com/libretro/yabause)                       | ✔         | High speed, supports graphic enhancements, but requires a GPU that supports at least OpenGL 4.2 |
-| [Yabasanshiro](https://github.com/libretro/yabause)                 | ✕         |       |
+| Core                                                                  | Supported | Notes |
+|-----------------------------------------------------------------------|:---------:|:------|
+| [Beetle Saturn](https://github.com/libretro/beetle-saturn-libretro)   | ✔         | High accuracy, but low speed |
+| [Yabause](https://github.com/libretro/yabause/tree/master)            | ✔         | Higher speed |
+| [Kronos](https://github.com/libretro/yabause/tree/kronos)             | ✔         | High speed, supports graphic enhancements, but requires a GPU that supports at least OpenGL 4.2 |
+| [YabaSanshiro](https://github.com/libretro/yabause/tree/yabasanshiro) | ✕         |       |
 
 ### SNK
 

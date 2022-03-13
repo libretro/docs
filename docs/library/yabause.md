@@ -189,8 +189,9 @@ Must be enabled in core options.
 - [Libretro Yabause Github Repository](https://github.com/libretro/yabause)
 - [Report Libretro Yabause Core Issues Here](https://github.com/libretro/yabause/issues)
 
-### See also
-
-#### Sega - Saturn
+## Saturn
 
 - [Sega - Saturn (Beetle Saturn)](beetle_saturn.md)
+- [Sega - Saturn/ST-V (Kronos)](kronos.md)
+- [Sega - Saturn (Yabause)](yabause.md)
+- [Sega - Saturn (YabaSanshiro)](yabasanshiro.md)
