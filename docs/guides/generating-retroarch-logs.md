@@ -9,16 +9,12 @@ The answer to this dilemma involves "logs", which RetroArch and other libretro s
 ## Generating Logs
 
 ### Generating Logs via Menu
-First We'll need to activate the Advanced Settings:
-1. Go to settings
-2. Enter at "User Interface"
-3. Activate "Show Advanced Settings"
-Next We'll activate the logging option:
-1. Go to settings if you weren't there
-2. Enter at "Logging"
-3. Activate "Log to File"
-4.(optional) Customize Core & Frontend Logging Level & if you want timestamps or performance counters on your log
-5. Activate "Logging Verbosity"
+1. Go to "Settings"
+2. Enter "Logging"
+3. Activate "Logging Verbosity"
+4. Activate "Log to File"
+5. (optional) Adjust "Frontend / Core Logging Level" to get more or less detailed information
+6. (optional) Activate "Timestamp Log Files" if you don't want to overwrite the log at each startup
 
 ### Generating Logs in Lakka
 [Please see the Troubleshooting Lakka doc](http://www.lakka.tv/doc/Troubleshooting-Lakka/).
@@ -28,9 +24,9 @@ Next We'll activate the logging option:
 #### RetroArch logs
 1. Open a terminal.
 2. Navigate to the RetroArch folder with the `cd` command.
-3. Start retroarch in 'verbose' mode with this command:<br />
- `retroarch --menu --verbose >> retroarch.log 2>&1`
-4. Once you exit RetroArch, a file called `retroarch.log` should be stored in your `logs` directory.
+3. Start RetroArch in 'verbose' mode with this command:<br />
+ `retroarch -v --log-file retroarch.log` or `retroarch -v >> retroarch.log 2>&1`
+4. Once you exit RetroArch, a file called `retroarch.log` should be stored in the folder.
 
 #### Graphic card logs
 `lspci -nnk | grep -A 3 VGA` will give information about your graphic card.
@@ -45,21 +41,6 @@ Next We'll activate the logging option:
 
 ### Generating Logs in Windows
 
-
-If you **installed** RetroArch:
-
-1. Open the Windows start menu
-2. Search and open `RetroArch (log to file)`
-
-Once you exit RetroArch, a file called `retroarch-log.txt` should be stored in the RetroArch folder, in order to retrieve it:
-
-1. Open the windows start menu
-2. Search and open `RetroArch Data Folder`
-3. Find `retroarch-log.txt`
-
-
-If you **haven't installed** RetroArch and have a folder with it:
-
 !!! tip
     You can hold `shift` then `right click` on the **folder that contains** retroarch.exe <br />
     Select `Open PowerShell window here`.<br />
@@ -67,17 +48,15 @@ If you **haven't installed** RetroArch and have a folder with it:
 
 1. Open a console window with the `cmd` command, found either in the Start Menu or through use of the Windows "Run" menu.
 2. Navigate to the RetroArch folder using the `cd` command.
-3. Launch RetroArch with this commandline:<br />
- `.\retroarch.exe --log-file .\retroarch-log.txt -v`
-4. Once you exit RetroArch, a file called `retroarch-log.txt` should be stored in the folder.
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oz9QNBtYrr8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+3. Start RetroArch in 'verbose' mode with this command:<br />
+ `retroarch.exe -v --log-file retroarch.log` or `retroarch.exe -v >> retroarch.log 2>&1`
+4. Once you exit RetroArch, a file called `retroarch.log` should be stored in the folder.
 
 ### Generating Logs in OS X
 1. Open a console window with the OS X "Terminal" app.
 2. Navigate to the RetroArch folder using the `cd` command.
-3. Launch RetroArch with this commandline:<br />
- `retroarch --menu --verbose --log-file ~/retroarch.log`
+3. Start RetroArch in 'verbose' mode with this command:<br />
+ `retroarch -v --log-file ~/retroarch.log` or `retroarch -v >> ~/retroarch.log 2>&1`
 4. Once you exit RetroArch, a file called `retroarch.log` should be stored in your home directory.
 
 ### Generating Logs in Android
