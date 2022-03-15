@@ -198,6 +198,7 @@ nav:
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
         - 'Sega - Dreamcast (redream)': 'library/redream.md'
+        - 'Sega - Dreamcast VMU (VeMUlator)': 'library/vemulator.md'         
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
         - 'Sega - MS/GG (SMS Plus GX)': 'library/smsplus.md'
         - 'Sega - MS/GG/SG-1000 (Gearsystem)': 'library/gearsystem.md'
@@ -207,9 +208,8 @@ nav:
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
         - 'Sega - Saturn/ST-V (Kronos)': 'library/kronos.md'
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
-        - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
+        - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'       
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
-        - 'VeMUlator': 'library/vemulator.md'
       - 'Sharp Emulation':
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
       - 'Sinclair Emulation':

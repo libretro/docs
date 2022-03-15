@@ -1,8 +1,10 @@
 # VeMUlator
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hqTm_3elBU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
-This is a port of the Android SEGA Dreamcast VMU emulator "VeMUlator" for libretro, it was translated from Java to C++ and then implemented the libretro.h callbacks.
+VeMUlator is a Sega VMU emulator. This is a port of the Android SEGA Dreamcast VMU emulator "VeMUlator" for libretro, it was translated from Java to C++ and then implemented the libretro.h callbacks.
 
 ### Author/License
 
@@ -30,18 +32,18 @@ Frontend-level settings or features that the VeMUlator core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | -         |
-| Screenshots       | ✔         |
+| Restart           | ✕[^1]     |
+| Screenshots       | ✔        |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
-| Core Options      | ✔         |
+| Core Options      | ✔        |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
-| Controls          | ✔         |
-| Remapping         | -         |
+| Controls          | ✔        |
+| Remapping         | -          |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
@@ -54,6 +56,8 @@ Frontend-level settings or features that the VeMUlator core respects.
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
+
+[^1]: It will cause a crash.
 
 ### Directories
 
@@ -91,13 +95,13 @@ The VeMUlator core supports the following device type(s) in the controls menu, b
 
 | RetroPad Inputs                           | VeMUlator core Inputs |
 |-------------------------------------------|-----------------------|
-| ![](../image/retropad/retro_b.png)    | B                     |
+| ![](../image/retropad/retro_a.png)    | A                           |
+| ![](../image/retropad/retro_b.png)    | B                           |
 | ![](../image/retropad/retro_start.png)      | Start                 |
 | ![](../image/retropad/retro_dpad_up.png)    | Up                    |
 | ![](../image/retropad/retro_dpad_down.png)  | Down                  |
 | ![](../image/retropad/retro_dpad_left.png)  | Left                  |
 | ![](../image/retropad/retro_dpad_right.png) | Right                 |
-| ![](../image/retropad/retro_a.png)    | A                     |
 
 ## Compatibility
 
@@ -105,6 +109,7 @@ Known issues:
 
 - Timer problems (Mainly T0, due to lack of documentation of the VMU.)
 - Sound not being synchronized with the system.
+- Close/restart content will cause crash.
 
 ## External Links
 
