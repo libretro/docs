@@ -359,3 +359,9 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                           | Supported | Notes |
 |------------------------------------------------|:---------:|:------|
 | [Potator](https://github.com/libretro/potator) | ✔         | RetroArch 1.9.2 or higher required |
+
+### Misc
+
+| Core                                           | Supported | Notes |
+|------------------------------------------------|:---------:|:------|
+| [VaporSpec](https://github.com/libretro/libretro-common/tree/716bb5e7b761a3b4d44e069c84491d906d32aba0) | ✕         |  |

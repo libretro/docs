@@ -146,3 +146,7 @@ This is a list of cores that are related to each other in some way.
 ## Mega Duck / Cougar Boy
 
 - [Mega Duck / Cougar Boy (SameDuck)](../library/sameduck.md)
+
+## Misc
+
+- [VaporSpec](../library/vaporspec.md)

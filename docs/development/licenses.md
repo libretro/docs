@@ -190,6 +190,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [TyrQuake](../library/tyrquake.md)                                               | [GPLv2](https://github.com/libretro/tyrquake/blob/master/gnu.txt)                         |                |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 | [Uzem](../library/uzem.md)                                                       | [GPLv3](https://github.com/Uzebox/uzebox/blob/master/gpl-3.0.txt)                         |                |
+| [VaporSpec](../library/vaporspec.md)                                             | [MIT](https://github.com/minkcv/vm/blob/master/LICENSE.md)    
 | [VBA-M](../library/vba_m.md)                                                     | [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt)                |                |
 | [VBA Next](../library/vba_next.md)                                               | [GPLv2](https://github.com/libretro/vba-next/blob/master/LICENSE)                         |                |
 | [vecx](../library/vecx.md)                                                       | [GPLv3](https://github.com/libretro/libretro-vecx/blob/master/LICENSE.md)                 |                |

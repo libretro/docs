@@ -4,6 +4,8 @@
 
 SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME libretro, which is in turn a fork of MAME. It includes only the Philips CD-i driver, and simplifies the loading of CD content to provide a 'plug and play' experience.
 
+The SAME_CDI core has been authored by
+
 - zach-morris
 
 The SAME_CDI core is licensed under
@@ -67,7 +69,7 @@ SAME_CDI does require BIOS (bootrom) files to work. You'll need to have followin
 
 The SAME_CDI core's doesn't create any directory.
 
-### Core provided aspect ratio
+### Geometry and timing
 
 SAME_CDI's core provided aspect ratio is 1/1.
 

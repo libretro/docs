@@ -255,6 +255,7 @@ nav:
       - 'TIC-80': 'library/tic80.md'
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - 'Uzebox (Uzem)': 'library/uzem.md'
+      - 'VaporSpec': 'library/vaporspec.md'      
       - 'WebAssembly (WASM-4)': 'library/wasm-4.md'
       - 'Wolfenstein 3D (ECWolf)': 'library/ecwolf.md'      
     - 'Core Library: Media':
