@@ -2,10 +2,41 @@
 
 This is a list of cores that are related to each other in some way.
 
+## 3DS
+
+- [Nintendo - 3DS (Citra)](../library/citra.md)
+- [Nintendo - 3DS (Citra Canary/Experimental)](../library/citra_canary.md)
+
+## Arcade
+
+- [MAME 2003](../library/mame_2003.md)
+- [MAME 2003-Plus](../library/mame2003_plus.md)
+- [MAME 2010](../library/mame_2010.md)
+- [FB Neo](../library/fbneo.md)
+- [SAME_CDI](../library/same_cdi.md)
+
+## ColecoVision
+
+- [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
+
 ## CPC
 
 - [Amstrad - CPC (Caprice32)](../library/caprice32.md)
 - [Amstrad - CPC (CrocoDS)](../library/crocods.md)
+
+## Custom Engine
+
+- [ChaiLove](../library/chailove.md)
+- [Lua Engine (Lutro)](../library/lutro.md)
+
+## Dreamcast
+
+- [Sega - Dreamcast (Redream)](../library/redream.md)
+- [Sega - Dreamcast (Flycast)](../library/flycast.md)
+
+## Elektronika - BK-0010/BK-0011
+
+- [Elektronika - BK-0010/BK-0011 (bk)](../library/bk.md)
 
 ## Lynx
 
@@ -16,11 +47,6 @@ This is a list of cores that are related to each other in some way.
 
 - [Microsoft - MSX (fMSX)](../library/fmsx.md)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](../library/bluemsx.md)
-
-## TG-16
-
-- [NEC - PC Engine / CD (Beetle PCE FAST)](../library/beetle_pce_fast.md)
-- [NEC - PC Engine SuperGrafx (Beetle SGX)](../library/beetle_sgx.md)
 
 ## GB
 
@@ -44,10 +70,20 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - Game Boy Advance (VBA-M)](../library/vba_m.md)
 - [Nintendo - Game Boy Advance (VBA Next)](../library/vba_next.md)
 
-## 3DS
+## Media
 
-- [Nintendo - 3DS (Citra)](../library/citra.md)
-- [Nintendo - 3DS (Citra Canary/Experimental)](../library/citra_canary.md)
+- [FFmpeg](../library/ffmpeg.md)
+- [Game Music Emu](../library/game_music_emu.md)
+- [Imageviewer](../library/imageviewer.md)
+- [PocketCDG](../library/pocketcdg.md)
+
+## Mega Duck / Cougar Boy
+
+- [Mega Duck / Cougar Boy (SameDuck)](../library/sameduck.md)
+
+## Misc
+
+- [VaporSpec](../library/vaporspec.md)
 
 ## N64
 
@@ -68,6 +104,11 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - NES / Famicom (Nestopia UE)](../library/nestopia_ue.md)
 - [Nintendo - NES / Famicom (QuickNES)](../library/quicknes.md)
 
+## id Software
+
+- [Doom (PrBoom)](../library/prboom.md)
+- [Quake 1 (TyrQuake)](../library/tyrquake.md)
+
 ## SNES
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](../library/beetle_bsnes.md)
@@ -86,11 +127,6 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](../library/snes9x_2005_plus.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005)](../library/snes9x_2005.md)
 - [Nintendo - SNES / Famicom (Snes9x 2010)](../library/snes9x_2010.md)
-
-## Dreamcast
-
-- [Sega - Dreamcast (Redream)](../library/redream.md)
-- [Sega - Dreamcast (Flycast)](../library/flycast.md)
 
 ## Sega 16-bit
 
@@ -114,39 +150,7 @@ This is a list of cores that are related to each other in some way.
 - [Sony - PlayStation (Beetle PSX)](../library/beetle_psx.md)
 - [Sony - PlayStation (PCSX ReARMed)](../library/pcsx_rearmed.md)
 
-## Custom Engine
+## TG-16
 
-- [ChaiLove](../library/chailove.md)
-- [Lua Engine (Lutro)](../library/lutro.md)
-
-## Media
-
-- [FFmpeg](../library/ffmpeg.md)
-- [Game Music Emu](../library/game_music_emu.md)
-- [Imageviewer](../library/imageviewer.md)
-- [PocketCDG](../library/pocketcdg.md)
-
-## id Software
-
-- [Doom (PrBoom)](../library/prboom.md)
-- [Quake 1 (TyrQuake)](../library/tyrquake.md)
-
-## Arcade
-
-- [MAME 2003](../library/mame_2003.md)
-- [MAME 2003-Plus](../library/mame2003_plus.md)
-- [MAME 2010](../library/mame_2010.md)
-- [FB Neo](../library/fbneo.md)
-- [SAME_CDI](../library/same_cdi.md)
-
-## ColecoVision
-
-- [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
-
-## Mega Duck / Cougar Boy
-
-- [Mega Duck / Cougar Boy (SameDuck)](../library/sameduck.md)
-
-## Misc
-
-- [VaporSpec](../library/vaporspec.md)
+- [NEC - PC Engine / CD (Beetle PCE FAST)](../library/beetle_pce_fast.md)
+- [NEC - PC Engine SuperGrafx (Beetle SGX)](../library/beetle_sgx.md)

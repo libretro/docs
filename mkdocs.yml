@@ -121,6 +121,8 @@ nav:
         - 'Commodore - Amiga (PUAE)': 'library/puae.md'
       - 'DOS Emulation':
         - 'DOS (DOSBox)': 'library/dosbox.md'
+      - 'Elektronika':
+        - 'Elektronika - BK-0010/BK-0011 (bk)': 'library/bk.md'        
       - 'GCE Emulation':
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
       - 'Magnavox Emulation':

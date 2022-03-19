@@ -57,7 +57,6 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Core                                             			           | License                                                                                   | Non-commercial |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
 | [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
-| [Opera](../library/opera.md)                         			           | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h) | Non-commercial |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Atari800](../library/atari800.md)               			           | [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)                         |                |
 | [Beetle bsnes](../library/beetle_bsnes.md)       			           | [GPLv2](https://github.com/libretro/beetle-bsnes-libretro/blob/master/COPYING)            |                |
@@ -96,6 +95,8 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Dungeon Crawl Stone Soup                                                         | [GPLv2+](https://github.com/libretro/crawl-ref/blob/master/crawl-ref/licence.txt)         |                |
 | EasyRPG                                                                          | [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)                 |                |
 | [EightyOne](../library/eightyone.md)             			           | [GPLv3](https://github.com/libretro/81-libretro/blob/master/LICENSE)                      |                |
+| [Elektronika - BK-0010/BK-0011](../library/bk.md)                                          | [BSD]https://github.com/libretro/bk-emulator/blob/master/COPYING)                             |
+
 | [Emux CHIP-8](../library/emux_chip8.md)                                          | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux GB](../library/emux_gb.md)                                                 | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux NES](../library/emux_nes.md)                                               | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
@@ -153,7 +154,10 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | nSide Balanced                                                                   | [GPLv3](https://github.com/hex-usr/nSide/blob/master/gpl-3.0.txt)                         |                |
 | [NXEngine](../library/nxengine.md)                        		           | [GPLv3](https://github.com/gameblabla/nxengine-nspire/blob/master/LICENSE)                |                |
 | O2EM                                                                             | [Artistic License](https://sourceforge.net/projects/o2em/)                                |                |
-| [OpenLara](../library/openlara.md)                                               | [BSD-2-Clause](https://github.com/XProger/OpenLara/blob/master/LICENSE)                |                |
+| [OpenLara](../library/openlara.md)                                               | [BSD-2-Clause](https://github.com/XProger/OpenLara/blob/master/LICENSE)                |
+
+| [Opera](../library/opera.md)                         			           | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h) | 
+                |
 | P-UAE                                                                            | [GPLv2](https://github.com/libretro/PUAE/blob/master/COPYING)                             |                |
 | ParaLLEl N64                                                                     | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | PCem                                                                             | [GPLv2](https://github.com/libretro/libretro-pcem/blob/master/COPYING)                    |                |
