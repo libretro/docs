@@ -219,6 +219,8 @@ Note that the tool currrently does not integrate .sbi files into the .chd, so th
 
 ## Texture replacements (Vulkan only)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rvRcawBqsH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 To use a textures pack you'll have to extract the textures in a `[game_filename]-texture-replacements/` folder inside your game directory, where "[game_filename]" matches the actual filename of the file you're using to load the game.
 
 Here's an example with Suikoden II:
