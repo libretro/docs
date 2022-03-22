@@ -24,7 +24,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Extensions
 
-Content that can be loaded by the Yabause core have the following file extensions:
+Content that can be loaded by the Kronos core have the following file extensions:
 
 - .cue
 - .iso
@@ -54,7 +54,7 @@ This md5sum for the Saturn BIOS is just a hint, any valid saturn bios should wor
 
 Kronos will try searching for locations commonly used by other Sega Saturn libretro cores if it can't find a Sega Saturn bios at the expected path.
 
-Note that unlike yabause, Kronos won't automatically switch to HLE bios if a bios file is not present, because the Kronos project don't recommend using this HLE bios and actually won't provide support for any issue related to its usage. 
+Note that unlike yabause, Kronos won't automatically switch to HLE bios if a bios file is not present, because the Kronos project doesn't recommend using this HLE bios and actually won't provide support for any issue related to its usage. 
 This is the reason for the file to be required.
 
 ## Features
@@ -109,7 +109,7 @@ However Kronos also has a core option named "Share saves with beetle", which wil
 
 ## Core options
 
-The Kronos core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The Kronos core has the following options that can be tweaked from the core options menu. The default settings are bolded.
 
 - **Force HLE BIOS** [kronos_force_hle_bios] (**disabled**|enabled)
 
@@ -135,7 +135,7 @@ The Kronos core has the following option(s) that can be tweaked from the core op
 
 	Details above. Requires a restart.
 
-- **Addon Cartridge** [kronos_addon_cartridge] (**none**|1M_extended_ram|4M_extended_ram|16M_extended_ram|512K_backup_ram|1M_backup_ram|2M_backup_ram|4M_backup_ram)
+- **Addon Cartridge** [kronos_addon_cartridge] (**none** | 1M_extended_ram | 4M_extended_ram | 16M_extended_ram | 512K_backup_ram | 1M_backup_ram | 2M_backup_ram | 4M_backup_ram)
 
 	This is the default cartridge you want Kronos to use. Note that your choice will be ignored if Kronos detects that the game requires a specific cartridge. Requires a restart.
 
@@ -147,7 +147,7 @@ The Kronos core has the following option(s) that can be tweaked from the core op
 
 	Enable multitap in port 2.
 
-- **Resolution** [kronos_resolution_mode] (**original**|480p|**720p**|1080p|4k|8k)
+- **Resolution** [kronos_resolution_mode] (**original**|480p|720p|1080p|4k|8k)
 
 	Modify rendering resolution. Requires a restart.
 
