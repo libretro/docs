@@ -31,6 +31,7 @@ Name | Author(s) |  Description
 [Phoenix](http://phoenix.vg/) | Phoenix | Upcoming libretro frontend written with the Qt5 cross-platform application framework.
 [raylib-libretro](https://github.com/RobLoach/raylib-libretro) | RobLoach |  Libretro frontend using raylib.
 [retro_frontend](https://github.com/ehmry/genode-libretro) | Ehmry  | Frontend for the [Genode](http://genode.org) operating system framework. Following the Genode philosophy this frontend strives to be a minimal implemention that is extensible via the abstract OS services provided to it.
+[replay](https://github.com/avojak/replay) | avojak | Native Linux multi-system emulator built in Vala and GTK for elementary OS.
 [RetroPlayer](https://forum.kodi.tv/forumdisplay.php?fid=194) | Kodi-Game | Also known as [Kodi-Game](https://github.com/kodi-game/), RetroPlayer is a libretro compatibility layer for [Kodi](https://kodi.tv/).
 [sdlarch](https://github.com/heuripedes/sdlarch) | heuripedes | Small frontend providing video, audio and basic input to run basic libretro cores. Built on SDL.
 [URetro](https://github.com/QuarkTheAwesome/URetro) | | Nintendo WiiU frontend
