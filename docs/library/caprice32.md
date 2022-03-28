@@ -86,7 +86,7 @@ The Caprice32 core saves/loads to/from these directories.
 
 ## Usage
 
-The Caprice32 core has a virtual keyboard GUI that can be accessed through cap32_combokey or F9.
+The Caprice32 core has a virtual keyboard GUI that can be accessed through SELECT (configured by cap32_combokey) or F9.
 
 The mouse cursor can be controlled by RetroPad D-Pad and use button A to press a Key.
 
@@ -230,9 +230,23 @@ If you press **SELECT** you could make a combo with other buttons:
 
 #### Keyboard
 
-English layout
+This core allows **direct keyboard access**, you could use your keyboard as an original CPC. To achieve that you must activate the **[Game Focus](https://docs.libretro.com/guides/input-and-controls/#cores-with-direct-keyboard-input)**, by default the hotkey is configured to the **SCROLL_LOCK** key.
+
+
+##### English layout
 
 ![](https://user-images.githubusercontent.com/560310/52812237-4c4fbd80-3097-11e9-8537-88f62e8ba5e8.png)
+
+##### Spanish layout
+
+![](https://user-images.githubusercontent.com/560310/54316295-9ff2ef80-45e0-11e9-9ae4-a2e3fb064600.png)
+
+##### French layout
+
+![](https://user-images.githubusercontent.com/560310/54316280-97021e00-45e0-11e9-91b5-da73a87534d6.png)
+
+
+#### Keyboard Binds
 
 | RetroKeyboard Special Inputs | Amstrad                      |
 |------------------------------|------------------------------|
@@ -261,8 +275,6 @@ English layout
 | Keyboard Right Shift         | CPC_KEY_FIRE2 (JOY EMULATION)|
 | Keyboard Right Control       | CPC_KEY_FIRE1 (JOY EMULATION)|
 
-#### Keyboard Custom Binds
-
 Choose AMSTRAD KEYBOARD in Quick Menu > Controls to customize your **retropad keys per game**.
 
 #### Mouse
@@ -271,7 +283,6 @@ Choose AMSTRAD KEYBOARD in Quick Menu > Controls to customize your **retropad ke
 |-------------------------------------------------------|-----------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Mouse Cursor                |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | Mouse Left Button           |
-
 
 ## M3U and Disk control
 
