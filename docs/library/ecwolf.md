@@ -46,7 +46,7 @@ RetroArch database(s) that are associated with the ECWolf core:
 
 ECWolf does require BIOS (bootrom) files to work.
 
-- ecwolf.pk
+- ecwolf.pk3
 
 ## Features
 
