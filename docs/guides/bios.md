@@ -10,7 +10,7 @@ A BIOS file is a copy of the operating system used by the hardware that a Core i
 |----------------|-------------------------------|-----------------------------|
 |[Beetle PSX HW](../library/beetle_psx_hw.md)|✔           |    ✕        |
 |[mGBA](../library/mgba.md)|✕           |✔            |
-|DuckStation|✔|✕|
+|SwanStation|✔|✕|
 |[PCSX ReArmed](../library/pcsx_rearmed.md)|✕           |✔            |
 
 ![Basic Workflow](https://cdn.discordapp.com/attachments/615183202239381544/757354372064739428/Workflow-Diagram.png)
