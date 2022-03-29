@@ -336,7 +336,6 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle PSX](https://github.com/libretro/beetle-psx-libretro)    | ✔         | Identical to Beetle PSX HW in software mode. |
 | [SwanStation](https://github.com/libretro/swanstation)           | ✔         | Fork of DuckStation. Fairly high accuracy, extremely high speed. |
 | [PCSX ReARMed](https://github.com/libretro/pcsx_rearmed)         | ✔         | Lower accuracy than Beetle PSX (HW), higher speed. |
-| [DuckStation](https://github.com/stenzek/duckstation)            | ✔         | No longer receiving updates. |
 
 #### PlayStation Portable
 
