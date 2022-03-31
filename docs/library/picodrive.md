@@ -43,6 +43,7 @@ Content that can be loaded by the PicoDrive core have the following file extensi
 - .iso
 - .sms
 - .68k
+- .chd
 
 RetroArch database(s) that are associated with the PicoDrive core:
 
