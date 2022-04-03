@@ -115,6 +115,10 @@ ColecoVision Gamepad Mapping is as follow:
 - 0 & 9 are on keyboard 1 & 2 for Player 1
 - 0 & 9 are on keyboard 3 & 4 for Player 2.
 
+## SpectraVideo Cassettes
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ikRjN5OV7cA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 To play SpectraVideo cassettes type 'cload' then 'run'
 
 or BLOAD ''CAS:'',R depending on the game.
