@@ -6,7 +6,8 @@ These shaders attempt to reproduce aspects and characteristics of cathode ray tu
     + ![crt-aperture](../image/shader/crt/crt-aperture.png)
 
 ## crt-blurpi
-  * A lightweight shader designed to run full speed on Raspberry Pi hardware (hence, the name) and on low-res screens (640x480 or less). Comes in **sharp** and **soft** flavors.
+  * A lightweight shader designed to run full speed on Raspberry Pi hardware (hence, the name) and on low-res screens (640x480 or less). It cheats a little by rendering scanlines that match your screen resolution instead of the game resolution, to avoid painful aliasing/Moiré efects on low res screens. Comes in **sharp** and **soft** flavors; use the sharp variant when using interger scaling for best results, and the soft variant otherwise.
+    + ![crt-caligari](../image/shader/crt/crt-blurPi.png)
 
 ## crt-caligari
   * A shader that produces a scanline/mask effect by controlling the height and width of each simulated pixel "spot".
