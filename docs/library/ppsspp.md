@@ -35,6 +35,12 @@ In order to acquire PPSSPP's assets files and install them succcessfully, follow
 !!! info
 	Lakka users do not need to follow these steps. Lakka image ships with the assets already included. Those assets are compatible with the version of the core provided in the Lakka image. Using not compatible assets may lead to unexpected results.
 
+### Installing from the 'Core System Files Downloader'
+
+If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'PPSSPP.zip' from that menu and you're all done!
+
+### Installing from the GitHub repo
+
 1 . Create a directory named PPSSPP in RetroArch's System directory.
 
 ```
