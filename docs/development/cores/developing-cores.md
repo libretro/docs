@@ -115,7 +115,7 @@ Abstracting gamepad and other input devices is the hardest part of defining a mu
 
 Input device abstractions are also available for keyboards, mice, pointers, and lightguns.
 
-**Learn more in the [Input API](/docs/development/input-api.md) docs.**
+**Learn more in the [Input API](../input-api.md) docs.**
 
 #### Video/Audio synchronization considerations
 

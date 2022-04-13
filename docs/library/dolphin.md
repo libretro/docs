@@ -27,6 +27,20 @@ in the proper location.
 
 After downloading the core within RetroArch, execute the following steps:
 
+### Installing from the 'Core System Files Downloader'
+
+If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and you're all done!
+
+### Installing from the 'Content Downloader'
+
+If your frontend version has `Main Menu > Online Updater > Content Downloader`:
+
+1. Inside the 'Content Downloader' menu, select 'Nintendo - GameCube - Wii' and download 'dolphin-data.zip'.
+2. Navigate to your frontend 'downloads' folder, if the download finished properly you should see a new 'dolphin-emu' folder inside.
+3. Now simply move that 'dophin-emu' folder to your frontend 'system' folder and you should be good to go!
+
+### Installing from the GitHub repo
+
 1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
     * **If you have *Git* (if not, see the next option)**
@@ -79,6 +93,7 @@ Content that can be loaded by the Dolphin core have the following file extension
 - .ciso
 - .gcz
 - .wad
+- .rvz
 
 RetroArch database(s) that are associated with the Dolphin core:
 
@@ -163,52 +178,69 @@ In some cases Direct3D 11 may offer better performance than OpenGL, especially o
 
 The Dolphin core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
-
-- **CPU Core** [ppsspp_cpu_core] (**jit**|IR jit|interpreter)
-
-    The jit setting enables the Dynamic Recomplier (Dynarec) for CPU emulation. The Dynarec is much faster than the interpreter setting and is the default, recommended mode for supported architectures.
-
-    The interpreter setting enables the Interpreter for CPU emulation. The Interpreter is a very slow type of emulation and mostly useful for debug, but should work anywhere.
-
-	The IR jit setting might be worth trying against games which are broken in the other two settings.
-
-- **CPU Clock Rate** [ppsspp_locked_cpu_speed] (**off**|222MHz|266MHz|333MHz)
-
-	Allows you to lock the internal CPU clock of the emulator (of the emulated CPU).
-
-	Larger clocks can ensure a more stable performance in certain games that present problems even on a real PSP, but it requires more powerful hardware.
-
-	Lower clocks can help weak hardware have more comfortable gameplay, limiting FPS to a lower rate.
-
-	Changing this option opens the door to several bugs that may compromise some games.
-
-	In case of doubt, keep this on off.
-
-- **Language** [dolphin_language] (**english**|japanese|french|spanish|german|italian|dutch|portuguese|russian|korean|chinese_traditional|chinese_simplified)
-
-    Configure the Dolphin core's system language.
+- **Renderer** [dolphin_renderer] (**Hardware**|Software)
+- **Internal Resolution** [dolphin_efb_scale] (**x1 (640 x 528)**|x2 (1280 x 1056)|x3 (1920 x 1584)|x4 (2560 x 2112)|x5 (3200 x 2640)|x6 (3840 x 3168))
+- **Widescreen (Wii)** [dolphin_widescreen] (**ON**|OFF)
+- **WideScreen Hack** [dolphin_widescreen_hack] (**OFF**|ON)
+- **Shader Compilation Mode** [dolphin_shader_compilation_mode] (**sync**|a-sync Skip Rendering|sync UberShaders|a-sync UberShaders)
+- **Wait for Shaders before Starting** [dolphin_wait_for_shaders] (**OFF**|ON)
+- **Progressive Scan** [dolphin_progressive_scan] (**ON**|OFF)
+- **PAL60** [dolphin_pal60] (**ON**|OFF)
+- **Max Anisotropy** [dolphin_max_anisotropy] (**1x**|2x|4x|8x|16x)
+- **Skip Presenting Duplicate Frames** [dolphin_skip_dupe_frames] (**ON**|OFF)
+- **Scaled EFB Copy** [dolphin_efb_scaled_copy] (**ON**|OFF)
+- **Force Texture Filtering** [dolphin_force_texture_filtering] (**OFF**|ON)
+- **Store EFB Copies on GPU** [dolphin_efb_to_texture] (**ON**|OFF)
+- **Texture Cache Accuracy** [dolphin_texture_cache_accuracy] (**Fast**|Middle|Safe)
+- **GPU Texture Decoding** [dolphin_gpu_texture_decoding] (**OFF**|ON)
+- **Fast Depth Calculation** [dolphin_fast_depth_calculation] (**ON**|OFF)
+- **Bounding Box Emulation** [dolphin_bbox_enabled] (**OFF**|ON)
+- **Disable EFB to VRAM** [dolphin_efb_to_vram] (**OFF**|ON)
+- **Load Custom Textures** [dolphin_load_custom_textures] (**OFF**|ON)
+- **CPU Core** [dolphin_cpu_core] (**JIT64/JITARM64**|Interpreter|Cached Interpreter)
+- **CPU Clock Rate** [dolphin_cpu_clock_rate] (**100%**|from 5% to 300%)
+- **Fastmem** [dolphin_fastmem] (**ON**|OFF)
+- **Wiimote IR Mode** [dolphin_ir_mode] (**Right Stick controls pointer (relative)**|Right Stick controls pointer (absolute)|Mouse controls pointer)
+- **Wiimote IR Vertical Offset** [dolphin_ir_offset] (**10**|from -50 to 50)
+- **Wiimote IR Total Yaw** [dolphin_ir_yaw] (**15**|from 0 to 100)
+- **Wiimote IR Total Pitch** [dolphin_ir_pitch] (**15**|from 0 to 100)
+- **Rumble** [dolphin_enable_rumble] (**ON**|OFF)
+- **Sensor Bar Position** [dolphin_sensor_bar_position] (**Bottom**|Top)
+- **Wiimote Continuous Scanning** [dolphin_wiimote_continuous_scanning] (**OFF**|ON)
+- **Use ports 5-8 for GameCube controllers in Wii mode** [dolphin_alt_gc_ports_on_wii] (**OFF**|ON)
+- **Audio Mixer Rate** [dolphin_mixer_rate] (**32000**|48000)
+- **DSP HLE** [dolphin_dsp_hle] (**ON**|OFF)
+- **DSP Enable JIT** [dolphin_dsp_jit] (**ON**|OFF)
+- **Language** [dolphin_language] (**English**|Japanese|German|French|Spanish|Italian|Dutch|Simplified Chinese|Traditional Chinese|Korean)
+- **Internal Cheats Enabled** [dolphin_cheats_enabled] (**OFF**|ON)
+- **OSD Enabled** [dolphin_osd_enabled] (**ON**|OFF)
+- **Log Level** [dolphin_log_level] (**Info**|Notice|Error|Warning)
 
 ## Joypad
 
-![](../image/controller/psp.png)
+| RetroPad Inputs                                 | GameCube Controller | Wiimote     | Wiimote (sideways) | Wiimote + Nunchuk | Classic Controller | Classic Controller Pro |
+|------------------------------------------------ |---------------------|-------------|--------------------|-------------------|--------------------|------------------------|
+| ![](../image/retropad/retro_b.png)              | B                   | B           | 1                  | B                 | B                  | B                      |
+| ![](../image/retropad/retro_y.png)              | Y                   | 2           | B                  | Z                 | Y                  | Y                      |
+| ![](../image/retropad/retro_select.png)         |                     | -           | -                  | 2                 | -                  | -                      |
+| ![](../image/retropad/retro_start.png)          | Start               | +           | +                  | 1                 | +                  | +                      |
+| ![](../image/retropad/retro_dpad_up.png)        | D-Pad Up            | D-Pad Up    | D-Pad Up           | D-Pad Up          | D-Pad Up           | D-Pad Up               |
+| ![](../image/retropad/retro_dpad_down.png)      | D-Pad Down          | D-Pad Down  | D-Pad Down         | D-Pad Down        | D-Pad Down         | D-Pad Down             |
+| ![](../image/retropad/retro_dpad_left.png)      | D-Pad Left          | D-Pad Left  | D-Pad Left         | D-Pad Left        | D-Pad Left         | D-Pad Left             |
+| ![](../image/retropad/retro_dpad_right.png)     | D-Pad Right         | D-Pad Right | D-Pad Right        | D-Pad Right       | D-Pad Right        | D-Pad Right            |
+| ![](../image/retropad/retro_a.png)              | A                   | A           | 2                  | A                 | A                  | A                      |
+| ![](../image/retropad/retro_x.png)              | X                   | 1           | A                  | C                 | X                  | X                      |
+| ![](../image/retropad/retro_l1.png)             |                     |             |                    | -                 | ZL                 | L                      |
+| ![](../image/retropad/retro_r1.png)             | Z                   |             |                    | +                 | ZR                 | R                      |
+| ![](../image/retropad/retro_l2.png)             | L                   |             |                    | Shake Nunchuk     | L                  | ZL                     |
+| ![](../image/retropad/retro_r2.png)             | R                   | Shake       | Shake              | Shake Wiimote     | R                  | ZR                     |
+| ![](../image/retropad/retro_l3.png)             | L-Analog            |             |                    |                   |                    |                        |
+| ![](../image/retropad/retro_r3.png)             | R-Analog            | Home        |  Home              | Home              | Home               | Home                   |
+| ![](../image/retropad/retro_left_stick.png) X   | Analog X            | Tilt X      |  Tilt X            | Nunchuk Stick X   | Left Stick X       | Left Stick X           |
+| ![](../image/retropad/retro_left_stick.png) Y   | Analog Y            | Tilt Y      |  Tilt Y            | Nunchuk Stick Y   | Left Stick Y       | Left Stick Y           |
+| ![](../image/retropad/retro_right_stick.png) X  | C-Stick X           |             |                    | Tilt X            | Right Stick X      | Right Stick X          |
+| ![](../image/retropad/retro_right_stick.png) Y  | C-Stick Y           |             |                    | Tilt Y            | Right Stick Y      | Right Stick Y          |
 
-| RetroPad Inputs                                | User 1 input descriptors |
-|------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_b.png)             | Cross                    |
-| ![](../image/retropad/retro_y.png)             | Square                   |
-| ![](../image/retropad/retro_select.png)        | Select                   |
-| ![](../image/retropad/retro_start.png)         | Start                    |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](../image/retropad/retro_a.png)             | Circle                   |
-| ![](../image/retropad/retro_x.png)             | Triangle                 |
-| ![](../image/retropad/retro_l1.png)            | L                        |
-| ![](../image/retropad/retro_r1.png)            | R                        |
-| ![](../image/retropad/retro_left_stick.png) X  | Analog X                 |
-| ![](../image/retropad/retro_left_stick.png) Y  | Analog Y                 |
 
 ## Compatibility
 
