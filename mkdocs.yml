@@ -443,7 +443,7 @@ plugins:
 
 extra:
   unit:
-    stable: 1.10.2
+    stable: 1.10.3
 
 extra_css:
   - stylesheets/extra.css
