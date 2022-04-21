@@ -4,24 +4,22 @@
 
 ## Downloading
 
-First decide if you want a stable release or a nightly.
-
-=== "Stable"
-
-	The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
-
-	Stable release are [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/windows/), and then select the architecture of your computer.
-
-=== "Nightly"
-
-	This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
-
-	The current nightly is [here](https://buildbot.libretro.com/nightly/windows/). There are several files you can download in these folders. For a new installation you want **RetroArch.7z** or the setup package (**RetroArch-20XX-XX-XX-setup.exe**).
-
-Both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually. Both are portable installation which means the RetroArch setup is:
+First decide if you want a stable release or a nightly. Both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually. Both are portable installation which means the RetroArch setup is:
 - It's self-contained
 - It doesn't need users to guess random locations for configurations files
 - It's easy to update by just replacing files
+
+### Stable
+
+The stable version is our first priority and the main distribution version. Since it is the major release, it comes out periodically. Stable releases take more time to manufacture, but new features become available in the next version. For example: A version can have a new theme and feature, and in the next version, this theme and feature can be removed, improved or changed. As can be understood from the name of Stable, this version is more stable because it is controlled accordingly to make it work better on the platform it is suitable for.
+
+Stable release are [here](https://buildbot.libretro.com/stable/{{ unit.stable }}/windows/), and then select the architecture of your computer.
+
+### Nightly
+
+This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
+
+The current nightly is [here](https://buildbot.libretro.com/nightly/windows/). There are several files you can download in these folders. For a new installation you want **RetroArch.7z** or the setup package (**RetroArch-20XX-XX-XX-setup.exe**).
 
 ## Installing
 

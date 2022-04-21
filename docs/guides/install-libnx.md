@@ -49,10 +49,10 @@ Updating RetroArch is the same as installing it, download a higher or lower vers
 
 ## Glossary
 
-=== "Atmosphère"
+### "Atmosphère"
 	Atmosphère is a work-in-progress customized firmware for the Nintendo Switch.
 
-=== "NRO"
+### "NRO"
 	An NRO file is an executable file used by the Nintendo Switch. It contains compiled code for an application or game. NRO files may also store assets for Homebrew Launcher, such as a icon and metadata.
 
 [^1]: https://github.com/Atmosphere-NX/Atmosphere
