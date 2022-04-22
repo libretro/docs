@@ -413,6 +413,10 @@ extra:
       link: https://facebook.com/libretro
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/libretro
+  analytics:
+    provider: google
+    property: G-MT11L3F6EZ
+
 
 theme:
   name: material
@@ -494,7 +498,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-google_analytics:
-  - 'UA-170150040-2'
-  - 'auto'

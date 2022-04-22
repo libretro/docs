@@ -113,26 +113,41 @@ After you have installed one or more cores you can run your content following th
 
 ## Glossary
 
-=== "frontend"
-	A frontend is a program designed to run libretro cores such as Kodi's RetroPlayer, RetroArch, Phoenix, Minir
+Here is the list of terms in a LibRetro, RetroArch or platform subject, field, or area of usage, with accompanying definitions.
 
-=== "core"
-	A core is a program that has been ported to the libretro API and runs inside a libretro frontend
 
-=== "content"
-	Content can be a game, an image, a video, an audio file that is executed by a core. In most cases contents are the ROMs of an emulated platform
+`frontend`
 
-=== "retropad"
-	RetroPad is libretro’s input abstraction controller, it’s the interface between the physical controller and the core inputs
+:   A frontend is a program designed to run libretro cores such as Kodi's RetroPlayer, RetroArch, Phoenix, Minir
 
-=== "save files"
-	Save files are saves that are made from within a game, usually cross platform and should work across emulators in most cases
+`core`
 
-=== "save states"
-	Save states are snapshots of the content menory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator that the one used to create them
+:   A core is a program that has been ported to the libretro API and runs inside a libretro frontend
 
-=== "system files"
-	Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
+`content`
 
-=== "autoconf"
-	A configuration file that has button definitions for a particular gamepad
+:   Content can be a game, an image, a video, an audio file that is executed by a core. In most cases contents are the ROMs of an emulated platform
+
+`retropad`
+
+:   RetroPad is libretro’s input abstraction controller, it’s the interface between the physical controller and the core inputs	
+
+`save files`
+
+:   Save files are saves that are made from within a game, usually cross platform and should work across emulators in most cases
+	
+`save states`
+
+:   Save states are snapshots of the content menory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator that the one used to create them
+
+`system files`
+
+:   Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
+
+`system files`
+
+:   Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
+
+`autoconf`
+
+:   A configuration file that has button definitions for a particular gamepad
