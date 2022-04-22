@@ -174,6 +174,8 @@ When the game asks for it, you can change the current disk in the RetroArch "Dis
 
 For games that support multiple disk drives, append "**(MD)**" as in "MultiDrive" to the M3U filename to insert each disk in different drives. Only possible with maximum 4 disks!
 
+***MultiDrive option is enabled by default, so the tag is not necessary, but some games require disabling it, because they can't handle multiple disk drives.***
+
 For games that require a dedicated save disk, one may be generated automatically by entering the following line in an M3U file: `#SAVEDISK:VolumeName`. `VolumeName` is optional and may be omitted. For example, this will create a blank, unlabelled disk image at disk index 5:
 
 `Secret of Monkey Island.m3u`
@@ -467,7 +469,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Default model when floppies are launched with 'Automatic' model. Core restart required.
 
-- **Automatic HD** [puae_model_hd] (**A600**|A1200OG|A1200|A2000|A4030|A4040)
+- **Automatic HD** [puae_model_hd] (A600|A1200OG|**A1200**|A2000|A4030|A4040)
 
     Default model when HD interface is used with 'Automatic' model. Affects WHDLoad installs and other hard drive images. Core restart required.
 
@@ -479,7 +481,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility. Core restart required.
 
-- **CPU Compatibility** [puae_cpu_compatibility] (normal|**compatible**|exact)
+- **CPU Compatibility** [puae_cpu_compatibility] (normal|**compatible**|memory|exact)
 
     Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.
 
