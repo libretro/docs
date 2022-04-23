@@ -28,23 +28,23 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Requirements
 
-=== "CPU"
+CPU
 
-    * Supports SSE2/AVX2
-    * PassMark Single Thread Performance rating near or greater than 1600/2100
-    * Two physical cores, with hyperthreading
-    * Four physical cores, with or without hyperthreading
+- Supports SSE2/AVX2
+- PassMark Single Thread Performance rating near or greater than 1600/2100
+- Two physical cores, with hyperthreading
+- Four physical cores, with or without hyperthreading
 
-=== "GPU"
+GPU
 
-	* Direct3D10/11 support
-	* OpenGL 3.x/4.5 support
-	* PassMark G3D Mark rating around 3000 (GeForce GTX 750)
-	* 2 GB/4 GB Video Memory
+- Direct3D10/11 support
+- OpenGL 3.x/4.5 support
+- PassMark G3D Mark rating around 3000 (GeForce GTX 750)
+- 2 GB/4 GB Video Memory
 
-=== "RAM"
+RAM
 
-	* 4GB/8GB
+- 4GB/8GB
 
 !!! Attention
 	Because of the complex nature of emulation, even if you meet the recommended requirements there will be games that will NOT run at full speed due to emulation imperfection, floating point emulation differences, issues with emulator itself or other problems.
