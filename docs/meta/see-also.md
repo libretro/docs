@@ -7,6 +7,10 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - 3DS (Citra)](../library/citra.md)
 - [Nintendo - 3DS (Citra Canary/Experimental)](../library/citra_canary.md)
 
+## Apple
+
+- [Apple - Macintosh (minivmac)](../library/minivmac.md)
+
 ## Arcade
 
 - [MAME 2003](../library/mame_2003.md)

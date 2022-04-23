@@ -45,6 +45,7 @@ System                        | Core               | Link |
 3DO                           | Opera              | [BIOS information](opera.md#bios)
 5200/Atari 8-bit computers    | Atari800           | [BIOS information](atari800.md#bios)
 7800                          | ProSystem          | [BIOS information](prosystem.md#bios)
+Apple                         | minivmac           | [BIOS information](minivmac.md#bios)
 Arcade                        | MAME2003           | [BIOS information](mame_2003.md#bios)
 Arcade                        | MAME2003+          | [BIOS information](mame2003_plus.md#bios)
 Arcade                        | MAME2010           | [BIOS information](mame_2010.md#bios)
