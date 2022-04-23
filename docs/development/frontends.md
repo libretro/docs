@@ -12,8 +12,8 @@ Name | Author(s) |  Description
 [Anarchy Arcade](http://store.steampowered.com/app/266430/Anarchy_Arcade/) | Elijah Newman-Gomez | AArcade is a virtual reality 3D desktop that launches shortcuts to absolutely anything you like.
 [Arcan](https://github.com/letoram/arcan) | Letoram | Powerful development framework for creating virtually anything from user interfaces for specialized embedded applications all the way to full-blown standalone desktop environments.
 [BizHawk](http://tasvideos.org/BizHawk.html) | BizHawk | Experimental libretro player support for the BizHawk multi-platform emulator.
-[einweggerät](https://github.com/mudlord/einweggerat) | mudlord | Debugging tool for libretro cores.
-[WTFweggerät](https://github.com/mudlord/WTFweggerat) | mudlord | WIMP libretro frontend for Linux/Windows.
+[einweggerät](https://github.com/mudlord/einweggerat) | mudlord | Win32-only debug tool for libretro cores.
+[WTFweg](https://github.com/mudlord/WTFweg) | mudlord | WIMP libretro core debug tool for Linux/Windows.
 [Emutest](https://github.com/kivutar/emutest) | kivutar | A headless libretro frontend to test libretro cores.
 [EmuVR](http://www.emuvr.net/about/) | | |
 [GNOME Games](https://wiki.gnome.org/Apps/Games) | GNOME | Games is a GNOME application to browse your video games library and to easily pick and play a game from it.
