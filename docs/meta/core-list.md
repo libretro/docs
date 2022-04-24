@@ -72,7 +72,7 @@
 | FFmpeg                    | Media player           | A port of FFmpeg library which allows playback of a variety of audio and video formats |
 | fixGB                     | Game Boy/Color         |                    |
 | fixNES                    | Nintendo NES/Famicom   |                    |
-| Flycast                   | Sega Dreamcast/NAOMI   |                    |
+| Flycast                   | Sega Dreamcast/NAOMI/NAOMI2 |               |
 | Flycast GLES2             | Sega Dreamcast/NAOMI   |                    |
 | fMSX                      | MSX/MSX2/MSX2+         |                    |
 | FreeChaF                  | Fairchild ChannelF     |                    |
@@ -96,6 +96,8 @@
 | higan Accuracy            | Nintendo SNES/SFC/Game Boy/Color |          |
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
+| Jaxe                      | XO-CHIP/CHIP-8         |                    |
+| Jump 'n Bump              | Jump 'n Bump           |                    |
 | Kronos                    | Sega Saturn/ST-V       |                    |
 | LowRes NX                 | Game engine            | A port of the LowRes NX fantasy console to libretro |
 | Lutro                     | Game engine            | An experimental Lua game framework for libretro, based on a subset of the LOVE API |
@@ -114,6 +116,7 @@
 | MESS 2015                 | Multi (various)        | See MAME note      |
 | Meteor                    | Game Boy Advance       |                    |
 | mGBA                      | Game Boy Advance       |                    |
+| minivmac                  | Macintosh              |                    |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
@@ -200,6 +203,7 @@
 | vitaQuake 2 (Zaero)       | Game Engine            | See vitaQuake 2 note |
 | vitaQuake 3               | Game Engine            | A port of the VitaQuake 3 source port of iD's ioquake3 engine to libretro |
 | vitaVoyager               | Game Engine            | A port of the Lilium Voyager engine, which runs the Star Trek: Voyager - Elite Force game and is itself based on the ioquake3 |
+| WASM-4                    | WebAssembly            |                    |
 | X Millennium              | Sharp X1               |                    |
 | XRick                     | Game Engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
 | YabaSanshiro              | Sega Saturn            |                    |

@@ -88,6 +88,7 @@ This is a list of cores that are related to each other in some way.
 ## Misc
 
 - [VaporSpec](../library/vaporspec.md)
+- [Jump 'n Bump](../library/jumpnbump.md)
 
 ## N64
 

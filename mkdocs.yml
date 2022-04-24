@@ -248,6 +248,7 @@ nav:
       - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
       - 'Flashback (REminiscence)': 'library/reminiscence.md'
       - 'Handheld Electronic (GW)': 'library/gw.md'
+      - 'Jump n Bump': 'library/jumpnbump.md'      
       - 'Lua Engine (Lutro)': 'library/lutro.md'
       - 'Minecraft (Craft)': 'library/craft.md'
       - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
