@@ -142,6 +142,12 @@ If there is only a single executable, the menu will not show and directly run th
 
 To force the menu to be shown, hold shift on the keyboard or L2 or R2 on the gamepad while selecting `Restart` in the core menu.
 
+### Directly run PC booter games from the start menu
+
+![Directly run PC booter games from the start menu](https://user-images.githubusercontent.com/14200249/164041304-f921c806-8790-4bee-b9fa-5826714012e3.gif)
+
+In addition, there's support for swapping floppy disk images (or PCjr cartridges) at runtime via a frontend's Disc Control menu and hotkeys.
+
 ### Installing CD-ROM games from disc images (ISO etc.) and running them
 
 In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
