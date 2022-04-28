@@ -116,6 +116,10 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 
 ## Loading content
 
+### loading of dosbox.conf files
+
+DOSBox Pure can boot directly from a .conf file or it will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path.
+
 ### Load games from ZIP
 
 DOSBox Pure can load games directly from ZIP files without the need to extract them.
@@ -142,12 +146,6 @@ If there is only a single executable, the menu will not show and directly run th
 
 To force the menu to be shown, hold shift on the keyboard or L2 or R2 on the gamepad while selecting `Restart` in the core menu.
 
-### Directly run PC booter games from the start menu
-
-![Directly run PC booter games from the start menu](https://user-images.githubusercontent.com/14200249/164041304-f921c806-8790-4bee-b9fa-5826714012e3.gif)
-
-In addition, there's support for swapping floppy disk images (or PCjr cartridges) at runtime via a frontend's Disc Control menu and hotkeys.
-
 ### Installing CD-ROM games from disc images (ISO etc.) and running them
 
 In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
@@ -157,6 +155,10 @@ From the start menu, select the executable on the CD-ROM to install the game (pr
 Now, the next time you run the ISO in DOSBox Pure (same way as above), the start menu will feature the "local" executables, e.g.: `C:\C&C\C&C.EXE`. They'll be available to select above the executables from mounted discs. Launch the correct executable to run the game.
 
 See screenshot in "Start menu with auto start" section above for reference.
+
+### Directly run PC booter games from the start menu
+
+![Directly run PC booter games from the start menu](https://user-images.githubusercontent.com/14200249/164041304-f921c806-8790-4bee-b9fa-5826714012e3.gif)
 
 ### Loading M3U8 files
 
@@ -214,10 +216,6 @@ When modifications to the file system loaded from a ZIP file happen, these modif
 - Up to 1MB of total save data, it will be written out 2 seconds after the previous file modification. Then gradually until at max 59MB and more, it will be written out 60 seconds after the last file modification.
 
 ## Features currently not implemented
-
-### Load dosbox.conf
-
-It would be nice to be able to load a dosbox.conf file if it exists in the loaded game directory (for example inside the ZIP file). Ideally this would then hide all the options that have been overwritten by that .conf file in the core options list.
 
 ### Store ZIP seek index into save file
 
@@ -445,6 +443,16 @@ By clicking a key on the on-screen keyboard for 0.5 seconds, it will be held dow
 	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
 
 If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
+
+### Gamepad Mapper
+
+![The DOSBox Pure gamepad mapper](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/padmapper.png)
+
+If you need even more customization of the controls than provided by the Automated controller mappings, or the various presets for mouse, keyboard and joysticks you can use the gamepad mapper introduced in version 0.9.0 in April, 2022.
+
+To open it, click the "PAD MAPPER" button in the On-screen keyboard (cf. above).
+
+It is available any time in-game and changes are immediately saved and applied when closing the mapper. Up to 4 functions can be mapped for any button/direction of the gamepad. A mapping can be to any function of the 3 emulated input devices: keyboard, mouse or joystick.
 
 ## Joypad (RetroPad)
 
