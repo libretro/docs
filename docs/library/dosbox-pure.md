@@ -160,6 +160,8 @@ See screenshot in "Start menu with auto start" section above for reference.
 
 ![Directly run PC booter games from the start menu](https://user-images.githubusercontent.com/14200249/164041304-f921c806-8790-4bee-b9fa-5826714012e3.gif)
 
+There's also support for swapping floppy disk images (or PCjr cartridges) at runtime via a frontend's Disc Control menu and hotkeys.
+
 ### Loading M3U8 files
 
 If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
