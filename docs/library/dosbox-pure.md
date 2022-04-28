@@ -132,6 +132,8 @@ Changes made to a loaded ZIP file will be stored as a separate ZIP file into the
 
 CD images (ISO or CUE) and floppy disk images (IMG/IMA/VHD) can be mounted directly from inside ZIP files. The system will automatically mount the first found disk image as the A: or D: drive. Additional disks can be loaded or swapped by using the `Disc Control` menu in RetroArch.
 
+When mounting a ZIP file which has just a single directory in its root, core versions before 0.9.0 used to mount that directory as the C: drive. Now the core will mount the root of the ZIP to improve compatibility with DOS games that need to be installed in a specific location on the hard drive. The old behavior will still be used if an old save file (named `GAME.save.zip`) exists. The new behavior uses a differently named save file (`GAME.pure.zip`).
+
 The start menu also offers the option to mount or unmount an image.
 
 ### Start menu with auto start
