@@ -185,6 +185,7 @@ To play not with a gamepad but with keyboard and mouse, be sure to use the 'Game
 ### ZIP files can be renamed to DOSZ
 
 If your libretro frontend wants to load the content of `.ZIP` files instead of sending it to DOSBox Pure to load, the files can be renamed from `.ZIP` to `.DOSZ`.
+
 This is especially useful for CD images in ZIP format which RetroArch refuses to append through its `Disc Control` menu. Using an `.M3U8` file (see above) also avoids this problem.
 
 ### Force opening the start menu
@@ -442,7 +443,7 @@ By pressing L3 on the gamepad (usually by pushing in the left analog stick), the
 By clicking a key on the on-screen keyboard for 0.5 seconds, it will be held down, clicking it again will release it. This allows multiple keys to be pressed at the same time through the on-screen-keyboard.
 
 !!!tip
-	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone`up a bit (e.g., 0.3).
+	Depending on your controller, you might experience a slight drift (the cursor moving on its own). Fix this by going to `Settings > Input` in RetroArch and nudging the option `Analog Deadzone` up a bit (e.g., 0.3).
 
 If the cursor is moved above the middle of the screen, the keyboard will move to the top. The button can be remapped in the controls menu and there is also a core option to disable it entirely.
 
