@@ -34,7 +34,7 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .tc
 - .m3u
 - .m3u8
-- .conf _(bootable, [more info here](#loading-of-dosboxconf-files))_
+- .conf _(bootable, see [Loading of dosbox.conf files](#loading-of-dosboxconf-files))_
 
 RetroArch database(s) that are associated with the DOSBox core:
 
