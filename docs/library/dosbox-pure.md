@@ -1,5 +1,3 @@
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (So, to create this document, I copied the [original Libretro DOSBox documentation](https://docs.libretro.com/library/dosbox/) and overwrote/expanded it. There's still many chunks of content in here that come straight from the original document and that probably need revision, and then most of the extra stuff in here comes from [Bernhard Schelling's readme for DOSBox Pure](https://github.com/schellingb/dosbox-pure). Lastly, a few additions by me. I annotated this whole thing, look for the read squares. - Matt)
-
 # DOS (DOSBox Pure)
 
 ## Background
@@ -16,14 +14,13 @@ The DOSBox core is licensed under
 - [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (This is a relative URL, so I'm guessing it will work correctly when this file lands on the master?)
 
 ## Extensions
 
 Content that can be loaded by the DOSBox Pure core has the following file extensions:
 
 - .zip
-- .dosz ''(alternative extension to .ZIP)''
+- .dosz _(alternative extension to .ZIP)_
 - .exe
 - .com
 - .bat
@@ -37,12 +34,11 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .tc
 - .m3u
 - .m3u8
-- .conf ''(bootable; booting a dosbox.conf file will mount the directory as C: and load/autoexec the conf file)''
+- .conf _(bootable; booting a dosbox.conf file will mount the directory as C: and load/autoexec the conf file)_
 
 RetroArch database(s) that are associated with the DOSBox core:
 
 - [DOS](https://github.com/libretro/libretro-database/blob/master/rdb/DOS.rdb)
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) (Others?)
 
 ## Features
 !!!tip
@@ -79,7 +75,7 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 
 ### MIDI playback with SoundFonts
 
-If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI SoundFont` core option. This sound font will then be used to play General Midi and Sound Canvas music.
+If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI Output` [core option](#core-options). This sound font will then be used to play `General Midi` and `Sound Canvas` music.
 
 ###  MPU-401 MIDI device emulation through MUNT
 
