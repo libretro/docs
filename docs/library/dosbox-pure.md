@@ -4,7 +4,7 @@
 
 ## Background
 
-DOSBox Pure is fork of the multiplatform MS-DOS emulator, DOSBox. It was built by Psyraven in 2020 specifically for RetroArch/Libretro and implements advanced features like save states, an on-screen keyboard, highly customizable controller setup or rewinding. DOSBox Pure aims for simplicity and ease of use.
+DOSBox Pure is a fork of the multiplatform MS-DOS emulator, DOSBox. It was built by Psyraven in 2020 specifically for RetroArch/Libretro and implements advanced features like save states, an on-screen keyboard, highly customizable controller setup or rewinding. DOSBox Pure aims for simplicity and ease of use.
 
 The DOSBox-Pure core has been authored by
 
@@ -23,7 +23,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 Content that can be loaded by the DOSBox Pure core has the following file extensions:
 
 - .zip
-- .dosz (alternative extension to .ZIP)
+- .dosz ''(alternative extension to .ZIP)''
 - .exe
 - .com
 - .bat
@@ -33,8 +33,11 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .img
 - .ima
 - .vhd
+- .jrc
+- .tc
 - .m3u
 - .m3u8
+- .conf ''(bootable; booting a dosbox.conf file will mount the directory as C: and load/autoexec the conf file)''
 
 RetroArch database(s) that are associated with the DOSBox core:
 
@@ -94,15 +97,11 @@ For details how to use it and how to find new cheats while playing the game, che
 
 The DOSBox Pure core fully supports libretro save states. Make sure to test it in each game before using it. Complex late era DOS games might have problems.
 
-Be aware that states saved with different video or cpu settings are not loadable. Also, save states might not be compatible across different versions of DOSBox Pure.
+Be aware that states saved with different video or cpu settings are not loadable.
 
 ### Rewind support
 
 Using the core option `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
-
-## Directories
-
-The DOSBox Pure core's library name is 'DOSBox-Pure'.
 
 ## Geometry and timing
 
@@ -116,7 +115,7 @@ The DOSBox Pure core's library name is 'DOSBox-Pure'.
 
 ## Loading content
 
-### loading of dosbox.conf files
+### Loading of dosbox.conf files
 
 DOSBox Pure can boot directly from a .conf file or it will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path.
 
@@ -161,6 +160,8 @@ See screenshot in "Start menu with auto start" section above for reference.
 ### Directly run PC booter games from the start menu
 
 ![Directly run PC booter games from the start menu](https://user-images.githubusercontent.com/14200249/164041304-f921c806-8790-4bee-b9fa-5826714012e3.gif)
+
+When loading a ZIP file which contains a floppy or hard-disk image or loading such a disk image directly, the start menu will show an additional option `[BOOT IMAGE FILE]`. When selected, a list of system modes (emulated graphics card) will be shown and once a mode is selected, DOSBox Pure will try to boot from the mounted image. While running a booter game, the mounted disk can be easily swapped with the Disc Control menu or hotkeys set in the frontend.
 
 There's also support for swapping floppy disk images (or PCjr cartridges) at runtime via a frontend's Disc Control menu and hotkeys.
 
@@ -220,18 +221,6 @@ When modifications to the file system loaded from a ZIP file happen, these modif
 - The larger the save, the less often it will be written out.
 - Up to 1MB of total save data, it will be written out 2 seconds after the previous file modification. Then gradually until at max 59MB and more, it will be written out 60 seconds after the last file modification.
 
-## Features currently not implemented
-
-### Store ZIP seek index into save file
-
-When a DOS game opens a large file and wants to read some data from near the end of the file, DOSBox Pure needs to decompress the entire file to do that. This can be most noticeable when mounting CD-ROM images from inside ZIP files.
-Afterwards there is an index buffer which will be used to decompress random locations of the file and file access will be much faster.
-This index buffer should be stored into the game save file to avoid having to slowly rebuild it every time the same game is launched.
-
-### Serial Port, IPX emulation
-
-For now, serial port and IPX emulation from base DOSBox have been removed.
-
 ## Core options
 
 The DOSBox core has the following options that can be tweaked from the core options menu. The default setting is bolded.
@@ -258,7 +247,7 @@ Core specific settings (latency, save states, start menu).
 
 - **Save States Support** [dosbox_pure_savestate]  (**Enable save states** | Enable save states with rewind | OFF)
 
-	Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer. Save states might not be compatible with new versions of this core.
+	Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer.
 	
 - **Start Menu** [dosbox_pure_menu_time] (**Show at start, shut down core 5 seconds after auto started game exit** | Show at start, shut down core 3 seconds after auto started game exit | Show at start, shut down core immediately after auto started game exit | Show at start, show again after game exit (default) | Always show menu on startup and after game exit, ignore auto start setting)
 
