@@ -179,7 +179,11 @@ You might have trouble getting stutter-free scrolling in some games (cf. [this b
 
 ### Playing with keyboard and mouse
 
-To play not with a gamepad but with keyboard and mouse, be sure to use the 'Game Focus' mode available in RetroArch. By default you can toggle game focus by pressing the scroll lock key. While game focus is active, the RetroArch hotkeys are disabled and keyboard presses will not cause [RetroPad](https://docs.libretro.com/guides/input-and-controls/) button presses (which could cause multiple keys to be pressed at once).
+To play not with a gamepad but with keyboard and mouse, be sure to use the '[Game Focus](https://docs.libretro.com/guides/input-and-controls/#cores-with-direct-keyboard-input)' mode available in RetroArch.
+
+By default, you can toggle game focus by pressing the scroll lock key. While game focus is active, the RetroArch hotkeys are disabled and keyboard presses will not cause [RetroPad](https://docs.libretro.com/guides/input-and-controls/) button presses (which could cause multiple keys to be pressed at once).
+
+You can change the hotkey for game focus mode in RetroArch's ["Hotkeys" menu](https://docs.libretro.com/guides/input-and-controls/#hotkeys).
 
 ### ZIP files can be renamed to DOSZ
 
