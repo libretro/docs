@@ -19,7 +19,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 Content that can be loaded by the DOSBox Pure core has the following file extensions:
 
-- .zip
+- .zip _(see [Load games from ZIP](#load-games-from-zip))_
 - .dosz _(alternative extension to .ZIP)_
 - .exe
 - .com
@@ -52,7 +52,7 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 | Screenshots       | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
-| Rewind            | ✔         |
+| [Rewind](#rewind-support)            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
