@@ -34,7 +34,7 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .tc
 - .m3u
 - .m3u8
-- .conf _(bootable; booting a dosbox.conf file will mount the directory as C: and load/autoexec the conf file)_
+- .conf _(bootable, [more info here](#loading-of-dosboxconf-files))_
 
 RetroArch database(s) that are associated with the DOSBox core:
 
@@ -75,7 +75,7 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 
 ### MIDI playback with SoundFonts
 
-If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI Output` [core option](#core-options). This sound font will then be used to play `General Midi` and `Sound Canvas` music.
+If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI Output` [core option](#audio-options). This sound font will then be used to play `General Midi` and `Sound Canvas` music.
 
 ###  MPU-401 MIDI device emulation through MUNT
 
@@ -91,18 +91,18 @@ For details how to use it and how to find new cheats while playing the game, che
 
 ### Save states
 
-The DOSBox Pure core fully supports libretro save states. Make sure to test it in each game before using it. Complex late era DOS games might have problems.
+The DOSBox Pure core fully supports libretro save states. Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video or cpu settings are not loadable.
 
-Be aware that states saved with different video or cpu settings are not loadable.
+Read more about [save file handling](#save-file-handling).
 
 ### Rewind support
 
-Using the core option `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
+Using the [core option](#emulation-options) `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
 
 ## Geometry and timing
 
 - The DOSBox Pure core's core provided FPS is dependent on the DOS application
-- The DOSBox Pure core's core provided sample rate is dependent on the 'Audio > Audio Sample Rate' core option
+- The DOSBox Pure core's core provided sample rate is dependent on the 'Audio > Audio Sample Rate' [core option](#audio-options)
 - The DOSBox Pure core's base width is 320
 - The DOSBox Pure core's base height is 200
 - The DOSBox Pure core's max width is 1280
@@ -121,13 +121,13 @@ DOSBox Pure can load games directly from ZIP files without the need to extract t
 
 ### Store modifications in separate save files
 
-Changes made to a loaded ZIP file will be stored as a separate ZIP file into the libretro saves directory. If a game is loaded directly without using a ZIP file the saves directory is not used.
+Changes made to a loaded ZIP file will be stored as a separate ZIP file into the [libretro saves directory](https://docs.libretro.com/guides/change-directories/#savefile-and-savestate). If a game is loaded directly without using a ZIP file, the saves directory is not used.
 
 ### Mount disc images from inside ZIP files
 
 CD images (ISO or CUE) and floppy disk images (IMG/IMA/VHD) can be mounted directly from inside ZIP files. The system will automatically mount the first found disk image as the A: or D: drive. Additional disks can be loaded or swapped by using the `Disc Control` menu in RetroArch.
 
-When mounting a ZIP file which has just a single directory in its root, core versions before 0.9.0 used to mount that directory as the C: drive. Now the core will mount the root of the ZIP to improve compatibility with DOS games that need to be installed in a specific location on the hard drive. The old behavior will still be used if an old save file (named `GAME.save.zip`) exists. The new behavior uses a differently named save file (`GAME.pure.zip`).
+When mounting a ZIP file which has just a single directory in its root, core versions before 0.9.0 used to mount that directory as the C: drive. Since 0.9.0, the core will mount the root of the ZIP to improve compatibility with DOS games that need to be installed in a specific location on the hard drive. The old behavior will still be used if an old save file (named `GAME.save.zip`) exists. The new behavior uses a differently named save file (`GAME.pure.zip`).
 
 The start menu also offers the option to mount or unmount an image.
 
@@ -145,13 +145,13 @@ To force the menu to be shown, hold shift on the keyboard or L2 or R2 on the gam
 
 ### Installing CD-ROM games from disc images (ISO etc.) and running them
 
-In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
+This can be done in 3 steps:
 
-From the start menu, select the executable on the CD-ROM to install the game (probably something like `SETUP.EXE`, `INSTALL.EXE`, `START.EXE`...). Follow the installer's instructions to install the game in any local directory of your choice (e.g., `C:\`, `C:\C&C\`, ...).
+1. In order to install a game from a CD-ROM image (e.g., a .iso file), use the "Load Content" option in the RetroArch main menu. Navigate to the ISO and launch it with the DOSBox Pure core.
+2. From the start menu, select the executable on the CD-ROM to install the game (probably something like `SETUP.EXE`, `INSTALL.EXE`, `START.EXE`...). Follow the installer's instructions to install the game in any local directory of your choice (e.g., `C:\`, `C:\C&C\`, ...).
+3. Now, the next time you run the ISO in DOSBox Pure (same way as in step 1 above), the start menu will feature the "local" executables, e.g.: `C:\C&C\C&C.EXE`. They'll be available to select above the executables from mounted discs. Launch the correct executable to run the game.
 
-Now, the next time you run the ISO in DOSBox Pure (same way as above), the start menu will feature the "local" executables, e.g.: `C:\C&C\C&C.EXE`. They'll be available to select above the executables from mounted discs. Launch the correct executable to run the game.
-
-See screenshot in "Start menu with auto start" section above for reference.
+See screenshot in "[Start menu with auto start](#start-menu-with-auto-start)" section above for reference.
 
 ### Directly run PC booter games from the start menu
 
@@ -169,7 +169,7 @@ If the core gets loaded with a `.m3u8` file, all files listed in it will be adde
 
 ### Smooth scrolling
 
-You might have trouble getting stutter-free scrolling in some games (cf. https://github.com/schellingb/dosbox-pure/issues/128). There are a number of things you can try to remedy this:
+You might have trouble getting stutter-free scrolling in some games (cf. [this bug report](https://github.com/schellingb/dosbox-pure/issues/128)). There are a number of things you can try to remedy this:
 
 - In `Quick Menu > Options > Emulation Options`, set `Force 60 FPS Output` to ON.
 - In RetroArch's settings, navigate to `Video` and set `Threaded Video` to OFF.
