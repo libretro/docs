@@ -54,12 +54,12 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 | States            | ✔         |
 | [Rewind](#rewind-support)            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✔         |
+| [Core Options](#core-options)      | ✔         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✔         |
-| Native Cheats     | ✔         |
-| Controls          | ✔         |
-| Remapping         | ✔         |
+| [RetroArch Cheats](#cheats-support)  | ✔         |
+| [Native Cheats](#cheats-support)     | ✔         |
+| [Controls](#controls)          | ✔         |
+| [Remapping](#gamepad-mapper)         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
@@ -230,6 +230,14 @@ Settings with (Restart) mean that core has to be closed for the new setting to b
 ### Manage Core Options
 Save or remove option overrides for the current content.
 
+- **Save game options**
+
+	Saves current options specifically for running game.
+
+- **Save Content Directory Options**
+
+	Saves current options specifically for running game's content directory.
+
 - **Reset Options**
 
 	Reset all core options to default values.
@@ -356,7 +364,7 @@ Other system settings for emulated RAM and CPU.
 	486 (slow): Betrayal in Antara
 	Pentium (slow): Fifa International Soccer 1994, Windows 95/Windows 3.x games
 
-- **Advanced > CPU Core (restart required)** [dosbox_pure_cpu_core] (**Auto - Real-mode games use normal, protected-mode games use dynamic** | Dynamic - Dynamic recompilation (fast, using dynamic_x86 implementation) | Auto - Real-mode games use normal, protected-mode games use dynamic | Dynamic - Dynamic recompilation (fast, using dynrec implementation) | **Normal (interpreter)** | Simple (interpreter optimized for old real-mode games))
+- **Advanced > CPU Core** [dosbox_pure_cpu_core] (**Auto - Real-mode games use normal, protected-mode games use dynamic** | Dynamic - Dynamic recompilation (fast, using dynamic_x86 implementation) | Auto - Real-mode games use normal, protected-mode games use dynamic | Dynamic - Dynamic recompilation (fast, using dynrec implementation) | **Normal (interpreter)** | Simple (interpreter optimized for old real-mode games))
 
 	Emulation method (DOSBox CPU core) used.
 
