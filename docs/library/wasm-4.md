@@ -1,10 +1,12 @@
-# WebAssembly (WASM-4) *WIP*
+# WebAssembly (WASM-4)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/34FXmvWVH-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
 
 WASM-4 is a low-level fantasy game console for building small games with WebAssembly. Game cartridges (ROMs) are small, self-contained .wasm files that can be built with any programming language that compiles to WebAssembly.
+
+The WASM-4 core have been authored by
 
 - aduros (Bruno Garcia)
 

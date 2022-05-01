@@ -1,34 +1,16 @@
 # Rick Dangerous (XRick)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V09CwrlFgA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
-Xrick is an open source implementation of the game "Rick Dangerous".
+XRick is an open source implementation of the game "Rick Dangerous". Rick Dangerous is a platform game developed by Core Design for the Acorn Archimedes, Amiga, Atari ST, Amstrad CPC, ZX Spectrum, Commodore 64, and MS-DOS. The game was released in 1989 and published by MicroProse on the Firebird Software label in the UK, and on the MicroPlay label in America. It was also published in Spain by Erbe Software. Later, it was released with two other games, Stunt Car Racer and MicroProse Soccer, on the Commodore 64 Powerplay 64 cartridge. The game was followed by a sequel, Rick Dangerous 2, in 1990. Loosely based on the Indiana Jones film franchise, the game received mixed reviews from critics. This libretro core is based on BigOrno's [work](http://www.bigorno.net/xrick/).
 
-This libretro core is based on BigOrno's [work](http://www.bigorno.net/xrick/).
+The XRick core have been authored by
 
-#### How to start the XRick core:
-
-- To start the XRick core, you need to obtain Rick Dangerous' data files. You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
-
-<center> ![](../image/core/all/download.png) </center>
-
-- Select 'Rick Dangerous', then select 'Rick Dangerous.zip'. This should download and extract this file to RetroArch's Downloads directory.
-
-<center> ![](../image/core/xrick/xrick.png) </center>
-
-- Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
-
-<center> ![](../image/core/all/load.png) </center>
-
-<center> ![](../image/core/all/downloads.png) </center>
-
-- Select the 'xrick' directory, next select 'data.zip'. Then, select Load Archive.
-
-- If you are asked which core to select, choose 'Rick Dangerous (XRick)'.
-
-The content should now start running!
-
-### Author/License
+- fabiensanglard
+- r-type
+- phcoder
 
 The XRick core is licensed under
 
@@ -48,6 +30,14 @@ RetroArch database(s) that are associated with the XRick core:
 
 - [Rick Dangerous](https://github.com/libretro/libretro-database/blob/master/rdb/Rick%20Dangerous.rdb)
 
+## BIOS
+
+Required or optional firmware files go in the frontend's system directory.
+
+| Filename    | Description                                                                           | md5sum                           |
+|:-----------:|:-------------------------------------------------------------------------------------:|:--------------------------------:|
+| xrick/data.zip | Audio and visual files required for Core to work. | A471E64E9F69AFBE59C10CC94ED1B184 |
+
 ## Features
 
 Frontend-level settings or features that the XRick core respects.
@@ -55,16 +45,16 @@ Frontend-level settings or features that the XRick core respects.
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✕         |
-| Screenshots       | ✔         |
+| Screenshots       | ✔        |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔        |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
-| Controls          | ✔         |
+| Native Cheats     | ✔        |
+| Controls          | ✔        |
 | Remapping         | ✕         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
@@ -79,15 +69,34 @@ Frontend-level settings or features that the XRick core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-### Directories
+## Directories
 
-The XRick core's internal core name is 'xrick'
+The XRick core's internal core name is 'xrick'.
 
-### Geometry and timing
+## Geometry and timing
 
-- The XRick core's core provided FPS is 50
-- The XRick core's core provided sample rate is 22050.0 Hz
-- The XRick core's core provided aspect ratio is 4/3
+- The XRick core's core provided FPS is 25.
+- The XRick core's core provided sample rate is 22050.0 Hz.
+- The XRick core's core provided aspect ratio is 4/3.
+- The XRick core's base width is 801.
+- The XRick core's base height is 600.
+
+## Core Options
+
+The Mesen core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Crop Border** [xrick_crop_borders] (**ON**|OFF)
+	Remove the 32 pixels of empty padding either side of the game screen. Note: Cheat mode indicators will only be shown if cropping is disabled.
+
+- **Cheats**
+	Configure internal trainer/cheat modes provided by the game engine.
+
+	- **Trainer Mode** [xrick_cheat1] (**OFF**|ON)
+		Always have 6 bullets, 6 dynamite stick, 6 lives.
+	- **Invulnerability Mode** [xrick_cheat2] (**OFF**|ON)
+		Nothing can kill Rick. Use with care. May break the game.
+	- **Expose Mode** [xrick_cheat3] (**OFF**|ON)
+		Highlight all entities on the game map.	
 
 ## Controllers
 
