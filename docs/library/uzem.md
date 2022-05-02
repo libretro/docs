@@ -120,5 +120,5 @@ Awaiting description.
 - [Libretro Uzem Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/uzem_libretro.info)
 - [Libretro Uzem Github Repository](https://github.com/libretro/libretro-uzem)
 - [Report Libretro Uzem Core Issues Here](https://github.com/libretro/libretro-uzem/issues)
-- [Official Uzem Website](http://belogic.com/uzebox/index.asp)
+- [Official Uzem Website](https://uzebox.org)
 - [Official Uzem Github Repository](https://github.com/Uzebox/uzebox)
