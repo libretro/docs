@@ -707,7 +707,7 @@ It is available any time in-game and changes are immediately saved and applied w
 ## Compatibility
 
 ### Boppin'
-If the game quickly cycles through the main menu options indefinitely, open the RetroArch Quick Menu and select Controls > Port 2 Controls > Device Type > Disabled.
+If the game rapidly cycles through the main menu options indefinitely, open the RetroArch Quick Menu and select Controls > Port 2 Controls > Device Type > Disabled.
 
 ## External Links
 
