@@ -707,7 +707,18 @@ It is available any time in-game and changes are immediately saved and applied w
 ## Compatibility
 
 ### Boppin'
-If the game rapidly cycles through the main menu options indefinitely, open the RetroArch Quick Menu and select Controls > Port 2 Controls > Device Type > Disabled.
+If the game rapidly cycles through the main menu options indefinitely, it has to do with malfunctioning joystick calibration. try deleting the game's config file, `BOPPIN.CFG`, and then reconfiguring the game. To do so, leave the game and from the command line, type:
+
+`CD BOPPIN
+DEL BOPPIN.CFG
+SETUP.EXE
+BOPPIN.EXE`
+
+To fix this in-game, you need to go to the core options and fiddle around with the Emulated Performance setting until the cursor stops moving.
+
+Boppin' uses some form of joystick calibration which depends on the speed of the CPU. And it seems that once it has some form of calibration data, it saves that to its config file. So if you use the game pre-configured while running with different performance emulation (cycles) settings, it will have its joysticks off-calibrated and thus scrolling through the main menu (always holding up or down) or switching between the title screen and the menu (always holding left or right).
+
+[More info here](https://github.com/schellingb/dosbox-pure/issues/75#issuecomment-1115108702).
 
 ## External Links
 
