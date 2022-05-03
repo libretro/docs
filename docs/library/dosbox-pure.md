@@ -707,10 +707,9 @@ It is available any time in-game and changes are immediately saved and applied w
 ## Compatibility
 
 ### Boppin'
-If the game rapidly cycles through the main menu options indefinitely, it has to do with malfunctioning joystick calibration. try deleting the game's config file, `BOPPIN.CFG`, and then reconfiguring the game. To do so, leave the game and from the command line, type:
+If the game rapidly cycles through the main menu options indefinitely, it has to do with malfunctioning joystick calibration. try deleting the game's config file, `BOPPIN.CFG`, and then reconfiguring the game. To do so, go to the command line from the start menu, then type:
 
 ```
-CD BOPPIN
 DEL BOPPIN.CFG
 SETUP.EXE
 BOPPIN.EXE
