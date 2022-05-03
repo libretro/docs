@@ -419,7 +419,7 @@ There is also the core option `Input > Mouse Sensitivity` to increase/decrease m
 
 ### Keyboard emulation
 
-For games that don't have automated controller mappings or are not detected successfully, by default the option `Input > Bind Unused Buttons` will assign all unused buttons on the game pad with some default key.
+For games that don't have automated controller mappings or are not detected successfully, by default the option `Input > Bind Unused Buttons` will assign all unused buttons on the game pad with a respective default key.
 
 If the `Device Type` on the `Controls` screen in the RetroArch menu of any port is set to `Generic Keyboard Bindings`, all buttons will be assigned with a keyboard key.
 
@@ -450,7 +450,7 @@ If the cursor is moved above the middle of the screen, the keyboard will move to
 
 ![The DOSBox Pure gamepad mapper](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/padmapper.png)
 
-If you need even more customization of the controls than provided by the Automated controller mappings, or the various presets for mouse, keyboard and joysticks you can use the gamepad mapper introduced in version 0.9.0 in April, 2022.
+If you need even more customization of the controls than provided by the [Automated controller mappings](#automated-controller-mappings), or the various presets for [mouse](#mouse-emulation), [keyboard](#keyboard-emulation) and [joysticks](#joystick-emulation), you can use the gamepad mapper introduced in version 0.9.0 in April, 2022.
 
 To open it, click the "PAD MAPPER" button in the On-screen keyboard (cf. above).
 
