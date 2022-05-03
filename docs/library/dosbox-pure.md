@@ -304,7 +304,7 @@ Keyboard, mouse and joystick settings.
 
 	Select the keyboard layout (will not change the On Screen Keyboard).
 
-- **Advanced > Menu Transparency** [dosbox_pure_joystick_analog_deadzone] (**15%** | 10% to 100% in 10% increments)
+- **Advanced > Menu Transparency** [dosbox_pure_menu_transparency] (**15%** | 10% to 100% in 10% increments)
 
 	Set the transparency level of the On Screen Keyboard and the Gamepad Mapper.
 
