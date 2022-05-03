@@ -304,6 +304,10 @@ Keyboard, mouse and joystick settings.
 
 	Select the keyboard layout (will not change the On Screen Keyboard).
 
+- **Advanced > Menu Transparency** [dosbox_pure_joystick_analog_deadzone] (**15%** | 10% to 100% in 10% increments)
+
+	Set the transparency level of the On Screen Keyboard and the Gamepad Mapper.
+
 - **Advanced > Joystick Analog Deadzone** [dosbox_pure_joystick_analog_deadzone] (**15%** | 0% to 35% in 5% increments)
 
 	Set the deadzone of the joystick analog sticks. May be used to eliminate drift caused by poorly calibrated joystick hardware.
