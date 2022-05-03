@@ -709,10 +709,12 @@ It is available any time in-game and changes are immediately saved and applied w
 ### Boppin'
 If the game rapidly cycles through the main menu options indefinitely, it has to do with malfunctioning joystick calibration. try deleting the game's config file, `BOPPIN.CFG`, and then reconfiguring the game. To do so, leave the game and from the command line, type:
 
-`CD BOPPIN
+```
+CD BOPPIN
 DEL BOPPIN.CFG
 SETUP.EXE
-BOPPIN.EXE`
+BOPPIN.EXE
+```
 
 To fix this in-game, you need to go to the core options and fiddle around with the Emulated Performance setting until the cursor stops moving.
 
