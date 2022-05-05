@@ -20,7 +20,7 @@ Arcade emulation won't work properly without the romsets matching the emulator. 
 
 ### Step 1: Obtaining an XML DAT
 
-You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory.
+You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory. Note that some devices (Nintendo 3DS) are running a "light" build with fewer supported games due to memory limitation, the dat files for that build are available from the [light](https://github.com/libretro/FBNeo/tree/master/dats/light/) subdirectory.
 
 ### Step 2: Gathering the ingredients
 
