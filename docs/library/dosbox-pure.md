@@ -163,7 +163,7 @@ There's also support for swapping floppy disk images (or PCjr cartridges) at run
 
 ### Auto-execution of DOSBOX.BAT
 
-The core automatically executes "DOSBOX.BAT" instead of showing the start menu if it exists in the mounted ZIP or path.
+The core automatically executes `DOSBOX.BAT` instead of showing the start menu if it exists in the mounted ZIP or path.
 
 ### Loading M3U8 files
 
