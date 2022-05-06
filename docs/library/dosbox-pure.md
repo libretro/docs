@@ -161,6 +161,10 @@ When loading a ZIP file which contains a floppy or hard-disk image or loading su
 
 There's also support for swapping floppy disk images (or PCjr cartridges) at runtime via a frontend's Disc Control menu and hotkeys.
 
+### Auto-execution of DOSBOX.BAT
+
+The core automatically executes "DOSBOX.BAT" instead of showing the start menu if it exists in the mounted ZIP or path.
+
 ### Loading M3U8 files
 
 If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
