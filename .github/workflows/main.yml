@@ -17,3 +17,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REQUIREMENTS: docs/requirements.txt
+          
+      - name: work around permission issue
+        run: git config --global --add safe.directory /github/workspace
