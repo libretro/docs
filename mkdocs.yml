@@ -122,7 +122,8 @@ nav:
         - 'Commodore - 8-bit (VICE)': 'library/vice.md'
         - 'Commodore - Amiga (PUAE)': 'library/puae.md'
       - 'DOS Emulation':
-        - 'DOS (DOSBox)': 'library/dosbox.md'
+        - 'MS - DOS (DOSBox)': 'library/dosbox.md'
+        - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
       - 'Elektronika':
         - 'Elektronika - BK-0010/BK-0011 (bk)': 'library/bk.md'        
       - 'GCE Emulation':

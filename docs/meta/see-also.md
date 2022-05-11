@@ -33,6 +33,12 @@ This is a list of cores that are related to each other in some way.
 - [ChaiLove](../library/chailove.md)
 - [Lua Engine (Lutro)](../library/lutro.md)
 
+## DOS
+
+- [MS - DOS (DOSBox)](../library/dosbox.md)
+- [MS - DOS (DOSBox Pure)](../library/dosbox_pure.md)
+
+
 ## Dreamcast
 
 - [Sega - Dreamcast (Redream)](../library/redream.md)

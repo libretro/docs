@@ -90,7 +90,10 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [DeSmuME](../library/desmume.md)                 			           | [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt)                     |                |
 | [Dinothawr](../library/dinothawr.md)             			           | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
-| DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  |                |
+| DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  |
+
+| DOSBox Pure                                          			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  |
+                |
 | Dummy Core                                                                       | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)       |                |
 | Dungeon Crawl Stone Soup                                                         | [GPLv2+](https://github.com/libretro/crawl-ref/blob/master/crawl-ref/licence.txt)         |                |
 | EasyRPG                                                                          | [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)                 |                |
