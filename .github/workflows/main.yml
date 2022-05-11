@@ -9,6 +9,9 @@ jobs:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
+      - name: work around permission issue
+        run: git config --global --add safe.directory /github/workspace
+    
       - name: Checkout master
         uses: actions/checkout@v1
 
@@ -18,5 +21,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REQUIREMENTS: docs/requirements.txt
           
-      - name: work around permission issue
-        run: git config --global --add safe.directory /github/workspace
