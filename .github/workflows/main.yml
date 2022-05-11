@@ -8,12 +8,9 @@ jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
-    steps:
-      - name: work around permission issue
-        run: git config --global --add safe.directory /github/workspace
-    
+    steps:   
       - name: Checkout master
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.4.2
 
       - name: Deploy docs
         uses: fpscan/mkdocs-deploy-gh-pages@master
