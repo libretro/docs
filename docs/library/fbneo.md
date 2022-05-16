@@ -4,7 +4,10 @@
 
 FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development, unlike MAME it's more focused on playability and advanced features than accuracy.
 It is the follow-up of FinalBurn and FinalBurn Alpha emulators.
-The libretro core provide wide compatibility with platforms and features supported by libretro.
+The libretro core provides wide compatibility with platforms and features supported by libretro.
+
+!!! Focused on playability ? So FBNeo isn't accurate ?
+    For the most part, it is just as accurate as current MAME, occasionally we even find out a few games are more faithful to the pcb videos. The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is about absolute preservation. "Quality of life" hacks include things like improving original game's sound, having control alternatives that didn't exist on original cabinet, or dramatically reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code.
 
 ## License and changelog
 
