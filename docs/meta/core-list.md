@@ -3,6 +3,8 @@
 | 2048                      | Game                   | A port of the popular puzzle game 2048 to libretro |
 | 3D Engine                 | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
 | 4DO                       | 3DO                    |                    |
+| a5200                     | Atari 5200             |                    |
+| Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | Atari800                  | Atari 5200             |                    |
 | Beetle bsnes              | Nintendo SNES/SFC      |                    |
 | Beetle Cygne              | Bandai WonderSwan/Color |                   |
@@ -18,12 +20,12 @@
 | Beetle SuperGrafx         | NEC PC Engine/SuperGrafx |                  |
 | Beetle Supafaust          | Nintendo SNES/SFC      |                    |
 | Beetle VB                 | Nintendo Virtual Boy   |                    |
-| BK                        | BK-0010/BK-0011(M)     |                    |
+| BK                        | BK-0010/BK-0011(M)/Terak 8510-a | A port of the PDP11 emulator to libretro. This core emulates the PDP-11/03 platform. |
 | BlastEm                   | Sega Genesis (Mega Drive) |                 |
 | blueMSX                   | MSX/SVI/ColecoVision/SG-1000 |              |
 | bnes                      | Nintendo NES/Famicom   |                    |
-| boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil' |
-| boom 3 xp                 | Game engine            | See boom 3 note    |
+| boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
+| boom 3 xp                 | Game engine            | (See boom 3 note)  |
 | bsnes                     | Nintendo SNES/SFC      |                    |
 | bsnes 2014 Accuracy       | Nintendo SNES/SFC      |                    |
 | bsnes 2014 Balanced       | Nintendo SNES/SFC      |                    |
@@ -33,8 +35,9 @@
 | bsnes-mercury Accuracy    | Nintendo SNES/SFC      |                    |
 | bsnes-mercury Balanced    | Nintendo SNES/SFC      |                    |
 | bsnes-mercury Performance | Nintendo SNES/SFC      |                    |
-| Cannonball                | Game engine            | A port of the Cannonball enhanced OutRun engine to libretro |
+| Cannonball                | Game engine            | A port of the Cannonball, enhanced OutRun engine to libretro |
 | Caprice32                 | Amstrad CPC            |                    |
+| CDi 2015                  | Philips CDi            |                    |
 | ChaiLove                  | Game engine            | A free, open-source framework used to make 2D games in ChaiScript |
 | Citra                     | Nintendo 3DS           |                    |
 | Citra 2018                | Nintendo 3DS           |                    |
@@ -61,8 +64,8 @@
 | Emux GB                   | Game Boy/Color         |                    |
 | Emux NES                  | Nintendo NES/Famicom   |                    |
 | Emux SMS                  | Sega Master System     |                    |
-| FB Alpha                  | Arcade/Console/various | See FB Neo note    |
-| FB Alpha 2012             | Arcade/Console/various | See FB Neo note    |
+| FB Alpha                  | Arcade/Console/various | (See FB Neo note)  |
+| FB Alpha 2012             | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012 CPS-1       | CPS-1                  |                    |
 | FB Alpha 2012 CPS-2       | CPS-2                  |                    |
 | FB Alpha 2012 CPS-3       | CPS-3                  |                    |
@@ -72,7 +75,7 @@
 | FFmpeg                    | Media player           | A port of FFmpeg library which allows playback of a variety of audio and video formats |
 | fixGB                     | Game Boy/Color         |                    |
 | fixNES                    | Nintendo NES/Famicom   |                    |
-| Flycast                   | Sega Dreamcast/NAOMI/NAOMI2 |               |
+| Flycast                   | Sega Dreamcast/NAOMI   |                    |
 | Flycast GLES2             | Sega Dreamcast/NAOMI   |                    |
 | fMSX                      | MSX/MSX2/MSX2+         |                    |
 | FreeChaF                  | Fairchild ChannelF     |                    |
@@ -96,27 +99,27 @@
 | higan Accuracy            | Nintendo SNES/SFC/Game Boy/Color |          |
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
-| Jaxe                      | XO-CHIP/CHIP-8         |                    |
-| Jump 'n Bump              | Jump 'n Bump           |                    |
-| Kronos                    | Sega Saturn/ST-V       |                    |
+| JAXE                      | CHIP-8/S-CHIP/XO-CHIP  |                    |
+| Jump 'n Bump              | Game engine            | A reimplementation of the engine of Jump 'n Bump, a open-source MS-DOS multiplayer video game by Brainchild Design |
+| Kronos                    | Sega Saturn/ST-V       | A port of the Kronos, which is itself a fork of Yabause emulator |
 | LowRes NX                 | Game engine            | A port of the LowRes NX fantasy console to libretro |
 | Lutro                     | Game engine            | An experimental Lua game framework for libretro, based on a subset of the LOVE API |
 | MAME (Current)            | Arcade/Console/various | Based on MAME development branch. Full list of supported systems: http://adb.arcadeitalia.net/mame.php |
-| MAME 2000                 | Arcade/Console/various | See MAME note      |
-| MAME 2003                 | Arcade/Console/various | See MAME note      |
-| MAME 2003 Midway          | Arcade/Console/various | See MAME note      |
-| MAME 2003-Plus            | Arcade/Console/various | See MAME note      |
-| MAME 2009                 | Arcade/Console/various | See MAME note      |
-| MAME 2010                 | Arcade/Console/various | See MAME note      |
-| MAME 2015                 | Arcade/Console/various | See MAME note      |
-| MAME 2016                 | Arcade/Console/various | See MAME note      |
+| MAME 2000                 | Arcade/Console/various | (See MAME note)    |
+| MAME 2003                 | Arcade/Console/various | (See MAME note)    |
+| MAME 2003 Midway          | Arcade/Console/various | (See MAME note)    |
+| MAME 2003-Plus            | Arcade/Console/various | (See MAME note)    |
+| MAME 2009                 | Arcade/Console/various | (See MAME note)    |
+| MAME 2010                 | Arcade/Console/various | (See MAME note)    |
+| MAME 2015                 | Arcade/Console/various | (See MAME note)    |
+| MAME 2016                 | Arcade/Console/various | (See MAME note)    |
 | melonDS                   | Nintendo DS            |                    |
 | Mesen                     | Nintendo NES/Famicom   |                    |
 | Mesen-S                   | Nintendo SNES/SFC/Game Boy/Color |          |
-| MESS 2015                 | Multi (various)        | See MAME note      |
+| MESS 2015                 | Multi (various)        | (See MAME note)    |
 | Meteor                    | Game Boy Advance       |                    |
 | mGBA                      | Game Boy Advance       |                    |
-| minivmac                  | Macintosh              |                    |
+| Minivmac                  | Mac II                 | MacII variant of minivmac emulator |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
@@ -150,6 +153,7 @@
 | PrBoom                    | Game engine            | A port of the PrBoom source port of iD's classic Doom engine |
 | ProSystem                 | Atari 7800             |                    |
 | PUAE                      | Commodore Amiga        |                    |
+| PUAE 2021                 | Commodore Amiga        |                    |
 | PX68k                     | Sharp X68000           |                    |
 | QUASI88                   | NEC PC-8000/PC-8800 series |                |
 | QuickNES                  | Nintendo NES/Famicom   |                    |
@@ -160,8 +164,8 @@
 | RetroDream                | Sega Dreamcast         |                    |
 | Rustation                 | Sony PlayStation       |                    |
 | SameBoy                   | Game Boy/Color         |                    |
-| SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games.                   |
-| SAME_CDI                  | Arcade                 | SAME_CDI is a libretro core to play CD-i games.                   |
+| SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
+| SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
 | ScummVM                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
 | SimCoupe                  | SAM Coupe              |                    |
 | SMS Plus GX               | Sega MS/GG             |                    |
@@ -173,17 +177,19 @@
 | SquirrelJME               | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
 | Stella                    | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
-| SwanStation               | Sony PlayStation       |                    |
+| Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
+| SwanStation               | Sony PlayStation       | SwanStation is a fork of the Duckstation emulator |
 | TempGBA                   | Game Boy Advance       |                    |
 | TGB Dual                  | Game Boy/Color         |                    |
 | Theodore                  | Thomson MO/TO          |                    |
 | TIC-80                    | Game engine            | A port of the free and open source fantasy computer TIC-80 to libretro |
 | The Powder Toy            | Game                   | A port of the Powdertoy physics sandbox/simulation engine to libretro |
-| TyrQuake                  | Game Engine            | A port of the tyrquake engine |
+| TyrQuake                  | Game engine            | A port of the tyrquake engine |
 | UAE4ARM                   | Commodore Amiga        |                    |
-| UME 2015                  | Arcade/Console/various | See MAME note      |
+| UME 2015                  | Arcade/Console/various | (See MAME note)    |
 | Uzem                      | Uzebox                 | A port of Uzem, the official emulator for the Uzebox |
-| VBA-M                     | Game Boy Advance       |                    |
+| VaporSpec                 | Game engine            | A virtual game platform with capabilities similar to 80s game consoles |
+| VBA-M                     | Game Boy Advance       | VisualBoy Advance-M is a active fork of VisualBoy Advance emulator |
 | VBA Next                  | Game Boy Advance       |                    |
 | vecx                      | Vectrex                |                    |
 | VeMUlaor                  | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
@@ -193,18 +199,18 @@
 | VICE xcbm2                | Commodore CBM-II 6x0/7x0 |                  |
 | VICE xcbm5x0              | Commodore CBM-II 5x0   |                    |
 | VICE xpet                 | Commodore PET          |                    |
-| VICE xplus4               | Commodore PLUS/4       |                    |
+| VICE xplus4               | Commodore Plus/4       |                    |
 | VICE xscpu64              | Commodore C64 SuperCPU |                    |
 | VICE xvic                 | Commodore VIC-20       |                    |
 | Virtual Jaguar            | Atari Jaguar           |                    |
-| vitaQuake 2               | Game Engine            | A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro. There is a separate core for each of the Quake 2 mission packs, 'Rogue', 'Zaero' and 'Xatrix'. |
-| vitaQuake 2 (Rogue)       | Game Engine            | See vitaQuake 2 note |
-| vitaQuake 2 (Xatrix)      | Game Engine            | See vitaQuake 2 note |
-| vitaQuake 2 (Zaero)       | Game Engine            | See vitaQuake 2 note |
-| vitaQuake 3               | Game Engine            | A port of the VitaQuake 3 source port of iD's ioquake3 engine to libretro |
-| vitaVoyager               | Game Engine            | A port of the Lilium Voyager engine, which runs the Star Trek: Voyager - Elite Force game and is itself based on the ioquake3 |
-| WASM-4                    | WebAssembly            |                    |
+| vitaQuake 2               | Game engine            | A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro. There is a separate core for each of the Quake 2 mission packs, 'Rogue', 'Zaero' and 'Xatrix'. |
+| vitaQuake 2 (Rogue)       | Game engine            | (See vitaQuake 2 note) |
+| vitaQuake 2 (Xatrix)      | Game engine            | (See vitaQuake 2 note) |
+| vitaQuake 2 (Zaero)       | Game engine            | (See vitaQuake 2 note) |
+| vitaQuake 3               | Game engine            | A port of the VitaQuake 3 source port of iD's ioquake3 engine to libretro |
+| vitaVoyager               | Game engine            | A port of the Lilium Voyager engine, which runs the Star Trek: Voyager - Elite Force game and is itself based on the ioquake3 |
+| WASM-4                    | Game engine            | WASM-4 is a open source low-level fantasy game console for building small games with WebAssembly |
 | X Millennium              | Sharp X1               |                    |
-| XRick                     | Game Engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
-| YabaSanshiro              | Sega Saturn            |                    |
+| XRick                     | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
+| YabaSanshiro              | Sega Saturn            | A port of the YabaSanshiro, which is itself a fork of Yabause emulator |
 | Yabause                   | Sega Saturn            |                    |
