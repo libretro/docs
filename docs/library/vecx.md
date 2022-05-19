@@ -4,23 +4,29 @@
 
 vecx is an emulator for the vector-display based Vectrex video game console.
 
-Author(s): Valavan Manohararajah|John Hawthorn|Nikita Zimin|Demeth
+The vecx core has been authored by
 
-## Contribute to this documentation
+- Valavan Manohararajah
+- John Hawthorn
+- Nikita Zimin
+- Demeth
 
-In order to propose improvements to this document, [visit it's corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/vecx.md). Changes are proposed using "Pull Requests."
+The vecx core is licensed under
 
-## License
+- GPLv3
 
-GPLv3
+A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
-bin|vec
+Content that can be loaded by the vecx core have the following file extensions:
+
+- bin
+- vec
 
 ## BIOS
 
-The vecx core does not feature BIOS use.
+vecx doesn't require BIOS (bootrom) files to work. 
 
 ## Features
 
@@ -77,13 +83,10 @@ The vecx core supports one controller setting:
 |           | ![RetroPad_Left_Stick](../image/retropad/retro_left_stick.png)   |
 |           | ![RetroPad_Right_Stick](../image/retropad/retro_right_stick.png) |
 
-## Compatibility
-
-Unknown
-
 ## External Links
 
 - [Libretro Repository](https://github.com/libretro/libretro-vecx)
 - [Report Core Issues Here](https://github.com/libretro/libretro-meta/issues)
 - [Official GitHub Repository of the SDL port](https://github.com/jhawthorn/vecx)
 - [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IcpjAFyTq8c2ZvV-dKqwtox)
+- [Steam](https://store.steampowered.com/app/2008300/RetroArch__vecx/)
