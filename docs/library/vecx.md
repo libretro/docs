@@ -47,9 +47,25 @@ vecx doesn't require BIOS (bootrom) files to work.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 
-## Options
+### Geometry and timing
+
+- The vecx core's core provided FPS is 59.72.
+- The vecx core's core provided sample rate is 44100 Hz.
+- The vecx core's base width is 869.
+- The vecx core's base height is 1080.
+- The vecx core's max width is 1648.
+- The vecx core's max height is 2048.
+
+## Core Options
 
 The vecx core has the following options that can be tweaked from the core options menu. The default setting is bolded.
+
+- **Use Hardware Rendering** [vecx_render] (**Hardware**|Software)
+- **Hardware Rendering Resolution** [vecx_renderresolution] (**824x1024**|434x540|515x640|580x720|618x768|845x1050|869x1080|966x1200|1159x1440|1648x2048)
+- **Line brightness** [vecx_linebrightness] (**4**|1|2|3|5|6|7|8|9)
+- **Line width** [vecx_linewidth] (**4**|0|1|2|3|5|6|7|8|9)
+- **Bloom brightness** [vecx_bloombrightness] (**4**|1|2|3|5|6|7|8|9)
+- **Bloom width** [vecx_bloomwidth] (**8x**|2x|3x|4x|6x|10x|12x|14x|16x)
 
 - **Res Multiplier** (**1**-4)
 
