@@ -8,31 +8,7 @@ A libretro core for Game & Watch simulators.
 
 It runs simulators converted from source code for the games available at [MADrigal](http://www.madrigaldesign.it/sim/).
 
-#### How to start the GW core:
-
-- As an example showcasing loading content with GW core, we will load the Donkey Kong (Coleco) game hosted on RetroArch's Content Downloader.
-
-You can do this by going to RetroArch's main menu screen and selecting 'Online Updater'. From there, select 'Content Downloader'.
-
-<center> ![](../image/core/all/download.png) </center>
-
-- Select 'Handheld Electronic Game', then select 'Donkey Kong (Coleco)'. This should download and extract this file to RetroArch's Downloads directory.
-
-<center> ![](../image/core/gw/donkey.png) </center>
-
-- Go back to RetroArch's main menu screen. Select 'Load Content', then 'Downloads'.
-
-<center> ![](../image/core/all/load.png) </center>
-
-<center> ![](../image/core/all/downloads.png) </center>
-
-- Select 'Donkey Kong (Coleco).mgw'.
-
-- If you are asked which core to select, choose 'Handheld Electronic (GW)'.
-
-The content should now start running!
-
-### Author/License
+The converted games are available at [buildbot](https://buildbot.libretro.com/assets/cores/Handheld%20Electronic%20Game/). 
 
 The GW core has been authored by
 
