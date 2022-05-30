@@ -1,15 +1,17 @@
 # DOS (DOSBox Pure)
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rHkIz4-SewI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Background
 
 DOSBox Pure is a fork of the multiplatform MS-DOS emulator, DOSBox. It was built by Psyraven in 2020 specifically for RetroArch/Libretro and implements advanced features like save states, an on-screen keyboard, highly customizable controller setup or rewinding. DOSBox Pure aims for simplicity and ease of use.
 
-The DOSBox-Pure core has been authored by
+The DOSBox Pure core has been authored by
 
 - DOSBox Team
 - Psyraven
 
-The DOSBox core is licensed under
+The DOSBox Pure core is licensed under
 
 - [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)
 
@@ -21,57 +23,55 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 
 - .zip _(see [Load games from ZIP](#load-games-from-zip))_
 - .dosz _(alternative extension to .ZIP)_
-- .exe
-- .com
-- .bat
-- .iso
-- .cue
-- .ins
-- .img
-- .ima
-- .vhd
-- .jrc
-- .tc
-- .m3u
-- .m3u8
+- .exe _(DOS program)_
+- .com _(DOS program)_
+- .bat _(DOS batch file)_
+- .iso _(CDROM image)_
+- .cue _(CDROM image)_
+- .ins _(CDROM image)_
+- .img _(hard disk/floppy disk/CDROM image)_
+- .ima _(hard disk/floppy disk image)_
+- .vhd _(hard disk image)_
+- .jrc _(PCjr cartridge)_
+- .tc _(PCjr cartridge)_
+- .m3u _(playlist for multiple CDROM/floppy)
+- .m3u8 _(playlist for multiple CDROM/floppy)
 - .conf _(bootable, see [Loading of dosbox.conf files](#loading-of-dosboxconf-files))_
 
-RetroArch database(s) that are associated with the DOSBox core:
+RetroArch database(s) that are associated with the DOSBox Pure core:
 
 - [DOS](https://github.com/libretro/libretro-database/blob/master/rdb/DOS.rdb)
 
 ## Features
-!!!tip
-	DOSBox Pure has its own [trailer on YouTube](https://www.youtube.com/watch?v=rHkIz4-SewI).
 
 Frontend-level settings or features that the DOSBox Pure core respects.
 
-| Feature           | Supported |
-|-------------------|:---------:|
-| Restart           | ✔         |
-| Screenshots       | ✔         |
-| Saves             | ✔         |
-| States            | ✔         |
-| [Rewind](#rewind-support)            | ✔         |
-| Netplay           | ✕         |
-| [Core Options](#core-options)      | ✔         |
-| RetroAchievements | ✕         |
-| [RetroArch Cheats](#cheats-support)  | ✔         |
-| [Native Cheats](#cheats-support)     | ✔         |
-| [Controls](#controls)          | ✔         |
-| [Remapping](#gamepad-mapper)         | ✔         |
-| Multi-Mouse       | ✕         |
-| Rumble            | ✕         |
-| Sensors           | ✕         |
-| Camera            | ✕         |
-| Location          | ✕         |
-| Subsystem         | ✕         |
-| [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✔         |
-| Username          | ✕         |
-| Language          | ✕         |
-| Crop Overscan     | ✕         |
-| LEDs              | ✕         |
+| Feature                             | Supported |
+|-------------------------------------|:---------:|
+| Restart                             | ✔         |
+| Screenshots                         | ✔         |
+| Saves                               | ✔         |
+| States                              | ✔         |
+| [Rewind](#rewind-support)           | ✔         |
+| Netplay                             | ✕         |
+| [Core Options](#core-options)       | ✔         |
+| RetroAchievements                   | ✕         |
+| [RetroArch Cheats](#cheats-support) | ✔         |
+| [Native Cheats](#cheats-support)    | ✔         |
+| [Controls](#controls)               | ✔         |
+| [Remapping](#gamepad-mapper)        | ✔         |
+| Multi-Mouse                         | ✕         |
+| Rumble                              | ✕         |
+| Sensors                             | ✕         |
+| Camera                              | ✕         |
+| Location                            | ✕         |
+| Subsystem                           | ✕         |
+| Softpatching                        | ✕         |
+| Disk Control                        | ✔         |
+| Username                            | ✕         |
+| Language                            | ✕         |
+| Crop Overscan                       | ✕         |
+| LEDs                                | ✕         |
 
 ### MIDI playback with SoundFonts
 
@@ -107,13 +107,9 @@ Using the [core option](#emulation-options) `Save States Support`, rewinding can
 - The DOSBox Pure core's base height is 200
 - The DOSBox Pure core's max width is 1280
 - The DOSBox Pure core's max height is 1024
-- The DOSBox Pure core's core provided aspect ratio is dependent on the DOS application and the 'Video > Aspect Ratio Correction' core option
+- The DOSBox Pure core's core provided aspect ratio is dependent on the DOS application and the 'Video > Aspect Ratio Correction' [core option](#video-options)
 
 ## Loading content
-
-### Loading of dosbox.conf files
-
-DOSBox Pure can boot directly from a .conf file or it will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path.
 
 ### Load games from ZIP
 
@@ -133,7 +129,7 @@ The start menu also offers the option to mount or unmount an image.
 
 ### Start menu with auto start
 
-![The DOSBox Pure Start Menu](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/startmenu.png)
+![The DOSBox Pure Start Menu](https://raw.githubusercontent.com/libretro/dosbox-pure/main/images/startmenu.png)
 
 This is the first screen that appears when loading a game. It offers a gamepad controllable list of all executable files for the loaded game. By pressing right an item can be selected as the default which will skip the menu on the next launch.
 
@@ -165,6 +161,14 @@ There's also support for swapping floppy disk images (or PCjr cartridges) at run
 
 The core automatically executes `DOSBOX.BAT` instead of showing the start menu if it exists in the mounted ZIP or path.
 
+### Loading of dosbox.conf files
+
+If a .conf file gets selected in the frontend, DOSBox Pure will load it directly and run its autoexec commands.
+
+Alternatively, a .conf file can get loaded automatically depending on the 'Emulation > Loading of dosbox.conf' [core option](#emulation-options). There are two modes that can be enabled:
+- "Try 'dosbox.conf' in the loaded content (ZIP or folder)" - Will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path
+- "Try '.conf' with same name as loaded content (next to ZIP or folder)" - Will automatically load GAME.conf next to GAME.zip if it exists.
+
 ### Loading M3U8 files
 
 If the core gets loaded with a `.m3u8` file, all files listed in it will be added to the disc swap menu. The first image will automatically get mounted as the A: or D: drive depending on whether it is a CD or floppy disk image.
@@ -193,7 +197,7 @@ You can change the hotkey for game focus mode in RetroArch's ["Hotkeys" menu](ht
 
 If your libretro frontend wants to load the content of `.ZIP` files instead of sending it to DOSBox Pure to load, the files can be renamed from `.ZIP` to `.DOSZ`.
 
-This is especially useful for CD images in ZIP format which RetroArch refuses to append through its `Disc Control` menu. Using an `.M3U8` file (see above) also avoids this problem.
+This is especially useful for CD images in ZIP format which RetroArch refuses to append through its `Disc Control` menu. Using an [.M3U8 file](#loading-m3u8-files) also avoids this problem.
 
 ### Force opening the start menu
 
@@ -227,7 +231,7 @@ When modifications to the file system loaded from a ZIP file happen, these modif
 
 ## Core options
 
-The DOSBox core has the following options that can be tweaked from the core options menu. The default setting is bolded.
+The DOSBox Pure core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
 
@@ -260,7 +264,11 @@ Core specific settings (latency, save states, start menu).
 - **Save States Support** [dosbox_pure_savestate]  (**Enable save states** | Enable save states with rewind | OFF)
 
 	Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer.
-	
+
+- **Loading of dosbox.conf** [dosbox_pure_conf] (**Disabled conf support (default)** | Try 'dosbox.conf' in the loaded content (ZIP or folder) | Try '.conf' with same name as loaded content (next to ZIP or folder))
+
+	DOSBox Pure is meant to be configured via core options but optionally supports loading of legacy .conf files.
+
 - **Start Menu** [dosbox_pure_menu_time] (**Show at start, shut down core 5 seconds after auto started game exit** | Show at start, shut down core 3 seconds after auto started game exit | Show at start, shut down core immediately after auto started game exit | Show at start, show again after game exit (default) | Always show menu on startup and after game exit, ignore auto start setting)
 
 	Set the behavior of the start menu before and after launching a game. You can also force it to open by holding shift or L2/R2 when selecting 'Restart'.
@@ -443,7 +451,7 @@ These can be assigned to any port and the button layout can be remapped as with 
 
 ### On-screen keyboard
 
-![DOSBox Pure On-Screen Keyboard](https://github.com/schellingb/dosbox-pure/blob/main/images/onscreenkeyboard.png)
+![DOSBox Pure On-Screen Keyboard](https://raw.githubusercontent.com/libretro/dosbox-pure/main/images/onscreenkeyboard.png)
 
 By pressing L3 on the gamepad (usually by pushing in the left analog stick), the on-screen keyboard will open. The cursor can be controlled with the controller (or mouse or keyboard) and L2/R2 will speed up or slow down the move speed.
 
@@ -456,7 +464,7 @@ If the cursor is moved above the middle of the screen, the keyboard will move to
 
 ### Gamepad Mapper
 
-![The DOSBox Pure gamepad mapper](https://raw.githubusercontent.com/schellingb/dosbox-pure/main/images/padmapper.png)
+![The DOSBox Pure gamepad mapper](https://raw.githubusercontent.com/libretro/dosbox-pure/main/images/padmapper.png)
 
 If you need even more customization of the controls than provided by the [Automated controller mappings](#automated-controller-mappings), or the various presets for [mouse](#mouse-emulation), [keyboard](#keyboard-emulation) and [joysticks](#joystick-emulation), you can use the gamepad mapper introduced in version 0.9.0 in April, 2022.
 
