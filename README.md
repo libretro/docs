@@ -51,7 +51,7 @@ There is a To-Do list for libretro/docs *here* and you can submit suggestions or
 
 **References**
 
-  - [Guide to installing mkdocs ](https://www.mkdocs.org/#installation)
+  - [Guide to installing mkdocs](https://www.mkdocs.org/#installation)
 
 
 ## Adding a new core
