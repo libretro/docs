@@ -19,6 +19,8 @@ Note: please be aware of whether your system uses DOS/Windows style paths with b
 #### Example: loading a ROM and libretro core with Steam
      steam -applaunch 1118310 -L "/path/to/steamapps/common/RetroArch/cores/nestopia_libretro.so" "/path/to/Tetris.nes"
 
+Content filenames require no spaces, as there is an issue with Steam passing through command line arguments containing spaces.
+
 ## Verbose logging output
 To get a better idea on what's going on, use the `--verbose` flag. If you want to report a bug, it is **vital** that this log is included.
 
