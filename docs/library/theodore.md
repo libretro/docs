@@ -16,10 +16,6 @@ The Theodore core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-## Requirements
-
-None
-
 ## BIOS
 
 The Theodore core does not feature BIOS use.
