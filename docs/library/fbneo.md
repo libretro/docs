@@ -6,7 +6,7 @@ FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arc
 It is the follow-up of FinalBurn and FinalBurn Alpha emulators.
 The libretro core provides wide compatibility with platforms and features supported by libretro.
 
-!!! Focused on playability ? So FBNeo isn't accurate ?
+!!! Question "Focused on playability ? So FBNeo isn't accurate ?"
     For the most part, it is just as accurate as current MAME, occasionally we even find out a few games are more faithful to the pcb videos. The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is about absolute preservation. "Quality of life" hacks include things like improving original game's sound, having control alternatives that didn't exist on original cabinet, or dramatically reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code.
 
 ## License and changelog
@@ -56,7 +56,7 @@ Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting
 
 ## Mapping
 
-We don't have a convenient tool like the MAME OSD, instead we use the retroarch api to customize mappings, you can do that by going into `Quick menu > Controls`.
+We don't have a convenient tool like the MAME OSD, instead we use the retroarch api to customize mappings, you can do that by going into `Quick Menu > Controls`.
 For those who don't want to fully customize their mapping, there are 2 convenient presets you can apply by changing the "device type" for a player in this menu :
 * **Classic** : it will apply the original neogeo layout from neogeo cd gamepads for neogeo games, and use L/R as 5th and 6th button for 6 buttons games like Street Fighter II.
 * **Modern** : it will apply the modern neogeo layout from neogeo arcade stick pro and mini pad for neogeo games, and use R1/R2 as 5th and 6th button for 6 buttons games like Street Fighter II (because it's also their modern layout), this is really convenient with most arcade sticks.
@@ -131,6 +131,7 @@ The following bioses are required for some of the emulated systems :
 * ngp.zip (NeoGeo Pocket BIOS)
 * spectrum.zip (ZX Spectrum BIOS)
 * spec128.zip (ZX Spectrum 128 BIOS)
+* spec1282a.zip (ZX Spectrum 128 +2a BIOS)
 * channelf.zip (Fairchild Channel F BIOS)
 
 ## Samples
@@ -139,11 +140,11 @@ Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`
 
 ## Hiscores
 
-Copy [hiscore.dat](https://github.com/libretro/FBNeo/tree/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled. It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for hiscores (or hiscore.dat might not be listing that romset). You can request support in the issue tracker as long as the request is reasonable (avoid making a list of several dozens/hundreds of games if you don't want to be ignored). There are also some cases where libretro features will prevent hiscores from working, runahead is a well-known case but there might be other savestates-related features causing issues.
+Copy [hiscore.dat](https://github.com/libretro/FBNeo/tree/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled. It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for hiscores (or hiscore.dat might not be listing that romset). You can request support in the issue tracker as long as the request is reasonable (avoid making a list of several dozens/hundreds of games if you don't want to be ignored). ~~There are also some cases where libretro features will prevent hiscores from working, runahead is a well-known case but there might be other savestates-related features causing issues.~~ As of [2022-06-25](https://github.com/libretro/FBNeo/commit/7ea5708565955658eeaf49da2be4a9905409bb35), hiscores are part of "fast savestates" and should work with runahead.
 
 ## Run Ahead input lag reduction
 
-This core widely supports the RetroArch "Run Ahead" input latency reduction feature, with or without `Second Instance` enabled. However, single instance is the recommended mode because it is the mode used in standalone FBNeo's runahead.
+This core widely supports the RetroArch "Run Ahead" input latency reduction feature, with **single instance** being the recommended method. Support for `Second Instance` won't be guaranteed anymore as of [2022-06-25](https://github.com/libretro/FBNeo/commit/7ea5708565955658eeaf49da2be4a9905409bb35).
 
 ## RetroAchievements
 
@@ -155,7 +156,7 @@ They are either directly available from `Quick Menu > Core Options`, or from the
 
 ## Cheats
 
-You can either use the RetroArch cheat feature, or download a pack of FBNeo native cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip) and uncompress them into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder, then they'll become available through core options, using a MAME `cheat.dat` file should also work.
+You can either use the RetroArch cheat feature, or download a pack of FBNeo native cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip) and uncompress them into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder, then they'll become available through core options (`Quick Menu > Options`, **NOT** `Quick Menu > Cheats`), using a MAME `cheat.dat` file should also work.
 
 ## F.A.Q
 
