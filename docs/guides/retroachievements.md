@@ -64,6 +64,12 @@ You can also check the progress of your friends and add comments on their trophi
 |-------------------------------------------------|:---------:|:------|
 | [AppleWin](https://github.com/audetto/AppleWin) | ✔         | Libretro core is still fairly new, but should be fully supported. Please report any issues. |
 
+#### Arduboy
+
+| Core                                            | Supported | Notes |
+|-------------------------------------------------|:---------:|:------|
+| [Aduros](https://github.com/Arduboy/Arduboy) |   ✔         |  RetroArch 1.10.2 or higher required|
+
 ### Atari
 
 #### 2600
@@ -350,6 +356,11 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                | Supported | Notes |
 |-----------------------------------------------------|:---------:|:------|
 | [Opera](https://github.com/libretro/opera-libretro) | ✔         |       |
+
+### WASM-4
+| Core                                           | Supported | Notes |
+|------------------------------------------------|:---------:|:------|
+| [WASM-4](https://github.com/aduros/wasm4) | ✔         | RetroArch 1.10.2 or higher required |
 
 ### Watara
 
