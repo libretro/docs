@@ -90,20 +90,17 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [DeSmuME](../library/desmume.md)                 			           | [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt)                     |                |
 | [Dinothawr](../library/dinothawr.md)             			           | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
-| DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  |
-
-| DOSBox Pure                                          			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  |
-                |
+| DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  | |
 | Dummy Core                                                                       | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)       |                |
 | Dungeon Crawl Stone Soup                                                         | [GPLv2+](https://github.com/libretro/crawl-ref/blob/master/crawl-ref/licence.txt)         |                |
 | EasyRPG                                                                          | [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)                 |                |
 | [EightyOne](../library/eightyone.md)             			           | [GPLv3](https://github.com/libretro/81-libretro/blob/master/LICENSE)                      |                |
-| [Elektronika - BK-0010/BK-0011](../library/bk.md)                                          | [BSD]https://github.com/libretro/bk-emulator/blob/master/COPYING)                             |
-
+| [Elektronika - BK-0010/BK-0011](../library/bk.md)                                          | [BSD](https://github.com/libretro/bk-emulator/blob/master/COPYING) |                            |
 | [Emux CHIP-8](../library/emux_chip8.md)                                          | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux GB](../library/emux_gb.md)                                                 | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux NES](../library/emux_nes.md)                                               | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux SMS](../library/emux_sms.md)                                               | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
+| [ep128emu](../library/ep128emu.md)                                               | [GPLv2](https://github.com/libretro/ep128emu-core/blob/master/COPYING)                             |                |
 | FB Alpha                                         			                       | [Non-commercial](https://github.com/libretro/fbalpha/blob/master/src/license.txt)         | Non-commercial |
 | FB Alpha 2012                                    			                       | [Non-commercial](https://github.com/libretro/fbalpha2012/blob/master/docs/license.txt)                                        | Non-commercial |
 | FB Alpha 2012 CPS-1                              			                       | [Non-commercial](https://github.com/libretro/fbalpha2012_cps1/blob/master/src/license.txt)                                        | Non-commercial |
@@ -157,10 +154,8 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | nSide Balanced                                                                   | [GPLv3](https://github.com/hex-usr/nSide/blob/master/gpl-3.0.txt)                         |                |
 | [NXEngine](../library/nxengine.md)                        		           | [GPLv3](https://github.com/gameblabla/nxengine-nspire/blob/master/LICENSE)                |                |
 | O2EM                                                                             | [Artistic License](https://sourceforge.net/projects/o2em/)                                |                |
-| [OpenLara](../library/openlara.md)                                               | [BSD-2-Clause](https://github.com/XProger/OpenLara/blob/master/LICENSE)                |
-
-| [Opera](../library/opera.md)                         			           | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h) | 
-                |
+| [OpenLara](../library/openlara.md)                                               | [BSD-2-Clause](https://github.com/XProger/OpenLara/blob/master/LICENSE)                | |
+| [Opera](../library/opera.md)                         			           | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h) |                 |
 | P-UAE                                                                            | [GPLv2](https://github.com/libretro/PUAE/blob/master/COPYING)                             |                |
 | ParaLLEl N64                                                                     | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | PCem                                                                             | [GPLv2](https://github.com/libretro/libretro-pcem/blob/master/COPYING)                    |                |
@@ -178,10 +173,8 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [REminiscence](../library/reminiscence.md)                                       | GPLv3                                                                                     |                |
 | RemoteJoy                                                                        | [GPLv2](https://github.com/libretro/libretro-remotejoy/blob/master/LICENSE)               |                |
 | Remote RetroPad                                                                  | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)                   |                |
-| [SameBoy](../library/sameboy.md)                                                 | [MIT](https://github.com/libretro/SameBoy/blob/master/LICENSE)
-
-| [SameDuck](../library/sameduck.md)                                               | [MIT](https://github.com/libretro/)
-                            |                |                            |                |
+| [SameBoy](../library/sameboy.md)                                                 | [MIT](https://github.com/libretro/SameBoy/blob/master/LICENSE) | |
+| [SameDuck](../library/sameduck.md)                                               | [MIT](https://github.com/libretro/) | |
 | [SAME_CDI](../library/same_cdi.md)                                               | [GPLv2](https://github.com/libretro/same_cdi/blob/master/COPYING)                            |                |
 | [ScummVM](../library/scummvm.md)                                                 | [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)                          |                |
 | [Snes9x](../library/snes9x.md)                                                   | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
