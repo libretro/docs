@@ -64,6 +64,7 @@
 | Emux GB                   | Game Boy/Color         |                    |
 | Emux NES                  | Nintendo NES/Famicom   |                    |
 | Emux SMS                  | Sega Master System     |                    |
+| Ep128emu                  | Enterprise 128         |                    |
 | FB Alpha                  | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012             | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012 CPS-1       | CPS-1                  |                    |

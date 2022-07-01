@@ -54,6 +54,7 @@ ColecoVision                  | Gearcoleco         | [BIOS information](gearcole
 Dreamcast                     | Flycast            | [BIOS information](flycast.md#bios)
 DS                            | DeSmuME            | [BIOS information](desmume.md#bios)
 Elektronika - BK-0010/BK-0011 | bk                 | [BIOS information](bk.md#bios)
+Enterprise 128                | ep128emu           | [BIOS information](ep128emu.md#bios)
 GameBoy/GameBoy Color         | Emux GB            | [BIOS information](emux_gb.md#bios)
 GameBoy/GameBoy Color         | Gambatte           | [BIOS information](gambatte.md#bios)
 GameBoy/GameBoy Color         | Gearboy            | [BIOS information](gearboy.md#bios)
