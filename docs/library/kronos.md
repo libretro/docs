@@ -235,6 +235,8 @@ Must be enabled in core options.
 
 - Savestates work but can sometime be quite unstable
 - Enabling both multitaps at the same time causes some kind of "autofire" bug
+- Switching between windowed and fullscreen will cause issues, you need to start the core in your prefered mode and stick with it
+- It seems there are compatibility issues between RetroArch's "threaded video" setting and this core.
 
 ## External Links
 
