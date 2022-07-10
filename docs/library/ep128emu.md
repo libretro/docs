@@ -164,7 +164,7 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 | ![](../image/retropad/retro_x.png)             | Enterprise, TVC: space (fire for internal joystick) <br> CPC: External joystick 1 fire <br> ZX Spectrum: Kempston joystick |                          |
 | ![](../image/retropad/retro_y.png)             | Enter                 |                          |
 | ![](../image/retropad/retro_a.png)             | CPC: External joystick 1 fire 2 | In-game key required for secondary action |
-| ![](../image/retropad/retro_b.png)             | -                 | In-game key required for other action |
+| ![](../image/retropad/retro_b.png)             | -                 | In-game key required for other action (if any) |
 | ![](../image/retropad/retro_select.png)        | -                 | In-game key required to select the supported input method (if any) |
 | ![](../image/retropad/retro_start.png)         | -                 | In-game key required to start the game (if any) |
 | ![](../image/retropad/retro_l1.png)            | Key 0 | In-game key required for other action (if any) |
@@ -176,28 +176,114 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 
 ## Keyboard
 
+### Enterprise 128
+
 The ep128emu core takes the Enterprise UK keyboard as a basis:
 ![](../image/core/ep128emu/enterprise-128-uk-keyboard.png)
 
-Most mappings are straightforward positionally from an ISO UK keyboard. Exceptions are marked in the following table:
+Most mappings are straightforward positionally from an ISO UK keyboard:
+- Dark green: natural mapping, both position and function matches nicely
+- Light green: either position or function is slightly different
+- Yellow: function is different
+- Red: extra mapping
+- Dark grey: keys intentionally reserved for RetroArch / OS functions
+
+![](../image/core/ep128emu/iso-mapping-for-enterprise-128.png)
+
+Exceptions are marked in the following table:
 
 | RetroKeyboard Inputs         | Enterprise keyboard input |
 |------------------------------|---------------------------|
-| Keyboard Backspace           | Erase                     |
-| Keyboard Pause               | Stop                      |
-| Keyboard Quote '             | : (colon)                 |
-| Keyboard Equals =            | ^ (caret)                 |
-| Keyboard Left Bracket [      | @ (at)                    |
-| Keyboard Backslash \         | ] (right bracket)         |
-| Keyboard Right Bracket ]     | [ (left bracket)          |
-| Keyboard Oem 102             | \\ (backslash)            |
-| Keyboard Home                | \\ (alternative mapping)  |
-| Keyboard Backquote `         | Escape (alternative mapping) |
-| Keyboard Delete              | Del                       |
-| Keyboard Insert              | Ins                       |
 | Keyboard F9                  | Hold                      |
 | Keyboard F10                 | Stop                      |
+| Keyboard Pause               | Stop                      |
+| Keyboard Backquote `         | Escape (alternative mapping) |
+| Keyboard Equals =            | ^ (caret)                 |
+| Keyboard Backspace           | Erase                     |
+| Keyboard Left Bracket [      | @ (at)                    |
+| Keyboard Right Bracket ]     | [ (left bracket)          |
+| Keyboard Quote '             | : (colon)                 |
+| Keyboard Backslash \         | ] (right bracket) (shown as # in ISO map) |
+| Keyboard Oem 102             | \\ (backslash)            |
+| Keyboard Home                | \\ (alternative mapping)  |
+| Keyboard Delete              | Del                       |
+| Keyboard Insert              | Ins                       |
 | Keyboard Keypad 0            | External joystick 1 fire  |
+| Keyboard Keypad 2            | External joystick 1 down  |
+| Keyboard Keypad 4            | External joystick 1 left  |
+| Keyboard Keypad 6            | External joystick 1 right |
+| Keyboard Keypad 8            | External joystick 1 up    |
+
+### Videoton TVC
+
+The Videoton TVC has a layout that is somewhat similar to ISO Hungarian layout:
+![](../image/core/ep128emu/videoton-tvc-keyboard.png)
+![](../image/core/ep128emu/iso-mapping-for-videoton-tvc.png)
+
+Since TVC has several extra keys, but no function keys, F-row is used as replacement for those.
+
+| RetroKeyboard Inputs         | TVC keyboard input        |
+|------------------------------|---------------------------|
+| Keyboard F1                  | @                         |
+| Keyboard F2                  | ;                         |
+| Keyboard F3                  | <                         |
+| Keyboard F4                  | \                         |
+| Keyboard F5                  | *                         |
+| Keyboard F6                  | ^                         |
+| Keyboard F7                  | [                         |
+| Keyboard F8                  | ]                         |
+| Keyboard F9                  | *                         |
+| Keyboard F10                 | í                         |
+| Keyboard Backquote `         | 0                         |
+| Keyboard 0                   | ö                         |
+| Keyboard Minus -             | ü                         |
+| Keyboard Equals =            | ó                         |
+| Keyboard Left Bracket [      | ő                         |
+| Keyboard Right Bracket ]     | ú                         |
+| Keyboard Semicolon ;         | é                         |
+| Keyboard Quote '             | á                         |
+| Keyboard Backslash \         | ű                         |
+| Keyboard Oem 102             | í                         |
+| Keyboard Home                | ű (alternative mapping)   |
+| Keyboard Delete              | Del                       |
+| Keyboard Insert              | Ins                       |
+| Keyboard Keypad 0            | External joystick 1 fire  |
+| Keyboard Keypad 2            | External joystick 1 down  |
+| Keyboard Keypad 4            | External joystick 1 left  |
+| Keyboard Keypad 6            | External joystick 1 right |
+| Keyboard Keypad 8            | External joystick 1 up    |
+
+### Amstrad CPC
+
+The Amstrad CPC 464/664 and 6128 fit well to ISO UK layout, with only slight differences:
+![](../image/core/ep128emu/amstrad-cpc-464-keyboard.png)
+![](../image/core/ep128emu/amstrad-cpc-6128-keyboard.png)
+![](../image/core/ep128emu/iso-mapping-for-amstrad-cpc.png)
+
+Function key row is mapped to Fn-array. Extra mappings are marked in the following table:
+
+| RetroKeyboard Inputs         | CPC keyboard input        |
+|------------------------------|---------------------------|
+| Keyboard F1                  | Fn1                       |
+| Keyboard F2                  | Fn2                       |
+| Keyboard F3                  | Fn3                       |
+| Keyboard F4                  | Fn4                       |
+| Keyboard F5                  | Fn5                       |
+| Keyboard F6                  | Fn6                       |
+| Keyboard F7                  | Fn7                       |
+| Keyboard F8                  | Fn8                       |
+| Keyboard F9                  | Fn9                       |
+| Keyboard F10                 | Fn0                       |
+| Keyboard F11                 | Fn Dot (.)                |
+| Keyboard Keypad Enter        | Fn Enter                  |
+| Keyboard Oem 102             | \\                         |
+| Keyboard Home                | \\ (alternative mapping)   |
+| Keyboard Delete              | Del                       |
+| Keyboard Insert              | Copy                      |
+| Keyboard Left Alt            | Copy (alternative mapping) |
+| Keyboard Right Alt           | Fn Dot (alternative mapping) |
+| Keyboard Keypad 0            | External joystick 1 fire  |
+| Keyboard Keypad Period .     | External joystick 1 fire 2 |
 | Keyboard Keypad 2            | External joystick 1 down  |
 | Keyboard Keypad 4            | External joystick 1 left  |
 | Keyboard Keypad 6            | External joystick 1 right |
