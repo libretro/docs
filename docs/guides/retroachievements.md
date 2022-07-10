@@ -273,7 +273,7 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                               | Supported | Notes |
 |----------------------------------------------------|:---------:|:------|
-| [FLycast](https://github.com/libretro/flycaste) | ✔         | RetroArch 1.10.1 or higher required. |
+| [FLycast](https://github.com/libretro/flycast) | ✔         | RetroArch 1.10.1 or higher required. |
 
 #### Master System / MegaDrive - Genesis
 
