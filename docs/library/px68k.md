@@ -2,17 +2,18 @@
 
 ## Background
 
-Portable SHARP X68000 Emulator for PSP, Android and other platforms.
+The X68000 (エックスろくまんはっせん Ekkusu Rokuman Hassen) is a home computer created by Sharp, first released in March, 1987, sold only in Japan. The X68000 to SUPER models had a Hitachi HD68HC000 CPU at 10 MHz. The XVI to Compact models had a Motorola 68000 at 16 MHz. The X68030 has a Motorola MC68EC030 CPU at 25 MHz. They had 1-4MB of RAM and 1MB of VRAM. It had a Sharp-Hudson Custom Chipset as its GPU. This libretro branch was forked, starting on May 3, 2017, from hissorii's old build (Last updated on August 2014), backported 'c68k' core from kenyahiro's 'px68k' branch (fork of hissorii's 'px68k' branch using recent c68k yabause core to support X64 build). The Pandora version (An open-source handheld PC) by ptitSeb was forked from hissorii's 'px68k' branch and encapsulates the latest code from px68k-libretro (A spin-off of hissorii's branch).
 
 ### Author/License
 
 The PX68k core has been authored by
 
 - hissorii
+- kenyahiro
 
 The PX68k core is licensed under
 
-- [kero_src.txt](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)
+- [kero_src](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -112,13 +113,13 @@ When prompted, use internal audio option if possible. All other audio/midi are n
 
 ### Geometry and timing
 
-- The PX68k core's core provided FPS is 55.45 or 59.94.
-- The PX68k core's core provided sample rate is 44100 Hz
-- The PX68k core's base width is 800
-- The PX68k core's base height is 600
-- The PX68k core's max width is 800
-- The PX68k core's max height is 600
-- The PX68k core's core provided aspect ratio is 4/3
+- The PX68k core's core provided FPS is `55.45` or `59.94`.
+- The PX68k core's core provided sample rate is `44100Hz`.
+- The PX68k core's base width is `800`.
+- The PX68k core's base height is `600`.
+- The PX68k core's max width is `800`.
+- The PX68k core's max height is `600`.
+- The PX68k core's core provided aspect ratio is `4/3`
 
 ## Usage
 
