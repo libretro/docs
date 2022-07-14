@@ -2,7 +2,7 @@
 
 ## Background
 
-Awaiting description.
+NP2kai is a PC-9801 series core. The NEC PC-9800, also known as the PC-98, were a family of computers made by NEC throughout 1982 to 2000. Despite using Intel x86 chips, MS-DOS and Windows OS, and many other superficial similarities, the series is not IBM compatible. Some PC-98 software may work on an IBM or vice versa, but this is very YMMV. In fact, the introduction of a native Japanese version of standard MS-DOS in the early 90s and subsequent entry of cheaper foreign IBM clones in the Japanese market was the nail in the coffin for the PC-98. They were not released or marketed outside of Japan (besides few attempts such as APC-III and PC-9801FC), but still useful for playing early visual novels and Touhou games.
 
 ### Author/License
 
@@ -114,9 +114,9 @@ The Neko Project II Kai core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Neko Project II Kai core's core provided FPS is 56.4
-- The Neko Project II Kai core's core provided sample rate is 44100 Hz
-- The Neko Project II Kai core's core provided aspect ratio is 8/5
+- The Neko Project II Kai core's core provided FPS is `56.4`.
+- The Neko Project II Kai core's core provided sample rate is `44100Hz`.
+- The Neko Project II Kai core's core provided aspect ratio is `8/5`.
 
 ## Usage
 
