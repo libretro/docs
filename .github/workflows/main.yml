@@ -2,19 +2,21 @@ name: Publish docs via GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
-    steps:   
-      - name: Checkout master
-        uses: actions/checkout@v3.0.0
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
 
       - name: Deploy docs
-        uses: fpscan/mkdocs-deploy-gh-pages@master
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_DOMAIN: optionaldomain.com
+          CONFIG_FILE: folder/mkdocs.yml
+          EXTRA_PACKAGES: build-base
           REQUIREMENTS: docs/requirements.txt
-          
