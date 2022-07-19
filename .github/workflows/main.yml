@@ -3,6 +3,17 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+   inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'release' 
+        type: choice
+        options:
+        - debug 
+        - release  
+        - testing
 
 jobs:
   build:
