@@ -22,7 +22,7 @@ If you're unsure about the result, run this test several times and see if the re
 
 ## Input latency
 
-There have been cases reported on excessive input lag in Windows for some users. It's not really input latency, but video driver latency. Some video drivers tend to buffer way too much in the name of increased performance. This problem is explained by Carmack [here](https://www.twentymilliseconds.com/post/latency-mitigation-strategies/).
+There have been cases reported on excessive input lag in Windows for some users. It's not really input latency, but video driver latency. Some video drivers tend to buffer way too much in the name of increased performance. This problem is explained by Carmack [here](https://danluu.com/latency-mitigation/).
 
 !!! note
     The original John Carmack article is unavailable. The above link is a reproduction, as explained in the intro.
