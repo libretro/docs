@@ -48,13 +48,13 @@ Frontend-level settings or features that the Citra core respects.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -92,6 +92,28 @@ The Citra Shaders should be in ../cores/savefilesCitra/shaders/opengl/transferab
 - The Citra core's max height is (Max height)
 - The Citra core's core provided aspect ratio is (Ratio)
 
+## Cheats
+
+The Citra core supports internal cheats, but you have to enable them manually:
+
+1. Grab a Citra cheats file for your game, you can find a lot of them here for example: [https://github.com/iSharingan/CTRPF-AR-CHEAT-CODES/tree/master/Cheats](https://github.com/iSharingan/CTRPF-AR-CHEAT-CODES/tree/master/Cheats)
+2. Put the file (`[game_id].txt`) in your frontend's `saves/Citra/cheats/` folder.
+3. Open the .txt file with a text editor, add `*citra_enabled` below the cheat title and save changes.
+
+As an example, if you want to enable the "All Characters" cheat for Mario Kart 7 you have to edit `[frontend_dir]/saves/Citra/cheats/0004000000030800.txt` and change that part:
+```
+[All Characters, Game v1.0]
+D3000000 14000000
+0013C99C 01FF003F
+```
+to:
+```
+[All Characters, Game v1.0]
+*citra_enabled
+D3000000 14000000
+0013C99C 01FF003F
+```
+
 ## Core options
 
 The Citra core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
@@ -109,6 +131,34 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Awaiting description.
 
 - **Enable shader JIT** [citra_use_shader_jit] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Enable hardware shaders** [citra_use_hw_shaders] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Save hardware shader cache to disk** [citra_use_hw_shader_cache] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Enable accurate geometry shaders (only for H/W shaders)** [citra_use_acc_geo_shaders] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Enable accurate shaders multiplication (only for H/W shaders)** [citra_use_acc_mul] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Texture filter type** [citra_texture_filter] (**none**|Anime4K Ultrafast|Bicubic|ScaleForce|xBRZ freescale)
+
+	Awaiting description.
+
+- **Enable custom textures** [citra_custom_textures] (**disabled**|enabled)
+
+	Awaiting description.
+
+- **Dump textures** [citra_dump_textures] (**disabled**|enabled)
 
 	Awaiting description.
 
@@ -141,6 +191,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Awaiting description.
 
+- **Simulate touchscreen interactions with mouse** [citra_mouse_touchscreen] (**enabled**|disabled)
+
+	Awaiting description.
+
+- **Simulate touchscreen interactions with touchscreen** [citra_touch_touchscreen] (**disabled**|enabled)
+
+	Awaiting description.
+
+- **Render simulated touchscreen interactions** [citra_render_touchscreen] (**disabled**|enabled)
+
+	Awaiting description.
+
 - **Enable virtual SD card** [citra_use_virtual_sd] (**enabled**|disabled)
 
 	Awaiting description.
@@ -154,6 +216,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Awaiting description.
 
 - **3DS system region** [citra_region_value] (**Auto**|Japan|USA|Europe|Australia|China|Korea|Taiwan)
+
+	Awaiting description.
+
+- **3DS system language** [citra_language] (**English**|Japanese|French|Spanish|German|Italian|Dutch|Portuguese|Russian|Korean|Traditional Chinese|Simplified Chinese)
 
 	Awaiting description.
 
