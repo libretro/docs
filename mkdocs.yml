@@ -427,6 +427,17 @@ extra:
 theme:
   name: material
   custom_dir: docs/overrides/
+  palette:
+    - scheme: retroarch
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: black
+      accent: deep purple  
   # 404 page
   static_templates:
     - 404.html

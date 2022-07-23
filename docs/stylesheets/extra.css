@@ -1,4 +1,4 @@
-:root {
+[data-md-color-scheme="retroarch"] {
   --md-default-fg-color:               #000000;
   --md-primary-fg-color:        #58598a;
   --md-accent-fg-color:                #2c2d45;
@@ -18,5 +18,4 @@
   background-color: rgb(43, 155, 70);
   -webkit-mask-image: var(--md-admonition-icon--regular);
           mask-image: var(--md-admonition-icon--regular);
-}
 }
