@@ -28,6 +28,7 @@ Content that can be loaded by the Yabause core have the following file extension
 - .mds
 - .chd
 - .zip
+- .m3u
 
 ## Databases
 
@@ -45,6 +46,9 @@ Required or optional firmware files go in the frontend's system directory.
 
 This md5sum is just a hint, it is not required, any valid saturn bios should work.
 
+!!! Question "Is the bios really optional ?"
+    It's highly recommended to install a real bios, the emulated bios is not perfect and has lesser compatibility. Furthermore, due to the nature of "multi-disc" games on Sega Saturn (they are independent game discs that will send you back to the bios screen when switching), the bios is **required** if you intend to load m3u files.
+
 ## Features
 
 Frontend-level settings or features that the Yabause core respects.
@@ -54,7 +58,7 @@ Frontend-level settings or features that the Yabause core respects.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
@@ -70,7 +74,7 @@ Frontend-level settings or features that the Yabause core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
@@ -178,7 +182,7 @@ Must be enabled in core options.
 ## Known issues
 
 - Savestates work but can freeze a game
-- Enabling both multitaps at the same time causes some kind of "autofire" bug
+- Enabling both multitaps at the same time causes some sort of "autofire" bug
 
 ## External Links
 
