@@ -23,7 +23,7 @@ Enter the following commands (from the PCSX2 source directory):
 
 In addition to the requirement(s) listed above, you will also need Visual Studio 2019 installed in order for the following to work.
 
-Enter the following commands (from the Dolphin source directory):
+Enter the following commands (from the PCSX2 source directory):
 
     mkdir build
     cd build
