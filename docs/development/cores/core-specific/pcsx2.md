@@ -18,6 +18,11 @@ Enter the following commands (from the PCSX2 source directory):
 !!! Warning
     If it says 'Could not find named generator' or something to that effect, it means you might be using
     the wrong cmake version on Msys2/Mingw. Remove the regular 'cmake' package and try to install 'mingw-w64-x86_64-cmake' instead.
+    
+!!! Warning
+    If you get this error 'Visual Studio 15 2017 could not find any instance of Visual Studio', your installation of Visual Studio 2017
+    is most likely missing 'Visual C++ tools for CMake'. This can be found under 'Desktop development with C++'. Go back to Visual Studio
+    2017 and install this, then try again.
 
 ## How to compile (for Windows x64 - Visual Studio 2019)
 
