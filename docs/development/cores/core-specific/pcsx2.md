@@ -3,6 +3,7 @@
 ## Requirements
 
 - CMake
+- xxd (optional)
 
 ## How to compile (for Windows x64 - Visual Studio 2017)
 
