@@ -19,6 +19,7 @@ This has a couple of benefits:
 - We dont have to keep editing every platform port's Makefile individually whenever we add a new file. We can simply update these Griffin files without touching any of the platform Makefiles.
 
 Some disadvantages (that we cater to regardless):
+
 - Because all of the C/C++/ObjC files all get included into one source file, it is necessary that all symbols and function names are uniquely named. We make sure in RetroArch this is the case.
 
 ## Salamander
