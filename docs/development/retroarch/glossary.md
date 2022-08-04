@@ -7,6 +7,7 @@ While developing RetroArch, you might find some terms which are unfamiliar to ne
 Most of the console platforms of RetroArch use a concept we call 'Griffin'. 
 
 Basically:
+
 - Every C file gets included in griffin/griffin.c.
 - Every C++ file gets included in griffin/griffin_cpp.cpp.
 - Every ObjectiveC file gets included in griffin_objc.m
