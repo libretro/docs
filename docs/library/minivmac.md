@@ -42,7 +42,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 |   Filename      |      Description       |              md5sum              |
 |:---------------:|:----------------------:|:--------------------------------:|
-| MacII.rom    |   | 66223be14974601f1e60885eeb35e03cc |
+| MacII.rom    |   | 66223BE1497460F1E60885EEB35E03CC |
 
 ## Features
 
