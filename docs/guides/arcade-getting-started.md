@@ -12,60 +12,99 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ---
 
-## Introduction : demystifying arcade emulation, accuracy, emulator and romset versioning
-
-What we refer as "arcade emulation" is the emulation of thousands of different machines. While it is considered that a console emulator emulating a single machine is never 100% finished, imagine this for an arcade emulator, this is why ongoing arcade emulators like MAME or FinalBurn have received updates basically every day for the past 25 years. 
-
-You often read that more recent emulators are more "accurate" : this is such a vague word whose real meaning is that graphics, sound and gameplay are more likely to be faithful to the real machine. The vintaged cores are meant as a workaround for performance issues, because emulating a machine properly is likely to be more demanding, so the older the year in the core's name the more likely the core will be faster while having additional more or less noticeable glitches. MAME2003-Plus is somehow an exception to that rule, because it mixes emulation code from back in 2003 with more recent emulation code, so sometimes it will emulate games more properly than more recent vintages of mame.
-
-Part of the reason older emulators are more likely to have major bugs is that they are using a lot of bad dumps. What we refer as a dump is the digital representation of a chip, a romset is a collection of those dumps, 1 dump for each chip. Sometimes the attempts at digitalizing some of those chips failed, and instead of having the game totally unplayable because the romset was only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable, those workarounds are known for going as far as changing gameplay by causing different enemy patterns from the real game. Every time one of those chips finally gets a proper dump, which can happen decades later (some of those boards are rare and pricy, dumping the chips is a complex process which can be harmful, meaning those new romset versions aren't made just for fun), ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump.
-
----
-
 ## Step 1: Choose an arcade emulator to match your system
 
-There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system.
+There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system. There is no "best arcade core", recommending one is hard without knowing your device and what you intend to play, each of them are a balance between multiple criterias.
 
-**There are two principle criteria which affect arcade emulator core choice:**
+### The criterias for choosing an arcade core:
 
-  * Frontend integration
-  * Processor performance requirements versus supported game library
+#### Integration within the libretro ecosystem:
+A better integration allows for more features to be available from the frontend you are using, like netplay, runahead, rewind, retroachievements, ... but also reduces the risk of bugs. The quality of the integration is directly linked to the availability of a support team for the core.
 
-#### Frontend integration
-Among the libretro arcade cores, **FinalBurn Neo** and **MAME 2003-Plus** have the closest integration with the libretro frontend API. In practice, this means that more functionality is accessible through libretro frontends like RetroArch in areas like configuration, control mapping, fast forward and rewind, screenshots, etc. .
+#### Accuracy:
+More recent version of the emulators should always be more accurate, which means the graphics, sound and gameplay of the games are more likely to be faithful to the original cabinet.
 
-#### Processor performance requirements versus supported game library
-As the years have passed, emulators have become able to recreate arcade games with more and more accuracy to the original system. Arcade emulators have also added support for emulating more games over time. Particularly with MAME cores, increasing emulation accuracy requires increasing amounts of processing power, meaning that cores based on more recent emulators require greater processor power than cores based on older versions.
+#### Romset versioning:
+Part of the reason older emulators are more likely to be less accurate is that they are using a lot of bad dumps. What we refer as a dump is the digital representation of a chip, a romset is a collection of those dumps, 1 dump for each chip. Sometimes the attempts at digitalizing some of those chips failed, and instead of having the game totally unplayable because the romset was only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable, those workarounds are known for going as far as changing gameplay by causing different enemy patterns from the real game. Every time one of those chips finally gets a proper dump, which can happen decades later, ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump. Some of those boards are rare and pricy, dumping the chips is a complex process which can be harmful, meaning while it can be annoying for the end user to update their romsets, those new romsets aren't made for fun.
 
-### Ultra low-power devices
-For purposes of this guide, ultra low-power devices are those such as the Raspberry Pi 0 as well as older smartphones and tablets.
+#### Performance:
+Being more accurate usually means the emulation will be more taxing on your cpu, so older versions of emulators will usually perform better and are worth trying if you have performance issues with more recent versions. Accuracy is not the only reason for performance regression though, the emulator framework has an impact too, this is especially noticeable on MAME which had its framework constantly updated over the years.
 
-|  | Recommended MAME Emulator | Recommended FinalBurn Emulator |
-| :---: | :---: | :---: |
-| **Primary recommendation** | MAME 2000 | FB Alpha 2012 |
-| **Secondary recommendation** | MAME 2003-Plus | FinalBurn Neo |
+#### Supported games:
+What we refer as "arcade emulation" is the emulation of thousands of different machines. Arcade emulators keep adding support for new machines over the years, so the more recent versions support more games. This is a double-edged sword as far as performance is concerned, because it can require updates to an already emulated component, to add a previously unemulated/unnecessary feature of the component, which might impact its emulation performance even for the machines that don't need this feature.
 
-!!! Note
-    _Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
+#### Emulator goal:
+MAME's goal is to emulate every existing machines, including machines unrelated to gaming (it can emulate printers, cigarette vending machines, ...), the most accurately possible, while documenting them thoroughly. FinalBurn's goal is mainly to offer a comfortable experience for the end-user as a gaming software. MAME 2003-Plus has pretty much the same goal as FinalBurn, with both emulators actually sharing a few contributors.
 
-### Low-power devices
-For purposes of this guide, low power devices include:
+#### Support team:
+Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps but doesn't really have a maintainer taking care of known issues. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
 
-  * Single board computers like the Raspberry Pi2 and Raspberry Pi3, Odroid-XU3/4, and Amlogic S905 boxes
-  * Consoles like the original XBox, the PlayStation 3, Wii, WiiU, and Switch
-  * Modern smartphones and tablets
-  * Desktop and laptop computers with processors from the Pentium 4/Athlon XP generation to the Sandy Bridge/K10 generation.
+### Quick guide:
 
-| | Recommended MAME Emulator | Recommended FinalBurn Emulator |
-| :---: | :---: | :---: |
-| **Primary recommendation** | MAME 2003-Plus | FinalBurn Neo |
-| **Secondary recommendation** | MAME 2010, MAME 2016 | N/A |
+#### FinalBurn Neo:
+* has the tightest integration within the libretro ecosystem
+* is mostly accurate, can be more accurate than MAME (current) on a few games
+* uses the latest known good romsets
+* is reasonably fast
+* has a support team
+* doesn't support 3D games, doesn't support as many 2D games than MAME
+* keeps adding support for new games
 
-!!! Note
-    _Secondary recommendations do not run at full speed on all systems in this category, but may allow the user to play games which are not available via the primary recommendation._
+#### MAME 2003-Plus:
+* has the second tightest integration within the libretro ecosystem
+* while originally forked from MAME 2003, can be fairly accurate on some games since it incorporates some emulation fixes from recent versions of MAME
+* is quite fast, this fork was originally meant by the author to run on a pentium III @ 733mhz (Xbox OG)
+* doesn't have fixed romsets, doesn't always use latest known good romsets either
+* has a support team
+* supports a few classics that aren't supported yet in FinalBurn Neo
+* keeps adding support for new games
 
-### Full-power devices
-Users with modern desktop and laptop processors, and other full power systems, have the greatest flexibility in terms of which arcade emulator cores to use.
+#### MAME (current):
+* is the slowest core and the one that consumes the most memory
+* is usually the most accurate
+* uses the latest known good romsets
+* has the widest range of emulated machines
+* has the shallowest libretro implementation, with concerning issues (see [broken shaders on vertical games](https://github.com/libretro/mame/issues/261))
+
+#### FinalBurn Alpha 2012:
+* has splitted cores for optimized memory usage if you are using a device with very very limited memory (wii, nds, ...)
+* has fixed romsets
+* is an older version of FinalBurn Neo, and as such should be faster while being less accurate and supporting less games, the libretro integration isn't as good either
+* should only be considered as an alternative on ultra low-power devices
+
+#### MAME 2000:
+* is the fastest arcade core
+* is the most inaccurate arcade core
+* has fixed romsets
+* has the smallest list of supported games
+* should only be considered as an alternative on ultra low-power devices
+
+#### MAME 2003:
+* is slower than MAME 2000
+* is more accurate than MAME 2000
+* has fixed romsets
+* support more games than MAME 2000
+* probably shouldn't be used at all, MAME 2003-Plus is just plain better
+
+#### MAME 2010:
+* is slower than MAME 2003
+* is more accurate than MAME 2003
+* has fixed romsets
+* support more games than MAME 2003
+* probably shouldn't be used at all, most of the interesting things it has to offer were backported to MAME 2003-Plus, including lots of game additions
+
+#### MAME 2015:
+* is slower than MAME 2010
+* is more accurate than MAME 2010
+* has fixed romsets
+* support more games than MAME 2010
+
+#### MAME 2016:
+* is slower than MAME 2015
+* is more accurate than MAME 2015
+* has fixed romsets
+* support more games than MAME 2015
+* has the same shallow libretro implementation than MAME (current)
 
 ---
 
