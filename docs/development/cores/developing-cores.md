@@ -174,6 +174,8 @@ It is discouraged to do libretro API calls outside of `retro_run()` i.e. outside
 There are several steps before your core can be available to user via the Online Updater > Core Downloader :
 
  1. Add your Libretro core info to [libretro-super repository](https://github.com/libretro/libretro-super/tree/master/dist/info)
+    - As a test, place info file to `libretro_info_path`, load core, and validate if information shows up correctly: Information / Core Information
  2. Add [.gitlab-ci.yml](https://github.com/search?q=org%3Alibretro+.gitlab-ci.yml&type=commits) to the root directory of your source code so it can be added to Libretro CI/CD.
  3. If you want your core to be compatible with [RetroArch's playlist](/guides/roms-playlists-thumbnails) :
     - Add at least icons playlist and content for your core in [RetroArch assets repository](https://github.com/libretro/retroarch-assets/tree/master/src/xmb/monochrome)
+ 4. Add documentation of your core following the instructions in [libretro-docs](https://github.com/libretro/docs#adding-a-new-core).
