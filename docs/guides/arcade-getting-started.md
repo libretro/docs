@@ -39,7 +39,7 @@ MAME's goal is to emulate every existing machines, including machines unrelated 
 #### Support team:
 Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps but doesn't really have a maintainer taking care of known issues. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
 
-### Quick guide:
+### Quick tour of every available core:
 
 #### FinalBurn Neo:
 * has the tightest integration within the libretro ecosystem
