@@ -27,6 +27,7 @@ Content that can be loaded by the Stella core have the following file extensions
 
 - .a26
 - .bin
+- .zip
 
 ## Databases
 
