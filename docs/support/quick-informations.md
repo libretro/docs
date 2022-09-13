@@ -1,8 +1,8 @@
-## What is latest version of RetroArch
+## What is the latest version of RetroArch
 
 It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.com/stable/{{ unit.stable }}/).
 
-## What is the official links
+## What are the official links
 
 === "Main"
 
