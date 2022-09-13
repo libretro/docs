@@ -26,7 +26,7 @@ Libretro is a simple API that allows for the creation of games and emulators. It
 
 When you choose to use the libretro API, your program gets turned into a single library file (called a ‘libretro core’). A frontend that supports the libretro API can then load that library file and run the app. The frontend’s responsibility is to provide all the implementation-specific details, such as video/audio/input drivers. The libretro core’s responsibility is solely to provide the main program. You therefore don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs/sound APIs/supporting all known joypads/etc. This is none of your concern at the libretro core implementation level.
 
-## Logo/Mascott
+## Logo/Mascot
 
 ![Invader](../image/start/icon.png){ align=left }
 We call them Invader but you can call it *Nice Little Pixel*, it was drawn from scratch by talented [Runar Heyer](https://twitter.com/runarheyer) and it has a completely different visual style.
