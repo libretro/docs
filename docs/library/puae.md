@@ -141,7 +141,7 @@ The PUAE core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The PUAE core's core provided FPS is dynamic, but initially 49.9201277955271580 for PAL and 59.8250950570342180 for NTSC
+- The PUAE core's core provided FPS is dynamic, but initially by default 50 for PAL and 59.94 for NTSC
 - The PUAE core's core provided sample rate is 44100 Hz
 - The PUAE core's base width is 360 in LoRes, 720 in HiRes 1440 in SuperHires
 - The PUAE core's base height is 288 for PAL single line, 576 for PAL double line, 240 for NTSC single line, 480 for NTSC double line
@@ -293,14 +293,16 @@ The virtual keyboard can be controlled with:
 
 - **RetroPad**
 
-    | Button   | Action              |
-    |----------|---------------------|
-    | D-Pad    | Move                |
-    | B        | Keypress            |
-    | A        | Toggle transparency |
-    | Y        | Toggle CapsLock     |
-    | X        | Press Space         |
-    | Start    | Press Return        |
+    | Button        | Action              |
+    |---------------|---------------------|
+    | D-Pad         | Move                |
+    | B             | Keypress            |
+    | A             | Toggle transparency |
+    | Y             | Toggle CapsLock     |
+    | Y (Long)      | Quick map button    |
+    | Y (Very long) | Quick clear button  |
+    | X             | Press Space         |
+    | Start         | Press Return        |
 
 - **Keyboard**
 
@@ -315,14 +317,14 @@ The virtual keyboard can be controlled with:
 
 The virtual keyboard has these additional actions:
 
-- `J/M` = Switch between joystick/mouse
+- `J/M`  = Switch between joystick/mouse
 - `TRBF` = Toggle turbo fire
 
 - CapsLock off:
     - `ASPR` = Toggle aspect ratio
     - `STBR` = Toggle statusbar
 - CapsLock on:
-    - `ZOOM` = Toggle zoom mode
+    - `CROP` = Toggle crop mode
     - `SVDS` = Create/Insert & remove save disk
 
 - Reset (Red key with undo icon, soft reset = Ctrl-Amiga-Amiga)
@@ -479,9 +481,70 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility. Core restart required.
 
-- **CPU Compatibility** [puae_cpu_compatibility] (normal|**compatible**|memory|exact)
+- **Chip RAM** [puae_chipmem_size] (**auto**|1|2|3|4)
 
-    Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.
+    'Automatic' defaults to the current preset model. Core restart required.
+
+    | Value | Label                 |
+    |-------|-----------------------|
+    | auto  | Automatic             |
+    | 1     | 0.5M                  |
+    | 2     | 1M                    |
+    | 3     | 1.5M                  |
+    | 4     | 2M                    |
+
+- **Slow RAM** [puae_bogomem_size] (**auto**|0|2|4|6|7)
+
+    'Automatic' defaults to the current preset model. Core restart required.
+
+    | Value | Label                 |
+    |-------|-----------------------|
+    | auto  | Automatic             |
+    | 0     | None                  |
+    | 2     | 0.5M                  |
+    | 4     | 1M                    |
+    | 6     | 1.5M                  |
+    | 7     | 1.8M                  |
+
+- **Z2 Fast RAM** [puae_fastmem_size] (**auto**|0|1|2|4|8)
+
+    'Automatic' defaults to the current preset model. Core restart required.
+
+    | Value | Label                 |
+    |-------|-----------------------|
+    | auto  | Automatic             |
+    | 0     | None                  |
+    | 1     | 1M                    |
+    | 2     | 2M                    |
+    | 4     | 4M                    |
+    | 8     | 8M                    |
+
+- **Z3 Fast RAM** [puae_z3mem_size] (**auto**|0|1|2|4|8|16|32|64|128|256|512)
+
+    'Automatic' defaults to the current preset model. Core restart required.
+
+    | Value | Label                 |
+    |-------|-----------------------|
+    | auto  | Automatic             |
+    | 0     | None                  |
+    | 1     | 1M                    |
+    | 2     | 2M                    |
+    | 4     | 4M                    |
+    | 8     | 8M                    |
+    | 16    | 16M                   |
+    | 32    | 32M                   |
+    | 64    | 64M                   |
+    | 128   | 128M                  |
+    | 256   | 256M                  |
+    | 512   | 512M                  |
+
+- **CPU Model** [puae_cpu_model] (**auto**|68000|68010|68020|68030|68040|68060)
+
+    'Automatic' defaults to the current preset model. Core restart required.
+
+- **FPU Model** [puae_fpu_model] (**auto**|0|68881|68882|cpu)
+
+    'Automatic' defaults to the current preset model. Core restart required.
 
 - **CPU Speed** [puae_cpu_throttle] (-900.0|**0.0**|10000.0)
 
@@ -501,6 +564,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | 10    | 35.468950 MHz         |
     | 12    | 42.562740 MHz         |
     | 16    | 56.750320 MHz         |
+
+- **CPU Compatibility** [puae_cpu_compatibility] (**normal**|compatible|memory|**exact**)
+
+    Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.
+
+    (x86_64 defaults to **exact**, others to **normal**)
 
 ### Media options
 
@@ -545,15 +614,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'OFF' saves separate files per content. Starting without content uses the shared file. CD32 and CDTV use separate shared files. Core restart required.
 
-- **Global Boot HD** [puae_use_boot_hd] (**disabled**|files|hdf20|hdf40|hdf80|hdf128|hdf256|hdf512)
-
-    Attach a hard disk meant for Workbench usage, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF. Core restart required.
 
 - **WHDLoad Support** [puae_use_whdload] (disabled|**files**|hdfs)
 
     Enable launching pre-installed WHDLoad installs. Creates a helper image for loading content and an empty image for saving. Core restart required.
     - 'Files' creates the data in directories
     - 'HDFs' contains the data in images
+
+- **WHDLoad Theme** [puae_use_whdload_theme] (**default**|native)
+
+    AmigaOS 'system-configuration' color prefs in WHDLoad helper image. Available only with 'Files' mode. Core restart required
+    - 'Default' = Black/White/DarkGray/LightGray
+    - 'Native'  = Gray/Black/White/LightBlue
 
 - **WHDLoad Splash Screen** [puae_use_whdload_prefs] (**disabled**|config|splash|both)
 
@@ -570,6 +642,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | config | Config (Show only if available)       |
     | splash | Splash (Show briefly)                 |
     | both   | Config + Splash (Wait for user input) |
+
+- **Global Boot HD** [puae_use_boot_hd] (**disabled**|files|hdf20|hdf40|hdf80|hdf128|hdf256|hdf512)
+
+    Attach a hard disk meant for Workbench usage, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF. Core restart required.
+
+- **Cartridge** [puae_cartridge] (**disabled**)
+
+    Cartridge images go in 'system/uae/' or 'system/uae_data/'. Core restart required.
 
 ### Video options
 
@@ -613,21 +693,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'PAL': 1/1 = 1.000
     - 'NTSC': 44/52 = 0.846
 
-- **Zoom Mode** [puae_zoom_mode] (**disabled**|minimum|smaller|small|medium|large|larger|maximum|auto)
+- **Crop** [puae_crop] (**disabled**|minimum|smaller|small|medium|large|larger|maximum|auto)
 
-    Crop borders to fit various host screens.
+    Remove borders according to 'Crop Mode'.
 
-    Requirements in RetroArch settings:
-    - Aspect Ratio: Core provided
-    - Integer Scale: Off
-
-- **Zoom Mode Crop** [puae_zoom_mode_crop] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
+- **Crop Mode** [puae_crop_mode] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
 
     'Horizontal + Vertical' & 'Automatic' removes borders completely.
 
 - **Vertical Position** [puae_vertical_pos] (**auto**|0|-20...70)
 
-    'Automatic' keeps only zoomed screens centered. Positive values move upward and negative values move downward.
+    'Automatic' keeps only cropped screens centered. Positive values move upward and negative values move downward.
 
 - **Horizontal Position** [puae_horizontal_pos] (**auto**|0|-40...40)
 
@@ -667,11 +743,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Keyboard transparency can be toggled with RetroPad A.
 
+- **Virtual KBD Dimming** [puae_vkbd_dimming] (0%|**25%**|50%|75%|100%)
+
+    Dimming level of the surrounding area.
+
 - **Statusbar Mode** [puae_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
 
     - 'Full': Joyports + Current image + LEDs
     - 'Basic': Current image + LEDs
     - 'Minimal': Track number + FPS hidden
+
+- **Statusbar Messages** [puae_statusbar_messages] (**disabled**|enabled)
+
+    Show messages when statusbar is hidden.
 
 ### Audio options
 
@@ -765,7 +849,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Toggle Aspect Ratio** [puae_mapper_aspect_ratio_toggle] (**---**)
 
-- **Toggle Zoom Mode** [puae_mapper_zoom_mode_toggle] (**---**)
+- **Toggle Crop** [puae_mapper_crop_toggle] (**---**)
 
 - **RetroPad Select** [puae_mapper_select] (**TOGGLE_VKBD**)
 

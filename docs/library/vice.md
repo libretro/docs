@@ -43,6 +43,7 @@ Content that can be loaded by the VICE cores have the following file extensions:
 
 - .t64
 - .tap
+- .tcrt
 
 ### Read-only memory
 
@@ -309,14 +310,16 @@ The virtual keyboard can be controlled with:
 
 - **RetroPad**
 
-    | Button   | Action              |
-    |----------|---------------------|
-    | D-Pad    | Move                |
-    | B        | Keypress            |
-    | A        | Toggle transparency |
-    | Y        | Toggle ShiftLock    |
-    | X        | Press Space         |
-    | Start    | Press Return        |
+    | Button        | Action              |
+    |---------------|---------------------|
+    | D-Pad         | Move                |
+    | B             | Keypress            |
+    | A             | Toggle transparency |
+    | Y             | Toggle ShiftLock    |
+    | Y (Long)      | Quick map button    |
+    | Y (Very long) | Quick clear button  |
+    | X             | Press Space         |
+    | Start         | Press Return        |
 
 - **Keyboard**
 
@@ -332,13 +335,13 @@ The virtual keyboard can be controlled with:
 The virtual keyboard has these additional actions:
 
 - ShiftLock off:
-    - `STB` = Toggle statusbar
-    - `JOY` = Switch joystick ports
-    - `TRF` = Toggle turbo fire
+    - `STBR` = Toggle statusbar
+    - `JOYP` = Switch joystick ports
+    - `TRBF` = Toggle turbo fire
 - ShiftLock on:
-    - `SVD` = Create/Insert & remove save disk
-    - `ASR` = Toggle aspect ratio
-    - `ZOM` = Toggle zoom mode
+    - `SVDS` = Create/Insert & remove save disk
+    - `ASPR` = Toggle aspect ratio
+    - `CROP` = Toggle crop mode
 
 - Reset (Red key with undo icon, obeys 'Reset Type' core option)
 - Datasette controls (Reset, Play, Rewind, Forward, Stop)
@@ -467,12 +470,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'Hard' erases all memory
     - 'Freeze' is for cartridges
 
-- **Cartridge** [vice_cartridge] (**disabled**)
-
-    Cartridge images go in 'system/vice/[corename]'.
-
-    Changing while running resets the system!
-
 - **Autostart** [vice_autostart] (disabled|**enabled**|warp)
 
     'ON' always runs content, 'OFF' runs only PRG/CRT, 'Warp' turns warp mode on during autostart loading.
@@ -487,7 +484,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Warp Boost** [vice_warp_boost] (disabled|**enabled**)
 
-    Make Warp Mode much faster by temporary changing SID emulation to 'FastSID' while warping.
+    Make warp mode much faster by changing SID emulation to 'FastSID' while warping.
 
 - **True Drive Emulation** [vice_drive_true_emulation] (disabled|**enabled**)
 
@@ -513,6 +510,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Work disk in device 8 will not be inserted when floppy content is launched.
 
+- **Cartridge** [vice_cartridge] (**disabled**)
+
+    Cartridge images go in 'system/vice/[corename]'.
+
+    Changing while running resets the system!
+
 ### Video options
 
 - **Show Video Options** [vice_video_options_display] (**disabled**|enabled)
@@ -523,15 +526,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Hotkey toggling disables this option until core restart.
 
-- **Zoom Mode** [vice_zoom_mode] (**disabled**|small|medium|maximum|auto|auto_disable|manual)
+- **Crop** [vice_crop] (**disabled**|small|medium|maximum|auto|auto_disable|manual)
 
-    Crop borders to fit various host screens.
+    Remove borders according to 'Crop Mode'.
 
-    Requirements in RetroArch settings:
-    - Aspect Ratio: Core provided
-    - Integer Scale: Off
-
-- **Zoom Mode Crop** [vice_zoom_mode_crop] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
+- **Crop Mode** [vice_crop_mode] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
 
     'Horizontal + Vertical' & 'Maximum' removes borders completely. Ignored with 'Manual' zoom.
 
@@ -691,11 +690,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Keyboard transparency can be toggled with RetroPad A.
 
+- **Virtual KBD Dimming** [vice_vkbd_dimming] (0%|**25%**|50%|75%|100%)
+
+    Dimming level of the surrounding area.
+
 - **Statusbar Mode** [vice_statusbar] (**bottom**|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)
 
     - 'Full': Joyports + Current image + LEDs
     - 'Basic': Current image + LEDs
     - 'Minimal': Track number + FPS hidden
+
+- **Statusbar Messages** [vice_statusbar_messages] (**disabled**|enabled)
+
+    Show messages when statusbar is hidden.
 
 - **Light Pen/Gun Pointer Color** [vice_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
 
@@ -757,7 +764,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Sound synthesizer cartridge with 9 voices.
 
-- **Output Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
+- **Sample Rate** [vice_sound_sample_rate] (22050|44100|**48000**|96000)
 
     Sound sample rate in Hz.
 
