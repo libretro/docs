@@ -52,6 +52,8 @@ You can then start RetroArch by running:
 
     $ ./retroarch
 
+Local builds do not contain assets. On a clean build, assets will be located by default at *$HOME/.config/retroarch/assets*, and can be downloaded from the Main Menu via Online Updater > Update Assets
+
 !!! tip
     If you're building frequently you may want to add **ccache** to the mix to speed up the build process.
     Install ccache via apt and the prepend the ccache symlink directory to your build environment path as shown below.
