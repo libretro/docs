@@ -81,6 +81,76 @@ modes[RETRO_LANGUAGE_XXXXX] = msg_hash_to_str(MENU_ENUM_LABEL_VALUE_LANG_XXXXX);
 
 ## Optional Adjustments
 
+### Generating custom font for RGUI
+
+The tutorial down below is taken from [trngaje's page.](https://trngaje.github.io/retroarch/retroarch-rgui-font/)
+
+First of all, I will explain the basic font, English font. It was 5x10 in size at first.
+
+If you analyze the first letter of !… hexadecimal value
+
+`0x80, 0x10, 0x42, 0x08, 0x20, 0x00, 0x00,`
+
+Convert to Binary
+
+```
+1000 0000
+0001 0000
+0100 0010
+0000 1000
+0010 0000
+0000 0000
+```
+
+Place it in a little endian and cut it into 5 pixels
+
+```
+00000
+00100
+00100
+00100
+00100
+00100
+00000
+00100
+00000000
+```
+
+The source code in retroarch for this is as follows.
+
+```
+unsigned font_pixel = x + y * FONT_WIDTH;
+uint8_t rem         = 1 << (font_pixel & 7);
+unsigned offset     = font_pixel >> 3;
+uint8_t col         = (bitmap_bin[FONT_OFFSET(letter) + offset] & rem) ? 0xff : 0;
+```
+
+The font was recreated by IlDucci’s request to improve the second Cyrillic language display error. It was 6x10 in size at first.
+
+![image](https://user-images.githubusercontent.com/4651944/192516266-58bebc83-9e58-4fb1-aae9-8614f26e68bc.png)
+
+Each letter is separated by 16 pixels, of which only 6x10 is a meaningful area.
+
+For this purpose, I created a conversion program using the SDL function.
+
+It can be generated simply as follows.
+
+```
+./png2c bitmap_cyrillic.png
+```
+
+Please refer to the location below for the code to build.
+
+https://github.com/trngaje/png2c
+
+You can download prebuilt images for Windows from the path below. https://github.com/trngaje/png2c/releases/tag/windows_64bit_png2c_220924
+
+unzip windows_64bit_png2c_prebuild_220924.zip
+
+```
+png2c.exe bitmap_cyrillic.png
+```
+
 ### RGUI Compatibility
 
 To make the new language usable with the RGUI menu driver:
