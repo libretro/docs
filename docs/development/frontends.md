@@ -32,6 +32,7 @@ Name | Author(s) |  Description
 [raylib-libretro](https://github.com/RobLoach/raylib-libretro) | RobLoach |  Libretro frontend using raylib.
 [retro_frontend](https://github.com/ehmry/genode-libretro) | Ehmry  | Frontend for the [Genode](http://genode.org) operating system framework. Following the Genode philosophy this frontend strives to be a minimal implemention that is extensible via the abstract OS services provided to it.
 [replay](https://github.com/avojak/replay) | avojak | Native Linux multi-system emulator built in Vala and GTK for elementary OS.
+[Retrobot](https://github.com/rossimo/retrobot) | Ross Squires | A self-hosted Discord bot that allows friends to play games over chat.
 [RetroPlayer](https://forum.kodi.tv/forumdisplay.php?fid=194) | Kodi-Game | Also known as [Kodi-Game](https://github.com/kodi-game/), RetroPlayer is a libretro compatibility layer for [Kodi](https://kodi.tv/).
 [sdlarch](https://github.com/heuripedes/sdlarch) | heuripedes | Small frontend providing video, audio and basic input to run basic libretro cores. Built on SDL.
 [URetro](https://github.com/QuarkTheAwesome/URetro) | | Nintendo WiiU frontend
