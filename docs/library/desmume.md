@@ -42,9 +42,9 @@ The md5sum of firmware.bin will vary from dump to dump. bios7 and bios9 should b
 
 |   Filename   |    Description          |              md5sum              |
 |:------------:|:-----------------------:|:--------------------------------:|
-| firmware.bin | NDS Firmware - Optional | 145eaef5bd3037cbc247c213bb3da1b3 |
 | bios7.bin    | ARM7 BIOS - Optional    | df692a80a5b1bc90728bc3dfc76cd948 |
 | bios9.bin    | ARM9 BIOS - Optional    | a392174eb3e572fed6447e956bde4b25 |
+| firmware.bin | NDS Firmware - Optional |                                  |
 
 ## Features
 
