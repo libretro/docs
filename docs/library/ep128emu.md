@@ -18,32 +18,34 @@ Since the emulated machines are 8-bit platforms from the 1980's, modern setups s
 
 ## BIOS
 
-Following "BIOS" files are required for emulation. Note: in usual 8-bit terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
+Following "BIOS" files are used for emulation. Note: in usual 8-bit terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
+
+From version 1.1.0, external BIOS files are optional.
 
 | Filename          | Description                     | md5sum                           |
 |:-----------------:|:-------------------------------:|:--------------------------------:|
-| `exos21.rom` | Enterprise 128 Expandible OS 2.1 <br> Required for EP128 | f36f24cbb87745fbd2714e4df881db09 |
-| `basic21.rom` | Enterprise 128 BASIC Interpreter v2.1 <br> Required for EP128 | e972fe42b398c9ff1d93ff014786aec6 |
-| `exdos13.rom` | Enterprise 128 Disk Controller v1.3 <br> Required for EP64/128 disk configs | ddff70c014d1958dc75378b6c9aab6f8 |
-| `exos20.rom` | Enterprise 64 Expandible OS 2.0 <br> Required for EP64 | 5ad3baaad3b5156d6b60b34229a676fb |
-| `basic20.rom` | Enterprise 64 BASIC Interpreter v2.0 <br> Required for EP64 | 8e18edce4a7acb2c33cc0ab18f988482 |
-| `epfileio.rom` | Enterprise 128 Direct File I/O <br> Required for loading from host file (instead of disk or tape image) | a68ebcbc73a4d2178d755b7755bf18fe |
+| `exos21.rom` | Enterprise 128 Expandible OS 2.1 <br> For EP128 | f36f24cbb87745fbd2714e4df881db09 |
+| `basic21.rom` | Enterprise 128 BASIC Interpreter v2.1 <br> For EP128 | e972fe42b398c9ff1d93ff014786aec6 |
+| `exdos13.rom` | Enterprise 128 Disk Controller v1.3 <br> For EP64/128 disk configs | ddff70c014d1958dc75378b6c9aab6f8 |
+| `exos20.rom` | Enterprise 64 Expandible OS 2.0 <br> For EP64 | 5ad3baaad3b5156d6b60b34229a676fb |
+| `basic20.rom` | Enterprise 64 BASIC Interpreter v2.0 <br> For EP64 | 8e18edce4a7acb2c33cc0ab18f988482 |
+| `epfileio.rom` | Enterprise 128 Direct File I/O <br> For loading from host file (instead of disk or tape image) | a68ebcbc73a4d2178d755b7755bf18fe |
 | `exos24uk.rom` | Enterprise 128 Expandible OS 2.4 <br> Optional, only for enhanced functions (fast memory test) | 55af78f877a21ca45eb2df68a74fcc60 |
 | `hun.rom` | Enterprise 128 Hungarian language extension <br> Optional | 22167938f142c222f40992839aa21a06 |
 | `epd19hft.rom` | Enterprise 128 EP-DOS with Hungarian language extension <br> Optional | 12cfc9c7e48c8a16c2e09edbd926d467 |
 | `zt19hfnt.rom` | Enterprise 128 ZozoTools with Hungarian language extension 1.9 <br> Optional | 653daaf7b9b29c2c4e577f489580f247 |
 | `brd.rom` | Enterprise 128 German language extension <br> Optional | 6af0402906944fd134004b85097c8524 |
-| `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> Required for loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
-| `tvc22_sys.rom` | Videoton TVC system BIOS <br> Required for TVC emulation | 8c54285f541930cde766069942bad0f2 |
-| `tvc22_ext.rom` | Videoton TVC extension BIOS <br> Required for TVC emulation | 5ce95a26ceed5bec73995d83568da9cf |
-| `tvcfileio.rom` | Videoton TVC Direct File I/O <br> Required for loading from host file (instead of disk or tape image) | a2cf86ba8e7fc58b242137fe59036832 |
-| `tvc_dos12d.rom` | Videoton TVC disk BIOS <br> Required for TVC disk configs | 88dc7876d584f90e4106f91444ab23b7 |
-| `cpc464.rom` | Amstrad CPC 464 BIOS <br> Required for CPC 464 emulation | a993f85b88ac4350cf4d41554e87fe4f |
-| `cpc664.rom` | Amstrad CPC 664 BIOS <br> Required for CPC 664 emulation | 5a384a2310f472c7857888371c00ed66 |
-| `cpc6128.rom` | Amstrad CPC 6128 BIOS <br> Required for CPC 6128 emulation | b96280dc6c95a48857b4b8eb931533ae |
-| `cpc_amsdos.rom` | Amstrad CPC AMSDOS BIOS <br> Required for CPC disk configs | 25629dfe870d097469c217b95fdc1c95 |
-| `zx128.rom` | ZX Spectrum 128 BIOS <br> Required for ZX Spectrum 128 emulation | 85fede415f4294cc777517d7eada482e |
-| `zx48.rom` | ZX Spectrum 48 BIOS <br> Required for ZX Spectrum 16/48 emulation | 4c42a2f075212361c3117015b107ff68 |
+| `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> For loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
+| `tvc22_sys.rom` | Videoton TVC system BIOS <br> For TVC emulation | 8c54285f541930cde766069942bad0f2 |
+| `tvc22_ext.rom` | Videoton TVC extension BIOS <br> For TVC emulation | 5ce95a26ceed5bec73995d83568da9cf |
+| `tvcfileio.rom` | Videoton TVC Direct File I/O <br> For loading from host file (instead of disk or tape image) | a2cf86ba8e7fc58b242137fe59036832 |
+| `tvc_dos12d.rom` | Videoton TVC disk BIOS <br> For TVC disk configs | 88dc7876d584f90e4106f91444ab23b7 |
+| `cpc464.rom` | Amstrad CPC 464 BIOS <br> For CPC 464 | a993f85b88ac4350cf4d41554e87fe4f |
+| `cpc664.rom` | Amstrad CPC 664 BIOS <br> For CPC 664 | 5a384a2310f472c7857888371c00ed66 |
+| `cpc6128.rom` | Amstrad CPC 6128 BIOS <br> For CPC 6128 | b96280dc6c95a48857b4b8eb931533ae |
+| `cpc_amsdos.rom` | Amstrad CPC AMSDOS BIOS <br> For CPC disk configs | 25629dfe870d097469c217b95fdc1c95 |
+| `zx128.rom` | ZX Spectrum 128 BIOS <br> For ZX Spectrum 128 | 85fede415f4294cc777517d7eada482e |
+| `zx48.rom` | ZX Spectrum 48 BIOS <br> For ZX Spectrum 16/48 | 4c42a2f075212361c3117015b107ff68 |
 
 ## Extensions
 
@@ -54,9 +56,12 @@ Content that can be loaded by the ep128emu core have the following file extensio
 - `.tap` (Enterprise or ZX Spectrum tape image)
 - `.dtf` (Enterprise compressed file)
 - `.cas` (Videoton TVC file format)
+- `.tvcwav` (sound file interpreted as Videoton TVC tape)
 - `.cdt` (Amstrad CPC tape image)
 - `.tzx` (ZX Spectrum tape image)
 - `.bas`, `.com`, `.trn`, `.128`, `.` (common extensions for Enterprise executable files, including no extension)
+
+From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth. (If core is compiled with libsndfile support, many other audio formats are recognized.) However, using the well-known `.wav` file extension will trigger the built-in RetroArch media player. Rename such files to have `.tap` or `.tvcwav` extensions.
 
 RetroArch database(s) that are associated with the ep128emu core:
 
