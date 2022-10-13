@@ -16,37 +16,6 @@ The ep128emu core is licensed under [GPL2](https://github.com/libretro/ep128emu-
 
 Since the emulated machines are 8-bit platforms from the 1980's, modern setups should have no problem emulating them. Tested on Raspberry Pi 2.
 
-## BIOS
-
-Following "BIOS" files are used for emulation. Note: in usual 8-bit terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
-
-From version 1.1.0, external BIOS files are optional.
-
-| Filename          | Description                     | md5sum                           |
-|:-----------------:|:-------------------------------:|:--------------------------------:|
-| `exos21.rom` | Enterprise 128 Expandible OS 2.1 <br> For EP128 | f36f24cbb87745fbd2714e4df881db09 |
-| `basic21.rom` | Enterprise 128 BASIC Interpreter v2.1 <br> For EP128 | e972fe42b398c9ff1d93ff014786aec6 |
-| `exdos13.rom` | Enterprise 128 Disk Controller v1.3 <br> For EP64/128 disk configs | ddff70c014d1958dc75378b6c9aab6f8 |
-| `exos20.rom` | Enterprise 64 Expandible OS 2.0 <br> For EP64 | 5ad3baaad3b5156d6b60b34229a676fb |
-| `basic20.rom` | Enterprise 64 BASIC Interpreter v2.0 <br> For EP64 | 8e18edce4a7acb2c33cc0ab18f988482 |
-| `epfileio.rom` | Enterprise 128 Direct File I/O <br> For loading from host file (instead of disk or tape image) | a68ebcbc73a4d2178d755b7755bf18fe |
-| `exos24uk.rom` | Enterprise 128 Expandible OS 2.4 <br> Optional, only for enhanced functions (fast memory test) | 55af78f877a21ca45eb2df68a74fcc60 |
-| `hun.rom` | Enterprise 128 Hungarian language extension <br> Optional | 22167938f142c222f40992839aa21a06 |
-| `epd19hft.rom` | Enterprise 128 EP-DOS with Hungarian language extension <br> Optional | 12cfc9c7e48c8a16c2e09edbd926d467 |
-| `zt19hfnt.rom` | Enterprise 128 ZozoTools with Hungarian language extension 1.9 <br> Optional | 653daaf7b9b29c2c4e577f489580f247 |
-| `brd.rom` | Enterprise 128 German language extension <br> Optional | 6af0402906944fd134004b85097c8524 |
-| `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> For loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
-| `tvc22_sys.rom` | Videoton TVC system BIOS <br> For TVC emulation | 8c54285f541930cde766069942bad0f2 |
-| `tvc22_ext.rom` | Videoton TVC extension BIOS <br> For TVC emulation | 5ce95a26ceed5bec73995d83568da9cf |
-| `tvcfileio.rom` | Videoton TVC Direct File I/O <br> For loading from host file (instead of disk or tape image) | a2cf86ba8e7fc58b242137fe59036832 |
-| `tvc_dos12d.rom` | Videoton TVC disk BIOS <br> For TVC disk configs | 88dc7876d584f90e4106f91444ab23b7 |
-| `cpc464.rom` | Amstrad CPC 464 BIOS <br> For CPC 464 | a993f85b88ac4350cf4d41554e87fe4f |
-| `cpc664.rom` | Amstrad CPC 664 BIOS <br> For CPC 664 | 5a384a2310f472c7857888371c00ed66 |
-| `cpc6128.rom` | Amstrad CPC 6128 BIOS <br> For CPC 6128 | b96280dc6c95a48857b4b8eb931533ae |
-| `cpc_amsdos.rom` | Amstrad CPC AMSDOS BIOS <br> For CPC disk configs | 25629dfe870d097469c217b95fdc1c95 |
-| `zx128.rom` | ZX Spectrum 128 BIOS <br> For ZX Spectrum 128 | 85fede415f4294cc777517d7eada482e |
-| `zx48.rom` | ZX Spectrum 48 BIOS <br> For ZX Spectrum 16/48 | 4c42a2f075212361c3117015b107ff68 |
-
 ## Extensions
 
 Content that can be loaded by the ep128emu core have the following file extensions:
@@ -56,12 +25,13 @@ Content that can be loaded by the ep128emu core have the following file extensio
 - `.tap` (Enterprise or ZX Spectrum tape image)
 - `.dtf` (Enterprise compressed file)
 - `.cas` (Videoton TVC file format)
+- `.wav` (sound file interpreted as Enterprise tape)
 - `.tvcwav` (sound file interpreted as Videoton TVC tape)
 - `.cdt` (Amstrad CPC tape image)
 - `.tzx` (ZX Spectrum tape image)
 - `.bas`, `.com`, `.trn`, `.128`, `.` (common extensions for Enterprise executable files, including no extension)
 
-From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth. (If core is compiled with libsndfile support, many other audio formats are recognized.) However, using the well-known `.wav` file extension will trigger the built-in RetroArch media player. Rename such files to have `.tap` or `.tvcwav` extensions.
+From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth as tape recordings. It is possible to enable libsndfile support during compilation, and then a wider range of formats are recognized, including MP3 if libsndfile version is at least 1.1. Using the `.wav` file extension will trigger the built-in RetroArch media player by default, it can be disabled under Settings / File Browser / Use Built-in Media Player. Rename files to have `.tvcwav` extension to be interpreted as TVC tapes.
 
 RetroArch database(s) that are associated with the ep128emu core:
 
@@ -122,7 +92,7 @@ The intelligent zoom function can reduce the apparent width/height, aspect ratio
 
 ## Usage
 
-Load any supported content file. Content type will be autodetected, and if possible, started. Without content, core starts with Enterprise 128 disk configuration.
+Load any supported content file. Content type will be autodetected, and if possible, started. Content-specific [configuration file](https://github.com/libretro/ep128emu-core/blob/core/core/sample.ep128cfg) is also loaded if present. Without content, core starts with Enterprise 128 disk configuration.
 
 ## Core options
 
@@ -152,16 +122,13 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 | ZX | Kempston | Sinclair 1 | Sinclair 2 |
 
 - Core default - Joypad and fire button is mapped as default (see above)
-- Internal Joystick - Joypad and fire button is mapped for internal joystick
+- Internal Joystick - Joypad and fire button is mapped for internal joystick on Enterprise and TVC. On CPC it is mapped to cursor keys.
 - External Joystick 1 / Kempston - Joypad and fire button is mapped for external joystick 1 (Kempston interface in case of ZX)
 - External Joystick 2 - Joypad and fire button is mapped for external joystick 2
-- Sinclair Joystick 1 - Joypad and fire button is mapped for Sinclair joystick 1. Only useful for ZX.
-- Sinclair Joystick 2 - Joypad and fire button is mapped for Sinclair joystick 2. Only useful for ZX.
-- Protek Joystick - Joypad and fire button is mapped for Protek joystick 1. Only useful for ZX.
-- External Joystick 3 - Joypad and fire button is mapped for external joystick 3. Only useful for Enterprise, very rarely used.
-- External Joystick 4 - Joypad and fire button is mapped for external joystick 4. Only useful for Enterprise, very rarely used.
-- External Joystick 5 - Joypad and fire button is mapped for external joystick 5. Only useful for Enterprise, very rarely used.
-- External Joystick 6 - Joypad and fire button is mapped for external joystick 6. Only useful for Enterprise, very rarely used.
+- Sinclair Joystick 1 - Joypad and fire button is mapped for Sinclair joystick 1. Only useful for ZX. Joystick inputs are emulated as keys: 1 (left), 2 (right), 3 (down), 4 (up), 5 (fire).
+- Sinclair Joystick 2 - Joypad and fire button is mapped for Sinclair joystick 2. Only useful for ZX. Joystick inputs are emulated as keys: 6 (left), 7 (right), 8 (down), 9 (up) ,0 (fire).
+- Protek Joystick - Joypad and fire button is mapped for Protek/AGF joystick. Only useful for ZX. Joystick inputs are emulated as keys: 5 (left), 6 (down), 7 (up), 8 (right) ,0 (fire).
+- External Joystick 3..6 - Joypad and fire button is mapped for external joystick 3..6. Only useful for Enterprise, very rarely used.
 
 ## Joypad
 
@@ -296,6 +263,36 @@ Function key row is mapped to Fn-array. Extra mappings are marked in the followi
 | Keyboard Keypad 6            | External joystick 1 right |
 | Keyboard Keypad 8            | External joystick 1 up    |
 
+## BIOS
+
+Following "BIOS" files are used for emulation. Note: in usual 8-bit terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
+
+From version 1.1.0, external BIOS files are optional.
+
+| Filename          | Description                     | md5sum                           |
+|:-----------------:|:-------------------------------:|:--------------------------------:|
+| `exos21.rom` | Enterprise 128 Expandible OS 2.1 <br> For EP128 | f36f24cbb87745fbd2714e4df881db09 |
+| `basic21.rom` | Enterprise 128 BASIC Interpreter v2.1 <br> For EP128 | e972fe42b398c9ff1d93ff014786aec6 |
+| `exdos13.rom` | Enterprise 128 Disk Controller v1.3 <br> For EP64/128 disk configs | ddff70c014d1958dc75378b6c9aab6f8 |
+| `exos20.rom` | Enterprise 64 Expandible OS 2.0 <br> For EP64 | 5ad3baaad3b5156d6b60b34229a676fb |
+| `basic20.rom` | Enterprise 64 BASIC Interpreter v2.0 <br> For EP64 | 8e18edce4a7acb2c33cc0ab18f988482 |
+| `epfileio.rom` | Enterprise 128 Direct File I/O <br> For loading from host file (instead of disk or tape image) | a68ebcbc73a4d2178d755b7755bf18fe |
+| `exos24uk.rom` | Enterprise 128 Expandible OS 2.4 <br> Only for enhanced functions (fast memory test) | 55af78f877a21ca45eb2df68a74fcc60 |
+| `hun.rom` | Enterprise 128 Hungarian language extension | 22167938f142c222f40992839aa21a06 |
+| `epd19hft.rom` | Enterprise 128 EP-DOS with Hungarian language extension | 12cfc9c7e48c8a16c2e09edbd926d467 |
+| `zt19hfnt.rom` | Enterprise 128 ZozoTools with Hungarian language extension 1.9 | 653daaf7b9b29c2c4e577f489580f247 |
+| `brd.rom` | Enterprise 128 German language extension | 6af0402906944fd134004b85097c8524 |
+| `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> For loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
+| `tvc22_sys.rom` | Videoton TVC system BIOS <br> For TVC emulation | 8c54285f541930cde766069942bad0f2 |
+| `tvc22_ext.rom` | Videoton TVC extension BIOS <br> For TVC emulation | 5ce95a26ceed5bec73995d83568da9cf |
+| `tvcfileio.rom` | Videoton TVC Direct File I/O <br> For loading from host file (instead of disk or tape image) | a2cf86ba8e7fc58b242137fe59036832 |
+| `tvc_dos12d.rom` | Videoton TVC disk BIOS <br> For TVC disk configs | 88dc7876d584f90e4106f91444ab23b7 |
+| `cpc464.rom` | Amstrad CPC 464 BIOS <br> For CPC 464 | a993f85b88ac4350cf4d41554e87fe4f |
+| `cpc664.rom` | Amstrad CPC 664 BIOS <br> For CPC 664 | 5a384a2310f472c7857888371c00ed66 |
+| `cpc6128.rom` | Amstrad CPC 6128 BIOS <br> For CPC 6128 | b96280dc6c95a48857b4b8eb931533ae |
+| `cpc_amsdos.rom` | Amstrad CPC AMSDOS BIOS <br> For CPC disk configs | 25629dfe870d097469c217b95fdc1c95 |
+| `zx128.rom` | ZX Spectrum 128 BIOS <br> For ZX Spectrum 128 | 85fede415f4294cc777517d7eada482e |
+| `zx48.rom` | ZX Spectrum 48 BIOS <br> For ZX Spectrum 16/48 | 4c42a2f075212361c3117015b107ff68 |
 
 ## External Links
 
