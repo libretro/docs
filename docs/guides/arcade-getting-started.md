@@ -50,7 +50,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * uses the latest known good romsets
 * is reasonably fast
 * has a support team
-* doesn't support 3D games, support less 2D games than MAME
+* doesn't support 3D games, support fewer 2D games than MAME
 * keeps adding support for new games, including a lot of hacks and homebrews
 
 #### MAME 2003-Plus
