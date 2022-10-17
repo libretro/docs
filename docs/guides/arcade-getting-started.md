@@ -14,43 +14,46 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ## Step 1: Choose an arcade emulator to match your system
 
-There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their system. There is no "best arcade core", recommending one is hard without knowing your device and what you intend to play, each of them are a balance between multiple criterias.
+There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their device. There is no "best arcade core", recommending one is hard without knowing your device and what you intend to play, each of them are a balance between multiple criterias.
 
-### The criterias for choosing an arcade core:
+### The criterias for choosing an arcade core
 
 #### Integration within the libretro ecosystem:
 A better integration allows for more features to be available from the frontend you are using, like netplay, runahead, rewind, retroachievements, ... but also reduces the risk of bugs. The quality of the integration is directly linked to the availability of a support team for the core.
 
-#### Accuracy:
+#### Accuracy
 More recent version of the emulators should always be more accurate, which means the graphics, sound and gameplay of the games are more likely to be faithful to the original cabinet.
 
-#### Romset versioning:
+#### Input lag
+Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead feature.
+
+#### Romset versioning
 Part of the reason older emulators are more likely to be less accurate is that they are using a lot of bad dumps. What we refer as a dump is the digital representation of a chip, a romset is a collection of those dumps, 1 dump for each chip. Sometimes the attempts at digitalizing some of those chips failed, and instead of having the game totally unplayable because the romset was only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable, those workarounds are known for going as far as changing gameplay by causing different enemy patterns from the real game. Every time one of those chips finally gets a proper dump, which can happen decades later, ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump. Some of those boards are rare and pricy, dumping the chips is a complex process which can be harmful, meaning while it can be annoying for the end user to update their romsets, those new romsets aren't made for fun.
 
-#### Performance:
+#### Performance
 Being more accurate usually means the emulation will be more taxing on your cpu, so older versions of emulators will usually perform better and are worth trying if you have performance issues with more recent versions. Accuracy is not the only reason for performance regression though, the emulator framework has an impact too, this is especially noticeable on MAME which had its framework constantly updated over the years.
 
-#### Supported games:
+#### Supported games
 What we refer as "arcade emulation" is the emulation of thousands of different machines. Arcade emulators keep adding support for new machines over the years, so the more recent versions support more games. This is a double-edged sword as far as performance is concerned, because it can require updates to an already emulated component, to add a previously unemulated/unnecessary feature of the component, which might impact its emulation performance even for the machines that don't need this feature.
 
-#### Emulator goal:
-MAME's goal is to emulate every existing machines, including machines unrelated to gaming (it can emulate printers, vending machines, ...), the most accurately possible, while documenting them thoroughly. FinalBurn's goal is mainly to offer a comfortable experience for the end-user as a gaming software. MAME 2003-Plus has pretty much the same goal as FinalBurn, with both emulators actually sharing a few contributors.
+#### Emulator goal
+MAME's goal is to emulate every existing machines, including machines unrelated to gaming (it can emulate printers, vending machines, ...), the most accurately possible, while documenting them thoroughly. FinalBurn's goal is mainly to offer a comfortable experience for the end-user as a gaming software, and will include optional features that didn't exist on original cabinet (alternate controls for a better experience with modern controllers, alternate high-quality music, ...). MAME 2003-Plus has pretty much the same goal as FinalBurn, with both emulators actually sharing a few contributors.
 
-#### Support team:
-Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps but doesn't really have a maintainer taking care of known issues. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
+#### Support team
+Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps but doesn't have a regular maintainer to take care of known issues. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
 
-### Quick tour of every available core:
+### Quick tour of every available core
 
-#### FinalBurn Neo:
+#### FinalBurn Neo
 * has the tightest integration within the libretro ecosystem
 * is mostly accurate, can be more accurate than MAME (current) on a few games
 * uses the latest known good romsets
 * is reasonably fast
 * has a support team
-* doesn't support 3D games, doesn't support as many 2D games than MAME
-* keeps adding support for new games
+* doesn't support 3D games, support less 2D games than MAME
+* keeps adding support for new games, including a lot of hacks and homebrews
 
-#### MAME 2003-Plus:
+#### MAME 2003-Plus
 * has the second tightest integration within the libretro ecosystem
 * while originally forked from MAME 2003, can be fairly accurate on some games since it incorporates some emulation fixes from recent versions of MAME
 * is quite fast, this fork was originally meant by the author to run on a pentium III @ 733mhz (Xbox OG)
@@ -59,47 +62,48 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * supports a few classics that aren't supported yet in FinalBurn Neo
 * keeps adding support for new games
 
-#### MAME (current):
+#### MAME (current)
 * is the slowest core and the one that consumes the most memory
 * is usually the most accurate
 * uses the latest known good romsets
 * has the widest range of emulated machines
 * has the shallowest libretro implementation, with concerning issues (see [broken shaders on vertical games](https://github.com/libretro/mame/issues/261))
+* keeps adding support for new games
 
-#### FinalBurn Alpha 2012:
+#### FinalBurn Alpha 2012
 * has splitted cores for optimized memory usage if you are using a device with very very limited memory (wii, nds, ...)
 * has fixed romsets
 * is an older version of FinalBurn Neo, and as such should be faster while being less accurate and supporting less games, the libretro integration isn't as good either
 * should only be considered as an alternative on ultra low-power devices
 
-#### MAME 2000:
+#### MAME 2000
 * is the fastest arcade core
 * is the most inaccurate arcade core
 * has fixed romsets
 * has the smallest list of supported games
 * should only be considered as an alternative on ultra low-power devices
 
-#### MAME 2003:
+#### MAME 2003
 * is slower than MAME 2000
 * is more accurate than MAME 2000
 * has fixed romsets
 * support more games than MAME 2000
 * probably shouldn't be used at all, MAME 2003-Plus is just plain better
 
-#### MAME 2010:
+#### MAME 2010
 * is slower than MAME 2003
 * is more accurate than MAME 2003
 * has fixed romsets
 * support more games than MAME 2003
 * probably shouldn't be used at all, most of the interesting things it has to offer were backported to MAME 2003-Plus, including lots of game additions
 
-#### MAME 2015:
+#### MAME 2015
 * is slower than MAME 2010
 * is more accurate than MAME 2010
 * has fixed romsets
 * support more games than MAME 2010
 
-#### MAME 2016:
+#### MAME 2016
 * is slower than MAME 2015
 * is more accurate than MAME 2015
 * has fixed romsets
