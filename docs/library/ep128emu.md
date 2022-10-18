@@ -31,7 +31,7 @@ Content that can be loaded by the ep128emu core have the following file extensio
 - `.tzx` (ZX Spectrum tape image)
 - `.bas`, `.com`, `.trn`, `.128`, `.` (common extensions for Enterprise executable files, including no extension)
 
-From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth as tape recordings. It is possible to enable libsndfile support during compilation, and then a wider range of formats are recognized, including MP3 if libsndfile version is at least 1.1. Using the `.wav` file extension will trigger the built-in RetroArch media player by default, it can be disabled under Settings / File Browser / Use Built-in Media Player. Rename files to have `.tvcwav` extension to be interpreted as TVC tapes.
+From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth as tape recordings. It is possible to enable libsndfile support during compilation, and then a wider range of formats are recognized, including MP3 if libsndfile version is at least 1.1. Using the `.wav` file extension will trigger the built-in RetroArch media player by default, it can be disabled under Settings / File Browser / Use Built-in Media Player. Rename `.wav` files to have `.tvcwav` extension to be interpreted as TVC tapes.
 
 RetroArch database(s) that are associated with the ep128emu core:
 
@@ -50,7 +50,7 @@ Frontend-level settings or features that the ep128emu core respects.
 | Netplay           | -         |
 | Core Options      | ✔         |
 | RetroAchievements | ✕         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | -         |
@@ -61,7 +61,7 @@ Frontend-level settings or features that the ep128emu core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
@@ -93,6 +93,8 @@ The intelligent zoom function can reduce the apparent width/height, aspect ratio
 ## Usage
 
 Load any supported content file. Content type will be autodetected, and if possible, started. Content-specific [configuration file](https://github.com/libretro/ep128emu-core/blob/core/core/sample.ep128cfg) is also loaded if present. Without content, core starts with Enterprise 128 disk configuration.
+
+In case of multi-disk (or multi-tape) games, use the Disk Control menu to add the subsequent images and switch between them. You can also use RetroArch's built-in memory analyzer to set up cheats.
 
 ## Core options
 
