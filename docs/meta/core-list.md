@@ -155,6 +155,7 @@
 | ProSystem                 | Atari 7800             |                    |
 | PUAE                      | Commodore Amiga        |                    |
 | PUAE 2021                 | Commodore Amiga        |                    |
+| PuzzleScript              | Game engine            | A port of PuzzleScript, open source HTML5 puzzle game engine |
 | PX68k                     | Sharp X68000           |                    |
 | QUASI88                   | NEC PC-8000/PC-8800 series |                |
 | QuickNES                  | Nintendo NES/Famicom   |                    |
