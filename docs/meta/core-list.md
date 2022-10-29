@@ -64,6 +64,7 @@
 | Emux GB                   | Game Boy/Color         |                    |
 | Emux NES                  | Nintendo NES/Famicom   |                    |
 | Emux SMS                  | Sega Master System     |                    |
+| EmuSCV                    | Super Cassette Vision  |                    |
 | Ep128emu                  | Enterprise 128         |                    |
 | FB Alpha                  | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012             | Arcade/Console/various | (See FB Neo note)  |

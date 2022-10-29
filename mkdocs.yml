@@ -230,6 +230,8 @@ nav:
         - 'Sony - PlayStation 2 (PCSX2)': 'library/pcsx2.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
+      - 'Super Cassette Vision':
+        - 'Super Cassette Vision (EmuSCV)': 'library/emuscv.md'        
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Thomson Emulation':
