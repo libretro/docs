@@ -100,10 +100,4 @@ The MD5 Checksum control for the BIOS can be disabled in core options to permit 
 
 ## External Links
 
-- [Official EmuSCV-core Repository](https://github.com/libretro/EmuSCV-core)
-- [Libretro EmuSCV Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/EmuSCV_core_libretro.info)
-- [Report Libretro EmuSCV Core Issues Here](https://github.com/libretro/EmuSCV-core/issues)
-- [Original EmuSCV Implementation](https://github.com/istvan-v/EmuSCV)
-- [ep128.hu](http://www.ep128.hu/) - games for Enterprise
-- [enterpriseforever.com](https://enterpriseforever.com/) - Enterprise community
-- [tvc.homeserver.hu](http://tvc.homeserver.hu/) - TVC page (Hungarian only)
+
