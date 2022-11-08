@@ -89,4 +89,3 @@ The first time you set up a per-game overlay:
 # More about Overlays
 
 - Visit the official [Libretro Overlays Forum](https://forums.libretro.com/c/retroarch-additions/retroarch-overlays)
-- [RetroArch Overlay Guide at emulationguide.com](http://emulationguide.com/retroarch-overlays)
