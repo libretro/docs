@@ -66,6 +66,7 @@
 | Emux SMS                  | Sega Master System     |                    |
 | EmuSCV                    | Super Cassette Vision  |                    |
 | Ep128emu                  | Enterprise 128         |                    |
+| FAKE-08                   | Pico-8                 | A port of the FAKE-08 open-source reimplementation of the PICO-8 fantasy console to libretro |
 | FB Alpha                  | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012             | Arcade/Console/various | (See FB Neo note)  |
 | FB Alpha 2012 CPS-1       | CPS-1                  |                    |
