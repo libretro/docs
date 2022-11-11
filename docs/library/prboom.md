@@ -102,9 +102,11 @@ An example folder structure would be like so:
 └── contents/
     └── dooms/
         ├── doom/
-        │   └── doom.wad
+        │   ├── doom.wad
+        │   └── [music_files].mp3
         └── doom2/
-            └── doom2.wad
+            ├── doom2.wad
+            └── [music_files].mp3
 ```
 
 ```
@@ -148,7 +150,8 @@ An example folder structure would be like so:
     └── dooms/
         └── doom/
             ├── doom.wad
-            └── SIGIL.WAD
+            ├── SIGIL.WAD
+            └── [music_files].mp3
 ```
 
 ```
@@ -156,6 +159,108 @@ An example folder structure would be like so:
     └── system/
 	 └── prboom.wad
 ```
+
+## Music
+
+If mp3 files are detected in the game folder, PrBoom will play these tracks instead of the internal MIDI musics, see below for the required filenames for each game.
+
+### Doom
+
+!!! Note
+	Episode 4 doesn't have exclusive musics, it uses tracks from the previous episodes.
+
+| Filename   | Description        |
+|------------|--------------------|
+| bunny.mp3  | Endgame Music      |
+| e1m1.mp3   | E1M1               |
+| e1m2.mp3   | E1M2               |
+| e1m3.mp3   | E1M3               |
+| e1m4.mp3   | E1M4               |
+| e1m5.mp3   | E1M5               |
+| e1m6.mp3   | E1M6               |
+| e1m7.mp3   | E1M7               |
+| e1m8.mp3   | E1M8               |
+| e1m9.mp3   | E1M9               |
+| e2m1.mp3   | E2M1               |
+| e2m2.mp3   | E2M2               |
+| e2m3.mp3   | E2M3               |
+| e2m4.mp3   | E2M4               |
+| e2m5.mp3   | E2M5               |
+| e2m6.mp3   | E2M6               |
+| e2m7.mp3   | E2M7               |
+| e2m8.mp3   | E2M8               |
+| e2m9.mp3   | E2M9               |
+| e3m1.mp3   | E3M1               |
+| e3m2.mp3   | E3M2               |
+| e3m3.mp3   | E3M3               |
+| e3m4.mp3   | E3M4               |
+| e3m5.mp3   | E3M5               |
+| e3m6.mp3   | E3M6               |
+| e3m7.mp3   | E3M7               |
+| e3m8.mp3   | E3M8               |
+| e3m9.mp3   | E3M9               |
+| inter.mp3  | Intermission Music |
+| intro.mp3  | Title Music        |
+| victor.mp3 | Victory Music      |
+
+### Doom II, Plutonia, TNT
+
+!!! Note
+	These 3 games share the same music filenames but the musics are actually different, for this reason it is recommended to have the games in separated folders.
+
+| Filename   | Description        |
+|------------|--------------------|
+| adrian.mp3 | MAP25              |
+| ampie.mp3  | MAP23              |
+| betwee.mp3 | MAP04              |
+| count2.mp3 | MAP21              |
+| countd.mp3 | MAP03              |
+| ddtbl2.mp3 | MAP14              |
+| ddtbl3.mp3 | MAP22              |
+| ddtblu.mp3 | MAP08              |
+| dead.mp3   | MAP10              |
+| dead2.mp3  | MAP16              |
+| dm2int.mp3 | Intermission Music |
+| dm2ttl.mp3 | Title Music        |
+| doom.mp3   | MAP05              |
+| doom2.mp3  | MAP13              |
+| evil.mp3   | MAP31              |
+| in_cit.mp3 | MAP09              |
+| messag.mp3 | MAP20              |
+| messg2.mp3 | MAP26              |
+| openin.mp3 | MAP30              |
+| read_m.mp3 | Endgame Music      |
+| romer2.mp3 | MAP27              |
+| romero.mp3 | MAP18              |
+| runni2.mp3 | MAP15              |
+| runnin.mp3 | MAP01              |
+| shawn.mp3  | MAP07              |
+| shawn2.mp3 | MAP19              |
+| shawn3.mp3 | MAP29              |
+| stalks.mp3 | MAP02              |
+| stlks2.mp3 | MAP11              |
+| stlks3.mp3 | MAP17              |
+| tense.mp3  | MAP28              |
+| theda2.mp3 | MAP12              |
+| theda3.mp3 | MAP24              |
+| the_da.mp3 | MAP06              |
+| ultima.mp3 | MAP32              |
+
+### SIGIL
+
+| Filename   | Description        |
+|------------|--------------------|
+| e5m1.mp3   | E5M1               |
+| e5m2.mp3   | E5M2               |
+| e5m3.mp3   | E5M3               |
+| e5m4.mp3   | E5M4               |
+| e5m5.mp3   | E5M5               |
+| e5m6.mp3   | E5M6               |
+| e5m7.mp3   | E5M7               |
+| e5m8.mp3   | E5M8               |
+| e5m9.mp3   | E5M9               |
+| inter.mp3  | Intermission Music |
+| intro.mp3  | Title Music        |
 
 ## Config
 
