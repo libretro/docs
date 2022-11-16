@@ -14,7 +14,7 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 
 ## Step 1: Choose an arcade emulator to match your system
 
-There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their device. There is no "best arcade core", recommending one is hard without knowing your device and what you intend to play, each of them are a balance between multiple criterias.
+There are two families of multi-system arcade emulators available as libretro cores: FinalBurn and MAME. These emulators are in turn available in multiple versions to allow users to best match a core to their device. There are also a few console emulators that can alternatively emulate the arcade hardware based on that console. There is no "best arcade core", recommending one is hard without knowing your device and what you intend to play, each of them are a balance between multiple criterias.
 
 ### The criterias for choosing an arcade core
 
@@ -25,7 +25,7 @@ A better integration allows for more features to be available from the frontend 
 More recent version of the emulators should always be more accurate, which means the graphics, sound and gameplay of the games are more likely to be faithful to the original cabinet.
 
 #### Input lag
-Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead feature.
+Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead feature. As of november 2022, runahead is also available in **MAME (current)**, but its quality is disparate since it's not officially supported upstream.
 
 #### Romset versioning
 Part of the reason older emulators are more likely to be less accurate is that they are using a lot of bad dumps. What we refer as a dump is the digital representation of a chip, a romset is a collection of those dumps, 1 dump for each chip. Sometimes the attempts at digitalizing some of those chips failed, and instead of having the game totally unplayable because the romset was only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable, those workarounds are known for going as far as changing gameplay by causing different enemy patterns from the real game. Every time one of those chips finally gets a proper dump, which can happen decades later, ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump. Some of those boards are rare and pricy, dumping the chips is a complex process which can be harmful, meaning while it can be annoying for the end user to update their romsets, those new romsets aren't made for fun.
@@ -110,15 +110,25 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * support more games than MAME 2015
 * has the same shallow libretro implementation than MAME (current)
 
+#### Flycast
+* support arcade hardware based on Sega Dreamcast (NAOMI, NAOMI 2 and AtomisWave)
+* is the only core available for those 3 systems
+
+#### Kronos
+* support arcade hardware based on Sega Saturn (ST-V)
+
 ---
 
 ## Step 2: Use the correct version romsets for that emulator
-**For best results, start with a full ROM collection with a version that matches the emulator you're using.**
 
 !!! Note
-    A romset is an archive (zip; 7z might or might not be supported depending on your core and/or platform and will be way slower to load) named in a specific way containing a set of file(s) each having their signature (crc). The emulator will know which game you are trying to load by the name of the archive (hence why you must never rename them), then will use the crcs in its database to search for files and map them into memory, usually it doesn't care much about the names inside the archive but some emulators will allow searching by name as a fallback if a crc can't be found.
+    A romset is an archive (zip; 7z might or might not be supported depending on your core and/or platform and will be far longer to load) named in a specific way containing a set of file(s), each representing a chip from the original cabinet's PCB and having their own signature (crc). The emulator will know which game you are trying to load by the name of the archive. It then matches the crcs from its internal database with the ones from the archive to recreate the game's ROM, the names inside the archive usually won't matter but some emulators will use them as a fallback if a crc can't be found.
 
-In general, you will only get good results with a full collection of arcade romsets for your chosen emulator. Starting with individual arcade romset zip files is unlikely to work because individual romsets are often not tagged with what MAME version they are built for. Also, individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
+!!! Warning "Keep arcade romsets zipped and don't rename them"
+    If you rename or extract a romset, it won't work.
+
+!!! tip
+    In general, you will get better results with a full collection of romsets for your chosen emulator. Starting with individual arcade romsets is less likely to work because you generally won't know which emulator they target, or if they contain every required files to run the game (bios, parent).
 
 !!! tip
     Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
@@ -135,12 +145,10 @@ In general, you will only get good results with a full collection of arcade roms
 | MAME 2016 | MAME 0.174 | [here](https://github.com/libretro/mame2016-libretro/blob/master/metadata/MAME%200.174%20Arcade%20XML%20DAT.zip) |
 | MAME (latest version) | MAME (latest version) | [here (click XML link)](https://www.mamedev.org/release.html) |
 
-!!! Warning "Warning: Keep arcade romsets zipped"
-    Unlike emulating some other systems, arcade romsets should remained zipped when used. If you extract arcade romsets, they won't work.
-
 ###  Optional : ClrMamePro tutorial
 
-!!! Credit : this tutorial is based on RetroPie's
+!!! info "Credits"
+    This tutorial is based on RetroPie's
 
 #### Step 1 - Back up your ROMs
 It is possible with ClrMamePro to change one or two options and when it runs it will delete all your existing ROMs. OK, not really - using the default options it will make backups of any files it removes, but it is still possible to mess up their ROMs beyond repair when getting started with ClrMamePro.
