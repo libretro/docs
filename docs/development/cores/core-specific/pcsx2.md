@@ -33,7 +33,7 @@ Enter the following commands (from the PCSX2 source directory):
 
     mkdir build
     cd build
-    cmake .. -DLIBRETRO=ON -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 17 2019 Win64"
+    cmake .. -DLIBRETRO=ON -DCMAKE_BUILD_TYPE=Release -G"Visual Studio 16 2019" -AWin64
     cmake --build . --target pcsx2_libretro --config Release
 
 !!! Warning
