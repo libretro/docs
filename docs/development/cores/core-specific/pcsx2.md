@@ -39,3 +39,12 @@ Enter the following commands (from the PCSX2 source directory):
 !!! Warning
     If it says 'Could not find named generator' or something to that effect, it means you might be using
     the wrong cmake version on Msys2/Mingw. Remove the regular 'cmake' package and try to install 'mingw-w64-x86_64-cmake' instead.
+    
+## How to compile (for Windows x64 - Visual Studio 2022)
+
+In addition to the requirement(s) listed above, you will also need Visual Studio 2022 installed in order for the following to work.
+
+Enter the following commands (from the PCSX2 source directory):
+
+    cmake -B build -G "Visual Studio 17 2022" -DCMAKE_BUILD_TYPE=Release -DLIBRETRO=ON
+    cmake --build build --config Release --target pcsx2_libretro
