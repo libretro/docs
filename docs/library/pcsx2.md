@@ -74,9 +74,13 @@ SCPH-70004_BIOS_V12_EUR_200.ROM2
 ### How to set up your BIOS:
 
 1. Go inside your RetroArch "system" folder (usually `retroarch/system/`, but if you're not sure check the path in `Settings > Directory > System/BIOS`).
-4. Paste your BIOS file(s) here.
+2. Create a `pcsx2` folder.
+3. Go inside the `pcsx2` folder and create a `bios` folder.
+4. Go inside the `bios` folder and paste your BIOS file(s) here.
 
-For example, the default path would look like this: `system\[bios_file_name].bin`
+For example, the default path would look like this: `system\pcsx2\bios\[bios_file_name].bin`
+
+If you're on a case-sensitive OS, make sure both `pcsx2` and `bios` folders are lowercase.
 
 ## Other required files and directories
 
@@ -86,11 +90,13 @@ The file structure should look like this:
 retroarch/
 └── system/
 	└── pcsx2/
+		├── bios/
 		├── cheats/
 		├── cheats_ws/
 		└── memcards/	(optional)
 ```
 
+* `bios/` is where the BIOS files are located (see the ['BIOS'](#bios) section above), this should be created by the user.
 * `cheats/` is where you can store cheat patches, the folder is created on the first boot automatically.
 * `cheats_ws/` is where you can store additional widescreen patches, the folder is created on the first boot automatically.
 * `memcards/` is where the "legacy" memory cards are stored. This folder is optional, see the ['Directories'](#directories) section below.
