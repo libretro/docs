@@ -20,16 +20,16 @@ Since the emulated machines are 8-bit platforms from the 1980's, modern setups s
 
 Content that can be loaded by the ep128emu core have the following file extensions:
 
-- `.img` (Enterprise, CPC or TVC floppy disk image)
-- `.dsk` (Enterprise, CPC or TVC floppy disk image)
-- `.tap` (Enterprise or ZX Spectrum tape image)
-- `.dtf` (Enterprise compressed file)
-- `.cas` (Videoton TVC file format)
-- `.wav` (sound file interpreted as Enterprise tape)
-- `.tvcwav` (sound file interpreted as Videoton TVC tape)
-- `.cdt` (Amstrad CPC tape image)
-- `.tzx` (ZX Spectrum tape image)
-- `.bas`, `.com`, `.trn`, `.128`, `.` (common extensions for Enterprise executable files, including no extension)
+- `.img` - Enterprise, CPC or TVC floppy disk image
+- `.dsk` - Enterprise, CPC or TVC floppy disk image
+- `.tap` - Enterprise or ZX Spectrum tape image
+- `.dtf` - Enterprise compressed file
+- `.cas` - Videoton TVC file format
+- `.wav` - sound file interpreted as Enterprise tape
+- `.tvcwav` - sound file interpreted as Videoton TVC tape
+- `.cdt` - Amstrad CPC tape image
+- `.tzx` - ZX Spectrum tape image
+- `.bas`, `.com`, `.trn`, `.128`, `.` - common extensions for Enterprise executable files, including no extension
 
 From version 1.1.0, emulator core is able to handle mono PCM WAV files with 1..8 bit depth as tape recordings. It is possible to enable libsndfile support during compilation, and then a wider range of formats are recognized, including MP3 if libsndfile version is at least 1.1. Using the `.wav` file extension will trigger the built-in RetroArch media player by default, it can be disabled under Settings / File Browser / Use Built-in Media Player. Rename `.wav` files to have `.tvcwav` extension to be interpreted as TVC tapes.
 
@@ -96,6 +96,12 @@ Load any supported content file. Content type will be autodetected, and if possi
 
 In case of multi-disk (or multi-tape) games, use the Disk Control menu to add the subsequent images and switch between them. You can also use RetroArch's built-in memory analyzer to set up cheats.
 
+Apart from disk/tape/fileIO differences, the core will adjust the emulated machine configuration in some cases:
+- if content file has `.DTF` extension, ZozoTools BIOS will be used
+- if content file name contains `[req brd-rom]`, German BIOS will be used
+- if content file name contains `[req zrom]`, Hungarian language BIOS and EPDOS will be used
+- if EP128_DISK_ISDOS (or EP64_DISK_ISDOS) type is supplied via configuration file, IS-DOS (CP/M flavor for Enterprise) will be used
+
 ## Core options
 
 The ep128emu core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
@@ -148,7 +154,7 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 | ![](../image/retropad/retro_l2.png)            | Key 2 | In-game key required for other action (if any) |
 | ![](../image/retropad/retro_r2.png)            | Key 3 | In-game key required for other action (if any) |
 | ![](../image/retropad/retro_l3.png)            | Info display | - |
-| ![](../image/retropad/retro_r3.png)            | Intelligent zoom | - |
+| ![](../image/retropad/retro_r3.png)            | Intelligent zoom | (Zoom is also available via keyboard F12) |
 
 ## Keyboard
 
@@ -281,8 +287,8 @@ From version 1.1.0, external BIOS files are optional.
 | `epfileio.rom` | Enterprise 128 Direct File I/O <br> For loading from host file (instead of disk or tape image) | a68ebcbc73a4d2178d755b7755bf18fe |
 | `exos24uk.rom` | Enterprise 128 Expandible OS 2.4 <br> Only for enhanced functions (fast memory test) | 55af78f877a21ca45eb2df68a74fcc60 |
 | `hun.rom` | Enterprise 128 Hungarian language extension | 22167938f142c222f40992839aa21a06 |
-| `epd19hft.rom` | Enterprise 128 EP-DOS with Hungarian language extension | 12cfc9c7e48c8a16c2e09edbd926d467 |
-| `zt19hfnt.rom` | Enterprise 128 ZozoTools with Hungarian language extension 1.9 | 653daaf7b9b29c2c4e577f489580f247 |
+| `epdos16f.rom` | Enterprise 128 EP-DOS | 6593dff00ab32a4b1fc084674ededf2b |
+| `exdos14isdos10uk.rom` | Enterprise 128 IS-DOS (CP/M) | f91c4a507cc6895bdd9c43df4f021df3 |
 | `brd.rom` | Enterprise 128 German language extension | 6af0402906944fd134004b85097c8524 |
 | `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> For loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
 | `tvc22_sys.rom` | Videoton TVC system BIOS <br> For TVC emulation | 8c54285f541930cde766069942bad0f2 |
