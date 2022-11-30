@@ -2,6 +2,17 @@
 
 RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom.bin` and one of the following is present, the ROM will be autopatched: `rom.ups`, `rom.ips` or `rom.bps`. Autopatching only takes place if the libretro implementation supports loading ROMs from memory.
 
+You can apply multiple patches to one ROM by naming the patches with the `.ips$` extension, where `$` is a number. For example, given the following files...
+
+```
+rom.bin
+rom.ips
+rom.ips1
+rom.ips2
+```
+
+...`rom.bin` will have `rom.ips`, `rom.ips1`, and `rom.ips2` applied to it in that order.
+
 ## **Cores Compatibility**
 
 ### Bandai - WonderSwan/Color
@@ -82,7 +93,7 @@ RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom
 | Core                                             | Supported |
 |--------------------------------------------------|:---------:|
 | [BlastEm](../library/blastem.md)                 | ✔         |
-| [Genesis Plus GX](../library/genesis_plus_gx.md) | ✕         |
+| [Genesis Plus GX](../library/genesis_plus_gx.md) | ✔         |
 | [PicoDrive](../library/picodrive.md)             | ✕         |
 
 ### SNK - Neo Geo Pocket / Neo Geo Pocket Color
