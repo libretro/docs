@@ -70,7 +70,7 @@ RetroArch-level settings or features that the Mupen64plus-Next core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✔         |
-| [Softpatching](../guides/softpatching.md) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
