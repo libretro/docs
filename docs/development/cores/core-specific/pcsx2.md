@@ -1,4 +1,4 @@
-# Sony PlayStation2 (PCSX2)
+# Sony PlayStation2 (LRPS2)
 
 ## Requirements
 
