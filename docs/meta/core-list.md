@@ -144,7 +144,7 @@
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
 | PCSX1                     | Sony PlayStation       |                    |
-| PCSX2                     | Sony PlayStation 2     |                    |
+| LRPS2                     | Sony PlayStation 2     |                    |
 | PCSX ReARMed              | Sony PlayStation       |                    |
 | PCSX ReARMed Neon         | Sony PlayStation       |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
