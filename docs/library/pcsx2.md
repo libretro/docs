@@ -1,23 +1,14 @@
-# Sony - PlayStation (PCSX2)
+# Sony - PlayStation (LRX2)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-EnWeztB8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-PCSX2 is still under development. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content. There’s a working OpenGL renderer and a Direct3D11 renderer option. Direct3D 11 renderer can be faster than OpenGL but also has less features. Pick whichever works best for you. On Xbox you will only be able to use Direct3D11 anyways. This core uses the x86_64 dynarec which was added to PCSX2 a year ago. It is still less compatible than the 32bit x86 dynarec in PCSX2, so keep that in mind. It’s for similar reasons that the software renderer right now won’t work (it’s not compatible yet with x86_64, not in upstream either). There’s a bug that can happen right now upon closing content or exiting RetroArch with the PCSX2 core on Windows – the RetroArch process might not completely cleanly shut itself off and you might still be able to see a 0% CPU process remaining in the Task Manager. We have not been able to figure out how to fix that yet as the PCSX2 codebase is a definite case of ‘here be dragons’, but for now when this happens, you can just bring up the Task Manager and close it manually. It shouldn’t have a real detriment on performance but it is of course far from ideal and hopefully something we can fix soon with the help of some contributors. We have found this happens the most with the Direct3D 11 renderers. Switching resolution at runtime right now can be a bit unstable, so does switching fullscreen resolution. We might just make resolution switching require a restart since this tends to be too unstable for now.
+LRPS2 is still under development. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content. There’s a working OpenGL renderer and a Direct3D11 renderer option. Direct3D 11 renderer can be faster than OpenGL but also has less features. Pick whichever works best for you. On Xbox you will only be able to use Direct3D11 anyways. This core uses the x86_64 dynarec. It is still less compatible than the 32bit x86 dynarec in PCSX2, so keep that in mind. It’s for similar reasons that the software renderer right now won’t work (it’s not compatible yet with x86_64, not in upstream either). There’s a bug that can happen right now upon closing content or exiting RetroArch with the LRPS2 core on Windows – the RetroArch process might not completely cleanly shut itself off and you might still be able to see a 0% CPU process remaining in the Task Manager. We have not been able to figure out how to fix that yet as the PCSX2 codebase is a definite case of ‘here be dragons’, but for now when this happens, you can just bring up the Task Manager and close it manually. It shouldn’t have a real detriment on performance but it is of course far from ideal and hopefully something we can fix soon with the help of some contributors. We have found this happens the most with the Direct3D 11 renderers. Switching resolution at runtime right now can be a bit unstable, so does switching fullscreen resolution. We might just make resolution switching require a restart since this tends to be too unstable for now.
 
-## Background
+LRPS2 core has been authored by
 
-PCSX2 is a PlayStation®2 emulator capable of running commercial games. It's an open source project that runs on Windows, Mac and Linux. Like its predecessor project [PCSX](../library/pcsx_rearmed.md), it is based on a PSEmu Pro spec plug-in architecture, separating several functions from the core emulator. PCSX2 requires a copy of the PS2 BIOS, which is not available for download from the developers, due to the copyright concerns and legal issues associated with it.
+- [Libretro]()
 
-PCSX2 is a free and open-source PlayStation 2 (PS2) emulator. Its purpose is to emulate the PS2's hardware, using a combination of MIPS CPU Interpreters, Recompilers and a Virtual Machine which manages hardware states and PS2 system memory. This allows you to play PS2 games on your PC, with many additional features and benefits.
-
-PCSX2, supports a wide range of PlayStation 2 video games with a high level of compatibility and functionality. Although PCSX2 can closely mirror the original gameplay experience on the PlayStation 2, PCSX2 supports a number of improvements over gameplay on a traditional PlayStation 2, such as the ability to use custom resolutions up to 8192×8192, anti-aliasing, and texture filtering.
-
-
-PCSX2 core has been authored by
-
-- []()
-
-PCSX2 core is licensed under
+LRPS2 core is licensed under
 
 - [GPLv2](https://github.com/libretro/pcsx2/blob/main/COPYING.GPLv2)
 - [GPLv3](https://github.com/libretro/pcsx2/blob/main/COPYING.GPLv3)
@@ -57,9 +48,9 @@ RAM
 !!! Notes
 	- No specific filename required, as long as the BIOS was properly dumped the core will be able to find it.
 	- The BIOS files must be extracted, the core will not be able to find them if they're zipped.
-	- PCSX2 does not implement region locking, so if you have a PAL BIOS you can play NTSC games, and vice versa. However, this only applies with the `Fast Boot` core option enabled.
+	- LRPS2 does not implement region locking, so if you have a PAL BIOS you can play NTSC games, and vice versa. However, this only applies with the `Fast Boot` core option enabled.
 
-PCSX2 requires a BIOS to work, the BIOS can be provided as a single 4MB .bin file or with additional files (usually .erom, .nvm, .rom1 and .rom2).
+LRPS2 requires a BIOS to work, the BIOS can be provided as a single 4MB .bin file or with additional files (usually .erom, .nvm, .rom1 and .rom2).
 
 In case you're having additional files with the .bin, make sure they're sharing the same filename or they'll be ignored.
 So as an example let's say you have a `SCPH-70004_BIOS_V12_EUR_200.BIN` file with an EROM file, a ROM1 file and a ROM2 file, it should look like this:
@@ -106,7 +97,7 @@ retroarch/
 
 ## Extensions
 
-Content that can be loaded by the PCSX2 core have the following file extensions:
+Content that can be loaded by the LRPS2 core have the following file extensions:
 
 - .elf
 - .iso
@@ -121,13 +112,13 @@ Content that can be loaded by the PCSX2 core have the following file extensions:
 - .img
 - .m3u
 
-RetroArch database(s) that are associated with the PCSX2 core:
+RetroArch database(s) that are associated with the LRPS2 core:
 
 - [Sony - PlayStation 2](https://github.com/libretro/libretro-database/blob/master/rdb/Sony%20-%20PlayStation%202.rdb)
 
 ## Features
 
-Frontend-level settings or features that the PCSX2 core respects.
+Frontend-level settings or features that the LRPS2 core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -158,9 +149,9 @@ Frontend-level settings or features that the PCSX2 core respects.
 
 ## Directories
 
-PCSX2's library name is 'pcsx2'
+LRPS2's library name is 'pcsx2'
 
-PCSX2 core saves/loads to/from these directories.
+LRPS2 core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -183,7 +174,7 @@ This can be useful if you were using an older version of the core that didn't us
 
 ## Rumble support
 
-Rumble only works in the PCSX2 core when
+Rumble only works in the LRPS2 core when
 
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
@@ -223,11 +214,9 @@ The current standalone development version is reported to be compatible with app
 
 ## External Links
 
-- [Official PCSX2 Website](https://pcsx2.net/)
-- [Official PCSX2 Downloads](https://pcsx2.net/download.html)
-- [PCSX2 Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/pcsx2_libretro.info)
-- [PCSX2 Github Repository](https://github.com/libretro/pcsx2)
-- [Report PCSX2 Core Issues Here](https://github.com/libretro/pcsx2/issues)
+- [LRPS2 Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/pcsx2_libretro.info)
+- [LRPS2 Github Repository](https://github.com/libretro/lrps2)
+- [Report LRPS2 Core Issues Here](https://github.com/libretro/lrps2/issues)
 
 ## Libretro PS2 cores
 
