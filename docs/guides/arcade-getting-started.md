@@ -124,6 +124,9 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 !!! Note
     A romset is an archive (zip; 7z might or might not be supported depending on your core and/or platform and will be far longer to load) named in a specific way containing a set of file(s), each representing a chip from the original cabinet's PCB and having their own signature (crc). The emulator will know which game you are trying to load by the name of the archive. It then matches the crcs from its internal database with the ones from the archive to recreate the game's ROM, the names inside the archive usually won't matter but some emulators will use them as a fallback if a crc can't be found.
 
+!!! Warning
+    When using romsets for the latest version of MAME or FBNeo, you should first make sure your version of those cores aren't outdated.
+
 !!! Warning "Keep arcade romsets zipped and don't rename them"
     If you rename or extract a romset, it won't work.
 
