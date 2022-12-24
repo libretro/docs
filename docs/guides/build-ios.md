@@ -76,7 +76,7 @@ When you first start RetroArch, you'll notice that you're missing images. You'll
   - Update Overlays
   - Update GLSL Shaders
 
-Do not choose "Core Updater"! That will not work on iOS.
+Do not choose "Core Downloader"! That will not work on iOS.
 
 #### Changing the Menu Interface
 

@@ -16,7 +16,7 @@ Awaiting description.
 
 1. Start up RetroArch. Inside the main menu, go to 'Online Updater'.
 
-2. Just to make sure we have the latest info files, select 'Update Core Info Files'. Wait until this is done. Then, select 'Core Updater'.
+2. Just to make sure we have the latest info files, select 'Update Core Info Files'. Wait until this is done. Then, select 'Core Downloader'.
 
 3. Browse through the list and select '3D Engine'.
 

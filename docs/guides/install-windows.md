@@ -89,10 +89,10 @@ You should always configure the following paths:
 
 RetroArch requires cores to run any content. You can download cores directly from RetroArch's interface by following this procedure:
 
-![Core updater](../image/retroarch/ozone/core_updater.gif)
+![Core updater](../image/retroarch/ozone/core_downloader.gif)
 
 - Navigate to **Online Updater**
-- Navigate to **Select Core Updater**
+- Navigate to **Select Core Downloader**
 - Select the core you want to download
 
 ### Running Content
