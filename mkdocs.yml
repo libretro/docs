@@ -234,6 +234,8 @@ nav:
         - 'Super Cassette Vision (EmuSCV)': 'library/emuscv.md'        
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
+      - 'Texas Instruments Emulation':
+        - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
       - 'MegaDuck Emulation':

@@ -152,6 +152,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Neko Project II                                           		           |                                                                                           |                |
 | Neko Project II Kai                                                              | [MIT](https://github.com/AZO234/NP2kai/blob/master/LICENSE)                               |                |
 | [Nestopia UE](../library/nestopia_ue.md)                                         | [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)                         |                |
+| [Numero](../library/numero.md)                                         | [GPLv2](https://github.com/nbarkhina/numero/blob/master/LICENSE)                         |                |
 | nSide Balanced                                                                   | [GPLv3](https://github.com/hex-usr/nSide/blob/master/gpl-3.0.txt)                         |                |
 | [NXEngine](../library/nxengine.md)                        		           | [GPLv3](https://github.com/gameblabla/nxengine-nspire/blob/master/LICENSE)                |                |
 | O2EM                                                                             | [Artistic License](https://sourceforge.net/projects/o2em/)                                |                |
