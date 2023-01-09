@@ -50,14 +50,12 @@ case RETRO_LANGUAGE_XXXXX:
 ```
 4. Open `Makefile.common`.
     1. Add `intl/msg_hash_xx.o` to `OBJ`.
-5. Create a copy of `intl/msg_hash_us.c` and name it `intl/msg_hash_xx.c`.
-6. Decide if `intl/msg_hash_xx.c` and `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below.
-7. Open `intl/msg_hash_xx.c`.
-    1. Rename the `msg_hash_get_help_us_enum()` function to `msg_hash_get_help_xx_enum()`.
-    2. Rename the `menu_hash_to_str_us_label_enum()` function to `menu_hash_to_str_xx_label_enum()`.
-    3. Rename the `msg_hash_to_str_us()` function to `msg_hash_to_str_xx()` and, inside that same function:
-       * Replace the call to `menu_hash_to_str_us_label_enum()` with a call to `menu_hash_to_str_xx_label_enum()`.
-       * Replace the `#include "msg_hash_us.h"` line with `#include "msg_hash_xx.h"`.
+5. Create a copy of `intl/msg_hash_en.c` and name it `intl/msg_hash_xx.c`. After the `msg_hash_us.c` refactor in early 2023, this file will only be a stub, so instead of the _us_ file, _en_ file is the source for this one.
+6. Open `intl/msg_hash_xx.c`.
+    1. Rename the `msg_hash_get_help_en_enum()` function to `msg_hash_get_help_xx_enum()`.
+    2. Rename the `msg_hash_to_str_en()` function to `msg_hash_to_str_xx()` and, inside that same function:
+       * Replace the `#include "msg_hash_en.h"` line with `#include "msg_hash_xx.h"`.
+7. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below.
 8. Open `intl/msg_hash_us.h`.
     1. Check if the following block is present, where `Yyyyy` is the native name of the language and if not, add it:
 ```c
@@ -215,8 +213,11 @@ Instructions and recommended reading for that can be found [here](https://docs.l
 
 > Please **do not change** the `intl/msg_hash_xx.h` files directly!
 
-The `intl/msg_hash_xx.c` files are not yet included on Crowdin, but that's because an overhaul of these files is currently a work-in-progress. If you just can't wait any longer, you can start translating those files by replacing the English texts with the respective translations.
-We will try to preserve your efforts.
+Starting from early 2023, the help texts that were located in `intl/msg_hash_xx.c` files are also included on Crowdin. If you have translation efforts in `msg_hash_xx.c` file from an earlier date, you can copy them to Crowdin, with following caveats:
+* Individual line breaks (\n) at the end of each line are not required, current menu drivers will break lines automatically. Line break may be used as a paragraph separator, if text is long.
+* Make sure translations still matches the current source text, as several of those were updated during the refactor.
+* Do not exceed maximum line length (500 characters).
+* The Crowdin translations for these strings will only take effect when the definition is removed from `intl/msg_hash_xx.c`.
 
 ## See also
 
