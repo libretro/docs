@@ -18,7 +18,7 @@ There are two families of multi-system arcade emulators available as libretro co
 
 ### The criterias for choosing an arcade core
 
-#### Integration within the libretro ecosystem:
+#### Integration within the libretro ecosystem
 A better integration allows for more features to be available from the frontend you are using, like netplay, runahead, rewind, retroachievements, ... but also reduces the risk of bugs. The quality of the integration is directly linked to the availability of a support team for the core.
 
 #### Accuracy
@@ -121,14 +121,14 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 
 ## Step 2: Use the correct version romsets for that emulator
 
-!!! Note
-    A romset is an archive (zip; 7z might or might not be supported depending on your core and/or platform and will be far longer to load) named in a specific way containing a set of file(s), each representing a chip from the original cabinet's PCB and having their own signature (crc). The emulator will know which game you are trying to load by the name of the archive. It then matches the crcs from its internal database with the ones from the archive to recreate the game's ROM, the names inside the archive usually won't matter but some emulators will use them as a fallback if a crc can't be found.
+!!! Warning "The rules"
+    Romsets are archives in zip format, they must not be extracted, 7zip is also supported with a few exceptions and the drawback that it's slower to load. If you rename a romset, it won't work. If your romset doesn't contain the exact files the emulator requires, it won't work. If your romset requires other romsets (bios, parent) and you don't have them, it won't work.
+
+!!! Note "The reasons behind those rules"
+    FinalBurn and MAME emulate thousands of different machines (because Pac-Man doesn't use the same hardware as Donkey Kong), so they need a mean to identify which machine run a given romset, it was decided to use the archive's filename for this purpose. Each file within a romset is the dump of a chip (program data, sound data, graphics data, ...) from the original game's PCB, the emulator needs to identify each dump's role, it was decided to use their signature (crc) for this purpose (filenames can sometimes be used as a fallback to load bad/hacked dump). To summarize, when you launch a romset with one of those emulators, it first matches the archive's filename with its internal database, then load all the dumps it requires, failing at one of those 2 steps will prevent the game from running.
 
 !!! Warning
     When using romsets for the latest version of MAME or FBNeo, you should first make sure your version of those cores aren't outdated.
-
-!!! Warning "Keep arcade romsets zipped and don't rename them"
-    If you rename or extract a romset, it won't work.
 
 !!! tip
     In general, you will get better results with a full collection of romsets for your chosen emulator. Starting with individual arcade romsets is less likely to work because you generally won't know which emulator they target, or if they contain every required files to run the game (bios, parent).
@@ -149,6 +149,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 | MAME (latest version) | MAME (latest version) | [here (click XML link)](https://www.mamedev.org/release.html) |
 
 ###  Optional : ClrMamePro tutorial
+Clrmamepro is a tool to help validating your romsets against a given emulator.
 
 !!! info "Credits"
     This tutorial is based on RetroPie's
