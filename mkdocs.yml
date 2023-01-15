@@ -455,6 +455,7 @@ theme:
     - navigation.top
     - tables
     - content.code.annotate
+    - content.action.edit
   font:
     text: Roboto
     code: Roboto Mono
