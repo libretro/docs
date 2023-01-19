@@ -23,6 +23,10 @@ OpenGL 3.3 or higher
 !!! warning
 	There is currently no ‘working’ macOS version available. This is because this core requires OpenGL core 3.3 context, and RetroArch on macOS currently does not support this. We will have to add support for this to a future version of RetroArch on macOS before this core will start to work on it.
 
+## Decryption keys
+
+Citra requires [AES keys](https://citra-emu.org/wiki/aes-keys/) in order to load encrypted games. `aes_keys.txt` needs to be placed in ../saves/Citra/sysdata.
+
 ## Extensions
 
 Content that can be loaded by the Citra core have the following file extensions:
@@ -76,7 +80,7 @@ The Citra core's library name is 'Citra'
 
 The Citra core saves/loads to/from these directories.
 
-The Citra Shaders should be in ../cores/savefilesCitra/shaders/opengl/transferable
+The Citra Shaders should be in ../saves/Citra/shaders/opengl/transferable
 
 **Frontend's Save directory**
 
