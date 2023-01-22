@@ -65,7 +65,7 @@ Frontend-level settings or features that the ep128emu core respects.
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
-| LEDs              | ✕         |
+| LEDs              | ✔         |
 
 ## Directories
 
@@ -89,6 +89,8 @@ The ep128emu core's library name is `ep128emu`. The ep128emu core saves/loads to
 - The ep128emu core's core provided aspect ratio is 4:3 (interlace mode)
 
 The intelligent zoom function can reduce the apparent width/height, aspect ratio is also adjusted.
+
+If there is LED driver configured in RetroArch, second LED should reflect disk activity state.
 
 ## Usage
 
@@ -273,7 +275,7 @@ Function key row is mapped to Fn-array. Extra mappings are marked in the followi
 
 ## BIOS
 
-Following "BIOS" files are used for emulation. Note: in usual 8-bit terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
+Following "BIOS" files are used for emulation. Note: in usual 8-bit home computer terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
 
 From version 1.1.0, external BIOS files are optional.
 
