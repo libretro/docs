@@ -86,7 +86,7 @@ The ScummVM core saves/loads to/from these directories.
 
 Before attempting to run a game with the ScummVM core, certain preparations are required to ensure correct operation:
 
-- Download and extract the file [scummvm.zip](https://github.com/libretro/scummvm/raw/master/backends/platform/libretro/aux-data/scummvm.zip).
+- Donwload from the Online Updater > Core System Files Downloader > Scummvm.zip or download and extract the file from [ScummVM.zip](https://buildbot.libretro.com/assets/system/ScummVM.zip).
 
 - Place the resultant `scummvm` folder inside the RetroArch `system` directory.
 
@@ -237,7 +237,7 @@ Once all files are in place, each game may be added as follows:
 
 #### Running a Game
 
-Running a ScummVM game via the RetroArch frontend requires the addition of an appropriately configured `.scummvm` file to the game directory. For each game listed in the ScummVM Launcher, the following procedure should be followed:
+Running a ScummVM game via the RetroArch frontend can be done using the appropriate `.scummvm` file to the game directory. For each game listed in the ScummVM Launcher, the following procedure should be followed:
 
 - Note the specific game 'ID:' that was submitted when adding the game to the ScummVM Launcher. If this guide has been followed, the game ID will be equal to the 'short name' found on the [ScummVM Compatibility Page](http://scummvm.org/compatibility).
 
@@ -277,14 +277,14 @@ Games can then be launched as follows:
 
 <center> ![](../image/core/scummvm/scummvm_load_content.png) </center>
 
-For users who do not wish to create their own `.scummvm` files, a pre-prepared collection is available in the [libretro-database-scummvm](https://github.com/RobLoach/libretro-database-scummvm/tree/master/games) repository. Simply download the appropriate file for a particular game and copy it to the game directory.
+For users who do not wish to create their own `.scummvm` files, a pre-prepared collection is available in the [libretro-database-scummvm](https://github.com/RobLoach/libretro-database-scummvm/tree/ffbf0a0b3550b74ba39ec3a25d321d85d529e1f8/games) repository. Simply download the appropriate file for a particular game and copy it to the game directory.
 
 !!! attention
 	When using third-party `.scummvm` files, it is important to verify that the file contents matches the specific game ID that was submitted when adding the game to the ScummVM Launcher. Do not assume that third-party `.scummvm` files are automagically 'correct'.
 
 #### Playlist/Scanning Support
 
-To launch games efficiently via the RetroArch frontend, it is recommended to add them to a playlist. Provided that a `.scummvm` file is present inside each game directory, RetroArch supports automated scanning/playlist generation for ScummVM content:
+To launch games efficiently via the RetroArch frontend, it is recommended to add them to a playlist. RetroArch supports automated scanning/playlist generation for ScummVM content:
 
 - From RetroArch's main menu screen, navigate to the 'Import content' tab.
 
