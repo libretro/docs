@@ -77,12 +77,13 @@ nav:
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
+      - 'CRT SwitchRes': 'guides/crtswitchres.md'
       - 'Input and Controller Drivers': 'guides/input-controller-drivers.md'
+      - 'Latency': 'guides/latency.md'
+      - 'LED Drivers': 'guides/led-drivers.md'
       - 'Linux KMS Mode': 'guides/kms-mode.md'
       - 'Optimal Vsync Performance': 'guides/optimal-vsync.md'
       - 'Run Ahead': 'guides/runahead.md'
-      - 'Latency': 'guides/latency.md'
-      - 'CRT SwitchRes': 'guides/crtswitchres.md'
     - 'Lakka Documentation': 'http://www.lakka.tv/doc/Home/'
     - 'Core Library: Emulation':
       - 'Getting Started with Arcade Emulation': 'guides/arcade-getting-started.md'
