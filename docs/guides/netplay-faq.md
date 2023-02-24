@@ -17,11 +17,11 @@
 
 ### Does it support more than one player on one computer?
 
-- Yes! See [Mutliple Controllers Guide](netplay-multiple-controllers.md) for more details.
+- Yes! See [Multiple Controllers Guide](netplay-multiple-controllers.md) for more details.
 
 ### Does it support the host spectating while a client performs as player 1?
 
-- Yes! By default, the host is always assigned Controller 1, but see [Mutliple Controllers Guide](netplay-multiple-controllers.md) on how a client can 'Request Device' to be controller 1.
+- Yes! By default, the host is always assigned Controller 1, but see [Multiple Controllers Guide](netplay-multiple-controllers.md) on how a client can 'Request Device' to be controller 1.
 
 ### What do you need for RetroArch netplay to work?
 
