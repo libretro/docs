@@ -11,7 +11,7 @@ The QuickNES core has been authored by
 
 The QuickNES core is licensed under
 
-- [LGPLv2.1+](https://github.com/kode54/QuickNES/blob/master/COPYING)
+- [GPLv2](https://github.com/kode54/QuickNES/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
