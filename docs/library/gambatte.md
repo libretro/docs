@@ -91,7 +91,7 @@ The Gambatte core saves/loads to/from these directories.
 
 | File                        | Description             |
 |:---------------------------:|:-----------------------:|
-| palettes/Default.pal        | Global custom palette   |
+| palettes/default.pal        | Global custom palette   |
 | palettes/'content-name'.pal | Per-game custom palette |
 
 ## Geometry and timing
@@ -112,7 +112,7 @@ Create a folder called "palettes" in RetroArch's system directory. Then, you can
 
 You can define different palettes for specific games by creating a .pal file in the "palettes" folder with 'INTERNALROMNAME.pal' or "rom-name.pal". If no specific palette is found for a ROM then the default palette is used.
 
-You can also define a palette to be used for all Game Boy games by creating a .pal file in the "palettes" folder named "Default.pal"
+You can also define a palette to be used for all Game Boy games by creating a .pal file in the "palettes" folder named "default.pal"
 
 ??? note "*Custom palettes can be created from the GUI in standalone Gambatte*"
     ![](../image/core/gambatte/tool.png)
