@@ -33,7 +33,7 @@ Unzip the above archive of cores into the following directory in the RetroArch p
 
 ### Open RetroArch in Xcode
 
-Open the Xcode project located at `pkg/apple/iOS/RetroArch_iOS11.xcodeproj`
+Open the Xcode project located at `pkg/apple/iOS/RetroArch_iOS11_Metal.xcodeproj`.
 
 ### Sign in with your Apple ID
 
