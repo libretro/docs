@@ -2,14 +2,14 @@
 
 ## Background
 
-Genesis Plus GX is an open-source Sega 8/16 bit emulator focused on accuracy and portability. The source code, originally based on Genesis Plus 1.3 by Charles MacDonald, has been heavily modified & enhanced, with respect to initial goals and design, in order to improve the accuracy of emulation, implementing new features and adding support for extra peripherals, cartridge & systems hardware.
+Genesis Plus GX is an open-source Sega 8/16 bit emulator developed by Eke-Eke which focuses on accuracy and portability. The source code, originally based on Genesis Plus 1.3 by Charles MacDonald, has been heavily modified & enhanced, with respect to initial goals and design, in order to improve the accuracy of emulation, implementing new features and adding support for extra peripherals, cartridge & systems hardware such as various lightguns, the FM Sound Unit and Lock-On cartridge technology.
 
-Genesis Plus GX has 100% compatibility with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear, SG-1000 & Pico released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available.
+Genesis Plus GX has [100% compatibility](https://github.com/ekeeke/Genesis-Plus-GX/blob/master/wiki/Compatibility.md) with Genesis / Mega Drive, Sega/Mega CD, Master System, Game Gear, SG-1000 & Pico released software (including all unlicensed or pirate known dumps), also emulating backwards compatibility modes when available. Keep in mind that 32X games are not supported.
 
 The Genesis Plus GX core has been authored by
 
-- Charles McDonald
 - Eke-Eke
+- Charles McDonald
 
 The Genesis Plus GX core is licensed under
 
@@ -45,18 +45,21 @@ Required or optional firmware files go in the frontend's system directory.
 
 Content that can be loaded by the Genesis Plus GX core have the following file extensions:
 
-- .mdx
-- .md
-- .smd
-- .gen
-- .bin
-- .cue
-- .iso
-- .sms
-- .gg
-- .sg
-- .68k
-- .chd
+.m3u
+.mdx
+.md
+.smd
+.gen
+.bin
+.cue
+.iso
+.chd
+.bms
+.sms
+.gg
+.sg
+.68k
+.sgd
 
 RetroArch database(s) that are associated with the Genesis Plus GX core:
 
@@ -91,7 +94,7 @@ Frontend-level settings or features that the Genesis Plus GX core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
@@ -334,8 +337,8 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 
 ## Other devices
 
-- PICO tablet - The Genesis Plus GX core can emulate PICO tablet inputs but this is done automatically, based off the game's crc, and cannot be manually selected as a device type.
-- Terebi Oekaki tablet - The Genesis Plus GX core can emulate Terebi Oekaki table inputs but this is done automatically, based off the game's crc, and cannot be manually selected a device type.
+- PICO tablet - The Genesis Plus GX core can emulate PICO tablet inputs but this is done automatically, based off the game's CRC, and cannot be manually selected as a device type.
+- Terebi Oekaki tablet - The Genesis Plus GX core can emulate Terebi Oekaki table inputs but this is done automatically, based off the game's CRC, and cannot be manually selected a device type.
 
 ## Multitap
 
