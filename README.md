@@ -38,13 +38,21 @@ There is a To-Do list for libretro/docs *here* and you can submit suggestions or
     ```
     pip install pymdown-extensions
     ```
+5. Install mkdocs-git-revision-date
+    ```
+    pip install mkdocs-git-revision-date-plugin
+    ```
+6. Install mkdocs-macros
+    ```
+    pip install mkdocs-macros-plugin
+    ```
 
-5. Build the site
+7. Build the site
     ```
     mkdocs build
     ```
 
-6. The documentation will be built to the `site` directory; preview any changes with MkDocs' built-in dev-server before submitting a pull request
+8. The documentation will be built to the `site` directory; preview any changes with MkDocs' built-in dev-server before submitting a pull request
     ```
     mkdocs serve
     ```
