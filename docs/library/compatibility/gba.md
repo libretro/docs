@@ -5,20 +5,20 @@
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
 | Activision Anthology                |Freezes when entering a game. |
-| Banjo-Kazooie - Grunty's Revenge    |Black screen during developer logo. Resets when Banjo leaves his house.|
+| Banjo-Kazooie - Grunty's Revenge    |Black screen during developer logo. ~~Resets when Banjo leaves his house.~~|
 | Boktai Trilogy                      |The solar sensor is not emulated. |
-| DemiKids - Light/Dark Version       |Crashes when entering a battle. |
+| ~~DemiKids - Light/Dark Version~~   |~~Crashes when entering a battle.~~ |
 | Digimon Racing (Europe)             |Freezes during the intro.   |
 | Dragon Ball Z - The Legacy of Goku  |Graphics glitches. |
 | Final Fantasy VI                    |Background/tiling order issues.  |
 | Game Boy Advance Video - Dragon Ball GT - Volume 1 |White screen.     |
-| ~~Grand Theft Auto Advance            |Crashes after first dialog. Never can be worked.~~ |
+| ~~Grand Theft Auto Advance~~        |~~Crashes after first dialog. Works on some platforms.~~ |
 | Harry Potter - Quidditch World Cup  |Crashes when going ingame.       |
 | Koro Koro Puzzle Happy Panechu!     |The tilt sensor is not emulated. |
-| ~~Mario & Luigi - Superstar Saga      |Crashes when entering a battle.~~  |
+| Mario & Luigi - Superstar Saga      |Sometimes crashes when entering a battle.  |
 | Phantasy Star Collection            |Phantasy Star 1 flickers.        |
 | R-Type III - The Third Lightning    |Softlocks at Irem startup screen.|
-| ~~Rock 'n Roll Racing                 |Corrupted graphics, not playable.~~|
+| ~~Rock 'n Roll Racing~~             |~~Corrupted graphics, not playable.~~|
 | Rockman & Forte                     |Doesn't continue after GBA BIOS screen.|
 | Sims 2, The - Pets |Graphics glitches. Heavy flickering, black objects. |
 | Street Racing Syndicate             |Freezes at startup screen, doesn't continue.|
