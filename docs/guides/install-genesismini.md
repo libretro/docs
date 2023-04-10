@@ -11,7 +11,7 @@
 ## Prerequisites
 
 - FAT32 or exFat formatted USB
-- USB Cable(The one came with Genesis is not support data transfer, it only works for power.
+- USB Cable(The one came with Genesis does not support data transfer, it only works for power.
 - *optional* OTG cable so you don't have to use second port
 
 | :warning: DISCLAIMER:          |
