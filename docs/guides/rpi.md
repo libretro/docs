@@ -118,7 +118,7 @@ In KMS mode, the resolution setting is not exposed in the GUI. Edit following en
 
 For Pi 4 to enable 4K 60 Hz refresh, a line is needed in `config.txt`:
 
-    hdmi_enable_4kp60 = 1
+    hdmi_enable_4kp60=1
 
 [LED driver](../led-drivers/#sysled-driver) may also be enabled.
 
@@ -159,7 +159,7 @@ FPS of Ozone menu, after downloading assets, gl driver:
 |-------------------------------|:---------:|:---------:|:---------:|:---------:|:---------:|
 | Bullseye 32-bit, Mesa         | ~5        | ~23       | ~29       |  ~50      | ¬10       |
 | Bullseye 64-bit, Mesa         | -         | -         | ~25       |  ~55      | ¬13       |
-| Bullseye lite 32-bit, Mesa/KMS| ~20       | ~42       | ~50       |  ~55      | ~23       |
+| Bullseye lite 32-bit, Mesa/KMS| ~20       | ~42       | ~50       |  ~55      | ~26       |
 | Bullseye lite 64-bit, Mesa/KMS| -         | -         | ~48       |  ~55      | ~23       |
 | Buster 32-bit, legacy         | ~6/21     | ~9/40     | ~10/42    |  -        | -         |
 
@@ -172,7 +172,7 @@ FPS of VitaQuake2, default demo, default internal resolution (960x544), gl drive
 |-------------------------------|:---------:|:---------:|:---------:|:---------:|:---------:|
 | Bullseye 32-bit, Mesa         | <1        | ~12       | ~15       | ~52       | ~25       |
 | Bullseye 64-bit, Mesa         | -         | -         | ~23       | >60       | ~26       |
-| Bullseye lite 32-bit, Mesa/KMS| ~3        | ~16       | ~25       | >60       |           |
+| Bullseye lite 32-bit, Mesa/KMS| ~3        | ~16       | ~25       | >60       | ~40       |
 | Bullseye lite 64-bit, Mesa/KMS| -         | -         | ~29       | >60       | ~45-50    |
 | Buster 32-bit, legacy         | ~2        | ~13       | ~19       | -         | -         |
 
