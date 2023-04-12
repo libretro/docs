@@ -2,12 +2,12 @@
 | :---                      | :---                   | :---               |
 | [2048](https://docs.libretro.com/library/2048/)                      | Game                   | A port of the popular puzzle game 2048 to libretro |
 | 3D Engine                 | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
-| 4DO                       | 3DO                    |                    |
+| [4DO](https://docs.libretro.com/library/opera/)                       | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
-| Atari800                  | Atari 5200             |                    |
+| [Atari800](https://docs.libretro.com/library/atari800/)                  | Atari 5200             |                    |
 | Beetle bsnes              | Nintendo SNES/SFC      |                    |
-| Beetle Cygne              | Bandai WonderSwan/Color |                   |
+| [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/)              | Bandai WonderSwan/Color |                   |
 | Beetle GBA                | Game Boy Advance       |                    |
 | Beetle Lynx               | Atari Lynx             |                    |
 | Beetle NeoPop             | Neo Geo Pocket/Color   |                    |
@@ -126,9 +126,9 @@
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
-| Mupen64Plus-Next          | Nintendo 64            |                    |
-| Mupen64Plus-Next GLES2    | Nintendo 64            |                    |
-| Mupen64Plus-Next GLES3    | Nintendo 64            |                    |
+| [Mupen64Plus-Next[(https://docs.libretro.com/library/mupen64plus/)          | Nintendo 64            |                    |
+| [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
+| [Mupen64Plus-Next GLES3](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
 | Neko Project II           | NEC PC-98              |                    |
 | Neko Project II Kai       | NEC PC-98              |                    |
 | NeoCD                     | Neo Geo CD             |                    |
@@ -145,7 +145,7 @@
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
 | PCSX1                     | Sony PlayStation       |                    |
-| LRPS2                     | Sony PlayStation 2     |                    |
+| [LRPS2](https://docs.libretro.com/library/pcsx2/)                     | Sony PlayStation 2     |                    |
 | PCSX ReARMed              | Sony PlayStation       |                    |
 | PCSX ReARMed Neon         | Sony PlayStation       |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
@@ -166,7 +166,6 @@
 | Redbook                   | Music player           | A libretro core for playing back Redbook-formatted audio, such as commercial audio CDs |
 | REminiscence              | Game engine            | A port of the REminiscence engine, a reimplementation of the engine used by Delphine Software's Flashback |
 | Retro8                    | Game engine            | A port of the Retro8 open-source reimplementation of the PICO-8 fantasy console to libretro |
-| RetroDream                | Sega Dreamcast         |                    |
 | Rustation                 | Sony PlayStation       |                    |
 | SameBoy                   | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
