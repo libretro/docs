@@ -168,10 +168,10 @@
 | SameBoy                   | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
 | SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
-| ScummVM                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
+| [ScummVM](https://docs.libretro.com/library/scummvm/)                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
 | SimCoupe                  | SAM Coupe              |                    |
-| SMS Plus GX               | Sega MS/GG             |                    |
-| Snes9x                    | Nintendo SNES/SFC      |                    |
+| [SMS Plus GX](https://docs.libretro.com/library/smsplus/)               | Sega MS/GG             |                    |
+| [Snes9x](https://docs.libretro.com/library/snes9x/)                    | Nintendo SNES/SFC      |                    |
 | [Snes9x 2002](https://docs.libretro.com/library/snes9x_2002/)               | Nintendo SNES/SFC      |                    |
 | [Snes9x 2005](https://docs.libretro.com/library/snes9x_2005/)               | Nintendo SNES/SFC      |                    |
 | [Snes9x 2005 Plus](https://docs.libretro.com/library/snes9x_2005_plus/)          | Nintendo SNES/SFC      |                    |
@@ -181,9 +181,9 @@
 | Stella 2014               | Atari 2600             |                    |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the Duckstation emulator |
-| TempGBA                   | Game Boy Advance       |                    |
-| TGB Dual                  | Game Boy/Color         |                    |
-| Theodore                  | Thomson MO/TO          |                    |
+| [TempGBA](https://docs.libretro.com/library/tempgba/)                   | Game Boy Advance       |                    |
+| [TGB Dual](https://docs.libretro.com/library/tgb_dual/)                  | Game Boy/Color         |                    |
+| [Theodore](https://docs.libretro.com/library/theodore/)                  | Thomson MO/TO          |                    |
 | TIC-80                    | Game engine            | A port of the free and open source fantasy computer TIC-80 to libretro |
 | The Powder Toy            | Game                   | A port of the Powdertoy physics sandbox/simulation engine to libretro |
 | [TyrQuake](https://docs.libretro.com/library/tyrquake/)                  | Game engine            | A port of the tyrquake engine |
@@ -192,9 +192,9 @@
 | Uzem                      | Uzebox                 | A port of Uzem, the official emulator for the Uzebox |
 | VaporSpec                 | Game engine            | A virtual game platform with capabilities similar to 80s game consoles |
 | VBA-M                     | Game Boy Advance       | VisualBoy Advance-M is a active fork of VisualBoy Advance emulator |
-| VBA Next                  | Game Boy Advance       |                    |
-| vecx                      | Vectrex                |                    |
-| VeMUlaor                  | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
+| [VBA Next](https://docs.libretro.com/library/vba_next/)                  | Game Boy Advance       |                    |
+| [vecx](https://docs.libretro.com/library/vecx/)                      | Vectrex                |                    |
+| [VeMUlator](https://docs.libretro.com/library/vemulator/)                  | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
 | VICE x64                  | Commodore C64          |                    |
 | VICE x64sc                | Commodore C64          |                    |
 | VICE x128                 | Commodore C128         |                    |
