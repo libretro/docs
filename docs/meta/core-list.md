@@ -126,7 +126,7 @@
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
-| [Mupen64Plus-Next[(https://docs.libretro.com/library/mupen64plus/)          | Nintendo 64            |                    |
+| [Mupen64Plus-Next](https://docs.libretro.com/library/mupen64plus/)          | Nintendo 64            |                    |
 | [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
 | [Mupen64Plus-Next GLES3](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
 | Neko Project II           | NEC PC-98              |                    |
@@ -144,10 +144,8 @@
 | ParaLLEl N64              | Nintendo 64            |                    |
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
-| PCSX1                     | Sony PlayStation       |                    |
 | [LRPS2](https://docs.libretro.com/library/pcsx2/)                     | Sony PlayStation 2     |                    |
-| PCSX ReARMed              | Sony PlayStation       |                    |
-| PCSX ReARMed Neon         | Sony PlayStation       |                    |
+| [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/)              | Sony PlayStation       |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
 | Pocket CDG                | Karaoke player         | A karaoke music player, ported to libretro |
