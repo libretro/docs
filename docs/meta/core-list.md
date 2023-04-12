@@ -172,12 +172,12 @@
 | SimCoupe                  | SAM Coupe              |                    |
 | SMS Plus GX               | Sega MS/GG             |                    |
 | Snes9x                    | Nintendo SNES/SFC      |                    |
-| Snes9x 2002               | Nintendo SNES/SFC      |                    |
-| Snes9x 2005               | Nintendo SNES/SFC      |                    |
-| Snes9x 2005 Plus          | Nintendo SNES/SFC      |                    |
-| Snes9x 2010               | Nintendo SNES/SFC      |                    |
+| [Snes9x 2002](https://docs.libretro.com/library/snes9x_2002/)               | Nintendo SNES/SFC      |                    |
+| [Snes9x 2005](https://docs.libretro.com/library/snes9x_2005/)               | Nintendo SNES/SFC      |                    |
+| [Snes9x 2005 Plus](https://docs.libretro.com/library/snes9x_2005_plus/)          | Nintendo SNES/SFC      |                    |
+| [Snes9x 2010](https://docs.libretro.com/library/snes9x_2010/)               | Nintendo SNES/SFC      |                    |
 | SquirrelJME               | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
-| Stella                    | Atari 2600             |                    |
+| [Stella](https://docs.libretro.com/library/stella/)                    | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the Duckstation emulator |
@@ -186,7 +186,7 @@
 | Theodore                  | Thomson MO/TO          |                    |
 | TIC-80                    | Game engine            | A port of the free and open source fantasy computer TIC-80 to libretro |
 | The Powder Toy            | Game                   | A port of the Powdertoy physics sandbox/simulation engine to libretro |
-| TyrQuake                  | Game engine            | A port of the tyrquake engine |
+| [TyrQuake](https://docs.libretro.com/library/tyrquake/)                  | Game engine            | A port of the tyrquake engine |
 | UAE4ARM                   | Commodore Amiga        |                    |
 | UME 2015                  | Arcade/Console/various | (See MAME note)    |
 | Uzem                      | Uzebox                 | A port of Uzem, the official emulator for the Uzebox |
