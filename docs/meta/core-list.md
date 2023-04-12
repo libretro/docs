@@ -1,6 +1,6 @@
 | Core                      | System/Machine         | Notes              |
 | :---                      | :---                   | :---               |
-| 2048                      | Game                   | A port of the popular puzzle game 2048 to libretro |
+| [2048](https://docs.libretro.com/library/2048/)                      | Game                   | A port of the popular puzzle game 2048 to libretro |
 | 3D Engine                 | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
 | 4DO                       | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
