@@ -205,6 +205,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | VICE VIC20                                                                       | [GPLv2](https://github.com/r-type/vice3.0-libretro/blob/master/vice/COPYING)              |                |
 | Video Processor                                                                  | [BSD-2-Clause](https://github.com/jaredmcneill/libretro-v4l2/blob/master/LICENSE)         |                |
 | [Virtual Jaguar](../library/virtual_jaguar.md)                                   | [GPLv3](https://github.com/libretro/virtualjaguar-libretro/blob/master/docs/GPLv3)        |                |
+| [VirtualXT](../library/virtualxt.md)                                   | [zlib-acknowledgement](https://github.com/andreas-jonsson/virtualxt/blob/develop/LICENSE)        |                |
 | [XRick](../library/xrick.md)                                                     | [GPLv3](https://github.com/libretro/xrick-libretro/blob/master/README)                    |                |
 | [YabaSanshiro](../library/yabasanshiro.md)						   | [GPLv2](https://github.com/libretro/yabasanshiro/blob/master/yabause/COPYING)                  |                |
 | [Yabause](../library/yabause.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/master/yabause/COPYING)                  |                |
