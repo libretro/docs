@@ -119,11 +119,11 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
-| ~~Activision Anthology~~               |~~Freezes when entering a game. ~~|
+| ~~Activision Anthology~~               |~~Freezes when entering a game.~~|
 | Banjo-Kazooie - Grunty's Revenge    |Black screen during developer logo. ~~Resets when Banjo leaves his house.~~|
 | Boktai Trilogy                      |The solar sensor is not emulated. |
 | ~~DemiKids - Light/Dark Version~~       |~~Crashes when entering a battle.~~ |
-| Digimon Racing (Europe)             |Freezes during the intro.   |
+| ~~Digimon Racing (Europe)~~             |~~Freezes during the intro.~~   |
 | Dragon Ball Z - The Legacy of Goku  |Graphics glitches. |
 | Final Fantasy VI                    |Background/tiling order issues.  |
 | ~~Game Boy Advance Video - Dragon Ball GT - Volume 1~~ |~~White screen.~~     |
