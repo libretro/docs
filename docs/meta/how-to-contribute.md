@@ -6,6 +6,7 @@ The documentation for this project is written in [Markdown](https://en.wikipedia
 The documentation source is maintained via [Git](https://en.wikipedia.org/wiki/Git). For more info on how to use git [refer to their help](https://help.github.com/)If you're new to Git, you can refer to their [documentation](https://help.github.com/) for more information on how to use it.
 
 By using *Git* and Markdown effectively, you can contribute to the project's documentation and help improve it for everyone.
+
 In order to propose improvements to a document:
 
 1. [Clone the repo](https://github.com/libretro/docs)
