@@ -1,8 +1,11 @@
 # Contribute to the documentation
 
-The docs are written in [Markdown](https://en.wikipedia.org/wiki/Markdown) if you need help with the syntax use [this guide](https://guides.github.com/features/mastering-markdown/). Mkdocs uses some [Markdown extensions](http://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions) that you may have to familiarize with.
+The documentation for this project is written in [Markdown](https://en.wikipedia.org/wiki/Markdown) , a simple markup language that allows you to format text using plain text syntax. If you're not familiar with Markdown, you can use [this guide](https://guides.github.com/features/mastering-markdown/) to learn the syntax. Note that Mkdocs uses some [Markdown extensions](http://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions), so you may need to familiarize yourself with those as well.
 
-The documentation source is maintained via [Git](https://en.wikipedia.org/wiki/Git). For more info on how to use git [refer to their help](https://help.github.com/)
+
+The documentation source is maintained via [Git](https://en.wikipedia.org/wiki/Git). For more info on how to use git [refer to their help](https://help.github.com/). If you're new to Git, you can refer to their [documentation](https://help.github.com/) for more information on how to use it.
+
+By using *Git* and Markdown effectively, you can contribute to the project's documentation and help improve it for everyone.
 
 In order to propose improvements to a document:
 
@@ -11,8 +14,7 @@ In order to propose improvements to a document:
 3. Follow the "Building the docs" section to render the documentation site locally
 4. Propose your changes using the button `New Pull Request` [in the docs repo](https://github.com/libretro/docs)
 
-There is a To-Do list for libretro/docs *here* and you can submit suggestions or issues regarding documentation at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues).
-
+To contribute to libretro/docs documentation, you can check out the To-Do list *here*, or submit suggestions and issues at the [libretro/docs issue tracker](https://github.com/libretro/docs/issues) on GitHub.
 ## Building the docs
 
 1. Make sure you have [Python](https://www.python.org/) and [pip](https://pip.pypa.io) installed
