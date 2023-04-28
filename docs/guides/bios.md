@@ -17,8 +17,8 @@ A BIOS file is a copy of the operating system used by the hardware that a Core i
 
 ## High-Level Emulation (HLE)
 
-HLE tries to reproduce the console's outputs instead of its actual behavior, though bugs and glitches are more common.
+High-Level Emulation (HLE) tries to reproduce the console's outputs instead of its actual behavior, though bugs and glitches are often common.
 
 ## Where do BIOS files go?
 
-Usually RetroArch's "system" directory. Check settings > directory and the core documentation to be sure.
+Usually BIOS files go to RetroArch's "system" directory. Check settings --> directory and the core documentation to be sure.
