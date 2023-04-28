@@ -16,7 +16,7 @@
 | Harry Potter - Quidditch World Cup  |Crashes when going ingame.       |
 | Koro Koro Puzzle Happy Panechu!     |The tilt sensor is not emulated. |
 | ~~Mario & Luigi - Superstar Saga~~      |~~Sometimes crashes when entering a battle.~~  |
-| Phantasy Star Collection            |Phantasy Star 1 flickers.        |
+| Phantasy Star Collection            |Phantasy Star 1 flickers  - turn on Interframe Blending in core options to fix.|
 | ~~R-Type III - The Third Lightning~~    |~~Softlocks at Irem startup screen.~~|
 | ~~Rock 'n Roll Racing~~             |~~Corrupted graphics, not playable.~~|
 | ~~Rockman & Forte~~                     |~~Doesn't continue after GBA BIOS screen.~~|
