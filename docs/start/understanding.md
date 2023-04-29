@@ -26,6 +26,14 @@ Libretro is a simple API that allows for the creation of games and emulators. It
 
 When you choose to use the libretro API, your program gets turned into a single library file (called a ‘libretro core’). A frontend that supports the libretro API can then load that library file and run the app. The frontend’s responsibility is to provide all the implementation-specific details, such as video/audio/input drivers. The libretro core’s responsibility is solely to provide the main program. You therefore don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs/sound APIs/supporting all known joypads/etc. This is none of your concern at the libretro core implementation level.
 
+While the libretro API is simple in nature, it is also incredibly powerful. By using the libretro API, your program becomes a single library file, known as a 'libretro core', that can be loaded by any frontend that supports the libretro API. 
+
+The beauty of this approach is that the frontend is responsible for providing all the implementation-specific details, such as video/audio/input drivers. This means that as a developer, you don't have to worry about writing different video drivers for Direct3D or OpenGL, or supporting all known joypads or input/sound APIs. All of these details are handled by the frontend, which frees up your time and energy to focus solely on creating the main program.
+
+Additionally, the libretro API allows for cross-platform compatibility, meaning that a libretro core can be used on multiple platforms with minimal effort. This makes it an ideal choice for developers who want to create games or emulators that can be easily ported to different platforms.
+
+In summary, the libretro API offers a simple yet powerful way to create games and emulators. By separating the implementation-specific details from the main program, the libretro API allows developers to focus on creating high-quality content without worrying about the underlying technical details.
+
 ## Logo/Mascot
 
 ![Invader](../image/start/icon.png){ align=left }
