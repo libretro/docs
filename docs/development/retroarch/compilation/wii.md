@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need the homebrew Nintendo Wii SDK libogc and Devkitpro PPC toolchain installed.
+You need to have installed [devkitPro](https://github.com/devkitPro/installer/releases), the homebrew Nintendo Wii SDK (libOGC) and the devkitPPC (r29) toolchain on your computer.
 
 ## RetroArch Compilation
 
@@ -18,18 +18,18 @@ For subsequent builds you only need to pull the changes from the repo
     cd retroarch
     git pull
 
-To update your local copy from the repository run git pull
+To update your local copy from the repository of RetroArch, run git pull
 
 ### Building RetroArch separately
 
 First, you need to compile [Salamander](../glossary.md#salamander).
-To compile Salamander (for Wii) run:
+For compile Salamander (for Wii) run:
 
     make -f Makefile.wii.salamander
 
 Rename the file retroarch-salamander_wii.dol as boot.dol. This file is the frontend launcher for the other cores (indeed files containing core and frontend).
 
-Second, to compile RetroArch for Wii (the core and the frontend), rename the compiled core as 'libretro_wii.a' (see bellow how to compile a core), put it in the RetroArch directory and run:
+Second, to compile RetroArch for Wii (the core and the frontend), rename the compiled core as 'libretro_wii.a' (see below how to compile a core on "Building Cores" section), put it in the RetroArch directory and run:
 
     make -f Makefile.griffin platform=wii
 
@@ -77,3 +77,22 @@ In case you only want to build one and/or more cores instead of all, you can spe
     ./libretro-build-wii.sh snes9x2010 fceumm
 
 Once finished, you can find the libretro cores inside directory `dist/wii`.
+
+Another way for compile the cores, is cloning the core's repository (for example, FCEUmm) from [GitHub](https://github.com/orgs/libretro/repositories).
+In this case, for clone FCEUmm-Libretro repo:
+
+    git clone https://github.com/libretro/libretro-fceumm.git libretro-fceumm
+    cd libretro-fceumm
+
+For subsequent builds you only need to pull the changes from the core's repo (ex., FCEUmm)
+
+    cd libretro-fceumm
+    git pull
+
+To update your local copy from the repository of the core (in this case FCEUmm), run git pull
+
+For compile the core for Wii (in this case, FCEUmm) run:
+
+    make platform=wii
+
+Rename the compiled core as 'libretro_wii.a', then put it in the RetroArch directory and follow the instructions on the "Building RetroArch separately" section.
