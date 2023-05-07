@@ -25,6 +25,8 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 Content that can be loaded by the EasyRPG core have the following file extensions:
 
 - .ldb
+- .zip
+- .easyrpg
 
 ### RTP files
 
@@ -39,7 +41,8 @@ You must download the RTP2000 and RTP2003 from [here](https://www.rpgmakerweb.co
 
 RetroArch database(s) that are associated with the EasyRPG core:
 
-- [RPG Maker](https://github.com/libretro/libretro-database/blob/master/rdb/RPG%20Maker.rdb)
+- [RPG Maker](https://github.com/libretro/libretro-database/blob/master/rdb/RPG%20Maker.rdb) (only covers 2000 and 2003 games, not the other versions)
+- [RPG Maker thumbnails](https://github.com/libretro-thumbnails/RPG_Maker)
 
 ## Features
 
@@ -58,7 +61,7 @@ Frontend-level settings or features that the EasyRPG core respects.
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
-| Remapping         | ✕         |
+| Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
@@ -103,15 +106,36 @@ The EasyRPG core supports the following device type(s) in the controls menu, bol
 
 #### Joypad
 
-| RetroPad Inputs                                | EasyRPG core inpits       |
+| RetroPad Inputs                                | EasyRPG core inputs       |
 |------------------------------------------------|---------------------------|
-| ![](../image/retropad/retro_b.png)             | Cancel                    |
-| ![](../image/retropad/retro_start.png)         | Decision                  |
 | ![](../image/retropad/retro_dpad_up.png)       | Up                        |
 | ![](../image/retropad/retro_dpad_down.png)     | Down                      |
 | ![](../image/retropad/retro_dpad_left.png)     | Left                      |
 | ![](../image/retropad/retro_dpad_right.png)    | Right                     |
 | ![](../image/retropad/retro_a.png)             | Decision                  |
+| ![](../image/retropad/retro_b.png)             | Cancel                    |
+| ![](../image/retropad/retro_x.png)             | Cancel                    |
+| ![](../image/retropad/retro_y.png)             | Shift                     |
+| ![](../image/retropad/retro_l3.png)            | Number 0                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 1                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 2                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 3                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 4                  |
+| ![](../image/retropad/retro_r3.png)            | Number 5                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 6                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 7                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 8                  |
+| ![](../image/retropad/retro_right_stick.png)   | Number 9                  |
+| ![](../image/retropad/retro_start.png)         | Settings Menu             |
+| ![](../image/retropad/retro_select.png)        | Reset                     |
+| ![](../image/retropad/retro_r2.png)            | Fast Forward (x3)         |
+| ![](../image/retropad/retro_r2.png)            | Fast Forward (x10)        |
+| ![](../image/retropad/retro_l2.png)            | Debug Menu (Test Play mode only)        |
+| ![](../image/retropad/retro_l2.png)            | Debug Through (Test Play mode only)     |
+| ![](../image/retropad/retro_r1.png)            | Debug Save (Test Play mode only)        |
+| ![](../image/retropad/retro_l1.png)            | Debug Abort Event (Test Play mode only) |
+
+
 
 ## External Links
 
