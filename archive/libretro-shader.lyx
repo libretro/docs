@@ -98,7 +98,7 @@ This document is for a (fresh) shader developer that wants to develop shader
  Shader programs run on your GPU, and thus enables very sophisticated effects
  to be performed on the picture which might not be possible in real-time
  on the CPU.
- Some introduction to shader programming in general is given, so more experience
+ Some introductions to shader programming in general is given, so more experience
 d developers that only need reference for the specification may just skip
  ahead.
 \end_layout
