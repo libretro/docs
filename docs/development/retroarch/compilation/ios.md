@@ -1,64 +1,123 @@
 # iOS Compilation / Development Guide
 
+The following is a non-developer guide to install RetroArch on non-jailbroken iOS or tvOS devices.
+
+The minimum version of iOS supported is iOS 6.0. However, older versions have fewer features and worse core support.
+
+!!! note
+    If you just want to sideload from an IPA file, then you can find a working build (version {{ unit.stable }}) [here for tvOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/tvos-arm64/RetroArchTV.ipa) and [here for iOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios-arm64/RetroArch.ipa). Instructions for installing the IPA are [here](/guides/install-ios/).
+
+Because iOS requires that all code be signed, iOS does not support installing/updating cores at runtime. Instead, all cores must be built and added to the RetroArch source tree before building RetroArch.
+
 ## Environment configuration
 
 The following software needs to be installed:
 
-- XCode
-- iOS SDK
+- XCode (macOS only)
 
-The following versions of the operating system are supported:
+You can get Xcode from the Mac App Store.
 
-- iOS 6.0
-- iOS 7.0+
-- iOS 8.0+
-- iOS 9.0+
-- iOS 10.0+
-- iOS 11 support is in-progress
+### Sign in with your Apple ID
 
-## Get the RetroArch source
+- Open Xcode Preferences (Xcode -> Preferences)
+- Click the "Accounts" tab
+- Hit the "+" at the bottom left and choose "Apple ID" and sign in with your Apple ID
+- Once you’ve successfully logged in, a new team called "(Your Name) Personal Team" with the role "User" will appear beneath your Apple ID.
 
-Clone RetroArch's repository from [GitHub](https://github.com/libretro/RetroArch)
+### Pair Xcode with your iOS or tvOS Device
 
-    git clone https://github.com/libretro/RetroArch.git retroarch
-    cd retroarch
+Connect your iPhone to your computer. For AppleTV, because you cannot connect it directly, follow the [instructions in this Apple support article](https://support.apple.com/en-gb/HT208088) to pair your device in Xcode. When finished, you should see your specific device when you go, in Xcode, to Windows -> Devices & Simulators.
+
+## Fetching the code
+
+### libretro-super
+
+The easiest way to fetch the source code for RetroArch and all the cores is to use libretro-super. Open Terminal (it's in `/Applications/Utilities`) and run the following commands:
+
+```shell
+git clone https://github.com/libretro/libretro-super.git libretro-super
+cd libretro-super
+```
+
+You can run the following command to download the source for RetroArch as well as all of the cores:
+
+```shell
+./libretro-fetch.sh
+```
+
+Or you can run the following command to download the source for RetroArch only:
+
+```shell
+./libretro-fetch.sh --retroarch
+```
+
+Or specify just the cores that you want:
+
+```shell
+./libretro-fetch.sh snes9x2010 fceumm
+```
+
+### RetroArch repo
+
+If you choose not to use libretro-super, you can clone RetroArch's repository from [GitHub](https://github.com/libretro/RetroArch)
+
+```shell
+git clone https://github.com/libretro/RetroArch.git retroarch
+cd retroarch
+```
 
 For subsequent builds you only need to pull the changes from the repo
 
-    cd retroarch
-    git pull
+```shell
+cd retroarch
+git pull
+```
 
-To update your local copy from the repository run git pull
+To update your local copy from the repository run `git pull`.
 
-## Core Compilation
+## Cores
 
-RetroArch needs the emulation cores compiled for it to be useful. Let's compile the cores first.
+Emulator cores are needed to use RetroArch as they contain the code that drives the emulation of the system of the game you want to play. All of the cores should have the extension `.dylib` and be placed in the RetroArch source tree in the directory `pkg/apple/iOS/modules` (`pkg/apple/tvOS/modules` for tvOS).
 
-### Fetching Cores
+### Downloading Pre-Built Cores
 
-The easiest way to fetch all the cores is to use libretro-super. Run
+Pre-built cores are available from the buildbot [for iOS here](https://buildbot.libretro.com/nightly/apple/ios-arm64/latest/) and [for tvOS here](https://buildbot.libretro.com/nightly/apple/tvos-arm64/latest/). You can also use the update-cores.sh script in the RetroArch source tree to fetch the cores from the buildbot for you:
 
-    git clone https://github.com/libretro/libretro-super
-    cd libretro-super
-    ./libretro-fetch.sh
+```shell
+./pkg/apple/update-cores.sh [--tvos] [core name]...
+```
+
+Without any arguments, it will try to update all of the cores in `pkg/apple/iOS/modules`. If there are no cores already downloaded, it will list the cores that are available to download. Any arguments are treated as core names and it will try to download that core if it is not already available.
 
 ### Building Cores
 
-The easiest way to build all the cores (for iOS) is to use libretro-super.
+Instead of downloading pre-built cores, you can build the cores yourself. The easiest way to build all the cores is to use libretro-super.
 
-To build iOS 6 to 8-compatible cores, run
+To build for iOS 11 and up, run:
 
-    ./libretro-build-ios.sh
+```shell
+./libretro-build-ios-arm64.sh
+```
 
-To build iOS 9 and up-compatible cores, run
+To build cores for iOS 9 and up, run:
 
-    ./libretro-build-ios9.sh
+```shell
+./libretro-build-ios9.sh
+```
+
+To build cores for iOS 6 to 8, run:
+
+```shell
+./libretro-build-ios.sh
+```
 
 In case you only want to build one and/or more cores instead of all, you can specify the cores you want to build after the first command in no particular order. E.g.:
 
-    ./libretro-build-ios.sh snes9x2010 fceumm
+```shell
+./libretro-build-ios-arm64.sh snes9x2010 fceumm
+```
 
-Once finished, you can find the libretro cores inside directory `dist/ios` or `dist/ios9`.
+Once finished, you can find the libretro cores inside directory `dist/ios-arm64`, `dist/ios9` or `dist/ios` depending on which build script you ran.
 
 ### Code Signing the Cores
 
@@ -66,102 +125,40 @@ Note that you *must code sign the dylib cores* in order for you to use them.
 
 #### In iOS 9 and above
 
-Starting from iOS 9, the cores must be packaged as part of the application, even if they are code-signed. This was an additional security measure introduced in iOS 9. Fortunately, the code signing is handled as part of the Xcode build/archive process, so all you need to do is place your compiled `.dylib` cores in the `pkg/apple/iOS/modules` folder.  Running the application via Xcode or archiving the application for an adhoc distribution will codesign the cores as long as they are placed in the aforementioned `pkg/apple/iOS/modules` folder.
+Starting from iOS 9, the cores must be packaged as part of the application, even if they are code-signed. This was an additional security measure introduced in iOS 9. Fortunately, the code signing is handled as part of the Xcode build/archive process, so all you need to do is place your compiled `.dylib` cores in the `pkg/apple/iOS/modules` folder. Running the application via Xcode or archiving the application for an adhoc distribution will codesign the cores as long as they are placed in the aforementioned `pkg/apple/iOS/modules` folder.
 
 #### In iOS 6 to 8
 
 You need to manually code sign the cores, and then you can copy them to the `Documents/RetroArch/cores` directory using an application like "iFunBox" or "iExplorer".
 
-#### Manually Code Signing
-
-```
+```shell
 cd [path where the dylib cores are]
 codesign -fs '[Your Full Developer Certificate Name]' *.dylib
 ```
 
-#### Known Issues with Code Signing (iOS 9 and above)
+## Building RetroArch
 
-Building and running from Xcode doesn't code sign the cores the first time for some reason. This is a bug in the build process. The cores seem to get signed after the cores are copied. If you build and run again, the cores will have been signed and will be usable in RetroArch.
-
-### Building RetroArch
-
-#### Using the graphical interface
-
-##### For iOS 6 to 8
-
-Open Xcode. Open the following project file `pkg/apple/RetroArch_iOS.xcodeproj` in the Xcode IDE and build (**&#8984;-B**) and run (**&#8984;-R**) it there.
-
-##### For iOS 10 and up
+There are multiple Xcode project files in `pkg/apple`, based on minimum iOS version. The following will use `pkg/apple/RetroArch_iOS13.xcodeproj` (the latest as of this writing) as an example.
 
 1. Open Xcode.
-2. Open the following project file `pkg/apple/RetroArch_iOS10.xcodeproj`
-3. In the Navigator Pane on the left, select the Retroarch_iOS10 project
-4. In the Project and Targets list on the left side, choose the RetroArchiOS10 target. Select the Target (the one with the RetroArch icon), not the project.
-5. In the "General" tab, change the "Team" under Signing to be your developer name.
-6. Set the active scheme to RetroArchiOS10, and select your connected iOS device as the device.
+2. Open the following project file `pkg/apple/RetroArch_iOS13.xcodeproj`
+3. In the Navigator Pane on the left, select the `Retroarch_iOS13` project
+4. In the Project and Targets list on the left side, choose the `RetroArchiOS` (or `RetroArchTV` for tvOS) target. Select the Target (the one with the RetroArch icon), not the project.
+5. In the `Signing & Capabilities` tab, change the "Team" under Signing to be your developer name.
+6. Set the active scheme to `RetroArch iOS Release` (or `RetroArch tvOS Release` for tvOS), and select your connected iOS/tvOS device as the device.
 6. Run (**&#8984;-R**)
 
-##### Creating an IPA for adhoc distribution (or for someone else to re-sign)
+![Xcode Steps](/image/guides/ios-install-pic-1.png)
 
-You will need an adhoc distribution certificate to create an adhoc distribution. Go to developer.apple.com to create an adhoc certificate.
+Once the application has been built, installed, and run on your device, it can be run again directly from the device without needing Xcode.
 
-In Xcode, select your target (RetroArchiOS10 for iOS 10 and above, RetroArch for others), Choose "Generic iOS Device" for the device, and select Product -> Archive. After it is done archiving, the Organizer window will appear. Select the archive and then use the "Export.." button on the right pane, and select "Save for Ad Hoc Deployment". Choose your developer name and you'll create an IPA in a directory of your choosing. This IPA can be resigned for other people to use using utilities such as [iOS App Signer](http://dantheman827.github.io/ios-app-signer/).
+## Additional Tips:
 
-You can install the IPA on your iOS device by dragging the IPA onto the Installed Apps section in the Devices window.
-
-##### Notes on building and running
-
-If you use Xcode to build and run RetroArch, and overwrite an existing RetroArch, you'll notice that your configuration will be wrong and stuff like your settings and directory locations will be missing. That's because you get a new application identifier when you do a re-install or upgrade, and the RetroArch config uses absolute paths in its configuration. You'll need to delete the app and then reinstall, or manually edit the RetroArch config file and fix the file paths by hand.
-
-#### Using the command line
-
-##### For iOS 6 to 8
-
-To build a debug build :
-
-    # Build
-    xcodebuild -target RetroArch -configuration Debug -project pkg/apple/RetroArch_iOS.xcodeproj
-    # Run
-    open ./pkg/apple/build/Debug/RetroArch.app/
-
-To build a release build :
-
-    # Build
-    xcodebuild -target RetroArch -configuration Release -project pkg/apple/RetroArch_iOS.xcodeproj
-    # Run
-    open ./pkg/apple/build/Release/RetroArch.app/
-
-##### For iOS 10 and up
-
-To build a debug build :
-
-    # Build
-    xcodebuild -target RetroArch -configuration Debug -project pkg/apple/RetroArch_iOS10.xcodeproj
-    # Run
-    open ./pkg/apple/build/Debug/RetroArch.app/
-
-To build a release build :
-
-    # Build
-    xcodebuild -target RetroArch -configuration Release -project pkg/apple/RetroArch_iOS10.xcodeproj
-    # Run
-    open ./pkg/apple/build/Release/RetroArch.app/
-
-### Packaging RetroArch
-
-### Additional Tips:
-
-#### Cores
+### Cores
 
 - When you run RetroArch and try to run a game, and see the message "Failed to load libretro core", that means the core is not code signed. See the above "Code Signing the Cores" section on making sure your cores are signed. You can manually check the code signature on a file by doing: `codesign -dvv mednafen_psx_libretro_ios.dylib`. The Authority entry has your certificate - make sure it's your dev or adhoc distribution certificate.
 
 - To see if your core is valid and usable in RetroArch, you can also try Load Core and selecting the core. If you see the core name appear at the top (in the GUI menu), then it is properly codesigned and loaded. If you still see "No Core", then your core is not codesigned and cannot be used.
-
-#### Getting your ROMs/content/BIOS in RetroArch
-
-- Use a desktop tool like "iFunBox" or "iExplorer". You can use iTunes but note that it cannot access subdirectories. BIOS files go in `RetroArch/system`
-
-- You can also download content in Safari and "Open in.." and choose RetroArch. Currently there is a bug in that it will crash (the app delegate needs fixing), but it gets placed in the "Inbox" folder in RetroArch's Documents folder. You can choose "Load Content" and navigate to the "Inbox" directory.
 
 ### Development
 

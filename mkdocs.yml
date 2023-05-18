@@ -20,8 +20,8 @@ nav:
         - 'Windows 2000/ME/98SE': 'guides/install-windows-2000-me-98SE.md'
       - 'GNU/Linux': 'guides/install-gnu.md'
       - 'Apple':
-        - 'iOS': 'guides/install-ios.md'
-        - 'iOS/tvOS Build': 'guides/build-ios.md'
+        - 'macOS': 'guides/install-macos.md'
+        - 'iOS/tvOS': 'guides/install-ios.md'
       - 'Android': 'guides/install-android.md'
       - 'Nintendo':
         - 'Switch': 'guides/install-libnx.md'
@@ -343,9 +343,8 @@ nav:
         - 'Network Control Interface': 'development/retroarch/network-control-interface.md'
       - 'RetroArch Compilation Guides':
         - 'Apple':
-          - 'OSX/PowerPC': 'development/retroarch/compilation/osxppc.md'
-          - 'OSX/macOS': 'development/retroarch/compilation/osx.md'
-          - 'iOS': 'development/retroarch/compilation/ios.md'
+          - 'macOS': 'development/retroarch/compilation/osx.md'
+          - 'iOS/tvOS': 'development/retroarch/compilation/ios.md'
         - 'Android': 'development/retroarch/compilation/android.md'
         - 'Linux and BSD':
           - 'Overview for Linux/BSD': 'development/retroarch/compilation/linux-and-bsd.md'
