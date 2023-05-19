@@ -1,6 +1,6 @@
 # Developing Cores
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KxJ6ZbWnAc4?start=92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Libretro API- An Introduction (YouTube)](https://www.youtube-nocookie.com/embed/KxJ6ZbWnAc4?start=92)
 
 The Libretro API is a lightweight C-based Application Programming Interface (API) that exposes generic audio, video, and input callbacks. Developers of "cores" such as standalone games, game emulators, media players, and other applications don’t have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs, sound APIs, gamepads, etc.
 
