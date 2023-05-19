@@ -17,7 +17,7 @@ Stable release are [here](https://buildbot.libretro.com/stable/{{ unit.stable }}
 
 ### Nightly
 
-This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is build daily, but this does not mean that it is not stable.
+This version contains the latest commits available on GitHub, and the latest enhancements and features are added daily. This version may not be as stable as Stable version because it is built daily, but this does not mean that it is not stable.
 
 The current nightly is [here](https://buildbot.libretro.com/nightly/windows/). There are several files you can download in these folders. For a new installation you want **RetroArch.7z** or the setup package (**RetroArch-20XX-XX-XX-setup.exe**).
 

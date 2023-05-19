@@ -1,66 +1,72 @@
-# Downloading, Installing and Updating RetroArch for iOS devices.
+# Downloading, Installing and Running RetroArch for iOS and tvOS devices
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QMCXXabUR5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Downloading and installing
-___
-There are multiple ways of downloading RetroArch for your iOS device. Depending on your iOS phone's version, you may want to install iOS 9 instead of iOS 11. Click [here](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios/RetroArch.ipa)(iOS11+) to download now.
-
 ## Prerequisites
 
-- **iTunes** We need iTunes to transfer content and for `Cydia Impactor` to work properly.
-- **Cydia Impactor** You can use this tool to install IPA files on iOS and APK files on Android.
+RetroArch is not available on the App Store. Instead, you must sideload the app onto your devices. There are three ways of sideloading:
 
-| :warning: WARNING          |
-|:---------------------------|
-| RetroArch or Libretro is not affiliated with Cydia Impactor in anyway. You can also use alternative applications that can do this function.      |
+* Jailbreaking, not something covered here;
+* Using Xcode to build RetroArch from source, described [here](../development/retroarch/compilation/ios.md);
+* Using a third party tool such as [AltStore](https://altstore.io/) that can install a built application by performing many of the same actions Xcode performs. That process is described below.
 
-## Installation
+!!! Warning
+    RetroArch or Libretro is not affiliated with AltStore in any way. You can also use alternative applications that can do this function.
 
-### Installation for non-Jailbreak Devices
-___
+## Downloading
 
-In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The name of this application is Cydia Impactor and is not associated with LibRetro or RetroArch. You need to provide the Cydia Impactor yourself, you can reach the desired result using your favorite search engine.
+Download one of the following IPA files depending on your needs:
 
-1. Run the **Cydia Impactor**.
-2. Drag and drop the `.ipa` file onto **Cydia Impactor**.
-3. Enter the email for your **iTunes** account.
-4. Enter the password for your **iTunes** account.
-* Note: You will encounter an error and will ask you to create an application-specific password
-5. Go to appleid.apple.com
-6. Sign in with your Apple account information.
-7. Scroll down to the App-specific password field and click `Generate Password...`
-8. Enter a password label.
-* Note: You can name it RetroArch or type a label of your choice.
-9. Copy your `app-specific password` and perform steps 2 and 3 again.
-10. Enter your `app-specific password` this time instead of your Apple-ID password.
-* Note: Wait until you see Complete.
+| | | |
+---|---|---
+| iOS 13+ | [Stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios-arm64/RetroArch.ipa) | [Nightly](https://buildbot.libretro.com/nightly/apple/ios-arm64/RetroArch.ipa) |
+| iOS 9+ (reduced feature set; may not work on newer devices) | [Stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios9/RetroArchiOS9.ipa) | [Nightly](https://buildbot.libretro.com/nightly/apple/ios9/RetroArchiOS9.ipa) |
+| tvOS 11+ | [Stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/tvos-arm64/RetroArchTV.ipa) | [Nightly](https://buildbot.libretro.com/nightly/apple/tvos-arm64/RetroArchTV.ipa) |
 
-We will continue from here on your iOS device. You can see `RetroArch` on your screen, but don't run it for now.
+Most people should start with the Stable build. The Nightly build contains the latest commits available on GitHub, and the latest enhancements and features that are added daily. The Nightly build may not be as stable as the Stable version.
 
-1. Go to `Settings` then `General`.
-2. Scroll down until you see `Device Management`, then open it.
-3. You will see your iCloud e-mail address that you entered before, just click on it.
-4. Click Trust "your-email-address@icloud.com"
+It is possible to build RetroArch for older versions of iOS, though due to resource constraints these are not provided. See the [instructions for building iOS](/development/retroarch/compilation/ios/) to build it yourself.
 
-Now you are free to run RetroArch.
+## Installation for non-Jailbreak devices
 
-## Content transfer via iTunes
-___
-**Unknown Sources** To avoid compromising the safety of your device, always use applications provided through official channels.
+In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The steps below describe using AltStore, which is not associated with LibRetro or RetroArch. You need to provide AltStore yourself.
 
-1. Go to https://support.apple.com/downloads/itunes or [click here](https://support.apple.com/downloads/itunes) to go to downloads.
-2. Then click **Download iTunes** based on your OS.
-3. Install and run iTunes.
-* Note: Connect your device to your computer via USB cable and complete the pre-installation if necessary.
-4. Click the iphone![iphone-icon](../image/guides/iphone-icon.jpg) icon at the top.
-5. Click File Sharing from the left menu.
-6. Now you'll see RetroArch with some of your apps here. Select RetroArch.
-7. Drag and drop your content to `RetroArch Documents field`.
+1. Install and launch AltServer.
+1. Hold Option (macOS) or Start (Windows) when clicking the AltServer icon to reveal new "Sideload .ipa…" menu option
+1. Select the device you want to install RetroArch on (must be on the same Wi-Fi network as AltServer)
+1. Enter the email and password for your Apple ID
 
-You can find your content under `Load Content > /var/mobile/containers/dat`.
+You cannot add or update cores after installation as they are signed executables and can only be updated by updating and resigning the entire application. The IPA files linked above contain all of the available iOS/tvOS cores.
 
+## Using RetroArch
 
-## Video Tutorial
-___
-[![Quick Video Demonstration](http://img.youtube.com/vi/QMCXXabUR5k/0.jpg)](http://www.youtube.com/watch?v=)
+On an iOS device, you'll be presented with a touch interface. If you have an mFi controller, you can control the interface that way as well.
+
+On the Apple TV, you'll be shown the "Ozone" interface. You need to use an mFi controller with an Apple TV. The Siri Remote only functions as an LRUD interface; it will not work as a controller.
+
+When you first start RetroArch, you'll notice that you're missing images. You'll want to run the Online Updater:
+
+- From the main menu, choose "Online Updater"
+- Choose:
+  - Update Core Info Files
+  - Update Assets
+  - Update Databases
+  - Update Overlays
+  - Update GLSL Shaders
+
+## Adding Content
+
+### iOS
+
+The RetroArch app is sandboxed and does not have access to iCloud. The easiest way to add content into RetroArch's sandbox is through the Apple Files app. Run RetroArch first and it will create several folders. After running RetroArch, open the Files app, and in Browse -> On My iPhone, you should now see a RetroArch folder. You can place your content in any directory or subdirectory in that folder (including creating your own subdirectories). You can use the Files app to copy the content from iCloud to the folder on your phone.
+
+### tvOS
+
+RetroArch on tvOS has a built-in webserver. While RetroArch is running, open a browser on your computer and open the URL that RetroArch displays. You can use the web-based UI to create subdirectories and upload or download files.
+
+!!! Warning
+    tvOS does not provide apps with a persistant storage area; instead it allows for up to 500kb meant for configuration data. The disk space shown through the web UI is a cache space. If the OS needs to reclaim disk space, it will delete files from that cache space without warning. This includes state and saves! When this happens, you will immediately see that the appearance of RetroArch is wrong, as the assets will need to be re-downloaded.
+
+## JIT
+
+Several cores are improved by enabling JIT, while others will not work at all without it. The only way to enable JIT is to convince the OS that RetroArch is being debugged. One way of doing this is to build with Xcode, launch the app from Xcode with the debugger attached, and leave Xcode running. Another way is to use AltServer to enable JIT on RetroArch after it has been opened (but before a core has been loaded). RetroArch will also use AltKit to search on the network for a running AltServer and ask it to turn on JIT automatically.
