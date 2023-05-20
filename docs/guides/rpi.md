@@ -180,7 +180,8 @@ FPS of VitaQuake2, default demo, default internal resolution (960x544), gl drive
 
 Following problems were experienced while writing this guide:
 
-- Vulkan with KMS does not work, RetroArch fails to launch.
-- In KMS mode, display can become shifted (even the menu)
+- KMS mode: Vulkan with KMS does not work in Bullseye. This is due to Mesa version being too old for the necessary KHR_display extension (added in version 21).
+- KMS mode: Display can become shifted (even the menu) in some configurations.
+- KMS mode: VC4 driver is needed for RetroArch, but some distributions (like Ubuntu Server) do not include necessary `dtoverlay=vc4-kms-v3d` line in `config.txt` by default.
 - On Buster, the terminal that is used to launch RetroArch, will continue to receive keypresses
 - Compiling for Pi4 needs all 3 of the opengles command line switches, even though they seem redundant
