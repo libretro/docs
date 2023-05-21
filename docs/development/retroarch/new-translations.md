@@ -1,15 +1,12 @@
 # Adding New Languages to RetroArch
 
-While translation is handled via the Crowdin[^1] platform ([more here](new-translations-crowdin.md)), RetroArch's code must be adjusted for it to display new languages.
+While translation is handled via the Crowdin[^1] platform ([more here](new-translations-crowdin.md)), RetroArch's code must be adjusted to display new languages.
 
 ## Files to change
 
-* `Makefile.common`
 * `msg_hash.c`
 * `msg_hash.h`
 * `retroarch.c`
-* `griffin/griffin.c`
-* `intl/msg_hash_xx.c` (new file)
 * `intl/msg_hash_us.h`
 * `menu/menu_setting.c`
 * `libretro-common/include/libretro.h`
@@ -28,13 +25,10 @@ To add a language with the English name `XXXXX` and two-letter code `xx` (be sur
 > Do not rearrange the elements of this list! This would break the language association for the cores!
 2. Open `msg_hash.h`.
     1. Check if a `MENU_ENUM_LABEL_VALUE_LANG_XXXXX` item for your language is present in the `msg_hash_enums` enum; if not, add it.
-    2. Add declaration of a `const char *msg_hash_to_str_xx(enum msg_hash_enums msg)` function.
-    3. Add declaration of a `int msg_hash_get_help_xx_enum(enum msg_hash_enums msg, char *s, size_t len)` function.
 3. Open `msg_hash.c`.
     1. Add the following block inside the `msg_hash_get_help_enum(enum msg_hash_enums msg, char *s, size_t len)` function:
 ```c
 case RETRO_LANGUAGE_XXXXX:
-   ret = msg_hash_get_help_xx_enum(msg, s, len);
    break;
 ```
     2. Add the following block inside the `get_user_language_iso639_1(bool limit)` function:
@@ -48,15 +42,22 @@ case RETRO_LANGUAGE_XXXXX:
     ret = msg_hash_to_str_xx(msg);
     break;
 ```
-4. Open `Makefile.common`.
-    1. Add `intl/msg_hash_xx.o` to `OBJ`.
-5. Create a copy of `intl/msg_hash_en.c` and name it `intl/msg_hash_xx.c`. After the `msg_hash_us.c` refactor in early 2023, this file will only be a stub, so instead of the _us_ file, _en_ file is the source for this one.
-6. Open `intl/msg_hash_xx.c`.
-    1. Rename the `msg_hash_get_help_en_enum()` function to `msg_hash_get_help_xx_enum()`.
-    2. Rename the `msg_hash_to_str_en()` function to `msg_hash_to_str_xx()` and, inside that same function:
-       * Replace the `#include "msg_hash_en.h"` line with `#include "msg_hash_xx.h"`.
-7. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below.
-8. Open `intl/msg_hash_us.h`.
+    4. Add a new static function:
+```c
+static const char *msg_hash_to_str_xx(enum msg_hash_enums msg)
+{
+   switch (msg)
+   {
+#include "intl/msg_hash_xx.h"
+      default:
+         break;
+   }
+
+   return "null";
+}
+```
+4. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below.
+5. Open `intl/msg_hash_us.h`.
     1. Check if the following block is present, where `Yyyyy` is the native name of the language and if not, add it:
 ```c
 MSG_HASH(
@@ -64,14 +65,12 @@ MSG_HASH(
    "Xxxxx - Yyyyy"
    )
 ```
-9. Open `menu/menu_setting.c`.
+6. Open `menu/menu_setting.c`.
     1. Add the following assignment to the `setting_get_string_representation_uint_user_language()` function:
 ```c
 modes[RETRO_LANGUAGE_XXXXX] = msg_hash_to_str(MENU_ENUM_LABEL_VALUE_LANG_XXXXX);
 ```
-10. Open `griffin/griffin.c`.
-    1. Add the line `#include "../intl/msg_hash_xx.c"` below the existing, similar ones for other languages.
-11. Open `retroarch.c`.
+7. Open `retroarch.c`.
     1. Add your language to `enum retro_language rarch_get_language_from_iso(const char *iso639)`:
 ```c
 {"xx", RETRO_LANGUAGE_XXXXX},
@@ -175,16 +174,16 @@ To do that for cores which have been added to Crowdin, follow these steps:
 
 ## Encoding of translation files
 
-Translation files (`intl/msg_hash_xx.{c,h}`) in general must be UTF-8 encoded.
+Translation files (`intl/msg_hash_xx.h`) in general must be UTF-8 encoded.
 For some languages, these files need to have a "UTF-8 Unicode (with [BOM](https://en.wikipedia.org/wiki/Byte_order_mark))" encoding. This can be done using the 'Encoding' option of editors like Notepad++ and Notepadqq. AFAIK, this is because of a requirement of the MSVC compilers for the Windows platform. Examples of this as of now are:
 
-* `msg_hash_ar.{c,h}`
-* `msg_hash_chs.{c,h}`
-* `msg_hash_cht.{c,h}`
-* `msg_hash_ja.{c,h}`
-* `msg_hash_ko.{c,h}`
-* `msg_hash_pl.{c,h}`
-* `msg_hash_ru.{c,h}`
+* `msg_hash_ar.c`
+* `msg_hash_chs.h`
+* `msg_hash_cht.h`
+* `msg_hash_ja.h`
+* `msg_hash_ko.h`
+* `msg_hash_pl.h`
+* `msg_hash_ru.h`
 * `msg_hash_vn.h`
 
 Be careful when creating and editing your new translation files, as some text editors do strip the BOM without warning.
