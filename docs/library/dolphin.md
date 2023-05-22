@@ -80,6 +80,8 @@ The Dolphin core will now work without issues.
 
 The (optional) BIOS file goes in the directory `retroarch/saves/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
 
+To play the [Gamecube BIOS animation](https://www.youtube.com/watch?v=CpmYW-gCSy4) at game launch, once you have the aforementioned BIOS file placed and named correctly, open the `Dolphin.ini` file located in `retroarch/saves/User/Config/` with a text editor and change the line `SkipIPL = True` to `SkipIPL = False`.
+
 ## Extensions
 
 Content that can be loaded by the Dolphin core have the following file extensions:
