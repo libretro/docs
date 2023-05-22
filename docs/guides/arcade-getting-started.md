@@ -94,7 +94,6 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * is usually the most accurate
 * uses the latest known good romsets
 * has the widest range of emulated machines
-* has the shallowest libretro implementation, with concerning issues (see [broken shaders on vertical games](https://github.com/libretro/mame/issues/261))
 * keeps adding support for new games
 
 #### FinalBurn Alpha 2012
