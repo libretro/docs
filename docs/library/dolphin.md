@@ -25,13 +25,13 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 For running properly, the Dolphin core requires to have the Dolphin `Sys` folder
 in the proper location.
 
-After downloading the core within RetroArch, execute the following steps:
+After downloading the core within RetroArch, execute one of the following three options:
 
-### Installing from the 'Core System Files Downloader'
+### A. Installing from the 'Core System Files Downloader'
 
 If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and you're all done!
 
-### Installing from the 'Content Downloader'
+### B. Installing from the 'Content Downloader'
 
 If your frontend version has `Main Menu > Online Updater > Content Downloader`:
 
@@ -39,7 +39,7 @@ If your frontend version has `Main Menu > Online Updater > Content Downloader`:
 2. Navigate to your frontend 'downloads' folder, if the download finished properly you should see a new 'dolphin-emu' folder inside.
 3. Now simply move that 'dophin-emu' folder to your frontend 'system' folder and you should be good to go!
 
-### Installing from the GitHub repo
+### C. Installing from the GitHub repo
 
 1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
