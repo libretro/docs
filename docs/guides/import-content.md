@@ -22,7 +22,7 @@ From the RetroArch Main Menu navigate to "Import Content". You will see three op
 
 !!! note
     "Scan Directory" and "Scan File" are sometimes refered to as "Auto Scan". These options can only recognise content that match the database.
-    Using the default settings, the scan options also need a coresponding core for the said content to be already added.
+    Using the default settings, these scan options also need a coresponding core for the said content to be already added.
 
 ***1) Scan Directory:*** for importing a collection of content. Using the file browser, navigate to the folder of the content collection and select **"Scan This Directory"**.
     
