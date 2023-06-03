@@ -165,6 +165,7 @@
 | REminiscence              | Game engine            | A port of the REminiscence engine, a reimplementation of the engine used by Delphine Software's Flashback |
 | Retro8                    | Game engine            | A port of the Retro8 open-source reimplementation of the PICO-8 fantasy console to libretro |
 | Rustation                 | Sony PlayStation       |                    |
+| RVVM                      | RISC-V Virtual Machine |                    |
 | SameBoy                   | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
 | SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
