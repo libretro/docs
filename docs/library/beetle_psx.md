@@ -148,7 +148,7 @@ PAL copy protected games need a SBI Subchannel file next to the bin/cue files in
 
 If foo is a multiple-disk game, you should have .cue files for each one, e.g. `foo (Disc 1).cue`, `foo (Disc 2).cue`, `foo (Disc 3).cue`.
 
-To take advantage of Beetle PSW's Disk Control feature for disk swapping, an index file (a m3u file) should be made.
+To take advantage of Disc Control feature for disk swapping, an index file (a m3u file) should be made.
 
 Create a text file and save it as `foo.m3u`. Then enter your game's .cue files on it. The m3u file contents should look something like this:
 
@@ -170,7 +170,7 @@ Here's a m3u example done with Valkryie Profile
 
 #### Swapping disks
 
-Disks can be swapped through Quick Menu -> Disk Control in RetroArch.
+Disks can be swapped through Quick Menu -> Disc Control in RetroArch.
 
 If not using .m3u files, .cue files must be manually selected via the Load New Disk legacy feature.
 
