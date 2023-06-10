@@ -29,7 +29,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory.
+Required or optional firmware files go in the frontend's `system` directory.
 
 |   Filename      | Description                           |              md5sum              |
 |:---------------:|:-------------------------------------:|:--------------------------------:|
