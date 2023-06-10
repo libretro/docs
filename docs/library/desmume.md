@@ -34,7 +34,7 @@ RetroArch database(s) that are associated with the DeSmuME core:
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory.
+Required or optional firmware files go in the frontend's `system` directory.
 
 !!! warning
 	In order for the firmware files to be loaded by the DeSmuME core, the 'Use External BIOS/Firmware (restart)' core option must be set to enabled.
