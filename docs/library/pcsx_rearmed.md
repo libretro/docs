@@ -20,7 +20,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory.
+Required or optional firmware files go in the frontend's `system` directory.
 
 If more than one BIOS file exists, the PCSX ReARMed core uses the BIOS above the table below.
 
