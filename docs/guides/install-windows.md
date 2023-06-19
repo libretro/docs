@@ -138,7 +138,7 @@ Here is the list of terms in a LibRetro, RetroArch or platform subject, field, o
 	
 `save states`
 
-:   Save states are snapshots of the content menory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator that the one used to create them
+:   Save states are snapshots of the content memory at a particular moment, these are not always cross platform and most certainly won’t work on a different emulator than the one used to create them
 
 `system files`
 
