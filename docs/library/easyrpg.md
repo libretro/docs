@@ -84,7 +84,13 @@ The EasyRPG core saves/loads to/from these directories.
 **Loaded content's directory**
 
 - Save##.lsd (Save files)
+- Save##.dyn (Additional save file data used by some games)
+- Save.lgs (Global save data used by some games)
 - easyrpg_log.txt (EasyRPG log file)
+
+**Frontend's system directory**
+
+- easyrpg-player/config.ini (configuration of the engine)
 
 ### Geometry and timing
 
