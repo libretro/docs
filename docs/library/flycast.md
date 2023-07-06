@@ -8,7 +8,7 @@ Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator. The 
 
 The Flycast core is licensed under
 
-- [GPLv2](https://github.com/libretro/flycast/blob/master/LICENSE)
+- [GPLv2](https://github.com/flyinghead/flycast/blob/master/LICENSE)
 
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
@@ -71,7 +71,7 @@ Required or optional firmware files go in RetroArch's system directory.
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
@@ -420,8 +420,8 @@ An alternative is to append discs to the current playlist via the "Disk Image Ap
 ## External Links
 
 - [Libretro Flycast Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/flycast_libretro.info)
-- [Libretro Flycast Github Repository](https://github.com/libretro/flycast)
-- [Report Flycast Core Issues Here](https://github.com/libretro/flycast/issues)
+- [Flycast Github Repository](https://github.com/flyinghead/flycast)
+- [Report Flycast Issues Here](https://github.com/flyinghead/flycast/issues)
 - [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0Ic597IBX8lXnsCV5ozweGbp)
 - [Steam page](https://store.steampowered.com/app/1222633/RetroArch___Flycast/)
 
