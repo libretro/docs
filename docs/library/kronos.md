@@ -45,8 +45,8 @@ Required or optional firmware files go in the frontend's system directory.
 
 | Filename               | Description                                                                | md5sum                           |
 |:----------------------:|:--------------------------------------------------------------------------:|:--------------------------------:|
-| kronos/saturn_bios.bin | Saturn BIOS - Required                                                     | af5828fdff51384f99b3c4926be27762 |
-| kronos/stvbios.zip     | ST-V BIOS - Optional                                                       |                                  |
+| kronos/saturn_bios.bin | Saturn BIOS - Required for Saturn games                                    | af5828fdff51384f99b3c4926be27762 |
+| kronos/stvbios.zip     | ST-V BIOS - Required for ST-V games                                        |                                  |
 | mpr-18811-mx.ic1       | The King of Fighters '95 ROM Cartridge - Required for this game            | 255113ba943c92a54facd25a10fd780c |
 | mpr-19367-mx.ic1       | Ultraman: Hikari no Kyojin Densetsu ROM Cartridge - Required for this game | 1cd19988d1d72a3e7caa0b73234c96b4 |
 
@@ -240,7 +240,7 @@ Must be enabled in core options.
 
 ## External Links
 
-- [Official Kronos Repository](https://github.com/FCare/Kronos)
+- [Official Kronos Repository](https://github.com/FCare/Kronos) (please report issues there)
 - [Libretro Kronos Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/kronos_libretro.info)
 - [Libretro Kronos Github Repository](https://github.com/libretro/yabause/tree/kronos)
 - [Report Issues Here](https://github.com/libretro/yabause/issues) or [Here](https://github.com/FCare/Kronos/issues)
