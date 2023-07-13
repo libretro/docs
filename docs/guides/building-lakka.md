@@ -30,10 +30,10 @@ You can now launch make, set the PROJECT and ARCH variables to fit your needs:
 
 ```sh
 $ cd Lakka-LibreELEC
-$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi ARCH=arm make image         # for the Raspberry Pi
-$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi2 ARCH=arm make image        # for the Raspberry Pi2/ Pi3
-$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi4 ARCH=arm make image        # for the Raspberry Pi4 (arm 32bit)
-$ DISTRO=Lakka PROJECT=RPI DEVICE=RPi4 ARCH=aarch64 make image    # for the Raspberry Pi4 (arm 64bit)
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi ARCH=arm make image         # for the Raspberry Pi
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi2 ARCH=arm make image        # for the Raspberry Pi2/ Pi3
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi4 ARCH=arm make image        # for the Raspberry Pi4 (arm 32bit)
+$ DISTRO=Lakka PROJECT=RPi DEVICE=RPi4 ARCH=aarch64 make image    # for the Raspberry Pi4 (arm 64bit)
 $ DISTRO=Lakka PROJECT=NXP DEVICE=imx6 ARCH=arm make image        # for the Hummingboard and Cubox-i
 $ DISTRO=Lakka PROJECT=Generic ARCH=x86_64 make image  # for 64 bits PCs
 $ DISTRO=Lakka PROJECT=Generic ARCH=i386 make image    # for 32 bits PCs
