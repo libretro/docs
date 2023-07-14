@@ -12,7 +12,7 @@
 
 - // Add [Background] info for the core here, use google for background info
 
-The [Core name] core has been authored by
+The [Core name] core has been authored by:
 
 - [Author]
 
@@ -20,7 +20,7 @@ The [Core name] core has been authored by
 - // [Author] is the display name entry from the core's info file
 - // https://github.com/libretro/libretro-super/tree/master/dist/info
 
-The [Core name] core is licensed under
+The [Core name] core is licensed under:
 
 - [License](URL)
 
@@ -79,7 +79,7 @@ The content should now start running!
 - // https://github.com/libretro/libretro-super/tree/master/dist/info)
 - // For core that don't need BIOS, either say BIOS not required or just not include a BIOS section
 
-Required or optional firmware files go in the frontend's system directory.
+[Required or optional firmware files](https://docs.libretro.com/library/bios/) go in the frontend's system directory:
 
 | Filename          | Description                     | md5sum                           |
 |:-----------------:|:-------------------------------:|:--------------------------------:|
@@ -109,7 +109,7 @@ RetroArch database(s) that are associated with the [Core name] core:
 
 ## Features
 
-Frontend-level settings or features that the [Core name] core respects.
+Frontend-level settings or features that the [Core name] core respects:
 
 - // Fill in the [Core name]
 - // Use ✔ or ✕
