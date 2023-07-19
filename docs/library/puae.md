@@ -32,6 +32,7 @@ Content that can be loaded by the PUAE core have the following file extensions:
 - .dms
 - .fdi
 - .ipf
+- .raw
 
 ### Hard drives
 
@@ -346,7 +347,7 @@ Some games use mouse instead of joystick. D-Pad can be switched between joystick
 
 You can force a specific model if a game needs one (AGA games for instance) either by the "Model" core option or by file path tags.
 
-The "Model" core option at "**Automatic**" will default to A500 when booting floppy disks, A600 when booting hard drives, and CD32 when booting CD images.
+The "Model" core option at "**Automatic**" will default to A500 when booting floppy disks, A1200 when booting hard drives, and CD32 when booting CD images.
 
 The whole path (filename and directory) will be searched for the following tags if the model is "**Automatic**":
 
@@ -565,11 +566,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | 12    | 42.562740 MHz         |
     | 16    | 56.750320 MHz         |
 
-- **CPU Compatibility** [puae_cpu_compatibility] (**normal**|compatible|memory|**exact**)
+- **CPU Compatibility** [puae_cpu_compatibility] (**normal**|compatible|**memory**|exact)
 
     Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.
 
-    (x86_64 defaults to **exact**, others to **normal**)
+    (x86_64 defaults to **memory**, others to **normal**. 2021 core does not have 'memory' option and defaults to 'exact' instead.)
 
 ### Media options
 
@@ -597,6 +598,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Set all drives read only. Changing this while emulation is running ejects and reinserts all disks. IPF images are always read only!
 
+- **Floppy Write Redirect** [puae_floppy_write_redirect] (**disabled**|enabled)
+
+    Writes to a substitute disk under 'saves' instead of original disks. Works also with IPF images.
+
 - **CD Speed** [puae_cd_speed] (**100**|0)
 
     Transfer rate in CD32 is 300KB/s (double-speed), CDTV is 150KB/s (single-speed). 'Turbo' removes seek delay emulation."
@@ -613,7 +618,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **CD32/CDTV Shared NVRAM** [puae_shared_nvram] (**disabled**|enabled)
 
     'OFF' saves separate files per content. Starting without content uses the shared file. CD32 and CDTV use separate shared files. Core restart required.
-
 
 - **WHDLoad Support** [puae_use_whdload] (disabled|**files**|hdfs)
 
@@ -643,6 +647,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | splash | Splash (Show briefly)                 |
     | both   | Config + Splash (Wait for user input) |
 
+- **WHDLoad NoWriteCache** [puae_use_whdload_nowritecache] (**disabled**|enabled)
+
+    Write save data immediately or on WHDLoad quit. Write cache enabled runs the core a few frames after frontend quit in order to trigger WHDLoad quit and flush the cache. Core restart required.
+
 - **Global Boot HD** [puae_use_boot_hd] (**disabled**|files|hdf20|hdf40|hdf80|hdf128|hdf256|hdf512)
 
     Attach a hard disk meant for Workbench usage, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF. Core restart required.
@@ -671,6 +679,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'PAL': 50Hz - 288px / 576px
     - 'NTSC': 60Hz - 240px / 480px
 
+- **Pixel Aspect Ratio** [puae_video_aspect] (**auto**|PAL|NTSC)
+
+    Hotkey toggling disables this option until core restart.
+
+    - 'PAL': 1/1 = 1.000
+    - 'NTSC': 44/52 = 0.846
+
 - **Resolution** [puae_video_resolution] (**auto**|lores|hires|superhires)
 
     'Automatic' defaults to 'High' and switches to 'Super-High' when needed.    
@@ -685,13 +700,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Line Mode** [puae_video_vresolution] (**auto**|single|double)
 
     'Automatic' defaults to 'Single Line' and switches to 'Double Line' on interlaced screens.
-
-- **Pixel Aspect Ratio** [puae_video_aspect] (**auto**|PAL|NTSC)
-
-    Hotkey toggling disables this option until core restart.
-
-    - 'PAL': 1/1 = 1.000
-    - 'NTSC': 44/52 = 0.846
 
 - **Crop** [puae_crop] (**disabled**|minimum|smaller|small|medium|large|larger|maximum|auto)
 
@@ -709,10 +717,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'Automatic' keeps screen centered. Positive values move right and negative values move left.
 
-- **Remove Interlace Artifacts** [puae_gfx_flickerfixer] (**disabled**|enabled)
-
-    Best suited for still screens, Workbench etc.
-
 - **Immediate/Waiting Blits** [puae_immediate_blits] (false|immediate|**waiting**)
 
     'Immediate Blitter' is ignored with 'Cycle-exact'.
@@ -720,6 +724,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Collision Level** [puae_collision_level] (none|sprites|**playfields**|full)
 
     'Sprites and Playfields' is recommended.
+
+- **Remove Interlace Artifacts** [puae_gfx_flickerfixer] (**disabled**|enabled)
+
+    Best suited for still screens, Workbench etc.
 
 - **Frameskip** [puae_gfx_framerate] (**disabled**|1|2)
 
@@ -753,9 +761,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'Basic': Current image + LEDs
     - 'Minimal': Track number + FPS hidden
 
+- **Statusbar Startup** [puae_statusbar_startup] (**disabled**|enabled)
+
+    Show statusbar on startup.
+
 - **Statusbar Messages** [puae_statusbar_messages] (**disabled**|enabled)
 
     Show messages when statusbar is hidden.
+
+- **Light Pen/Gun Pointer Color** [puae_joyport_pointer_color] (disabled|black|white|red|green|**blue**|yellow|purple)
+
+    Crosshair color for light pens and guns.
 
 ### Audio options
 
@@ -785,10 +801,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | standard | A500      |
     | enhanced | A1200     |
 
-- **CD Audio Volume** [puae_sound_volume_cd] (0%|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**)
-
-    CD volume in percent.
-
 - **Floppy Sound Emulation** [puae_floppy_sound] (100|95|90|85|**80**|75|70|65|60|55|50|45|40|35|30|25|20|15|10|5|0)
 
     ***Values are inverted, '80' = '20% volume'***
@@ -800,6 +812,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Floppy Sound Type** [puae_floppy_sound_type] (**internal**|A500|LOUD)
 
     External files go in `system/uae_data/` or `system/uae/`.
+
+- **CD Audio Volume** [puae_sound_volume_cd] (0%|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**)
+
+    CD volume in percent.
 
 ### Input options
 
@@ -827,13 +843,55 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'Double' requirements: raw/udev input driver and proper mouse index per port. Does not affect RetroPad emulated mice.
 
+- **Keyboard Pass-through** [puae_physical_keyboard_pass_through] (**disabled**|enabled)
+
+    'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.
+
 - **Keyrah Keypad Mappings** [puae_keyrah_keypad_mappings] (**disabled**|enabled)
 
     Hardcoded keypad to joyport mappings for Keyrah hardware.
 
-- **Keyboard Pass-through** [puae_physical_keyboard_pass_through] (**disabled**|enabled)
+- **Turbo Fire** [puae_turbo_fire] (**disabled**|enabled)
 
-    'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.
+    Hotkey toggling disables this option until core restart.
+
+- **Turbo Button** [puae_turbo_fire_button] (**B**|A|Y|X|L|R|L2|R2)
+
+    Replace the mapped button with turbo fire button.
+
+- **Turbo Pulse** [puae_turbo_pulse] (2|4|**6**|8|10|12)
+
+    Frames in a button cycle.
+
+- **Joystick/Mouse** [puae_joyport] (**joystick**|mouse)
+
+    Change D-Pad control between joyports. Hotkey toggling disables this option until core restart.
+
+- **Joystick Port Order** [puae_joyport_order] (**1234**|2143|3412|4321)
+
+    Plug RetroPads in different ports. Useful for Arcadia system and games that use the 4-player adapter.
+
+- **RetroPad Face Button Options** [puae_retropad_options] (**disabled**|jump|rotate|rotate_jump)
+
+    Rotate face buttons clockwise and/or make 2nd fire press up.
+
+    | Value       | Label                  |
+    |-------------|------------------------|
+    | disabled    | B = Fire, A = 2nd fire |
+    | jump        | B = Fire, A = Up       |
+    | rotate      | Y = Fire, B = 2nd fire |
+    | rotate_jump | Y = Fire, B = Up       |
+
+- **CD32 Pad Face Button Options** [puae_cd32pad_options] (**disabled**|jump|rotate|rotate_jump)
+
+    Rotate face buttons clockwise and/or make blue button press up.
+
+    | Value       | Label             |
+    |-------------|-------------------|
+    | disabled    | B = Red, A = Blue |
+    | jump        | B = Red, A = Up   |
+    | rotate      | Y = Red, B = Blue |
+    | rotate_jump | Y = Red, B = Up   |
 
 - **Show Mapping Options** [puae_mapping_options_display] (disabled|**enabled**)
 
@@ -845,23 +903,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Switch Joystick/Mouse** [puae_mapper_mouse_toggle] (**RETROK_RCTRL**)
 
+- **Toggle Turbo Fire** [puae_mapper_turbo_fire_toggle] (**---**)
+
+- **Toggle Save Disk** [puae_mapper_save_disk_toggle] (**---**)
+
 - **Reset** [puae_mapper_reset] (**---**)
 
 - **Toggle Aspect Ratio** [puae_mapper_aspect_ratio_toggle] (**---**)
 
 - **Toggle Crop** [puae_mapper_crop_toggle] (**---**)
 
-- **RetroPad Select** [puae_mapper_select] (**TOGGLE_VKBD**)
+- **RetroPad Up** [puae_mapper_up] (**---**)
 
-- **RetroPad Start** [puae_mapper_start] (**---**)
+- **RetroPad Down** [puae_mapper_down] (**---**)
 
-- **RetroPad B** [puae_mapper_b] (**---**)
+- **RetroPad Left** [puae_mapper_left] (**---**)
+
+- **RetroPad Right** [puae_mapper_right] (**---**)
 
 - **RetroPad A** [puae_mapper_a] (**---**)
 
-- **RetroPad Y** [puae_mapper_y] (**---**)
+- **RetroPad B** [puae_mapper_b] (**---**)
 
 - **RetroPad X** [puae_mapper_x] (**RETROK_SPACE**)
+
+- **RetroPad Y** [puae_mapper_y] (**---**)
+
+- **RetroPad Select** [puae_mapper_select] (**TOGGLE_VKBD**)
+
+- **RetroPad Start** [puae_mapper_start] (**---**)
 
 - **RetroPad L** [puae_mapper_l] (**---**)
 
@@ -891,48 +961,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **RetroPad Right Analog Right** [puae_mapper_rr] (**---**)
 
-- **RetroPad Turbo Fire** [puae_turbo_fire] (**disabled**|enabled)
-
-    Hotkey toggling disables this option until core restart.
-
-- **RetroPad Turbo Button** [puae_turbo_fire_button] (**B**|A|Y|X|L|R|L2|R2)
-
-    Replace the mapped button with turbo fire button.
-
-- **RetroPad Turbo Pulse** [puae_turbo_pulse] (2|4|**6**|8|10|12)
-
-    Frames in a button cycle.
-
-- **RetroPad Joystick/Mouse** [puae_joyport] (**joystick**|mouse)
-
-    Change D-Pad control between joyports. Hotkey toggling disables this option until core restart.
-
-- **RetroPad Joyport Order** [puae_joyport_order] (**1234**|2143|3412|4321)
-
-    Plug RetroPads in different ports. Useful for Arcadia system and games that use the 4-player adapter.
-
-- **RetroPad Face Button Options** [puae_retropad_options] (**disabled**|jump|rotate|rotate_jump)
-
-    Rotate face buttons clockwise and/or make 2nd fire press up.
-
-    | Value       | Label                  |
-    |-------------|------------------------|
-    | disabled    | B = Fire, A = 2nd fire |
-    | jump        | B = Fire, A = Up       |
-    | rotate      | Y = Fire, B = 2nd fire |
-    | rotate_jump | Y = Fire, B = Up       |
-
-- **CD32 Pad Face Button Options** [puae_cd32pad_options] (**disabled**|jump|rotate|rotate_jump)
-
-    Rotate face buttons clockwise and/or make blue button press up.
-
-    | Value       | Label             |
-    |-------------|-------------------|
-    | disabled    | B = Red, A = Blue |
-    | jump        | B = Red, A = Up   |
-    | rotate      | Y = Red, B = Blue |
-    | rotate_jump | Y = Red, B = Up   |
-
 ## Controllers
 
 The PUAE core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -940,9 +968,13 @@ The PUAE core supports the following device type(s) in the controls menu, bolded
 ### User 1 - 2 device types
 
 - None - Input disabled.
-- **RetroPad** - Joypad - Standard one or two fire button joystick + customizable buttons with keyboard keys and hotkeys.
+- **Automatic** - Joypad - Uses RetroPad by default and switches to CD32 Pad with CD32 content.
+- RetroPad - Joypad - Standard one or two fire button joystick + customizable buttons with keyboard keys and hotkeys.
 - CD32 Pad - Joypad - Standard CD32 controller with unused buttons available for RetroPad extra mappings.
 - Analog Joystick - Joypad - Standard Analog joystick with unused buttons available for RetroPad extra mappings.
+- Arcadia - Joypad - Arcadia cabinet joystick + keyboard arcade controls.
+- Trojan Phazer Lightgun - Lightgun - Trojan Phazer Lightgun.
+- Lightpen - Lightgun - Standard lightpen.
 - Joystick - Joypad - Standard one or two fire button joystick.
 - Keyboard - Keyboard - Keyboard input is always active. Has keymapper support.
 
@@ -1037,6 +1069,7 @@ English layout
 | Keyboard Right Meta/Super    | Right Amiga                 |
 | Keyboard Page Up             | Left Amiga                  |
 | Keyboard Page Down           | Right Amiga                 |
+| Keyboard Right Control       | Right Amiga                 |
 | Keyboard Insert              | Help                        |
 | Keyboard Home                | [                           |
 | Keyboard End                 | ]                           |
