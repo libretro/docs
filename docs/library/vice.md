@@ -403,11 +403,26 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - `scpu-dos-1.4.bin`
     - `scpu-dos-2.04.bin`
 
+#### C64DTV specific
+
+- **Model** [vice_c64dtv_model] (DTV2 PAL|DTV2 NTSC|**DTV3 PAL**|DTV3 NTSC|HUMMER NTSC)
+
 #### C128 specific
 
 - **Model** [vice_c128_model] (**C128 PAL**|C128 NTSC|C128 DCR PAL|C128 DCR NTSC)
 
+- **RAM Expansion Unit** [vice_c128_ram_expansion_unit] (**none**|128kB|256kB|512kB|1024kB|2048kB|4096kB|16384kB)
+
+    Changing while running resets the system!
+
 - **Video Output** [vice_c128_video_output] (**VICII**|VDC)
+
+- **VDC Video RAM** [vice_c128_vdc_ram] (**default**|64)
+
+    | Value   | Label                 |
+    |---------|-----------------------|
+    | default | 16kB                  |
+    | 64      | 64kB                  |
 
 - **GO64 (Restart)** [vice_c128_go64] (**disabled**|enabled)
 
@@ -470,10 +485,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'Hard' erases all memory
     - 'Freeze' is for cartridges
 
-- **Autostart** [vice_autostart] (disabled|**enabled**|warp)
-
-    'ON' always runs content, 'OFF' runs only PRG/CRT, 'Warp' turns warp mode on during autostart loading.
-
 - **Automatic Load Warp** [vice_autoloadwarp] (**disabled**|enabled|mute|disk|disk_mute|tape|tape_mute)
 
     Toggle warp mode during disk and/or tape access if there is no audio output.
@@ -485,6 +496,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Warp Boost** [vice_warp_boost] (disabled|**enabled**)
 
     Make warp mode much faster by changing SID emulation to 'FastSID' while warping.
+
+- **Autostart** [vice_autostart] (disabled|**enabled**|warp)
+
+    'ON' always runs content, 'OFF' runs only PRG/CRT, 'Warp' turns warp mode on during autostart loading.
 
 - **True Drive Emulation** [vice_drive_true_emulation] (disabled|**enabled**)
 
@@ -532,7 +547,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Crop Mode** [vice_crop_mode] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
 
-    'Horizontal + Vertical' & 'Maximum' removes borders completely. Ignored with 'Manual' zoom.
+    'Horizontal + Vertical' & 'Maximum' removes borders completely.
 
 - **Manual Crop Top** [vice_manual_crop_top] (**0**-60)
 
@@ -554,13 +569,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter with custom horizontal blur.
 
-- **VIC-II Filter Oddline Phase** [vice_vicii_filter_oddline_phase] (**1000**|20-2000)
-
-    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
-
 - **VIC-II Filter Oddline Offset** [vice_vicii_filter_oddline_offset] (**1000**|20-2000)
 
     PAL emulation filter oddline offset.
+
+- **VIC-II Filter Oddline Phase** [vice_vicii_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
 - **VIC-II Color Palette** [vice_external_palette] (default|**colodore**|pepto-pal|pepto-ntsc|pepto-ntsc-sony|cjam|c64hq|c64s|ccs64|community-colors|deekay|frodo|godot|pc64|ptoing|rgb|vice)
 
@@ -592,13 +607,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter with custom horizontal blur.
 
-- **VIC Filter Oddline Phase** [vice_vic_filter_oddline_phase] (**1000**|20-2000)
-
-    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
-
 - **VIC Filter Oddline Offset** [vice_vic_filter_oddline_offset] (**1000**|20-2000)
 
     PAL emulation filter oddline offset.
+
+- **VIC Filter Oddline Phase** [vice_vic_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
 - **VIC Color Palette** [vice_vic20_external_palette] (default|**colodore_vic**|mike-pal|mike-ntsc|vice)
 
@@ -630,13 +645,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter with custom horizontal blur.
 
-- **TED Filter Oddline Phase** [vice_ted_filter_oddline_phase] (**1000**|20-2000)
-
-    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
-
 - **TED Filter Oddline Offset** [vice_ted_filter_oddline_offset] (**1000**|20-2000)
 
     PAL emulation filter oddline offset.
+
+- **TED Filter Oddline Phase** [vice_ted_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
 - **TED Color Palette** [vice_plus4_external_palette] (default|**colodore_ted**|yape-pal|yape-ntsc)
 
@@ -668,13 +683,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter with custom horizontal blur.
 
-- **CRTC Filter Oddline Phase** [vice_crtc_filter_oddline_phase] (**1000**|20-2000)
-
-    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
-
 - **CRTC Filter Oddline Offset** [vice_crtc_filter_oddline_offset] (**1000**|20-2000)
 
     PAL emulation filter oddline offset.
+
+- **CRTC Filter Oddline Phase** [vice_crtc_filter_oddline_phase] (**1000**|20-2000)
+
+    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
 - **CRTC Color Palette** [vice_cbm2_external_palette] (**default**|green|amber|white)
 
@@ -699,6 +714,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'Full': Joyports + Current image + LEDs
     - 'Basic': Current image + LEDs
     - 'Minimal': Track number + FPS hidden
+
+- **Statusbar Startup** [vice_statusbar_startup] (**disabled**|enabled)
+
+    Show statusbar on startup.
 
 - **Statusbar Messages** [vice_statusbar_messages] (**disabled**|enabled)
 
@@ -791,9 +810,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Global mouse speed.
 
-- **Userport Joystick Adapter** [vice_userport_joytype] (**disabled**|CGA|HIT|Kingsoft|Starbyte|Hummer|OEM|PET)
+- **Keyboard Pass-through** [vice_physical_keyboard_pass_through] (**disabled**|enabled)
 
-    Required for more than 2 joysticks, for example IK+ Gold with 3 players.
+    'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.
+
+- **Datasette Hotkeys** [vice_datasette_hotkeys] (**disabled**|enabled)
+
+    Toggle all Datasette hotkeys.
 
 - **Keyrah Keypad Mappings** [vice_keyrah_keypad_mappings] (**disabled**|enabled)
 
@@ -805,101 +828,27 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - Positional: `sdl_pos.vkm`
     - Symbolic: `sdl_sym.vkm`
 
-- **Keyboard Pass-through** [vice_physical_keyboard_pass_through] (**disabled**|enabled)
-
-    'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.
-
-- **Datasette Hotkeys** [vice_datasette_hotkeys] (**disabled**|enabled)
-
-    Toggle all Datasette hotkeys.
-
-- **Show Mapping Options** [vice_mapping_options_display] (disabled|**enabled**)
-
-    Page refresh by menu toggle required!
-
-- **Toggle Virtual Keyboard** [vice_mapper_vkbd] (**---**)
-
-- **Toggle Statusbar** [vice_mapper_statusbar] (**RETROK_F12**)
-
-- **Switch Joyport** [vice_mapper_joyport_switch] (**RETROK_RCTRL**)
-
-- **Reset** [vice_mapper_reset] (**RETROK_END**)
-
-- **Hold Warp Mode** [vice_mapper_warp_mode] (**---**)
-
-- **Toggle Aspect Ratio** [vice_mapper_aspect_ratio_toggle] (**---**)
-
-- **Toggle Zoom Mode** [vice_mapper_zoom_mode_toggle] (**---**)
-
-- **Toggle Datasette Hotkeys** [vice_mapper_datasette_toggle_hotkeys] (**---**)
-
-- **Datasette Start** [vice_mapper_datasette_start] (**RETROK_UP**)
-
-- **Datasette Stop** [vice_mapper_datasette_stop] (**RETROK_DOWN**)
-
-- **Datasette Rewind** [vice_mapper_datasette_rewind] (**RETROK_LEFT**)
-
-- **Datasette Forward** [vice_mapper_datasette_forward] (**RETROK_RIGHT**)
-
-- **Datasette Reset** [vice_mapper_datasette_reset] (**---**)
-
-- **RetroPad Select** [vice_mapper_select] (**TOGGLE_VKBD**)
-
-- **RetroPad Start** [vice_mapper_start] (**---**)
-
-- **RetroPad B** [vice_mapper_b] (**---**)
-
-- **RetroPad A** [vice_mapper_a] (**---**)
-
-- **RetroPad Y** [vice_mapper_y] (**---**)
-
-- **RetroPad X** [vice_mapper_x] (**RETROK_SPACE**)
-
-- **RetroPad L** [vice_mapper_l] (**---**)
-
-- **RetroPad R** [vice_mapper_r] (**---**)
-
-- **RetroPad L2** [vice_mapper_l2] (**RETROK_ESCAPE**)
-
-- **RetroPad R2** [vice_mapper_r2] (**RETROK_RETURN**)
-
-- **RetroPad L3** [vice_mapper_l3] (**---**)
-
-- **RetroPad R3** [vice_mapper_r3] (**---**)
-
-- **RetroPad Left Analog Up** [vice_mapper_lu] (**---**)
-
-- **RetroPad Left Analog Down** [vice_mapper_ld] (**---**)
-
-- **RetroPad Left Analog Left** [vice_mapper_ll] (**---**)
-
-- **RetroPad Left Analog Right** [vice_mapper_lr] (**---**)
-
-- **RetroPad Right Analog Up** [vice_mapper_ru] (**---**)
-
-- **RetroPad Right Analog Down** [vice_mapper_rd] (**---**)
-
-- **RetroPad Right Analog Left** [vice_mapper_rl] (**---**)
-
-- **RetroPad Right Analog Right** [vice_mapper_rr] (**---**)
-
-- **RetroPad Turbo Fire** [vice_turbo_fire] (**disabled**|enabled)
+- **Turbo Fire** [vice_turbo_fire] (**disabled**|enabled)
 
     Hotkey toggling disables this option until core restart.
 
-- **RetroPad Turbo Button** [vice_turbo_fire_button] (**B**|A|Y|X|L|R|L2|R2)
+- **Turbo Button** [vice_turbo_fire_button] (**B**|A|Y|X|L|R|L2|R2)
 
     Replace the mapped button with turbo fire button.
 
-- **RetroPad Turbo Pulse** [vice_turbo_pulse] (2|4|**6**|8|10|12)
+- **Turbo Pulse** [vice_turbo_pulse] (2|4|**6**|8|10|12)
 
     Frames in a button cycle.
 
-- **RetroPad Port** [vice_joyport] (1|**2**)
+- **Userport Joystick Adapter** [vice_userport_joytype] (**disabled**|CGA|HIT|Kingsoft|Starbyte|Hummer|OEM|PET)
+
+    Required for more than 2 joysticks, for example IK+ Gold with 3 players.
+
+- **Joystick Port** [vice_joyport] (1|**2**)
 
     Most games use port 2, some use port 1. Filename forcing or hotkey toggling disables this option until core restart.
 
-- **RetroPad Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)
+- **Joystick Port Type** [vice_joyport_type] (**1**|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)
 
     | Value | Label                           |
     |-------|---------------------------------|
@@ -930,6 +879,88 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | jump        | B = Fire, A = Up       |
     | rotate      | Y = Fire, B = 2nd fire |
     | rotate_jump | Y = Fire, B = Up       |
+
+- **Show Mapping Options** [vice_mapping_options_display] (disabled|**enabled**)
+
+    Page refresh by menu toggle required!
+
+- **Toggle Virtual Keyboard** [vice_mapper_vkbd] (**---**)
+
+- **Toggle Statusbar** [vice_mapper_statusbar] (**RETROK_F12**)
+
+- **Switch Joyport** [vice_mapper_joyport_switch] (**RETROK_RCTRL**)
+
+- **Toggle Turbo Fire** [vice_mapper_turbo_fire_toggle] (**---**)
+
+- **Toggle Save Disk** [vice_mapper_save_disk_toggle] (**---**)
+
+- **Reset** [vice_mapper_reset] (**RETROK_END**)
+
+- **Hold Warp Mode** [vice_mapper_warp_mode] (**---**)
+
+- **Toggle Aspect Ratio** [vice_mapper_aspect_ratio_toggle] (**---**)
+
+- **Toggle Crop** [vice_mapper_crop_toggle] (**---**)
+
+- **Toggle Datasette Hotkeys** [vice_mapper_datasette_toggle_hotkeys] (**---**)
+
+- **Datasette PLAY** [vice_mapper_datasette_start] (**RETROK_UP**)
+
+- **Datasette STOP** [vice_mapper_datasette_stop] (**RETROK_DOWN**)
+
+- **Datasette REWIND** [vice_mapper_datasette_rewind] (**RETROK_LEFT**)
+
+- **Datasette F.FWD** [vice_mapper_datasette_forward] (**RETROK_RIGHT**)
+
+- **Datasette RESET** [vice_mapper_datasette_reset] (**---**)
+
+- **RetroPad Up** [vice_mapper_up] (**---**)
+
+- **RetroPad Down** [vice_mapper_down] (**---**)
+
+- **RetroPad Left** [vice_mapper_left] (**---**)
+
+- **RetroPad Right** [vice_mapper_right] (**---**)
+
+- **RetroPad A** [vice_mapper_a] (**---**)
+
+- **RetroPad B** [vice_mapper_b] (**---**)
+
+- **RetroPad X** [vice_mapper_x] (**RETROK_SPACE**)
+
+- **RetroPad Y** [vice_mapper_y] (**---**)
+
+- **RetroPad Select** [vice_mapper_select] (**TOGGLE_VKBD**)
+
+- **RetroPad Start** [vice_mapper_start] (**---**)
+
+- **RetroPad L** [vice_mapper_l] (**---**)
+
+- **RetroPad R** [vice_mapper_r] (**---**)
+
+- **RetroPad L2** [vice_mapper_l2] (**RETROK_ESCAPE**)
+
+- **RetroPad R2** [vice_mapper_r2] (**RETROK_RETURN**)
+
+- **RetroPad L3** [vice_mapper_l3] (**---**)
+
+- **RetroPad R3** [vice_mapper_r3] (**---**)
+
+- **RetroPad Left Analog Up** [vice_mapper_lu] (**---**)
+
+- **RetroPad Left Analog Down** [vice_mapper_ld] (**---**)
+
+- **RetroPad Left Analog Left** [vice_mapper_ll] (**---**)
+
+- **RetroPad Left Analog Right** [vice_mapper_lr] (**---**)
+
+- **RetroPad Right Analog Up** [vice_mapper_ru] (**---**)
+
+- **RetroPad Right Analog Down** [vice_mapper_rd] (**---**)
+
+- **RetroPad Right Analog Left** [vice_mapper_rl] (**---**)
+
+- **RetroPad Right Analog Right** [vice_mapper_rr] (**---**)
 
 ## Controllers
 
