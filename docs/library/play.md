@@ -10,7 +10,8 @@ The Play! core supports OpenGL rendering.
 
 The Play! core has been authored by
 
-- Jean-Philip Desjardins
+- Zer0xFF
+- jpd002
 
 The Play! core is licensed under
 
