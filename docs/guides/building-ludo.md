@@ -56,7 +56,7 @@ go build
 
 ### Mac OS X
 
-First setup [XCode](https://developer.apple.com/documentation/xcode/) then setup [Homebrew](https://brew.sh/).
+First setup [Xcode](https://developer.apple.com/documentation/xcode/) then setup [Homebrew](https://brew.sh/).
 
 ```brew
 brew install go openal-soft

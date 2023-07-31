@@ -13,7 +13,7 @@ Because iOS requires that all code be signed, iOS does not support installing/up
 
 The following software needs to be installed:
 
-- XCode (macOS only)
+- Xcode (macOS only)
 
 You can get Xcode from the Mac App Store.
 
