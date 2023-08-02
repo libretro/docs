@@ -20,17 +20,14 @@ If your video driver has very bad performance, it is possible to run it on a thr
 
 ### Low frame rate
 
-Make sure your system meets the requirement of the core you picked.
-
- See if your core options aren't set too high for your system.
-
-Disable shaders.
-
-Lower the video scale setting.
-
-Try another video driver.
-
-Try enabling threaded video in the video options.
+- Make sure your system meets the requirement of the core you picked
+- See if your core options aren't set too high for your system
+- Disable shaders
+- Lower the video scale setting
+- Try another video driver
+- Try enabling threaded video in the video options
+- Try disabling VSYNC
+- Disable Run-Ahead in the Latency options
 
 ### Windows Vista and up video problems
 Windows Vista and up suffer problems with OpenGL in windowed mode where it appears to be impossible to obtain proper, smooth VSync behavior no matter what you do. If you are annoyed by this problem, and still want to play in windowed mode, you should use the D3D driver which doesn't have this problem. Disabling Aero sometimes helps OpenGL VSync behavior.
