@@ -55,7 +55,7 @@ A better integration allows for more features to be available from the frontend 
 Theoretically, more recent version of the emulators should always be more accurate, which means the graphics, sound and gameplay of the games are more likely to be faithful to the original cabinet. In reality, for vintaged MAME cores, with fixes being backported to some vintages and not some others, the situation is not so predictable.
 
 #### Input lag
-Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead and pre-emptive frames feature. As of november 2022, runahead is also available in **MAME (current)**, keep in mind that feature is not officially supported by upstream so it might never catch up with FBNeo quality-wise.
+Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead and pre-emptive frames feature. Runahead is also partially available in multiple MAME cores (MAME-Current, MAME2003-Plus, ...), with second instance being recommended.
 
 #### Performance
 Being more accurate usually means the emulation will be more taxing on your cpu, so older versions of emulators will usually perform better at the cost of accuracy and are worth trying if you have performance issues with more recent versions. Accuracy is not the only reason for performance regression though, the emulator framework has an impact too, this is especially noticeable on MAME which had its framework constantly updated over the years.
@@ -90,7 +90,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * keeps adding support for new games
 
 #### MAME (current)
-* is the slowest core and the one that consumes the most memory
+* is usually the slowest core and the one that consumes the most memory
 * is usually the most accurate
 * uses the latest known good romsets
 * has the widest range of emulated machines
