@@ -9,7 +9,7 @@ Lakka is the official Linux distribution of RetroArch and the libretro ecosystem
 ## Compiling Lakka
 ___
 
-This page is for developers who want to customize their build and/or contribute to Lakka. You will need Linux (we usually build on Debian, Arch or Crux) and the base development packages (base-devel on Arch, build-essential on Debian). You may also need a local HTTP server to host Lakka packages if you plan to do packaging.
+This page is for developers who want to customize their build and/or contribute to Lakka. You will need Linux (we usually build on Debian or Crux) and the base development packages (build-essential on Debian). You may also need a local HTTP server to host Lakka packages if you plan to do packaging.
 
 ### Building Lakka the first time
 
