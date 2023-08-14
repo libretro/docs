@@ -58,7 +58,7 @@ Content that can be loaded by the Genesis Plus GX core have the following file e
 * .chd
 * .bms
 * .sms
-*. gg
+* .gg
 * .sg
 * .68k
 * .sgd
@@ -87,7 +87,7 @@ Frontend-level settings or features that the Genesis Plus GX core respects:
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
-| Native Cheats     | ✕          |
+| Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✔         |
@@ -222,13 +222,18 @@ Regarding Genesis Plus GX's implementation of MD+ mode operation, all CD overlay
 
 Since there is no way to auto-detect a MD+ patched ROM, MegaSD add-on emulation needs to be enabled in core options (through the newly added "CD add-on" core option). However, when "CD add-on" core option is set to Auto, if a cue file with same basename as loaded ROM file is found in same directory AND that cue file contains MegaSD specific keywords ("REM LOOP xxx", "REM NOLOOP",...), MegaSD CD overlay emulation will be automatically enabled (instead of full Sega/Mega CD hardware emulation).
 
-By setting the "CD add-on" core option to "Sega/Mega CD", you can force Sega/Mega CD hardware emulation when any MD game (<8MB) is loaded even if there is no cue file found in loaded game directory (this can be useful for demos or homebrew games that want to use Mega CD extra hardware without necessarily having a loaded CD beforehand)
+By setting the "CD add-on" core option to "Sega/Mega CD", you can force Sega/Mega CD hardware emulation when any MD game (<8MB) is loaded even if there is no cue file found in loaded game directory (this can be useful for demos or homebrew games that want to use Mega CD extra hardware without necessarily having a loaded CD beforehand).
 
 And by setting the "CD add-on" option to "None", Sega/Mega CD hardware emulation will be forced disabled, even if a cue file is found in loaded game directory or when the loaded game is known to have Sega/Mega CD support (like Pier Solar, Flux or Wonder Library). This emulates the behavior where there is no Sega/Mega CD unit attached.
 
-Although no known games are using them, MegaSD extended SSF2 mapper and limited ROM write mapper (automatically enabled when respectively "SEGA SSF2" and "SEGA MEGASD" are found in loaded ROM header) are also emulated, according to the description in MegaSD dev manual . Note that MegaSD overlay will also automatically be enabled when these mappers are detected, no matter of the "CD Add-on" core option.
-	
+Although no known games are using them, MegaSD extended SSF2 mapper and limited ROM write mapper (automatically enabled when respectively "SEGA SSF2" and "SEGA MEGASD" are found in loaded ROM header) are also emulated, according to the description in MegaSD dev manual. Note that MegaSD overlay will also automatically be enabled when these mappers are detected, no matter of the "CD Add-on" core option.
+
 Please peruse the official MegaSD manual for further information: https://downloads.terraonion.com/public/MegaSD_DEV_Manual.pdf
+
+Also, there's an useful reference wiki here for MSU-MD games/patches and its technical specifications here: https://arcadetv.github.io/msu-md-patches/
+
+!!! attention
+	Make sure that your files match what's specified in your MD+/MSU-MD cue file!
 
 ## Core options
 
@@ -414,17 +419,17 @@ Enable emulation of the [FM Sound Unit](http://segaretro.org/FM_Sound_Unit) used
 
 **Master System FM (YM2413) Core** - [genesis_plus_gx_ym2413_core]
 
-Select method used to emulate the [FM Sound Unit](https://segaretro.org/FM_Sound_Unit) of the Sega Mark III/Master System. 'MAME' option is fast, and runs full speed on most systems. 'Nuked' option is cycle accurate, very high quality, and has substantial CPU requirements. The 'Master System FM (YM2413) Core' core option only appears if the Genesis Plus GX libretro core was compiled with the ['HAVE_OPLL_CORE' flag](https://github.com/libretro/Genesis-Plus-GX/blob/master/Makefile.libretro).
+Select method used to emulate the [FM Sound Unit](https://segaretro.org/FM_Sound_Unit) of the Sega Mark III/Master System. 'MAME' option is fast, and runs full speed on most systems. 'Nuked' option is cycle accurate, very high quality, and has substantial CPU requirements.
 
 * **MAME [mame]** - Uses the MAME option for emulating the FM Sound Unit for Sega Mark III/Master System games which is fast and full speed for most games.
 * Nuked [nuked] - Uses the Nuked option for emulating the FM Sound Unit for Sega Mark III/Master System games which is high quality but has substantial CPU requirements.
 
 **Mega Drive/Genesis FM** [genesis_plus_gx_ym2612]
 
-Select method used to emulate the FM synthesizer (main sound generator) of the Mega Drive/Genesis. 'MAME' options are fast, and run full speed on most systems. 'Nuked' options are cycle accurate, very high quality, and have substantial CPU requirements. The 'Nuked' core option settings only appear if the Genesis Plus GX libretro core was compiled with the ['HAVE_YM3438_CORE' flag](https://github.com/libretro/Genesis-Plus-GX/blob/master/Makefile.libretro). The ['YM2612'](https://segaretro.org/YM2612) chip is used by the original Model 1 Mega Drive/Genesis. The ['YM3438'](https://segaretro.org/index.php?title=YM3438&redirect=no) is used in later Mega Drive/Genesis revisions.
+Select method used to emulate the FM synthesizer (main sound generator) of the Mega Drive/Genesis. 'MAME' options are fast, and run full speed on most systems. 'Nuked' options are cycle accurate, very high quality, and have substantial CPU requirements. The ['YM2612'](https://segaretro.org/YM2612) chip is used by the original Model 1 Mega Drive/Genesis. The ['YM3438'](https://segaretro.org/index.php?title=YM3438&redirect=no) is used in later Mega Drive/Genesis revisions.
 
 * **MAME (YM2612) [mame (ym2612)]** - Selects MAME (YM2612) [original Model 1 Mega Drive/Genesis] as FM synthesizer method which is fast and fullspeed.
-* MAME (ASIC YM3438) [mame (asic ym3438)] - Selects MAME (ASIC YM3438 [later Mega Drive/Genesis revisions] as FM synthesizer method which is fast and fullspeed.
+* MAME (ASIC YM3438) [mame (asic ym3438)] - Selects MAME (ASIC YM3438) [later Mega Drive/Genesis revisions] as FM synthesizer method which is fast and fullspeed.
 * MAME (Enhanced YM3438) [mame (enhanced ym3438)] - Selects MAME (Enhanced YM3438) [later Mega Drive/Genesis revisions] as FM synthesizer method which is fast and fullspeed.
 * Nuked (YM2612) [nuked (ym2612)] - Selects Nuked (YM2612) [original Model 1 Mega Drive/Genesis] as FM synthesizer method which is high quality but has high CPU requirements.
 * Nuked (YM3438) [nuked (ym3438)] - Selects Nuked (YM3438) [later Mega Drive/Genesis revisions] FM synthesizer method which is fast but has high CPU requirements.
@@ -438,7 +443,7 @@ Select stereo or mono sound reproduction.
 
 **Audio Filter** [genesis_plus_gx_audio_filter]
 
-Enable a low pass audio filter to better simulate the characteristic sound of a Model 1 Mega Drive/Genesis." The 'EQ' core option setting only appears if the Genesis Plus GX core was compiled with the ['HAVE_EQ' flag](https://github.com/libretro/Genesis-Plus-GX/blob/master/libretro/libretro.c).
+Enable a low pass audio filter to better simulate the characteristic sound of a Model 1 Mega Drive/Genesis.
 
 * **Off [disabled]** - Disables low pass audio filter.
 * Low-Pass [low-pass] - Enables low pass audio filter.
@@ -541,9 +546,12 @@ Only is usable when the 'Enhanced per-tile vertical scroll' core option is enabl
 
 **CPU Speed** [genesis_plus_gx_overclock]
 
-Overclock the emulated CPU. Can reduce slowdown, but may cause glitches. The 'CPU Speed' core option only appears if the Genesis Plus GX core was compiled with the ['HAVE_OVERCLOCK'](https://github.com/libretro/Genesis-Plus-GX/blob/master/libretro/libretro.c) flag.
+Overclock the emulated CPU. Can reduce slowdown, but may cause glitches.
 
 * 100% to 500% in increments of 25%. **100% is default.**
+
+??? note "*!00% vs 200% (video)*"
+    https://youtu.be/yE8qzwVuy5Q
 
 **System Locks-Ups** [genesis_plus_gx_force_dtack]
 
@@ -552,6 +560,9 @@ Emulate system lock-ups that occur on real hardware when performing illegal addr
 * **On [enabled]** - Enables emulation of system lock-ups.
 * Off [disabled] - Disables emulation of system lock-ups.
 
+??? note "*Enabled vs Disabled (video)*"
+    https://youtu.be/yE8qzwVuy5Q
+
 **68K Address Error** [genesis_plus_gx_addr_error]
 
 The [Mega Drive/Genesis main CPU (Motorola 68000)](http://segaretro.org/M68000) generates an Address Error exception (crash) when attempting to perform unaligned memory access. Enabling this will simulate this behavior. It should only be disabled when playing ROM hacks, since these are typically developed using less accurate emulators and may rely on invalid RAM access for correct operation.
@@ -559,9 +570,15 @@ The [Mega Drive/Genesis main CPU (Motorola 68000)](http://segaretro.org/M68000) 
 * **On [enabled]** - Enables simulation of 68K Address Error.
 * Off [disabled] - Disables simulation of 68K Address Error.
 
+??? note "*Enabled vs Disabled (video)*"
+    https://youtu.be/yIr2DF2Os3c
+
+??? note "*Enabled (image)*"
+    ![](../image/core/genesis_plus_gx/address_error.png)
+
 **CD access time** [genesis_plus_gx_cd_latency]
 
-Simulate [original CD hardware latency](https://segaretro.org/Sega_Mega-CD/Technical_specifications#Storage) when initiating a read or seeking to a specific location on loaded disc. This is required by a few CD games that crash if CD data is available too soon and also fixes CD audio desync issues in some games. Disabling this can be useful with [MSU-MD games](https://emulation.gametechwiki.com/index.php/Sega_Genesis_emulators#Mega_Drive_Plus_.2F_Genesis_Plus_.2F_MSU-MD_modes) as it makes CD audio tracks loops more seamless.
+Simulate [original CD hardware latency](https://segaretro.org/Sega_Mega-CD/Technical_specifications#Storage) when initiating a read or seeking to a specific location on loaded disc. This is required by a few CD games that crash if CD data is available too soon and also fixes CD audio desync issues in some games. Disabling this can be useful with [MD+ or MSU-MD games](https://emulation.gametechwiki.com/index.php/Sega_Genesis_emulators#Mega_Drive_Plus_.2F_Genesis_Plus_.2F_MSU-MD_modes) as it makes CD audio tracks loops more seamless.
 
 * **On [enabled]** - Enables simulation of original CD hardware latency.
 * Off [disabled] - Disables simulation of original CD hardware latency.
@@ -572,122 +589,122 @@ Change the volume of individual hardware audio channels.
 
 **Show Advanced Audio Volume Settings (Reopen menu)** [genesis_plus_gx_show_advanced_audio_settings]
 
-Enable configuration of low-level audio channel parameters core options listed below. NOTE: Quick Menu must be toggled for this setting to take effect.  The 'Show Advanced Audio Volume Settings' core option only appears if the Genesis Plus GX core was compiled with the ['USE_PER_SOUND_CHANNELS_CONFIG' flag being set to 1](https://github.com/libretro/Genesis-Plus-GX/blob/master/Makefile.libretro).
+Enable configuration of low-level audio channel parameters core options listed below. NOTE: Quick Menu must be toggled for this setting to take effect.
 
 * **On [enabled]** - Enables configuration of low-level audio channel parameters.
 * Off [disabled] - Disables configuration of low-level audio channel parameters.
 
 **PSG Tone Channel 0 Volume %** [genesis_plus_gx_psg_channel_0_volume]
 
-Reduce the volume of the [PSG Tone Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 0.
+Adjust the volume of Channel 0f the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **PSG Tone Channel 1 Volume %** [genesis_plus_gx_psg_channel_1_volume]
 
-Reduce the volume of the [PSG Tone Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 1.
+Adjust the volume of Channel 1 of the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **PSG Tone Channel 2 Volume %** [genesis_plus_gx_psg_channel_2_volume]
 
-Reduce the volume of the [PSG Tone Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 2.
+Adjust the volume of Channel 2 of the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **PSG Tone Channel 3 Volume %** [genesis_plus_gx_psg_channel_3_volume]
 
-Reduce the volume of the [PSG Tone Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 3.
+Adjust the volume of Channel 3 of the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 0 Volume %** [genesis_plus_gx_md_channel_0_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 0. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 0 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 1 Volume %** [genesis_plus_gx_md_channel_1_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 1. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 1 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 2 Volume %** [genesis_plus_gx_md_channel_2_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 2. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 2 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 3 Volume %** [genesis_plus_gx_md_channel_3_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 3. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 3 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 4 Volume %** [genesis_plus_gx_md_channel_4_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 4. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 4 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Mega Drive/Genesis FM Channel 5 Volume %** [genesis_plus_gx_md_channel_5_volume]
 
-Reduce the volume of the [Mega Drive/Genesis FM Channel](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio) 5. Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
+Adjust the volume of Channel 5 of the [Mega Drive/Genesis FM](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio). Only works with MAME FM emulators ('Mega Drive/Genesis FM' core option).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 0 Volume %** [genesis_plus_gx_sms_fm_channel_0_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 0.
+Adjust the volume of Channel 0 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 1 Volume %** [genesis_plus_gx_sms_fm_channel_1_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 1.
+Adjust the volume of Channel 1 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 2 Volume %** [genesis_plus_gx_sms_fm_channel_2_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 2.
+Adjust the volume of Channel 2 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 3 Volume %** [genesis_plus_gx_sms_fm_channel_3_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 3.
+Adjust the volume of Channel 3 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 4 Volume %** [genesis_plus_gx_sms_fm_channel_4_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 4.
+Adjust the volume of Channel 4 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 5 Volume %** [genesis_plus_gx_sms_fm_channel_5_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 5.
+Adjust  the volume of Channel 5 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 6 Volume %** [genesis_plus_gx_sms_fm_channel_6_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 6.
+Adjust the volume of Channel 6 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 7 Volume %** [genesis_plus_gx_sms_fm_channel_7_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 7.
+Adjust the volume of Channel 7 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
 **Master System FM (YM2413) Channel 8 Volume %** [genesis_plus_gx_sms_fm_channel_8_volume]
 
-Reduce the volume of the [Master System FM Channel](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio) 8.
+Adjust the volume of Channel 8 of the [Master System FM](https://segaretro.org/Sega_Master_System/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
@@ -740,7 +757,7 @@ The Genesis Plus GX core supports the following device type(s) in the controls m
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer, Master Tap device types for the [User 1](#user-1-device-types) and/or [User 2](#user-2-device-types) ports.
+Activating multitap support in compatible games can be configured by the 4-WayPlay, Teamplayer or Master Tap device types for the [User 1](#user-1-device-types) and/or [User 2](#user-2-device-types) ports.
 
 ## Joypad
 
@@ -784,7 +801,7 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | MS Graphic Board Stylus |
 | ![](../image/retromouse/retro_left.png) Mouse 1                                                                        | MS Graphic Board Pen    |
 | ![](../image/retromouse/retro_right.png) Mouse 2                                                                       | MS Graphic Board Menu   |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                      | MS Graphic Do           |
+| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                      | MS Graphic Board Do     |
 
 ## Lightgun
 
@@ -800,10 +817,10 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 | Inputs                                                                                                                   | [PICO tablet](https://segaretro.org/Sega_Pico)               | [Terebi Oekaki tablet](https://segaretro.org/Terebi_Oekaki)      |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | PICO tablet Stylus        | Terebi Oeka tablet Stylus |
-| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | PICO tablet Pen           | Terebi Oeka tablet Pen    |
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | PICO tablet Stylus        | Terebi Oekaki tablet Stylus |
+| ![](../image/retromouse/retro_left.png) Mouse 1                                                                          | PICO tablet Pen           | Terebi Oekaki tablet Pen    |
 | ![](../image/retromouse/retro_right.png) Mouse 2                                                                         | PICO tablet Red           |                           |
-| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        |                           | Terebo Peka tablet Start  |
+| ![](../image/retromouse/retro_middle.png) Mouse 3                                                                        |                           | Terebo Oekaki tablet Start  |
 | Wheel Up                                                                                                                 | PICO tablet Previous page |                           |
 | Wheel Down                                                                                                               | PICO tablet Next page     |                           |
 | ![](../image/retropad/retro_dpad_up.png)                                                                                 | PICO tablet Up (White)    |                           |
@@ -817,9 +834,9 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 - [Libretro Genesis Plus GX Core Info File](https://github.com/libretro/libretro-super/blob/master/dist/info/genesis_plus_gx_libretro.info)
 - [Libretro Genesis Plus GX Github Repository](https://github.com/libretro/Genesis-Plus-GX)
 - [Report Libretro Genesis Plus GX Core Issues Here](https://github.com/libretro/Genesis-Plus-GX/issues)
-- [Libretro Genesis Plus GX Gameplay Videos Playlist on YouTube](https://www.youtube.com/playlist?list=PLRbgg4gk_0If0UWkhjPbRmWUBcGaRiPZt)
+- [Gameplay Videos Playlist on YouTube](https://www.youtube.com/playlist?list=PLRbgg4gk_0If0UWkhjPbRmWUBcGaRiPZt)
 
-## Libretro Sega 8/16-bit cores
+## Sega 8/16-bit cores
 
 - [Sega - Master System (Emux SMS)](emux_sms.md)
 - [Sega - MS/MD/CD/32X (PicoDrive)](picodrive.md)
