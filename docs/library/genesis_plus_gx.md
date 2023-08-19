@@ -358,6 +358,9 @@ Forces Game Gear titles to run in 'SMS' mode, with an increased resolution of 25
 
 **Blargg NTSC Filter** [genesis_plus_gx_blargg_ntsc_filter] - Apply a video filter to mimic various NTSC TV signals.
 
+??? note "*Disabled vs All Filters (video)*"
+    https://youtu.be/buZPDyDzvPY
+
 ??? note "*Off [disabled]*"
     ![](../image/core/genesis_plus_gx/normal.png)
 
@@ -368,26 +371,36 @@ Forces Game Gear titles to run in 'SMS' mode, with an increased resolution of 25
     ![](../image/core/genesis_plus_gx/composite.png)
 
 ??? note "*S-Video [svideo]*"
-    ![](../image/core/genesis_plus_gx/svideo.png)
-
-??? note "*RGB [rgb]*"
+    ![](../image/core/genesis_plus "*RGB [rgb]*"
     ![](../image/core/genesis_plus_gx/rgb.png)
 
 **LCD Ghosting Filter** [genesis_plus_gx_lcd_filter]
 
 Apply an image 'ghosting' filter to mimic the display characteristics of the Game Gear and 'Genesis Nomad' LCD panels.
 
-??? note "*On [enabled]*"
+* **Off** [disabled] - Disables ghosting filter.
+* On [enabled] - Enables ghosting filter.
+
+??? note "*Disabled vs Enabled (video)*"
+    https://youtu.be/Us13sJPEUD8
+
+??? note "*Enabled*"
     ![](../image/core/genesis_plus_gx/ghost.png)
 
 **Interlaced Mode 2 Output** [genesis_plus_gx_render]
 
 Interlaced Mode 2 allows the Mega Drive/Genesis to output a double height (high resolution) 320x448 image by drawing alternate scanlines each frame (this is used by 'Sonic the Hedgehog 2' and 'Combat Cars' multiplayer modes). 'Single Field' mimics original hardware, producing each field (320x224) alternatively with flickering/interlacing artefacts. 'Double Field' simulates the interlaced display, which stabilises the image but causes mild blurring.
 
-??? note "*Single Field [single field]*"
+* **Single Field** [single field] - Sets Interlaced Mode 2 Output as Single Field.
+* Double Field [double field] - Sets Interlaced Mode 2 Output as Double Field.
+
+??? note "*Single Field vs Double Field (video)*"
+    https://youtu.be/xZc58OSPj4Y
+
+??? note "*Single Field*"
     ![](../image/core/genesis_plus_gx/single.png)
 
-??? note "*Double Field [double field]*"
+??? note "*Double Field*"
     ![](../image/core/genesis_plus_gx/double.png)
 
 **Frameskip** [genesis_plus_gx_frameskip]
@@ -414,8 +427,8 @@ _________________
 Enable emulation of the [FM Sound Unit](http://segaretro.org/FM_Sound_Unit) used by certain Sega Mark III/Master System games for enhanced audio output.
 
 * **Auto [auto]** - Automatically enables emulation of FM Sound Unit based on the loaded [game's ROM information](https://github.com/libretro/Genesis-Plus-GX/blob/master/core/loadrom.c) like its ROM type, product code/version, checksum, size and region code.
-* Off [disabled] - Disables emulation of FM Sound Unit.
-* On [enabled] - Enables emulation of FM Sound Unit.
+* Off [disabled] - Manually disables emulation of FM Sound Unit.
+* On [enabled] - Manually enables emulation of FM Sound Unit.
 
 **Master System FM (YM2413) Core** - [genesis_plus_gx_ym2413_core]
 
@@ -510,8 +523,11 @@ Use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
 
 Display light gun crosshairs when using the [MD Menacer, MD Justifiers and MS Light Phaser](#lightgun) input device types.
 
-??? note "*On [enabled]*"
-    ![](../image/core/genesis_plus_gx/lightgun.png)
+* **Off [disabled]** - Disables light gun crosshair for the aftermentioned input device types.
+* On [enabled] - Enables light gun crosshair for the aftermentioned input device types.
+
+??? note "*Disabled vs Enabled (video)*"
+    https://www.youtube.com/watch?v=w6iYysbni2g
 
 **Invert Mouse Y-Axis** [genesis_plus_gx_invert_mouse]
 
@@ -531,12 +547,21 @@ Removes the original sprite-per-scanline hardware limit. This reduces flickering
 * **Off [disabled]** - Keeps the per-line sprite limit.
 * On [enabled] - Disables the per-line sprite limit.
 
+??? note "*Disabled vs Enabled (video)*"
+    https://youtu.be/IZp5epy-hBM
+
 **Enhanced per-tile vertical scroll** [genesis_plus_gx_enhanced_vscroll]
 
 Allows each individual cell to be scrolled vertically, instead of 16px 2-cell, by averaging out with the vscroll value of the neighbouring cell. This hack only applies to few games that use 2-cell vertical scroll mode.
 
 * **Off [disabled]** - Enables enhanced per-tile vertical scrolling.
 * On [enabled] - Disables enhanced per-tile vertical scrolling.
+
+??? note "*Disabled*"
+    ![](../image/core/genesis_plus_gx/vertical_disabled.png)
+
+??? note "*Enabled [16]*"
+    ![](../image/core/genesis_plus_gx/vertical_enabled.png)
 
 **Enhanced per-tile vertical scroll limit** [genesis_plus_gx_enhanced_vscroll_limit]
 
@@ -561,7 +586,7 @@ Emulate system lock-ups that occur on real hardware when performing illegal addr
 * Off [disabled] - Disables emulation of system lock-ups.
 
 ??? note "*Enabled vs Disabled (video)*"
-    https://youtu.be/yE8qzwVuy5Q
+    https://youtu.be/B1n1wQGzzYk
 
 **68K Address Error** [genesis_plus_gx_addr_error]
 
@@ -571,9 +596,9 @@ The [Mega Drive/Genesis main CPU (Motorola 68000)](http://segaretro.org/M68000) 
 * Off [disabled] - Disables simulation of 68K Address Error.
 
 ??? note "*Enabled vs Disabled (video)*"
-    https://youtu.be/yIr2DF2Os3c
+    https://youtu.be/zjBPz9QWRqI
 
-??? note "*Enabled (image)*"
+??? note "*Enabled*"
     ![](../image/core/genesis_plus_gx/address_error.png)
 
 **CD access time** [genesis_plus_gx_cd_latency]
@@ -596,7 +621,7 @@ Enable configuration of low-level audio channel parameters core options listed b
 
 **PSG Tone Channel 0 Volume %** [genesis_plus_gx_psg_channel_0_volume]
 
-Adjust the volume of Channel 0f the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
+Adjust the volume of Channel 0 of the [PSG Tone](https://segaretro.org/Sega_Mega_Drive/Technical_specifications#Audio).
 
 * 0% to 100% in increments of 10%. **100% is default**.
 
