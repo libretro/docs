@@ -97,6 +97,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | EasyRPG                                                                          | [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)                 |                |
 | [EightyOne](../library/eightyone.md)             			           | [GPLv3](https://github.com/libretro/81-libretro/blob/master/LICENSE)                      |                |
 | [Elektronika - BK-0010/BK-0011](../library/bk.md)                                          | [BSD](https://github.com/libretro/bk-emulator/blob/master/COPYING) |                            |
+| [EmuSCV](../library/emuscv.md)                           | [GPLv2](https://github.com/libretro/)                  |                |
 | [Emux CHIP-8](../library/emux_chip8.md)                                          | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux GB](../library/emux_gb.md)                                                 | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
 | [Emux NES](../library/emux_nes.md)                                               | [GPLv2](https://github.com/libretro/emux/blob/master/COPYING)                             |                |
@@ -146,6 +147,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | MESS 2014                                                 		               | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 | [Meteor](../library/meteor.md)                            		           | [GPLv3](https://github.com/libretro/meteor-libretro/blob/master/COPYING)                  |                |
 | [mGBA](../library/mgba.md)                                                       | [MPLv2.0](https://github.com/libretro/mgba/blob/master/LICENSE)                           |                |
+| [MicroW8](../library/microw8.md)                                                       | [Unlicense](https://github.com/libretro/uw8-libretro/blob/main/UNLICENSE)                           |                |
 | mpv                                                                              | [GPLv3](https://github.com/libretro/libretro-mpv/blob/master/LICENSE)                     |                |
 | [Mr.Boom](../library/mr_boom.md)                          		           | [MIT](https://github.com/libretro/mrboom-libretro/blob/master/LICENSE)                    |                |
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
@@ -194,7 +196,6 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [TyrQuake](../library/tyrquake.md)                                               | [GPLv2](https://github.com/libretro/tyrquake/blob/master/gnu.txt)                         |                |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 | [Uzem](../library/uzem.md)                                                       | [GPLv3](https://github.com/Uzebox/uzebox/blob/master/gpl-3.0.txt)                         |                |
-| [EmuSCV](../library/emuscv.md)						   | [GPLv2](https://github.com/libretro/)                  |                |
 | [VaporSpec](../library/vaporspec.md)                                             | [MIT](https://github.com/minkcv/vm/blob/master/LICENSE.md)    
 | [VBA-M](../library/vba_m.md)                                                     | [GPLv2](https://github.com/libretro/vbam-libretro/blob/master/doc/gpl.txt)                |                |
 | [VBA Next](../library/vba_next.md)                                               | [GPLv2](https://github.com/libretro/vba-next/blob/master/LICENSE)                         |                |

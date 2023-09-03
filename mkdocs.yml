@@ -264,6 +264,7 @@ nav:
       - 'Jump n Bump': 'library/jumpnbump.md'
       - 'LowRes NX': 'library/lowres_nx.md'      
       - 'Lua Engine (Lutro)': 'library/lutro.md'
+      - 'MicroW8': 'library/microw8.md'
       - 'Minecraft (Craft)': 'library/craft.md'
       - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
       - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
