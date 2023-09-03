@@ -122,6 +122,7 @@
 | MESS 2015                 | Multi (various)        | (See MAME note)    |
 | Meteor                    | Game Boy Advance       |                    |
 | mGBA                      | Game Boy Advance       |                    |
+| Microw8                   | Game engine            | A port of a WebAssembly based fantasy console to libretro |
 | Minivmac                  | Mac II                 | MacII variant of minivmac emulator |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
