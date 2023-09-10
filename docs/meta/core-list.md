@@ -206,6 +206,7 @@
 | VICE xplus4               | Commodore Plus/4       |                    |
 | VICE xscpu64              | Commodore C64 SuperCPU |                    |
 | VICE xvic                 | Commodore VIC-20       |                    |
+| Vircon32                  | Game engine            | A port of Vircon32 game console to libretro |
 | Virtual Jaguar            | Atari Jaguar           |                    |
 | VirtualXT                 | DOS                    | Runns PC/XT class software. Mainly intended for PC booters from the 80's. |
 | vitaQuake 2               | Game engine            | A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro. There is a separate core for each of the Quake 2 mission packs, 'Rogue', 'Zaero' and 'Xatrix'. |
