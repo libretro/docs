@@ -4,6 +4,7 @@
 | 3D Engine                 | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
 | [4DO](https://docs.libretro.com/library/opera/)                       | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
+| Anarch                    | Game                   | A port of Anarch, 90s-style Doom clone shooter game |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/)                  | Atari 5200             |                    |
 | Beetle bsnes              | Nintendo SNES/SFC      |                    |
