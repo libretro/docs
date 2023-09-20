@@ -42,7 +42,7 @@ nav:
         - 'Steam Link': 'guides/install-steamlink.md'
         - 'Web Player': 'guides/web-player.md'
         - 'Sega Genesis Mini': 'guides/install-genesismini.md'
-        - 'Facebook Portal': 'guides/install-facebookportal.md'         
+        - 'Facebook Portal': 'guides/install-facebookportal.md'
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
@@ -98,7 +98,7 @@ nav:
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
       - 'Apple':
-        - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'     
+        - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
         - 'Arcade (FinalBurn Neo)': 'library/fbneo.md'
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
@@ -131,7 +131,7 @@ nav:
       - 'Enterprise Emulation':
         - 'Enterprise 128 (ep128emu)': 'library/ep128emu.md'
       - 'Elektronika':
-        - 'Elektronika - BK-0010/BK-0011 (bk)': 'library/bk.md'        
+        - 'Elektronika - BK-0010/BK-0011 (bk)': 'library/bk.md'
       - 'GCE Emulation':
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
       - 'Magnavox Emulation':
@@ -211,7 +211,7 @@ nav:
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
         - 'Sega - Dreamcast (redream)': 'library/redream.md'
-        - 'Sega - Dreamcast VMU (VeMUlator)': 'library/vemulator.md'         
+        - 'Sega - Dreamcast VMU (VeMUlator)': 'library/vemulator.md'
         - 'Sega - Master System (Emux SMS)': 'library/emux_sms.md'
         - 'Sega - MS/GG (SMS Plus GX)': 'library/smsplus.md'
         - 'Sega - MS/GG/SG-1000 (Gearsystem)': 'library/gearsystem.md'
@@ -221,7 +221,7 @@ nav:
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
         - 'Sega - Saturn/ST-V (Kronos)': 'library/kronos.md'
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
-        - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'       
+        - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sharp Emulation':
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
@@ -237,7 +237,7 @@ nav:
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'Super Cassette Vision':
-        - 'Super Cassette Vision (EmuSCV)': 'library/emuscv.md'        
+        - 'Super Cassette Vision (EmuSCV)': 'library/emuscv.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Texas Instruments Emulation':
@@ -245,7 +245,7 @@ nav:
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
       - 'MegaDuck Emulation':
-        - 'Welback Holdings - Mega Duck (SameDuck)': 'library/sameduck.md'        
+        - 'Welback Holdings - Mega Duck (SameDuck)': 'library/sameduck.md'
     - 'Core Library: Game and Scripting Engines':
       - '2048': 'library/2048.md'
       - '3D Engine': 'library/3d_engine.md'
@@ -255,7 +255,7 @@ nav:
       - 'ChaiLove': 'library/chailove.md'
       - 'CHIP-8 Emulation':
         - 'XO-CHIP/CHIP-8 (JAXE)': 'library/jaxe.md'
-        - 'CHIP-8 (Emux)': 'library/emux_chip8.md'      
+        - 'CHIP-8 (Emux)': 'library/emux_chip8.md'
       - 'Dinothawr': 'library/dinothawr.md'
       - 'Doom (PrBoom)': 'library/prboom.md'
       - 'Doom 3 (Boom3)': 'library/boom3.md'
@@ -263,7 +263,7 @@ nav:
       - 'Flashback (REminiscence)': 'library/reminiscence.md'
       - 'Handheld Electronic (GW)': 'library/gw.md'
       - 'Jump n Bump': 'library/jumpnbump.md'
-      - 'LowRes NX': 'library/lowres_nx.md'      
+      - 'LowRes NX': 'library/lowres_nx.md'
       - 'Lua Engine (Lutro)': 'library/lutro.md'
       - 'MicroW8': 'library/microw8.md'
       - 'Minecraft (Craft)': 'library/craft.md'
@@ -276,9 +276,10 @@ nav:
       - 'TIC-80': 'library/tic80.md'
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
       - 'Uzebox (Uzem)': 'library/uzem.md'
-      - 'VaporSpec': 'library/vaporspec.md'      
+      - 'VaporSpec': 'library/vaporspec.md'
+      - 'Vircon32': 'library/vircon32.md'
       - 'WebAssembly (WASM-4)': 'library/wasm-4.md'
-      - 'Wolfenstein 3D (ECWolf)': 'library/ecwolf.md'      
+      - 'Wolfenstein 3D (ECWolf)': 'library/ecwolf.md'
     - 'Core Library: Media':
       - 'Imageviewer': 'library/imageviewer.md'
       - 'FFmpeg': 'library/ffmpeg.md'
@@ -449,7 +450,7 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
       primary: black
-      accent: deep purple  
+      accent: deep purple
   # 404 page
   static_templates:
     - 404.html
