@@ -110,7 +110,7 @@ The Stella core supports the following device type(s) in the controls menu, bold
 | Left Difficulty A        | ![](../image/retropad/retro_l1.png)         |
 | Right Difficulty A       | ![](../image/retropad/retro_r1.png)         |
 | Left Difficulty B        | ![](../image/retropad/retro_l2.png)         |
-| Left Difficulty B        | ![](../image/retropad/retro_r2.png)         |
+| Right Difficulty B       | ![](../image/retropad/retro_r2.png)         |
 | Color                    | ![](../image/retropad/retro_l3.png)         |
 | Black/White              | ![](../image/retropad/retro_r3.png)         |
 
