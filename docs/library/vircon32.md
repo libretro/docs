@@ -76,7 +76,7 @@ Frontend-level settings or features that the Vircon32 core respects.
 - The Vircon32 core's base height is 480.
 - The Vircon32 core's max width is 640.
 - The Vircon32 core's max height is 480.
-- The Vircon32 core's core provided aspect ratio is 4/3.
+- The Vircon32 core's core provided aspect ratio is 16/9.
 
 ## User 1 - 4 device types
 
