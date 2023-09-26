@@ -178,4 +178,5 @@ There are several steps before your core can be available to user via the Online
  2. Add [.gitlab-ci.yml](https://github.com/search?q=org%3Alibretro+.gitlab-ci.yml&type=commits) to the root directory of your source code so it can be added to Libretro CI/CD.
  3. If you want your core to be compatible with [RetroArch's playlist](/guides/roms-playlists-thumbnails) :
     - Add at least icons playlist and content for your core in [RetroArch assets repository](https://github.com/libretro/retroarch-assets/tree/master/src/xmb/monochrome)
+    - Add your games to [Libretro database](https://github.com/libretro/libretro-database).
  4. Add documentation of your core following the instructions in [libretro-docs](https://github.com/libretro/docs#adding-a-new-core).
