@@ -104,7 +104,7 @@ The Mupen64plus-Next core saves/loads to/from these directories.
 - The Mupen64plus-Next core's internal sample rate is 44100 Hz
 - The Mupen64plus-Next core's core provided aspect ratio is (Ratio)
 
-### High-resolution textures
+### High-Resolution Textures
 
 There are two primary ways to utilize high-resolution textures:
 
