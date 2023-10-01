@@ -111,7 +111,7 @@ There are two primary ways to utilize high-resolution textures:
 1. By using pre-compiled high-resolution texture packs (in the `.htc` format) that are available for download.
 2. By compiling your own high-resolution texture packs from uncompressed Rice sources.
 
-#### Use pre-compiled high-resolution textures
+#### Use Pre-Compiled High-Resolution Textures
 
 - Place the `.htc` formatted textures into the `Mupen64plus/cache` directory.
 - Ensure the `.htc` file name corresponds to the system name of the game as shown in the mupen64plus console.
