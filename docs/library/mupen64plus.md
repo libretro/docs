@@ -126,7 +126,7 @@ There are two primary ways to utilize high-resolution textures:
 - `mupen64plus-EnableEnhancedTextureStorage = "False"`
 - `mupen64plus-EnableEnhancedHighResStorage = "False"`
 
-#### Compile your own high-resolution texture packs
+#### Compile Your Own High-Resolution Texture Packs
 
 1. Obtain the high-resolution textures in uncompressed Rice format.
 2. Name the folder to match the system name of the game in the mupen64plus console and place it in the `Mupen64plus/hires_texture` directory.
