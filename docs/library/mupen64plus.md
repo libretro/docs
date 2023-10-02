@@ -117,7 +117,7 @@ There are two primary ways to utilize high-resolution textures:
 - Ensure the `.htc` file name corresponds to the system name of the game as shown in the mupen64plus console.
 - Pre-compiled high-resolution packs will work only if Retroarch core settings related to textures match those used during the pack's compilation. To avoid potential mismatches, you might prefer to compile your own texture packs.
 
-**Recommended core options** for widely used `.htc` texture packs (for example , those used by Djipi or Mollymutt):
+**Recommended core options** for widely used `.htc` texture packs (for example, those used by Djipi or Mollymutt):
 
 - `mupen64plus-EnableTextureCache = "True"`
 - `mupen64plus-txHiresEnable = "True"`
