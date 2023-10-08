@@ -36,7 +36,7 @@ In order to install the RetroArch on your non-Jailbreak device, we need to use a
 1. Select the device you want to install RetroArch on (must be on the same Wi-Fi network as AltServer)
 1. Enter the email and password for your Apple ID
 
-You cannot add or update cores after installation as they are signed executables and can only be updated by updating and resigning the entire application. The IPA files linked above contain all of the available iOS/tvOS cores.
+You cannot add or update cores after installation as they are signed executables and can only be updated by updating and resigning the entire application. The IPA files linked above contain [all of the available iOS/tvOS cores](https://buildbot.libretro.com/nightly/apple/ios/latest/).
 
 ## Using RetroArch
 
