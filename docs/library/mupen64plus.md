@@ -104,23 +104,40 @@ The Mupen64plus-Next core saves/loads to/from these directories.
 - The Mupen64plus-Next core's internal sample rate is 44100 Hz
 - The Mupen64plus-Next core's core provided aspect ratio is (Ratio)
 
-###  Hires Textures
+### High-Resolution Textures
 
-You can either use pre-compiled hires texture packs (.htc format, available for download) or compile your own hires texture packs from uncompressed Rice sources.
+There are two primary ways to utilize high-resolution textures:
 
-Pre-compiled hires textures in .htc format have to be put into Mupen64plus/cache. The name of the .htc file must match the system name of the game in the mupen64plus console. Pre-compiled hires packs will only work if the Retroarch core settings regarding textures are identical when compiled. This is why an own compilation of uncompressed textures is recommended.
+1. By using pre-compiled high-resolution texture packs (in the `.htc` format) that are available for download.
+2. By compiling your own high-resolution texture packs from uncompressed Rice sources.
 
-Recommended Core Options for pre-compiled very popular .htc texture packs, such as those of Djipi or Mollymutt, are:
-- mupen64plus-EnableTextureCache = "True"
-- mupen64plus-txHiresEnable = "True"
-- mupen64plus-txCacheCompression = "True"
-- mupen64plus-txHiresFullAlphaChannel = "False"
-- mupen64plus-EnableEnhancedTextureStorage = "False"
-- mupen64plus-EnableEnhancedHighResStorage = "False"
+#### Use Pre-Compiled High-Resolution Textures
 
-For a compilation of your own hires texture pack, you need the high resolution textures in the uncompressed Rice format, and the folder name must match the system name of the game in the mupen64plus console. Put this folder into Mupen64plus/hires_texture. At the first start of the game, the .htc texture pack is created, which can take a while. After successful creation of the .htc file in the cache subdirectory, you can delete the uncompressed texture directory as it is no longer needed. If you want to re-use your newly created texture pack on a different system, you must enable the same core options on the new system that you used when you compiled the pack.
-If you compile your own texture pack, you should be sure to enable the further three for Alpha Channel and Enhanced Storage, which will then produce a hires texture pack with the *.hts extension.
-Compilation under Windows seems to be more complicated than under Linux or iOS. Rice texture packs must be converted to 32bit PNG.
+- Place the `.htc` formatted textures into the `Mupen64plus/cache` directory.
+- Ensure the `.htc` file name corresponds to the system name of the game as shown in the mupen64plus console.
+- Pre-compiled high-resolution packs will work only if Retroarch core settings related to textures match those used during the pack's compilation. To avoid potential mismatches, you might prefer to compile your own texture packs.
+
+**Recommended core options** for widely used `.htc` texture packs (for example, those used by Djipi or Mollymutt):
+
+- `mupen64plus-EnableTextureCache = "True"`
+- `mupen64plus-txHiresEnable = "True"`
+- `mupen64plus-txCacheCompression = "True"`
+- `mupen64plus-txHiresFullAlphaChannel = "False"`
+- `mupen64plus-EnableEnhancedTextureStorage = "False"`
+- `mupen64plus-EnableEnhancedHighResStorage = "False"`
+
+#### Compile Your Own High-Resolution Texture Packs
+
+1. Obtain the high-resolution textures in uncompressed Rice format.
+2. Name the folder to match the system name of the game in the mupen64plus console and place it in the `Mupen64plus/hires_texture` directory.
+3. When you first launch the game, the `.htc` texture pack will be created. This process can take some time.
+4. After the `.htc` file is successfully generated in the cache subdirectory, you can remove the uncompressed texture directory, as it becomes redundant.
+
+For custom compilations, enabling the additional options for Alpha Channel and Enhanced Storage will yield a high-resolution texture pack with an `*.hts` extension.
+
+If you're planning to use your custom texture pack on a different system, ensure that you activate the same core options for textures on the new system as those you set during the compilation.
+
+**Note**: Compilation on Windows can be more intricate than on Linux or iOS. Ensure Rice texture packs are converted to 32-bit PNG.
 
 ## Using the Transfer Pak
 
