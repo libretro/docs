@@ -2,7 +2,7 @@
 
 ## Background
 
-Flycast is a multi-platform Sega Dreamcast, NAOMI, and Atomiswave emulator. The Flycast core has been authored by
+Flycast is a multi-platform Sega Dreamcast, NAOMI, Atomiswave and System SP emulator. The Flycast core has been authored by
 
 - flyinghead
 
@@ -51,15 +51,17 @@ RetroArch database(s) that are associated with the flycast core:
 
 Required or optional firmware files go in RetroArch's system directory.
 
-|   Filename      |    Description                                                     |              md5sum              |
-|:---------------:|:------------------------------------------------------------------:|:--------------------------------:|
-| dc/dc_boot.bin  | Dreamcast BIOS - Required for Dreamcast                            | e10c53c2f8b90bab96ead2d368858623 |
-| dc/naomi.zip    | Naomi Bios from MAME - Optional                                    |                                  |
-| dc/hod2bios.zip | Naomi The House of the Dead 2 Bios from MAME - Optional            |                                  |
-| dc/f355dlx.zip  | Naomi Ferrari F355 Challenge deluxe Bios from MAME - Optional      |                                  |
-| dc/f355bios.zip | Naomi Ferrari F355 Challenge twin/deluxe Bios from MAME - Optional |                                  |
-| dc/airlbios.zip | Naomi Airline Pilots deluxe Bios from MAME - Optional              |                                  |
-| dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                               |                                  |
+|   Filename      |    Description                                                       |              md5sum              |
+|:---------------:|:--------------------------------------------------------------------:|:--------------------------------:|
+| dc/dc_boot.bin  | Dreamcast BIOS - Required for Dreamcast                              | e10c53c2f8b90bab96ead2d368858623 |
+| dc/naomi.zip    | NAOMI BIOS from MAME - Optional                                      |                                  |
+| dc/hod2bios.zip | NAOMI The House of the Dead 2 BIOS from MAME - Optional              |                                  |
+| dc/f355dlx.zip  | NAOMI Ferrari F355 Challenge (deluxe) BIOS from MAME - Optional      |                                  |
+| dc/f355bios.zip | NAOMI Ferrari F355 Challenge (twin/deluxe) BIOS from MAME - Optional |                                  |
+| dc/airlbios.zip | NAOMI Airline Pilots (deluxe) BIOS from MAME - Optional              |                                  |
+| dc/awbios.zip   | Atomiswave BIOS from MAME - Optional                                 |                                  |
+| dc/naomi2.zip   | NAOMI 2 BIOS from MAME - Optional                                    |                                  |
+| dc/segasp.zip   | System SP BIOS from MAME - Optional                                  |                                  |
 
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
