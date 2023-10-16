@@ -7,8 +7,10 @@ While translation is handled via the Crowdin[^1] platform ([more here](new-trans
 * `msg_hash.c`
 * `msg_hash.h`
 * `retroarch.c`
+* `translation_defines.h`
 * `intl/msg_hash_us.h`
 * `menu/menu_setting.c`
+* `tasks/task_translation.c`
 * `libretro-common/include/libretro.h`
 
 > Every new language must first be added to the project on Crowdin. This will ensure that a corresponding `intl/msg_hash_xx.h` file is created. Requests are accepted at the `#retroarch-translations` channel of the RetroArch Discord[^2].
@@ -26,23 +28,18 @@ To add a language with the English name `XXXXX` and two-letter code `xx` (be sur
 2. Open `msg_hash.h`.
     1. Check if a `MENU_ENUM_LABEL_VALUE_LANG_XXXXX` item for your language is present in the `msg_hash_enums` enum; if not, add it.
 3. Open `msg_hash.c`.
-    1. Add the following block inside the `msg_hash_get_help_enum(enum msg_hash_enums msg, char *s, size_t len)` function:
-```c
-case RETRO_LANGUAGE_XXXXX:
-   break;
-```
-    2. Add the following block inside the `get_user_language_iso639_1(bool limit)` function:
+    1. Add the following block inside the `get_user_language_iso639_1(bool limit)` function:
 ```c
 case RETRO_LANGUAGE_XXXXX:
    return "xx";
 ```
-    3. Add the following block inside the `msg_hash_to_str(enum msg_hash_enums msg)` function:
+    2. Add the following block inside the `msg_hash_to_str(enum msg_hash_enums msg)` function:
 ```c
 case RETRO_LANGUAGE_XXXXX:
-    ret = msg_hash_to_str_xx(msg);
-    break;
+   ret = msg_hash_to_str_xx(msg);
+   break;
 ```
-    4. Add a new static function:
+    3. Add a new static function:
 ```c
 static const char *msg_hash_to_str_xx(enum msg_hash_enums msg)
 {
@@ -66,14 +63,31 @@ MSG_HASH(
    )
 ```
 6. Open `menu/menu_setting.c`.
-    1. Add the following assignment to the `setting_get_string_representation_uint_user_language()` function:
+    1. Add the following assignment to the `setting_get_string_representation_uint_user_language()` function, before `if (*msg_hash_get_uint(MSG_HASH_USER_LANGUAGE) == RETRO_LANGUAGE_ENGLISH)` statement:
 ```c
-modes[RETRO_LANGUAGE_XXXXX] = msg_hash_to_str(MENU_ENUM_LABEL_VALUE_LANG_XXXXX);
+LANG_DATA(XXXXX)
+```
+    2. Add the following block inside the `setting_get_string_representation_uint_ai_service_lang()` function:
+```c
+case TRANSLATION_LANG_XX:
+   enum_idx = MENU_ENUM_LABEL_VALUE_LANG_XXXXX;
+   break;
 ```
 7. Open `retroarch.c`.
-    1. Add your language to `enum retro_language rarch_get_language_from_iso(const char *iso639)`:
+    1. Add your language to `enum retro_language retroarch_get_language_from_iso(const char *iso639)`:
 ```c
 {"xx", RETRO_LANGUAGE_XXXXX},
+```
+8. Open `tasks/task_translation.c`.
+    1. Add the following block inside the `ai_service_get_str(enum translation_lang id)` function:
+```c
+case TRANSLATION_LANG_XX:
+   return "xx";
+```
+9. Open `translation_defines.h`.
+    1. Add your language to the `translation_lang` enum between `TRANSLATION_LANG_DONT_CARE` and `TRANSLATION_LANG_LAST`items:
+```c
+TRANSLATION_LANG_XX,    /* Xxxxx */
 ```
 
 ## Optional Adjustments
@@ -199,6 +213,8 @@ Be careful when creating and editing your new translation files, as some text ed
 
 * Indonesian, Swedish and Ukrainian (+RGUI):
     * [Add Indonesian, Swedish and Ukrainian language options](https://github.com/libretro/RetroArch/commit/311fec15d9db10ab14c879e898a8205dd37f827c)
+
+* [List of merges related to adding languages](https://github.com/libretro/RetroArch/pulls?q=is%3Apr+is%3Amerged+in%3Atitle+add+language+option+)
 
 ### Enabling new languages for cores
 
