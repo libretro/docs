@@ -44,7 +44,7 @@ You can add translations and suggestions to the project regardless of whether yo
 
 After selecting the language you want to translate to (you may request additional languages at the `#retroarch-translations` channel of our Discord[^2]), you will be welcomed by the file selection page. At the moment the most important files are _msg\_hash\_us.json_, which contains the (options) texts of the RetroArch program, as well as _googleplay\_us.json_ and _steam\_us.json_, which contain RetroArch’s Google Store and Steam page descriptions, respectively.
 
-[^2]: The official RetroArch Discord server: https://discord.gg/2E8pNrCR
+[^2]: The official RetroArch Discord server: https://ra-link.web.app/discord
 
 <figure markdown>
    <center>

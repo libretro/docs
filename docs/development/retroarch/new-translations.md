@@ -14,7 +14,7 @@ While translation is handled via the Crowdin[^1] platform ([more here](new-trans
 > Every new language must first be added to the project on Crowdin. This will ensure that a corresponding `intl/msg_hash_xx.h` file is created. Requests are accepted at the `#retroarch-translations` channel of the RetroArch Discord[^2].
 
 [^1]: https://crowdin.com/ - RetroArch and libretro are not affiliated in any way with Crowdin.
-[^2]: The official RetroArch Discord server: https://discord.gg/2E8pNrCR
+[^2]: The official RetroArch Discord server: https://ra-link.web.app/discord
 
 ## Main Instructions
 

@@ -10,7 +10,7 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 	- [Twitter](https://twitter.com/libretro)	
 	- [Facebook](https://www.facebook.com/libretro)
 	- [Forum](https://forums.libretro.com/)
-	- [Discord](https://discord.gg/27Xxm2h)
+	- [Discord](https://ra-link.web.app/discord)
 	- [YouTube](https://www.youtube.com/Libretro)
 	- [Lakka's Website](https://lakka.tv/)
 	- [Github Repository](https://github.com/libretro/RetroArch)
