@@ -31,15 +31,7 @@ After downloading the core within RetroArch, execute one of the following three 
 
 If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and you're all done!
 
-### B. Installing from the 'Content Downloader'
-
-If your frontend version has `Main Menu > Online Updater > Content Downloader`:
-
-1. Inside the 'Content Downloader' menu, select 'Nintendo - GameCube - Wii' and download 'dolphin-data.zip'.
-2. Navigate to your frontend 'downloads' folder, if the download finished properly you should see a new 'dolphin-emu' folder inside.
-3. Now simply move that 'dophin-emu' folder to your frontend 'system' folder and you should be good to go!
-
-### C. Installing from the GitHub repo
+### B. Installing from the GitHub repo
 
 1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
