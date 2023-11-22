@@ -2,13 +2,13 @@
 
 ## Background
 
-An up-and-coming Nintendo DS emulator by StapleButter, ported to libretro.
+An up-and-coming Nintendo DS emulator by Arisotura, ported to libretro.
 
 ### Author/License
 
 The melonDS core has been authored by
 
-- StapleButter
+- Arisotura
 
 The melonDS core is licensed under
 
@@ -137,7 +137,7 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 ## External Links
 
 - [Official melonDS Website](http://melonds.kuribo64.net/)
-- [Official melonDS Github Repository](https://github.com/StapleButter/melonDS)
+- [Official melonDS Github Repository](https://github.com/melonDS-emu/melonDS)
 - [Libretro melonDS Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/melonds_libretro.info)
 - [Libretro melonDS Github Repository](https://github.com/libretro/melonds)
 - [Report Libretro melonDS Core Issues Here](https://github.com/libretro/melonds/issues)
