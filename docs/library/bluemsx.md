@@ -44,6 +44,10 @@ RetroArch database(s) that are associated with the blueMSX core:
 
 The blueMSX core requires the 'Databases' and 'Machines' folders from a full installation of blueMSX.
 
+Go to `Main Menu > Online Updater > Core System Files Downloader` and download 'blueMSX.zip'. That's all you need to do! The 'Databases' and 'Machines' folders will be extracted and moved to your RetroArch 'system' folder automatically.
+
+Alternatively, if your frontend doesn't have the 'Core System Files Downloader':
+
 You can download the 'Databases' and 'Machines' folders from an [official full standalone blueMSX emulator installation](http://bluemsx.msxblue.com/download.html). Get blueMSXv282full.zip near the bottom of the page.
 
 Move/Copy the 'Databases' and 'Machines' Folders to RetroArch's System directory.
