@@ -9,7 +9,7 @@ Then, install all the required libraries:
     - replace `dkp-pacman` by `pacman` on Linux and Mac OS
 
 ```
-dkp-pacman -Sy devkit-env devkitA64 libnx switch-tools switch-mesa switch-zlib switch-bzip2 switch-freetype switch-libpng
+dkp-pacman -Sy devkit-env devkitA64 libnx switch-tools switch-mesa switch-zlib switch-bzip2 switch-liblzma switch-freetype switch-libpng switch-libvpx switch-libffmpeg
 ```
 
 ## RetroArch Compilation
