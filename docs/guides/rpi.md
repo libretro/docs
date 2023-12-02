@@ -108,7 +108,7 @@ Building cores can be tried using libretro-super scripts. It is not guaranteed t
 ## Further RetroArch settings
 
 It is worth to check if the audio driver matches the one you want. Threaded video setting may be enabled for speed enhancement.
-In KMS mode, the resolution setting is not exposed in the GUI. Edit following entries in `retroarch.cfg`, example for 1920x1080 50Hz:
+In KMS mode, the resolution setting is not exposed in the GUI if Vulkan is used, but it can still be modified. Edit following entries in `retroarch.cfg`, example for 1920x1080 50Hz:
 
     video_fullscreen = "true"
     video_fullscreen_x = "1920"
@@ -125,7 +125,12 @@ For Pi 4 to enable 4K 60 Hz refresh, a line is needed in `config.txt`:
 ## Legacy GL drivers and dispmanx
 
 Initially, RPi's VideoCore IV GPU (used for models earlier than RPi 4) was supported through vendor-specific Broadcom OpenGL/EGL libraries. This library is linked when `--enable-videocore` option is specified for `./configure`.
-To compile RetroArch with legacy drivers, specify the `--enable-videcore` option instead of `--disable-videocore` above. Note that this library is only available for 32-bit systems, and even there it is missing in recent distributions. The binaries must be present in `/opt/vc` for compilation to work.
+To compile RetroArch with legacy drivers, specify the `--enable-videcore` option instead of `--disable-videocore` above. Note that this library is only available for 32-bit systems. The binaries must be present in `/opt/vc` for compilation to work. Legacy drivers (or "userland") may be installed as `libraspberrypi-dev` package, or retrieved from https://github.com/raspberrypi/userland, and installed as:
+
+    git clone https://github.com/raspberrypi/userland.git
+    cd userland/
+    ./buildme /
+
 To start RetroArch built this way, system must be switched to "Legacy GL" driver using `raspi-config`.
 In addition to this, RetroArch has a specific `dispmanx` video driver that utilizes the vendor-specific API instead of OpenGL. This video driver can be enabled with `--enable-dispmanx`, however it has only limited functionalities, in particular only RGUI is supported, and there are no widgets/overlays. As a corner case, dispmanx driver works in fake KMS mode.
 Neither dispmanx driver nor legacy GL drivers work with RetroArch in KMS mode.
