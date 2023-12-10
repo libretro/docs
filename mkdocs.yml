@@ -5,7 +5,9 @@ site_description: >-
 repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
-copyright: Copyright &copy; 2010 <a href="https://libretro.com">Libretro</a>
+copyright: >
+  Copyright &copy; 2010 Libretro –
+  <a href="#__consent">Change cookie settings</a>
 nav:
   - 'About': 'index.md'
   - 'Start':
@@ -435,6 +437,13 @@ extra:
   analytics:
     provider: google
     property: G-MT11L3F6EZ
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 
 theme:
