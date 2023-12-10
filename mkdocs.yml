@@ -478,7 +478,7 @@ plugins:
 
 extra:
   unit:
-    stable: 1.15.0
+    stable: 1.16.0
 
 extra_css:
   - stylesheets/extra.css
