@@ -98,14 +98,16 @@ Add note about SoftList xml specifying the game names and crc and only supportin
 
 ### Method 2: RetroArch frontend friendly via Libretro CMD file launching  
 
-This method follows the same folder structure as above but you can use custom naming outside of the hash file included with MAME.
-It utilises some custom additions to the Libretro MAME Cores. Specifically the use of text files (.cmd) to replicate sending command line actions as you can with mainline MAME.
+This method follows the same folder structure as above, but you can use custom naming outside of the hash file included with MAME. It utilises some custom additions to the Libretro MAME Cores. Specifically the use of text files (.cmd) to replicate sending command line actions as you can with mainline MAME.
 
 Note to folder structure: In this method, the system bios files must be in the subfolder. If they are in the parent folder (which works in mainline MAME), launching via .cmd will fail.
+
+**Creating a .cmd file**
+Let's follow the above example and create a dedicated .cmd file for the Atari 5200 game:
+
 
 To do
 Deciding on contents of the cmd file
 
 Cmd file example
 
-Test on clean install
