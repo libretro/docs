@@ -48,69 +48,60 @@ In general, you will only get good results with a full collection of software li
 ## Running software list machines
 There are two common methods of configuring Retroarch to launch software list machines and games with MAME cores.
 
-  1. **MAME Frontend direct**
-  2. **Libretro CMD file**
+  1. **MAME Frontend direct launch**
+  2. **RetroArch fontend friendly via Libretro CMD file launch**
 
 **Method 1** uses the inbuilt MAME logic and hash files to launch your games.
 **Method 2** uses an extra Libretro feature to pass command line functions to the core. This replicates sending command line functions directly to MAME like you would on a PC.
 
-### MAME Frontend direct
+### Method 1: MAME Frontend direct launch
 
+Using the internal Software List functions of MAME. For this you will need some supporting files from the mainline MAME standalone emulator, i.e. the **hash files**. Download the Windows MAME emulator [here](https://www.mamedev.org/release.html). Make sure to get the correct version you require: The version of the hash files must match with the Libretro Core version.
 
-NOTES:-
-Method 1:- Authentic MAME
-Using the internal Software List functions of MAME.
+Extract the contents and take the “hash” folder for moving into the RetroArch folder structure. If your device has limited storage, just copy the hash files relating to the system you want to emulate.
 
-For this you will need some supporting files from the mainline MAME emulator. Download the windows MAME emulator here(link). Making sure to get the correct version you require.
+**RetroArch MAME system folder structure:**
+Folder structure/naming is very important for this use of the MAME Cores. The naming will depend on the machine you are trying to emulate but the folder structure will be the same. The example below is for the Atari 5200 system in MAME current.
 
-Extract the contents and remove the “hash” folder and it’s contents. If your device has limited storage just take the files relating to the system you want to emulate.
+“YourPath” is the location of your Retroarch system folders. It varies depending on your operating system.
 
-Folder structure:-
-Folder structure/naming is very important for this use of the MAME Cores. The naming will depend on the machine you are trying to emulate but the folder structure will be the same. The example below is for the Atari 5200.
-
-“YourPath” is the location of your Retroarch and games folders.
-
-Create the following folders in your Retroarch installation or your specified “system” folder
-
+If not already existent, create the following folder in your Retroarch “system” folder:
 YourPath/Retroarch/System/mame
 
-Copy the hash folder acquired earlier to the above location.
-
+Copy the hash folder acquired earlier into the RetroArch system folder:
 YourPath/Retroarch/system/mame/hash
 
-So for Atari 5200 you would have
-
+So for Atari 5200 you would have the following hash file:
 YourPath/Retroarch/system/mame/hash/a5200.xml
 
 (Check about .hsi file or use another example)
 
+**RetroArch MAME games folder structure:**
 Create the following folders in your games directory (these will be mame naming dependent)
-
 YourPath/Games/Atari 5200/a5200
-
 (The last folder MUST be named as MAME requires, in this case “a5200”)
 
-Place any .zip games and .zip bios files required here
-
+Place any .zip games and .zip bios files required here:
 YourPath/Games/Atari 5200/a5200/a5200.zip
 YourPath/Games/Atari 5200/a5200/boogie.zip
 
 (You May also extract the bios file to their own folder within the games directory)
-YourPath/Games/Atari 5200/a5200/a5200/5200.rom)
+YourPath/Games/Atari 5200/a5200/a5200/5200.rom
 
-Now Load Content and browse to the game files and launch with a compatible core.
+In RetroArch, choose "Load Content" and browse to the game files and launch with a compatible core.
+
 ————————————————
 Need to do a fresh install and confirm minimum files needed
 
 Add note about SoftList xml specifying the game names and crc and only supporting only those specific file names.
 ————————————————
 
-Method2: Frontend Friendly
-
-CMD or command line file launching.
+### Method 2: RetroArch frontend friendly via Libretro CMD file launching  
 
 This method follows the same folder structure as above but you can use custom naming outside of the hash file included with MAME.
 It utilises some custom additions to the Libretro MAME Cores. Specifically the use of text files (.cmd) to replicate sending command line actions as you can with mainline MAME.
+
+Note to folder structure: In this method, the system bios files must be in the subfolder. If they are in the parent folder (which works in mainline MAME), launching via .cmd will fail.
 
 To do
 Deciding on contents of the cmd file
