@@ -71,6 +71,7 @@ nav:
       - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
+      - 'RetroArch Cloud Sync (Apple Devices)': 'guides/retroarch-cloud-sync.md'
     - 'Appearance & Customization':
       - 'Creating a Theme': 'guides/themes.md'
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
