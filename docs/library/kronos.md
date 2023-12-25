@@ -2,7 +2,7 @@
 
 ## Background
 
-Kronos is a fork of [Yabause](yabause.md). It requires OpenGL 4.2, with higher versions being recommended. It emulates both the Sega Saturn and its arcade board version, the Sega Titan Video (ST-V).
+Kronos is a fork of [Yabause](yabause.md). [It uses compute shaders](https://www.libretro.com/index.php/kronos-2-1-2-progress-report-sega-saturn-emulator/) and as such requires OpenGL 4.3. It emulates both the Sega Saturn and its arcade board version, the Sega Titan Video (ST-V).
 
 It's a fairly active project and the only Sega Saturn libretro core being officially supported by upstream.
 
@@ -123,13 +123,9 @@ The Kronos core has the following options that can be tweaked from the core opti
 
 	It will skip rendering at a fixed rate, it can improve playability dramatically on lower end devices
 
-- **SH-2 cpu core** [kronos_sh2coretype] (**kronos**|old)
+- **SH-2 cache support (experimental)** [kronos_sh2coretype] (**kronos**|old)
 
-	Use Kronos's new SH-2 interpreter or older SH-2 interpreter inherited from yabause. Change at your own risk, this is mainly for debugging purpose and is neither recommended nor supported. Requires a restart.
-
-- **Video renderer** [kronos_videocoretype] (**opengl**|opengl_cs)
-
-	OpenGL CS is the new and more accurate video renderer, however it has higher requirements which is why it's not the default (yet). More details about the differences [here](https://www.libretro.com/index.php/kronos-2-1-2-progress-report-sega-saturn-emulator/). Requires a restart.
+	Support for SH-2's cache. It is required for some game to work properly. It can kill performance.
 
 - **Share saves with beetle** [kronos_use_beetle_saves] (**disabled**|enabled)
 
@@ -155,10 +151,6 @@ The Kronos core has the following options that can be tweaked from the core opti
 
 	Useful when using resolution higher than your screen's, will also replace meshed transparency by real transparency to avoid moiré effect.
 
-- **Polygon Mode** [kronos_polygon_mode] (**cpu_tesselation**|gpu_tesselation|perspective_correction)
-
-	Select method for applying textures on polygons, OpenGL CS renderer will ignore this and use its own method.
-
 - **Improved mesh** [kronos_meshmode] (**disabled**|enabled)
 
 	Replace meshed transparency by real transparency.
@@ -166,10 +158,6 @@ The Kronos core has the following options that can be tweaked from the core opti
 - **Improved banding** [kronos_bandingmode] (**disabled**|enabled)
 
 	Apply gouraud shading instead of flat shading, requires OpenGL CS renderer.
-
-- **RBG Compute shaders** [kronos_use_cs] (**disabled**|enabled)
-
-	Use compute shaders for upscaling RBG, requires OpenGL 4.3+.
 
 - **Wireframe mode** [kronos_wireframe_mode] (**disabled**|enabled)
 
