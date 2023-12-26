@@ -304,6 +304,40 @@ From version 1.1.0, external BIOS files are optional.
 | `zx128.rom` | ZX Spectrum 128 BIOS <br> For ZX Spectrum 128 | 85fede415f4294cc777517d7eada482e |
 | `zx48.rom` | ZX Spectrum 48 BIOS <br> For ZX Spectrum 16/48 | 4c42a2f075212361c3117015b107ff68 |
 
+## Special emulation
+
+Enterprise 128 has software extensions to emulate ZX Spectrum (48, 128) and Amstrad CPC. As a technical quirk, these emulators can be run in the ep128emu-core, creating a double emulation layer.
+
+### SPEMU
+
+- Obtain ROM version of SPEmu from the [EnterpriseForever forums](https://enterpriseforever.com/letoltesek-downloads/enterprise-software/).
+- Place ROM files under RetroArch system directory: `system/ep128emu/roms/`
+- Create a custom config file into RetroArch system directory called `system/ep128emu/config/enterprise.ep128cfg`:
+
+    `machineDetailedType "EP128_TAPE"`
+    `memory.ram.size 256`
+    `memory.rom.40.file "spemu128.rom"`
+    `memory.rom.40.offset 0`
+    `memory.rom.41.file "spemu128.rom"`
+    `memory.rom.41.offset 16384`
+    `memory.rom.42.file "spemu128.rom"`
+    `memory.rom.42.offset 32768`
+    `tape.forceMotorOn Yes`
+
+- Start ep128emu core without content
+- Invoke the SPEmu extension with `:sp128`
+- Choose Load tape
+- Enter RetroArch Quick menu (F1), go to Disk Control, and select the `.tap` file containing the Spectrum program
+- Later on, remember to remove the custom config file if you run into problems with regular Enterprise programs afterwards
+
+### CPCEMU
+
+- Obtain COM version of CPCEmu from the [EnterpriseForever forums](https://enterpriseforever.com/letoltesek-downloads/enterprise-software/).
+- Start CPCEMU.COM the usual way (select the file in RetroArch and open it with ep128emu core)
+- Once the blue screen has loaded, open quick menu (F1) go to Disk Control and select the file that needs to be loaded
+- Continue, enable keyboard pass-through with Scroll Lock, and issue RUN command as needed
+- It may be needed to change the control type to External 2 in Quick Menu / Controls
+
 ## External Links
 
 - [Official ep128emu-core Repository](https://github.com/libretro/ep128emu-core)
