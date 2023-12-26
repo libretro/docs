@@ -371,7 +371,9 @@ Forces Game Gear titles to run in 'SMS' mode, with an increased resolution of 25
     ![](../image/core/genesis_plus_gx/composite.png)
 
 ??? note "*S-Video [svideo]*"
-    ![](../image/core/genesis_plus "*RGB [rgb]*"
+    ![](../image/core/genesis_plus_gx/svideo.png)
+
+??? note "*RGB [rgb]*"
     ![](../image/core/genesis_plus_gx/rgb.png)
 
 **LCD Ghosting Filter** [genesis_plus_gx_lcd_filter]
