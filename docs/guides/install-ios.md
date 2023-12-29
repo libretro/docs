@@ -32,7 +32,7 @@ It is possible to build RetroArch for older versions of iOS, though due to resou
 In order to install the RetroArch on your non-Jailbreak device, we need to use a third-party application. The steps below describe using AltStore, which is not associated with LibRetro or RetroArch. You need to provide AltStore yourself.
 
 1. Install and launch AltServer.
-1. Hold Option (macOS) or Start (Windows) when clicking the AltServer icon to reveal new "Sideload .ipa…" menu option
+1. Hold Option (macOS) or Left Shift (Windows) when clicking the AltServer icon to reveal new "Sideload .ipa…" menu option
 1. Select the device you want to install RetroArch on (must be on the same Wi-Fi network as AltServer)
 1. Enter the email and password for your Apple ID
 
