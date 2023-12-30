@@ -2,29 +2,48 @@
 
 In this chapter, the terms 'software' and 'software lists' are used to define non-arcade machines that are emulated by MAME/MESS. This kind of emulation requires a different planning approach than arcade machine emulation - it is more complicated to set up.
 
+The basic principle is that software lists contained in the hash database are used to tell MAME/MESS how to start the game. This is an example entry from an Atari 7800 game also used further below (just for illustration purposes, no need to configure anything):
+
+	<software name="asteroid">
+		<description>Asteroids (NTSC)</description>
+		<year>1984</year>
+		<publisher>Atari</publisher>
+		<info name="serial" value="CX7802"/>
+		<sharedfeat name="compatibility" value="NTSC"/>
+		<part name="cart" interface="a7800_cart">
+			<feature name="slot" value="a78_rom" />
+			<dataarea name="rom" size="16384">
+				<rom name="astroids.bin" size="16384" crc="dfb93f40" sha1="d96ec4e043fcdacab367d8a69d29904b3b2896f1"/>
+			</dataarea>
+		</part>
+	</software>
+
 ## Understand the core variants
 
 The libretro core ecosystem currently includes many multi software emulators that support software emulation. Three families exist: MAME, MESS and UME. These emulators are in turn available in multiple versions to allow users to best match a core to their preference.
 
-#### MAME
-Arcade (MAME) & Arcade (MAME 2016) are currently the only MAME cores that support the emulation of both software & arcade systems. The Arcade (MAME) core is updated regularly and most inline with the official MAME project release. Arcade (MAME 2016) is an archived snapshot of MAME from the 0.174 release.
+#### MAME current
+Arcade (MAME) is currently the only MAME core for most host systems that supports the emulation of both software & arcade systems. The Arcade (MAME) core is updated regularly and most of the time in line with the official MAME project release. For an overview of the vast number of system that are emulated, have a look into the github directory of the hash files: https://github.com/mamedev/mame/tree/master/hash - every xml contains the readable metadata of one system, i.e. the games it supports.
 
-#### MESS
-Multi (MESS 2015) is a snapshot of the MESS project from v0.160. The MESS project later merged with the MAME project in MAME v0.162, i.e. in May 2015.
+Arcade (MAME 2016) is an archived snapshot of MAME from the 0.174 release. Currently it is no longer built for RetroArch.
 
-#### UME
-Multi (UME 2015) is a snapshot of the Universal Machine Emulator. This was a precursor to the MAME/MESS merger, released by David Haywood (haze). The MAME and MESS project codebases co-existed in the MESS SVN development tree before they officially merged. This allowed haze to build and release the emulator with unmodified code from both projects under the name UME.
+#### MESS (no longer provided)
+Currently there is no dedicated MESS core in Retroarch, except for Android ARM64. It is also still provided in RetroPie as MESS2016_libretro core.
+Multi (MESS 2016) is a snapshot of the MESS project from v0.160. The MESS project later merged with the MAME project in MAME v0.162, i.e. in May 2015. The documentation of MESS is here: http://mess.redump.net/start - however some of its pages no longer work.
+
+#### UME (no longer provided)
+UME cores are no longer in RetroArch. Multi (UME 2015) was a snapshot of the Universal Machine Emulator. This was a precursor to the MAME/MESS merger, released by David Haywood (haze). The MAME and MESS project codebases co-existed in the MESS SVN development tree before they officially merged. This allowed haze to build and release the emulator with unmodified code from both projects under the name UME.
 
 ## Use the correct version of romset for the desired emulator
   
-Arcade (MAME), Arcade (MAME 2016) will be the main focus of this guide but also the MULTI (MESS 2015) and MULTI (UME 2015) cores have this ability. As in MAME arcade emulation, each core requires its own distinct version of software list "romsets", which the emulator supports.
+Arcade (MAME) will be the focus of this guide, but also the old Arcade (MAME 2016), the MULTI (MESS 2015) and MULTI (UME 2015) cores had this ability (so this information is also provided for documentation purposes). As in MAME arcade emulation, each core requires its own distinct version of software list "romsets", which the emulator supports.
 
-| Emulator | Required ROM Version |
-| :---: | :---: |
-| MAME 2016 | MAME 0.174 |
-| MAME (latest version) | MAME (latest version) |
-| MESS 2015 | - |
-| UME 2015 | - |
+| Emulator | Required ROM Version | Notes |
+| :---: | :---: | :---: |
+| MAME (latest version) | MAME (latest version) | or same version if not in sync with MAME upstream |
+| MAME 2016 | MAME 0.174 | RetroArch core no longer provided | 
+| MESS 2015 | MAME 0.160 | RetroArch core no longer provided |
+| UME 2015 | MAME 0.160 | RetroArch core no longer provided |
 
 !!! tip
     For best results, start with a full software list ROM collection with a version that matches the emulator you are using. Individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
@@ -82,7 +101,7 @@ You may also put or even extract the bios file to their own folder within the ga
 
 Now launch the game: In RetroArch, choose "Load Content" and browse to asteroid.zip and launch with MAME current.
 
-(To Do: Add note about SoftList xml specifying the game names and crc and only supporting only those specific file names.)
+(To Do: Add note about SoftList xml specifying the game names and crc and only supporting only those specific file names. Dummy files for CD-based games.)
 
 ### Method 2: RetroArch frontend friendly via Libretro CMD file launching  
 
@@ -93,7 +112,7 @@ Let's follow the above example and create a dedicated asteroid.cmd file for the 
 
 a7800 -cart asteroid -rp "/"YourPath"/mame/roms/a7800"
 
-To do: Other path definitions, e.g. under Windows?
+To do: Other path definitions, e.g. under Windows? Maybe explain the different sources, e.g. cart, flop etc?
 
 Now launch the game: In RetroArch, choose "Load Content" and browse to asteroid.cmd, and it should launch with MAME current.
 
