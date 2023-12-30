@@ -77,7 +77,7 @@ ECWolf does require BIOS (bootrom) files to work.
 
 ### Directories
 
-The TIC-80 core's internal core name is `ecwolf`.
+The ECWolf core's internal core name is `ecwolf`.
 
 ### Core provided aspect ratio
 
@@ -101,15 +101,25 @@ The ECWolf core supports the following device type(s) in the controls menu, bold
 
 #### Joypad and analog device type table
 
-
-| RetroPad Inputs                                | User 1 - 5 input descriptors |
-|------------------------------------------------|------------------------------|
-| ![](../image/retropad/retro_b.png)             | Z                            |
-| ![](../image/retropad/retro_a.png)             | X                            |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                     |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                   |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                   |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                  |
+| RetroPad Inputs                                | User 1 input descriptors |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_dpad_up.png)       | Move Forward             |
+| ![](../image/retropad/retro_dpad_down.png)     | Move Backward            |
+| ![](../image/retropad/retro_dpad_left.png)     | Turn Left                |
+| ![](../image/retropad/retro_dpad_right.png)    | Turn Right               |
+| ![](../image/retropad/retro_l1.png)            | Strafe Left              |
+| ![](../image/retropad/retro_r1.png)            | Strafe Right             |
+| ![](../image/retropad/retro_a.png)             | Fire                     |
+| ![](../image/retropad/retro_b.png)             | Use                      |
+| ![](../image/retropad/retro_x.png)             | Run                      |
+| ![](../image/retropad/retro_y.png)             | Show Status              |
+| ![](../image/retropad/retro_select.png)        | Map                      |
+| ![](../image/retropad/retro_l2.png)            | Previous Weapon          |
+| ![](../image/retropad/retro_r2.png)            | Next Weapon              |
+| ![](../image/retropad/retro_start.png)         | Pause                    |
+| ![](../image/retropad/retro_left_stick.png) X  | Strafe Left/Right        |
+| ![](../image/retropad/retro_left_stick.png) Y  | Move Forward/Backward    |
+| ![](../image/retropad/retro_right_stick.png) X | Turn Left/Right          |
 
 ## External Links
 
