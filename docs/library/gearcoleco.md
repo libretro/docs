@@ -7,7 +7,8 @@ Gearcoleco is an open source, cross-platform, ColecoVision emulator written in C
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
 - Accurate TMS9918 emulation.
 - Sound emulation using a fine tuned Sms_Snd_Emu library.
-- Battery powered RAM save support.
+- Support for ColecoVision Super Game Module (SGM) and MegaCart ROMs.
+- Support for Super Action Controller (SAC), Wheel Controller and Roller Controller.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux and QNX.
 
 The Gearcoleco core has been authored by
@@ -125,26 +126,54 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     It's best to keep this core option disabled.
 
+- **No Sprite Limit** [gearcoleco_no_sprite_limit] (**Disabled**|Enabled)
+
+    Enabling this will remove the sprite limit in a single line.
+
+    This may cause glitches to occur in certain games.
+
+    It's best to keep this core option disabled.
+
+- **Spinner Support** [gearcoleco_spinners] (**Disabled**|Super Action Controller|Wheel Controller|Roller Controller)
+
+    Select which controller will be used in emulation. Spinners are controlled by mouse movement. Mouse buttons are mapped to Left (Yellow) and Right (Red) buttons.
+
+    - *Disabled* disables spinner support.
+    - *Super Action Controller* enables spinner support for Super Action Controller.
+    - *Wheel Controller* enables spinner support for Wheel Controller.
+    - *Roller Controller* enables spinner support for Roller Controller.
+
+- **Spinner Sensitivity** [gearcoleco_spinner_sensitivity] (**1**|2|3|4|5|6|7|8|9|10)
+
+    Select the spinner sensitivity.
+
+    - *1* is the lowest sensitivity.
+    - *10* is the highest sensitivity.
+
 ### Joypad
 
 | User 1 and User 2 input descriptors | RetroPad Inputs                                |
 |-------------------------------------|------------------------------------------------|
-| Up                                  | ![](../image/retropad/retro_dpad_up.png)       |
-| Down                                | ![](../image/retropad/retro_dpad_down.png)     |
-| Left                                | ![](../image/retropad/retro_dpad_left.png)     |
-| Right                               | ![](../image/retropad/retro_dpad_right.png)    |
-| Left Button                         | ![](../image/retropad/retro_a.png)             |
-| Right Button                        | ![](../image/retropad/retro_b.png)             |
-| 1                                   | ![](../image/retropad/retro_x.png)             |
-| 2                                   | ![](../image/retropad/retro_y.png)             |
-| 3                                   | ![](../image/retropad/retro_r1.png)            |
-| 4                                   | ![](../image/retropad/retro_l1.png)            |
-| 5                                   | ![](../image/retropad/retro_r2.png)            |
-| 6                                   | ![](../image/retropad/retro_l2.png)            |
-| 7                                   | ![](../image/retropad/retro_r3.png)            |
-| 8                                   | ![](../image/retropad/retro_l3.png)            |
-| *                                   | ![](../image/retropad/retro_select.png)        |
-| #                                   | ![](../image/retropad/retro_start.png)         |
+| Joystick Up                         | ![](../image/retropad/retro_dpad_up.png)       |
+| Joystick Down                       | ![](../image/retropad/retro_dpad_down.png)     |
+| Joystick Left                       | ![](../image/retropad/retro_dpad_left.png)     |
+| Joystick Right                      | ![](../image/retropad/retro_dpad_right.png)    |
+| Yellow (Left)                       | ![](../image/retropad/retro_b.png)             |
+| Red (Right)                         | ![](../image/retropad/retro_a.png)             |
+| Keypad 1                            | ![](../image/retropad/retro_y.png)             |
+| Keypad 2                            | ![](../image/retropad/retro_x.png)             |
+| Keypad 3                            | ![](../image/retropad/retro_l1.png)            |
+| Keypad 4                            | ![](../image/retropad/retro_r1.png)            |
+| Keypad 5                            | ![](../image/retropad/retro_l2.png)            |
+| Keypad 6                            | ![](../image/retropad/retro_r2.png)            |
+| Keypad 7                            | ![](../image/retropad/retro_l3.png)            |
+| Keypad 8                            | ![](../image/retropad/retro_r3.png)            |
+| Keypad *                            | ![](../image/retropad/retro_start.png)         |
+| Keypad #                            | ![](../image/retropad/retro_select.png)        |
+| Keypad 9                            | ![](../image/retropad/retro_left_stick.png)  Left Analog Y   |
+| Keypad 0                            | ![](../image/retropad/retro_left_stick.png)  Left Analog X   |
+| Purple                              | ![](../image/retropad/retro_right_stick.png)  Right Analog Y  |
+| Blue                                | ![](../image/retropad/retro_right_stick.png)  Right Analog X  |
 
 ## External Links
 
