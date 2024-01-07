@@ -49,6 +49,27 @@ RetroArch will attempt to detect and use the correct core for use with the ROMs 
 
 RetroArch provides an Explore menu which can be used for browsing all content that were added to playlists using any database attribute - release year, genre, etc.
 
+## Thumbnails
+
+RetroArch can display three types of thumbnails (small still pictures) for games in playlists:
+
+* In-game snapshots
+* Title screen snapshots
+* Boxart
+
+![An in-game snapshot displayed with a Sega - 32X playlist.](http://www.lakka.tv/doc/images/thumbnails.png "An in-game snapshot displayed with a Sega - 32X playlist.")
+
+Most menu drivers support displaying two pictures when browsing the playlist. Displayed thumbnail types can be configured system-wide and also per playlist.
+All menu drivers can display fullscreen thumbnails when pressing Start, and Y button (left) can be used to cycle between available pictures.
+
+Thumbnails can be retrieved multiple ways:
+
+* Playlist thumbnail downloader (recommended): under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com.
+* Individual thumbnail downloader: there is a Download Thumbnails option for each entry in playlists. For RetroArch versions later than 1.16.0, you may hit download up to 3 times to try the flexible matches.
+* On-demand thumbnail downloader: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions later than 1.16.0, you may try flicking back and forth between entries up to 3 times to try the flexible matches.
+
+Thumbnail packs are no longer available, use one of the above methods, or see Custom thumbnails section below.
+
 ## Playlist File Format Details
 
 Each playlist is a plain text file with an extension of `.lpl`. RetroArch 1.7.5 and later uses a JSON playlist format, although the backwards compatibility remains for the deprecated "6-Line" playlist format.
@@ -150,29 +171,11 @@ Since playlists are managed in text-only JSON format, there are a few third-part
 - [RetroArch Playlist Editor](https://www.marcrobledo.com/retroarch-playlist-editor/) ([Source](https://github.com/marcrobledo/retroarch-playlist-editor))
 - [RetroArch Playlist Buddy](https://forums.libretro.com/t/retroarch-playlist-buddy-playlist-and-thumbnail-generation-app/8417) ([Source](https://github.com/markwkidd/ahk-retroarch-playlist-helpers))
 
-## Thumbnails
 
-RetroArch can display three types of thumbnails for games in playlists, depending on the specific RetroArch menu driver in use:
-
-* In-game snapshots
-* Title screen snapshots
-* Boxart
-
-![An in-game snapshot displayed with a Sega - 32X playlist.](http://www.lakka.tv/doc/images/thumbnails.png "An in-game snapshot displayed with a Sega - 32X playlist.")
-
-Displayed thumbnail types can be configured system-wide and also per playlist. For XMB and Ozone menus, Y button (west face button) changes between possible thumbnails.
-
-Thumbnails can be retrieved in several ways:
-
-* Playlist thumbnail downloader (recommended): under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com.
-* Individual thumbnail downloader: there is a Download Thumbnails option for each entry in playlists. For RetroArch versions later than 1.16.0, you may hit download up to 3 times to try the flexible matches.
-* On-demand thumbnail downloader: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions later than 1.16.0, you may try flicking back and forth between entries up to 3 times to try the flexible matches.
-* Thumbnail pack downloader: RetroArch provides packs of thumbnails suitable for use with many emulated systems, although the playlist thumbnail downloader is preferred. Thumbnail packs can be installed from the Online Updater menu, if the legacy thumbnail downloader option is enabled. Thumbnail packs can be downloaded manually from http://thumbnailpacks.libretro.com .
-
-### Custom thumbnails
+## Custom thumbnails
 Users who wish to use their own thumbnails can do so by naming PNG image files according to the RetroArch naming convention.
 
-#### Thumbnail paths and filenames
+### Thumbnail paths and filenames
 Thumbnails should be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. **Example: If your playlist is named `Atari - 2600.lpl`, then your Atari 2600 root thumbnail folder should be called `thumbnails/Atari - 2600/`.**
 
 Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively.
