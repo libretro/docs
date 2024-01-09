@@ -163,6 +163,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
+- **Aspect Ratio (restart)** [gearsystem_aspect_ratio] (**Auto**|4:3|16:9)
+
+    Select which aspect ratio will be presented by the core.
+
+    - *Auto* selects an aspect ratio that produces square pixels.
+    - *4:3* forces 4:3 aspect ratio.
+    - *16:9* forces 16:9 aspect ratio.
+
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
 	This option will enable/disable BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in the Retro Arch's system directory.
