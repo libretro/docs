@@ -166,9 +166,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Select which aspect ratio will be presented by the core.
 
-    - *Auto* selects an aspect ratio that produces square pixels.
-    - *4:3* forces 4:3 aspect ratio.
-    - *16:9* forces 16:9 aspect ratio.
+    - *1:1 PAR* selects an aspect ratio that produces square pixels.
+    - *4:3 PAR* forces 4:3 aspect ratio.
+    - *16:9 PAR* forces 16:9 aspect ratio.
 
 - **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full)
 
