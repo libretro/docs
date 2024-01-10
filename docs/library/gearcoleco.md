@@ -117,7 +117,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
-- **Aspect Ratio (restart)** [gearsystem_aspect_ratio] (**Auto**|4:3|16:9)
+- **Aspect Ratio (restart)** [gearcoleco_aspect_ratio] (**Auto**|4:3|16:9)
 
     Select which aspect ratio will be presented by the core.
 
