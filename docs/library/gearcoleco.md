@@ -6,7 +6,6 @@ Gearcoleco is an open source, cross-platform, ColecoVision emulator written in C
 
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
 - Accurate TMS9918 emulation.
-- Sound emulation using a fine tuned Sms_Snd_Emu library.
 - Support for ColecoVision Super Game Module (SGM) and MegaCart ROMs.
 - Support for Super Action Controller (SAC), Wheel Controller and Roller Controller.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux and QNX.
@@ -32,7 +31,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 | Filename          | Description                        | md5sum                           |
 |:-----------------:|:----------------------------------:|:--------------------------------:|
-| colecovision.rom  | ColecoVision BIOS - Mandatory      | 2c66f5911e5b42b8ebe113403548eee7 |
+| colecovision.rom  | ColecoVision BIOS - Required       | 2c66f5911e5b42b8ebe113403548eee7 |
 
 ## Extensions
 
@@ -75,7 +74,7 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | ✕         |
+| Crop Overscan     | ✔         |
 | LEDs              | ✕         |
 
 ### Directories
@@ -117,6 +116,22 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *Auto* selects the best refresh rate based in the rom.
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
+
+- **Aspect Ratio (restart)** [gearcoleco_aspect_ratio] (**Auto**|4:3|16:9)
+
+    Select which aspect ratio will be presented by the core.
+
+    - *1:1 PAR* selects an aspect ratio that produces square pixels.
+    - *4:3 PAR* forces 4:3 aspect ratio.
+    - *16:9 PAR* forces 16:9 aspect ratio.
+
+- **Overscan** [gearcoleco_overscan] (**Disabled**|Top+Bottom|Full)
+    
+    Select which overscan (borders) will be used in emulation.
+
+    - *Disabled* disables overscan.
+    - *Top+Bottom* enables overscan for top and bottom.
+    - *Full* enables overscan for top, bottom, left and right.
 
 - **Allow Up+Down / Left+Right** [gearcoleco_up_down_allowed] (**Disabled**|Enabled)
 
