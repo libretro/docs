@@ -26,7 +26,7 @@ Required firmware file go in the frontend's system directory.
 
 | Filename          | Description                     | md5sum                           |
 |:-----------------:|:-------------------------------:|:--------------------------------:|
-| StandardBios.v32  | Vircon32 BIOS 1.1               | 1ad96946bce7bd0422b7d9340735b248 |
+| StandardBios.v32  | [Vircon32 BIOS 1.1](https://github.com/vircon32/ConsoleSoftware/releases/tag/bios-v1.1) | 1ad96946bce7bd0422b7d9340735b248 |
 
 ## Extensions
 
