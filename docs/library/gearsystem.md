@@ -5,11 +5,10 @@
 Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
 
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX, SG-1000.
+- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation including timing and Master System 2 only 224 video mode support.
 - Internal database for rom detection.
-- Sound emulation using SDL Audio and Sms_Snd_Emu library.
 - Battery powered RAM save support.
 - Save states.
 - Game Genie and Pro Action Replay cheat support.
@@ -87,7 +86,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | ✕         |
+| Crop Overscan     | ✔         |
 | LEDs              | ✕         |
 
 ### Directories
@@ -167,9 +166,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Select which aspect ratio will be presented by the core.
 
-    - *Auto* selects an aspect ratio that produces square pixels.
-    - *4:3* forces 4:3 aspect ratio.
-    - *16:9* forces 16:9 aspect ratio.
+    - *1:1 PAR* selects an aspect ratio that produces square pixels.
+    - *4:3 PAR* forces 4:3 aspect ratio.
+    - *16:9 PAR* forces 16:9 aspect ratio.
+
+- **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full)
+
+    Select which overscan (borders) will be used in emulation.
+
+    - *Disabled* disables overscan.
+    - *Top+Bottom* enables overscan for top and bottom.
+    - *Full* enables overscan for top, bottom, left and right.
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
