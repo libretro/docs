@@ -44,18 +44,19 @@ The set of joypad profiles used by RetroArch can be downloaded and updated from 
 
 A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
 
+
 ## Generating a joypad profile
 
 If your joypad is not recognized by RetroArch even after updating the profiles, you can generate a profile from the menu.
 
-
 1. Unplug all the other joypads
-2. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
-3. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> Menu Toggle
-4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` -- the .cfg file will be saved in: [Controller profile directory]/[Controller driver]/[Device index].cfg
-5. The new profile will be saved to your disk.
-6. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
-7. Unplug your joypad an re-plug it. See if it is auto configured.
+2. For Android, run the [Input descriptors](#android) step first.
+3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
+4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> Menu Toggle
+5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
+6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg
+7. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
+8. Unplug your joypad an re-plug it. See if it is auto configured.
 
 
 !!! Warning "Clear manual bindings"
@@ -65,6 +66,12 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
+
+### Android
+
+In order to access `Settings` ->  in Android phones that are not rooted, you need to
+- Create `/storage/emulated/0/RetroArch/autoconfig/`
+- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`
 
 ## Troubleshooting
 
