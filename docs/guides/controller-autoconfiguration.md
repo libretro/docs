@@ -69,7 +69,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 ### Android
 
-In order to access `Settings` ->  in Android phones that are not rooted, you need to
+In order to access the new profile file that will be saved to your disk on Android phones that are not rooted, you need to
 - Create `/storage/emulated/0/RetroArch/autoconfig/`
 - Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`
 
