@@ -57,4 +57,4 @@ Last one you should consider changing are the save locations, by default it will
 
 ## Definitions of special values
 
-- `<Content dir>`: The directory where the game was loaded from via `Main Menu -> Load Content`.
+- `<Content dir>`: The directory where the game was loaded from via `Main Menu -> Load Content`. For example, these entries has the value `<Content dir>` by default in RetroArch 1.7.3: "System/BIOS", "Save States", "Save Files"
