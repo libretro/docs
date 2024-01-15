@@ -52,7 +52,7 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 1. Unplug all the other joypads
 2. For Android, run the [Input descriptors](#android) step first.
 3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
-4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> Menu Toggle
+4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> `Menu Toggle`
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
 6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg
 7. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
