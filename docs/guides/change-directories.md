@@ -53,3 +53,8 @@ Another one you'll want to consider changing. This will be the starting director
     Some platforms/distros may use a different structure, so always verify your paths in settings -> directory
 
 Last one you should consider changing are the save locations, by default it will place them in the same folder as your ROMS. If you care about organisation you should change these to another folder.
+
+
+## Definitions of special values
+
+- `<Content dir>`: The directory where the game was loaded from via `Main Menu -> Load Content`.
