@@ -50,15 +50,16 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 
 
 1. Unplug all the other joypads
-2. Use `Settings` -> `Input` -> `User 1 Binds` -> `User 1 Bind All`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
-3. Use `Settings` -> `Inputs` -> `User 1 Binds` -> `User 1 Save Autoconfig`
-4. The new profile will be saved to your disk.
-5. Use `Settings` -> `Inputs` -> `User 1 Binds` -> `User 1 Bind Default All` to clear manual bindings and rely on the new profile
-6. Unplug your joypad an re-plug it. See if it is auto configured.
+2. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
+3. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> Menu Toggle
+4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
+5. The new profile will be saved to your disk.
+6. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
+7. Unplug your joypad an re-plug it. See if it is auto configured.
 
 
 !!! Warning "Clear manual bindings"
-    It is important to to skip the step of clearing manual bindings after using the `User 1 Save Autoconfig` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Inputs` -> `User 1 Binds` -> `User 1 Bind Default All` to reset the manual settings before completing this process.
+    It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings before completing this process.
 
 If you are happy with your profile, you can submit it to RetroArch so that other users benefit:
 
