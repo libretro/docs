@@ -59,7 +59,7 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 
 
 !!! Warning "Clear manual bindings"
-    It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings before completing this process.
+    It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings _before_ completing this process.
 
 If you are happy with your profile, you can submit it to RetroArch so that other users benefit:
 
