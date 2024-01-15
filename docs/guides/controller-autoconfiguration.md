@@ -63,8 +63,8 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 
 If you are happy with your profile, you can submit it to RetroArch so that other users benefit:
 
-1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the **Input Descriptors** section below)
-2. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
+1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
+3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
 
 ## Troubleshooting
 
