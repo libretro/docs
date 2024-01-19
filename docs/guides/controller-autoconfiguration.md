@@ -19,9 +19,10 @@ We compute a matching score for each configuration file based on these three fac
 
 RetroArch works many platforms. Each of these platforms has one or more input systems. These input systems in turn differ widely in the way they enumerate the pad buttons. For this reason, your joypad buttons may be mapped differently depending on if you are using Windows, Mac, or Linux.
 
-Traditional emulators allow you map each button of your pad to the original pad of the emulated system. For example, this is how the BSNES joypad configuration interface looks:
 
-![image](https://github.com/davidhedlund/docs/assets/6416073/d89aefdb-ea5e-40be-8443-d34d88766d25)
+Traditional emulators allow you map each button of your pad to the original pad of the emulated system. For example, this is how the Snes9x joypad configuration interface looks:
+
+![Snes9x joypad configuration](../image/retroarch/input/snes9x-joyconfig-example.jpg)
 
 RetroArch also allows this kind of manual mapping. However, RetroArch tries to go further by detecting your joypad and automatically configuring it so manual configuration becomes obsolete.
 
