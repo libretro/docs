@@ -39,6 +39,8 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 
 ## Installing or updating joypad profiles
 
+![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
+
 The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Controller Profiles` to get the latest version of the profile pack.
 
 A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
