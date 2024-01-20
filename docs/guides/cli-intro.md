@@ -4,6 +4,8 @@ RetroArch can be used from its robust graphical interfaces as well as a powerful
 
 Note: please be aware of whether your system uses DOS/Windows style paths with backslashes `\` or Unix-style paths with forward slashes: `/`.
 
+Some cores like [ScummVM](https://docs.libretro.com/library/scummvm/) (which also has an inbuilt GUI file browser), do not require any content file name passed as a command line argument. This is determined by the core info files with the line `supports_no_game = "true"`. In this case, after you have loaded the core and if it is not starting directly, select 'Start Core' that will appear inside the main menu.
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/W-fRcamSp-c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### On macOS: invoking the RetroArch CLI executable
