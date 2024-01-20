@@ -1,6 +1,6 @@
 # LED drivers for RetroArch
 
-Libretro cores can have extra on/off outputs, that can provide simple visual feedback such as disk activity happening inside the emulated system.
+Libretro cores can have extra on/off outputs, that provide simple visual feedback such as illuminated Start buttons for arcade or disk activity happening inside the emulated system.
 
 Available LED drivers:
    * `overlay` - control individual elements of a RetroArch overlay
@@ -29,7 +29,7 @@ The RPi driver will set the specified GPIO pins to `out` direction and then set 
     led1_map = "18"
 
 ## Keyboard driver
-The keyboard driver will utilize the keyboard Num Lock (0), Caps Lock (1), and Scroll Lock (2) LEDs. It works under Windows, and X11 (since RetroArch 1.9.1).
+The keyboard driver will utilize the keyboard Num Lock (0), Caps Lock (1), and Scroll Lock (2) LEDs. It works under Windows, and X11 (since RetroArch 1.9.1). Note: this driver does not work under Linux Wayland or KMS mode, and in case of X11, access to Num Lock and Caps Lock may be limited, check [this answer]( https://unix.stackexchange.com/questions/179286/change-the-status-of-the-keyboard-leds-from-within-an-x-session-without-root-a).
 
 #### Example: keyboard driver with second LED assigned for Scroll Lock, while leaving first LED explicitly unassigned.
     led_driver = "keyboard"
@@ -38,7 +38,7 @@ The keyboard driver will utilize the keyboard Num Lock (0), Caps Lock (1), and S
 
 ## Sysled driver
 The sysled driver will set the brightness of supported mainboard LEDs via filesystem entry `/sys/class/leds/led%d/brightness`. This entry is present typically on Raspberry Pi single board computers, where led0 is the green LED usually indicating MMC card activity, and led1 is the red LED.
-Note that these filesystem entries may be writable by root only, enable access with e.g. `sudo chmod a+w /sys/class/leds/led*/trigger /sys/class/leds/led*/brightness` before running RetroArch. This driver was added after RetroArch 1.14.0.
+Note that these filesystem entries may be writable by root only, enable access with e.g. `sudo chmod a+w /sys/class/leds/led*/trigger /sys/class/leds/led*/brightness` before running RetroArch. This driver was added in RetroArch 1.15.0.
 
 #### Example: sysled driver with first led output from core assigned to led1, second to led0
     led_driver = "sysled"
