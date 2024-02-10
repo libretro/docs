@@ -94,6 +94,7 @@
 | Gearcoleco                | Coleco ColecoVision    |                    |
 | Gearsystem                | Sega MS/GG/SG-1000     |                    |
 | Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
+| Geolith                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
 | gpSP                      | Game Boy Advance       |                    |
 | Gong                      | Game                   | A clone of Pong written for libretro |
 | GW                        | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |

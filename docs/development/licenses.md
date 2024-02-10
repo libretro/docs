@@ -124,6 +124,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Gearcoleco](../library/gearcoleco.md)                                           | [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)                       |                |
 | [Gearsystem](../library/gearsystem.md)                                           | [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)                       |                |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)          		           | [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)     | Non-commercial |
+| [Geolith](../library/geolith.md)                                                 | [BSD-3-Clause, MIT](https://github.com/libretro/geolith-libretro/blob/master/LICENSE)     |                |
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |
 | [GW](../library/gw.md)                                                           | [zlib](https://github.com/libretro/gw-libretro/blob/master/LICENSE)                       |                |
 | [Handy](../library/handy.md)					    		   | [zlib](https://github.com/libretro/libretro-handy/blob/master/lynx/license.txt)                                           |                |
