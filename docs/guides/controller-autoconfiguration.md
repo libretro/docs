@@ -75,7 +75,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 ### Android
 
 Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
-- Create `/storage/emulated/0/RetroArch/autoconfig/`
+- Create `/storage/emulated/0/RetroArch/autoconfig/android`
 - Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`
 
 ## Troubleshooting
