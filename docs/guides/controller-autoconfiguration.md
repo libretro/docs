@@ -47,7 +47,6 @@ input_gun_trigger_mbtn = "1"
 input_gun_offscreen_shot_mbtn = "2"
 ```
 
-
 ## Installing or updating joypad profiles
 
 ![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
@@ -62,7 +61,7 @@ A message will appear at the bottom of the screen showing the download progress 
 If your joypad is not recognized by RetroArch even after updating the profiles, you can generate a profile from the menu.
 
 1. Unplug all the other joypads
-2. For Android, run the [Input descriptors](#android) step first.
+2. For Android, run the [Android](#android) steps first.
 3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
 4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> `Menu Toggle`
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
