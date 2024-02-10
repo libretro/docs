@@ -37,6 +37,17 @@ This allows:
 
 Having automatically configured joypads makes it a lot easier to navigate the RetroArch Menu with the joypad. This is very convenient when running RetroArch on a game console, where a keyboard and a mouse are not always available. It is also what makes RetroArch suitable to build your own game console using Lakka or a similar OS.
 
+## Before you begin
+
+Make sure that you run the latest version of RetroArch, to generate a file name and file content via `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` that is up to date with our current policies.
+
+For example, RetroArch 1.16.0 incorrectly added these lines by default:
+```
+input_gun_trigger_mbtn = "1"
+input_gun_offscreen_shot_mbtn = "2"
+```
+
+
 ## Installing or updating joypad profiles
 
 ![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
