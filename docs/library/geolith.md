@@ -157,11 +157,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | B                                   | ![](../image/retropad/retro_a.png)             |
 | C                                   | ![](../image/retropad/retro_y.png)             |
 | D                                   | ![](../image/retropad/retro_x.png)             |
-| Select                              | ![](../image/retropad/retro_select.png)        |
+| Select/Coin                         | ![](../image/retropad/retro_select.png)        |
 | Start                               | ![](../image/retropad/retro_start.png)         |
-| Coin (Arcade Only)                  | ![](../image/retropad/retro_l1.png)            |
-| Service (Arcade, Player 1 Only)     | ![](../image/retropad/retro_r1.png)            |
+| C+D                                 | ![](../image/retropad/retro_l1.png)            |
+| A+B                                 | ![](../image/retropad/retro_r1.png)            |
+| B+C+D                               | ![](../image/retropad/retro_l2.png)            |
+| A+B+C                               | ![](../image/retropad/retro_r2.png)            |
 | Test (Arcade, Player 1 Only)        | ![](../image/retropad/retro_l3.png)            |
+| Service (Arcade, Player 1 Only)     | ![](../image/retropad/retro_r3.png)            |
 
 | V-Liner                             | RetroPad Inputs                                |
 |-------------------------------------|------------------------------------------------|
@@ -175,6 +178,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | Start/Collect                       | ![](../image/retropad/retro_x.png)             |
 | Operator Menu                       | ![](../image/retropad/retro_select.png)        |
 | Clear Credit                        | ![](../image/retropad/retro_start.png)         |
+| Coin 1                              | ![](../image/retropad/retro_l1.png)            |
+| Coin 2                              | ![](../image/retropad/retro_r1.png)            |
 | Hopper Out                          | ![](../image/retropad/retro_l2.png)            |
 
 ## External Links
