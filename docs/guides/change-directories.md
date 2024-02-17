@@ -48,8 +48,8 @@ It is suggested that this be changed to a folder named "system" under your retro
 Another one you'll want to consider changing. This will be the starting directory when you select "Load Content" and it can be very handy to have this set to your ROM folder. Although this probably isn't needed since RetroArch has an import feature, it doesn't hurt to have this set anyway.
 
 Definitions of special values:
-- `<Content Directory>`: The directory where the game was loaded from via `Main Menu -> Load Content`. For example, these entries has the value `<Content dir>` by default in RetroArch 1.7.3: "System/BIOS", "Save States", "Save Files"
-
+- `<Content Directory>`: The directory where the game was loaded from via `Main Menu -> Load Content`. For example, these entries has the value `<Content dir>` by default in RetroArch 1.7.3:
+- `<Default>` values in `Settings -> Directories`: The RetroArch configuration directory.
 
 ### Savefile and Savestate
 
