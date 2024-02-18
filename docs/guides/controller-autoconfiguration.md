@@ -56,12 +56,14 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 
 1. Unplug all the other joypads
 2. For Android, run the [Android](#android) steps first.
-3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. Make sure that your mapping is perfect by testing every button in the menu and in some games.
+3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`.
 4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> `Menu Toggle`
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
-6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg
-7. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
-8. Unplug your joypad an re-plug it. See if it is auto configured.
+6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
+7. Open the file in a text editor and check if some variables are missing. If your OS does not support the controller, then RetroArch will not be able to generate a complete autoconfig file.
+8. Make sure that your mapping is perfect by testing every button in the menu, and in game(s) that make use of all of them.
+9. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile
+10. Unplug your joypad an re-plug it. See if it is auto configured.
 
 
 !!! Warning "Clear manual bindings"
@@ -76,8 +78,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
 - Create `/storage/emulated/0/RetroArch/autoconfig/android`
-- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`
-- The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
+- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
 
 ## Troubleshooting
 
