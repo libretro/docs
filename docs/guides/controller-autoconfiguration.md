@@ -90,8 +90,8 @@ If your joypad is not configured properly, you should [generate a RetroArch log]
 The first part of the joypad profile is used for matching the profile with the device, as explained above. The **Vendor ID** and **Product ID** are in decimal format.
 
 ```
-input_device = "Microsoft X-Box One pad"
 input_driver = "udev"
+input_device = "Microsoft X-Box One pad"
 input_vendor_id = 1118
 input_product_id = 721
 ```
