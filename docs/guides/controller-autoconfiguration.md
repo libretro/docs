@@ -91,9 +91,9 @@ The first part of the joypad profile is used for matching the profile with the d
 
 ```
 input_driver = "udev"
-input_device = "Microsoft X-Box One pad"
-input_vendor_id = 1118
-input_product_id = 721
+input_device = "Sony Interactive Entertainment DualSense Edge Wireless Controller"
+input_vendor_id = "1356"
+input_product_id = "3570"
 ```
 
 ### Mapping
