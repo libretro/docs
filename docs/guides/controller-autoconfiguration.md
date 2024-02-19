@@ -60,7 +60,13 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
 6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
 
-#### Inspect the file
+### Android configuration
+
+Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
+- Create `/storage/emulated/0/RetroArch/autoconfig/android`
+- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
+
+### Inspect the file
 
 Without modifying anything in the original file, open it in the file in a text editor and
 1. Check if some variables are missing.
@@ -69,7 +75,7 @@ Without modifying anything in the original file, open it in the file in a text e
 
 If your OS does not support the controller, then RetroArch will generate an incorrect autoconfig file. You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT add missing variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
 
-#### Try the controller in a game
+### Try the controller in a game
 1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
 2. Make sure that your mapping is perfect by testing every button in the menu.
 3. Try all mappings by loading a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
@@ -84,12 +90,6 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
-
-### Android
-
-Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
-- Create `/storage/emulated/0/RetroArch/autoconfig/android`
-- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
 
 ## Troubleshooting
 
