@@ -12,7 +12,7 @@ The matching algorithm considers three criteria:
 
 We compute a matching score for each configuration file based on these three factors. The profile with the highest score is chosen to configure the pad.
 
-**Note**: TThe **Vendor ID** and **Product ID** pair is often abbreviated as **vid:pid**.
+**Note**: The **Vendor ID** and **Product ID** pair is often abbreviated as **vid:pid**.
 
 ## Why is it needed?
 
