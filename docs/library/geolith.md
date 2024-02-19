@@ -161,7 +161,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | Start                               | ![](../image/retropad/retro_start.png)         |
 | C+D                                 | ![](../image/retropad/retro_l1.png)            |
 | A+B                                 | ![](../image/retropad/retro_r1.png)            |
-| B+C+D                               | ![](../image/retropad/retro_l2.png)            |
+| B+C                                 | ![](../image/retropad/retro_l2.png)            |
 | A+B+C                               | ![](../image/retropad/retro_r2.png)            |
 | Test (Arcade, Player 1 Only)        | ![](../image/retropad/retro_l3.png)            |
 | Service (Arcade, Player 1 Only)     | ![](../image/retropad/retro_r3.png)            |
