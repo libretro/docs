@@ -2,7 +2,7 @@
 
 ## Environment configuration
 
-You need to have installed [devkitPro](https://github.com/devkitPro/installer/releases), the homebrew Nintendo Wii SDK (libOGC) and the devkitPPC (r29) toolchain on your computer.
+You need to have installed [devkitPro](https://github.com/devkitPro/installer/releases), the homebrew Nintendo Wii SDK (libOGC) and the devkitPPC (r29 or r29-1) toolchain on your computer.
 
 ## RetroArch Compilation
 
@@ -10,7 +10,7 @@ You need to have installed [devkitPro](https://github.com/devkitPro/installer/re
 
 Clone RetroArch's repository from [GitHub](https://github.com/libretro/RetroArch)
 
-    git clone https://github.com/libretro/RetroArch.git retroarch
+    git clone https://github.com/libretro/RetroArch.git retroarch --recursive
     cd retroarch
 
 For subsequent builds you only need to pull the changes from the repo
@@ -62,7 +62,7 @@ This process will also automate the packaging process for you.
 
 ### Fetching Cores
 
-The easiest way to fetch all the cores is to use libretro-super. Download libretro-super from github and run
+The easiest way to fetch all the cores is to use libretro-super. Download libretro-super from [GitHub](https://github.com/libretro/libretro-super) and run
 
     ./libretro-fetch.sh
 
@@ -81,7 +81,7 @@ Once finished, you can find the libretro cores inside directory `dist/wii`.
 Another way to compile cores, is by cloning the core's repository (for example, FCEUmm) from [GitHub](https://github.com/orgs/libretro/repositories).
 In this case, to clone FCEUmm-Libretro repo:
 
-    git clone https://github.com/libretro/libretro-fceumm.git libretro-fceumm
+    git clone https://github.com/libretro/libretro-fceumm.git libretro-fceumm --recursive
     cd libretro-fceumm
 
 For subsequent builds you only need to pull the changes from the core's repo (ex., FCEUmm)
@@ -94,5 +94,9 @@ To update your local copy from the repository of the core (in this case FCEUmm),
 To compile the core for Wii (in this case, FCEUmm) run:
 
     make platform=wii
+
+Some cores (example, Snes9x) have a dedicated makefile for compile as a Libretro core. To compile the core for Wii with the dedicated Libretro makefile run:
+
+    make -f Makefile.libretro platform=wii
 
 Rename the compiled core as 'libretro_wii.a', then put it in the RetroArch directory and follow the instructions in the "Building RetroArch separately" section.
