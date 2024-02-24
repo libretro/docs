@@ -49,13 +49,13 @@ With any additional device, you do the identical steps in RetroArch as with the 
 
 Syncing is displayed in the bottom left status line of RetroArch.
 
-As soon as the solution is properly configured, Cloud Sync starts immediately at launching RetroArch. This is apparently important if other devices synced new data to the webdav repository. They are then immediately picked up.
+As soon as the solution is properly configured, Cloud Sync starts immediately at launching RetroArch. This is apparently important if other devices synced new data to the webdav repository. They are then immediately picked up. As of more recent nightly iOS builds, RetroArch also starts Cloud Sync if it is launched from a Background/Suspended State (important for avoiding sync conflicts).
 
-Another sync is triggered with every closing of a game.
+Another sync is triggered with every closing of a game and returning to the RetroArch menu. Be conscious that RetroArch cannot sync a new game status if RetroArch is closed from within a game by pressing Escape/Escape.
 
-### .DS_Store files create conflicts
+### .DS_Store files will be ignored in sync
 
-RetroArch Cloud Sync may run in sync problems if .DS_Store files are synced into the cloud repository. It is therefore recommended to delete all .DS_Store files from the synced directories.
+As of more recent nightly builds, Cloud Sync ignores .DS_Store files during sync. You can monitor this in the logfiles after turning on logging in RetroARch. But it is nevertheless recommended to delete all .DS_Store files from the synced directories.
 
 For example, you can delete the .DS.Store files from the relevant RetroArch directories from the terminal as follows (easiest way is that you create an .sh file containing these lines and make it executable via chmod 755):
 
@@ -64,8 +64,6 @@ find . -name '.DS_Store' -type f -delete
 cd /"YourUser"/Library/Application\ Support/RetroArch
 find . -name '.DS_Store' -type f -delete
 
-After deletion, the sync also deletes these .DS_Store files from the cloud repository.
-
 ### Troubleshooting
 
-If the Cloud Sync returns an error, turn logging on and set the logging level to debug, log into a file. Cloud Sync logs reliably into the logfile, so the errors can be read easily.
+If the Cloud Sync returns an error, turn logging on and set the logging level to debug, log into a file. Cloud Sync logs reliably into the logfile, so the errors can be read easily. Not all conflicts that RetroArch Cloud Sync returns are critical (e.g. cache conflicts that can be easily resolved by deleting the conflicting local cache file according to the logfile). Other conflicts may even be desired, e.g. if core configurations shall differ between the MacOS core and the iOS core.
