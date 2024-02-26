@@ -4,7 +4,7 @@
 
 ## Background
 
-- Vircon32 is a virtual game console, inspired by classic 16 & 32 bit systems as well as the arcade era.
+Vircon32 is a virtual game console, inspired by classic 16 & 32 bit systems as well as the arcade era.
 
 The Vircon32 core has been authored by
 
