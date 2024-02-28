@@ -26,16 +26,16 @@ Some directory variable values are set to "default" by default in retroarch.cfg.
 - Open retroarch.cfg
 - After the = sign, make changes then save.
 
-## Paths to consider changing:
+# Paths to consider changing:
 
-### Cores
+## Cores
 
 This is the location for all your cores. To [install them using the user interface](download-cores.md#installing-cores-through-retroarch-interface), this setting needs to point to a writeable directory.
 
 !!! note
     The Ubuntu PPA does not point this to a user-writable directory because cores are modified by the package manager. If you want to change it manually, you might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *libretro_directory =* is what you need to change in the config file. Some distributions use `~/.config/retroarch/cores/`
 
-### System/BIOS
+## System/BIOS
 
 This is where you specify the location for all your BIOS's, by default RetroArch looks for BIOS in your "Starting directory" folder. It is not suggested that you dump all BIOS files in the "Starting directory".
 
@@ -47,11 +47,11 @@ It is suggested that this be changed to a folder named "system" under your retro
 !!! note
     You might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *system_directory =* is what you need to change in the config file.
 
-### File Browser
+## File Browser
 
 Another one you'll want to consider changing. This will be the starting directory when you select "Load Content" and it can be very handy to have this set to your ROM folder. Although this probably isn't needed since RetroArch has an import feature, it doesn't hurt to have this set anyway.
 
-### Savefile and Savestate
+## Save Files and Save States
 
 !!! note
     Some platforms/distros may use a different structure, so always verify your paths in settings -> directory
