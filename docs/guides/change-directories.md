@@ -5,7 +5,7 @@ Next step you might want to consider is setting directories for RetroArch, this 
 Although the defaults will suit most users, if you want to configure custom BIOS's or change the save location, you will have to change directories.
 
 Some directory variable values are set to "default" by default in retroarch.cfg. However, to modify directory values to "default", a text editor is required. "default" means different things to different entries in `Settings` -> `Directories`:
-- `<Content Directory>`: The directory where the game was loaded from via `Main Menu -> Load Content`. Only System/BIOS, and Screenshots, found in `Settings` -> `Directories`, can get the value `<Content Directory>`. Their retroarch.cfg variables are `system_directory`, and `screenshot_directory`, respectively.
+- `<Content Directory>`: The directory where the game was loaded from via `Main Menu -> Load Content`. Only `System/BIOS`, and `Screenshots`, found in `Settings` -> `Directories`, can get the value `<Content Directory>`. Their retroarch.cfg variables are `system_directory`, and `screenshot_directory`, respectively.
 - `<Default>` values in `Settings -> Directories`: The RetroArch configuration directory. Many, but not all entries in `Settings` -> `Directories` will receive the `<Default>` value.
 
 ## From the RetroArch settings:
