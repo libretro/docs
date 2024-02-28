@@ -8,12 +8,12 @@ Some directory variable values are set to "default" by default in retroarch.cfg.
 - `System/BIOS` (`system_directory`), and `Screenshots` (`screenshot_directory`): `<Content Directory>` -- The directory where the game was loaded from via `Main Menu -> Load Content`. For example, if /home/gamer/Downloads/SNES/game.sfc was loaded, and retroarch.cfg contains `screenshot_directory = "default"`, then the screenshots will be saved in /home/gamer/Downloads/SNES/.
 - Multiple directories: `<Default>` -- The RetroArch configuration directory.
 
-## From the RetroArch settings:
+## From RetroArch:
 
-- Navigate to **Settings**
-- Navigate to **Directories**
-- Select the directory you want to changed
-- Navigate to the desired location using the file browser
+- Open RetroArch.
+- Navigate to `Settings` -> `Directories`.
+- Click on the directory you want to change.
+- Navigate to the desired location using the File Browser.
 
 ## From a text editor:
 
