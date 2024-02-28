@@ -65,8 +65,8 @@ All menu drivers can display fullscreen thumbnails when pressing Start, and Y bu
 Thumbnails can be retrieved multiple ways:
 
 * Playlist thumbnail downloader (recommended): under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com.
-* Individual thumbnail downloader: there is a Download Thumbnails option for each entry in playlists. For RetroArch versions later than 1.16.0, you may hit download up to 3 times to try the flexible matches.
-* On-demand thumbnail downloader: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions later than 1.16.0, you may try flicking back and forth between entries up to 3 times to try the flexible matches.
+* Individual thumbnail downloader: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
+* On-demand thumbnail downloader: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
 
 Thumbnail packs are no longer available, use one of the above methods, or see Custom thumbnails section below.
 
@@ -194,7 +194,7 @@ The thumbnail filename should exactly match the game's title as listed in the pl
                Named_Titles/
                     Q_bert's Qubes (USA).png
 ```
-For RetroArch versions later than 1.16.0, flexible naming is applied, up to 3 options are tried for each playlist entry, in the following order:
+For RetroArch versions 1.17.0 or later, flexible naming is applied, up to 3 options are tried for each playlist entry, in the following order:
 - ROM file name with .png extension: `Q-Bert's Qubes (1983)(Parker Bros)[b].png`
 - Database entry / playlist label with .png extension, as explained above: `Q_Bert's Qubes (USA).png`
 - Short name: same as previous, but only up to first round bracket: `Q_Bert's Qubes.png`
