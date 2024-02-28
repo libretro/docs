@@ -25,7 +25,7 @@ Table of special values limited to some variables:
 ## From a text editor:
 
 - Close RetroArch.
-- Find your retroarch.cfg file. If you are having trouble locating the file, 1) Open RetroArch 2) Navigate to `Main Menu` -> `Configuration File` -> `Save Current Configuration`, the on-screen notification widget will display: `Saved new config to "[...]/config/retroarch/retroarch.cfg".` where [...] is the directory path that you are looking for. If all hope is lost do a system-wide search for **retroarch.cfg**
+- Find your retroarch.cfg file. If you are having trouble locating the file, 1) Open RetroArch 2) Navigate to `Main Menu` -> `Configuration File` -> `Save Current Configuration`, the on-screen notification widget will display: `Saved new config to "[...]/config/retroarch/retroarch.cfg".`. If all hope is lost do a system-wide search for **retroarch.cfg**
 - Open retroarch.cfg in a text editor.
 - After the = sign, make changes then save the file.
 
