@@ -54,7 +54,7 @@ It is suggested that this be changed to a folder named "system" under your retro
 
 Another one you'll want to consider changing. This will be the starting directory when you select "Load Content" and it can be very handy to have this set to your ROM folder. Although this probably isn't needed since RetroArch has an import feature, it doesn't hurt to have this set anyway.
 
-## Save Files and Save States
+## Save Files, and Save States
 
 !!! note
     Some platforms/distros may use a different structure, so always verify your paths in settings -> directory
