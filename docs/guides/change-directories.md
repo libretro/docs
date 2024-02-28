@@ -5,8 +5,8 @@ Next step you might want to consider is setting directories for RetroArch, this 
 Although the defaults will suit most users, if you want to configure custom BIOS's or change the save location, you will have to change directories.
 
 Some directory variable values are set to "default" by default in retroarch.cfg. However, to modify directory values to "default", a text editor is required. "default" represents different values to different entries in `Settings` -> `Directories`:
-- `System/BIOS` (`system_directory`), and `Screenshots` (`screenshot_directory`): `<Content Directory>` -- The directory where the game was loaded from via `Main Menu -> Load Content`. For example, if /home/gamer/Downloads/SNES/game.sfc was loaded, and retroarch.cfg contains `screenshot_directory = "default"`, then the screenshots will be saved in /home/gamer/Downloads/SNES/.
-- Multiple directories: `<Default>` -- The RetroArch configuration directory.
+- For the `System/BIOS` (`system_directory`), and the `Screenshots` (`screenshot_directory`) directory, the "default" value represents: `<Content Directory>` -- The directory where the game was loaded from via `Main Menu -> Load Content`. For example, if /home/gamer/Downloads/SNES/game.sfc was loaded, and retroarch.cfg contains `screenshot_directory = "default"`, then the screenshots will be saved in /home/gamer/Downloads/SNES/.
+- For multiple directories the "default" value represents:`<Default>` -- The RetroArch configuration directory.
 
 ## From RetroArch:
 
