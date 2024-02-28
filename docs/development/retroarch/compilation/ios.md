@@ -160,6 +160,17 @@ Once the application has been built, installed, and run on your device, it can b
 
 - To see if your core is valid and usable in RetroArch, you can also try Load Core and selecting the core. If you see the core name appear at the top (in the GUI menu), then it is properly codesigned and loaded. If you still see "No Core", then your core is not codesigned and cannot be used.
 
+
+### Top Shelf
+
+Top Shelf for tvOS will display up to five entries from each of the History and Favorites playlists, but is not compiled by default. The Top Shelf extension runs as in a different sandbox, and sharing the playlists requires the use of App Groups. In order to enable the Top Shelf extension:
+
+1. With the project selected, select the RetroArchTV target. In the `Signing & Capabilities` tab, add the `App Groups` capability, and provide a unique group identifier.
+2. You will also need to provide a unique app/bundle identifier. This will have the effect of breaking updating from a prior version of the app, as the app data will not be copied over due to the new bundle identifier.
+3. Select the RetroArchTopShelfExtension target. In the `Signing & Capabilities` tab, add the `App Groups` capability, and provide the same unique group identifier.
+4. You will also need to provide a unique app/bundle identifier for the extension.
+5. In `pkg/apple/RetroArchTopShelfExtension/ContentProvider.h`, change the value of `kRetroArchAppGroup` to be the same unique group identifier.
+
 ### Development
 
 #### Where do I start?
