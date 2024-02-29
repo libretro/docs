@@ -69,12 +69,10 @@ Android phones that are not rooted you need to run these steps in order to backu
 ### Inspect the file
 
 Without modifying anything in the original file, open it in the file in a text editor and
-1. Check if some variables are missing.
-2. Check if some variables has duplicated values.
-3. Each button should have either a _btn, or a _axis variable, not both. So for example, if you find both input_a_axis, and input_a_btn, it's incorrect.
-4. Uexpected values (for example "0").
+1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
+2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
 
-If your OS does not support the controller, then RetroArch will generate an incorrect autoconfig file. You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT modify the variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
+You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT modify the variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
 
 ### Try the controller
 1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
