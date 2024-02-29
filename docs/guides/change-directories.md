@@ -4,34 +4,41 @@ Next step you might want to consider is setting directories for RetroArch, this 
 
 Although the defaults will suit most users, if you want to configure custom BIOS's or change the save location, you will have to change directories.
 
-## From the RetroArch settings:
+Some directory variable values are set to "default" by default in retroarch.cfg. However, to modify directory values to "default", a text editor is required. "default" represents different values to different entries in `Settings` -> `Directories`:
+- `<Content Directory>` -- The directory where the game was loaded from via `Main Menu -> Load Content`. For example, if /home/gamer/Downloads/SNES/game.sfc was loaded, and retroarch.cfg contains `screenshot_directory = "default"`, then the screenshots will be saved in /home/gamer/Downloads/SNES/.
+- For multiple directory variables in retoarch.cfg, the "default" value sets their value in `Settings` -> `Directories` to:`<Default>` -- The RetroArch configuration directory.
 
-- Navigate to **Settings**
-- Navigate to **Directories**
-- Select the directory you want to changed
-- Navigate to the desired location using the file browser
+Table of special values limited to some variables:
+
+| retroarch.cfg configuration | RetroArch `Settings` -> `Directories` |
+| - | - |
+| system_directory = "default" | `System/BIOS`: `<Content Directory>` |
+| screenshot_directory = "default" | `Screenshots`: `<Content Directory>` |
+
+## From RetroArch:
+
+- Open RetroArch.
+- Navigate to `Settings` -> `Directories`.
+- Click on the directory you want to change.
+- Navigate to the desired location using the File Browser.
 
 ## From a text editor:
 
-- Close RetroArch
-- Find your retroarch config folder
+- Close RetroArch.
+- Find your retroarch.cfg file. If you are having trouble locating the file, 1) Open RetroArch 2) Navigate to `Main Menu` -> `Configuration File` -> `Save Current Configuration`, the on-screen notification widget will display: `Saved new config to "[...]/config/retroarch/retroarch.cfg".`. If all hope is lost do a system-wide search for **retroarch.cfg**
+- Open retroarch.cfg in a text editor.
+- After the = sign, make changes then save the file.
 
-!!! tip
-    If you are having trouble locating your retroarch config folder, check back in the **Directories** setting, take a mental note of what appears on the **Config** directory, this should lead you to a **retroarch** folder. If all hope is lost do a system-wide search for **retroarch.cfg**
+# Paths to consider changing:
 
-- Open retroarch.cfg
-- After the = sign, make changes then save.
-
-## Paths to consider changing:
-
-### Cores
+## Cores
 
 This is the location for all your cores. To [install them using the user interface](download-cores.md#installing-cores-through-retroarch-interface), this setting needs to point to a writeable directory.
 
 !!! note
     The Ubuntu PPA does not point this to a user-writable directory because cores are modified by the package manager. If you want to change it manually, you might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *libretro_directory =* is what you need to change in the config file. Some distributions use `~/.config/retroarch/cores/`
 
-### System/BIOS
+## System/BIOS
 
 This is where you specify the location for all your BIOS's, by default RetroArch looks for BIOS in your "Starting directory" folder. It is not suggested that you dump all BIOS files in the "Starting directory".
 
@@ -43,15 +50,11 @@ It is suggested that this be changed to a folder named "system" under your retro
 !!! note
     You might want to change this directory from "retroarch.cfg" with a text editor since the RetroArch file browser doesn't show hidden folders by default. *system_directory =* is what you need to change in the config file.
 
-### File Browser
+## File Browser
 
 Another one you'll want to consider changing. This will be the starting directory when you select "Load Content" and it can be very handy to have this set to your ROM folder. Although this probably isn't needed since RetroArch has an import feature, it doesn't hurt to have this set anyway.
 
-Definitions of special values:
-- `<Content Directory>`: The directory where the game was loaded from via `Main Menu -> Load Content`. For example, these entries has the value `<Content dir>` by default in RetroArch 1.7.3:
-- `<Default>` values in `Settings -> Directories`: The RetroArch configuration directory.
-
-### Savefile and Savestate
+## Save Files, and Save States
 
 !!! note
     Some platforms/distros may use a different structure, so always verify your paths in settings -> directory
