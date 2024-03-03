@@ -22,11 +22,13 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Required firmware file go in the frontend's system directory.
+The Vircon32 core already contains the Vircon32 Standard BIOS. But you can optionally use a different BIOS file by placing it in the frontend's system directory, with name Vircon32Bios.v32.
 
-| Filename          | Description                     | md5sum                           |
-|:-----------------:|:-------------------------------:|:--------------------------------:|
-| StandardBios.v32  | [Vircon32 BIOS 1.1](https://github.com/vircon32/ConsoleSoftware/releases/tag/bios-v1.1) | 1ad96946bce7bd0422b7d9340735b248 |
+The core will first check if an alternative BIOS file is present and if so, use it. Otherwise it will default to its embedded standard BIOS.
+
+| Filename          | Description                              |
+|:-----------------:|:----------------------------------------:|
+| Vircon32Bios.v32  | Optional alternative Vircon32 BIOS file  |
 
 ## Extensions
 
