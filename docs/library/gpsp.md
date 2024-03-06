@@ -4,6 +4,8 @@
 
 gpSP is a Game Boy Advance emulator based on notaz' fork of gpSP with additional codebase improvements.
 
+Please notice that [this core do not support libretro save interface](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161), meaning even if you set option "SaveRAM Autosave Interval" on settings, it will only write down internal save game data when you gracefully close emulation (by selecting option "Close Content" on Quick Menu). That might lead to loss of data if you exit RetroArch from your OS app switcher, if it freezes or if shuts down unexpectedly without battery for instance.
+
 ### Author/License
 
 The gpSP core has been authored by
