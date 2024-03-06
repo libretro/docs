@@ -4,6 +4,8 @@
 
 Standalone port of Mednafen GBA to libretro, itself a fork of VBA-M, itself a fork of Visual Boy Advance.
 
+Please notice that [this core do not support libretro save interface](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161), meaning even if you set option "SaveRAM Autosave Interval" on settings, it will only write down internal save game data when you gracefully close emulation (by selecting option "Close Content" on Quick Menu). That might lead to loss of data if you exit RetroArch from your OS app switcher, if it freezes or if shuts down unexpectedly without battery for instance.
+
 ### Author/License
 
 The Beetle GBA core has been authored by
