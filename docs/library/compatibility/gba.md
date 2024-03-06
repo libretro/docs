@@ -1,6 +1,6 @@
 # Nintendo Game Boy Advance Core Compatibility
 
-Please notice that [only certain cores support libretro save interface](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161), meaning even if you set option "SaveRAM Autosave Interval" on settings, some cores will only write down internal save game data when you gracefully close emulation. That might lead to loss of data.
+Please notice that [only certain cores support libretro save interface](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161), meaning even if you set option "SaveRAM Autosave Interval" on settings, some cores will only write down internal save game data when you gracefully close emulation. That might lead to loss of data if you exit RetroArch from your OS app switcher, if it freezes or if shuts down unexpectedly without battery for instance.
 
 ## Beetle GBA
 
