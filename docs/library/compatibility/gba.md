@@ -1,6 +1,14 @@
 # Nintendo Game Boy Advance Core Compatibility
 
+Please notice that when using these cores on RetroArch, [only certain cores support libretro save interface](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161), meaning even if you set option "SaveRAM Autosave Interval" on settings, some cores will only write down internal save game data when you gracefully close emulation. That might lead to loss of data if you exit RetroArch from your OS app switcher, if it freezes or if shuts down unexpectedly without battery for instance.
+
+## Beetle GBA
+
+[Does not support SaveRAM Autosave Interval.](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1980460281)
+
 ## gpSP
+
+[Does not support SaveRAM Autosave Interval.](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1980460281)
 
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
@@ -30,7 +38,13 @@
 | ~~Wolfenstein 3D~~                      |~~Softlocks at id Software startup screen.~~|
 | Yoshi’s Universal Gravitation       |The tilt sensor is not emulated.|
 
+## mGBA
+
+[Supports SaveRAM Autosave Interval.](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1980460281)
+
 ## VBA-M
+
+[Supports SaveRAM Autosave Interval.](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1980460281)
 
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
@@ -42,6 +56,8 @@
 | ~~Yoshi’s Universal Gravitation~~         |   ~~The tilt sensor is not emulated~~   |
 
 ## VBA Next
+
+[Supports SaveRAM Autosave Interval.](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1980460281)
 
 | Game                                              | Issue                                                                                              |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------|
