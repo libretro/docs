@@ -58,6 +58,7 @@ nav:
       - 'Overrides: Content/Folder/Core-Specific Settings': 'guides/overrides.md'
       - 'Cheat/Rumble Codes': 'guides/cheat-codes.md'
       - 'Input Overlays': 'guides/libretro-overlays.md'
+      - 'Overlay Mouse & Lightgun': 'guides/overlay-pointing-devices.md'
       - 'What is BIOS?': 'guides/bios.md'
       - 'Netplay':
         - 'FAQ': 'guides/netplay-faq.md'
