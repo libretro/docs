@@ -24,6 +24,15 @@ Note: some of those "quality of life" hacks might be doable with programming ski
 
 It's distributed under a non-commercial license, see [LICENSE.md](https://github.com/finalburnneo/FBNeo/blob/master/LICENSE.md) and [whatsnew.html](https://github.com/finalburnneo/FBNeo/blob/master/whatsnew.html).
 
+There are controversies about whether libretro's patreon and retroarch's GPL license breaks FBNeo's non-commercial license or not. This is what you should know :
+
+* **"Redistributions may not be sold, nor may they be used in a commercial product or activity."** : By definition, a commercial activity is an activity involving the sale of goods or services. The libretro project does none of that, and it is unclear whether a patreon should be treated as a commercial activity or not when no goods or services are provided in exchange of the donations.
+* **"You may not ask for donations to support your work on any project that uses the FB Neo source code."** : This FBNeo port is using libretro code, not the other way around. This port is directly authored/maintained/supported by members of the FBNeo team, and none of them is receiving donations. Interestingly, if receiving donations was de facto a commercial activity, this term shouldn't be required.
+* *If* the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial. 
+* Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as this port is not distributed with/through them and they don't use its availability as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.
+* While GPL code can't be mixed with non-commercial code, this is a non-issue since this port doesn't contain any GPL-licensed code.
+* Under european law, where the libretro buildbots are located, linking GPL and non-commercial softwares doesn't produce a derivative work, and doesn't extend the GPL license to the non-commercial work (source [here](https://joinup.ec.europa.eu/collection/eupl/licence-compatibility-permissivity-reciprocity-and-interoperability)). It is unclear whether the same applies in non-EU countries or not.
+
 ## Extensions
 
 zip, 7z
@@ -202,6 +211,7 @@ Here is a list of samples currently in use :
 * reactor.zip
 * safarir.zip
 * sasuke.zip
+* sfz3mix.zip
 * sharkatt.zip
 * spacefb.zip
 * spacfury.zip
@@ -231,6 +241,8 @@ Runahead now works with hiscores, it'll require fairly recent version of the cor
 This core widely supports the RetroArch input latency reduction features, with **runahead single instance** and **preemptive frames** being the recommended methods. 
 
 Proper support for **runahead second instance** is not guaranteed because it doesn't exist in standalone FBNeo unlike the other methods.
+
+Note : There seems to be possible conflicts when rewind is active simultanneously, see https://github.com/libretro/RetroArch/issues/16374.
 
 ## RetroAchievements
 
@@ -349,6 +361,7 @@ You might also want to make sure you are running the game at the correct speed, 
 The `neogeo` romset is a collection of neogeo bioses, and most of them are considered as optional so they won't cause a "white screen" when missing. Only `MVS Asia/Europe ver. 6 (1 slot)` is mandatory.
 
 However, having an incomplete romset can still cause various issues :
+
 * If you are using the "Use bios set in BIOS dipswitch" as "Neo-Geo mode" and the bios set in dipswitches is missing, you'll have a black screen where you can hear some sound playing.
 * If you are using any of the other choices available in "Neo-Geo mode" and a corresponding bios can't be found, the core will fallback to one of the available bioses.
 
