@@ -6,7 +6,7 @@ repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
 copyright: >
-  Copyright &copy; 2010 Libretro –
+  Copyright &copy; 2010-2024 Libretro –
   <a href="#__consent">Change cookie settings</a>
 nav:
   - 'About': 'index.md'
