@@ -109,6 +109,7 @@
 | Kronos                    | Sega Saturn/ST-V       | A port of the Kronos, which is itself a fork of Yabause emulator |
 | LowRes NX                 | Game engine            | A port of the LowRes NX fantasy console to libretro |
 | Lutro                     | Game engine            | An experimental Lua game framework for libretro, based on a subset of the LOVE API |
+| M2000                     | Philips P2000T         | A port of M2000, the portable Philips P2000 emulator to libretro |
 | MAME (Current)            | Arcade/Console/various | Based on MAME development branch. Full list of supported systems: http://adb.arcadeitalia.net/mame.php |
 | MAME 2000                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2003                 | Arcade/Console/various | (See MAME note)    |
@@ -139,7 +140,7 @@
 | nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
 | Numero                  | TI-83            | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
-| O2EM                      | Magnavox Odyssey2/Phillips Videopac+ |      |
+| O2EM                      | Magnavox Odyssey2/Philips Videopac+ |      |
 | Oberon                    | Oberon RISC machine    | An emulator for the Oberon RISC machine, ported to libretro |
 | OpenLara                  | Game engine            | A port of the OpenLara free/open re-implementation of the engine used by the original Tomb Raider series |
 | OpenTyrian                | Game                   | A port of the OpenTyrian clone of the classic Tyrian shmup, ported to libretro |
