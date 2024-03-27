@@ -134,6 +134,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Kronos](../library/kronos.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/kronos/yabause/COPYING)                  |                |
 | [LowRES NX](../library/lowres_nx.md)				                	   | [zlib](https://github.com/timoinutilis/lowres-nx/blob/master/LICENSE)                     |                |
 | [Lutro](../library/lutro.md)				                	   | [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE)                     |                |
+| M2000                                                                            | [GPLv3](https://github.com/p2000t/M2000/blob/main/LICENSEE)                               |                |
 | MAME										   | [BSD-3-Clause & GNU GPLv2](http://mamedev.org/legal.html)                                 |                |
 | MAME 2000							                                               | [MAME (Non-commercial)](https://github.com/libretro/mame2000-libretro/blob/master/readme.txt) | Non-commercial |
 | [MAME 2003](../library/mame_2003.md)						                       | [MAME (Non-commercial)](https://github.com/libretro/mame2003-libretro/blob/master/LICENSE.md)         | Non-commercial |
