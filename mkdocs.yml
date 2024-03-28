@@ -139,7 +139,7 @@ nav:
       - 'GCE Emulation':
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
       - 'Magnavox Emulation':
-        - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
+        - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
       - 'Mattel Emulation':
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
       - 'Microsoft Emulation':
@@ -201,8 +201,9 @@ nav:
         - 'NEC - PC Engine SuperGrafx (Beetle SGX)': 'library/beetle_sgx.md'
         - 'NEC - PC Engine / CD (Beetle PCE FAST)': 'library/beetle_pce_fast.md'
         - 'NEC - PC-FX (Beetle PC-FX)': 'library/beetle_pc_fx.md'
-      - 'Phillips Emulation':
-        - 'Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)': 'library/o2em.md'
+      - 'Philips Emulation':
+        - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
+        - 'Philips - P2000T (M2000)': 'library/m2000.md'
       - 'RISC-V Emulation':
         - 'RVVM - RISC-V Virtual Machine': 'library/rvvm.md'
       - 'SNK Emulation':

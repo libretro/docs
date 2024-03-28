@@ -1,4 +1,4 @@
-# Magnavox - Odyssey2 / Phillips Videopac+ (O2EM)
+# Magnavox - Odyssey2 / Philips Videopac+ (O2EM)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JvxqCJS0hyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -40,7 +40,7 @@ Content that can be loaded by the O2EM core have the following file extensions:
 RetroArch database(s) that are associated with the O2EM core:
 
 - [Magnavox - Odyssey2](https://github.com/libretro/libretro-database/blob/master/rdb/Magnavox%20-%20Odyssey2.rdb)
-- [Phillips - Videopac+](https://github.com/libretro/libretro-database/blob/master/rdb/Philips%20-%20Videopac%2B.rdb)
+- [Philips - Videopac+](https://github.com/libretro/libretro-database/blob/master/rdb/Philips%20-%20Videopac%2B.rdb)
 
 ## Features
 
