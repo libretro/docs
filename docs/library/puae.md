@@ -4,13 +4,6 @@
 
 PUAE tries to continue where E-UAE left off. PUAE versioning is based on the merged WinUAE version.
 
-E-UAE is an Amiga emulator, a program that allows you to run software
-designed for Amiga computers on other platforms, such as Linux or Mac
-OS. It is based on UAE, the original Ubiquitous Amiga Emulator, and
-WinUAE, the Windows version of UAE. While it owes a huge debt to these
-two great projects, E-UAE diverges from both, aiming to improve
-performance and features on a variety of host platforms.
-
 The PUAE core have been authored by
 
 - UAE Team
@@ -407,7 +400,11 @@ For more detailed history of WHDLoad support visit the [Github repository](https
 
 You can pass `.uae` configuration files and they will be appended to the core option configuration.
 
-If the file `puae_libretro_global.uae` exists in RetroArch `saves` it will be appended to the configuration.
+If `puae_libretro_[model].uae` exists in RetroArch `saves` it will be appended to the model preset section.
+
+If `puae_libretro_global.uae` exists in RetroArch `saves` it will be appended to the configuration.
+
+If `[content].uae` exists in RetroArch `saves` it will be appended to the configuration.
 
 The final generated configuration output is available in debug level log.
 
@@ -737,9 +734,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Adjust color gamma.
 
-- **Color Depth (Restart)** [puae_gfx_colors] (**16bit**|24bit)
-
-    '24-bit' is slower and not available on all platforms. Full restart required.
+- **Color Depth** [puae_gfx_colors] (16bit|**24bit**)
 
 ### On-Screen Display options
 
@@ -805,7 +800,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     ***Values are inverted, '80' = '20% volume'***
 
-- **Floppy Sound Mute Ejected** [puae_floppy_sound_empty_mute] (**disabled**|enabled)
+- **Floppy Sound Mute Ejected** [puae_floppy_sound_empty_mute] (disabled|**enabled**)
 
     Mute drive head clicking when floppy is not inserted.
 
@@ -907,11 +902,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Toggle Save Disk** [puae_mapper_save_disk_toggle] (**---**)
 
-- **Reset** [puae_mapper_reset] (**---**)
-
 - **Toggle Aspect Ratio** [puae_mapper_aspect_ratio_toggle] (**---**)
 
 - **Toggle Crop** [puae_mapper_crop_toggle] (**---**)
+
+- **Reset** [puae_mapper_reset] (**---**)
 
 - **RetroPad Up** [puae_mapper_up] (**---**)
 

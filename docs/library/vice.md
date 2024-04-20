@@ -135,7 +135,7 @@ Frontend-level settings or features that the VICE cores respect.
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | ✕         |
+| Multi-Mouse       | ✔         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -385,7 +385,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **RAM Expansion Unit** [vice_ram_expansion_unit] (**none**|128kB|256kB|512kB|1024kB|2048kB|4096kB|16384kB)
 
-    Changing while running resets the system!
+    Not allowed with cartridges. Changing while running resets the system!
 
 #### C64 SuperCPU specific
 
@@ -409,11 +409,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 #### C128 specific
 
-- **Model** [vice_c128_model] (**C128 PAL**|C128 NTSC|C128 DCR PAL|C128 DCR NTSC)
+- **Model** [vice_c128_model] (**C128 PAL auto**|C128 NTSC auto|C128 D PAL auto|C128 D NTSC auto|C128 DCR PAL auto|C128 DCR NTSC auto|C128 PAL|C128 NTSC|C128 D PAL|C128 D NTSC|C128 DCR PAL|C128 DCR NTSC)
+
+    'Automatic' switches region per file path tags.
 
 - **RAM Expansion Unit** [vice_c128_ram_expansion_unit] (**none**|128kB|256kB|512kB|1024kB|2048kB|4096kB|16384kB)
 
-    Changing while running resets the system!
+    Not allowed with cartridges. Changing while running resets the system!
 
 - **Video Output** [vice_c128_video_output] (**VICII**|VDC)
 
@@ -469,6 +471,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 #### Common
 
+- **Printer** [vice_printer] (**disabled**|enabled)
+
+    Output is written to 'saves/vice_printer.txt'.
+
 - **Read 'vicerc'** [vice_read_vicerc] (disabled|**enabled**)
 
     Process first found 'vicerc' in this order:
@@ -493,7 +499,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     'True Drive Emulation' required with disks!
 
-- **Warp Boost** [vice_warp_boost] (disabled|**enabled**)
+- **Warp Boost** [vice_warp_boost] (**disabled**|enabled)
 
     Make warp mode much faster by changing SID emulation to 'FastSID' while warping.
 
@@ -512,6 +518,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     Required for printer device, but causes loading issues on rare cases.
 
     Enabled forcefully by disabling 'True Drive Emulation'.
+
+- **Floppy MultiDrive** [vice_floppy_multidrive] (**disabled**|enabled)
+
+    Insert each disk in different drives. Can be forced with '(MD)' file path tag. Maximum is 4 disks due to external drive limit! Core restart required.
 
 - **Floppy Write Protection** [vice_floppy_write_protection] (**disabled**|enabled)
 
@@ -545,6 +555,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Remove borders according to 'Crop Mode'.
 
+- **Automatic Crop Delay** [vice_crop_delay] (disabled|**enabled**)
+
+    Patient or instant geometry change.
+
 - **Crop Mode** [vice_crop_mode] (**both**|horizontal|vertical|16:9|16:10|4:3|5:4)
 
     'Horizontal + Vertical' & 'Maximum' removes borders completely.
@@ -557,9 +571,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Manual Crop Right** [vice_manual_crop_right] (**0**-60)
 
-- **Color Depth (Restart)** [vice_gfx_colors] (**16bit**|24bit)
-
-    '24-bit' is slower and not available on all platforms. Full restart required.
+- **Color Depth** [vice_gfx_colors] (16bit|**24bit**)
 
 #### Color palette options
 
@@ -894,10 +906,6 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Toggle Save Disk** [vice_mapper_save_disk_toggle] (**---**)
 
-- **Reset** [vice_mapper_reset] (**RETROK_END**)
-
-- **Hold Warp Mode** [vice_mapper_warp_mode] (**---**)
-
 - **Toggle Aspect Ratio** [vice_mapper_aspect_ratio_toggle] (**---**)
 
 - **Toggle Crop** [vice_mapper_crop_toggle] (**---**)
@@ -913,6 +921,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Datasette F.FWD** [vice_mapper_datasette_forward] (**RETROK_RIGHT**)
 
 - **Datasette RESET** [vice_mapper_datasette_reset] (**---**)
+
+- **Reset** [vice_mapper_reset] (**RETROK_END**)
+
+- **Hold Warp Mode** [vice_mapper_warp_mode] (**---**)
 
 - **RetroPad Up** [vice_mapper_up] (**---**)
 
