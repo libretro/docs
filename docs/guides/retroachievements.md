@@ -222,7 +222,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         |       |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         |       |
-| [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✕         | Requires games in `nes` or `fds` subdirectories, exact archives just like arcade. Not all games may be linked for this core. |
+| [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✕         |       |
 
 #### Nintendo 64
 
