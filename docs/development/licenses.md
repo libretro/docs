@@ -59,6 +59,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Anarch](../library/anarch.md)                                                   | [CC0](https://codeberg.org/iyzsong/anarch-libretro/src/branch/master/LICENSE)             |                |
+| [Ardens](../library/ardens.md)                                       | [MIT](https://github.com/tiberiusbrown/Ardens/blob/master/LICENSE.txt)                         |                |
 | [Atari800](../library/atari800.md)               			           | [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)                         |                |
 | [Beetle bsnes](../library/beetle_bsnes.md)       			           | [GPLv2](https://github.com/libretro/beetle-bsnes-libretro/blob/master/COPYING)            |                |
 | [Beetle Cygne](../library/beetle_cygne.md)       			           | [GPLv2](https://github.com/libretro/beetle-wswan-libretro/blob/master/COPYING)            |                |
