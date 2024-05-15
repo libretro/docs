@@ -1,10 +1,12 @@
-# Downloading, Installing and Running RetroArch for iOS and tvOS devices
+# Downloading, Installing and Running RetroArch on iOS
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QMCXXabUR5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Prerequisites
 
-RetroArch is not available on the App Store. Instead, you must sideload the app onto your devices. There are 4 ways of sideloading:
+As of May 15th 2024, RetroArch is available on the App Store worldwide. 
+
+
+You can still sideload the app onto your devices if you want. There are 4 ways of sideloading:
 
 - Jailbreaking, not something covered here
 - Build RetroArch from source using Xcode, as described [here](../development/retroarch/compilation/ios.md)
@@ -17,7 +19,9 @@ RetroArch is not available on the App Store. Instead, you must sideload the app 
 
 ## Downloading
 
-Download one of the following IPA files depending on your needs:
+AppStore : https://apps.apple.com/us/app/retroarch/id6499539433
+
+Or one of the following IPA files depending on your needs:
 
 |                                                             |                                                                                                   |                                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -91,3 +95,5 @@ RetroArch on tvOS has a built-in webserver. While RetroArch is running, open a b
 ## JIT
 
 Several cores are improved by enabling JIT, while others will not work at all without it. The only way to enable JIT is to convince the OS that RetroArch is being debugged. One way of doing this is to build with Xcode, launch the app from Xcode with the debugger attached, and leave Xcode running. Another way is to use AltServer to enable JIT on RetroArch after it has been opened (but before a core has been loaded). RetroArch will also use AltKit to search on the network for a running AltServer and ask it to turn on JIT automatically.
+
+Note: JIT is not enabled on the AppStore version of RetroArch. Apple doesn't allow apps to run with JIT. Some core will not function as intended. 
