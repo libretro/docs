@@ -77,7 +77,7 @@ The gpSP core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.sav (Cartridge backup save)
+- 'content-name'.srm (Cartridge battery save)
 
 **Frontend's State directory**
 
