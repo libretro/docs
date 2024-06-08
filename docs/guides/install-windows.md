@@ -144,10 +144,6 @@ Here is the list of terms in a LibRetro, RetroArch or platform subject, field, o
 
 :   Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
 
-`system files`
-
-:   Additional files that might or not be part of the romset that might be needed to get some content to work (usually referred to by the BIOS term)
-
 `autoconf`
 
 :   A configuration file that has button definitions for a particular gamepad
