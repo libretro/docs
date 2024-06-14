@@ -143,12 +143,12 @@ input_menu_toggle_btn = "8"
 
 * Variable names ending with `_axis` define these (e.g., `input_l_x_axis`, `input_r2_axis`).
 * They represent analog inputs from the controller, like joystick position (e.g., left joystick X-axis, right joystick Y-axis) or trigger pressure (e.g., left trigger, right trigger).
-* Axis definitions use `+` and `-` to indicate positive or negative direction (e.g., full press vs. no press).
+* Axis definitions use `+` and `-` that ranges from `0`, to `10` to indicate positive or negative direction (e.g., full press vs. no press).
 
 #### Buttons (digital inputs)
 
 * These are defined by variable names ending with `_btn` (e.g., `input_a_btn`, `input_start_btn`).
-* The values assigned (like "0", "1") are IDs for your controller's buttons.
+* The assigned values (ranging from "0" to "203") are unique IDs for your controller's buttons.
 * RetroArch interprets these IDs (usually 1 for pressed, 0 for not pressed) to determine the button state.
 
 ##### D-Pad directions (special digital inputs)
