@@ -141,16 +141,20 @@ input_menu_toggle_btn = "8"
 
 #### Axes (analog inputs)
 
-Axes (variable names ending with the suffix `_axis`) in libretro autoconfigs are used for analog inputs from the controller. These axes use a continuous range of values to represent the position of the joystick (e.g., `input_l_x_axis` for the left joystick's X-axis, `input_r_y_axis` for the right joystick's Y-axis) or the pressure applied to a trigger (e.g., `input_l2_axis` for the left trigger, `input_r2_axis` for the right trigger). Axis definitions use `+`/`-` to indicate positive or negative direction (e.g., full press vs. no press).
+* Variable names ending with `_axis` define these (e.g., `input_l_x_axis`, `input_r2_axis`).
+* They represent analog inputs from the controller, like joystick position (e.g., left joystick X-axis, right joystick Y-axis) or trigger pressure (e.g., left trigger, right trigger).
+* Axis definitions use `+` and `-` to indicate positive or negative direction (e.g., full press vs. no press).
 
 #### Buttons (digital inputs)
 
-Buttons (variable names ending with the suffix `_btn`) in libretro autoconfigs use IDs (like "0", "1", "2") to identify buttons on your controller. These IDs have no inherent meaning about the pressed state (typically handled by RetroArch as 1 for pressed, 0 for not pressed). The mappings link these IDs to the buttons on the RetroPad within RetroArch (e.g., `input_b_btn = "0"` assigns the controller's B button to the B button on the RetroPad).
+* These are defined by variable names ending with `_btn` (e.g., `input_a_btn`, `input_start_btn`).
+* The values assigned (like "0", "1") are IDs for your controller's buttons.
+* RetroArch interprets these IDs (usually 1 for pressed, 0 for not pressed) to determine the button state.
 
-#### D-Pad directions (special digital inputs)
+##### D-Pad directions (special digital inputs)
 
-D-pad directions (variable names with the prefix `h0`) are also digital inputs, but they are special. These entries specify whether a particular direction on the D-pad is pressed (typically registering as a 1) or not pressed (typically registering as a 0). The h0 prefix likely refers to the first D-pad on the controller (if there's more than one).
-
+* D-pad directions use variable values beginning with `h0` (e.g., `input_up_btn = "h0up"`).
+* Four `h0` variables exist (`h0up`, `h0down`, `h0left`, `h0right`) for each direction on the D-pad.
 
 ### Input descriptors
 
