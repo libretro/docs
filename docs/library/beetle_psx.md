@@ -10,11 +10,9 @@ Notable additions in this fork are:
 - Software renderer internal resolution upscaling, implemented by simias;
 - PGXP subpixel precision, developed by iCatButler;
 
-Beetle PSX is built without hardware rendering support and lacks enhancements such as texture filtering, PGXP perspective correct texturing, and more. To take advantage of hardware rendering and the various enhancements that come with it, use Beetle PSX HW instead.
+Beetle PSX prioritizes accuracy and offers a software renderer that faithfully replicates the original PlayStation experience. However, it lacks hardware rendering capabilities.
 
-However, it's important to note that the OpenGL renderer in Beetle PSX HW can be quite buggy. There are reports of graphical glitches and rendering issues with some games ([example](https://github.com/libretro/beetle-psx-libretro/issues/900)).
-
-Fortunately, Beetle PSX HW also offers a Vulkan renderer which is generally considered much more stable and reliable, offering an experience closer to the software renderer in terms of accuracy while leveraging hardware acceleration.
+For those seeking improved visuals and performance, Beetle PSX HW provides a hardware-accelerated alternative. However, it's important to note that all games experience graphical glitches and rendering issues of varying severity with its OpenGL renderer ([example](https://github.com/libretro/beetle-psx-libretro/issues/900)). Fortunately, Beetle PSX HW offers a more stable alternative – the Vulkan renderer. This choice delivers hardware acceleration with accuracy closer to the software renderer, making it a compelling middle ground.
 
 The Beetle PSX core has been authored by
 
