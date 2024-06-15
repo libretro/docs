@@ -109,7 +109,7 @@ input_product_id = "3570"
 
 ### Mapping
 
-The second part is the mapping itself, where each button is assigned to a button of the RetroPad (the joypad abstraction of RetroArch):
+The second part is the mapping itself, where each button is assigned to a button of the RetroPad (the joypad abstraction of RetroArch).
 
 ```
 input_b_btn = "0"
@@ -138,6 +138,25 @@ input_r_y_plus_axis = "+4"
 input_r_y_minus_axis = "-4"
 input_menu_toggle_btn = "8"
 ```
+
+#### Axes (analog inputs)
+
+* Variable names ending with `_axis` define these (e.g., `input_l_x_axis`, `input_r2_axis`).
+* They represent analog inputs from the controller, like joystick position (e.g., left joystick X-axis, right joystick Y-axis) or trigger pressure (e.g., left trigger, right trigger).
+* Axis definitions use `+` and `-` to indicate positive or negative direction (e.g., full press vs. no press).
+* The current RetroArch configurations have axis values that ranges from `0` to `10`. However, if RetroArch does not limit the values to `10`, underlying controller hardware could offer an even wider range.
+
+#### Buttons (digital inputs)
+
+* These are defined by variable names ending with `_btn` (e.g., `input_a_btn`, `input_start_btn`).
+* The current RetroArch configurations have button values that ranges from `0` to `203`. However, if RetroArch does not limit the values to `203`, underlying controller hardware could offer an even wider range.
+* RetroArch interprets these IDs (usually 1 for pressed, 0 for not pressed) to determine the button state.
+
+##### D-Pad directions (special digital inputs)
+
+* D-pad directions use variable values beginning with `h0` (e.g., `input_up_btn = "h0up"`).
+* Four `h0` variables exist (`h0up`, `h0down`, `h0left`, `h0right`) for each direction on the D-pad.
+* Note: The value `h1` is used by a single controller (Nintendo_Wii_Remote_Classic_Controller.cfg).
 
 ### Input descriptors
 
