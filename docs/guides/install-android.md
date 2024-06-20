@@ -42,12 +42,7 @@ ___
 
 ### Installation via F-Droid
 ___
-This is our F-Droid app repository for RetroArch. You can add this repo via QR scanning the code below:
-
-![QR Code](../image/guides/qr-code.png).
-or by entering `https://fdroid.libretro.com` in the **F-Droid application**.
-
-You can also download older builds using `https://fdroid.libretro.com/archive` as repository URL in the F-Droid application.
+RetroArch can also be found in the F-Droid repository. You can find more information [here](https://f-droid.org/packages/com.retroarch/). 
 
 ## Download with Buildbot
 ___
