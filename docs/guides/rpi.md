@@ -127,13 +127,14 @@ For Pi 4 to enable 4K 60 Hz refresh, a line is needed in `config.txt`:
 Initially, RPi's VideoCore IV GPU (used for models earlier than RPi 4) was supported through vendor-specific Broadcom OpenGL/EGL libraries. This library is linked when `--enable-videocore` option is specified for `./configure`.
 To compile RetroArch with legacy drivers, specify the `--enable-videcore` option instead of `--disable-videocore` above. Note that this library is only available for 32-bit systems. The binaries must be present in `/opt/vc` for compilation to work. Legacy drivers (or "userland") may be installed as `libraspberrypi-dev` package, or retrieved from https://github.com/raspberrypi/userland, and installed as:
 
+    sudo apt install cmake
     git clone https://github.com/raspberrypi/userland.git
     cd userland/
     ./buildme /
 
-To start RetroArch built this way, system must be switched to "Legacy GL" driver using `raspi-config`.
+To start RetroArch built this way, system must be switched to "Legacy GL" driver using `raspi-config`. This is not possible starting from Debian 12 Bookworm, so make sure you are running an older distribution.
 In addition to this, RetroArch has a specific `dispmanx` video driver that utilizes the vendor-specific API instead of OpenGL. This video driver can be enabled with `--enable-dispmanx`, however it has only limited functionalities, in particular only RGUI is supported, and there are no widgets/overlays. As a corner case, dispmanx driver works in fake KMS mode.
-Neither dispmanx driver nor legacy GL drivers work with RetroArch in KMS mode.
+Neither dispmanx driver nor legacy GL drivers work with RetroArch in KMS mode. If you run into problems with compilation, try adding the userland to package-cfg by issuing `export PKG_CONFIG_PATH=/opt/vc/lib/pkgconfig/` before running `./configure`.
 
 ## Checking OpenGL details
 
