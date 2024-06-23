@@ -1,0 +1,2 @@
+mkdocs-macros-plugin
+mkdocs-git-revision-date-plugin
