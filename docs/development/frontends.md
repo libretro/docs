@@ -19,6 +19,7 @@ Name | Author(s) |  Description
 [Haiyajan](https://projects.deltabeard.com/haiyajan) | deltabeard | A tiny and fast libretro entertainment application. 
 [Ludo](https://github.com/libretro/ludo) | kivutar | libretro frontend written in Go.
 [Lemuroid](https://github.com/Swordfish90/Lemuroid) | Swordfish90 | All in 1 emulator on Android.
+[Merton](https://github.com/snowcone-ltd/merton) | Snowcone Ltd. | Merton is a work-in-progress emulator frontend for libretro built with [libmatoya](https://github.com/snowcone-ltd/libmatoya).
 [Mininal reference fronted](https://github.com/bparker06/reference_frontend) | bparker06 | This is a barebones minimal reference frontend for the libretro API.
 [minir](https://github.com/Alcaro/minir) | Alcaro | WIMP interface (Windows, Icons, Menus and Pointers), and only cares about the major desktop OSes. Drops flexibility in favor of improved out-of-the-box experience.
 [minir test fronts](https://github.com/Alcaro/minir/tree/master/subproj) | Alcaro | Three different fronts, none of which has IO drivers: retroprofile just runs the core, intended for performance tests and PGO; retrorepeat runs the core twice, expecting identical output; retrostateverify traces the entire core and verifies whether its savestates are perfect.
