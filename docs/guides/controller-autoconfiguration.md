@@ -41,7 +41,7 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 Make sure that you run the latest version of RetroArch, to generate a file name and file content via `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` that is up to date with our current policies.
 
 ## Controller Profiles Directory
-For the Flatpak and the Android release, you need to configure the Controller Profiles Directory in order to give RetroArch permission to save the controller profiles.
+Flatpak and Android require configuring the Controller Profiles Directory to allow RetroArch to download profile packs and save generated profiles.
 
 ### Android configuration
 
@@ -127,7 +127,8 @@ You can try to re-map missing buttons before you give up and save the controller
 ### Try the controller
 1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
 2. Make sure that your mapping is perfect by testing every button in the menu.
-3. Try all mappings by loading `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
+3. Test all mappings: Load `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Verify pressure sensitivity of analog buttons.
+4. Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
 5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
 6. Unplug your joypad an re-plug it. See if it is auto configured.
 
