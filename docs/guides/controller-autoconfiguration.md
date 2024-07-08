@@ -40,6 +40,36 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 
 Make sure that you run the latest version of RetroArch, to generate a file name and file content via `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` that is up to date with our current policies.
 
+## Controller Profiles Directory
+For the Flatpak and the Android release, you need to configure the Controller Profiles Directory in order to give RetroArch permission to save the controller profiles.
+
+### Android configuration
+
+Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
+- Create `/storage/emulated/0/RetroArch/autoconfig/android`
+- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
+
+### Flatpak configuration
+
+#### Issue with default settings
+
+The default autoconfig directory in RetroArch's Flatpak version requires root privileges. This prevents users from creating new controller profiles through the normal menu path: `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
+
+#### Solution
+To resolve this and enable custom controller profile creation, follow these steps: 
+
+1. Enable Hidden File Visibility
+* Navigate to `Main Menu -> Load Content -> File Browser`
+* Enable the option `Show Hidden Files and Directories`
+
+2. Modify Controller Profiles Directory
+* Go to `Settings -> Directory -> Controller Profiles`
+* Change the directory from the default `/app/share/libretro/autoconfig to: /home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`
+
+Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libretro.RetroArch/current/active/files/share/libretro/autoconfig/
+
+By implementing these changes, you'll be able to create and save custom controller profiles without requiring root privileges.
+
 ## Installing or updating joypad profiles
 
 ![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
@@ -47,7 +77,6 @@ Make sure that you run the latest version of RetroArch, to generate a file name 
 The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Controller Profiles` to get the latest version of the profile pack.
 
 A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
-
 
 ## Generating a joypad profile
 
@@ -83,33 +112,6 @@ input_r2_axis = "+5"
 ```
 
 This manual configuration allows the analog triggers to work properly until the bug in RetroArch's control mapping UI is fixed.
-
-### Android configuration
-
-Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
-- Create `/storage/emulated/0/RetroArch/autoconfig/android`
-- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
-
-### Flatpak configuration
-
-#### Issue with default settings
-
-The default autoconfig directory in RetroArch's Flatpak version requires root privileges. This prevents users from creating new controller profiles through the normal menu path: `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
-
-#### Solution
-To resolve this and enable custom controller profile creation, follow these steps: 
-
-1. Enable Hidden File Visibility
-* Navigate to `Main Menu -> Load Content -> File Browser`
-* Enable the option `Show Hidden Files and Directories`
-
-2. Modify Controller Profiles Directory
-* Go to `Settings -> Directory -> Controller Profiles`
-* Change the directory from the default `/app/share/libretro/autoconfig to: /home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`
-
-Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libretro.RetroArch/current/active/files/share/libretro/autoconfig/
-
-By implementing these changes, you'll be able to create and save custom controller profiles without requiring root privileges.
 
 ### Inspect the file
 
