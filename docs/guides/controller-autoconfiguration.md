@@ -45,17 +45,20 @@ For the Flatpak and the Android release, you need to configure the Controller Pr
 
 ### Android configuration
 
-Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
+#### Android issue
+Most Android phones are not rooted. Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
+
+#### Android solution
 - Create `/storage/emulated/0/RetroArch/autoconfig/android`
 - Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
 
 ### Flatpak configuration
 
-#### Issue with default settings
+#### Flatpak issue
 
 The default autoconfig directory in RetroArch's Flatpak version requires root privileges. This prevents users from creating new controller profiles through the normal menu path: `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 
-#### Solution
+#### Flatpak solution
 To resolve this and enable custom controller profile creation, follow these steps: 
 
 1. Enable Hidden File Visibility
