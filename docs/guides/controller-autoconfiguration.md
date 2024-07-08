@@ -77,10 +77,32 @@ You can try to re-map missing buttons before you give up and save the controller
 ### Try the controller
 1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
 2. Make sure that your mapping is perfect by testing every button in the menu.
-3. Try all mappings by loading `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. If not all buttons is working with RetroPad, report it, and try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
+3. Try all mappings by loading `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. For analog buttons you must manually evaluate them (see ddd). Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
 5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
 6. Unplug your joypad an re-plug it. See if it is auto configured.
 
+#### Analog L2/R2 remapping
+RetroArch has a [bug](https://github.com/libretro/RetroArch/issues/6920) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
+
+To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
+
+* Install and run jstest avalible for GNU/Linux, and Windows.
+* In GNU/Linux: jstest /dev/input/js0
+* Slowly press L2 and R2 to identify which axis numbers change
+* Note the axis numbers that correspond to L2 and R2
+* In the RetroArch config file, set:
+```
+input_l2_axis = "+X"  (where X is the L2 axis number)
+input_r2_axis = "+Y"  (where Y is the R2 axis number) 
+```
+
+For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would set:
+```
+input_l2_axis = "+2"
+input_r2_axis = "+5"
+```
+
+This manual configuration allows the analog triggers to work properly until the bug in RetroArch's control mapping UI is fixed.
 
 **Warning "Clear manual bindings"**
     It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings _before_ completing this process.
