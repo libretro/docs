@@ -70,7 +70,7 @@ To address this issue, configure RetroArch as follows:
 
 2. Modify Controller Profiles Directory
 * Go to `Settings -> Directory -> Controller Profiles`
-* Change the directory from the default `/app/share/libretro/autoconfig to: /home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`
+* Change the directory from the default `/app/share/libretro/autoconfig` to `/home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`.
 
 Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libretro.RetroArch/current/active/files/share/libretro/autoconfig/
 
