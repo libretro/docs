@@ -40,8 +40,8 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 
 Make sure that you run the latest version of RetroArch, to generate a file name and file content via `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` that is up to date with our current policies.
 
-## Controller Profiles Directory
-Both Flatpak and Android versions require adjusting the Controller Profiles Directory for optimal functionality. 
+## Change the Controller Profiles Directory to make it accessible for non-root users
+Both Flatpak and Android versions require adjusting the Controller Profiles Directory for essential functionality and proper operation.
 
 ### Android configuration
 
