@@ -40,6 +40,42 @@ Having automatically configured joypads makes it a lot easier to navigate the Re
 
 Make sure that you run the latest version of RetroArch, to generate a file name and file content via `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` that is up to date with our current policies.
 
+## Change the Controller Profiles Directory to make it accessible for non-root users
+Both Flatpak and Android versions require adjusting the Controller Profiles Directory for essential functionality and proper operation.
+
+### Android configuration
+
+#### Challenge
+Most Android devices aren't rooted, and RetroArch's default autoconfig directory requires root access. This leads to two problems:
+- Users can't save custom profiles through `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
+- Restricted File Access: Users can update controller profiles through `Main Menu -> Online Updater -> Update Controller Profiles`. However, they cannot read these files stored in /data/user/0/com.retroarch/autoconfig. Unlike GNU/Linux systems, Android's security model is designed to prevent non-root users from reading certain files or gaining root access. This limitation makes it impossible for users to compare the updated profiles with their custom-generated controller files, significantly impeding effective profile management and customization.
+
+#### Resolution
+- Create the directory `/storage/emulated/0/RetroArch/autoconfig/android`
+- In RetroArch, navigate to `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
+
+### Flatpak configuration
+ 
+#### Challenge
+The default autoconfig directory in Flatpak RetroArch requires root access, preventing users from: 
+* Downloading and extracting profiles via `Main Menu` -> `Online Updater` -> `Update Controller Profiles`.
+* Saving custom profiles through `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
+
+#### Resolution
+To address this issue, configure RetroArch as follows:
+ 
+1. Enable Hidden File Visibility
+* Navigate to `Main Menu -> Load Content -> File Browser`
+* Enable the option `Show Hidden Files and Directories`
+
+2. Modify Controller Profiles Directory
+* Go to `Settings -> Directory -> Controller Profiles`
+* Change the directory from the default `/app/share/libretro/autoconfig to: /home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`
+
+Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libretro.RetroArch/current/active/files/share/libretro/autoconfig/
+
+By implementing these changes, you'll be able to create and save custom controller profiles without requiring root privileges.
+
 ## Installing or updating joypad profiles
 
 ![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
@@ -47,7 +83,6 @@ Make sure that you run the latest version of RetroArch, to generate a file name 
 The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Controller Profiles` to get the latest version of the profile pack.
 
 A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
-
 
 ## Generating a joypad profile
 
@@ -58,31 +93,11 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 3. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`.
 4. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> `Menu Toggle`
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
-6. The new profile file will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
+6. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
+7. For analog L2/R2 triggers (pressure-sensitive triggers) you must manually edit the autoconfig file (see the [Analog L2/R2 remapping](#analog-l2r2-remapping) section) due to a bug in RetroArch.
 
-### Android configuration
-
-Android phones that are not rooted you need to run these steps in order to backup your profile files or to [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig):
-- Create `/storage/emulated/0/RetroArch/autoconfig/android`
-- Change `Settings` -> `Directory` -> `Controller Profiles` from the default value `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. The `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile` step above will now save the Android autoconfig files in `/storage/emulated/0/RetroArch/autoconfig/android`
-
-### Inspect the file
-
-Without modifying anything in the original file, open it in the file in a text editor and
-1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
-2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
-
-You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT modify the variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
-
-### Try the controller
-1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
-2. Make sure that your mapping is perfect by testing every button in the menu.
-3. Try all mappings by loading `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. For analog buttons you must manually evaluate them (see ddd). Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
-5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
-6. Unplug your joypad an re-plug it. See if it is auto configured.
-
-#### Analog L2/R2 remapping
-RetroArch has a [bug](https://github.com/libretro/RetroArch/issues/6920) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
+### Analog L2/R2 remapping
+RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
 
 To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
 
@@ -103,6 +118,22 @@ input_r2_axis = "+5"
 ```
 
 This manual configuration allows the analog triggers to work properly until the bug in RetroArch's control mapping UI is fixed.
+
+### Inspect the file
+
+Without modifying anything in the original file, open it in the file in a text editor and
+1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
+2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
+
+You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT modify the variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
+
+### Try the controller
+1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
+2. Make sure that your mapping is perfect by testing every button in the menu.
+3. Test all mappings: Load `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Verify pressure sensitivity of analog buttons.
+4. Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
+5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
+6. Unplug your joypad an re-plug it. See if it is auto configured.
 
 **Warning "Clear manual bindings"**
     It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings _before_ completing this process.
