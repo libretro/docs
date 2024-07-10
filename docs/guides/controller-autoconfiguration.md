@@ -47,8 +47,8 @@ Both Flatpak and Android versions require adjusting the Controller Profiles Dire
 
 #### Challenge
 Most Android devices aren't rooted, and RetroArch's default autoconfig directory requires root access. This leads to two problems:
-- Users can't save custom profiles through `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
-- Restricted File Access: Users can update controller profiles through `Main Menu -> Online Updater -> Update Controller Profiles`. However, they cannot read these files stored in /data/user/0/com.retroarch/autoconfig. Unlike GNU/Linux systems, Android's security model is designed to prevent non-root users from reading certain files or gaining root access. This limitation makes it impossible for users to compare the updated profiles with their custom-generated controller files, significantly impeding effective profile management and customization.
+* Users can't save custom profiles through `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
+* Restricted File Access: Users can update controller profiles through `Main Menu -> Online Updater -> Update Controller Profiles`. However, they cannot read these files stored in /data/user/0/com.retroarch/autoconfig. Unlike GNU/Linux systems, Android's security model is designed to prevent non-root users from reading certain files or gaining root access. This limitation makes it impossible for users to compare the updated profiles with their custom-generated controller files, significantly impeding effective profile management and customization.
 
 #### Resolution
 - Create the directory `/storage/emulated/0/RetroArch/autoconfig/android`
@@ -57,7 +57,7 @@ Most Android devices aren't rooted, and RetroArch's default autoconfig directory
 ### Flatpak configuration
  
 #### Challenge
-The default autoconfig directory in Flatpak RetroArch requires root access, preventing users from: 
+The default autoconfig directory in Flatpak RetroArch requires root access, preventing users from:
 * Downloading and extracting profiles via `Main Menu` -> `Online Updater` -> `Update Controller Profiles`.
 * Saving custom profiles through `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 
@@ -70,7 +70,7 @@ To address this issue, configure RetroArch as follows:
 
 2. Modify Controller Profiles Directory
 * Go to `Settings -> Directory -> Controller Profiles`
-* Change the directory from the default `/app/share/libretro/autoconfig to: /home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`
+* Change the directory from the default `/app/share/libretro/autoconfig` to `/home/youruser/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig`.
 
 Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libretro.RetroArch/current/active/files/share/libretro/autoconfig/
 
@@ -105,7 +105,7 @@ To work around this issue, you need to manually edit the RetroArch config file t
 * In GNU/Linux: jstest /dev/input/js0
 * Slowly press L2 and R2 to identify which axis numbers change
 * Note the axis numbers that correspond to L2 and R2
-* In the RetroArch config file, set:
+* In the autoconfig file, set:
 ```
 input_l2_axis = "+X"  (where X is the L2 axis number)
 input_r2_axis = "+Y"  (where Y is the R2 axis number) 
