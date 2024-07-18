@@ -132,8 +132,8 @@ You can try to re-map missing buttons before you give up and save the controller
 2. Make sure that your mapping is perfect by testing every button in the menu.
 3. To verify all controller mappings: `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Press each button once; icons change white to light green permanently. Ensure no white buttons remain. Test analog button sensitivity.
 4. 7. Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
-8. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
-9. Unplug your joypad an re-plug it. See if it is auto configured.
+5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
+6. Unplug your joypad an re-plug it. See if it is auto configured.
 
 **Warning "Clear manual bindings"**
     It is important to to skip the step of clearing manual bindings after using the `Save Controller Profile` command. In order to avoid issues using your profile in the future, remember to go to `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Reset to Default Controls` to reset the manual settings _before_ completing this process.
