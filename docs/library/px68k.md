@@ -24,7 +24,6 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 Content that can be loaded by the PX68k core have the following file extensions:
 
 - .dim
-- .zip
 - .img
 - .d88
 - .88d
@@ -35,6 +34,10 @@ Content that can be loaded by the PX68k core have the following file extensions:
 - .hdf
 - .cmd
 - .m3u
+
+**IMPORTANT NOTICE BEFORE YOU START PLAYING:**
+
+Saves are directly written to the disks being used. It is recommended to make sure to have a backup of roms before using them. This will make it easier to restore the original files incase the roms get corrupted.
 
 ## Databases
 
@@ -89,10 +92,6 @@ Frontend-level settings or features that the PX68k core respects.
 | LEDs              | ✕         |
 
 
-**IMPORTANT NOTICE BEFORE YOU START PLAYING:**
-
-**Saves are directly written to the disks used**. Make sure to have a backup of roms before using them. This will make it easier to restore the files incase the roms get corrupted.
-
 ### Directories
 
 The PX68k core's library name is 'PX68K'
@@ -111,7 +110,6 @@ The PX68k core saves/loads to/from these directories.
 
 If your game suddenly does not boot up, try deleting <system>keropi/sram.dat.
 In some cases, you may also need to delete <system>keropi/config.
-When prompted, use internal audio option if possible. All other audio/midi are not available (MT-xx, CM-xx, SC-xx etc).
 
 ### Geometry and timing
 
@@ -207,11 +205,35 @@ Games that have more than 2 disks will often require swapping disks at some poin
 
 	The starting directory for loading disks is determined by the setting StartDir in the system/keropi/config file.
 
+### MIDI
+
+MIDI support is provided through RetroArch > Settings > Audio > MIDI. Change the Output to the MIDI synthesizer installed or configured in your system. Currently the API supports Linux and Windows.
+
+A few example of software synthesizers are the following (you need to install them separately as px68k or RetroArch do not support synthesizer emulation):
+
+```
+Windows
+- Microsoft GS Synth (should be available in any windows system)
+- Nuke SC-55 (you need to use loopMIDI with it)
+- Munt
+```
+```
+Linux
+- Timidity
+- FluidSynth
+- Nuke SC-55
+- Munt (MT-32/CM-32L)
+```
+
 ## Core options
 
 The PX68k core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+- **Menu Font Size** [px68k_menufontsize] (**normal**|large)
+
+	Sets the size of the menu (F12).
 
 - **CPU Speed** [px68k_cpuspeed] (**10Mhz**|16Mhz|25Mhz|33Mhz (OC)|66Mhz (OC)|100Mhz (OC)|150Mhz (OC)|200Mhz (OC))
 
@@ -223,23 +245,35 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Use Analog** [px68k_analog] (**OFF**|ON)
 
-	Awaiting description.
+	(reserved)
 
 - **P1 Joypad Type** [px68k_joytype1] (**Default (2 Buttons)**|CPSF-MD (8 Buttons)|CPSF-SFC (8 Buttons))
 
-	Awaiting description.
+	Sets the joypad type for player 1's port.
 
 - **P2 Joypad Type** [px68k_joytype2] (**Default (2 Buttons)**|CPSF-MD (8 Buttons)|CPSF-SFC (8 Buttons))
 
-	Awaiting description.
+	Sets the joypad type for player 2's port.
+
+- **P1 Joystick Select Mapping** [px68k_joy1_select] (**Default**|XF1|XF2|XF3|XF4|XF5|OPT1|OPT2|F1|F2)
+
+	Assigns a keyboard key to joypad's SELECT button since some games use these keys as the Start or Insert Coin buttons.
+
+- **MIDI Output (Restart)** [px68k_midi_output] (disabled|**enabled**)
+
+	Enables the software MIDI. If disabled, it will use internal OPM for music, otherwise it will try use use midi software synthesizers configured. Due to missing bus-error handling in the CPU cores, its not recommended to disable this option.
+
+- **MIDI Output Type (Restart)** [px68k_midi_output_type] (LA|**GM**|GS|XG)
+
+	Sets the MIDI output type. Depending on the MIDI device attached, may initialize it on reset in different modes.
 
 - **ADPCM Volume** [px68k_adpcm_vol] (**15**|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14)
 
-	Awaiting description.
+	Controls the volume levels for the ADPCM channel.
 
 - **OPM Volume** [px68k_opm_vol] (**12**|13|14|15|0|1|2|3|4|5|6|7|8|9|10|11)
 
-	Awaiting description.
+	Controls the volume levels for the OPM channel.
 
 - **Swap Disks on Drive** [px68k_disk_drive] (**FDD1**|FDD0)
 
@@ -266,6 +300,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Frame Skip** [px68k_frameskip] (**Full Frame**|1/2 Frame|1/3 Frame|1/4 Frame|1/5 Frame|1/6 Frame|1/8 Frame1/16 Frame|1/32 Frame|1/60 Frame|Auto Frame Skip)
 
 	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+
+- **Push Video before Audio** [px68k_push_video_before_audio] (**disabled**|enabled)
+
+	Prioritize reducing video latency over audio latency and/or stuttering.
+
+- **Adjust Frame Rates** [px68k_adjust_frame_rates] (disabled|**enabled**)
+
+	For compatibility with modern displays, slightly adjust frame rates reported to frontend in order to reduce the chances of audio stuttering.  Disable to use actual frame rates.
+
+- **Audio Desync Hack** [px68k_audio_desync_hack] (**disabled**|enabled)
+
+	Prevents audio from desynchronizing by simply discarding any audio samples generated past the requested amount per frame slice.  Forces 'No Wait Mode' to [enabled], use appropriate frontend settings to properly throttle content.
 
 ## Controllers
 
