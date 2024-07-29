@@ -144,32 +144,22 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
 
 ### Default-off configs
+When creating controller configurations, it's crucial to consider potential conflicts, especially unlicensed controllers that may use the same vendor ID and product ID as original controllers. These conflicts can lead to unintended consequences, making it necessary to implement specific handling for certain controllers. To address this, we recommend using "default-off" configurations for such devices.
 
-Some third-party controller vendors may use the same vendor ID and product ID as original controllers, which can lead to conflicts. To prevent issues with commonly used devices, consider the following steps for specific controllers:
+Here's how to set up a default-off configuration:
+
 1. Append "(default-off)" to the configuration filename.
 2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
 
-This approach allows users to manually enable the configuration when needed.
+This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices.
 
-**Examples**:
-- Affected common device: Nintendo Switch Pro Controller (on Linux 5.15 and older)
-- Unlicensed controller: Data Frog P02
+**Examples of affected devices**:
+- The Nintendo Switch Pro Controller operates with distinct configuration files depending on the Linux kernel version. For Linux 5.16 and later, it utilizes one specific configuration file, while an alternate configuration file is employed for older versions of the Linux kernel.
+- Unlicensed controllers that may use the same vendor ID and product ID as original controllers (e.g., Data Frog P02)
 
-### Unlicensed controllers
-
-#### Managing generic controller identifiers
-
-Unlicensed controllers may appear with generic names like "Wireless Controller" when connected to a system. This lack of specific identification can cause file name conflicts within the autoconfig system, which relies on unique device names. To address this problem:
-1. Rename the configuration file to follow the format `[Manufacturer] [Model]`.
-2. Retain the `input_device` field with the generic identifier for system compatibility.
-3. Implement `input_device_display_name` to show a more specific title in the RetroArch interface.
-
-**Note:** The risk of naming conflicts is generally lower with licensed controllers, including those from licensed third-party vendors, but it's not entirely eliminated. Licensed controllers typically follow standardized protocols for device identification, reducing the likelihood of generic names being used. This applies to both first-party and officially licensed third-party controllers.
-
-Example of unlicensed controller: Data Frog P02 identifies as "Wireless Controller"
+By implementing default-off configs for these and similar devices, you can help ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
 
 ## Troubleshooting
-
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
 
 ## Joypad auto-configuration file
