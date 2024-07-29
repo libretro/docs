@@ -1,22 +1,32 @@
 # CRTSwitchRes
 
+[Switchres](https://github.com/antonioginer/switchres) is a modeline generation engine for emulation.
+
+Its purpose is on-the-fly creation of fully customized video modes that accurately reproduce those of the emulated systems. Based on a monitor profile, it will provide the best video mode for a given width, height, and refresh rate.
+
+The usual motivation is to connect a CRT display and have it driven in the original resolution (at least vertically), which is otherwise too low for modern display systems. The connection is typically from a digital connector (such as HDMI) on the computer side and needs an external converter for the CRT.
+
 ## Setup
 
 ### Windows 
 
-Windows works the best with CRT Emudriver, available [here](https://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning CRTSwitchRes on and choosing your settings.
+AMD video card is needed. Windows works the best with CRT Emudriver, available [here](http://geedorah.com/eiusdemmodi/forum/viewtopic.php?id=295). Once you have this setup and running, it is a simple case of turning CRTSwitchRes on and choosing your settings.
 
 Other options are available. It's a simple case of getting the resolutions installed on you Windows PC.
 
 ### Linux
 
-No pre setup required here, although X11 is a requirement at the moment. Simply install/compile RetroArch choose you CRTSwitchRes setting, and you're off.
+Switchres can work in the following environments:
+- X11
+- KMS mode
+- Raspberry Pi with legacy graphics drivers
 
 !!! note
     In some cases your distribution may be missing some X libraries in this case make sure you install the 
     following `libx11-dev libxrandr-dev`
 
-This is also compatible with Raspberry Pi, X11 is not a requirement here.
+!!! note
+    The composite output of RPi has fixed resolution and is unsuitable for custom modelines.
 
 ## Enabling and Changing Settings
 
