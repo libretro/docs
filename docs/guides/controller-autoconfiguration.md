@@ -145,7 +145,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 ### Managing generic controller identifiers
 
-Many controllers, especially those from third-party manufacturers, may be detected with non-specific names like "Wireless Controller". This can cause naming conflicts in the autoconfig system. To mitigate this issue:
+Some controllers, especially those from third-party manufacturers, may be detected with non-specific names like "Wireless Controller". This can cause naming conflicts in the autoconfig system. To mitigate this issue:
 
 1. Rename the configuration file to follow the format `[Manufacturer] [Model]`.
 2. Retain the `input_device` field with the generic identifier for system compatibility.
