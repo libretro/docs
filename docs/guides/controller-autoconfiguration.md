@@ -151,12 +151,11 @@ Many controllers, especially those from third-party manufacturers, may be detect
 2. Retain the `input_device` field with the generic identifier for system compatibility.
 3. Implement `input_device_display_name` to show a more specific title in the RetroArch interface.
 
-**Illustration**: The Data Frog P02 controller is typically recognized as "Wireless Controller".
+**Example of third-party vendor/product**: Data Frog P02
 
 ### Conflict prevention with default-off configs
 
-To avoid potential conflicts with widely-used devices, implement the following for certain controllers:
-
+Some third-party controller vendors may use the same vendor ID and product ID as original controllers, which can lead to conflicts. To prevent issues with commonly used devices, consider the following steps for specific controllers:
 1. Append "(default-off)" to the configuration filename.
 2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
 
@@ -164,7 +163,7 @@ This approach allows users to manually enable the configuration when needed.
 
 **Examples**:
 - Affected common device: Nintendo Switch Pro Controller (on Linux 5.15 and older)
-- Third-party device example: Data Frog P02
+- **Example of third-party vendor/product**: Data Frog P02
 
 ## Troubleshooting
 
