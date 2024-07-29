@@ -125,12 +125,12 @@ Without modifying anything in the original file, open it in the file in a text e
 1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
 2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
 
-You can try to re-map missing buttons before you give up and save the controller once again, but please do NOT modify the variables manually if you are going to submit your profile to our joypad profile repository; We rely on automated data to debug the autoconfig files.
+Before giving up and saving the controller again, you can attempt to re-map any missing buttons. However, please refrain from manually modifying the variables unless it's absolutely necessary due to bugs in RetroArch. If you plan to submit your profile to our joypad profile repository, we depend on automated data for debugging the autoconfig files.
 
 ### Try the controller
 1. If the controller support Bluetooth, make sure that that there's no Bluetooth latency.
 2. Make sure that your mapping is perfect by testing every button in the menu.
-3. Test all mappings: Load `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Verify pressure sensitivity of analog buttons.
+3. To verify all controller mappings: `Main Menu` -> `Load Core` -> `Start Remote RetroPad`. Press each button once; icons change white to light green permanently if they are mapped correctly. If icons remain white, try to remap them. Ensure no white buttons remain. Evaluate analog trigger responsiveness for L2 and R2. As you slowly apply pressure, a black rectangle should appear in the center of each button and gradually fade as the pressure increases. Ensure you press the triggers slowly to observe the visual feedback accurately. For Android smartphones and other devices with small displays, hold the screen closer to your eyes. This will help you see the subtle rectangle indicator, which can be difficult to spot at normal viewing distances on compact screens.
 4. Try a game in a core that uses all mappings on your controller. After you have loaded the game it's possible that you have to change the native controller to your controller in `Quick Menu` -> `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Device Index` -- for example if you want to use both thumbsticks you have to change `PS1` to `DualShock` in PlayStation cores. If it's difficult for you to find a game that uses all buttons, you can set `Settings` -> `Input` -> `Hotkeys` (for example Save state, Load state, Fastforward, and Rewind) for unused buttons, so you can evaluate all mappings.
 5. Use `Settings` -> `Inputs` -> `Port 1 Controls` -> `Reset to Default Controls` to clear manual bindings and rely on the new profile.
 6. Unplug your joypad an re-plug it. See if it is auto configured.
@@ -143,8 +143,20 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
 
-## Troubleshooting
+### Default-off configs
+When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
 
+1. When multiple autoconfig files exist for a single device, causing confusion in the system. This primarily occurs with controllers that require different configurations based on kernel versions. For example, the Nintendo Switch Pro Controller on Linux, where older kernels necessitate a different button mapping compared to newer kernels.
+2. With unlicensed controllers that mimic the vendor ID and product ID of official controllers but require their own specific autoconfig because they only partially emulate the original device's mappings. For example, the Data Frog P02 mimics a PlayStation 4 controller's vendor ID and product ID, but features a different input_menu_toggle_btn value, necessitating a unique configuration.
+
+Here's how to set up a default-off configuration:
+
+1. Append "(default-off)" to the configuration filename.
+2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
+
+This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices, and helps ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
+ 
+## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
 
 ## Joypad auto-configuration file
