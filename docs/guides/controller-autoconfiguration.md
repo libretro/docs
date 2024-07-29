@@ -143,6 +143,29 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
 
+### Managing generic controller identifiers
+
+Many controllers, especially those from third-party manufacturers, may be detected with non-specific names like "Wireless Controller". This can cause naming conflicts in the autoconfig system. To mitigate this issue:
+
+1. Rename the configuration file to follow the format `[Manufacturer] [Model]`.
+2. Retain the `input_device` field with the generic identifier for system compatibility.
+3. Implement `input_device_display_name` to show a more specific title in the RetroArch interface.
+
+**Illustration**: The Data Frog P02 controller is typically recognized as "Wireless Controller".
+
+### Conflict prevention with default-off configs
+
+To avoid potential conflicts with widely-used devices, implement the following for certain controllers:
+
+1. Append "(default-off)" to the configuration filename.
+2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
+
+This approach allows users to manually enable the configuration when needed.
+
+**Examples**:
+- Affected common device: Nintendo Switch Pro Controller (on Linux 5.15 and older)
+- Third-party device example: Data Frog P02
+
 ## Troubleshooting
 
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
