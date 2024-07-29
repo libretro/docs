@@ -164,7 +164,7 @@ Unlicensed controllers may appear with generic names like "Wireless Controller" 
 2. Retain the `input_device` field with the generic identifier for system compatibility.
 3. Implement `input_device_display_name` to show a more specific title in the RetroArch interface.
 
-**Note:** The risk of naming conflicts occurring even with licensed controllers is generally lower, but it's not entirely eliminated. Licensed controllers typically follow standardized protocols for device identification, reducing the likelihood of generic names being used.
+**Note:** The risk of naming conflicts is generally lower with licensed controllers, including those from licensed third-party vendors, but it's not entirely eliminated. Licensed controllers typically follow standardized protocols for device identification, reducing the likelihood of generic names being used. This applies to both first-party and officially licensed third-party controllers.
 
 Example of unlicensed controller: Data Frog P02 identifies as "Wireless Controller"
 
