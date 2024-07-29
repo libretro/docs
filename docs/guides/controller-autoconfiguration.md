@@ -144,21 +144,18 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
 
 ### Default-off configs
-When creating controller configurations, it's crucial to consider potential conflicts, especially unlicensed controllers that may use the same vendor ID and product ID as original controllers. These conflicts can lead to unintended consequences, making it necessary to implement specific handling for certain controllers. To address this, we recommend using "default-off" configurations for such devices.
+When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
+
+1. When multiple autoconfig files exist for a single device, causing confusion in the system. This primarily occurs with controllers that require different configurations based on kernel versions. For example, the Nintendo Switch Pro Controller on Linux, where older kernels necessitate a different button mapping compared to newer kernels.
+2. With unlicensed controllers that mimic the vendor ID and product ID of official controllers but require their own specific autoconfig because they only partially emulate the original device's mappings. For example, the Data Frog P02 mimics a PlayStation 4 controller's vendor ID and product ID, but features a different input_menu_toggle_btn value, necessitating a unique configuration.
 
 Here's how to set up a default-off configuration:
 
 1. Append "(default-off)" to the configuration filename.
 2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
 
-This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices.
-
-**Examples of affected devices**:
-- The Nintendo Switch Pro Controller operates with distinct configuration files depending on the Linux kernel version. For Linux 5.16 and later, it utilizes one specific configuration file, while an alternate configuration file is employed for older versions of the Linux kernel.
-- Unlicensed controllers that may use the same vendor ID and product ID as original controllers (e.g., Data Frog P02)
-
-By implementing default-off configs for these and similar devices, you can help ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
-
+This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices, and helps ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
+ 
 ## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
 
