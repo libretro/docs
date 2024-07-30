@@ -84,10 +84,10 @@ There is a range of variation in the logging systems available to Android device
 _Based on Stackexchange posts by Leandros and Nicolas Raoul._
 
 #### Generating Logs via Android App
-Gathering log files in Android requires a third-party app that can interface with the `logcat` system. Many free apps are available via Android's "Play Store" system.
+Gathering log files in Android requires a third-party app that can interface with the `logcat` system. Many free apps are available via Android's "Play Store" system. You can still generate RetroArch logs from the menu.
 
 ### Generating Logs in iOS
-At the moment there are no logging docs available for iOS. Please feel free to post about your situation in the libretro forums.
+You can generate RetroArch logs from the menu, and App Store installations can opt to send crash logs to the RetroArch developers for analysis, if desired.
 
 ### Generating Logs with Nintendo Switch
 
