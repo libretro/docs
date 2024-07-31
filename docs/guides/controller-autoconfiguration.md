@@ -164,9 +164,12 @@ In RetroArch, the management of controller configurations is essential for ensur
 
 #### Understanding controller names
 
-When you configure a controller in RetroArch, you can save its profile through the following path:  
-**Settings > Input > RetroPad Binds > Port 1 Controls > Save Controller Profile**.  
-This action generates a configuration file (e.g., "udev/Foo.cfg") that includes an `input_device` entry reflecting the controller's name (e.g., `input_device = Foo`). Notably, this name remains consistent across different controller drivers, including udev, sdl2, and linuxraw, as defined in **Settings > Drivers > Controller**.
+When you save a controller profile (**Settings > Input > RetroPad Binds > Port 1 Controls > Save Controller Profile**), RetroArch generates a controller name (e.g., "Foo"). This name serves two purposes:
+
+1. It becomes part of the configuration file name (e.g., "udev/Foo.cfg").
+2. It's used as the value for the `input_device` variable within the configuration file (e.g., `input_device = "Foo"`).
+
+Importantly, this name remains consistent across various controller drivers, such as udev, sdl2, and linuxraw, as specified in **Settings > Drivers > Controller**.
 
 #### Variability of controller names
 
