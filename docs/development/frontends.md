@@ -14,7 +14,6 @@ Name | Author(s) |  Description
 [BizHawk](http://tasvideos.org/BizHawk.html) | BizHawk | Experimental libretro player support for the BizHawk multi-platform emulator.
 [Emutest](https://github.com/kivutar/emutest) | kivutar | A headless libretro frontend to test libretro cores.
 [EmuVR](http://www.emuvr.net/about/) | | |
-[GNOME Games](https://wiki.gnome.org/Apps/Games) | GNOME | Games is a GNOME application to browse your video games library and to easily pick and play a game from it.
 [Hackable console](https://github.com/leiradel/hackable-console) | leiradel | Debugging tool for libretro cores.
 [Haiyajan](https://projects.deltabeard.com/haiyajan) | deltabeard | A tiny and fast libretro entertainment application. 
 [Ludo](https://github.com/libretro/ludo) | kivutar | libretro frontend written in Go.
