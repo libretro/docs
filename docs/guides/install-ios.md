@@ -86,7 +86,7 @@ The RetroArch app is sandboxed and does not have access to iCloud. The easiest w
 
 ### tvOS
 
-RetroArch on tvOS has a built-in webserver. While RetroArch is running, open a browser on your computer and open the URL that RetroArch displays. You can use the web-based UI to create subdirectories and upload or download files.
+RetroArch on tvOS has a built-in webserver. While RetroArch is running, open a browser on your computer and open the URL that RetroArch displays. You can use the web-based UI to create subdirectories and upload or download files.  Content files and folders must be placed in RetroArch's downloads folder: Apple TV/RetroArch/downloads when viewed within the web-based UI, which corresponds to ~/Library/Caches/RetroArch/downloads when viewed in RetroArch).  The Apple TV version of RetroArch cannot load games from any other location.
 
 <!-- prettier-ignore -->
 !!! Warning
