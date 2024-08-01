@@ -179,7 +179,7 @@ The controller name may change depending on the version of the system, particula
 
 The following table illustrates how the controller name for the Nintendo Switch Pro Controller varies across different Linux kernel versions, along with its HID support and corresponding autoconfig file names. As a side-note, the notation "(default-off)" indicates that the configuration is disabled by default to avoid 
 
-| Linux Kernel Version | Controller Name in RetroArch              | Nintendo Switch Pro Controller HID Support | Controller name                          |
+| Linux Kernel Version | Controller Name in RetroArch              | Nintendo Switch Pro Controller HID Support | Selected controller name for the autoconfiguration file                          |
 |----------------------|-------------------------------------------|-------------------------------------------|----------------------------------------------|
 | 5.15                 | Pro Controller                            | No                                        | Pro Controller             |
 | 5.19                 | Nintendo Switch Pro Controller            | Yes                                       |                                              |
@@ -276,8 +276,9 @@ input_menu_toggle_btn = "8"
 
 ### Input descriptors
 
-The third part are *input descriptors* used by RetroArch to display the labels of the buttons as they are written on your joypad. So if you are using a DualShock pad, RetroArch will refer to the buttons as Cross, Circle, Square and Triangle.
+The third part are *input descriptors* used by RetroArch to display the labels of the buttons as they are written on your joypad.
 
+Generic input descriptors:
 ```
 input_b_btn_label = "A"
 input_y_btn_label = "X"
@@ -304,4 +305,35 @@ input_r_x_minus_axis_label = "Right Analog X- (left)"
 input_r_y_plus_axis_label = "Right Analog Y+ (down)"
 input_r_y_minus_axis_label = "Right Analog Y- (up)"
 input_menu_toggle_btn_label = "Guide"
+```
+
+#### Sony PlayStation controllers
+
+So if you are using a Sony PlayStation controllers, RetroArch will refer to the buttons as Cross, Circle, Square and Triangle:
+```
+input_b_btn_label = "Cross"
+input_y_btn_label = "Square"
+input_select_btn_label = "Create"
+input_start_btn_label = "Options"
+input_up_btn_label = "D-Pad Up"
+input_down_btn_label = "D-Pad Down"
+input_left_btn_label = "D-Pad Left"
+input_right_btn_label = "D-Pad Right"
+input_a_btn_label = "Circle"
+input_x_btn_label = "Triangle"
+input_l_btn_label = "L1"
+input_r_btn_label = "R1"
+input_l2_axis_label = "L2"
+input_r2_axis_label = "R2"
+input_l3_btn_label = "L3"
+input_r3_btn_label = "R3"
+input_l_x_plus_axis_label = "Left Analog X+ (right)"
+input_l_x_minus_axis_label = "Left Analog X- (left)"
+input_l_y_plus_axis_label = "Left Analog Y+ (down)"
+input_l_y_minus_axis_label = "Left Analog Y- (up)"
+input_r_x_plus_axis_label = "Right Analog X+ (right)"
+input_r_x_minus_axis_label = "Right Analog X- (left)"
+input_r_y_plus_axis_label = "Right Analog Y+ (down)"
+input_r_y_minus_axis_label = "Right Analog Y- (up)"
+input_menu_toggle_btn_label = "PS"
 ```
