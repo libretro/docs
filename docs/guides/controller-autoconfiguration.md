@@ -256,7 +256,7 @@ input_r_y_minus_axis = "-4"
 input_menu_toggle_btn = "8"
 ```
 
-Note: These values are examples and should not be directly copied to your configuration file without verification.
+Note: These variable values are examples and should not be directly copied to your configuration file.
 
 #### Overview
 
@@ -284,7 +284,7 @@ input_l2_axis = "+2"
 input_r2_axis = "+5"
 ```
 
-Note: These values are examples and should not be directly copied to your configuration file without verification.
+Note: These variable values are examples and should not be directly copied to your configuration file.
 
 ###### Label variables
 The term "Analog" is included in the variable values for the analog inputs to clearly indicate that these inputs are analog in nature.
