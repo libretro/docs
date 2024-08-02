@@ -49,7 +49,7 @@ Enter the following commands (from the PCSX2 source directory):
     cmake -B build -G "Visual Studio 17 2022" -DCMAKE_BUILD_TYPE=Release -DLIBRETRO=ON
     cmake --build build --config Release --target pcsx2_libretro
 
-# How to compile (for Linux)
+## How to compile (for Linux)
 
 Enter the following commands (from the PCSX2 source directory):
 
