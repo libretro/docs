@@ -158,28 +158,44 @@ Here's how to set up a default-off configuration:
 
 This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices, and helps ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
 
-### Controller name scheme
+### Device Index scheme for autoconfig files
 
-In RetroArch, the management of controller configurations is essential for ensuring proper functionality across various systems. This guide outlines how controller names are generated and how they can vary based on the Linux kernel version in GNU/Linux distributions.
+In RetroArch, the management of controller configurations is essential for ensuring proper functionality across various systems. This guide outlines how the Device Index are generated and how they can vary based on the Linux kernel version in GNU/Linux distributions.
 
-#### Understanding controller names
+#### Understanding the Device Index
 
-When you save a controller profile (**Settings > Input > RetroPad Binds > Port 1 Controls > Save Controller Profile**), RetroArch generates a controller name (e.g., "Foo"). This name serves two purposes:
+RetroArch identifies physical controllers through a system called the Device Index. You can locate this identifier by navigating to:
 
-1. It becomes part of the configuration file name (e.g., "udev/Foo.cfg").
-2. It's used as the value for the `input_device` variable within the configuration file (e.g., `input_device = "Foo"`).
+**Settings > Input > RetroPad Binds > Port 1 Binds > Device Index**
+
+The Device Index plays a crucial role when saving a controller profile. To save a profile, follow this path:
+
+**Settings > Input > RetroPad Binds > Port 1 Controls > Save Controller Profile**
+
+
+### Dual function of the Device Index
+
+When you save a controller profile, the Device Index serves two important purposes:
+
+1. **Configuration File Naming**: It becomes an integral part of the configuration file's name. For example, if the Device Index is "Foo", the configuration file might be named "udev/Foo.cfg".
+
+2. **Input Device Identification**: Within the configuration file itself, the Device Index is used as the value for the `input_device` variable. Following our example, you would see a line like this in the file:
+
+   `input_device = "Foo"`
+
+This dual functionality ensures that RetroArch can correctly identify and apply the appropriate settings for each unique controller.
 
 Importantly, this name remains consistent across various controller drivers, such as udev, sdl2, and linuxraw, as specified in **Settings > Drivers > Controller**.
 
-#### Variability of controller names
+#### Variability of the Device Index
 
-The controller name may change depending on the version of the system, particularly the Linux kernel version. To ensure compatibility, we utilize the most recent controller name that is supported by the system.
+The Device Index may change depending on the version of the system, particularly the Linux kernel version. To ensure compatibility, we utilize the most recent Device Index that is supported by the system.
 
 #### Example: Nintendo Switch Pro Controller on GNU/Linux
 
-The following table illustrates how the controller name for the Nintendo Switch Pro Controller varies across different Linux kernel versions, along with its HID support and corresponding autoconfig file names. As a side-note, the notation "(default-off)" indicates that the configuration is disabled by default to avoid 
+The following table illustrates how the Device Index for the Nintendo Switch Pro Controller varies across different Linux kernel versions, along with its HID support and corresponding autoconfig file names. As a side-note, the notation "(default-off)" indicates that the configuration is disabled by default to avoid 
 
-| Linux Kernel Version | Controller Name in RetroArch              | Nintendo Switch Pro Controller HID Support | Selected controller name for the autoconfiguration file                          |
+| Linux Kernel Version | Device Index in RetroArch              | Nintendo Switch Pro Controller HID Support | Selected Device Index for the autoconfiguration file                          |
 |----------------------|-------------------------------------------|-------------------------------------------|----------------------------------------------|
 | 5.15                 | Pro Controller                            | No                                        | Pro Controller             |
 | 5.19                 | Nintendo Switch Pro Controller            | Yes                                       |                                              |
@@ -190,7 +206,7 @@ The following table illustrates how the controller name for the Nintendo Switch 
 
 ###### Pro Controller (default-off).cfg
 ```
-# This file uses the legacy controller name "Pro Controller" (generated by RetroArch on Linux 5.15)
+# This file uses the legacy Device Index "Pro Controller" (generated by RetroArch on Linux 5.15)
 # "(default-off)" was added to the file name to indicate that the autoconfig file is not active by default. See comments for input_vendor_id and input_product_id.
 input_device = "Pro Controller"
 # Due to the uncommon nature of this device, the autoconfig file is not active by default. This precaution is taken to avoid potential conflicts with the widely-used Nintendo Switch Pro Controller (nintendo-hid version) file. Button layouts are not compatible. To activate this configuration:
