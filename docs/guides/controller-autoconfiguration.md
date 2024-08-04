@@ -7,18 +7,17 @@ When you connect a new controller to RetroArch, the system attempts to automatic
 The matching algorithm considers several key factors:
 
 - **Controller driver (input_driver)**: The software interface used to communicate with the controller. To use a specific driver, RetroArch must be configured accordingly by navigating to **Settings -> Drivers -> Controller**.
-- **Device Index (input_device)**: The name of the controller as recognized by the system.
+- **Device Index (input_device)**: The name of the controller as recognized by the system. The **Device Index** can be identified by navigating to **Settings -> Input -> RetroPad Binds -> Port 1 Controls**.
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
 RetroArch evaluates each of these factors against its database of controller profiles. It then calculates a matching score for each profile, with the highest-scoring profile being selected to configure the controller.
 
-It's important to note an exception involving the linuxraw driver. This driver uses an interface that does not provide Vendor ID (VID) and Product ID (PID) information. Instead, it only supplies a device name, which can be accessed using the `JSIOCGNAME` ioctl command from the Linux kernel. As a result, matching for controllers using the linuxraw driver relies more heavily on the device name rather than the usual vid:pid identifiers.
+RetroArch automatically utilizes the linuxraw driver, which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
 
 It's worth noting that the Vendor ID and Product ID pair is often abbreviated as "vid:pid" in technical discussions.
 
 This matching system allows RetroArch to support a wide range of controllers while minimizing the need for manual configuration in most cases.
-
 
 ## Why is it needed?
 
