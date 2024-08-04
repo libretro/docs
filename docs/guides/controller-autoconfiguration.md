@@ -1,18 +1,24 @@
 # Joypad Auto Configuration
 
-## How does matching work?
+## How does RetroArch match controllers?
 
-RetroArch is shipped with a set of configuration files for the most common joypads. When you plug a joypad for the first time, we try to find a matching profile in our set.
+When you connect a new controller to RetroArch, the system attempts to automatically configure it by matching it to known profiles. This matching process is crucial for ensuring that your controller works correctly with various games and emulators.
 
-The matching algorithm considers three criteria:
+The matching algorithm considers several key factors:
 
-   - Device name
-   - Vendor ID
-   - Product ID
+- **Controller driver (input_driver)**: The software interface used to communicate with the controller. To use a specific driver, RetroArch must be configured accordingly by navigating to **Settings -> Drivers -> Controller**.
+- **Device Index (input_device)**: The name of the controller as recognized by the system.
+- **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
+- **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-We compute a matching score for each configuration file based on these three factors. The profile with the highest score is chosen to configure the pad.
+RetroArch evaluates each of these factors against its database of controller profiles. It then calculates a matching score for each profile, with the highest-scoring profile being selected to configure the controller.
 
-**Note**: The **Vendor ID** and **Product ID** pair is often abbreviated as **vid:pid**.
+It's important to note an exception involving the linuxraw driver. This driver uses an interface that does not provide Vendor ID (VID) and Product ID (PID) information. Instead, it only supplies a device name, which can be accessed using the `JSIOCGNAME` ioctl command from the Linux kernel. As a result, matching for controllers using the linuxraw driver relies more heavily on the device name rather than the usual vid:pid identifiers.
+
+It's worth noting that the Vendor ID and Product ID pair is often abbreviated as "vid:pid" in technical discussions.
+
+This matching system allows RetroArch to support a wide range of controllers while minimizing the need for manual configuration in most cases.
+
 
 ## Why is it needed?
 
