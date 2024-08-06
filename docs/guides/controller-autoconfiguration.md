@@ -123,9 +123,16 @@ input_l2_axis = "+2"
 input_r2_axis = "+5"
 ```
 
-**Note:** When modifying the config file, ensure you add new lines for "input_l2_axis" and "input_r2_axis" rather than changing existing "input_l2_btn" or "input_r2_btn" entries. The "_axis" suffix is crucial for proper analog functionality.
- 
-This manual configuration allows the analog triggers to work properly until the bug in RetroArch's control mapping UI is fixed.
+When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves.
+
+1. **Variable Replacement:** 
+   - Replace `input_l2_btn` with `input_l2_axis`
+   - Replace `input_r2_btn` with `input_r2_axis`
+2. **Suffix Importance:** 
+   The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
+3. **Common Pitfall:** Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
+By carefully updating both the variable names and values, you can ensure that your analog triggers are correctly configured for optimal performance.
+
 
 ### Inspect the file
 
