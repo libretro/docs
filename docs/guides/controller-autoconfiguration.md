@@ -153,7 +153,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
 
 1. When multiple autoconfig files exist for a single device, causing confusion in the system. This primarily occurs with controllers that require different configurations based on kernel versions. For example, the Nintendo Switch Pro Controller on Linux, where older kernels necessitate a different button mapping compared to newer kernels.
-2. With unlicensed controllers that mimic the vendor ID and product ID of official controllers but require their own specific autoconfig because they only partially emulate the original device's mappings. For example, the Data Frog P02 mimics a PlayStation 4 controller's vendor ID and product ID, but features a different input_menu_toggle_btn value, necessitating a unique configuration.
+2. With poorly constructed unlicensed controllers. Even a single mismatched button can break compatibility, necessitating custom configuration.
 
 Here's how to set up a default-off configuration:
 
