@@ -102,7 +102,7 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 7. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
 8. For analog L2/R2 triggers (pressure-sensitive triggers) you must manually edit the autoconfig file (see the [Analog L2/R2 remapping](#analog-l2r2-remapping) section) due to a bug in RetroArch.
 
-### Analog L2/R2 remapping
+### Manual analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
 
 To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
@@ -114,25 +114,40 @@ To work around this issue, you need to manually edit the RetroArch config file t
 * In the autoconfig file, set:
 ```
 input_l2_axis = "+X"  (where X is the L2 axis number)
-input_r2_axis = "+Y"  (where Y is the R2 axis number) 
+input_r2_axis = "+Y"  (where Y is the R2 axis number)
+
+input_l2_axis_label = "L2 Analog"
+input_r2_axis_label = "R2 Analog"
 ```
 
-For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would set:
+For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would:
+
+Replace:
+```
+input_l2_btn = "6"
+input_r2_btn = "7"
+
+input_l2_btn_label = "L2"
+input_r2_btn_label = "R2"
+
+```
+
+With
 ```
 input_l2_axis = "+2"
 input_r2_axis = "+5"
+
+input_l2_axis_label = "L2 Analog"
+input_r2_axis_label = "R2 Analog"
 ```
 
-When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves.
+Note: These variable values are examples and should not be directly copied to your configuration file.
 
-1. **Variable Replacement:** 
-   - Replace `input_l2_btn` with `input_l2_axis`
-   - Replace `input_r2_btn` with `input_r2_axis`
-2. **Suffix Importance:** 
-   The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
-3. **Common Pitfall:** Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
+When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves. The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
+
+####Common Pitfall
+Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
 By carefully updating both the variable names and values, you can ensure that your analog triggers are correctly configured for optimal performance.
-
 
 ### Inspect the file
 
