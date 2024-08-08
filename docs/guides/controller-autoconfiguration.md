@@ -13,7 +13,7 @@ The matching algorithm considers several key factors:
 
 RetroArch evaluates each of these factors against its database of controller profiles. It then calculates a matching score for each profile, with the highest-scoring profile being selected to configure the controller.
 
-RetroArch automatically utilizes the linuxraw driver, which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
+linuxraw is specifically an input driver option within RetroArch, and not a standalone component used by other software like sdl2, or udev. However, linuxraw which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
 
 It's worth noting that the Vendor ID and Product ID pair is often abbreviated as "vid:pid" in technical discussions.
 
