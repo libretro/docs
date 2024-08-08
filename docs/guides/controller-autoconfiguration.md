@@ -13,7 +13,7 @@ The matching algorithm considers several key factors:
 
 RetroArch evaluates each of these factors against its database of controller profiles. It then calculates a matching score for each profile, with the highest-scoring profile being selected to configure the controller.
 
-RetroArch automatically utilizes the linuxraw driver, which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
+linuxraw is specifically an input driver option within RetroArch, and not a standalone component used by other software like sdl2, or udev. However, linuxraw which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
 
 It's worth noting that the Vendor ID and Product ID pair is often abbreviated as "vid:pid" in technical discussions.
 
@@ -102,7 +102,7 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 7. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
 8. For analog L2/R2 triggers (pressure-sensitive triggers) you must manually edit the autoconfig file (see the [Analog L2/R2 remapping](#analog-l2r2-remapping) section) due to a bug in RetroArch.
 
-### Analog L2/R2 remapping
+### Manual analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
 
 To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
@@ -114,16 +114,40 @@ To work around this issue, you need to manually edit the RetroArch config file t
 * In the autoconfig file, set:
 ```
 input_l2_axis = "+X"  (where X is the L2 axis number)
-input_r2_axis = "+Y"  (where Y is the R2 axis number) 
+input_r2_axis = "+Y"  (where Y is the R2 axis number)
+
+input_l2_axis_label = "L2 Analog"
+input_r2_axis_label = "R2 Analog"
 ```
 
-For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would set:
+For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would:
+
+Replace:
+```
+input_l2_btn = "6"
+input_r2_btn = "7"
+
+input_l2_btn_label = "L2"
+input_r2_btn_label = "R2"
+
+```
+
+With
 ```
 input_l2_axis = "+2"
 input_r2_axis = "+5"
+
+input_l2_axis_label = "L2 Analog"
+input_r2_axis_label = "R2 Analog"
 ```
 
-This manual configuration allows the analog triggers to work properly until the bug in RetroArch's control mapping UI is fixed.
+Note: These variable values are examples and should not be directly copied to your configuration file.
+
+When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves. The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
+
+####Common Pitfall
+Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
+By carefully updating both the variable names and values, you can ensure that your analog triggers are correctly configured for optimal performance.
 
 ### Inspect the file
 
@@ -153,7 +177,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
 
 1. When multiple autoconfig files exist for a single device, causing confusion in the system. This primarily occurs with controllers that require different configurations based on kernel versions. For example, the Nintendo Switch Pro Controller on Linux, where older kernels necessitate a different button mapping compared to newer kernels.
-2. With unlicensed controllers that mimic the vendor ID and product ID of official controllers but require their own specific autoconfig because they only partially emulate the original device's mappings. For example, the Data Frog P02 mimics a PlayStation 4 controller's vendor ID and product ID, but features a different input_menu_toggle_btn value, necessitating a unique configuration.
+2. With poorly constructed unlicensed controllers. Even a single mismatched button can break compatibility, necessitating custom configuration.
 
 Here's how to set up a default-off configuration:
 
@@ -305,7 +329,7 @@ input_l2_axis = "+2"
 input_r2_axis = "+5"
 ```
 
-Note: These variable values are examples and should not be directly copied to your configuration file.
+Note: A common mistake These variable values are examples and should not be directly copied to your configuration file.
 
 ###### Label variables
 The term "Analog" is included in the variable values for the analog inputs to clearly indicate that these inputs are analog in nature.
