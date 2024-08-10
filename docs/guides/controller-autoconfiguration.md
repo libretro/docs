@@ -277,7 +277,7 @@ In the above list, three unique Device Index entries are identified, which requi
   - Comment above input_device: [1]
   - Variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
 
-1: `# The files "Nintendo Co., Ltd. Pro Controller.cfg" and "Nintendo Switch Pro Controller.cfg" are the same except for the input_devicevariable. This difference allows thelinuxraw driver to recognize the controller on various Linux kernel versions. If you modify this file, wait for the PR to be approved, then update this file too to ensure they function identically.`
+1: `# The files "Nintendo Co., Ltd. Pro Controller.cfg" and "Nintendo Switch Pro Controller.cfg" should have identical content except for the input_devicevariable. This difference allows thelinuxraw driver to recognize the controller on various Linux kernel versions.`
 
 ## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
