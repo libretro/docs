@@ -232,11 +232,17 @@ The Device Index may vary depending on the system version, particularly the Linu
 | 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller |
 
 In the above list, three unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for linuxraw:
-- `Pro Controller.cfg` with variable: `input_device = "Pro Controller"`
-- `Nintendo Switch Pro Controller.cfg` with variable: `input_device = "Nintendo Switch Pro Controller"`
-- `Nintendo Co., Ltd. Pro Controller.cfg` with variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
-
-*Note: The rest of the file should be a copy of the previous entry, `Nintendo Switch Pro Controller.cfg`, since both have HID support.*
+- **Pro Controller.cfg**: 
+  - Variable: `input_device = "Pro Controller"`
+  
+- **Nintendo Switch Pro Controller.cfg**: 
+  - Comment above input_device: `# "Nintendo Co., Ltd. Pro Controller.cfg", and "Nintendo Switch Pro Controller.cfg", are copies except for the `input_device` variable value, which is modified to ensure the `linuxraw` driver can detect the controller across various Linux kernel versions.`
+  - Variable: `input_device = "Nintendo Switch Pro Controller"`
+  
+- **Nintendo Co., Ltd. Pro Controller.cfg**: 
+  - Comment above input_device: `# "Nintendo Co., Ltd. Pro Controller.cfg", and "Nintendo Switch Pro Controller.cfg", are copies except for the `input_device` variable value, which is modified to ensure the `linuxraw` driver can detect the controller across various Linux kernel versions.`
+  - Variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
+  - The rest of the file should be a copy of the previous entry, `Nintendo Switch Pro Controller.cfg`, since both have HID support.
 
 ## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
