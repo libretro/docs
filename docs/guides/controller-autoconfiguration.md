@@ -66,8 +66,13 @@ Most Android devices are not rooted, and RetroArch's default autoconfig director
 - This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
 
 #### Addressing controller navigation issues on non-touchscreen devices
+If your controller lacks an existing autoconfiguration or if the fallback configuration is ineffective, you may encounter issues with the following components:
 
-If your controller lacks an existing autoconfig or fallback configuration, or if the autoconfig is only partially functional—missing settings for the DPAD and "OK" button—you won't be able to use the controller to navigate to `Settings -> Input -> RetroPad Binds -> Port 1 Controls` and select `Set All Controls` and `Save Controller Profile`. This isn't an issue for typical Android devices like smartphones and tablets, as you can still navigate using the touchscreen. However, in Google TV (an Android-based OS used by Chromecast), where a touchscreen isn't available, this becomes problematic. Additionally, Chromecast's voice remote control lacks an autoconfig and is incompatible with RetroArch navigation. Even if your controller has a touchpad, it is ineffective because the touchpad button doesn't work (PS4/PS5 controllers tested), and the cursor remains invisible due to a [bug](https://github.com/libretro/RetroArch/issues/16853).
+* **DPAD**: Essential for navigating menus.
+* **OK**: Necessary for applying settings, such as navigating to `Settings -> Input -> RetroPad Binds -> Port 1 Controls`, and selecting `Set All Controls` and `Save Controller Profile`.
+* **Back**: Needed to return to `Main Menu -> Quit` after configuring `Settings -> Directory -> Controller Profiles`, ensuring the settings are saved to retroarch.cfg.
+
+While these issues are not problematic for typical Android devices like smartphones and tablets, which offer touchscreen navigation, they become significant on Google TV (an Android-based OS used by Chromecast) where a touchscreen is unavailable. Additionally, Chromecast's voice remote control lacks autoconfiguration and is incompatible with RetroArch navigation. Even controllers with touchpads are ineffective, as the touchpad button does not function (as observed with PS4/PS5 controllers), and the cursor remains invisible due to a known [bug](https://github.com/libretro/RetroArch/issues/16853).
 
 **Proposed Solution:**
 
@@ -80,8 +85,13 @@ To resolve this issue, follow these steps:
     ```
 
 - **Set Up a Fallback Configuration:**
-  - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings:
+  - Find the Product ID and Vendor ID of your controller
+  - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings (don't forget to replace `input_vendor_id = "[XXXX]"` and `input_product_id = "[YYYY]"` with the values of your controller:
 ```
+input_driver = "android"
+input_device = "Fallback device"
+input_vendor_id = "[XXXX]"
+input_product_id = "[YYYY]"
 input_b_btn = "96"
 input_y_btn = "97"
 input_select_btn = "98"
