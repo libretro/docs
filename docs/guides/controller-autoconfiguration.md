@@ -84,6 +84,11 @@ To resolve this issue, follow these steps:
     joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
     ```
 
+Optionally, temporarily connect another controller with a functioning autoconfig "Back" button and adjust the Controller Profiles directory: 
+- `Settings -> Directory -> Controller Profiles`.
+- `Main Menu -> Quit` -- ensuring the settings are saved to retroarch.cfg.
+- Disconnect the controller from BlueTooth.
+
 - **Set Up a Fallback Configuration:**
   - Identify the Product ID and Vendor ID of your controller: Ensure that the directory /storage/emulated/0/RetroArch/autoconfig/ remains empty, then restart RetroArch. This action will compel RetroArch to enter fallback mode, displaying a message like "[Controller name] ([Vendor ID]/[Product ID]) not configured, using fallback". Record the four-digit numbers for both IDs.
   - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings (don't forget to replace `input_vendor_id = "[Vendor ID]"` and `input_product_id = "[Product ID]"` with the values of your controller:
