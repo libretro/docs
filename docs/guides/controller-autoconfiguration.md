@@ -83,9 +83,9 @@ To resolve this issue, follow these steps:
 
 - **Create a Custom Configuration File:**
   - Create the file `retroarch.cfg` in the directory `/storage/emulated/0/Android/com.retroarch/files/retroarch.cfg` with the following line:
-    ```
-    joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
-    ```
+```
+joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
+```
 
 - **Set Up a Fallback Configuration:**
   - Identify the Product ID and Vendor ID of your controller: Ensure that the directory /storage/emulated/0/RetroArch/autoconfig/ remains empty, then restart RetroArch. This action will compel RetroArch to enter fallback mode, displaying a message like "[Controller name] ([Vendor ID]/[Product ID]) not configured, using fallback". Record the four-digit numbers for both IDs.
