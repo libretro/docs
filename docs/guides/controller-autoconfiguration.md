@@ -66,11 +66,14 @@ Most Android devices are not rooted, and RetroArch's default autoconfig director
 - This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
 
 #### Addressing controller navigation issues on non-touchscreen devices
-If your controller lacks an existing autoconfiguration or if the fallback configuration is ineffective, you may encounter issues with the following components:
+Your controller will use the Controller Profile directory `/data/user/0/com.retroarch/autoconfig` by default in Android. Any autoconfig file that mathces your controller (Vendor ID/Product ID) be used by RetroArch automatically. However, you will not be able to generate a **new** autoconfig file for your controller if a default autoconfig file encounter issues with the following components:
 
 * **DPAD**: Essential for navigating menus.
 * **OK**: Necessary for applying settings, such as navigating to `Settings -> Input -> RetroPad Binds -> Port 1 Controls`, and selecting `Set All Controls` and `Save Controller Profile`.
-* **Back**: Needed to return to `Main Menu -> Quit` after configuring `Settings -> Directory -> Controller Profiles`, ensuring the settings are saved to retroarch.cfg.
+* **Back**: Needed to return to `Main Menu -> Quit` after configuring `Settings -> Directory -> Controller Profiles`, ensuring the settings are saved to retroarch.cfg. Workaround if you have access to another controller: Temporarily connect another controller with a functioning autoconfig "Back" button and adjust the Controller Profiles directory:
+  - `Settings -> Directory -> Controller Profiles`.
+  - `Main Menu -> Quit` -- ensuring the settings are saved to retroarch.cfg.
+  - Disconnect the controller from BlueTooth.
 
 While these issues are not problematic for typical Android devices like smartphones and tablets, which offer touchscreen navigation, they become significant on Google TV (an Android-based OS used by Chromecast) where a touchscreen is unavailable. Additionally, Chromecast's voice remote control lacks autoconfiguration and is incompatible with RetroArch navigation. Even controllers with touchpads are ineffective, as the touchpad button does not function (as observed with PS4/PS5 controllers), and the cursor remains invisible due to a known [bug](https://github.com/libretro/RetroArch/issues/16853).
 
@@ -83,11 +86,6 @@ To resolve this issue, follow these steps:
     ```
     joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
     ```
-
-Optionally, temporarily connect another controller with a functioning autoconfig "Back" button and adjust the Controller Profiles directory: 
-- `Settings -> Directory -> Controller Profiles`.
-- `Main Menu -> Quit` -- ensuring the settings are saved to retroarch.cfg.
-- Disconnect the controller from BlueTooth.
 
 - **Set Up a Fallback Configuration:**
   - Identify the Product ID and Vendor ID of your controller: Ensure that the directory /storage/emulated/0/RetroArch/autoconfig/ remains empty, then restart RetroArch. This action will compel RetroArch to enter fallback mode, displaying a message like "[Controller name] ([Vendor ID]/[Product ID]) not configured, using fallback". Record the four-digit numbers for both IDs.
