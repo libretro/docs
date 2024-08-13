@@ -62,7 +62,59 @@ Most Android devices are not rooted, and RetroArch's default autoconfig director
 
 **Resolution:**
 - Create the directory `/storage/emulated/0/RetroArch/autoconfig/android`.
-- In RetroArch, change the directory path under `Settings` -> `Directory` -> `Controller Profiles` from `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`. This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
+- In RetroArch, change the directory path under `Settings` -> `Directory` -> `Controller Profiles` from `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`.
+- This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
+
+#### Addressing controller navigation issues on non-touchscreen devices
+
+If your controller lacks an existing autoconfig or fallback configuration, or if the autoconfig is only partially functional—missing settings for the DPAD and "OK" button—you won't be able to use the controller to navigate to `Settings -> Input -> RetroPad Binds -> Port 1 Controls` and select `Set All Controls` and `Save Controller Profile`. This isn't an issue for typical Android devices like smartphones and tablets, as you can still navigate using the touchscreen. However, in Google TV (an Android-based OS used by Chromecast), where a touchscreen isn't available, this becomes problematic. Additionally, Chromecast's voice remote control lacks an autoconfig and is incompatible with RetroArch navigation. Even if your controller has a touchpad, it is ineffective because the touchpad button doesn't work (PS4/PS5 controllers tested), and the cursor remains invisible due to a [bug](https://github.com/libretro/RetroArch/issues/16853).
+
+**Proposed Solution:**
+
+To resolve this issue, follow these steps:
+
+- **Create a Custom Configuration File:**
+  - Create the file `retroarch.cfg` in the directory `/storage/emulated/0/Android/com.retroarch/files/retroarch.cfg` with the following line:
+    ```
+    joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
+    ```
+
+- **Set Up a Fallback Configuration:**
+  - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings:
+```
+input_b_btn = "96"
+input_y_btn = "97"
+input_select_btn = "98"
+input_start_btn = "99"
+input_up_btn = "h0up"
+input_down_btn = "h0down"
+input_left_btn = "h0left"
+input_right_btn = "h0right"
+input_a_btn = "100"
+input_x_btn = "101"
+input_l_btn = "102"
+input_r_btn = "103"
+input_l2_btn = "104"
+input_r2_btn = "105"
+input_l3_btn = "106"
+input_r3_btn = "107"
+input_l_x_plus_axis = "+0"
+input_l_x_minus_axis = "-0"
+input_l_y_plus_axis = "+1"
+input_l_y_minus_axis = "-1"
+input_r_x_plus_axis = "+2"
+input_r_x_minus_axis = "-2"
+input_r_y_plus_axis = "+3"
+input_r_y_minus_axis = "-3"
+```
+
+- **Launch RetroArch:**
+  - Start the RetroArch application.
+
+- **Button Testing:**
+  - Test the controller buttons to identify which ones correspond to the "OK" and "Back" functions. This will allow you to navigate and temporarily reconfigure RetroArch.
+
+By applying this solution, you allow your controller to configure RetroArch, enabling navigation to Settings -> Input -> RetroPad Binds -> Port 1 Controls and the selection of Set All Controls and Save Controller Profile. This setup also permits the saving of autoconfig files in the directory /storage/emulated/0/RetroArch/autoconfig/android.
 
 ### Flatpak Configuration
 
