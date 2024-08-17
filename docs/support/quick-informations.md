@@ -31,6 +31,7 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 	- [YouTube Membership](https://www.youtube.com/channel/UCjAimkVp-G_o6HK5MXujk9A/join)
 	- [Liberapay](https://liberapay.com/Libretro/donate)
 	- [BountySource](https://salt.bountysource.com/checkout/amount?team=libretro)
+ 	- [Service status](https://mnt.gds.im/status/retroarch)
 
 === "Video"
 
