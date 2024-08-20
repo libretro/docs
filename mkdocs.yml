@@ -1,12 +1,15 @@
+%YAML 1.2
+---
 site_name: Libretro Docs
 site_url: 'https://docs.libretro.com/'
-site_description: >-
-  This is RetroArch's document page, modification or development information outside of this repo may be incorrect.
+site_description: >-2
+  This is the official RetroArch documentation for users and developers.
+  Information from sources outside of this website may be dated or incorrect.
 repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
-copyright: >
-  Copyright &copy; 2010-2024 Libretro –
+copyright: >2
+  Copyright &copy; 2010–2024 Libretro. –
   <a href="#__consent">Change cookie settings</a>
 nav:
   - 'About': 'index.md'
@@ -48,12 +51,15 @@ nav:
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
+      - 'Starting a Game': 'guides/starting-a-game.md'
       - 'Controller Auto-Configuration': 'guides/controller-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
       - 'Core List': 'guides/core-list.md'
       - 'Directory Configuration': 'guides/change-directories.md'
       - 'File Browser': 'guides/file-browser.md'
       - 'Launching Content': 'guides/launch-content.md'
+      - 'Menu Styles': 'guides/gui.md'
+      - 'Quick Menu': 'guides/quick-menu.md'
       - 'Importing Content': 'guides/import-content.md'
       - 'Shaders': 'guides/shaders.md'
       - 'Overrides: Content/Folder/Core-Specific Settings': 'guides/overrides.md'
@@ -66,6 +72,7 @@ nav:
         - 'Getting Started': 'guides/netplay-getting-started.md'
         - 'Multiple Controllers': 'guides/netplay-multiple-controllers.md'
       - 'RetroAchievements': 'guides/retroachievements.md'
+      - 'Disc Swapping': 'guides/disc-swapping.md'
       - 'Softpatching ROMs': 'guides/softpatching.md'
       - 'Accessibility':
         - 'Quick Start': 'guides/accessibility.md'
@@ -75,10 +82,13 @@ nav:
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'RetroArch Cloud Sync (Apple Devices)': 'guides/retroarch-cloud-sync.md'
     - 'Appearance & Customization':
+      - 'Interface Styles':
+        - 'GLUI Interface': 'guides/glui.md'
+        - 'Ozone Interface': 'guides/ozone.md'
+        - 'RGUI Interface': 'guides/rgui.md'
+        - 'XMB Interface': 'guides/xmb.md'
       - 'Creating a Theme': 'guides/themes.md'
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
-      - 'RGUI Interface': 'guides/rgui.md'
-      - 'Ozone Interface': 'guides/ozone.md'
       - 'XMB Menu Map': 'guides/xmb-menu-map.md'
     - 'Advanced':
       - 'AI Service': 'guides/ai-service.md'
@@ -422,78 +432,53 @@ nav:
     - 'Privacy Policy': 'support/privacy-policy.md'
     - 'Quick informations': 'support/quick-informations.md'
     - 'Developing Cores': 'tech/developing-cores.md'
+
 extra:
+  adsense: "ca-pub-9447404270680650"
+  analytics:
+    provider: google
+    property: G-MT11L3F6EZ
   consent:
-    title: Cookie consent
-    description: >- 
+    description: >-2
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-  version: '0.1.0'
-  adsense: "ca-pub-9447404270680650"
+    title: Cookie consent
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: 'Noto Sans'
+    code: 'Noto Sans Mono'
   i18n:
     prev: 'Previous'
     next: 'Next'
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/libretro
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/libretro
+      name: Libretro on GitHub
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/libretro
+      name: Libretro on X
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/C4amCeV
+      name: RetroArch Discord server
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@Libretro
+      name: Libretro YouTube channel
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/libretro
-    - icon: fontawesome/brands/youtube
-      link: https://youtube.com/libretro
-  analytics:
-    provider: google
-    property: G-MT11L3F6EZ
-
-
-theme:
-  name: material
-  custom_dir: docs/overrides/
-  palette:
-    - scheme: retroarch
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-      primary: black
-      accent: deep purple
-  # 404 page
-  static_templates:
-    - 404.html
-  # Don't include MkDocs' JavaScript
-  include_search_page: false
-  search_index_only: true
-  # Default values, taken from mkdocs_theme.yml
-  language: en
-  features:
-    - navigation.tabs
-    - navigation.top
-    - tables
-    - content.code.annotate
-    - content.action.edit
-  font:
-    text: Roboto
-    code: Roboto Mono
-  logo: 'image/branding/invader.png'
-  favicon: 'image/branding/invader.png'
-
-plugins:
-    - search
-    - git-revision-date
-    - macros
-
-extra:
+      name: Libretro on Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/libretro
+      name: Libretro/RetroArch on Instagram
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:libretro@gmail.com
+      name: Email the Libretro Team
+  status:
+    fixed: The information on this page never changes
+    stable: The information on this page changes infrequently, or not at all
   unit:
     stable: 1.19.1
+  version: '0.2.0'
 
 extra_css:
   - stylesheets/extra.css
@@ -504,40 +489,102 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - meta
   - md_in_html
-  - markdown.extensions.admonition
-  - markdown.extensions.codehilite:
-      linenums: true
-      guess_lang: false
-  - markdown.extensions.nl2br
-  - markdown.extensions.toc:
-      permalink: true
+  - meta
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret
+  - pymdownx.caret:
+      insert: true
+      smart_insert: true
+      superscript: true
   - pymdownx.critic:
       mode: accept
   - pymdownx.details
-  - pymdownx.highlight
-  #     linenums_style: pymdownx-inline
-  - pymdownx.inlinehilite
-  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: false
+      guess_lang: block
+      line_spans: __span
+      linenums: false
+      linenums_style: pymdownx-inline
+      pygments_lang_class: true
+      stripnl: false
+      use_pygments: true
+  - pymdownx.inlinehilite:
+      style_plain_text: true
+  - pymdownx.keys:
+      camel_case: true
+      strict: true
   - pymdownx.magiclink:
+      repo: docs
       repo_url_shorthand: true
       user: libretro
-      repo: docs
-  - pymdownx.mark
-  - pymdownx.smartsymbols
+  - pymdownx.mark:
+      smart_mark: true
+  - pymdownx.smartsymbols:
+      arrows: false
   - pymdownx.snippets:
       check_paths: true
+      dedent_subsections: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
   - pymdownx.tasklist:
+      clickable_checkbox: false
       custom_checkbox: true
-  - pymdownx.tilde
+  - pymdownx.tilde:
+      delete: true
+      smart_delete: true
+      subscript: true
+  - toc:
+      permalink: true
+      permalink_title: Reference link to this section
+      toc_depth: 6
+
+plugins:
+  - git-revision-date
+  - macros
+  - search
+
+theme:
+  custom_dir: docs/overrides/
+  favicon: 'image/branding/invader.png'
+  features:
+    - content.action.edit
+    - content.code.annotate
+    - content.code.copy
+    - navigation.tabs
+    - navigation.top
+    - tables
+  font:
+    text: 'Noto Sans'
+    code: 'Noto Sans Mono'
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  language: en
+  logo: 'image/branding/invader.png'
+  name: material
+  palette:
+    - scheme: retroarch
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: slate
+      accent: deep purple
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  search_index_only: true
+  static_templates:
+    - 404.html
+...
