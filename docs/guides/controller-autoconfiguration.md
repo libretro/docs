@@ -293,7 +293,12 @@ SDL2 uses the [SDL2 Game controller community database](https://github.com/mdqin
 You can check it using [SDL2 Gamepad Mapper](https://gitlab.com/ryochan7/sdl2-gamepad-mapper/-/releases).
 
 #### Appimage issue
-Currently, the [RetroArch Appimage package generates udev autoconfig file with sdl2 driver](https://github.com/hizzlekizzle/RetroArch-AppImage/issues/12). Therfore, use the Flatpak package in order to upload SDL2 autoconfig files.
+Currently, the [RetroArch Appimage package generates udev autoconfig file with sdl2 driver](https://github.com/hizzlekizzle/RetroArch-AppImage/issues/12). Therfore, use the Flatpak package in order to upload SDL2 autoconfig files and include this comment in the autocomment file
+
+```
+# This autoconfig file was generated using RetroArch via the Flathub package.
+# Please refrain from updating it with an autoconfig created by the AppImage: SDL2 incorrectly creates udev autoconfig files - https://github.com/hizzlekizzle/RetroArch-AppImage/issues/12
+```
 
 ### udev
 
