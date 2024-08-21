@@ -306,26 +306,49 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 #### Example: Nintendo Switch Pro Controller
 
-| Linux Kernel Version | HID Support | Device Index in RetroArch         |
-|----------------------|-------------|-----------------------------------|
-| 5.15                 | No          | Pro Controller                    |
-| 5.19                 | Yes         | Nintendo Switch Pro Controller    |
-| 6.2.0                | Yes         | Nintendo Switch Pro Controller    |
-| 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller |
+| Linux Kernel Version | HID Support | Device Index in RetroArch (USB)   | Device Index in RetroArch (Bluetooth)   |
+|----------------------|-------------|-----------------------------------|-----------------------------------------|
+| 5.15                 | No          | Pro Controller                    | Pro Controller                          |
+| 5.19                 | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          |
+| 6.2.0                | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          |
+| 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller | Nintendo Co., Ltd. Pro Controller       |
 
-In the above list, three unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for the controller driver:
-- **Pro Controller.cfg**: 
+In the above list, three unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+- **Pro Controller.cfg**:
   - Variable: `input_device = "Pro Controller"`
+  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"`
   
-- **Nintendo Switch Pro Controller.cfg**: 
+- **Nintendo Switch Pro Controller.cfg**:
   - Comment above input_device: [1]
   - Variable: `input_device = "Nintendo Switch Pro Controller"`
   
-- **Nintendo Co., Ltd. Pro Controller.cfg**: 
+- **Nintendo Co., Ltd. Pro Controller.cfg**:
   - Comment above input_device: [1]
   - Variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
 
 1: `# The files "Nintendo Co., Ltd. Pro Controller.cfg" and "Nintendo Switch Pro Controller.cfg" should have identical content except for the input_device variable. This difference allows the controller driver to recognize the controller on various Linux kernel versions.`
+
+#### Example: Sony DualSense
+
+| Linux Kernel Version | HID Support | Device Index in RetroArch (USB)                              | Device Index in RetroArch (Bluetooth)   |
+|----------------------|-------------|--------------------------------------------------------------|-----------------------------------------|
+| 5.15                 | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |
+| 5.19                 | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |
+| 6.2.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |
+| 6.8.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |
+
+In the above list, two unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+- **Sony Interactive Entertainment DualSense Wireless Controller.cfg**:
+  - Comment above input_device: [1]
+  - Variable: `input_device = "Sony Interactive Entertainment DualSense Wireless Controller"`
+  - Variable: `input_device_display_name = "Sony DualSense (USB)"`
+  
+- **DualSense Wireless Controller.cfg**:
+  - Comment above input_device: [1]
+  - Variable: `input_device = "DualSense Wireless Controller"`
+  - Variable: `input_device_display_name = "Sony DualSense (BlueTooth)"`
+
+1: `# The files "DualSense Wireless Controller.cfg" and "Sony Interactive Entertainment DualSense Wireless Controller.cfg" should have identical content except for the input_device variable. This difference allows the controller driver to recognize the controller on various Linux kernel versions.`
 
 ## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
