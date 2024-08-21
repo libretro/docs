@@ -11,13 +11,14 @@ The matching algorithm considers several key factors:
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-RetroArch evaluates each of these factors against its database of controller profiles. It then calculates a matching score for each profile, with the highest-scoring profile being selected to configure the controller.
+Different controller drivers use these identifiers in various ways. For instance, the SDL2 driver utilizes both the Vendor ID and Product ID, while the linuxraw and udev drivers rely on the Device Index.
 
-linuxraw is specifically an input driver option within RetroArch, and not a standalone component used by other software like sdl2, or udev. However, linuxraw which operates differently than other drivers by providing only a device name instead of Vendor ID (VID) and Product ID (PID) information. This means that controller matching with the linuxraw driver depends primarily on the device name (Device Index), accessed through the JSIOCGNAME ioctl command, rather than the typical vid:pid identifiers.
+### Matching process
+RetroArch compares these factors against its database of known controller profiles. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
 
-It's worth noting that the Vendor ID and Product ID pair is often abbreviated as "vid:pid" in technical discussions.
+The combination of Vendor ID and Product ID is often referred to as "vid:pid" in technical contexts.
 
-This matching system allows RetroArch to support a wide range of controllers while minimizing the need for manual configuration in most cases.
+This automated matching system allows RetroArch to support a vast array of controllers, reducing the need for manual setup in most situations.
 
 ## Why is it needed?
 
