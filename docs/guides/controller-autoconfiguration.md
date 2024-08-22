@@ -179,7 +179,7 @@ RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [
 
 To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
 
-* Install and run jstest avalible for GNU/Linux, and Windows.
+* Install and run jstest avalible for GNU/Linux (`sudo apt-get install joystick` for Debian-like distros), and Windows.
 * In GNU/Linux: jstest /dev/input/js0
 * Slowly press L2 and R2 to identify which axis numbers change
 * Note the axis numbers that correspond to L2 and R2
