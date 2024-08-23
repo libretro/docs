@@ -11,7 +11,7 @@ The matching algorithm considers several key factors:
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-Different controller drivers use these identifiers in various ways. For instance, the SDL2 driver utilizes both the Vendor ID and Product ID, while the linuxraw and udev drivers rely on the Device Index.
+Different controller drivers use these identifiers in various ways. For instance, the `android`, and `sdl2` driver utilizes both the Vendor ID and Product ID, while the `linuxraw` and `udev` drivers rely on the Device Index.
 
 ### Matching process
 RetroArch compares these factors against its database of known controller profiles. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
