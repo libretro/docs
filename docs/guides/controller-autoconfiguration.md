@@ -20,9 +20,10 @@ Different controller drivers use these identifiers in various ways:
 
 ### Difference in input variable generation between linuxraw and udev.
 
-It's useful to know that the `linuxraw` driver generates the same input variables as udev, except for the DPAD inputs, which are handled differently:
+It's useful to know that the `linuxraw` driver generates identical file content as udev with the exception of the `input_driver` variable, and the DPAD inputs, which are handled differently:
 
-- **Linuxraw Example:**
+#### linuxraw
+The `linuxraw` driver specifies DPAD inputs using axis values, providing precise control over directional inputs. For example:
 ```
 input_up_axis = "-5"
 input_down_axis = "+5"
@@ -30,7 +31,37 @@ input_left_axis = "-4"
 input_right_axis = "+4"
 ```
 
-- **udev:**
+- **autoconfig/linuxraw/Nintendo Switch Pro Controller.cfg example:**
+```
+input_driver = "linuxraw"
+input_device = "Nintendo Switch Pro Controller"
+input_b_btn = "0"
+input_y_btn = "3"
+input_select_btn = "9"
+input_start_btn = "10"
+input_up_axis = "-5"
+input_down_axis = "+5"
+input_left_axis = "-4"
+input_right_axis = "+4"
+input_a_btn = "1"
+input_x_btn = "2"
+input_l_btn = "5"
+input_r_btn = "6"
+input_l2_btn = "7"
+input_r2_btn = "8"
+input_l3_btn = "12"
+input_r3_btn = "13"
+input_l_x_plus_axis = "+0"
+input_l_x_minus_axis = "-0"
+input_l_y_plus_axis = "+1"
+input_l_y_minus_axis = "-1"
+input_r_x_plus_axis = "+2"
+input_r_x_minus_axis = "-2"
+input_r_y_plus_axis = "+3"
+input_r_y_minus_axis = "-3"
+```
+
+#### udev
 
 Udev consistently generates the following:
 ```
@@ -39,10 +70,37 @@ input_down_btn = "h0down"
 input_left_btn = "h0left"
 input_right_btn = "h0right"
 ```
+
+- **autoconfig/udev/Nintendo Switch Pro Controller.cfg example:**
+```
+input_driver = "udev"
+input_device = "Nintendo Switch Pro Controller"
+input_vendor_id = "1406"
+input_product_id = "8201"
+input_b_btn = "0"
+input_y_btn = "3"
+input_select_btn = "9"
+input_start_btn = "10"
 input_up_btn = "h0up"
 input_down_btn = "h0down"
 input_left_btn = "h0left"
 input_right_btn = "h0right"
+input_a_btn = "1"
+input_x_btn = "2"
+input_l_btn = "5"
+input_r_btn = "6"
+input_l2_btn = "7"
+input_r2_btn = "8"
+input_l3_btn = "12"
+input_r3_btn = "13"
+input_l_x_plus_axis = "+0"
+input_l_x_minus_axis = "-0"
+input_l_y_plus_axis = "+1"
+input_l_y_minus_axis = "-1"
+input_r_x_plus_axis = "+2"
+input_r_x_minus_axis = "-2"
+input_r_y_plus_axis = "+3"
+input_r_y_minus_axis = "-3"
 ```
 
 ### Matching process
