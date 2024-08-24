@@ -393,21 +393,22 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 | Linux Kernel Version | HID Support | Device Index in RetroArch (USB)   | Device Index in RetroArch (Bluetooth)   |
 |----------------------|-------------|-----------------------------------|-----------------------------------------|
-| 5.15                 | No          | Pro Controller                    | Pro Controller                          |
+| 5.15                 | No          | Nintendo Co., Ltd. Pro Controller | Pro Controller                          |
 | 5.19                 | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          |
 | 6.2.0                | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          |
-| 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller | Nintendo Co., Ltd. Pro Controller       |
+| 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller | Pro Controller                          |
 
 In the above list, three unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
 - **Pro Controller.cfg**:
   - Variable: `input_device = "Pro Controller"`
-  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"`
+  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"`
   
 - **Nintendo Switch Pro Controller.cfg**:
   - Variable: `input_device = "Nintendo Switch Pro Controller"`
   
 - **Nintendo Co., Ltd. Pro Controller.cfg**:
   - Variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
+  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"`
 
 #### Example: Sony DualSense
 
