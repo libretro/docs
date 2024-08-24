@@ -408,7 +408,7 @@ In the above list, three unique Device Index entries are identified, which requi
   
 - **Nintendo Co., Ltd. Pro Controller.cfg**:
   - Variable: `input_device = "Nintendo Co., Ltd. Pro Controller"`
-  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"`
+  - Variable: `input_device_display_name = "Nintendo Switch Pro Controller (USB)"`
 
 #### Example: Sony DualSense
 
