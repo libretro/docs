@@ -11,7 +11,39 @@ The matching algorithm considers several key factors:
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-Different controller drivers use these identifiers in various ways. For instance, the `android`, and `sdl2` driver utilizes both the Vendor ID and Product ID, while the `linuxraw` and `udev` drivers rely on the Device Index.
+## Different Controller Driver Usage
+
+Different controller drivers use these identifiers in various ways:
+
+- The `android` and `sdl2` drivers utilize both the Vendor ID (input_vendor_id) and Product ID (input_product_id).
+- The `linuxraw` and `udev` drivers rely on the Device Index (input_device).
+
+### Difference in input variable generation between linuxraw and udev.
+
+It's useful to know that the `linuxraw` driver generates the same input variables as udev, except for the DPAD inputs, which are handled differently:
+
+- **Linuxraw Example:**
+```
+input_up_axis = "-5"
+input_down_axis = "+5"
+input_left_axis = "-4"
+input_right_axis = "+4"
+```
+
+- **udev:**
+
+Udev consistently generates the following:
+```
+input_up_btn = "h0up"
+input_down_btn = "h0down"
+input_left_btn = "h0left"
+input_right_btn = "h0right"
+```
+input_up_btn = "h0up"
+input_down_btn = "h0down"
+input_left_btn = "h0left"
+input_right_btn = "h0right"
+```
 
 ### Matching process
 RetroArch compares these factors against its database of known controller profiles. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
