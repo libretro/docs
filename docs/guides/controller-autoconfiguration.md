@@ -444,14 +444,19 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 | 6.2.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |                                                                                                     |
 | 6.8.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |                                                                                                     |
 
-In the above list, two unique Device Index entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+In the above list, two **Autoconfigs file names to generate** entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+
 - **Sony Interactive Entertainment DualSense Wireless Controller.cfg**:
-  - Variable: `input_device = "Sony Interactive Entertainment DualSense Wireless Controller"`
-  - Variable: `input_device_display_name = "Sony DualSense (USB)"`
-  
+```
+input_device = "Sony Interactive Entertainment DualSense Wireless Controller"
+input_device_display_name = "Sony DualSense (USB)"
+```
+
 - **DualSense Wireless Controller.cfg**:
-  - Variable: `input_device = "DualSense Wireless Controller"`
-  - Variable: `input_device_display_name = "Sony DualSense (BlueTooth)"`
+```
+input_device = "DualSense Wireless Controller"
+input_device_display_name = "Sony DualSense (BlueTooth)"
+```
 
 ## Troubleshooting
 If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
