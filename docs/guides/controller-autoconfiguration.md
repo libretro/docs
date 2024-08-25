@@ -639,7 +639,7 @@ When RetroArch generates autoconfig files through Settings -> Input -> RetroPad 
 
 ### Example of a correctly formatted autoconfig file
 
-DualSense Wireless Controller.cfg:
+autoconfig/udev/DualSense Wireless Controller.cfg:
 
 ```
 input_driver = "udev"
