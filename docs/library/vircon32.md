@@ -50,10 +50,10 @@ Frontend-level settings or features that the Vircon32 core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Saves             | ✕         |
-| States            | ✕         |
-| Rewind            | ✕         |
+| States            | ✔         |
+| Rewind            | ✔         |
 | Netplay           | ✕         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | RetroAchievements | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
