@@ -470,9 +470,6 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/libretro
       name: Libretro/RetroArch on Instagram
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:libretro@gmail.com
-      name: Email the Libretro Team
   status:
     fixed: The information on this page never changes
     stable: The information on this page changes infrequently, or not at all
