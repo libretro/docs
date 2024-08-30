@@ -45,7 +45,7 @@
 
 ### Can I trade Pokémon via RetroArch Netplay?
 
-- Yes, it is. For now, the only two cores providing this possibility are gpSP (its emulates the GBA wireless adapter) and MelonDS DS (a MelonDS fork that lets you use GTS).
+- Yes. For now, the only two cores providing this functionality are gpSP (it emulates the GBA wireless adapter) and MelonDS DS (a MelonDS fork that lets you use GTS).
 
 ## Troubleshooting NetPlay
 
