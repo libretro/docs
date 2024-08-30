@@ -1,136 +1,174 @@
-# Downloading, Installing and Updating RetroArch
+---
+title: Downloading, Installing and Updating RetroArch on GNU/Linux
+description: Instructions for setting up RetroArch on GNU/Linux systems.
+---
 
-<iframe allow="accelerometer; ambient-light-sensor; autoplay; clipboard-write;
-  display-capture; encrypted-media; execution-while-out-of-viewport; fullscreen;
-  geolocation; gyroscope; hid; magnetometer; picture-in-picture;
-  screen-wake-lock; speaker-selection; web-share;" aria-label="YouTube video"
-  height="315" loading="lazy" name="YouTube embedded player"
-  referrerpolicy="strict-origin-when-cross-origin" role="application"
-  sandbox="allow-orientation-lock; allow-presentation;"
-  src="https://www.youtube-nocookie.com/embed/kCyTlMjvzWA"
-  style="border-collapse: collapse; border-style: hidden; margin: 1rem auto;"
-  title="RetroArch - How to Install : Sega Genesis Mini" width="560"></iframe>
+# Installing RetroArch on Linux
 
-## GNU/Linux
+This page contains descriptions of several officially-supported methods of
+installing RetroArch on systems running the GNU/Linux kernel.
 
-### Flatpak
+<iframe allow="accelerometer 'self'; clipboard-write *; display-capture 'self'; encrypted-media 'src';
+  fullscreen *; geolocation 'src'; gyroscope 'self'; hid 'self'; picture-in-picture *; screen-wake-lock *;
+  web-share *;" aria-label="YouTube video" height="315" width="560" loading="lazy" role="application"
+  name="YouTube embedded player" title="RetroArch - How to Install: Linux" referrerpolicy="strict-origin-when-cross-origin"
+  sandbox="allow-orientation-lock allow-popups allow-presentation allow-same-origin allow-scripts"
+  src="https://www.youtube-nocookie.com/embed/7ZSPR2eYULU?origin=docs.libretro.com&playsinline=1"
+  style="border-collapse: collapse; border-style: hidden; display: block; margin: 1.5rem auto 2rem; position: relative;"></iframe>
+
+---
+
+## Flatpak (suitable for most Linux distributions)
 
 Flatpak is a distribution-agnostic packaging format with broad support
-throughout the Linux ecosystem. An official
-[RetroArch flatpak][retroarch-flatpak] is published in the Flathub repository,
-and can be installed in just three easy steps:
+throughout the Linux ecosystem. An official [RetroArch
+flatpak][retroarch-flatpak] is published in the Flathub repository, and can be
+installed in just three easy steps:
 
-#### Installation
+### Installation
 
 1. Ensure that Flatpak is [enabled on your system][flatpak-setup] by opening the
    terminal and confirming that the following command exits with no errors:
 
-   ```sh
-   flatpak --installations
-   ```
+    ``` shell
+    flatpak --installations
+    ```
 
-1. Confirm that the Flathub repository is configured as a
-   [flatpak remote][flatpak-remote], so that packages may be installed from it.
-   You can examine the flatpak remotes currently enabled on your system with
-   this terminal command (shown with default output):
+1. Confirm that the Flathub repository is configured as a [flatpak
+   remote][flatpak-remote], so that packages from it may be installed. You can
+   examine the flatpak remotes currently enabled on your system with this
+   terminal command (shown with default output):
 
-   ```console
-   $ flatpak remotes --columns=name,url,homepage
+    ``` shell-session hl_lines="4"
+    ra@libretro:~$ flatpak remotes --columns=name,url,homepage
 
-   Name    URL                          Homepage
-   flathub https://dl.flathub.org/repo/ https://flathub.org/
-   ```
+    Name    URL                          Homepage
+    flathub https://dl.flathub.org/repo/ https://flathub.org/
+    ```
 
-   If Flathub is not among the remotes shown, this command will add it to your
-   system:
+    If Flathub is not among the remotes shown, this command will add it to your
+    system:
 
-   ```sh
-   sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-   ```
+    ``` shell
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
 
 1. Finally, install the RetroArch Flatpak. You have the option of making it
    available to only the current user, with this command:
 
-   ```sh
-   flatpak install -y --user --from https://dl.flathub.org/repo/appstream/org.libretro.RetroArch.flatpakref
-   ```
+    ``` shell
+    flatpak install -y --user --from https://dl.flathub.org/repo/appstream/org.libretro.RetroArch.flatpakref
+    ```
 
-   Or for all users with this command:
+    Or for all users with this command:
 
-   ```sh
-   sudo flatpak install -y --from https://dl.flathub.org/repo/appstream/org.libretro.RetroArch.flatpakref
-   ```
+    ``` shell
+    sudo flatpak install -y --from https://dl.flathub.org/repo/appstream/org.libretro.RetroArch.flatpakref
+    ```
 
-#### Launching the Flatpak
+### Launching the Flatpak
 
 RetroArch should now be listed in your app launcher and can also be executed
 from the terminal with the command:
 
-```sh
+``` shell
 flatpak run org.libretro.RetroArch
 ```
 
-#### Updates
+### Updates
 
 You should keep RetroArch updated by running this command periodically from the
 terminal:
 
-```sh
+``` shell
 flatpak update -y --app org.libretro.RetroArch
 ```
 
-### Ubuntu-based
+## Ubuntu(-based)
 
-If you're using Ubuntu, an official [Ubuntu flavor][ubuntu-flavors], or one of
-the many Linux distributions based on Ubuntu (such as Linux Mint, Zorin OS, Pop!
-OS, elementary OS, etc.), you can install RetroArch and many of the most popular
-Libretro cores as native APT packages by simply enabling one (or both) of the
-two official Libretro [Personal Package Archives (PPAs)][help-ppas] hosted on
-[Launchpad](https://launchpad.net/~libretro), namely:
+Ubuntu provides RetroArch as a Debian [package in their official "universe"
+archive][ubuntu-package], which is maintained by the community with no promise
+of support or regular update schedule. Nevertheless, for the casual user of
+Ubuntu or a derivative distribution, it represents the simplest method for
+installing RetroArch. All that is required is to open a terminal and issue this
+single command:
 
-- [**Stable**][ppa-stable] (recommended), which includes only official releases
-  (as announced on libretro.com / retroarch.com), and
-- [**Testing**][ppa-testing], which provides nightly builds of RetroArch and
-  most Libretro cores that allow you to test new features as soon as they're
-  added.
-
-#### Installation
-
-In order to add PPAs to your system's package sources, some tools from the
-official package repositories are needed. Open the terminal and run this command
-to ensure they are installed:
-
-```sh
-sudo apt -y install software-properties-common
+``` shell
+sudo apt --upgrade --yes install retroarch
 ```
 
-One command is needed to add a PPA to your system's package sources. To add the
-[**Stable PPA**][ppa-stable], use:
+### Personal Package Archives (PPAs)
 
-```sh
-sudo add-apt-repository -ysnP libretro/stable
-```
+In an effort to improve the experience of RetroArch users on Ubuntu, official
+[Ubuntu flavors][ubuntu-flavors], and all of the many Linux distributions based
+on Ubuntu (such as Linux Mint, Zorin OS, Pop! OS, elementary OS, etc.), the
+Libretro Team has long been committed to producing its own Debian packages as an
+alternative to the ones supplied by Ubuntu in the "universe" package archive.
+These packages are updated much faster to keep pace with each new RetroArch
+version, and compiled with a greater range of features than the Ubuntu package.
+In addition, Debian packages are created for the vast majority of popular
+Libretro cores, simplifying their installation and allowing them to be updated
+by the system package manager on the same schedule as all other package updates.
 
-Or to add the [**Testing PPA**][ppa-testing], use:
+These packages are built and distributed using the [Launchpad
+platform][launchpad-team] operated by Canonical itself (the company which
+distributes Ubuntu), and split into two channels called "Personal Package
+Archives" (PPAs) that each cater to a specific type of user. By simply [enabling
+one (or both) the PPAs][help-ppas] listed below, users can seamlessly replace
+the Ubuntu RetroArch package on their system with those provided by the Libretro
+team.
 
-```sh
-sudo add-apt-repository -ysnP libretro/testing
-```
+- [**Stable**][ppa-stable] (recommended) — includes only official releases
+  (as announced on libretro.com / retroarch.com)
 
-You can now install the RetroArch package from the PPAs with this command:
+- [**Testing**][ppa-testing] — builds of RetroArch and most Libretro cores from
+  the latest source code, for test new fixes and features as soon as they're
+  added
 
-```sh
-sudo apt -Uy install retroarch
-```
+### Installation
 
-You can verify that the PPA package was installed rather than the one from the
-official distribution repositories with the `apt show` command (shown with
-expected output for the Testing PPA package):
+Follow these steps to enable the Libretro PPAs on your Ubuntu(-based) system.
 
-```console
-$ apt show retroarch
+1. In order to add PPAs to your system's package sources, some tools from the
+   official package repositories are needed. Open the terminal and run this
+   command to ensure they are installed:
+
+    ``` shell
+    sudo apt --update --yes install software-properties-common
+    ```
+
+1. Just a single command is needed to add a PPA to your system's package
+   sources.
+
+    - To add the [**Stable PPA**][ppa-stable], run this command in your
+      terminal:
+
+        ``` shell
+        sudo add-apt-repository --yes --no-update --ppa libretro/stable
+        ```
+
+    - Or to add the [**Testing PPA**][ppa-testing], run:
+
+        ``` shell
+        sudo add-apt-repository --yes --no-update --ppa libretro/testing
+        ```
+
+1. You can now install the RetroArch package from the PPAs with this command:
+
+    ``` shell
+    sudo apt --update --yes install retroarch
+    ```
+
+#### Verifying PPA package installation
+
+You can verify that the PPA package is installed (rather than the one from the
+official distribution repositories) with the `apt show retroarch` command (shown
+with expected output for the Testing PPA package):
+
+``` shell-session hl_lines="14"
+ra@libretro:~$ apt show retroarch
 Package: retroarch
-Version: 1.19.1+r202408170734~bf25bd9149-179~ubuntu24.04.1
+Version: {{ unit.stable }}+r202408170734~bf25bd9149-179~ubuntu24.04.1
 Priority: optional
 Section: games
 Maintainer: Libretro Team <libretro@gmail.com>
@@ -154,51 +192,91 @@ Description: Simple frontend for the libretro library
 Notice: There is 1 additional record. Please use the '-a' switch to see it
 ```
 
-Look at the **`APT-Sources:`** line in the output. If one of the PPA packages is
-installed, its value will begin with
-`https://ppa.launchpadcontent.net/libretro/`.
+!!! tip "What to look for"
+    Look at the **`APT-Sources:`** line in the output. If one of the PPA
+    packages is installed, its value will begin with
+    `https://ppa.launchpadcontent.net/libretro/`.
 
-#### Updates
+### Updates
 
 With this installation method, RetroArch updates will automatically be included
-with your systems regular package upgrades. However, you are always able to
-trigger an update specifically for RetroArch with the terminal command:
+with your system's regular package upgrades. However, you are always able to
+trigger an update specifically for RetroArch (if one is available) with the
+command:
 
-```sh
-sudo apt -y upgrade retroarch
+``` shell
+sudo apt --update --yes upgrade retroarch
 ```
 
-### Arch Linux-based
+## Arch Linux(-based)
 
-Arch Linux provides a [`retroarch`][arch-package] package for x86_64 systems in
-their official [Extra repository][arch-extra-repo]. You can install it by
+### Installation
+
+#### Official package
+
+Arch Linux provides a [**`retroarch`**][arch-package] package for x86_64 systems
+in their official [Extra repository][arch-extra-repo]. You can install it by
 searching for RetroArch by name in a graphical package manager like
 [Octopi][octopi], or from the terminal with the command:
 
-```sh
+``` shell
 sudo pacman -S retroarch
 ```
 
-A "git" package named [`retroarch-git`][aur-git-package] which offers prerelease
-builds (similar to the Testing PPA described above) is also available on the
-[AUR][arch-aur]. As above, it can be installed from a package manager GUI or in
-the terminal using an "[AUR helper][aur-helpers]" like [`yay`][aur-yay], as in:
+#### Arch User Repository (AUR) package
 
-```sh
+A "git" package named [**`retroarch-git`**][aur-git-package] which offers
+prerelease builds (similar to the Testing PPA described above) is also available
+in the [AUR][arch-aur]. As above, it can be installed from a package manager GUI
+or in the terminal using an "[AUR helper][aur-helpers]" like [`yay`][aur-yay],
+as in:
+
+``` shell
 yay retroarch-git
 ```
 
+!!! tip "Installing an AUR helper"
+    If you wish to install the AUR package but don't yet have an AUR helper
+    installed on your system, the following shell "one-liner" will download,
+    compile and install `yay` for you:
+
+    ``` shell
+    pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git &&
+      cd yay-bin && makepkg -si
+    ```
+
+### Updates
+
+With this installation method, RetroArch updates will automatically be included
+with your system's regular package upgrades. However, you are always able to
+trigger an update specifically for RetroArch (if one is available) with the
+following commands.
+
+#### Official package
+
+``` shell
+pacman -Syyuu retroarch
+```
+
+#### AUR package
+
+``` shell
+yay -Syyuu retroarch-git
+```
+
 [arch-aur]: https://aur.archlinux.org/ "Arch User Repository (AUR)"
-[arch-extra-repo]: https://wiki.archlinux.org/title/Official_repositories#extra
-[arch-package]: https://archlinux.org/packages/extra/x86_64/retroarch/
-[aur-git-package]: https://aur.archlinux.org/packages/retroarch-git
-[aur-helpers]: https://wiki.archlinux.org/title/AUR_helpers
-[aur-yay]: https://github.com/Jguer/yay
-[flatpak-remote]: https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-remotes
-[flatpak-setup]: https://flatpak.org/setup/
-[help-ppas]: https://help.launchpad.net/Packaging/PPA/InstallingSoftware
-[octopi]: https://tintaescura.com/projects/octopi/
-[ppa-stable]: https://launchpad.net/~libretro/+archive/ubuntu/stable
-[ppa-testing]: https://launchpad.net/~libretro/+archive/ubuntu/testing
-[retroarch-flatpak]: https://flathub.org/apps/org.libretro.RetroArch
-[ubuntu-flavors]: https://ubuntu.com/desktop/flavours
+[arch-extra-repo]: https://wiki.archlinux.org/title/Official_repositories#extra "Official repositories - ArchWiki"
+[arch-package]: https://archlinux.org/packages/extra/x86_64/retroarch/ "Arch Linux - retroarch {{ unit.stable }}-1 (x86_64)"
+[aur-git-package]: https://aur.archlinux.org/packages/retroarch-git "AUR (en) - retroarch-git"
+[aur-helpers]: https://wiki.archlinux.org/title/AUR_helpers "AUR helpers - ArchWiki"
+[aur-yay]: https://github.com/Jguer/yay "Jguer/yay: Yet another Yogurt - An AUR Helper written in Go (GitHub)"
+[flatpak-remote]: https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-remotes "Flatpak Command Reference - Flatpak documentation"
+[flatpak-setup]: https://flatpak.org/setup/ "Flatpak—the future of application distribution"
+[help-ppas]: https://help.launchpad.net/Packaging/PPA/InstallingSoftware "Packaging/PPA/Installing Software - Launchpad Help"
+[launchpad-team]: https://launchpad.net/~libretro "Libretro in Launchpad"
+[octopi]: https://tintaescura.com/projects/octopi/ "Octopi - Tinta escura"
+[ppa-stable]: https://launchpad.net/~libretro/+archive/ubuntu/stable "Libretro Stable : “Libretro” team"
+[ppa-testing]: https://launchpad.net/~libretro/+archive/ubuntu/testing "Libretro Testing/Nightly : “Libretro” team"
+[retroarch-flatpak]: https://flathub.org/apps/org.libretro.RetroArch "Install RetroArch on Linux &verbar; Flathub"
+[ubuntu-flavors]: https://ubuntu.com/desktop/flavours "Ubuntu flavours &verbar; Ubuntu"
+[ubuntu-package]: https://packages.ubuntu.com/search?keywords=retroarch&searchon=names "Ubuntu – Package Search Results -- retroarch"
