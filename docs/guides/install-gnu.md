@@ -1,8 +1,6 @@
 ---
 title: Downloading, Installing and Updating RetroArch on GNU/Linux
 description: Instructions for setting up RetroArch on GNU/Linux systems.
-icon: fontawesome/brands/linux
-status: stable
 ---
 
 # Installing RetroArch on Linux
