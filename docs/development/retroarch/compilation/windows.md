@@ -22,7 +22,11 @@ We recommend MinGW-W64 from MSYS2. You can download MSYS2 installer from [here](
 
 Follow the installation instructions and once finished start the MSYS2 shell.
 
-MSYS2 shell is a maintenance shell. We are going to use this shell to install the toolchain and other packages. First order of business is to update MSYS2. Start the MSYS2 Shell and run the following commands:
+You may need to add "Full Control" permission to your MSYS folder (for example, C:\msys64) or run the shell as Administrator.
+
+MSYS2 shell is a maintenance shell. We are going to use this shell to install the toolchain and other packages. First order of business is to update MSYS2. Start the MSYS2 MINGW64 or MINGW32 Shell (mingw64.exe or mingw32.exe), It is important to use this particular shell (MINGW) because the makefile uses it to detect the target platform as Windows.
+
+Once we're in the shell, run the following commands:
 
 ```bash
 pacman --noconfirm -Sy
@@ -78,6 +82,14 @@ For 64-bit builds:
 wget https://sourceforge.net/projects/mingw-w64-archlinux/files/x86_64/mingw-w64-nvidia-cg-toolkit-3.1-2-any_4.pkg.tar.xz/download -O mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 pacman -U mingw-w64-x86_64-nvidia-cg-toolkit-3.1-2-any.pkg.tar.xz
 ```
+
+If you encounter any errors, you may try the following procedure instead:
+
+```bash
+pacman -S mingw-w64-x86_64-crt
+pacman -S mingw-w64-x86_64-nvidia-cg-toolkit
+```
+
 
 Once these packages are installed close MSYS2 shell and open MinGW-w32 shell or MinGW-w64 shell depending on the platform you want to build for.
 
@@ -273,6 +285,13 @@ Then compile the core:
 ```bash
 cd libretro-fceumm
 make -f Makefile.libretro
+```
+
+If the Makefile.libretro is not present, as in the libretro-atari800 core, you might try the following:
+
+```bash
+cd libretro-atari800
+make
 ```
 
 Optionally strip the build product:
