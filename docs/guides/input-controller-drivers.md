@@ -26,7 +26,6 @@ RetroArch makes use of two input systems in order to support the full range of i
 - linuxraw
 - sdl2
 - udev
-- xinput
 
 ### udev input driver
 udev is the newest input driver and uses the evdev joypad interface at `/dev/input`. It supports hotplugging and force feedback (if supported by device). udev reads evdev events directly and supports keyboard callback, mice, and touchpads. `libudev` is used to discover devices and support hotplugging.
