@@ -22,7 +22,6 @@ RetroArch makes use of two input systems in order to support the full range of i
 
 **Linux Controller Drivers**
 
-- hid
 - linuxraw
 - sdl2
 - udev
