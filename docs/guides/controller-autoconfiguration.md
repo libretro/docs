@@ -278,8 +278,8 @@ To work around this issue, you need to manually edit the RetroArch config file t
 input_l2_axis = "+X"  (where X is the L2 axis number)
 input_r2_axis = "+Y"  (where Y is the R2 axis number)
 
-input_l2_axis_label = "L2 Analog"
-input_r2_axis_label = "R2 Analog"
+input_l2_axis_label = "L2 Trigger"
+input_r2_axis_label = "R2 Trigger"
 ```
 
 For [example](https://github.com/libretro/retroarch-joypad-autoconfig/pull/1135), if L2 is axis 2 and R2 is axis 5, you would:
@@ -299,8 +299,8 @@ With
 input_l2_axis = "+2"
 input_r2_axis = "+5"
 
-input_l2_axis_label = "L2 Analog"
-input_r2_axis_label = "R2 Analog"
+input_l2_axis_label = "L2 Trigger"
+input_r2_axis_label = "R2 Trigger"
 ```
 
 Note: These variable values are examples and should not be directly copied to your configuration file.
@@ -556,8 +556,8 @@ input_r_y_minus_axis_label = "Right Analog Y- (up)"
 
 Labels for analog L2/R2 triggers:
 ```
-input_l2_axis_label = "L2 Analog"
-input_r2_axis_label = "R2 Analog"
+input_l2_axis_label = "L2 Trigger"
+input_r2_axis_label = "R2 Trigger"
 ```
 
 ##### Buttons (digital inputs)
@@ -607,7 +607,7 @@ input_menu_toggle_btn_label = "Guide"
 
 #### Example: Controllers for Sony PlayStation 2 and later
 
-Labels for PlayStation controllers starting from PS2. Note that analog L2/R2 triggers (`input_l2_axis_label = "L2 Analog"`, and `input_r2_axis_label = "R2 Analog"`) are featured:
+Labels for PlayStation controllers starting from PS2. Note that analog L2/R2 triggers (`input_l2_axis_label = "L2 Trigger"`, and `input_r2_axis_label = "R2 Trigger"`) are featured:
 ```
 input_b_btn_label = "Cross"
 input_y_btn_label = "Square"
@@ -621,8 +621,8 @@ input_a_btn_label = "Circle"
 input_x_btn_label = "Triangle"
 input_l_btn_label = "L1"
 input_r_btn_label = "R1"
-input_l2_axis_label = "L2 Analog"
-input_r2_axis_label = "R2 Analog"
+input_l2_axis_label = "L2 Trigger"
+input_r2_axis_label = "R2 Trigger"
 input_l3_btn_label = "L3"
 input_r3_btn_label = "R3"
 input_l_x_plus_axis_label = "Left Analog X+ (right)"
@@ -684,8 +684,8 @@ input_a_btn_label = "Circle"
 input_x_btn_label = "Triangle"
 input_l_btn_label = "L1"
 input_r_btn_label = "R1"
-input_l2_axis_label = "L2 Analog"
-input_r2_axis_label = "R2 Analog"
+input_l2_axis_label = "L2 Trigger"
+input_r2_axis_label = "R2 Trigger"
 input_l3_btn_label = "L3"
 input_r3_btn_label = "R3"
 input_l_x_plus_axis_label = "Left Analog X+ (right)"
