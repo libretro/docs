@@ -396,7 +396,7 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
 
-In the above list, five **Autoconfigs file names to generate** entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
 - **Pro Controller (default-off).cfg**:
 ```
@@ -437,7 +437,7 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 
 
-In the above list, two **Autoconfigs file names to generate** entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
+In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
 - **Sony Interactive Entertainment DualSense Wireless Controller.cfg**:
 ```
