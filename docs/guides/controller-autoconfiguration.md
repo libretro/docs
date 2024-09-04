@@ -15,8 +15,8 @@ The matching algorithm considers several key factors:
 
 Different controller drivers use these identifiers in various ways:
 
-- The `android` and `sdl2` drivers utilize both the Vendor ID (input_vendor_id) and Product ID (input_product_id).
-- The `linuxraw` and `udev` drivers rely on the Device Index (input_device).
+- The `android`, `udev`, and `sdl2` drivers can use either the Device Index (`input_device`) or a combination of Vendor ID (`input_vendor_id`) and Product ID (`input_product_id`). If the Device Index is configured incorrectly, the system will fall back on checking the Vendor ID and Product ID, and vice versa. References: input_autoconfigure_get_config_file_affinity in (task_autodetect.c)[https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c], and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c).
+- The `linuxraw` driver rely on the Device Index (input_device).
 
 ### Difference in input variable generation between linuxraw and udev.
 
@@ -342,7 +342,7 @@ When developing controller configurations, it's essential to anticipate and miti
 Here's how to set up a default-off configuration:
 
 1. Append "(default-off)" to the configuration filename.
-2. Comment out the `input_vendor_id` and `input_product_id` lines in the config file.
+2. Comment out the `input_device`, `input_vendor_id` and `input_product_id` lines in the config file.
 3. Do not add "(default-off)" to the values of the input_device_display_name and input_driver variables in the config file. The default-off status is already indicated by the filename, so these variables should remain unmodified for clarity.
 
 This approach allows users to manually enable the configuration when needed, preventing automatic application that could interfere with common devices, and helps ensure a smoother experience for users while still providing the necessary configuration options for those who require them.
@@ -402,6 +402,8 @@ In the above list, five **Autoconfigs file names to generate** entries are ident
 ```
 #input_device = "Nintendo Co., Ltd. Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (USB)"
+#input_vendor_id = "1406"
+#input_product_id = "8201"
 ```
 
 Note: `(default-off)` is added to the filename , and `input_device` variable is commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Nintendo Co., Ltd. Pro Controller.cfg
@@ -410,9 +412,11 @@ Note: `(default-off)` is added to the filename , and `input_device` variable is 
 ```
 #input_device = "Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (Bluetooth)"
+#input_vendor_id = "1406"
+#input_product_id = "8201"
 ```
 
-Note: `(default-off)` is added to the filename , and `input_device` variable is commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Pro Controller.cfg
+Note: `(default-off)` is added to the filename , and the `input_device`, `input_vendor_id` and `input_product_id` variables are commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Pro Controller.cfg
  
 - **Nintendo Switch Pro Controller.cfg**:
 ```
