@@ -389,24 +389,14 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 #### Example: Nintendo Switch Pro Controller
 
-| Linux Kernel Version | HID Support | Device Index in RetroArch (USB)   | Device Index in RetroArch (Bluetooth)   | Autoconfigs file names to generate                                                    |
-|----------------------|-------------|-----------------------------------|-----------------------------------------|---------------------------------------------------------------------------------------|
-| 5.15                 | No          | Nintendo Co., Ltd. Pro Controller | Pro Controller                          | Nintendo Co., Ltd. Pro Controller (default-off).cfg, Pro Controller (default-off).cfg |
-| 5.19                 | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          | Nintendo Switch Pro Controller                                                        |
-| 6.2.0                | Yes         | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller          |                                                                                       |
-| 6.8.0                | Yes         | Nintendo Co., Ltd. Pro Controller | Pro Controller                          | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg                             |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+|-|-|-|-|-|-|-|
+| 5.15 | No | No | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Pro Controller (default-off).cfg |
+| 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
+| 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
 
 In the above list, five **Autoconfigs file names to generate** entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
-
-- **Nintendo Co., Ltd. Pro Controller (default-off).cfg**
-```
-#input_device = "Nintendo Co., Ltd. Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (USB)"
-#input_vendor_id = "1406"
-#input_product_id = "8201"
-```
-
-Note: `(default-off)` is added to the filename , and `input_device` variable is commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Nintendo Co., Ltd. Pro Controller.cfg
 
 - **Pro Controller (default-off).cfg**:
 ```
@@ -439,12 +429,13 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 
 #### Example: Sony DualSense
 
-| Linux Kernel Version | HID Support | Device Index in RetroArch (USB)                              | Device Index in RetroArch (Bluetooth)   | Autoconfigs file names to generate                                                                  |
-|----------------------|-------------|--------------------------------------------------------------|-----------------------------------------|-----------------------------------------------------------------------------------------------------|
-| 5.15                 | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
-| 5.19                 | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |                                                                                                     |
-| 6.2.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |                                                                                                     |
-| 6.8.0                | Yes         | Sony Interactive Entertainment DualSense Wireless Controller | DualSense Wireless Controller           |                                                                                                     |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+|-|-|-|-|-|-|-|
+| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
+| 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
+| 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
+| 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
+
 
 In the above list, two **Autoconfigs file names to generate** entries are identified, which require these autoconfig files for the controller to be identified for the controller drivers:
 
