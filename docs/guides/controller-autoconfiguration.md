@@ -391,12 +391,14 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Pro Controller (default-off).cfg |
+| 5.15 | No | No | Nintendo Co., Ltd. Pro Controller | Yes[1] | Pro Controller | Pro Controller (default-off).cfg |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
+
+1: Please be aware that this controller operates exclusively via Bluetooth. Unfortunately, the Bluetooth connection can be unreliable. Although you might be able to pair and connect the controller using software like Blueman, it may not be recognized by other applications such as RetroArch, jstest, and similar programs.
 
 - **Pro Controller (default-off).cfg**:
 ```
