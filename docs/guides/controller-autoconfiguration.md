@@ -391,7 +391,7 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Co., Ltd. Pro Controller | Yes[2] | Pro Controller | Pro Controller (default-off).cfg |
+| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes[2] | Pro Controller | Pro Controller (default-off).cfg |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
