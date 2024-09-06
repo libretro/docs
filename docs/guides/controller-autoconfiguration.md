@@ -16,9 +16,9 @@ The matching algorithm considers several key factors:
 Different controller drivers use these identifiers in various ways:
 
 - The `android`, `udev`, and `sdl2` drivers can use either the Device Index (`input_device`) or a combination of Vendor ID (`input_vendor_id`) and Product ID (`input_product_id`). If the Device Index is configured incorrectly, the system will fall back on checking the Vendor ID and Product ID, and vice versa. References: input_autoconfigure_get_config_file_affinity in [task_autodetect.c](https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c), and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c).
-- The `linuxraw` driver rely on the Device Index (input_device).
+- The `linuxraw` driver rely on the Device Index (input_device). For android and udev, the value of the input_device variable varies with USB and Bluetooth connections and also changes depending on the Linux kernel version. In contrast, the sdl2 driver maintains a consistent value regardless of whether the connection is USB or Bluetooth or the Linux kernel version.
 
-### Difference in input variable generation between linuxraw and udev.
+### Similarities in input variable generation between linuxraw and udev.
 
 It's useful to know that the `linuxraw` driver generates identical file content as udev with the exception of the `input_driver` variable, and the DPAD inputs, which are handled differently:
 
