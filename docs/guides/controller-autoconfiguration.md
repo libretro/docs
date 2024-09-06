@@ -391,14 +391,15 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No | Nintendo Co., Ltd. Pro Controller | Yes[1] | Pro Controller | Pro Controller (default-off).cfg |
+| 5.15 | No | No[1] | Nintendo Co., Ltd. Pro Controller | Yes[2] | Pro Controller | Pro Controller (default-off).cfg |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
 
-In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
+1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
+2: The Bluetooth connection is often unreliable. While pairing and connecting the controller with a Bluetooth manager initially works, the controller eventually stops being recognized by applications like RetroArch and jstest after a few weeks. When this occurs, the controller is not identified in RetroPad Binds -> Port 1 Controls -> Device Index, showing "N/A (#1)" instead. This issue arose after reinstalling the distribution.
 
-1: Please be aware that this controller operates exclusively via Bluetooth. Unfortunately, the Bluetooth connection can be unreliable. Although you might be able to pair and connect the controller using software like Blueman, it may not be recognized by other applications such as RetroArch, jstest, and similar programs.
+In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
 - **Pro Controller (default-off).cfg**:
 ```
