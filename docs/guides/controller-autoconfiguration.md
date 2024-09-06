@@ -396,9 +396,6 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
 
-1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
-2: The Bluetooth connection is often unreliable. While pairing and connecting the controller with a Bluetooth manager initially works, the controller eventually stops being recognized by applications like RetroArch and jstest after a few weeks. When this occurs, the controller is not identified in RetroPad Binds -> Port 1 Controls -> Device Index, showing "N/A (#1)" instead. This issue arose after reinstalling the distribution.
-
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
 - **Pro Controller (default-off).cfg**:
@@ -434,7 +431,7 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes[2] | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
@@ -692,3 +689,7 @@ input_r_y_plus_axis_label = "Right Analog Y+ (down)"
 input_r_y_minus_axis_label = "Right Analog Y- (up)"
 input_menu_toggle_btn_label = "PS"
 ```
+
+# References
+1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
+2: The Bluetooth connection is often unreliable. While pairing and connecting the controller with a Bluetooth manager initially works, the controller eventually stops being recognized by applications like RetroArch and jstest after a few weeks. When this occurs, the controller is not identified in RetroPad Binds -> Port 1 Controls -> Device Index, showing "N/A (#1)" instead. This issue arose after reinstalling the distribution.
