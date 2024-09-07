@@ -693,4 +693,4 @@ input_menu_toggle_btn_label = "PS"
 
 # References
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
-2: The Bluetooth connection is often unreliable, for any controller. While pairing and connecting the controller with a Bluetooth manager initially works, the controller eventually stops being recognized by applications like RetroArch and jstest after a few weeks. When this occurs, the controller is not identified in RetroPad Binds -> Port 1 Controls -> Device Index, showing "N/A (#1)" instead. This issue arose after reinstalling the distribution.
+2: This problem occurs for all controls. The Bluetooth connection is often unreliable. While pairing and connecting the controller with a Bluetooth manager initially works, the controller eventually stops being recognized by applications like RetroArch and jstest after a few weeks. When this occurs, the controller is not identified in RetroPad Binds -> Port 1 Controls -> Device Index, showing "N/A (#1)" instead. This issue arose after reinstalling the distribution.
