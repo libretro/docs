@@ -390,9 +390,9 @@ Both linuxraw, and udev controller driver relies on the `input_device` variable 
 
 #### Example: Nintendo Switch Pro Controller
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes[2] | Pro Controller | Pro Controller (default-off).cfg |
+| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | Pro Controller (default-off).cfg |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
@@ -430,9 +430,9 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 
 #### Example: Sony DualSense
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes[2] | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
@@ -693,4 +693,4 @@ input_menu_toggle_btn_label = "PS"
 
 # References
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
-2: This problem occurs for all controls. The Bluetooth connection may be unreliable.
+2: If you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
