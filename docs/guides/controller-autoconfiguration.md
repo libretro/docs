@@ -11,18 +11,15 @@ The matching algorithm considers several key factors:
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-## Different Controller Driver Usage
+## Different controller driver usage
 
-Different controller drivers use these identifiers in various ways:
+If there is a misconfiguration of the Vendor ID and Product ID, the system defaults to using the Device Index, and vice versa.[4]
 
-### android, udev, and sdl2 matching algorithms
-
-The `android`, `udev`, and `sdl2` drivers primarily rely on Vendor ID (`input_vendor_id`) and Product ID (`input_product_id`).
-
-They also check for Device Index (`input_device`), but this is not reliable since only a single name can be added. This limitation is highlighted in a feature request to support multiple `input_device` and `input_device_display_name` variables, as many names are identified by OS systems, depending on Linux kernel versions. For more details, you can view the feature request [here](https://github.com/libretro/RetroArch/issues/16907). If the Vendor ID and Product ID are configured incorrectly, the system will fall back on checking the Device Index, and vice versa. References: input_autoconfigure_get_config_file_affinity in [task_autodetect.c](https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c), and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c). For `android` and `udev`, the value of the `input_device` variable varies with USB and Bluetooth connections and also changes depending on the Linux kernel version. In contrast, the `sdl2` driver maintains a consistent value regardless of whether the connection is USB or Bluetooth or the Linux kernel version.
-
-### linuxraw matching algorithms
-The `linuxraw` driver rely on the Device Index (input_device).
+| Controller driver | input_vendor_id/input_product_id utilized | input_device utilized | input_device name variability
+|-|-|-|-|
+| android, udev | Yes | Yes[1] | Yes, USB and Bluetooth are distinct technologies, and their functionality can differ depending on the Linux version in use.
+| linuxraw | Yes | No | Yes (see "android, udev")
+| sdl2 | Yes | Yes | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
 ### Similarities in input variable generation between linuxraw and udev.
 
@@ -110,7 +107,7 @@ input_r_y_minus_axis = "-3"
 ```
 
 ### Matching process
-RetroArch compares these factors against its database of known controller profiles. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
+RetroArch compares these factors against the files in the autoconfig directorys. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
 
 The combination of Vendor ID and Product ID is often referred to as "vid:pid" in technical contexts.
 
@@ -700,3 +697,5 @@ input_menu_toggle_btn_label = "PS"
 # References
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
 2: If you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
+3: While these drivers do take the Device Index (`input_device`) into account, this method is still being refined due to its limitation of permitting only a single name entry. Nonetheless, a new [pull request](https://github.com/libretro/RetroArch/pull/16990) is currently undergoing testing.
+4: Relevant code references include `input_autoconfigure_get_config_file_affinity` in [task_autodetect.c](https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c), and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), and [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c).
