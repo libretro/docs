@@ -713,6 +713,6 @@ input_menu_toggle_btn_label = "PS"
 
 # References
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
-2: If you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
+2: Ensure that the bluez package is functioning correctly, as detailed in this [bug](https://github.com/bluez/bluez/issues/673). Also, if you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
 3: While these drivers do take the Device Index (`input_device`) into account, this method is still being refined due to its limitation of permitting only a single name entry. Nonetheless, a new [pull request](https://github.com/libretro/RetroArch/pull/16990) is currently undergoing testing.
 4: Relevant code references include `input_autoconfigure_get_config_file_affinity` in [task_autodetect.c](https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c), and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), and [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c).
