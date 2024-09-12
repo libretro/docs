@@ -23,17 +23,20 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 
 Example of Device Indexes for the Nintendo Switch Pro Controller:
 
-| Linux version | Controller driver | Device Index (USB)             | Device Index (Bluetooth)       |
-|---------------|-------------------|--------------------------------|--------------------------------|
-| 5.15.0        | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 5.15.0        | udev              | Nintendo Switch Pro Controller | Pro Controller                 |
-| 5.15.0        | linuxraw          | Nintendo Switch Pro Controller | Pro Controller                 |
-| 5.19.0        | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 5.19.0        | udev              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 5.19.0        | linuxraw          | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 6.2.0         | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 6.2.0         | udev              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
-| 6.2.0         | linuxraw          | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| Linux version | Controller driver | Device Index (USB)                | Device Index (Bluetooth)       |
+|---------------|-------------------|-----------------------------------|--------------------------------|
+| 5.15.0        | sdl2              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 5.15.0        | udev              | Nintendo Switch Pro Controller    | Pro Controller                 |
+| 5.15.0        | linuxraw          | Nintendo Switch Pro Controller    | Pro Controller                 |
+| 5.19.0        | sdl2              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 5.19.0        | udev              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 5.19.0        | linuxraw          | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 6.2.0         | sdl2              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 6.2.0         | udev              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 6.2.0         | linuxraw          | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 6.8.0         | sdl2              | Nintendo Switch Pro Controller    | Nintendo Switch Pro Controller |
+| 6.8.0         | udev              | Nintendo Co., Ltd. Pro Controller | Pro Controller                 |
+| 6.8.0         | linuxraw          | Nintendo Co., Ltd. Pro Controller | Pro Controller                 |
 
 ### Similarities in input variable generation between linuxraw and udev.
 
