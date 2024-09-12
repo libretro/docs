@@ -48,7 +48,7 @@ current source code. We provide two methods: one using *Git* and one without.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*
-If you didn't change it's default location, the 'system' folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your 'system' folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
+If you didn't change it's default location, the `system` folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your 'system' folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
 4. In the `RETROARCH_SYSTEM_FOLDER`, create a new folder named *dolphin-emu* and move/copy the `Sys` folder into it.
 
 When everything is set up properly, the `Sys` folder path should look something like this:
@@ -60,9 +60,9 @@ The dolphin-libretro core will now work much more reliably.
 
 ## BIOS
 
-The (optional) BIOS file goes in the directory `retroarch/saves/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
+The (optional) BIOS file goes in the directory `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
 
-To play the [Gamecube BIOS animation](https://www.youtube.com/watch?v=CpmYW-gCSy4) at game launch, once you have the aforementioned BIOS file placed and named correctly, open the `Dolphin.ini` file located in `retroarch/saves/User/Config/` with a text editor and change the line `SkipIPL = True` to `SkipIPL = False`.
+To play the [Gamecube BIOS animation](https://www.youtube.com/watch?v=CpmYW-gCSy4) at game launch, once you have the aforementioned BIOS file placed and named correctly, open the `Dolphin.ini` file located in `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings/Config/` with a text editor and change the line `SkipIPL = True` to `SkipIPL = False`.
 
 ## Extensions
 
@@ -116,7 +116,7 @@ Frontend-level settings or features that the dolphin-libretro core respects.
 
 ## Directories
 
-In addition to the aforementioned 'dolphin-emu' directory, the dolphin-libretro core also creates a folder structure similar to that used by the standalone Dolphin emulator in RETROARCH_SAVES_FOLDER/User. In this structure, you can access/edit most of the same functionality you would find in the standalone Dolphin emulator and can even copy some files--such as GAME.ini and save files--back and forth between the dolphin-libretro core and the standalone Dolphin emulator.
+In addition to the aforementioned `RETROARCH_SYSTEM_FOLDER/dolphin-emu` directory, the dolphin-libretro core also creates a folder structure similar to that used by the standalone Dolphin emulator in `RETROARCH_SAVES_FOLDER/dolphin-emu/User`. In this structure, you can access/edit most of the same functionality you would find in the standalone Dolphin emulator and can even copy some files--such as GAME.ini and save files--back and forth between the dolphin-libretro core and the standalone Dolphin emulator.
 
 ## Geometry and timing
 
@@ -140,12 +140,12 @@ Disabled by default. Internal cheats can be handled via the GAME.ini files, but 
 2. Look at the title bar and remember the ID of the game (for example "GFZE01" for F-Zero GX USA).
 3. Go to "Gecko Codes" tab and click "Download Codes".
 4. Check the boxes for the cheats you want to use then you can close Dolphin.
-5. Navigate to My Documents\Dolphin Emulator\GameSettings by default (or ~/.local/share/dolphin-emu/GameSettings for Linux).
-6. Copy the .ini file with the ID of the game and paste it in your RetroArch saves\User\GameSettings folder.
+5. Navigate to `My Documents\Dolphin Emulator\GameSettings` by default for Windows (or `~/.local/share/dolphin-emu/GameSettings` for Linux).
+6. Copy the .ini file with the ID of the game and paste it in your `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings` folder.
 7. Start the game, go to Quick Menu > Core Options and turn ON "Internal Cheats".
 8. And finally Quick Menu > Close Content, restart the game and the cheats should now be active.
 
-If you need to enable another cheat later for that game you don't need to do that all over again, you can simply edit the .ini file in your RetroArch saves folder with a text editor then add the cheat title under the line [Gecko_Enabled].
+If you need to enable another cheat later for that game, you don't need to do the whole process all over again. You can simply edit the .ini file(s) in your `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings` folder structure with a text editor to add the cheat title under the line [Gecko_Enabled].
 
 ## OpenGL
 
