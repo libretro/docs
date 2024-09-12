@@ -405,6 +405,8 @@ In Linux kernel version 5.15.0, the USB connection identifies the device as "Nin
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
+##### udev autoconfigs
+
 - **Pro Controller (default-off).cfg**:
 ```
 #input_device = "Pro Controller"
@@ -414,7 +416,40 @@ input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (Bluetooth
 ```
 
 Note: `(default-off)` is added to the filename , and the `input_device`, `input_vendor_id` and `input_product_id` variables are commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Pro Controller.cfg
- 
+
+- **Nintendo Switch Pro Controller.cfg**:
+```
+input_device = "Nintendo Switch Pro Controller"
+input_vendor_id = "1406"
+input_product_id = "8201"
+```
+
+Note: There's no need to include input_device_display_name because the input_device is detected via both Bluetooth and USB.
+
+- **Nintendo Co., Ltd. Pro Controller.cfg**:
+```
+input_device = "Nintendo Co., Ltd. Pro Controller"
+input_device_display_name = "Nintendo Switch Pro Controller (USB)"
+input_vendor_id = "1406"
+input_product_id = "8201"
+```
+
+- **Pro Controller.cfg**:
+```
+input_device = "Pro Controller"
+input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
+input_vendor_id = "1406"
+input_product_id = "8201"
+```
+
+##### linuxraw autoconfigs
+
+- **Pro Controller (default-off).cfg**:
+```
+#input_device = "Pro Controller"
+input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (Bluetooth)"
+```
+
 - **Nintendo Switch Pro Controller.cfg**:
 ```
 input_device = "Nintendo Switch Pro Controller"
