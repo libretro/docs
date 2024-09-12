@@ -23,7 +23,11 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 
 ### Importance of Linux kernel evaluation
 
-The naming conventions for the Nintendo Switch Pro Controller vary between USB and Bluetooth connections depending on the Linux kernel version in use. For example, in Linux kernel version 5.15.0, the USB connection identifies the device as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, it is recognized as "Nintendo Co., Ltd. Pro Controller." Despite these changes in USB naming, the Bluetooth name remains consistent as "Pro Controller" across both kernel versions. Therefore, when considering all Device Index names, it is crucial to create autoconfig files for both Bluetooth and USB connections across different Linux kernel versions. This is necessary because relying solely on the Bluetooth name and assuming the USB name will remain unchanged in future Linux versions is not advisable, as demonstrated in this case, which would have resulted in missing the addition of "Nintendo Co., Ltd. Pro Controller."
+The naming conventions for the controllers may vary between USB and Bluetooth connections depending on the Linux kernel version in use.
+
+#### Device Index example
+
+For example, in Linux kernel version 5.15.0, the USB connection identifies the device as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, it is recognized as "Nintendo Co., Ltd. Pro Controller." Despite these changes in USB naming, the Bluetooth name remains consistent as "Pro Controller" across both kernel versions. Therefore, when considering all Device Index names, it is crucial to create autoconfig files for both Bluetooth and USB connections across different Linux kernel versions. This is necessary because relying solely on the Bluetooth name and assuming the USB name will remain unchanged in future Linux versions is not advisable, as demonstrated in this case, which would have resulted in missing the addition of "Nintendo Co., Ltd. Pro Controller."
 
 | Linux version | Controller driver | Device Index (USB)                | Device Index (Bluetooth)       |
 |---------------|-------------------|-----------------------------------|--------------------------------|
