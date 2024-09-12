@@ -130,7 +130,7 @@ In addition to the aforementioned 'dolphin-emu' directory, the dolphin-libretro 
 
 ## Language
 
-When the 'Language' core option is set to automatic, the default olphin-libretro language setting will be pulled from RetroArch's Language setting.
+When the 'Language' core option is set to automatic, the default dolphin-libretro language setting will be pulled from RetroArch's Language setting.
 
 ## Internal Cheats
 
