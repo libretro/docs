@@ -407,6 +407,8 @@ In the above list, the following entries under **Autoconfigs file names to gener
 
 ##### udev autoconfigs
 
+udev primarily uses input_vendor_id and input_product_id, eliminating the need to create multiple files as required by linuxraw. An extra non-HID autoconfig must be added though:
+
 - **Pro Controller (default-off).cfg**:
 ```
 #input_device = "Pro Controller"
@@ -424,25 +426,9 @@ input_vendor_id = "1406"
 input_product_id = "8201"
 ```
 
-Note: There's no need to include input_device_display_name because the input_device is detected via both Bluetooth and USB.
-
-- **Nintendo Co., Ltd. Pro Controller.cfg**:
-```
-input_device = "Nintendo Co., Ltd. Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (USB)"
-input_vendor_id = "1406"
-input_product_id = "8201"
-```
-
-- **Pro Controller.cfg**:
-```
-input_device = "Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
-input_vendor_id = "1406"
-input_product_id = "8201"
-```
-
 ##### linuxraw autoconfigs
+
+Since linuxraw relies solely on input_device, all file names must be included:
 
 - **Pro Controller (default-off).cfg**:
 ```
