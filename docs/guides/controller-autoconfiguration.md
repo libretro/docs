@@ -21,6 +21,20 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 | linuxraw | Yes | No | Yes (see "android, udev")
 | sdl2 | Yes | Yes | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
+Example of Device Indexes for the Nintendo Switch Pro Controller:
+
+| Linux version | Controller driver | Device Index (USB)             | Device Index (Bluetooth)       |
+|---------------|-------------------|--------------------------------|--------------------------------|
+| 5.15.0        | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 5.15.0        | udev              | Nintendo Switch Pro Controller | Pro Controller                 |
+| 5.15.0        | linuxraw          | Nintendo Switch Pro Controller | Pro Controller                 |
+| 5.19.0        | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 5.19.0        | udev              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 5.19.0        | linuxraw          | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 6.2.0         | sdl2              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 6.2.0         | udev              | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 6.2.0         | linuxraw          | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+
 ### Similarities in input variable generation between linuxraw and udev.
 
 It's useful to know that the `linuxraw` driver generates identical file content as udev with the exception of the `input_driver` variable, and the DPAD inputs, which are handled differently:
