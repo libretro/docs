@@ -25,7 +25,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 For running properly, the Dolphin core requires to have the Dolphin `Sys` folder
 in the proper location.
 
-After downloading the core within RetroArch, execute one of the following three options:
+After downloading the core within RetroArch, execute one of the following options:
 
 ### A. Installing from the 'Core System Files Downloader'
 
@@ -49,13 +49,10 @@ current source code. We provide two methods: one using *Git* and one without.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*
-Unless you customized your installation, the RetroArch configuration path is
-the one listed in the
-[RGUI page](../guides/rgui/#config-file).
 If you didn't change any value, the system folder is:
 `RETROARCH_CONFIG_DIR/system`.
-If you changed the default directory configuration, you should check the
-*system_directory* option in the RetroArch configuration file (usually
+You can find the location of your 'system' folder (along with any other folders RetroArch uses) by going to settings > directory or by locating the 
+*system_directory* line in the RetroArch configuration file (usually
 `retroarch.cfg`) to see which folder is used.
 4. In the `RETROARCH_SYSTEM_FOLDER`, create the *dolphin-emu* directory and
 move/copy the `Sys` folder within it.
