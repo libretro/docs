@@ -48,7 +48,7 @@ current source code. We provide two methods: one using *Git* and one without.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*
-If you didn't change it's default location, the `system` folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your `system` folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
+If you didn't change its default location, the `system` folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your `system` folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
 4. In the `RETROARCH_SYSTEM_FOLDER`, create a new folder named *dolphin-emu* and move/copy the `Sys` folder into it.
 
 When everything is set up properly, the `Sys` folder path should look something like this:
