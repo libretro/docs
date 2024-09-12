@@ -398,10 +398,10 @@ In Linux kernel version 5.15.0, the USB connection identifies the device as "Nin
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | Pro Controller (default-off).cfg |
-| 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Nintendo Switch Pro Controller |
+| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | `Pro Controller (default-off).cfg` |
+| 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | `Nintendo Switch Pro Controller.cfg` |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
-| 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | Nintendo Co., Ltd. Pro Controller.cfg, Pro Controller.cfg |
+| 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | `Nintendo Co., Ltd. Pro Controller.cfg`, `Pro Controller.cfg` |
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
@@ -473,11 +473,10 @@ input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | Sony Interactive Entertainment DualSense Wireless Controller.cfg, DualSense Wireless Controller.cfg |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | `Sony Interactive Entertainment DualSense Wireless Controller.cfg`, `DualSense Wireless Controller.cfg` |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
-
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
