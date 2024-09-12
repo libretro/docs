@@ -26,11 +26,11 @@ To function properly, the dolphin-libretro core requires the Dolphin `Sys` folde
 
 After downloading the core within RetroArch, do **one** of the following options:
 
-### A. Installing from the 'Core System Files Downloader'
+### A. Installing from the 'Core System Files Downloader' (Easy/Automatic)
 
 If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution. Just download 'Dolphin.zip' from that menu and it will place the files where it needs them. You're all done!
 
-### B. Installing from the GitHub repo
+### B. Installing from the GitHub repo (Hard/Manual)
 
 1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
@@ -48,15 +48,10 @@ current source code. We provide two methods: one using *Git* and one without.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*
-If you didn't change any value, the system folder is:
-`RETROARCH_CONFIG_DIR/system`.
-You can find the location of your 'system' folder (along with any other folders RetroArch uses) by going to settings > directory or by locating the 
-*system_directory* line in the RetroArch configuration file (usually
-`retroarch.cfg`).
-4. In the `RETROARCH_SYSTEM_FOLDER`, create the *dolphin-emu* directory and
-move/copy the `Sys` folder into it.
+If you didn't change it's default location, the 'system' folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your 'system' folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
+4. In the `RETROARCH_SYSTEM_FOLDER`, create a new folder named *dolphin-emu* and move/copy the `Sys` folder into it.
 
-Ultimately, the `Sys` folder should be placed at a location similar to:
+When everything is set up properly, the `Sys` folder path should look something like this:
 ```
 RETROARCH_SYSTEM_FOLDER/dolphin-emu/Sys
 ```
@@ -121,9 +116,7 @@ Frontend-level settings or features that the dolphin-libretro core respects.
 
 ## Directories
 
-The dolphin-libretro core's library name is 'Dolphin'
-
-TODO/FIXME
+In addition to the aforementioned 'dolphin-emu' directory, 
 
 ## Geometry and timing
 
