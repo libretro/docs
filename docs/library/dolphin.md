@@ -120,13 +120,13 @@ In addition to the aforementioned 'dolphin-emu' directory, the dolphin-libretro 
 
 ## Geometry and timing
 
-- The olphin-libretro core's core provided FPS is 60 (for NTSC) / 50 (for PAL)
-- The olphin-libretro core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
-- The olphin-libretro core's base width is dependent on the 'Internal Resolution' core option
-- The olphin-libretro core's base height is dependent on the 'Internal Resolution' core option
-- The olphin-libretro core's max width is dependent on the 'Internal Resolution' core option
-- The olphin-libretro core's max height is dependent on the 'Internal Resolution' core option
-- The olphin-libretro core's core provided aspect ratio is 4/3.
+- The dolphin-libretro core's core provided FPS is 60 (for NTSC) / 50 (for PAL)
+- The dolphin-libretro core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
+- The dolphin-libretro core's base width is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's base height is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's max width is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's max height is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's core provided aspect ratio is 4/3.
 
 ## Language
 
