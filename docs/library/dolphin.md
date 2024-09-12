@@ -22,14 +22,14 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Setup
 
-For running properly, the Dolphin core requires to have the Dolphin `Sys` folder
-in the proper location.
+To function properly, the Dolphin core requires to have the Dolphin `Sys` folder
+in the proper location. This directory contains Dolphin's database of per-game compatibility settings/hacks, without which many games experience bugs of varying severity.
 
-After downloading the core within RetroArch, execute one of the following options:
+After downloading the core within RetroArch, do **one** of the following options:
 
 ### A. Installing from the 'Core System Files Downloader'
 
-If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and you're all done!
+If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and it will place the files where it needs them. You're all done!
 
 ### B. Installing from the GitHub repo
 
@@ -63,7 +63,7 @@ RETROARCH_SYSTEM_FOLDER/dolphin-emu/Sys
 ```
 There is also currently a bug with this core and the GL driver that can be worked around by going to settings > user interface > show advanced settings ON and then going to settings > core > allow cores to change the video driver OFF.
 
-The Dolphin core will now work without issues.
+The Dolphin core will now work much more reliably.
 
 ## BIOS
 
