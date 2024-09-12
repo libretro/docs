@@ -407,7 +407,7 @@ In the above list, the following entries under **Autoconfigs file names to gener
 
 ##### udev autoconfigs
 
-udev primarily uses input_vendor_id and input_product_id, eliminating the need to create multiple files as required by linuxraw. An extra non-HID autoconfig must be added though:
+udev primarily uses input_vendor_id and input_product_id, eliminating the need to create multiple files as required by linuxraw. However, an additional non-HID autoconfiguration is necessary in this example, because the bindings differ from those used in the HID autoconfiguration. This is important to ensure that the correct button mappings are applied for devices that do not conform to the HID standard, as they have different layouts that require distinct configurations.
 
 - **Pro Controller (default-off).cfg**:
 ```
