@@ -231,7 +231,7 @@ The Dolphin core has the following option(s) that can be tweaked from the core o
 | ![](../image/retropad/retro_left_stick.png) Y   | Analog Y            | Tilt Y      |  Tilt Y            | Nunchuk Stick Y   | Left Stick Y       | Left Stick Y           |
 | ![](../image/retropad/retro_right_stick.png) X  | C-Stick X           |             |                    | Tilt X            | Right Stick X      | Right Stick X          |
 | ![](../image/retropad/retro_right_stick.png) Y  | C-Stick Y           |             |                    | Tilt Y            | Right Stick Y      | Right Stick Y          |
-
+**NOTE:** The 'L-Analog' and 'R-Analog' inputs are half-presses of the analog L and R buttons, respectively. These inputs are required to progress in some games, such as Super Mario Sunshine.
 
 ## Compatibility
 
