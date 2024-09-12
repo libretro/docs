@@ -17,8 +17,8 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 
 | Controller driver | input_vendor_id/input_product_id utilized | input_device utilized | input_device name variability
 |-|-|-|-|
-| android, udev | Yes | Yes[1] | Yes, USB and Bluetooth are distinct technologies, and their functionality can differ depending on the Linux version in use.
-| linuxraw | Yes | No | Yes (see "android, udev")
+| android, udev | Yes | Yes (but no need to use it) | Yes (see "linuxraw")
+| linuxraw | No | Yes | Yes, the name for USB and Bluetooth are distinct on the same kernel, and their names can differ depending on the Linux version in use.
 | sdl2 | Yes | Yes | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
 ### Similarities in input variable generation between linuxraw and udev.
