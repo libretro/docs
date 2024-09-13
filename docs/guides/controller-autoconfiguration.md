@@ -396,12 +396,12 @@ The naming conventions for the controllers may vary between USB and Bluetooth co
 
 In Linux kernel version 5.15.0, the USB connection identifies the device as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, it is recognized as "Nintendo Co., Ltd. Pro Controller." Despite these changes in USB naming, the Bluetooth name remains consistent as "Pro Controller" across both kernel versions. Therefore, when considering all Device Index names, it is crucial to create autoconfig files for both Bluetooth and USB connections across different Linux kernel versions. This is necessary because relying solely on the Bluetooth name and assuming the USB name will remain unchanged in future Linux versions is not advisable, as demonstrated in this case, which would have resulted in missing the addition of "Nintendo Co., Ltd. Pro Controller."
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | `Pro Controller (default-off).cfg` |
-| 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | `Nintendo Switch Pro Controller.cfg` |
+| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | Generate `Pro Controller (default-off).cfg` |
+| 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Generate `Nintendo Switch Pro Controller.cfg` |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
-| 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | `Nintendo Co., Ltd. Pro Controller.cfg`, `Pro Controller.cfg` |
+| 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | For linuxraw, manually add `input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"` and `input_device_alt2 = "Pro Controller"` |
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
@@ -434,6 +434,7 @@ Since linuxraw relies solely on input_device, all file names must be included:
 
 - **Pro Controller (default-off).cfg**:
 ```
+input_driver = "linuxraw"
 #input_device = "Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 ```
@@ -448,25 +449,30 @@ input_device_alt2 = "Pro Controller"
 
 #### Example: Sony DualSense
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfigs file names to generate |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | `Sony Interactive Entertainment DualSense Wireless Controller.cfg`, `DualSense Wireless Controller.cfg` |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | Generate `Sony Interactive Entertainment DualSense Wireless Controller.cfg` |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
-| 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
+| 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | For linuxraw, manually add `input_device_alt1 = "DualSense Wireless Controller"` |
 
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
+##### udev
+
 - **Sony Interactive Entertainment DualSense Wireless Controller.cfg**:
 ```
+input_driver = "udev"
 input_device = "Sony Interactive Entertainment DualSense Wireless Controller"
-input_device_display_name = "Sony DualSense (USB)"
 ```
 
-- **DualSense Wireless Controller.cfg**:
+##### linuxraw
+
+- **Sony Interactive Entertainment DualSense Wireless Controller.cfg**:
 ```
-input_device = "DualSense Wireless Controller"
-input_device_display_name = "Sony DualSense (BlueTooth)"
+input_driver = "linuxraw"
+input_device = "Sony Interactive Entertainment DualSense Wireless Controller"
+input_device_alt1 = "DualSense Wireless Controller"
 ```
 
 ## Troubleshooting
