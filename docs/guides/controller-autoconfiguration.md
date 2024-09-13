@@ -449,16 +449,20 @@ input_device_alt2 = "Pro Controller"
 
 #### Example of multiple input_product_id variables: DualShock 4 v1, and DualShock 4 v2
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
+**DualShock 4 v2:**
+
+| Controller | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony Interactive Entertainment Wireless Controller.cfg`. udev/linuxraw: Manually add DualShock 4 v1 values to input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony DualShock 4 Controller.cfg` (see "Note" below). udev/linuxraw: Manually add DualShock 4 v1 values to input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 
+Note: DualShock 4 v1 is known as "Sony Computer Entertainment Wireless Controller" in Linux. However, this controller is not sold any more so extensive evaluation is not possible. However, the configuration is identical for both controllers.
+
 ##### udev autoconfigs
 
-- **Sony Interactive Entertainment Wireless Controller.cfg**:
+- **Sony DualShock 4 Controller.cfg**:
 ```
 input_device = "Sony Interactive Entertainment Wireless Controller"
 input_device_display_name = "Sony Interactive Entertainment Wireless Controller (DualShock 4 v2)"
@@ -473,13 +477,15 @@ input_product_id_alt1 = "1476"
 
 ##### linuxraw autoconfigs
 
-- **Sony Interactive Entertainment Wireless Controller.cfg**:
+- **Sony DualShock 4 Controller.cfg**:
 ```
 input_driver = "linuxraw"
 input_device = "Sony Interactive Entertainment Wireless Controller"
 input_device_display_name = "Sony Interactive Entertainment Wireless Controller (DualShock 4 v2)"
 input_device_alt1 = "Wireless Controller"
 input_device_display_name_alt1 = "Wireless Controller (DualShock 4 v2)"
+input_device_alt2 = "Sony Computer Entertainment Wireless Controller"
+input_device_display_name_alt2 = "Sony Computer Entertainment Wireless (DualShock 4 v1)"
 ```
 
 #### Example: Sony DualSense
