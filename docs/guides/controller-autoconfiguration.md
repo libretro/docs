@@ -405,11 +405,11 @@ The naming conventions for the controllers may vary between USB and Bluetooth co
 
 #### Example of controller with HID and non-HID autoconfigs: Nintendo Switch Pro Controller
 
-In Linux kernel version 5.15.0, the USB connection identifies the device as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, it is recognized as "Nintendo Co., Ltd. Pro Controller." Despite these changes in USB naming, the Bluetooth name remains consistent as "Pro Controller" across both kernel versions. Therefore, when considering all Device Index names, it is crucial to create autoconfig files for both Bluetooth and USB connections across different Linux kernel versions. This is necessary because relying solely on the Bluetooth name and assuming the USB name will remain unchanged in future Linux versions is not advisable, as demonstrated in this case, which would have resulted in missing the addition of "Nintendo Co., Ltd. Pro Controller."
+In Linux kernel versions 5.15.0, 5.19, and 6.2.0, devices connected via USB and Bluetooth are identified as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, the device is recognized with the USB name "Nintendo Co., Ltd. Pro Controller" and the Bluetooth name "Pro Controller." Consequently, to account for all possible device index names, it is essential to generate autoconfiguration files using various Linux kernel versions to capture all naming variations.
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Pro Controller | Generate `Pro Controller (default-off).cfg` |
+| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Generate `Nintendo Switch Pro Controller (default-off).cfg` |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | udev/linuxraw: Generate `Nintendo Switch Pro Controller.cfg` |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | For linuxraw: Manually add `input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"` and `input_device_alt2 = "Pro Controller"` |
@@ -420,10 +420,10 @@ In the above list, the following entries under **Autoconfigs file names to gener
 
 udev primarily uses input_vendor_id and input_product_id, eliminating the need to create multiple files as required by linuxraw. However, an additional non-HID autoconfiguration is necessary in this example, because the bindings differ from those used in the HID autoconfiguration. This is important to ensure that the correct button mappings are applied for devices that do not conform to the HID standard, as they have different layouts that require distinct configurations.
 
-- **Pro Controller (default-off).cfg**:
+- **Nintendo Switch Pro Controller (default-off).cfg**:
 ```
 input_driver = "udev"
-#input_device = "Pro Controller"
+#input_device = "Nintendo Switch Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 #input_vendor_id = "1406"
 #input_product_id = "8201"
@@ -443,10 +443,10 @@ input_product_id = "8201"
 
 Since linuxraw relies solely on input_device, all file names must be included:
 
-- **Pro Controller (default-off).cfg**:
+- **Nintendo Switch Pro Controller (default-off).cfg**:
 ```
 input_driver = "linuxraw"
-#input_device = "Pro Controller"
+#input_device = "Nintendo Switch Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 ```
 
