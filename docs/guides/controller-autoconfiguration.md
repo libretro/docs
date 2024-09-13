@@ -392,7 +392,7 @@ Currently, the SDL2 controller driver utilizes UDEV rather than SDL2 in the Retr
 
 The naming conventions for the controllers may vary between USB and Bluetooth connections depending on the Linux kernel version in use.
 
-#### Example: Nintendo Switch Pro Controller
+#### Example of controller with HID and non-HID autoconfigs: Nintendo Switch Pro Controller
 
 In Linux kernel version 5.15.0, the USB connection identifies the device as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, it is recognized as "Nintendo Co., Ltd. Pro Controller." Despite these changes in USB naming, the Bluetooth name remains consistent as "Pro Controller" across both kernel versions. Therefore, when considering all Device Index names, it is crucial to create autoconfig files for both Bluetooth and USB connections across different Linux kernel versions. This is necessary because relying solely on the Bluetooth name and assuming the USB name will remain unchanged in future Linux versions is not advisable, as demonstrated in this case, which would have resulted in missing the addition of "Nintendo Co., Ltd. Pro Controller."
 
@@ -447,11 +447,11 @@ input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"
 input_device_alt2 = "Pro Controller"
 ```
 
-#### Example: DualShock 4 v1, and DualShock 4 v2
+#### Example of multiple input_product_id variables: DualShock 4 v1, and DualShock 4 v2
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony Interactive Entertainment Wireless Controller.cfg`. udev/linuxraw: Manually add input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
+| 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony Interactive Entertainment Wireless Controller.cfg`. udev/linuxraw: Manually add DualShock 4 v1 values to input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
