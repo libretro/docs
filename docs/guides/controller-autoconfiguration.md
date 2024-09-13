@@ -447,6 +447,41 @@ input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"
 input_device_alt2 = "Pro Controller"
 ```
 
+#### Example: DualShock 4 v1, and DualShock 4 v2
+
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
+|-|-|-|-|-|-|-|
+| 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony Interactive Entertainment Wireless Controller.cfg`. udev/linuxraw: Manually add input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
+| 5.19 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
+| 6.2.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
+| 6.8.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
+
+##### udev autoconfigs
+
+- **Sony Interactive Entertainment Wireless Controller.cfg**:
+```
+input_device = "Sony Interactive Entertainment Wireless Controller"
+input_device_display_name = "Sony Interactive Entertainment Wireless Controller (DualShock 4 v2)"
+input_driver = "udev"
+input_vendor_id = "1356"
+input_product_id = "2508"
+input_device_alt1 = "Sony Computer Entertainment Wireless Controller"
+input_device_display_name_alt1 = "Sony Computer Entertainment Wireless  (DualShock 4 v1)"
+input_vendor_id_alt1 = "1356"
+input_product_id_alt1 = "1476"
+```
+
+##### linuxraw autoconfigs
+
+- **Sony Interactive Entertainment Wireless Controller.cfg**:
+```
+input_driver = "linuxraw"
+input_device = "Sony Interactive Entertainment Wireless Controller"
+input_device_display_name = "Sony Interactive Entertainment Wireless Controller (DualShock 4 v2)"
+input_device_alt1 = "Wireless Controller"
+input_device_display_name_alt1 = "Wireless Controller (DualShock 4 v2)"
+```
+
 #### Example: Sony DualSense
 
 | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
