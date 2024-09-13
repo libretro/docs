@@ -18,8 +18,19 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 | Controller driver | input_vendor_id/input_product_id utilized | input_device utilized | input_device name variability
 |-|-|-|-|
 | android, udev | Yes | input_device | May vary but no need to add input_device_alt1 since input_vendor_id/input_product_id is utilized. Please use the USB name since it's more describing.
-| linuxraw | No | input_device, input_device_alt1, | Yes, the name for USB and Bluetooth are distinct on the same kernel, and their names can differ depending on the Linux version in use.
+| linuxraw | No | input_device, input_device_alt1 | Yes, the name for USB and Bluetooth are distinct on the same kernel, and their names can differ depending on the Linux version in use.
 | sdl2 | Yes | Yes | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
+
+## Alternative variables
+
+Managing Controllers with Identical Configurations. Up to nine alternative variables can be used for the following purposes:
+
+- **Managing Controllers with Identical Configurations for Linuxraw**:
+  - **Device Index (input_device)**: You can use `input_device_alt1`, `input_device_alt2`, `input_device_alt3`, up to `input_device_alt9`.
+- **Managing Controllers with Identical Configurations that has different input_vendor_id/input_product_id**:
+  - This applies to controllers like the Sony DualShock v1 and v2 for the `android`, `sdl2`, and `udev` controller drivers. Always use `input_vendor_id` and `input_product_id` for the most recent controller models, as they are more likely still available on the market. RetroArch version 1.19.1 and earlier cannot utilize _alt autoconfig variables, so using `input_vendor_id` for the latest controller ensures connectivity in RetroArch. Use `..._alt*` variables for older controllers.
+  - **Vendor ID (input_vendor_id)**: Options include `input_vendor_id_alt1`, `input_vendor_id_alt2`, `input_vendor_id_alt3`, up to `input_vendor_id_alt9`.
+  - **Product ID (input_product_id)**: Options include `input_product_id_alt1`, `input_product_id_alt2`, `input_product_id_alt3`, up to `input_product_id_alt9`.
 
 ### Similarities in input variable generation between linuxraw and udev.
 
