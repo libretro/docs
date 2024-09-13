@@ -25,9 +25,9 @@ If there is a misconfiguration of the Vendor ID and Product ID, the system defau
 
 Managing Controllers with Identical Configurations. Up to nine alternative variables can be used for the following purposes:
 
-- **Managing Controllers with Identical Configurations for Linuxraw**:
-  - **Device Index (input_device)**: You can use `input_device_alt1`, `input_device_alt2`, `input_device_alt3`, up to `input_device_alt9`.
-- **Managing Controllers with Identical Configurations that has different input_vendor_id/input_product_id**:
+- **`linuxraw`: Managing Controllers with Identical Configurations**:
+  - **Device Index (input_device)**: You can use `input_device_alt1`, `input_device_alt2`, `input_device_alt3`, up to `input_device_alt9`. For names available on both USB and Bluetooth, input_vendor_id should be utilized; for USB-specific names, use input_vendor_id_alt1, and for Bluetooth-specific names, use input_vendor_id_alt2.
+- **`android`, `sdl2`, and `udev`: Managing Controllers with Identical Configurations that has different input_vendor_id/input_product_id**:
   - This applies to controllers like the Sony DualShock v1 and v2 for the `android`, `sdl2`, and `udev` controller drivers. Always use `input_vendor_id` and `input_product_id` for the most recent controller models, as they are more likely still available on the market. RetroArch version 1.19.1 and earlier cannot utilize _alt autoconfig variables, so using `input_vendor_id` for the latest controller ensures connectivity in RetroArch. Use `..._alt*` variables for older controllers.
   - **Vendor ID (input_vendor_id)**: Options include `input_vendor_id_alt1`, `input_vendor_id_alt2`, `input_vendor_id_alt3`, up to `input_vendor_id_alt9`.
   - **Product ID (input_product_id)**: Options include `input_product_id_alt1`, `input_product_id_alt2`, `input_product_id_alt3`, up to `input_product_id_alt9`.
