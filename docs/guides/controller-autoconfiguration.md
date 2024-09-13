@@ -411,8 +411,9 @@ udev primarily uses input_vendor_id and input_product_id, eliminating the need t
 
 - **Pro Controller (default-off).cfg**:
 ```
+input_driver = "udev"
 #input_device = "Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (Bluetooth)"
+input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 #input_vendor_id = "1406"
 #input_product_id = "8201"
 ```
@@ -421,6 +422,7 @@ Note: `(default-off)` is added to the filename , and the `input_device`, `input_
 
 - **Nintendo Switch Pro Controller.cfg**:
 ```
+input_driver = "udev"
 input_device = "Nintendo Switch Pro Controller"
 input_vendor_id = "1406"
 input_product_id = "8201"
@@ -433,26 +435,15 @@ Since linuxraw relies solely on input_device, all file names must be included:
 - **Pro Controller (default-off).cfg**:
 ```
 #input_device = "Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (non-HID) (Bluetooth)"
+input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 ```
 
 - **Nintendo Switch Pro Controller.cfg**:
 ```
+input_driver = "linuxraw"
 input_device = "Nintendo Switch Pro Controller"
-```
-
-Note: There's no need to include input_device_display_name because the input_device is detected via both Bluetooth and USB.
-
-- **Nintendo Co., Ltd. Pro Controller.cfg**:
-```
-input_device = "Nintendo Co., Ltd. Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (USB)"
-```
-
-- **Pro Controller.cfg**:
-```
-input_device = "Pro Controller"
-input_device_display_name = "Nintendo Switch Pro Controller (Bluetooth)"
+input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"
+input_device_alt2 = "Pro Controller"
 ```
 
 #### Example: Sony DualSense
