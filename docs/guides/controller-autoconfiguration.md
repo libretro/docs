@@ -464,6 +464,8 @@ In the above list, the following entries under **Autoconfigs file names to gener
 ```
 input_driver = "udev"
 input_device = "Sony Interactive Entertainment DualSense Wireless Controller"
+input_vendor_id = "1356"
+input_product_id = "3302"
 ```
 
 ##### linuxraw
