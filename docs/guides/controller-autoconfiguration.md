@@ -11,15 +11,14 @@ The matching algorithm considers several key factors:
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
 
-## Different controller driver usage
+## Autoconfig variable policy
 
-If there is a misconfiguration of the Vendor ID and Product ID, the system defaults to using the Device Index, and vice versa.[4]
-
-| Controller driver | input_vendor_id/input_product_id utilized | input_device utilized | input_device name variability
+| Controller driver | input_vendor_id/input_product_id required | input_device usage | input_device name variability policy
 |-|-|-|-|
-| android, udev | Yes | input_device | May vary but no need to add input_device_alt1 since input_vendor_id/input_product_id is utilized. Please use the USB name since it's more describing.
-| linuxraw | No | input_device, input_device_alt1 | Yes, the name for USB and Bluetooth are distinct on the same kernel, and their names can differ depending on the Linux version in use.
-| sdl2 | Yes | Yes | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
+| android | Yes | input_device[4] | Use the Bluetooth name since it's primarly used by Android devices.
+| udev | Yes | input_device[4] | Use the USB name since it's more describing.
+| linuxraw | No | input_device (for USB), input_device_alt1 (for Bluetooth), input_device_alt2 (for USB on another Linux kernel)... | Use both USB and Bluetooth names from different Linux kernels; Their names can differ depending on the Linux version in use.
+| sdl2 | Yes | input_device[4] | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
 ## Alternative variables
 
@@ -772,4 +771,4 @@ input_menu_toggle_btn_label = "PS"
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
 2: Ensure that the bluez package is functioning correctly, as detailed in this [bug](https://github.com/bluez/bluez/issues/673). Also, if you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
 3: While these drivers do take the Device Index (`input_device`) into account, this method is still being refined due to its limitation of permitting only a single name entry. Nonetheless, a new [pull request](https://github.com/libretro/RetroArch/pull/16990) is currently undergoing testing.
-4: Relevant code references include `input_autoconfigure_get_config_file_affinity` in [task_autodetect.c](https://github.com/libretro/RetroArch/blob/master/tasks/task_autodetect.c), and `input_autoconfigure_connect` in [android_input.c](https://github.com/libretro/RetroArch/blob/master/input/drivers/android_input.c), [sdl_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/sdl_joypad.c), and [udev_joypad.c](https://github.com/libretro/RetroArch/blob/master/input/drivers_joypad/udev_joypad.c).
+4: If there is a misconfiguration of the Vendor ID and Product ID, the system defaults to using the Device Index. Relevant code references include input_autoconfigure_get_config_file_affinity in task_autodetect.c, and input_autoconfigure_connect in android_input.c, sdl_joypad.c, and udev_joypad.c. However, it is inconvenient to use alternative input_device variables (like input_device_alt1, input_device_alt2, etc.) to match multiple Linux kernels. Therefore, we only include the input_device USB name as a single fallback identifier, since using input_vendor_id/input_product_id is adequate.
