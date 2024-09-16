@@ -16,8 +16,8 @@ The matching algorithm considers several key factors:
 | Controller driver | input_vendor_id/input_product_id required | input_device usage | input_device name variability policy
 |-|-|-|-|
 | android | Yes | input_device[4] | Use the Bluetooth name since it's primarly used by Android devices.
-| udev | Yes | If you have generated linuxraw autoconfig files please reuse their input_device and alternative input_device variables, otherwise just use input_device.[4] | Use the USB name since it's more describing.
-| linuxraw | No | input_device (for USB), input_device_alt1 (for Bluetooth), input_device_alt2 (for USB on another Linux kernel)... | Use both USB and Bluetooth names from different Linux kernels; Their names can differ depending on the Linux version in use.
+| udev | Yes | Recommended: See linuxraw. Minimal: input_device | For optimal configuration, if you are generating Linux raw autoconfig files, it is advisable to reuse the variables for input_device and alternative_input_device. In cases where input_device is used without alternative names, it is recommended to utilize the USB Device Index for a more descriptive identification.
+| linuxraw | No | input_device (for Device Index over USB), input_device_alt1 (for Device Index over Bluetooth), input_device_alt2 (for Device Index over USB on another Linux kernel)... | Use both Device Index over USB and Bluetooth from different Linux kernels; Their names can differ depending on the Linux version in use.
 | sdl2 | Yes | input_device[4] | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
 ## Alternative variables
