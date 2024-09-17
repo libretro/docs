@@ -15,10 +15,10 @@ The matching algorithm considers several key factors:
 
 | Controller driver | input_vendor_id/input_product_id required | input_device usage | input_device name variability policy
 |-|-|-|-|
-| android | Yes | input_device[4] | Use the Bluetooth name since it's primarly used by Android devices.
+| android | Yes | input_device[3](#references) | Use the Bluetooth name since it's primarly used by Android devices.
 | udev | Yes | Recommended: See linuxraw. Minimal: input_device | For optimal configuration, if you are generating Linux raw autoconfig files, it is advisable to reuse the variables for input_device and alternative_input_device. In cases where input_device is used without alternative names, it is recommended to utilize the USB Device Index for a more descriptive identification.
 | linuxraw | No | input_device (for Device Index over USB), input_device_alt1 (for Device Index over Bluetooth), input_device_alt2 (for Device Index over USB on another Linux kernel)... | Use both Device Index over USB and Bluetooth from different Linux kernels; Their names can differ depending on the Linux version in use.
-| sdl2 | Yes | input_device[4] | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
+| sdl2 | Yes | input_devicee[3](#references) | No (uses [SDL2 Game Controller community database](https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt))
 
 ## Alternative variables
 
@@ -406,9 +406,9 @@ The naming conventions for the controllers may vary between USB and Bluetooth co
 
 In Linux kernel versions 5.15.0, 5.19, and 6.2.0, devices connected via USB and Bluetooth are identified as "Nintendo Switch Pro Controller." However, in kernel version 6.8.0, the device is recognized with the USB name "Nintendo Co., Ltd. Pro Controller" and the Bluetooth name "Pro Controller." Consequently, to account for all possible device index names, it is essential to generate autoconfiguration files using various Linux kernel versions to capture all naming variations.
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2](#references) | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
-| 5.15 | No | No[1] | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Generate `Nintendo Switch Pro Controller (default-off).cfg` |
+| 5.15 | No | Noe[1](#references) | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | Generate `Nintendo Switch Pro Controller (default-off).cfg` |
 | 5.19 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | udev/linuxraw: Generate `Nintendo Switch Pro Controller.cfg` |
 | 6.2.0 | Yes | Yes | Nintendo Switch Pro Controller | Yes | Nintendo Switch Pro Controller | |
 | 6.8.0 | Yes | Yes | Nintendo Co., Ltd. Pro Controller | Yes | Pro Controller | For linuxraw: Manually add `input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"` and `input_device_alt2 = "Pro Controller"` |
@@ -461,7 +461,7 @@ input_device_alt2 = "Pro Controller"
 
 **DualShock 4 v2:**
 
-| Controller | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
+| Controller | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2](#references) | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
 | 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony DualShock 4 Controller.cfg` (see "Note" below). udev/linuxraw: Manually add DualShock 4 v1 values to input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
@@ -500,7 +500,7 @@ input_device_display_name_alt2 = "Sony Computer Entertainment Wireless (DualShoc
 
 #### Example: Sony DualSense
 
-| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
+| Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supportede[2](#references) | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
 |-|-|-|-|-|-|-|
 | 5.15 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | udev/linuxraw: Generate `Sony Interactive Entertainment DualSense Wireless Controller.cfg`. linuxraw: Manually add `input_device_alt1 = "DualSense Wireless Controller"` |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
@@ -770,5 +770,4 @@ input_menu_toggle_btn_label = "PS"
 # References
 1: The controller is listed as "Nintendo Switch Pro Controller" under RetroPad Binds -> Port 1 Controls -> Device Index, but button binding is not possible.
 2: Ensure that the bluez package is functioning correctly, as detailed in this [bug](https://github.com/bluez/bluez/issues/673). Also, if you're experiencing unreliable Bluetooth connections with virtual machines, which can impact all controllers, consider booting the distributions in live mode directly from the BIOS.
-3: While these drivers do take the Device Index (`input_device`) into account, this method is still being refined due to its limitation of permitting only a single name entry. Nonetheless, a new [pull request](https://github.com/libretro/RetroArch/pull/16990) is currently undergoing testing.
-4: If there is a misconfiguration of the Vendor ID and Product ID, the system defaults to using the Device Index. Relevant code references include input_autoconfigure_get_config_file_affinity in task_autodetect.c, and input_autoconfigure_connect in android_input.c, sdl_joypad.c, and udev_joypad.c. If you've already created Linuxraw autoconfig names that need alternative input_device variables (such as input_device_alt1, input_device_alt2, etc.), please use them for udev as well since they are using identical Device Indexes. If you haven't, using input_vendor_id/input_product_id will suffice.
+3: If there is a misconfiguration of the Vendor ID and Product ID, the system defaults to using the Device Index. Relevant code references include input_autoconfigure_get_config_file_affinity in task_autodetect.c, and input_autoconfigure_connect in android_input.c, sdl_joypad.c, and udev_joypad.c. If you've already created Linuxraw autoconfig names that need alternative input_device variables (such as input_device_alt1, input_device_alt2, etc.), please use them for udev as well since they are using identical Device Indexes. If you haven't, using input_vendor_id/input_product_id will suffice.
