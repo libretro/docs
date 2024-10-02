@@ -419,7 +419,7 @@ In the above list, the following entries under **Autoconfigs file names to gener
 
 udev primarily uses input_vendor_id and input_product_id, eliminating the need to create multiple files as required by linuxraw. However, an additional non-HID autoconfiguration is necessary in this example, because the bindings differ from those used in the HID autoconfiguration. This is important to ensure that the correct button mappings are applied for devices that do not conform to the HID standard, as they have different layouts that require distinct configurations.
 
-- **Nintendo Switch Pro Controller (default-off).cfg**:
+- **Nintendo Switch Pro Controller (non-HID) (default-off).cfg**:
 ```
 input_driver = "udev"
 #input_device = "Nintendo Switch Pro Controller"
@@ -428,7 +428,7 @@ input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 #input_product_id = "8201"
 ```
 
-Note: `(default-off)` is added to the filename , and the `input_device`, `input_vendor_id` and `input_product_id` variables are commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Pro Controller.cfg
+Note: `(non-HID) (default-off)` is added to the filename to distinguish it from the autoconfig with HID support and to make clear that it is disabled by default. Also, the `input_device`, `input_vendor_id` and `input_product_id` variables are commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Nintendo Switch Pro Controller.cfg
 
 - **Nintendo Switch Pro Controller.cfg**:
 ```
@@ -436,18 +436,22 @@ input_driver = "udev"
 input_device = "Nintendo Switch Pro Controller"
 input_vendor_id = "1406"
 input_product_id = "8201"
+input_device_alt1 = "Nintendo Co., Ltd. Pro Controller"
+input_device_alt2 = "Pro Controller"
 ```
 
 ##### linuxraw autoconfigs
 
 Since linuxraw relies solely on input_device, all file names must be included:
 
-- **Nintendo Switch Pro Controller (default-off).cfg**:
+- **Nintendo Switch Pro Controller (non-HID) (default-off).cfg**:
 ```
 input_driver = "linuxraw"
 #input_device = "Nintendo Switch Pro Controller"
 input_device_display_name = "Nintendo Switch Pro Controller (non-HID)"
 ```
+
+Note: `(non-HID) (default-off)` is added to the filename to distinguish it from the autoconfig with HID support and to make clear that it is disabled by default. Also, the `input_device` variable is commented out to disable this auto-configuration, preventing file name duplication and conflicts with the HID version: Nintendo Switch Pro Controller.cfg
 
 - **Nintendo Switch Pro Controller.cfg**:
 ```
