@@ -12,7 +12,7 @@ RetroArch is a frontend for emulators, game engines and media players.
 
 ## What RetroArch is
 
-It runs programs converted into dynamic libraries called libretro cores, using several user interfaces such as command-line interface, a few graphical user interfaces optimized for gamepads, several input, audio and video drivers, plus other sophisticated features like dynamic rate control, audio filters, multi-pass shaders, netplay, gameplay rewinding, cheats, etc.Settings are also unified so configuration is done once and for all.
+It runs programs converted into dynamic libraries called libretro cores, using several user interfaces such as command-line interface, a few graphical user interfaces optimized for gamepads, several input, audio and video drivers, plus other sophisticated features like dynamic rate control, audio filters, multi-pass shaders, netplay, gameplay rewinding, cheats, etc. Settings are also unified so configuration is done once and for all.
 
 In addition to this, you are able to run original game discs (CDs) from RetroArch.
 
