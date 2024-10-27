@@ -109,6 +109,8 @@ nav:
       - '3DO Emulation':
         - 'The 3DO Company - 3DO (Opera)': 'library/opera.md'
         - '3DO Compatibility List': 'library/compatibility/3do.md'
+      - 'Acorn Emulation':
+        - 'Acorn - BBC Micro (b2)': 'library/b2.md'
       - 'Amstrad Emulation':
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
