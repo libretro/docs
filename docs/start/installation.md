@@ -42,7 +42,7 @@ To get started with RetroArch, the first step is to download the application. Wh
 
 Now that we've talked about our download sources, we can come to the download stages. You can use one of the two channels for this. One of them is our [original website](https://www.retroarch.com/index.php?page=platforms) and the other is the [buildbot](http://buildbot.libretro.com/stable/{{ unit.stable }}) where our application is produced. It downloads from the same source on both links, so you can use both.
 
-After entering the website, you will encounter the situation where you can use one of the two download options. This is apply for most platforms. These options are divided into two as Stable and Nightly. Let's get to know these options closely:
+After entering the website, you will encounter the situation where you can use one of the two download options. This applies for most platforms. These options are divided into two as Stable and Nightly. Let's get to know these options closely:
 
 === "Stable"
 
