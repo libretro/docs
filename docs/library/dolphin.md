@@ -6,9 +6,9 @@
 
 A Nintendo Gamecube/Wii emulator for Android, Windows, Mac and Linux, written in C++.
 
-The Dolphin core supports [OpenGL](#opengl), [Vulkan](#vulkan), and [Direct3D 11](#d3d11) rendering.
+The dolphin-libretro core supports [OpenGL](#opengl), [Vulkan](#vulkan), and [Direct3D 11](#d3d11) rendering.
 
-The Dolphin core is licensed under
+The dolphin-libretro core is licensed under
 
 - [GPLv2](https://github.com/libretro/dolphin/blob/master/LICENSE.TXT)
 
@@ -22,16 +22,15 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Setup
 
-For running properly, the Dolphin core requires to have the Dolphin `Sys` folder
-in the proper location.
+To function properly, the dolphin-libretro core requires the Dolphin `Sys` folder to be in the proper location. This directory contains Dolphin's database of per-game compatibility settings/hacks, without which many games experience bugs of varying severity.
 
-After downloading the core within RetroArch, execute one of the following three options:
+After downloading the core within RetroArch, do **one** of the following options:
 
-### A. Installing from the 'Core System Files Downloader'
+### A. Installing from the 'Core System Files Downloader' (Easy/Automatic)
 
-If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'Dolphin.zip' from that menu and you're all done!
+If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution. Just download 'Dolphin.zip' from that menu and it will place the files where it needs them. You're all done!
 
-### B. Installing from the GitHub repo
+### B. Installing from the GitHub repo (Hard/Manual)
 
 1. Get a copy of the Dolphin `Sys` folder. This can be done by downloading the
 current source code. We provide two methods: one using *Git* and one without.
@@ -45,38 +44,29 @@ current source code. We provide two methods: one using *Git* and one without.
     [https://github.com/libretro/dolphin/archive/master.zip](https://github.com/libretro/dolphin/archive/master.zip)
     You can then extract it.
 
-2. After getting the code, enter in the folder containing it.
+2. After downloading/extracting the code, navigate into the resulting source tree folder.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
 3. *Find RetroArch's system folder path*
-Unless you customized your installation, the RetroArch configuration path is
-the one listed in the
-[RGUI page](../guides/rgui/#config-file).
-If you didn't change any value, the system folder is:
-`RETROARCH_CONFIG_DIR/system`.
-If you changed the default directory configuration, you should check the
-*system_directory* option in the RetroArch configuration file (usually
-`retroarch.cfg`) to see which folder is used.
-4. In the `RETROARCH_SYSTEM_FOLDER`, create the *dolphin-emu* directory and
-move/copy the `Sys` folder within it.
+If you didn't change its default location, the `system` folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your `system` folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
+4. In the `RETROARCH_SYSTEM_FOLDER`, create a new folder named *dolphin-emu* and move/copy the `Sys` folder into it.
 
-Ultimately, the `Sys` folder should be placed at a location similar to:
+When everything is set up properly, the `Sys` folder path should look something like this:
 ```
 RETROARCH_SYSTEM_FOLDER/dolphin-emu/Sys
 ```
-There is also currently a bug with this core and the GL driver that can be worked around by going to settings > user interface > show advanced settings ON and then going to settings > core > allow cores to change the video driver OFF.
 
-The Dolphin core will now work without issues.
+The dolphin-libretro core will now work much more reliably.
 
 ## BIOS
 
-The (optional) BIOS file goes in the directory `retroarch/saves/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
+The (optional) BIOS file goes in the directory `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GC/<USA or EUR or JAP>`, with the file name `IPL.bin` for all regions. It is not necessary to provide a BIOS for most games, but certain titles (particularly those which make heavy use of the system fonts, like Star Fox Assault) can be unplayable without it.
 
-To play the [Gamecube BIOS animation](https://www.youtube.com/watch?v=CpmYW-gCSy4) at game launch, once you have the aforementioned BIOS file placed and named correctly, open the `Dolphin.ini` file located in `retroarch/saves/User/Config/` with a text editor and change the line `SkipIPL = True` to `SkipIPL = False`.
+To play the [Gamecube BIOS animation](https://www.youtube.com/watch?v=CpmYW-gCSy4) at game launch, once you have the aforementioned BIOS file placed and named correctly, open the `Dolphin.ini` file located in `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings/Config/` with a text editor and change the line `SkipIPL = True` to `SkipIPL = False`.
 
 ## Extensions
 
-Content that can be loaded by the Dolphin core have the following file extensions:
+Content that can be loaded by the dolphin-libretro core have the following file extensions:
 
 - .elf
 - .iso
@@ -89,14 +79,14 @@ Content that can be loaded by the Dolphin core have the following file extension
 - .wad
 - .rvz
 
-RetroArch database(s) that are associated with the Dolphin core:
+RetroArch database(s) that are associated with the dolphin-libretro core:
 
 - [Nintendo - GameCube](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20GameCube.rdb)
 - [Nintendo - Wii](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Wii.rdb)
 
 ## Features
 
-Frontend-level settings or features that the Dolphin core respects.
+Frontend-level settings or features that the dolphin-libretro core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -126,29 +116,36 @@ Frontend-level settings or features that the Dolphin core respects.
 
 ## Directories
 
-The Dolphin core's library name is 'Dolphin'
-
-TODO/FIXME
+In addition to the aforementioned `RETROARCH_SYSTEM_FOLDER/dolphin-emu` directory, the dolphin-libretro core also creates a folder structure similar to that used by the standalone Dolphin emulator in `RETROARCH_SAVES_FOLDER/dolphin-emu/User`. In this structure, you can access/edit most of the same functionality you would find in the standalone Dolphin emulator and can even copy some files--such as `GAME.ini` and save files--back and forth between the dolphin-libretro core and the standalone Dolphin emulator.
 
 ## Geometry and timing
 
-- The Dolphin core's core provided FPS is 60 (for NTSC) / 50 (for PAL)
-- The Dolphin core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
-- The Dolphin core's base width is dependent on the 'Internal Resolution' core option
-- The Dolphin core's base height is dependent on the 'Internal Resolution' core option
-- The Dolphin core's max width is dependent on the 'Internal Resolution' core option
-- The Dolphin core's max height is dependent on the 'Internal Resolution' core option
-- The Dolphin core's core provided aspect ratio is 4/3.
+- The dolphin-libretro core's core provided FPS is 60 (for NTSC) / 50 (for PAL)
+- The dolphin-libretro core's core provided sample rate can be either 32000 Hz or 48000 Hz depending on user configuration
+- The dolphin-libretro core's base width is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's base height is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's max width is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's max height is dependent on the 'Internal Resolution' core option
+- The dolphin-libretro core's core provided aspect ratio is 4/3.
 
 ## Language
 
-When the 'Language' core option is set to automatic, the default Dolphin language setting will be pulled from RetroArch's Language setting.
+When the `Language` core option is set to automatic, the default dolphin-libretro language setting will be pulled from RetroArch's Language setting.
 
 ## Internal Cheats
 
-Disabled by default.
+Disabled by default. Internal cheats can be handled via the GAME.ini files, but they will not take effect unless internal cheats are enabled in the core options. While there is no automatic way to add cheats to the dolphin-libretro core, it can use a cheat file generated by the standalone Dolphin emulator using the following process:
 
-TODO/FIXME
+1. Open standalone Dolphin emulator and right-click your game > Properties.
+2. Look at the title bar and remember the ID of the game (for example `GFZE01` for `F-Zero GX USA`).
+3. Go to `Gecko Codes` tab and click `Download Codes`.
+4. Check the boxes for the cheats you want to use then you can close Dolphin.
+5. Navigate to `My Documents\Dolphin Emulator\GameSettings` by default for Windows (or `~/.local/share/dolphin-emu/GameSettings` for Linux).
+6. Copy the .ini file with the ID of the game and paste it in your `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings` folder.
+7. Start the game, go to Quick Menu > Core Options and turn ON "Internal Cheats".
+8. And finally Quick Menu > Close Content, restart the game and the cheats should now be active.
+
+If you need to enable another cheat later for that game, you don't need to do the whole process all over again. You can simply edit the .ini file(s) in your `RETROARCH_SAVES_FOLDER/dolphin-emu/User/GameSettings` folder structure with a text editor to add the cheat title under the line [Gecko_Enabled].
 
 ## OpenGL
 
@@ -234,7 +231,7 @@ The Dolphin core has the following option(s) that can be tweaked from the core o
 | ![](../image/retropad/retro_left_stick.png) Y   | Analog Y            | Tilt Y      |  Tilt Y            | Nunchuk Stick Y   | Left Stick Y       | Left Stick Y           |
 | ![](../image/retropad/retro_right_stick.png) X  | C-Stick X           |             |                    | Tilt X            | Right Stick X      | Right Stick X          |
 | ![](../image/retropad/retro_right_stick.png) Y  | C-Stick Y           |             |                    | Tilt Y            | Right Stick Y      | Right Stick Y          |
-
+**NOTE:** The 'L-Analog' and 'R-Analog' inputs are half-presses of the analog L and R buttons, respectively. These inputs are required to progress in some games, such as Super Mario Sunshine.
 
 ## Compatibility
 

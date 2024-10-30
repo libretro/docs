@@ -7,41 +7,51 @@ RetroArch is intended to be easily controlled with a controller. RetroArch uses 
     RetroArch allows users to configure a controller once for many cores instead of having to configure each core individually. RetroArch also provides the freedom to configure specific cores and even individual games differently if the user wants.
 
 ### What is a RetroPad?
-RetroArch controls map real-world controller inputs to a virtual controller called a "RetroPad". A RetroPad does not exist in real life, it's a concept only within RetroArch. A RetroPad has an ABXY layout like a SNES gamepad plus four shoulder buttons and dual analog sticks like a Sony DualShock.
+RetroArch maps real-world controller inputs to a virtual controller called a `RetroPad` . A RetroPad resembles the common modern controller layout, and has:
 
-You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad also has less buttons, that's perfectly fine.
+- a D-pad
+- 4 face buttons with an ABXY layout like a SNES gamepad (that is: A-right, B-bottom, X-top, Y-left)
+- Select / Start buttons
+- two shoulder buttons (L1, R1)
+- two trigger buttons (L2, R2)
+- dual analog sticks like a Sony DualShock, which can also be used as a button (L3, R3).
 
 ![RetroPad Conceptual Diagram](../image/guides/retropad-conceptual-diagram.png)
 
+You don't have to map all of the RetroPad buttons to a real world button. If your real controller has less buttons than a DualShock, then the virtual RetroPad will have some unmapped buttons, that's perfectly fine. If your real controller has more buttons, the extra buttons may be used as freely configurable hotkeys.
+
+Conceptually, all RetroPad buttons can behave as analog (pressure sensitive), but the hardware typically only supports this for the trigger buttons. Gyroscope, acceleration, and illumination sensors may be supported, very much depending on the driver and the core.
+
 ### Controller autoconfiguration
-Many controllers should work out of the box via the RetroArch autoconfiguration profile database. If the controller  can be autoconfigured the OSD will inform you of the autoconfiguration event.
+Most well-known controllers should work out of the box via the RetroArch autoconfiguration profile database. If the controller can be autoconfigured, the OSD will inform you of the autoconfiguration event. The menu hotkey is often pre-defined in the autoconfiguration profile. 
 
 !!! info "Manual RetroPad binding"
-    Not all controllers have autoconfigs. If that is the case for your controller, please refer to the **Manual RetroPad binding** section below.
+    Not all controllers have autoconfigs. If that is the case for your controller, please refer to the [Manual RetroPad Binding](#manual-retropad-binding).
 
 ## Keyboard controls
-RetroArch provides a remappable set of bindings between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys. Please refer to **Default RetroArch keyboard bindings** in this doc as a reference.
+RetroArch provides a remappable set of bindings between a keyboard and the RetroPad abstraction as well as between a keyboard and RetroArch's hotkeys, details are [below](#default-retroarch-keyboard-bindings).
 
 ### Cores with direct keyboard input
-Please be aware that some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to directly read the keyboard or controls that use a keyboard interface. **If you are using a core configured for direct keyboard access, it is recommended that users unbind the RetroArch keyboard-to-RetroPad and hotkey bindings or use the `Game Focus` mode to disable those bindings while using the keyboard device.** Otherwise, keyboard input may result in multiple conflicting simultaneous actions by the core.
+Please be aware that some cores, for example arcade emulator cores and vintage computer emulator cores, can also be configured to directly read the keyboard or controls that use a keyboard interface. **If you are using a core configured for direct keyboard access, it is recommended to use the `Game Focus` mode (default: Scroll Lock) to disable those bindings while using the keyboard device,** or unbind the conflicting RetroArch keyboard-to-RetroPad and hotkey bindings if only a few keys are needed. Otherwise, keyboard input will be captured by the RetroArch hotkeys and the core will not get the input.
 
 !!! tip
-    Controls with keyboard interfaces can also benefit from defining a **Hotkey Enable** button in RetroArch which is required to be held down in order to activate the other hotkeys.
+    Controls with keyboard interfaces can also benefit from defining a **Hotkey Enable** button. If this hotkey is defined, other hotkeys will not be activated unless it is pressed.
 
 ## Manual RetroPad binding
 
-If your gamepad does not have an autoconfiguration or if you would like to change its default RetroPad binding, use the **Input** settings menu.
+If your gamepad is not recognized by autoconfiguration or if you would like to change its RetroPad binding, use the **Input** settings menu.
 
 ![Screenshot of input binding](../image/retroarch/xmb/autoconf.gif)
 
 - Navigate to **Settings**
 - Navigate to **Input**
-- Navigate to **Input User 1 Binds**
-- Select **User 1 Bind All**
-- Press the buttons as required
+- Navigate to **RetroPad Binds**
+- Navigate to **Port 1 Controls**
+- Select **Set All Controls**
+- Press the buttons as required.
 
 !!! tip
-    If you have several different controller types you may want to use the **User 1 Save Autoconfig** followed by **User 1 Bind Default All** options after binding in order to achieve hotplug functionality
+    If you have several different controllers, do **Save Controller Profile** after each binding so that controllers will be recognized next time automatically.
 
 ## Controls for multi-player
 
@@ -49,20 +59,19 @@ If you want to set-up local multi-player with games that support it:
 
 - Navigate to **Settings**
 - Navigate to **Input**
+- Navigate to **RetroPad Binds**
 
-Here you will find the option to set binds for multiple users, "Input User 1 Binds", "Input User 2 Binds" and so on.
+Here you will find the option to set binds for multiple users. Let's set-up User 1's controller:
 
-So lets set-up User 1's controller:
+- Navigate to **Port 1 Controls**
+- Select **Device Index**
 
-- Navigate to **Input User 1 Binds**
-- Select **User 1 Device Index**
+Select which currently plugged-in controller will be assigned to this player. After you finish, go back, select **Port 2 Controls** and repeat for user 2.
 
-From here using the left/right buttons, select which currently plugged-in controller will be assigned to what player. While here you should also bind the controls to this player by pressing them on the assigned controller, Select **User 1 Bind All** to do this.
-
-After you finish, go back, select **Input User 2 Binds** and repeat for user 2.
+In case of multiple controllers, RetroArch will assign them by default in the order they are presented by the operating system. For more customization, use the device reservation options to explicitly assign a controller to a player.
 
 ## Hotkeys
-Hotkeys are combinations of buttons you can press in order to access options such as saving, loading, and exiting games. Hotkey binds can be configured at `Settings` → `Input` → `Input Hotkey Binds`. If you map `Enable Hotkeys` to a button, it will require that button to be held in order to trigger any hotkeys.
+Hotkeys are combinations of buttons you can press in order to access options such as saving, loading, and exiting games. Hotkey binds can be configured at `Settings` → `Input` → `Hotkeys` . If you map `Enable Hotkeys` to a button, it will require that button to be held in order to trigger any hotkeys.
 
 !!! tip
     To unbind (effectively, disable) a hotkey, press **Del** on your keyboard or the **Y button** (the left one of the 4 buttons) on the RetroPad. To reset a hotkey to its default, press **Space** on your keyboard or the **Start** button on the RetroPad.
@@ -80,53 +89,52 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 ## Default RetroArch keyboard bindings
 
-### Keyboard gameplay controls
+### General controller mapping
 
-| User 1 Keyboard                                                                       | Default RetroPad Mapping                                     |
-|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| ![Up Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)          |
-| ![Down Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)      |
-| ![Left Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)      |
-| ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png)    |
-| ![Q](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Q.png)                     | ![RetroPad L1](../image/retropad/retro_l1.png)               |
-| ![W](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_W.png)                     | ![RetroPad R1](../image/retropad/retro_r1.png)               |
-| ![Z](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Z.png)                     | ![RetroPad B](../image/retropad/retro_b.png)                 |
-| ![X](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_X.png)                     | ![RetroPad A](../image/retropad/retro_a.png)                 |
-| ![A](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_A.png)                     | ![RetroPad Y](../image/retropad/retro_y.png)                 |
-| ![S](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetroPad X](../image/retropad/retro_x.png)                 |
-| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       |
-| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         |
+These controls are valid both in-game and in the menu:
+
+| User 1 Keyboard                                                                         | Default RetroPad Mapping                                     | Menu Action                   |
+|-----------------------------------------------------------------------------------------|--------------------------------------------------------------| ----------------------------- |
+| ![Up Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)          | Move cursor up                |
+| ![Down Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)      | Move cursor down              |
+| ![Left Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)      | Move cursor left              |
+| ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png)    | Move cursor right             |
+| ![Q](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Q.png)                     | ![RetroPad L1](../image/retropad/retro_l1.png)               | Scroll one page up            |
+| ![W](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_W.png)                     | ![RetroPad R1](../image/retropad/retro_r1.png)               | Scroll one page down          |
+| ![Z](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Z.png)                     | ![RetroPad B](../image/retropad/retro_b.png)                 | Return to the previous screen |
+| ![X](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_X.png)                     | ![RetroPad A](../image/retropad/retro_a.png)                 | Select Item                   |
+| ![A](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_A.png)                     | ![RetroPad Y](../image/retropad/retro_y.png)                 | Scan content / Remove highlighted input bind |
+| ![S](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_S.png)                     | ![RetroPad X](../image/retropad/retro_x.png)                 | Search                        |
+| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)       | Help                          |
+| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad Start](../image/retropad/retro_start.png)         | (see next section)            |
 
 ### Menu controls
 
-The keyboard inputs shown here are active only when `Settings` → `Input` → `Unified Menu Controls` is disabled (default). Otherwise, only Retropad inputs are used.
+While in the menu, there are additional navigation keys defined for convenience.
 
 | Keyboard Input                                                                        | Retropad Input                                            | Menu Action                   |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------- |
-| ![Up Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Up.png)       | ![RetroPad Up](../image/retropad/retro_dpad_up.png)       | Move cursor up                |
-| ![Down Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Down.png)   | ![RetroPad Down](../image/retropad/retro_dpad_down.png)   | Move cursor down              |
-| ![Left Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Left.png)   | ![RetroPad Left](../image/retropad/retro_dpad_left.png)   | Move cursor left              |
-| ![Right Arrow](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Arrow_Right.png) | ![RetroPad Right](../image/retropad/retro_dpad_right.png) | Move cursor right             |
-| ![Page Up](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Up.png)         | ![RetroPad L1](../image/retropad/retro_l1.png)            | Scroll one page up            |
-| ![Page Down](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Page_Down.png)     | ![RetroPad R1](../image/retropad/retro_r1.png)            | Scroll one page down          |
-| ![Backspace](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Backspace.png)     | ![RetroPad B](../image/retropad/retro_b.png)              | Return to the previous screen |
-| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)             | ![RetroPad A](../image/retropad/retro_a.png)              | Select Item                   |
-| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)                 | ![RetroPad Y](../image/retropad/retro_y.png)              | Scan content / Remove highlighted input bind |
-| ![/](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Slash.png)                 | ![RetroPad X](../image/retropad/retro_x.png)              | Search                        |
-| ![Shift](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Shift.png)             | ![RetroPad Select](../image/retropad/retro_select.png)    | Help                          |
-| ![Space](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png)             | ![RetroPad Start](../image/retropad/retro_start.png)      | Reset to default              |
-| ![Home](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Home.png)               | ![RetroPad L3](../image/retropad/retro_l3.png)            | Scroll to top                 |
-| ![End](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_End.png)                 | ![RetroPad R3](../image/retropad/retro_r3.png)            | Scroll to bottom              |
+| ![Backspace](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Backspace.png)   | ![RetroPad B](../image/retropad/retro_b.png)              | Return to the previous screen |
+| ![Enter](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Enter.png)           | ![RetroPad A](../image/retropad/retro_a.png)              | Select Item (note: Enter key is mapped to Select button in-game) |
+| ![Del](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Del.png)               | ![RetroPad Y](../image/retropad/retro_y.png)              | Scan content / Remove highlighted input bind |
+| ![/](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Slash.png)               | ![RetroPad X](../image/retropad/retro_x.png)              | Search                        |
+| ![Space](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png)           | ![RetroPad Start](../image/retropad/retro_start.png)      | Reset to default              |
+|                                                                                       | ![RetroPad L3](../image/retropad/retro_l2.png)            | Scroll to previous letter     |
+|                                                                                       | ![RetroPad R3](../image/retropad/retro_r2.png)            | Scroll to next letter         |
+| ![Home](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Home.png)             | ![RetroPad L3](../image/retropad/retro_l3.png)            | Scroll to top                 |
+| ![End](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_End.png)               | ![RetroPad R3](../image/retropad/retro_r3.png)            | Scroll to bottom              |
+
+Analog sticks are also able to control the menu. If needed, additional hotkeys can be disabled in `Settings` → `Input` → `Menu Controls`, along with several other customization options.
 
 ### Hotkey controls
 
-Hotkey binds can be configured at `Settings` → `Input` → 'Input Hotkey Binds'. If you map `Enable Hotkeys` to a key, it will require that key to be held in order to trigger any hotkeys. This can be useful in avoiding keyboard mapping conflicts between RetroArch and cores cores that use the keyboard for input.
+Hotkey binds can be configured at `Settings` → `Input` → `Hotkeys` . If you map `Enable Hotkeys` to a key, it will require that key to be held in order to trigger any hotkeys. This can be useful in avoiding keyboard mapping conflicts between RetroArch and cores cores that use the keyboard for input.
 
 !!! Tip
-    Hotkeys can also be mapped to RetroPad buttons.
+    Hotkeys can also be mapped to controller buttons.
 
-| Keyboard Input                                                               | In-Game Action               |
-| ---------------------------------------------------------------------------- | ---------------------------- |
+| Keyboard Input                                                                 | In-Game Action               |
+| ------------------------------------------------------------------------------ | ---------------------------- |
 | ![Esc](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Esc.png)        | Exit RetroArch               |
 | ![Spacebar](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_Space.png) | Fast forward toggle          |
 | ![L](../image/Button_Pack/Keyboard_Mouse/Dark/Keyboard_Black_L.png)            | Fast forward hold            |

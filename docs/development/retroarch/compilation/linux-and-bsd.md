@@ -44,7 +44,7 @@ apk add eudev-dev ffmpeg-dev freetype-dev g++ gcc libxml2-dev mesa-dev pkgconf z
 This list of packages may not be complete.
 ### Getting the code
 ```bash
-git clone git://github.com/libretro/libretro-super.git
+git clone https://github.com/libretro/libretro-super.git
 cd libretro-super
 SHALLOW_CLONE=1 ./libretro-fetch.sh
 ```

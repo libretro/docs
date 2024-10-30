@@ -58,6 +58,9 @@ Content that can be loaded by the PCSX ReARMed core have the following file exte
 - .cbn
 - .m3u
 - .ccd
+- .chd
+- .iso
+- .exe
 
 RetroArch database(s) that are associated with the PCSX ReARMed core:
 

@@ -1,7 +1,7 @@
 # ROMs, Playlists, and Thumbnails
 
 ## Storing games and other content
-Game ROMs are the source media of the games that can be played using RetroArch cores, they can be actual dumps of read-only memory, but also tape/floppy/compact disc images or some other format. The ROM files may be placed anywhere in the file system where RetroArch has access - note that some platforms (notably Android) are not able to browse the full storage. It is practical if the file browser start directory is configured to the directory where ROMs are stored.
+Game ROMs are the source media of the games that can be played using RetroArch cores. They can be actual dumps of read-only memory, tape/floppy/compact disc images, or some other format. The ROM files may be placed anywhere in the file system where RetroArch has access - note that some platforms (notably Android) are not able to browse the full storage. It is practical if the file browser start directory is configured to the directory where ROMs are stored.
 
 Many users sort their ROMs into subfolders named after the system which the ROMs belong to, which results in a folder arrangement such as:
 
@@ -173,7 +173,7 @@ Since playlists are managed in text-only JSON format, there are a few third-part
 
 
 ## Custom thumbnails
-Users who wish to use their own thumbnails can do so by naming PNG image files according to the RetroArch naming convention.
+Users who wish to use their own thumbnails can do so by naming PNG image files according to the RetroArch naming convention. In RetroArch versions later than 1.19.1, other image formats can be also enabled (jpg, bmp, tga). 
 
 ### Thumbnail paths and filenames
 Thumbnails should be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. **Example: If your playlist is named `Atari - 2600.lpl`, then your Atari 2600 root thumbnail folder should be called `thumbnails/Atari - 2600/`.**
@@ -198,3 +198,8 @@ For RetroArch versions 1.17.0 or later, flexible naming is applied, up to 3 opti
 - ROM file name with .png extension: `Q-Bert's Qubes (1983)(Parker Bros)[b].png`
 - Database entry / playlist label with .png extension, as explained above: `Q_Bert's Qubes (USA).png`
 - Short name: same as previous, but only up to first round bracket: `Q_Bert's Qubes.png`
+
+### Named logos
+In RetroArch versions later than 1.19.1, there is an option for the XMB menu driver to display custom images in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). For this to work, create a folder called `Named_Logos` in the same structure as above, and put the logo images there using the same file name convention as above.
+
+Logo support is only possible with XMB menu driver, and the online thumbnail repositories do not contain logo collections. 

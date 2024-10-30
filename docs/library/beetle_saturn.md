@@ -97,7 +97,7 @@ The Beetle Saturn core saves/loads to/from these directories.
 
 ## Geometry and timing
 
-- The Beetle Saturn core's core provided FPS is 59.88 for NTSC games and 49.96 for PAL games
+- The Beetle Saturn core's core provided FPS is 59.83 for NTSC games and 49.92 for PAL games
 - The Beetle Saturn core's core provided sample rate is 44100 Hz
 - The Beetle Saturn core's base width is 320
 - The Beetle Saturn core's base height is 240

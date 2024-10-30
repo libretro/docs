@@ -217,7 +217,7 @@ Must be enabled in core options.
 
 ## Compatibility
 
-- [Official Kronos Compatibility List](http://tradu-france.com/tfwiki-1.28.2/index.php?title=Compatibility_list_of_Kronos)
+- [Official Kronos Compatibility List](https://tradu-france.com/wiki-emu-compatibility/index.php?title=Compatibility_list_of_Kronos)
 
 ## Known issues
 
