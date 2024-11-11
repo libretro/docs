@@ -152,3 +152,4 @@ Supported combinations
 #### Atari - Lynx
 
 - [Atari - Lynx (Handy)](handy.md)
+- [Atari - Lynx (Holani)](holani.md)

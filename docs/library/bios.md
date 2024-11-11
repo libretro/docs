@@ -67,6 +67,7 @@ Gamecube/Wii                  | Dolphin            | [BIOS information](dolphin.
 Intellivision                 | FreeIntv           | [BIOS information](freeintv.md#bios)
 Lynx                          | Beetle Lynx        | [BIOS information](beetle_lynx.md#bios)
 Lynx                          | Handy              | [BIOS information](handy.md#bios)
+Lynx                          | Holani             | [BIOS information](holani.md#bios)
 Master System                 | Emux SMS           | [BIOS information](emux_sms.md#bios)
 MS/GG                         | SMS Plus GX        | [BIOS information](smsplus.md#bios)
 MS/GG/MD/CD                   | Genesis Plus GX    | [BIOS information](genesis_plus_gx.md#bios)

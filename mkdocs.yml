@@ -133,6 +133,7 @@ nav:
         - 'Atari - Jaguar (Virtual Jaguar)': 'library/virtual_jaguar.md'
         - 'Atari - Lynx (Beetle Lynx)': 'library/beetle_lynx.md'
         - 'Atari - Lynx (Handy)': 'library/handy.md'
+        - 'Atari - Lynx (Holani)': 'library/holani.md'
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
       - 'Bandai Emulation':
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
