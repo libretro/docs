@@ -129,6 +129,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |
 | [GW](../library/gw.md)                                                           | [zlib](https://github.com/libretro/gw-libretro/blob/master/LICENSE)                       |                |
 | [Handy](../library/handy.md)					    		   | [zlib](https://github.com/libretro/libretro-handy/blob/master/lynx/license.txt)                                           |                |
+| [Holani](../library/holani.md)					    		   | [GPLv3](https://github.com/LLeny/holani-retro/blob/main/LICENSE)                                           |                |
 | [Hatari](../library/hatari.md)						   | [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)                        |                |
 | [higan Accuracy](../library/higan_accuracy.md)                                   | [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)                           |                |
 | [Imageviewer](../library/imageviewer.md)				  	   | [MIT](https://github.com/libretro/RetroArch/blob/master/cores/libretro-imageviewer/LICENSE)                                                                                       |                |

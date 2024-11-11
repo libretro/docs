@@ -96,7 +96,8 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                             | Supported | Notes |
 |------------------------------------------------------------------|:---------:|:------|
 | [Beetle Lynx](https://github.com/libretro/beetle-lynx-libretro)  | ✔         |       |
-| [Handy](https://github.com/libretro/libretro-handy)              | ✔         | Preferred core. |
+| [Handy](https://github.com/libretro/libretro-handy)              | ✔         | |
+| [Holani](https://github.com/LLeny/holani-retro)              | ✔         | |
 
 ### Bandai
 

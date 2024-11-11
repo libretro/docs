@@ -1,36 +1,37 @@
-# Atari - Lynx (Handy)
+# Atari - Lynx (Holani)
 
 ## Background
 
-Handy is an Atari Lynx video game system emulator that can be used as a libretro core.  Handy was the original name of the Lynx project that was started at Epyx and then finished by Atari.
+Holani is a cycle-stepped Atari Lynx video game system emulator that can be used as a libretro core.  Holani's primary goal is to get closer to the Lynx hardware and provide a better emulation experience.
 
 ### Author/License
 
-The Handy core has been authored by
+The Holani core has been authored by
 
-- K. Wilkins
+- [LLeny](https://github.com/LLeny)
 
-The Handy core is licensed under
+The Holani core is licensed under
 
-- [zlib](https://sourceforge.net/projects/handy/)
+- [GNU General Public License v3.0](https://github.com/LLeny/holani/blob/main/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
-Content that can be loaded by the Handy core have the following file extensions:
+Content that can be loaded by the Holani core have the following file extensions:
 
 - .lnx
+- .o
 
 ## Databases
 
-RetroArch database(s) that are associated with the Handy core:
+RetroArch database(s) that are associated with the Holani core:
 
 - [Atari - Lynx](https://github.com/libretro/libretro-database/blob/master/rdb/Atari%20-%20Lynx.rdb)
 
 ## BIOS
 
-Required or optional firmware files go in the frontend's system directory.
+Optional firmware files go in the frontend's system directory.
 
 |   Filename    |    Description             |              md5sum              |
 |:-------------:|:--------------------------:|:--------------------------------:|
@@ -38,19 +39,19 @@ Required or optional firmware files go in the frontend's system directory.
 
 ## Features
 
-Frontend-level settings or features that the Handy core respects.
+Frontend-level settings or features that the Holani core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | ✕         |
+| Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay (State based) | ✔ (not link-cable emulation) |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
-| Cheats (Cheats menu) | ✕         |
+| Cheats (Cheats menu) | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -69,9 +70,9 @@ Frontend-level settings or features that the Handy core respects.
 
 ### Directories
 
-The Handy core's directory name is 'Handy'
+The Holani core's directory name is 'Holani'
 
-The Handy core saves/loads to/from these directories.
+The Holani core saves/loads to/from these directories.
 
 **Frontend's State directory**
 
@@ -79,23 +80,12 @@ The Handy core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Handy core's core provided FPS is 75
-- The Handy core's core provided sample rate is 22050 Hz
-- The Handy core's core provided aspect ratio is dependent on the ['Display rotation' core option](#core-options/). When set to None, the aspect ratio will be 80/51. When set to 90 or 240, the aspect ratio will be 51/80.
-
-## Core options
-
-The Handy core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
-
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
-
-- **Display rotation** [handy_rot] (**None**/90/240)
-
-	Self-explanatory. Need to restart content.
+- The Holani core's core provided FPS is dynamic
+- The Holani core's core provided sample rate is 16,000 Hz
 
 ## Controllers
 
-The Handy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Holani core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
@@ -126,24 +116,17 @@ Supported combinations
 - Option 1 + Pause = Restarts game
 - Option 2 + Pause = Flips Screen
 
-## Compatibility
-
-| Game         | Issue                                                                   |
-|--------------|-------------------------------------------------------------------------|
-| RoadBlasters | Graphics glitches. Minor flickering and glitches after starting a race. |
-
 ## External Links
 
-- [Official Handy Website](http://handy.sourceforge.net/)
-- [Official Handy Downloads](http://handy.sourceforge.net/download.htm)
-- [Libretro Handy Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/handy_libretro.info)
-- [Libretro Handy Github Repository](https://github.com/libretro/libretro-handy)
-- [Report Libretro Handy Core Issues Here](https://github.com/libretro/libretro-handy/issues)
-- [Gameplay Videos](https://www.youtube.com/playlist?list=PLRbgg4gk_0IfDlFKLg0HMDXbn8BrcxbJV)
+- [Official Holani Website](https://github.com/LLeny/holani-retro)
+- [Official Holani Downloads](https://github.com/LLeny/holani-retro/releases)
+- [Libretro Holani Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/holani_libretro.info)
+- [Libretro Holani Github Repository](https://github.com/LLeny/holani-retro)
+- [Report Libretro Holani Core Issues Here](https://github.com/LLeny/holani-retro/issues)
 
 ### See also
 
 #### Atari - Lynx
 
 - [Atari - Lynx (Beetle Lynx)](beetle_lynx.md)
-- [Atari - Lynx (Holani)](holani.md)
+- [Atari - Lynx (Handy)](handy.md)

@@ -52,6 +52,7 @@ This is a list of cores that are related to each other in some way.
 
 - [Atari - Lynx (Beetle Lynx)](../library/beetle_lynx.md)
 - [Atari - Lynx (Handy)](../library/handy.md)
+- [Atari - Lynx (Holani)](../library/holani.md)
 
 ## MSX
 
