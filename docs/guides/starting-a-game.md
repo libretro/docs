@@ -13,7 +13,7 @@
 
 *See [Download Cores](download-cores.md).*
 
-When a libretro core is laoded, you will see the name and version of the core in the bottom left of the screen (Ozone/XMB/RGUI) or in the notification bar (GLUI).
+When a libretro core is loaded, you will see the name and version of the core in the bottom left of the screen (Ozone/XMB/RGUI) or in the notification bar (GLUI).
 
 ### Load the content
 You can then browse for a ROM by selecting `Load Content`. Browse to your content's folder and select your ROM from the list. Then select `Current Core` or select another core from this list. The content will now launch.
