@@ -16,6 +16,8 @@ The answer to this dilemma involves "logs", which RetroArch and other libretro s
 5. (optional) Adjust "Frontend / Core Logging Level" to get more or less detailed information
 6. (optional) Activate "Timestamp Log Files" if you don't want to overwrite the log at each startup
 
+This will place the logs in the System Events Logs directory, visible in the "Directory" settings.
+
 ### Generating Logs in Lakka
 [Please see the Troubleshooting Lakka doc](http://www.lakka.tv/doc/Troubleshooting-Lakka/).
 
@@ -54,10 +56,11 @@ The answer to this dilemma involves "logs", which RetroArch and other libretro s
 
 ### Generating Logs in OS X
 1. Open a console window with the OS X "Terminal" app.
-2. Navigate to the RetroArch folder using the `cd` command.
-3. Start RetroArch in 'verbose' mode with this command:<br />
- `retroarch -v --log-file ~/retroarch.log` or `retroarch -v >> ~/retroarch.log 2>&1`
-4. Once you exit RetroArch, a file called `retroarch.log` should be stored in your home directory.
+2. Navigate to the RetroArch.app folder using the `cd` command.
+3. Inside the RetroArch.app folder, navigate to the Contents/MacOS filter.
+4. Start RetroArch in 'verbose' mode with this command:<br />
+ `./RetroArch -v --log-file ~/retroarch.log` or `./RetroArch -v >> ~/retroarch.log 2>&1`
+5. Once you exit RetroArch, a file called `retroarch.log` should be stored in your home directory.
 
 ### Generating Logs in Android
 There is a range of variation in the logging systems available to Android device depending on the combination of hardware and operating system in use. There are two general approaches to generating logs in Android: tethering to a PC via a USB cable or using a `logcat` app.
@@ -86,8 +89,11 @@ _Based on Stackexchange posts by Leandros and Nicolas Raoul._
 #### Generating Logs via Android App
 Gathering log files in Android requires a third-party app that can interface with the `logcat` system. Many free apps are available via Android's "Play Store" system. You can still generate RetroArch logs from the menu.
 
-### Generating Logs in iOS
-You can generate RetroArch logs from the menu, and App Store installations can opt to send crash logs to the RetroArch developers for analysis, if desired.
+### Generating Logs in iOS and tvOS
+
+You can generate RetroArch logs from the menu, described above. Logs by default go into the RetroArch/logs directory accessible through the Files app on iOS or the webserver on tvOS.
+
+App Store installations can opt to send crash logs to the RetroArch developers for analysis, if desired. This can be configured through the Settings app in "Privacy & Security" under "Analytics & Improvements" by turning on "Share With App Developers".
 
 ### Generating Logs with Nintendo Switch
 

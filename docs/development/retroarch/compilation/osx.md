@@ -2,30 +2,7 @@
 
 This compilation guide will teach you how to build RetroArch for macOS/OSX.
 
-The following versions of the operating system are supported:
-
-- OSX 10.5    (Leopard)
-- OSX 10.6    (Snow Leopard)
-- OSX 10.7    (Lion)
-- OSX 10.8    (Mountain Lion)
-- OSX 10.9    (Mavericks)
-- OSX 10.10   (Yosemite)
-- OSX 10.11   (El Capitan)
-- macOS 10.12 (Sierra)
-- macOS 10.13 (High Sierra)
-- macOS 10.14 (Mojave)
-- macOS 10.15 (Catalina)
-- macOS 11    (Big Sur)
-- macOS 12    (Monterey)
-- macOS 13    (Ventura)
-
-RetroArch can work on:
-
-- 32bit PPC   processor-powered Macs
-- 64bit PPC   processor-powered Macs
-- 32bit Intel processor-powered Macs
-- 64bit Intel processor-powered Macs
-- 64bit ARM   processor-powered Macs
+All versions of the operating system since 10.5 are supported. RetroArch can work on PPC, Intel, and ARM processor-powered Macs.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fPO-9jescmo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -43,11 +20,20 @@ Be sure to read instructions that are given on this page.
 
 ## Environment configuration
 
-The following software needs to be installed:
+### Xcode
 
-- Xcode (macOS only)
+The only requirement for building is Xcode, which is only available for macOS. You can get Xcode from the App Store. If you have never used Xcode before, you will need to open the Xcode preferences, and in Accounts, log in with your Apple ID.
 
-You can get Xcode from the App Store. If you have never used Xcode before, you will need to open the Xcode preferences, and in Accounts, log in with your Apple ID.
+### retroarch-apple-deps (optional but recommended)
+
+RetroArch optionally will automatically link with supporting libraries (including MoltenVK) that are provided by the retroarch-apple-deps repo. By default Xcode will look for these dependencies in `/usr/local/share/retroarch-apple-deps`.
+
+To get retroarch-apple-deps, run:
+
+```shell
+git clone https://github.com/warmenhoven/retroarch-apple-deps.git retroarch-apple-deps
+sudo ln -s $PWD/retroarch-apple-deps /usr/local/share
+```
 
 ## Fetching the code
 
@@ -109,18 +95,22 @@ There are several Xcode projects and workspaces in the `pkg/apple` directory in 
 | Xcode&nbsp;Project/Workspace&nbsp;File&nbsp;Name | OS support | Purpose |
 -----------------------------------------|-|-
 | `RetroArch.xcworkspace`      | 10.13+ | The primary workspace for the latest Metal build. Most active development happens here. |
-| `RetroArch.xcodeproj`        | 10.6+ | The current non-Metal build. |
-| `RetroArch_PPC.xcodeproj`    | 10.5+ | Building for PowerPC processor-powered Macs. |
 | `RetroArch_Metal.xcodeproj`  | 10.13+ | The project for the latest Metal build. You can use this directly but typically it's preferred to use the Workspace. |
+| `RetroArch.xcodeproj`        | 10.6+ | The outdated non-Metal build, only for Intel processor-powered Macs. |
+| `RetroArch_PPC.xcodeproj`    | 10.5+ | Building for PowerPC processor-powered Macs. |
 | `RetroArch_OSX107.xcodeproj` | 10.7+ | An old development line that is no longer in use. |
 
 ### Building RetroArch separately
 
-Open Xcode. Open your chosen project file in the Xcode IDE and build (**&#8984;-B**) and run (**&#8984;-R**) it there.
+Open Xcode. Open your chosen project file in the Xcode IDE and build (**&#8984;-B**) and run (**&#8984;-R**) it there. The default scheme should be `RetroArch` and that is what is used for building the DMG image available on the buildbot.
 
-## Core Compilation
+## Core Compilation (optional)
 
-The easiest way to build all the cores is to use libretro-super.
+RetroArch on OSX by default will be configured to download cores from the buildbot; you do not need to build the cores yourself.
+
+### libretro-super (deprecated)
+
+If you choose to build the cores yourself, the easiest way to build all the cores is to use libretro-super.
 
 To build all cores for OSX, run
 
@@ -135,3 +125,21 @@ In case you only want to build one and/or more cores instead of all, you can spe
 ```
 
 Once finished, you can find the libretro cores inside directory `dist/osx`.
+
+### GitLab CI mimicry
+
+Cores on the buildbot are built using the GitLab CI infrastructure. Each core provides its own `.gitlab-ci.yml` file with instructions for how to build it. Almost all cores reference one of the [CI Templates](https://git.libretro.com/libretro-infrastructure/ci-templates). Between the `.gitlab-ci.yml` file and the templates, you should have complete instructions for how to build each core.
+
+## Store Builds
+
+### Steam Build
+
+Building for Steam differs from the normal app build in two ways: the scheme is `RetroArchSteam`, and it requires bundling [mist](https://git.libretro.com/libretro-steam/mist) and linking against libmist. Simply download the latest artifacts for mist from GitLab, and set the `MIST_PATH` variable in the Xcode project with its location.
+
+Once the Steam app is built, it is no different from the app available in the Steam store, and will communicate with Steam to fetch cores and update presence.
+
+### Mac App Store Build
+
+Building for the Mac App Store requires being logged into Xcode with the Apple Developer account associated with the Bundle ID for the app. The app also builds with Push Notification and CloudKit entitlements for the iCloud cloud sync driver. Once all of the signing and entitlements are set up, creating the build is simply changing the scheme to `RetroArch AppStore`.
+
+There is an automated [fastlane](http://docs.fastlane.tools) script available in pkg/apple/fastlane that will update the build numbers and upload the built prodduct to TestFlight using an [App Store Connect API Key](http://docs.fastlane.tools/app-store-connect-api/).

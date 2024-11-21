@@ -17,7 +17,7 @@ This user guide is to aid users of screen readers who are newcomers to Retroarch
 
 ## Download Retroarch
 
-To download Retroarch, go to [Retroarch's download page](https://www.retroarch.com/?page=platforms) and choose the download for your system. Windows users should choose the 64-bit installer version, unless they have an old computer with a 32-bit operating system. Mac users should download the Intel version under the “Apple macOS / OSX” heading. Linux users should see if version 1.8.2 or higher is in their package manager, and get that and the cores through APT, Pacman, DNF, and so on, or compile it yourself. For iOS, Android, tvOS, and game consoles, accessibility features are not implemented.
+To download Retroarch, go to [Retroarch's download page](https://www.retroarch.com/?page=platforms) and choose the download for your system. Windows users should choose the 64-bit installer version, unless they have an old computer with a 32-bit operating system. Mac users should download the version under the “Apple macOS / OSX” heading; iOS and tvOS users are encouraged to install from the App Store. Linux users should see if version 1.8.2 or higher is in their package manager, and get that and the cores through APT, Pacman, DNF, and so on, or compile it yourself. For Android and game consoles, accessibility features are not implemented.
 
 ## Open the Program
 
