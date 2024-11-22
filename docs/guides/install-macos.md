@@ -17,7 +17,7 @@ The install follows the standard process of opening the .dmg file and copying Re
 
 Most people should start with the Metal build. The Metal has more features, and is a Universal binary. The non-Metal build is x86_64-only and only includes the OpenGL graphics driver. However, the Metal build only supports macOS 10.13+, whereas the non-Metal build supports 10.9+.
 
-It is possible to build RetroArch for older versions of macOS, though due to resource constraints these are not provided. See the [instructions for building on macOS](../development/retroarch/compilation/osx/) to build it yourself.
+It is possible to build RetroArch for older versions of macOS, though due to resource constraints these are not provided. See the [instructions for building on macOS](../development/retroarch/compilation/osx.md) to build it yourself.
 
 ### Stable vs nightly builds
 

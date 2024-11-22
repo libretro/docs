@@ -50,7 +50,7 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 	- [HUAWEI AppGallery](https://appgallery.huawei.com/#/app/C104593727)
 
 ## Which platforms is RetroArch available for?
-RetroArch runs and is supported on GNU/Linux, BSD, Windows, Mac OSX (PPC/Intel), Haiku, PlayStation Classic, PlayStation 2, PlayStation 3, Playstation Vita, Playstation Portable, Xbox 360, Xbox One, Raspberry Pi, Nintendo GameCube, Nintendo Wii, Nintendo Wii U, Nintendo 3DS & 2DS Family, Nintendo Switch, Steam Link, Android, iOS, Open Pandora, Blackberry and even on web browsers by using the Emscripten compiler.
+RetroArch runs and is supported on GNU/Linux, BSD, Windows, Mac OSX (PPC/Intel), Haiku, PlayStation Classic, PlayStation 2, PlayStation 3, Playstation Vita, Playstation Portable, Xbox 360, Xbox One, Raspberry Pi, Nintendo GameCube, Nintendo Wii, Nintendo Wii U, Nintendo 3DS & 2DS Family, Nintendo Switch, Steam Link, Android, iOS, Apple TV, Open Pandora, Blackberry and even on web browsers by using the Emscripten compiler.
 
 ## What is the license for this?
 libretro is released under the MIT license. RetroArch is released under the GNU GPLv3. The cores are usually released with the same license as the originating projects.

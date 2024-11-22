@@ -2,31 +2,40 @@
 
 The following is a non-developer guide to install RetroArch on non-jailbroken iOS or tvOS devices.
 
-The minimum version of iOS supported is iOS 6.0. However, older versions have fewer features and worse core support.
+The minimum version of iOS supported is iOS 6.0. However, older versions have fewer features and worse core support. Additionally, building for old versions of iOS requires [old versions of Xcode](https://developer.apple.com/support/xcode/), which require old versions of macOS, all of which may be hard to come by.
 
 !!! note
-    If you just want to sideload from an IPA file, then you can find a working build (version {{ unit.stable }}) [here for tvOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/tvos-arm64/RetroArchTV.ipa) and [here for iOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios-arm64/RetroArch.ipa). Instructions for installing the IPA are [here](/guides/install-ios/).
+    If you just want to sideload from an IPA file, then you can find a working build (version {{ unit.stable }}) [here for tvOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/tvos-arm64/RetroArchTV.ipa) and [here for iOS](http://buildbot.libretro.com/stable/{{ unit.stable }}/apple/ios-arm64/RetroArch.ipa). Instructions for installing the IPA are [here](../../..//guides/install-ios.md).
 
 Because iOS requires that all code be signed, iOS does not support installing/updating cores at runtime. Instead, all cores must be built and added to the RetroArch source tree before building RetroArch.
 
 ## Environment configuration
 
-The following software needs to be installed:
+### Xcode
 
-- Xcode (macOS only)
+The only requirement for building is Xcode, which is only available for macOS. You can get Xcode from the App Store. If you have never used Xcode before, you will need to open the Xcode preferences, and in Accounts, log in with your Apple ID.
 
-You can get Xcode from the Mac App Store.
-
-### Sign in with your Apple ID
+#### Sign in with your Apple ID
 
 - Open Xcode Preferences (Xcode -> Preferences)
 - Click the "Accounts" tab
 - Hit the "+" at the bottom left and choose "Apple ID" and sign in with your Apple ID
 - Once you’ve successfully logged in, a new team called "(Your Name) Personal Team" with the role "User" will appear beneath your Apple ID.
 
-### Pair Xcode with your iOS or tvOS Device
+#### Pair Xcode with your iOS or tvOS Device
 
 Connect your iPhone to your computer. For AppleTV, because you cannot connect it directly, follow the [instructions in this Apple support article](https://support.apple.com/en-gb/HT208088) to pair your device in Xcode. When finished, you should see your specific device when you go, in Xcode, to Windows -> Devices & Simulators.
+
+### retroarch-apple-deps (optional but recommended)
+
+RetroArch optionally will automatically link with supporting libraries (including MoltenVK) that are provided by the retroarch-apple-deps repo. By default Xcode will look for these dependencies in `/usr/local/share/retroarch-apple-deps`.
+
+To get retroarch-apple-deps, run:
+
+```shell
+git clone https://github.com/warmenhoven/retroarch-apple-deps.git retroarch-apple-deps
+sudo ln -s $PWD/retroarch-apple-deps /usr/local/share
+```
 
 ## Fetching the code
 
@@ -141,16 +150,30 @@ codesign -fs '[Your Full Developer Certificate Name]' *.dylib
 There are multiple Xcode project files in `pkg/apple`, based on minimum iOS version. The following will use `pkg/apple/RetroArch_iOS13.xcodeproj` (the latest as of this writing) as an example.
 
 1. Open Xcode.
-2. Open the following project file `pkg/apple/RetroArch_iOS13.xcodeproj`
-3. In the Navigator Pane on the left, select the `Retroarch_iOS13` project
-4. In the Project and Targets list on the left side, choose the `RetroArchiOS` (or `RetroArchTV` for tvOS) target. Select the Target (the one with the RetroArch icon), not the project.
-5. In the `Signing & Capabilities` tab, change the "Team" under Signing to be your developer name.
-6. Set the active scheme to `RetroArch iOS Release` (or `RetroArch tvOS Release` for tvOS), and select your connected iOS/tvOS device as the device.
-6. Run (**&#8984;-R**)
+1. Open the following project file `pkg/apple/RetroArch_iOS13.xcodeproj`
+1. Change the identifiers and signing for the target
+    1. In the Navigator Pane on the left, select the `Retroarch_iOS13` project
+    1. In the Project and Targets list on the left side, choose the `RetroArchiOS` (or `RetroArchTV` for tvOS) target. Select the Target (the one with the RetroArch icon), not the project.
+    1. In the `Signing & Capabilities` tab, change the "Team" under Signing to be your developer name.
+    1. In the `Signing & Capabilities` tab, Change the "Bundle Identifier" to something globally unique (e.g. `your.email.address.RetroArch`).
+1. Change the signing for the extensions
+    1. In the Navigator Pane on the left, select the `Retroarch_iOS13` project
+    1. In the Project and Targets list on the left side, choose the `RetroArchWidgetExtensionExtension` (or `RetroArchTopShelfExtension` for tvOS) target.
+    1. In the `Signing & Capabilities` tab, change the "Team" under Signing to be your developer name.
+    1. In the `Signing & Capabilities` tab, Change the "Bundle Identifier" to the bundle identifier you chose for the target plus a suffix (e.g. `your.email.address.RetroArch.RetroArchWidgetExtension`).
+    1. For tvOS, in order for Top Shelf to work, you additionally need to set up the App Groups properly, described below.
+1. Set the active scheme to `RetroArch iOS Release` (or `RetroArch tvOS Release` for tvOS), and select your connected iOS/tvOS device as the device.
+1. Run (**&#8984;-R**)
 
-![Xcode Steps](/image/guides/ios-install-pic-1.png)
+![Xcode Steps](../../../image/guides/ios-install-pic-1.png)
 
 Once the application has been built, installed, and run on your device, it can be run again directly from the device without needing Xcode.
+
+## App Store Build
+
+Building for the Mac App Store requires being logged into Xcode with the Apple Developer account associated with the Bundle ID for the app. The app also builds with Push Notification and CloudKit entitlements for the iCloud cloud sync driver (and Top Shelf for tvOS). Once all of the signing and entitlements are set up, creating the build is simply changing the scheme to `RetroArch AppStore`.
+
+There is an automated [fastlane](http://docs.fastlane.tools) script available in pkg/apple/fastlane that will update the build numbers and upload the built prodduct to TestFlight using an [App Store Connect API Key](http://docs.fastlane.tools/app-store-connect-api/).
 
 ## Additional Tips:
 
@@ -175,7 +198,7 @@ Top Shelf for tvOS will display up to five entries from each of the History and 
 
 #### Where do I start?
 
-The RetroArch codebase can be daunting, especially if you're used to iOS development in Objective C or Swift. Objective C is a subset of C so the syntax should look somewhat familiar to you.
+The RetroArch codebase can be daunting, especially if you're used to iOS development in Objective C or Swift. Objective C is a superset of C so the syntax should look somewhat familiar to you.
 
 The first and main entrypoint you should look at is in `core/griffin/griffin.c`. This is where all the code is included, with compiler flags used to bring in code specific to the platform. For iOS, you should pay attention to the compiler flags like `__APPLE__`, `TARGET_OS_IPHONE`, `HAVE_COCOATOUCH`.
 
