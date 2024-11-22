@@ -8,7 +8,7 @@ Here we will touch on some critical topics and run our first content.
 
 | :warning: WARNING          |
 |:---------------------------|
-| RetroArch or LibRetro do not illegally share copyrighted content. There is no support for the reproduction or distribution of copyrighted content.    |  
+| RetroArch and LibRetro do not illegally share copyrighted content. There is no support for the reproduction or distribution of copyrighted content.    |  
 
 ### Cores
 
