@@ -10,6 +10,11 @@ RetroArch makes use of two input systems in order to support the full range of i
 
 **Absolute mouse devices** in the tables below refers to input drivers which support mouse-like devices such as light guns, air mice, and Wiimotes that use 'absolute' coordinate systems. Certain input drivers only support mouse devices with 'relative' coordinate systems.
 
+## Apple OSes
+
+**Apple Controller Drivers[^1]**
+- mfi
+
 ## Linux
 `udev` is the most full-featured Input Driver and Controller Driver for Linux.
 
@@ -22,11 +27,10 @@ RetroArch makes use of two input systems in order to support the full range of i
 
 **Linux Controller Drivers**
 
-- hid
 - linuxraw
 - sdl2
 - udev
-- xinput
+- [parport](https://docs.libretro.com/development/retroarch/input/parallel-port-controllers/)
 
 ### udev input driver
 udev is the newest input driver and uses the evdev joypad interface at `/dev/input`. It supports hotplugging and force feedback (if supported by device). udev reads evdev events directly and supports keyboard callback, mice, and touchpads. `libudev` is used to discover devices and support hotplugging.
@@ -316,3 +320,14 @@ The older linuxraw driver is available which uses the legacy joystick API at `/d
 | Rumble |
 |--------|
 | -    |
+
+## QNX
+
+### QNX controller driver
+- QNX
+
+# Fotnotes
+[^1]: MFi controllers are primarily supported on Apple devices, which means that the operating systems supporting this configuration would include:
+- iOS: Used on iPhones and iPads.
+- macOS: Used on Mac computers.
+- tvOS: Used on Apple TV devices.
