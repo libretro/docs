@@ -130,3 +130,7 @@ The NXEngine core supports the following device type(s) in the controls menu, bo
 - [Libretro NXEngine Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/nxengine_libretro.info)
 - [Libretro NXEngine Github Repository](https://github.com/libretro/nxengine-libretro)
 - [Report Libretro NXEngine Core Issues Here](https://github.com/libretro/nxengine-libretro/issues)
+
+## (Related cores)
+
+- [Doukutsu Rust](doukutsu-rust.md)
