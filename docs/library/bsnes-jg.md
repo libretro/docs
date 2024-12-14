@@ -7,6 +7,7 @@ Entertainment System, including support for the Super Game Boy, BS-X
 Satellaview, and Sufami Turbo.
 
 This is a fork of bsnes v115. Many changes have been made post-fork:
+
 - Higher quality resampler with settings
 - Improved performance without loss of accuracy
 - Portability improvements
@@ -202,11 +203,11 @@ MSU-1 is supported. To load an MSU-1 enhanced ROM, simply load the .sfc which re
 
     Mask off pixels hidden by a bezel or border on original CRTs (bottom)
 
-- **Mask Overscan (Left)** [bsnes_jg_overscan_l] (0|4|**8**|12|16|20)
+- **Mask Overscan (Left)** [bsnes_jg_overscan_l] (**0**|4|8|12|16|20)
 
     Mask off pixels hidden by a bezel or border on original CRTs (left)
 
-- **Mask Overscan (Right)** [bsnes_jg_overscan_r] (0|4|**8**|12|16|20)
+- **Mask Overscan (Right)** [bsnes_jg_overscan_r] (**0**|4|8|12|16|20)
 
     Mask off pixels hidden by a bezel or border on original CRTs (right)
 

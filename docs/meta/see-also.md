@@ -97,6 +97,10 @@ This is a list of cores that are related to each other in some way.
 - [VaporSpec](../library/vaporspec.md)
 - [Jump 'n Bump](../library/jumpnbump.md)
 
+## Neo Geo AES/MVS
+
+- [Geolith](../library/geolith.md)
+
 ## N64
 
 - [Nintendo - Nintendo 64 (Mupen64Plus)](../library/mupen64plus.md)
