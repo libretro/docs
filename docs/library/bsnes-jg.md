@@ -1,49 +1,42 @@
-# Nintendo - SNES / Famicom (bsnes-mercury Balanced)
+# Nintendo - SNES / Famicom (bsnes-jg)
 
 ## Background
 
-bsnes-mercury is a fork of higan, aiming to restore some useful features that have been removed, as well as improving performance a bit.
-Maximum accuracy is still uncompromisable; anything that affects accuracy is optional and off by default.
+bsnes-jg is a cycle accurate emulator for the Super Famicom/Super Nintendo
+Entertainment System, including support for the Super Game Boy, BS-X
+Satellaview, and Sufami Turbo.
 
-This core has been compiled with the Balanced profile.
-
-Improvements include:
-
-* Improved framerate
-* Faster ROM loading
-* HLE emulation of some special chips is optionally restored (defaults to LLE), to improve performance and reduce reliance on those chip ROMs (they're not really easy to find). Chips for which no HLE emulation was developed (ST-0011 and ST-0018) are still LLE.
-* SuperFX overclock is now available (off by default, of course); if enabled, it makes SuperFX look quite a lot smoother.
-
-**The bsnes-mercury cores are not less accurate at default settings than the mainline bsnes cores (you have to explicitly enable 2 core options to switch to the less accurate special chip HLE).**
+This is a fork of bsnes v115. Many changes have been made post-fork:
+- Higher quality resampler with settings
+- Improved performance without loss of accuracy
+- Portability improvements
+- Removal of accuracy-reducing hacks and unnecessary code
+- Significant increase in standards compliance
+- Translation to the C++ Standard Library (ISO C++11)
 
 ### Author/License
 
-The bsnes-mercury Balanced core has been authored by
+The bsnes-jg core has been authored by
 
 - byuu
-- Alcaro
+- [Rupert Carmichael (carmiker)](https://github.com/carmiker)
 
-The bsnes-mercury Balanced core is licensed under
+The bsnes-jg core is licensed under
 
-- [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)
+- [GPLv3](https://github.com/libretro/bsnes-jg/blob/libretro/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## Extensions
 
-Content that can be loaded by the bsnes-mercury Balanced core have the following file extensions:
+Content that can be loaded by the bsnes-jg core have the following file extensions:
 
 - .sfc
 - .smc
-- .bml
-
-## Databases
-
-RetroArch database(s) that are associated with the bsnes-mercury Balanced core:
-
-- [Nintendo - Super Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.rdb)
-- [Nintendo - Super Nintendo Entertainment System Hacks](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System%20Hacks.rdb)
-- [Nintendo - Sufami Turbo](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Sufami%20Turbo.rdb)
+- .gb
+- .gbc
+- .st
+- .bs
 
 ## BIOS
 
@@ -68,11 +61,10 @@ Required or optional firmware files go in the frontend's system directory.
 | st011.program.rom | ST011 co-processor firmware            | 95222ebf1c0c2990bcf25db43743f032 |
 | st018.data.rom    | ST018 co-processor firmware            | 49c898b60d0f15e90d0ba780dd12f366 |
 | st018.program.rom | ST018 co-processor firmware            | dda40ccd57390c96e49d30a041f9a9e7 |
-| sgb.boot.rom      | Super Game Boy BIOS                    |                                  |
 
 ## Features
 
-Frontend-level settings or features that the bsnes-mercury Balanced core respects.
+Frontend-level settings or features that the bsnes-jg core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -81,14 +73,14 @@ Frontend-level settings or features that the bsnes-mercury Balanced core respect
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✔         |
+| Netplay           | ✕         |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
-| Native Cheats     | ✕         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
-| Multi-Mouse       | -         |
+| Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
@@ -98,142 +90,159 @@ Frontend-level settings or features that the bsnes-mercury Balanced core respect
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
-| Crop Overscan     | ✕         |
+| Crop Overscan     | ✔         |
 | LEDs              | ✕         |
 
 ### Directories
 
-The bsnes-mercury Balanced core's internal core name is 'bsnes-mercury'
+The bsnes-jg core's library name is 'bsnes-jg'
 
-The bsnes-mercury Balanced core saves/loads to/from these directories.
+The bsnes-jg core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
-- 'content-name'.srm (Cartridge battery save)
+| File  | Description                   |
+|:-----:|:-----------------------------:|
+| *.srm | Cartridge-based battery saves |
+| *.rtc | Real Time Clock data          |
 
 **Frontend's State directory**
 
-- 'content-name'.state# (State)
+| File     | Description |
+|:--------:|:-----------:|
+| *.state# | State       |
 
 ### Geometry and timing
 
-- The bsnes-mercury Balanced core's core provided FPS is 60.0988118623 for NTSC games and 50.0069789082 for PAL games.
-- The bsnes-mercury Balanced core's core provided sample rate is 32040.5 Hz
-- The bsnes-mercury Balanced core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](#core-options).
+- The bsnes-jg core's core provided FPS is 60.098812 for NTSC games and 50.006979 for PAL games.
+- The bsnes-jg core's core provided sample rate is 48000Hz
+- The bsnes-jg core provides adjustable overscan and aspect ratio options.
 
-## Super GameBoy
+## Subsystems
 
-!!! warning
-	Super GameBoy support in this core is **Windows only**, and has **buggy save state support** and **visual glitches**. **Use the [higan Accuracy core](higan_accuracy.md#super-gameboy-support) or the [nSide Balanced core](nside_balanced.md#super-gameboy-support) for simplified, functional, and easily accessible Super Gameboy support.**
+bsnes-jg supports Super Game Boy, BS-X Satellaview, and Sufami Turbo via the Subsystem API.
 
-For Super GameBoy support, you need sgb.boot.rom (in RetroArch's System directory), a GameBoy ROM and a Super GameBoy ROM.
+For Super Game Boy, you will need a Game Boy ROM (.gb/gbc) and Super Game Boy ROM.
 
-Please note that the Game Boy and Super GameBoy ROMs have to be unzipped.
+For BS-X Satellaview, you will need a BS Memory dump (.bs) and BS-X BIOS ROM.
 
-Super GameBoy is supported via the Subsystem API.
+For Sufami Turbo (1 or 2 Carts), you will need Sufami Turbo ROMs (.st) and the Sufami Turbo ROM.
 
-There are two ways to access the Subsystem API.
+| Subsystem | Description                   |
+|:---------:|:-----------------------------:|
+| sgb       | Super Game Boy                |
+| bsx       | BS-X Satellaview              |
+| sufami    | Sufami Turbo (One Cart)       |
+| sufami2   | Sufami Turbo (Two Carts)      |
 
-**One way is to access the Subsystem API through RetroArch's GUI like this.**
 
-First, we load our GameBoy ROM through 'Load Super GameBoy' in RetroArch's Main Menu.
-
-![](../image/core/bsnes/menu1.png)
-
-![](../image/core/bsnes/gb.png)
-
-Next, we load our Super GameBoy ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
-
-![](../image/core/bsnes/menu2.png)
-
-![](../image/core/bsnes/sgb.png)
-
-Then, we start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
-
-![](../image/core/bsnes/start.png)
-
-**The other way is to launch RetroArch with commandline like this.**
+**Command Line**
 
 ```
 retroarch -L {path to bsnes core} {path to Super GameBoy ROM} --subsystem sgb {path to GameBoy rom}
 ```
 
+**RetroArch GUI**
+
+Load the Game Boy ROM through 'Load SuperGame Boy' in RetroArch's Main Menu.
+
+![](../image/core/bsnes/menu1.png)
+
+![](../image/core/bsnes/gb.png)
+
+Next, load the Super Game Boy BIOS ROM through 'Load Super GameBoy' in RetroArch's Menu Menu.
+
+![](../image/core/bsnes/menu2.png)
+
+![](../image/core/bsnes/sgb.png)
+
+Then, start the content by selecting 'Start GameBoy' In RetroArch's Menu Menu.
+
+![](../image/core/bsnes/start.png)
+
 ## MSU-1
 
-!!! attention
-	MSU-1 support in this core is complex. **Use the [Snes9x core](snes9x.md#msu-1-support) for simplified and easily accessible MSU-1 support.**
-
-MSU-1 support can be used by loading a correct .bml file.
-
-There's documentation for loading MSU-1 games in standalone higan [here](https://higan.readthedocs.io/en/stable/guides/import/#msu-1-games).
+MSU-1 is supported. To load an MSU-1 enhanced ROM, simply load the .sfc which resides in the same directory as the .msu and audio tracks.
 
 ## Core options
 
-The bsnes-mercury Balanced core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+- **Delay LLE Coprocessor Sync (Restart)** [bsnes_jg_coproc_delaysync] (**Off**|On)
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+    Delay sync when using Low Level Coprocessor Emulation for more speed at the cost of accuracy
 
-- **Allow settings to reduce accuracy** [bsnes_violate_accuracy] (**disabled**|enabled)
+- **Prefer HLE Coprocessor Emulation (Restart)** [bsnes_jg_coproc_preferhle] (**Off**|On)
 
-	Respect accuracy-impacting settings.
+    Delay sync when using Low Level Coprocessor Emulation for more speed at the cost of accuracy
 
-- **Special chip accuracy** [bsnes_chip_hle] (**LLE**|HLE)
+- **Hotfixes (Restart)** [bsnes_jg_hotfixes] (**Off**|On)
 
-	**The Allow settings to reduce accuracy core option must be enabled in order for this to function properly. **
+    Apply hotfixes when playing a handful of games released with major bugs (which are exhibited on real hardware). Games in question: Dirt Racer, Magical Drop, Rendering Ranger R2
 
-	Choose whether to use LLE (real BIOS) or HLE (emulated BIOS) for enhancement chips.
+- **Internal Run-Ahead** [bsnes_jg_runahead] (**0**|1|2|3|4)
 
-	HLE is less accurate but also less demanding for the special chips.
+    Simulate the system ahead of time and roll back to reduce input latency. Has very high system requirements.
 
-	The ST-0011 and ST-0018 co-processors cannot be HLE'd.
+- **Resampler Quality (Restart)** [bsnes_jg_rsqual] (**Fast**|Medium|Best)
 
-- **SuperFX speed** [bsnes_superfx_overclock] (**100%**|150%|200%|300%|400%|500%|1000%)
+    Set the internal resampler's quality level (you may hear a difference if you use pro audio equipment and your imagination)
 
-	**The Allow settings to reduce accuracy core option must be enabled in order for this to function properly.**
+- **SPC Interpolation Algorithm** [bsnes_jg_spc_interp] (**Gaussian**|Sinc)
 
-	Overclock the [SuperFX chip](https://en.wikipedia.org/wiki/Super_FX). 100% is stock clockspeed.
+    Set the emulated sound chip sample interpolation algorithm: Gaussian is considered more accurate, while Sinc is cleaner, but still produces very accurate output.
 
-- **System region** [bsnes_region] (**auto**|ntsc|pal)
+- **Aspect Ratio** [bsnes_jg_aspect] (**Auto**|1:1|8:7|11:8|4:3)
 
-	Choose which region the system is from.
+    Set the Aspect Ratio
 
-- **Preferred aspect ratio** [bsnes_aspect_ratio] (**auto**|ntsc|pal)
+- **Mask Overscan (Top)** [bsnes_jg_overscan_t] (0|4|**8**|12|16|20)
 
-	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings.
+    Mask off pixels hidden by a bezel or border on original CRTs (top)
 
-- **Crop overscan** [bsnes_crop_overscan] (**disabled**|enabled)
+- **Mask Overscan (Bottom)** [bsnes_jg_overscan_b] (0|4|**8**|12|16|20|21)
 
-	Crop out the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
+    Mask off pixels hidden by a bezel or border on original CRTs (bottom)
 
-- **Gamma ramp (requires restart)** [bsnes_gamma_ramp] (**disabled**|enabled)
+- **Mask Overscan (Left)** [bsnes_jg_overscan_l] (0|4|**8**|12|16|20)
 
-	Simulates the way a console’s display device differs from modern computer monitor’s colour reproduction. In particular, it simulates the slightly-different gamma correction used by the Super Famicom.
+    Mask off pixels hidden by a bezel or border on original CRTs (left)
 
-??? note "Gamma ramp - Disabled"
-    ![](../image/core/higan/gamma_off.png)
+- **Mask Overscan (Right)** [bsnes_jg_overscan_r] (0|4|**8**|12|16|20)
 
-??? note "Gamma ramp - Enabled"
-    ![](../image/core/higan/gamma_on.png)
+    Mask off pixels hidden by a bezel or border on original CRTs (right)
+
+- **Colour Adjustment - Luminance** [bsnes_jg_luminance] (0%|10%|20%|30%|40%|50%|60%|70%|80%|90%|**100%**)
+
+    Adjust Luminance
+
+- **Colour Adjustment - Saturation** [bsnes_jg_saturation] (0%|10%|20%|30%|40%|50%|60%|70%|80%|90%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%)
+
+    Adjust Saturation
+
+- **Colour Adjustment - Gamma** [bsnes_jg_gamma] (100%|110%|**120%**|130%|140%|150%|160%|170%|180%|190%|200%)
+
+    Adjust Gamma
+
+- **Competition Timer** [bsnes_jg_competition_timer] (3 Minutes|4 Minutes|5 Minutes|**6 Minutes**|7 Minutes|8 Minutes|9 Minutes|10 Minutes|11 Minutes|12 Minutes|13 Minutes|14 Minutes|15 Minutes|16 Minutes|17 Minutes|18 Minutes)
+
+    Set the gameplay time for competition boards such as Campus Challenge '92 and PowerFest '94
+
 
 ## Controllers
 
-The bsnes-mercury Balanced core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The bsnes-jg core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
-- None - Doesn't disable input.
-- **[SNES Joypad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Joypad
+- **[Gamepad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Gamepad
 - [SNES Mouse](https://en.wikipedia.org/wiki/Super_NES_Mouse) - Mouse
 
 ### User 2 device types
 
-- None - Doesn't disable input.
-- **[SNES Joypad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Joypad
+- **[Gamepad](http://nintendo.wikia.com/wiki/Super_Nintendo_Entertainment_System_controller)** - Gamepad
 - [SNES Mouse](https://en.wikipedia.org/wiki/Super_NES_Mouse) - Mouse
-- [Multitap](http://nintendo.wikia.com/wiki/Super_Multitap) - Joypad - Allows for up to five players to play together in multitap games.
+- [Multitap](http://nintendo.wikia.com/wiki/Super_Multitap) - Gamepad - Allows for up to five players to play together in multitap games.
 - [SuperScope](https://en.wikipedia.org/wiki/Super_Scope) - Lightgun
 - [Justifier](https://en.wikipedia.org/wiki/Konami_Justifier) - Lightgun
-- [Justifiers](https://en.wikipedia.org/wiki/Konami_Justifier) - Lightgun - Two Justifiers are plugged in, for two-player Justifier games.
 
 ### Multitap support
 
@@ -241,7 +250,7 @@ Activating multitap support in compatible games can be configured by switching t
 
 ### Controller tables
 
-#### Joypad
+#### Gamepad
 
 ![](../image/controller/snes.png)
 
@@ -280,25 +289,22 @@ Activating multitap support in compatible games can be configured by switching t
 
 ## Compatibility
 
-| Game                     | Issue                                                                          |
-|--------------------------|--------------------------------------------------------------------------------|
-| A.S.P. Air Strike Patrol | Black lines show up during gameplay. The shadow below the aircraft is missing. |
+The bsnes-jg core is compatible with all officially released SNES/SFC titles.
 
 ## External Links
 
-- [Official higan Website](https://byuu.org/)
-- [Official higan Upstream Downloads](https://byuu.org/emulation/higan/)
-- [Libretro bsnes-mercury Balanced Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/bsnes_mercury_balanced_libretro.info)
-- [Libretro bsnes-mercury Balanced Github Repository](https://github.com/libretro/bsnes-mercury)
-- [Report Libretro bsnes-mercury Balanced Core Issues Here](https://github.com/libretro/bsnes-mercury/issues)
+- [Upstream bsnes-jg Repository](https://gitlab.com/jgemu/bsnes-jg)
+- [Libretro bsnes-jg Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/bsnes-jg_libretro.info)
+- [Libretro bsnes-jg Repository](https://github.com/libretro/bsnes-jg)
+- [Report bsnes-jg Core Issues Here](https://github.com/libretro/bsnes-jg/issues)
 
 ### See also
 
 #### Nintendo - Sufami Turbo
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
-- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
 - [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
@@ -313,8 +319,8 @@ Activating multitap support in compatible games can be configured by switching t
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
-- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
 - [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)

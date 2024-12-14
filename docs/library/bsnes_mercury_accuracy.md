@@ -295,6 +295,7 @@ The bsnes-mercury Accuracy core fully emulates all SNES games that have ever bee
 #### Nintendo - Sufami Turbo
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
 - [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
@@ -310,6 +311,7 @@ The bsnes-mercury Accuracy core fully emulates all SNES games that have ever bee
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
 - [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)

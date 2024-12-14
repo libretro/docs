@@ -267,6 +267,7 @@ Activating multitap support in compatible games can be configured by switching t
 #### Nintendo - Sufami Turbo
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
@@ -282,6 +283,7 @@ Activating multitap support in compatible games can be configured by switching t
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
