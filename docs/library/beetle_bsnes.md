@@ -132,6 +132,7 @@ The Beetle bsnes core supports the following device type(s) in the controls menu
 
 #### Nintendo - Sufami Turbo
 
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
@@ -147,6 +148,7 @@ The Beetle bsnes core supports the following device type(s) in the controls menu
 
 #### Nintendo - Super Nintendo Entertainment System (+Hacks)
 
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)

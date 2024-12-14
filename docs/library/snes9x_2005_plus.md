@@ -181,6 +181,7 @@ The Snes9x 2005 Plus core supports the following device type(s) in the controls 
 
 #### Nintendo - Sufami Turbo
 
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
@@ -196,6 +197,7 @@ The Snes9x 2005 Plus core supports the following device type(s) in the controls 
 
 #### Nintendo - Super Nintendo Entertainment System (+ Hacks)
 
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)

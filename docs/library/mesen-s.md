@@ -287,12 +287,14 @@ The Mesen-S core fully emulates all SNES, GB, and GBC games that have ever been 
 - [Nintendo - Game Boy / Color (TGB Dual)](tgb_dual.md)
 - [Nintendo - Game Boy Advance (mGBA)](mgba.md)
 - [Nintendo - Game Boy Advance (VBA-M)](vba_m.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 
 #### SNES
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
