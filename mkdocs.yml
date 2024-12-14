@@ -194,6 +194,7 @@ nav:
         - 'Nintendo - DS (melonDS)': 'library/melonds.md'
         - 'Nintendo - Pokémon Mini (PokeMini)': 'library/pokemini.md'
         - 'Nintendo - SNES / Famicom (Beetle bsnes)': 'library/beetle_bsnes.md'
+        - 'Nintendo - SNES / Famicom (bsnes-jg)': 'library/bsnes-jg.md'
         - 'Nintendo - SNES / Famicom (bsnes Accuracy)': 'library/bsnes_accuracy.md'
         - 'Nintendo - SNES / Famicom (bsnes Balanced)': 'library/bsnes_balanced.md'
         - 'Nintendo - SNES / Famicom (bsnes C++98 (v085))': 'library/bsnes_cplusplus98.md'
