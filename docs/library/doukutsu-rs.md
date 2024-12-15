@@ -1,12 +1,12 @@
-# Doukutsu Rust
+# doukutsu-rs
 
 *This article primarily outlines the retroarch-specific features of this core. For a general feature-list and how-to for d-rs, please see the readme in the [Upstream Repository](https://github.com/doukutsu-rs/doukutsu-rs/).*
 
-<center> ![](../image/core/doukutsu-rust/drs-libretro.png) </center>
+<center> ![](../image/core/doukutsu-rs/drs-libretro.png) </center>
 
 ## Background
 
-Doukutsu Rust *(often abbreviated d-rs)* is a modern and accurate re-implementation of the Cave Story Engine designed to be a drop-in replacement for all official and most fan ports, including:
+Doukutsu-rs *(often abbreviated d-rs)* is a modern and accurate re-implementation of the Cave Story Engine designed to be a drop-in replacement for all official and most fan ports, including:
 
 - CS Freeware
 - Cave Story+
@@ -60,7 +60,7 @@ The game should begin playing.
 
 These versions of Cave Story don't have an executable bundled with the `data` folder. D-rs can load this just fine, but it needs to know *where* to find it, which requires the creation of a "dummy" executable next to the data folder.
 
-<center> ![](../image/core/doukutsu-rust/dummy-target.png) </center>
+<center> ![](../image/core/doukutsu-rs/dummy-target.png) </center>
 
 1. Grab your CS-Switch or CS-Wiiware install and place it where you can navigate to it from retroarch.
 2. In the folder that contains the `data` folder *(not INSIDE the data folder, but next to it)*, create an empty file with the `.exe` extension. Name doesn't matter, (example: `Target.exe`)
@@ -146,7 +146,7 @@ Depending on the `Core Options` (see below), the game's screen ratio can be chan
 - **GOD Mode (Invincibility)** - Player cannot take damage. `Disabled|Enabled`
 - **Infinite Booster** - Gives the player the jetpack without a fuel limit. `Disabled|Enabled`
 - **Noclip** - Allows the player to float through the map without tile or NPC collision. `Disabled|Enabled`
-- **More Rust** - Turns Sue into the d-rs mascot (![](../image/core/doukutsu-rust/more-rust.png){ width="16" height="16" }). `Disabled|Enabled`
+- **More Rust** - Turns Sue into the d-rs mascot (![](../image/core/doukutsu-rs/more-rust.png){ width="16" height="16" }). `Disabled|Enabled`
 
 
 ## User 1-2 device types

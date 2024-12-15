@@ -275,7 +275,7 @@ nav:
       - '2048': 'library/2048.md'
       - '3D Engine': 'library/3d_engine.md'
       - 'Anarch': 'library/anarch.md'
-      - 'Cave Story (Doukutsu Rust)': 'library/doukutsu-rust.md'
+      - 'Cave Story (doukutsu-rs)': 'library/doukutsu-rs.md'
       - 'Cave Story (NXEngine)': 'library/nxengine.md'
       - 'Cannonball': 'library/cannonball.md'
       - 'ChaiLove': 'library/chailove.md'

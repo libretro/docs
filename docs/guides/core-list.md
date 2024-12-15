@@ -57,7 +57,7 @@
 | DOSBox-core               | DOS                    | Provides some improvements over the DOSBox-SVN trunk, including native MIDI support, cycle-accurate OPL3 (YMF262) emulation, MT-32 emulation and experimental 3dfx Voodoo support |
 | DOSBox-Pure               | DOS                    | A port of DOSBox with a goal of simplicty and ease of use and gameplay. This core includes a streamlined workflow for launching games directly from ZIP archives with automated mapping of controls to gamepads and a native onscreen keyboard. |
 | DOSBox-SVN                | DOS                    | This core is based on DOSBox-SVN trunk and allows on-the-fly configuration and different sync methods |
-| [Doukutsu Rust](../library/doukutsu-rust.md)             | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
+| [doukutsu-rs](../library/doukutsu-rs.md)             | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
 | DuckStation               | Sony PlayStation       |                    |
 | Dungeon Crawl Stone Soup  | Game                   | A preliminary port of the Dungeon Crawl Stone Soup strategy game |
 | EasyRPG                   | RPG Maker 2000/2003    |                    |

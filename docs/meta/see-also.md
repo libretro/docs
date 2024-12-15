@@ -173,5 +173,5 @@ This is a list of cores that are related to each other in some way.
 
 ## Cave Story
 
-- [D-RS](../library/doukutsu-rust.md)
+- [d-rs](../library/doukutsu-rs.md)
 - [NXEngine](../library/nxengine.md)

@@ -94,7 +94,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
 | DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  | |
 | DOSBox Pure                                          			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  | |
-| [Doukutsu Rust](../library/doukutsu-rust.md) | [MIT](https://github.com/DrGlaucous/doukutsu-rs-nm/blob/retroarch-dev/LICENSE)       |                |
+| [doukutsu-rs](../library/doukutsu-rs.md) | [MIT](https://github.com/DrGlaucous/doukutsu-rs-nm/blob/retroarch-dev/LICENSE)       |                |
 | Dummy Core                                                                       | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)       |                |
 | Dungeon Crawl Stone Soup                                                         | [GPLv2+](https://github.com/libretro/crawl-ref/blob/master/crawl-ref/licence.txt)         |                |
 | EasyRPG                                                                          | [GPLv3](https://github.com/libretro/easyrpg-libretro/blob/master/COPYING)                 |                |
