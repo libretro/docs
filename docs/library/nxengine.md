@@ -133,4 +133,4 @@ The NXEngine core supports the following device type(s) in the controls menu, bo
 
 ## (Related cores)
 
-- [Doukutsu Rust](doukutsu-rust.md)
+- [doukutsu-rs](doukutsu-rs.md)
