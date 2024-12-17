@@ -1,0 +1,11 @@
+[files]
+extend-exclude = [
+  ".git/",     # Version control files
+  "achive/*",  # Archive files
+]
+
+# Match Inside a Word - Case Insensitive
+[default.extend-words]
+ue = "ue"          # Nestopia UE
+sav = "sav"        # .sav file extension
+kernal = "kernal"  # Commodore's low-level Operating System

@@ -1,0 +1,24 @@
+# Spell checker
+
+name: Typos Action
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  run:
+    name: Spell Check with Typos
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v45.0.2
+
+    - name: Check spelling
+      uses: crate-ci/typos@master
+      with:
+        files: ${{ steps.changed-files.outputs.all_changed_files }}
+        write_changes: false
