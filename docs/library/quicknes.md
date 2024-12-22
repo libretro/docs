@@ -228,4 +228,4 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
 - [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
 - [Nintendo - NES / Famicom (Mesen)](mesen.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)

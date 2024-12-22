@@ -138,7 +138,7 @@
 | Neko Project II           | NEC PC-98              |                    |
 | Neko Project II Kai       | NEC PC-98              |                    |
 | NeoCD                     | Neo Geo CD             |                    |
-| Nestopia UE                | Nintendo NES/Famicom   |                    |
+| Nestopia                  | Nintendo NES/Famicom   |                    |
 | nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
 | Numero                  | TI-83            | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |

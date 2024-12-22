@@ -116,5 +116,5 @@ Awaiting description.
 - [Nintendo - NES / Famicom (bnes)](bnes.md)
 - [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
 - [Nintendo - NES / Famicom (Mesen)](mesen.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

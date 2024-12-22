@@ -220,7 +220,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Mesen](https://github.com/SourMesen/Mesen)           | ✔         | Supports FDS, very high accuracy, relatively high performance cost |
 | [FCEUmm](https://github.com/libretro/libretro-fceumm) | ✔         | Supports FDS |
 | [QuickNES](https://github.com/libretro/QuickNES_Core) | ✔         |       |
-| [Nestopia UE](https://github.com/libretro/nestopia)   | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
+| [Nestopia](https://github.com/libretro/nestopia)      | ✕         | [**Achievements are not fully supported yet**](https://github.com/libretro/docs/pull/10) |
 | [bnes](https://github.com/libretro/bnes-libretro)     | ✕         |       |
 | [Emux NES](https://github.com/libretro/emux)          | ✕         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)    | ✕         |       |

@@ -422,12 +422,12 @@ Multitap support can be activated in the Mesen core by switching User 5's device
 #### Nintendo - Family Computer Disk System
 
 - [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)
 
 #### Nintendo - Nintendo Entertainment System
 
 - [Nintendo - NES / Famicom (bnes)](bnes.md)
 - [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
 - [Nintendo - NES / Famicom (FCEUmm)](fceumm.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](quicknes.md)

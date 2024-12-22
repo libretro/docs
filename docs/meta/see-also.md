@@ -117,7 +117,7 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - NES / Famicom (Emux NES)](../library/emux_nes.md)
 - [Nintendo - NES / Famicom (FCEUmm)](../library/fceumm.md)
 - [Nintendo - NES / Famicom (Mesen)](../library/mesen.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](../library/nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](../library/nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](../library/quicknes.md)
 
 ## id Software
