@@ -1,18 +1,20 @@
-# Nintendo - NES / Famicom (Nestopia UE)
+# Nintendo - NES / Famicom (Nestopia)
 
 ## Background
 
-Nestopia is a portable and cycle-accurate NES/Famicom emulator written in C++. Nestopia UE (Undead Edition) is a fork of the original source code, with enhancements from members of the emulation community. This includes support for new platforms, and bug fixes in the emulator core.
+Nestopia is a cycle accurate emulator for the NES/Famicom.
+This is the libretro port of the Nestopia emulator, based on the de facto
+upstream Nestopia JG fork. The libretro port contains an additional overclocking feature.
 
 ### Author/License
 
-The Nestopia UE core has been authored by
+The Nestopia core has been authored by
 
 - Martin Freij
-- R. Belmont
 - R. Danbrook
+- [Rupert Carmichael (carmiker)](https://github.com/carmiker)
 
-The Nestopia UE core is licensed under
+The Nestopia core is licensed under
 
 - [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)
 
@@ -20,7 +22,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Extensions
 
-Content that can be loaded by the Nestopia UE core have the following file extensions:
+Content that can be loaded by the Nestopia core have the following file extensions:
 
 - .nes
 - .fds
@@ -29,7 +31,7 @@ Content that can be loaded by the Nestopia UE core have the following file exten
 
 ## Databases
 
-RetroArch database(s) that are associated with the Nestopia UE core:
+RetroArch database(s) that are associated with the Nestopia core:
 
 - [Nintendo - Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20Entertainment%20System.rdb)
 - [Nintendo - Family Computer Disk System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Family%20Computer%20Disk%20System.rdb)
@@ -39,7 +41,7 @@ RetroArch database(s) that are associated with the Nestopia UE core:
 Required or optional firmware files go in the frontend's system directory.
 
 !!! warning
-	Prior to Nestopia UE 1.50, it required the [NstDatabase.xml](#nstdatabasexml) file for general proper emulation. In version 1.50 or higher, it's baked into the core.
+	Prior to version 1.50, it required the [NstDatabase.xml](#nstdatabasexml) file for general proper emulation. In version 1.50 or higher, it's baked into the core.
 
 |   Filename      |    Description                                                                |              md5sum              |
 |:---------------:|:-----------------------------------------------------------------------------:|:--------------------------------:|
@@ -47,7 +49,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 ## Features
 
-Frontend-level settings or features that the Nestopia UE core respects.
+Frontend-level settings or features that the Nestopia core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -78,9 +80,9 @@ Frontend-level settings or features that the Nestopia UE core respects.
 
 ### Directories
 
-The Nestopia UE core's internal core name is 'Nestopia'
+The Nestopia core's internal core name is 'Nestopia'
 
-The Nestopia UE core saves/loads to/from these directories.
+The Nestopia core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -96,13 +98,13 @@ The Nestopia UE core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Nestopia UE core's core provided FPS is (FPS)
-- The Nestopia UE core's core provided sample rate is 44100 Hz
-- The Nestopia UE core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](#core-options).
+- The Nestopia core's core provided FPS is (FPS)
+- The Nestopia core's core provided sample rate is 44100 Hz
+- The Nestopia core's core provided aspect ratio is dependent on the ['Preferred aspect ratio' core option](#core-options).
 
 ### NstDatabase.xml
 
-The Nestopia UE core relies on the internal database (built from the NstDatabase.xml file) for
+The Nestopia core relies on the internal database (built from the NstDatabase.xml file) for
 
 - Games that support a custom mapper
 - Games that support multitap accessories
@@ -113,7 +115,7 @@ The Nestopia UE core relies on the internal database (built from the NstDatabase
 
 ### Custom color palettes
 
-To use custom color palettes in the Nestopia UE core, the custom color palette file you want to use must be in RetroArch's system directory.
+To use custom color palettes in the Nestopia core, the custom color palette file you want to use must be in RetroArch's system directory.
 
 Make sure the custom palette file is named 'custom.pal'
 
@@ -126,7 +128,7 @@ Custom color palettes for the NES can be generated with either of these tools.
 
 ## Core options
 
-The Nestopia UE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The Nestopia core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
@@ -138,19 +140,19 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Blargg NTSC filter' core option screenshots have been taken with the 'Palette' core option set to cxa2025as.
 
 ??? note "Blargg NTSC filter - Off"
-	![](../image/core/nestopia_ue/blargg_off.png)
+	![](../image/core/nestopia/blargg_off.png)
 
 ??? note "Blargg NTSC filter - composite"
-	![](../image/core/nestopia_ue/blargg_composite.png)
+	![](../image/core/nestopia/blargg_composite.png)
 
 ??? note "Blargg NTSC filter - svideo"
-	![](../image/core/nestopia_ue/blargg_svideo.png)
+	![](../image/core/nestopia/blargg_svideo.png)
 
 ??? note "Blargg NTSC filter - rgb"
-	![](../image/core/nestopia_ue/blargg_rgb.png)
+	![](../image/core/nestopia/blargg_rgb.png)
 
 ??? note "Blargg NTSC filter - monochrome"
-	![](../image/core/nestopia_ue/blargg_monochrome.png)
+	![](../image/core/nestopia/blargg_monochrome.png)
 
 - **Palette** [nestopia_palette] (**cxa2025as**|consumer|canonical|alternative|rgb|pal|composite-direct-fbx|pvm-style-d93-fbx|ntsc-hardware-fbx|nes-classic-fbx-fs|raw|custom)
 
@@ -160,37 +162,37 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	These 'Palette' core option screenshots have been taken with the 'Blargg NTSC filter' core option set to Off.
 
 ??? note "Palette - cxa2025as"
-	![](../image/core/nestopia_ue/cxa2025as.png)
+	![](../image/core/nestopia/cxa2025as.png)
 
 ??? note "Palette - consumer"
-	![](../image/core/nestopia_ue/consumer.png)
+	![](../image/core/nestopia/consumer.png)
 
 ??? note "Palette - canonical"
-	![](../image/core/nestopia_ue/canonical.png)
+	![](../image/core/nestopia/canonical.png)
 
 ??? note "Palette - alternative"
-	![](../image/core/nestopia_ue/alternative.png)
+	![](../image/core/nestopia/alternative.png)
 
 ??? note "Palette - rgb"
-	![](../image/core/nestopia_ue/rgb.png)
+	![](../image/core/nestopia/rgb.png)
 
 ??? note "Palette - pal"
-	![](../image/core/nestopia_ue/pal.png)
+	![](../image/core/nestopia/pal.png)
 
 ??? note "Palette - composite-direct-fbx"
-	![](../image/core/nestopia_ue/composite_direct_fbx.png)
+	![](../image/core/nestopia/composite_direct_fbx.png)
 
 ??? note "Palette - pvm-style-d93-fbx"
-	![](../image/core/nestopia_ue/pvm_style_d93_fbx.png)
+	![](../image/core/nestopia/pvm_style_d93_fbx.png)
 
 ??? note "Palette - ntsc-hardware-fbx"
-	![](../image/core/nestopia_ue/ntsc_hardware_fbx.png)
+	![](../image/core/nestopia/ntsc_hardware_fbx.png)
 
 ??? note "Palette - nes-classic-fbx-fs"
-	![](../image/core/nestopia_ue/nes_classic_fbx_fs.png)
+	![](../image/core/nestopia/nes_classic_fbx_fs.png)
 
 ??? note "Palette - raw"
-	![](../image/core/nestopia_ue/raw.png)
+	![](../image/core/nestopia/raw.png)
 
 - **Remove Sprite Limit** [nestopia_nospritelimit] (**disabled**|enabled)
 
@@ -213,33 +215,33 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 	Mask out (vertically) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Mask Overscan (Vertical) - On"
-	![](../image/core/nestopia_ue/vert_on.png)
+	![](../image/core/nestopia/vert_on.png)
 
 ??? note "Mask Overscan (Vertical) - Off"
-	![](../image/core/nestopia_ue/vert_off.png)
+	![](../image/core/nestopia/vert_off.png)
 
 - **Mask Overscan (Horizontal)** [nestopia_overscan_h] (**disabled**|enabled)
 
 	Mask out (horizontally) the potentially random glitchy video output that would have been hidden by the bezel around the edge of a standard-definition television screen.
 
 ??? note "Mask Overscan (Horizontal) - Off"
-	![](../image/core/nestopia_ue/horiz_off.png)
+	![](../image/core/nestopia/horiz_off.png)
 
 ??? note "Mask Overscan (Horizontal) - On"
-	![](../image/core/nestopia_ue/horiz_on.png)
+	![](../image/core/nestopia/horiz_on.png)
 
 - **Preferred aspect ratio** [nestopia_aspect] (**auto**|ntsc|pal|4:3)
 
 	Choose the preferred aspect ratio. RetroArch's aspect ratio must be set to Core provided in the Video settings. 'auto' will use the [internal database](#nstdatabasexml) for aspect ratio autodetection.
 
 ??? note "Preferred aspect ratio - ntsc"
-	![](../image/core/nestopia_ue/ratio_ntsc.png)
+	![](../image/core/nestopia/ratio_ntsc.png)
 
 ??? note "Preferred aspect ratio - pal"
-	![](../image/core/nestopia_ue/ratio_pal.png)
+	![](../image/core/nestopia/ratio_pal.png)
 
 ??? note "Preferred aspect ratio - 4:3"
-	![](../image/core/nestopia_ue/ratio_4by3.png)
+	![](../image/core/nestopia/ratio_4by3.png)
 
 - **Game Genie Sound Distortion** [nestopia_genie_distortion] (**disabled**|enabled)
 
@@ -259,7 +261,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Controllers
 
-The Nestopia UE core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Nestopia core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 - 4 device types
 
@@ -267,11 +269,11 @@ The Nestopia UE core supports the following device type(s) in the controls menu,
 - **Auto** - Automatically detects the device to use based on the internal database.
 - Gamepad - Joypad
 - Arkanoid - Arkanoid paddle -  This should be automatic from the internal database, but this can be changed to Gamepad if you'd prefer using a joypad rather than a paddle. (Port 2 only)
-- Zapper - Lightgun - The Nestopia UE core can emulate Zapper inputs.  This is generally done automatically based off of the internal database, but can be manually selected as a device type. (Port 2 only)
+- Zapper - Lightgun - The Nestopia core can emulate Zapper inputs.  This is generally done automatically based off of the internal database, but can be manually selected as a device type. (Port 2 only)
 
 ### Multitap support
 
-The Nestopia UE core uses the internal database to detect which games have multitap support.
+The Nestopia core uses the internal database to detect which games have multitap support.
 
 ### Controller tables
 
@@ -322,20 +324,14 @@ The Nestopia UE core uses the internal database to detect which games have multi
 
 ## Compatibility
 
-| Game                   | Issue                                                            |
-|------------------------|----------------------------------------------------------------- |
-| Skull & Crossbones     | Graphical glitches and screen shaking when in 2-player mode. (1) |
-
-??? note "(1)"
-	![](../image/core/nestopia_ue/skull.png)
+The Nestopia core is compatible with 100% of officially released titles, and the vast majority of homebrew and hacks.
 
 ## External Links
 
-- [Official Nestopia UE Website](http://0ldsk00l.ca/nestopia/)
-- [Official Nestopia UE Github Repository](https://github.com/0ldsk00l/nestopia)
-- [Libretro Nestopia UE Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/nestopia_libretro.info)
-- [Libretro Nestopia UE Github Repository](https://github.com/libretro/nestopia)
-- [Report Libretro Nestopia UE Core Issues Here](https://github.com/libretro/nestopia/issues)
+- [Upstream Nestopia JG Repository](https://gitlab.com/jgemu/nestopia)
+- [Libretro Nestopia Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/nestopia_libretro.info)
+- [Libretro Nestopia Github Repository](https://github.com/libretro/nestopia)
+- [Report Libretro Nestopia Core Issues Here](https://github.com/libretro/nestopia/issues)
 
 ### See also
 

@@ -76,7 +76,7 @@ MS/MD/CD/32X                  | PicoDrive          | [BIOS information](picodriv
 MSX/SVI/ColecoVision/SG-1000  | blueMSX            | [BIOS information](bluemsx.md#bios)
 MSX                           | fMSX               | [BIOS information](fmsx.md#bios)
 NES/Famicom                   | FCEUmm             | [BIOS information](fceumm.md#bios)
-NES/Famicom                   | Nestopia UE        | [BIOS information](nestopia_ue.md#bios)
+NES/Famicom                   | Nestopia        | [BIOS information](nestopia.md#bios)
 NES/Famicom                   | Mesen              | [BIOS information](mesen.md#bios)
 Odyssey2/Videopac+            | O2EM               | [BIOS information](o2em.md#bios)
 PC-98                         | Neko Project II Kai| [BIOS information](neko_project_ii_kai.md#bios)

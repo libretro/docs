@@ -55,7 +55,7 @@ rom.ips2
 | [bnes](../library/bnes.md)               | ✔         |
 | [FCEUmm](../library/fceumm.md)           | ✔         |
 | [Mesen](../library/mesen.md)             | ✔         |
-| [Nestopia UE](../library/nestopia_ue.md) | ✔         |
+| [Nestopia](../library/nestopia.md)       | ✔         |
 | [QuickNES](../library/quicknes.md)       | ✔         |
 
 ### Nintendo - SNES / Famicom

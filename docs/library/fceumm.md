@@ -419,12 +419,12 @@ The FCEUmm core supports up to 4 players in multitap games for the NES and Famic
 #### Nintendo - Family Computer Disk System
 
 - [Nintendo - NES / Famicom (Mesen)](mesen.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)
 
 #### Nintendo - Nintendo Entertainment System
 
 - [Nintendo - NES / Famicom (bnes)](bnes.md)
 - [Nintendo - NES / Famicom (Emux NES)](emux_nes.md)
 - [Nintendo - NES / Famicom (Mesen)](mesen.md)
-- [Nintendo - NES / Famicom (Nestopia UE)](nestopia_ue.md)
+- [Nintendo - NES / Famicom (Nestopia)](nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](quicknes.md)
