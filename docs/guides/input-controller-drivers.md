@@ -2,49 +2,65 @@
 
 RetroArch makes use of two input systems in order to support the full range of input devices available across RetroArch's supported platforms.
 
-- **Input Drivers** provide access to keyboards, mice, and mouse-like devices such as lightguns, spinners, steering wheels, etc.
-- **Controller Drivers** provide access to gamepads and joysticks. 
+- **Input Drivers** provide access to keyboards, mice, and mouse-like devices such as lightguns or touch screens. Input drivers are typically set up automatically, and are either not changeable or there is only a limited selection.
+- **Controller Drivers** provide access to gamepads and joysticks. On desktop platforms, controller drivers can be usually changed. The autoconfiguration profile database is different per controller driver.
 
 !!! Note
     Controller drivers were previously referred to as joypad drivers. Some documentation may still use the older "joypad" terminology.
 
-**Absolute mouse devices** in the tables below refers to input drivers which support mouse-like devices such as light guns, air mice, and Wiimotes that use 'absolute' coordinate systems. Certain input drivers only support mouse devices with 'relative' coordinate systems.
+- **Multi-mouse** indicates if it is possible to select a separate mouse-type device (such as a lightgun) for each player. If multi-mouse is not supported, typically all pointing devices are controlling the same default cursor.
+- **Pointer device** indicates if it is possible for the core to query the absolute coordinates of the pointer, as opposed to the default (relative) mouse. Certain cores may only support one or the other.
+- **Lightgun device** indicates if it is possible for the core to query a specific lightgun device, which has a different button set compared to a RetroPad. A few platforms support physical lightguns natively, or lightguns may appear as pointer devices.
+- **Rumble support** indicates if the driver can pass on haptic feedback (vibration) signals.
+- **Autoconfig support** indicates if the driver can read the controller vendor/product identifiers and apply an automatic mapping for [RetroPad](../../guides/input-and-controls/#what-is-a-retropad).
 
+The listing below is not complete, but on the rest of the platforms, there is usually only 1 valid driver.
+
+---
 ## Apple OSes
 
-**Apple Controller Drivers[^1]**
-- mfi
+**Apple Input Drivers**
 
+| Input driver | Conditions | Multi-mouse support | Pointer device | Lightgun device |
+|--------------|------------|---------------------|----------------|-----------------|
+| `cocoa` | - | No | Yes | No |
+
+**Apple Controller Drivers[^1]**
+
+| Controller driver | Conditions | Rumble support | Autoconfig support |
+|-------------------|------------|----------------|--------------------|
+| `mfi` | - | Yes | Yes |
+| `sdl2` | - | Yes | Yes |
+
+---
 ## Linux
-`udev` is the most full-featured Input Driver and Controller Driver for Linux.
 
 **Linux Input Drivers**
 
-- linuxraw
-- sdl2
-- udev
-- wayland
+| Input driver | Conditions | Multi-mouse support | Pointer device | Lightgun device |
+|--------------|------------|---------------------|----------------|-----------------|
+| `x` | Desktop environment is X11, video driver is OpenGL (any version) or Vulkan | No | Yes | Yes |
+| `wayland` | Desktop environment is Wayland, video driver is OpenGL (any version) or Vulkan | No | Yes | Yes, button map is fixed |
+| `sdl` | Video driver is sdl or sdl2 | No | Yes | Yes, button map is fixed |
+| `udev` | No desktop environment (KMS) or X11 | Yes | Yes | Yes |
+| `linuxraw` | No desktop environment (KMS) | No mouse support at all | No | No |
 
 **Linux Controller Drivers**
 
-- linuxraw
-- sdl2
-- udev
-- [parport](https://docs.libretro.com/development/retroarch/input/parallel-port-controllers/)
+| Controller driver | Conditions | Rumble support | Autoconfig support |
+|-------------------|------------|----------------|--------------------|
+| `udev` | Access to the udev interface (see below) | Yes | Yes |
+| `sdl2` | - | Yes | Yes |
+| `linuxraw` | - | No | Yes |
+| `parport` | [Special adapter](../../development/retroarch/input/parallel-port-controllers/) on physical parallel port | No | No |
+| `hid` | Only if enabled during compilation | Yes | Yes |
 
-### udev input driver
+### udev drivers
 udev is the newest input driver and uses the evdev joypad interface at `/dev/input`. It supports hotplugging and force feedback (if supported by device). udev reads evdev events directly and supports keyboard callback, mice, and touchpads. `libudev` is used to discover devices and support hotplugging.
 
-#### Features
+The `libudev` and `libxkbdcommon` packages are required. udev does not require X11, but udev does depend on X11 keyboard layout files being installed.
 
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| Yes         |  Yes          |
-
-#### Required packages
-TThe `libudev` and `libxkbdcommon` packages are required. udev does not require X, but udev does depend on X11 keyboard layout files being installed.
-
-#### Setting up udev permissions
+### Setting up udev permissions
 Most Linux distributions prevent users from capturing keyboard/mouse information by default. Only root and users in the group "input" are able to access raw input. This is a security feature in case the system is used by multiple users.
 
 The easiest way to gain access to this input is to:
@@ -58,275 +74,51 @@ If adding your user to the input group does not succeed, you may also set up a u
 * **Step 2:** Reload the rules with `sudo udevadm control --reload-rules`.
 * **Step 3:** Reboot
 
-### linuxraw input driver
-The older linuxraw driver is available which uses the legacy joystick API at `/dev/input/js*`. The  linuxraw driver requires an active TTY in order to read keyboard events.
+### linuxraw drivers
+The linuxraw controller driver uses the legacy joystick API at `/dev/input/js*`. The linuxraw input driver requires an active TTY in order to read keyboard events.
 
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| No          |  Yes          |
-
-### wayland input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| -           |  -            |
-
-### sdl2 input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice* |
-|-------------|----------------|
-| No          |  No            |
-
-
-### hid controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -      |
-
-### linuxraw controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -      |
-
-
-### sdl2 controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
-
-### udev controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
-
-### xinput controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
+### hid driver
+The hid driver on Linux platform detects Human Interface Devices via libusb. By default it is not enabled during compilation.
 
 ---
-
 ## Windows
 
 **Windows Input Drivers**
 
-- dinput
-- raw
-- sdl2
+| Input driver | Conditions | Multi-mouse support | Pointer device | Lightgun device |
+|--------------|------------|---------------------|----------------|-----------------|
+| `dinput` | Video driver is not sdl(2) | No | Yes | Yes |
+| `raw` | Video driver is not sdl(2) | Yes | Yes | Yes |
+| `sdl` | Video driver is sdl or sdl2 | No | Yes | Yes, button map is fixed |
 
 **Windows Controller Drivers**
 
-- dinput
-- hid
-- sdl2
-- xinput
+| Controller driver | Conditions | Rumble support | Autoconfig support |
+|-------------------|------------|----------------|--------------------|
+| `dinput` | Controller is connected as a DirectInput device | Yes | Yes |
+| `xinput` | Controller is connected as an XInput device | Yes | Yes |
+| `sdl2` | - | Yes | Yes |
+| `hid` | Only if enabled during compilation | Yes | Yes |
 
-### raw input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| Yes         |  Yes          |
-
-
-### dinput input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| No          |  No           |
-
-### sdl2 input driver
--To be written-
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| -           |  -            |
-
-### dinput controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| No    |
-
-### hid controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -      |
-
-### sdl2 controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
-
-### xinput controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
+### hid driver
+The hid driver on Windows platform detects Human Interface Devices via libusb. By default it is not enabled during compilation.
 
 ---
+## Auxiliary sensor support
 
-## Android
+The libretro API provides a possibility to pass extra sensor inputs to cores: 3 axes of accelerometer/tilt sensor, 3 axes of gyroscope, and an illumination sensor. The following input drivers support extra sensors:
 
-**Android Input Drivers**
-
-- android
-- linuxraw
-- udev
-
-**Android Controller Drivers**
-
-- android
-- hid
-- udev
-
-### android input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| -           |  -            |
-
-### linuxraw input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| No          |  Yes          |
-
-### udev input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| Yes         |  No           |
-
-
-### android controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -      |
-
-### hid controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -      |
-
-### udev controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
-
-## OS X
-
-**OS X Input Drivers**
-
-- cocoa
-
-**OS X Controller Drivers**
-
-- hid
-
-### cocoa input driver
--To be written-
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| -           |  -            |
-
-### hid controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -    |
-
-### sdl2 controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| Yes    |
+- `linuxraw`: illumination
+- `sdl`: illumination (only on Linux)
+- `android`: accelerometer and gyroscope
+- `cocoa`: accelerometer and gyroscope
+- `vita`: accelerometer and gyroscope
+- `switch`: accelerometer, gyroscope and illumination
+- `udev`: illumination
+- `x`: illumination
 
 ---
-
-## DOS
-
-
-### DOS input driver
-
-#### Features
-
-| Multi-mouse | Absolute mice |
-|-------------|---------------|
-| -           |  -            |
-
-### DOS controller driver
-
-#### Features
-
-| Rumble |
-|--------|
-| -    |
-
-## QNX
-
-### QNX controller driver
-- QNX
-
-# Fotnotes
+## Footnotes
 [^1]: MFi controllers are primarily supported on Apple devices, which means that the operating systems supporting this configuration would include:
 - iOS: Used on iPhones and iPads.
 - macOS: Used on Mac computers.
