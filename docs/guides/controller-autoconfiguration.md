@@ -345,7 +345,8 @@ Before giving up and saving the controller again, you can attempt to re-map any 
 If you are happy with your profile, you can submit it to RetroArch so that other users benefit:
 
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
-3. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig).
+2. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig) by filing a pull request (PR).
+   - To help us track potential bugs if the autconfig does not work as expected in all RetroArch releases (Flatpak via Flathub, AppImage, etc) and their gamepad driver (sdl2, udev, etc), please include a bullet point at the beginning of your PR Comment when submitting a PR. This bullet should specify the RetroArch version you used to generate the autoconfig. Additionally, please add further bullet points to outline what has been added. For example: `* Generated the autoconfig file[s] with RetroArch Flathub's release version x.xx.x`
 
 ### Default-off configs
 When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
