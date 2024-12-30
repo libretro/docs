@@ -5,14 +5,16 @@
 Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
 
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000.
+- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000 and many Korean multi-carts.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
-- Accurate VDP emulation including timing and Master System 2 only 224 video mode support.
+- Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
+- Support for YM2413 (OPLL) FM sound chip.
+- Light Phaser and Paddle Control
 - Internal database for rom detection.
 - Battery powered RAM save support.
 - Save states.
 - Game Genie and Pro Action Replay cheat support.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearsystem core has been authored by
 
@@ -162,13 +164,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
-- **Aspect Ratio (restart)** [gearsystem_aspect_ratio] (**Auto**|4:3|16:9)
+- **Aspect Ratio** [gearsystem_aspect_ratio] (**Auto**|4:3|16:9)
 
     Select which aspect ratio will be presented by the core.
 
     - *1:1 PAR* selects an aspect ratio that produces square pixels.
-    - *4:3 PAR* forces 4:3 aspect ratio.
-    - *16:9 PAR* forces 16:9 aspect ratio.
+    - *4:3 DAR* forces 4:3 aspect ratio.
+    - *16:9 DAR* forces 16:9 aspect ratio.
+    - *16:10 DAR* forces 16:10 aspect ratio.
 
 - **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full)
 
@@ -176,7 +179,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     - *Disabled* disables overscan.
     - *Top+Bottom* enables overscan for top and bottom.
-    - *Full* enables overscan for top, bottom, left and right.
+    - *Full (284 width)* enables overscan for top, bottom, left and right (284 width).
+    - *Full (320 width)* enables overscan for top, bottom, left and right (320 width).
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
@@ -185,6 +189,13 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 - **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
 
 	This option will enable/disable BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the Retro Arch's system directory.
+
+- **YM2413 (restart)** [gearsystem_ym2413] (**Auto**|Disabled)
+
+	This option will enable/disable YM2413 (OPLL) FM sound chip.
+
+    - *Auto* selects the best option based in the rom.
+    - *Disabled* disables YM2413.
 
 - **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
 
@@ -202,7 +213,21 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	It's best to keep this core option disabled.
 
-### Joypad
+- **Light Gun Input** [gearsystem_lightgun_input] (**Light Gun**|Touchscreen)
+
+    Select which input will be used for Light Gun games.
+
+    - *Light Gun* - Selects mouse-controlled 'Light Gun' input (devices will use [RetroLightgun](#lightgun) inputs).
+    - *Touchscreen* - Selects a touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
+
+- **Paddle Sensitivity** [gearsystem_paddle_sensitivity] (**1**|1-15)
+
+    Set the sensitivity of the [Paddle Control](#mouse).
+
+    - *1* is the lowest sensitivity.
+    - *15* is the highest sensitivity.
+
+## Joypad
 
 ![](../image/controller/gg.png)
 
@@ -210,15 +235,36 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ![](../image/controller/sg1000.png)
 
-| User 1 input descriptors | RetroPad Inputs                                |
-|--------------------------|------------------------------------------------|
-| 1                        | ![](../image/retropad/retro_b.png)             |
-| Start                    | ![](../image/retropad/retro_start.png)         |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)       |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)     |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)     |
-| Right                    | ![](../image/retropad/retro_dpad_right.png)    |
-| 2                        | ![](../image/retropad/retro_a.png)             |
+| RetroPad Inputs                                | SMS / GG Pad             |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_dpad_up.png)       | Up                       |
+| ![](../image/retropad/retro_dpad_down.png)     | Down                     |
+| ![](../image/retropad/retro_dpad_left.png)     | Left                     |
+| ![](../image/retropad/retro_dpad_right.png)    | Right                    |
+| ![](../image/retropad/retro_b.png)             | 1                        |
+| ![](../image/retropad/retro_a.png)             | 2                        |
+| ![](../image/retropad/retro_start.png)         | Pause / Start            |
+
+## Lightgun
+
+| RetroLightgun Inputs  | [Light Phaser](https://segaretro.org/Light_Phaser)      |
+|-----------------------|---------------------------------------------------------|
+| ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Light Phaser Crosshair |
+| Gun Trigger                                            | Light Phaser Trigger   |
+
+## Pointer
+
+| RetroPointer Inputs   | [Light Phaser](https://segaretro.org/Light_Phaser)        |
+|-----------------------|-----------------------------------------------------------|
+| ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Light Phaser Crosshair                 |
+| ![](../image/retromouse/retro_left.png) Mouse 1   | Light Phaser Trigger          |
+
+## Mouse
+
+| RetroMouse Inputs                                     | [Paddle Control](https://segaretro.org/Paddle_Control)        |
+|-------------------------------------------------------|-----------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Paddle wheel |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Paddle button   |
 
 ## Compatibility
 
