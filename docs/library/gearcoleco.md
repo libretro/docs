@@ -8,7 +8,7 @@ Gearcoleco is an open source, cross-platform, ColecoVision emulator written in C
 - Accurate TMS9918 emulation.
 - Support for ColecoVision Super Game Module (SGM) and MegaCart ROMs.
 - Support for Super Action Controller (SAC), Wheel Controller and Roller Controller.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearcoleco core has been authored by
 
@@ -117,21 +117,23 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
-- **Aspect Ratio (restart)** [gearcoleco_aspect_ratio] (**Auto**|4:3|16:9)
+- **Aspect Ratio** [gearcoleco_aspect_ratio] (**Auto**|4:3|16:9)
 
     Select which aspect ratio will be presented by the core.
 
     - *1:1 PAR* selects an aspect ratio that produces square pixels.
-    - *4:3 PAR* forces 4:3 aspect ratio.
-    - *16:9 PAR* forces 16:9 aspect ratio.
+    - *4:3 DAR* forces 4:3 aspect ratio.
+    - *16:9 DAR* forces 16:9 aspect ratio.
+    - *16:10 DAR* forces 16:10 aspect ratio.
 
 - **Overscan** [gearcoleco_overscan] (**Disabled**|Top+Bottom|Full)
-    
+
     Select which overscan (borders) will be used in emulation.
 
     - *Disabled* disables overscan.
     - *Top+Bottom* enables overscan for top and bottom.
-    - *Full* enables overscan for top, bottom, left and right.
+    - *Full (284 width)* enables overscan for top, bottom, left and right (284 width).
+    - *Full (320 width)* enables overscan for top, bottom, left and right (320 width).
 
 - **Allow Up+Down / Left+Right** [gearcoleco_up_down_allowed] (**Disabled**|Enabled)
 
@@ -158,7 +160,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *Wheel Controller* enables spinner support for Wheel Controller.
     - *Roller Controller* enables spinner support for Roller Controller.
 
-- **Spinner Sensitivity** [gearcoleco_spinner_sensitivity] (**1**|2|3|4|5|6|7|8|9|10)
+- **Spinner Sensitivity** [gearcoleco_spinner_sensitivity] (**1**|1-10)
 
     Select the spinner sensitivity.
 
@@ -167,7 +169,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ### Joypad
 
-| User 1 and User 2 input descriptors | RetroPad Inputs                                |
+| Coleco Controller                   | RetroPad Inputs                                |
 |-------------------------------------|------------------------------------------------|
 | Joystick Up                         | ![](../image/retropad/retro_dpad_up.png)       |
 | Joystick Down                       | ![](../image/retropad/retro_dpad_down.png)     |
