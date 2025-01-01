@@ -64,9 +64,10 @@ All menu drivers can display fullscreen thumbnails when pressing Start, and Y bu
 
 Thumbnails can be retrieved multiple ways:
 
-* Playlist thumbnail downloader (recommended): under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com.
-* Individual thumbnail downloader: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
-* On-demand thumbnail downloader: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
+* **Playlist thumbnail downloader (recommended)**: under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com and retrieve the available thumbnail.
+  - WARNING: the Playlist Thumbnails Updater process will over-write any custom thumbnails set by the user (see below) for any game name that matches a thumbnail on the server.
+* **Individual thumbnail downloader**: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
+* **On-demand thumbnail downloader**: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
 
 Thumbnail packs are no longer available, use one of the above methods, or see Custom thumbnails section below.
 
@@ -173,16 +174,18 @@ Since playlists are managed in text-only JSON format, there are a few third-part
 
 
 ## Custom thumbnails
-Users who wish to use their own thumbnails can do so by naming PNG image files according to the RetroArch naming convention. In RetroArch versions later than 1.19.1, other image formats can be also enabled (jpg, bmp, tga). 
+Users can set custom thumbnails (i.e. a thumbnail different from the one automatically provided by RetroArch) by naming PNG image files with the same base filename as a game title displayed in a playlist, and placing the PNG in the correct location for the relevant playlist. In RetroArch versions later than 1.19.1, other image formats can be also enabled (jpg, bmp, tga). 
 
 ### Thumbnail paths and filenames
-Thumbnails should be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. **Example: If your playlist is named `Atari - 2600.lpl`, then your Atari 2600 root thumbnail folder should be called `thumbnails/Atari - 2600/`.**
+Thumbnails must be stored in subfolders within the configured RetroArch `thumbnails` directory within a subfolder named exactly the same as the playlist, except without `.lpl` at the end. The thumbnail folder named after the playlist must then contain subfolders as follows:
 
-Within this root thumbnail folder called `Atari - 2600`, you should then create subfolders named `Named_Boxarts`, `Named_Snaps`, or `Named_Titles` for boxart/cover art, in-game snapshots, and title screens, respectively.
+- `Named_Boxarts`for boxart/cover art
+- `Named_Snaps` for in-game snapshots
+- `Named_Titles` for in-game introductory title screens
 
-The thumbnail filename should exactly match the game's title as listed in the playlist with an important exception. **The following characters in playlist titles must be replaced with `_` in the corresponding thumbnail filename:** `` &*/:`<>?\| ``
+**Invalid characters.** The thumbnail filename should exactly match the game's title displayed in the playlist with an important exception. The characters `` &*/:`<>?\| `` in playlisted game titles must be replaced with `_` in the corresponding thumbnail filename.
 
-**Example: If your content is named `Q*bert's Qubes (USA)` in the playlist, then its thumbnails should be named `Q_bert's Qubes (USA).png` and stored at these paths:**
+**Example of correct thumbnail file setup**: If your content is named `Q*bert's Qubes (USA)` in the playlist, then its thumbnails should be named `Q_bert's Qubes (USA).png` and stored at these paths:
 
 ```
      thumbnails/
