@@ -65,7 +65,7 @@ All menu drivers can display fullscreen thumbnails when pressing Start, and Y bu
 Thumbnails can be retrieved in multiple ways:
 
 * **Playlist thumbnail downloader (recommended)**: under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com and retrieve the available thumbnail.
-  - _WARNING_: the Playlist Thumbnails Updater process will over-write any [custom thumbnails](#custom-thumbnails) set by the user for any game name that matches a thumbnail on the server.
+  - _WARNING_: the Playlist Thumbnails Updater process will over-write [custom thumbnails](#custom-thumbnails) set by the user for any game that has an associated thumbnail on the server.
 * **Individual thumbnail downloader**: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
 * **On-demand thumbnail downloader**: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
 
