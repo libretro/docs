@@ -65,7 +65,7 @@ All menu drivers can display fullscreen thumbnails when pressing Start, and Y bu
 Thumbnails can be retrieved in multiple ways:
 
 * **Playlist thumbnail downloader (recommended)**: under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com and retrieve the available thumbnail.
-  - WARNING: the Playlist Thumbnails Updater process will over-write any custom thumbnails set by the user (see below) for any game name that matches a thumbnail on the server.
+  - _WARNING_: the Playlist Thumbnails Updater process will over-write any [custom thumbnails](#custom-thumbnails) set by the user for any game name that matches a thumbnail on the server.
 * **Individual thumbnail downloader**: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
 * **On-demand thumbnail downloader**: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
 
@@ -177,20 +177,18 @@ Since playlists are managed in text-only JSON format, there are a few third-part
 Users can set a custom thumbnail (i.e. a thumbnail that is different from the one automatically provided by RetroArch) by following the process below.
 
 !!! Terminology Note: "Game Name"
-    The term _Game Name_ refers to the name displayed within RetroArch and within a playlist, _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document is synonymous with playlist item label, playlist entry, or content name.  Game names are often assigned automatically after a file import scan and a database lookup, though the user can manually game names by choosing a game in a playlist and using "Rename" in the menu.
+    The term _Game Name_ refers to the name displayed [within a playlist in RetroArch](#retroarch-playlist-scanner), _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document is synonymous with playlist item label, playlist entry, content name, game title.
 
-- Name a PNG image file with a base filename that matches a game title displayed in a playlist.  _Example_: if the game name is `Q-Bert's Qubes`, the intended image file must be named `Q-Bert's Qubes.png` _(See below for additional flexible name matching options.)_
-- Place the PNG in the [correct folder](#thumbnail-folder-paths) for the relevant playlist.
+- __File & Name__. Name a PNG image file with a base filename that matches a game title displayed in a playlist.  _Example_: if the game name is `Q-Bert's Qubes`, the intended image file must be named `Q-Bert's Qubes.png` _(See below for additional flexible name matching options.)_
+- __Location.__ Place the PNG in the [correct folder](#thumbnail-folder-paths) for the relevant playlist.
+- __Use a compatible image type.__ In RetroArch versions later than 1.19.1, image formats other than PNG can be enabled (jpg, bmp, tga).
+- __Replace invalid characters.__ The thumbnail's base filename should exactly match the game's title displayed in the playlist with an important exception. The characters `` &*/:`<>?\| `` in playlisted game titles must be replaced with `_` in the corresponding thumbnail filename.
 
-__Use a compatible image type.__ In RetroArch versions later than 1.19.1, image formats other than PNG can be enabled (jpg, bmp, tga).
-
-__Replace invalid characters.__ The thumbnail's base filename should exactly match the game's title displayed in the playlist with an important exception. The characters `` &*/:`<>?\| `` in playlisted game titles must be replaced with `_` in the corresponding thumbnail filename.
-
-**Flexible name matching.** RetroArch versions 1.17.0 or later will automatically attempt up to 3 different match techniques to associate a playlist item with a [properly located](#thumbnail-folder-paths) thumbnail image file, in the following order:
+**Flexible name matching.** RetroArch versions 1.17.0 or later will attempt up to 3 different match techniques to associate a playlist item with a [properly located](#thumbnail-folder-paths) thumbnail image file, in the following order:
 
 1. __ROM file name <-> .png file name match__. A ROM file `Q-Bert's Qubes (USA) (1983).a26` would receive the thumbnail `Q-Bert's Qubes (USA) (1983).png` if it exists, regardless of how the game name appears in the RetroArch interface.
 2. __Game name <-> .png file name match__. `Q*Bert's Qubes (USA)` in a playlist would receive the thumbnail `Q_Bert's Qubes (USA).png` if it exists. `*` is an invalid character and must be replaced with `_` in the image filename.
-3. __Short game name <-> .png file name match__. Same as method 2, but only up to first round bracket: `Q-Bert's Qubes (USA) (1983) (Parker Brothers) [h]` in a playlist would receive `Q_Bert's Qubes.png` thumbnail if it exists.
+3. __Short game name <-> .png file name match__. Same as method 2, but only up to first round bracket: `Q-Bert's Qubes (USA) (1983) (Parker Brothers) [h]` in a playlist would receive `Q-Bert's Qubes.png` thumbnail if it exists.
 
 ### Thumbnail folder paths
 Thumbnail image files must be stored in subfolders according to this structure:
@@ -226,15 +224,15 @@ follow the steps below.
 ### Overview
 1. Make an account on github.com
 2. "Fork" (copy) a [Libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) to your own working area in github
-3. Make your image file changes to your copy of the project (aka your fork), while following [libretro guidelines](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md)
-4. Create a "Pull Request" to request that the official project takes your proposed changes
+3. Make your image file changes to your copy of the project (aka your fork), while following [libretro thumbnail rules](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md) and the detailed guidelines below
+4. Create a "Pull Request" to request that the official project members take your proposed changes
 
 ### Detailed Steps
 
 - __Fork the repository.__ Visit the github.com [libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) directory that you want to contribute to and click the fork button.  You must fork it at the level of specific console. The Fork button won't appear if you're viewing a lower level folder in the respository like "boxart" or "snaps.”
   - _Example_. If you are doing GBA thumbnail work you should fork 
 [Nintendo_-_Game_Boy_Advance](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/).
-  - **Why "Fork" your own**?  If you try to directly edit an image file in github libretro thumbnails by digging down to a certain thumbnail and clicking the pencil icon to edit, it's locked unless you are a member of the official project.  Forking means copying your own copy of the project to freely draft changes in your own separate work area.  Later you’ll send your proposed changes to the official project.
+  - **Why "Fork" your own**?  If you try to directly edit an image file in github libretro thumbnails by digging down to a certain thumbnail and clicking the pencil icon to edit, it's locked unless you are an official member/admin.  Forking means copying your own copy of the project to freely draft changes in your own separate work area.  Later you’ll send your proposed changes to the official project.
   - _Warning_: You must visit and fork the _current_ gitHub project for the libretro thumbnail repository: for example [this one for SNES](https://github.com/libretro-thumbnails/Nintendo_-_Super_Nintendo_Entertainment_System), not to be confused with the similar-looking [archived version](https://github.com/libretro/libretro-thumbnails) which is inactive.
     - Correct: https://github.com/libretro-thumbnails/
     - Incorrect:  https://github.com/libretro/libretro-thumbnails
@@ -243,28 +241,28 @@ follow the steps below.
   - Upload File.
 - __Choose "Upload File"__.  Select your new chosen image file.  In this stage you are uploading to your fork/branch of the project.
 - __Follow all guidelines for a proper contribution.__
-  - Your choice of image file should meet the libretro thumbnail [ReadMe rules](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. 512px or smaller.
-  - Name your contribution image file correctly.  If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch.  If uploading a thumbnail that has no prior existing one, research the naming conventions of libretro and how the game is named in databases.
-  - Use the correct path.  Choose the correct console system folder and thumbnail type folder in the project.
-  - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game. For good examples of well-chosen in-game screenshots, see the back-of-box marketing images for officially published games.
+  - Your choice of image file should meet the libretro thumbnail [rules in the ReadMe](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. 512px or smaller.
+  - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game in normal gameplay. For examples of well-chosen well-composed in-game screenshots, see the back-of-box images printed on officially published games.
+  - Name your image file correctly.
+    - If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch.
+    - If uploading a new thumbnail that has no prior existing version, research the naming conventions of libretro and how the game is named in databases. Name the image file according to the game name that RetroArch assigns in the playlist.
+  - Use the correct path.  Choose the correct console system folder and thumbnail type folder in the repository.
 - __Commit.__ The "Commit" button will save your change to your copy of the repository. You should generally commit to your own _master_. 
-- __Pull Request (PR)__.  Look for the button or option for a Pull Request when you Commit, though you may wait until you have finalized multiple changes (commits) and then include them all in a single PR. A Pull Request means sending a request to the official controllers of the project to take your contribution into the official project.  Official members will review your proposed changes and decide whether to accept it.  You will eventually see a confirmation that it was approved or a discussion message if changes are needed.  It may take time before someone is able to review the request, so please be patient.
-- __Verify that your Pull Request is active and correct.__ _Example_: if you made a Pull Request to contribute a Gameboy thumbnail you’d [see the request publicly listed at the official repository](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy/pulls).
-  - _Warning_: It is possible to accidentally send a Pull Request to yourself if you committed your changes to your sub-branch instead of your own "_master_". Your “master” is not the official project *master*.  And your sub-branch is not the same as your master. You can hover on any abbreviated branch path label in GitHub to see a pop-up of the full path label. If needed, approve your PR to yourself to merge your sub-branch changes to your master, then do a Pull Request from your master to the official Libretro master project.
+- __Pull Request (PR)__.  Look for the button or option for a Pull Request when you Commit, though you may wait until you have finalized multiple changes (commits) and then include them all in a single PR. A Pull Request means sending a request to the official members to take your contribution (i.e. merge your fork) into the RetroArch repository.  Admins will review your proposed changes and decide whether to accept it.  You will eventually see a confirmation that it was approved or a discussion message if changes are needed.  It may take time (even weeks or months) before an admin is able to examine the request, so please be patient.
+- __Verify that your Pull Request is active and correct.__ For example, if you made a Pull Request to contribute a Gameboy thumbnail then you can [view the request publicly listed at the official repository](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy/pulls).
+  - _Warning_: It is possible to accidentally send a Pull Request to yourself if you committed your changes to your sub-branch instead of your own _master_. If needed, approve your PR to yourself to merge your sub-branch changes to your master, then do a Pull Request from your master to the official Libretro master project. For clarity on github.com, you can hover on any abbreviated branch path label to see a pop-up of the full path label. 
 
-__About "Syncing"__ #comment
-Thumbnail contribution work involves changing your copy of the project while other people may be changing the official repository _after_ you created your fork.  Github provides options to keep both your copy ("downstream") and the official repository ("upstream") up-to-date with ongoing changes.
-
-- __Contribute__ button.  If you make multiple changes within your fork, you can use Contribute button > Open Pull Request to send all your changes as one PR.
-- __Sync__ button. Use the Sync button to update your fork with other people’s changes that have happened upstream.
+__About "Syncing."__ Contribution work involves changing your copy of the project while other people may be changing the official repository _after_ you created your fork.  Github provides options to keep both your copy ("downstream") and the official repository ("upstream") up-to-date with ongoing changes.  If you make multiple changes within your fork, you can use the **Contribute button** > Open Pull Request to send all your changes as one PR.  You can use the __Sync button__ button to update your fork with other people’s changes that have happened upstream.
 
 ### The Thumbnail Server
+Thumbnail contribution flow [EDIT: use markdown DIAGRAM for A -> B -> C - >D for user fork to RA repos to Thumb server to Retroarch users
+
 RetroArch retrieves thumbnails from [a server](https://thumbnails.libretro.com/) that is updated periodically with imports from the Libretro thumbnail repository on github. After a pull request is approved for a contribution, some time may pass before the updates are sent to the server. The final server update must occur before you and other users will see your contribution in RetroArch playlists.
 
-## Custom logos/icons for playlist items
-RetroArch versions later than 1.19.1 include an option for the XMB menu driver to display custom per-game icons/logos in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). The required file and subfolder format follows the same pattern as [custom thumbnails](#custom-thumbnails).
+## Custom icons/logos for playlist items
+RetroArch versions later than 1.19.1 include an option for the XMB menu driver to display custom per-game icons/logos in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). The required file format and subfolder structure follows the same pattern as [custom thumbnails](#custom-thumbnails):
 
 - Create a folder called `Named_Logos` alongside the `Named_Boxarts` thumbnail subfolder for the intended playlist
 - Put the logo image files there with base filenames that match the associated game's displayed name in the RetroArch playlist.
 
-Logo support is only possible with XMB menu driver, and the online thumbnail repositories do not contain logo collections. 
+**Limitations.** Logo support is only possible with XMB menu driver. The online thumbnail repositories do not contain logo collections. 
