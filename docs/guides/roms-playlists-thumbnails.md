@@ -65,7 +65,7 @@ All menu drivers can display fullscreen thumbnails when pressing Start, and Y bu
 Thumbnails can be retrieved in multiple ways:
 
 * **Playlist thumbnail downloader (recommended)**: under Online Updater menu, all available thumbnails can be downloaded for a playlist. RetroArch will connect to http://thumbnails.libretro.com and retrieve the available thumbnail.
-  - _WARNING_: the Playlist Thumbnails Updater process will over-write [custom thumbnails](#custom-thumbnails) set by the user for any game that has an associated thumbnail on the server.
+    - _WARNING_: the Playlist Thumbnails Updater process will over-write [custom thumbnails](#custom-thumbnails) set by the user for any game that has an associated thumbnail on the server.
 * **Individual thumbnail downloader**: there is a Download Thumbnails option for each entry in playlists. For RetroArch version 1.17.0 or later, you may hit download up to 3 times to try the flexible matches.
 * **On-demand thumbnail downloader**: if the respective option is enabled, RetroArch will try to download each thumbnail as the playlist is browsed. For RetroArch versions 1.17.0 or later, you may try flicking back and forth between entries up to 3 times to try the flexible matches. By default, on-demand thumbnail downloader does not try to fetch thumbnails based on ROM name, enable Settings / Playlist / Use filenames for thumbnail matching options for that.
 
@@ -176,7 +176,7 @@ Since playlists are managed in text-only JSON format, there are a few third-part
 ## Custom thumbnails
 Users can set a custom thumbnail (i.e. a thumbnail that is different from the one automatically provided by RetroArch) by following the process below.
 
-!!! Terminology Note: "Game Name"
+!!! Hint "Terminology Note: Game Name"
     The term _Game Name_ refers to the name displayed [within a playlist in RetroArch](#retroarch-playlist-scanner), _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document is synonymous with playlist item label, playlist entry, content name, game title.
 
 - __File & Filename__. Name a PNG image file with a base filename that matches a game title displayed in a playlist.  _Example_: if the game name is `Q-Bert's Qubes (USA)`, the intended image file must be named `Q-Bert's Qubes (USA).png` _(See below for additional flexible name matching options.)_
