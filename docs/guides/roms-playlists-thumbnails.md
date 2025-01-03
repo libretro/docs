@@ -258,9 +258,8 @@ follow the steps below.
 __About "Syncing."__ Contribution work involves changing your copy of the project while other people may be changing the official repository _after_ you created your fork.  Github provides options to keep both your copy ("downstream") and the official repository ("upstream") up-to-date with ongoing changes.  If you make multiple changes within your fork, you can use the **Contribute button** > Open Pull Request to send all your changes as one PR.  You can use the __Sync button__ button to update your fork with other people’s changes that have happened upstream.
 
 ### The Thumbnail Server
-Thumbnail contribution flow [EDIT: use markdown DIAGRAM for A -> B -> C - >D for user fork to RA repos to Thumb server to Retroarch users
 
-RetroArch retrieves thumbnails from [a server](https://thumbnails.libretro.com/) that is updated periodically with imports from the Libretro thumbnail repository on github. After a pull request is approved for a contribution, some time may pass before the updates are sent to the server. The final server update must occur before you and other users will see your contribution in RetroArch playlists.
+RetroArch retrieves thumbnails from a server (https://thumbnails.libretro.com/) that is updated periodically with imports from the Libretro thumbnail repository on github. After a pull request is approved for a contribution, some time may pass before the updates are sent to the server. The final server update must occur before users will see new image contributions in RetroArch playlists.
 
 ## Custom icons/logos for playlist items
 RetroArch versions later than 1.19.1 include an option for the XMB menu driver to display custom per-game icons/logos in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). The required file format and subfolder structure follows the same pattern as [custom thumbnails](#custom-thumbnails):
