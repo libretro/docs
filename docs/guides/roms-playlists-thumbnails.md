@@ -179,16 +179,16 @@ Users can set a custom thumbnail (i.e. a thumbnail that is different from the on
 !!! Terminology Note: "Game Name"
     The term _Game Name_ refers to the name displayed [within a playlist in RetroArch](#retroarch-playlist-scanner), _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document is synonymous with playlist item label, playlist entry, content name, game title.
 
-- __File & Name__. Name a PNG image file with a base filename that matches a game title displayed in a playlist.  _Example_: if the game name is `Q-Bert's Qubes`, the intended image file must be named `Q-Bert's Qubes.png` _(See below for additional flexible name matching options.)_
+- __File & Filename__. Name a PNG image file with a base filename that matches a game title displayed in a playlist.  _Example_: if the game name is `Q-Bert's Qubes (USA)`, the intended image file must be named `Q-Bert's Qubes (USA).png` _(See below for additional flexible name matching options.)_
 - __Location.__ Place the PNG in the [correct folder](#thumbnail-folder-paths) for the relevant playlist.
 - __Use a compatible image type.__ In RetroArch versions later than 1.19.1, image formats other than PNG can be enabled (jpg, bmp, tga).
 - __Replace invalid characters.__ The thumbnail's base filename should exactly match the game's title displayed in the playlist with an important exception. The characters `` &*/:`<>?\| `` in playlisted game titles must be replaced with `_` in the corresponding thumbnail filename.
 
-**Flexible name matching.** RetroArch versions 1.17.0 or later will attempt up to 3 different match techniques to associate a playlist item with a [properly located](#thumbnail-folder-paths) thumbnail image file, in the following order:
+**Flexible name matching.** RetroArch versions 1.17.0 or later will attempt up to 3 different match techniques to associate a playlist item with a [properly located](#thumbnail-folder-paths) local thumbnail image file, in the following order:
 
 1. __ROM file name <-> .png file name match__. A ROM file `Q-Bert's Qubes (USA) (1983).a26` would receive the thumbnail `Q-Bert's Qubes (USA) (1983).png` if it exists, regardless of how the game name appears in the RetroArch interface.
 2. __Game name <-> .png file name match__. `Q*Bert's Qubes (USA)` in a playlist would receive the thumbnail `Q_Bert's Qubes (USA).png` if it exists. `*` is an invalid character and must be replaced with `_` in the image filename.
-3. __Short game name <-> .png file name match__. Same as method 2, but only up to first round bracket: `Q-Bert's Qubes (USA) (1983) (Parker Brothers) [h]` in a playlist would receive `Q-Bert's Qubes.png` thumbnail if it exists.
+3. __Short game name <-> .png file name match__. RetroArch looks for a local thumbnail named after a shortened form of the game name ignoring all text starting at the first round bracket, in other words ignoring informational tags like Region etc. `Q-Bert's Qubes (USA) (1983) (Parker Brothers) [h]` in a playlist would receive `Q-Bert's Qubes.png` if that local image file exists.
 
 ### Thumbnail folder paths
 Thumbnail image files must be stored in subfolders according to this structure:
@@ -198,8 +198,10 @@ Thumbnail image files must be stored in subfolders according to this structure:
     - `Named_Boxarts` subfolder for boxart/cover art
     - `Named_Snaps` subfolder for in-game snapshots
     - `Named_Titles` subfolder for in-game introductory title screens
+   
+**Example** of a Windows path to a correctly set boxart folder: `RetroArch-Win64\thumbnails\Atari - 2600\Named_Boxarts`
 
-**Example of correct thumbnail file setup**: If your content is named `Q*bert's Qubes (USA)` in the playlist, then its thumbnails should be named `Q_bert's Qubes (USA).png` and stored at these paths:
+**Example** of correct thumbnail file setup for content named `Q*bert's Qubes (USA)` in a default Atari 2600 playlist:
 
 ```
      thumbnails/
@@ -211,29 +213,30 @@ Thumbnail image files must be stored in subfolders according to this structure:
                Named_Titles/
                     Q_bert's Qubes (USA).png
 ```
+_Note the replacement of the playlist game name's `*` with `_` in the filenames, in accordance with invalid characters described above._
  
 ## Contributing Thumbnails: How To
-Thumbnails are an area where users who are not experienced in programming can contribute to RetroArch and in a way that helps all users. If you are interested in:
+Thumbnails (along with [documentation](https://docs.libretro.com/meta/how-to-contribute/)) are an area where users who are not experienced in programming can contribute to RetroArch and in a way that helps all users. If you are interested in:
 
 - adding a thumbnail that you see is missing
-- correcting a thumbnail that is inaccurate
+- correcting a thumbnail that is inaccurate or mistaken
 - replacing an existing thumbnail with a more representative or more aesthetic image
 
 follow the steps below.
 
 ### Overview
 1. Make an account on github.com
-2. "Fork" (copy) a [Libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) to your own working area in github
+2. "Fork" (copy) a [libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) to your own working area in github
 3. Make your image file changes to your copy of the project (aka your fork), while following [libretro thumbnail rules](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md) and the detailed guidelines below
-4. Create a "Pull Request" to request that the official project members take your proposed changes
+4. Create a "Pull Request" to request that the official project members review your proposed changes in order to accept it into RetroArch
 
 ### Detailed Steps
 
 - __Fork the repository.__ Visit the github.com [libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) directory that you want to contribute to and click the fork button.  You must fork it at the level of specific console. The Fork button won't appear if you're viewing a lower level folder in the respository like "boxart" or "snaps.”
   - _Example_. If you are doing GBA thumbnail work you should fork 
 [Nintendo_-_Game_Boy_Advance](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/).
-  - **Why "Fork" your own**?  If you try to directly edit an image file in github libretro thumbnails by digging down to a certain thumbnail and clicking the pencil icon to edit, it's locked unless you are an official member/admin.  Forking means copying your own copy of the project to freely draft changes in your own separate work area.  Later you’ll send your proposed changes to the official project.
-  - _Warning_: You must visit and fork the _current_ gitHub project for the libretro thumbnail repository: for example [this one for SNES](https://github.com/libretro-thumbnails/Nintendo_-_Super_Nintendo_Entertainment_System), not to be confused with the similar-looking [archived version](https://github.com/libretro/libretro-thumbnails) which is inactive.
+  - **Why "Fork" your own**?  Every part RetroArch's code and materials are open and accessible on github for input from any public volunteer (via Pull Request), but only official admins have direct edit access.  Forking means copying your own copy of the project to freely draft changes in your own separate work area.  Later you’ll send your proposed changes to the official project.
+  - _Warning_: You must visit and fork the _current_ github project for the libretro thumbnail repository, for example [this one for SNES](https://github.com/libretro-thumbnails/Nintendo_-_Super_Nintendo_Entertainment_System), not to be confused with the similar-looking [archived version](https://github.com/libretro/libretro-thumbnails) which is inactive.
     - Correct: https://github.com/libretro-thumbnails/
     - Incorrect:  https://github.com/libretro/libretro-thumbnails
 - __Add / Upload your new image file.__ When viewing a specific thumbnail type folder (e.g. Named_boxarts, Named_titles, Named_snaps) within *your fork* of the thumbnails repository, click the pulldown button (near top right) that says **Add file** to see 2 options:
@@ -241,10 +244,10 @@ follow the steps below.
   - Upload File.
 - __Choose "Upload File"__.  Select your new chosen image file.  In this stage you are uploading to your fork/branch of the project.
 - __Follow all guidelines for a proper contribution.__
-  - Your choice of image file should meet the libretro thumbnail [rules in the ReadMe](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. 512px or smaller.
-  - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game in normal gameplay. For examples of well-chosen well-composed in-game screenshots, see the back-of-box images printed on officially published games.
+  - Your choice of image file should meet the libretro thumbnail [rules in the ReadMe](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. width scaled down to 512px.
+  - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game in normal or ideal gameplay. For examples of well-chosen well-composed in-game screenshots, see the back-of-box images printed on officially published games.
   - Name your image file correctly.
-    - If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch.
+    - If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch. (Unless your contribution is to correct an erroneous filename that doesn't match the game name database.)
     - If uploading a new thumbnail that has no prior existing version, research the naming conventions of libretro and how the game is named in databases. Name the image file according to the game name that RetroArch assigns in the playlist.
   - Use the correct path.  Choose the correct console system folder and thumbnail type folder in the repository.
 - __Commit.__ The "Commit" button will save your change to your copy of the repository. You should generally commit to your own _master_. 
