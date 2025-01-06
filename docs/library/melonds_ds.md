@@ -125,7 +125,25 @@ The melonDS DS core saves/loads to/from these directories.
 - The melonDS DS core's max height depends on the screen layout and configured renderer.
 - The melonDS DS core's core-provided aspect ratio depends on the screen layout and configured renderer.
 
-## Wi-fi
+## Subsystems
+
+melonDS DS uses subsystems to enable inserting GBA ROMs into the emulated Slot-2.
+GBA save data (if any) must be loaded explicitly.
+Subsystems are not used for DSi mode.
+
+| Subsystem | Description                                                  |
+|:---------:|--------------------------------------------------------------|
+|    gba    | NDS ROM in Slot-1, GBA ROM in Slot-2 with optional save data |
+| gbanosav  | NDS ROM in Slot-1, GBA ROM in Slot-2 with no GBA save data   |
+
+!!! info "Not for playing GBA games."
+    melonDS can load Game Boy Advance ROMs and save data for the purpose of Slot-2 connectivity,
+    but it cannot actually play GBA games.
+    Use a GBA core instead.
+
+Additional BIOS images are not required.
+
+## Wi-Fi
 
 TODO
 
