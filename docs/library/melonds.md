@@ -155,3 +155,4 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 - [Nintendo - DS (DeSmuME 2015)](desmume_2015.md)
 - [Nintendo - DS (DeSmuME)](desmume.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)

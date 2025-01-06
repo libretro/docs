@@ -377,14 +377,17 @@ The DeSmuME 2015 core supports the following device type(s) in the controls menu
 #### Nintendo - Nintendo DS (Download Play)
 
 - [Nintendo - DS (DeSmuME)](desmume.md)
-- [Nintendo - DS (melonDS)](melonds.md)
+- [Nintendo - DS (melonDS 2021)](melonds.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)
 
 #### Nintendo - Nintendo DS Decrypted
 
 - [Nintendo - DS (DeSmuME)](desmume.md)
-- [Nintendo - DS (melonDS)](melonds.md)
+- [Nintendo - DS (melonDS 2021)](melonds.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)
 
 #### Nintendo - Nintendo DS
 
 - [Nintendo - DS (DeSmuME)](desmume.md)
-- [Nintendo - DS (melonDS)](melonds.md)
+- [Nintendo - DS (melonDS 2021)](melonds.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)
