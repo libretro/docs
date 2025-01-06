@@ -117,14 +117,13 @@ The melonDS DS core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-TODO correct these numbers
-- The melonDS DS core's core provided FPS is 59.8983059319
-- The melonDS DS core's core provided sample rate is 32768 Hz
-- The melonDS DS core's base width is 256
-- The melonDS DS core's base height is 384
-- The melonDS DS core's max width is 256
-- The melonDS DS core's max height is 384
-- The melonDS DS core's core-provided aspect ratio is 2/3
+- The melonDS DS core's core provided FPS is 59.898307800293 FPS.
+- The melonDS DS core's core provided sample rate is 32768 Hz.
+- The melonDS DS core's base width depends on the screen layout and configured renderer.
+- The melonDS DS core's base height depends on the screen layout and configured renderer.
+- The melonDS DS core's max width depends on the screen layout and configured renderer.
+- The melonDS DS core's max height depends on the screen layout and configured renderer.
+- The melonDS DS core's core-provided aspect ratio depends on the screen layout and configured renderer.
 
 ## Wi-fi
 
