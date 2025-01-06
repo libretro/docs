@@ -145,21 +145,48 @@ Additional BIOS images are not required.
 
 ## Wi-Fi
 
-TODO
+melonDS DS fully supports emulating Nintendo WFC services on all platforms.
+You can choose from one of several preconfigured servers in the core options menu,
+with [Kaeru WFC](https://kaeru.world/projects/wfc) being the default.
 
-## Microphone
+If there's another server you'd like to use, you can set its DNS address from within the emulated console's Wi-Fi settings menu.
+
+!!! info "Not related to netplay!"
+    Wi-fi emulation is not related to LAN-based netplay.
+
+## LAN Netplay
+
+Coming soon...
+
+## DSi
+
+melonDS DS supports DSi mode, which allows you to play DSi-enhanced games and DSiWare.
+**There is no need to prepare a NAND image externally;**
+when selecting a DSiWare game from RetroArch,
+it (and its previously-exported save data) will be
+temporarily installed on the configured NAND image.
+At the end of the session,
+the save data will be exported to the frontend's save directory
+and the DSiWare will be uninstalled.
+
+## Screen Layouts
+
+melonDS DS supports a variety of screen layouts, including sideways rotation;
+you can configure a particular sequence of available layouts in the core options,
+and cycle through them with the `Next Screen Layout` button.
+Best used with per-game core option overrides.
 
 ## Controllers
 
-The melonDS core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The melonDS DS core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
 - None - Doesn't disable input. There's no reason to switch to this.
 - **Nintendo DS** - Joypad - Stay on this.
 
-TODO future devices
-
+Future device types may be added
+to include peripherals that provided additional inputs.
 
 ### Device tables
 
@@ -181,8 +208,10 @@ TODO future devices
 | X                        | ![](../image/retropad/retro_x.png)          |
 | L                        | ![](../image/retropad/retro_l1.png)         |
 | R                        | ![](../image/retropad/retro_r1.png)         |
+| Microphone               | ![](../image/retropad/retro_l2.png)         |
 | Next Screen Layout       | ![](../image/retropad/retro_r2.png)         |
 | Close Lid                | ![](../image/retropad/retro_l3.png)         |
+| Touch Virtual Cursor     | ![](../image/retropad/retro_r3.png)         |
 
 ## Migrating from melonDS 2021
 
