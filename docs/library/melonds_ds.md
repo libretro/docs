@@ -167,6 +167,47 @@ TODO future devices
 | Next Screen Layout       | ![](../image/retropad/retro_r2.png)         |
 | Close Lid                | ![](../image/retropad/retro_l3.png)         |
 
+## Migrating from melonDS 2021
+
+melonDS DS is intended to replace the [legacy melonDS core](melonds.md).
+If you have existing data you'd like to migrate, follow these steps.
+
+### Save Files
+
+The save data format is unchanged between the legacy core and melonDS DS.
+However, the method used to save game data internally has changed.
+
+You'll need to do two things:
+
+1. Go to the RetroArch save directory and rename the "melonDS" folder to "melonDS DS" (if it exists)
+2. Rename the save files from `.sav` to `.srm`.
+
+### Savestates
+
+**Savestates taken in the legacy core cannot be migrated to melonDS DS.**
+In the time since the last release of the legacy core,
+the savestate format has changed upstream.
+_Save your game normally before migrating your data to melonDS DS._
+
+### Config Files
+
+Rename the following directories to `melonDS DS`:
+
+- `$RETROARCH_ROOT/config/melonDS` to `melonDS DS`.
+- `$RETROARCH_ROOT/config/remaps/melonDS` to `melonDS DS`.
+- Rename any files inside these directories named `melonDS.opt` to `melonDS DS.opt`.
+
+### Cheats
+
+Rename `$RETROARCH_ROOT/cheats/melonDS` to `melonDS DS`.
+Cheat support is unchanged.
+
+### System Files
+
+melonDS DS will detect system files (BIOS, firmware, NAND) in the system directory,
+so no action is required from you.
+However, melonDS DS will prefer system files in the "melonDS DS" subdirectory.
+
 ## Compatibility
 
 - [Upstream melonDS Forums Compatibility section](http://melonds.kuribo64.net/board/forum.php?id=3)
