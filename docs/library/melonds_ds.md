@@ -104,10 +104,10 @@ The melonDS DS core saves/loads to/from these directories.
 
 #### Frontend's System directory
 
-|       File       |      Description      |
-|:----------------:|:---------------------:|
-| melonDS DS/*.tid | DSiWare title ID file |
-| wfcsettings.bin  |   DS Wi-Fi settings (built-in BIOS only) |
+|         File         |              Description               |
+|:--------------------:|:--------------------------------------:|
+| melonDS DS/tmd/*.tmd |         DSiWare title ID file          |
+|   wfcsettings.bin    | DS Wi-Fi settings (built-in BIOS only) |
 
 #### Frontend's State directory
 
