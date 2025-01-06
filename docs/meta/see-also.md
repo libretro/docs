@@ -109,7 +109,8 @@ This is a list of cores that are related to each other in some way.
 
 - [Nintendo - DS (DeSmuME 2015)](../library/desmume_2015.md)
 - [Nintendo - DS (DeSmuME)](../library/desmume.md)
-- [Nintendo - DS (melonDS)](../library/melonds.md)
+- [Nintendo - DS (melonDS 2021)](../library/melonds.md)
+- [Nintendo - DS (melonDS DS)](../library/melonds_ds.md)
 
 ## NES
 

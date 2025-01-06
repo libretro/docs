@@ -53,6 +53,7 @@ Arcade                        | SAME_CDI           | [BIOS information](same_cdi
 ColecoVision                  | Gearcoleco         | [BIOS information](gearcoleco.md#bios)
 Dreamcast                     | Flycast            | [BIOS information](flycast.md#bios)
 DS                            | DeSmuME            | [BIOS information](desmume.md#bios)
+DS                            | melonDS DS         | [BIOS information](melonds_ds.md#bios)
 Elektronika - BK-0010/BK-0011 | bk                 | [BIOS information](bk.md#bios)
 Enterprise 128                | ep128emu           | [BIOS information](ep128emu.md#bios)
 GameBoy/GameBoy Color         | Emux GB            | [BIOS information](emux_gb.md#bios)
