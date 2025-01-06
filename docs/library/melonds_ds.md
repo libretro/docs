@@ -208,9 +208,9 @@ to include peripherals that provided additional inputs.
 | X                        | ![](../image/retropad/retro_x.png)          |
 | L                        | ![](../image/retropad/retro_l1.png)         |
 | R                        | ![](../image/retropad/retro_r1.png)         |
-| Move Virtual Cursor      | ![](../image/retropad/retro_right_stick.png) |
 | Microphone               | ![](../image/retropad/retro_l2.png)         |
 | Next Screen Layout       | ![](../image/retropad/retro_r2.png)         |
+| Move Virtual Cursor      | ![](../image/retropad/retro_right_stick.png) |
 | Close Lid                | ![](../image/retropad/retro_l3.png)         |
 | Touch Virtual Cursor     | ![](../image/retropad/retro_r3.png)         |
 
