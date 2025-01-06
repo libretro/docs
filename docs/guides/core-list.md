@@ -121,7 +121,8 @@
 | MAME 2010                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2015                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2016                 | Arcade/Console/various | (See MAME note)    |
-| melonDS                   | Nintendo DS            |                    |
+| melonDS 2021              | Nintendo DS            |                    |
+| melonDS DS                | Nintendo DS/DSi        | Enhanced remake of the melonDS core based on a newer version of the emulator. |
 | Mesen                     | Nintendo NES/Famicom   |                    |
 | Mesen-S                   | Nintendo SNES/SFC/Game Boy/Color |          |
 | MESS 2015                 | Multi (various)        | (See MAME note)    |

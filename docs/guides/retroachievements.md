@@ -181,7 +181,8 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
-| [MelonDS](https://github.com/libretro/melonDS)          | ✔         | External BIOS recommended, but no longer required. RetroArch 1.9.14 nightly or newer required for hashing to work. DSi mode currently is not supported for achievements. |
+| [MelonDS 2021](https://github.com/libretro/melonDS)          | ✔         | External BIOS recommended, but no longer required. RetroArch 1.9.14 nightly or newer required for hashing to work. DSi mode currently is not supported for achievements. |
+| [MelonDS DS](https://github.com/JesseTG/melonds-ds)          | ✔         | Achievements supported for DS and DSi mode. |
 | [DeSmuME](https://github.com/libretro/desmume)          | ✔         | External BIOS recommended, needs to be enabled in core options |
 | [DeSmuME 2015](https://github.com/libretro/desmume2015) | ✔         |       |
 

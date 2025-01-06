@@ -27,6 +27,12 @@ rom.ips2
 |--------------------------------------------|:---------:|
 | [Gearcoleco](../library/gearcoleco.md)     | ✔         |
 
+### Nintendo - DS
+
+| Core                               | Supported |
+|------------------------------------|:---------:|
+| [melonDS DS](../library/melonds_ds.md) | ✔         |
+
 ### Nintendo - Game Boy / Color
 
 | Core                               | Supported |

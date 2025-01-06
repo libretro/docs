@@ -406,4 +406,5 @@ Same as upstream standalone.
 #### Nintendo - Nintendo DS + Decrypted + (Download Play)
 
 - [Nintendo - DS (DeSmuME 2015)](desmume_2015.md)
-- [Nintendo - DS (melonDS)](melonds.md)
+- [Nintendo - DS (melonDS 2021)](melonds.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)

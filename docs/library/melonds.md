@@ -4,6 +4,12 @@
 
 An up-and-coming Nintendo DS emulator by Arisotura, ported to libretro.
 
+!!! warning "This is the older version!"
+    This version of the melonDS core is obsolete and unmaintained.
+    You are encouraged to migrate to [melonDS DS](melonds_ds.md),
+    which is based on a newer version of the original emulator,
+    has more features, and is easier to use.
+
 ### Author/License
 
 The melonDS core has been authored by
@@ -149,3 +155,4 @@ The melonDS core supports the following device type(s) in the controls menu, bol
 
 - [Nintendo - DS (DeSmuME 2015)](desmume_2015.md)
 - [Nintendo - DS (DeSmuME)](desmume.md)
+- [Nintendo - DS (melonDS DS)](melonds_ds.md)
