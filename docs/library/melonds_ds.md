@@ -42,28 +42,28 @@ RetroArch database(s) that are associated with the melonDS DS core:
 
 Required or optional firmware files go in the frontend's `system` directory.
 
-|   Filename       |               Description                |              md5sum              |
-|:----------------:|:----------------------------------------:|:--------------------------------:|
-| bios7.bin        |         NDS ARM7 BIOS - Optional         | df692a80a5b1bc90728bc3dfc76cd948 |
-| bios9.bin        |         NDS ARM9 BIOS - Optional         | a392174eb3e572fed6447e956bde4b25 |
-| firmware.bin     |         NDS Firmware - Optional          |              Varies              |
-| dsi_bios7.bin    | DSi ARM7 BIOS - Required for DSi support |                                  |
-| dsi_bios9.bin    | DSi ARM9 BIOS - Required for DSi support |                                  |
-| dsi_firmware.bin | DSi Firmware - Required for DSi support  |              Varies              |
-| dsi_nand.bin     |   DSi NAND - Required for DSi support    |              Varies              |
+|     Filename     |             Description              |              md5sum              |
+|:----------------:|:------------------------------------:|:--------------------------------:|
+|    bios7.bin     |       NDS ARM7 BIOS - Optional       | df692a80a5b1bc90728bc3dfc76cd948 |
+|    bios9.bin     |       NDS ARM9 BIOS - Optional       | a392174eb3e572fed6447e956bde4b25 |
+|   firmware.bin   |       NDS Firmware - Optional        |              Varies              |
+|  dsi_bios7.bin   | DSi ARM7 BIOS - Required in DSi mode |                                  |
+|  dsi_bios9.bin   | DSi ARM9 BIOS - Required in DSi mode |                                  |
+| dsi_firmware.bin | DSi Firmware - Required in DSi mode  |              Varies              |
+|   dsi_nand.bin   |   DSi NAND - Required in DSi mode    |              Varies              |
 
 ## Features
 
-Frontend-level settings or features that the melonDS core respects.
+Frontend-level settings or features that melonDS DS respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✔         |
-| Rewind            | ✔         |
-| Netplay           | ✔[^1]     |
+| States            | ✔[^1]     |
+| Rewind            | ✔[^1]     |
+| Netplay           | ✔[^2]     |
 | Core Options      | ✔         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
@@ -89,14 +89,31 @@ The melonDS DS core's library name is 'melonDS DS'
 
 The melonDS DS core saves/loads to/from these directories.
 
-**Frontend's Cache directory**
+#### Frontend's Save directory
 
-| File  | Description            |
-|:-----:|:----------------------:|
-| *.srm | Cartridge battery save |
-TODO dsi save data
-TODO dsi tid file
-TODO homebrew
+|         File         |         Description         |
+|:--------------------:|:---------------------------:|
+|        *.srm         |   Cartridge battery save    |
+|   dldi_sd_card.bin   |   Homebrew SD card image    |
+| dldi_sd_card.bin.idx | Homebrew SD card file index |
+|   dsi_sd_card.bin    |      DSi SD card image      |
+| dsi_sd_card.bin.idx  |   DSi SD card file index    |
+|     *.public.sav     |  DSiWare public save data   |
+|    *.private.sav     |  DSiWare private save data  |
+|     *.banner.sav     |   DSiWare icon save data    |
+
+#### Frontend's System directory
+
+|       File       |      Description      |
+|:----------------:|:---------------------:|
+| melonDS DS/*.tid | DSiWare title ID file |
+| wfcsettings.bin  |   DS Wi-Fi settings (built-in BIOS only) |
+
+#### Frontend's State directory
+
+|   File   | Description |
+|:--------:|:-----------:|
+| *.state# |    State    |
 
 ### Geometry and timing
 
