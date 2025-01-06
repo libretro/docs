@@ -245,4 +245,5 @@ However, melonDS DS will prefer system files in the "melonDS DS" subdirectory.
 - [Nintendo - DS (DeSmuME)](desmume.md)
 - [Nintendo - DS (melonDS 2021)](melonds.md)
 
-[^1]: Netplay is supported, but it's not recommended due to the high latency of the DS core.
+[^1]: Not available in DSi mode.
+[^2]: LAN only. (No, VPNs won't work.)
