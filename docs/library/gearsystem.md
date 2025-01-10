@@ -164,7 +164,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
-- **Aspect Ratio** [gearsystem_aspect_ratio] (**Auto**|4:3|16:9)
+- **Aspect Ratio** [gearsystem_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
     Select which aspect ratio will be presented by the core.
 
@@ -173,7 +173,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *16:9 DAR* forces 16:9 aspect ratio.
     - *16:10 DAR* forces 16:10 aspect ratio.
 
-- **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full)
+- **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full (284 width)|Full (320 width))
 
     Select which overscan (borders) will be used in emulation.
 
@@ -181,6 +181,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *Top+Bottom* enables overscan for top and bottom.
     - *Full (284 width)* enables overscan for top, bottom, left and right (284 width).
     - *Full (320 width)* enables overscan for top, bottom, left and right (320 width).
+
+- **Hide Left Bar (SMS only)** [gearsystem_hide_left_bar] (**No**|Auto|Always)
+
+    Select when to hide the left bar in Master System games.
+
+    - *No* never hides the left bar.
+    - *Auto* hides the left bar when the the bar is detected.
+    - *Always* always hides the left bar even if no left bar is detected.
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
@@ -215,10 +223,30 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Light Gun Input** [gearsystem_lightgun_input] (**Light Gun**|Touchscreen)
 
-    Select which input will be used for Light Gun games.
+    Select which input will be used for Light Phaser games.
 
     - *Light Gun* - Selects mouse-controlled 'Light Gun' input (devices will use [RetroLightgun](#lightgun) inputs).
     - *Touchscreen* - Selects a touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
+
+- **Light Gun Crosshair** [gearsystem_lightgun_crosshair] (**Disabled**|Enabled)
+
+    Enable or disable the crosshair for Light Phaser games.
+
+- **Light Gun Crosshair Shape** [gearsystem_lightgun_shape] (**Cross**|Square)
+
+    Select the shape of the crosshair for Light Phaser games.
+
+- **ight Gun Crosshair Color** [gearsystem_lightgun_color] (**White**|Black|Red|Green|Blue|Yellow|Magenta|Cyan)
+
+    Select the color of the crosshair for Light Phaser games.
+
+- **Light Gun Crosshair Offset X** [gearsystem_lightgun_crosshair_offset_x] (**0**|-10 - 10)
+
+    Set the horizontal pixel offset of the crosshair for calibration.
+
+- **Light Gun Crosshair Offset Y** [gearsystem_lightgun_crosshair_offset_y] (**0**|-10 - 10)
+
+    Set the vertical pixel offset of the crosshair for calibration.
 
 - **Paddle Sensitivity** [gearsystem_paddle_sensitivity] (**1**|1-15)
 

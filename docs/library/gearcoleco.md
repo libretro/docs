@@ -117,7 +117,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
-- **Aspect Ratio** [gearcoleco_aspect_ratio] (**Auto**|4:3|16:9)
+- **Aspect Ratio** [gearcoleco_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
     Select which aspect ratio will be presented by the core.
 
@@ -126,7 +126,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - *16:9 DAR* forces 16:9 aspect ratio.
     - *16:10 DAR* forces 16:10 aspect ratio.
 
-- **Overscan** [gearcoleco_overscan] (**Disabled**|Top+Bottom|Full)
+- **Overscan** [gearcoleco_overscan] (**Disabled**|Top+Bottom|Full (284 width)|Full (320 width))
 
     Select which overscan (borders) will be used in emulation.
 
