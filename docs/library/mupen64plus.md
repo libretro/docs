@@ -12,7 +12,7 @@ Parallel-N64 was forked off from the standalone Mupen64Plus codebase a number of
 
 This core has the latest upstream accuracy improvements, along with the latest and greatest HLE improvements in GLideN64 and the latest LLE developments in ParaLLEl-RDP/RSP. Outstanding support of Hires Textures.
 
-The Meteor core has been authored by
+The Mupen64Plus-Next core has been authored by
 
 - m4xw
 - gillou
