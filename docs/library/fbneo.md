@@ -1,15 +1,21 @@
 # FinalBurn Neo
 
+## Note about this document
+
+It mostly assumes you are using RetroArch as your libretro frontend, some specific instructions might differ if you are using another frontend.
+
+It also assumes you are already knowledgeable about arcade emulation and its quirks. If you aren't, you should be reading [getting started with arcade emulation](https://docs.libretro.com/guides/arcade-getting-started/) first.
+
 ## Background
 
-FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development. Unlike MAME it's more focused on playability and advanced features than preservation.
+FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development.
 It is the follow-up of the FinalBurn and FinalBurn Alpha emulators.
 The libretro core provides wide compatibility with platforms and features supported by libretro.
 
 ## Difference from MAME
 
 FBNeo strives for accuracy, just like MAME. There are some arcade boards where one or the other will be more accurate, but for the most part they should be equally accurate.
-The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is about absolute preservation. "Quality of life" hacks include things like :
+The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is mostly focused on preservation and documentation. "Quality of life" hacks include things like :
 
 * improving original game's sound (some games like "Burger Time" have noise which was clearly unintended by their developpers, we are removing it)
 * implementing alternative colors for games where the colors don't look right (sometimes there are controversies about which colors are right for an arcade board, like "Tropical Angel", we implement alternative colors as dipswitches)
@@ -29,7 +35,7 @@ There are controversies about whether libretro's patreon and retroarch's GPL lic
 * **"Redistributions may not be sold, nor may they be used in a commercial product or activity."** : By definition, a commercial activity is an activity involving the sale of goods or services. The libretro project does none of that, and it is unclear whether a patreon should be treated as a commercial activity or not when no goods or services are provided in exchange of the donations.
 * **"You may not ask for donations to support your work on any project that uses the FB Neo source code."** : This FBNeo port is using libretro code, not the other way around. This port is directly authored/maintained/supported by members of the FBNeo team, and none of them is receiving donations. Interestingly, if receiving donations was de facto a commercial activity, this term shouldn't be required.
 * *If* the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial. 
-* Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as this port is not distributed with/through them and they don't use its availability as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.
+* Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as they neither redistribute FBNeo nor use it as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.
 * While GPL code can't be mixed with non-commercial code, this is a non-issue since this port doesn't contain any GPL-licensed code.
 * Under european law, where the libretro buildbots are located, linking GPL and non-commercial softwares doesn't produce a derivative work, and doesn't extend the GPL license to the non-commercial work (source [here](https://joinup.ec.europa.eu/collection/eupl/licence-compatibility-permissivity-reciprocity-and-interoperability)). It is unclear whether the same applies in non-EU countries or not.
 
@@ -41,22 +47,28 @@ zip, 7z
 
 From the root of the repository, run
 ```
-make -j5 -C src/burner/libretro generate-files
 make -j5 -C src/burner/libretro
 ```
-Note : `-j5` is to optimize build time on cpus with 4 cores, you can rise or reduce that value to match your own, however a value too high will increase ram usage and might even cause your system to become instable.
+Note : `-j5` is to optimize build time on cpus with 4 cores (X+1 cores), you can rise or reduce that value to match your own, however a value too high will increase ram usage and might even cause your system to become unstable.
 
-Note : if you need additional parameters, they must be added to both commands.
+Note : Here is a non-exhaustive list of additional parameters you might want to append to the make command line :
+
+* **SUBSET=all** : Build a core that supports everything. This is the default SUBSET so you don't need to append it.
+* **SUBSET=neogeo** : Build a core that only supports neogeo games.
+* **SUBSET=cps12** : Build a core that only supports CPS-1 & CPS-2 games.
+* **generate-files** : Generate header/gamelist files and stop there.
+* **clean** : Remove any previously built object.
+* **REGEN_HEADERS=1** : This will run **generate-files** and **clean** consecutively before building the core, which is usually required when you made a change to the list of drivers you want to build, either from modifying the project's code or switching between SUBSETs. Note that make version 4.4 may be required for this to behave properly.
 
 ## Building romsets for FBNeo
 
-Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game. **All of this is to offer you the best gaming experience possible, because older bad dumps can prevent the game from working as it should**.
+Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game.
 
 Don't expect things to work properly if you didn't build valid romsets, and don't report issues because your romsets are invalid.
 
 ### Step 1: Obtaining an XML DAT
 
-You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory. Note that some devices (Nintendo 3DS) are running a "light" build with fewer supported games due to memory limitation, the dat files for that build are available from the [light](https://github.com/libretro/FBNeo/tree/master/dats/light/) subdirectory.
+You can download the dat files for the latest version of the core from the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) directory.
 
 ### Step 2: Gathering the ingredients
 
@@ -88,10 +100,13 @@ Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✔         |
+| IPS Patch         | ✔         |
+| RomData           | ✔         |
+| Multi-language    | ✔         |
 
 ## Mapping
 
-We don't have a convenient tool like the MAME OSD, instead we use the libretro api to announce buttons and let the frontend customize mapping, this is done through `Quick Menu > Controls`.
+We don't have a tool like the MAME OSD, instead we use the libretro api to announce buttons and let the frontend customize mapping, this is done through `Quick Menu > Controls`.
 
 For those who don't want to fully customize their mapping, there are 2 convenient presets you can apply by changing the "device type" for a player in this menu :
 
@@ -104,6 +119,12 @@ The following "device type" also exist, but they won't be compatible with every 
 * **Mouse (full)** : same as above, but the buttons will be on the mouse
 * **Pointer** : it will use "pointer" device (can be a mouse/trackball) to determine coordinates on screen, buttons will stay on retropad
 * **Lightgun** : it will use lightgun to determine coordinates on screen, buttons will be on the lightgun too.
+* **Analog Arcade Gun** : it will use the analog stick for gun games but in a different way than "Classic" and "Modern", it is particularily useful if you have a "fixed arcade gun" (arcade gun mounted on an analog control).
+
+The following device types are mostly WIP, they haven't been thoroughly tested and might contain major bugs (please report them) :
+
+* **6-Panel** : assuming you are using a 6-button arcade panel and followed the "YXL as top row and BAR as bottom row" mapping recommendation, it will map the top row then the bottom row as a general rule (with some exceptions), note that some users might be more comfortable with Classic/Modern's BAYX's assignment for 4-buttons systems like neogeo.
+* **Touchscreen** : a variant of the "Pointer" device type meant for mobile devices, touchscreen "tap events" are used for gameplay, "Start" and "Coin" are still assigned to your retropad overlay.
 
 ## Emulating consoles and computers
 
@@ -119,6 +140,7 @@ You can use specific folder's name for detection, it's the easiest and recommend
 * Nec TurboGrafx-16 : `tg16`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
+* Super Nintendo Entertainment System : `snes`
 * Sega GameGear : `gamegear`
 * Sega Master System : `sms` | `mastersystem`
 * Sega Megadrive : `megadriv` | `megadrive` | `genesis`
@@ -137,6 +159,7 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 * Nec TurboGrafx-16 : `tg`
 * Nintendo Entertainment System : `nes`
 * Nintendo Family Disk System : `fds`
+* Super Nintendo Entertainment System : `snes`
 * Sega GameGear : `gg`
 * Sega Master System : `sms`
 * Sega Megadrive : `md`
@@ -177,6 +200,13 @@ The following bioses are required for some of the emulated systems :
 * spec128.zip (ZX Spectrum 128 BIOS)
 * spec1282a.zip (ZX Spectrum 128 +2a BIOS)
 * channelf.zip (Fairchild Channel F BIOS)
+* dsp1.zip (SNES DSP-1)
+* dsp1b.zip (SNES DSP-1B)
+* dsp2.zip (SNES DSP-2)
+* dsp3.zip (SNES DSP-3)
+* dsp4.zip (SNES DSP-4)
+* st010.zip (SNES Seta ST010)
+* st011.zip (SNES Seta ST011)
 
 ## Samples
 
@@ -242,7 +272,7 @@ This core widely supports the RetroArch input latency reduction features, with *
 
 Proper support for **runahead second instance** is not guaranteed because it doesn't exist in standalone FBNeo unlike the other methods.
 
-Note : There seems to be possible conflicts when rewind is active simultanneously, see https://github.com/libretro/RetroArch/issues/16374.
+Note : There seems to be possible conflicts when rewind is active simultaneously, see https://github.com/libretro/RetroArch/issues/16374.
 
 ## RetroAchievements
 
@@ -258,7 +288,14 @@ This core supports the RetroArch cheat feature with the `.cht` files. However it
 
 * Download the pack of cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip)
 * Uncompress **all of them** into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder (which is **NOT** the same folder as the RetroArch feature with the `.cht` files)
-* Cheats will become available through core options (`Quick Menu > Options`, **NOT** `Quick Menu > Cheats`) afterward.
+* Cheats will become available through core options (`Quick Menu > Core Options`, **NOT** `Quick Menu > Cheats`) afterward.
+
+## Multi-language
+
+This core supports multi-language feature.
+
+* Multi-language is based on the front-end User UI language switching
+* Simplified Chinese and Traditional Chinese have been added.
 
 ## Frequently asked questions
 
@@ -268,21 +305,38 @@ As far as we are concerned, you are supposed to dump your own games, so we can't
 
 ### Why am i getting a white screen ?
 
-Refer to [getting started with arcade emulation](https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator) to understand how romsets work.
+The white screen tells you if the romset is supported at all and which files are wrong or missing. 
+Especially, if present, the line "Verify the following romsets : <romset> <parent> <bios>" tells you the list of romset/parent/bios needed by the romset you are trying to run.
 
-The white screen tells you if the romset is supported at all and which files are wrong or missing.
-Exceptionally there might be a false positive due to your file being unreadable for some reason.
+Exceptionally there might be a false positive due to your file being unreadable for some reason (file corruption during transfer, file permission, damaged disk drive, ...).
+This is a rabbit hole and something you should only concern yourself if you already used clrmamepro to verify your romsets.
 
 ### How can i run that romhack i found ?
 
 A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.
 
-For the unsupported romhacks, you can put the patched version of the romset into `SYSTEM_DIRECTORY/fbneo/patched` (NB: you can strip it of any file that don't differ from non-patched romset if you want), that method will only work if the sizes and names matches with the original romset. 
-**The romset you must launch is still the original non-patched romset (its content will be overrided at runtime by the content of the patched one)**, you can disable that behavior by toggling off the `Allow patched romsets` core option.
+For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed and must be disabled by toggling off the `Allow patched romsets` core option if you intend to use RetroAchievements : 
+
+#### Using the "patched" folder
+
+* Put the patched version of the romset into `SYSTEM_DIRECTORY/fbneo/patched`, this folder has special privileges allowing it to ignore crcs. Sizes and names still need to match the original romset though.
+* Optional : you could strip the patched version from any file that don't differ from the original romset.
+* Note : **The romset you must launch is still the original non-patched romset (its content will be overriden at runtime by the content of the patched one)**.
+
+#### Using IPS Patches
+
+* Put all IPS patch files (including: driver name directory/**.dat|**.ips) into the `SYSTEM_DIRECTORY/fbneo/ips/` folder.
+* IPS Patch will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+* Note : To avoid competing with loaded games for startup privileges, IPS Patches is initially disabled by default.
+
+#### Using RomData
+
+* Put all RomData files (including: driver name directory/**.dat) into the `SYSTEM_DIRECTORY/fbneo/romdata/` folder
+* RomData will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
 
 ### How can i run that unibios i bought from http://unibios.free.fr/ ?
 
-Same answer as above.
+Use the "patched folder" method from above.
 
 ### I think i found a glitch, how do i report it ?
 
@@ -381,6 +435,8 @@ The currently available neogeo combos were decided in https://github.com/libretr
 
 Note that there was also a request to add a retroarch macro mapper in https://github.com/libretro/RetroArch/issues/8209.
 
+There is also a PR currently opened to implement this : https://github.com/libretro/RetroArch/pull/16035.
+
 ### Why can't i enable hardcore mode in RetroAchievements ?
 
 This feature doesn't accept achievements made with any kind of cheat, meaning unibios, cheats, and patched romsets must be disabled in core options.
@@ -388,6 +444,11 @@ This feature doesn't accept achievements made with any kind of cheat, meaning un
 ### Why do i need to re-enable cheats every time i boot a game ?
 
 It is common for arcade machines to execute self-tests at boot, and in many cases they won't boot if unexpected values have been injected into their memory, which is exactly what cheats do. Disabling cheats at boot is a safety mecanism to prevent those boot issues.
+
+### Why do the self-tests at boot fail ?
+
+Sometimes the NVRAM/EEPROM saved on your disk gets corrupted for some reason, Konami games are especially known for getting this issue *somewhat frequently*.
+NVRAM/EEPROM are saved in the `SAVEFILES_DIRECTORY/fbneo` folder, and you can get around this issue by finding the files corresponding to your game and deleting them.
 
 ### Where is SYSTEM_DIRECTORY ?
 
