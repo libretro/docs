@@ -1,4 +1,45 @@
-# Troubleshooting Brief
+# Databases
+
+See the libretro databases [readme](https://github.com/libretro/libretro-database) for comprehensive information about the databases used by RetroArch.
+
+## RetroArch's Usage of the Database
+
+Libretro databases allow RetroArch to provide several automated cataloging functions:
+
+- __Validation__. Reject or accept files when using the [Import Scanner / Playlist Generator](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists) based on whether the ROM checksum matches the checksum of a known verified completely intact (aka  "properly dumped") file.
+- __Game Naming__. Assign a definitive and uniform display name for each game in a playlist regardless of filename.
+- __Thumbnail Images__. Download and display thumbnail images for games based on the uniform name assigned by the database, regardless of filename. (Thumbnails are __not__ directly assigned by the database or by checksum association, but as a secondary effect of databased *game name* assignment if a matching thumbnail is available on the server. Also see: [Flexible Name Matching Algorithm](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails).)
+- __Category Search ("Explore")__. Allows the user to find/view games that match selected criteria, e.g. by Developer, Release Year, Genre, and other attributes/metadata.
+- __Per-Game Information View__. Provide an in-app viewable informational screen for each game (Game > Information > Database Entry).
+
+## Key Field
+
+During Playlist / Import Scanning ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key field for matching varies by console typical file size (i.e. original media type).
+
+- __CRC checksum__ for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.
+- __Serial Number__ for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.
+
+## Contributions
+
+__Small-Scale Corrections__
+
+A vast majority of the database's game information originates from routine imports from upstream data groups (No-Intro, Redump, TOSEC, GameTDB, etc). In cases where the `.dat` for the entry at issue originates from an upstream group, best practice is for a contributor to go through the channels/process of that group. Upstream changes made by the database groups will eventually be imported to the Libretro databases. A seemingly helpful "fix" to Libretro's copy of the database would be overwritten and lost by the next import from upstream. 
+
+In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) above and to github Histories for information about which libretro databases are applicable for github contributions.
+
+__Folder Structure Revisions__
+
+The [build script](https://github.com/libretro/libretro-super/blob/master/libretro-build-database.sh) specifies exact `.dat` files and folders in the repository, therefore organizational housekeeping revisions to the file/folder structure (e.g. combining two metadata fragments into one unified folder and file) require corresponding revisions in the build script.
+
+__Large-Scale Additions__
+
+See [Adding New Database](#adding-a-new-database).
+
+## Databases and RetroArch Thumbnails
+
+Currently there is no automatic process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails#libretro-thumbnails) image filenames based on game name updates in databases.  RetroArch uses databases to assign a [game name](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails) based on a game file's checksum (or other [key](#key-field)), but thumbnails are only assigned if the thumbnail server image filename matches the game name or the ROM filename (with some [flexibility](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails)). To help fix a thumbnail, for example in a case where a database game name has been definitively/correctly updated in a way that no longer matches the repository thumbnail name, follow the [Thumbnail Repository readme](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [How To Contribute Thumbnails guide](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to).
+
+## Troubleshooting
 
 Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner).
 
