@@ -1,6 +1,6 @@
 # Databases
 
-See the libretro databases [readme](https://github.com/libretro/libretro-database) for comprehensive information about the libretro database repository.
+See the libretro database [readme](https://github.com/libretro/libretro-database) for comprehensive information about the libretro database repository.
 
 ## RetroArch's Usage of the Libretro Database
 
@@ -12,7 +12,7 @@ Libretro databases allow RetroArch to provide several automated cataloging funct
 - __Category Search ("Explore")__. Allows the user to find/view games that match selected criteria, e.g. by Developer, Release Year, Genre, and other attributes/metadata.
 - __Per-Game Information View__. Provide an in-app viewable informational screen for each game (Game > Information > Database Entry).
 
-## Matching Game Files to the Database
+### Matching Game Files to the Database
 
 During Playlist / Import Scanning ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for identifying and matching varies by console typical file size (i.e. original media type).
 
@@ -28,15 +28,17 @@ In other words, RetroArch automated scan will do the following:
 
 Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data.  And although databases include cryptographic hashes (sha1, etc) as information that defines the item specified, only CRC checksum (or serial) not hashes are used for matching.
 
-## Validation
+### Validation
 
 Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches the source.  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes. 
 
-If your file's crc or internal serial data (whichever is the key used for matching, [as above](#key-field-for-matching) does not exist in the database, the file will be rejected by the automatic scans.
+If your file's crc or internal serial data (whichever is the key used for matching, [as above](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans.
 
 To import your games/items into a playlist regardless of database matches, or if your files are being rejected by the automatic scan, use the Manual Scan.
 
 ## How to Contribute to Databases
+
+Like [thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [documentation](https://docs.libretro.com/meta/how-to-contribute/), databases are an area where users who are not programmers can contribute to RetroArch and in a way that benefits all users.
 
 __Small-Scale Corrections__
 
@@ -54,7 +56,7 @@ See [Adding New Database](#adding-a-new-database).
 
 ## Databases and RetroArch Thumbnails
 
-Currently there is no automatic process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails#libretro-thumbnails) image filenames based on game name updates in databases.  RetroArch uses databases to assign a [game name](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails) based on a game file's checksum (or other [key](#key-field)), but thumbnails are only assigned if the thumbnail server image filename matches the game name or the ROM filename (with some [flexibility](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails)). To help fix a thumbnail, for example in a case where a database game name has been definitively/correctly updated in a way that no longer matches the repository thumbnail name, follow the [Thumbnail Repository readme](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [How To Contribute Thumbnails guide](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to).
+Currently there is no automatic process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails#libretro-thumbnails) image filenames based on game name updates in databases.  RetroArch uses databases to assign a [game name](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails) based on a game file's checksum (or other [key](#key-field-for-matching)), but thumbnails are only assigned if the thumbnail server image filename matches the game name or the ROM filename (with some [flexibility](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails)). To help fix a thumbnail, for example in a case where a database game name has been definitively/correctly updated in a way that no longer matches the repository thumbnail name, follow the [Thumbnail Repository readme](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [How To Contribute Thumbnails guide](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to).
 
 ## Troubleshooting
 
@@ -64,14 +66,14 @@ Following the steps below will help to find and fix the cause of a database or g
 
 - __Update__ your RetroArch databases (Main Menu > Online Updater > Update databases).
 - __Read about the factors that might be affecting the Problem.__
-  - Understand [`.dat` and `.rdb`](#libretro-database) files.
+  - Understand [`.dat` and `.rdb`](https://github.com/libretro/libretro-database#retroarch-database) files.
   - Understand [which key field](#key-field-for-matching) RetroArch uses for matching your item at issue to the database.  Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data, not a checksum or hash.
-  - Understand [precedence](#precedence).
+  - Understand [precedence](https://github.com/libretro/libretro-database#precedence).
 - __Verify data on both sides.__
-  -  __Your file properties.__ Verify your file has the appropriate [key ID](#key-field): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
+  -  __Your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
   - __Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with precedence may be over-ruling with incorrect data.
   - Automated scanning and database association will only work if your file matches a crc or serial that is the database.
-  - Look on the websites of the upstream database group (No-Intro, Redump, GameTDB, etc) where the `.dat` at issue [originated](#sources), to see whether their current information has/hasn't been cycled through to the libretro repository.
+  - Look on the websites of the upstream database group (No-Intro, Redump, GameTDB, etc) where the `.dat` at issue [originated](https://github.com/libretro/libretro-database#sources), to see whether their current information has/hasn't been cycled through to the libretro repository.
 - __Help Fix the Problem.__
-  - See the [Contributions](#contributions) section for how to go about correcting or adding data to fix the issue.
+  - See the [Contributions](#how-to-contribute-to-databases) section for how to go about correcting or adding data to fix the issue.
   - If you see a large-scale issue affecting many data entries or entire dats, open a [Database Issue](https://github.com/libretro/libretro-database/issues) and describe the exact details of the problem. If the databases appear correct and match your file, then the issue may be within RetroArch's scanning or other behavior, and you should open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) instead.
