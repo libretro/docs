@@ -1,6 +1,6 @@
 # Databases
 
-See the libretro databases [readme](https://github.com/libretro/libretro-database) for comprehensive information about the databases used by RetroArch.
+See the libretro databases [readme](https://github.com/libretro/libretro-database) for comprehensive information about the libretro database repository.
 
 ## RetroArch's Usage of the Libretro Database
 
