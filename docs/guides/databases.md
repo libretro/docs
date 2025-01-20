@@ -14,10 +14,17 @@ Libretro databases allow RetroArch to provide several automated cataloging funct
 
 ## Matching Game Files to the Database
 
-During Playlist / Import Scanning ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key field for matching varies by console typical file size (i.e. original media type).
+During Playlist / Import Scanning ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for identifying and matching varies by console typical file size (i.e. original media type).
 
 - __CRC checksum__ for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.
 - __Serial Number__ for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.
+
+In other words, RetroArch automated scan will do the following:
+
+1. Compute a CRC checksum of the file(s), or scan for the in-game serial
+1. Find that CRC or serial in a local `.rdb` file (default location `RetroArch/databases`)
+2. Assign whatever `Game Name` (aka display name or playlist item name) is specified within the database entry for the scanned CRC/serial
+3. Assign all other associated metadata that has been [collated in the `.rdb`](https://github.com/libretro/libretro-database#fields-specified-in-game-information-databases) entry for the given CRC/serial to the Information > Database Entry for the game (which will also be viewable via Explore > criteria).
 
 Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data.  And although databases include cryptographic hashes (sha1, etc) as information that defines the item specified, only CRC checksum (or serial) not hashes are used for matching.
 
