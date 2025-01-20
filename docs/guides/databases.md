@@ -2,7 +2,7 @@
 
 See the libretro databases [readme](https://github.com/libretro/libretro-database) for comprehensive information about the databases used by RetroArch.
 
-## RetroArch's Usage of the Database
+## RetroArch's Usage of the Libretro Database
 
 Libretro databases allow RetroArch to provide several automated cataloging functions:
 
@@ -12,14 +12,24 @@ Libretro databases allow RetroArch to provide several automated cataloging funct
 - __Category Search ("Explore")__. Allows the user to find/view games that match selected criteria, e.g. by Developer, Release Year, Genre, and other attributes/metadata.
 - __Per-Game Information View__. Provide an in-app viewable informational screen for each game (Game > Information > Database Entry).
 
-## Key Field
+## Matching Game Files to the Database
 
 During Playlist / Import Scanning ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key field for matching varies by console typical file size (i.e. original media type).
 
 - __CRC checksum__ for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.
 - __Serial Number__ for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.
 
-## Contributions
+Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data.  And although databases include cryptographic hashes (sha1, etc) as information that defines the item specified, only CRC checksum (or serial) not hashes are used for matching.
+
+## Validation
+
+Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches the source.  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes. 
+
+If your file's crc or internal serial data (whichever is the key used for matching, [as above](#key-field-for-matching) does not exist in the database, the file will be rejected by the automatic scans.
+
+To import your games/items into a playlist regardless of database matches, or if your files are being rejected by the automatic scan, use the Manual Scan.
+
+## How to Contribute to Databases
 
 __Small-Scale Corrections__
 
@@ -29,7 +39,7 @@ In cases where the `.dat` in question is created and maintained by Libretro or d
 
 __Folder Structure Revisions__
 
-The [build script](https://github.com/libretro/libretro-super/blob/master/libretro-build-database.sh) specifies exact `.dat` files and folders in the repository, therefore organizational housekeeping revisions to the file/folder structure (e.g. combining two metadata fragments into one unified folder and file) require corresponding revisions in the build script.
+The database repository's [build script](https://github.com/libretro/libretro-super/blob/master/libretro-build-database.sh) specifies exact `.dat` files and folders in the repository, therefore organizational housekeeping revisions to the file/folder structure (e.g. combining two metadata fragments into one unified folder and file) require corresponding revisions in the build script.
 
 __Large-Scale Additions__
 
@@ -43,12 +53,12 @@ Currently there is no automatic process for updating libretro [thumbnail reposit
 
 Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner).
 
-Follow the steps below to find and fix the cause of a database or game/name identification issue:
+Following the steps below will help to find and fix the cause of a database or game/name identification issue:
 
 - __Update__ your RetroArch databases (Main Menu > Online Updater > Update databases).
 - __Read about the factors that might be affecting the Problem.__
   - Understand [`.dat` and `.rdb`](#libretro-database) files.
-  - Understand [which key field](#key-field) RetroArch uses for matching your item at issue to the database.  Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data, not a checksum or hash.
+  - Understand [which key field](#key-field-for-matching) RetroArch uses for matching your item at issue to the database.  Contrary to popular belief, the data used for matching is often the _serial number_ encoded within a disc-game's binary data, not a checksum or hash.
   - Understand [precedence](#precedence).
 - __Verify data on both sides.__
   -  __Your file properties.__ Verify your file has the appropriate [key ID](#key-field): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
