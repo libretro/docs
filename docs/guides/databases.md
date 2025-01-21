@@ -30,7 +30,7 @@ Contrary to popular belief, the data used for matching is often the _serial numb
 
 ### Validation
 
-Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches the source.  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes. 
+Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches the source.  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes, not merely tools for adding all files to a playlist.
 
 If your file's crc or internal serial data (whichever is the key used for matching, [as above](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans.
 
