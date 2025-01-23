@@ -35,7 +35,7 @@ RetroArch automated scan will do the following:
 
 ### Validation & Rejection
 
-Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches what is specified source (aka what is "allowed").  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes, not merely tools for adding all files to a playlist.  Part of their function is to **reject** files, not to import all files.
+Validation refers to checking a file against a source, and then accepting or rejecting it based on whether it matches what is specified in the source (aka what is "allowed").  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes, not merely tools for adding all files to a playlist.  Part of their function is to **reject** files, not to import all files.
 
 If your file's crc or internal serial data (whichever is the key used for matching, [as above](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans and will not appear in the playlist.
 
