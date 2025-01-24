@@ -1,6 +1,6 @@
 # Databases
 
-RetroArch uses `.rdb` [database format](https://github.com/libretro/RetroArch/blob/master/libretro-db/README.md) files that are compiled from clrmamepro format `.dat` files at the libretro database repository.  See the libretro database [readme](https://github.com/libretro/libretro-database) for comprehensive information about the sources and functioning of data repository.  
+RetroArch uses `.rdb` [database format](https://github.com/libretro/RetroArch/blob/master/libretro-db/README.md) files that are compiled from clrmamepro format `.dat` files stored at the libretro database repository.  See the libretro database [readme](https://github.com/libretro/libretro-database) for comprehensive information about the sources and functioning of data repository.  
 
 !!! Hint "Terminology Note: Game Name"
     The term _Game Name_ refers to the name displayed [within a playlist in RetroArch](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner), _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document (and [related documents about Playlists and Thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/) is synonymous with playlist item label, playlist entry, content name, game title.
