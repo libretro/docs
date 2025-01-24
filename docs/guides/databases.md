@@ -19,7 +19,7 @@ RetroArch uses the database to provide several automated cataloging functions:
 
 RetroArch automated scan ("Directory Scan" and "File Scan") will do the following:
 
-1. Compute a CRC checksum of the file(s) or scan for the in-game serial number. CRC and serial number are the [keys used for matching a game file to the database](#key-field-for-matching) below.
+1. Compute a CRC checksum of the file(s) or scan for the in-game serial number. CRC and serial number are the [keys used for matching a game file to the database](#key-field-for-matching).
 1. Search for that CRC or serial in the information of the local `.rdb` files (default location `RetroArch/databases`). If the key is not found in databases, the file will __not__ be added to a playlist. See [Validation & Rejection](#validation-and-rejection).
 3. Assign the `Game Name` (aka display name or playlist item name) that is specified as `name` within the database entry for the key (CRC/serial). The assigned `Game Name` will appear in the playlist, not the filename.
 4. All other associated metadata [collated in the `.rdb`](https://github.com/libretro/libretro-database#fields-specified-in-game-information-databases) entry for the given CRC/serial can be viewed in the Information > Database Entry for the game and will be viewable via "Explore".
