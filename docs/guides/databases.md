@@ -68,7 +68,7 @@ Also see the RetroArch documentation for [import scanning](https://docs.libretro
 The most common user problems and solutions related to the database are:
 
 - __Missed files during scan / import.__ I.e. automated Directory Scan or File Scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See [Validation & Rejection](#validation-and-rejection) above.
-  - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the "missed" games
+  - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the rejected files/games.
   - Solution B: Use the __Manual Scan__ option, which will accept all files that are compatible with the selected core.
 - __Wrong matching / incorrect information__. E.g. A game file receives a wrong title.
   - Solution A: Follow the [investigation steps](#investigating-database-issues) below, and [contribute to the database](#how-to-contribute-to-databases). Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage regardless of the database groups.
