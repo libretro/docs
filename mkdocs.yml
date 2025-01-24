@@ -81,7 +81,7 @@ nav:
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
       - 'RetroArch Cloud Sync (Apple Devices)': 'guides/retroarch-cloud-sync.md'
-      - 'Databases': 'guides/databases.md'
+      - 'Databases & Validation': 'guides/databases.md'
     - 'Appearance & Customization':
       - 'Interface Styles':
         - 'GLUI Interface': 'guides/glui.md'
