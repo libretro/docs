@@ -32,7 +32,7 @@ If your file's crc or internal serial data (whichever is the key used for matchi
 
 #### Manual Scan for Bypassing Validation/Databases
 
-To import your games into a playlist regardless of database matches, or if your files are being rejected by the automatic scan (in other words are not recognized by the database) and you wish to add them anyway, use the __Manual Scan__.
+To import your games into a playlist regardless of database matches, or if your files are being rejected by the automatic scan (in other words are not recognized by the database) and you wish to add them to the playlist anyway, use the __Manual Scan__.
 
 ### Key Field for Matching
 
