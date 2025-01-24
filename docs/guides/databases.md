@@ -2,12 +2,14 @@
 
 RetroArch uses `.rdb` [database format](https://github.com/libretro/RetroArch/blob/master/libretro-db/README.md) files that are compiled from clrmamepro format `.dat` files stored at the libretro database repository.  See the libretro database [readme](https://github.com/libretro/libretro-database) for comprehensive information about the sources and functioning of data repository.  
 
+The local database files are stored by default in folder `RetroArch/databases`.
+
 !!! Hint "Terminology Note: Game Name"
     The term _Game Name_ refers to the name displayed [within a playlist in RetroArch](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner), _not_ to the filename of the underlying file on the computer or device.  _Game Name_ in this document (and [related documents about Playlists and Thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/) is synonymous with playlist item label, playlist entry, content name, game title.
 
 ## Features of RetroArch Database Usage
 
-RetroArch stores the `.rdb` database files by default in `RetroArch/databases` and uses them to provide several automated cataloging functions:
+RetroArch uses the database to provide several automated cataloging functions:
 
 - __Validation__. Reject or accept files when using the [Import Scanner / Playlist Generator](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists) based on whether the ROM checksum (or [other key](#matching-game-files-to-the-database)) matches the checksum of a known verified completely intact (aka  "properly dumped") file in the database.
 - __Game Naming__. Assign a definitive and uniform display name for each game in a playlist regardless of filename, by looking up the `name` field specified for the file's [key](#matching-game-files-to-the-database) in the database.
