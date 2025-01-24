@@ -97,21 +97,27 @@ Follow the steps below to find and fix the cause of a database or game/name iden
 
 Like [thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [documentation](https://docs.libretro.com/meta/how-to-contribute/), databases are an area where users who are not programmers can contribute to RetroArch and in a way that benefits all users.
 
+__Github Steps__
+
+1. Make an account on github.com and login
+2. Fork the libretro database repository.  Forking means copying the repository into your own working area on github.
+3. Make your changes within your fork.  For example, create a new `.dat`, or add a game entry or correction to an existing dat, while carefully heeding the existing formats observed in present `.dat` files on the repository.
+4. "Commit" (save) your changes
+5.  __Set a Pull Request__ to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.
+
 __Small-Scale Corrections__
 
 A vast majority of the database's game information originates from routine imports from upstream data groups (No-Intro, Redump, TOSEC, GameTDB, etc). In cases where the `.dat` for the entry at issue originates from an upstream group, best practice is for a contributor to go through the channels/process of that group. Upstream changes made by the database groups will eventually be imported to the Libretro databases. A seemingly helpful "fix" to Libretro's copy of the database would be overwritten and lost by the next import from upstream. 
 
-In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) above and to github Histories for information about which libretro databases are applicable for github contributions.
+In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) and to github `.dat` Histories for information about which libretro databases are applicable for github contributions.
 
-For adding data coverage for a single game or niche of games, it is possible to add a game data entry to an ad hoc database separate from the database at issue, or to create an ad hoc `.dat` (even for a small number of games).  For example a contributor could leave the original error in place _if_ for example the key data (e.g. crc checksum) is wrong, and then establish a correct key entry in a different dat.  The new entry covers the given game, while the erroneous entry remains present but would become moot and uninvoked.  This method may be practical in a case where an upstream group's data contans the problem and is difficult to change for some reason.
+Two general (or three specific) methods for adding data coverage for a single game or niche of games:
 
-__General Steps to Make a Github Contribution__
-
-1. Make an account on github.com and login
-2. Fork the libretro database repository.  Forking means copying the repository into your own working area on github.
-3. Make your changes within your fork.  For example, create a new `.dat`, or add a game entry or correction to an existing dat, while carefully paying attention to the existing formats observed with present `.dat` files on the repository.
-4. "Commit" (save) your changes, and use the Pull Request button to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.
+- Fix the dat at issue.  This is only possible if it doesn't originate from an import from upstream, and is a `.dat` that can accept manual contributions (i.e. a dat that won't receive bulk sync/over-writes in the future). _Or..._
+- Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is not met, then the attempted correction would be over-ruled in the `.rdb` compile by the erroneous dat's information.
+  - Add a game data entry to an existing ad hoc `.dat` on the repository. _Or..._
+  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats in the repository.
 
 __Large-Scale Additions__
 
-See [Adding New Database](#adding-a-new-database). Contributors are welcome to add bulk data via their own build scripts or otherwise.
+See [Adding New Database](#adding-a-new-database). Contributors are welcome to add bulk data from their own build scripts or otherwise, via github Pull Request.
