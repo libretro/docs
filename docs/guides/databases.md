@@ -101,9 +101,9 @@ __Github Steps__
 
 1. Make an account on github.com and login
 2. Fork the libretro database repository.  Forking means copying the repository into your own working area on github.
-3. Make your changes within your fork.  For example, create a new `.dat`, or add a game entry or correction to an existing dat, while carefully heeding the existing formats observed in present `.dat` files on the repository.
+3. Make your changes within your fork.  For example, create a new `.dat`, or add a game entry or correction to an existing dat, while understanding the principles explained in the [database repository readme](https://github.com/libretro/libretro-database#) and while carefully heeding the existing formats observable in present `.dat` files on the repository.
 4. "Commit" (save) your changes
-5.  __Set a Pull Request__ to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.
+5.  Set a Pull Request to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.
 
 __Small-Scale Corrections__
 
