@@ -63,7 +63,6 @@ One of the visible consequences of a Game Name or database problem is the lack o
 
 _Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
 
-
 The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
 
 The most common user problems and solutions related to the database are:
@@ -86,7 +85,6 @@ Follow the steps below to find and fix the cause of a database or game/name iden
 - __Verify data "on both sides"__
   -  __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
   - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may be over-ruling others with incorrect data.
-  - Automated scanning and database association will only work if your file matches a key (sometimes crc or sometimes serial) that is in database.
   - If an upstream database group (No-Intro, Redump, GameTDB, etc) is [responsible for the `.dat` at issue](https://github.com/libretro/libretro-database#sources), look on their websites to see whether their current information is correct or incorrect.
     - If Upstream Data is _Correct_: the libretro repository may need an update, or the user may need an update (Main Menu > Online Updater > Update Databases), or something may have gone wrong in the libretro database build process.  If more than 2 weeks have passed since the upstream update, [Open an Issue](https://github.com/libretro/libretro-database/issues).
     - If Upstream Data is _Incorrect_: either the upstream group must make the correction, or you can [Contribute a correction to libretro](#how-to-contribute-to-databases) perhaps by creating an ad hoc database or making a new entry within an ad hoc database.
