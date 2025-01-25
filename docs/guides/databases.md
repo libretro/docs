@@ -80,9 +80,9 @@ Follow the steps below to find and fix the cause of a database or game/name iden
 
 - __Update__ your RetroArch databases (Main Menu > Online Updater > Update databases).
 - __Read about the factors that might be causing the Problem__
-  - Understand [`.dat` and `.rdb`](https://github.com/libretro/libretro-database#retroarch-database) files.
+  - Understand the multifacted [`.dat` system](https://github.com/libretro/libretro-database#retroarch-database) and files.
   - Understand [which key field](#key-field-for-matching) RetroArch uses for matching your item at issue to the database.
-  - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the multi-faceted database repository.
+  - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
 - __Verify data "on both sides"__
   -  __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
   - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may be over-ruling others with incorrect data.
