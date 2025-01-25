@@ -114,7 +114,10 @@ Two general (or three specific) methods for adding data coverage for a single ga
 
 - Fix the dat at issue.  This is only possible if it doesn't originate from an import from upstream, and is a `.dat` that can accept manual contributions (i.e. a dat that won't receive bulk sync/over-writes in the future). _Or..._
 - Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is not met, then the attempted correction would be over-ruled in the `.rdb` compile by the erroneous dat's information.
-  - Add a game data entry to an existing ad hoc `.dat` on the repository. _Or..._
+  - Add a game data entry to an existing ad hoc `.dat` on the repository.
+  
+    _Or..._
+    
   - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats in the repository.
 
 __Large-Scale Additions__
