@@ -125,4 +125,4 @@ Two general (or three specific) methods for adding data coverage for a single ga
 
 __Large-Scale Additions__
 
-See [Adding New Database](#adding-a-new-database). Contributors are welcome to add bulk data from their own build scripts or otherwise, via github Pull Request.
+See [Adding New Database](#adding-a-new-database). Contributors are welcome to propose the addition of bulk data from their own build scripts or otherwise, via github Pull Request.
