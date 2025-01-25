@@ -61,9 +61,10 @@ One of the visible consequences of a Game Name or database problem is the lack o
 
 ## Troubleshooting
 
-The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
+_Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
 
-Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner).
+
+The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
 
 The most common user problems and solutions related to the database are:
 
