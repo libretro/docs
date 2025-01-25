@@ -79,7 +79,7 @@ The most common user problems and solutions related to the database are:
 Follow the steps below to find and fix the cause of a database or game/name identification issue:
 
 - __Update__ your RetroArch databases (Main Menu > Online Updater > Update databases).
-- __Read about the factors that might be causing the Problem__
+- __Learn about the factors that might be causing the Problem__
   - Understand the multifacted [`.dat` system](https://github.com/libretro/libretro-database#retroarch-database) and files.
   - Understand [which key field](#key-field-for-matching) RetroArch uses for matching your item at issue to the database.
   - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
