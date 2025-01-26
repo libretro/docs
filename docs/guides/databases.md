@@ -110,17 +110,14 @@ A vast majority of the database's game information originates from routine impor
 
 In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) and to github `.dat` Histories for information about which libretro databases are applicable for github contributions.
 
-Two general (or three specific) methods for adding data coverage for a single game or niche of games:
+Two methods for adding data coverage for a single game or niche of games, in a Pull Request proposal on github:
 
 - Fix the dat at issue.  This is only possible if it doesn't originate from an import from upstream, and is a `.dat` that can accept manual contributions (i.e. a dat that won't receive bulk sync/over-writes in the future).
 
   _Or..._
   
 - Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is not met, then the attempted correction would be over-ruled in the `.rdb` compile by the erroneous dat's information.
-  - Add a game data entry to an existing ad hoc `.dat` on the repository.
-  
-    _Or..._
-    
+  - Add a game data entry to an existing ad hoc `.dat` on the repository.    
   - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats in the repository.
 
 __Large-Scale Additions__
