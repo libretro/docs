@@ -86,7 +86,7 @@ Follow the steps below to find and fix the cause of a database or game/name iden
   - __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
   - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may be over-ruling others with incorrect data.
   - If an upstream database group (No-Intro, Redump, GameTDB, etc) is [responsible for the `.dat` at issue](https://github.com/libretro/libretro-database#sources), look on their websites to see whether their current information is correct or incorrect.
-- __Help Fix the Problem.__
+- __Help Fix the Problem.__ Some possible actions are:
   - Be aware that the user may need an update (Main Menu > Online Updater > Update Databases)
   - [Contribute](#how-to-contribute-to-databases) a correction or addition of data to fix the issue. It may be possible to create an ad hoc database or make a new entry within an existing ad hoc database.
   - Open an Issue on github:
