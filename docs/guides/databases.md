@@ -118,7 +118,7 @@ Two methods for adding data coverage for a single game or niche of games, in a P
   
 - Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is not met, then the attempted correction would fail: it would be over-ruled in the `.rdb` compile by the erroneous dat's information.
   - Add a game data entry to an existing ad hoc `.dat` on the repository.    
-  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats in the repository.
+  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats in the repository or for other systematic reasons.
 
 __Large-Scale Additions__
 
