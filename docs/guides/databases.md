@@ -53,7 +53,7 @@ Currently there is no _automatic_ process for updating libretro [thumbnail repos
 
 ### Help Fix a Database Game Name or Thumbnail Name Problem
 
-One of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail whenever a `Game Name` doesn't match a repository thumbnail filename.
+One of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail whenever a `Game Name` displayed in the RetroArch interface doesn't match a repository thumbnail filename.
 
 - __Game name error__. To help fix a database error where the game name doesn't match a correctly named thumbnail in the repository, see [How to Contribute to Databases](#how-to-contribute-to-databases).
 - __Thumbnail name error__. To help fix a thumbnail in a case where a _correct_ database game name doesn't match the repository thumbnail name, follow the [Thumbnail Repository readme](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [How To Contribute Thumbnails guide](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to).
