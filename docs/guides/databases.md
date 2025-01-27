@@ -100,7 +100,7 @@ Follow the steps below to find and fix the cause of a database or game/name iden
 
 Like [thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to) and [documentation](https://docs.libretro.com/meta/how-to-contribute/), databases are an area where users who are not programmers can contribute to RetroArch and in a way that benefits all users.
 
-__Github Steps__
+### Github Steps
 
 1. Make an account on github.com and login
 2. Fork the libretro database repository.  Forking means copying the repository into your own working area on github.
@@ -108,7 +108,7 @@ __Github Steps__
 4. "Commit" (save) your changes
 5.  Set a Pull Request to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.
 
-__Small-Scale Corrections__
+### Small-Scale Corrections
 
 A vast majority of the database's game information originates from routine imports from upstream data groups (No-Intro, Redump, TOSEC, GameTDB, etc). In cases where the `.dat` for the entry at issue originates from an upstream group, best practice is for a contributor to go through the channels/process of that group. Upstream changes made by the database groups will eventually be imported to the Libretro databases. A seemingly helpful "fix" to Libretro's copy of the database would be overwritten and lost by the next import from upstream. 
 
@@ -124,6 +124,6 @@ Two methods for adding data coverage for a single game or niche of games, via Pu
   - Add a game data entry to an existing ad hoc `.dat` on the repository.    
   - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats or for other systematic reasons.
 
-__Large-Scale Additions__
+### Large-Scale Additions
 
 See [Adding New Database](https://github.com/libretro/libretro-database#adding-a-new-database). Contributors are welcome to propose the addition of bulk data from their own build scripts or otherwise, via github Pull Request.
