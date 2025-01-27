@@ -28,7 +28,7 @@ RetroArch automated scan ("Directory Scan" and "File Scan") will do the followin
 
 Validation here refers to checking a file or attribute against a reference, and then accepting or rejecting it based on whether it matches what is specified in the reference data (aka what is "allowed").  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes, not merely tools for adding all files to a playlist.  Part of their function is to **reject** files, not to import all files.  The database is the reference, and the ROM file is the item being validated.
 
-If your file's crc or internal serial data (whichever is the key used for matching, [as below](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans and will not appear in the playlist.
+If your file's crc or internal serial data (whichever is the key used for matching, [see below](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans and will not appear in the playlist.
 
 #### Manual Scan for Bypassing Validation/Databases
 
