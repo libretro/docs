@@ -83,18 +83,18 @@ Follow the steps below to find and fix the cause of a database or game/name iden
   - Understand [which key field](#key-field-for-matching) RetroArch uses for matching your item at issue to the database.
   - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
 - __Verify data "on both sides"__
-  -  __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
+  - __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
   - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may be over-ruling others with incorrect data.
   - If an upstream database group (No-Intro, Redump, GameTDB, etc) is [responsible for the `.dat` at issue](https://github.com/libretro/libretro-database#sources), look on their websites to see whether their current information is correct or incorrect.
 - __Help Fix the Problem.__
   - Be aware that the user may need an update (Main Menu > Online Updater > Update Databases)
-  - See the [Contributions](#how-to-contribute-to-databases) section for how to go about correcting or adding data to fix the issue, e.g. create an ad hoc database or make a new entry within an existing ad hoc database.
+  - [Contribute](#how-to-contribute-to-databases) a correction or addition of data to fix the issue. It may be possible to create an ad hoc database or make a new entry within an existing ad hoc database.
   - Open an Issue on github:
     - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
       - You see a large-scale issue affecting many data entries or entire dats.
       - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
     - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor) 
-  - Make changes upstream by going through the upstream data group's channels __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction, though it may be possible to create alternative data coverage instead (see below).
+  - Make changes upstream (No-Intro, Redump, GameTDB, etc) by going through the channels of the upstream group responsible for the data at issue __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction, though it may be possible to create alternative data coverage instead (see below).
  
 ## How to Contribute to Databases
 
