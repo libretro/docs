@@ -114,7 +114,7 @@ A vast majority of the database's game information originates from routine impor
 
 In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) and to github `.dat` Histories for information about which libretro databases are applicable for github contributions.
 
-Two methods for adding data coverage for a single game or niche of games, in a Pull Request proposal on github:
+Two methods for adding data coverage for a single game or niche of games, via Pull Request proposal on github:
 
 - Fix the dat at issue.  This is only possible if it doesn't originate from an import from upstream, and is a `.dat` that can accept manual contributions (i.e. a dat that won't receive bulk sync/over-writes in the future).
 
