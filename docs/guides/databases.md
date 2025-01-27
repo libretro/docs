@@ -90,9 +90,9 @@ Follow the steps below to find and fix the cause of a database or game/name iden
   - Be aware that the user may need an update (Main Menu > Online Updater > Update Databases)
   - See the [Contributions](#how-to-contribute-to-databases) section for how to go about correcting or adding data to fix the issue, e.g. create an ad hoc database or make a new entry within an existing ad hoc database.
   - Open an Issue on github:
-    -  [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
-       - You see a large-scale issue affecting many data entries or entire dats.
-       - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't seem to reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
+    - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
+      - You see a large-scale issue affecting many data entries or entire dats.
+      - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't seem to reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
     - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor) 
   - Make changes upstream by going through the upstream data group's channels __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction, though it may be possible to create alternative data coverage instead (see below).
  
