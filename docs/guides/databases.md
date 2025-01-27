@@ -49,7 +49,7 @@ Databases include cryptographic hashes (sha1, etc) for informational purposes to
 
 Thumbnails _are not_ assigned or retrieved based on checksum, serial, or game database matching.  [Thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#thumbnails) are _only_ automatically retrieved and assigned if the thumbnail server image filename (i.e. the thumbnail [repository image filename](https://github.com/libretro-thumbnails/libretro-thumbnails)) matches the __game name__ or the __ROM filename__ (with some [flexibility](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails)).  Databases assist thumbnail assignment if the game name assigned by the database, which then appears in the playlist, matches a repository/server thumbnail file name. 
 
-Currently there is no _automatic_ process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails#libretro-thumbnails) image filenames based on game name updates in databases.  Therefore thumbnail repository and server filenames can become outdated and no longer retrieved for the associated game.
+Currently there is no _automatic_ process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails#libretro-thumbnails) image filenames based on game name updates in databases.  Therefore thumbnail repository and server filenames can become outdated, which means the server thumbnail will not be retrieved for the associated game.
 
 ### Help Fix a Database Game Name or Thumbnail Name Problem
 
