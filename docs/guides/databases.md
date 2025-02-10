@@ -51,7 +51,7 @@ Thumbnails _are not_ assigned or retrieved based on checksum, serial, or game da
 
 Currently there is no _automatic_ process that applies database game name changes/updates to libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) image filenames.  Therefore one of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail display in RetroArch if the `Game Name` displayed in the interface doesn't match a repository thumbnail filename.
 
-### Help Fix a Database Game Name or Thumbnail Name Problem
+### Help Fix a Database Game Name <> Thumbnail Name Problem
 
 
 - __Game name error__. To help fix a database error where the game name doesn't match a correctly named thumbnail in the repository, see [How to Contribute to Databases](#how-to-contribute-to-databases).
@@ -64,13 +64,17 @@ _Also see the RetroArch documentation for [import scanning](https://docs.libretr
 
 The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
 
+### Common Problems and Solutions
+
 The most common user problems and solutions related to the database are:
 
 - __Missed files during import scan.__ I.e. automated Directory Scan or File Scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See [Validation & Rejection](#validation-and-rejection) above.
   - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the files/games that are not yet covered by the database.
-  - Solution B: Use the __Manual Scan__ option, which will accept all files that are compatible with the selected core.
-- __Wrong matching / incorrect information__. E.g. A game file receives a wrong title inside the RetroArch playlists/interface.
-  - Solution A: Follow the [investigation steps](#investigating-database-issues) below, and [contribute to the database](#how-to-contribute-to-databases). Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
+  - Solution B: Use the __Manual Scan__ option, which will accept all files according to the chosen settings.
+- __Wrong matching / incorrect information__. E.g. A game file receives a wrong title inside the RetroArch playlist/interface.
+  - Solution:
+    - Follow the [investigation steps](#investigating-database-issues) below, and [contribute to the database](#how-to-contribute-to-databases).
+    - Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
 
 ### Investigating Database Issues
 
@@ -83,16 +87,16 @@ Follow the steps below to find and fix the cause of a database or game/name iden
   - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
 - __Verify data "on both sides"__
   - __Verify your file properties.__ Verify your file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
-  - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may be over-ruling others with incorrect data.
+  - __Verify Databases__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if one `.dat` holds correct data, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may hold incorrect data that is over-ruling the correct data.
   - If an upstream database group (No-Intro, Redump, GameTDB, etc) is [responsible for the `.dat` at issue](https://github.com/libretro/libretro-database#sources), look on their websites to see whether their current information is correct or incorrect.
 - __Help Fix the Problem.__ Some possible actions are:
-  - Be aware that the user may need an update (Main Menu > Online Updater > Update Databases)
+  - Update: Use _Main Menu > Online Updater > Update Databases_ to download new corrected data from the libretro server.
   - [Contribute](#how-to-contribute-to-databases) a correction or addition of data to fix the issue. It may be possible to create an ad hoc database or make a new entry within an existing ad hoc database.
-  - Open an Issue on github:
+  - Search for existing issues on github which may hold advice or useful discussion, or Open an Issue.
     - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
       - You see a large-scale issue affecting many data entries or entire dats.
       - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
-    - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor) 
+    - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).
   - Make changes upstream (No-Intro, Redump, GameTDB, etc) by going through the channels of the upstream group responsible for the data at issue __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction, though it may be possible to create alternative data coverage instead (see below).
  
 ## How to Contribute to Databases
