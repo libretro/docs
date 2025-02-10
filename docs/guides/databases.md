@@ -30,9 +30,7 @@ Validation here refers to checking a file or attribute against a reference, and 
 
 If your file's crc or internal serial data (whichever is the key used for matching, [see below](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans and will not appear in the playlist.
 
-#### Manual Scan for Bypassing Validation/Databases
-
-To import your games into a playlist regardless of database matches, or if your files are being rejected by the automatic scan (in other words are not recognized by the database) and you wish to add them to the playlist anyway, use the [Manual Scan](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists).
+__Bypass validation and rejection.__  To import your games into a playlist regardless of database matches, or if your files are being rejected by the automatic scan (in other words are not recognized by the database) and you wish to add them to the playlist anyway, use the [Manual Scan](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists).
 
 ### Key Field for Matching
 
