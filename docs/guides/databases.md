@@ -47,13 +47,12 @@ Databases include cryptographic hashes (sha1, etc) for informational purposes to
 
 ## Databases and RetroArch Thumbnails
 
-Thumbnails _are not_ assigned or retrieved based on checksum, serial, or game database matching.  [Thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#thumbnails) are _only_ automatically retrieved and assigned if the thumbnail server image filename (i.e. the thumbnail [repository image filename](https://github.com/libretro-thumbnails/libretro-thumbnails)) matches the __game name__ or the __ROM filename__ (with some [flexibility](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails)).  Databases assist thumbnail assignment if the game name assigned by the database, which then appears in the playlist, matches a repository/server thumbnail file name. 
+Thumbnails _are not_ assigned or retrieved based on checksum, serial, or game database matching.  See separate documentation for [thumbnail handling](https://docs.libretro.com/guides/roms-playlists-thumbnails/#thumbnails) and the thumbnail [matching algorithm](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails).
 
-Currently there is no _automatic_ process for updating libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) image filenames based on game name updates in databases.  Therefore thumbnail repository and server filenames can become outdated, which means the server thumbnail will not be retrieved for the associated game.
+Currently there is no _automatic_ process that applies database game name changes/updates to libretro [thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) image filenames.  Therefore one of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail display in RetroArch if the `Game Name` displayed in the interface doesn't match a repository thumbnail filename.
 
 ### Help Fix a Database Game Name or Thumbnail Name Problem
 
-One of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail whenever a `Game Name` displayed in the RetroArch interface doesn't match a repository thumbnail filename.
 
 - __Game name error__. To help fix a database error where the game name doesn't match a correctly named thumbnail in the repository, see [How to Contribute to Databases](#how-to-contribute-to-databases).
 - __Thumbnail name error__. To help fix a thumbnail in a case where a _correct_ database game name doesn't match the repository thumbnail name, follow the [Thumbnail Repository readme](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md#contributions) and [How To Contribute Thumbnails guide](https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to).
@@ -110,19 +109,20 @@ Like [thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#co
 
 ### Small-Scale Corrections
 
-A vast majority of the database's game information originates from routine imports from upstream data groups (No-Intro, Redump, TOSEC, GameTDB, etc). In cases where the `.dat` for the entry at issue originates from an upstream group, best practice is for a contributor to go through the channels/process of that group. Upstream changes made by the database groups will eventually be imported to the Libretro databases. A seemingly helpful "fix" to Libretro's copy of the database would be overwritten and lost by the next import from upstream. 
-
-In cases where the `.dat` in question is created and maintained by Libretro or does not receive bulk over-writes, github contributions are accepted.  Refer to the [repository contents list](#repository-contents) and to github `.dat` Histories for information about which libretro databases are applicable for github contributions.
+See [database repository readme](https://github.com/libretro/libretro-database) to learn when/where small-scare corrections are appropriate.
 
 Two methods for adding data coverage for a single game or niche of games, via Pull Request proposal on github:
 
-- Fix the dat at issue.  This is only possible if it doesn't originate from an import from upstream, and is a `.dat` that can accept manual contributions (i.e. a dat that won't receive bulk sync/over-writes in the future).
+- __Method A:__ Fix the dat at issue.  This is only possible if two conditions are met:
+  - 1. The dat doesn't originate from an import from upstream _and_
+  - 2. The `.dat` won't receive subtractive sync over-writes in the future.
+  - _If those conditions are not met, the intended "fix" will be deleted by the next bulk import sync._
 
   _Or..._
   
-- Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is not met, then the attempted correction would fail: it would be over-ruled in the `.rdb` compile by the erroneous dat's information.
-  - Add a game data entry to an existing ad hoc `.dat` on the repository.    
-  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system, though some limitations may be enforced by admins for the manageability of the build script that processes all dats or for other systematic reasons.
+- __Method B:__ Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited/corrected database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is _not_ met, then the attempted correction would fail: it would be over-ruled in the `.rdb` compile by the erroneous dat's information.  If one of those conditions is met, you may do one of following:
+  - Add a game data entry to an existing and appropriate ad hoc `.dat` in the repository.    
+  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games, because of the multi-faceted nature of the dat system.  Some limitations may be enforced by admins for the manageability of the build script that processes all dats or for other systematic reasons.
 
 ### Large-Scale Additions
 
