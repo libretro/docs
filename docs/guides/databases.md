@@ -43,7 +43,7 @@ Contrary to popular belief, the data used for matching is often the _serial numb
 
 Databases include cryptographic hashes (sha1, etc) for informational purposes to define the item specified, but only CRC checksum (or serial) not hashes are used for matching.
 
-## Databases and RetroArch Thumbnails
+## Databases and Thumbnails
 
 Thumbnails _are not_ assigned or retrieved based on checksum, serial, or game database matching.  See separate documentation for [thumbnail handling](https://docs.libretro.com/guides/roms-playlists-thumbnails/#thumbnails) and the thumbnail [matching algorithm](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails).
 
