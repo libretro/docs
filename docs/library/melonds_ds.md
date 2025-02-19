@@ -214,18 +214,6 @@ This setting will cause issues on LAN multiplayer
 if more than one player has the same username.
 The username can be set on RetroArch by going to "Settings", "User", "Username".
 
-* Read from a file:
-By adding a txt file that contains a formatted MAC address
-in the "system" folder of the libretro frontend or a subfolder of the "system" folder named "melonDS DS",
-an option will appear to set the MAC address from the file.
-The file must be encoded in ASCII,
-and the MAC address must be formatted as "00:00:00:00:00".
-The MAC address must be the first line in the file,
-and there must be no other text before the MAC address.
-The MAC address must only use uppercase letters and digits in the hexadecimal numbers.
-As with all other settings,
-this setting will cause issues if more than one player in a multiplayer session has the same MAC address.
-
 ### Starting a multiplayer session (RetroArch)
 Before starting a multiplayer session,
 it is recommended that all set a proper username in "Settings", "User", "Username", in RetroArch,
