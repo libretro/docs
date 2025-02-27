@@ -577,7 +577,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### VIC-II (C64, C128, CBM-II 5x0)
 
-- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
+- **VIC-II Filter** [vice_vicii_filter] (**disabled**|enabled_noblur|enabled_lowblur|enabled_medblur|enabled)
 
     PAL emulation filter with custom horizontal blur.
 
@@ -589,7 +589,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
-- **VIC-II Color Palette** [vice_external_palette] (default|**colodore**|pepto-pal|pepto-ntsc|pepto-ntsc-sony|cjam|c64hq|c64s|ccs64|community-colors|deekay|frodo|godot|pc64|ptoing|rgb|vice)
+- **VIC-II Color Palette** [vice_external_palette] (**default**|c64hq|c64s|ccs64|cjam|colodore|community-colors|deekay|frodo|godot|lemon64|palette|palette_6569R1_v1r|palette_6569R5_v1r|palette_8565R2_v1r|palette_C64_amber|palette_C64_cyan|palette_C64_green|pc64|pepto-pal|pepto-palold|pepto-ntsc|pepto-ntsc-sony|pixcen|ptoing|rgb|the64|vice)
 
     'Colodore' is recommended for the most accurate colors.
 
@@ -615,7 +615,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### VIC (VIC-20)
 
-- **VIC Filter** [vice_vic_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
+- **VIC Filter** [vice_vic_filter] (**disabled**|enabled_noblur|enabled_lowblur|enabled_medblur|enabled)
 
     PAL emulation filter with custom horizontal blur.
 
@@ -627,7 +627,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
-- **VIC Color Palette** [vice_vic20_external_palette] (default|**colodore_vic**|mike-pal|mike-ntsc|vice)
+- **VIC Color Palette** [vice_vic20_external_palette] (**default**|colodore_vic|mike-pal|mike-ntsc|palette|vice)
 
     'Colodore' is recommended for the most accurate colors.
 
@@ -653,7 +653,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### TED (PLUS/4)
 
-- **TED Filter** [vice_ted_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
+- **TED Filter** [vice_ted_filter] (**disabled**|enabled_noblur|enabled_lowblur|enabled_medblur|enabled)
 
     PAL emulation filter with custom horizontal blur.
 
@@ -665,7 +665,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
-- **TED Color Palette** [vice_plus4_external_palette] (default|**colodore_ted**|yape-pal|yape-ntsc)
+- **TED Color Palette** [vice_plus4_external_palette] (**default**|colodore_ted|ITU-R_BT601_CRT|ITU-R_BT709_HDTV|ITU-R_BT2020|yape-pal|yape-ntsc)
 
     'Colodore' is recommended for the most accurate colors.
 
@@ -691,17 +691,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ##### CRTC (CBM-II, PET)
 
-- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled|enabled_medblur|enabled_lowblur|enabled_noblur)
+- **CRTC Filter** [vice_crtc_filter] (**disabled**|enabled_noblur|enabled_lowblur|enabled_medblur|enabled)
 
     PAL emulation filter with custom horizontal blur.
-
-- **CRTC Filter Oddline Offset** [vice_crtc_filter_oddline_offset] (**1000**|20-2000)
-
-    PAL emulation filter oddline offset.
-
-- **CRTC Filter Oddline Phase** [vice_crtc_filter_oddline_phase] (**1000**|20-2000)
-
-    PAL emulation filter oddline phase. Applies with 'Internal' palette only!
 
 - **CRTC Color Palette** [vice_cbm2_external_palette] (**default**|green|amber|white)
 
@@ -787,7 +779,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Filter bias for 6581, which can be used to adjust DAC bias in millivolts.
 
-- **ReSID Filter 8580 Bias** [vice_resid_8580filterbias] (-5000|-4500|-4000|-3500|-3000|-2500|-2000|-1500|-1000|-500|0|500|1000|**1500**|2000|2500|3000|3500|4000|4500|5000)
+- **ReSID Filter 8580 Bias** [vice_resid_8580filterbias] (-5000|-4500|-4000|-3500|-3000|-2500|-2000|-1500|-1000|-500|**0**|500|1000|1500|2000|2500|3000|3500|4000|4500|5000)
 
     Filter bias for 8580, which can be used to adjust DAC bias in millivolts.
 
@@ -810,13 +802,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Required distance from stick center to register input.
 
-- **Analog Stick Mouse Speed** [vice_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
+- **Left Analog Stick Mouse Speed** [vice_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-    Mouse movement speed multiplier for analog stick.
+    Mouse speed for left analog stick.
 
-- **D-Pad Mouse Speed** [vice_dpadmouse_speed] (1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+- **Right Analog Stick Mouse Speed** [vice_analogmouse_speed_right] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-    Mouse movement speed multiplier for directional pad.
+    Mouse speed for right analog stick.
+
+- **D-Pad Mouse Speed** [vice_dpadmouse_speed] (0|1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+
+    Mouse speed for directional pad.
 
 - **Mouse Speed** [vice_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300)
 
