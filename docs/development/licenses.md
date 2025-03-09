@@ -90,6 +90,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [CrocoDS](../library/crocods.md)                 			           | [MIT](https://github.com/libretro/libretro-crocods/blob/master/LICENSE)                   |                |
 | [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |
 | [DeSmuME](../library/desmume.md)                 			           | [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt)                     |                |
+| [DICE](../library/dice.md)             | [GPLv3](https://github.com/mittonk/dice-libretro/blob/master/LICENSE.txt)                    |                |
 | [Dinothawr](../library/dinothawr.md)             			           | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
 | DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  | |
