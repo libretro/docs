@@ -55,12 +55,6 @@ DICE core" above.
 RetroArch database(s) that are associated with the DICE core:
 None yet.
 
-- [Database name](URL)
-
-- // Add database entries from the core info file here and add (URL) from libretro-database repo
-- // https://github.com/libretro/libretro-super/tree/master/dist/info
-- // https://github.com/libretro/libretro-database/tree/master/rdb
-
 ## Features
 
 Frontend-level settings or features that the DICE core respects:
