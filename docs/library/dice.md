@@ -98,7 +98,6 @@ None.
 ## Geometry and timing
 
 Varies based on individual game, mostly around 640x246, 60 FPS.
-// Add [Core name], [FPS], [Sample rate], [Base width], [Base height], [Max width], [Max height], [Aspect ratio]
 
 ## Usage
 
@@ -111,15 +110,6 @@ controllers, see
 https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support .
 
 These are still in flux.
-
-## User # - # device types
-
-The [Core name] core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-- None - Optional description.
-- **(Device name)** - (Device type) - Optional description.
-
-## Other devices
 
 ## Joypad
 
@@ -149,8 +139,6 @@ Most games are playable with just a joypad.  Controls vary by game.
 | ![](../image/retropad/retro_right_stick.png) Y |                          | -                         |
 
 ## Mouse
-
-- // Add mouse inputs
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|
@@ -194,13 +182,9 @@ Most games are playable with just a joypad.  Controls vary by game.
 
 ## External Links
 
-- // Put relevant links here
-
-- [Original DICE Website](https://adamulation.blogspot.com/)
-- [Original DICE Repository](https://sourceforge.net/projects/dice/)
-- [DirtBagXon's DICE Website](https://github.com/DirtBagXon/DICE)
+- [Original DICE Website](https://adamulation.blogspot.com/) (inactive)
+- [Original DICE Repository](https://sourceforge.net/projects/dice/) (inactive)
 - [DirtBagXon's DICE Repository](https://github.com/DirtBagXon/DICE)
-- [
 - [Libretro DICE Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dice.info)
 - [Libretro DICE (Website name)
   Repository](https://github.com/mittonk/dice-libretro)
