@@ -105,6 +105,14 @@ https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support .
 
 These are still in flux.
 
+## User 1 device types
+
+The DICE core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+
+- **RetroPad**
+- RetroPad w/Analog
+- Mouse
+
 ## Joypad
 
 Most games are playable with just a joypad.  Controls vary by game.
