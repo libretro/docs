@@ -53,7 +53,8 @@ Content that can be loaded by the DICE core have the following file extensions:
 DICE core" above.
 
 RetroArch database(s) that are associated with the DICE core:
-None yet.
+
+- [DICE](https://github.com/libretro/libretro-database/blob/master/rdb/DICE.rdb)
 
 ## Features
 
@@ -61,7 +62,7 @@ Frontend-level settings or features that the DICE core respects:
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✔         |
+| Restart           | ✕         |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
