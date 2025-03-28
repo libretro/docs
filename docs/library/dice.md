@@ -62,7 +62,7 @@ Frontend-level settings or features that the DICE core respects:
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✕         |
+| Restart           | ✔         |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
