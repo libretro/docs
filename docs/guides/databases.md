@@ -36,7 +36,7 @@ __Bypass validation and rejection.__  To import your games into a playlist regar
 
 ### Key Field for Matching
 
-During [Playlist / Import Scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner) ("Directory Scan" and "Scan File" in RetroArch), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for matching varies by console typical file size (i.e. original media type).
+During [Playlist / Import Scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner) ("Directory Scan" and "Scan File" in menu), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for matching varies by console typical file size (i.e. original media type).
 
 - __CRC checksum__ for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.
 - __Serial Number__ for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.
