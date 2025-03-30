@@ -57,7 +57,7 @@ Currently there is no _automatic_ process that applies database game name change
 
 ## Troubleshooting
 
-_See also: the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
+_See also: RetroArch documentation for [Import Scanning](https://docs.libretro.com/guides/import-content/) and [Playlist Creation/Scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
 
 The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
 
