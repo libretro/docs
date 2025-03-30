@@ -119,7 +119,7 @@ Like [thumbnails](https://docs.libretro.com/guides/roms-playlists-thumbnails/#co
 
 ### Small-Scale Corrections
 
-See [database repository readme](https://github.com/libretro/libretro-database) to learn when/where small-scare corrections are appropriate.
+See [database repository readme](https://github.com/libretro/libretro-database#small-scale-corrections) to learn when/where small-scare corrections are appropriate.
 
 Two methods for adding data coverage for a single game or niche of games, via Pull Request proposal on github:
 
