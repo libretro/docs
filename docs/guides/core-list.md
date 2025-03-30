@@ -50,6 +50,7 @@
 | Daphne                    | Arcade                 |                    |
 | DeSmuME                   | Nintendo DS            |                    |
 | DeSmuME 2015              | Nintendo DS            |                    |
+| DICE                      | Arcade                 | Pre-CPU games like Pong |
 | Dinothawr                 | Game engine            | A push-the-block-in-a-straight-line puzzle game in the spirit of Kickle Cubicle |
 | DirectXbox                | Xbox                   |                    |
 | Dolphin                   | Nintendo GameCube/Wii  |                    |

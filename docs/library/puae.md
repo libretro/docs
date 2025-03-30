@@ -321,7 +321,7 @@ The virtual keyboard has these additional actions:
     - `CROP` = Toggle crop mode
     - `SVDS` = Create/Insert & remove save disk
 
-- Reset (Red key with undo icon, soft reset = Ctrl-Amiga-Amiga)
+- Reset (long press = soft reset, shifted = WHDLoad QuitKey)
 - Mouse controls (Left+right button, up, down, left, right)
 - Numpad key (Toggles numbers, arrows, Return etc. to numpad variants)
 
@@ -646,7 +646,8 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **WHDLoad NoWriteCache** [puae_use_whdload_nowritecache] (**disabled**|enabled)
 
-    Write save data immediately or on WHDLoad quit. Write cache enabled runs the core a few frames after frontend quit in order to trigger WHDLoad quit and flush the cache. Core restart required.
+    Write cache requires running the core a few frames after closing content to trigger WHDLoad quit and flush cache to disk. 
+    QuitKey = '$2b' = '#' = 'LCtrl + Backslash'. Core restart required.
 
 - **Global Boot HD** [puae_use_boot_hd] (**disabled**|files|hdf20|hdf40|hdf80|hdf128|hdf256|hdf512)
 
@@ -676,23 +677,27 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     - 'PAL': 50Hz - 288px / 576px
     - 'NTSC': 60Hz - 240px / 480px
 
-- **Pixel Aspect Ratio** [puae_video_aspect] (**auto**|PAL|NTSC)
+- **Pixel Aspect Ratio** [puae_video_aspect] (**auto**|PAL|NTSC|1:1)
 
     Hotkey toggling disables this option until core restart.
 
-    - 'PAL': 1/1 = 1.000
-    - 'NTSC': 44/52 = 0.846
+    - 'PAL': 26/25 = 1.04
+    - 'NTSC': 43/50 = 0.86
 
-- **Resolution** [puae_video_resolution] (**auto**|lores|hires|superhires)
+- **Resolution** [puae_video_resolution] (**auto**|auto-lores|auto-superhires|lores|hires|superhires)
 
-    'Automatic' defaults to 'High' and switches to 'Super-High' when needed.    
+    'Automatic' uses 'High' at minimum.
+    'Automatic (Low)' allows 'Low'.
+    'Automatic (Super-High)' sets max size already at startup.
 
-    | Value      | Label             |
-    |------------|-------------------|
-    | auto       | Automatic         |
-    | lores      | Low 360px         |
-    | hires      | High 720px        |
-    | superhires | Super-High 1440px |
+    | Value           | Label                  |
+    |-----------------|------------------------|
+    | auto            | Automatic              |
+    | auto-lores      | Automatic (Low)        |
+    | auto-superhires | Automatic (Super-High) |
+    | lores           | Low 360px              |
+    | hires           | High 720px             |
+    | superhires      | Super-High 1440px      |
 
 - **Line Mode** [puae_video_vresolution] (**auto**|single|double)
 
@@ -822,13 +827,17 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Required distance from stick center to register input.
 
-- **Analog Stick Mouse Speed** [puae_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
+- **Left Analog Stick Mouse Speed** [puae_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-    Mouse movement speed multiplier for analog stick.
+    Mouse speed for left analog stick.
 
-- **D-Pad Mouse Speed** [puae_dpadmouse_speed] (1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+- **Right Analog Stick Mouse Speed** [puae_analogmouse_speed_right] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|**1.0**|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)
 
-    Mouse movement speed multiplier for directional pad.
+    Mouse speed for right analog stick.
+
+- **D-Pad Mouse Speed** [puae_dpadmouse_speed] (0|1|2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18)
+
+    Mouse speed for directional pad.
 
 - **Mouse Speed** [puae_mouse_speed] (10|20|30|40|50|60|70|80|90|**100**|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300)
 

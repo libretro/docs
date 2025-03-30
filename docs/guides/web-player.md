@@ -1,10 +1,10 @@
 # What is it?
 
-It is a version that works on the modern internet browsers with the basic features of RetroArch. You don't need to install this version. You can add your content after selecting the desired Core.
+It is a version that works on modern internet browsers with the basic features of RetroArch. You don't need to install this version. You can add your content after selecting the desired Core.
 
 ## How to use it
 
-You can access it from this [link](https://web.libretro.com/) with using modern internet browsers (For example: Google Chrome, Microsoft Edge etc.).
+You can access it from this [link](https://web.libretro.com/) using a modern internet browser (For example: Google Chrome, Microsoft Edge etc.).
 
 !!! Warning
     Using an old internet browser may ruin the whole experience.
@@ -43,16 +43,10 @@ Beetle Lynx
 Beetle NeoPop
 Beetle PCE FAST
 Beetle PC-FX
-Beetle PSX
-Beetle SNES
 Beetle VB
 Beetle WonderSwan
-BlueMSX
 ChaiLove
 Craft
-DeSmuME
-DOSBox
-EasyRPG
 FB Alpha 2012
 FB Alpha 2012 CPS1
 FB Alpha 2012 CPS2
@@ -62,12 +56,10 @@ FFmpeg
 Gambatte
 Game Music Emu
 Genesi Plus GX
-GLupeN64
 gPSP
 Handy
 MAME 2000
 Mu
-Mupen64 Plus
 Nestopia
 NX Engine
 02em
@@ -81,12 +73,10 @@ Snes9x 2005
 Snes9x 2010
 Snes9x
 SquirrelJME
-Stella
 TGB Dual
 Theodore (Thompson T08/T09)
 TryQuake
 VBA Next
 Vecx
-Virtual Jaguar
 Yabause
 ```

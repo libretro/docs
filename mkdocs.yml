@@ -118,6 +118,7 @@ nav:
       - 'Apple':
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
+        - 'Arcade (DICE)': 'library/dice.md'
         - 'Arcade (FinalBurn Neo)': 'library/fbneo.md'
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'

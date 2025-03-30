@@ -13,6 +13,7 @@ This is a list of cores that are related to each other in some way.
 
 ## Arcade
 
+- [DICE](../library/dice.md)
 - [MAME 2003](../library/mame_2003.md)
 - [MAME 2003-Plus](../library/mame2003_plus.md)
 - [MAME 2010](../library/mame_2010.md)
