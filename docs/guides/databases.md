@@ -17,7 +17,9 @@ RetroArch uses the database to provide several automated cataloging functions:
 
 ## How the Import Scanner Uses the Database
 
-RetroArch automated scan ("Directory Scan" and "File Scan") will do the following:
+_See also: [Importing Content](https://docs.libretro.com/guides/import-content/) and [Creating Playlists](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._ 
+
+RetroArch's Import Content actions "Directory Scan" and "File Scan" will do the following:
 
 1. Compute a CRC checksum of the file(s) or scan for the in-game serial number. CRC and serial number are the [keys used for matching a game file to the database](#key-field-for-matching).
 1. Search for that CRC or serial in the information of the local `.rdb` files (default location `RetroArch/databases`). If the key is not found in databases, the file will __not__ be added to a playlist. See [Validation & Rejection](#validation-and-rejection).
@@ -55,7 +57,7 @@ Currently there is no _automatic_ process that applies database game name change
 
 ## Troubleshooting
 
-_Also see the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
+_See also: the RetroArch documentation for [import scanning](https://docs.libretro.com/guides/import-content/) and [playlist creation/scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._
 
 The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.
 
