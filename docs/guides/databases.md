@@ -11,7 +11,7 @@ RetroArch uses the database to provide several automated cataloging functions:
 
 - __Validation__. Reject or accept files when using the [Import Scanner / Playlist Generator](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists) based on whether the ROM checksum (or [other key](#key-field-for-matching)) matches the checksum of a known verified completely intact (aka  "properly dumped") file in the database.
 - __Game Naming__. Assign a definitive and uniform display name for each game in a playlist regardless of filename.  RetroArch will look up the `name` field specified for the file's [key](#key-field-for-matching) in the database.
-  - _Secondary_: __Thumbnail Images__. Download and display thumbnail images for games based on the uniform name assigned by the database, regardless of filename. (Thumbnails are __not__ directly assigned by the database or by checksum association, but as a secondary effect of databased *game name* assignment if a matching thumbnail is available on the server. Also see: [Flexible Name Matching Algorithm](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails).)
+    - _Secondary_: __Thumbnail Images__. Download and display thumbnail images for games based on the uniform name assigned by the database, regardless of filename. (Thumbnails are __not__ directly assigned by the database or by checksum association, but as a secondary effect of databased *game name* assignment if a matching thumbnail is available on the server. Also see: [Flexible Name Matching Algorithm](https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails).)
 - __Category Search ("Explore")__. Allows the user to find/view games that match selected criteria, e.g. by Developer, Release Year, Genre, and other attributes/metadata.
 - __Per-Game Information View__. Provide an in-app viewable informational screen for each game (Game > Information > Database Entry).
 
@@ -66,26 +66,26 @@ The information below is for Users who are interested in figuring out the cause 
 The most common user problems and solutions related to the database are:
 
 - __Missed files during import scan.__ I.e. automated Directory Scan or File Scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See [Validation & Rejection](#validation-and-rejection) above.
-  - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the files/games that are not yet covered by the database.
-  - Solution B: Use the __Manual Scan__ option, which will accept all files according to the chosen settings.
+    - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the files/games that are not yet covered by the database.
+    - Solution B: Use the __Manual Scan__ option, which will accept all files according to the chosen settings.
 - __Game Name error or incorrect information__. E.g. A game file receives a wrong title inside the RetroArch playlist/interface.
-  - Solution:
-    - Follow the [investigation steps](#investigating-database-issues) below to find the `.dat` file that has the erroneous information, and [contribute a correction](#how-to-contribute-to-databases).
-    - Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
+    - Solution:
+      - Follow the [investigation steps](#investigating-database-issues) below to find the `.dat` file that has the erroneous information, and [contribute a correction](#how-to-contribute-to-databases).
+      - Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
 - __Outdated Local Files__. I.e. an error(s) has been fixed in the libretro database but the fix has not yet been downloaded in the user's app install.
-  - Solution: Update your RetroArch databases (Main Menu > Online Updater > Update databases). That will apply recent fixes/corrections to your RetroArch install.
+    - Solution: Update your RetroArch databases (Main Menu > Online Updater > Update databases). That will apply recent fixes/corrections to your RetroArch install.
  
 ### Investigating Database Issues
 
 Follow the steps below to find the cause of a database or game/name identification issue:
 
 - __Learn about the factors that might be causing the Problem__
-  - Understand the multifaceted [.dat system](https://github.com/libretro/libretro-database#retroarch-database) and files.  Multiple different .dat files may have data for the same game.
-  - Understand [which key field](#key-field-for-matching) RetroArch uses for identifying your file and for searching for your file's info in the database.
-  - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
+    - Understand the multifaceted [.dat system](https://github.com/libretro/libretro-database#retroarch-database) and files.  Multiple different .dat files may have data for the same game.
+    - Understand [which key field](#key-field-for-matching) RetroArch uses for identifying your file and for searching for your file's info in the database.
+    - Understand [precedence](https://github.com/libretro/libretro-database#precedence) within the dat files in the repository.
 - __Verify data "on both sides"__
-  - __Verify your file properties.__ Verify your game file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
-  - __Verify libretro databases on github__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if you find a `.dat` that holds correct data for the game key (CRC or serial) in question, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may hold incorrect data that is over-ruling the correct data.
+    - __Verify your file properties.__ Verify your game file has the appropriate [key ID](#key-field-for-matching): compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.
+    - __Verify libretro databases on github__. Look in the repository databases to find which `.dat` file might hold incorrect data for the game file at issue.  Even if you find a `.dat` that holds correct data for the game key (CRC or serial) in question, a different dat with [precedence](https://github.com/libretro/libretro-database#precedence) may hold incorrect data that is over-ruling the correct data.
 - __Verify upstream data__ to find mismatches or pending corrections.  If an upstream database group (No-Intro, Redump, GameTDB, etc) is [responsible for the `.dat` at issue](https://github.com/libretro/libretro-database#sources), look on their websites to see whether their current information is correct or incorrect.
  
 ### Help Fix the Problem
@@ -95,12 +95,12 @@ After you've investigated the issue (see above), some possible actions are:
 - __Update__. Use _Main Menu > Online Updater > Update Databases_ to download new and possibly corrected data from the libretro server.
 - __[Contribute](#how-to-contribute-to-databases)__ a correction or addition of data to fix the issue. It may be possible to create an ad hoc database or to make a new entry within an existing ad hoc database.
 - __Use the [Issue Tracker](https://github.com/libretro/libretro-database/issues)__.
-  - __Search__ for existing issues on github that may hold useful advice or solutions for your problem.  Adding your new examples or insights to the discussion for the  problem may help Members/Contributors create a fix.
-  - __Open__ an Issue if a relevant one isn't already open.
-    - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
-      - You see a large-scale issue affecting many data entries or entire dats.
-      - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
-    - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).
+    - __Search__ for existing issues on github that may hold useful advice or solutions for your problem.  Adding your new examples or insights to the discussion for the  problem may help Members/Contributors create a fix.
+    - __Open__ an Issue if a relevant one isn't already open.
+      - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
+        - You see a large-scale issue affecting many data entries or entire dats.
+        - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  
+      - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).
 - __Submit Upstream Changes.__  Make changes upstream (No-Intro, Redump, GameTDB, etc) by going through the channels of the upstream group responsible for the data at issue __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction to "fix it at the source", though it may be possible to create alternative data coverage instead (see below).
  
 ## How to Contribute to Databases
@@ -124,15 +124,15 @@ See [database repository readme](https://github.com/libretro/libretro-database#s
 Two methods for adding data coverage for a single game or niche of games, via Pull Request proposal on github:
 
 - __Method A:__ Fix the dat at issue.  This is only possible if two conditions are met:
-  - 1. The `.dat` doesn't originate from an import from upstream _and_
-  - 2. The `.dat` won't receive subtractive sync over-writes in the future.
-  - _If those conditions are not met, the intended "fix" would be deleted by the next bulk import sync._
+    - 1. The `.dat` doesn't originate from an import from upstream _and_
+    - 2. The `.dat` won't receive subtractive sync over-writes in the future.
+    - _If those conditions are not met, the intended "fix" would be deleted by the next bulk import sync._
 
   _Or..._
   
 - __Method B:__ Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different [keys](#key-field-for-matching), or if the edited/corrected database has [precedence](https://github.com/libretro/libretro-database#precedence) over the erroneous database. If one of those conditions is _not_ met, then the attempted correction would fail: it would be over-ruled in the `.rdb` compile by the erroneous dat's information.  If one of those conditions is met, you may do one of following:
-  - Add a game data entry to an existing and appropriate ad hoc `.dat` in the repository.    
-  - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games because of the multi-faceted nature of the dat system.  Some limitations may be enforced by admins, e.g. for the manageability of the build script or the repository.
+    - Add a game data entry to an existing and appropriate ad hoc `.dat` in the repository.    
+    - Create a new ad hoc `.dat`. This is often acceptable even for a small number of games because of the multi-faceted nature of the dat system.  Some limitations may be enforced by admins, e.g. for the manageability of the build script or the repository.
 
 ### Large-Scale Additions
 
