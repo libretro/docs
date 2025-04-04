@@ -46,6 +46,7 @@ This will place the logs in the System Events Logs directory, visible in the "Di
 !!! tip
     You can hold `shift` then `right click` on the **folder that contains** retroarch.exe <br />
     Select `Open PowerShell window here`.<br />
+    In the PowerShell window, use the `cmd` command to switch to the Windows console.
     Then jump to step 3.
 
 1. Open a console window with the `cmd` command, found either in the Start Menu or through use of the Windows "Run" menu.
