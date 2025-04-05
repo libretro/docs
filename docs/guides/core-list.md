@@ -86,7 +86,7 @@
 | Flycast GLES2             | Sega Dreamcast/NAOMI   |                    |
 | fMSX                      | MSX/MSX2/MSX2+         |                    |
 | FreeChaF                  | Fairchild ChannelF     |                    |
-| FreeInv                   | Mattel Intellivision   |                    |
+| FreeIntv                  | Mattel Intellivision   |                    |
 | FreeJ2ME                  | J2ME                   | a port of Java 2 Micro Edition emulator |
 | Frodo                     | Commodore C64          |                    |
 | FS-UAE                    | Commodore Amiga        |                    |
