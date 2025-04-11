@@ -144,6 +144,9 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * support arcade hardware based on Sega Saturn (ST-V)
 * MAME is also able to emulate ST-V
 
+#### DICE
+* supports machines without any type of CPU
+
 ---
 
 ## Step 3: Use the correct version romsets for that emulator
@@ -162,6 +165,7 @@ Each file within a romset is the dump of a chip with a specific purpose (program
 
 | Emulator | Required ROM Version | ClrMamePro dat file |
 | :---: | :---: | :---: |
+| DICE | DICE 0.3.0 | [here](https://github.com/mittonk/dice-libretro/blob/main/dice_xml.dat) |
 | FB Neo | FBNeo (latest version) | [here](https://github.com/libretro/FBNeo/blob/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat) |
 | FB Alpha 2012 | FBA 0.2.97.24 | N/A |
 | MAME 2000 | MAME 0.37b5 | [here](https://github.com/libretro/mame2000-libretro/blob/master/metadata/MAME%200.37b5%20XML.dat) |
