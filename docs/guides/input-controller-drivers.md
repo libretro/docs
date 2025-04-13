@@ -39,11 +39,13 @@ The listing below is not complete, but on the rest of the platforms, there is us
 
 | Input driver | Conditions | Multi-mouse support | Pointer device | Lightgun device |
 |--------------|------------|---------------------|----------------|-----------------|
-| `x` | Desktop environment is X11, video driver is OpenGL (any version) or Vulkan | No | Yes | Yes |
+| `x` | Desktop environment is X11, video driver is OpenGL (any version) or Vulkan | Yes | Yes | Yes |
 | `wayland` | Desktop environment is Wayland, video driver is OpenGL (any version) or Vulkan | No | Yes | Yes, button map is fixed |
 | `sdl` | Video driver is sdl or sdl2 | No | Yes | Yes, button map is fixed |
 | `udev` | No desktop environment (KMS) or X11 | Yes | Yes | Yes |
 | `linuxraw` | No desktop environment (KMS) | No mouse support at all | No | No |
+
+Multi-mouse support for X11 was added after RetroArch 1.20.0 and requires that RetroArch is compiled with XInput library. Use `xinput create-master` and `xinput reattach` commands to set up a second pointer and assign the physical device.
 
 **Linux Controller Drivers**
 
