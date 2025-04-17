@@ -174,18 +174,6 @@ To make the new language usable with the RGUI menu driver:
 4. If a new language was added, it is important to compile RetroArch with the changes and ensure the new language works correctly with RGUI.
 5. If your language uses a different range of symbols, an RGUI compatible font must be added first. This is an extensive process, which is outside the scope of this article.
 
-### Enabling new languages in cores
-
-Adding a language to RetroArch does not automatically enable it for the core options.
-To do that for cores which have been added to Crowdin, follow these steps:
-
-1. Locate the `libretro.h` file and add a `RETRO_LANGUAGE_XXXXX` item to the `retro_language` enum exactly the same as was done for RetroArch.
-    1. Alternatively, overwrite this file with the `libretro-common/include/libretro.h` file from RetroArch's code.
-2. Locate the `libretro_core_options.h` file and open it.
-    1. Add `&options_xx,` at the end of the `retro_core_options_v2` struct. Remember to keep the same order as in the `retro_language` enum.
-
-> Adding cores to Crowdin is a whole other elaborate process and, currently, can only be performed by a Crowdin manager. Suggestions/Requests can be submitted on Discord to DisasterMo#0389.
-
 ### Narrator support
 
 1. For Mac. (compatible with **say**)
@@ -239,11 +227,6 @@ Be careful when creating and editing your new translation files, as some text ed
     * [Add Indonesian, Swedish and Ukrainian language options](https://github.com/libretro/RetroArch/commit/311fec15d9db10ab14c879e898a8205dd37f827c)
 
 * [List of merges related to adding languages](https://github.com/libretro/RetroArch/pulls?q=is%3Apr+is%3Amerged+in%3Atitle+add+language+option+)
-
-### Enabling new languages for cores
-
-* mgba:
-    * [Enable Indonesian, Swedish and Ukrainian localisations](https://github.com/libretro/mgba/commit/b0cdccc9ad2e5a8cd40ad4b9a3db1587d6f1560b)
 
 ## Translation
 

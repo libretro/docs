@@ -416,6 +416,7 @@ nav:
       - 'Core Development Overview': 'development/cores/developing-cores.md'
       - 'Dynamic Rate Control for Emulators': 'development/cores/dynamic-rate-control.md'
       - 'OpenGL Accelerated Cores': 'development/cores/opengl-cores.md'
+      - 'Core Options Translation': 'development/cores/core-options-translation.md'
       - 'Core-Specific Docs':
         - 'Nintendo - GameCube/Wii (Dolphin)': 'development/cores/core-specific/dolphin.md'
         - 'Nintendo - GameCube/Wii (Ishiiruka)': 'development/cores/core-specific/ishiiruka.md'
