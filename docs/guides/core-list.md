@@ -25,7 +25,7 @@
 | BK                        | BK-0010/BK-0011(M)/Terak 8510-a | A port of the PDP11 emulator to libretro. This core emulates the PDP-11/03 platform. |
 | BlastEm                   | Sega Genesis (Mega Drive) |                 |
 | blueMSX                   | MSX/SVI/ColecoVision/SG-1000 |              |
-| bnes                      | Nintendo NES/Famicom   |                    |
+| [bnes](../library/bnes.md) | Nintendo NES/Famicom   |                    |
 | boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
 | bsnes                     | Nintendo SNES/SFC      |                    |
