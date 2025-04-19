@@ -1,4 +1,4 @@
-#Nintendo - 3DS (Citra Canary/Experimental)
+# Nintendo - 3DS (Citra Canary/Experimental)
 
 ## Background
 
