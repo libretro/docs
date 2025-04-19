@@ -82,7 +82,7 @@ Frontend-level settings or features that the DICE core respects:
 | [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
-| Language          | ✕         |
+| Language          | ✔         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
@@ -102,9 +102,13 @@ Again, see .dmy files for games that do not use read-only memory.
 
 There are numerous options around using mice to simulate spinners / paddle
 controllers, see
-https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support .
+[mouse-support](https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support).
 
-These are still in flux.
+- Easy: One mouse can be used for Paddle 1. Use "Core Options -> Use mouse pointer for paddle 1". You'll still want a keyboard or gamepad handy to have enough buttons.
+
+- Somewhat advanced: Multiple mice are supported using certain libretro drivers on Linux and Windows, see [retromouse.md](https://github.com/mittonk/dice-libretro/blob/main/retromouse.md).
+
+
 
 ## User 1 device types
 
@@ -120,7 +124,7 @@ Most games are playable with just a joypad.  Controls vary by game.
 
 | RetroPad Inputs                                | User # input descriptors | (Device name) Inputs      |
 |------------------------------------------------|--------------------------|---------------------------|
-| ![](../image/retropad/retro_b.png)             | Button 2                 | -                         |
+| ![](../image/retropad/retro_b.png)             | Button 1                 | -                         |
 | ![](../image/retropad/retro_y.png)             | Button 3                 | -                         |
 | ![](../image/retropad/retro_select.png)        | Coin                     | -                         |
 | ![](../image/retropad/retro_start.png)         | Start                    | -                         |
@@ -128,7 +132,7 @@ Most games are playable with just a joypad.  Controls vary by game.
 | ![](../image/retropad/retro_dpad_down.png)     | Down                     | -                         |
 | ![](../image/retropad/retro_dpad_left.png)     | Left                     | -                         |
 | ![](../image/retropad/retro_dpad_right.png)    | Right                    | -                         |
-| ![](../image/retropad/retro_a.png)             | Button 1                 | -                         |
+| ![](../image/retropad/retro_a.png)             | Button 2                 | -                         |
 | ![](../image/retropad/retro_x.png)             |                          | -                         |
 | ![](../image/retropad/retro_l1.png)            | Dollar                   | -                         |
 | ![](../image/retropad/retro_r1.png)            |                          | -                         |
@@ -145,7 +149,7 @@ Most games are playable with just a joypad.  Controls vary by game.
 
 | RetroMouse Inputs                                     | (Device name) Inputs      |
 |-------------------------------------------------------|---------------------------|
-| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Paddle, see https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support                         |
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Paddle, see [mouse-support](https://github.com/mittonk/dice-libretro/?tab=readme-ov-file#mouse-support)                         |
 | ![](../image/retromouse/retro_left.png) Mouse 1       | -                         |
 | ![](../image/retromouse/retro_right.png) Mouse 2      | -                         |
 | ![](../image/retromouse/retro_middle.png) Mouse 3     | -                         |
