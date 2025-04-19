@@ -8,7 +8,7 @@
 | Ardens                    | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/)                  | Atari 5200             |                    |
-| Beetle bsnes              | Nintendo SNES/SFC      |                    |
+| [Beetle bsnes](../library/beetle_bsnes.md) | Nintendo SNES/SFC      |                    |
 | [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/)              | Bandai WonderSwan/Color |                   |
 | [Beetle GBA](../library/beetle_gba.md) | Game Boy Advance       |                    |
 | Beetle Lynx               | Atari Lynx             |                    |
@@ -21,7 +21,7 @@
 | Beetle Saturn             | Sega Saturn            |                    |
 | Beetle SuperGrafx         | NEC PC Engine/SuperGrafx |                  |
 | Beetle Supafaust          | Nintendo SNES/SFC      |                    |
-| Beetle VB                 | Nintendo Virtual Boy   |                    |
+| [Beetle VB](../library/beetle_vb.md) | Nintendo Virtual Boy   |                    |
 | BK                        | BK-0010/BK-0011(M)/Terak 8510-a | A port of the PDP11 emulator to libretro. This core emulates the PDP-11/03 platform. |
 | BlastEm                   | Sega Genesis (Mega Drive) |                 |
 | blueMSX                   | MSX/SVI/ColecoVision/SG-1000 |              |
@@ -29,14 +29,15 @@
 | boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
 | bsnes                     | Nintendo SNES/SFC      |                    |
-| bsnes 2014 Accuracy       | Nintendo SNES/SFC      |                    |
-| bsnes 2014 Balanced       | Nintendo SNES/SFC      |                    |
-| bsnes 2014 Performance    | Nintendo SNES/SFC      |                    |
-| bsnes C++98 (v085)        | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Accuracy](../library/bsnes_accuracy.md) | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Balanced](../library/bsnes_balanced.md) | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Performance](../library/bsnes_performance.md) | Nintendo SNES/SFC      |                    |
+| [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md) | Nintendo SNES/SFC      |                    |
 | bsnes-hd beta             | Nintendo SNES/SFC      |                    |
-| bsnes-mercury Accuracy    | Nintendo SNES/SFC      |                    |
-| bsnes-mercury Balanced    | Nintendo SNES/SFC      |                    |
-| bsnes-mercury Performance | Nintendo SNES/SFC      |                    |
+| [bsnes-jg](../library/bsnes-jg.md) | Nintendo SNES/SFC      |                    |
+| [bsnes-mercury Accuracy](../library/bsnes_mercury_accuracy.md) | Nintendo SNES/SFC      |                    |
+| [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md) | Nintendo SNES/SFC      |                    |
+| [bsnes-mercury Performance](../library/bsnes_mercury_performance.md) | Nintendo SNES/SFC      |                    |
 | Cannonball                | Game engine            | A port of the Cannonball, enhanced OutRun engine to libretro |
 | Caprice32                 | Amstrad CPC            |                    |
 | CDi 2015                  | Philips CDi            |                    |
@@ -104,7 +105,7 @@
 | Handy                     | Atari Lynx             |                    |
 | Hatari                    | Atari ST/STE/TT/Falcon |                    |
 | HBMAME                    | Arcade/Console/various | HBMAME (HomeBrew MAME) is a derivative of MAME, and contains various hacks and homebrews |
-| higan Accuracy            | Nintendo SNES/SFC/Game Boy/Color |          |
+| [higan Accuracy](../library/higan_accuracy.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
 | JAXE                      | CHIP-8/S-CHIP/XO-CHIP  |                    |
@@ -122,8 +123,8 @@
 | MAME 2010                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2015                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2016                 | Arcade/Console/various | (See MAME note)    |
-| melonDS 2021              | Nintendo DS            |                    |
-| melonDS DS                | Nintendo DS/DSi        | Enhanced remake of the melonDS core based on a newer version of the emulator. |
+| [melonDS 2021](../library/melonds.md) | Nintendo DS            |                    |
+| [melonDS DS](../library/melonds_ds.md) | Nintendo DS/DSi        | Enhanced remake of the melonDS core based on a newer version of the emulator. |
 | [Mesen](../library/mesen.md) | Nintendo NES/Famicom   |                    |
 | [Mesen-S](../library/mesen-s.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | MESS 2015                 | Multi (various)        | (See MAME note)    |
@@ -141,7 +142,7 @@
 | Neko Project II Kai       | NEC PC-98              |                    |
 | NeoCD                     | Neo Geo CD             |                    |
 | [Nestopia](../library/nestopia.md) | Nintendo NES/Famicom   |                    |
-| nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
+| [nSide Balanced](../library/nside_balanced.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | Numero                  | TI-83            | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
 | O2EM                      | Magnavox Odyssey2/Philips Videopac+ |      |
@@ -157,7 +158,7 @@
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
 | Pocket CDG                | Karaoke player         | A karaoke music player, ported to libretro |
-| PokeMini                  | Nintendo Pokemon Mini  |                    |
+| [PokeMini](../library/pokemini.md) | Nintendo Pokemon Mini  |                    |
 | Potator                   | Watara Supervision     |                    |
 | PPSSPP                    | PlayStation Portable   |                    |
 | PrBoom                    | Game engine            | A port of the PrBoom source port of iD's classic Doom engine |
@@ -177,33 +178,33 @@
 | [SameBoy](../library/sameboy.md) | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
 | SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
-| [ScummVM](https://docs.libretro.com/library/scummvm/)                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
+| [ScummVM](https://docs.libretro.com/library/scummvm/) | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
 | SimCoupe                  | SAM Coupe              |                    |
-| [SMS Plus GX](https://docs.libretro.com/library/smsplus/)               | Sega MS/GG             |                    |
-| [Snes9x](https://docs.libretro.com/library/snes9x/)                    | Nintendo SNES/SFC      |                    |
-| [Snes9x 2002](https://docs.libretro.com/library/snes9x_2002/)               | Nintendo SNES/SFC      |                    |
-| [Snes9x 2005](https://docs.libretro.com/library/snes9x_2005/)               | Nintendo SNES/SFC      |                    |
-| [Snes9x 2005 Plus](https://docs.libretro.com/library/snes9x_2005_plus/)          | Nintendo SNES/SFC      |                    |
-| [Snes9x 2010](https://docs.libretro.com/library/snes9x_2010/)               | Nintendo SNES/SFC      |                    |
+| [SMS Plus GX](https://docs.libretro.com/library/smsplus/) | Sega MS/GG             |                    |
+| [Snes9x](https://docs.libretro.com/library/snes9x/) | Nintendo SNES/SFC      |                    |
+| [Snes9x 2002](https://docs.libretro.com/library/snes9x_2002/) | Nintendo SNES/SFC      |                    |
+| [Snes9x 2005](https://docs.libretro.com/library/snes9x_2005/) | Nintendo SNES/SFC      |                    |
+| [Snes9x 2005 Plus](https://docs.libretro.com/library/snes9x_2005_plus/) | Nintendo SNES/SFC      |                    |
+| [Snes9x 2010](https://docs.libretro.com/library/snes9x_2010/) | Nintendo SNES/SFC      |                    |
 | SquirrelJME               | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
-| [Stella](https://docs.libretro.com/library/stella/)                    | Atari 2600             |                    |
+| [Stella](https://docs.libretro.com/library/stella/) | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the Duckstation emulator |
-| [TempGBA](https://docs.libretro.com/library/tempgba/)                   | Game Boy Advance       |                    |
-| [TGB Dual](https://docs.libretro.com/library/tgb_dual/)                  | Game Boy/Color         |                    |
-| [Theodore](https://docs.libretro.com/library/theodore/)                  | Thomson MO/TO          |                    |
+| [TempGBA](https://docs.libretro.com/library/tempgba/) | Game Boy Advance       |                    |
+| [TGB Dual](https://docs.libretro.com/library/tgb_dual/) | Game Boy/Color         |                    |
+| [Theodore](https://docs.libretro.com/library/theodore/) | Thomson MO/TO          |                    |
 | TIC-80                    | Game engine            | A port of the free and open source fantasy computer TIC-80 to libretro |
 | The Powder Toy            | Game                   | A port of the Powdertoy physics sandbox/simulation engine to libretro |
-| [TyrQuake](https://docs.libretro.com/library/tyrquake/)                  | Game engine            | A port of the tyrquake engine |
+| [TyrQuake](https://docs.libretro.com/library/tyrquake/) | Game engine            | A port of the tyrquake engine |
 | UAE4ARM                   | Commodore Amiga        |                    |
 | UME 2015                  | Arcade/Console/various | (See MAME note)    |
 | Uzem                      | Uzebox                 | A port of Uzem, the official emulator for the Uzebox |
 | VaporSpec                 | Game engine            | A virtual game platform with capabilities similar to 80s game consoles |
 | [VBA-M](../library/vba_m.md) | Game Boy Advance       | VisualBoy Advance-M is a active fork of VisualBoy Advance emulator |
-| [VBA Next](https://docs.libretro.com/library/vba_next/)                  | Game Boy Advance       |                    |
-| [vecx](https://docs.libretro.com/library/vecx/)                      | Vectrex                |                    |
-| [VeMUlator](https://docs.libretro.com/library/vemulator/)                  | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
+| [VBA Next](https://docs.libretro.com/library/vba_next/) | Game Boy Advance       |                    |
+| [vecx](https://docs.libretro.com/library/vecx/) | Vectrex                |                    |
+| [VeMUlator](https://docs.libretro.com/library/vemulator/) | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
 | VICE x64                  | Commodore C64          |                    |
 | VICE x64sc                | Commodore C64          |                    |
 | VICE x128                 | Commodore C128         |                    |
