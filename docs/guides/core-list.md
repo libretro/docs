@@ -142,13 +142,13 @@
 | NeoCD                     | Neo Geo CD             |                    |
 | Nestopia                  | Nintendo NES/Famicom   |                    |
 | nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
-| Numero                  | TI-83            | A TI-83 Emulator for Libretro |
+| Numero                    | TI-83                  | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
 | O2EM                      | Magnavox Odyssey2/Philips Videopac+ |      |
 | Oberon                    | Oberon RISC machine    | An emulator for the Oberon RISC machine, ported to libretro |
 | OpenLara                  | Game engine            | A port of the OpenLara free/open re-implementation of the engine used by the original Tomb Raider series |
 | OpenTyrian                | Game                   | A port of the OpenTyrian clone of the classic Tyrian shmup, ported to libretro |
-| Opera                     | 3DO                    |                    |
+| [Opera](https://docs.libretro.com/library/opera/)             | 3DO                    |                    |
 | ParaLLEl N64              | Nintendo 64            |                    |
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
