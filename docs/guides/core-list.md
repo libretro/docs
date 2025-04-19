@@ -10,7 +10,7 @@
 | [Atari800](https://docs.libretro.com/library/atari800/)                  | Atari 5200             |                    |
 | Beetle bsnes              | Nintendo SNES/SFC      |                    |
 | [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/)              | Bandai WonderSwan/Color |                   |
-| Beetle GBA                | Game Boy Advance       |                    |
+| [Beetle GBA](../library/beetle_gba.md) | Game Boy Advance       |                    |
 | Beetle Lynx               | Atari Lynx             |                    |
 | Beetle NeoPop             | Neo Geo Pocket/Color   |                    |
 | Beetle PC-FX              | NEC PC-FX              |                    |
@@ -41,32 +41,32 @@
 | Caprice32                 | Amstrad CPC            |                    |
 | CDi 2015                  | Philips CDi            |                    |
 | ChaiLove                  | Game engine            | A free, open-source framework used to make 2D games in ChaiScript |
-| Citra                     | Nintendo 3DS           |                    |
+| [Citra](../library/citra.md) | Nintendo 3DS           |                    |
 | Citra 2018                | Nintendo 3DS           |                    |
-| Citra Canary              | Nintendo 3DS           | Based on Citra development branch |
+| [Citra Canary](../library/citra_canary.md) | Nintendo 3DS           | Based on Citra development branch |
 | Craft                     | Game                   | A basic clone of the Minecraft sandbox game |
 | CrocoDS                   | Amstrad CPC            |                    |
 | Cruzes                    | Game                   | (Further information required) |
 | Daphne                    | Arcade                 |                    |
-| DeSmuME                   | Nintendo DS            |                    |
-| DeSmuME 2015              | Nintendo DS            |                    |
+| [DeSmuME](../library/desmume.md) | Nintendo DS            |                    |
+| [DeSmuME 2015](../library/desmume_2015.md) | Nintendo DS            |                    |
 | DICE                      | Arcade                 | Pre-CPU games like Pong |
 | Dinothawr                 | Game engine            | A push-the-block-in-a-straight-line puzzle game in the spirit of Kickle Cubicle |
 | DirectXbox                | Xbox                   |                    |
-| Dolphin                   | Nintendo GameCube/Wii  |                    |
+| [Dolphin](../library/dolphin.md) | Nintendo GameCube/Wii  |                    |
 | DOSBox                    | DOS                    |                    |
 | DOSBox-core               | DOS                    | Provides some improvements over the DOSBox-SVN trunk, including native MIDI support, cycle-accurate OPL3 (YMF262) emulation, MT-32 emulation and experimental 3dfx Voodoo support |
 | DOSBox-Pure               | DOS                    | A port of DOSBox with a goal of simplicty and ease of use and gameplay. This core includes a streamlined workflow for launching games directly from ZIP archives with automated mapping of controls to gamepads and a native onscreen keyboard. |
 | DOSBox-SVN                | DOS                    | This core is based on DOSBox-SVN trunk and allows on-the-fly configuration and different sync methods |
-| [doukutsu-rs](../library/doukutsu-rs.md)             | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
+| [doukutsu-rs](../library/doukutsu-rs.md) | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
 | DuckStation               | Sony PlayStation       |                    |
 | Dungeon Crawl Stone Soup  | Game                   | A preliminary port of the Dungeon Crawl Stone Soup strategy game |
 | EasyRPG                   | RPG Maker 2000/2003    |                    |
 | ECWolf                    | Game engine            | A port of the Wolfenstein 3D engine to libretro |
 | EighyOne                  | Sinclair ZX 81         |                    |
 | Emux CHIP-8               | CHIP-8                 |                    |
-| Emux GB                   | Game Boy/Color         |                    |
-| Emux NES                  | Nintendo NES/Famicom   |                    |
+| [Emux GB](../library/emux_gb.md) | Game Boy/Color         |                    |
+| [Emux NES](../library/emux_nes.md) | Nintendo NES/Famicom   |                    |
 | Emux SMS                  | Sega Master System     |                    |
 | EmuSCV                    | Super Cassette Vision  |                    |
 | Ep128emu                  | Enterprise 128         |                    |
@@ -78,7 +78,7 @@
 | FB Alpha 2012 CPS-3       | CPS-3                  |                    |
 | FB Alpha 2012 Neo Geo     | Neo Geo                |                    |
 | FB Neo                    | Arcade/Console/various | Full list of supported systems: https://github.com/finalburnneo/FBNeo/wiki |
-| FCEUmm                    | Nintendo NES/Famicom   |                    |
+| [FCEUmm](../library/fceumm.md) | Nintendo NES/Famicom   |                    |
 | FFmpeg                    | Media player           | A port of FFmpeg library which allows playback of a variety of audio and video formats |
 | fixGB                     | Game Boy/Color         |                    |
 | fixNES                    | Nintendo NES/Famicom   |                    |
@@ -91,14 +91,14 @@
 | Frodo                     | Commodore C64          |                    |
 | FS-UAE                    | Commodore Amiga        |                    |
 | Fuse                      | Sinclair ZX Spectrum   |                    |
-| Gambatte                  | Game Boy/Color         |                    |
+| [Gambatte](../library/gambatte.md) | Game Boy/Color         |                    |
 | Game Music Emu            | Music player           | A port of Game Music Emu which allows playback of a wide variety of video game music formats |
-| Gearboy                   | Game Boy/Color         |                    |
+| [Gearboy](../library/gearboy.md) | Game Boy/Color         |                    |
 | Gearcoleco                | Coleco ColecoVision    |                    |
 | Gearsystem                | Sega MS/GG/SG-1000     |                    |
 | Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
 | Geolith                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
-| gpSP                      | Game Boy Advance       |                    |
+| [gpSP](../library/gpsp.md) | Game Boy Advance       |                    |
 | Gong                      | Game                   | A clone of Pong written for libretro |
 | GW                        | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |
 | Handy                     | Atari Lynx             |                    |
@@ -124,11 +124,11 @@
 | MAME 2016                 | Arcade/Console/various | (See MAME note)    |
 | melonDS 2021              | Nintendo DS            |                    |
 | melonDS DS                | Nintendo DS/DSi        | Enhanced remake of the melonDS core based on a newer version of the emulator. |
-| Mesen                     | Nintendo NES/Famicom   |                    |
-| Mesen-S                   | Nintendo SNES/SFC/Game Boy/Color |          |
+| [Mesen](../library/mesen.md) | Nintendo NES/Famicom   |                    |
+| [Mesen-S](../library/mesen-s.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | MESS 2015                 | Multi (various)        | (See MAME note)    |
-| Meteor                    | Game Boy Advance       |                    |
-| mGBA                      | Game Boy Advance       |                    |
+| [Meteor](../library/meteor.md) | Game Boy Advance       |                    |
+| [mGBA](../library/mgba.md) | Game Boy Advance       |                    |
 | Microw8                   | Game engine            | A port of a WebAssembly based fantasy console to libretro |
 | Minivmac                  | Mac II                 | MacII variant of minivmac emulator |
 | mpv                       | Media player           | An port of MPV media player to libretro |
@@ -140,7 +140,7 @@
 | Neko Project II           | NEC PC-98              |                    |
 | Neko Project II Kai       | NEC PC-98              |                    |
 | NeoCD                     | Neo Geo CD             |                    |
-| Nestopia                  | Nintendo NES/Famicom   |                    |
+| [Nestopia](../library/nestopia.md) | Nintendo NES/Famicom   |                    |
 | nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
 | Numero                  | TI-83            | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
@@ -167,14 +167,14 @@
 | PuzzleScript              | Game engine            | A port of PuzzleScript, open source HTML5 puzzle game engine |
 | PX68k                     | Sharp X68000           |                    |
 | QUASI88                   | NEC PC-8000/PC-8800 series |                |
-| QuickNES                  | Nintendo NES/Famicom   |                    |
+| [QuickNES](../library/quicknes.md) | Nintendo NES/Famicom   |                    |
 | RACE                      | Neo Geo Pocket/Color   |                    |
 | Redbook                   | Music player           | A libretro core for playing back Redbook-formatted audio, such as commercial audio CDs |
 | REminiscence              | Game engine            | A port of the REminiscence engine, a reimplementation of the engine used by Delphine Software's Flashback |
 | Retro8                    | Game engine            | A port of the Retro8 open-source reimplementation of the PICO-8 fantasy console to libretro |
 | Rustation                 | Sony PlayStation       |                    |
 | RVVM                      | RISC-V Virtual Machine |                    |
-| SameBoy                   | Game Boy/Color         |                    |
+| [SameBoy](../library/sameboy.md) | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
 | SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
 | [ScummVM](https://docs.libretro.com/library/scummvm/)                   | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
@@ -200,7 +200,7 @@
 | UME 2015                  | Arcade/Console/various | (See MAME note)    |
 | Uzem                      | Uzebox                 | A port of Uzem, the official emulator for the Uzebox |
 | VaporSpec                 | Game engine            | A virtual game platform with capabilities similar to 80s game consoles |
-| VBA-M                     | Game Boy Advance       | VisualBoy Advance-M is a active fork of VisualBoy Advance emulator |
+| [VBA-M](../library/vba_m.md) | Game Boy Advance       | VisualBoy Advance-M is a active fork of VisualBoy Advance emulator |
 | [VBA Next](https://docs.libretro.com/library/vba_next/)                  | Game Boy Advance       |                    |
 | [vecx](https://docs.libretro.com/library/vecx/)                      | Vectrex                |                    |
 | [VeMUlator](https://docs.libretro.com/library/vemulator/)                  | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
