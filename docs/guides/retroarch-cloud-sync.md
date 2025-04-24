@@ -1,6 +1,6 @@
 # What is it?
 
-RetroArch Cloud Sync is available in recent RetroArch Nighties and enables a seamless synchronization of the most important system configuration and save data to a dedicated private webdav server, from where these data can be synchronized across Apple devices. The current functionality is limited to Apple devices (MacOS, iOS, tvOS) because it was developed here. It can be deployed to other RetroArch operating systems, if a developer is interested in this work.
+RetroArch Cloud Sync enables a seamless synchronization of the most important system configuration and save data to a dedicated private webdav server, from where these data can be synchronized across your devices.
 
 RetroArch Cloud Sync currently syncs all data from the following directories:
 
