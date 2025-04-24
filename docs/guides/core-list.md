@@ -142,7 +142,7 @@
 | NeoCD                     | Neo Geo CD             |                    |
 | Nestopia                  | Nintendo NES/Famicom   |                    |
 | nSide Balanced            | Nintendo SNES/SFC/Game Boy/Color |          |
-| Numero                    | TI-83                  | A TI-83 Emulator for Libretro |
+| Numero                  | TI-83            | A TI-83 Emulator for Libretro |
 | NXEngine                  | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
 | O2EM                      | Magnavox Odyssey2/Philips Videopac+ |      |
 | Oberon                    | Oberon RISC machine    | An emulator for the Oberon RISC machine, ported to libretro |
