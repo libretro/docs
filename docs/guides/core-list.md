@@ -1,15 +1,16 @@
 | Core                      | System/Machine         | Notes              |
 | :---                      | :---                   | :---               |
-| [2048](https://docs.libretro.com/library/2048/)                      | Game                   | A port of the popular puzzle game 2048 to libretro |
+| [2048](https://docs.libretro.com/library/2048/) | Game                   | A port of the popular puzzle game 2048 to libretro |
 | 3D Engine                 | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
-| [4DO](https://docs.libretro.com/library/opera/)                       | 3DO                    |                    |
+| [4DO](https://docs.libretro.com/library/opera/) | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
 | Anarch                    | Game                   | A port of Anarch, 90s-style Doom clone shooter game |
 | Ardens                    | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
-| [Atari800](https://docs.libretro.com/library/atari800/)                  | Atari 5200             |                    |
+| [Atari800](https://docs.libretro.com/library/atari800/) | Atari 5200             |                    |
+| [b2](../library/b2.md)    | Acorn BBC Micro        |                    |
 | [Beetle bsnes](../library/beetle_bsnes.md) | Nintendo SNES/SFC      |                    |
-| [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/)              | Bandai WonderSwan/Color |                   |
+| [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/) | Bandai WonderSwan/Color |                   |
 | [Beetle GBA](../library/beetle_gba.md) | Game Boy Advance       |                    |
 | Beetle Lynx               | Atari Lynx             |                    |
 | Beetle NeoPop             | Neo Geo Pocket/Color   |                    |
@@ -39,19 +40,19 @@
 | [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md) | Nintendo SNES/SFC      |                    |
 | [bsnes-mercury Performance](../library/bsnes_mercury_performance.md) | Nintendo SNES/SFC      |                    |
 | Cannonball                | Game engine            | A port of the Cannonball, enhanced OutRun engine to libretro |
-| Caprice32                 | Amstrad CPC            |                    |
+| [Caprice32](../library/caprice32.md) | Amstrad CPC            |                    |
 | CDi 2015                  | Philips CDi            |                    |
 | ChaiLove                  | Game engine            | A free, open-source framework used to make 2D games in ChaiScript |
 | [Citra](../library/citra.md) | Nintendo 3DS           |                    |
 | Citra 2018                | Nintendo 3DS           |                    |
 | [Citra Canary](../library/citra_canary.md) | Nintendo 3DS           | Based on Citra development branch |
 | Craft                     | Game                   | A basic clone of the Minecraft sandbox game |
-| CrocoDS                   | Amstrad CPC            |                    |
+| [CrocoDS](../library/crocods.md) | Amstrad CPC            |                    |
 | Cruzes                    | Game                   | (Further information required) |
 | Daphne                    | Arcade                 |                    |
 | [DeSmuME](../library/desmume.md) | Nintendo DS            |                    |
 | [DeSmuME 2015](../library/desmume_2015.md) | Nintendo DS            |                    |
-| DICE                      | Arcade                 | Pre-CPU games like Pong |
+| [DICE](../library/dice.md) | Arcade                 | Pre-CPU games like Pong |
 | Dinothawr                 | Game engine            | A push-the-block-in-a-straight-line puzzle game in the spirit of Kickle Cubicle |
 | DirectXbox                | Xbox                   |                    |
 | [Dolphin](../library/dolphin.md) | Nintendo GameCube/Wii  |                    |
@@ -78,7 +79,7 @@
 | FB Alpha 2012 CPS-2       | CPS-2                  |                    |
 | FB Alpha 2012 CPS-3       | CPS-3                  |                    |
 | FB Alpha 2012 Neo Geo     | Neo Geo                |                    |
-| FB Neo                    | Arcade/Console/various | Full list of supported systems: https://github.com/finalburnneo/FBNeo/wiki |
+| [FB Neo](../library/fbneo.md) | Arcade/Console/various | Full list of supported systems: https://github.com/finalburnneo/FBNeo/wiki |
 | [FCEUmm](../library/fceumm.md) | Nintendo NES/Famicom   |                    |
 | FFmpeg                    | Media player           | A port of FFmpeg library which allows playback of a variety of audio and video formats |
 | fixGB                     | Game Boy/Color         |                    |
@@ -116,11 +117,11 @@
 | M2000                     | Philips P2000T         | A port of M2000, the portable Philips P2000 emulator to libretro |
 | MAME (Current)            | Arcade/Console/various | Based on MAME development branch. Full list of supported systems: http://adb.arcadeitalia.net/mame.php |
 | MAME 2000                 | Arcade/Console/various | (See MAME note)    |
-| MAME 2003                 | Arcade/Console/various | (See MAME note)    |
+| [MAME 2003](../library/mame_2003.md) | Arcade/Console/various | (See MAME note)    |
 | MAME 2003 Midway          | Arcade/Console/various | (See MAME note)    |
-| MAME 2003-Plus            | Arcade/Console/various | (See MAME note)    |
+| [MAME 2003-Plus](../library/mame2003_plus.md) | Arcade/Console/various | (See MAME note)    |
 | MAME 2009                 | Arcade/Console/various | (See MAME note)    |
-| MAME 2010                 | Arcade/Console/various | (See MAME note)    |
+| [MAME 2010](../library/mame_2010.md) | Arcade/Console/various | (See MAME note)    |
 | MAME 2015                 | Arcade/Console/various | (See MAME note)    |
 | MAME 2016                 | Arcade/Console/various | (See MAME note)    |
 | [melonDS 2021](../library/melonds.md) | Nintendo DS            |                    |
@@ -131,7 +132,7 @@
 | [Meteor](../library/meteor.md) | Game Boy Advance       |                    |
 | [mGBA](../library/mgba.md) | Game Boy Advance       |                    |
 | Microw8                   | Game engine            | A port of a WebAssembly based fantasy console to libretro |
-| Minivmac                  | Mac II                 | MacII variant of minivmac emulator |
+| [Minivmac](../library/minivmac.md) | Mac II                 | MacII variant of minivmac emulator |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
@@ -177,7 +178,7 @@
 | RVVM                      | RISC-V Virtual Machine |                    |
 | [SameBoy](../library/sameboy.md) | Game Boy/Color         |                    |
 | SameDuck                  | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
-| SAME CDI                  | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
+| [SAME CDI](../library/same_cdi.md) | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
 | [ScummVM](https://docs.libretro.com/library/scummvm/) | Game engine            | A fork of the ScummVM adventure game engine ported to libretro |
 | SimCoupe                  | SAM Coupe              |                    |
 | [SMS Plus GX](https://docs.libretro.com/library/smsplus/) | Sega MS/GG             |                    |
