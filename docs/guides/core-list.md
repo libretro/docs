@@ -5,14 +5,14 @@
 | [4DO](https://docs.libretro.com/library/opera/) | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
 | Anarch                    | Game                   | A port of Anarch, 90s-style Doom clone shooter game |
-| Ardens                    | Arduboy                | A simulator for the Arduboy FX |
+| [Ardens](../library/ardens.md) | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/) | Atari 5200             |                    |
 | [b2](../library/b2.md)    | Acorn BBC Micro        |                    |
 | [Beetle bsnes](../library/beetle_bsnes.md) | Nintendo SNES/SFC      |                    |
 | [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/) | Bandai WonderSwan/Color |                   |
 | [Beetle GBA](../library/beetle_gba.md) | Game Boy Advance       |                    |
-| Beetle Lynx               | Atari Lynx             |                    |
+| [Beetle Lynx](../library/beetle_lynx.md) | Atari Lynx             |                    |
 | Beetle NeoPop             | Neo Geo Pocket/Color   |                    |
 | Beetle PC-FX              | NEC PC-FX              |                    |
 | Beetle PCE                | NEC PC Engine/SuperGrafx/CD |               |
@@ -25,7 +25,7 @@
 | [Beetle VB](../library/beetle_vb.md) | Nintendo Virtual Boy   |                    |
 | BK                        | BK-0010/BK-0011(M)/Terak 8510-a | A port of the PDP11 emulator to libretro. This core emulates the PDP-11/03 platform. |
 | BlastEm                   | Sega Genesis (Mega Drive) |                 |
-| blueMSX                   | MSX/SVI/ColecoVision/SG-1000 |              |
+| [blueMSX](../library/bluemsx.md) | MSX/SVI/ColecoVision/SG-1000 |              |
 | [bnes](../library/bnes.md) | Nintendo NES/Famicom   |                    |
 | boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
@@ -96,17 +96,18 @@
 | [Gambatte](../library/gambatte.md) | Game Boy/Color         |                    |
 | Game Music Emu            | Music player           | A port of Game Music Emu which allows playback of a wide variety of video game music formats |
 | [Gearboy](../library/gearboy.md) | Game Boy/Color         |                    |
-| Gearcoleco                | Coleco ColecoVision    |                    |
+| [Gearcoleco](../library/gearcoleco.md) | Coleco ColecoVision    |                    |
 | Gearsystem                | Sega MS/GG/SG-1000     |                    |
 | Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
 | Geolith                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
 | [gpSP](../library/gpsp.md) | Game Boy Advance       |                    |
 | Gong                      | Game                   | A clone of Pong written for libretro |
 | GW                        | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |
-| Handy                     | Atari Lynx             |                    |
-| Hatari                    | Atari ST/STE/TT/Falcon |                    |
+| [Handy](../library/handy.md) | Atari Lynx             |                    |
+| [Hatari](../library/hatari.md) | Atari ST/STE/TT/Falcon |                    |
 | HBMAME                    | Arcade/Console/various | HBMAME (HomeBrew MAME) is a derivative of MAME, and contains various hacks and homebrews |
 | [higan Accuracy](../library/higan_accuracy.md) | Nintendo SNES/SFC/Game Boy/Color |          |
+| [Holani](../library/holani.md) | Atari Lynx             |                    |
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
 | JAXE                      | CHIP-8/S-CHIP/XO-CHIP  |                    |
@@ -163,9 +164,9 @@
 | Potator                   | Watara Supervision     |                    |
 | PPSSPP                    | PlayStation Portable   |                    |
 | PrBoom                    | Game engine            | A port of the PrBoom source port of iD's classic Doom engine |
-| ProSystem                 | Atari 7800             |                    |
-| PUAE                      | Commodore Amiga        |                    |
-| PUAE 2021                 | Commodore Amiga        |                    |
+| [ProSystem](../library/prosystem.md) | Atari 7800             |                    |
+| [PUAE](../library/puae.md) | Commodore Amiga        |                    |
+| [PUAE 2021](../library/puae.md) | Commodore Amiga        |                    |
 | PuzzleScript              | Game engine            | A port of PuzzleScript, open source HTML5 puzzle game engine |
 | PX68k                     | Sharp X68000           |                    |
 | QUASI88                   | NEC PC-8000/PC-8800 series |                |
@@ -206,17 +207,18 @@
 | [VBA Next](https://docs.libretro.com/library/vba_next/) | Game Boy Advance       |                    |
 | [vecx](https://docs.libretro.com/library/vecx/) | Vectrex                |                    |
 | [VeMUlator](https://docs.libretro.com/library/vemulator/) | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
-| VICE x64                  | Commodore C64          |                    |
-| VICE x64sc                | Commodore C64          |                    |
-| VICE x128                 | Commodore C128         |                    |
-| VICE xcbm2                | Commodore CBM-II 6x0/7x0 |                  |
-| VICE xcbm5x0              | Commodore CBM-II 5x0   |                    |
-| VICE xpet                 | Commodore PET          |                    |
-| VICE xplus4               | Commodore Plus/4       |                    |
-| VICE xscpu64              | Commodore C64 SuperCPU |                    |
-| VICE xvic                 | Commodore VIC-20       |                    |
+| [VICE x64](../library/vice.md) | Commodore C64          |                    |
+| [VICE x64dtv](../library/vice.md) | Commodore C64DTV        | DTV2 PAL/NTSC, DTV3 PAL/NTSC, HUMMER NTSC |
+| [VICE x64sc](../library/vice.md) | Commodore C64          |                    |
+| [VICE x128](../library/vice.md) | Commodore C128         |                    |
+| [VICE xcbm2](../library/vice.md) | Commodore CBM-II 6x0/7x0 |                  |
+| [VICE xcbm5x0](../library/vice.md) | Commodore CBM-II 5x0   |                    |
+| [VICE xpet](../library/vice.md) | Commodore PET          |                    |
+| [VICE xplus4](../library/vice.md) | Commodore Plus/4       |                    |
+| [VICE xscpu64](../library/vice.md) | Commodore C64 SuperCPU |                    |
+| [VICE xvic](../library/vice.md) | Commodore VIC-20       |                    |
 | Vircon32                  | Game engine            | A port of Vircon32 game console to libretro |
-| Virtual Jaguar            | Atari Jaguar           |                    |
+| [Virtual Jaguar](../library/virtual_jaguar.md) | Atari Jaguar           |                    |
 | VirtualXT                 | DOS                    | Runns PC/XT class software. Mainly intended for PC booters from the 80's. |
 | vitaQuake 2               | Game engine            | A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro. There is a separate core for each of the Quake 2 mission packs, 'Rogue', 'Zaero' and 'Xatrix'. |
 | vitaQuake 2 (Rogue)       | Game engine            | (See vitaQuake 2 note) |
