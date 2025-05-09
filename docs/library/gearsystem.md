@@ -5,7 +5,7 @@
 Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
 
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000 and many Korean multi-carts.
+- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000, and many Korean multi-carts.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
@@ -123,13 +123,13 @@ The Gearsystem core saves/loads to/from these directories.
 
 The Gearsystem core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear|SG-1000 / Multivision)
 
 	Select which hardware/model is emulated.
 
-    - *Auto* selects the best hardware based in the rom.
+    - *Auto* selects the best hardware based on the rom.
     - *Master System / Mark III* forces original Master System / Mark III hardware.
     - *Game Gear* forces Game Gear hardware.
     - *SG-1000 / Multivision* forces SG-1000 / Multivision hardware.
@@ -138,7 +138,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select which region is emulated.
 
-    - *Auto* selects the best region based in the rom.
+    - *Auto* selects the best region based on the rom.
     - *Master System Japan* forces Master System Japan region.
     - *Master System Export* forces Master System Export region.
     - *Game Gear Japan* forces Game Gear Japan region.
@@ -149,7 +149,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select which mapper (memory bank controller) is emulated.
 
-    - *Auto* selects the best mapper based in the rom.
+    - *Auto* selects the best mapper based on the rom.
     - *ROM* forces no mapper.
     - *SEGA* forces SEGA mapper.
     - *Codemasters* forces Codemasters mapper.
@@ -160,7 +160,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select which refresh rate will be used in emulation.
 
-    - *Auto* selects the best refresh rate based in the rom.
+    - *Auto* selects the best refresh rate based on the rom.
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
@@ -187,22 +187,22 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     Select when to hide the left bar in Master System games.
 
     - *No* never hides the left bar.
-    - *Auto* hides the left bar when the the bar is detected.
+    - *Auto* hides the left bar when the bar is detected.
     - *Always* always hides the left bar even if no left bar is detected.
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
-	This option will enable/disable BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in the Retro Arch's system directory.
+	This option will enables/disables BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in RetroArch's system directory.
 
 - **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
 
-	This option will enable/disable BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the Retro Arch's system directory.
+	This option will enables/disables BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the RetroArch's system directory.
 
 - **YM2413 (restart)** [gearsystem_ym2413] (**Auto**|Disabled)
 
-	This option will enable/disable YM2413 (OPLL) FM sound chip.
+	This option will enables/disables YM2413 (OPLL) FM sound chip.
 
-    - *Auto* selects the best option based in the rom.
+    - *Auto* selects the best option based on the rom.
     - *Disabled* disables YM2413.
 
 - **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
@@ -215,7 +215,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Allow Up+Down / Left+Right** [gearsystem_up_down_allowed] (**Disabled**|Enabled)
 
-	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+	Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
 
 	This may cause movement based glitches to occur in certain games.
 
@@ -236,7 +236,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Select the shape of the crosshair for Light Phaser games.
 
-- **ight Gun Crosshair Color** [gearsystem_lightgun_color] (**White**|Black|Red|Green|Blue|Yellow|Magenta|Cyan)
+- **Light Gun Crosshair Color** [gearsystem_lightgun_color] (**White**|Black|Red|Green|Blue|Yellow|Magenta|Cyan)
 
     Select the color of the crosshair for Light Phaser games.
 

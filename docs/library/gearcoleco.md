@@ -22,7 +22,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Gearcoleco require a BIOS file to work.
+Gearcoleco requires a BIOS file to work.
 
 Required or optional firmware files go in the frontend's system directory.
 
@@ -107,13 +107,13 @@ The Gearcoleco core saves/loads to/from these directories.
 
 The Gearcoleco core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Refresh Rate (restart)** [gearcoleco_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
 
     Select which refresh rate will be used in emulation.
 
-    - *Auto* selects the best refresh rate based in the rom.
+    - *Auto* selects the best refresh rate based on the rom.
     - *NTSC (60 Hz)* forces 60 Hz.
     - *PAL (50 Hz)* forces 50 Hz.
 
@@ -137,7 +137,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Allow Up+Down / Left+Right** [gearcoleco_up_down_allowed] (**Disabled**|Enabled)
 
-    Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+    Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
 
     This may cause movement based glitches to occur in certain games.
 

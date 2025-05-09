@@ -121,13 +121,13 @@ The Gearboy core saves/loads to/from these directories.
 
 The Gearboy core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
 - **Game Boy Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
 
 	Select which hardware/model is emulated.
 
-    - *Auto* selects the best hardware based in the rom.
+    - *Auto* selects the best hardware based on the rom.
     - *Game Boy DMG* forces original Game Boy hardware.
     - *Game Boy Advance* enables Game Boy Advance hardware.
 
@@ -135,7 +135,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Select which Memory Bank Controller (MBC or mapper) is emulated.
 
-    - *Auto* selects the best MBC based in the rom.
+    - *Auto* selects the best MBC based on the rom.
     - *ROM Only* forces no MBC.
     - *MBC 1* forces MBC 1.
     - *MBC 2* forces MBC 2.
@@ -149,15 +149,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **DMG Bootrom** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
 
-	This option will enable/disable bootrom for Game Boy DMG model. For this to work, the `dmg_boot.bin` file must exist in the Retro Arch's system directory.
+	This option will enables/disables bootrom for Game Boy DMG model. For this to work, the `dmg_boot.bin` file must exist in Retro Arch's system directory.
 
 - **Game Boy Color Bootrom** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
 
-	This option will enable/disable bootrom for Game Boy Color model. For this to work, the `cgb_boot.bin` file must exist in the Retro Arch's system directory.
+	This option will enables/disables bootrom for Game Boy Color model. For this to work, the `cgb_boot.bin` file must exist in Retro Arch's system directory.
 
 - **Allow Up+Down / Left+Right** [gearboy_up_down_allowed] (**Disabled**|Enabled)
 
-	Enabling this will allow pressing / quickly alternating / holding both left and right (or up and down in some games) directions at the same time.
+	Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
 
 	This may cause movement based glitches to occur in certain games.
 

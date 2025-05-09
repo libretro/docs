@@ -116,7 +116,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✕         |       |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✕         |       |
-| [Gearcoleco](https://github.com/drhelius/Gearcoleco)    | ✕         |       |
+| [Gearcoleco](https://github.com/drhelius/Gearcoleco)    | ✔         |       |
 
 ### GCE
 
@@ -161,6 +161,7 @@ You can also check the progress of your friends and add comments on their trophi
 | [Beetle PCE FAST](https://github.com/libretro/beetle-pce-fast-libretro)     | ✔         | Highest speed. Does not support SuperGrafx games. |
 | [Beetle SuperGrafx](https://github.com/libretro/beetle-supergrafx-libretro) | ✔         | High speed. Supports SuperGrafx games. |
 | [Beetle PCE](https://github.com/libretro/beetle-pce-libretro)               | ✕         |       |
+| [Geargrafx](https://github.com/drhelius/Geargrafx)                          | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)                          | ✕         |       |
 
 #### PC-FX
