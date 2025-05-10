@@ -104,14 +104,14 @@ The Gambatte core saves/loads to/from these directories.
 - The Gambatte core's max height is [Max height]
 - The Gambatte core's core provided aspect ratio is [Aspect ratio]
 
-## Color Palettes
+## Color Palette
 
 ![screen_record__2021_10_06__17_11_02](https://user-images.githubusercontent.com/38211560/136244454-945e0b6e-070f-4947-8067-22f971d00223.gif)
 
 - The [core option](#core-options) `GB Colorization` enables colorization of Game Boy games, using pre-defined or user-selected color palettes.
 - When satisfied you can save the currently chosen palette per the whole core, per content-directory or per game with the usual RetroArch [override](../guides/overrides.md) mechanism.
 - During gameplay you can instantly swap color palettes.
-  - You can cycle through all available color palettes with the [Joypad](#joypad) hotkeys L2 / R2.
+  - You can cycle through the available color palettes with the [L/R shoulder buttons](#joypad).
   
     (Source: Feature request in issue [182](https://github.com/libretro/gambatte-libretro/issues/182) was implemented in pull request [204](https://github.com/libretro/gambatte-libretro/pull/204) in October 2021)
   - This is ideal for your initial browsing / exploration of the color palettes.
@@ -465,18 +465,18 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ![](../image/controller/gb.png)
 
-| RetroPad Inputs                                | User 1 input descriptors |
-|------------------------------------------------|--------------------------|
-| ![](../image/retropad/retro_a.png)             | A                        |
-| ![](../image/retropad/retro_b.png)             | B                        |
-| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                 |
-| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down               |
-| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left               |
-| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right              |
-| ![](../image/retropad/retro_select.png)        | Select                   |
-| ![](../image/retropad/retro_start.png)         | Start                    |
-| ![](../image/retropad/retro_l2.png)            | Previous Palette         |
-| ![](../image/retropad/retro_r2.png)            | Next Palette             |
+| RetroPad Inputs                                | User 1 input descriptors                  |
+|------------------------------------------------|-------------------------------------------|
+| ![](../image/retropad/retro_a.png)             | A                                         |
+| ![](../image/retropad/retro_b.png)             | B                                         |
+| ![](../image/retropad/retro_dpad_up.png)       | D-Pad Up                                  |
+| ![](../image/retropad/retro_dpad_down.png)     | D-Pad Down                                |
+| ![](../image/retropad/retro_dpad_left.png)     | D-Pad Left                                |
+| ![](../image/retropad/retro_dpad_right.png)    | D-Pad Right                               |
+| ![](../image/retropad/retro_select.png)        | Select                                    |
+| ![](../image/retropad/retro_start.png)         | Start                                     |
+| ![](../image/retropad/retro_l1.png)            | Previous [Color Palette](#color-palette)  |
+| ![](../image/retropad/retro_r1.png)            | Next [Color Palette](#color-palette)      |
 
 
 ## Compatibility
