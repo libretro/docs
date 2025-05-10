@@ -220,6 +220,7 @@ nav:
         - 'NEC - PC-98 (Neko Project II Kai)': 'library/neko_project_ii_kai.md'
         - 'NEC - PC Engine SuperGrafx (Beetle SGX)': 'library/beetle_sgx.md'
         - 'NEC - PC Engine / CD (Beetle PCE FAST)': 'library/beetle_pce_fast.md'
+        - 'NEC - PC Engine / SuperGrafx (Geargrafx)': 'library/geargrafx.md'
         - 'NEC - PC-FX (Beetle PC-FX)': 'library/beetle_pc_fx.md'
       - 'Palm Emulation':
         - 'Palm OS (Mu)': 'library/mu.md'

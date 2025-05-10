@@ -27,6 +27,12 @@ rom.ips2
 |--------------------------------------------|:---------:|
 | [Gearcoleco](../library/gearcoleco.md)     | ✔         |
 
+### NEC PC Engine - TurboGrafx-16 / PC Engine CD - TurboGrafx-CD
+
+| Core                               | Supported |
+|--------------------------------------------|:---------:|
+| [Geargrafx](../library/geargrafx.md)     | ✔         |
+
 ### Nintendo - DS
 
 | Core                               | Supported |

@@ -172,6 +172,7 @@ This is a list of cores that are related to each other in some way.
 
 - [NEC - PC Engine / CD (Beetle PCE FAST)](../library/beetle_pce_fast.md)
 - [NEC - PC Engine SuperGrafx (Beetle SGX)](../library/beetle_sgx.md)
+- [NEC - PC Engine / SuperGrafx (Geargrafx)](../library/geargrafx.md)
 
 ## Cave Story
 
