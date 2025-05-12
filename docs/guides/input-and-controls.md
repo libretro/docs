@@ -91,7 +91,7 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 ### Key bindings cheat sheet
 
-![RetroPad standard key bindings - Commands as of 2025-05-12 superimposed on a US laptop keyboard](../image/guides/standard-key-bindings.png)
+![RetroArch standard key bindings - Commands as of 2025-05-12 superimposed on a US laptop keyboard](../image/guides/standard-key-bindings.png)
 
 Commands as of 2025-05-12 superimposed on US laptop keyboard. For most recent key bindings see the following sections.
 
