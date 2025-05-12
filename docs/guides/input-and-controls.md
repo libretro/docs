@@ -91,11 +91,10 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 ### Key bindings cheat sheet
 
-// keyboard shematics image to be inserted here
+![RetroPad standard key bindings - Commands as of 2025-05-12 superimposed on a US laptop keyboard](../image/guides/standard-key-bindings.png)
 
-Commands as of 2025-05-12 superimposed on a US laptop keyboard.
+Commands as of 2025-05-12 superimposed on US laptop keyboard. For most recent key bindings see the following sections.
 
-Most recent key bindings are listed below in the sections: [General controller mapping](#general-controller-mapping), [Menu controls](#menu-controls), [Hotkey controls](#hotkey-controls)
 
 ### General controller mapping
 
