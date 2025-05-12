@@ -89,6 +89,14 @@ Core Controls Remapping alters how the core receives input rather than how the g
 
 ## Default RetroArch keyboard bindings
 
+### Key bindings cheat sheet
+
+// keyboard shematics image to be inserted here
+
+Commands as of 2025-05-12 superimposed on a US laptop keyboard.
+
+Most recent key bindings are listed below in the sections: [General controller mapping](#general-controller-mapping), [Menu controls](#menu-controls), [Hotkey controls](#hotkey-controls)
+
 ### General controller mapping
 
 These controls are valid both in-game and in the menu:
