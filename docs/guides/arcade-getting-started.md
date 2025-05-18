@@ -19,14 +19,14 @@ The libretro core ecosystem includes a variety of arcade emulators, each with sp
 * **Dump**: A dump is the digital representation of 1 chip present on a game board/cartridge.
 * **Rom**: A rom refers to 1 file containing 1 single dump or several dumps concatenated together.
 * **Romset**: Literally "rom set", meaning a set of roms. A romset is an archive containing one or several individual rom(s), **arcade emulators expect this game format**.
-* **Romset version**: It's not unusual for a specific romset to exist in different versions. The reason for this is that sometimes the attempts at digitalizing chips failed, and instead of having a game totally unavailable due to a romset being only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable. Every time one of those chips finally gets a proper dump, which can happen decades later, ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump, hence why multiple versions can exist.
+* **Romset version**: It's not unusual for a specific romset to exist in different versions. The reason for this is that sometimes the attempts at digitalizing chips failed, and instead of having a game totally unavailable due to a romset being only 90% complete, it was decided to implement workarounds in the emulator's code to make the game somehow playable. Every time one of those chips finally gets a proper dump, which can happen decades later, ongoing arcade emulators will update their code by removing the workarounds and loading the correct dump, hence why multiple romset versions can exist.
 * **Samples**: Sometimes, instead of emulating the sound coming from the actual board of a game, an emulator will use recorded sounds. There can be several reasons for this : the chips weren't dumped, the emulator doesn't emulate that sound board (yet), or the emulator allows as an alternative to replace that emulation by high quality sound coming from another source (OST, ...).
 * **CHD**: Some arcade games require data from an internal hard drive, CD-ROM, laserdisk, or other media in order to be emulated -- those forms of media are packaged as CHD files. CHD files should be copied to subfolders (going by the name of the romset) within the folder where the arcade romset has been installed.
 
 Additionally, there exist different kind of romsets :
 
 * **Bios romset**: A romset containing bioses required to run an arcade system. For example, the `neogeo` romset contains the bioses required to run SNK's NeoGeo cartridge system.
-* **Parent romset**: There can be multiple revisions of an arcade cabinet, the romset dumped from the one believed to be the most recent is the parent romset. Parent romsets might require a bios romset to work.
+* **Parent romset**: There can be multiple revisions of an arcade cabinet, the parent romset is usually the one dumped from the arcade cabinet which is believed to be the most recent revision, which is often a world or europe version. Parent romsets might require a bios romset to work.
 * **Clone romset**: Either dumped from arcade cabinet revisions believed to be older, or unofficial revisions of that arcade cabinet (bootlegs, hacks). Clone romsets might require a parent to work.
 * **Full non-merged romset**: The romset can be used standalone because the archive contains all the files required to run that romset, including any roms from its parent and bios romsets.
 * **Non-merged romset**: The romset can be used standalone because the archive contains all the files required to run that game, including any roms from its parent romset. With this format, a separate bios romset might be needed to run the romset.
@@ -55,10 +55,10 @@ A better integration allows for more features to be available from the frontend 
 Theoretically, more recent version of the emulators should always be more accurate, which means the graphics, sound and gameplay of the games are more likely to be faithful to the original cabinet. In reality, for vintaged MAME cores, with fixes being backported to some vintages and not some others, the situation is not so predictable.
 
 #### Input lag
-Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead and pre-emptive frames feature. Runahead is also partially available in multiple MAME cores (MAME-Current, MAME2003-Plus, ...), with second instance being recommended.
+Accuracy improvements can add or remove frames of input lag. It is believed that **FinalBurn Neo** and **MAME (current)** have the lowest input lag on average. Also note that **FinalBurn Neo** has virtually 0 frames of input lag since it has full support for the runahead and pre-emptive frames feature. MAME also partially supports those features, with runahead second instance being recommended.
 
 #### Performance
-Being more accurate usually means the emulation will be more taxing on your cpu, so older versions of emulators will usually perform better at the cost of accuracy and are worth trying if you have performance issues with more recent versions. Accuracy is not the only reason for performance regression though, the emulator framework has an impact too, this is especially noticeable on MAME which had its framework constantly updated over the years.
+Being more accurate usually means the emulation will be more taxing on your cpu, so older versions of emulators will usually perform better at the cost of accuracy, and are worth trying if you have performance issues with more recent versions. Accuracy is not the only reason for performance regression though, the emulator framework has an impact too, this is especially noticeable on MAME which had its framework constantly updated over the years.
 
 #### Supported games
 Arcade emulators keep adding support for new machines over the years, so the more recent versions support more games. This is a double-edged sword as far as performance is concerned, because it can require updates to already emulated components, to add previously unemulated/unnecessary feature of the component, which might impact its emulation performance even for the machines that didn't need this feature.
@@ -67,7 +67,7 @@ Arcade emulators keep adding support for new machines over the years, so the mor
 MAME's goal is to emulate every existing machines, including machines unrelated to gaming (it can emulate printers, vending machines, ...), the most accurately possible, while documenting them thoroughly. FinalBurn's goal is mainly to offer a comfortable experience for the end-user as a gaming software, and can include optional features that didn't exist on original cabinet (alternate controls for a better experience with modern controllers, alternate high-quality music, ...). MAME 2003-Plus has pretty much the same goal as FinalBurn, with both emulators actually sharing a few contributors.
 
 #### Support team
-Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps but doesn't have a regular maintainer to take care of known issues. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
+Last but not least, most of the arcade cores have no real maintainer and are mostly there as a frozen-in-time alternative if the cores that have a support team can't play properly the game you want. **FinalBurn Neo** and **MAME 2003-Plus** have a support team (please note that MAME 2003-Plus is a hard fork which isn't written by the MAME team). **MAME (current)** gets regular bumps and has a regular maintainer to take care of issues related to its libretro integration. We don't recommend you try getting help from the MAME team for any of the MAME cores we provide, because you won't get any.
 
 ### Quick tour of every available core
 
@@ -81,7 +81,6 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * keeps adding support for new games, including a lot of hacks and homebrews
 
 #### MAME 2003-Plus
-* has the second tightest integration within the libretro ecosystem
 * while originally forked from MAME 2003, can be fairly accurate on some games since it incorporates some emulation fixes from recent versions of MAME
 * is quite fast, this fork was originally meant by the author to run on a pentium III @ 733mhz (Xbox OG)
 * doesn't have fixed romsets, doesn't always use latest known good romsets either
@@ -91,6 +90,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 
 #### MAME (current)
 * is usually the slowest core and the one that consumes the most memory
+* has a few dynamic recompilers for emulating more demanding systems, which can dramatically increase performance emulating those systems on supported cpus (x86_32, x86_64, and arm64 since 0.274)
 * is usually the most accurate
 * uses the latest known good romsets
 * has the widest range of emulated machines
@@ -121,6 +121,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * is more accurate than MAME 2003
 * has fixed romsets
 * support more games than MAME 2003
+* is missing support for basic libretro api features (savestates, ...)
 * probably shouldn't be used at all, most of the interesting things it has to offer were backported to MAME 2003-Plus, including lots of game additions
 
 #### MAME 2015
@@ -128,17 +129,20 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * is more accurate than MAME 2010
 * has fixed romsets
 * support more games than MAME 2010
+* is missing support for basic libretro api features (savestates, ...)
+* probably shouldn't be used at all, the performance gap with MAME (current) is usually small and can be in favor of the later, which also has a better libretro integration
 
 #### MAME 2016
 * is slower than MAME 2015
 * is more accurate than MAME 2015
 * has fixed romsets
 * support more games than MAME 2015
-* has the same shallow libretro implementation than MAME (current)
+* is missing support for basic libretro api features (rotation, ...)
+* probably shouldn't be used at all, the performance gap with MAME (current) is usually small and can be in favor of the later, which also has a better libretro integration
 
 #### Flycast
-* support arcade hardware based on Sega Dreamcast (NAOMI, NAOMI 2 and AtomisWave)
-* is the only libretro core available for those 3 systems
+* support arcade hardware based on Sega Dreamcast (NAOMI, NAOMI 2, AtomisWave and Sega System SP)
+* is the only working libretro core for those 4 systems
 
 #### Kronos
 * support arcade hardware based on Sega Saturn (ST-V)
@@ -161,7 +165,7 @@ Each file within a romset is the dump of a chip with a specific purpose (program
     When using romsets for the latest version of MAME or FBNeo, you should first make sure your version of those cores aren't outdated.
 
 !!! tip
-    In general, you will get better results with a full collection of romsets for your chosen emulator. Starting with individual arcade romsets is less likely to work because you generally won't know which emulator they target, or if they contain every required files to run the game (bios, parent). Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset zip contains all necessary files for one game.**
+    In general, you will get better results with a full collection of romsets for your chosen emulator. Starting with individual arcade romsets is less likely to work because you generally won't know which emulator they target, or if they contain every required files to run the game (bios, parent). Full Non-Merged romsets are widely available for all of the "historic" MAME cores. **Full Non-Merged romsets are the simplest romset format to get started with because each romset archive contains all necessary files for emulating one game.**
 
 | Emulator | Required ROM Version | ClrMamePro dat file |
 | :---: | :---: | :---: |
