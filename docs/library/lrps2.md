@@ -53,11 +53,11 @@ For the LRPS2 core to function, it requires a set of real BIOS images dumped fro
 
 In the past, most PS2 games required setting various hacks/options on a per-game basis to avoid compatibility issues and bugs. More recently, the PCSX2 team has automated this process by including a database of these per-game hacks/options in a file named `GameIndex.yaml`. Having this database in the correct spot is necessary for a good emulation experience.
 
-###$ Core System Files Downloader
+#### Core System Files Downloader
 
 The easiest way to get this file and put it where it needs to go is to stop by RetroArch's `Online Updater` and head to the `Core System Files Downloader`. Inside, you'll see a series of entries named for various cores. Look for `LRPS2.zip` and select it. The `Core System Files Downloader` will then download the `GameIndex.yaml` database and place it within the necessary directory structure automatically.
 
-###$ Manually
+#### Manually
 
 If you don't have access to the `Core System Files Downloader` for whatever reason (e.g., using the Steam release of RetroArch, or some other libretro frontend), you can still get everything you need manually.
 
