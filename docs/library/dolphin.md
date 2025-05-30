@@ -96,7 +96,7 @@ Frontend-level settings or features that the dolphin-libretro core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
