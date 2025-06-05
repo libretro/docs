@@ -1,19 +1,23 @@
 # Sony - PlayStation (LRPS2)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-EnWeztB8wI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="845" height="475" src="https://www.youtube.com/embed/f-DxgSIGNlg" title="RetroArch - LRPS2 - How to get into the PS2 startup screen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-LRPS2 is still under development. The content on this page is not the final version. Connecting a remote while any content is running may cause retroarch crashes. If you get a failed to load content warning, respectively; Check your BIOS, video driver(try to switch between drivers, use 'GL') and content. There’s a working OpenGL renderer and a Direct3D11 renderer option. Direct3D 11 renderer can be faster than OpenGL but also has less features. Pick whichever works best for you. On Xbox you will only be able to use Direct3D11 anyways. This core uses the x86_64 dynarec. It is still less compatible than the 32bit x86 dynarec in PCSX2, so keep that in mind. It’s for similar reasons that the software renderer right now won’t work (it’s not compatible yet with x86_64, not in upstream either). There’s a bug that can happen right now upon closing content or exiting RetroArch with the LRPS2 core on Windows – the RetroArch process might not completely cleanly shut itself off and you might still be able to see a 0% CPU process remaining in the Task Manager. We have not been able to figure out how to fix that yet as the PCSX2 codebase is a definite case of ‘here be dragons’, but for now when this happens, you can just bring up the Task Manager and close it manually. It shouldn’t have a real detriment on performance but it is of course far from ideal and hopefully something we can fix soon with the help of some contributors. We have found this happens the most with the Direct3D 11 renderers. Switching resolution at runtime right now can be a bit unstable, so does switching fullscreen resolution. We might just make resolution switching require a restart since this tends to be too unstable for now.
+LRPS2 is a heavily modified hard fork of the excellent and mature PCSX2 emulator ported to libretro. It runs on Windows, macOS and Linux on the x86_64 architecture. MacOS computers running on Apple's ARM chipsets can still run it through the Rosetta x86 compatibility mode. This core does not work natively on ARM hardware, so it is not available on iOS/tvOS, Android, ARM Linux or Windows on ARM.
+
+It supports hardware rendering via OpenGL (Windows and Linux), Vulkan (natively on Windows and Linux and via MoltenVk on macOS) and D3D11/12 (Windows-only), as well as software rendering for games that require its additional accuracy. Note: the D3D11 renderer produces a black screen with working audio on some GPUs (toggling fast-forward should show a flickering picture), so if you encounter this, switch to another renderer, if possible.
+
+LRPS2 also includes a brand new, high-accuracy Vulkan compute renderer known as ParaLLEl-GS (from the same author and tech behind the ParaLLEl-RDP renderer now used by almost every major N64 emulator).
+
+The ParaLLEl-GS renderer is essentially a software renderer that relies on the parallel-processing power of a modern gaming GPU to accurately reproduce console behavior at or beyond full speed. As a result, this renderer is recommended, if your hardware is able to run it at full speed (should be fine on any discrete GPU and possibly on AMD integrated graphics; Intel integrated graphics do not appear to be fast enough at the time of this writing).
 
 LRPS2 core has been authored by
 
 - [Libretro]()
+- based on the PCSX2 emulator by the PCSX2 Dev Team
 
 LRPS2 core is licensed under
 
-- [GPLv2](https://github.com/libretro/pcsx2/blob/main/COPYING.GPLv2)
-- [GPLv3](https://github.com/libretro/pcsx2/blob/main/COPYING.GPLv3)
-- [LGPLv2.1](https://github.com/libretro/pcsx2/blob/main/COPYING.LGPLv2.1)
-- [LGPLv3](https://github.com/libretro/pcsx2/blob/main/COPYING.LGPLv3)
+- [GPLv3](https://github.com/libretro/ps2/blob/libretroization/COPYING.GPLv3)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -30,6 +34,7 @@ GPU
 
 - Direct3D10/11 support
 - OpenGL 3.x/4.5 support
+- Vulkan 1.3+ support
 - PassMark G3D Mark rating around 3000 (GeForce GTX 750)
 - 2 GB/4 GB Video Memory
 
@@ -40,7 +45,30 @@ RAM
 !!! Attention
 	Because of the complex nature of emulation, even if you meet the recommended requirements there will be games that will NOT run at full speed due to emulation imperfection, floating point emulation differences, issues with emulator itself or other problems.
 
-## BIOS
+## Setup (Required!!)
+
+For the LRPS2 core to function, it requires a set of real BIOS images dumped from your Playstation 2 console in accordance with your local laws, along with the `GameIndex.yaml` compatibility database.
+
+### GameIndex.yaml
+
+In the past, most PS2 games required setting various hacks/options on a per-game basis to avoid compatibility issues and bugs. More recently, the PCSX2 team has automated this process by including a database of these per-game hacks/options in a file named `GameIndex.yaml`. Having this database in the correct spot is necessary for a good emulation experience.
+
+#### Core System Files Downloader
+
+The easiest way to get this file and put it where it needs to go is to stop by RetroArch's `Online Updater` and head to the `Core System Files Downloader`. Inside, you'll see a series of entries named for various cores. Look for `LRPS2.zip` and select it. The `Core System Files Downloader` will then download the `GameIndex.yaml` database and place it within the necessary directory structure automatically.
+
+#### Manually
+
+If you don't have access to the `Core System Files Downloader` for whatever reason (e.g., using the Steam release of RetroArch, or some other libretro frontend), you can still get everything you need manually.
+
+First, you will need to download the `GameIndex.yaml` file from the core's source code repository on [Github](https://github.com/libretro/ps2). [This](https://raw.githubusercontent.com/libretro/ps2/refs/heads/libretroization/bin/resources/GameIndex.yaml) is a direct link to the file, but if that link breaks in the future, the database file is typically housed in the `bin/resources` directory.
+
+Once you have the `GameIndex.yaml` database:
+1. Navigate to your 'system'/BIOS directory (the location of which you can find/confirm by going to settings > directory in the RetroArch menu), then create a directory named `pcsx2` (must be in all lower-case).
+2. Inside your new `pcsx2` directory, you'll make another directory named `resources` (again, all lower-case)
+3. Place the `GameIndex.yaml` inside of it. The final structure should be `system/pcsx2/resources/GameIndex.yaml`.
+
+### BIOS
 
 !!! Attention
 	For compatibility reasons, it is recommended to not use a SCPH-10000 BIOS.
@@ -62,10 +90,10 @@ SCPH-70004_BIOS_V12_EUR_200.ROM1
 SCPH-70004_BIOS_V12_EUR_200.ROM2
 ```
 
-### How to set up your BIOS:
+#### How to set up your BIOS:
 
 1. Go inside your RetroArch "system" folder (usually `retroarch/system/`, but if you're not sure check the path in `Settings > Directory > System/BIOS`).
-2. Create a `pcsx2` folder.
+2. Create a `pcsx2` folder (if you used the Core System Files Downloader to download the `GameIndex.yaml`, this folder structure should already exist).
 3. Go inside the `pcsx2` folder and create a `bios` folder.
 4. Go inside the `bios` folder and paste your BIOS file(s) here.
 
@@ -122,14 +150,14 @@ Frontend-level settings or features that the LRPS2 core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✕         |
+| Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
-| States            | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |
@@ -141,7 +169,7 @@ Frontend-level settings or features that the LRPS2 core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✕         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan[^2] | ✕         |
@@ -153,30 +181,17 @@ LRPS2's library name is 'pcsx2'
 
 LRPS2 core saves/loads to/from these directories.
 
-**Frontend's Save directory**
-
-- Memory card - slot 1
-
-`retroarch/saves/pcsx2/Slot 1/`
-
-- Memory card - slot 2
-
-`retroarch/saves/pcsx2/Slot 2/`
-
 **Frontend's System directory**
 
 - Legacy memory cards
 
 `retroarch/system/pcsx2/memcards/`
 
-The legacy memory cards folder is only used if `Mcd001.ps2` and/or `Mcd002.ps2` is detected in `retroarch/system/pcsx2/memcards/` and the "Memory Card: Slot N" core option is set to "Legacy".
-This can be useful if you were using an older version of the core that didn't use the `saves` folder yet, or if you transferred the `memcards` folder directly from standalone.
-
 ## Rumble support
 
 Rumble only works in the LRPS2 core when
 
-- The content being ran has rumble support.
+- The content being run has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
 - The corresponding user's device type is set to **DualShock 2**
@@ -215,8 +230,8 @@ The current standalone development version is reported to be compatible with app
 ## External Links
 
 - [LRPS2 Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/pcsx2_libretro.info)
-- [LRPS2 Github Repository](https://github.com/libretro/lrps2)
-- [Report LRPS2 Core Issues Here](https://github.com/libretro/lrps2/issues)
+- [LRPS2 Github Repository](https://github.com/libretro/ps2)
+- [Report LRPS2 Core Issues Here](https://github.com/libretro/ps2/issues)
 
 ## Libretro PS2 cores
 
