@@ -1,6 +1,6 @@
 # Softpatching ROMs with RetroArch
 
-RetroArch currently supports UPS, IPS and BPS patching formats. If you load `rom.bin` and one of the following is present, the ROM will be autopatched: `rom.ups`, `rom.ips` or `rom.bps`. Autopatching only takes place if the libretro implementation supports loading ROMs from memory.
+RetroArch currently supports the UPS, IPS, BPS, and XDelta[^1] patching formats. If you load `rom.bin` and one of the following is present, the ROM will be autopatched: `rom.ups`, `rom.ips` or `rom.bps`. Autopatching only takes place if the libretro implementation supports loading ROMs from memory.
 
 You can apply multiple patches to one ROM by naming the patches with the `.ips$` extension, where `$` is a number. For example, given the following files...
 
@@ -114,3 +114,5 @@ rom.ips2
 |----------------------------------------------|:---------:|
 | [Beetle NeoPop](../library/beetle_neopop.md) | ✔         |
 | [RACE](../library/race.md)                   | ✕         |
+
+[^1]: When enabled at compile-time.
