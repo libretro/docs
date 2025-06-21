@@ -4,12 +4,13 @@
 
 Geargrafx is an open source, cross-platform, PC Engine / TurboGrafx-16 / SuperGrafx emulator written in C++.
 
-- Accurate emulation supporting the entire PCE / SGX catalog
+- Accurate emulation supporting the entire HuCard PCE / SGX catalog
+- CD-ROM² and Super CD-ROM² systems
 - Multi Tap support (up to 5 players)
 - Controllers:
-  - Standard Gamepad (2 buttons)
-  - Avenue Pad 3 (3 buttons, auto-configured based on game)
-  - Avenue Pad 6 (6 buttons)
+    * Standard Gamepad (2 buttons)
+    * Avenue Pad 3 (3 buttons, auto-configured based on game)
+    * Avenue Pad 6 (6 buttons)
 - Internal database for automatic rom detection
 - Backup RAM support
 - Save state support
@@ -30,7 +31,22 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Geargrafx does not require BIOS (bootrom) files to work.
+Geargrafx requires a BIOS file to run CD-ROM games.
+
+Required or optional firmware files go in RetroArch's system directory.
+
+!!! attention
+	 Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
+
+!!! attention
+	 You can choose the BIOS to use in the core options menu.
+
+|   Filename    |    Description                        |              md5sum              |
+|:-------------:|:-------------------------------------:|:--------------------------------:|
+| syscard3.pce  | Super CD-ROM2 System V3.xx - Required | 38179df8f4ac870017db21ebcbf53114 |
+| syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
+| syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
+| gexpress.pce  | Game Express CD Card - Optional       |                                  |
 
 ## Extensions
 
@@ -40,11 +56,13 @@ Content that can be loaded by the Geargrafx core have the following file extensi
 - .sgx
 - .bin
 - .rom
+- .cue
 
 RetroArch database(s) that are associated with the Geargrafx core:
 
 - [NEC - PC Engine - TurboGrafx 16](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.rdb)
 - [NEC - PC Engine SuperGrafx](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20SuperGrafx.rdb)
+- [NEC - PC Engine CD - TurboGrafx-CD](https://github.com/libretro/libretro-database/blob/master/rdb/NEC%20-%20PC%20Engine%20CD%20-%20TurboGrafx-CD.rdb)
 
 ## Features
 
@@ -115,12 +133,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     This option enables/disables TurboTap support (up to 5 players).
 
-- **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
+- **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|6:5 DAR|16:9 DAR|16:10 DAR)
 
     Select which aspect ratio will be presented by the core.
 
     - *1:1 PAR* selects an aspect ratio that produces square pixels.
     - *4:3 DAR* forces 4:3 aspect ratio.
+    - *6:5 DAR* forces 6:5 aspect ratio.
     - *16:9 DAR* forces 16:9 aspect ratio.
     - *16:10 DAR* forces 16:10 aspect ratio.
 
@@ -154,21 +173,28 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     This option allows you to disable backup RAM (not recommended).
 
-- **Force Japanese PC Engine (restart)** [geargrafx_force_pce_jap] (**Disabled**|Enabled)
+- **System (restart)** [geargrafx_console_type] (**Auto**|PC Engine (JAP)|SuperGrafx (JAP)|TurboGrafx-16 (USA))
 
-    Allows you to force Japanese PC Engine hardware.
-    This option is not recommended, as many USA games will fail to start if a Japanese system is detected.
+    Select the console type to emulate. The default setting, Auto, automatically detects the appropriate console type based on the loaded content.
+    Many US games will not start if a Japanese system is detected.
 
-- **Force SuperGrafx (restart)** [geargrafx_force_sgx] (**Disabled**|Enabled)
+- **CD-ROM (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
-    Allows you to force SuperGrafx hardware.
-    This option is recommended only for content (homebrew) not detected correctly as SuperGrafx.
+    Choose the type of CD-ROM system to emulate. The Auto setting automatically selects the appropriate CD-ROM type based on the loaded content.
+
+- **CD-ROM Bios (restart)** [geargrafx_cdrom_bios] (**Auto**|System Card 1|System Card 2|System Card 3|Game Express)
+
+    Specify the BIOS file to use for CD-ROM emulation. The *Auto* setting automatically selects the appropriate BIOS based on the loaded content. You can also manually choose one for compatibility with specific games.
 
 - **No Sprite Limit** [geargrafx_no_sprite_limit] (**Disabled**|Enabled)
 
-    Enabling this option will remove the sprite limit in a single line.
-    This may cause glitches to occur in certain games.
+    Enabling this option removes the per-line sprite limit, but may cause glitches in certain games.
     It's best to keep this core option disabled.
+
+- **Avenue Pad 3 Switch** [geargrafx_avenue_pad_3_switch] (**Auto**|SELECT|RUN)
+
+    When using the Avenue Pad 3 controller, you can set the switch to either *RUN* or *SELECT* with this option.
+    If you choose *Auto*, the emulator will select the best option based on the game being played.
 
 - **Soft Reset** [geargrafx_soft_reset] (**Enabled**|Disabled)
 
@@ -183,24 +209,24 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 ## Joypad
 
-| RetroPad Inputs                              | PCE Pad (2-button) | Avenue Pad 3 (3-button) | Avenue Pad 6 (6-button) |
-|----------------------------------------------|--------------------|-------------------------|-------------------------|
-| ![](../image/retropad/retro_dpad_up.png)     | D-Pad Up           | D-Pad Up                | D-Pad Up                |
-| ![](../image/retropad/retro_dpad_down.png)   | D-Pad Down         | D-Pad Down              | D-Pad Down              |
-| ![](../image/retropad/retro_dpad_left.png)   | D-Pad Left         | D-Pad Left              | D-Pad Left              |
-| ![](../image/retropad/retro_dpad_right.png)  | D-Pad Right        | D-Pad Right             | D-Pad Right             |
-| ![](../image/retropad/retro_select.png)      | Select             | Select                  | Select                  |
-| ![](../image/retropad/retro_start.png)       | Run                | Run                     | Run                     |
-| ![](../image/retropad/retro_a.png)           | I                  | I                       | I                       |
-| ![](../image/retropad/retro_b.png)           | II                 | II                      | II                      |
-| ![](../image/retropad/retro_y.png)           | III                | III                     | III                     |
-| ![](../image/retropad/retro_x.png)           | IV                 |                         | IV                      |
-| ![](../image/retropad/retro_l2.png)          | V                  |                         | V                       |
-| ![](../image/retropad/retro_r2.png)          | VI                 |                         | VI                      |
+| RetroPad Inputs                             | PCE Pad (2-button) | Avenue Pad 3 (3-button)    | Avenue Pad 6 (6-button) |
+|---------------------------------------------|--------------------|----------------------------|-------------------------|
+| ![](../image/retropad/retro_dpad_up.png)    | D-Pad Up           | D-Pad Up                   | D-Pad Up                |
+| ![](../image/retropad/retro_dpad_down.png)  | D-Pad Down         | D-Pad Down                 | D-Pad Down              |
+| ![](../image/retropad/retro_dpad_left.png)  | D-Pad Left         | D-Pad Left                 | D-Pad Left              |
+| ![](../image/retropad/retro_dpad_right.png) | D-Pad Right        | D-Pad Right                | D-Pad Right             |
+| ![](../image/retropad/retro_select.png)     | Select             | Select                     | Select                  |
+| ![](../image/retropad/retro_start.png)      | Run                | Run                        | Run                     |
+| ![](../image/retropad/retro_a.png)          | I                  | I                          | I                       |
+| ![](../image/retropad/retro_b.png)          | II                 | II                         | II                      |
+| ![](../image/retropad/retro_y.png)          |                    | III (mapped to Select/Run) | III                     |
+| ![](../image/retropad/retro_x.png)          |                    |                            | IV                      |
+| ![](../image/retropad/retro_l2.png)         |                    |                            | V                       |
+| ![](../image/retropad/retro_r2.png)         |                    |                            | VI                      |
 
 ## External Links
 
 - [Official Geargrafx Repository](https://github.com/drhelius/Geargrafx)
-- [Libretro Geargrafx Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/Geargrafx_libretro.info)
+- [Libretro Geargrafx Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/geargrafx_libretro.info)
 - [Report Libretro Geargrafx Core Issues Here](https://github.com/drhelius/Geargrafx/issues)
 
