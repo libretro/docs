@@ -156,7 +156,7 @@
 | ParaLLEl N64              | Nintendo 64            |                    |
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
-| [LRPS2](https://docs.libretro.com/library/pcsx2/)               | Sony PlayStation 2     |                    |
+| [LRPS2](https://docs.libretro.com/library/lrps2/)               | Sony PlayStation 2     |                    |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
