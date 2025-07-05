@@ -131,5 +131,5 @@ Play! core is still experimental but promising. Some games are already [playable
 
 ## Libretro PS2 cores
 
-- [PlayStation 2 (LRPS2)](pcsx2.md)
+- [PlayStation 2 (LRPS2)](lrps2.md)
 
