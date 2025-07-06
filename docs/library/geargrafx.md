@@ -321,8 +321,10 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_b.png)          | II                 | II                         | II                      |
 | ![](../image/retropad/retro_y.png)          |                    | III (mapped to Select/Run) | III                     |
 | ![](../image/retropad/retro_x.png)          |                    |                            | IV                      |
-| ![](../image/retropad/retro_l2.png)         | Toggle Turbo II    | Toggle Turbo II            | V                       |
-| ![](../image/retropad/retro_r2.png)         | Toggle Turbo I     | Toggle Turbo I             | VI                      |
+| ![](../image/retropad/retro_l1.png)         |                    |                            | V                       |
+| ![](../image/retropad/retro_r1.png)         |                    |                            | VI                      |
+| ![](../image/retropad/retro_l2.png)         | Toggle Turbo II    | Toggle Turbo II            | Toggle Turbo II         |
+| ![](../image/retropad/retro_r2.png)         | Toggle Turbo I     | Toggle Turbo I             | Toggle Turbo I          |
 
 ## External Links
 
