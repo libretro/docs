@@ -5,13 +5,13 @@
 Geargrafx is an open source, cross-platform, PC Engine / TurboGrafx-16 / SuperGrafx emulator written in C++.
 
 - Accurate emulation supporting the entire HuCard PCE / SGX catalog
-- CD-ROM² and Super CD-ROM² systems
+- CD-ROM², Super CD-ROM² and Arcade CD-ROM² systems
 - Multi Tap support (up to 5 players)
 - Controllers:
     * Standard Gamepad (2 buttons)
     * Avenue Pad 3 (3 buttons, auto-configured based on game)
     * Avenue Pad 6 (6 buttons)
-- Internal database for automatic rom detection
+- Internal database for automatic rom detection and hardware selection if `Auto` options are selected
 - Backup RAM support
 - Save state support
 - Retro Achievements support
@@ -36,7 +36,7 @@ Geargrafx requires a BIOS file to run CD-ROM games.
 Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
-	 Any CD-ROM System BIOS will work, but some of them are known to be incompatible with certain games.
+	 Any CD-ROM System BIOS will work, but some are known to be incompatible with certain games.
 
 !!! attention
 	 You can choose the BIOS to use in the core options menu.
@@ -54,9 +54,10 @@ Content that can be loaded by the Geargrafx core have the following file extensi
 
 - .pce
 - .sgx
-- .bin
-- .rom
 - .cue
+- .chd
+
+Geargrafx supports `chd`, `cue/bin`, `cue/img` and `cue/iso` CD-ROM images. `cue/iso + wav` is also supported when audio track format is 44100Hz, 16 bit, stereo. It does not support MP3 or OGG audio tracks.
 
 RetroArch database(s) that are associated with the Geargrafx core:
 
@@ -129,9 +130,10 @@ The Geargrafx core has the following options that can be tweaked from the core o
 
 Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **TurboTap** [geargrafx_turbotap] (**Disabled**|Enabled)
+- **System (restart)** [geargrafx_console_type] (**Auto**|PC Engine (JAP)|SuperGrafx (JAP)|TurboGrafx-16 (USA))
 
-    This option enables/disables TurboTap support (up to 5 players).
+    Select the console type to emulate. The default setting, Auto, automatically detects the appropriate console type based on the loaded content.
+    Many US games will not start if a Japanese system is detected.
 
 - **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|6:5 DAR|16:9 DAR|16:10 DAR)
 
@@ -155,12 +157,12 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *240p* forces 240 scanlines.
     - *Manual* lets you set the first and last scanline manually.
 
-- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|0 - 30)
+- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 30)
 
     This option will set the first scanline to be displayed. Scanline 0 is the first visible scanline.
     This option is only available when 'Scanline Count' is set to 'Manual'.
 
-- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|220 - 241)
+- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 220 to 241)
 
     This option will set the last scanline to be displayed. Scanline 241 is the last visible scanline.
     This option is only available when 'Scanline Count' is set to 'Manual'.
@@ -169,14 +171,14 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     If enabled, the core will use composite colors instead of RGB colors.
 
+- **No Sprite Limit** [geargrafx_no_sprite_limit] (**Disabled**|Enabled)
+
+    Enabling this option removes the per-line sprite limit, but may cause glitches in certain games.
+    It's best to keep this core option disabled.
+
 - **Backup RAM (restart)** [geargrafx_backup_ram] (**Enabled**|Disabled)
 
     This option allows you to disable backup RAM (not recommended).
-
-- **System (restart)** [geargrafx_console_type] (**Auto**|PC Engine (JAP)|SuperGrafx (JAP)|TurboGrafx-16 (USA))
-
-    Select the console type to emulate. The default setting, Auto, automatically detects the appropriate console type based on the loaded content.
-    Many US games will not start if a Japanese system is detected.
 
 - **CD-ROM (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
@@ -186,26 +188,124 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     Specify the BIOS file to use for CD-ROM emulation. The *Auto* setting automatically selects the appropriate BIOS based on the loaded content. You can also manually choose one for compatibility with specific games.
 
-- **No Sprite Limit** [geargrafx_no_sprite_limit] (**Disabled**|Enabled)
+- **Preload CD-ROM (restart)** [geargrafx_cdrom_preload] (**Disabled**|Enabled)
 
-    Enabling this option removes the per-line sprite limit, but may cause glitches in certain games.
-    It's best to keep this core option disabled.
+    This option will preload all CD-ROM tracks in RAM. It will increase the memory usage of the core, but may improve performance.
 
-- **Avenue Pad 3 Switch** [geargrafx_avenue_pad_3_switch] (**Auto**|SELECT|RUN)
+- **PSG Volume** [geargrafx_psg_volume] (**100**|0 - 200)
 
-    When using the Avenue Pad 3 controller, you can set the switch to either *RUN* or *SELECT* with this option.
-    If you choose *Auto*, the emulator will select the best option based on the game being played.
+    This option sets the volume of the PSG sound system, which is used for sound effects and music in many games.
+    The value is a percentage from 0 to 200, where 100 is the default volume.
 
-- **Soft Reset** [geargrafx_soft_reset] (**Enabled**|Disabled)
+- **CD-ROM Volume** [geargrafx_cdrom_volume] (**100**|0 - 200)
 
-    Pressing RUN and SELECT simultaneously on the PCE gamepad will SOFT RESET the console. This is the default hardware behavior.
-    Disable this option if you want the soft reset functionality turned off.
+    This option sets the volume of the CD-ROM sound system, which is used for music in CD-ROM games.
+    The value is a percentage from 0 to 200, where 100 is the default volume.
+
+- **ADPCM Volume** [geargrafx_adpcm_volume] (**100**|0 - 200)
+
+    This option sets the volume of the ADPCM sound system, which is typically used for speech in CD-ROM games.
+    The value is a percentage from 0 to 200, where 100 is the default volume.
 
 - **Allow Up+Down / Left+Right** [geargrafx_up_down_allowed] (**Disabled**|Enabled)
 
     Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
     This may cause movement based glitches to occur in certain games.
     It's best to keep this core option disabled.
+
+- **Allow Soft Reset** [geargrafx_soft_reset] (**Enabled**|Disabled)
+
+    Pressing RUN and SELECT simultaneously on the PCE gamepad will SOFT RESET the console. This is the default hardware behavior.
+    Disable this option if you want the soft reset functionality turned off.
+
+- **TurboTap** [geargrafx_turbotap] (**Disabled**|Enabled)
+
+    This option enables/disables TurboTap support (up to 5 players).
+
+- **Avenue Pad 3 Switch** [geargrafx_avenue_pad_3_switch] (**Auto**|SELECT|RUN)
+
+    When using the Avenue Pad 3 controller, you can set the switch to either *RUN* or *SELECT* with this option.
+    If you choose *Auto*, the emulator will select the best option based on the game being played.
+
+- **P1 Turbo I** [geargrafx_turbo_p1_i] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo I button for Player 1.
+
+- **P1 Turbo II** [geargrafx_turbo_p1_ii] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo II button for Player 1.
+
+- **P2 Turbo I** [geargrafx_turbo_p2_i] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo I button for Player 2.
+
+- **P2 Turbo II** [geargrafx_turbo_p2_ii] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo II button for Player 2.
+
+- **P3 Turbo I** [geargrafx_turbo_p3_i] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo I button for Player 3.
+
+- **P3 Turbo II** [geargrafx_turbo_p3_ii] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo II button for Player 3.
+
+- **P4 Turbo I** [geargrafx_turbo_p4_i] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo I button for Player 4.
+
+- **P4 Turbo II** [geargrafx_turbo_p4_ii] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo II button for Player 4.
+
+- **P5 Turbo I** [geargrafx_turbo_p5_i] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo I button for Player 5.
+
+- **P5 Turbo II** [geargrafx_turbo_p5_ii] (**Disabled**|Enabled)
+
+    Enables/disables the Turbo II button for Player 5.
+
+- **P1 Turbo I Speed** [geargrafx_turbo_speed_p1_i] (**4**|values from 1 to 15)
+
+    Number of frames between each button I toggle for Player 1.
+
+- **P1 Turbo II Speed** [geargrafx_turbo_speed_p1_ii] (**4**|values from 1 to 15)
+
+    Number of frames between each button II toggle for Player 1.
+
+- **P2 Turbo I Speed** [geargrafx_turbo_speed_p2_i] (**4**|values from 1 to 15)
+
+    Number of frames between each button I toggle for Player 2.
+
+- **P2 Turbo II Speed** [geargrafx_turbo_speed_p2_ii] (**4**|values from 1 to 15)
+
+    Number of frames between each button II toggle for Player 2.
+
+- **P3 Turbo I Speed** [geargrafx_turbo_speed_p3_i] (**4**|values from 1 to 15)
+
+    Number of frames between each button I toggle for Player 3.
+
+- **P3 Turbo II Speed** [geargrafx_turbo_speed_p3_ii] (**4**|values from 1 to 15)
+
+    Number of frames between each button II toggle for Player 3.
+
+- **P4 Turbo I Speed** [geargrafx_turbo_speed_p4_i] (**4**|values from 1 to 15)
+
+    Number of frames between each button I toggle for Player 4.
+
+- **P4 Turbo II Speed** [geargrafx_turbo_speed_p4_ii] (**4**|values from 1 to 15)
+
+    Number of frames between each button II toggle for Player 4.
+
+- **P5 Turbo I Speed** [geargrafx_turbo_speed_p5_i] (**4**|values from 1 to 15)
+
+    Number of frames between each button I toggle for Player 5.
+
+- **P5 Turbo II Speed** [geargrafx_turbo_speed_p5_ii] (**4**|values from 1 to 15)
+
+    Number of frames between each button II toggle for Player 5.
 
 ## Joypad
 
@@ -221,12 +321,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_b.png)          | II                 | II                         | II                      |
 | ![](../image/retropad/retro_y.png)          |                    | III (mapped to Select/Run) | III                     |
 | ![](../image/retropad/retro_x.png)          |                    |                            | IV                      |
-| ![](../image/retropad/retro_l2.png)         |                    |                            | V                       |
-| ![](../image/retropad/retro_r2.png)         |                    |                            | VI                      |
+| ![](../image/retropad/retro_l1.png)         |                    |                            | V                       |
+| ![](../image/retropad/retro_r1.png)         |                    |                            | VI                      |
+| ![](../image/retropad/retro_l2.png)         | Toggle Turbo II    | Toggle Turbo II            | Toggle Turbo II         |
+| ![](../image/retropad/retro_r2.png)         | Toggle Turbo I     | Toggle Turbo I             | Toggle Turbo I          |
 
 ## External Links
 
 - [Official Geargrafx Repository](https://github.com/drhelius/Geargrafx)
 - [Libretro Geargrafx Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/geargrafx_libretro.info)
 - [Report Libretro Geargrafx Core Issues Here](https://github.com/drhelius/Geargrafx/issues)
-
