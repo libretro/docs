@@ -123,6 +123,7 @@ The combination of Vendor ID and Product ID is often referred to as "vid:pid" in
 
 This automated matching system allows RetroArch to support a vast array of controllers, reducing the need for manual setup in most situations.
 
+
 ## Why is it needed?
 
 RetroArch works many platforms. Each of these platforms has one or more input systems. These input systems in turn differ widely in the way they enumerate the pad buttons. For this reason, your joypad buttons may be mapped differently depending on if you are using Windows, Mac, or Linux.
@@ -548,6 +549,45 @@ input_device = "Sony Interactive Entertainment DualSense Edge Wireless Controlle
 input_vendor_id = "1356"
 input_product_id = "3570"
 ```
+
+#### Manually finding Vendor ID and Product ID (VID:PID) on GNU/Linux
+
+If you need to manually identify the VID:PID for your controller (for example, if RetroArch does not work as expected for you) in GNU/Linux, you can run this script:
+
+```
+#!/bin/bash
+
+# This script helps you identify your connected USB joypad.
+# It lists all USB devices, lets you select your joypad, extracts its Vendor ID and Product ID,
+# converts these IDs from hexadecimal to decimal, and prints them in a configuration-ready format.
+# If you skip selection, it exits gracefully.
+
+read -p "Connect your joypad and press ENTER."
+lsusb | nl -w2 -s': ' 
+read -p "Enter the number of your joypad device (or ENTER to skip): " n
+
+if [[ -z "$n" ]]; then
+  echo "No device selected. Only mapping will be re-generated."
+  exit 0
+fi
+
+line=$(lsusb | sed -n "${n}p")
+ids=$(echo "$line" | grep -oP 'ID \K[0-9a-fA-F]{4}:[0-9a-fA-F]{4}')
+vendor_hex=${ids%%:*}
+product_hex=${ids##*:}
+input_product_id=$((16#$vendor_hex))
+input_vendor_id=$((16#$product_hex))
+
+echo -e "\ninput_vendor_id = \"$input_product_id\"\ninput_product_id = \"$input_vendor_id\"\n"
+
+```
+
+This is especially useful if you want to search for existing autoconfig files matching your controller.
+For example, after obtaining the decimal Product ID, you can search the autoconfig directory (usually ~/.config/retroarch/autoconfig/) like this:
+
+
+`grep -r "input_product_id = \"$input_vendor_id\"" ~/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig/`
+
 
 ### Mapping
 
