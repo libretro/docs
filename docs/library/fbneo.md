@@ -377,12 +377,12 @@ There are several things to know :
 
 * You need to follow the instructions about [emulating consoles](#emulating-consoles-and-computers)
 * You need a copy of the `neocdz.zip` and `neogeo.zip` bioses
-* The supported format is single file MODE1/2352 cue/bin (use "CDmage" to convert your iso if needed), **they must not be compressed**
+* The supported format is single file MODE1/2352 cue/bin (the format where there is one .cue file with one single .bin file). Use "CDmage" to convert your dump if needed. **It must not be compressed**
 
-You can convert your unsupported cd images by following this tutorial :
+You can convert your unsupported dumps by following this tutorial :
 
 * Get [CDMage 1.02.1 (beta)](https://www.videohelp.com/software/CDMage) (freeware & no ads). **Don't get CDMage 1.01.5, it doesn't have the "Save As" function**
-* File > Open > select your iso (NB : for multi-track, select the .cue file, not the .iso file)
+* File > Open > select your dump (NB : always choose the .cue file if there is one)
 * File > Save As > write the name of your new file
 * Make sure you select MODE1/2352 in the second drop-down
 * Press OK, wait for the process to finish (a few seconds on my computer), and it’s done !
