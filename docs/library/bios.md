@@ -50,6 +50,7 @@ Arcade                        | MAME2003           | [BIOS information](mame_200
 Arcade                        | MAME2003+          | [BIOS information](mame2003_plus.md#bios)
 Arcade                        | MAME2010           | [BIOS information](mame_2010.md#bios)
 Arcade                        | SAME_CDI           | [BIOS information](same_cdi.md#bios)
+BBK electronic dictionary     | GAM4980            | [BIOS information](gam4980.md#bios)
 ColecoVision                  | Gearcoleco         | [BIOS information](gearcoleco.md#bios)
 Dreamcast                     | Flycast            | [BIOS information](flycast.md#bios)
 DS                            | DeSmuME            | [BIOS information](desmume.md#bios)

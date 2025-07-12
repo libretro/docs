@@ -121,6 +121,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | FreeJ2ME                                                                         | [GPLv3](https://github.com/hex007/freej2me/blob/master/LICENSE)                           |                |
 | Frodo                                                                            | [GPLv2](https://github.com/r-type/frodo-libretro/blob/master/COPYING)                     |                |
 | Fuse                                                                             | [GPLv3](https://github.com/libretro/fuse-libretro/blob/master/LICENSE)                    |                |
+| [GAM4980](../library/gam4980.md)                                                 | [GPLv3](https://codeberg.org/iyzsong/gam4980/raw/branch/master/COPYING)                   |                |
 | [Gambatte](../library/gambatte.md)                                               | [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)                |                |
 | [Game Music Emu](../library/game_music_emu.md)            		           | [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)                     |                |
 | [Gearboy](../library/gearboy.md)                                                 | [GPLv3](https://github.com/drhelius/Gearboy/blob/master/LICENSE)                          |                |
