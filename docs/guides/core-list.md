@@ -93,6 +93,7 @@
 | Frodo                     | Commodore C64          |                    |
 | FS-UAE                    | Commodore Amiga        |                    |
 | Fuse                      | Sinclair ZX Spectrum   |                    |
+| [GAM4980](../library/gam4980.md) | BBK 4980/4988/5980 electronic dictionary |
 | [Gambatte](../library/gambatte.md) | Game Boy/Color         |                    |
 | Game Music Emu            | Music player           | A port of Game Music Emu which allows playback of a wide variety of video game music formats |
 | [Gearboy](../library/gearboy.md) | Game Boy/Color         |                    |
