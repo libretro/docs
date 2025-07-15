@@ -57,7 +57,7 @@ Frontend-level settings or features that the Gambatte core respects.
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
-| Rumble            | ✕         |
+| Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
@@ -460,6 +460,14 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | gambatte_gb_link_network_server_ip_octet3    | (client only) Network link server address part 3, (0 to 255 in increments of 1. **0 is default**.)  |
 | gambatte_gb_link_network_server_ip_octet4    | (client only) Network link server address part 4, (0 to 255 in increments of 1. **0 is default**.)  |
 
+
+## Rumble
+
+Rumble only works in the mGBA core when
+
+- The content being ran has rumble support. (e.g. Cartridges with a Rumble Pak)
+- The frontend being used has rumble support.
+- The joypad device being used has rumble support.
 
 ## Joypad
 
