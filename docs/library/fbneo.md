@@ -241,6 +241,7 @@ Here is a list of samples currently in use :
 * reactor.zip
 * safarir.zip
 * sasuke.zip
+* seawolf.zip
 * sfz3mix.zip
 * sharkatt.zip
 * spacefb.zip
