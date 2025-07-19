@@ -170,43 +170,50 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 
 ## BIOS
 
-Bioses will be searched through 3 folders :
+When loading a romset requiring a bios romset, it will be searched through 3 folders in that order :
 
 * the folder of the current romset
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
 
-The following bioses are required for some of the emulated systems :
+The following bios romsets are required for some of the emulated arcade systems :
 
-* neogeo.zip (Neo Geo BIOS)
-* neocdz.zip (Neo Geo CDZ System BIOS)
-* decocass.zip (DECO Cassette System BIOS)
-* isgsm.zip (ISG Selection Master Type 2006 System BIOS)
-* midssio.zip (Midway SSIO Sound Board Internal ROM)
-* nmk004.zip (NMK004 Internal ROM)
-* pgm.zip (PGM System BIOS)
-* skns.zip (Super Kaneko Nova System BIOS)
-* ym2608.zip (YM2608 Internal ROM)
-* cchip.zip (C-Chip Internal ROM)
-* bubsys.zip (Bubble System BIOS)
-* namcoc69.zip (Namco C69 BIOS)
-* namcoc70.zip (Namco C70 BIOS)
-* namcoc75.zip (Namco C75 BIOS)
-* coleco.zip (ColecoVision System BIOS)
-* fdsbios.zip (FDS System BIOS)
-* msx.zip (MSX1 System BIOS)
-* ngp.zip (NeoGeo Pocket BIOS)
-* spectrum.zip (ZX Spectrum BIOS)
-* spec128.zip (ZX Spectrum 128 BIOS)
-* spec1282a.zip (ZX Spectrum 128 +2a BIOS)
-* channelf.zip (Fairchild Channel F BIOS)
-* dsp1.zip (SNES DSP-1)
-* dsp1b.zip (SNES DSP-1B)
-* dsp2.zip (SNES DSP-2)
-* dsp3.zip (SNES DSP-3)
-* dsp4.zip (SNES DSP-4)
-* st010.zip (SNES Seta ST010)
-* st011.zip (SNES Seta ST011)
+| Romset name | Note                                       |
+|-------------|--------------------------------------------|
+| bubsys      | Bubble System BIOS                         |
+| cchip       | C-Chip Internal ROM                        |
+| decocass    | DECO Cassette System BIOS                  |
+| isgsm       | ISG Selection Master Type 2006 System BIOS |
+| midssio     | Midway SSIO Sound Board Internal ROM       |
+| msx         | MSX1 System BIOS                           |
+| namcoc69    | Namco C69 BIOS                             |
+| namcoc70    | Namco C70 BIOS                             |
+| namcoc75    | Namco C75 BIOS                             |
+| neogeo      | Neo Geo BIOS                               |
+| nmk004      | NMK004 Internal ROM                        |
+| pgm         | PGM System BIOS                            |
+| skns        | Super Kaneko Nova System BIOS              |
+| ym2608      | YM2608 Internal ROM                        |
+
+The following bios romsets are required for some of the emulated non-arcade systems :
+
+| Romset name | Note                     |
+|-------------|--------------------------|
+| channelf    | Fairchild Channel F BIOS |
+| coleco      | ColecoVision System BIOS |
+| dsp1        | SNES DSP-1               |
+| dsp1b       | SNES DSP-1B              |
+| dsp2        | SNES DSP-2               |
+| dsp3        | SNES DSP-3               |
+| dsp4        | SNES DSP-4               |
+| fdsbios     | FDS System BIOS          |
+| neocdz      | Neo Geo CDZ System BIOS  |
+| ngp         | NeoGeo Pocket BIOS       |
+| spectrum    | ZX Spectrum BIOS         |
+| spec128     | ZX Spectrum 128 BIOS     |
+| spec1282a   | ZX Spectrum 128 +2a BIOS |
+| st010       | SNES Seta ST010          |
+| st011       | SNES Seta ST011          |
 
 ## Samples
 
@@ -214,50 +221,53 @@ Samples should be put under `SYSTEM_DIRECTORY/fbneo/samples`.
 
 Here is a list of samples currently in use :
 
-* blockade.zip
-* buckrog.zip
-* carnival.zip
-* cheekyms.zip
-* congo.zip
-* dkongjr.zip
-* dkong.zip
-* donpachi.zip
-* elim2.zip
-* fantasy.zip
-* galaga.zip
-* gaplus.zip
-* gridlee.zip
-* heiankyo.zip
-* invaders.zip
-* journey.zip
-* mario.zip
-* mmagic.zip
-* natodef.zip
-* nitedrvr.zip
-* nsub.zip
-* qbert.zip
-* radarscp.zip
-* rallyx.zip
-* reactor.zip
-* safarir.zip
-* sasuke.zip
-* seawolf.zip
-* sfz3mix.zip
-* sharkatt.zip
-* spacefb.zip
-* spacfury.zip
-* stinger.zip
-* subroc3d.zip
-* thehand.zip
-* thief.zip
-* tr606drumkit.zip
-* turbo.zip
-* twotiger.zip
-* vanguard.zip
-* xevious.zip
-* zaxxon.zip
-* zektor.zip
-* zerohour.zip
+| Sample name  | Note                                                                   |
+|--------------|------------------------------------------------------------------------|
+| blockade     |                                                                        |
+| buckrog      |                                                                        |
+| carnival     |                                                                        |
+| cheekyms     | Not from MAME                                                          |
+| congo        |                                                                        |
+| dkongjr      |                                                                        |
+| dkong        |                                                                        |
+| donpachi     | Not from MAME, optional, replace OG music by HQ music, requires dipsw. |
+| elim2        |                                                                        |
+| fantasy      |                                                                        |
+| galaga       |                                                                        |
+| gaplus       |                                                                        |
+| gridlee      |                                                                        |
+| heiankyo     | Not from MAME                                                          |
+| invaders     |                                                                        |
+| journey      |                                                                        |
+| mario        |                                                                        |
+| mmagic       |                                                                        |
+| natodef      |                                                                        |
+| nitedrvr     | Not from MAME                                                          |
+| nsub         |                                                                        |
+| paprium      | Not from MAME, megadrive, huge usage of disk space and ram (2.1GB)     |
+| qbert        |                                                                        |
+| radarscp     | Not from MAME                                                          |
+| rallyx       |                                                                        |
+| reactor      |                                                                        |
+| safarir      |                                                                        |
+| sasuke       |                                                                        |
+| seawolf      |                                                                        |
+| sfz3mix      | Not from MAME, optional, replace OG music by HQ music, no dipsw.       |
+| sharkatt     |                                                                        |
+| spacefb      |                                                                        |
+| spacfury     |                                                                        |
+| stinger      | Not from MAME                                                          |
+| subroc3d     |                                                                        |
+| thehand      |                                                                        |
+| thief        |                                                                        |
+| tr606drumkit | Not from MAME                                                          |
+| turbo        |                                                                        |
+| twotiger     |                                                                        |
+| vanguard     |                                                                        |
+| xevious      |                                                                        |
+| zaxxon       |                                                                        |
+| zektor       |                                                                        |
+| zerohour     |                                                                        |
 
 ## Hiscores
 
