@@ -63,7 +63,7 @@ Frontend-level settings or features that the ep128emu core respects.
 | [Softpatching](../guides/softpatching.md) | ✕         |
 | Disk Control      | ✔         |
 | Username          | ✕         |
-| Language          | ✕         |
+| Language          | ✔         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✔         |
 
@@ -99,6 +99,7 @@ Load any supported content file. Content type will be autodetected, and if possi
 In case of multi-disk (or multi-tape) games, use the Disk Control menu to add the subsequent images and switch between them. You can also use RetroArch's built-in memory analyzer to set up cheats.
 
 Apart from disk/tape/fileIO differences, the core will adjust the emulated machine configuration in some cases:
+
 - if content file has `.DTF` extension, ZozoTools BIOS will be used
 - if content file name contains `[req brd-rom]`, German BIOS will be used
 - if content file name contains `[req zrom]`, Hungarian language BIOS and EPDOS will be used
@@ -158,6 +159,10 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 | ![](../image/retropad/retro_l3.png)            | Info display | - |
 | ![](../image/retropad/retro_r3.png)            | Intelligent zoom | (Zoom is also available via keyboard F12) |
 
+## Mouse
+
+Mouse input is used for the EnterMice emulation of the Enterprise.
+
 ## Keyboard
 
 ### Enterprise 128
@@ -166,6 +171,7 @@ The ep128emu core takes the Enterprise UK keyboard as a basis:
 ![](../image/core/ep128emu/enterprise-128-uk-keyboard.png)
 
 Most mappings are straightforward positionally from an ISO UK keyboard:
+
 - Dark green: natural mapping, both position and function matches nicely
 - Light green: either position or function is slightly different
 - Yellow: function is different
@@ -277,7 +283,7 @@ Function key row is mapped to Fn-array. Extra mappings are marked in the followi
 
 Following "BIOS" files are used for emulation. Note: in usual 8-bit home computer terms, these are "ROM"s as they contain the original machine's read-only memory dumps.
 
-From version 1.1.0, external BIOS files are optional.
+From ep128emu_core version 1.1.0, external BIOS files are optional.
 
 | Filename          | Description                     | md5sum                           |
 |:-----------------:|:-------------------------------:|:--------------------------------:|
@@ -312,7 +318,7 @@ Enterprise 128 has software extensions to emulate ZX Spectrum (48, 128) and Amst
 
 - Obtain ROM version of SPEmu from the [EnterpriseForever forums](https://enterpriseforever.com/letoltesek-downloads/enterprise-software/).
 - Place ROM files under RetroArch system directory: `system/ep128emu/roms/`
-- Create a custom config file into RetroArch system directory called `system/ep128emu/config/enterprise.ep128cfg`:
+- Create a custom config file next to the content (such as a .tzx file) called `enterprise.ep128cfg`:
 
     `machineDetailedType "EP128_TAPE"`
     `memory.ram.size 256`
@@ -324,11 +330,9 @@ Enterprise 128 has software extensions to emulate ZX Spectrum (48, 128) and Amst
     `memory.rom.42.offset 32768`
     `tape.forceMotorOn Yes`
 
-- Start ep128emu core without content
+- Start ep128emu core using the tape content
 - Invoke the SPEmu extension with `:sp128`
 - Choose Load tape
-- Enter RetroArch Quick menu (F1), go to Disk Control, and select the `.tap` file containing the Spectrum program
-- Later on, remember to remove the custom config file if you run into problems with regular Enterprise programs afterwards
 
 ### CPCEMU
 
