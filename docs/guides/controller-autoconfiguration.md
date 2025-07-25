@@ -273,12 +273,48 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 2. Connect the controller intended for autoconfiguration. Ensure your system supports the selected connectivity method. If your joypad supports both wired and wireless connections and the initial attempt (e.g., via USB) fails, try the alternative option (e.g., Bluetooth). For example, the Nintendo Switch Pro Controller does not support USB connection on Linux 5.15 and older but does support Bluetooth.
 3. For Android, run the [Android](#android) steps first.
 4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. If automatic mapping fails for any button (e.g., due to lack of driver support), the process will be interrupted. In case of interruption, manually map the remaining buttons, starting from the one that caused the interruption and continuing through the rest of the list.
-5. If applicable, then also set the menu button binding in `Settings` -> `Input` -> `Hotkeys` -> `Menu Toggle`
-6. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
-7. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
-8. For analog L2/R2 triggers (pressure-sensitive triggers) you must manually edit the autoconfig file (see the [Analog L2/R2 remapping](#analog-l2r2-remapping) section) due to a bug in RetroArch.
+5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
+6. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
+7. Proceed with the manual configuration step section below.
 
-### Manual analog L2/R2 remapping
+### Additional manual configuration steps
+
+#### Add hotkey(s)
+When using RetroArch, not all controller buttons are automatically mapped through the "Set All Controls" option. Some buttons—such as menu toggles, screenshot triggers, or other special functions—must be configured separately. Here’s a step-by-step guide to ensure all your controller buttons work as desired.
+
+##### Step 1: Identify the Button Functions
+Take a look at your physical controller to spot any special buttons that might not be auto-mapped by RetroArch. These could include:
+
+- Buttons marked for menus, home, or guides (e.g., *Menu Toggle*).
+- Extra buttons for screenshots or system functions (e.g., *Screenshot* on some Nintendo Switch Pro Controllers).
+
+Knowing which buttons are physically present helps you decide what needs manual mapping or hotkey assignment.
+
+##### Step 2: Configure Hotkeys in RetroArch
+1. Open RetroArch and navigate to:
+  - `Settings` → `Input` → `Hotkeys`
+2. Assign your desired button to the special function (e.g., menu toggle, screenshot).
+3. These hotkey assignments are saved in your main `retroarch.cfg` file.
+
+##### Step 3: Transfer Hotkey Assignments to the Autoconfig File
+To persist your custom mappings automatically for your controller:
+
+1. Open your main `retroarch.cfg` and locate the relevant variable(s), e.g.:
+    ```
+    input_menu_toggle_btn = "[x]"
+    input_screenshot_btn = "[y]"
+    ```
+The values shown are only examples and won’t work if directly copied into your autoconfig.
+
+2. Open your controller’s autoconfig file, usually located at:
+
+    ```
+    RetroArch/autoconfig/[platform]/[controller-name].cfg
+    ```
+3. Append the copied hotkey lines at the very bottom of the autoconfig file.
+4. Save changes.
+
+### Analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
 
 To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
@@ -322,9 +358,11 @@ Note: These variable values are examples and should not be directly copied to yo
 
 When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves. The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
 
-####Common Pitfall
+#### Common Pitfall
 Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
 By carefully updating both the variable names and values, you can ensure that your analog triggers are correctly configured for optimal performance.
+
+### 
 
 ### Inspect the file
 
@@ -467,8 +505,8 @@ input_device_alt2 = "Pro Controller"
 
 **DualShock 4 v2:**
 
-| Controller | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported[^2] | Device Index in RetroArch (Bluetooth) | Autoconfig structure |
-|-|-|-|-|-|-|-|
+| Controller Version | Linux Kernel Version | HID Support | USB Supported | Device Index in RetroArch (USB) | Bluetooth Supported | Device Index in RetroArch (Bluetooth) | Autoconfig Structure |
+|--------------------|---------------------|-------------|---------------|---------------------------------|---------------------|---------------------------------------|----------------------|
 | 5.15 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | udev/linuxraw: Generate `Sony DualShock 4 Controller.cfg` (see "Note" below). udev/linuxraw: Manually add DualShock 4 v1 values to input_device_alt1, input_device_display_name_alt1. linuxraw: Manually add: input_vendor_id_alt1, input_product_id_alt1 |
 | 5.19 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment Wireless Controller | Yes | Wireless Controller | |
@@ -555,13 +593,6 @@ input_product_id = "3570"
 If you need to manually identify the VID:PID for your controller (for example, if RetroArch does not work as expected for you) in GNU/Linux, you can run this script:
 
 ```
-#!/bin/bash
-
-# This script helps you identify your connected USB joypad.
-# It lists all USB devices, lets you select your joypad, extracts its Vendor ID and Product ID,
-# converts these IDs from hexadecimal to decimal, and prints them in a configuration-ready format.
-# If you skip selection, it exits gracefully.
-
 read -p "Connect your joypad and press ENTER."
 lsusb | nl -w2 -s': ' 
 read -p "Enter the number of your joypad device (or ENTER to skip): " n
@@ -580,14 +611,59 @@ input_vendor_id=$((16#$product_hex))
 
 echo -e "\ninput_vendor_id = \"$input_product_id\"\ninput_product_id = \"$input_vendor_id\"\n"
 
+########################################
+# List all autoconfig files for the selected USB controller
+
+search_autoconfig() {
+  local retroarch_dir="$1"
+
+  if [ ! -f "$retroarch_dir/retroarch.cfg" ]; then
+    echo "Config file not found: $retroarch_dir/retroarch.cfg. Please start RetroArch, and optionally configure Settings -> Directory -> Controller Profiles."
+    return
+  fi
+
+  # Extract raw joypad_autoconfig_dir from config, strip quotes and spaces
+  local joypad_autoconfig_dir_raw
+  joypad_autoconfig_dir_raw=$(grep "^joypad_autoconfig_dir" "$retroarch_dir/retroarch.cfg" | cut -d= -f2- | tr -d '" ')
+
+  local joypad_autoconfig_dir
+
+  # For AppImage, expand ~ to retroarch_dir; for others, expand ~ to $HOME
+  if [[ "$retroarch_dir" == *".AppImage.home/.config/retroarch" ]]; then
+    joypad_autoconfig_dir="${joypad_autoconfig_dir_raw/#\~/$retroarch_dir}"
+    # Remove duplicated ".config/retroarch/" if present twice
+    joypad_autoconfig_dir="${joypad_autoconfig_dir//.config\/retroarch\/.config\/retroarch/.config/retroarch}"
+  else
+    joypad_autoconfig_dir="${joypad_autoconfig_dir_raw/#\~/$HOME}"
+  fi
+
+  # Fallback to default autoconfig directory if empty
+  if [ -z "$joypad_autoconfig_dir" ]; then
+    joypad_autoconfig_dir="$HOME/.config/retroarch/autoconfig"
+  fi
+
+  echo "Searching in: $joypad_autoconfig_dir"
+
+  if [ -d "$joypad_autoconfig_dir" ]; then
+    grep -r "input_product_id = \"$input_vendor_id\"" "$joypad_autoconfig_dir"
+  else
+    echo "Autoconfig directory not found: $joypad_autoconfig_dir"
+  fi
+
+  echo ""
+}
+
+echo "--- Standard package install ---"
+search_autoconfig "$HOME/.config/retroarch"
+
+echo "--- Flathub (Flatpak) install ---"
+search_autoconfig "$HOME/.var/app/org.libretro.RetroArch/config/retroarch"
+
+echo "--- AppImage install ---"
+search_autoconfig "$HOME/Downloads/RetroArch-Linux-x86_64/RetroArch-Linux-x86_64.AppImage.home/.config/retroarch"
 ```
 
-This is especially useful if you want to search for existing autoconfig files matching your controller.
-For example, after obtaining the decimal Product ID, you can search the autoconfig directory (usually ~/.config/retroarch/autoconfig/) like this:
-
-
-`grep -r "input_product_id = \"$input_vendor_id\"" ~/.var/app/org.libretro.RetroArch/config/retroarch/autoconfig/`
-
+With this you can search for existing autoconfig files matching your controller. This is especially useful to find if your loaded autoconfig has commented variables which happens if there are multiple autoconfigs of the same controller.
 
 ### Mapping
 
@@ -624,7 +700,33 @@ input_menu_toggle_btn = "8"
 
 Note: These variable values are examples and should not be directly copied to your configuration file.
 
-#### Overview
+#### Input types
+
+##### Buttons (digital inputs)
+
+* These are defined by variable names ending with `_btn` (e.g., `input_a_btn`, `input_start_btn`).
+* The current RetroArch configurations have button values that ranges from `0` to `203`. However, if RetroArch does not limit the values to `203`, underlying controller hardware could offer an even wider range.
+* RetroArch interprets these IDs (usually 1 for pressed, 0 for not pressed) to determine the button state.
+
+###### D-Pad directions (special digital inputs)
+
+* D-pad directions use variable values beginning with `h0` (e.g., `input_up_btn = "h0up"`), for certain controller drivers (e.g udev, and android, but not sdl2).
+* Four `h0` variables exist (`h0up`, `h0down`, `h0left`, `h0right`) for each direction on the D-pad.
+* Note: The value `h1` is used by a single controller (Nintendo_Wii_Remote_Classic_Controller.cfg).
+
+##### Axis (analog input)
+* Axis definitions use `+` and `-` to indicate positive or negative direction (e.g., full press vs. no press).
+* The current RetroArch configurations have axis values that ranges from `0` to `10`. However, if RetroArch does not limit the values to `10`, underlying controller hardware could offer an even wider range.
+
+###### Mapping variables with analog L2/R2 triggers
+```
+input_l2_axis = "+[x]"
+input_r2_axis = "+[y]"
+```
+
+Note: These variable values are examples and should not be directly copied to your configuration file, they will not work.
+
+#### Controller elements
 
 ##### Axes (analog inputs)
 * They represent analog inputs from the controller, like joystick position (e.g., left joystick X-axis, right joystick Y-axis) or trigger pressure (e.g., L2 trigger, R2 trigger).
@@ -640,19 +742,12 @@ Note: These variable values are examples and should not be directly copied to yo
 | PlayStation 4    | DualShock 4                      | 2013           | Yes                 | Yes          |
 | PlayStation 5    | DualSense                        | 2020           | Yes                 | Yes          |
 
-###### Mapping variables
-* Axis definitions use `+` and `-` to indicate positive or negative direction (e.g., full press vs. no press).
-* The current RetroArch configurations have axis values that ranges from `0` to `10`. However, if RetroArch does not limit the values to `10`, underlying controller hardware could offer an even wider range.
+###### Shoulder buttons with analog variables
+Give each button the same label as described by the manufacturer. Additionally:
+- For analog shoulder buttons, use the manufacturer’s label **and** append the word **" Trigger"** at the end.
+  - For example: `input_l2_axis_label = "L2 Trigger"`
 
-Mapping variables with analog L2/R2 triggers:
-```
-input_l2_axis = "+2"
-input_r2_axis = "+5"
-```
-
-Note: A common mistake These variable values are examples and should not be directly copied to your configuration file.
-
-###### Label variables
+###### Analog sticks
 The term "Analog" is included in the variable values for the analog inputs to clearly indicate that these inputs are analog in nature.
 
 Labels for analog thumb sticks:
@@ -667,27 +762,9 @@ input_r_y_plus_axis_label = "Right Analog Y+ (down)"
 input_r_y_minus_axis_label = "Right Analog Y- (up)"
 ```
 
-Labels for analog L2/R2 triggers:
-```
-input_l2_axis_label = "L2 Trigger"
-input_r2_axis_label = "R2 Trigger"
-```
-
-##### Buttons (digital inputs)
-
-* These are defined by variable names ending with `_btn` (e.g., `input_a_btn`, `input_start_btn`).
-* The current RetroArch configurations have button values that ranges from `0` to `203`. However, if RetroArch does not limit the values to `203`, underlying controller hardware could offer an even wider range.
-* RetroArch interprets these IDs (usually 1 for pressed, 0 for not pressed) to determine the button state.
-
-###### D-Pad directions (special digital inputs)
-
-* D-pad directions use variable values beginning with `h0` (e.g., `input_up_btn = "h0up"`).
-* Four `h0` variables exist (`h0up`, `h0down`, `h0left`, `h0right`) for each direction on the D-pad.
-* Note: The value `h1` is used by a single controller (Nintendo_Wii_Remote_Classic_Controller.cfg).
-
 #### Input descriptors
 
-The third part are *input descriptors* used by RetroArch to display the labels of the buttons as they are written on your joypad.
+The third part are *input descriptors* used by RetroArch to display the labels of the buttons as they are written on your joypad. RetroArch does not automatically generate button labels; therefore, you need to manually add them to your autoconfig file.
 
 Generic input descriptors:
 ```
