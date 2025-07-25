@@ -294,7 +294,7 @@ Knowing which buttons are physically present helps you decide what needs manual 
 1. Open RetroArch and navigate to:
   - `Settings` → `Input` → `Hotkeys`
 2. Assign your desired button to the special function (e.g., menu toggle, screenshot).
-3. These hotkey assignments are saved in your main `retroarch.cfg` file.
+3. Close RetroArch properly to save your hotkey assignments to the main retroarch.cfg file. On most platforms, simply exiting RetroArch saves the configuration. However, on Android, you must explicitly quit RetroArch via the menu by selecting `Main Menu` → `Quit` for your changes to be saved correctly.
 
 ##### Step 3: Transfer Hotkey Assignments to the Autoconfig File
 To persist your custom mappings automatically for your controller:
