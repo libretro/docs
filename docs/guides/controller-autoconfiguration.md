@@ -282,37 +282,34 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 #### Add hotkey(s)
 When using RetroArch, not all controller buttons are automatically mapped through the "Set All Controls" option. Some buttons—such as menu toggles, screenshot triggers, or other special functions—must be configured separately. Here’s a step-by-step guide to ensure all your controller buttons work as desired.
 
-##### Step 1: Identify the Button Functions
-Take a look at your physical controller to spot any special buttons that might not be auto-mapped by RetroArch. These could include:
+1. Identify special buttons on your controller
+  - Look for buttons on your physical controller not automatically mapped by Retroarch.
+  - Examples include
+    - *Menu Toggle* (virtually all controllers has them)
+    - Additional special buttons may be found on some controllers. For example, the *Capture* (screenshot) button and the *HOME* button on the Nintendo Switch Pro Controller are examples of such special buttons.
+2. Assign hotkeys in Retroarch
+  - Launch Retroarch.
+  - Navigate to: `Settings` → `Input` → `Hotkeys`.
+  - Select the special function you want to assign (e.g., *Menu Toggle*, *Screenshot*).
+  - Press the desired button on your controller to bind it.
+  - Exit Retroarch properly to save the settings:
+    - On most platforms, just closing Retroarch saves the config.
+    - On Android, explicitly quit via `Main Menu` → `Quit` to ensure save.
 
-- Buttons marked for menus, home, or guides (e.g., *Menu Toggle*).
-- Extra buttons for screenshots or system functions (e.g., *Screenshot* on some Nintendo Switch Pro Controllers).
-
-Knowing which buttons are physically present helps you decide what needs manual mapping or hotkey assignment.
-
-##### Step 2: Configure Hotkeys in RetroArch
-1. Open RetroArch and navigate to:
-  - `Settings` → `Input` → `Hotkeys`
-2. Assign your desired button to the special function (e.g., menu toggle, screenshot).
-3. Close RetroArch properly to save your hotkey assignments to the main retroarch.cfg file. On most platforms, simply exiting RetroArch saves the configuration. However, on Android, you must explicitly quit RetroArch via the menu by selecting `Main Menu` → `Quit` for your changes to be saved correctly.
-
-##### Step 3: Transfer Hotkey Assignments to the Autoconfig File
-To persist your custom mappings automatically for your controller:
-
-1. Open your main `retroarch.cfg` and locate the relevant variable(s), e.g.:
+3. Transfer hotkey assignments to your controller autoconfig file
+  - Open your main `retroarch.cfg` file.
+  - Locate the hotkey assignment lines, for example:
     ```
     input_menu_toggle_btn = "[x]"
     input_screenshot_btn = "[y]"
     ```
-The values shown are only examples and won’t work if directly copied into your autoconfig.
-
-2. Open your controller’s autoconfig file, usually located at:
-
+    (The values `[x]`, `[y]` are placeholders from your config.)
+  - Open your controller’s autoconfig file, typically found at:
     ```
-    RetroArch/autoconfig/[platform]/[controller-name].cfg
+    retroarch/autoconfig/[platform]/[controller-name].cfg
     ```
-3. Append the copied hotkey lines at the very bottom of the autoconfig file.
-4. Save changes.
+  - Append the copied hotkey lines to the bottom of this autoconfig file.
+  - Save the autoconfig file.
 
 ### Analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
@@ -752,14 +749,14 @@ The term "Analog" is included in the variable values for the analog inputs to cl
 
 Labels for analog thumb sticks:
 ```
-input_l_x_plus_axis_label = "Left Analog X+ (right)"
-input_l_x_minus_axis_label = "Left Analog X- (left)"
-input_l_y_plus_axis_label = "Left Analog Y+ (down)"
-input_l_y_minus_axis_label = "Left Analog Y- (up)"
-input_r_x_plus_axis_label = "Right Analog X+ (right)"
-input_r_x_minus_axis_label = "Right Analog X- (left)"
-input_r_y_plus_axis_label = "Right Analog Y+ (down)"
-input_r_y_minus_axis_label = "Right Analog Y- (up)"
+input_l_x_plus_axis_label = "Left Analog X+ (Right)"
+input_l_x_minus_axis_label = "Left Analog X- (Left)"
+input_l_y_plus_axis_label = "Left Analog Y+ (Down)"
+input_l_y_minus_axis_label = "Left Analog Y- (Up)"
+input_r_x_plus_axis_label = "Right Analog X+ (Right)"
+input_r_x_minus_axis_label = "Right Analog X- (Left)"
+input_r_y_plus_axis_label = "Right Analog Y+ (Down)"
+input_r_y_minus_axis_label = "Right Analog Y- (Up)"
 ```
 
 #### Input descriptors
@@ -784,14 +781,14 @@ input_l2_axis_label = "LT"
 input_r2_axis_label = "RT"
 input_l3_btn_label = "Left Thumb"
 input_r3_btn_label = "Right Thumb"
-input_l_x_plus_axis_label = "Left Analog X+ (right)"
-input_l_x_minus_axis_label = "Left Analog X- (left)"
-input_l_y_plus_axis_label = "Left Analog Y+ (down)"
-input_l_y_minus_axis_label = "Left Analog Y- (up)"
-input_r_x_plus_axis_label = "Right Analog X+ (right)"
-input_r_x_minus_axis_label = "Right Analog X- (left)"
-input_r_y_plus_axis_label = "Right Analog Y+ (down)"
-input_r_y_minus_axis_label = "Right Analog Y- (up)"
+input_l_x_plus_axis_label = "Left Analog X+ (Right)"
+input_l_x_minus_axis_label = "Left Analog X- (Left)"
+input_l_y_plus_axis_label = "Left Analog Y+ (Down)"
+input_l_y_minus_axis_label = "Left Analog Y- (Up)"
+input_r_x_plus_axis_label = "Right Analog X+ (Right)"
+input_r_x_minus_axis_label = "Right Analog X- (Left)"
+input_r_y_plus_axis_label = "Right Analog Y+ (Down)"
+input_r_y_minus_axis_label = "Right Analog Y- (Up)"
 input_menu_toggle_btn_label = "Guide"
 ```
 
@@ -815,14 +812,14 @@ input_l2_axis_label = "L2 Trigger"
 input_r2_axis_label = "R2 Trigger"
 input_l3_btn_label = "L3"
 input_r3_btn_label = "R3"
-input_l_x_plus_axis_label = "Left Analog X+ (right)"
-input_l_x_minus_axis_label = "Left Analog X- (left)"
-input_l_y_plus_axis_label = "Left Analog Y+ (down)"
-input_l_y_minus_axis_label = "Left Analog Y- (up)"
-input_r_x_plus_axis_label = "Right Analog X+ (right)"
-input_r_x_minus_axis_label = "Right Analog X- (left)"
-input_r_y_plus_axis_label = "Right Analog Y+ (down)"
-input_r_y_minus_axis_label = "Right Analog Y- (up)"
+input_l_x_plus_axis_label = "Left Analog X+ (Right)"
+input_l_x_minus_axis_label = "Left Analog X- (Left)"
+input_l_y_plus_axis_label = "Left Analog Y+ (Down)"
+input_l_y_minus_axis_label = "Left Analog Y- (Up)"
+input_r_x_plus_axis_label = "Right Analog X+ (Right)"
+input_r_x_minus_axis_label = "Right Analog X- (Left)"
+input_r_y_plus_axis_label = "Right Analog Y+ (Down)"
+input_r_y_minus_axis_label = "Right Analog Y- (Up)"
 input_menu_toggle_btn_label = "PS"
 ```
 
@@ -878,14 +875,14 @@ input_l2_axis_label = "L2 Trigger"
 input_r2_axis_label = "R2 Trigger"
 input_l3_btn_label = "L3"
 input_r3_btn_label = "R3"
-input_l_x_plus_axis_label = "Left Analog X+ (right)"
-input_l_x_minus_axis_label = "Left Analog X- (left)"
-input_l_y_plus_axis_label = "Left Analog Y+ (down)"
-input_l_y_minus_axis_label = "Left Analog Y- (up)"
-input_r_x_plus_axis_label = "Right Analog X+ (right)"
-input_r_x_minus_axis_label = "Right Analog X- (left)"
-input_r_y_plus_axis_label = "Right Analog Y+ (down)"
-input_r_y_minus_axis_label = "Right Analog Y- (up)"
+input_l_x_plus_axis_label = "Left Analog X+ (Right)"
+input_l_x_minus_axis_label = "Left Analog X- (Left)"
+input_l_y_plus_axis_label = "Left Analog Y+ (Down)"
+input_l_y_minus_axis_label = "Left Analog Y- (Up)"
+input_r_x_plus_axis_label = "Right Analog X+ (Right)"
+input_r_x_minus_axis_label = "Right Analog X- (Left)"
+input_r_y_plus_axis_label = "Right Analog Y+ (Down)"
+input_r_y_minus_axis_label = "Right Analog Y- (Up)"
 input_menu_toggle_btn_label = "PS"
 ```
 
