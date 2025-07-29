@@ -285,7 +285,7 @@ When using RetroArch, not all controller buttons are automatically mapped throug
 1. Identify special buttons on your controller
   - Look for buttons on your physical controller not automatically mapped by Retroarch.
   - Examples include
-    - *Menu Toggle* (virtually all controllers has them)
+    - *Menu Toggle* (virtually all controllers have them)
     - Additional special buttons may be found on some controllers. For example, the *Capture* (screenshot) and the "Home" button on Nintendo Switch Pro Controller.
 3. Assign hotkeys in Retroarch
   - Launch Retroarch.
@@ -294,7 +294,7 @@ When using RetroArch, not all controller buttons are automatically mapped throug
   - Press the desired button on your controller to bind it.
   - Exit Retroarch properly to save the settings:
     - On most platforms, just closing Retroarch saves the config.
-    - On Android, explicitly quit via `Main Menu` → `Quit` to ensure save.
+    - On Android, explicitly quit via `Main Menu` → `Quit` to ensure settings are saved.
 
 4. Transfer hotkey assignments to your controller autoconfig file
   - Open your main `retroarch.cfg` file.
@@ -309,14 +309,16 @@ When using RetroArch, not all controller buttons are automatically mapped throug
     retroarch/autoconfig/[platform]/[controller-name].cfg
     ```
   - Append the copied hotkey lines to the bottom of the autoconfig file.
-5. Refer to the manufacturer’s official labeling for each button, but avoid using all capital letters unless the name is an abbreviation. Instead, use standard capitalization with an initial capital letter to enhance readability and provide user-friendly display labels. Additionally, do not add the word “button” if it is already part of the official name. For example, although Nintendo officially refers to the “HOME button” on the Switch Pro Controller, you should simply add it as “Home.” Similarly, the menu toggle label for Sony PlayStation controllers is shown as “PS.” This approach balances clear communication with respect for the manufacturer’s naming conventions.
-  - Add their corresponding label variables at the absolute bottom of the file, for example:
+5. Add labels. They will be visible in `Settings` → `Input` → `Hotkeys`.
+  - Add variable names. Complement the variables that you just added to the autoconfig file with the corresponding label variables ([variable name]+"_label") at the absolute bottom of the file, for example:
     ```
     input_menu_toggle_btn_label = "[y]"
     input_screenshot_btn_label = "[z]"
     ```
-    *(Replace `[y]` and `[z]` with the appropriate label values.)*
+    *(Replace `[y]` and `[z]` with the appropriate label values described below.)*
+  - Add the corresponding variable label values. Refer to the manufacturer’s official labeling for each button, but avoid using all capital letters unless the name is an abbreviation. Use standard capitalization with an initial capital letter to improve readability. Also, do not add the word “button” if it is already part of the official name. For instance, Nintendo refers to the “HOME button” on the Switch Pro Controller, but you should label it simply as “Home.” Similarly, the menu toggle label for Sony PlayStation controllers is “PS.” This approach balances clarity and respect for official naming.
 6. Save the autoconfig file.
+7. Restart RetroArch and navigate to `Settings` → `Input` → `Hotkeys` to confirm that they look as intended.
 
 ### Analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
