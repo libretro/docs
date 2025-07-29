@@ -300,10 +300,12 @@ When using RetroArch, not all controller buttons are automatically mapped throug
   - Open your main `retroarch.cfg` file.
   - Locate the hotkey assignment lines, for example:
     ```
-    input_menu_toggle_btn = "[x]"
-    input_screenshot_btn = "[y]"
+    input_menu_toggle_btn = "[w]"
+    input_screenshot_btn = "[x]"
+    input_menu_toggle_btn_label = "[y]"
+    input_screenshot_btn_label = "[z]"
     ```
-    (The values `[x]`, `[y]` are placeholders from your config.)
+    (The values `[w]`, `[x]`, `[y]`, `[z]` are placeholders from your config.)
   - Open your controller’s autoconfig file, typically found at:
     ```
     retroarch/autoconfig/[platform]/[controller-name].cfg
