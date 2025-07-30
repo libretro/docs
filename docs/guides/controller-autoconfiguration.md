@@ -323,7 +323,17 @@ When using RetroArch, not all controller buttons are automatically mapped throug
 ### Analog L2/R2 remapping
 RetroArch has a bug([ref1](https://github.com/libretro/RetroArch/issues/6920), [ref2](https://github.com/libretro/RetroArch/issues/16767)) that causes analog L2/R2 triggers to be incorrectly mapped as digital buttons instead of analog axes when configuring controls through the UI. This affects pressure-sensitive triggers on controllers like PlayStation 2 and later, making some games unplayable due to the lack of analog input.
 
-To work around this issue, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
+SDL2 is an exception to this issue: SDL2 treats triggers like L2 and R2 as axes, even if they are digital buttons, to keep a consistent interface across controllers. For example, the Nintendo Switch Pro Controller’s triggers are digital but SDL2 maps them as axes, with values jumping from 0 to max instantly. In the SDL2 Nintendo Switch Pro Controller.cfg file, this is reflected by lines like:
+
+```
+input_l2_axis = "+4"
+input_r2_axis = "+5"
+input_l2_axis_label = "ZL"
+input_r2_axis_label = "ZR"
+```
+
+
+To address this bug in RetroArch on other controllers or drivers, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
 
 * Install and run jstest avalible for GNU/Linux (`sudo apt-get install joystick` for Debian-like distros), and Windows.
   - In GNU/Linux: `jstest /dev/input/js0`
@@ -362,7 +372,7 @@ input_r2_axis_label = "R2 Trigger"
 
 Note: These variable values are examples and should not be directly copied to your configuration file.
 
-When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. A common oversight is focusing solely on the values while neglecting to update the variable names themselves. The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
+When modifying your autoconfig file for analog triggers, it's crucial to pay attention to both variable names and values. The corresponding label variable names must also be consistent to ensure the configuration works correctly. A common oversight is focusing solely on the values while neglecting to update the variable names themselves. The `_axis` suffix is essential for ensuring proper analog functionality. Simply changing values without updating the suffix from `_btn` to `_axis` will not achieve the desired result.
 
 #### Common Pitfall
 Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
