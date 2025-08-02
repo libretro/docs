@@ -264,7 +264,7 @@ nav:
         - 'Sony - PlayStation (Beetle PSX)': 'library/beetle_psx.md'
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
-        - 'Sony - PlayStation 2 (PCSX2)': 'library/pcsx2.md'
+        - 'Sony - PlayStation 2 (PCSX2)': 'library/lrps2.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'Super Cassette Vision':
