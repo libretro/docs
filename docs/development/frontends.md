@@ -15,7 +15,8 @@ Name | Author(s) |  Description
 [Emutest](https://github.com/kivutar/emutest) | kivutar | A headless libretro frontend to test libretro cores.
 [EmuVR](http://www.emuvr.net/about/) | | |
 [Hackable console](https://github.com/leiradel/hackable-console) | leiradel | Debugging tool for libretro cores.
-[Haiyajan](https://projects.deltabeard.com/haiyajan) | deltabeard | A tiny and fast libretro entertainment application. 
+[Haiyajan](https://projects.deltabeard.com/haiyajan) | deltabeard | A tiny and fast libretro entertainment application.
+[KRetro](https://invent.kde.org/games/kretro) | Seshan Ravikumar | libretro emulation frontend for Plasma.
 [Ludo](https://github.com/libretro/ludo) | kivutar | libretro frontend written in Go.
 [Lemuroid](https://github.com/Swordfish90/Lemuroid) | Swordfish90 | All in 1 emulator on Android.
 [Merton](https://github.com/snowcone-ltd/merton) | Snowcone Ltd. | Merton is a work-in-progress emulator frontend for libretro built with [libmatoya](https://github.com/snowcone-ltd/libmatoya).
