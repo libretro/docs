@@ -1,3 +1,7 @@
+# Libretro Docs
+
+This repository contains the source for the official Libretro and RetroArch documentation, available at [docs.libretro.com](https://docs.libretro.com/).
+
 # Contribute to the documentation
 
 These docs are written in [Markdown.](https://en.wikipedia.org/wiki/Markdown) If you need help with the syntax, use [this guide](https://guides.github.com/features/mastering-markdown/). Mkdocs uses some [Markdown extensions](http://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions) that you may have to familiarize with.
