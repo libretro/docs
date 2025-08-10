@@ -1,5 +1,5 @@
 # Sony - PlayStation (LRPS2)
-
+RetroArch LRPS2
 <iframe width="845" height="475" src="https://www.youtube.com/embed/f-DxgSIGNlg" title="RetroArch - LRPS2 - How to get into the PS2 startup screen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 LRPS2 is a heavily modified hard fork of the excellent and mature PCSX2 emulator ported to libretro. It runs on Windows, macOS and Linux on the x86_64 architecture. MacOS computers running on Apple's ARM chipsets can still run it through the Rosetta x86 compatibility mode. This core does not work natively on ARM hardware, so it is not available on iOS/tvOS, Android, ARM Linux or Windows on ARM.
