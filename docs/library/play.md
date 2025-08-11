@@ -1,4 +1,4 @@
-# Sony - PlayStation 2 (Play!)
+# Sony - PlayStation 2 (Play!) 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/smbhFWfkgMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -15,7 +15,7 @@ The Play! core has been authored by
 
 The Play! core is licensed under
 
-- [MIT](https://github.com/jpd002/Play-/blob/master/License.txt)
+- [MIT](https://github.com/jpd002/Play-/blob/master/License.txt)tditnmd
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
