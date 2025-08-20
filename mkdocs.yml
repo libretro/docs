@@ -249,6 +249,7 @@ nav:
         - 'Sega - MS/GG/MD/CD (Genesis Plus GX)': 'library/genesis_plus_gx.md'
         - 'Sega - MS/MD/CD/32X (PicoDrive)': 'library/picodrive.md'
         - 'Sega - MD/CD (BlastEm)': 'library/blastem.md'
+        - 'Sega - MD/CD (ClownMDEmu)': 'library/clownmdemu.md'
         - 'Sega - Saturn (Beetle Saturn)': 'library/beetle_saturn.md'
         - 'Sega - Saturn/ST-V (Kronos)': 'library/kronos.md'
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'

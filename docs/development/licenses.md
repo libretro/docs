@@ -86,6 +86,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/COPYING)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
 | [Citra Canary/Experimental](../library/citra_canary.md)              | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
+| [ClownMDEmu](../library/clownmdemu.md)                     			   | [AGPLv3](https://github.com/Clownacy/clownmdemu-libretro/blob/master/LICENCE.txt)         |                |
 | [Craft](../library/craft.md)                     			           | [MIT](https://github.com/libretro/Craft/blob/master/LICENSE.md)                           |                |
 | [CrocoDS](../library/crocods.md)                 			           | [MIT](https://github.com/libretro/libretro-crocods/blob/master/LICENSE)                   |                |
 | [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |

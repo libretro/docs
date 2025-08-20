@@ -151,6 +151,8 @@ This is a list of cores that are related to each other in some way.
 - [Sega - Master System (Emux SMS)](../library/emux_sms.md)
 - [Sega - MS/GG/MD/CD (Genesis Plus GX)](../library/genesis_plus_gx.md)
 - [Sega - MS/MD/CD/32X (PicoDrive)](../library/picodrive.md)
+- [Sega - MD/CD (BlastEm)](../library/blastem.md)
+- [Sega - MD/CD (ClownMDEmu)](../library/clownmdemu.md)
 - [Sega - MS/GG/SG-1000 (Gearsystem)](../library/gearsystem.md)
 - [Sega - MS/GG (SMS Plus GX)](../library/smsplus.md)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](../library/bluemsx.md)
