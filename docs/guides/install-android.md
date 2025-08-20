@@ -1,7 +1,5 @@
 # Downloading, Installing and Updating RetroArch for Android devices.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dqx5c28pT3o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ### Installation via Website
 ___
 1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
