@@ -46,6 +46,7 @@
 | [Citra](../library/citra.md)               | Nintendo 3DS           |                    |
 | Citra 2018                | Nintendo 3DS           |                    |
 | [Citra Canary](../library/citra_canary.md) | Nintendo 3DS           | Based on Citra development branch |
+| [ClownMDEmu](../library/clownmdemu.md)     | Sega MD/CD             |                    |
 | Craft                     | Game                   | A basic clone of the Minecraft sandbox game |
 | [CrocoDS](../library/crocods.md)           | Amstrad CPC            |                    |
 | Cruzes                    | Game                   | (Further information required) |

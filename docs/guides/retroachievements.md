@@ -284,6 +284,7 @@ You can also check the progress of your friends and add comments on their trophi
 |----------------------------------------------------------------|:---------:|:------|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         | Preferred core. |
 | [BlastEm](https://github.com/libretro/blastem)                 | ✕         | Cycle accurate. Genesis/MegaDrive only. Has known issues with game RAM and is incompatible with achievements. |
+| [ClownMDEmu](https://github.com/Clownacy/clownmdemu-libretro)  | ✕         |       |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         |       |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)          | ✔         | Master System only |
 | [Gearsystem](https://github.com/drhelius/Gearsystem)           | ✔         | Master System only |
@@ -320,6 +321,7 @@ You can also check the progress of your friends and add comments on their trophi
 | Core                                                           | Supported | Notes |
 |----------------------------------------------------------------|:---------:|:------|
 | [Genesis Plus GX](https://github.com/libretro/Genesis-Plus-GX) | ✔         |       |
+| [ClownMDEmu](https://github.com/Clownacy/clownmdemu-libretro)  | ✕         |       |
 | [Picodrive](https://github.com/libretro/picodrive)             | ✔         |       |
 
 #### Saturn

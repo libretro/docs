@@ -105,6 +105,7 @@ rom.ips2
 | Core                                             | Supported |
 |--------------------------------------------------|:---------:|
 | [BlastEm](../library/blastem.md)                 | ✔         |
+| [ClownMDEmu](../library/clownmdemu.md)           | ✔         |
 | [Genesis Plus GX](../library/genesis_plus_gx.md) | ✔         |
 | [PicoDrive](../library/picodrive.md)             | ✕         |
 
