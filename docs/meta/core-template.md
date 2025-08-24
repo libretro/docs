@@ -268,6 +268,7 @@ Rumble only works in the [Core name] core when
 
 ## Joypad
 
+- // Illustrations are available in 'docs/image/controller', which may be useful here
 - // Add RetroPad inputs, please note the third column is only used when an input doesn't have a descriptor
 
 | RetroPad Inputs                                | User # input descriptors | (Device name) Inputs      |
@@ -492,7 +493,7 @@ Rumble only works in the [Core name] core when
 - // Or write up a compatibility description
 - // Or make a compatibility table
 
-## External Links
+## External links
 
 - // Put relevant links here
 
@@ -504,5 +505,4 @@ Rumble only works in the [Core name] core when
 
 ## (Related cores)
 
-- // Add links to related core docs here. Use the See Also doc for help
-- // https://docs.libretro.com/meta/see_also
+- // Add links to related core docs here. Use the 'docs/meta/see-also.md' doc for help

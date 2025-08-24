@@ -34,14 +34,14 @@ RetroArch database(s) that are associated with the ClownMDEmu core:
 Frontend-level settings or features that the ClownMDEmu core respects:
 
 | Feature           | Supported |
-|-------------------|-----------|
+|-------------------|:---------:|
 | Restart           | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -68,14 +68,14 @@ The ClownMDEmu core saves/loads to/from these directories.
 **Frontend's Save directory**
 
 | File  | Description                  |
-|-------|------------------------------|
+|:-----:|:----------------------------:|
 | *.srm | Mega Drive/Genesis save data |
 | *.brm | Mega CD/Sega CD save data    |
 
 **Frontend's State directory**
 
 | File     | Description |
-|----------|-------------|
+|:--------:|:-----------:|
 | *.state# | State       |
 
 ## Geometry and timing
@@ -205,6 +205,8 @@ The ClownMDEmu core has the following option(s) that can be tweaked from the cor
 	Approximates the so-called 'ladder effect' that is present in early Mega Drives. Without this, certain sounds in some games will be too quiet.
 
 ## Joypad
+
+![](../image/controller/md6.png)
 
 | RetroPad Inputs                                | User 1 - 2 input descriptors |
 |------------------------------------------------|------------------------------|
