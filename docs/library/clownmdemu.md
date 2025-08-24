@@ -41,7 +41,7 @@ Frontend-level settings or features that the ClownMDEmu core respects:
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
