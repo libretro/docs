@@ -34,7 +34,7 @@ RetroArch database(s) that are associated with the ClownMDEmu core:
 Frontend-level settings or features that the ClownMDEmu core respects:
 
 | Feature           | Supported |
-|-------------------|-----------|
+|-------------------|:---------:|
 | Restart           | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
@@ -68,14 +68,14 @@ The ClownMDEmu core saves/loads to/from these directories.
 **Frontend's Save directory**
 
 | File  | Description                  |
-|-------|------------------------------|
+|:-----:|:----------------------------:|
 | *.srm | Mega Drive/Genesis save data |
 | *.brm | Mega CD/Sega CD save data    |
 
 **Frontend's State directory**
 
 | File     | Description |
-|----------|-------------|
+|:--------:|:-----------:|
 | *.state# | State       |
 
 ## Geometry and timing
