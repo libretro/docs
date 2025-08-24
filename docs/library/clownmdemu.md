@@ -206,6 +206,8 @@ The ClownMDEmu core has the following option(s) that can be tweaked from the cor
 
 ## Joypad
 
+![](../image/controller/md6.png)
+
 | RetroPad Inputs                                | User 1 - 2 input descriptors |
 |------------------------------------------------|------------------------------|
 | ![](../image/retropad/retro_b.png)             | B                            |
