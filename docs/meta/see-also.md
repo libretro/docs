@@ -122,6 +122,11 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - NES / Famicom (Nestopia)](../library/nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](../library/quicknes.md)
 
+## RPG Maker
+
+- [RPG Maker 2000/2003 (EasyRPG)](../library/easyrpg.md)
+- [RPG Maker XP/VX/VX Ace (mkxp-z)](../library/mkxp-z.md)
+
 ## id Software
 
 - [Doom (PrBoom)](../library/prboom.md)

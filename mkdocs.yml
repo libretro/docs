@@ -303,7 +303,9 @@ nav:
       - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
       - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
       - 'Rick Dangerous (XRick)': 'library/xrick.md'
-      - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
+      - 'RPG Maker Emulation':
+        - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
+        - 'RPG Maker XP/VX/VX Ace (mkxp-z)': 'library/mkxp-z.md'
       - 'ScummVM': 'library/scummvm.md'
       - 'The Powder Toy': 'library/the_powder_toy.md'
       - 'TIC-80': 'library/tic80.md'
