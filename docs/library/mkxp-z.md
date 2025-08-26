@@ -1,4 +1,4 @@
-# mkxp-z
+# RPG Maker XP/VX/VX Ace (mkxp-z)
 
 ## Background
 
@@ -41,7 +41,7 @@ Once extracted, the RTP files should consist of a directory which contains two s
         │   ├── Graphics
         │   ├── RGSS200J.dll
         │   ├── RGSS202E.dll
-        │   └── RGSS200J.dll
+        │   └── RGSS202J.dll
         ├── RPGVXAce
         │   ├── Audio
         │   ├── Fonts
