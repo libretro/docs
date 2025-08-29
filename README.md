@@ -72,7 +72,7 @@ These are the documents that should be added/updated when a new core is added to
 
 - Add the core to docs/library/ (Follow the latest core template. docs/meta/core-template.md)
 - Add the core to mkdocs.yml
-- Add the core to docs/meta/core-list.md
+- Add the core to docs/guides/core-list.md
 - Add the core to docs/meta/see-also.md if it's related to another core in some way
 - Add the core to docs/development/licenses.md
 - Add the core to docs/guides/softpatching.md if it supports softpatching
