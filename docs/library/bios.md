@@ -90,6 +90,8 @@ PlayStation                   | Beetle PSX HW      | [BIOS information](beetle_p
 PlayStation                   | PCSX ReARMed       | [BIOS information](pcsx_rearmed.md#bios)
 Pokémon Mini                  | PokeMini           | [BIOS information](pokemini.md#bios)
 PSP                           | PPSSPP             | [BIOS information](ppsspp.md#bios)
+RPG Maker 2000/2003           | EasyRPG            | [BIOS information](easyrpg.md#rtp-files)
+RPG Maker XP/VX/VX Ace        | mkxp-z             | [BIOS information](mkxp-z.md#bios)
 Saturn                        | Beetle Saturn      | [BIOS information](beetle_saturn.md#bios)
 Saturn                        | Kronos             | [BIOS information](kronos.md#bios)
 Saturn                        | Yabause            | [BIOS information](yabause.md#bios)

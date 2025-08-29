@@ -41,7 +41,7 @@ You must download the RTP2000 and RTP2003 from [here](https://www.rpgmakerweb.co
 
 RetroArch database(s) that are associated with the EasyRPG core:
 
-- [RPG Maker](https://github.com/libretro/libretro-database/blob/master/rdb/RPG%20Maker.rdb) (only covers 2000 and 2003 games, not the other versions)
+- [RPG Maker](https://github.com/libretro/libretro-database/blob/master/rdb/RPG%20Maker.rdb)
 - [RPG Maker thumbnails](https://github.com/libretro-thumbnails/RPG_Maker)
 
 ## Features
@@ -150,3 +150,7 @@ The EasyRPG core supports the following device type(s) in the controls menu, bol
 - [Libretro EasyRPG Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/easyrpg_libretro.info)
 - [Libretro EasyRPG Github Repository](https://github.com/libretro/easyrpg-libretro)
 - [Report Libretro EasyRPG Core Issues Here](https://github.com/libretro/easyrpg-libretro/issues)
+
+## (Related cores)
+
+- [RPG Maker XP/VX/VX Ace (mkxp-z)](mkxp-z.md)

@@ -137,6 +137,7 @@
 | [mGBA](../library/mgba.md)                    | Game Boy Advance       |                    |
 | Microw8                   | Game engine            | A port of a WebAssembly based fantasy console to libretro |
 | [Minivmac](../library/minivmac.md)            | Mac II                 | MacII variant of minivmac emulator |
+| [mkxp-z](../library/mkxp-z.md)                | RPG Maker XP/VX/VX Ace |                    |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | Mr.Boom                   | Game                   | A clone of the classic Bomberman series |
 | Mu                        | Palm OS                | An emulator for the Palm m515 OS ported to libretro |

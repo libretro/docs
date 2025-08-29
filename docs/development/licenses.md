@@ -159,6 +159,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Meteor](../library/meteor.md)                            		           | [GPLv3](https://github.com/libretro/meteor-libretro/blob/master/COPYING)                  |                |
 | [mGBA](../library/mgba.md)                                                       | [MPLv2.0](https://github.com/libretro/mgba/blob/master/LICENSE)                           |                |
 | [MicroW8](../library/microw8.md)                                                       | [Unlicense](https://github.com/libretro/uw8-libretro/blob/main/UNLICENSE)                           |                |
+| [mkxp-z](../library/mkxp-z.md)                                                   | [GPLv2](https://github.com/mkxp-z/mkxp-z/blob/dev/COPYING)                                |                |
 | mpv                                                                              | [GPLv3](https://github.com/libretro/libretro-mpv/blob/master/LICENSE)                     |                |
 | [Mr.Boom](../library/mr_boom.md)                          		           | [MIT](https://github.com/libretro/mrboom-libretro/blob/master/LICENSE)                    |                |
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
