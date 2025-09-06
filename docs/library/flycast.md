@@ -53,7 +53,7 @@ Required or optional firmware files go in RetroArch's system directory.
 
 |   Filename      |    Description                                                       |              md5sum              |
 |:---------------:|:--------------------------------------------------------------------:|:--------------------------------:|
-| dc/dc_boot.bin  | Dreamcast BIOS - Required for Dreamcast                              | e10c53c2f8b90bab96ead2d368858623 |
+| dc/dc_boot.bin  | Dreamcast BIOS - Optional                                            | e10c53c2f8b90bab96ead2d368858623 |
 | dc/naomi.zip    | NAOMI BIOS from MAME - Optional                                      |                                  |
 | dc/hod2bios.zip | NAOMI The House of the Dead 2 BIOS from MAME - Optional              |                                  |
 | dc/f355dlx.zip  | NAOMI Ferrari F355 Challenge (deluxe) BIOS from MAME - Optional      |                                  |
@@ -77,7 +77,7 @@ Required or optional firmware files go in RetroArch's system directory.
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
