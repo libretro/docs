@@ -51,7 +51,7 @@ Frontend-level settings or features that the ClownMDEmu core respects:
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
