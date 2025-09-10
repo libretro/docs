@@ -1,5 +1,48 @@
 # Joypad Auto Configuration
 
+## Why is it needed?
+
+RetroArch runs on many platforms. Each of these platforms has one or more input systems. These input systems in turn differ widely in the way they enumerate the pad buttons. For this reason, your joypad buttons may be mapped differently depending on if you are using Windows, Mac, or Linux.
+
+
+Traditional emulators allow you map each button of your pad to the original pad of the emulated system. For example, this is how the Snes9x joypad configuration interface looks:
+
+![Snes9x joypad configuration](../image/retroarch/input/snes9x-joyconfig-example.jpg)
+
+RetroArch also allows this kind of manual mapping. However, RetroArch tries to go further by detecting your joypad and automatically configuring it so manual configuration becomes obsolete.
+
+## Benefits
+
+With RetroArch joypad auto-configuration system, your joypad will be recognized and will work out of the box.
+
+This allows:
+
+   - Use many different joypads and have them attributed to each players like it would work on a real game console.
+   - Unplug the second joypad, and replace it by another one, even if it's of a different brand and model.
+
+Having automatically configured joypads makes it a lot easier to navigate the RetroArch Menu with the joypad. This is very convenient when running RetroArch on a game console, where a keyboard and a mouse are not always available. It is also what makes RetroArch suitable to build your own game console using Lakka or a similar OS.
+
+## Installing or updating joypad profiles
+
+![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
+
+The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Controller Profiles` to get the latest version of the profile pack.
+
+A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
+
+## Generating a joypad profile
+
+If your joypad is not recognized by RetroArch even after updating the profiles, you can generate a profile from the menu.
+
+1. To avoid other controllers from interfering with your mapping when starting RetroArch, follow these steps: Disconnect all joypads by unplugging their cables or disconnecting them from any wireless connections.
+2. Connect the controller intended for autoconfiguration. Ensure your system supports the selected connectivity method. If your joypad supports both wired and wireless connections and the initial attempt (e.g., via USB) fails, try the alternative option (e.g., Bluetooth). For example, the Nintendo Switch Pro Controller does not support USB connection on Linux 5.15 and older but does support Bluetooth.
+3. For Android, run the [Android](#android) steps first.
+4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. If automatic mapping fails for any button (e.g., due to lack of driver support), the process will be interrupted. In case of interruption, manually map the remaining buttons, starting from the one that caused the interruption and continuing through the rest of the list.
+5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
+6. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
+7. Proceed with the manual configuration step section below.
+
+
 ## How does RetroArch match controllers?
 
 When you connect a new controller to RetroArch, the system attempts to automatically configure it by matching it to known profiles. This matching process is crucial for ensuring that your controller works correctly with various games and emulators.
@@ -10,6 +53,14 @@ The matching algorithm considers several key factors:
 - **Device Index (input_device)**: The name of the controller as recognized by the system. The **Device Index** can be identified by navigating to **Settings -> Input -> RetroPad Binds -> Port 1 Controls**.
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
+- **Physical ID (input_phys_id)**: A manually generated identifier, only valid for one specific controller / USB port. Documentation [in github](https://github.com/libretro/RetroArch/pull/18190) for the time being.
+
+### Matching process
+RetroArch compares these factors against the files in the autoconfig directorys. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
+
+The combination of Vendor ID and Product ID is often referred to as "vid:pid" in technical contexts.
+
+This automated matching system allows RetroArch to support a vast array of controllers, reducing the need for manual setup in most situations.
 
 ## Autoconfig variable policy
 
@@ -115,36 +166,6 @@ input_r_x_minus_axis = "-2"
 input_r_y_plus_axis = "+3"
 input_r_y_minus_axis = "-3"
 ```
-
-### Matching process
-RetroArch compares these factors against the files in the autoconfig directorys. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
-
-The combination of Vendor ID and Product ID is often referred to as "vid:pid" in technical contexts.
-
-This automated matching system allows RetroArch to support a vast array of controllers, reducing the need for manual setup in most situations.
-
-
-## Why is it needed?
-
-RetroArch works many platforms. Each of these platforms has one or more input systems. These input systems in turn differ widely in the way they enumerate the pad buttons. For this reason, your joypad buttons may be mapped differently depending on if you are using Windows, Mac, or Linux.
-
-
-Traditional emulators allow you map each button of your pad to the original pad of the emulated system. For example, this is how the Snes9x joypad configuration interface looks:
-
-![Snes9x joypad configuration](../image/retroarch/input/snes9x-joyconfig-example.jpg)
-
-RetroArch also allows this kind of manual mapping. However, RetroArch tries to go further by detecting your joypad and automatically configuring it so manual configuration becomes obsolete.
-
-## Benefits
-
-With RetroArch joypad auto-configuration system, your joypad will be recognized and will work out of the box.
-
-This allows:
-
-   - Use many different joypads and have them attributed to each players like it would work on a real game console.
-   - Unplug the second joypad, and replace it by another one, even if it's of a different brand and model.
-
-Having automatically configured joypads makes it a lot easier to navigate the RetroArch Menu with the joypad. This is very convenient when running RetroArch on a game console, where a keyboard and a mouse are not always available. It is also what makes RetroArch suitable to build your own game console using Lakka or a similar OS.
 
 ## Before you begin
 
@@ -257,26 +278,6 @@ Note: The actual path of the default directory is: /var/lib/flatpak/app/org.libr
 
 By implementing these changes, you'll be able to create and save custom controller profiles without requiring root privileges.
 
-## Installing or updating joypad profiles
-
-![downloading joypad profiles](../image/retroarch/input/update-joypads.jpg)
-
-The set of joypad profiles used by RetroArch can be downloaded and updated from the menu. Go to `Main Menu` -> `Online Updater` -> `Update Controller Profiles` to get the latest version of the profile pack.
-
-A message will appear at the bottom of the screen showing the download progress and the extraction of the archive.
-
-## Generating a joypad profile
-
-If your joypad is not recognized by RetroArch even after updating the profiles, you can generate a profile from the menu.
-
-1. To avoid other controllers from interfering with your mapping when starting RetroArch, follow these steps: Disconnect all joypads by unplugging their cables or disconnecting them from any wireless connections.
-2. Connect the controller intended for autoconfiguration. Ensure your system supports the selected connectivity method. If your joypad supports both wired and wireless connections and the initial attempt (e.g., via USB) fails, try the alternative option (e.g., Bluetooth). For example, the Nintendo Switch Pro Controller does not support USB connection on Linux 5.15 and older but does support Bluetooth.
-3. For Android, run the [Android](#android) steps first.
-4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. If automatic mapping fails for any button (e.g., due to lack of driver support), the process will be interrupted. In case of interruption, manually map the remaining buttons, starting from the one that caused the interruption and continuing through the rest of the list.
-5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
-6. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
-7. Proceed with the manual configuration step section below.
-
 ### Additional manual configuration steps
 
 #### Add hotkey(s)
@@ -377,8 +378,6 @@ When modifying your autoconfig file for analog triggers, it's crucial to pay att
 #### Common Pitfall
 Users often unintentionally incorporate analog variable values without properly adjusting the existing variable names to reflect their analog nature. This oversight frequently results in configuration problems within the system.
 By carefully updating both the variable names and values, you can ensure that your analog triggers are correctly configured for optimal performance.
-
-### 
 
 ### Inspect the file
 
