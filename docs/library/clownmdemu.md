@@ -51,7 +51,7 @@ Frontend-level settings or features that the ClownMDEmu core respects:
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
@@ -84,7 +84,7 @@ The ClownMDEmu core saves/loads to/from these directories.
 - The ClownMDEmu core's core-provided sample rate is 223721.5625 Hz
 - The ClownMDEmu core's base width is 320 (though this varies depending on the loaded content)
 - The ClownMDEmu core's base height is 224 (though this varies depending on the loaded content)
-- The ClownMDEmu core's max width is 320
+- The ClownMDEmu core's max width is 400
 - The ClownMDEmu core's max height is 480
 - The ClownMDEmu core's core-provided aspect ratio is typically 10:7 (though this varies depending on the loaded content)
 
@@ -195,6 +195,10 @@ The ClownMDEmu core has the following option(s) that can be tweaked from the cor
 - **Tall Interlace Mode 2** [clownmdemu_tall_interlace_mode_2] (**disabled**|enabled)
 
 	Makes games that use Interlace Mode 2 for split-screen not appear squashed.
+
+- **Widescreen Hack** [clownmdemu_widescreen] (**disabled**|enabled)
+
+	Widens the display. Works well with some games, badly with others.
 
 - **Low-Pass Filter** [clownmdemu_lowpass_filter] (**enabled**|disabled)
 
