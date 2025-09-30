@@ -3,11 +3,22 @@
 Arcade emulation requires a different planning approach than console emulation. Arcade emulator terminology can also differ from the terms used in other kinds of emulation.
 
 ### Process
-  1. **Understanding the terminology**
-  2. **Choose an arcade emulator to match your system**
-  3. **Use the correct version romsets for that emulator**
 
 The libretro core ecosystem includes a variety of arcade emulators, each with specific strengths and each requiring its own distinct version of arcade "romsets" which the emulator supports. Every arcade emulator core is optimized for different hardware and different games. This guide is intended to help you decide which core to use and find out what romset version is required for that emulator.
+
+You sometimes read people recommending to change core until your game works, this is extremely bad counselling for the following reasons :
+
+* It is usually faster to acquire/verify/rebuild romsets for a specific arcade core than to test each of your romsets with all available cores
+* You might be using an incomplete romset that is not playable in any core
+* Your platform might be missing the only core where that romset is playable
+* Some arcade cores are not recommended in most cases for reasons explained later in this document, so most users should avoid them
+* Retroarch playlists don't allow you to use a different core for each item, and you might not want to split your arcade games into several playlists
+
+The real recommended approach goes like this :
+
+1. **Understanding the terminology**
+2. **Choose an arcade emulator to match your system**
+3. **Use the correct version romsets for that emulator**
 
 ![Arcade cabinets in an arcade room](../image/guides/arcade-emulation.png)
 
