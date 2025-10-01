@@ -51,4 +51,4 @@ For a list of supported cores, take a look at the [Emulator Support page on Retr
 
 Cores that are not listed as supported are likely to have issues with achievement logic, and tickets from players using those can be closed without investigation.
 
-In the future, it is likely that unsupported cores will not be blocked in hardcore mode, as well.
+In the future, it is likely that unsupported cores will be blocked in hardcore mode, as well.
