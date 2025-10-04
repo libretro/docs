@@ -83,7 +83,7 @@ Frontend-level settings or features that the bsnes-mercury Balanced core respect
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/retroachievements.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

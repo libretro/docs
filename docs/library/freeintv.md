@@ -55,7 +55,7 @@ Frontend-level settings or features that the FreeIntv core respects.
 | Rewind            | ✕         |
 | Netplay (State based) | ✕         |
 | Core Options      | ✕         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | Cheats (Cheats menu) | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

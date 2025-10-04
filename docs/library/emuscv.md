@@ -38,7 +38,7 @@ Frontend-level settings or features that the EmuSCV core respects.
 | Rewind            | -         |
 | Netplay           | x         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | x         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

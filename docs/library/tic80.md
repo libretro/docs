@@ -46,7 +46,7 @@ Frontend-level settings or features that the Theodore core respects.
 | Rewind            | ✕         |
 | Netplay           | [✔](https://tic.computer/play?cart=893)         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | [✔](https://github.com/libretro/libretro-database/tree/master/cht/TIC-80)         |
 | Controls          | ✔         |

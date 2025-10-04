@@ -59,7 +59,7 @@ Frontend-level settings or features that the DeSmuME core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔ (Not Download Play, Link-Cable or Wi-Fi emulation)         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

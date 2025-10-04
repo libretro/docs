@@ -52,7 +52,7 @@ Frontend-level settings or features that the Beetle PC-FX core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/retroachievements.md) | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
