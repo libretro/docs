@@ -28,7 +28,7 @@ The Mr.Boom core does not feature extension use. Just load and start the core.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controllers       | ✔         |

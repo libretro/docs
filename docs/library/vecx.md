@@ -36,7 +36,7 @@ vecx doesn't require BIOS (bootrom) files to work.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✕         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controllers       | ✔         |

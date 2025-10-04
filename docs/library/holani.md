@@ -50,7 +50,7 @@ Frontend-level settings or features that the Holani core respects.
 | Rewind            | ✔         |
 | Netplay (State based) | ✔ (not link-cable emulation) |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | Cheats (Cheats menu) | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

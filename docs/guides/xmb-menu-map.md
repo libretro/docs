@@ -1,67 +1,69 @@
 # XMB Menu Map
+Note: entries followed by an ellipsis (**...**) will bring up the file browser to select an external file. Entries in **bold** are submenus
 ## Tabs
 ### Main Menu
   - Load Core ... / **Quick Menu** (Changes when a core is loaded)
   - **Load Content**
-    - Start Directory ...
-    - Downloads ...
-    - Playlists
-    - (Varies by platform/device)
-    - **File Browser** (Duplicate/Shortcut to Settings > File Browser)
+    + Start Directory ...
+    + Downloads ...
+    + Playlists
+    + (Varies by platform/device)
+    + **File Browser** (Duplicate/Shortcut to Settings > File Browser)
   - Show Desktop Menu
   - **Online Updater**
-    - **Core Downloader**
+    + **Core Downloader**
       - (Availability of cores varies by platform/device)
-    - Update Installed Cores
-    - Playlist Thumbnails Updater
-    - **Content Downloader**
-    - Update Core Infor Files
-    - Update Assets
-    - Update Controller Profiles
-    - Update Cheats
-    - Update Databases
-    - Update Overlays
-    - Update (Slang/GLSL/Cg; varies by active video driver) Shaders
-    - On-Demand Thumbnail Downloads
+    + Update Installed Cores
+    + Playlist Thumbnails Updater
+    + **Content Downloader**
+      - (Varies by what is on the remote server)
+    + Update Core Info Files
+    + Update Assets
+    + Update Controller Profiles
+    + Update Cheats
+    + Update Databases
+    + Update Overlays
+    + Update (Slang/GLSL/Cg; varies by active video driver) Shaders
+    + On-Demand Thumbnail Downloads
   - **Information**
-   - **Network Information**
-     - (Varies by device)
-   - **System Information**
-     - (Varies by device)
-   - **Database Manager**
-     - (Varies by available databases)
-   - **Cursor Manager**
-     - (Varies by available cursors)
+    + **Network Information**
+      - (Varies by device)
+    + **System Information**
+      - (Varies by device)
+    + **Database Manager**
+      - (Varies by available databases)
+    + **Cursor Manager**
+      - (Varies by available cursors)
   - **Configuration File**
-    - Load Configuration ...
-    - Reset to Defaults
-    - Save Current Configuration
-    - Save New Configuration
+    + Load Configuration ...
+    + Reset to Defaults
+    + Save Current Configuration
+    + Save New Configuration
   - **Help**
-    - Basic Menu Controls
+    + Basic Menu Controls
   - Restart RetroArch
   - Quit RetroArch
     
 ### Settings
   - **Drivers**
-    - Input
-    - Controller
-    - Video
-    - Audio
-    - Audio Resampler
-    - Camera
-    - Location
-    - Menu
-    - Record
-    - MIDI
+    + Input
+    + Controller
+    + Video
+    + Audio
+    + Audio Resampler
+    + Camera
+    + Location
+    + Menu
+    + Record
+    + MIDI
   - **Video**
-    - **CRT SwitchRes**
+    + **CRT SwitchRes**
       - CRT SwitchRes
       - CRT Super Resolution
       - X-Axis Centering
       - Porch Adjust
       - Use Custom Refresh Rate
-    - **Output**
+    + **Output**
       - Video (Duplicate/Shortcut to Settings > Driver > video)
       - Monitor Index
       - Video Rotation
@@ -69,55 +71,55 @@
       - Vertical Refresh Rate
       - Estimated Screen Refresh Rate
       - Set Display-Reported Refresh Rate
-    - **Fullscreen Mode**
+    + **Fullscreen Mode**
       - Start in Fullscreen Mode
       - Windowed Fullscreen Mode
       - Fullscreen Width
       - Fullscreen Height
-    - **Windowed Mode**
+    + **Windowed Mode**
       - Windowed Scale
       - Window Opacity
       - Show Window Decorations
       - Remember Window Position and Size
       - Window Width
       - Window Height
-    - **Scaling**
+    + **Scaling**
       - Integer Scale
       - Aspect Ratio
       - Custom Aspect Ratio
       - Crop Overscan
-    - **Synchronization**
+    + **Synchronization**
       - Vertical Sync (VSync)
       - Vsync Swap Interval
       - Frame Delay
       - Max swapchain images
       - Sync to Exact Content Framerate
-    - Suspend Screensaver
-    - Threaded Video
-    - Black Frame Insertion
-    - GPU Screenshot
-    - Bilinear Filtering
-    - Auto-Shader Delay
-    - Video Filter ...
+    + Suspend Screensaver
+    + Threaded Video
+    + Black Frame Insertion
+    + GPU Screenshot
+    + Bilinear Filtering
+    + Auto-Shader Delay
+    + Video Filter ...
   - **Audio**
-    - **Output**
+    + **Output**
       - Audio
       - Audio (Duplicate/Shortcut to Settings > Driver > Audio)
       - Device
       - Audio Latency (ms)
-    - **Resampler**
+    + **Resampler**
       - Audio Resampler
       - Resampler Quality
       - Output Rate (Hz)
-    - **Synchronization**
+    + **Synchronization**
       - Synchronization
       - Maximum Timing Skew
       - Dynamic Audio Rate Control
-    - **MIDI**
+    + **MIDI**
       - Input
       - Output
       - Volume
-    - **Mixer**
+    + **Mixer**
       - Mixer Stream #1
       - Mixer Stream #2
       - Mixer Stream #3
@@ -134,38 +136,38 @@
       - Mixer Stream #14
       - Mixer Stream #15
       - Mixer Stream #16
-    - **Menu Sounds**
+    + **Menu Sounds**
       - Mixer
       - Enable 'OK' Sound
       - Enable 'Cancel' Sound
       - Enable 'Notice' Sound
       - Enable 'BGM' Sound
-    - Mute
-    - Mixer Mute
-    - Mute When Fast-Forwarding
-    - Volume Gain (dB)
-    - Mixer Volume Gain (dB)
-    - DSP Plugin ...
+    + Mute
+    + Mixer Mute
+    + Mute When Fast-Forwarding
+    + Volume Gain (dB)
+    + Mixer Volume Gain (dB)
+    + DSP Plugin ...
   - **Input**
-    - Maximum Users
-    - Polling Behavior
-    - Remap Controls for This Core
-    - Autoconfig
-    - Input Button Axis Threshold
-    - Touch Scale
-    - Analog Deadzone
-    - Analog Sensitivity
-    - Bind Timeout
-    - Bind Hold
-    - Disable Windows Hotkeys (Restart)
-    - Auxiliary Sensor Input
-    - Auto Enable 'Game Focus' Mode
-    - **Menu Controls**
+    + Maximum Users
+    + Polling Behavior
+    + Remap Controls for This Core
+    + Autoconfig
+    + Input Button Axis Threshold
+    + Touch Scale
+    + Analog Deadzone
+    + Analog Sensitivity
+    + Bind Timeout
+    + Bind Hold
+    + Disable Windows Hotkeys (Restart)
+    + Auxiliary Sensor Input
+    + Auto Enable 'Game Focus' Mode
+    + **Menu Controls**
       - Unified Menu Controls
       - Menu Swap OK and Cancel Buttons
       - Menu Scroll Acceleration
       - Menu Scroll Delay
-    - **Hotkeys**
+    + **Hotkeys**
       - Confirm Quit
       - Menu Toggle Controller Combo
       - Hotkey Enable
@@ -212,12 +214,12 @@
       - Streaming (Toggle)
       - Run-Ahead (Toggle)
       - AI Service
-    - **Turbo Fire**
+    + **Turbo Fire**
       - Turbo Period
       - Turbo Duty Cycle
       - Turbo Mode
       - Turbo Default Button
-    - **Port 1 Controls**
+    + **Port 1 Controls**
       - Device Type
       - Analog to Digital Type
       - Device Index
@@ -228,99 +230,99 @@
       - (RetroPad Mapping)
       - (Gun Mapping)
       - Turbo
-    - **Port 2 Controls**
+    + **Port 2 Controls**
       - (Same as Port 1)
-    - **Port 3 Controls**
+    + **Port 3 Controls**
       - (Same as Port 1)
-    - **Port 4 Controls**
+    + **Port 4 Controls**
       - (Same as Port 1)
-    - **Port 5 Controls**
+    + **Port 5 Controls**
       - (Same as Port 1)
-    - (possibly more/less based on 'Maximum Users' setting)
+    + (possibly more/less based on 'Maximum Users' setting)
   - **Latency**
-    - Max swapchain images (Duplicate/Shortcut to Settings > Video > Synchronization > Max swapchain images)
-    - Frame Delay
-    - Audio Latency (ms)
-    - Polling Behavior
-    - **Run-Ahead to Reduce Latency**
+    + Max swapchain images (Duplicate/Shortcut to Settings > Video > Synchronization > Max swapchain images)
+    + Frame Delay
+    + Audio Latency (ms)
+    + Polling Behavior
+    + **Run-Ahead to Reduce Latency**
       - Number of Frames to Run-Ahead
       - Use Second Instance for Run-Ahead
       - Hide Run-Ahead Warnings
   - **Core**
-    - Hardware Shared Context
-    - Allow Cores to Switch the Video Driver
-    - Load Dummy on Core Shutdown
-    - Check for Missing Firmware before Loading
-    - Allow Rotation
-    - Manage Cores
+    + Hardware Shared Context
+    + Allow Cores to Switch the Video Driver
+    + Load Dummy on Core Shutdown
+    + Check for Missing Firmware before Loading
+    + Allow Rotation
+    + Manage Cores
   - **Configuration**
-    - Save Configuration on Quit
-    - Load Content-Specific Core Option
-    - Load Override Files Automatically
-    - Load Remap Files Automatically
-    - Use Global Core Options File
+    + Save Configuration on Quit
+    + Load Content-Specific Core Option
+    + Load Override Files Automatically
+    + Load Remap Files Automatically
+    + Use Global Core Options File
   - **Saving**
-    - Sort Saves into Folders by Core Name
-    - Sort Save States into Folders by Core Name
-    - Sort Saves into Folders by Content Directory
-    - Sort Save states into Folders by Content Directory
-    - Don't Overwrite SaveRAM on Loading Save State
-    - SaveRAM Autosave Interval
-    - Increment Save State Index Automatically
-    - Auto Save State
-    - Load State Automatically
-    - Save State Thumbnails
-    - SaveRAM Compression
-    - Save State Compression
-    - Sort Screenshots into Folders by Content Directory
-    - Write Saves to Content Directory
-    - Write Save States to Content Directory
-    - System Files are in Content Directory
-    - Write Screenshots to Content Directory
-    - Save Runtime Log (Per Core)
-    - Save Runtime Log (Aggregate)
+    + Sort Saves into Folders by Core Name
+    + Sort Save States into Folders by Core Name
+    + Sort Saves into Folders by Content Directory
+    + Sort Save states into Folders by Content Directory
+    + Don't Overwrite SaveRAM on Loading Save State
+    + SaveRAM Autosave Interval
+    + Increment Save State Index Automatically
+    + Auto Save State
+    + Load State Automatically
+    + Save State Thumbnails
+    + SaveRAM Compression
+    + Save State Compression
+    + Sort Screenshots into Folders by Content Directory
+    + Write Saves to Content Directory
+    + Write Save States to Content Directory
+    + System Files are in Content Directory
+    + Write Screenshots to Content Directory
+    + Save Runtime Log (Per Core)
+    + Save Runtime Log (Aggregate)
   - **Logging**
-    - Logging Verbosity
-    - Frontend Logging Level
-    - Core Logging Level
-    - Log to File
-    - Performance Counters
+    + Logging Verbosity
+    + Frontend Logging Level
+    + Core Logging Level
+    + Log to File
+    + Performance Counters
   - **File Browser**
-    - Show Hidden Files and Directories
-    - Filter Unknown Extensions
-    - Use Built-In Media Player
-    - Use Built-In Image Viewer
-    - Filter by Current Core
-    - Remember Last Used Start Directory
+    + Show Hidden Files and Directories
+    + Filter Unknown Extensions
+    + Use Built-In Media Player
+    + Use Built-In Image Viewer
+    + Filter by Current Core
+    + Remember Last Used Start Directory
   - **Frame Throttle**
-    - **Rewind**
+    + **Rewind**
       - Rewind Support
       - Rewind Frames
       - Rewind Buffer Size (MB)
       - Rewind Buffer Size Step (MB)
-    - **Frame Time Counter**
+    + **Frame Time Counter**
       - Estimated Screen Refresh Rate
       - Reset after Fast-Forward
       - Reset after Load State
       - Reset after Save State
-    - Fast-Forward Rate
-    - Slow-Motion Rate
-    - Sync to Exact Content Framerate (Duplicate/Shortcut to Settings > Video > Synchronization > Sync to Exact Content Framerate)
-    - Throttle Menu Framerate
+    + Fast-Forward Rate
+    + Slow-Motion Rate
+    + Sync to Exact Content Framerate (Duplicate/Shortcut to Settings > Video > Synchronization > Sync to Exact Content Framerate)
+    + Throttle Menu Framerate
   - **Recording**
-    - Recording Quality
-    - Custom recording Configuration ...
-    - Recording Threads
-    - Use Post Filter Recording
-    - Use GPU Recording
-    - Streaming Mode
-    - Streaming Quality
-    - Custom Streaming Configuration
-    - Stream Title
-    - Stream URL
-    - UDP Stream Port
+    + Recording Quality
+    + Custom recording Configuration ...
+    + Recording Threads
+    + Use Post Filter Recording
+    + Use GPU Recording
+    + Streaming Mode
+    + Streaming Quality
+    + Custom Streaming Configuration
+    + Stream Title
+    + Stream URL
+    + UDP Stream Port
   - **On-Screen Display**
-    - **On-Screen Overlay**
+    + **On-Screen Overlay**
       - Display Overlay
       - Hide Overlay in Menu
       - Hide Overlay When Controller is Connected
@@ -342,11 +344,11 @@
       - (Portrait) Overlay Vertical Separation
       - (Portrait) Overlay X Offset
       - (Portrait) Overlay Y Offset
-    - **Video Layout**
+    + **Video Layout**
       - Enable Video Layout
       - Video Layout Path ...
       - Selected View
-    - **On-Screen Notification**
+    + **On-Screen Notification**
       - **Notification Visibility**
         - Display Framerate
         - Display Frame Count
@@ -369,7 +371,7 @@
       - Notification Font ...
       - Notification Size
   - **User Interface**
-    - **Menu Item Visibility**
+    + **Menu Item Visibility**
       - **Quick Menu**
         - Show 'Resume'
         - Show 'Restart'
@@ -446,7 +448,7 @@
       - Show Core Name
       - Show Menu Sub-Labels
       - Display Start Screens
-    - **Appearance**
+    + **Appearance**
       - Menu Scale Factor
       - Background Image ...
       - Dynamic Background
@@ -474,94 +476,94 @@
       - Ticker Text Animation
       - Ticker Text Speed
       - Smooth Ticker Text
-    - Menu (Duplication/Shortcut to Settings > Driver > Menu)
-    - Show Advanced Settings
-    - Kiosk Mode
-    - Navigation Wrap-Around
-    - Pause Content When Menu is Active
-    - Pause Content When Not Active
-    - Resume Content after Using Save States
-    - Resume Content after Changing Discs
-    - Quit on Close Content
-    - Menu Screensaver Timeout
-    - Mouse Support
-    - Touch Support
-    - Threaded Tasks
-    - UI Companion
-    - Start UI Companion on Boot
-    - Menu Bar
-    - Desktop Menu (Restart Required)
-    - Open Desktop Menu on Startup
-    - Disable Desktop Composition
+    + Menu (Duplication/Shortcut to Settings > Driver > Menu)
+    + Show Advanced Settings
+    + Kiosk Mode
+    + Navigation Wrap-Around
+    + Pause Content When Menu is Active
+    + Pause Content When Not Active
+    + Resume Content after Using Save States
+    + Resume Content after Changing Discs
+    + Quit on Close Content
+    + Menu Screensaver Timeout
+    + Mouse Support
+    + Touch Support
+    + Threaded Tasks
+    + UI Companion
+    + Start UI Companion on Boot
+    + Menu Bar
+    + Desktop Menu (Restart Required)
+    + Open Desktop Menu on Startup
+    + Disable Desktop Composition
   - **AI Service**
-    - AI Service Enabled
-    - AI Service Output
-    - AI Service URL
-    - Pause During Translation
-    - Source Language
-    - Target Language
+    + AI Service Enabled
+    + AI Service Output
+    + AI Service URL
+    + Pause During Translation
+    + Source Language
+    + Target Language
   - **Accessibility**
-    - Accessibility Enable
-    - Text-to-Speech Speed
+    + Accessibility Enable
+    + Text-to-Speech Speed
   - **Power Management**
-    - (Only available on certain devices)
+    + (Only available on certain devices)
   - **Achievements**
-    - Achievements
-    - Username
-    - Password
-    - Hardcore Mode
-    - Leaderboards
-    - Rich Presence
-    - Achievement Badges
-    - Test Unofficial Achievements
-    - Unlock Sound
-    - Verbose Mode
-    - Automatic Screenshot
-    - Start Active
+    + Achievements
+    + Username
+    + Password
+    + Hardcore Mode
+    + Leaderboards
+    + Rich Presence
+    + Achievement Badges
+    + Test Unofficial Achievements
+    + Unlock Sound
+    + Verbose Mode
+    + Automatic Screenshot
+    + Start Active
   - **Network**
-    - Publicly Announce Netplay
-    - Use Relay Server
-    - Server Address
-    - Netplay TCP Port
-    - Server Password
-    - Server Spectate-Only Password
-    - Netplay Spectator Mode
-    - Allow Slave-Mode Clients
-    - Disallow Non-Slave-Mode Clients
-    - Netplay Stateless Mode
-    - Netplay Check Frames
-    - Input Latency Frames
-    - Input Latency Frames Range
-    - Netplay NAT Traversal
-    - Digital Input Sharing
-    - Analog Input Sharing
-    - Request Device 1
-    - Request Device 2
-    - Request Device 3
-    - Request Device 4
-    - Request Device 5
-    - Request Device 6
-    - Request Device 7
-    - Request Device 8
-    - Request Device 9
-    - Request Device 10
-    - Request Device 11
-    - Request Device 12
-    - Request Device 13
-    - Request Device 14
-    - Request Device 15
-    - Request Device 16
-    - Network Commands
-    - Network RetroPad
-    - Network RetroPad Base Port
-    - User 1 Network RetroPad
-    - User 2 Network RetroPad
-    - User 3 Network RetroPad
-    - User 4 Network RetroPad
-    - User 5 Network RetroPad
-    - stdin Commands
-    - On-Demand Thumbnail Downloads
-    - **Updater**
+    + Publicly Announce Netplay
+    + Use Relay Server
+    + Server Address
+    + Netplay TCP Port
+    + Server Password
+    + Server Spectate-Only Password
+    + Netplay Spectator Mode
+    + Allow Slave-Mode Clients
+    + Disallow Non-Slave-Mode Clients
+    + Netplay Stateless Mode
+    + Netplay Check Frames
+    + Input Latency Frames
+    + Input Latency Frames Range
+    + Netplay NAT Traversal
+    + Digital Input Sharing
+    + Analog Input Sharing
+    + Request Device 1
+    + Request Device 2
+    + Request Device 3
+    + Request Device 4
+    + Request Device 5
+    + Request Device 6
+    + Request Device 7
+    + Request Device 8
+    + Request Device 9
+    + Request Device 10
+    + Request Device 11
+    + Request Device 12
+    + Request Device 13
+    + Request Device 14
+    + Request Device 15
+    + Request Device 16
+    + Network Commands
+    + Network RetroPad
+    + Network RetroPad Base Port
+    + User 1 Network RetroPad
+    + User 2 Network RetroPad
+    + User 3 Network RetroPad
+    + User 4 Network RetroPad
+    + User 5 Network RetroPad
+    + stdin Commands
+    + On-Demand Thumbnail Downloads
+    + **Updater**
       - Buildbot Cores URL
       - Buildbot Assets URL
       - Automatically Extract Downloaded Archive
@@ -569,29 +571,29 @@
       - Backup Cores When Updating
       - Core Backup History Size
   - **Playlists**
-    - History
-    - History Size
-    - Favorites Size
-    - Allow to Rename Entries
-    - Allow to Remove Entries
-    - Sort Playlists Alphabetically
-    - Save Playlists Using Old Format
-    - Compress Playlists
-    - Show Associated Cores in Playlists
-    - Show Playlist Sub-Labels
-    - Playlist Sub-Label Runtime
-    - 'Last Played' Date and Time Style
-    - Fuzzy Archive Matching
-    - Scan Without Core Match
-    - Save Runtime Log (Per Core)
-    - Save Runtime Log (Aggregate)
-    - Portable Playlists
-    - **Manage Playlists**
+    + History
+    + History Size
+    + Favorites Size
+    + Allow to Rename Entries
+    + Allow to Remove Entries
+    + Sort Playlists Alphabetically
+    + Save Playlists Using Old Format
+    + Compress Playlists
+    + Show Associated Cores in Playlists
+    + Show Playlist Sub-Labels
+    + Playlist Sub-Label Runtime
+    + 'Last Played' Date and Time Style
+    + Fuzzy Archive Matching
+    + Scan Without Core Match
+    + Save Runtime Log (Per Core)
+    + Save Runtime Log (Aggregate)
+    + Portable Playlists
+    + **Manage Playlists**
       - (Varies by user's playlists)
   - **User**
-    - **Privacy**
+    + **Privacy**
       - (Varies by device)
-    - **Accounts**
+    + **Accounts**
       - **RetroAchievements**
         - Username
         - Password
@@ -604,39 +606,39 @@
       - Username
       - Language
   - **Directory**
-    - System/BIOS
-    - Downloads
-    - Assets
-    - Dynamic Backgrounds
-    - Thumbnails
-    - File Browser
-    - Configs
-    - Cores
-    - Core Info
-    - Databases
-    - Cursor
-    - Cheat Files
-    - Video Filters
-    - Audio Filters
-    - Video Shaders
-    - Recordings
-    - Recording Configs
-    - Overlays
-    - Video Layouts
-    - Screenshots
-    - Input Autoconfig
-    - Input Remaps
-    - Playlists
-    - Favorites Playlist
-    - History Playlist
-    - Images Playlist
-    - Music Playlist
-    - Videos Playlist
-    - Runtime Logs
-    - Save Files
-    - Save States
-    - Cache
-    - System Event Logs
+    + System/BIOS
+    + Downloads
+    + Assets
+    + Dynamic Backgrounds
+    + Thumbnails
+    + File Browser
+    + Configs
+    + Cores
+    + Core Info
+    + Databases
+    + Cursor
+    + Cheat Files
+    + Video Filters
+    + Audio Filters
+    + Video Shaders
+    + Recordings
+    + Recording Configs
+    + Overlays
+    + Video Layouts
+    + Screenshots
+    + Input Autoconfig
+    + Input Remaps
+    + Playlists
+    + Favorites Playlist
+    + History Playlist
+    + Images Playlist
+    + Music Playlist
+    + Videos Playlist
+    + Runtime Logs
+    + Save Files
+    + Save States
+    + Cache
+    + System Event Logs
     
 ### Favorites
 
@@ -660,17 +662,17 @@
   - Scan Directory
   - Scan File
   - **Manual Scan**
-    - Content Directory
-    - System Name
-    - Custom System Name
-    - Default Core
-    - File Extensions
-    - Scan Recursively
-    - Scan Inside Archives
-    - Arcade DAT File
-    - Arcade DAT Filter
-    - Overwrite Existing Playlist
-    - Start Scan
+    + Content Directory
+    + System Name
+    + Custom System Name
+    + Default Core
+    + File Extensions
+    + Scan Recursively
+    + Scan Inside Archives
+    + Arcade DAT File
+    + Arcade DAT Filter
+    + Overwrite Existing Playlist
+    + Start Scan
       
 ### Explore
   - Search Name ...
@@ -690,67 +692,67 @@
   - Start Recording
   - Start Streaming
   - **Options**
-    - (Varies by core)
+    + (Varies by core)
   - **On-Screen Overlay** (Duplicate/Shortcut to Settings > On-Screen Display > On-Screen Overlay)
   - **Rewind** (Duplicate/Shortcut to Settings > Frame Throttle > Rewind)
   - **Latency** (Duplicate/Shortcut to Settings > Latency)
   - **Controls**
-    - Load Remap File ...
-    - Save Core Remap File
-    - Save Content Directory Remap File
-    - Save Game Remap File
-    - **Turbo Fire** (Duplicate/Shortcut to Settings > Input > Turbo Fire)
-    - **Port 1 Controls**
+    + Load Remap File ...
+    + Save Core Remap File
+    + Save Content Directory Remap File
+    + Save Game Remap File
+    + **Turbo Fire** (Duplicate/Shortcut to Settings > Input > Turbo Fire)
+    + **Port 1 Controls**
       - Device Type
       - Analog to Digital Type
       - (RetroPad to Core functions; varies by core)
-    - **Port 2 Controls**
+    + **Port 2 Controls**
       - (Same as Port 1 Controls)
-    - **Port 3 Controls**
+    + **Port 3 Controls**
       - (Same as Port 1 Controls)
-    - **Port 4 Controls**
+    + **Port 4 Controls**
       - (Same as Port 1 Controls)
-    - **Port 5 Controls**
+    + **Port 5 Controls**
       - (Same as Port 1 Controls)
-    - (More or Fewer Ports based on Settings > Input > Maximum Users)
+    + (More or Fewer Ports based on Settings > Input > Maximum Users)
   - **Cheats**
-    - Start or Continue Cheat Search
-    - Load Cheat File (Replace) ...
-    - Load Cheat File (Append) ...
-    - Reload Game Specific Cheats
-    - Save Cheat File As ...
-    - Add New Cheat to Top
-    - Add New Cheat to Bottom
-    - Delete All Cheats
-    - Auto-Apply Cheats During Game Load
-    - Apply After Toggle
-    - Apply Changes
+    + Start or Continue Cheat Search
+    + Load Cheat File (Replace) ...
+    + Load Cheat File (Append) ...
+    + Reload Game Specific Cheats
+    + Save Cheat File As ...
+    + Add New Cheat to Top
+    + Add New Cheat to Bottom
+    + Delete All Cheats
+    + Auto-Apply Cheats During Game Load
+    + Apply After Toggle
+    + Apply Changes
   - **Shaders**
-    - Video Shaders
-    - Watch Shader Files for Changes
-    - Remember Last Used Shader Directory
-    - Load ...
-    - **Save**
+    + Video Shaders
+    + Watch Shader Files for Changes
+    + Remember Last Used Shader Directory
+    + Load ...
+    + **Save**
       - Simple Presets
       - Save Shader Preset As ...
       - Save Global Preset
       - Save Core Preset
       - Save Content Directory Preset
       - Save Game Preset
-    - **Remove**
-    - Apply Changes
-    - **Shader Parameters**
+    + **Remove**
+    + Apply Changes
+    + **Shader Parameters**
       - (Varies by active shader preset)
-    - **Shader Passes**
+    + **Shader Passes**
       - (Varies by active shader preset)
   - **Overrides**
-    - Save Core Overrides
-    - Save Content Directory Overrides
-    - Save Game Overrides
+    + Save Core Overrides
+    + Save Content Directory Overrides
+    + Save Game Overrides
   - **Information**
-    - Name
-    - File Path
-    - Core
-    - Runtime
-    - Last Played
+    + Name
+    + File Path
+    + Core
+    + Runtime
+    + Last Played
   - Download Thumbnails

@@ -72,6 +72,7 @@ nav:
         - 'Getting Started': 'guides/netplay-getting-started.md'
         - 'Multiple Controllers': 'guides/netplay-multiple-controllers.md'
       - 'RetroAchievements': 'guides/retroachievements.md'
+      - 'Memory Monitoring': 'guides/memorymonitoring.md'
       - 'Disc Swapping': 'guides/disc-swapping.md'
       - 'Softpatching ROMs': 'guides/softpatching.md'
       - 'Accessibility':

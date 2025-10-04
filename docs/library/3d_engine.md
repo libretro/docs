@@ -66,7 +66,7 @@ RetroArch features that the 3D Engine core respects.
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/retroachievements.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

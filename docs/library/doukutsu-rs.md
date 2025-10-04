@@ -96,7 +96,7 @@ https://github.com/libretro/libretro-super/blob/master/dist/info/doukutsu_rs_lib
 | Rewind            | X         |
 | Netplay           | X         |
 | Core Options      | ✔         |
-| RetroAchievements | X         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | X         |
 | RetroArch Cheats  | X         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |

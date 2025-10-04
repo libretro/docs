@@ -90,7 +90,7 @@ Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting
 | Run-Ahead         | ✔         |
 | Preemptive Frames | ✔         |
 | Netplay           | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✔         |
 | Controllers       | ✔         |
