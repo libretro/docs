@@ -113,10 +113,11 @@ You can also check the progress of your friends and add comments on their trophi
 
 | Core                                                    | Supported | Notes |
 |---------------------------------------------------------|:---------:|:------|
-| [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✕         |       |
 | [blueMSX](https://github.com/libretro/blueMSX-libretro) | ✔         |       |
 | [FinalBurn Neo](https://github.com/libretro/FBNeo)      | ✕         |       |
 | [Gearcoleco](https://github.com/drhelius/Gearcoleco)    | ✔         |       |
+| [JollyCV](https://github.com/libretro/jollycv)          | ✔         |       |
+| [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✕         |       |
 
 ### GCE
 

@@ -102,7 +102,7 @@
 | [Geargrafx](../library/geargrafx.md) | NEC PC Engine/SuperGrafx    |                    |
 | [Gearsystem](../library/gearsystem.md) | Sega MS/GG/SG-1000     |                    |
 | Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
-| Geolith                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
+| [Geolith](../library/geolith.md)                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
 | [gpSP](../library/gpsp.md) | Game Boy Advance       |                    |
 | Gong                      | Game                   | A clone of Pong written for libretro |
 | GW                        | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |
@@ -114,6 +114,7 @@
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
 | JAXE                      | CHIP-8/S-CHIP/XO-CHIP  |                    |
+| [JollyCV](../library/jollycv.md) | ColecoVision/CreatiVision/My Vision      |                    |
 | Jump 'n Bump              | Game engine            | A reimplementation of the engine of Jump 'n Bump, a open-source MS-DOS multiplayer video game by Brainchild Design |
 | Kronos                    | Sega Saturn/ST-V       | A port of the Kronos, which is itself a fork of Yabause emulator |
 | LowRes NX                 | Game engine            | A port of the LowRes NX fantasy console to libretro |
