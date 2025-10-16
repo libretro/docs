@@ -138,6 +138,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Hatari](../library/hatari.md)						   | [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)                        |                |
 | [higan Accuracy](../library/higan_accuracy.md)                                   | [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)                           |                |
 | [Imageviewer](../library/imageviewer.md)				  	   | [MIT](https://github.com/libretro/RetroArch/blob/master/cores/libretro-imageviewer/LICENSE)                                                                                       |                |
+| [JollyCV](../library/jollycv.md)                                                 | [BSD-3-Clause, MIT](https://github.com/libretro/jollycv/blob/master/LICENSE)     |                |
 | [Kronos](../library/kronos.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/kronos/yabause/COPYING)                  |                |
 | [LowRES NX](../library/lowres_nx.md)				                	   | [zlib](https://github.com/timoinutilis/lowres-nx/blob/master/LICENSE)                     |                |
 | [Lutro](../library/lutro.md)				                	   | [MIT](https://github.com/libretro/libretro-lutro/blob/master/LICENSE)                     |                |

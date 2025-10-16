@@ -200,4 +200,5 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 ### See also
 
+- [ColecoVision/CreatiVision/My Vision (JollyCV)](jollycv.md)
 - [MSX/SVI/ColecoVision/SG-1000 (blueMSX)](bluemsx.md)

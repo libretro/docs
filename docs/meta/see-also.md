@@ -23,6 +23,7 @@ This is a list of cores that are related to each other in some way.
 ## ColecoVision
 
 - [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
+- [Coleco - ColecoVision (JollyCV)](../library/jollycv.md)
 
 ## CPC
 
