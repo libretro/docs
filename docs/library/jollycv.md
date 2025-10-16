@@ -2,7 +2,7 @@
 
 ## Background
 
-JollyCV is a multi-emulator supporting ColecoVision (including Super Game Module support), CreatiVision, and My Vision. JollyCV is fast, accurate, and highly portable.
+JollyCV is a multi-emulator supporting ColecoVision (including Super Game Module), CreatiVision, and My Vision. JollyCV is fast, accurate, and highly portable.
 
 The JollyCV core has been authored by
 
@@ -16,8 +16,6 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-JollyCV requires a BIOS file for ColecoVision and CreatiVision content.
-
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
@@ -30,7 +28,7 @@ Required or optional firmware files go in the frontend's system directory.
 
 ## Extensions
 
-Content that can be loaded by the Gearcoleco core have the following file extensions:
+Content that can be loaded by the JollyCV core have the following file extensions:
 
 - .col
 - .rom
