@@ -144,6 +144,7 @@ nav:
         - 'BBK - 4980/4988/5980 electronic dictionary': 'library/gam4980.md'
       - 'ColecoVision Emulation':
         - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
+        - 'ColecoVision/CreatiVision/My Vision (JollyCV)': 'library/jollycv.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Commodore Emulation':
         - 'Commodore - 8-bit (VICE)': 'library/vice.md'
