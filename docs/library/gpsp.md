@@ -48,7 +48,7 @@ Frontend-level settings or features that the gpSP core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✕         |
 | RetroAchievements | ✔         |
 | RetroArch Cheats  | ✔         |
@@ -57,7 +57,7 @@ Frontend-level settings or features that the gpSP core respects.
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
-| Rumble            | ✕         |
+| Rumble            | ✔         |
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
@@ -120,29 +120,17 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 
 | Game                                  | Issue                          |
 |---------------------------------------|--------------------------------|
-| ~~Activision Anthology~~               |~~Freezes when entering a game.~~|
-| Banjo-Kazooie - Grunty's Revenge    |Black screen during developer logo. ~~Resets when Banjo leaves his house.~~|
+| Banjo-Kazooie - Grunty's Revenge    |Black screen during developer logo. |
 | Boktai Trilogy                      |The solar sensor is not emulated. |
-| ~~DemiKids - Light/Dark Version~~       |~~Crashes when entering a battle.~~ |
-| ~~Digimon Racing (Europe)~~             |~~Freezes during the intro.~~   |
 | Dragon Ball Z - The Legacy of Goku  |Graphics glitches. |
 | Final Fantasy VI                    |Background/tiling order issues.  |
-| ~~Game Boy Advance Video - Dragon Ball GT - Volume 1~~ |~~White screen.~~     |
-| ~~Grand Theft Auto Advance~~            |~~Crashes after first dialog.~~      |
 | Harry Potter - Quidditch World Cup  |Crashes when going ingame.       |
 | Koro Koro Puzzle Happy Panechu!     |The tilt sensor is not emulated. |
-| ~~Mario & Luigi - Superstar Saga~~      |~~Crashes when entering a battle.~~  |
 | Phantasy Star Collection            |Phantasy Star 1 flickers - turn on Interframe Blending in core options to fix.|
-| ~~R-Type III - The Third Lightning~~    |~~Softlocks at Irem startup screen.~~|
-| ~~Rock 'n Roll Racing~~                 |~~Corrupted graphics, not playable.~~|
-| ~~Rockman & Forte~~                     |~~Doesn't continue after GBA BIOS screen.~~|
 | Sims 2, The - Pets |Graphics glitches. Heavy flickering, black objects. |
 | Street Racing Syndicate             |Crashes afer pressing Start.|
-| ~~Super Monkey Ball Jr.~~               |~~Softlocks at startup screen.~~|
 | Super Street Fighter II Turbo/X Revival |Small graphics glitch. Selecting speed 'Turbo 1' and beyond on the character select screen makes the game speed window not fully visible. |
-| ~~Tales of Phantasia (USA version)~~    |~~Softlocks during the introduction sequence (just before the small guy hits the tall guy in the right).~~|
 | WarioWare: Twisted!                 |The tilt sensor is not emulated.|
-| ~~Wolfenstein 3D~~                      |~~Softlocks at id Software startup screen.~~|
 | Yoshi’s Universal Gravitation       |The tilt sensor is not emulated.|
 
 ??? note "(1)"
