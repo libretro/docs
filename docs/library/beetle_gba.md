@@ -52,7 +52,7 @@ Frontend-level settings or features that the Beetle GBA core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✕         |
 | [RetroArch SaveRAM Autosave Interval support](https://github.com/libretro/RetroArch/issues/16323#issuecomment-1977792161) | ✕ |
 | Native Cheats     | ✕         |

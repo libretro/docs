@@ -76,7 +76,7 @@ Frontend-level settings or features that the bsnes-jg core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |

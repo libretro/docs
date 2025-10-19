@@ -74,7 +74,7 @@ Frontend-level settings or features that the Beetle PSX HW core respects.
 | Rewind            | ✔         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

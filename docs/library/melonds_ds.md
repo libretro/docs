@@ -65,7 +65,7 @@ Frontend-level settings or features that melonDS DS respects.
 | Rewind            | ✔[^1]     |
 | Netplay           | ✔[^2]     |
 | Core Options      | ✔         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✔         |
 | Controls          | ✔         |

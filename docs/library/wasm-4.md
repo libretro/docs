@@ -49,7 +49,7 @@ WASM-4 does not require BIOS (bootrom) files to work.
 | Rewind            | ✔        |
 | Netplay           | ✔         |
 | Core Options      | ✕         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
