@@ -46,7 +46,7 @@ Content that can be loaded by the Emux CHIP-8 core have the following file exten
 | States            | -         |
 | Rewind            | -         |
 | Netplay           | -         |
-| RetroAchievements | -         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | -         |
 | RetroArch Cheats  | -         |
 | Native Cheats     | -         |
 | Controllers       | -         |

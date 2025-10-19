@@ -61,7 +61,7 @@ Frontend-level settings or features that the NXEngine core respects.
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✕         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

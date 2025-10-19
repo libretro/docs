@@ -45,7 +45,7 @@ Frontend-level settings or features that the Beetle Cygne core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔ (not link-cable emulation)         |
 | Core Options      | ✕         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

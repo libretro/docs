@@ -49,7 +49,7 @@ SAME_CDI does require BIOS (bootrom) files to work. You'll need to have followin
 | Rewind            | ✕        |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |

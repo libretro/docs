@@ -95,7 +95,7 @@ BIOS romsets are not needed when using "Full Non-Merged" arcade romsets. For "Sp
 | States            | game-dependent |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
-| RetroAchievements | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✔         |
 | Controllers       | ✔         |
