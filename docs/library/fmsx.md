@@ -64,8 +64,8 @@ RetroArch-level settings or features that the fMSX core respects.
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
+| RetroArch Cheats  | ✔         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
