@@ -493,7 +493,7 @@ extra:
     fixed: The information on this page never changes
     stable: The information on this page changes infrequently, or not at all
   unit:
-    stable: 1.22.1
+    stable: 1.22.2
   version: '0.2.0'
 
 extra_css:
