@@ -133,6 +133,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Mask off pixels hidden by a bezel or border on original CRTs (right)
 
+- **Palette** [geolith_palette] (**Resistor Network**|Raw)
+
+    Set the Palette
+
 - **Aspect Ratio** [geolith_aspect] (**Perfectly Square Pixels (1:1 PAR)**|Ostensibly Accurate NTSC Aspect Ratio (45:44 PAR)|Very Traditional NTSC Aspect Ratio (4:3 DAR))
 
     Set the Aspect Ratio
