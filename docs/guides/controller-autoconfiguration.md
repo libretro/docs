@@ -566,6 +566,9 @@ input_device_display_name_alt2 = "Sony Computer Entertainment Wireless (DualShoc
 | 6.2.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 | 6.8.0 | Yes | Yes | Sony Interactive Entertainment DualSense Wireless Controller | Yes | DualSense Wireless Controller | |
 
+
+It should be noted that all DualSense controller versions (V1–V5, regardless of firmware version) share the same USB PID 0CE6 under VID 054C, unlike the earlier DualShock 4, whose V1 and V2 models use distinct PIDs.
+
 In the above list, the following entries under **Autoconfigs file names to generate** are identified and required for the controller to be identified by linuxraw:
 
 ##### udev
