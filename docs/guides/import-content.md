@@ -18,7 +18,12 @@ Wait for the download to finish.
 
 ## Step 2: Scan and import
 
-From the RetroArch Main Menu navigate to "Import Content". You will see three options, "Scan Directory", "Scan File" and "Manual Scan".
+The "Import Content" menu can be either in the "Playlists" > "Import Content" (default), or directly accessible from the Main Menu.
+
+!!! note
+    The location of this menu item can be toggled in "Settings" > "User Interface" > "Menu Item Visibility" > "Show 'Import Content'" and updating this from "Playlists Menu" to "Main Menu".
+
+Here you will see three options, "Scan Directory", "Scan File" and "Manual Scan".
 
 !!! note
     "Scan Directory" and "Scan File" are sometimes refered to as "Auto Scan". These options can only recognise content that match the database.
