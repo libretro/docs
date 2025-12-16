@@ -81,7 +81,7 @@ nav:
       - 'Video Recording and Streaming': 'guides/recording-and-streaming.md'
       - 'Troubleshooting': 'guides/troubleshooting-retroarch.md'
       - 'Generating Logs': 'guides/generating-retroarch-logs.md'
-      - 'RetroArch Cloud Sync (Apple Devices)': 'guides/retroarch-cloud-sync.md'
+      - 'RetroArch Cloud Sync': 'guides/retroarch-cloud-sync.md'
       - 'Databases & Validation': 'guides/databases.md'
     - 'Appearance & Customization':
       - 'Interface Styles':

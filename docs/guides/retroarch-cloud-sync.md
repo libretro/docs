@@ -1,69 +1,213 @@
-# What is it?
+# RetroArch Cloud Sync
 
-RetroArch Cloud Sync enables a seamless synchronization of the most important system configuration and save data to a dedicated private webdav server, from where these data can be synchronized across your devices.
+Cloud Sync enables seamless synchronization of configuration and save data to a cloud server, allowing you to keep multiple devices in sync.
 
-RetroArch Cloud Sync currently syncs all data from the following directories:
+## Supported Backends
 
-/"YourUser"/Documents/RetroArch/saves - original system saves
-/"YourUser"/Documents/RetroArch/states - RetroArch save states
-/"YourUser"/Library/Application Support/RetroArch/config - all core-specific configurations, core options and shader configurations, MAME/FBNeo hiscores, but not the global retroarch.cfg
+There are three cloud sync backends available:
 
-"YourUser" refers to your $HOME user in MacOS
+| Backend | Platforms | Notes |
+|---------|-----------|-------|
+| **WebDAV** | All | Requires server URL, username, and password |
+| **iCloud** | macOS, iOS, tvOS | Uses CloudKit (Apple's database service) |
+| **iCloud Drive** | macOS, iOS | Uses iCloud Drive file storage |
 
-## How to configure it
+### WebDAV
 
-As with any sync solution, it is recommended to start with one device and ensure a proper functioning. Only then further devices should be added.
+WebDAV is a standard protocol supported by many cloud providers and self-hosted solutions. You'll need:
 
-### Initial configuration with first device
+- A WebDAV server URL (e.g., `https://webdav.example.com/RetroArch/`)
+- Username and password
 
-In order to start with Cloud sync, you need an own webdav account that is accessible by MacOS via the Menu/Connect to Server -> https://webdav.xxxxxx.xxx/.
+### iCloud vs iCloud Drive
 
-!!! Tip
-    It is obviously the best way to start with your leading RetroArch system, as this will bring the most important data into the webdav account first. In this account, create an own folder called RetroArch.
+Both use your Apple iCloud account but work differently:
 
-Within RetroArch, go to Settings/Saving/Cloud Sync
-    Enable Cloud Sync -> ON
-    Destructive Cloud Sync -> OFF (keeps a backup in a dedicated subfolder called "deleted", and the file names get a time stamp of deletion)
-    Cloud Sync Backend -> webdav
-    Cloud Storage URL -> https://webdav.xxxxxx.xxx/RetroArch/ (here is the RetroArch subfolder that you created before)
-    Username -> your webdav user
-    Password -> your webdav password
+- **iCloud** uses CloudKit, Apple's database service. Data is stored in a structured database format.
+- **iCloud Drive** stores files directly in iCloud Drive storage, similar to how other apps store documents.
 
-Save this configuration and restart Retroarch. After this restart, the initial sync should start immediately (see progress indicator in the bottom left status line of RetroArch). Depending on your amount of sync data, this can take some time. When this is finished, you could do some testing. For example, launch a game and set a new hiscore, then close the game. Let the sync do its job, then look into the webdav account, and the new hiscore should be there.
+!!! note "iCloud Drive files are not visible in Files.app"
+    Files synced via iCloud Drive are intentionally hidden from the Files app. This is by design—the sync system uses a manifest file to track file hashes, and direct editing of files would corrupt the sync state. Your data is safely stored in iCloud and syncs between devices, but you should only access it through RetroArch.
 
-### Configuration of a second device and further devices
+## What Gets Synced
 
-With any additional device, you do the identical steps in RetroArch as with the first device. From now on, these devices should be in sync!
+Cloud Sync can synchronize the following directories (each can be enabled/disabled individually):
 
-!!! Tip
-    Be very careful that these directory save settings are also identical on all sync devices:
-    - Sort Saves into Folders by Core Name - ON/OFF
-    - Sort Save States into Folders by Core Name - ON/OFF
-    - Sort Saves into Folders by Content Directory - ON/OFF
-    - Sort Save States into Folders by Content Directory - ON/OFF
-    If these settings are not matching, the sync is likely to fail, as the devices store its data in different directories.
+| Directory | Default | Contents |
+|-----------|---------|----------|
+| **Save Files & States** | On | Game saves (`.srm`) and save states |
+| **Configuration** | On | Core configs, core options, shader presets, MAME/FBNeo hiscores |
+| **Thumbnails** | Off | Custom thumbnails (use the thumbnail downloader for standard ones) |
+| **System Files** | Off | BIOS files, etc. (can be large; use with caution) |
 
-## Further details of the solution
+### Excluded Files
 
-### Sync Status
+The following are automatically excluded from sync:
 
-Syncing is displayed in the bottom left status line of RetroArch.
+- `retroarch.cfg` (main configuration file)
+- Playlist files (`content_*.lpl`)
+- `.DS_Store` files (macOS)
 
-As soon as the solution is properly configured, Cloud Sync starts immediately at launching RetroArch. This is apparently important if other devices synced new data to the webdav repository. They are then immediately picked up. As of more recent nightly iOS builds, RetroArch also starts Cloud Sync if it is launched from a Background/Suspended State (important for avoiding sync conflicts).
+## Configuration
 
-Another sync is triggered with every closing of a game and returning to the RetroArch menu. Be conscious that RetroArch cannot sync a new game status if RetroArch is closed from within a game by pressing Escape/Escape.
+### Initial Setup (First Device)
 
-### .DS_Store files will be ignored in sync
+Start with your primary RetroArch device to establish the initial cloud state.
 
-As of more recent nightly builds, Cloud Sync ignores .DS_Store files during sync. You can monitor this in the logfiles after turning on logging in RetroARch. But it is nevertheless recommended to delete all .DS_Store files from the synced directories.
+1. Navigate to **Settings → Saving → Cloud Sync**
+2. Configure the following:
 
-For example, you can delete the .DS.Store files from the relevant RetroArch directories from the terminal as follows (easiest way is that you create an .sh file containing these lines and make it executable via chmod 755):
+| Setting | Description |
+|---------|-------------|
+| **Enable Cloud Sync** | Turn on to enable syncing |
+| **Destructive Cloud Sync** | When OFF, deleted/overwritten files are backed up locally |
+| **Cloud Sync Backend** | Select your backend (webdav, icloud, or icloud_drive) |
+| **Sync Saves** | Sync save files and save states |
+| **Sync Configs** | Sync configuration files |
+| **Sync Thumbnails** | Sync thumbnail images |
+| **Sync System** | Sync system/BIOS files |
 
-cd /"YourUser"/Documents/RetroArch 
-find . -name '.DS_Store' -type f -delete
-cd /"YourUser"/Library/Application\ Support/RetroArch
-find . -name '.DS_Store' -type f -delete
+For WebDAV, also configure:
 
-### Troubleshooting
+| Setting | Description |
+|---------|-------------|
+| **Cloud Storage URL** | Your WebDAV server URL (include trailing slash) |
+| **Username** | WebDAV username |
+| **Password** | WebDAV password |
 
-If the Cloud Sync returns an error, turn logging on and set the logging level to debug, log into a file. Cloud Sync logs reliably into the logfile, so the errors can be read easily. Not all conflicts that RetroArch Cloud Sync returns are critical (e.g. cache conflicts that can be easily resolved by deleting the conflicting local cache file according to the logfile). Other conflicts may even be desired, e.g. if core configurations shall differ between the MacOS core and the iOS core.
+3. Save the configuration and restart RetroArch
+4. The initial sync will begin automatically (watch the status line at the bottom)
+
+### Adding Additional Devices
+
+Configure each additional device with identical settings. Pay special attention to these directory settings—they must match across all devices:
+
+- Sort Saves into Folders by Core Name
+- Sort Save States into Folders by Core Name
+- Sort Saves into Folders by Content Directory
+- Sort Save States into Folders by Content Directory
+
+!!! warning
+    If these settings don't match, devices will store files in different locations and sync will fail to merge them correctly.
+
+## How Cloud Sync Works
+
+Cloud Sync uses a three-way merge algorithm with two manifest files:
+
+1. **Server Manifest** - Tracks what's stored in the cloud
+2. **Local Manifest** - Tracks what was last synced from this device
+
+When sync runs, RetroArch compares:
+
+- Current local files
+- Local manifest (what we last synced)
+- Server manifest (what the cloud has)
+
+This allows the system to detect:
+
+- New local files → upload to cloud
+- New server files → download to device
+- Changed files → determine which version is newer
+- Deleted files → propagate deletion (or backup if non-destructive)
+- Conflicts → when both local and server changed the same file
+
+### Sync Mode
+
+The **Sync Mode** setting controls when synchronization occurs:
+
+| Mode | Behavior |
+|------|----------|
+| **Automatic** (default) | Syncs on RetroArch startup and when cores are unloaded (returning to menu) |
+| **Manual** | Only syncs when you explicitly trigger it via **Sync Now** |
+
+In **Automatic** mode, sync also runs when RetroArch resumes from the background on iOS.
+
+Use **Manual** mode if you want full control over when sync happens, or if you're on a metered connection and want to minimize data usage.
+
+### Sync Now
+
+The **Sync Now** option (in Settings → Saving → Cloud Sync) manually triggers a sync. This works in both Automatic and Manual modes, allowing you to force a sync at any time.
+
+!!! tip
+    Always close the running content (Close Content) and return to RetroArch's main menu before quitting RetroArch. This ensures your latest saves are synced. Quitting RetroArch while content is still running may skip the sync.
+
+### Conflict Resolution
+
+A conflict occurs when the same file is modified on multiple devices before they have a chance to sync. Specifically, a conflict is detected when:
+
+- The server version differs from what was last synced, AND
+- The local version also differs from what was last synced
+
+Another conflict scenario is when one device deletes a file while another device modifies it.
+
+**Current behavior:** When a conflict is detected, RetroArch does not overwrite either version. The local file remains unchanged, the server file remains unchanged, and the conflict is logged. The file is temporarily excluded from sync until manually resolved.
+
+**Identifying conflicts:**
+
+- The status line will show "Cloud Sync finished with conflicts"
+- The log file will contain entries like: `[CloudSync] Conflicting change of saves/game.srm`
+
+**Resolving conflicts manually:**
+
+1. Enable debug logging and check the log to identify which files are conflicting
+2. Decide which version you want to keep (local or server)
+3. To keep the **server** version: delete or rename the local file, then let sync run again to download the server version
+4. To keep the **local** version: edit the local manifest file (`manifest.local` in your downloads/core assets directory) and update the conflicting file's hash to match the server's hash. On the next sync, RetroArch will see the local file as changed and upload it
+
+!!! tip
+    To avoid conflicts, try not to use RetroArch on multiple devices simultaneously. Always let sync complete on one device before starting a session on another.
+
+### Non-Destructive Mode
+
+When **Destructive Cloud Sync** is OFF, files that would be deleted or overwritten are backed up to:
+
+```
+[core_assets_directory]/cloud_backups/[path]-YYMMDD-HHMMSS
+```
+
+This allows recovery if sync makes unwanted changes.
+
+## Sync Status
+
+Sync progress is displayed in the bottom-left status line. Messages include:
+
+- "Cloud Sync in progress" - Sync is running
+- "Cloud Sync finished" - Completed successfully
+- "Cloud Sync finished with conflicts" - Completed but conflicts were detected
+- "Cloud Sync finished with failures" - Some operations failed
+- "Cloud Sync failed" - Could not connect to backend
+
+## Troubleshooting
+
+### Enable Logging
+
+1. Go to **Settings → Logging**
+2. Enable **Log to File**
+3. Set **Logging Level** to **Debug**
+
+Cloud Sync logs detailed information prefixed with `[CloudSync]`.
+
+### Common Issues
+
+**Sync not starting**
+
+- Verify Cloud Sync is enabled
+- Check network connectivity
+- For WebDAV: verify URL, username, and password
+- For iCloud: ensure you're signed into iCloud on the device
+
+**Files not syncing between devices**
+
+- Ensure directory organization settings match on all devices
+- Check that the same sync options (saves, configs, etc.) are enabled
+- Wait for sync to complete on one device before starting another
+
+**Conflicts appearing**
+
+- Avoid using multiple devices simultaneously
+- Always let sync complete before closing RetroArch
+- Check logs to identify which files are conflicting
+
+**iCloud Drive: "Can't see files in Files.app"**
+
+This is intentional. Files are stored in a private app container to protect sync integrity. Your data is syncing correctly even though it's not visible in Files.app.
