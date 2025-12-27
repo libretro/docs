@@ -239,3 +239,4 @@ The current standalone development version is reported to be compatible with app
 
 
 [^2]: Overscan cropping available via Core Options instead of frontend settings
+Brasil 
