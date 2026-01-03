@@ -121,18 +121,14 @@ This tool automatically creates both the required hook files and the playlist, b
 2. Add games to the list as needed using the GUI buttons (a “Mass Add” option is available).
 3. Open **Global Options**, then select the **Backend** tab.
 4. Check or set the path for frontend playlists. A `ScummVM.lpl` file will be created or overwritten there.
-5. Check the **Hooks location** setting:
-   - Either create one `.scummvm` file in each game folder.
-   - Or store all hook files in a `scummvm_hooks` folder inside the save path.
-6. Check the **Playlist version** setting:
-   - **JSON format** is the default and recommended for all modern Libretro frontends.
-   - The old 6-line format is deprecated and provided only for backward compatibility.
+5. Check the **Hooks location** setting: either create one `.scummvm` file in each game folder or store all hook files in a `scummvm_hooks` folder inside the save path (this is the suggested way as the game folder will be untouched).
+6. Check the **Playlist version** setting: **JSON format** is the default and recommended for all modern Libretro frontends. The old 6-line format is deprecated and provided only for backward compatibility.
 7. (Optional) Select **Clear existing hooks** to remove any existing `.scummvm` files in the working folders.
 8. Press the **Generate playlist** button.
 
 The operation status will be shown in the same dialog, and detailed logs will appear in the frontend log output.
 
-Once the playlist has been generated, it will be available in the frontend ready to be used to launch games, and synced with the ScummVM internal Launcher list.
+Once the playlist has been generated, it will be available in the frontend ready to be used to launch games, and synced with the ScummVM internal Launcher list. The playlist can be re-synced with the internal Launcher list re-generating it as per above steps.
 
 ## Core Options
 
@@ -169,15 +165,11 @@ Options are grouped into **Video**, **Cursor**, **Timing**, and **RetroPad** cat
 
 ### Timing / Performance
 
-
-- **Frameskip** (if available, default: `disabled`):  
-  Skips frames to improve performance on slow devices. Modes: `disabled` (no frames skipped), `fixed` (always skip a set number of frames, e.g. 1–5), `auto` or `manual` (automatically skip frames when performance drops below a user-defined threshold, typically 15–60%). Higher frameskip can help maintain smooth gameplay but may reduce animation smoothness.
-
 - **Frame rate cap** (`scummvm_framerate`, default: `disabled`):  
-  Sets an upper limit for the core’s frame rate. Options: `disabled`, `60 Hz`, `50 Hz`, `30 Hz`, `25 Hz`. Changing this resets the core.
+  Sets an upper limit for the core’s frame rate. Options: `disabled`, `60 Hz`, `50 Hz`, `30 Hz`, `25 Hz`. Lower values can help maintain smooth gameplay on lower end devices but may reduce animation smoothness. Changing this resets the core.
 
 - **Sample rate** (`scummvm_samplerate`, default: `48000 Hz`):  
-  Sets the audio sample rate for the core. Options: `48000 Hz`, `44100 Hz`. Changing this resets the core.
+  Sets the audio sample rate for the core. Options: `48000 Hz`, `44100 Hz`. Lower values can slightly improve performance on lower end devices. Changing this resets the core.
 
 ### Video
 
