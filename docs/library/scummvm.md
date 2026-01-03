@@ -57,7 +57,7 @@ Frontend-level settings or features that the ScummVM core respects.
 
 ## Directories
 
-The ScummVM core's library name is 'libretro_scummvm'.
+The ScummVM core's library name is 'scummvm_libretro'.
 
 The ScummVM core saves/loads to/from these directories:
 
