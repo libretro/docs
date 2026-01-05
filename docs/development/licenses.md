@@ -179,6 +179,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | PCem                                                                             | [GPLv2](https://github.com/libretro/libretro-pcem/blob/master/COPYING)                    |                |
 | [PCSX ReARMed](../library/pcsx_rearmed.md)                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
 | PCSX ReARMed [Interpreter]                                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
+| [PD777](../library/pd777.md)                                               | [MIT](https://github.com/mittonk/PD777/blob/main/LICENSE)                |                |
 | [PicoDrive](../library/picodrive.md)                                             | [MAME (Non-commercial)](https://github.com/libretro/picodrive/blob/master/COPYING)        | Non-commercial |
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
 | [PokeMini](../library/pokemini.md)                                               | [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)                         |                |

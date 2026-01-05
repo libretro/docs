@@ -162,6 +162,7 @@
 | PCem                      | IBM PC                 |                    |
 | [LRPS2](https://docs.libretro.com/library/lrps2/)               | Sony PlayStation 2     |                    |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       |                    |
+| [PD777](../library/pd777.md) | Epoch Cassette Vision |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
 | Pocket CDG                | Karaoke player         | A karaoke music player, ported to libretro |
