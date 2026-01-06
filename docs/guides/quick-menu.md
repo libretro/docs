@@ -3,9 +3,9 @@
 The **Quick Menu** is effectively RetroArch's pause menu.
 
 ## Controls
-The Quick Menu can be accessed by pressing a certain gamepad combination, pressing the `F1` key on your keyboard, or tapping on the "[Invader](../start/understanding/#logomascot)" or "Menu" button on most Gamepad Overlays.
+The Quick Menu can be accessed by pressing a certain gamepad combination, pressing the `F1` key on your keyboard, or tapping on the "Invader" or "Menu" button on most Gamepad Overlays.
 
-The RetroPad button combination for opening the Quick Menu can be changed at `Settings>Input> Hotkeys> Menu Toggle`. Users select the combination from a list (Custom combinations cannot the applied):
+The RetroPad button combination for opening the Quick Menu can be changed at `Settings>Input> Hotkeys> Menu Toggle`. Users select the combination from a list (Custom combinations cannot be applied):
 
 * None
 * Done + Y + L1 + R1
