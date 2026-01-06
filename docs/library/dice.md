@@ -193,10 +193,8 @@ Most games are playable with just a joypad.  Controls vary by game.
 - [Original DICE Repository](https://sourceforge.net/projects/dice/) (inactive)
 - [DirtBagXon's DICE Repository](https://github.com/DirtBagXon/DICE)
 - [Libretro DICE Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dice.info)
-- [Libretro DICE (Website name)
-  Repository](https://github.com/mittonk/dice-libretro)
-- [Report Libretro DICE Core Issues
-  Here](https://github.com/mittonk/dice-libretro/issues)
+- [Libretro DICE Github Repository](https://github.com/mittonk/dice-libretro)
+- [Report Libretro DICE Core Issues Here](https://github.com/mittonk/dice-libretro/issues)
 
 ## (Related cores)
 
