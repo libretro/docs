@@ -2,7 +2,7 @@
 
 ## Non-Google Play sources
 
-For installations from outside Google Play, you may need to follow the [Allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect) guide.
+For installations from outside Google Play, you need to follow the [Allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect) guide.
 
 ### Installation via Website
 ___
@@ -40,20 +40,22 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 ### Method 1: "Install anyway" in Google Play Protect
 
-<img width="433" height="469" alt="2" src="https://github.com/user-attachments/assets/fb450071-c260-4e4d-947e-2ccbbcf6e3c7" /><br />
+![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
-<img width="433" height="195" alt="1" src="https://github.com/user-attachments/assets/18026f64-4266-40e9-8fbe-94ae7ebb9100" />
+
+![google-play-protect_-_install-anyway-2.png](../image/guides/google-play-protect_-_install-anyway-2.png)
 
 * When you select “Install anyway”, Google Play Protect will ask you to authenticate your identity. For security reasons, this step cannot be captured in a screenshot, which is why it's described here instead. If Play Protect still fails to install the app even after you’ve entered the correct password, you’ll need to disable Google Play Protect. For instructions, see [Method 2: Disable Google Play Protect](#method-2-disable-google-play-protect).
 
 ### Method 2: Disable Google Play Protect
 
-If Google Play Protect still prevents the app from installing even after you entered the correct password in Method 1 above, which is problematic in older Android versions, you’ll need to disable Play Protect, as it is blocking APK installations.
+If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to temporarily disable Play Protect to proceed.
 
-* Disable Google Play Protect:
-  - Open the Play Store app first.
-  - Tap your profile icon
-  - Select Play Protect
-  - Tap the gear icon in settings
-  - Toggle off "Scan apps with Play Protect"
-* Install the apk
+Disable Google Play Protect:
+* Open the Play Store app first
+* Tap your profile icon
+* Select Play Protect
+* Tap the gear icon in settings
+* Toggle off "Scan apps with Play Protect"
+
+Once disabled, install the APK — Play Protect will no longer interfere with the process.
