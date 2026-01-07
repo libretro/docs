@@ -42,7 +42,6 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 ![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
-
 ![google-play-protect_-_install-anyway-2.png](../image/guides/google-play-protect_-_install-anyway-2.png)
 
 * When you select “Install anyway”, Google Play Protect will ask you to authenticate your identity. For security reasons, this step cannot be captured in a screenshot, which is why it's described here instead. If Play Protect still fails to install the app even after you’ve entered the correct password, you’ll need to disable Google Play Protect. For instructions, see [Method 2: Disable Google Play Protect](#method-2-disable-google-play-protect).
