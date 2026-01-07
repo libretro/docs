@@ -40,8 +40,6 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 ### Method 1: "Install anyway" in Google Play Protect
 
-<img width="433" height="533" alt="3" src="https://github.com/user-attachments/assets/0cf3523b-7992-4d3d-af8d-657e942a2bb3" /><br />
-
 <img width="433" height="469" alt="2" src="https://github.com/user-attachments/assets/fb450071-c260-4e4d-947e-2ccbbcf6e3c7" /><br />
 
 <img width="433" height="195" alt="1" src="https://github.com/user-attachments/assets/18026f64-4266-40e9-8fbe-94ae7ebb9100" />
