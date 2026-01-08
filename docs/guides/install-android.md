@@ -31,6 +31,8 @@ RetroArch is available on the Google Play Store, but has not been updated for ye
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
+DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store and Yalp Store offer free alternatives, enabling anonymous downloads and updates from Google Play servers without a Google account.
+
 ## Installation notes
 
 ### Side-loading
@@ -49,17 +51,18 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 ![google-play-protect_-_install-anyway-2.png](../image/guides/google-play-protect_-_install-anyway-2.png)
 
-* When you select “Install anyway”, Google Play Protect will ask you to authenticate your identity. For security reasons, this step cannot be captured in a screenshot, which is why it's described here instead. If Play Protect still fails to install the app even after you’ve entered the correct password, you’ll need to disable Google Play Protect. For instructions, see [Method 2: Disable Google Play Protect](#method-2-disable-google-play-protect).
+When you select “Install anyway”, Google Play Protect prompts for identity authentication (password or fingerprint). For security reasons, this step cannot be screenshotted, so it's described textually here. This method requires no Google account—unlike [disabling Google Play Protect](#method-2-disable-google-play-protect), needed if authentication still fails after entering the correct password.
 
 #### Method 2: Disable Google Play Protect
 
-If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to temporarily disable Play Protect to proceed.
+If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed. The downside of this method is that it **requires** a Google account to sign in to the Google Play Store.
 
-Disable Google Play Protect:
-* Open the Play Store app first
-* Tap your profile icon
-* Select Play Protect
-* Tap the gear icon in settings
-* Toggle off "Scan apps with Play Protect"
+* Create a Google account if you don’t already have one.
+* Open the Google Play Store app
+* Click on the "Sign in" button and sign in with your Google account.
+* Tap your profile icon.
+* Select Play Protect.
+* Tap the gear icon (Settings).
+* Toggle off "Scan apps with Play Protect".
 
 Once disabled, install the APK — Play Protect will no longer interfere with the process.
