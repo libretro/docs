@@ -31,7 +31,7 @@ RetroArch is available on the Google Play Store, but has not been updated for ye
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
-DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative, enabling anonymous downloads and updates from Google Play servers without a Google account.
+DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store, avalible from the [F-droid](https://f-droid.org/en/packages/com.aurora.store/) repository, offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account.
 
 ## Installation notes
 
