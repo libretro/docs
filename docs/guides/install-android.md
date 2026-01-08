@@ -31,19 +31,19 @@ RetroArch is available on the Google Play Store, but has not been updated for ye
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
-# Installation notes
+## Installation notes
 
-## Side-loading
+### Side-loading
 
 * Android may tell you that `the app doesn’t have permission to install APKs`. Click the available `Settings` button in that prompt.
 * In the next menu, turn on the toggle allowing the app install APKs.
 * `Hit the back button` to return to your installation.
 
-## Allowing APK installations blocked by Google Play Protect
+### Allowing APK installations blocked by Google Play Protect
 
 To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc), ensure Google Play Protect either approves it or disable the service entirely.
 
-### Method 1: "Install anyway" in Google Play Protect
+#### Method 1: "Install anyway" in Google Play Protect
 
 ![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
@@ -51,7 +51,7 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 * When you select “Install anyway”, Google Play Protect will ask you to authenticate your identity. For security reasons, this step cannot be captured in a screenshot, which is why it's described here instead. If Play Protect still fails to install the app even after you’ve entered the correct password, you’ll need to disable Google Play Protect. For instructions, see [Method 2: Disable Google Play Protect](#method-2-disable-google-play-protect).
 
-### Method 2: Disable Google Play Protect
+#### Method 2: Disable Google Play Protect
 
 If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to temporarily disable Play Protect to proceed.
 
