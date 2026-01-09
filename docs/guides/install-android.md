@@ -67,13 +67,12 @@ When you select “Install anyway”, Google Play Protect prompts for identity a
 
 #### Method 2: Disable Google Play Protect
 
-If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed. The downside of this method is that it **requires** a Google account to sign in to the Google Play Store.
+If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed.
 
-* Create a Google account if you don’t already have one.
 * Open the Google Play Store app
-* Click on the "Sign in" button and sign in with your Google account.
-* Tap your profile icon.
-* Select Play Protect.
+* Tap the hamburger button located in the top right.
+  * You don’t need to be signed in to adjust Play Protect settings. But if you’re signed in to a Google account, this icon will show the first letter of your name (for example, “F” for “Foo”).
+* Select "Play Protect".
 * Tap the gear icon (Settings).
 * Toggle off "Scan apps with Play Protect".
 
