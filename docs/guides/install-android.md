@@ -5,7 +5,9 @@
 ### Installation via Sideloading
 When referring to Android apps, "sideloading" involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
 
-If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect).
+To sideload successfully, complete these two steps:
+* The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), enable the [install unknown apps](#install-unknown-apps) permission for it.
+* If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect).
 
 #### From RetroArch.com Downloads
 
@@ -52,7 +54,7 @@ DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Stor
 
 #### Install unknown apps
 
-Android may prompt `For your security, your phone currently isn't allowed to install unknonw apps from this source. You can change this in Settings`.
+The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), Android displays a prompt: `For your security, your phone currently isn't allowed to install unknonw apps from this source. You can change this in Settings`.
 * Click the available `Settings` button in that prompt.
 * In the `Install unknown apps` menu, toggle on `Allow from this source` to permit the app to install APKs.
 * `Hit the back button` to return to your installation.
@@ -62,6 +64,8 @@ Android may prompt `For your security, your phone currently isn't allowed to ins
 To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc), ensure Google Play Protect either approves it or disable the service entirely.
 
 ##### Method 1: "Install anyway" in Google Play Protect
+
+This procedure must be repeated each time you sideload an app:
 
 ![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
@@ -79,5 +83,5 @@ If Google Play Protect still blocks the app installation even after you entered 
 * Tap "Play Protect".
 * Tap the gear icon (Settings).
 * Toggle off "Scan apps with Play Protect".
-
-Once disabled, install the APK — Play Protect will no longer interfere with the process.
+* Install the APK — Play Protect will no longer interfere with the process.
+* Android may prompt you to enable Play Protect each time you sideload an APK; always select "No" to maintain this habit.
