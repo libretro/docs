@@ -8,7 +8,9 @@ You must follow the [installation notes](#installation-notes) for this process.
 
 #### From RetroArch.com Downloads
 
-#### Installation via Obtainium
+#### Installation via Obtainium (recommended)
+"Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
+
 * Install Obtainium: The most recent stable release can be found [in its F-Droid repository]([https://f-droid.org/packages/com.retroarch/](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/))
 * Visit https://apps.obtainium.imranr.dev/
   * Search for "RetroArch"
@@ -25,11 +27,13 @@ ___
 All [stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
 > 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
-### Installation via F-Droid
+### Installation via F-Droid (incomplete)
 ___
 RetroArch's most recent stable release can be found [in its F-Droid repository](https://f-droid.org/packages/com.retroarch/) for easier automatic updating.
 
-### (NOT RECOMMENDED) Installation via Google Play servers
+Note that the F-Droid package lacks many resources ([GitHub issue #16126](https://github.com/libretro/RetroArch/issues/16126); see also [F-Droid RFP #1933](https://gitlab.com/fdroid/rfp/-/issues/1933#note_1731005305)). Both issues are now closed but the resource problems persist.
+
+### Installation via Google Play servers (obsolete)
 ___
 RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
