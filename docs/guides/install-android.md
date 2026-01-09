@@ -4,7 +4,8 @@
 
 ### Installation via Sideloading
 When referring to Android apps, "sideloading" involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
-You must follow the [installation notes](#installation-notes) for this process.
+
+If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect).
 
 #### From RetroArch.com Downloads
 
@@ -49,15 +50,18 @@ DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Stor
 
 ### Sideloading
 
-* Android may tell you that `the app doesn’t have permission to install APKs`. Click the available `Settings` button in that prompt.
-* In the next menu, turn on the toggle allowing the app install APKs.
+#### Install unknown apps
+
+Android may prompt `For your security, your phone currently isn't allowed to install unknonw apps from this source. You can change this in Settings`.
+* Click the available `Settings` button in that prompt.
+* In the `Install unknown apps` menu, toggle on `Allow from this source` to permit the app to install APKs.
 * `Hit the back button` to return to your installation.
 
-### Allowing APK installations blocked by Google Play Protect
+#### Allowing APK installations blocked by Google Play Protect
 
 To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc), ensure Google Play Protect either approves it or disable the service entirely.
 
-#### Method 1: "Install anyway" in Google Play Protect
+##### Method 1: "Install anyway" in Google Play Protect
 
 ![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
@@ -65,7 +69,7 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 
 When you select “Install anyway”, Google Play Protect prompts for identity authentication (password or fingerprint). For security reasons, this step cannot be screenshotted, so it's described textually here. This method requires no Google account—unlike [disabling Google Play Protect](#method-2-disable-google-play-protect), needed if authentication still fails after entering the correct password.
 
-#### Method 2: Disable Google Play Protect
+##### Method 2: Disable Google Play Protect
 
 If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed.
 
