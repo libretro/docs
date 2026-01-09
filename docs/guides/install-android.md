@@ -3,25 +3,33 @@
 ## Non-Google Play sources
 
 ### Installation via Side-loading
-Side-loading means installing manually downloaded APK files on Android (outside official stores).<br />
+Side-loading involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
 You must follow the [installation notes](#installation-notes) for this process.
 
 #### From RetroArch.com Downloads
+
+#### Installation via Obtainium
+* Install Obtainium: The most recent stable release can be found [in its F-Droid repository]([https://f-droid.org/packages/com.retroarch/](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/))
+* Visit https://apps.obtainium.imranr.dev/
+  * Search for "RetroArch"
+  * Click on the "Add to Obtainium" link.
+
+##### Manual Downloads
 ___
 1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
 2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
 3. Select Install.
 
-##### From Buildbot Archives
+###### From Buildbot Archives
 ___
 All [stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
 > 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
 ### Installation via F-Droid
 ___
-RetroArch's most recent stable release can be found [in the F-Droid repository](https://f-droid.org/packages/com.retroarch/) for easier automatic updating.
+RetroArch's most recent stable release can be found [in its F-Droid repository](https://f-droid.org/packages/com.retroarch/) for easier automatic updating.
 
-### (NOT RECOMMENDED) Installation via Google Play
+### (NOT RECOMMENDED) Installation via Google Play servers
 ___
 RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
@@ -31,7 +39,7 @@ RetroArch is available on the Google Play Store, but has not been updated for ye
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
-DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store, avalible from the [F-droid](https://f-droid.org/en/packages/com.aurora.store/) repository, offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account.
+DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store, avalible from its [F-droid](https://f-droid.org/en/packages/com.aurora.store/) repository, offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account.
 
 ## Installation notes
 
