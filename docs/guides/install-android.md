@@ -2,8 +2,8 @@
 
 ## Non-Google Play sources
 
-### Installation via Side-loading
-Side-loading involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
+### Installation via Sideloading
+When referring to Android apps, "sideloading" involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
 You must follow the [installation notes](#installation-notes) for this process.
 
 #### From RetroArch.com Downloads
@@ -47,7 +47,7 @@ DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Stor
 
 ## Installation notes
 
-### Side-loading
+### Sideloading
 
 * Android may tell you that `the app doesn’t have permission to install APKs`. Click the available `Settings` button in that prompt.
 * In the next menu, turn on the toggle allowing the app install APKs.
@@ -69,7 +69,7 @@ When you select “Install anyway”, Google Play Protect prompts for identity a
 
 If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed.
 
-* Open the Google Play Store app
+* Open the Google Play Store app.
 * Tap the menu icon in the top right corner.
   * You don’t need to be signed in to adjust Play Protect settings. But if you’re signed in to a Google account, An icon will show the first letter of your name (for example, “F” for “Foo”) instead of a hamburger button.
 * Tap "Play Protect".
