@@ -71,7 +71,7 @@ If Google Play Protect still blocks the app installation even after you entered 
 
 * Open the Google Play Store app
 * Tap the hamburger button located in the top right.
-  * You don’t need to be signed in to adjust Play Protect settings. But if you’re signed in to a Google account, this icon will show the first letter of your name (for example, “F” for “Foo”).
+  * You don’t need to be signed in to adjust Play Protect settings. But if you’re signed in to a Google account, An icon will show the first letter of your name (for example, “F” for “Foo”) instead of a hamburger button.
 * Select "Play Protect".
 * Tap the gear icon (Settings).
 * Toggle off "Scan apps with Play Protect".
