@@ -3,7 +3,7 @@
 ## Non-Google Play sources
 
 ### Installation via Sideloading
-When referring to Android apps, "sideloading" involves installing APK files on Android devices from sources outside official app stores. These APKs can be obtained manually or automatically via apps like Obtainium.
+Sideloading Android apps involves installing APK files from sources outside official stores. Apps like Obtainium automate APK downloads for the latest versions, avoiding issues with manual methods such as lengthy repeated downloads/installations and missed updates.
 
 To sideload successfully:
 * The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), enable the [install unknown apps](#install-unknown-apps) permission for it. This step is straightforward, and most Android users can complete it without consulting the detailed instructions.
@@ -14,10 +14,18 @@ To sideload successfully:
 #### Installation via Obtainium (recommended)
 "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
 
-* Install Obtainium: The most recent stable release can be found [in its F-Droid repository]([https://f-droid.org/packages/com.retroarch/](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/))
-* Visit https://apps.obtainium.imranr.dev/
-  * Search for "RetroArch"
-  * Click on the "Add to Obtainium" link.
+To install the latest stable RetroArch APK — whether 32-bit, AArch64, or Universal — from https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/, follow these steps:
+
+* Install Obtainium
+  * Download the latest stable version from its [F-Droid repository](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/)
+* Add RetroArch to Obtainium
+  * Visit https://apps.obtainium.imranr.dev/.
+  * Search for "RetroArch".
+  * Select “Add to Obtainium” for either RetroArch (32-bit), RetroArch (AArch64), or RetroArch (Universal).
+* Import and Install
+  * When the “Import app” prompt appears, tap **Continue**.
+* Open the newly added RetroArch entry.
+* Tap **Install** to download and install the app.
 
 ##### Manual Downloads
 ___
@@ -27,7 +35,7 @@ ___
 
 ###### From Buildbot Archives
 ___
-All [stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
+All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
 > 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
 ### Installation via F-Droid (incomplete)
