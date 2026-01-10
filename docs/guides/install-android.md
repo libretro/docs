@@ -14,7 +14,9 @@ To sideload successfully:
 #### Installation via Obtainium (recommended)
 "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
 
-To install the latest stable RetroArch APK — whether 32-bit, AArch64, or Universal — from https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/, follow these steps:
+Obtainium installs the latest stable RetroArch APK — whether 32‑bit, AArch64, or Universal — directly from https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/, the same source used for manual downloads. The only difference is that Obtainium automates this process and provides update notifications, helping users stay current and avoid reporting issues from outdated versions.
+
+To install RetroArch from Obtainium, follow these steps:
 
 * Install [Obtainium](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/) from F-Droid.
 * Add RetroArch to Obtainium
