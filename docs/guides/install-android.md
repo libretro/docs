@@ -16,8 +16,7 @@ To sideload successfully:
 
 To install the latest stable RetroArch APK — whether 32-bit, AArch64, or Universal — from https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/, follow these steps:
 
-* Install Obtainium
-  * Download the latest stable version from its [F-Droid repository](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/)
+* Install [Obtainium](https://f-droid.org/en/packages/dev.imranr.obtainium.fdroid/) from F-Droid.
 * Add RetroArch to Obtainium
   * Visit https://apps.obtainium.imranr.dev/.
   * Search for "RetroArch".
@@ -40,7 +39,7 @@ All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/)
 
 ### Installation via F-Droid (incomplete)
 ___
-RetroArch's most recent stable release can be found [in its F-Droid repository](https://f-droid.org/packages/com.retroarch/) for easier automatic updating.
+The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable release can be found in F-Droid for easier automatic updating.
 
 Note that the F-Droid package lacks many resources ([GitHub issue #16126](https://github.com/libretro/RetroArch/issues/16126); see also [F-Droid RFP #1933](https://gitlab.com/fdroid/rfp/-/issues/1933#note_1731005305)). Both issues are now closed but the resource problems persist.
 
@@ -54,7 +53,7 @@ RetroArch is available on the Google Play Store, but has not been updated for ye
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
-DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store, avalible from its [F-droid](https://f-droid.org/en/packages/com.aurora.store/) repository, offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account.
+DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is avalible in F-Droid.
 
 ## Installation notes
 
