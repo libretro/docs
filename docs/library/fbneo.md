@@ -82,27 +82,27 @@ Refer to a [clrmamepro tutorial](https://docs.libretro.com/guides/arcade-getting
 
 ## Features
 
-| Feature           | Supported |
-|-------------------|-----------|
-| Saves             | ✔         |
-| States            | ✔         |
-| Rewind            | ✔         |
-| Run-Ahead         | ✔         |
-| Preemptive Frames | ✔         |
-| Netplay           | ✔         |
+| Feature                                                           | Supported |
+|-------------------------------------------------------------------|-----------|
+| Saves                                                             | ✔         |
+| States                                                            | ✔         |
+| Rewind                                                            | ✔         |
+| Run-Ahead                                                         | ✔         |
+| Preemptive Frames                                                 | ✔         |
+| Netplay                                                           | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✔         |
-| Native Cheats     | ✔         |
-| Controllers       | ✔         |
-| Multi-Mouse       | ✔         |
-| Rumble            | ✕         |
-| Sensors           | ✕         |
-| Camera            | ✕         |
-| Location          | ✕         |
-| Subsystem         | ✔         |
-| IPS Patch         | ✔         |
-| RomData           | ✔         |
-| Multi-language    | ✔         |
+| RetroArch Cheats                                                  | ✔         |
+| Native Cheats                                                     | ✔         |
+| Controllers                                                       | ✔         |
+| Multi-Mouse                                                       | ✔         |
+| Rumble                                                            | ✕         |
+| Sensors                                                           | ✕         |
+| Camera                                                            | ✕         |
+| Location                                                          | ✕         |
+| Subsystem                                                         | ✔         |
+| IPS Patch                                                         | ✔         |
+| RomData                                                           | ✔         |
+| Multi-language                                                    | ✔         |
 
 ## Mapping
 
@@ -227,7 +227,11 @@ Here is a list of samples currently in use :
 | buckrog      |                                                                        |
 | carnival     |                                                                        |
 | cheekyms     | Not from MAME                                                          |
+| circus       |                                                                        |
+| crash        |                                                                        |
 | congo        |                                                                        |
+| depthch      |                                                                        |
+| digger       | Not from MAME                                                          |
 | dkongjr      |                                                                        |
 | dkong        |                                                                        |
 | donpachi     | Not from MAME, optional, replace OG music by HQ music, requires dipsw. |
@@ -238,6 +242,8 @@ Here is a list of samples currently in use :
 | gridlee      |                                                                        |
 | heiankyo     | Not from MAME                                                          |
 | invaders     |                                                                        |
+| invds        | Not from MAME                                                          |
+| invinco      |                                                                        |
 | journey      |                                                                        |
 | mario        |                                                                        |
 | mmagic       |                                                                        |
@@ -254,6 +260,7 @@ Here is a list of samples currently in use :
 | seawolf      |                                                                        |
 | sfz3mix      | Not from MAME, optional, replace OG music by HQ music, no dipsw.       |
 | sharkatt     |                                                                        |
+| sot4w        | Not from MAME, megadrive                                               |
 | spacefb      |                                                                        |
 | spacfury     |                                                                        |
 | stinger      | Not from MAME                                                          |
@@ -320,7 +327,8 @@ If present, the line `Verify the following romsets : <romset> <parent> <bios>` g
 
 Otherwise, a `Romset is unknown` message means the romset couldn't be found by its filename in our database.
 
-Both problems result from not reading the [arcade documentation](https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator). Exceptionally there might be false positives due to your files being unreadable for some reason (file corruption during transfer, file permission, damaged disk drive, ...). This is a rabbit hole and something you should only concern yourself after using clrmamepro to verify your romsets.
+Both problems result from not reading the [arcade documentation](https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator).
+Exceptionally there might be false positives due to your files being unreadable for some reason (file corruption during transfer, file permission, damaged disk drive, [retroarch regression](https://github.com/libretro/RetroArch/issues/18582), ...). This is usually a rabbit hole and something you should only concern yourself after using clrmamepro to verify your romsets.
 
 Rarely you could get a "Failed initializing driver" message, this is something you should report [here](https://github.com/finalburnneo/FBNeo/issues)
 
@@ -334,7 +342,6 @@ For the unsupported romhacks, there are 3 methods, but those romhacks are not al
 
 * Put the patched version of the romset into `SYSTEM_DIRECTORY/fbneo/patched`, this folder has special privileges allowing it to ignore crcs. Sizes and names still need to match the original romset though.
 * Optional : you could strip the patched version from any file that don't differ from the original romset.
-* Note : **The romset you must launch is still the original non-patched romset (its content will be overriden at runtime by the content of the patched one)**.
 
 #### Using IPS Patches
 
@@ -346,6 +353,8 @@ For the unsupported romhacks, there are 3 methods, but those romhacks are not al
 
 * Put all RomData files (including: driver name directory/**.dat) into the `SYSTEM_DIRECTORY/fbneo/romdata/` folder
 * RomData will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+
+Please note that all 3 methods still require that you launch the original non-patched romset, it will be patched/replaced at runtime.
 
 ### How can i run that unibios i bought from http://unibios.free.fr/ ?
 
@@ -402,6 +411,15 @@ You can convert your unsupported dumps by following this tutorial :
 
 That driver was disabled for now, it didn't meet our quality criteria.
 
+### Where is the hires dipswitch on vector games ? It seems gone.
+
+It was streamlined into a global `Resolution` core option affecting all vector games at once, with new resolutions available.
+
+For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
+* for horizontal games, you'll want to use 1440x1080
+* for vertical games (tempest, tacscan), if you are running them on a vertical screen with the settings to rotate them, you'll also want to use 1440x1080
+* for those same vertical games, if you are running them at default settings on a horizontal screen, you'll want to use 1080x810
+
 ### Why are vertical games not working properly ?
 
 2 settings are required when running vertical games in FBNeo :
@@ -416,12 +434,15 @@ Additionally :
 * If you are playing on a vertical screen, you'll want to use the `Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
 * If you are using a bezel pack, make sure it's compatible with FBNeo (apparently, some were written specifically to work with MAME's internal rotation) and to follow its official instructions. In some case it seems enabling `Settings > On-Screen Display > On-Screen Overlay > Auto-Scale Overlay` (`input_overlay_auto_scale = "true"` in `retroarch.cfg`) can help.
 
-### Why is the music high-pitched, too fast and/or different from upstream ?
+### Why is the music high-pitched, too fast and/or different from what i think it should be ?
 
-For better or worse, it was decided to use different default audio settings from standalone in the libretro port. 
+The first question you should be asking yourself is "what am i comparing this to ?", emulation is meant to be faithful to real hardware (here the original arcade board), not to some console port, remaster, other emulator, or ost.
+
+If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings. 
 By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
 
-You might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). Please note that your screen might not handle well the correct refresh rate, in which case you'll have to make a choice between smoothness and correct refresh rate.
+Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
+Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
 
 ### Why do i get a black screen and/or can't i change bios in neogeo games ?
 
