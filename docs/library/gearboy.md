@@ -8,16 +8,16 @@ Gearboy is an open source, cross-platform, Nintendo Game Boy (DMG) / Game Boy Co
 - Accurate instruction and memory timing, passes instr_timing.gb and mem_timing.gb from blargg's tests.
 - Supported cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3 + RTC, MBC5, HuC-1 and MBC1M (multicart).
 - Accurate LCD controller emulation with correct timings and priorities including mid-scanline effects.
-- Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
+- Game Boy Color support.
 - Battery powered RAM save support.
 - Save states.
-- Game Genie and GameShark cheat support.
 - Bootrom (BIOS) support.
+- Game Genie and GameShark cheat support.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearboy core has been authored by:
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearboy core is licensed under:
 
@@ -67,7 +67,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats - Game Genie | ✔         |
@@ -146,6 +146,10 @@ Settings with (restart) means that core has to be closed for the new setting to 
 - **DMG Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
 
 	Select a color palette for Game Boy DMG games.
+
+- **GBC Color Correction** [gearboy_color_correction] (**Disabled**|Enabled)
+
+	Enables color correction for Game Boy Color games to simulate the original GBC LCD screen output.
 
 - **DMG Bootrom** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
 
