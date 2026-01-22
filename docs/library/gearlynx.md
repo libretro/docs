@@ -120,6 +120,14 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *Left* rotates the screen 90 degrees counter-clockwise.
 	- *Right* rotates the screen 90 degrees clockwise.
 
+- **Console Type** [gearlynx_console_type] (**Auto**|Lynx I|Lynx II)
+
+	Select the Atari Lynx console model to emulate.
+
+	- *Auto* automatically selects the appropriate console type based on the game.
+	- *Lynx I* forces emulation of the original Lynx model.
+	- *Lynx II* forces emulation of the Lynx II model.
+
 - **Audio Low-Pass Filter (Hz)** [gearlynx_lowpass_filter] (**3500**|500|1000|1500|2000|2500|3000|3500|4000|4500|5000)
 
 	Configures a low-pass audio filter to reduce high-frequency noise.
