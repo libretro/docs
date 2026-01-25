@@ -12,7 +12,7 @@ In order to have RetroArch recognise your games, you need to have a database of 
 !!! note
     Certain releases of Retroarch (e.g. Windows), come with the database files out-of-the-box.
 
-From the RetroArch main menu select "Online Updater", then choose "Update Databases".
+From the RetroArch main menu select "Online Updater", then choose "Update Databases". Also update core info files.
 
 Wait for the download to finish.
 
@@ -23,17 +23,7 @@ The "Import Content" menu can be either in the "Playlists" > "Import Content" (d
 !!! note
     The location of this menu item can be toggled in "Settings" > "User Interface" > "Menu Item Visibility" > "Show 'Import Content'" and updating this from "Playlists Menu" to "Main Menu".
 
-Here you will see three options, "Scan Directory", "Scan File" and "Manual Scan".
-
-!!! note
-    "Scan Directory" and "Scan File" are sometimes refered to as "Auto Scan". These options can only recognise content that match the database.
-    Using the default settings, these scan options also need a coresponding core for the said content to be already added.
-
-***1) Scan Directory:*** for importing a collection of content. Using the file browser, navigate to the folder of the content collection and select **"Scan This Directory"**.
-    
-***2) Scan File:*** for importing a single file. Navigate to file and select it.
-    
-***3) Manual Scan:*** it scans based on content file names and does not require content to match the database.
+The default, fully automatic option for scanning is strict (requires the CRC checksum or disc serial of the content to match the database). Scanning can be customized in several ways, loose scans for example will add content that does not match the database.
 
 Please be patient while it scans. Large collections could take several minutes.
 

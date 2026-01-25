@@ -253,7 +253,7 @@ Time to find out how well your source ROMs matched up...
 
 ~~The RetroArch content database supports arcade romsets in Full Non-Merged and Split formats. In order to be recognized by the scanner, Full Non-Merged and Split romsets must also be [processed by TorrentZip to standardize their CRC](https://sourceforge.net/projects/trrntzip/).~~
 
-Manual scan is the recommended method for setting up arcade playlists in RetroArch. [Here](https://neo-source.com/index.php?topic=3725.0) is a guide written for creating FBNeo playlists, but you can easily adapt it for MAME usage.
+Custom scan with DAT file is the recommended method for setting up arcade playlists in RetroArch. [Here](https://neo-source.com/index.php?topic=3725.0) is a guide written for creating FBNeo playlists, but you can easily adapt it for MAME usage.
 
 !!! info "Credits"
     The arcade cabinets image is based on an image by Rob DiCaterino, licensed for reuse under a Creative Commons (CC BY 2.0) License. Original image and license: https://www.flickr.com/photos/goodrob13/17385639015/
