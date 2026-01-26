@@ -9,16 +9,15 @@ Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / S
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
-- Light Phaser and Paddle Control
-- Internal database for rom detection.
+- Light Phaser and Paddle Control support.
+- Internal database for ROM detection.
 - Battery powered RAM save support.
-- Save states.
 - Game Genie and Pro Action Replay cheat support.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearsystem core has been authored by
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearsystem core is licensed under
 
@@ -70,7 +69,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats - Game Genie  | ✔         |
@@ -145,7 +144,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *Game Gear Export* forces Game Gear Export region.
     - *Game Gear International* forces Game Gear International region.
 
-- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|SG-1000)
+- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|MSX|Janggun|SG-1000)
 
 	Select which mapper (memory bank controller) is emulated.
 
@@ -154,6 +153,8 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *SEGA* forces SEGA mapper.
     - *Codemasters* forces Codemasters mapper.
     - *Korean* forces Korean mapper.
+    - *MSX* forces MSX mapper.
+    - *Janggun* forces Janggun mapper.
     - *SG-1000* forces SG-1000 mapper.
 
 - **Refresh Rate (restart)** [gearsystem_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))

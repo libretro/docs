@@ -12,7 +12,7 @@ Gearcoleco is an open source, cross-platform, ColecoVision emulator written in C
 
 The Gearcoleco core has been authored by
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearcoleco core is licensed under
 
@@ -57,7 +57,7 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✕         |

@@ -4,24 +4,23 @@
 
 Geargrafx is an open source, cross-platform, PC Engine / TurboGrafx-16 / SuperGrafx emulator written in C++.
 
-- Accurate emulation supporting the entire HuCard PCE / SGX catalog
-- CD-ROM², Super CD-ROM² and Arcade CD-ROM² systems
-- Multi Tap support (up to 5 players)
+- Accurate emulation supporting the entire HuCard PCE / SGX catalog.
+- Support for CD-ROM², Super CD-ROM² and Arcade CD-ROM² systems.
+- Backup RAM and Memory Base 128 support.
+- Multi Tap support (up to 5 players).
 - Controllers:
     * Standard Gamepad (2 buttons)
     * Avenue Pad 3 (3 buttons, auto-configured based on game)
     * Avenue Pad 6 (6 buttons)
-- Internal database for automatic rom detection and hardware selection if `Auto` options are selected
-- Backup RAM support
-- Save state support
-- Retro Achievements support
-- Adjustable scanline count (224p, 240p, or manual)
-- RGB or Composite color output
+- Adjustable scanline count (224p, 240p, or manual).
+- RGB or Composite color output.
+- Music rom support: HES.
+- Internal database for automatic rom detection and hardware selection if `Auto` options are selected.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
 
 The Geargrafx core has been authored by
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Geargrafx core is licensed under
 
@@ -54,6 +53,7 @@ Content that can be loaded by the Geargrafx core have the following file extensi
 
 - .pce
 - .sgx
+- .hes
 - .cue
 - .chd
 
@@ -76,7 +76,7 @@ Frontend-level settings or features that the Geargrafx core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
@@ -180,9 +180,18 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     This option allows you to disable backup RAM (not recommended).
 
+- **Deterministic Netplay** [geargrafx_deterministic_netplay] (**Disabled**|Enabled)
+
+	When enabled, ensures deterministic emulation behavior for netplay by setting consistent reset values for memory and hardware registers. This helps prevent desyncs during netplay sessions.
+
 - **CD-ROM (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
-    Choose the type of CD-ROM system to emulate. The Auto setting automatically selects the appropriate CD-ROM type based on the loaded content.
+    Select the CD-ROM system type. The *Auto* setting automatically selects the appropriate CD-ROM system based on the loaded content.
+
+    - *Auto* selects the best CD-ROM system based on the content.
+    - *Standard* forces standard CD-ROM² system.
+    - *Super CD-ROM* forces Super CD-ROM² system.
+    - *Arcade CD-ROM* forces Arcade CD-ROM² system.
 
 - **CD-ROM Bios (restart)** [geargrafx_cdrom_bios] (**Auto**|System Card 1|System Card 2|System Card 3|Game Express)
 
@@ -192,9 +201,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     This option will preload all CD-ROM tracks in RAM. It will increase the memory usage of the core, but may improve performance.
 
+- **HuC6280A Audio Chip** [geargrafx_psg_huc6280a] (**Enabled**|Disabled)
+
+	Enable or disable the HuC6280A audio chip emulation. The HuC6280A provides the PSG (Programmable Sound Generator) functionality.
+
 - **PSG Volume** [geargrafx_psg_volume] (**100**|0 - 200)
 
-    This option sets the volume of the PSG sound system, which is used for sound effects and music in many games.
+    This option sets the volume of the PSG (Programmable Sound Generator) sound system.
     The value is a percentage from 0 to 200, where 100 is the default volume.
 
 - **CD-ROM Volume** [geargrafx_cdrom_volume] (**100**|0 - 200)
@@ -222,10 +235,17 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     This option enables/disables TurboTap support (up to 5 players).
 
+- **MB128 Backup Memory** [geargrafx_mb128] (**Auto**|Enabled|Disabled)
+
+	Enable or disable MB128 backup memory support. MB128 is an external memory card device that can be used to save game data across multiple games.
+
 - **Avenue Pad 3 Switch** [geargrafx_avenue_pad_3_switch] (**Auto**|SELECT|RUN)
 
-    When using the Avenue Pad 3 controller, you can set the switch to either *RUN* or *SELECT* with this option.
-    If you choose *Auto*, the emulator will select the best option based on the game being played.
+    Configure the button mapping for the Avenue Pad 3 controller's third button (III).
+
+    - *Auto* automatically selects the appropriate button mapping based on the game.
+    - *SELECT* maps button III to SELECT.
+    - *RUN* maps button III to RUN.
 
 - **P1 Turbo I** [geargrafx_turbo_p1_i] (**Disabled**|Enabled)
 
