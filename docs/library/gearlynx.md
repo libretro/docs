@@ -119,6 +119,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *Auto* automatically rotates based on the game.
 	- *Left* rotates the screen 90 degrees counter-clockwise.
 	- *Right* rotates the screen 90 degrees clockwise.
+	- *Disabled* forces the screen to remain in standard horizontal orientation.
 
 - **Console Type** [gearlynx_console_type] (**Auto**|Lynx I|Lynx II)
 
