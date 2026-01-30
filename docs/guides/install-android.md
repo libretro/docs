@@ -11,7 +11,18 @@ To sideload successfully:
 
 #### From RetroArch.com Downloads
 
-#### Installation via Obtainium (recommended)
+##### Manual Downloads
+___
+1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
+2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
+3. Select Install.
+
+###### From Buildbot Archives
+___
+All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
+> 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
+
+#### Installation via Obtainium
 "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
 
 Obtainium installs the latest stable RetroArch APK — whether 32‑bit, AArch64, or Universal — directly from https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/, the same source used for manual downloads. The only difference is that Obtainium automates this process and provides update notifications, helping users stay current and avoid reporting issues from outdated versions. It’s also worth noting that Obtainium is Android TV–friendly, making it suitable for use across all Android devices.
@@ -27,17 +38,6 @@ To install RetroArch from Obtainium, follow these steps:
   * When the “Import app” prompt appears, tap **Continue**.
 * Open the newly added RetroArch entry.
 * Tap **Install** to download and install the app.
-
-##### Manual Downloads
-___
-1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
-2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
-3. Select Install.
-
-###### From Buildbot Archives
-___
-All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
-> 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
 ### Installation via F-Droid (incomplete)
 ___
