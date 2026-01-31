@@ -100,6 +100,7 @@
 | [Gearboy](../library/gearboy.md) | Game Boy/Color         |                    |
 | [Gearcoleco](../library/gearcoleco.md) | Coleco ColecoVision    |                    |
 | [Geargrafx](../library/geargrafx.md) | NEC PC Engine/SuperGrafx    |                    |
+| [Gearlynx](../library/gearlynx.md) | Atari Lynx             |                    |
 | [Gearsystem](../library/gearsystem.md) | Sega MS/GG/SG-1000     |                    |
 | Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
 | [Geolith](../library/geolith.md)                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |

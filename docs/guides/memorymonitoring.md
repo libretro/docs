@@ -33,6 +33,12 @@ To be clear: the cores listed on this page support libretro's memory monitoring 
 
 ### Atari
 
+#### Lynx
+
+| Core                                             | Supported | Notes |
+|--------------------------------------------------|:---------:|:------|
+| [Gearlynx](https://github.com/drhelius/Gearlynx) | ✔         |       |
+
 #### 2600
 
 | Core                                                           | Supported | Notes |

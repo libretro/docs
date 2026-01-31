@@ -135,6 +135,7 @@ nav:
         - 'Atari - 5200 (Atari800)': 'library/atari800.md'
         - 'Atari - Jaguar (Virtual Jaguar)': 'library/virtual_jaguar.md'
         - 'Atari - Lynx (Beetle Lynx)': 'library/beetle_lynx.md'
+        - 'Atari - Lynx (Gearlynx)': 'library/gearlynx.md'
         - 'Atari - Lynx (Handy)': 'library/handy.md'
         - 'Atari - Lynx (Holani)': 'library/holani.md'
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
