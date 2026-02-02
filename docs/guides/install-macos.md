@@ -6,18 +6,19 @@
 
 Download one of the .dmg files from here:
 
-* [Stable Metal](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/osx/universal/RetroArch_Metal.dmg)
-* [Nightly Metal](https://buildbot.libretro.com/nightly/apple/osx/universal/RetroArch_Metal.dmg)
-* [Stable non-Metal](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/osx/x86_64/RetroArch.dmg)
-* [Nightly non-Metal](https://buildbot.libretro.com/nightly/apple/osx/x86_64/RetroArch.dmg)
+* [Stable](https://buildbot.libretro.com/stable/{{ unit.stable }}/apple/osx/universal/RetroArch_Metal.dmg)
+* [Nightly](https://buildbot.libretro.com/nightly/apple/osx/universal/RetroArch_Metal.dmg)
 
 The install follows the standard process of opening the .dmg file and copying RetroArch.app into the Applications folder.
 
-### Metal vs non-Metal builds
+### About the "Metal" build name
 
-Most people should start with the Metal build. The Metal has more features, and is a Universal binary. The non-Metal build is x86_64-only and only includes the OpenGL graphics driver. However, the Metal build only supports macOS 10.13+, whereas the non-Metal build supports 10.9+.
+The downloadable builds are named "Metal" for historical reasons. This build is a Universal binary (supporting both Intel and Apple Silicon Macs) and includes multiple video drivers: Vulkan, glcore (OpenGL 3/4), and an experimental Metal driver. Most users should use the Vulkan or glcore video drivers.
 
-It is possible to build RetroArch for older versions of macOS, though due to resource constraints these are not provided. See the [instructions for building on macOS](../development/retroarch/compilation/osx.md) to build it yourself.
+!!! warning "Metal video driver is experimental"
+    The metal video driver within RetroArch is experimental, largely untested, and not well supported. If you encounter issues, switch to the Vulkan or glcore video driver instead.
+
+The Metal build requires macOS 10.13 or later. It is possible to build RetroArch for older versions of macOS, though due to resource constraints these are not provided. See the [instructions for building on macOS](../development/retroarch/compilation/osx.md) to build it yourself.
 
 ### Stable vs nightly builds
 
