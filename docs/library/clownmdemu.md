@@ -23,6 +23,7 @@ Content that can be loaded by the ClownMDEmu core have the following file extens
 - .gen
 - .cue
 - .iso
+- .chd
 
 RetroArch database(s) that are associated with the ClownMDEmu core:
 
@@ -184,29 +185,33 @@ The ClownMDEmu core has the following option(s) that can be tweaked from the cor
 
 	Disable the RF5C164's PCM8 channel.
 
-- **TV Standard** [clownmdemu_tv_standard] (**NTSC (59.94Hz)**|PAL (50Hz))
+- **Console > TV Standard** [clownmdemu_tv_standard] (**ntsc**|pal)
 
 	Which television standard to output in.
 
-- **Console Region** [clownmdemu_overseas_region] (**Overseas (Elsewhere)**|Domestic (Japan))
+- **Console > Region** [clownmdemu_overseas_region] (**elsewhere**|japan)
 
 	Which region the console is.
 
-- **Tall Interlace Mode 2** [clownmdemu_tall_interlace_mode_2] (**disabled**|enabled)
+- **Console > CD Add-on** [clownmdemu_cd_addon] (**disabled**|enabled)
+
+	Allow cartridge-only software to utilise features of the emulated Mega CD add-on, such as CD music. This may break some software.
+
+- **Video > Tall Interlace Mode 2** [clownmdemu_tall_interlace_mode_2] (**disabled**|enabled)
 
 	Makes games that use Interlace Mode 2 for split-screen not appear squashed.
 
-- **Widescreen Hack** [clownmdemu_widescreen] (**disabled**|enabled)
+- **Video > Widescreen Hack** [clownmdemu_widescreen_tiles] (**0**|1|2|3|4|5|6|7|8|9|10|11|12)
 
 	Widens the display. Works well with some games, badly with others.
 
-- **Low-Pass Filter** [clownmdemu_lowpass_filter] (**enabled**|disabled)
+- **Audio > Low-Pass Filter** [clownmdemu_lowpass_filter] (**enabled**|disabled)
 
-	Makes the audio sound 'softer', just like on a real Mega Drive.
+	Lowers the volume of high frequencies to make the audio 'softer', like a real Mega Drive does. Without this, treble will become louder due to differences in volume balancing.
 
-- **Low-Volume Distortion** [clownmdemu_ladder_effect] (**enabled**|disabled)
+- **Audio > Low-Volume Distortion** [clownmdemu_ladder_effect] (**enabled**|disabled)
 
-	Approximates the so-called 'ladder effect' that is present in early Mega Drives. Without this, certain sounds in some games will be too quiet.
+	Enables the so-called 'ladder effect' that is present in early Mega Drives. Without this, some quiet sounds will become inaudible.
 
 ## Joypad
 
