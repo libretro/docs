@@ -51,7 +51,7 @@ Multi-mouse support for X11 was added after RetroArch 1.20.0 and requires that R
 
 | Controller driver | Conditions | Rumble support | Autoconfig support |
 |-------------------|------------|----------------|--------------------|
-| `udev` | Access to the udev interface (see below) | Yes | Yes |
+| `udev` | Access to the udev interface (see below) | Yes | Yes (+[physical ID support](../../guides/controller-autoconfiguration/#physical-identifier-customization)) |
 | `sdl2` | - | Yes | Yes |
 | `linuxraw` | - | No | Yes |
 | `parport` | [Special adapter](../../development/retroarch/input/parallel-port-controllers/) on physical parallel port | No | No |
