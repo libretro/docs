@@ -8,7 +8,28 @@ Open-source cross-platform player for (some) RPG Maker XP / VX / VX Ace games. A
 
 The mkxp-z core has been authored by:
 
-- mkxp-z
+- [Aeodyn](https://github.com/Aeodyn) &lt;Aeodyn0@gmail.com&gt;
+- [Alex Folland](https://github.com/AlexFolland) &lt;lexlexlex@gmail.com&gt;
+- [Amaryllis Kulla](https://github.com/Ancurio) &lt;ancurio@mapleshrine.eu&gt;
+- [Thomas Schneider](https://github.com/BlackLotus)
+- [Carsten Teibes](https://github.com/carstene1ns) &lt;dev@f4ke.de&gt;
+- [cremno](https://github.com/cremno) &lt;cremno@mail.ru&gt;
+- [David Salvisberg](https://github.com/Daverball) &lt;dave@daverball.com&gt;
+- [Eblo](https://github.com/Eblo)
+- [Eliza Velasquez](https://github.com/elizagamedev)
+- [Jáchym Toušek](https://github.com/enumag) &lt;enumag@gmail.com&gt;
+- [ijuintekka](https://github.com/ijuintekka) &lt;ijuintekka@hotmail.com&gt;
+- [Joni Savolainen](https://github.com/jonisavo) &lt;joni@savolainen.io&gt;
+- [Luis Cáceres](https://github.com/lacc97) &lt;lacc97@protonmail.ch&gt;
+- [mook](https://github.com/mook)
+- [Nathan de Medeiros Vieira](https://github.com/Nathan-MV) &lt;nathanmvieira@outlook.com&gt;
+- [Riley Pierce](https://github.com/rainefall) &lt;rileyraine01@gmail.com&gt;
+- [Rodrigo Locatti](https://github.com/ReinUsesLisp) &lt;rodrigo.locatti@gmail.com&gt;
+- [Splendide Imaginarius](https://github.com/Splendide-Imaginarius)
+- Struma &lt;strumajen@icloud.com&gt;
+- [Edward Rudd](https://github.com/urkle) &lt;urkle@outoforder.cc&gt;
+- [Wayward Heart](https://github.com/WaywardHeart)
+- [Hao Liu (刘皓)](https://github.com/white-axe) &lt;whiteaxe@tuta.io&gt;
 
 The mkxp-z core is licensed under:
 
@@ -83,12 +104,12 @@ Frontend-level settings or features that the mkxp-z core respects:
 | Restart           | ✔         |
 | Saves             | ✔         |
 | States            | ✔         |
-| Rewind            | ✔ *       |
-| Netplay           | ✔ *       |
+| Rewind            | ✔ [^1]    |
+| Netplay           | ✔ [^1]    |
 | Core Options      | ✔         |
-| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
-| RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔ [^2]    |
+| RetroArch Cheats  | ✔ [^2]    |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -103,8 +124,6 @@ Frontend-level settings or features that the mkxp-z core respects:
 | Language          | ✔         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
-
-\* Because RetroArch does not currently support rewind or netplay with cores that use threaded audio, rewind and netplay currently require disabling the ["Threaded Audio" core option](#core-options). This core option is enabled by default for better performance and for closer similarity to the original RPG Maker runtimes, which also use threaded audio.
 
 ## Directories
 
@@ -124,6 +143,8 @@ The mkxp-z core saves/loads to/from these directories.
 |:------------:|:-----------:|
 | mkxp-z/Fonts | Any fonts that the game uses that are not found in the game files will be loaded from here as a fallback. Supported file extensions for fonts are .otf and .ttf. The names of the font files do not matter since the mkxp-z core matches fonts based on the font family name stored in the file. |
 | mkxp-z/RTP   | This is where RTPs are loaded from. See the [BIOS](#bios) section for more details. |
+| mkxp-z/Scripts/Preload | Any preload scripts added to this directory can be toggled in the "Preload Scripts" section of the core options. Enabled preload scripts will be loaded in lexicographic order of the bytes in their file names prior to loading the game's scripts. |
+| mkxp-z/Scripts/Preload | Any postload scripts added to this directory can be toggled in the "Postload Scripts" section of the core options. In RPG Maker VX Ace games, enabled postload scripts will be loaded in lexicographic order of the bytes in their file names after the game's scripts are loaded but before the game starts running. Enabled postload scripts have no effect in RPG Maker XP and RPG Maker VX games. |
 
 ## Geometry and timing
 
@@ -140,16 +161,22 @@ The mkxp-z core saves/loads to/from these directories.
 There are three ways to load games using the mkxp-z core:
 
 - Load the Game.ini or mkxp.json.
-- Create an empty file with the file extension .mkxp in the same directory as Game.ini and/or mkxp.json, and load that. This is intended to make it easier to deal with save states in RetroArch, since RetroArch's save states are named after the file you load as the game, so if you load Game.ini or mkxp.json, all the save states for every game will be named "Game" or "mkxp", which is really inconvenient.
+- Create an empty file with the file extension .rxproj, .rvproj or .rvproj2 in the same directory as Game.ini and/or mkxp.json, and load that. This is intended to make it easier to deal with save states in RetroArch, since RetroArch's save states are named after the file you load as the game, so if you load Game.ini or mkxp.json, all the save states for every game will be named "Game" or "mkxp", which is really inconvenient.
 - Put the game into a zip or 7z archive with file extension .mkxpz, .zip or .7z and load that. Please note that the files inside the zip or 7z archive should be uncompressed if possible, especially .rgssad/.rgss2a/.rgss3a and .otf/.ttf files inside the archive, or the game will lag quite a bit from trying to seek compressed files. The game will still run, though, just very slowly.
 
-There is currently no way to load preload scripts or postload scripts. Support for preload/postload scripts will be added in the future.
+Preload scripts and postload scripts may be added to the mkxp-z/Scripts/Preload and mkxp-z/Scripts/Postload subdirectories of the libretro system directory. Each preload script and postload script added to these directories has its own core option for toggling it. If more than one preload script or postload script is enabled via the core options at the same time, they will be loaded in lexicographic order of the bytes in the file names, which is the same as the order in which they appear in the core options menu.
+
+The default set of preload scripts provided with mkxp-z is embedded in the core and available by default to remove the need to manually copy them into the preload script directory.
+
+Native cheats are run as Ruby scripts in the video frame immediately after enabling them.
 
 ## Core options
 
 The mkxp-z core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+In addition to the core options shown below, there are also core options for changing the key bindings and the currently enabled preload scripts and postload scripts.
 
 - **Runtime: RGSS Version** (Restart) [mkxp-z_rgssVersion] (**inherit**|default|1|2|3)
 
@@ -210,36 +237,40 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 ## Joypad
 
+These are the default bindings. They can be changed in the "Button Bindings" section of the core options if needed.
+
 | RetroPad Inputs                                | RGSS Inputs              |
 |------------------------------------------------|--------------------------|
 | ![](../image/retropad/retro_a.png)             | Input::C                 |
 | ![](../image/retropad/retro_b.png)             | Input::B                 |
 | ![](../image/retropad/retro_x.png)             | Input::A                 |
 | ![](../image/retropad/retro_y.png)             | Input::X                 |
-| ![](../image/retropad/retro_dpad_up.png)       | Input::UP                |
-| ![](../image/retropad/retro_dpad_down.png)     | Input::DOWN              |
-| ![](../image/retropad/retro_dpad_left.png)     | Input::LEFT              |
-| ![](../image/retropad/retro_dpad_right.png)    | Input::RIGHT             |
+| ![](../image/retropad/retro_dpad_up.png)       | Input::Up                |
+| ![](../image/retropad/retro_dpad_down.png)     | Input::Down              |
+| ![](../image/retropad/retro_dpad_left.png)     | Input::Left              |
+| ![](../image/retropad/retro_dpad_right.png)    | Input::Right             |
 | ![](../image/retropad/retro_l1.png)            | Input::L                 |
 | ![](../image/retropad/retro_r1.png)            | Input::R                 |
-| ![](../image/retropad/retro_l2.png)            | Input::SHIFT             |
-| ![](../image/retropad/retro_r2.png)            | Input::CTRL              |
+| ![](../image/retropad/retro_l2.png)            | Input::Ctrl              |
+| ![](../image/retropad/retro_r2.png)            | Input::Shift             |
 | ![](../image/retropad/retro_l3.png)            | Input::Y                 |
 | ![](../image/retropad/retro_r3.png)            | Input::Z                 |
-| ![](../image/retropad/retro_select.png)        | Input::ALT               |
-| ![](../image/retropad/retro_left_stick.png) X  | Input::LEFT and Input::RIGHT |
-| ![](../image/retropad/retro_left_stick.png) Y  | Input::UP and Input::DOWN |
+| ![](../image/retropad/retro_start.png)         | Input::Alt               |
+| ![](../image/retropad/retro_left_stick.png) X  | Input::Left and Input::Right |
+| ![](../image/retropad/retro_left_stick.png) Y  | Input::Up and Input::Down |
 
 ## Mouse
+
+These are the default bindings. They can be changed in the "Button Bindings" section of the core options if needed.
 
 | RetroMouse Inputs                                     | RGSS Inputs               |
 |-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Input.mouse_x and Input.mouse_y |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Input::MOUSELEFT          |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Input::MOUSERIGHT         |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | Input::MOUSEMIDDLE        |
-| Mouse 4                                               | Input::MOUSEX1            |
-| Mouse 5                                               | Input::MOUSEX2            |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Input::MouseLeft          |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Input::MouseRight         |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Input::MouseMiddle        |
+| Mouse 4                                               | Input::MouseX1            |
+| Mouse 5                                               | Input::MouseX2            |
 | Wheel Up                                              | Input.scroll_v            |
 | Wheel Down                                            | Input.scroll_v            |
 
@@ -252,3 +283,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 ## (Related cores)
 
 - [RPG Maker 2000/2003 (EasyRPG)](easyrpg.md)
+
+[^1]: Because RetroArch does not currently support rewind or netplay with cores that use threaded audio, rewind and netplay currently require disabling the ["Threaded Audio" core option](#core-options). This core option is enabled by default for better performance and for closer similarity to the original RPG Maker runtimes, which also use threaded audio.
+
+[^2]: Only supported on little-endian devices.
