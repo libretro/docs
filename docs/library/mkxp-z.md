@@ -144,7 +144,7 @@ The mkxp-z core saves/loads to/from these directories.
 | mkxp-z/Fonts | Any fonts that the game uses that are not found in the game files will be loaded from here as a fallback. Supported file extensions for fonts are .otf and .ttf. The names of the font files do not matter since the mkxp-z core matches fonts based on the font family name stored in the file. |
 | mkxp-z/RTP   | This is where RTPs are loaded from. See the [BIOS](#bios) section for more details. |
 | mkxp-z/Scripts/Preload | Any preload scripts added to this directory can be toggled in the "Preload Scripts" section of the core options. Enabled preload scripts will be loaded in lexicographic order of the bytes in their file names prior to loading the game's scripts. |
-| mkxp-z/Scripts/Preload | Any postload scripts added to this directory can be toggled in the "Postload Scripts" section of the core options. In RPG Maker VX Ace games, enabled postload scripts will be loaded in lexicographic order of the bytes in their file names after the game's scripts are loaded but before the game starts running. Enabled postload scripts have no effect in RPG Maker XP and RPG Maker VX games. |
+| mkxp-z/Scripts/Postload | Any postload scripts added to this directory can be toggled in the "Postload Scripts" section of the core options. In RPG Maker VX Ace games, enabled postload scripts will be loaded in lexicographic order of the bytes in their file names after the game's scripts are loaded but before the game starts running. Enabled postload scripts have no effect in RPG Maker XP and RPG Maker VX games. |
 
 ## Geometry and timing
 
