@@ -85,7 +85,6 @@ Content that can be loaded by the mkxp-z core have the following file extensions
 - .rxproj
 - .rvproj
 - .rvproj2
-- .mkxp
 - .mkxpz
 - .zip
 - .7z
