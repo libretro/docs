@@ -168,7 +168,7 @@ Preload scripts and postload scripts may be added to the mkxp-z/Scripts/Preload 
 
 The default set of preload scripts provided with mkxp-z is embedded in the core and available by default to remove the need to manually copy them into the preload script directory.
 
-Native cheats are run as Ruby scripts in the video frame immediately after enabling them.
+Native cheats are run as Ruby scripts. They can be used, for example, to change the contents of `$game_switches`.
 
 ## Core options
 
