@@ -221,7 +221,7 @@ In addition to the core options shown below, there are also core options for cha
     disabling it can be used as a workaround.
     (default: disabled on Windows, enabled on other systems)
 
-- **Video: Texture Synchronization** [mkxp-z_enableBlitting] (**default**|eager|lazy)
+- **Video: Texture Synchronization** [mkxp-z_textureSync] (**default**|eager|lazy)
 
     Controls how often GPU textures are copied to CPU memory.
     Eager synchronization is less likely to cause graphical issues but may cause performance problems in some games.
