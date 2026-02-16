@@ -185,11 +185,25 @@ In addition to the core options shown below, there are also core options for cha
     If this fails, the version defaults to 1.
     Changes will take effect after the core is reset.
 
-- **Runtime: Save State Size** (Restart) [mkxp-z_saveStateSize] (64|66|68|70|72|74|76|78|80|82|84|86|88|90|92|94|96|98|**100**|102|104|106|108|110|112|114|116|118|120|122|124|126|128|132|136|140|144|148|152|156|160|164|168|172|176|180|184|188|192|196|200|204|208|212|216|220|224|228|232|236|240|244|248|252|256|264|272|280|288|296|304|312|320|328|336|344|352|360|368|376|384|392|400|408|416|424|432|440|448|456|464|472|480|488|496|504|512|528|544|560|576|592|608|624|640|656|672|688|704|720|736|752|768|784|800|816|832|848|864|880|896|912|928|944|960|976|992)
+- **Runtime: Save State Size** (Restart) [mkxp-z_saveStateSize] (64|66|68|70|72|74|76|78|80|82|84|86|88|90|92|94|96|98|**100**|102|104|106|108|110|112|114|116|118|120|122|124|126|128|132|136|140|144|148|152|156|160|164|168|172|176|180|184|188|192|196|200|204|208|212|216|220|224|228|232|236|240|244|248|252|256|264|272|280|288|296|304|312|320|328|336|344|352|360|368|376|384|392|400|408|416|424|432|440|448|456|464|472|480|488|496|504|512|544|576|608|640|672|704|736|768|800|832|864|896|928|960|992|1024|1152|1280|1408|1536|1664|1792|1920|2048|2560|3072|3584|4096)
 
     Maximum size of each save state, in mebibytes.
     If the game uses more than this much memory, save state creation will fail.
     Changes to this setting will not take effect until the core is unloaded.
+
+- **Runtime: Debug** (Restart) [mkxp-z_debug] (enabled|**disabled**)
+
+    Launch the game in debug mode.
+    Changes will take effect after the core is reset.
+
+- **Runtime: Battle Test** (Restart) [mkxp-z_battleTest] (enabled|**disabled**)
+
+    Launch the game in battle test mode.
+    Changes will take effect after the core is reset.
+
+- **Video: Frame Skip** [mkxp-z_frameSkip] (inherit|enabled|**disabled**)
+
+    Skip (don't draw) frames when behind.
 
 - **Video: Subimage Fix** [mkxp-z_subImageFix] (inherit|**default**|enabled|disabled)
 
@@ -206,6 +220,16 @@ In addition to the core options shown below, there are also core options for cha
     implementations of this functionality, so
     disabling it can be used as a workaround.
     (default: disabled on Windows, enabled on other systems)
+
+- **Video: Texture Synchronization** [mkxp-z_enableBlitting] (**default**|eager|lazy)
+
+    Controls how often GPU textures are copied to CPU memory.
+    Eager synchronization is less likely to cause graphical issues but may cause performance problems in some games.
+    Lazy synchronization is faster but may or may not,
+    depending on which libretro frontend you're using and what version of it you're using,
+    cause graphical artifacts when performing certain operations,
+    such as toggling fullscreen or, on Android, opening the app switcher.
+    (default: lazy)
 
 - **Audio: Threaded Audio** (Restart) [mkxp-z_threadedAudio] (**enabled**|disabled)
 
@@ -233,6 +257,52 @@ In addition to the core options shown below, there are also core options for cha
     (if this value is also set in the game's mkxp.json,
     the maximum of the value set here and the value in
     mkxp.json will be used)
+
+- **Text: Font Scale** [mkxp-z_fontScale] (0.2|0.25|0.3|0.35|0.4|0.45|0.5|0.55|0.6|0.65|0.7|0.75|0.8|0.85|0.9|0.95|**1.0**|1.05|1.1|1.15|1.2|1.25|1.3|1.35|1.4|1.45|1.5|1.55|1.6|1.65|1.7|1.75|1.8|1.85|1.9|1.95|2.0|2.05|2.1|2.15|2.2|2.25|2.3|2.35|2.4|2.45|2.5|2.55|2.6|2.65|2.7|2.75|2.8|2.85|2.9|2.95|3.0|3.05|3.1|3.15|3.2|3.25|3.3|3.35|3.4|3.45|3.5|3.55|3.6|3.65|3.7|3.75|3.8|3.85|3.9|3.95|4.0|4.05|4.1|4.15|4.2|4.25|4.3|4.35|4.4|4.45|4.5|4.55|4.6|4.65|4.7|4.75|4.8|4.85|4.9|4.95|5.0)
+
+    Scales the sizes of all fonts.
+    If you think text tends to be too large or too small,
+    try fiddling with this.
+    (if this value is also set in the game's mkxp.json,
+    the product of the value set here and the value in
+    mkxp.json will be used)
+
+- **Text: Kerning** [mkxp-z_fontKerning] (**inherit**|default|enabled|disabled)
+
+    Kerning adjusts the spacing between individual letters or characters.
+    Enabling it generally looks nicer, but RGSS doesn't use it,
+    so disabling it should make text appearance more accurate.
+    (default: enabled)
+
+- **Text: Font Hinting** [mkxp-z_fontHinting] (**inherit**|default|0|1|2|3)
+
+    Hinting adjusts the rendering of individual letters or characters.
+    Enabling it may look nicer (especially on low-resolution displays), but
+    RGSS doesn't use it, so disabling it should make text appearance more
+    accurate. Documentation can be found at:
+    https://pysdl2.readthedocs.io/en/latest/modules/sdl2_sdlttf.html#sdl2.sdlttf.TTF_HINTING_NORMAL
+    (default: 3)
+
+- **Text: Font Height Reporting** [mkxp-z_fontHeightReporting] (**inherit**|default|0|1)
+
+    Controls the algorithm for reporting the height of rendered text.
+    0: Nominal (TTF_FontHeight); matches RGSS behavior; may cut off bottoms of some characters.
+    1: Rendered (TTF_SizeUTF8); deviates from RGSS; may look better.
+    (default: 0)
+
+- **Text: Outline Crop** [mkxp-z_fontOutlineCrop] (**inherit**|default|enabled|disabled)
+
+    Crops top row and left column of text that has an outline.
+    Disabling it generally looks nicer, but RGSS enables it, so enabling it
+    should make text appearance more accurate.
+    (default: enabled)
+
+- **Text: Load Fonts Into Memory** [mkxp-z_loadFontsIntoMemory] (**default**|enabled|disabled)
+
+    When loading a font, load the entire font file into memory instead of using a file handle.
+    This improves text rendering performance on systems with extremely slow file system access speed
+    at the cost of higher memory usage.
+    (default: enabled on Emscripten, disabled on other platforms)
 
 ## Joypad
 
