@@ -314,19 +314,19 @@ These are the default bindings. They can be changed in the "Button Bindings" sec
 | ![](../image/retropad/retro_b.png)             | Input::B                 |
 | ![](../image/retropad/retro_x.png)             | Input::A                 |
 | ![](../image/retropad/retro_y.png)             | Input::X                 |
-| ![](../image/retropad/retro_dpad_up.png)       | Input::Up                |
-| ![](../image/retropad/retro_dpad_down.png)     | Input::Down              |
-| ![](../image/retropad/retro_dpad_left.png)     | Input::Left              |
-| ![](../image/retropad/retro_dpad_right.png)    | Input::Right             |
+| ![](../image/retropad/retro_dpad_up.png)       | Input::UP                |
+| ![](../image/retropad/retro_dpad_down.png)     | Input::DOWN              |
+| ![](../image/retropad/retro_dpad_left.png)     | Input::LEFT              |
+| ![](../image/retropad/retro_dpad_right.png)    | Input::RIGHT             |
 | ![](../image/retropad/retro_l1.png)            | Input::L                 |
 | ![](../image/retropad/retro_r1.png)            | Input::R                 |
-| ![](../image/retropad/retro_l2.png)            | Input::Ctrl              |
-| ![](../image/retropad/retro_r2.png)            | Input::Shift             |
+| ![](../image/retropad/retro_l2.png)            | Input::CTRL              |
+| ![](../image/retropad/retro_r2.png)            | Input::SHIFT             |
 | ![](../image/retropad/retro_l3.png)            | Input::Y                 |
 | ![](../image/retropad/retro_r3.png)            | Input::Z                 |
-| ![](../image/retropad/retro_start.png)         | Input::Alt               |
-| ![](../image/retropad/retro_left_stick.png) X  | Input::Left and Input::Right |
-| ![](../image/retropad/retro_left_stick.png) Y  | Input::Up and Input::Down |
+| ![](../image/retropad/retro_start.png)         | Input::ALT               |
+| ![](../image/retropad/retro_left_stick.png) X  | Input::LEFT and Input::RIGHT |
+| ![](../image/retropad/retro_left_stick.png) Y  | Input::UP and Input::DOWN |
 
 ## Mouse
 
@@ -335,11 +335,11 @@ These are the default bindings. They can be changed in the "Button Bindings" sec
 | RetroMouse Inputs                                     | RGSS Inputs               |
 |-------------------------------------------------------|---------------------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | Input.mouse_x and Input.mouse_y |
-| ![](../image/retromouse/retro_left.png) Mouse 1       | Input::MouseLeft          |
-| ![](../image/retromouse/retro_right.png) Mouse 2      | Input::MouseRight         |
-| ![](../image/retromouse/retro_middle.png) Mouse 3     | Input::MouseMiddle        |
-| Mouse 4                                               | Input::MouseX1            |
-| Mouse 5                                               | Input::MouseX2            |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | Input::MOUSELEFT          |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | Input::MOUSERIGHT         |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | Input::MOUSEMIDDLE        |
+| Mouse 4                                               | Input::MOUSEX1            |
+| Mouse 5                                               | Input::MOUSEX2            |
 | Wheel Up                                              | Input.scroll_v            |
 | Wheel Down                                            | Input.scroll_v            |
 
