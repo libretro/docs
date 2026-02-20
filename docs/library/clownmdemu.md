@@ -43,8 +43,8 @@ Frontend-level settings or features that the ClownMDEmu core respects:
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✕         |
-| Native Cheats     | ✕         |
+| RetroArch Cheats  | ✔         |
+| Native Cheats     | ✔         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -85,7 +85,7 @@ The ClownMDEmu core saves/loads to/from these directories.
 - The ClownMDEmu core's core-provided sample rate is 223721.5625 Hz
 - The ClownMDEmu core's base width is 320 (though this varies depending on the loaded content)
 - The ClownMDEmu core's base height is 224 (though this varies depending on the loaded content)
-- The ClownMDEmu core's max width is 400
+- The ClownMDEmu core's max width is 512
 - The ClownMDEmu core's max height is 480
 - The ClownMDEmu core's core-provided aspect ratio is typically 10:7 (though this varies depending on the loaded content)
 
@@ -184,6 +184,10 @@ The ClownMDEmu core has the following option(s) that can be tweaked from the cor
 - **Debug > Disable PCM8** [clownmdemu_disable_pcm8] (**disabled**|enabled)
 
 	Disable the RF5C164's PCM8 channel.
+
+- **Debug > Disable CDDA** [clownmdemu_disable_cdda] (**disabled**|enabled)
+
+	Disable the CDDA channel.
 
 - **Console > TV Standard** [clownmdemu_tv_standard] (**ntsc**|pal)
 
