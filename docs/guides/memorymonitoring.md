@@ -238,6 +238,13 @@ To be clear: the cores listed on this page support libretro's memory monitoring 
 |-------------------------------------------------------------|:---------:|:------|
 | [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         |       |
 
+### RPG Maker
+
+| Core                                           | Supported | Notes |
+|------------------------------------------------|:---------:|:------|
+| [EasyRPG](https://github.com/libretro/easyrpg-libretro) | ✕         |       |
+| [mkxp-z](https://github.com/mkxp-z/mkxp-z) | ✔         | Only supported on little-endian devices. |
+
 ### Sega
 
 #### Dreamcast/Naomi
