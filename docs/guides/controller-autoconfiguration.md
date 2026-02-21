@@ -53,7 +53,7 @@ The matching algorithm considers several key factors:
 - **Device Index (input_device)**: The name of the controller as recognized by the system. The **Device Index** can be identified by navigating to **Settings -> Input -> RetroPad Binds -> Port 1 Controls**.
 - **Vendor ID (input_vendor_id)**: A unique identifier assigned to the controller's manufacturer.
 - **Product ID (input_product_id)**: A specific identifier for the particular controller model.
-- **Physical ID (input_phys_id)**: A manually generated identifier, only valid for one specific controller / USB port. Documentation [in github](https://github.com/libretro/RetroArch/pull/18190) for the time being.
+- **Physical ID (input_phys)**: A locally generated identifier in supported drivers, only valid for one specific controller instance / USB port.
 
 ### Matching process
 RetroArch compares these factors against the files in the autoconfig directorys. It calculates a matching score for each profile, selecting the one with the highest score to configure the controller.
@@ -61,6 +61,23 @@ RetroArch compares these factors against the files in the autoconfig directorys.
 The combination of Vendor ID and Product ID is often referred to as "vid:pid" in technical contexts.
 
 This automated matching system allows RetroArch to support a vast array of controllers, reducing the need for manual setup in most situations.
+
+### Physical identifier customization
+
+Supported controller drivers (currently, this is only Linux/udev) will interrogate further physical details about the controller: USB port and serial number. The value of this attribute can be determined from RetroArch debug logs. A few examples (serial redacted):
+```
+[DEBUG] [Autoconf] Config files scanned: driver udev, pad name Microsoft Xbox Series S|X Controller (045e/0b12), phys usb-0000:04:00.0-2/input0, affinity 41
+[DEBUG] [Autoconf] Config files scanned: driver udev, pad name Sony Interactive Entertainment Wireless Controller (054c/09cc), phys 28:c1:3c:__:__:__, affinity 50
+```
+
+Both identifiers will be queried, but support is not guaranteed. In the example above, one has the USB port, the other has the serial number.
+
+To use the physical identifier for matching, duplicate the existing autoconfig file (to avoid overwriting it when pulling an update), and extend it with the `input_phys` attribute. Partial matches are supported.
+```
+input_phys = "usb-0000:04:00.0-2"
+```
+
+It is also worth to change `display_name`, to immediately see if the match went as expected.
 
 ## Autoconfig variable policy
 
