@@ -41,9 +41,9 @@ To install RetroArch from Obtainium, follow these steps:
 
 ### Installation via F-Droid (incomplete)
 ___
-The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable release can be found in F-Droid for easier automatic updating.
+The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable release can be found in F-Droid for easier automatic updating. The APK supports ABIs: arm64-v8a, armeabi-v7a, x86, x86_64.
 
-Note that the F-Droid package lacks many resources ([GitHub issue #16126](https://github.com/libretro/RetroArch/issues/16126); see also [F-Droid RFP #1933](https://gitlab.com/fdroid/rfp/-/issues/1933#note_1731005305)). Both issues are now closed but the resource problems persist.
+The armeabi-v7a variant lacks assets (impacting microconsoles; see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Workaround: Main Menu → Online Updater → Update Assets.
 
 ### Installation via Google Play servers (obsolete)
 ___
