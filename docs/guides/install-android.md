@@ -45,7 +45,7 @@ The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) 
 
 To minimize installation size, the F-Droid release includes only a basic set of assets. For a complete setup matching the retroarch.com release it is necessary to visit `Main Menu` → `Online Updater` within the app to download all additional assets, controller profiles, overlays, shaders, and other required data.
 
-The armeabi-v7a variant lacks assets (impacting microconsoles; see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Temporary workaround: Main Menu → Online Updater → Update Assets.
+The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Temporary workaround: Main Menu → Online Updater → Update Assets.
 
 ### Installation via Google Play servers (obsolete)
 
