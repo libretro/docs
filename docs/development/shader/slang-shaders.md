@@ -102,33 +102,75 @@ We have a way to query the resolution of individual textures to allow highly con
 
 ### Multiple passes, multiple inputs, with history
 
-We now extend our filter graph, where we also have access to information from earlier frames. Note that this is still a causal filter system.
+```
+    /------------------------------------------------\
+   /                                                  v
+(Input) -> (+feedback input) [ Shader Pass #0 ] (output) -> (Framebuffer #0) -> [ Shader Pass #1 ] -> (Backbuffer)
+         ^                                      /
+          \------------------------------------/
+```
+
+This diagram shows a filter chain where a shader pass can take multiple inputs: the original input texture, the output from a previous pass, and feedback from a previous frame. The feedback input allows the shader to use data from the last frame, enabling effects like motion blur, persistence, or ghosting. Each pass can combine these inputs to produce its output, which is then used by subsequent passes or rendered to the backbuffer.
+
+For practical guidance on using feedback and history in shaders, see [Advanced Techniques: Practical Guide to Feedback and History](#advanced-techniques-practical-guide-to-feedback-and-history).
+
+### Texture Clamping and Wrap Modes
+
+When sampling textures in a shader, the behavior for coordinates outside the [0, 1] range is determined by the texture's wrap mode. By default, all input and intermediate textures in the filter chain use `clamp_to_border` mode, with the border color set to transparent black (`vec4(0.0)`). This means that any sampling outside the texture returns transparent black unless otherwise specified.
+
+The wrap mode for each stage's input texture can be controlled in the preset file using the `wrap_modeN` option (where `N` is the pass index) or `NAME_wrap_mode` for external textures where `NAME` is the alias. The following wrap modes are supported:
+
+- **clamp_to_edge**: Coordinates outside [0, 1] are clamped to the nearest edge texel. Sampling outside the texture returns the value of the closest edge pixel.
+- **clamp_to_border** (default): Coordinates outside [0, 1] return the border color, which is always transparent black (`vec4(0.0)`).
+- **repeat**: Texture coordinates wrap around, so sampling outside [0, 1] repeats the texture in a tiled fashion.
+- **mirrored_repeat**: Texture coordinates outside [0, 1] are mirrored and then repeated, creating a seamless mirrored tiling effect.
+
+You can set the wrap mode for each texture or pass in the preset file, for example:
 
 ```
-Frame N:        (Input     N, Input N - 1, Input N - 2) -> [ Shader Pass #0 ] -> (Framebuffer     N, Framebuffer N - 1, Input N - 3) -> [ Shader Pass #1 ] -> (Backbuffer)
-Frame N - 1:    (Input N - 1, Input N - 2, Input N - 3) -> [ Shader Pass #0 ] -> (Framebuffer N - 1, Framebuffer N - 2, Input N - 4) -> [ Shader Pass #1 ] -> (Backbuffer)
-Frame N - 2:    (Input N - 2, Input N - 3, Input N - 4) -> [ Shader Pass #0 ] -> (Framebuffer N - 2, Framebuffer N - 3, Input N - 5) -> [ Shader Pass #1 ] -> (Backbuffer)
+wrap_mode0 = clamp_to_edge
+wrap_mode1 = mirrored_repeat
+
+foo_wrap_mode = clamp_to_edge
+bar_wrap_mode = repeat
 ```
 
-For framebuffers we can read the previous frame's framebuffer. We don't really need more than one frame of history since we have a feedback effect in place. Just like IIR filters, the "response" of such a feedback in the filter graph gives us essentially "infinite" history back in time, although it is mostly useful for long-lasting blurs and ghosting effects.
+This allows fine-grained control over how out-of-bounds texture sampling behaves for each stage or lookup texture. For most shader passes, the default `clamp_to_border` is safe, but for effects like tiling or seamless wrapping, `repeat` or `mirrored_repeat` may be preferred. When compositing external textures, especially with alpha channels, `clamp_to_border` may have unexpected results near edges, and `clamp_to_edge` may be preferred.
 
-Supporting more than one frame of feedback would also be extremely memory intensive since framebuffers tend to be much higher resolution than their input counterparts. One frame is also a nice "clean" limit. Once we go beyond just 1, the floodgate opens to arbitrary numbers, which we would want to avoid.
+From a practical standpoint, `clamp_to_border` is the sanest choice for filtering, while `clamp_to_edge` is the sanest choice for compositing.
 
-It is also possible to fake as many feedback frames of history we want anyways, since we can copy a feedback frame to a separate pass anyways which effectively creates a "shift register" of feedback framebuffers in memory.
+### Runtime Resizing of Textures and Framebuffers
 
-Input textures can have arbitrary number of textures as history (just limited by memory). They cannot feedback since the filter chain cannot render into it, so it effectively is finite response (FIR). For the very first frames, frames with frame `N < 0` are transparent black (all values `0`).
+To enable maximum flexibility, frontends take a hands-off approach to resizing textures and framebuffers during runtime. This allows shaders and presets to adapt dynamically to changing conditions, such as window resizing, core resolution changes, or user adjustments.
 
-### No POT padding
+There are three high-level stages for size management in the filter chain:
 
-No texture in the filter chain is padded at any time. It is possible for resolutions in the filter chain to vary over time which is common with certain emulated systems. In this scenarios, the textures and framebuffers are simply resized appropriately. Older frames still keep their old resolution in the brief moment that the resolution is changing.
+**Input Stage:**
+- The base texture is provided by the core and is represented by the `OriginalSize` uniform.
+- The input size can change from frame to frame, depending on the core's output.
 
-It is very important that shaders do not blindly sample with nearest filter with any scale factor. If naive nearest neighbor sampling is to be used, shaders must make sure that the filter chain is configured with integer scaling factors so that ambiguous texel-edge sampling is avoided.
+**Intermediate Stages:**
+- Each shader pass outputs to a framebuffer whose size is controlled by the preset.
+- The size can be specified as an absolute value, as a size relative to the output of the previous shader stage (or `OriginalSize` for the first stage), or as a size relative to the viewport (the area requested by the frontend, represented by `FinalViewportSize`).
+- The size of the input to a pass is represented by the `SourceSize` uniform, and the size of the output is represented by the `OutputSize` uniform.
+
+**Output Stage:**
+- The final output may be the last shader in the chain, provided the swapchain format matches the requested format in that shader pass (e.g., 8-bit when frontend HDR is off, 10-bit when HDR is on, *and* `scale_typeN` is not used for that shader).
+- In all cases, the final output size is represented by the `FinalViewportSize` uniform.
+
+This flexible sizing system allows for complex scaling, multi-pass effects, and seamless adaptation to runtime changes. Shaders should always use the provided size uniforms (`OriginalSize`, `SourceSize`, `OutputSize`, `FinalViewportSize`) to ensure correct sampling and output, especially when resolutions may change dynamically. In addition, shaders can rely on the `OriginalAspect` uniform to know the requested aspect ratio of the core for correct presentation.
+
+No texture in the filter chain is padded at any time. It is possible for resolutions in the filter chain to vary over time, which is common with certain emulated systems. In these scenarios, the textures and framebuffers are simply resized appropriately. Older frames still keep their old resolution in the brief moment that the resolution is changing.
+
+It is very important that shaders do not blindly sample with nearest filter with any scale factor. If naive nearest neighbor sampling is to be used, shaders must either make sure that the filter chain is configured with integer scaling factors so that ambiguous texel-edge sampling is avoided, or align texture sampling with the texture's pixel grid.
+
+If you need to align sampling with the texture's pixel grid (for example, to avoid artifacts with nearest-neighbor sampling and non-integer scaling), see [the sampling alignment code example](#correctly-sampling-textures) later in this document.
 
 ### Deduce shader inputs by reflection
 
-We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders wherever we can. The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
+We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders whereever we can The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
 
-There are three main types of inputs in this shader system:
+There are three main types of inputs in this shader system.
 
  - Texture samplers (sampler2D)
  - Look-up textures for static input data
@@ -155,31 +197,139 @@ The other approach is to have built-in identifiers which correspond to certain t
 uniform sampler2D Source;
 ```
 
-In SPIR-V, we can use `OpName` to describe these names, so we do not require the original Vulkan GLSL source to perform this reflection. We use this approach throughout the specification. An identifier is mapped to an internal meaning (semantic). The shader backend looks at these semantics and constructs a filter chain based on all shaders in the chain.
+In SPIR-V, we can use `OpName` to describe these names, so we do not require the original Vulkan GLSL source to perform this reflection.
+We use this approach throughout the specification. An identifier is mapped to an internal meaning (semantic). The shader backend looks at these semantics and constructs
+a filter chain based on all shaders in the chain.
 
 Identifiers can also have user defined meaning, either as an alias to existing identifiers or mapping to user defined parameters.
 
 ### Combining vertex and fragment into a single shader file
 
-One strength of Cg is its ability to contain multiple shader stages in the same .cg file. This is very convenient since we always want to consider vertex and fragment together. This is especially needed when trying to mix and match shaders in a GUI window for example. We don't want to require users to load first a vertex shader, then fragment manually.
+One strength of Cg is its ability to contain multiple shader stages in the same .cg file.
+This is very convenient since we always want to consider vertex and fragment together.
+This is especially needed when trying to mix and match shaders in a GUI window for example.
+We don't want to require users to load first a vertex shader, then fragment manually.
 
-GLSL however does not support this out of the box. This means we need to define a light-weight system for preprocessing one GLSL source file into multiple stages.
+GLSL however does not support this out of the box. This means we need to define a light-weight system for preprocessing
+one GLSL source file into multiple stages.
 
-#### Should we make vertex optional?
+#### Do we make vertex optional?
 
-In most cases, the vertex shader will remain the same. This leaves us with the option to provide a "default" vertex stage if the shader stage is not defined.
+In most cases, the vertex shader will remain the same. This leaves us with the option to provide a "default" vertex stage if the shader stage is not defined, but at this time, a valid entry-point must always be present for both stages.
+
+Vertex shaders are also useful for performing precomputations that can reduce the workload of the fragment shader. For more information, see [Advanced Techniques: Vertex Precomputation](#vertex-precomputation).
 
 ### #include support
 
 With complex filter chains there is a lot of opportunity to reuse code. We therefore want light support for the #include directive.
 
+### #pragma directives: Required and Optional
+
+Most `#pragma` directives in a `.slang` file are optional and provide additional metadata or configuration for the shader system. However, there are two exceptions: `#pragma stage vertex` and `#pragma stage fragment` are required in every `.slang` file. These pragmas explicitly define the boundaries of the vertex and fragment shader stages, and both must be present for the shader to compile successfully. This requirement is closely related to the rule that both vertex and fragment stages are mandatory (see [Required shader stages](#required-shader-stages)).
+
+Other `#pragma` directives, such as `#pragma name`, `#pragma format`, and `#pragma parameter`, are optional and only need to be included if their functionality is desired. If omitted, their associated features will not be available, but the shader will still compile as long as the required stage pragmas are present.
+
 ### User parameter support
 
 Since we already have a "preprocessor" of sorts, we can also trivially extend this idea with user parameters. In the shader source we can specify which uniform inputs are user controlled, GUI visible name, their effective range, etc.
 
+#### Parameter Declaration, Validation, and UI Behavior
+
+When a `#pragma parameter` line is declared in a shader, the libretro frontend uses the information in the line to create a parameter entry in the user interface. Each entry displays the description, the current value, and the minimum and maximum values. Entries are populated in the order they appear in the shader source, and in the order of shader compilation (earlier passes compile first).
+
+The compiler validates each `#pragma parameter` line to ensure it is complete and well-formed. If duplicate parameter lines are present—either due to an `#include` or because multiple shader passes declare the same parameter—the compiler checks that all lines for a given parameter name match exactly. This means that parameter lines using the same variable name must have identical descriptions, default values, minimum and maximum values, and step sizes across all declarations. If there is a mismatch, compilation will fail.
+
+In the RetroArch interface, parameter values are displayed to two decimal digits. However, the step size can be smaller than 0.01. If the step size is too small, users may not see the value change in the interface. Therefore, it is best practice to scale parameter values so that the step size is no smaller than 0.01 for optimal usability.
+
+##### Examples
+
+**Simple Example:**
+
+```
+#pragma parameter Brightness "Screen brightness" 1.0 0.0 2.0 0.05
+```
+This creates a parameter named `Brightness` with a description, default value, minimum, maximum, and step size.
+
+**Multiple Files Example A (Valid):**
+
+File 1:
+```
+#pragma parameter Sharpness "Sharpness level" 1.0 0.0 2.0 0.1
+```
+File 2:
+```
+#pragma parameter Contrast "Contrast adjustment" 1.0 0.5 1.5 0.05
+```
+These files declare completely different parameters. This is valid.
+
+**Multiple Files Example B (Valid):**
+
+File 1:
+```
+#pragma parameter Gamma "Gamma correction" 1.0 0.5 2.0 0.1
+```
+File 2:
+```
+#pragma parameter Gamma "Gamma correction" 1.0 0.5 2.0 0.1
+```
+These files declare the same parameter with identical lines. This is valid.
+
+**Multiple Files Example C (Invalid):**
+
+File 1:
+```
+#pragma parameter Saturation "Saturation adjustment" 1.0 0.0 2.0 0.1
+```
+File 2:
+```
+#pragma parameter Saturation "Saturation level" 1.2 0.0 2.0 0.1
+```
+These files declare the same parameter name (`Saturation`) but with different descriptions and default values. This will not compile; all fields must match exactly.
+
+**Note:** Validation is case sensitive. Parameter names, descriptions, and all values must match exactly, including letter case, for duplicate parameters across files or shader passes.
+
 ### Lookup textures
 
-A handy feature to have is reading from lookup textures. We can specify that some sampler inputs are loaded from a PNG file on disk as a plain RGBA8 texture.
+A handy feature to have is reading from lookup textures. Custom sampler uniforms are specified in the `.slangp` (preset) file using the `textures` line, where values are separated by semicolons:
+
+```
+textures = "foo;bar"
+```
+Each listed texture uniform can then be assigned a texture file and options:
+
+```
+foo = "relative/or/absolute/path/filename.png"
+bar = "another_texture.png"
+```
+PNG and JPEG formats are known to be supported.
+
+Additional options can be set for each texture uniform:
+
+- `foo_linear = true` or `false` (enables or disables bilinear sampling; corresponds to shader option `filter_linearN`)
+- `foo_wrap_mode = clamp_to_edge` or other valid wrap mode strings (corresponds to shader option `wrap_modeN`)
+- `foo_mipmap = true` or `false` (enables or disables mipmapping; corresponds to shader option `mipmap_inputN`)
+
+Option values are case sensitive. Valid boolean values are `true` and `false`. It's recommended to enable mipmapping if your texture is simply going to be composited on screen (whether to mipmap LUTs warrants its own discussion entirely).
+
+This mechanism allows shader authors to bind custom textures to uniforms and control their sampling behavior and wrapping modes directly from the preset file, providing flexibility for advanced shader effects.
+
+For more information on the uniforms and aliases automatically provided when using lookup textures, see the [Aliases](#aliases) section.
+
+**Shader Example:**
+
+To use a custom texture declared in the preset file, declare the sampler uniform in your shader code:
+
+```
+#pragma stage fragment
+...
+layout(binding = 2) uniform sampler2D foo;
+```
+Then, sample from the texture in your shader:
+
+```
+vec4 texColor = texture(foo, vTexCoord);
+```
+This will use the texture file and options specified for `foo` in the preset file. The binding number must match the preset's texture order if explicit bindings are used, or can be left to the frontend to assign if not specified. `sampler2D` objects can only be declared in the fragment shader stage.
 
 #### Do we want to support complex reinterpretation?
 
@@ -234,7 +384,13 @@ The very first line of a `.slang` file must contain a `#version` statement.
 
 The first process which takes place is dealing with `#include` statements. A slang file is preprocessed by scanning through the slang and resolving all `#include` statements.
 
-The include process does not consider any preprocessor defines or conditional expressions. The include path must always be relative, and it will be relative to the file path of the current file. Nested includes are allowed, but includes in a cycle are undefined as preprocessor guards are not considered.
+**Include Path Restrictions:**
+- Only files in the same directory as the including file, or in a child directory, may be included. Absolute paths and parent-relative paths (e.g., `../`) are not supported and have undefined behavior.
+
+**Cyclic Includes:**
+- Cyclic includes are not handled at all. If a file is included more than once in a dependency cycle, only the first occurrence is processed; subsequent `#include` lines for that file lead to undefined behavior. As a result, slang requires a flat, acyclic dependency structure for includes.
+
+The include process does not consider any preprocessor defines or conditional expressions. Nested includes are allowed as long as they do not form a cycle.
 
 E.g.:
 ```
@@ -268,9 +424,37 @@ This pragma controls the format of the framebuffer which this shader will render
 
 Supported render target formats are listed below. From a portability perspective, please be aware that GLES2 has abysmal render target format support, and GLES3/GL3 may have restricted floating point render target support.
 
-If rendering to uint/int formats, make sure your fragment shader output target is uint/int.
+##### Portability Limitations: Guaranteed Formats
 
-#### 8-bit
+**GLES2 (OpenGL ES 2.0):**
+The following framebuffer color formats are guaranteed to be supported on all GLES2-compliant devices (at least, according to specification):
+
+- `GL_RGBA4`
+- `GL_RGB5_A1`
+- `GL_RGB565`
+
+Other formats, such as `GL_RGBA8` or floating-point formats, are not guaranteed and may not be available on all GLES2 implementations. Unfortunately, none of these formats align with the formats that can be expressed by the pragma.
+
+**GLES3 (OpenGL ES 3.0):**
+GLES3 expands the set of guaranteed framebuffer formats. The following are required by the specification:
+
+- `GL_RGBA4`
+- `GL_RGB5_A1`
+- `GL_RGB565`
+- `GL_RGBA8` (corresponds to `R8G8B8A8_UNORM` with 8 bits per channel)
+- `GL_RGB8`
+- `GL_RGBA16`
+- `GL_RGB10_A2` (corresponds to `A2B10G10R10_UNORM_PACK32` with 10 bits per color channel, 2 bits per alpha)
+- `GL_R11F_G11F_B10F`
+- `GL_RGB10_A2UI` (corresponds to `A2B10G10R10_UINT_PACK32` with 10 bits per color channel, 2 bits per alpha)
+- `GL_RGBA16F` (corresponds to `R16G16B16A16_SFLOAT` with 16 bits per channel)
+- `GL_RGBA32F` (corresponds to `R32G32B32A32_SFLOAT` with 32 bits per channel)
+
+Desktop-oriented APIs can generally support all formats available.
+
+##### Valid Formats
+
+**8-bit**
  - `R8_UNORM`
  - `R8_UINT`
  - `R8_SINT`
@@ -282,11 +466,11 @@ If rendering to uint/int formats, make sure your fragment shader output target i
  - `R8G8B8A8_SINT`
  - `R8G8B8A8_SRGB`
 
-#### 10-bit
+**10-bit**
  - `A2B10G10R10_UNORM_PACK32`
  - `A2B10G10R10_UINT_PACK32`
 
-#### 16-bit
+**16-bit**
  - `R16_UINT`
  - `R16_SINT`
  - `R16_SFLOAT`
@@ -297,7 +481,7 @@ If rendering to uint/int formats, make sure your fragment shader output target i
  - `R16G16B16A16_SINT`
  - `R16G16B16A16_SFLOAT`
 
-#### 32-bit
+ **32-bit**
  - `R32_UINT`
  - `R32_SINT`
  - `R32_SFLOAT`
@@ -312,6 +496,23 @@ E.g.:
 ```
 #pragma format R16_SFLOAT
 ```
+
+If rendering to uint/int formats, make sure your fragment shader output target is uint/int.
+
+##### Practical Format Choice Guidance
+
+When choosing a framebuffer format for your shader, consider the following practical recommendations:
+
+- For shaders that output gamma-corrected SDR (standard dynamic range) data, use `R8G8B8A8_UNORM` or simply omit the format specification (the default is usually suitable).
+- For shaders that output HDR10 data, any output intended for 10-bit display, or gamma-corrected intermediates requiring extra precision, use `A2B10G10R10_UNORM_PACK32`.
+- For shaders that output linear data (such as for realistic color blending or physically-based rendering), use `R16G16B16A16_SFLOAT`.
+- If your shader only needs to output one or two color channels, the `Rxx` or `RxxGxx` formats (e.g., `R16_UINT`, `R8_UNORM`) can be used for efficiency.
+
+Be aware that using higher bit-depth formats (such as 16-bit or 32-bit float) can have a significant impact on performance, especially on mobile or older hardware. Always profile your shader if performance is a concern.
+
+Note: If you specify `A2B10G10R10_UNORM_PACK32` and the shader is the last shader in the chain, frontends like RetroArch will treat it as an HDR shader. See the section on HDR programming for more details.
+
+
 #### `#pragma parameter`
 
 Shader parameters allow shaders to take user-defined inputs as uniform values. This makes shaders more configurable.
@@ -557,6 +758,8 @@ To correctly sample nearest textures with non-integer scale, we must pre-quantiz
 
 The concept of splitting up the integer texel along with the fractional texel helps us safely do arbitrary non-integer scaling safely. The uv variable could also be passed pre-computed from vertex to avoid the extra computation in fragment.
 
+See also [Advanced Techniques: Vertex Precomputation](#vertex-precomputation).
+
 ### Preset format (.slangp)
 
 The present format is essentially unchanged from the old .cgp and .glslp, except the new preset format is called .slangp.
@@ -649,3 +852,272 @@ Instead of returning a float4 from main\_fragment, have an output in fragment:
 ```
 layout(location = 0) out vec4 FragColor;
 ```
+
+
+## Advanced Techniques
+
+### Validation, Debugging, and Profiling Tools for Slang Shaders
+
+#### Emulator Support and Reference Implementation
+
+Currently, there are no standalone external validation tools or compilers for slang shaders outside of RetroArch. However, other emulators such as Ares also support the slang format, though implementation details may differ and not all shaders are guaranteed to work identically across emulators. Some projects, like 86Box, have expressed interest in supporting slang shaders in the future.
+
+If you are an emulator developer and want to support slang shaders, you are encouraged to use RetroArch's MIT Licensed reference implementation. This ensures maximum compatibility and leverages the most mature and widely tested codebase for shader support among emulators.
+
+#### Note on Unrelated SLANG Formats
+
+There is a completely different SLANG format that was developed after RetroArch's. It is unrelated to Libretro and should not be confused with the slang shader format described in this document.
+
+#### Graphics Debugging and Profiling Tools
+
+While there are no slang-specific external tools, any graphics debugging or profiling tool that works with Vulkan, OpenGL, or Direct3D can be used to profile and debug slang shaders running in RetroArch. These tools allow you to inspect shader code, view intermediate render targets, analyze performance, and debug rendering issues. Some popular tools include:
+
+- **RenderDoc** (https://renderdoc.org/):
+   - A powerful, open-source graphics debugger for Vulkan, OpenGL, and Direct3D. Capture a frame in RetroArch, inspect all draw calls, view shader code, and analyze textures and framebuffers.
+   - **Getting started:** Launch RetroArch, start your content, and attach RenderDoc to the RetroArch process. Capture a frame and explore the pipeline and resources.
+
+- **NVIDIA Nsight Graphics** (https://developer.nvidia.com/nsight-graphics):
+   - A comprehensive tool for debugging, profiling, and analyzing graphics applications on NVIDIA GPUs. Supports Vulkan, OpenGL, and Direct3D.
+   - **Getting started:** Install Nsight Graphics, launch RetroArch through the tool, and use its frame debugging and profiling features.
+
+- **Microsoft PIX** (https://devblogs.microsoft.com/pix/):
+   - A performance tuning and debugging tool for Direct3D applications on Windows. Useful for analyzing shaders and GPU workloads on D3D11/D3D12 backends.
+   - **Getting started:** Run RetroArch under PIX, capture a frame, and inspect shader stages and GPU timings.
+
+- **GPUView** (https://docs.microsoft.com/en-us/windows-hardware/test/gpuview/):
+   - A system-level GPU profiler for Windows, useful for analyzing overall GPU usage and identifying bottlenecks.
+
+These tools are invaluable for diagnosing rendering issues, optimizing performance, and understanding how your shaders interact with the graphics pipeline.
+
+#### Using the RetroArch Log for Shader Debugging
+
+RetroArch's log output provides some useful information for debugging shaders, especially compilation errors. If your shader fails to compile, check the log for detailed error messages, including the line number and nature of the error. You can increase the log verbosity in RetroArch's settings to get more detailed output. Reviewing the log is often the fastest way to identify and fix issues in your shader code.
+
+#### Debugging Shaders with Colors
+
+One of the simplest and most effective ways to debug shaders is to output specific colors in your fragment shader to "flag" certain conditions or code paths. This technique helps you visually identify when a particular branch of code is executed, when a value is out of range, or when a bug occurs.
+
+For example, you might want to check if a computed value exceeds a threshold, or if a texture coordinate is outside the expected range. By outputting a bright, easily recognizable color (such as red or green) when the condition is met, you can quickly spot issues on screen.
+
+**Example:**
+
+```glsl
+#pragma stage fragment
+layout(location = 0) out vec4 FragColor;
+void main() {
+   float value = ...; // Some computed value
+   if (value > 1.0) {
+      FragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red: value is too high
+   } else {
+      FragColor = vec4(0.0, 1.0, 0.0, 1.0); // Green: value is OK
+   }
+}
+```
+
+You can use this approach to test any condition—just pick a color that stands out. This visual feedback is especially useful when debugging complex effects, coordinate calculations, or sampling issues. Once you've identified and fixed the problem, simply remove or comment out the color-debugging code. Using the parameter system with this debugging technique can be very powerful. For example, parameters can be used as switches to bypass certain sections of code in real time, or to modify values meant for internal use. The parameters can be removed and the uniforms converted to constants before publishing.
+
+**Example: Using a Parameter as a Debug Switch**
+
+You can use a shader parameter to toggle debugging output on and off in real time. This allows you to enable visual debugging only when needed, without modifying the shader code each time.
+
+```glsl
+#pragma parameter DebugMode "Enable debug color output" 0.0 0.0 1.0 1.0
+layout(push_constant) uniform Push {
+   float DebugMode;
+} registers;
+
+#pragma stage fragment
+layout(location = 0) out vec4 FragColor;
+void main() {
+   float value = ...; // Some computed value
+   if (registers.DebugMode > 0.5) {
+      // Output bright green if debugging is enabled
+      FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+   } else {
+      // Normal rendering
+      FragColor = ...;
+   }
+}
+```
+
+This approach lets you toggle debug colors from the frontend UI, making it easy to test and diagnose issues interactively. You can add more parameters to control which conditions trigger debug output, or to adjust the debug color as needed.
+
+### Naming Conventions for Uniforms and Samplers
+
+There are no strict requirements for naming or formatting uniforms and samplers in slang shaders—developers are free to choose conventions that best suit their project and style. However, here are some best practices and common patterns observed in the community:
+
+- **Samplers:**
+   - Treat samplers just like any other variable.
+   - External textures (such as lookup tables or fixed images) are often referenced with ALL_CAPS (e.g., `LUT`, `NOISE_TEXTURE`) to indicate that they are fixed, unchanging blobs.
+   - Source textures, which change from frame to frame (such as `Source` or `Original`), are typically referenced with CamelCase to reflect their dynamic nature.
+
+- **Uniforms:**
+   - Uniforms are fixed across a single frame but may change between frames. The uniforms presented by the frontend (such as `SourceSize`, `OutputSize`, `FrameCount`) use CamelCase for this reason.
+   - Parameter uniforms (those controlled by the user or preset) are often considered 'fixed' and may be written in ALL_CAPS (e.g., `BRIGHTNESS`, `SATURATION`).
+
+- **#define Usage:**
+   - It's common to use `#define` for uniforms that are referenced multiple times in a shader. This can improve readability and make it easier to update variable names in one place.
+   - However, uniforms provided by the frontend (such as `SourceSize`, `OutputSize`, etc.) do not need to be `#define`d, as their names are stable and consistent for backwards compatibility.
+
+Ultimately, choose naming conventions that make your shader code clear and maintainable for yourself and others. Consistency within a project is more important than following any particular global style. If you are adding or modifying someone else's shader, it's best to follow the original style rather than refactoring the entire shader or mixing styles.
+
+### Shader Version Selection and Cross-Platform Compilation
+
+When writing new slang shaders, always use `#version 450` unless you have a specific reason to use `#version 310 es` (for example, targeting mobile hardware that requires it). Using `#version 450` ensures broad compatibility with a wide set of features, and is the standard for Vulkan-based workflows. Only use `#version 310 es` if it is absolutely necessary for your use case.
+
+If you believe you need a newer shader version (such as `#version 460` or later), it's best to discuss your requirements with the Libretro developers first. There may be a workaround or alternative approach that will have better support across platforms. Users can be frustrated when they pick a shader that fails to compile on their system, so sticking to the most widely supported versions is recommended.
+
+#### Platform Differences and Testing
+
+Shader compilation and feature support can vary significantly between platforms, especially between Vulkan and DirectX. A shader that compiles and runs perfectly on Vulkan may not compile or behave the same way on DirectX (D3D11/D3D12), and vice-versa. For best results:
+
+- Always test your shader on Vulkan as a baseline, since it is the most robust and widely supported backend for slang shaders.
+- If you have access to a Windows system, also test your shader with at least one Direct3D driver (such as D3D12) to catch platform-specific issues early.
+- Be aware that some features or syntax may be accepted by one backend but not another. When in doubt, consult the documentation or ask the community for advice.
+
+#### Troubleshooting 'Unknown Semantic' Errors
+
+If shader compilation fails with an 'unknown semantic' error, check that every parameter uniform you declare in your shader has a matching `#pragma parameter` line. The reflection system relies on these lines to map uniforms to user parameters and internal semantics. Missing or mismatched pragmas are a common cause of this error.
+
+By following these guidelines, you'll maximize the portability and reliability of your shaders, and help ensure a smooth experience for users across all supported platforms.
+
+### Best Practices for Multi-Pass (Multi-Stage) Shaders
+
+When designing shaders that are meant to be used together as a multi-pass (multi-stage) effect, following best practices for organization and clarity will help both you and other users maintain, extend, and reuse your work. It is common for users to group unrelated shaders into a custom preset, but for tightly coupled multi-pass effects, consider the following guidelines:
+
+1. **Descriptive Naming:**
+   - Give every shader a descriptive name using `#pragma name`. Avoid using numbers or generic names; prefer qualitative, meaningful names (e.g., `#pragma name GaussianBlurH` and `#pragma name GaussianBlurV`).
+   - When shaders are meant to always be used together (tightly coupled), give them a matching prefix for clarity.
+
+2. **Shared Functions:**
+   - Place shared functions, macros, or utility code in a separate file with the `.inc` extension (not `.h`). Use `#include` to bring these into each shader file that needs them.
+
+3. **One Stage per File:**
+   - Do not try to put multiple fragment or vertex shaders in one file. Each `.slang` file can only have one vertex stage and one fragment stage. If for some reason a frontend ever supports this, ignore it. It's a bad idea.
+
+4. **Shared Parameters:**
+   - Use includes for parameters when they are shared among shaders. This ensures consistency and reduces duplication. Consider using the menu technique below to show users what shader stages or high-level aspects of the effect the parameters relate to.
+
+5. **Document Pass Order:**
+   - If the shader stages need to be used in a specific order, add a comment near the top of each file or in the preset to make this explicit.
+
+6. **Example Preset File:**
+   - Always include an example `.slangp` preset file showing how your multi-pass shader is intended to be used.
+   - Assume that the input is gamma-corrected and the output is 8-bit SDR. If your shader operates on linear data, add a linearizing shader stage before and a gamma correction shader stage at the end. This makes it clear to users what sort of data your shader expects and produces.
+
+Following these practices will make your multi-pass shaders easier to understand, maintain, and integrate into larger filter chains or custom presets.
+
+
+### Practical Guide to Feedback and History
+
+Feedback in slang shaders refers to the ability for a shader pass to access the output of a previous pass from the previous frame. This is a powerful technique for creating time-based effects such as motion blur, ghosting, persistence, and other temporal filters.
+
+#### What is Feedback?
+
+Each shader pass can declare a uniform sampler2D with the alias `NAMEFeedback`, where `NAME` is the pass name. The frontend (e.g., RetroArch) provides one frame of history for each `NAMEFeedback` uniform, following sensible best practice. This means you can access the output of a pass from the previous frame, but not from earlier frames directly.
+
+#### Why Use Feedback?
+
+Feedback enables effects that depend on previous frame data. Common uses include:
+- Motion blur
+- Temporal anti-aliasing
+- Persistence/afterglow
+- Ghosting
+- IIR (infinite impulse response) signal processing
+
+With just one frame of history, you can implement a wide variety of time-based effects using IIR techniques. By blending the current frame with the previous frame's output, you can achieve effects that appear to have "memory" or persistence, without needing multiple frames of history.
+
+#### How to Use Feedback
+
+1. **Declare the Feedback Uniform:**
+    - In your shader, declare a sampler2D uniform with the alias `NAMEFeedback`.
+    - Example:
+       ```glsl
+       #pragma name BlurPass
+       #pragma stage fragment
+       layout(binding = 1) uniform sampler2D BlurPassFeedback;
+       ```
+
+2. **Sample the Previous Frame:**
+    - In your fragment shader, sample from the feedback texture.
+    - Example:
+       ```glsl
+       vec4 prev = texture(BlurPassFeedback, vTexCoord);
+       ```
+
+3. **Blend with Current Output:**
+    - Combine the previous frame's output with the current computation to create a time-based effect.
+    - Example (simple persistence):
+       ```glsl
+       FragColor = mix(texture(Source, vTexCoord), prev, 0.5);
+       ```
+
+#### Example: Temporal Persistence
+
+```glsl
+#pragma name PersistencePass
+#pragma stage fragment
+layout(binding = 1) uniform sampler2D PersistencePassFeedback;
+layout(binding = 0) uniform sampler2D Source;
+layout(location = 0) in vec2 vTexCoord;
+layout(location = 0) out vec4 FragColor;
+void main() {
+     vec4 current = texture(Source, vTexCoord);
+     vec4 previous = texture(PersistencePassFeedback, vTexCoord);
+     FragColor = mix(current, previous, 0.7); // 70% previous, 30% current
+}
+```
+
+#### Best Practices
+
+- Use feedback for effects that require temporal memory.
+- Limit feedback to one frame for performance and simplicity; frontends only provide one frame natively.
+- For more complex history (e.g., multi-frame effects), use additional passes to "shift" feedback manually, but this is rarely needed.
+- Leverage IIR signal processing techniques to achieve long-lasting effects with just one frame of history.
+
+#### Notes
+
+- Input textures can have arbitrary history (limited by memory), but cannot be fed back since the filter chain cannot render into them.
+- For the very first frames, feedback textures are initialized to transparent black (`0`).
+
+Feedback is a core feature for time-based shader effects, and mastering its use unlocks a wide range of creative possibilities.
+
+### Vertex Precomputation
+
+In many cases, it is beneficial to perform certain calculations in the vertex shader and pass the results to the fragment shader as varyings. This technique, known as vertex precomputation, can improve performance by reducing redundant computations in the fragment shader, which typically runs many more times per frame than the vertex shader.
+
+#### Benefits
+- Reduces the computational load in the fragment shader, which is executed per-pixel.
+- Can help avoid redundant calculations, especially for values that are constant or linearly interpolated across a primitive.
+- May improve GPU throughput and efficiency, particularly on lower-end hardware.
+
+#### Example
+
+Suppose you need to compute a texture coordinate transformation that is the same for all fragments of a given vertex. Instead of repeating the calculation in the fragment shader, you can do it once in the vertex shader:
+
+```glsl
+#pragma stage vertex
+layout(location = 0) in vec4 Position;
+layout(location = 1) in vec2 TexCoord;
+layout(location = 0) out vec2 vTransformedCoord;
+void main()
+{
+   gl_Position = MVP * Position;
+   // Example transformation
+   vTransformedCoord = TexCoord * 2.0 + 0.5;
+}
+
+#pragma stage fragment
+layout(location = 0) in vec2 vTransformedCoord;
+layout(location = 0) out vec4 FragColor;
+void main()
+{
+   FragColor = texture(Source, vTransformedCoord);
+}
+```
+
+#### Guidance
+- Use vertex precomputation for any value that is constant per vertex or can be linearly interpolated across the primitive.
+- Avoid duplicating expensive calculations in the fragment shader if they can be done once per vertex.
+- Be mindful that not all calculations are suitable for precomputation (e.g., those requiring per-pixel precision or non-linear interpolation).
+- Profile your shaders if in doubt; on complex scenes or low-power devices, the benefits can be significant.
