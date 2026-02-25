@@ -223,7 +223,48 @@ Vertex shaders are also useful for performing precomputations that can reduce th
 
 With complex filter chains there is a lot of opportunity to reuse code. We therefore want light support for the #include directive.
 
-### #pragma directives: Required and Optional
+### Required Shader Stages
+
+Every `.slang` shader file must define both a vertex and a fragment stage. This is accomplished using the `#pragma stage` directive. The convention is to place the vertex stage first, followed by the fragment stage.
+
+#### Universal Declarations
+Any code (such as uniform declarations, function definitions, or constants) written before the first `#pragma stage` directive is considered universal. These declarations are included in both the vertex and fragment shader stages.
+
+#### Scoped Declarations
+Once a `#pragma stage` directive is encountered, all subsequent code is scoped to that shader stage until the next `#pragma stage` is found. This allows you to write stage-specific code for either the vertex or fragment shader.
+
+#### Example Structure
+```glsl
+#version 450
+
+// Universal declarations
+uniform mat4 MVP;
+vec2 computeUV(vec2 pos) { ... }
+
+#pragma stage vertex
+// Vertex stage-specific code
+layout(location = 0) in vec2 position;
+void main() {
+   gl_Position = MVP * vec4(position, 0.0, 1.0);
+}
+
+#pragma stage fragment
+// Fragment stage-specific code
+layout(location = 0) out vec4 FragColor;
+void main() {
+   FragColor = vec4(1.0);
+}
+```
+
+#### Supported `#pragma stage` Types
+- `#pragma stage vertex`: Marks the beginning of the vertex shader stage code.
+- `#pragma stage fragment`: Marks the beginning of the fragment shader stage code.
+
+Both stages must be present for the shader to compile successfully. The order should be vertex first, then fragment. Any declarations before the first stage pragma are shared by both stages; declarations after a stage pragma are only visible to that stage until the next stage pragma.
+
+This structure ensures clarity and separation between universal and stage-specific code, making shader development more maintainable and less error-prone.
+
+### `#pragma` directives: Required and Optional
 
 Most `#pragma` directives in a `.slang` file are optional and provide additional metadata or configuration for the shader system. However, there are two exceptions: `#pragma stage vertex` and `#pragma stage fragment` are required in every `.slang` file. These pragmas explicitly define the boundaries of the vertex and fragment shader stages, and both must be present for the shader to compile successfully. This requirement is closely related to the rule that both vertex and fragment stages are mandatory (see [Required shader stages](#required-shader-stages)).
 
@@ -237,7 +278,7 @@ Since we already have a "preprocessor" of sorts, we can also trivially extend th
 
 When a `#pragma parameter` line is declared in a shader, the libretro frontend uses the information in the line to create a parameter entry in the user interface. Each entry displays the description, the current value, and the minimum and maximum values. Entries are populated in the order they appear in the shader source, and in the order of shader compilation (earlier passes compile first).
 
-The compiler validates each `#pragma parameter` line to ensure it is complete and well-formed. If duplicate parameter lines are present—either due to an `#include` or because multiple shader passes declare the same parameter—the compiler checks that all lines for a given parameter name match exactly. This means that parameter lines using the same variable name must have identical descriptions, default values, minimum and maximum values, and step sizes across all declarations. If there is a mismatch, compilation will fail.
+The compiler validates each `#pragma parameter` line to ensure it is complete and well-formed. The step parameter is optional, but best practice is to always include it for clarity and consistency. If duplicate parameter lines are present—either due to an `#include` or because multiple shader passes declare the same parameter—the compiler checks that all lines for a given parameter name match exactly. This means that parameter lines using the same variable name must have identical descriptions, default values, minimum and maximum values, and step sizes across all declarations. If there is a mismatch, compilation will fail.
 
 In the RetroArch interface, parameter values are displayed to two decimal digits. However, the step size can be smaller than 0.01. If the step size is too small, users may not see the value change in the interface. Therefore, it is best practice to scale parameter values so that the step size is no smaller than 0.01 for optimal usability.
 
@@ -329,7 +370,7 @@ Then, sample from the texture in your shader:
 ```
 vec4 texColor = texture(foo, vTexCoord);
 ```
-This will use the texture file and options specified for `foo` in the preset file. The binding number must match the preset's texture order if explicit bindings are used, or can be left to the frontend to assign if not specified. `sampler2D` objects can only be declared in the fragment shader stage.
+This will use the texture file and options specified for `foo` in the preset file. The binding number must match the preset's texture order. Explicit binding is mandatory for all samplers and UBOs. `sampler2D` objects can only be declared in the fragment shader stage.
 
 #### Do we want to support complex reinterpretation?
 
@@ -367,8 +408,8 @@ Certain rules must be adhered to in order to make it easier for the frontend to 
  - `layout(binding = #N)` must be declared for all `UBO`s and `sampler2D`s.
  - All resources must use different bindings.
  - There can be only one UBO.
- - There can be only use push constant block.
- - It is possible to have one regular UBO and one push constant UBO.
+ - There can be only one push constant block.
+ - It is possible to have one UBO and one push constant block.
  - If a UBO is used in both vertex and fragment, their binding number must match.
  - If a UBO is used in both vertex and fragment, members with the same name must have the same offset/binary interface.
    This problem is easily avoided by having the same UBO visible to both vertex and fragment as "common" code.
@@ -522,7 +563,7 @@ The format is:
 #pragma parameter IDENTIFIER "DESCRIPTION" INITIAL MINIMUM MAXIMUM [STEP]
 ```
 
-The step parameter is optional. `INITIAL`, `MINIMUM`, and `MAXIMUM` are floating point values. `IDENTIFIER` is the meaningful string which is the name of the uniform which will be used in a UBO or push constant block. `DESCRIPTION` is a string which is human readable representation of IDENTIFIER.
+The step parameter is optional. However, best practice is to always include the step parameter for clarity and consistency, even if the value is not strictly required. `INITIAL`, `MINIMUM`, and `MAXIMUM` are floating point values. `IDENTIFIER` is the meaningful string which is the name of the uniform which will be used in a UBO or push constant block. `DESCRIPTION` is a string which is human readable representation of IDENTIFIER.
 
 E.g:
 ```
@@ -701,13 +742,6 @@ layout(push_constant) uniform Push
 
 Which samplers are used for textures are specified by the preset format. The sampler remains constant throughout the frame, there is currently no way to select samplers on a frame-by-frame basic. This is mostly to make it possible to use the spec in GLES2 as GLES2 has no concept of separate samplers and images.
 
-### sRGB
-
-The input to the filter chain will not be of an sRGB format. This is due to many reasons, the main one being that it is very difficult for the frontend to get "free" passthrough of sRGB. It is possible to have a first pass which linearizes the input to a proper sRGB render target. In this way, custom gammas can be used as well.
-
-Similarly, the final pass will not be an sRGB backbuffer for similar reasons.
-
-
 ## Caveats
 
 ### Frag Coord
@@ -760,9 +794,82 @@ The concept of splitting up the integer texel along with the fractional texel he
 
 See also [Advanced Techniques: Vertex Precomputation](#vertex-precomputation).
 
-### Preset format (.slangp)
+## Preset Format: Full .slangp Example
 
 The present format is essentially unchanged from the old .cgp and .glslp, except the new preset format is called .slangp.
+
+Below is a comprehensive example of a `.slangp` preset file. This example demonstrates:
+- Multiple shader passes
+- Per-pass options (filter_linear, wrap_mode, scale_type, scale_x/y, mipmap_input, float_framebuffer, etc.)
+- External lookup textures with options
+- Parameter settings
+- Inline comments for clarity
+
+```ini
+# Example: CRT with LUT and multi-pass scaling
+
+shaders = 3
+
+# Pass 0: Horizontal blur
+shader0 = "shaders/blur_horiz.slang"
+filter_linear0 = true           # Enable bilinear filtering for this pass
+wrap_mode0 = clamp_to_edge      # Clamp sampling to edge
+scale_type0 = source            # Scale relative to input
+scale_x0 = 2.0                  # 2x horizontal scale
+scale_y0 = 1.0                  # 1x vertical scale
+mipmap_input0 = false           # No mipmapping on input
+float_framebuffer0 = false      # Use integer framebuffer
+
+# Pass 1: Vertical blur
+shader1 = "shaders/blur_vert.slang"
+filter_linear1 = true
+wrap_mode1 = clamp_to_edge
+scale_type1 = absolute          # Use absolute size
+scale_x1 = 1280
+scale_y1 = 960
+mipmap_input1 = false
+float_framebuffer1 = false
+
+# Pass 2: CRT effect with LUT
+shader2 = "shaders/crt.slang"
+filter_linear2 = false          # Nearest neighbor for scanlines
+wrap_mode2 = clamp_to_border
+scale_type2 = viewport          # Scale to viewport size
+scale_x2 = 1.0
+scale_y2 = 1.0
+mipmap_input2 = true            # Enable mipmapping for LUT
+float_framebuffer2 = true       # Use floating point framebuffer
+
+# External lookup textures
+textures = "phosphor_lut;mask"
+
+# LUT: Phosphor lookup table
+phosphor_lut = "textures/phosphor_lut.png"
+phosphor_lut_linear = true
+phosphor_lut_wrap_mode = repeat
+phosphor_lut_mipmap = true
+
+# Mask: Shadow mask pattern
+mask = "textures/mask.png"
+mask_linear = false
+mask_wrap_mode = mirrored_repeat
+mask_mipmap = false
+
+# Parameter overrides (optional, can be set in preset)
+Brightness = 1.2
+Sharpness = 0.8
+
+# Comments can be added anywhere with #
+# This preset demonstrates multiple passes, external textures, and parameter overrides.
+```
+
+This example shows how to:
+- Chain multiple shader passes, each with its own options
+- Bind external textures and control their sampling/wrapping
+- Override user parameters at the preset level
+- Use comments for documentation
+
+See the following sections for detailed explanations of each option and their effects.
 
 ## Porting guide from legacy Cg spec
 
@@ -852,7 +959,6 @@ Instead of returning a float4 from main\_fragment, have an output in fragment:
 ```
 layout(location = 0) out vec4 FragColor;
 ```
-
 
 ## Advanced Techniques
 
