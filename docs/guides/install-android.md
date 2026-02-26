@@ -74,25 +74,26 @@ The first time you attempt to install an APK via an app (e.g. via any file manag
 
 To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc), ensure Google Play Protect either approves it or disable the service entirely.
 
-##### Method 1: "Install anyway" in Google Play Protect
+##### Method 1: Selecting ‘Install anyway’ in the Google Play Protect popup
 
-This procedure must be repeated each time you sideload an app:
+When you tap "Install" for the APK, Google Play Protect runs a security scan and displays options similar to those shown below:
 
 ![google-play-protect_-_install-anyway-1.png](../image/guides/google-play-protect_-_install-anyway-1.png)
 
 ![google-play-protect_-_install-anyway-2.png](../image/guides/google-play-protect_-_install-anyway-2.png)
 
-When you select “Install anyway”, Google Play Protect prompts for identity authentication (password or fingerprint). For security reasons, this step cannot be screenshotted, so it's described textually here. This method requires no Google account—unlike [disabling Google Play Protect](#method-2-disable-google-play-protect), needed if authentication still fails after entering the correct password.
+When you select “Install anyway”, Google Play Protect may prompt for identity authentication (password or fingerprint). For security reasons, this step cannot be screenshotted, that is why it's described textually here.
 
 ##### Method 2: Disable Google Play Protect
 
-If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to disable Play Protect to proceed.
+This method lets you skip the steps in method 1, which can be convenient since method 1 may require you to authenticate each time.
 
 * Open the Google Play Store app.
-* Tap the menu icon in the top right corner.
-  * You don’t need to be signed in to adjust Play Protect settings. But if you’re signed in to a Google account, An icon will show the first letter of your name (for example, “F” for “Foo”) instead of a hamburger button.
-* Tap "Play Protect".
-* Tap the gear icon (Settings).
-* Toggle off "Scan apps with Play Protect".
+* Locate and tap "Play Protect" — its location depends on your Android version and whether you’re signed in:
+  - Tap the hamburger menu (☰) in the upper-left or upper-right corner.
+  - If you’re signed in, check both the hamburger menu (☰) and your profile icon, as Play Protect may appear under either. The profile icon shows your account initial (e.g., “F” for Foo).
+* Tap the gear icon ⚙️ to open Settings.
+* Toggle off "Scan apps with Play Protect":
+  - You may be asked whether to "Pause" scanning temporarily or "Turn off" permanently — choose the option you prefer.
 * Install the APK — Play Protect will no longer interfere with the process.
-* Android may prompt you to enable Play Protect each time you sideload an APK; always select "No" to maintain this habit.
+* Note: Android may prompt you to re-enable Play Protect each time you sideload an APK. If your goal is to keep it permanently turned off, always select "No" when prompted.
