@@ -72,7 +72,9 @@ The first time you attempt to install an APK via an app (e.g. via any file manag
 
 #### Allowing APK installations blocked by Google Play Protect
 
-To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc), ensure Google Play Protect either approves it or disable the service entirely.
+To install RetroArch from non-Google Play sources (such as F-Droid or retroarch.com), you may need to either allow it through Google Play Protect or disable Play Protect entirely.
+
+Since RetroArch 1.19.1, if you skip the methods in the sub-sections below, the app may either fail to install without warning or display the message “App installation failed. The package couldn’t be installed because the verification did not succeed.” This issue appears to affect some Android versions and hardware configurations, but not all. For example, the current RetroArch APK may fail to install on the standard Android version without following these methods, while it may succeed on the current Android TV version.
 
 ##### Method 1: Selecting ‘Install anyway’ in the Google Play Protect popup
 
