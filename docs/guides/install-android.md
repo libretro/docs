@@ -76,6 +76,8 @@ To install RetroArch from non-Google Play sources (such as F-Droid or retroarch.
 
 Since RetroArch 1.19.1, if you skip the methods in the sub-sections below, the app may either fail to install without warning or display the message “App not installed.” This issue appears to affect some Android versions and hardware configurations, but not all. For example, the current RetroArch APK may fail to install on the standard Android version without following these methods, while it may succeed on the current Android TV version.
 
+If you get "App not installed" your version of Play Protect may have a bug that prevents you from using the feature.[1] If so, use Method 2—disable Google Play Protect to permit blocked APK installs.
+
 ##### Method 1: Selecting ‘Install anyway’ in the Google Play Protect popup
 
 When you tap "Install" for the APK, Google Play Protect runs a security scan and displays options similar to those shown below:
@@ -84,11 +86,9 @@ When you tap "Install" for the APK, Google Play Protect runs a security scan and
 
 ![google-play-protect_-_install-anyway-2.png](../image/guides/google-play-protect_-_install-anyway-2.png)
 
-When you select “Install anyway”, Google Play Protect may prompt for identity authentication (password or fingerprint). For security reasons, this step cannot be screenshotted, that is why it's described textually here.
+If you get "App not installed," your Play Protect version may have a bug preventing use of the "Install anyway" feature.[1] In that case, use Method 2—disable Google Play Protect to permit blocked APK installs.
 
 ##### Method 2: Disable Google Play Protect
-
-This method lets you skip the steps in method 1, which can be convenient since method 1 may require you to authenticate each time.
 
 * Open the Google Play Store app.
 * Locate and tap "Play Protect" — its location depends on your Android version and whether you’re signed in:
@@ -99,3 +99,6 @@ This method lets you skip the steps in method 1, which can be convenient since m
   - You may be asked whether to "Pause" scanning temporarily or "Turn off" permanently — choose the option you prefer.
 * Install the APK — Play Protect will no longer interfere with the process.
 * Note: Android may prompt you to re-enable Play Protect each time you sideload an APK. If your goal is to keep it permanently turned off, always select "No" when prompted.
+
+## References
+1: Use Case: After signing into Google and updating Play Protect on Android 10 with an LG G7 ThinQ (LM-G710EM), the "Install anyway" prompt results in an "App not installed" error.
