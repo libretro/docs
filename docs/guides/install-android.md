@@ -101,4 +101,4 @@ If you get "App not installed," your Play Protect version may have a bug prevent
 * Note: Android may prompt you to re-enable Play Protect each time you sideload an APK. If your goal is to keep it permanently turned off, always select "No" when prompted.
 
 ## References
-1: Case Report: On Android 10 with LG G7 ThinQ (LM-G710EM), after factory reset, signing into Play Store (allowing self-update and setup), sideloading RetroArch 1.22.2 from retroarch.com triggers "App not installed" on "Install anyway." The same APK installs successfully via factory reset and sideloading offline.
+Case Report: On Android 10 with LG G7 ThinQ (LM-G710EM), after factory reset, signing into Play Store (allowing self-update and setup), sideloading RetroArch 1.22.2 from retroarch.com and tapping "Install anyway" triggers "App not installed" before the password prompt—even with the correct password entered. Disabling Play Protect was the sole workaround to install the APK; otherwise, factory reset with offline sideloading was required.
