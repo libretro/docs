@@ -37,6 +37,7 @@ nav:
         - 'PlayStation 2': 'guides/install-ps2.md'
         - 'PlayStation 3': 'guides/install-ps3.md'
         - 'PlayStation Classic': 'guides/install-psc.md'
+      - 'TV': 'guides/tv.md'
       - 'Others':
         - 'Lakka':
           - 'Installing': 'guides/install-lakka.md'
