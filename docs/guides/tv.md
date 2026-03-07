@@ -18,9 +18,16 @@ Note that TVs with Auto Low Latency Mode (ALLM), often found in gaming TVs, auto
 
 For older TVs without a "Game" picture mode, use RetroArch's `Settings` → `Latency` → `Run-Ahead` feature to reduce latency effectively.
 
-### Optionally: Use Shaders and Overlays
+### Optionally: Use RetroArch's Shaders and Overlays
 
 Shaders and overlays in RetroArch may be used instead of TV picture modes to apply authentic retro display effects and decorative elements directly to the emulated image, bypassing the hardware-dependent post-processing in non-Game picture modes that introduces input lag.
 
-## Variable Refresh Rate (VRR)
+## Frame rate fluctuations
+
+### Frame rate fluctuations fixes
+
+#### Variable Refresh Rate (VRR)
 TVs with Variable Refresh Rate (VRR), often found in gaming TVs, independently eliminates screen tearing and stuttering from frame rate fluctuations, which Game picture mode/ALLM alone can't fix—resulting in noticeably smoother gameplay during intense scenes, which becomes increasingly important as graphics demands and refresh rates rise.
+
+#### Non-VRR TVs: Use RetroArch Synchronization features
+RetroArch's `Settings → Video → Synchronization` section provides `Vertical Sync (VSync)` (default: On), `Hard GPU Sync` (default: Off), and `Adaptive VSync` (default: Off) options that reduce tearing and stuttering by synchronizing frames to the display's refresh rate, mimicking some VRR benefits at the software level.
