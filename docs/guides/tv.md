@@ -12,7 +12,7 @@ On the TV, navigate to **Settings → Picture Mode/Style**, and select “Ga
 
 Even if you don't notice any latency on the TV model, it's still good practice to enable this mode to ensure minimal input lag.
 
-Note that TVs with Auto Low Latency Mode (ALLM), often found in gaming TVs, automatically detect gaming signals (such as from a console or streaming device) and switch to their low-latency preset. This means you can keep any picture mode active—such as Cinema or Sports—since ALLM will temporarily enable Game Mode optimizations during gameplay and then revert to your original mode once the signal changes (for example, when watching a movie).
+Auto Low Latency Mode (ALLM) is not helpful for RetroArch. While ALLM—often found in gaming TVs—automatically detects gaming signals (such as from a console or streaming device) and switches to a low-latency preset, allowing you to keep picture modes like Cinema or Sports active during gameplay before reverting when the signal changes (e.g., to a movie), RetroArch typically does not send the required HDMI ALLM gaming flag. Manual activation of Game Mode remains essential for emulation setups.
 
 | Manufacturer | Common Name(s) for ALLM              |
 |--------------|--------------------------------------|
