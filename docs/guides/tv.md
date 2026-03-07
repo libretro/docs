@@ -12,6 +12,8 @@ On the TV, navigate to **Settings → Picture Mode/Style**, and select “Ga
 
 Even if you don't notice any latency on the TV model, it's still good practice to enable this mode to ensure minimal input lag.
 
+Note that TVs with Auto Low Latency Mode (ALLM), often found in gaming TVs, automatically detect gaming signals (such as from a console or streaming device) and switch to their low-latency preset. This means you can keep any picture mode active—such as Cinema or Sports—since ALLM will temporarily enable Game Mode optimizations during gameplay and then revert to your original mode once the signal changes (for example, when watching a movie).
+
 #### Older TVs: Enable RetroArch `Run-Ahead`
 
 For older TVs without a "Game" picture mode, use RetroArch's `Settings` → `Latency` → `Run-Ahead` feature to reduce latency effectively.
@@ -19,3 +21,6 @@ For older TVs without a "Game" picture mode, use RetroArch's `Settings` → `Lat
 ### Optionally: Use Shaders and Overlays
 
 Shaders and overlays in RetroArch may be used instead of TV picture modes to apply authentic retro display effects and decorative elements directly to the emulated image, bypassing the hardware-dependent post-processing in non-Game picture modes that introduces input lag.
+
+## Variable Refresh Rate (VRR)
+TVs with Variable Refresh Rate (VRR), often found in gaming TVs, independently eliminates screen tearing and stuttering from frame rate fluctuations, which Game picture mode/ALLM alone can't fix—resulting in noticeably smoother gameplay during intense scenes, which becomes increasingly important as graphics demands and refresh rates rise.
