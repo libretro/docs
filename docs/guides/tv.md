@@ -37,10 +37,5 @@ Shaders and overlays in RetroArch may be used instead of TV picture modes to app
 
 ## Frame rate fluctuations
 
-### Frame rate fluctuations fixes
-
-#### Variable Refresh Rate (VRR)
-TVs with Variable Refresh Rate (VRR), often found in gaming TVs, independently eliminates screen tearing and stuttering from frame rate fluctuations, which Game picture mode/ALLM alone can't fix—resulting in noticeably smoother gameplay during intense scenes, which becomes increasingly important as graphics demands and refresh rates rise.
-
-#### Non-VRR TVs: Use RetroArch Synchronization features
-RetroArch's `Settings → Video → Synchronization` section provides `Vertical Sync (VSync)` (default: On), `Hard GPU Sync` (default: Off), and `Adaptive VSync` (default: Off) options that reduce tearing and stuttering by synchronizing frames to the display's refresh rate, mimicking some VRR benefits at the software level.
+### Frame rate fluctuations fix: Use RetroArch Synchronization features
+The Settings → Video → Synchronization menu in RetroArch provides several options to reduce screen tearing and stuttering by synchronizing frame output with the display’s refresh rate. These options—Vertical Sync (VSync) (default: On), Hard GPU Sync (default: Off), and Adaptive VSync (default: Off)—offer software-level synchronization that can approximate some of the benefits of Variable Refresh Rate (VRR) available on certain TVs. This is necessary because RetroArch does not support native HDMI signaling to automatically enable VRR on compatible displays.
