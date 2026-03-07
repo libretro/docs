@@ -8,11 +8,22 @@ Most TVs—both smart and non‑smart—ship with preconfigured picture modes th
 
 #### Modern TVs: Switch to "Game" picture mode
 
-On the TV, navigate to **Settings → Picture Mode/Style**, and select “Game” (or equivalent like Instant Game Response or Game Optimizer). This addresses the root cause of input lag.
+On the TV, navigate to **Settings → Picture Mode/Style**, and select “Game”. This addresses the root cause of input lag.
 
 Even if you don't notice any latency on the TV model, it's still good practice to enable this mode to ensure minimal input lag.
 
 Note that TVs with Auto Low Latency Mode (ALLM), often found in gaming TVs, automatically detect gaming signals (such as from a console or streaming device) and switch to their low-latency preset. This means you can keep any picture mode active—such as Cinema or Sports—since ALLM will temporarily enable Game Mode optimizations during gameplay and then revert to your original mode once the signal changes (for example, when watching a movie).
+
+| Manufacturer | Common Name(s) for ALLM              |
+|--------------|--------------------------------------|
+| LG           | Instant Game Response, Game Optimizer |
+| Sony         | Auto Genre Picture Mode              |
+| Samsung      | Auto Game Mode                       |
+| Vizio        | Auto Game Mode, ProGaming Engine     |
+| TCL          | Auto Game Mode, Game Master          |
+| Hisense      | Game Mode Pro                        |
+| Panasonic    | Auto Low Latency Mode                |
+| Philips      | Auto Low Latency Mode                |
 
 #### Older TVs: Enable RetroArch `Run-Ahead`
 
