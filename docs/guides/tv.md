@@ -14,7 +14,7 @@ Even if you don't notice any latency on the TV model, it's still good practice t
 
 Auto Low Latency Mode (ALLM) is not helpful for RetroArch. While ALLM—often found in gaming TVs—automatically detects gaming signals (such as from a console or streaming device) and switches to a low-latency preset, allowing you to keep picture modes like Cinema or Sports active during gameplay before reverting when the signal changes (e.g., to a movie), RetroArch typically does not send the required HDMI ALLM gaming flag. Manual activation of Game Mode remains essential for emulation setups.
 
-Thus, understanding that the manufacturer ALLM features with various names listed below are useless for RetroArch saves you from wasting time enabling them:
+Thus, understanding that the manufacturer ALLM features with various names listed below are useless for RetroArch saves you from wasting time evaluating them:
 
 | Manufacturer | Common Name(s) for ALLM              |
 |--------------|--------------------------------------|
