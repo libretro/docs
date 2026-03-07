@@ -16,14 +16,14 @@ Note that TVs with Auto Low Latency Mode (ALLM), often found in gaming TVs, auto
 
 | Manufacturer | Common Name(s) for ALLM              |
 |--------------|--------------------------------------|
-| LG           | Instant Game Response, Game Optimizer |
-| Sony         | Auto Genre Picture Mode              |
-| Samsung      | Auto Game Mode                       |
-| Vizio        | Auto Game Mode, ProGaming Engine     |
-| TCL          | Auto Game Mode, Game Master          |
 | Hisense      | Game Mode Pro                        |
+| LG           | Instant Game Response, Game Optimizer |
 | Panasonic    | Auto Low Latency Mode                |
 | Philips      | Auto Low Latency Mode                |
+| Samsung      | Auto Game Mode                       |
+| Sony         | Auto Genre Picture Mode              |
+| TCL          | Auto Game Mode, Game Master          |
+| Vizio        | Auto Game Mode, ProGaming Engine     |
 
 #### Older TVs: Enable RetroArch `Run-Ahead`
 
