@@ -41,7 +41,7 @@ To install RetroArch from Obtainium, follow these steps:
 
 ### Installation via F-Droid (incomplete)
 
-The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable release can be found in F-Droid for easier automatic updating. The APK supports ABIs: arm64-v8a, armeabi-v7a, x86, x86_64.
+The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable universal release (com.retroarch) can be found in F-Droid for easier automatic updating.
 
 To minimize installation size, the F-Droid release includes only a basic set of assets. For a complete setup matching the retroarch.com release it is necessary to visit `Main Menu` → `Online Updater` within the app to download all additional assets, controller profiles, overlays, shaders, and other required data.
 
@@ -51,9 +51,8 @@ The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#187
 
 RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
-[RetroArch Plus on the Play Store](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (Only for 64 bit devices, additional cores)
-
-[RetroArch on the Play Store](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (For 32 or 64 bit devices, fewer cores)
+- [RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices, additional cores
+- [RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): For 32 or 64 bit devices, fewer cores
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
@@ -102,8 +101,6 @@ If you get "App not installed," your Play Protect version may have a bug prevent
 
 ## RetroArch APK Package Variants
 
-RetroArch.com provides six Android APK builds with three distinct package names:
-
 | Type    | Variant          | Filename                          | Package Name       |
 |---------|------------------|-----------------------------------|--------------------|
 | Stable  | Universal        | `RetroArch.apk`                   | `com.retroarch`         |
@@ -112,6 +109,18 @@ RetroArch.com provides six Android APK builds with three distinct package names:
 | Nightly | Universal        | `YYYY-MM-DD-RetroArch.apk`        | `com.retroarch`         |
 | Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_aarch64.apk`| `com.retroarch.aarch64` |
 | Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_ra32.apk`   | `com.retroarch.ra32`    |
+
+### Universal APK
+
+The universal RetroArch package (`com.retroarch`) automatically detects the device's architecture and runs the appropriate ABI:
+- `arm64-v8a`: 64-bit ARM
+- `armeabi-v7a`: 32-bit ARM
+- `x86`: 32-bit Intel/AMD
+- `x86_64`: 64-bit Intel/AMD
+
+Android supports multiple instruction sets beyond ARM, including `x86` (32-bit Intel/AMD processors) and `x86_64` (64-bit Intel/AMD). These are used for Android-x86 projects, PC emulators, select Chromebooks, and some tablets running Android on Intel hardware.
+
+There are no standalone `x86` or `x86_64` releases of RetroArch like the 32-bit and 64-bit ARM variants; the universal package (`com.retroarch`) must be installed to access these ABIs.
 
 ### Multi-Package Handling
 Android 7.0+ (Nougat) supports multi-package handling, while earlier versions treat distinct package names as conflicting upgrades. However, multi-package handling makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
