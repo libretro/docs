@@ -1,6 +1,6 @@
 # Downloading, Installing and Updating RetroArch for Android devices.
 
-## Non-Google Play sources
+## Non-Google Play Sources
 
 ### Installation via Sideloading
 Sideloading Android apps involves installing APK files from sources outside official stores. Apps like Obtainium automate APK downloads for the latest versions, avoiding issues with manual methods such as lengthy repeated downloads/installations and missed updates.
@@ -10,6 +10,13 @@ To sideload successfully:
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
 #### From RetroArch.com Downloads
+retroarch.com offers six apk builds:
+* Architecture-specific builds: RetroArch_aarch64.apk and RetroArch_ra32.apk for stable, and YYYY-MM-DD-RetroArch_aarch64.apk and YYYY-MM-DD-RetroArch_ra32.apk for nightly. APK's that contain "aarch64.apk", and "ra32.apk" in the filename has package name com.retroarch.aarch64 and com.retroarch.ra32 respective when installed in Android.
+* Universal package: RetroArch.apk for stable, and YYYY-MM-DD-RetroArch.apk for nightly. Their package name is com.retroarch when installed in Android.
+
+Android 7.0 (Nougat) or later supports installing both architecture-specific RetroArch builds (com.retroarch.aarch64 and com.retroarch.ra32) alongside the universal package (com.retroarch) without forcing an upgrade. Android introduced improved multi-package handling in 7.0, treating distinct package names as separate apps rather than conflicting upgrades like in earlier versions.
+
+It is not possible to install both stable and nightly builds of the same apk on any system.
 
 ##### Manual Downloads
 
@@ -99,6 +106,24 @@ If you get "App not installed," your Play Protect version may have a bug prevent
   - You may be asked whether to "Pause" scanning temporarily or "Turn off" permanently — choose the option you prefer.
 * Install the APK — Play Protect will no longer interfere with the process.
 * Note: Android may prompt you to re-enable Play Protect each time you sideload an APK. If your goal is to keep it permanently turned off, always select "No" when prompted.
+
+## RetroArch APK Package Variants
+
+RetroArch.com provides six Android APK builds with distinct package names:
+
+| Type    | Variant          | Filename                          | Package Name       |
+|---------|------------------|-----------------------------------|--------------------|
+| Stable  | Universal        | `RetroArch.apk`                   | `com.retroarch`         |
+| Stable  | Architecture-specific | `RetroArch_aarch64.apk`        | `com.retroarch.aarch64` |
+| Stable  | Architecture-specific | `RetroArch_ra32.apk`             | `com.retroarch.ra32`    |
+| Nightly | Universal        | `YYYY-MM-DD-RetroArch.apk`        | `com.retroarch`         |
+| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_aarch64.apk`| `com.retroarch.aarch64` |
+| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_ra32.apk`   | `com.retroarch.ra32`    |
+
+### Compatibility Notes
+- **Android 7.0+ (Nougat)**: Supports multi-package handling. This makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
+- **Pre-7.0**: Distinct package names treated as conflicting upgrades.
+- **Stable vs Nightly**: Cannot coexist for the same package name on any Android version.
 
 ## References
 Case Report: On Android 10 with LG G7 ThinQ (LM-G710EM), after factory reset, signing into Play Store (allowing self-update and setup), sideloading RetroArch 1.22.2 from retroarch.com and tapping "Install anyway" triggers "App not installed" before the password prompt—even with the correct password entered. Disabling Play Protect was the sole workaround to install the APK; otherwise, factory reset with offline sideloading was required.
