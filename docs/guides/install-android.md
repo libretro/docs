@@ -109,7 +109,7 @@ If you get "App not installed," your Play Protect version may have a bug prevent
 
 ## RetroArch APK Package Variants
 
-RetroArch.com provides six Android APK builds with distinct package names:
+RetroArch.com provides six Android APK builds with three distinct package names:
 
 | Type    | Variant          | Filename                          | Package Name       |
 |---------|------------------|-----------------------------------|--------------------|
