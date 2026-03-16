@@ -11,6 +11,8 @@
 | Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_aarch64.apk`| `com.retroarch.aarch64` |
 | Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_ra32.apk`   | `com.retroarch.ra32`    |
 
+Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
+
 ### Universal APK
 
 The universal RetroArch package (`com.retroarch`) automatically detects the device's architecture and runs the appropriate application binary interface (ABI):
@@ -53,10 +55,9 @@ To sideload successfully:
 2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
 3. Select Install.
 
-####### From Buildbot Archives
+**From Buildbot Archives**
 
-All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing. Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it.
-> 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
+All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing.
 
 ##### Installation via Obtainium
 "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
