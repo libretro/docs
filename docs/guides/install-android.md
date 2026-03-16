@@ -123,7 +123,7 @@ RetroArch.com provides six Android APK builds with three distinct package names:
 ### Compatibility Notes
 - **Android 7.0+ (Nougat)**: Supports multi-package handling. This makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
 - **Pre-7.0**: Distinct package names treated as conflicting upgrades.
-- **Stable vs Nightly**: Cannot coexist for the same package name on any Android version.
+- **Installing both stable and nightly builds on the same device**: To install both the stable and nightly versions of RetroArch, ensure that the APKs use different package names, since Android does not allow multiple apps with the same package name to coexist. For example, on a typical 64-bit Android system, you can install the stable RetroArch.apk (com.retroarch) alongside YYYY-MM-DD-RetroArch_aarch64.apk (com.retroarch.aarch64), but you cannot install RetroArch.apk (com.retroarch) together with YYYY-MM-DD-RetroArch.apk (com.retroarch), nor RetroArch_aarch64.apk (com.retroarch.aarch64) together with YYYY-MM-DD-RetroArch_aarch64.apk (com.retroarch.aarch64).
 
 ## References
 Case Report: On Android 10 with LG G7 ThinQ (LM-G710EM), after factory reset, signing into Play Store (allowing self-update and setup), sideloading RetroArch 1.22.2 from retroarch.com and tapping "Install anyway" triggers "App not installed" before the password prompt—even with the correct password entered. Disabling Play Protect was the sole workaround to install the APK; otherwise, factory reset with offline sideloading was required.
