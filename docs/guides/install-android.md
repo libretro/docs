@@ -10,13 +10,6 @@ To sideload successfully:
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
 #### From RetroArch.com Downloads
-retroarch.com offers six apk builds:
-* Architecture-specific builds: RetroArch_aarch64.apk and RetroArch_ra32.apk for stable, and YYYY-MM-DD-RetroArch_aarch64.apk and YYYY-MM-DD-RetroArch_ra32.apk for nightly. APK's that contain "aarch64.apk", and "ra32.apk" in the filename has package name com.retroarch.aarch64 and com.retroarch.ra32 respective when installed in Android.
-* Universal package: RetroArch.apk for stable, and YYYY-MM-DD-RetroArch.apk for nightly. Their package name is com.retroarch when installed in Android.
-
-Android 7.0 (Nougat) or later supports installing both architecture-specific RetroArch builds (com.retroarch.aarch64 and com.retroarch.ra32) alongside the universal package (com.retroarch) without forcing an upgrade. Android introduced improved multi-package handling in 7.0, treating distinct package names as separate apps rather than conflicting upgrades like in earlier versions.
-
-It is not possible to install both stable and nightly builds of the same apk on any system.
 
 ##### Manual Downloads
 
