@@ -93,7 +93,7 @@ A more detailed difference between the Play Store versions can be found in [this
 DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is avalible in F-Droid.
 
 ##### RetroArch (stable 32/64-bit, Play Store)
-[RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): For 32 or 64 bit devices, fewer cores
+[RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): Supports both 32- and 64-bit devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
 
 ##### RetroArch Plus (stable 64-bit only, Play Store)
 [RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices, additional cores.
