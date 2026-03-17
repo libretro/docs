@@ -88,7 +88,7 @@ The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#187
 
 RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
-- [RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices, additional cores
+- [RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices, additional cores. Note: Despite the implication of superiority in its name, RetroArch Plus builds support approximately 80 fewer cores than APKs from retroarch.com across all variants.
 - [RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): For 32 or 64 bit devices, fewer cores
 
 A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
