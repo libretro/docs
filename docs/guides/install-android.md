@@ -15,13 +15,8 @@ Package names are named with an architecture suffix: `aarch64` is a 64-bit build
 ### Multi-Package Installation
 Android 7.0+ (Nougat) supports multi-package handling, while earlier versions treat distinct package names as conflicting upgrades. However, multi-package handling makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
   
-For example, to install both the stable and nightly versions of RetroArch on a typical 64-bit device, you can install:
-- Stable release (`com.retroarch`) + 64-bit nightly (`com.retroarch.aarch64`)
-- 64-bit release (`com.retroarch.aarch64`) + stable nightly (`com.retroarch`)
-
-However, you cannot install:
-- Stable + stable nightly (both `com.retroarch`)
-- 64-bit + 64-bit nightly (both `com.retroarch.aarch64`)
+For example, on a typical 64-bit device, install both RetroArch variants:
+- `com.retroarch` + `com.retroarch.aarch64`
 
 ## Sources
 
@@ -118,6 +113,9 @@ However, you cannot install:
   </tbody>
 </table>
 
+To elaborate on the [Multi-Package Installation](#multi-package-installation) example: On a typical 64-bit device, install both stable and nightly RetroArch versions as follows:
+- Stable `com.retroarch` + nightly `com.retroarch.aarch64`
+- Stable `com.retroarch.aarch64` + nightly `com.retroarch`
 
 ### Non-Play Store Sources
 
