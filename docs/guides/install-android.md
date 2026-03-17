@@ -96,9 +96,7 @@ DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Stor
 [RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): Supports both 32- and 64-bit devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
 
 ##### RetroArch Plus (stable 64-bit only, Play Store)
-[RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices, additional cores.
-
-Despite the implication of superiority in its name, RetroArch Plus builds support approximately 80 fewer cores than APKs from retroarch.com across all variants. Also, RetroArch Plus is not avalible on all Android devices even if they have an up to date Android system.
+[RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices. Includes more cores than the standard RetroArch available on the Play Store. Note: Despite the implication of superiority in its name, RetroArch Plus builds support approximately 80 fewer cores than APKs from retroarch.com across all variants. Also, RetroArch Plus is not avalible on all Android devices even if they have an up to date Android system.
 
 RetroArch Plus is available on Google Pixel phones because their pure Google hardware and stock OS reliably pass compatibility checks, even for legacy apps. Native Play Store prioritizes "safe" devices and hides the outdated APK on incompatible ones—like those with non-stock OS skins, slower updates, or mid-range SoCs that trigger stricter enforcement of policies like target API levels and storage access. Aurora Store bypasses these filters entirely, making it a reliable workaround for such devices.
 
