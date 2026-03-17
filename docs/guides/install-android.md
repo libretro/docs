@@ -2,14 +2,11 @@
 
 ## RetroArch APK Package Variants
 
-| Type    | Variant          | Filename                          | Package Name       |
-|---------|------------------|-----------------------------------|--------------------|
-| Stable  | Universal        | `RetroArch.apk`                   | `com.retroarch`         |
-| Stable  | Architecture-specific | `RetroArch_aarch64.apk`        | `com.retroarch.aarch64` |
-| Stable  | Architecture-specific | `RetroArch_ra32.apk`             | `com.retroarch.ra32`    |
-| Nightly | Universal        | `YYYY-MM-DD-RetroArch.apk`        | `com.retroarch`         |
-| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_aarch64.apk`| `com.retroarch.aarch64` |
-| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_ra32.apk`   | `com.retroarch.ra32`    |
+| Variant               | Package Name            |
+|-----------------------|-------------------------|
+| Universal             | `com.retroarch`         |
+| Architecture-specific | `com.retroarch.aarch64` |
+| Architecture-specific | `com.retroarch.ra32`    |
 
 Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
@@ -29,12 +26,12 @@ There are no standalone `x86` or `x86_64` releases of RetroArch like the 32-bit 
 Android 7.0+ (Nougat) supports multi-package handling, while earlier versions treat distinct package names as conflicting upgrades. However, multi-package handling makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
   
 For example, to install both the stable and nightly versions of RetroArch on a typical 64-bit device, you can install:
-- the stable `RetroArch.apk` (`com.retroarch`) alongside `YYYY-MM-DD-RetroArch_aarch64.apk` (`com.retroarch.aarch64`)
-- or `RetroArch_aarch64.apk` (`com.retroarch.aarch64`) alongside `YYYY-MM-DD-RetroArch.apk` (`com.retroarch`)
+- Stable release (`com.retroarch`) + 64-bit nightly (`com.retroarch.aarch64`)
+- 64-bit release (`com.retroarch.aarch64`) + stable nightly (`com.retroarch`)
 
 However, you cannot install:
-- `RetroArch.apk` together with `YYYY-MM-DD-RetroArch.apk` (both `com.retroarch`)
-- nor `RetroArch_aarch64.apk` together with `YYYY-MM-DD-RetroArch_aarch64.apk` (both `com.retroarch.aarch64`)
+- Stable + stable nightly (both `com.retroarch`)
+- 64-bit + 64-bit nightly (both `com.retroarch.aarch64`)
 
 ## Sources
 
@@ -48,6 +45,17 @@ To sideload successfully:
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
 ##### From RetroArch.com Downloads
+
+| Type    | Variant               | Filename                           | Version identifier   | Package Name            |
+|---------|-----------------------|------------------------------------|----------------------|-------------------------|
+| Stable  | Universal             | `RetroArch.apk`                    | [version number]_GIT | `com.retroarch`         |
+| Stable  | Architecture-specific | `RetroArch_aarch64.apk`            | [version number]_GIT | `com.retroarch.aarch64` |
+| Stable  | Architecture-specific | `RetroArch_ra32.apk`               | [version number]_GIT | `com.retroarch.ra32`    |
+| Nightly | Universal             | `YYYY-MM-DD-RetroArch.apk`         | [version number]_GIT | `com.retroarch`         |
+| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_aarch64.apk` | [version number]_GIT | `com.retroarch.aarch64` |
+| Nightly | Architecture-specific | `YYYY-MM-DD-RetroArch_ra32.apk`    | [version number]_GIT | `com.retroarch.ra32`    |
+
+Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
 ###### Manual Downloads
 
@@ -78,6 +86,11 @@ To install RetroArch from Obtainium, follow these steps:
 
 #### Installation via F-Droid (stable 32/64-bit) (incomplete)
 
+| Type    | Variant          | Filename                            | Version identifier |  Package Name       |
+|---------|------------------|-------------------------------------|--------------------|---------------------|
+| Stable  | Universal        | `com.retroarch_[UNIXTIMESTAMP].apk` | [version number]   | `com.retroarch`     |
+
+
 The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable universal release (com.retroarch) can be found in F-Droid for easier automatic updating.
 
 To minimize installation size, the F-Droid release includes only a basic set of assets. For a complete setup matching the retroarch.com release it is necessary to visit `Main Menu` → `Online Updater` within the app to download all additional assets, controller profiles, overlays, shaders, and other required data.
@@ -85,6 +98,11 @@ To minimize installation size, the F-Droid release includes only a basic set of 
 The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Temporary workaround: Main Menu → Online Updater → Update Assets.
 
 ### Installation via Google Play servers (obsolete)
+
+| Type    | Variant               | Version identifier             | Package Name            |
+|---------|-----------------------|--------------------------------|-------------------------|
+| Stable  | Universal             | [version number] (YYYY-MM-DD)  | `com.retroarch`         |
+| Stable  | Architecture-specific | [version number] (YYYY-MM-DD)  | `com.retroarch.aarch64` |
 
 The stable (but outdated) release of RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
