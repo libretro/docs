@@ -27,17 +27,97 @@ However, you cannot install:
 
 ### Overview
 
-| Source             | Filename                              | Type    | Title               | Version identifier            | Package name            |
-|--------------------|---------------------------------------|---------|---------------------|-------------------------------|-------------------------|
-| RetroArch official | `RetroArch.apk`                       | Stable  | RetroArch           | [version number]_GIT          | `com.retroarch`         |
-| RetroArch official | `RetroArch_aarch64.apk`               | Stable  | RetroArch (AArch64) | [version number]_GIT          | `com.retroarch.aarch64` |
-| RetroArch official | `RetroArch_ra32.apk`                  | Stable  | RetroArch (32-bit)  | [version number]_GIT          | `com.retroarch.ra32`    |
-| RetroArch official | `YYYY-MM-DD-RetroArch.apk`            | Nightly | RetroArch           | [version number]_GIT          | `com.retroarch`         |
-| RetroArch official | `YYYY-MM-DD-RetroArch_aarch64.apk`    | Nightly | RetroArch (AArch64) | [version number]_GIT          | `com.retroarch.aarch64` |
-| RetroArch official | `YYYY-MM-DD-RetroArch_ra32.apk`       | Nightly | RetroArch (32-bit)  | [version number]_GIT          | `com.retroarch.ra32`    |
-| F-Droid            | `com.retroarch_[UNIXTIMESTAMP].apk`   | Stable  | RetroArch           | [version number]              | `com.retroarch`         |
-| Play Store         | -                                     | Stable  | RetroArch           | [version number] (YYYY-MM-DD) | `com.retroarch`         |
-| Play Store         | -                                     | Stable  | RetroArch Plus      | [version number] (YYYY-MM-DD) | `com.retroarch.aarch64` |
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+      <th colspan="3">Installation</th>
+    </tr>
+    <tr>
+      <th>Source</th>
+      <th>Filename</th>
+      <th>Type</th>
+      <th>Title</th>
+      <th>Version identifier</th>
+      <th>Package name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>RetroArch.apk</code></td>
+      <td>Stable</td>
+      <td>RetroArch</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch</code></td>
+    </tr>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>RetroArch_aarch64.apk</code></td>
+      <td>Stable</td>
+      <td>RetroArch (AArch64)</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch.aarch64</code></td>
+    </tr>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>RetroArch_ra32.apk</code></td>
+      <td>Stable</td>
+      <td>RetroArch (32-bit)</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch.ra32</code></td>
+    </tr>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>YYYY-MM-DD-RetroArch.apk</code></td>
+      <td>Nightly</td>
+      <td>RetroArch</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch</code></td>
+    </tr>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>YYYY-MM-DD-RetroArch_aarch64.apk</code></td>
+      <td>Nightly</td>
+      <td>RetroArch (AArch64)</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch.aarch64</code></td>
+    </tr>
+    <tr>
+      <td>RetroArch official</td>
+      <td><code>YYYY-MM-DD-RetroArch_ra32.apk</code></td>
+      <td>Nightly</td>
+      <td>RetroArch (32-bit)</td>
+      <td>[version number]_GIT</td>
+      <td><code>com.retroarch.ra32</code></td>
+    </tr>
+    <tr>
+      <td>F-Droid</td>
+      <td><code>com.retroarch_[UNIXTIMESTAMP].apk</code></td>
+      <td>Stable</td>
+      <td>RetroArch</td>
+      <td>[version number]</td>
+      <td><code>com.retroarch</code></td>
+    </tr>
+    <tr>
+      <td>Play Store</td>
+      <td>-</td>
+      <td>Stable</td>
+      <td>RetroArch</td>
+      <td>[version number] (YYYY-MM-DD)</td>
+      <td><code>com.retroarch</code></td>
+    </tr>
+    <tr>
+      <td>Play Store</td>
+      <td>-</td>
+      <td>Stable</td>
+      <td>RetroArch Plus</td>
+      <td>[version number] (YYYY-MM-DD)</td>
+      <td><code>com.retroarch.aarch64</code></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Non-Play Store Sources
 
