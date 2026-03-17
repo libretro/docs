@@ -27,17 +27,17 @@ However, you cannot install:
 
 ### Overview
 
-| Source             | Filename                              | Type    | Version identifier            | Package name            |
-|--------------------|---------------------------------------|---------|-------------------------------|-------------------------|
-| RetroArch official | `RetroArch.apk`                       | Stable  | [version number]_GIT          | `com.retroarch`         |
-| RetroArch official | `RetroArch_aarch64.apk`               | Stable  | [version number]_GIT          | `com.retroarch.aarch64` |
-| RetroArch official | `RetroArch_ra32.apk`                  | Stable  | [version number]_GIT          | `com.retroarch.ra32`    |
-| RetroArch official | `YYYY-MM-DD-RetroArch.apk`            | Nightly | [version number]_GIT          | `com.retroarch`         |
-| RetroArch official | `YYYY-MM-DD-RetroArch_aarch64.apk`    | Nightly | [version number]_GIT          | `com.retroarch.aarch64` |
-| RetroArch official | `YYYY-MM-DD-RetroArch_ra32.apk`       | Nightly | [version number]_GIT          | `com.retroarch.ra32`    |
-| F-Droid            | `com.retroarch_[UNIXTIMESTAMP].apk`   | Stable  | [version number]              | `com.retroarch`         |
-| Play Store         | -                                     | Stable  | [version number] (YYYY-MM-DD) | `com.retroarch`         |
-| Play Store         | -                                     | Stable  | [version number] (YYYY-MM-DD) | `com.retroarch.aarch64` |
+| Source             | Filename                              | Type    | Title               | Version identifier            | Package name            |
+|--------------------|---------------------------------------|---------|---------------------|-------------------------------|-------------------------|
+| RetroArch official | `RetroArch.apk`                       | Stable  | RetroArch           | [version number]_GIT          | `com.retroarch`         |
+| RetroArch official | `RetroArch_aarch64.apk`               | Stable  | RetroArch (AArch64) | [version number]_GIT          | `com.retroarch.aarch64` |
+| RetroArch official | `RetroArch_ra32.apk`                  | Stable  | RetroArch (32-bit)  | [version number]_GIT          | `com.retroarch.ra32`    |
+| RetroArch official | `YYYY-MM-DD-RetroArch.apk`            | Nightly | RetroArch           | [version number]_GIT          | `com.retroarch`         |
+| RetroArch official | `YYYY-MM-DD-RetroArch_aarch64.apk`    | Nightly | RetroArch (AArch64) | [version number]_GIT          | `com.retroarch.aarch64` |
+| RetroArch official | `YYYY-MM-DD-RetroArch_ra32.apk`       | Nightly | RetroArch (32-bit)  | [version number]_GIT          | `com.retroarch.ra32`    |
+| F-Droid            | `com.retroarch_[UNIXTIMESTAMP].apk`   | Stable  | RetroArch           | [version number]              | `com.retroarch`         |
+| Play Store         | -                                     | Stable  | RetroArch           | [version number] (YYYY-MM-DD) | `com.retroarch`         |
+| Play Store         | -                                     | Stable  | RetroArch Plus      | [version number] (YYYY-MM-DD) | `com.retroarch.aarch64` |
 
 ### Non-Play Store Sources
 
