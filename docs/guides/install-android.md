@@ -1,4 +1,4 @@
-# Downloading, Installing and Updating RetroArch for Android devices.
+# Downloading, Installing and Updating RetroArch for Android devices
 
 ## RetroArch APK Package Variants
 
