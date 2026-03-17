@@ -2,25 +2,15 @@
 
 ## RetroArch APK Package Variants
 
-| Variant               | Package Name            |
-|-----------------------|-------------------------|
-| Universal             | `com.retroarch`         |
-| Architecture-specific | `com.retroarch.aarch64` |
-| Architecture-specific | `com.retroarch.ra32`    |
+| Package Name            | Supported application binary interface (ABI) | Architectures                                              |
+|-------------------------|----------------------------------------------|------------------------------------------------------------|
+| `com.retroarch`         | `arm64-v8a`, `armeabi-v7a`, `x86`, `x86_64`  | 64-bit ARM, 32-bit ARM, 32-bit Intel/AMD, 64-bit Intel/AMD |
+| `com.retroarch.aarch64` | `arm64-v8a`                                  | 64-bit ARM                                                 |
+| `com.retroarch.ra32`    | `armeabi-v7a`                                | 32-bit ARM                                                 |
 
-Builds are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
+Package names are named with an architecture suffix: `.aarch64` is a 64-bit build, `.ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
-### Universal APK
-
-The universal RetroArch package (`com.retroarch`) automatically detects the device's architecture and runs the appropriate application binary interface (ABI):
-- `arm64-v8a`: 64-bit ARM
-- `armeabi-v7a`: 32-bit ARM
-- `x86`: 32-bit Intel/AMD
-- `x86_64`: 64-bit Intel/AMD
-
-Android supports multiple instruction sets beyond ARM, including `x86` (32-bit Intel/AMD processors) and `x86_64` (64-bit Intel/AMD). These are used for Android-x86 projects, PC emulators, select Chromebooks, and some tablets running Android on Intel hardware.
-
-There are no standalone `x86` or `x86_64` releases of RetroArch like the 32-bit and 64-bit ARM variants; the universal package (`com.retroarch`) must be installed to access these ABIs.
+`com.retroarch` supports multiple instruction sets beyond ARM, including `x86` (32-bit Intel/AMD processors) and `x86_64` (64-bit Intel/AMD). These are used for Android-x86 projects, PC emulators, select Chromebooks, and some tablets running Android on Intel hardware. There are no standalone `x86` or `x86_64` releases of RetroArch like the 32-bit and 64-bit ARM variants; the universal package (`com.retroarch`) must be installed to access these ABIs.
 
 ### Multi-Package Installation
 Android 7.0+ (Nougat) supports multi-package handling, while earlier versions treat distinct package names as conflicting upgrades. However, multi-package handling makes it possible to install the universal package (com.retroarch) alongside the appropriate architecture-specific build (com.retroarch.aarch64 **or** com.retroarch.ra32, depending on device) without forcing an upgrade.
