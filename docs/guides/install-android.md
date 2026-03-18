@@ -173,10 +173,10 @@ Both RetroArch, and RetroArch Plus is avalaible on Play Store and. A more detail
 
 DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is avalible in F-Droid.
 
-#### RetroArch on Play Store
+#### RetroArch on Play servers
 [RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en): It uses the package `com.retroarch`, which supports both 32- and 64-bit ARM devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
 
-#### RetroArch Plus on Play Store
+#### RetroArch Plus on Play servers
 [RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US): Uses the package `com.retroarch.aarch64`, supporting only 64-bit ARM devices. It includes more cores than standard RetroArch but ~80 fewer cores than retroarch.com APKs across all variants. Note: Despite its name, RetroArch Plus isn't available on all up-to-date Android devices.
 
 RetroArch Plus is available on Google Pixel phones because their pure Google hardware and stock OS reliably pass compatibility checks, even for legacy apps. Native Play Store prioritizes "safe" devices and hides the outdated APK on incompatible ones—like those with non-stock OS skins, slower updates, or mid-range SoCs that trigger stricter enforcement of policies like target API levels and storage access. Aurora Store bypasses these filters entirely, making it a reliable workaround for such devices.
