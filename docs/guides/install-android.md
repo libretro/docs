@@ -8,7 +8,7 @@
 | `com.retroarch.aarch64` | `arm64-v8a`                                  | 64-bit ARM                                                 |
 | `com.retroarch.ra32`    | `armeabi-v7a`                                | 32-bit ARM                                                 |
 
-Package names are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. This suffix is also used in retroarch.comi apk filenamess. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
+Package names are named with an architecture suffix: `aarch64` is a 64-bit build, `ra32` is a 32-bit build, and no suffix is a universal build that opts for 64-bit if your system supports it. This suffix also appears in RetroArch.com APK filenames. 32-bit support on Android is slowly being phased out by the industry, but these builds remain available for older devices or specific use cases.
 
 `com.retroarch` supports multiple instruction sets beyond ARM, including `x86` (32-bit Intel/AMD processors) and `x86_64` (64-bit Intel/AMD). These are used for Android-x86 projects, PC emulators, select Chromebooks, and some tablets running Android on Intel hardware. There are no standalone `x86` or `x86_64` releases of RetroArch like the 32-bit and 64-bit ARM variants; the universal package (`com.retroarch`) must be installed to access these ABIs.
 
@@ -126,7 +126,7 @@ To sideload successfully:
 * The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), enable the [install unknown apps](#install-unknown-apps) permission for it. This step is straightforward, and most Android users can complete it without consulting the detailed instructions.
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
-##### From RetroArch.com Downloads
+##### RetroArch.com
 
 ###### Manual Downloads
 
@@ -155,7 +155,7 @@ To install RetroArch from Obtainium, follow these steps:
 * Open the newly added RetroArch entry.
 * Tap **Install** to download and install the app.
 
-#### Installation via F-Droid (stable 32/64-bit) (incomplete)
+#### F-Droid (stable 32/64-bit) (incomplete)
 
 The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable universal release (com.retroarch) can be found in F-Droid for easier automatic updating.
 
@@ -163,7 +163,7 @@ To minimize installation size, the F-Droid release includes only a basic set of 
 
 The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Temporary workaround: Main Menu → Online Updater → Update Assets.
 
-### Installation via Google Play servers (obsolete)
+### Google Play servers (obsolete)
 
 The stable (but outdated) release of RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
