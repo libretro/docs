@@ -155,29 +155,34 @@ To install RetroArch from Obtainium, follow these steps:
 * Open the newly added RetroArch entry.
 * Tap **Install** to download and install the app.
 
-#### F-Droid (stable 32/64-bit) (incomplete)
+#### F-Droid
 
-The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable universal release (com.retroarch) can be found in F-Droid for easier automatic updating.
+The F-Droid release of [RetroArch](https://f-droid.org/packages/com.retroarch/) offers the recent stable `com.retroarch` (32/64-bit ARM) package can be found in F-Droid for easier automatic updating.
 
 To minimize installation size, the F-Droid release includes only a basic set of assets. For a complete setup matching the retroarch.com release it is necessary to visit `Main Menu` → `Online Updater` within the app to download all additional assets, controller profiles, overlays, shaders, and other required data.
 
+##### F-Droid issue
+
 The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#18756](https://github.com/libretro/RetroArch/issues/18756)). Temporary workaround: Main Menu → Online Updater → Update Assets.
 
-### Google Play servers (obsolete)
+### Google Play servers
 
-The stable (but outdated) release of RetroArch is available on the Google Play Store, but has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
+RetroArch is available on the Google Play Store, but is outdated and thus not recommended (see [Google Play servers issue](#google-play-servers-issue)).
 
-A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
+Both RetroArch, and RetroArch Plus is avalaible on Play Store and. A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
 DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is avalible in F-Droid.
 
-#### RetroArch (stable 32/64-bit, Play Store)
-[RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en "RetroArch") (com.retroarch): Supports both 32- and 64-bit devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
+#### RetroArch on Play Store
+[RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en): It uses the package `com.retroarch`, which supports both 32- and 64-bit ARM devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
 
-#### RetroArch Plus (stable 64-bit only, Play Store)
-[RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US "RetroArch64") (com.retroarch.aarch64): Only for 64 bit devices. Includes more cores than the standard RetroArch available on the Play Store. Note: Despite the implication of superiority in its name, RetroArch Plus builds support approximately 80 fewer cores than APKs from retroarch.com across all variants. Also, RetroArch Plus is not avalible on all Android devices even if they have an up to date Android system.
+#### RetroArch Plus on Play Store
+[RetroArch Plus](https://play.google.com/store/apps/details?id=com.retroarch.aarch64&hl=en_US): Uses the package `com.retroarch.aarch64`, supporting only 64-bit ARM devices. It includes more cores than standard RetroArch but ~80 fewer cores than retroarch.com APKs across all variants. Note: Despite its name, RetroArch Plus isn't available on all up-to-date Android devices.
 
 RetroArch Plus is available on Google Pixel phones because their pure Google hardware and stock OS reliably pass compatibility checks, even for legacy apps. Native Play Store prioritizes "safe" devices and hides the outdated APK on incompatible ones—like those with non-stock OS skins, slower updates, or mid-range SoCs that trigger stricter enforcement of policies like target API levels and storage access. Aurora Store bypasses these filters entirely, making it a reliable workaround for such devices.
+
+#### Google Play servers issue
+The Play Store releases of RetroArch has not been updated for years due to Play Store policy changes. You may choose to use this older version, but it is not recommended.
 
 ### Installation notes
 
