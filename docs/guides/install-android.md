@@ -41,7 +41,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>RetroArch.apk</code></td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch</code></td>
@@ -49,7 +49,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>RetroArch_aarch64.apk</code></td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch (AArch64)</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch.aarch64</code></td>
@@ -57,7 +57,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>RetroArch_ra32.apk</code></td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch (32-bit)</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch.ra32</code></td>
@@ -65,7 +65,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>YYYY-MM-DD-RetroArch.apk</code></td>
-      <td>Nightly</td>
+      <td><a href="https://buildbot.libretro.com/nightly/android/">Nightly</a></td>
       <td>RetroArch</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch</code></td>
@@ -73,7 +73,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>YYYY-MM-DD-RetroArch_aarch64.apk</code></td>
-      <td>Nightly</td>
+      <td><a href="https://buildbot.libretro.com/nightly/android/">Nightly</a></td>
       <td>RetroArch (AArch64)</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch.aarch64</code></td>
@@ -81,7 +81,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>RetroArch official</td>
       <td><code>YYYY-MM-DD-RetroArch_ra32.apk</code></td>
-      <td>Nightly</td>
+      <td><a href="https://buildbot.libretro.com/nightly/android/">Nightly</a></td>
       <td>RetroArch (32-bit)</td>
       <td>[version number]_GIT</td>
       <td><code>com.retroarch.ra32</code></td>
@@ -89,7 +89,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>F-Droid</td>
       <td><code>com.retroarch_[UNIXTIMESTAMP].apk</code></td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch</td>
       <td>[version number]</td>
       <td><code>com.retroarch</code></td>
@@ -97,7 +97,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>Play Store</td>
       <td>-</td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch</td>
       <td>[version number] (YYYY-MM-DD)</td>
       <td><code>com.retroarch</code></td>
@@ -105,7 +105,7 @@ For example, on a typical 64-bit device, install both RetroArch variants:
     <tr>
       <td>Play Store</td>
       <td>-</td>
-      <td>Stable</td>
+      <td><a href="https://buildbot.libretro.com/stable/">Stable</a></td>
       <td>RetroArch Plus</td>
       <td>[version number] (YYYY-MM-DD)</td>
       <td><code>com.retroarch.aarch64</code></td>
