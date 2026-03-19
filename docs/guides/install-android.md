@@ -113,10 +113,6 @@ For example, on a typical 64-bit device, install both RetroArch variants:
   </tbody>
 </table>
 
-To elaborate on the [Multi-Package Installation](#multi-package-installation) example: On a typical 64-bit device, install both stable and nightly RetroArch versions as follows:
-- Stable `com.retroarch` + nightly `com.retroarch.aarch64`
-- Stable `com.retroarch.aarch64` + nightly `com.retroarch`
-
 ### Non-Play Store Sources
 
 #### Installation via Sideloading
@@ -154,6 +150,28 @@ To install RetroArch from Obtainium, follow these steps:
   * When the “Import app” prompt appears, tap **Continue**.
 * Open the newly added RetroArch entry.
 * Tap **Install** to download and install the app.
+
+##### RetroArch.com Package Installation Notes
+
+###### Install both stable and nightly RetroArch 
+
+This section expands on the [Multi-Package Installation](#multi-package-installation) documentation, focusing specifically on retroarch.com builds.
+
+On a typical 64-bit device, install both stable and nightly RetroArch versions as follows:
+- Stable `com.retroarch` + nightly `com.retroarch.aarch64`, or
+- Stable `com.retroarch.aarch64` + nightly `com.retroarch`
+
+###### Compatibility of `com.retroarch.ra32` on 64-bit ARM Devices
+
+The 32‑bit `com.retroarch.ra32` package can be installed on most Android devices because they run 64‑bit ARM processors, which are still able to execute 32‑bit code. This setup is mainly useful for development and testing, since new 32‑bit ARM devices are no longer sold
+The device must support 32‑bit execution, as verified by:
+
+```
+adb shell getprop ro.zygote                  # → zygote64_32
+adb shell getprop ro.product.cpu.abilist     # → arm64-v8a,armeabi-v7a,armeabi
+```
+
+Note: Google Pixel 6a and newer ship with 64‑bit‑only system images (ro.zygote=zygote64, no 32‑bit ABI support). On such devices, pure 32‑bit APKs will fail to install with the error INSTALL_FAILED_NO_MATCHING_ABIS.
 
 #### F-Droid
 
