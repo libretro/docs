@@ -171,7 +171,7 @@ adb shell getprop ro.zygote                  # → zygote64_32
 adb shell getprop ro.product.cpu.abilist     # → arm64-v8a,armeabi-v7a,armeabi
 ```
 
-Note: Google Pixel 6a and newer ship with 64‑bit‑only system images (ro.zygote=zygote64, no 32‑bit ABI support). On such devices, pure 32‑bit APKs will fail to install with the error INSTALL_FAILED_NO_MATCHING_ABIS.
+Note: Google Pixel 6a and newer running Android 12 (and later) ship with 64‑bit‑only system images (ro.zygote=zygote64, no 32‑bit ABI support). On such devices, pure 32‑bit APKs will fail to install with the error INSTALL_FAILED_NO_MATCHING_ABIS.
 
 #### F-Droid
 
