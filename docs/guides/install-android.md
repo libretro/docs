@@ -163,15 +163,14 @@ On a typical 64-bit device, install both stable and nightly RetroArch versions a
 
 ###### Compatibility of `com.retroarch.ra32` on 64-bit ARM Devices
 
-The 32‑bit `com.retroarch.ra32` package can be installed on most Android devices because they run 64‑bit ARM processors, which are still able to execute 32‑bit code. This setup is mainly useful for development and testing, since new 32‑bit ARM devices are no longer sold
-The device must support 32‑bit execution, as verified by:
+The 32‑bit `com.retroarch.ra32` package can typically be installed on most Android devices because 64‑bit ARM processors generally include support for running 32‑bit applications, and manufacturers usually configure the system images to enable that compatibility:
 
 ```
 adb shell getprop ro.zygote                  # → zygote64_32
 adb shell getprop ro.product.cpu.abilist     # → arm64-v8a,armeabi-v7a,armeabi
 ```
 
-Note: Google Pixel 6a and newer running Android 12 (and later) ship with 64‑bit‑only system images (ro.zygote=zygote64, no 32‑bit ABI support). On such devices, pure 32‑bit APKs will fail to install with the error INSTALL_FAILED_NO_MATCHING_ABIS.
+Note: An exception is Google. Google Pixel 6a and newer devices running Android 12 (and later) ship with 64‑bit‑only system images (ro.zygote=zygote64, no 32‑bit ABI support). On such devices, pure 32‑bit APKs will fail to install with the error INSTALL_FAILED_NO_MATCHING_ABIS.
 
 #### F-Droid
 
