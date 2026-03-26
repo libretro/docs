@@ -433,13 +433,41 @@ The first process which takes place is dealing with `#include` statements. A sla
 
 The include process does not consider any preprocessor defines or conditional expressions. Nested includes are allowed as long as they do not form a cycle.
 
+This means `#include` handling does not respect `#ifdef`, `#ifndef`, `#if`, or similar conditional blocks. Even if an include appears inside a branch that would normally be compiled out by the GLSL preprocessor, slang still sees and processes that include during its own preprocessing step.
+
+For example, this is unintuitive but important:
+
+```glsl
+#ifdef USE_OPTIONAL_HELPERS
+#include "optional-helper.inc"
+#pragma parameter DebugAmount "Debug Amount" 0.0 0.0 1.0 0.1
+#endif
+```
+
+Even when `USE_OPTIONAL_HELPERS` is not defined, slang will still attempt to process the `#include` and will still discover the `#pragma parameter` line. In other words, these constructs are not conditionally skipped just because they appear inside a conditional GLSL block.
+
 E.g.:
 ```
 #include "common.inc"
 ```
 
+If a shader wants to reuse helper code when present but still compile when the file is missing, it can use an optional include pragma.
+
+#### `#pragma include_optional`
+
+This pragma behaves like `#include`, but does not generate an error if the specified file cannot be found.
+
+The format is:
+```
+#pragma include_optional "path/to/file_to_include"
+```
+
+This is useful for optional compatibility shims, shared parameter blocks, or helper files that may exist in one shader pack but not another.
+
 After includes have been resolved, the frontend scans through all lines of the shader and considers `#pragma` statements.
 These pragmas build up ancillary reflection information and otherwise meaningful metadata.
+
+Like includes, pragmas are discovered by scanning the source directly and do not respect `#ifdef` or related conditional compilation blocks. In practice, a pragma written inside a conditional block should still be treated as present by the slang frontend.
 
 #### `#pragma stage`
 This pragma controls which part of a `.slang` file are visible to certain shader stages.
@@ -654,6 +682,31 @@ Other than uniforms related to textures, there are other special uniforms availa
  - `FinalViewportSize`: a `vec4(x, y, 1.0 / x, 1.0 / y)` variable describing the render target size for the final pass. Accessible from any pass.
  - `FrameCount`: an `uint` variable taking a value which increases by one every frame. This value could be pre-wrapped by modulo if specified in preset. This is useful for creating time-dependent effects.
  - `FrameDirection`: an `int` variable which indicates whether the content is currently being rewinded. Has a value of `-1` while rewinding, otherwise `1`.
+ - `Rotation`: a `uint` variable with values from `0` to `3` describing the rotation of the content; respectively `0°`, `90°`, `180°`, and `270°`.
+ - `OriginalAspect`: a `float` value describing the aspect ratio intended by the current core.
+ - `OriginalAspectRotated`: a `float` value describing the intended aspect ratio after accounting for rotation. It is equal to `OriginalAspect` for unrotated and `180°`-rotated content, and `1.0 / OriginalAspect` for `90°` and `270°` rotation.
+ - `OriginalFPS`: a `float` value describing the frame rate set by the core.
+ - `FrameTimeDelta`: a `uint` value describing the time difference, in microseconds, between the previous and current frame.
+
+#### Checking for builtin uniform availability
+
+Some builtin uniforms were added after the initial slang implementation. If you want a shader to compile on older RetroArch versions, it is best practice to check whether newer builtin uniforms are available before using them.
+
+RetroArch provides the following preprocessor defines:
+
+ - `_HAS_ORIGINALASPECT_UNIFORMS`: Indicates that `OriginalAspect` and `OriginalAspectRotated` are available.
+ - `_HAS_FRAMETIME_UNIFORMS`: Indicates that `OriginalFPS` and `FrameTimeDelta` are available.
+
+For example:
+```glsl
+#ifdef _HAS_FRAMETIME_UNIFORMS
+   float deltaSeconds = float(FrameTimeDelta) * 1e-6;
+#else
+   float deltaSeconds = 1.0 / 60.0;
+#endif
+```
+
+Using these defines lets a shader take advantage of newer runtime information while still remaining compatible with older frontend versions.
 
 #### Aliases
 
@@ -741,6 +794,14 @@ layout(push_constant) uniform Push
 ### Samplers
 
 Which samplers are used for textures are specified by the preset format. The sampler remains constant throughout the frame, there is currently no way to select samplers on a frame-by-frame basic. This is mostly to make it possible to use the spec in GLES2 as GLES2 has no concept of separate samplers and images.
+
+### sRGB
+
+The input to the filter chain is not presented as an sRGB texture. Likewise, the final pass does not render to an sRGB backbuffer by default.
+
+In practice, this means that shaders which need linear-light processing should perform explicit linearization themselves, usually in an early pass, and convert back to the desired output transfer function in a later pass.
+
+This approach also gives shader authors more control over gamma handling. For example, a preset can insert a pass which linearizes the source into a floating point render target, perform blending or lighting work in linear space, and then apply gamma correction before the final SDR output pass.
 
 ## Caveats
 
