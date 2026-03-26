@@ -11,7 +11,7 @@
 
 **Design principle: Avoid mandating high-level features which do not work for GLES2.**
 
-RetroArch runs on GL, GL2, and GLES2. GL and GL2 are only relevant from a legacy standpoint, but GLES2 a relevant target platform today and having GLES2 compatibility makes GL2 very easy. We therefore avoid a design which deliberately ruins GLES2 compatibility.
+RetroArch runs on GL, GL2, and GLES2. GL and GL2 are only relevant from a legacy standpoint, but GLES2 is stil a relevant target platform today and having GLES2 compatibility makes GL2 very easy. We therefore avoid a design which deliberately ruins GLES2 compatibility.
 
 However, we also do not want to artificially limit ourselves to shader features which are only available in GLES2. There are many shader builtins, for example, which only work in GLES3/GL3 and we should not hold back support in these cases.
 
@@ -42,13 +42,13 @@ In runtime, we can have a vendor-neutral mature compiler, [https://github.com/Kh
 
 We can also disassemble back to our desired GLSL dialect in the GL backend based on which GL version we're running, which effectively means we can completely sidestep all our current problems with a pure GLSL based shading system.
 
-Another upside is that we no longer have to deal with vendor-specific quirks in the GLSL frontend. A common problem when people write for nVidia is that people mistakingly use `float2`/`float3`/`float4` types from Cg/HLSL, which is supported as an extension in their GLSL frontend.
+Another upside is that we no longer have to deal with vendor-specific quirks in the GLSL frontend. A common problem when people write for nVidia is that they mistakenly use `float2`/`float3`/`float4` types from Cg/HLSL, which is supported as an extension in their GLSL frontend.
 
 ## Why not SPIR-V directly?
 
 This was considered, but there are several convenience problems with having a shading spec around pure SPIR-V. The first problem is metadata. In GLSL, we can quite easily extend with custom `#pragmas` or similar, but there is no trivial way to do this in SPIR-V outside writing custom tools to emit special metadata as debug information or similar with OpSource.
 
-We could also have this metadata outside in a separate file, but juggling more files means more churn, which we should try to avoid. The other problem is convenience. If RetroArch only accepts SPIR-V, we would need an explicit build step outside RetroArch first before we could test a shader. This gets very annoying during shader development, so it is clear that we need to support GLSL anyways, making SPIR-V support kinda redundant.
+We could also have this metadata outside in a separate file, but juggling more files means more churn, which we should try to avoid. The other problem is convenience. If RetroArch only accepts SPIR-V, we would need an explicit build step outside RetroArch first before we could test a shader. This gets very annoying during shader development, so it is clear that we need to support GLSL anyway, making SPIR-V support largely redundant.
 
 The main argument for supporting SPIR-V would be to allow new shading languages to be used. This is a reasonable thing to consider, which is why the goal is to not design ourselves into a corner where it's only Vulkan GLSL that can possibly work down the line. We are open to the idea that new shading languages that target SPIR-V will emerge.
 
@@ -137,7 +137,7 @@ bar_wrap_mode = repeat
 
 This allows fine-grained control over how out-of-bounds texture sampling behaves for each stage or lookup texture. For most shader passes, the default `clamp_to_border` is safe, but for effects like tiling or seamless wrapping, `repeat` or `mirrored_repeat` may be preferred. When compositing external textures, especially with alpha channels, `clamp_to_border` may have unexpected results near edges, and `clamp_to_edge` may be preferred.
 
-From a practical standpoint, `clamp_to_border` is the sanest choice for filtering, while `clamp_to_edge` is the sanest choice for compositing.
+From a practical standpoint, `clamp_to_border` is generally the most robust choice for filtering, while `clamp_to_edge` is generally the most robust choice for compositing.
 
 ### Runtime Resizing of Textures and Framebuffers
 
@@ -168,9 +168,9 @@ If you need to align sampling with the texture's pixel grid (for example, to avo
 
 ### Deduce shader inputs by reflection
 
-We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders whereever we can The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
+We want to have as much useful information in the shader source as possible. We want to avoid having to explicitly write out metadata in shaders wherever we can. The biggest hurdle to overcome is how we describe our pipeline layout. The pipeline layout contains information about how we access resources such as uniforms and textures.
 
-There are three main types of inputs in this shader system.
+There are six main types of inputs in this shader system.
 
  - Texture samplers (sampler2D)
  - Look-up textures for static input data
@@ -580,8 +580,42 @@ When choosing a framebuffer format for your shader, consider the following pract
 
 Be aware that using higher bit-depth formats (such as 16-bit or 32-bit float) can have a significant impact on performance, especially on mobile or older hardware. Always profile your shader if performance is a concern.
 
-Note: If you specify `A2B10G10R10_UNORM_PACK32` and the shader is the last shader in the chain, frontends like RetroArch will treat it as an HDR shader. See the section on HDR programming for more details.
+##### Output transfer-function mapping
 
+When the final pass in a filter chain targets an HDR-capable display, the frontend selects a swapchain format that matches the display's capabilities. The transfer function the shader is expected to produce in its output depends entirely on which format the final pass renders to. Intermediate passes are not affected by these rules — only the last pass that writes to the swapchain.
+
+The table below summarises the contract for each relevant final-pass format.
+
+| Final pass format | Bit depth | Color space | Expected transfer function | Notes |
+|---|---|---|---|---|
+| `R8G8B8A8_UNORM` | 8-bit | Rec. 709 | Gamma-corrected (sRGB/Rec. 709) | SDR output. Gamma-corrected values can be written directly. Linear values must be gamma-corrected before output. Apply tone-mapping as needed before the final pass. |
+| `R16G16B16A16_SFLOAT` | 16-bit | Rec. 709 | Linear (scRGB) | HDR output via scRGB. Linear values can be written directly. Values above 1.0 represent luminance above SDR white. Gamma-corrected values must be linearized before output. PQ-encoded values must be linearized before output. |
+| `A2B10G10R10_UNORM_PACK32` | 10-bit | Rec. 2020 | PQ (ST 2084) | HDR10 output. HDR10-encoded (PQ) values can be written directly. Linear values, gamma-corrected values, and HLG values must all be converted to PQ before output. |
+
+##### 8-bit output (`R8G8B8A8_UNORM`): SDR, Rec. 709
+
+This is the standard SDR path. The display and the OS compositor both assume the output is gamma-corrected sRGB / gamma 2.2 in the Rec. 709 color space.
+
+- **Gamma-corrected values** can be written to `FragColor` directly.
+- **Linear values** must be gamma-corrected before output (apply inverse EOTF for the selected SDR display model).
+- **Tone-mapping** should be applied before the final pass whenever scene luminance can exceed the SDR range.
+
+##### 16-bit output (`R16G16B16A16_SFLOAT`): scRGB, Rec. 709
+
+scRGB is a linear, extended-range encoding in the Rec. 709 color space. The value `1.0` corresponds to the SDR white point (80 nits by convention). Values above `1.0` are legal and represent luminance above SDR white, up to the display's peak luminance.
+
+- **Linear values** can be written to `FragColor` directly.
+- **Gamma-corrected values** must be linearized before output.
+- **PQ-encoded values** must be linearized (apply the PQ EOTF) before output.
+
+##### 10-bit output (`A2B10G10R10_UNORM_PACK32`): HDR10, Rec. 2020
+
+HDR10 uses the PQ (ST 2084) transfer function in the Rec. 2020 color space. The PQ curve encodes an absolute luminance range of 0–10 000 nits, with `1.0` mapping to 10 000 nits. SDR white can correspond to either 100 nits or 203 nits.
+
+- **HDR10-encoded (PQ) values** can be written to `FragColor` directly.
+- **Linear values** must be converted to PQ encoding before output, including a gamut conversion from Rec. 709 to Rec. 2020 if the working color space is Rec. 709.
+- **Gamma-corrected values** must be linearized first, then converted to PQ as above.
+- **HLG-encoded values** must be converted to PQ before output (convert HLG → linear → PQ).
 
 #### `#pragma parameter`
 
@@ -793,11 +827,9 @@ layout(push_constant) uniform Push
 } registers;
 ```
 
-However, be aware that there is a limit to how large push constant blocks can be used. Vulkan puts a minimum required size of 128 bytes, which equals 8 `vec4`s. It is an error to use more than 128 bytes.
+However, be aware that there is a limit to how large push constant blocks can be used. Vulkan puts a minimum required size of 128 bytes, which equals 8 `vec4`s. Using more than 128 bytes may lead to an error, so push constant blocks larger than 128 bytes should not be used.
 
 If you're running out of space, you can move the MVP to a UBO instead, which frees up 64 bytes. Always prioritize push constants for data used in fragment shaders as there are many more fragment threads than vertex. Also note that like UBOs, the push constant space is shared across vertex and fragment.
-
-If you need more than 8 `vec4`s, you can spill uniforms over to plain UBOs, but more than 8 `vec4`s should be quite rare in practice.
 
 E.g.:
 
@@ -818,7 +850,7 @@ layout(push_constant) uniform Push
 
 ### Samplers
 
-Which samplers are used for textures are specified by the preset format. The sampler remains constant throughout the frame, there is currently no way to select samplers on a frame-by-frame basic. This is mostly to make it possible to use the spec in GLES2 as GLES2 has no concept of separate samplers and images.
+Which samplers are used for textures are specified by the preset format. The sampler remains constant throughout the frame, and there is currently no way to select samplers on a frame-by-frame basis. This is mostly to make it possible to use the spec in GLES2 as GLES2 has no concept of separate samplers and images.
 
 ### sRGB
 
@@ -827,6 +859,8 @@ The input to the filter chain is not presented as an sRGB texture. Likewise, the
 In practice, this means that shaders which need linear-light processing should perform explicit linearization themselves, usually in an early pass, and convert back to the desired output transfer function in a later pass.
 
 This approach also gives shader authors more control over gamma handling. For example, a preset can insert a pass which linearizes the source into a floating point render target, perform blending or lighting work in linear space, and then apply gamma correction before the final SDR output pass.
+
+For a more detailed framework covering how this applies to both SDR and HDR pipelines — including treating source content as virtual display signals, multi-pass HDR workflows, and practical pipeline examples — see [HDR Programming](#hdr-programming).
 
 ## Caveats
 
@@ -876,13 +910,13 @@ To correctly sample nearest textures with non-integer scale, we must pre-quantiz
    vec4 result = mix(mix(t0, t1, a.x), mix(t2, t3, a.x), a.y);
 ```
 
-The concept of splitting up the integer texel along with the fractional texel helps us safely do arbitrary non-integer scaling safely. The uv variable could also be passed pre-computed from vertex to avoid the extra computation in fragment.
+The concept of splitting up the integer texel along with the fractional texel helps us do arbitrary non-integer scaling safely. The uv variable could also be passed pre-computed from vertex to avoid the extra computation in fragment.
 
 See also [Advanced Techniques: Vertex Precomputation](#vertex-precomputation).
 
 ## Preset Format: Full .slangp Example
 
-The present format is essentially unchanged from the old .cgp and .glslp, except the new preset format is called .slangp.
+The preset format is essentially unchanged from the old .cgp and .glslp, except the new preset format is called .slangp.
 
 Below is a comprehensive example of a `.slangp` preset file. This example demonstrates:
 - Multiple shader passes
@@ -1336,6 +1370,222 @@ void main()
 - Be mindful that not all calculations are suitable for precomputation (e.g., those requiring per-pixel precision or non-linear interpolation).
 - Profile your shaders if in doubt; on complex scenes or low-power devices, the benefits can be significant.
 
+### HDR Programming
+
+This section is informational best-practice guidance, not a strict prescription. The goal is to provide a conceptual framework that reduces avoidable errors by keeping HDR-related processes explicit and intentional.
+
+For background on how the slang pipeline handles gamma and linearization in general, see [sRGB](#srgb).
+
+Without explicit transfer-function and color-space discipline, advanced pipelines can produce luminance rolloff errors, highlight clipping/banding, hue shifts near gamut limits, and inconsistent results across SDR, scRGB, and HDR10 output paths. Structuring processing into explicit stages keeps each operation in a well-defined working space and isolates conversions so output-target or source-assumption changes can be handled predictably. To achieve this structure, we first must develop mental models for each of our stages.
+
+#### Signal model, linear light processing, and presentation
+
+The following is an example of how to break down a complex pipeline into stages using physical modeling. We'll start with three models: signal model, light model, and presentation model. Terminology is defined in [Pipeline vocabulary](#pipeline-vocabulary).
+
+##### Stage 1: Real-world Signal Modeling
+
+As a working mental model, we can treat source texture data from a libretro core as normalized voltage video levels coming from a virtual DAC, video output connector, framebuffer, or other such device.
+
+A practical rationale for this choice:
+
+- Source values are often gamma-corrected signals, not linear-light scene data.
+- The source color space may not match modern presentation color spaces.
+- Applying display-like transforms too early or too late in the chain can introduce compounded errors.
+
+For this example, we'll operate on these assumptions:
+
+ - Source data is in range [0, 1], mapping to lowest and highest signal voltages
+ - Source data is gamma-corrected according to Rec. 601
+ - Source data represents the Rec. 601 color space, slightly different from target SDR color space (Rec. 709) and very different from target HDR color space (Rec. 2020)
+
+This model helps separate signal transport from light-domain math, and makes each conversion step intentional. We can do all signal-domain processes here. Other operations related to light blending or mapping to the user's color space have to be done after conversion steps.
+
+##### Stage 2: Linear Light Processing
+
+Most physically meaningful operations (blending, bloom accumulation, blur energy conservation, and light-like compositing) are best behaved in linear light. General-purpose upscaling and downscaling algorithms are also usually best behaved in this stage because interpolation and reconstruction are performed in linear light.
+
+When blending is done in gamma-encoded domains, midtones and highlights are typically biased, causing dark seams, incorrect brightness rolloff, or halo artifacts. Converting to linear light before heavy compositing stages reduces these error sources and usually gives more stable results across backends.
+
+Output format is important at this stage. An 8-bit format can result in a loss of dynamic range, so 16-bit floating point format is recommended when shaders need to pass linear data to later shaders. This also allows values to exceed the [0, 1] range.
+
+##### Stage 3: Presentation
+
+Presentation is the stage where linear working data is fit to an output-referred target. In practice, this mainly means:
+
+- tone mapping (compressing luminance into the target's usable range), and
+- gamut mapping/compression (fitting colors into the target primaries without severe clipping artifacts).
+
+Treat presentation as a deliberate final stage rather than something implied by format alone. This makes behavior easier to reason about when switching between SDR, scRGB, and HDR10 outputs.
+
+Presentation is where technical correctness becomes visible output behavior. Decisions made here primarily determine highlight rolloff, color fidelity near gamut boundaries, and consistency between SDR, scRGB, and HDR10 outputs.
+
+Practical guidance for Stage 3:
+
+- **Luminance anchoring**: Decide how internal linear values map to display-referred luminance before choosing tone mapping behavior. Keep this mapping explicit so the same shader behaves predictably across output targets.
+- **Tone mapping policy**: If linear-light values remain near the target range, simple clamping may be acceptable. If values significantly exceed target range, use a deliberate tone mapping operator to reduce hard clipping, highlight banding, and hue distortion.
+- **Gamut compression policy**: When targeting constrained or different primaries, use gamut compression to reduce clipping artifacts. Choose rendering intent based on artistic goal (for example, preserving relationships vs preserving in-gamut accuracy).
+- **Gamut compression intents**: The four classic ICC rendering intents are a useful frame of reference:
+   - **Perceptual**: Compresses the full gamut to preserve visual relationships.
+   - **Relative colorimetric**: Preserves in-gamut values and clips out-of-gamut values relative to target white.
+   - **Saturation**: Prioritizes vividness over strict color accuracy.
+   - **Absolute colorimetric**: Preserves absolute colorimetry including white-point differences, clipping out-of-gamut values.
+- **Output contract check**: Validate the final stage against the per-format output contract before shipping. The normative mapping for expected transfer function by final-pass format is [Output transfer-function mapping](#output-transfer-function-mapping) under [`#pragma format`](#pragma-format).
+- **Default operation order**: A stable baseline is tone mapping first, gamut compression second, then output encoding (inverse EOTF for SDR or PQ encoding for HDR).
+- **Validation checklist**: Verify neutral gradients stay neutral, highlight rolloff is smooth, saturated edges do not collapse abruptly, and behavior remains coherent when switching between SDR, scRGB, and HDR10 outputs.
+
+#### Transition Stages
+
+At this point, we have a model for a pipeline that looks like this:
+
+```text
+Source -> Direct processing -> Linear light processing -> Tone mapping -> Gamut compression -> Output encoding
+```
+
+However, we haven't actually defined how we convert data from one stage to the next. For that, we need transition stages. SDR and HDR require separate paths.
+
+For unknown source characteristics, prefer a BT.1886 virtual display EOTF, which can be approximated as a simple 2.4 power function. For backlit handhelds, values near gamma 2.2 are often practical. For frontlit or reflective handhelds, treat the effective value as system-dependent.
+
+##### SDR
+```text
+Source -> Direct processing -> Virtual display EOTF -> Linear light processing -> Tone mapping -> Gamut compression -> SDR output (inverse EOTF) -> Output
+```
+
+##### HDR
+```text
+Source -> Direct processing -> Virtual display EOTF -> Linear light processing -> (Tone mapping) -> (Gamut compression) -> HDR output (PQ encoding) -> Output
+```
+
+HDR ranges are large, so tone mapping and gamut compression may not be necessary depending on the output range of the linear light processing stage.
+
+In this document, SDR output is described as inverse EOTF to emphasize preserving intended system-gamma behavior, rather than introducing a camera-style OETF model. HDR output is described as PQ encoding and requires mapping internal rendering values to intended nit values.
+
+#### Stage-to-workflow mapping
+
+The 3-stage model and the 6-step workflow describe the same process at different granularity. Use this crosswalk when moving from conceptual design to pass planning:
+
+| 3-stage model | 6-step workflow items |
+|---|---|
+| Stage 1: Real-world Signal Modeling | 1) Direct processing, 2) Virtual display EOTF |
+| Stage 2: Linear Light Processing | 3) Linear light processing |
+| Stage 3: Presentation | 4) Tone mapping, 5) Gamut compression, 6) Presentation encoding |
+
+#### Pipeline vocabulary
+
+The following terms are used throughout this section.
+
+- **Direct processing**: Operations applied directly to gamma-corrected source-domain signals.
+- **Virtual display EOTF**: A display-transfer model used to move source-domain signals into a linear-light working domain.
+- **Linear light processing**: Operations performed in linear light after applying the virtual display EOTF.
+- **Tone mapping**: Luminance remapping from working range into the target presentation range.
+- **Gamut compression**: Mapping of out-of-gamut colors into the target color volume with reduced clipping artifacts.
+- **SDR output (inverse EOTF)**: Final conversion from linear-light working values to SDR gamma-corrected output.
+- **HDR output (PQ encoding)**: Final conversion from linear-light working values to HDR10 PQ-encoded output.
+
+##### Suggested workflow for complex pipelines
+
+Generalized summary:
+
+- Treat source values as signal-domain data first, then move intentionally into linear light through a virtual display EOTF.
+- Keep major reconstruction, filtering, compositing, and light-like operations in linear light for more stable and predictable results.
+- Use presentation controls (tone mapping and gamut compression) only when the target output or content range requires them.
+- Encode only at presentation: inverse EOTF for SDR, or PQ encoding for HDR10.
+
+Practical conclusion: Build presets so early and middle passes remain target-agnostic, then make the final presentation pass responsible for output encoding. This keeps SDR, scRGB, and HDR10 variants easier to maintain and less error-prone. Use a variety of test patterns to ensure color appearance behaves naturally.
+
+#### Example use cases
+
+The following examples show how the same process vocabulary can be applied to different shader goals. The pass names in these examples are conceptual placeholders; flexible implementation is left to developers.
+
+##### Use case 1: Real-world model of a CRT device
+
+This pipeline follows all stages of the general flow.
+
+High-level outline:
+
+1. **Direct processing**: Apply signal-domain operations that emulate source-side video behavior.
+2. **Virtual display EOTF**: Linearize using a CRT-like display model (commonly BT.1886/approximate 2.4 behavior).
+3. **Linear light processing**: Perform light-domain effects and compositing.
+4. **Tone mapping**: Fit luminance into the output range.
+5. **Gamut compression**: Compress out-of-gamut colors into the target primaries.
+6. **Presentation encoding**: Use inverse EOTF for SDR targets or PQ encoding for HDR10 targets.
+
+Short `.slangp` example:
+
+```ini
+shaders = 4
+
+shader0 = "passes/composite_ntsc.slang"
+shader1 = "passes/virtual_display_eotf.slang"
+shader2 = "passes/crt_upscale_bloom.slang"
+shader3 = "passes/present_sdr_hdr.slang"
+
+# Example parameters (implementation-dependent)
+DisplayEOTF = 2.4
+ToneMapStrength = 0.75
+GamutCompress = 0.5
+```
+
+##### Use case 2: Real-world model of a reflective handheld device
+
+This pipeline is typically subtractive-only and often does not require tone mapping. However, gamut compression remains important because the device color appearance can differ strongly from typical modern monitors/TVs.
+
+Typical emphasis:
+
+1. Apply direct/signal-domain shaping for handheld-like response.
+2. Apply a handheld-appropriate virtual display EOTF.
+3. Perform linear-light processing for stable compositing.
+4. Skip tone mapping when dynamic-range expansion is not part of the goal.
+5. Keep gamut compression as a primary presentation control.
+6. Encode for final target (inverse EOTF for SDR or PQ encoding for HDR10).
+
+Short `.slangp` example:
+
+```ini
+shaders = 4
+
+shader0 = "passes/handheld_ghosting.slang"
+shader1 = "passes/handheld_linearize.slang"
+shader2 = "passes/handheld_dot_matrix.slang"
+shader3 = "passes/handheld_color_correct.slang"
+
+# Example parameters (implementation-dependent)
+DisplayEOTF = 2.2
+GamutCompress = 0.8
+```
+
+##### Use case 3: Specialized upscaler
+
+A specialized upscaler usually does not require tone mapping or gamut compression as core stages, but interpolation/reconstruction should still be done in linear space for best behavior.
+
+Typical emphasis:
+
+1. Optional direct processing for preconditioning.
+2. Apply virtual display EOTF to reach linear light.
+3. Run upscaler/reconstruction in linear light.
+4. Skip tone mapping and gamut compression unless the preset's output target explicitly needs them.
+5. Encode for presentation target (inverse EOTF for SDR or PQ encoding for HDR10).
+
+Short `.slangp` example:
+
+```ini
+shaders = 3
+
+shader0 = "passes/upscaler_linearize.slang"
+shader1 = "passes/upscaler_upscale.slang"
+shader2 = "passes/upscaler_present.slang"
+
+# Example parameters (implementation-dependent)
+DisplayEOTF = 2.4
+```
+
+#### Common decision points
+
+| Question | Guidance |
+|---|---|
+| When should I include a tone mapping step? | Include it when working-space luminance values can fall outside the [0, 1] output range after processing. For small excursions, clamping is acceptable. For larger ones, use an explicit operator. Pure upscalers and linear pass-through chains typically skip this step. |
+| When does gamut compression matter most? | Gamut compression is most important when targeting sRGB / Rec. 709 output and when source content uses saturated colors that may extend outside Rec. 709. It is less critical for HDR or scRGB targets. |
+| Which virtual display EOTF should I use as a fallback? | Prefer BT.1886 (approximated as a 2.4 power function) when source characteristics are unknown. Use approximately 2.2 for backlit handhelds. Frontlit and reflective handhelds are system-dependent. |
+
 ## FAQ: Out of Scope for This Document
 
 This document is mainly about how to write and organize `.slang` shaders and `.slangp` presets. The questions below are the kind of things people often ask next, but they go beyond what this guide is trying to cover.
@@ -1350,7 +1600,6 @@ This document is mainly about how to write and organize `.slang` shaders and `.s
 | What pass-count/format budgets should be used for low-end hardware? | The document gives general performance advice, not hard budgeting targets. |
 | How much VRAM should be budgeted for deep history/feedback chains? | It explains the feature, but not exact memory budgeting. |
 | What are the exact guarantees during rapid resolution/aspect/rotation changes across all backends? | Those guarantees depend on backend behavior and are beyond this guide. |
-| What is the complete HDR pipeline contract (transfer functions, tonemapping expectations, presentation assumptions)? | HDR is touched on here, but not defined as a full end-to-end workflow. |
 | What is the definitive precedence order between shader defaults, preset overrides, and runtime UI changes? | The pieces are described, but there is no formal precedence model spelled out here. |
 | Is there an official CI/validation workflow for shader pack maintainers? | This guide does not prescribe a standard CI or validation pipeline. |
 | What minimum cross-backend test matrix is required before release? | It recommends testing, but does not define a required release checklist. |
