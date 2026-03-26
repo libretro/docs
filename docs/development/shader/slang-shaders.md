@@ -372,16 +372,6 @@ vec4 texColor = texture(foo, vTexCoord);
 ```
 This will use the texture file and options specified for `foo` in the preset file. The binding number must match the preset's texture order. Explicit binding is mandatory for all samplers and UBOs. `sampler2D` objects can only be declared in the fragment shader stage.
 
-#### Do we want to support complex reinterpretation?
-
-There could be valid use cases for supporting other formats than plain `RGBA8_UNORM`. `SRGB` and `UINT` might be valid cases as well and maybe even 2x16-bit, 1x32-bit integer formats.
-
-#### Lookup buffers
-
-_Do we want to support lookup buffers as UBOs as well?_ This wouldn't be doable in GLES2, but it could be useful as a more modern feature. If the `LUT` is small enough, we could realize it via plain old uniforms as well perhaps.
-
-This particular feature could be very interesting for generic polyphase lookup banks with different `LUT` files for different filters.
-
 ## Slang specification
 
 This part of the spec considers how Vulkan GLSL shaders are written. The frontend uses the glslang frontend to compile GLSL sources. This ensures that we do not end up with vendor-specific extensions.
@@ -648,6 +638,30 @@ layout(location = 0) in vec4 some_other_name;
 ```
 
 will still link fine, although using same names are encouraged for readability.
+
+#### Location allocation for composite types
+
+Location indices are consumed per slot, not per declaration line. Composite types can consume multiple consecutive locations.
+
+- Scalar and vector types (`float`, `vec2`, `vec3`, `vec4`, etc.) consume 1 location.
+- Matrix types consume multiple locations. A matrix consumes one location per column (for example, `mat4` consumes 4 locations).
+- Structs consume the sum of their members' location usage.
+   - Non-matrix struct members consume 1 location each.
+   - Matrix struct members consume one location per matrix column.
+
+Example (`mat4` consumes locations 0, 1, 2, and 3):
+
+```glsl
+// Invalid: overlaps location 1, which is still part of CorrectionMatrix.
+layout(location = 0) in mat4 CorrectionMatrix;
+layout(location = 1) in float CorrectionScale;
+
+// Valid: next free location after mat4 is 4.
+layout(location = 0) in mat4 CorrectionMatrix;
+layout(location = 4) in float CorrectionScale;
+```
+
+When matching vertex outputs to fragment inputs, make sure both stages use compatible types and the same occupied location range.
 
 #### Fragment outputs
 
@@ -1032,6 +1046,28 @@ Instead of returning a float4 from main\_fragment, have an output in fragment:
 layout(location = 0) out vec4 FragColor;
 ```
 
+## FAQ for New Shader Developers
+
+The table below answers common first-time questions using only information already present in this document.
+
+| Question | Short answer from this document | References |
+|---|---|---|
+| What is the minimum valid `.slang` shader? | It must start with `#version` on the first line and define both `#pragma stage vertex` and `#pragma stage fragment`. | [Required Shader Stages](#required-shader-stages), [Initial pre-process of slang files](#initial-pre-process-of-slang-files) |
+| What are required vs optional pragmas? | Required: `#pragma stage vertex` and `#pragma stage fragment`. Others (for example `#pragma name`, `#pragma format`, `#pragma parameter`) are optional. | [#pragma directives: Required and Optional](#pragma-directives-required-and-optional), [Required Shader Stages](#required-shader-stages) |
+| Is vertex stage optional? | No. Both vertex and fragment stages are mandatory. | [Do we make vertex optional?](#do-we-make-vertex-optional), [Required Shader Stages](#required-shader-stages) |
+| How do includes work? | Includes are resolved in a pre-pass, do not respect `#ifdef` logic, and only support same-directory or child-directory paths. | [Initial pre-process of slang files](#initial-pre-process-of-slang-files) |
+| Can I include missing helper files safely? | Yes, use `#pragma include_optional "..."` to avoid a hard error if the file is missing. | [#pragma include_optional](#pragma-include_optional) |
+| What resource binding rules do I have to follow? | Explicit `layout(binding = N)` is required for samplers and UBOs; bindings must be unique; only one UBO and one push constant block are allowed. | [Resource usage rules](#resource-usage-rules) |
+| Can I use `sampler2D` in vertex shaders? | No. `sampler2D` is fragment-only, though texture size uniforms can be used in vertex. | [Resource usage rules](#resource-usage-rules) |
+| Which built-in textures and uniforms are available? | Built-ins include `Original`, `Source`, `PassOutput#`, `PassFeedback#`, and uniforms like `MVP`, `SourceSize`, `OutputSize`, `FrameCount`, and more. | [Builtin variables](#builtin-variables) |
+| How do I choose between push constants and UBOs? | Prefer push constants for frequently used data (especially fragment), but stay within the practical 128-byte limit; spill to UBO when needed. | [Push constants vs uniform blocks](#push-constants-vs-uniform-blocks) |
+| How should I choose render target format? | Use `R8G8B8A8_UNORM` for typical SDR, `A2B10G10R10_UNORM_PACK32` for HDR10/10-bit workflows, and `R16G16B16A16_SFLOAT` for linear-light processing. | [#pragma format](#pragma-format), [Practical Format Choice Guidance](#practical-format-choice-guidance) |
+| What wrap mode should I use by default? | Default is `clamp_to_border`; for compositing edges, `clamp_to_edge` is often safer. | [Texture Clamping and Wrap Modes](#texture-clamping-and-wrap-modes) |
+| Why do nearest-sampled shaders sometimes glitch at non-integer scale? | Interpolated UVs can fall between texels; pre-quantize coordinates to texel centers when doing nearest at non-integer scale. | [Correctly sampling textures](#correctly-sampling-textures) |
+| How do parameter declarations fail? | Duplicate `#pragma parameter` entries with the same identifier must match exactly (description and all numeric fields), or compilation fails. | [Parameter Declaration, Validation, and UI Behavior](#parameter-declaration-validation-and-ui-behavior), [#pragma parameter](#pragma-parameter) |
+| How do I add lookup textures in presets? | Declare them with `textures = "a;b"`, assign file paths per alias, then set optional per-texture options such as `_linear`, `_wrap_mode`, and `_mipmap`. | [Lookup textures](#lookup-textures), [Preset Format: Full .slangp Example](#preset-format-full-slangp-example) |
+| What is the recommended debugging workflow? | Start with RetroArch logs for compile errors, then use graphics debuggers/profilers (RenderDoc, Nsight, PIX, GPUView) and color-debug techniques. | [Validation, Debugging, and Profiling Tools for Slang Shaders](#validation-debugging-and-profiling-tools-for-slang-shaders), [Using the RetroArch Log for Shader Debugging](#using-the-retroarch-log-for-shader-debugging), [Debugging Shaders with Colors](#debugging-shaders-with-colors) |
+
 ## Advanced Techniques
 
 ### Validation, Debugging, and Profiling Tools for Slang Shaders
@@ -1299,3 +1335,22 @@ void main()
 - Avoid duplicating expensive calculations in the fragment shader if they can be done once per vertex.
 - Be mindful that not all calculations are suitable for precomputation (e.g., those requiring per-pixel precision or non-linear interpolation).
 - Profile your shaders if in doubt; on complex scenes or low-power devices, the benefits can be significant.
+
+## FAQ: Out of Scope for This Document
+
+This document is mainly about how to write and organize `.slang` shaders and `.slangp` presets. The questions below are the kind of things people often ask next, but they go beyond what this guide is trying to cover.
+
+| Out-of-scope question | Why it is out of scope here |
+|---|---|
+| What are practical varying/location limits per backend and GPU generation? | That depends a lot on the API, driver, and hardware you are running on. |
+| What is the exact precision policy (`mediump` vs `highp`) for each platform? | This guide does not try to lay down a per-platform precision policy. |
+| How are complex location packing edge cases handled (for example nested structs or arrays of structs)? | The basics are covered here, but not every GLSL packing corner case. |
+| What is the full runtime sampler binding order when built-ins, aliases, and user textures are mixed? | That gets into frontend/backend implementation details rather than shader authoring rules. |
+| Is there an official error-code catalog mapping compiler/runtime errors to fixes? | There is practical debugging advice here, but not a full backend-by-backend error reference. |
+| What pass-count/format budgets should be used for low-end hardware? | The document gives general performance advice, not hard budgeting targets. |
+| How much VRAM should be budgeted for deep history/feedback chains? | It explains the feature, but not exact memory budgeting. |
+| What are the exact guarantees during rapid resolution/aspect/rotation changes across all backends? | Those guarantees depend on backend behavior and are beyond this guide. |
+| What is the complete HDR pipeline contract (transfer functions, tonemapping expectations, presentation assumptions)? | HDR is touched on here, but not defined as a full end-to-end workflow. |
+| What is the definitive precedence order between shader defaults, preset overrides, and runtime UI changes? | The pieces are described, but there is no formal precedence model spelled out here. |
+| Is there an official CI/validation workflow for shader pack maintainers? | This guide does not prescribe a standard CI or validation pipeline. |
+| What minimum cross-backend test matrix is required before release? | It recommends testing, but does not define a required release checklist. |
