@@ -70,7 +70,7 @@ Let's first look at what we mean by filter chains and how far we can expand this
 
 The simplest filter chain we can specify is a single pass.
 
-```
+```text
 (Input) -> [ Shader Pass #0 ] -> (Backbuffer)
 ```
 
@@ -80,7 +80,7 @@ In this case there are no offscreen render targets necessary since our input is 
 
 A trivial extension is to keep our straight line view of the world where each pass looks at the previous output.
 
-```
+```text
 (Input) -> [ Shader Pass #0 ] -> (Framebuffer) -> [ Shader Pass #1 ] -> (Backbuffer)
 ```
 
@@ -90,7 +90,7 @@ Framebuffer here might have a different resolution than both Input and Backbuffe
 
 There is no reason why we should restrict ourselves to a straight-line view.
 
-```
+```text
      /------------------------------------------------\
     /                                                  v
 (Input) -> [ Shader Pass #0 ] -> (Framebuffer #0) -> [ Shader Pass #1 ] -> (Backbuffer)
@@ -102,7 +102,7 @@ We have a way to query the resolution of individual textures to allow highly con
 
 ### Multiple passes, multiple inputs, with history
 
-```
+```text
     /------------------------------------------------\
    /                                                  v
 (Input) -> (+feedback input) [ Shader Pass #0 ] (output) -> (Framebuffer #0) -> [ Shader Pass #1 ] -> (Backbuffer)
@@ -127,7 +127,7 @@ The wrap mode for each stage's input texture can be controlled in the preset fil
 
 You can set the wrap mode for each texture or pass in the preset file, for example:
 
-```
+```ini
 wrap_mode0 = clamp_to_edge
 wrap_mode1 = mirrored_repeat
 
@@ -183,7 +183,7 @@ There are three main types of inputs in this shader system.
 
 There are two main approaches to deduce what a sampler2D uniform wants to sample from. The first way is to explicitly state somewhere else what that particular sampler needs, e.g.
 
-```
+```text
 uniform sampler2D geeWhatAmI;
 
 // Metadata somewhere else
@@ -192,7 +192,7 @@ SAMPLER geeWhatAmI = Input[-2]; // Input frame from 2 frames ago
 
 The other approach is to have built-in identifiers which correspond to certain textures.
 
-```
+```glsl
 // Source here being defined as the texture from previous framebuffer pass or the input texture if this is the first pass in the chain.
 uniform sampler2D Source;
 ```
@@ -286,7 +286,7 @@ In the RetroArch interface, parameter values are displayed to two decimal digits
 
 **Simple Example:**
 
-```
+```glsl
 #pragma parameter Brightness "Screen brightness" 1.0 0.0 2.0 0.05
 ```
 This creates a parameter named `Brightness` with a description, default value, minimum, maximum, and step size.
@@ -294,11 +294,11 @@ This creates a parameter named `Brightness` with a description, default value, m
 **Multiple Files Example A (Valid):**
 
 File 1:
-```
+```glsl
 #pragma parameter Sharpness "Sharpness level" 1.0 0.0 2.0 0.1
 ```
 File 2:
-```
+```glsl
 #pragma parameter Contrast "Contrast adjustment" 1.0 0.5 1.5 0.05
 ```
 These files declare completely different parameters. This is valid.
@@ -306,11 +306,11 @@ These files declare completely different parameters. This is valid.
 **Multiple Files Example B (Valid):**
 
 File 1:
-```
+```glsl
 #pragma parameter Gamma "Gamma correction" 1.0 0.5 2.0 0.1
 ```
 File 2:
-```
+```glsl
 #pragma parameter Gamma "Gamma correction" 1.0 0.5 2.0 0.1
 ```
 These files declare the same parameter with identical lines. This is valid.
@@ -318,11 +318,11 @@ These files declare the same parameter with identical lines. This is valid.
 **Multiple Files Example C (Invalid):**
 
 File 1:
-```
+```glsl
 #pragma parameter Saturation "Saturation adjustment" 1.0 0.0 2.0 0.1
 ```
 File 2:
-```
+```glsl
 #pragma parameter Saturation "Saturation level" 1.2 0.0 2.0 0.1
 ```
 These files declare the same parameter name (`Saturation`) but with different descriptions and default values. This will not compile; all fields must match exactly.
@@ -333,12 +333,12 @@ These files declare the same parameter name (`Saturation`) but with different de
 
 A handy feature to have is reading from lookup textures. Custom sampler uniforms are specified in the `.slangp` (preset) file using the `textures` line, where values are separated by semicolons:
 
-```
+```ini
 textures = "foo;bar"
 ```
 Each listed texture uniform can then be assigned a texture file and options:
 
-```
+```ini
 foo = "relative/or/absolute/path/filename.png"
 bar = "another_texture.png"
 ```
@@ -360,14 +360,14 @@ For more information on the uniforms and aliases automatically provided when usi
 
 To use a custom texture declared in the preset file, declare the sampler uniform in your shader code:
 
-```
+```glsl
 #pragma stage fragment
 ...
 layout(binding = 2) uniform sampler2D foo;
 ```
 Then, sample from the texture in your shader:
 
-```
+```glsl
 vec4 texColor = texture(foo, vTexCoord);
 ```
 This will use the texture file and options specified for `foo` in the preset file. The binding number must match the preset's texture order. Explicit binding is mandatory for all samplers and UBOs. `sampler2D` objects can only be declared in the fragment shader stage.
@@ -437,7 +437,7 @@ For example, this is unintuitive but important:
 Even when `USE_OPTIONAL_HELPERS` is not defined, slang will still attempt to process the `#include` and will still discover the `#pragma parameter` line. In other words, these constructs are not conditionally skipped just because they appear inside a conditional GLSL block.
 
 E.g.:
-```
+```glsl
 #include "common.inc"
 ```
 
@@ -448,7 +448,7 @@ If a shader wants to reuse helper code when present but still compile when the f
 This pragma behaves like `#include`, but does not generate an error if the specified file cannot be found.
 
 The format is:
-```
+```glsl
 #pragma include_optional "path/to/file_to_include"
 ```
 
@@ -474,7 +474,7 @@ If a `#pragma stage` statement has been encountered, that stage is considered ac
 This pragma lets a shader set its identifier. This identifier can be used to create simple aliases for other passes.
 
 E.g.:
-```
+```glsl
 #pragma name HorizontalPass
 ```
 
@@ -483,7 +483,7 @@ E.g.:
 This pragma is supported as an alias of `#pragma name`. It sets the same shader identifier and has the same behavior as `#pragma name`.
 
 E.g.:
-```
+```glsl
 #pragma alias HorizontalPass
 ```
 
@@ -563,7 +563,7 @@ Desktop-oriented APIs can generally support all formats available.
  - `R32G32B32A32_SFLOAT`
 
 E.g.:
-```
+```glsl
 #pragma format R16_SFLOAT
 ```
 
@@ -588,14 +588,14 @@ Note: If you specify `A2B10G10R10_UNORM_PACK32` and the shader is the last shade
 Shader parameters allow shaders to take user-defined inputs as uniform values. This makes shaders more configurable.
 
 The format is:
-```
+```glsl
 #pragma parameter IDENTIFIER "DESCRIPTION" INITIAL MINIMUM MAXIMUM [STEP]
 ```
 
 The step parameter is optional. However, best practice is to always include the step parameter for clarity and consistency, even if the value is not strictly required. `INITIAL`, `MINIMUM`, and `MAXIMUM` are floating point values. `IDENTIFIER` is the meaningful string which is the name of the uniform which will be used in a UBO or push constant block. `DESCRIPTION` is a string which is human readable representation of IDENTIFIER.
 
 E.g:
-```
+```glsl
 layout(push_constant) uniform Push {
    float DummyVariable;
 } registers;
@@ -615,7 +615,7 @@ This attribute is a 2D position in the form `vec4(x, y, 0.0, 1.0);`. Shaders sho
 
 `gl_Position` must be assigned as:
 
-```
+```glsl
 gl_Position = MVP * Position;
 ```
 
@@ -630,7 +630,7 @@ If TexCoord is passed to a varying unmodified, the interpolated varying will be 
 Vertex outputs and fragment inputs link by location, and not name.
 
 E.g.:
-```
+```glsl
 // Vertex
 layout(location = 0) out vec4 varying;
 // Fragment
@@ -746,7 +746,7 @@ If a shader pass has a `#pragma name NAME` associated with it, meaning is given 
 
 #### Example slang shader
 
-```
+```glsl
 #version 450
 // 450 or 310 es are recommended
 
@@ -785,7 +785,7 @@ void main()
 Push constants are fast-access uniform data which on some GPUs will improve performance over plain UBOs.
 It is encouraged to use push constant data as much as possible.
 
-```
+```glsl
 layout(push_constant) uniform Push
 {
    vec4 SourceSize;
@@ -801,7 +801,7 @@ If you need more than 8 `vec4`s, you can spill uniforms over to plain UBOs, but 
 
 E.g.:
 
-```
+```glsl
 layout(binding = 0, std140) uniform UBO
 {
    mat4 MVP; // Only used in vertex
@@ -840,7 +840,7 @@ Be careful with derivatives of `vTexCoord`. The screen might have been rotated b
 
 However, derivatives are fortunately never really needed, since `w = 1` (we render flat 2D quads), which means derivatives of varyings are constant. You can do some trivial replacements which will be faster and more robust.
 
-```
+```glsl
 dFdx(vTexCoord) = vec2(OutputSize.z, 0.0);
 dFdy(vTexCoord) = vec2(0.0, OutputSize.w);
 fwidth(vTexCoord) = max(OutputSize.z, OutputSize.w);
@@ -861,7 +861,7 @@ If we interpolate `vTexCoord` over a frame with non-integer scale, it is possibl
 
 To correctly sample nearest textures with non-integer scale, we must pre-quantize our texture coordinates. Here's a snippet which lets us safely sample a nearest filtered texture and emulate bilinear filtering.
 
-```
+```glsl
    vec2 uv = vTexCoord * global.SourceSize.xy - 0.5; // Shift by 0.5 since the texel sampling points are in the texel center.
    vec2 a = fract(uv);
    vec2 tex = (floor(uv) + 0.5) * global.SourceSize.zw; // Build a sampling point which is in the center of the texel.
@@ -998,7 +998,7 @@ See the following sections for detailed explanations of each option and their ef
 Output structs should be flattened into separate varyings.
 
 E.g. instead of
-```
+```cpp
 struct VertexData
 {
    float pos : POSITION;
@@ -1021,7 +1021,7 @@ void main_fragment(in VertexData vout)
 
 do this
 
-```
+```glsl
 #pragma stage vertex
 layout(location = 0) out vec4 tex0;
 layout(location = 1) out vec4 tex1;
@@ -1042,7 +1042,7 @@ void main()
 
 Instead of returning a float4 from main\_fragment, have an output in fragment:
 
-```
+```glsl
 layout(location = 0) out vec4 FragColor;
 ```
 
