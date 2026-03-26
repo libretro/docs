@@ -488,6 +488,17 @@ E.g.:
 #pragma name HorizontalPass
 ```
 
+#### `#pragma alias`
+
+This pragma is supported as an alias of `#pragma name`. It sets the same shader identifier and has the same behavior as `#pragma name`.
+
+E.g.:
+```
+#pragma alias HorizontalPass
+```
+
+For consistency and clarity, `#pragma name` should be preferred in new shaders and documentation.
+
 #### `#pragma format`
 This pragma controls the format of the framebuffer which this shader will render to. The default render target format is `R8G8B8A8_UNORM`.
 
