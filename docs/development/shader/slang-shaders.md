@@ -183,7 +183,7 @@ There are three main types of inputs in this shader system.
 
 There are two main approaches to deduce what a sampler2D uniform wants to sample from. The first way is to explicitly state somewhere else what that particular sampler needs, e.g.
 
-```text
+```glsl
 uniform sampler2D geeWhatAmI;
 
 // Metadata somewhere else
