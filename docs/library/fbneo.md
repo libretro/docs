@@ -62,7 +62,7 @@ Note : Here is a non-exhaustive list of additional parameters you might want to 
 
 ## Building romsets for FBNeo
 
-Arcade emulation won't work properly without the romsets matching the emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game.
+You won't be able to emulate games without the romsets matching this emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game.
 
 Don't expect things to work properly if you didn't build valid romsets, and don't report issues because your romsets are invalid.
 
@@ -74,6 +74,7 @@ You can download the dat files for the latest version of the core from the [dats
 
 It mostly consists of latest dumps available for MAME.
 The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
+Console/computer romsets come from different sources (recently emulated systems are likely to be based on No-Intro, but older ones were mostly based on MESS, there are also a lot of hacks/homebrews you won't find in those sets).
 Having an older FBAlpha/FBNeo set among your ingredients will also help a lot.
 
 ### Step 3: Building the romsets
@@ -128,7 +129,7 @@ The following device types are mostly WIP, they haven't been thoroughly tested a
 
 ## Emulating consoles and computers
 
-It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name (the instructions to build those romsets don't differ from arcade's).
+It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name ([the instructions to build those romsets aren't different from arcade](#building-romsets-for-fbneo)).
 
 You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :
 
@@ -223,6 +224,7 @@ Here is a list of samples currently in use :
 
 | Sample name  | Note                                                                   |
 |--------------|------------------------------------------------------------------------|
+| ad59mc07     | Known as `equites` in MAME                                             |
 | blockade     |                                                                        |
 | buckrog      |                                                                        |
 | carnival     |                                                                        |
@@ -230,6 +232,7 @@ Here is a list of samples currently in use :
 | circus       |                                                                        |
 | crash        |                                                                        |
 | congo        |                                                                        |
+| deathnlead   | Not from MAME, megadrive                                               |
 | depthch      |                                                                        |
 | digger       | Not from MAME                                                          |
 | dkongjr      |                                                                        |
@@ -260,11 +263,13 @@ Here is a list of samples currently in use :
 | seawolf      |                                                                        |
 | sfz3mix      | Not from MAME, optional, replace OG music by HQ music, no dipsw.       |
 | sharkatt     |                                                                        |
+| sidetrac     | Not from MAME                                                          |
 | sot4w        | Not from MAME, megadrive                                               |
 | spacefb      |                                                                        |
 | spacfury     |                                                                        |
 | stinger      | Not from MAME                                                          |
 | subroc3d     |                                                                        |
+| targ         |                                                                        |
 | thehand      |                                                                        |
 | thief        |                                                                        |
 | tr606drumkit | Not from MAME                                                          |
@@ -278,7 +283,7 @@ Here is a list of samples currently in use :
 
 ## Hiscores
 
-Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have the hiscore core option enabled.
+Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have `Quick Menu > Core Options > Hiscores` enabled.
 
 It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or `hiscore.dat` might have a missing or broken entry for that romset. You can request support in the issue tracker. 
 
@@ -298,7 +303,7 @@ This core provides support for RetroAchievements, and some were added for popula
 
 ## Dipswitches
 
-They are either directly available from `Quick Menu > Core Options`, or from the service menu after setting its shortcut in the `Diagnostic Input` core option.
+They are either directly available from `Quick Menu > Core Options > DIP Switches`, or from the service menu after setting its shortcut at `Quick Menu > Core Options > Diagnostic Input`.
 
 ## Cheats
 
@@ -306,7 +311,7 @@ This core supports the RetroArch cheat feature with the `.cht` files. However it
 
 * Download the pack of cheats from [here](https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip)
 * Uncompress **all of them** into the `SYSTEM_DIRECTORY/fbneo/cheats/` folder (which is **NOT** the same folder as the RetroArch feature with the `.cht` files)
-* Cheats will become available through core options (`Quick Menu > Core Options`, **NOT** `Quick Menu > Cheats`) afterward.
+* Cheats will become available through core options (`Quick Menu > Core Options > Cheat`, **NOT** `Quick Menu > Cheats`) afterward.
 
 ## Multi-language
 
@@ -325,18 +330,26 @@ As far as we are concerned, you are supposed to dump your own games, so we can't
 
 If present, the line `Verify the following romsets : <romset> <parent> <bios>` gives you the list of split romsets required by the game you are trying to run. This is mainly for reference since you might not be striving to use romsets in split format. The next few lines give you the list of files it couldn't find within those romsets.
 
-Otherwise, a `Romset is unknown` message means the romset couldn't be found by its filename in our database.
+Otherwise, a `Romset is unknown` message means the romset couldn't be found by its filename in our database, meaning it's either not supported at all or wrongly named.
 
 Both problems result from not reading the [arcade documentation](https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator).
 Exceptionally there might be false positives due to your files being unreadable for some reason (file corruption during transfer, file permission, damaged disk drive, [retroarch regression](https://github.com/libretro/RetroArch/issues/18582), ...). This is usually a rabbit hole and something you should only concern yourself after using clrmamepro to verify your romsets.
 
 Rarely you could get a "Failed initializing driver" message, this is something you should report [here](https://github.com/finalburnneo/FBNeo/issues)
 
+### Is XXX supported ?
+
+You can check the [dats](https://github.com/libretro/FBNeo/tree/master/dats/) or [gamelist.txt](https://raw.githubusercontent.com/libretro/FBNeo/refs/heads/master/gamelist.txt) to see if a game is supported.
+
+We don't accept requests for supporting a game, and questions regarding the lack of support for a game are also regarded as requesting for its support.
+One exception to that rule would be for consoles/computers we already support, and you should make that request [here](https://neo-source.com/index.php?topic=3656.0).
+Games running on already emulated arcade systems will also be tolerated, the most common case for this would be romhacks of already emulated games, don't ask if you are not absolutely sure.
+
 ### How can i run that romhack i found ?
 
 A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.
 
-For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed and must be disabled by toggling off the `Allow patched romsets` core option if you intend to use RetroAchievements : 
+For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed if you intend to use RetroAchievements and must be disabled by toggling off `Quick Menu > Core Options > Allow patched romsets` : 
 
 #### Using the "patched" folder
 
@@ -346,13 +359,13 @@ For the unsupported romhacks, there are 3 methods, but those romhacks are not al
 #### Using IPS Patches
 
 * Put all IPS patch files (including: driver name directory/**.dat|**.ips) into the `SYSTEM_DIRECTORY/fbneo/ips/` folder.
-* IPS Patch will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+* IPS Patch will become available through core options (`Quick Menu > Core Options > IPS Patch`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
 * Note : To avoid competing with loaded games for startup privileges, IPS Patches is initially disabled by default.
 
 #### Using RomData
 
 * Put all RomData files (including: driver name directory/**.dat) into the `SYSTEM_DIRECTORY/fbneo/romdata/` folder
-* RomData will become available through core options (`Quick Menu > Core Options`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
+* RomData will become available through core options (`Quick Menu > Core Options > RomData`) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.
 
 Please note that all 3 methods still require that you launch the original non-patched romset, it will be patched/replaced at runtime.
 
@@ -409,11 +422,11 @@ You can convert your unsupported dumps by following this tutorial :
 
 ### Why can't i launch Killer instinct ? I heard it's supported.
 
-That driver was disabled for now, it didn't meet our quality criteria.
+That driver was disabled, it didn't meet our quality criteria. There are no plans for fixing it at the moment.
 
 ### Where is the hires dipswitch on vector games ? It seems gone.
 
-It was streamlined into a global `Resolution` core option affecting all vector games at once, with new resolutions available.
+It was streamlined into a global `Video Settings > Resolution` core option affecting all vector games at once, with new resolutions available.
 
 For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
 * for horizontal games, you'll want to use 1440x1080
@@ -431,7 +444,7 @@ If you are wondering why this isn't required for the MAME core, you can find mor
 
 Additionally :
 
-* If you are playing on a vertical screen, you'll want to use the `Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
+* If you are playing on a vertical screen, you'll want to use the `Video Settings > Vertical Mode` core option to rotate the display for your needs, it should also be possible to rotate display from `Settings > Video > Output > Video Rotation` but that method might handle the aspect ratio incorrectly.
 * If you are using a bezel pack, make sure it's compatible with FBNeo (apparently, some were written specifically to work with MAME's internal rotation) and to follow its official instructions. In some case it seems enabling `Settings > On-Screen Display > On-Screen Overlay > Auto-Scale Overlay` (`input_overlay_auto_scale = "true"` in `retroarch.cfg`) can help.
 
 ### Why is the music high-pitched, too fast and/or different from what i think it should be ?
@@ -441,12 +454,12 @@ The first question you should be asking yourself is "what am i comparing this to
 If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings. 
 By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
 
-Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
+Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Video Settings > Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
 Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
 
 ### Why do i get a black screen and/or can't i change bios in neogeo games ?
 
-The `neogeo` romset is a collection of neogeo bioses, and most of them are considered as optional so they won't cause a "white screen" when missing. Only `MVS Asia/Europe ver. 6 (1 slot)` is mandatory.
+The `neogeo` romset is a collection of neogeo bioses, and most of them are considered optional so they won't cause a "white screen" when missing. Only `MVS Asia/Europe ver. 6 (1 slot)` is mandatory.
 
 However, having an incomplete romset can still cause various issues :
 
@@ -486,7 +499,21 @@ NVRAM/EEPROM are saved in the `SAVEFILES_DIRECTORY/fbneo` folder, and you can ge
 
 ### Should i use retroarch's analog-to-digital feature ?
 
-You should **NEVER** use that feature with this core, it already converts analog to digital and digital to analog internally. Exceptionally it might not do that conversion because each of those controls are already doing their own thing.
+You should **NEVER** use that feature with this core, it already converts analog to digital and digital to analog internally. Exceptionally it might not do that conversion because each of those controls are already doing their own thing, meaning you don't want that conversion either.
+
+### Why is my old savestate not working anymore after updating my core ?
+
+A core's savestates are only guaranteed to keep working as long as you NEVER update that core.
+Savestates are tied to how a game is emulated, and updating a core might significantly change how that game is emulated, breaking older savestates in the process.
+This does apply to any core, but is likely to be more frequent for actively developed multi-system emulators like FBNeo.
+You should be wary of updating your cores if this is a major concern for you.
+Note that rollback netplay with mismatching core versions can also be affected by this.
+
+### Why am i having trouble playing with a keyboard ?
+
+Keyboards, especially cheaper ones, are often affected by ghosting, which will prevent some key combinations from working and hinder your experience. You can test your keyboard [here](https://www.microsoft.com/applied-sciences/projects/anti-ghosting-demo).
+
+Additionally, keyboards are kind of unsuitable for arcade emulation, because they allow things that were impossible on real hardware, like pressing opposite directions. This commonly leads to problems while doing special moves involving opposite directions in fighting games. The FBNeo core has a core option at `Input Settings > SOCD Mode` to mitigate this, and some value might work better than another for your play style.
 
 ### Where is SYSTEM_DIRECTORY ?
 
