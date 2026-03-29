@@ -4,9 +4,7 @@
 
 ## Background
 
-A PSP emulator for Android, Windows, Mac and Linux, written in C++.
-
-The PPSSPP core supports [OpenGL](#opengl), [Vulkan](#vulkan), and [Direct3D 11](#d3d11) rendering.
+A fast and portable PSP emulator written in C++. No BIOS file required to play, PPSSPP is an "HLE" emulator. Default settings balance good compatibility and speed.
 
 The PPSSPP core has been authored by
 
@@ -18,26 +16,18 @@ The PPSSPP core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-## Requirements
+## Setup (Required!!)
 
-- OpenGL/Open GL ES 2.0 or higher for the OpenGL renderer.
-- Vulkan for the Vulkan renderer.
-- Direct3D 11 for the Direct3D 11 renderer.
+The PPSSPP core requires some helper files to be fully functional, including assets such as fonts and backgrounds that are required for memory card screens, and per-game settings that are loaded automatically for compatibility/bugfixing.
 
-## BIOS
-
-The PPSSPP core requires assets files to be fully functional.
-
-Assets such as fonts and backgrounds that are required for memory card screens.
-
-In order to acquire PPSSPP's assets files and install them succcessfully, follow these steps.
+In order to acquire PPSSPP's assets files and install them succcessfully, follow these steps:
 
 !!! info
 	Lakka users do not need to follow these steps. Lakka image ships with the assets already included. Those assets are compatible with the version of the core provided in the Lakka image. Using not compatible assets may lead to unexpected results.
 
 ### Installing from the 'Core System Files Downloader'
 
-If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution, just download 'PPSSPP.zip' from that menu and you're all done!
+If your frontend version has `Main Menu > Online Updater > Core System Files Downloader` then that's the easiest solution. Just download 'PPSSPP.zip' from that menu and you're all done!
 
 ### Installing from the GitHub repo
 
@@ -77,6 +67,7 @@ Content that can be loaded by the PPSSPP core have the following file extensions
 - .cso
 - .prx
 - .pbp
+- .chd
 
 RetroArch database(s) that are associated with the PPSSPP core:
 
@@ -112,6 +103,14 @@ Frontend-level settings or features that the PPSSPP core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
+**Texture Replacement Packs**
+
+High-resolution texture packs can be used by extracting any archives and placing the contents into the frontend's 'saves' directory, in a directory under PSP/TEXTURES, named for the [game's ID code](https://www.scribd.com/document/515954071/PSP-Game-IDs).
+
+**Netplay**
+
+PPSSPP-libretro can utilize the same netplay services provided by the standalone PPSSPP application by entering the desired network address in the core options, under the 'network' category. See [the upstream documentation](https://github.com/hrydgard/ppsspp/wiki/How-to-play-multiplayer-games-with-PPSSPP) for further details on setup.
+
 ## Directories
 
 The PPSSPP core's library name is 'PPSSPP'
@@ -128,8 +127,10 @@ The PPSSPP core saves/loads to/from these directories.
        ├── flash0/ (Font override for real fonts dumped from PSP system)
        ├── Cheats/ (Internal Cheats directory, disabled by default)
        ├── GAME/ (DLC directory)
-       └── SYSTEM/
+       ├── SYSTEM/
                  └── CACHE/ (Shader cache)
+       └── TEXTURES/
+                 └── [GAME_ID] (Extracted textures; enabled via core option)
 ```
 
 **Frontend's State directory**
@@ -174,29 +175,29 @@ DLCs need to be installed in the GAME directory. Create the GAME directory in th
 
 RetroArch\saves\PPSSPP\PSP\GAME\
 
-## OpenGL
+## Hardware Rendering
 
-PPSSPP's OpenGL renderer can be used by setting RetroArch's video driver to gl.
+- **OpenGL**
 
-The common option for all operating systems is OpenGL, requiring hardware that supports OpenGL/Open GL ES 2.0 or higher. It is an older, pre-Vulkan API, slower than Vulkan but with better compatibility. If you encounter problems with other APIs, try this one.
+    PPSSPP's OpenGL renderer can be used by setting RetroArch's video driver to gl or glcore (where available).
 
-## Vulkan
+    This renderer requires hardware that supports OpenGL/Open GL ES 2.0 or higher. It is an older, pre-Vulkan API, which is slower but with better compatibility. If you encounter problems with other APIs, try this one.
 
-PPSSPP's Vulkan renderer can be used by setting RetroArch's video driver to vulkan.
+- **Vulkan**
 
-This is the latest and fastest API currently. It is most recommended for demanding less of your CPU, thus being the fastest.
+    PPSSPP's Vulkan renderer can be used by setting RetroArch's video driver to vulkan. This is the latest and fastest API currently. It is most recommended for demanding less of your CPU, thus being the fastest.
 
-## D3D11
+- **D3D11**
 
-PPSSPP's Direct3D 11 renderer can be used by setting RetroArch's video driver to d3d11.
-
-In some cases Direct3D 11 may offer better performance than OpenGL, especially on integrated Intel graphics.
+    PPSSPP's Direct3D 11 renderer can be used by setting RetroArch's video driver to d3d11. In some cases Direct3D 11 may offer better performance than OpenGL, especially on integrated Intel graphics.
 
 ## Core options
 
 The PPSSPP core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+
+### System
 
 - **CPU Core** [ppsspp_cpu_core] (**jit**|IR jit|interpreter)
 
@@ -205,6 +206,16 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     The interpreter setting enables the Interpreter for CPU emulation. The Interpreter is a very slow type of emulation and mostly useful for debug, but should work anywhere.
 
 	The IR jit setting might be worth trying against games which are broken in the other two settings.
+
+- **Fast Memory** [ppsspp_fast_memory] (**enabled**|disabled)
+
+	This option avoids some memory accesses by caching information, however a few games may have problems when this option is enabled, most run with no problem.
+
+- **Ignore Bad Memory Accesses**
+  
+- **I/O Timing Method**
+
+- **Force Real Clock Sync**
 
 - **Locked CPU Speed** [ppsspp_locked_cpu_speed] (**off**|222MHz|266MHz|333MHz)
 
@@ -218,71 +229,79 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	In case of doubt, keep this on off.
 
-- **Language** [ppsspp_language] (**automatic**|english|japanese|french|spanish|german|italian|dutch|portuguese|russian|korean|chinese_traditional|chinese_simplified)
+- **Memory Stick Inserted**
+
+- **Cache Full ISO in RAM**
+
+- **Internal Cheats Support** [ppsspp_cheats] (**disabled**|enabled)
+
+	Enables internal cheats. Look at the [Internal Cheats section](#internal-cheats) for more information.
+
+- **Game Language** [ppsspp_language] (**automatic**|english|japanese|french|spanish|german|italian|dutch|portuguese|russian|korean|chinese_traditional|chinese_simplified)
 
     Configure the PPSSPP's system language.
 
 	When set to automatic, the default PPSSPP language setting will be pulled from RetroArch's Language setting.
 
-- **Rendering Mode** [ppsspp_rendering_mode] (**buffered**|nonbuffered)
+- **PSP Mode**
 
-	Buffered mode renders graphics close to what is in the actual PSP, with all the effects and with the least possible bugs.
+### Video
 
-	Nonbuffered mode skips most heavier graphics effects like blur, bloom, reflections, shadows, and more. It can be used as a speed hack if it is underperforming because of a weak GPU.
+- **Backend** [ppsspp_rendering_mode] (**Automatic**|OpenGL|Vulkan|D3D11|None)
 
-- **True Color Depth** [ppsspp_true_color] (**enabled**|disabled)
+	Sets the hardware rendering API. 'Automatic' uses whichever backend matches the frontend's current video driver.
 
-	Enhance the colors compared to the older models of PSPs which have lower quality screens.
+- **Software Rendering**
 
-	It's best to keep this enabled.
+- **Rendering Resolution** [ppsspp_internal_resolution] (**480x272**|960x544|1440x816|1920x1088|2400x1360|2880x1632|3360x1904|3840x2176|4320x2448|4800x2720)
 
-- **Auto Frameskip** [ppsspp_auto_frameskip] (**disabled**|enabled)
+	**The 'Software Rendering' core option must be set to OFF for this to have any effect.**
 
-	This option only selects the optimal number of frames to skip to not to compromise both gameplay. The max frames to be skipped can be limited in the Frameskip option.
+	Controls the internal resolution of the graphics, significant performance impact if your GPU is not powerful enough for certain resolutions.
+
+- **MSAA Antialiasing**
+
+- **Crop to 16x9**
 
 - **Frameskip** [ppsspp_frameskip] (**0**|1|2|3|4|5|6|7|8|9)
 
 	This option skips image frames to increase the emulation speed. They can be skipped between 1 and 8 frames every second. Using this option can give the impression of the game running faster but with stuttering, and this increases the amount of frames to be skipped you select. This option is only effective when your processor is powerful enough.
 
-- **Force Max FPS** [ppsspp_force_max_fps] (**disabled**|enabled)
+- **Auto Frameskip** [ppsspp_auto_frameskip] (**disabled**|enabled)
 
-	Prevents FPS form exceeding 60.
+	This option only selects the optimal number of frames to skip to not to compromise both gameplay. The max frames to be skipped can be limited in the Frameskip option.
 
-	This option was created in order to help God of War games that used to have a performance problem because the FPS were higher than normal. This option locks the FPS to 60 to avoid this problem.
+- **Render Duplicate Frames to 60 Hz**
 
-- **Audio latency** [ppsspp_audio_latency] (**low**|medium|high)
+- **Detect Frame Rate Changes**
 
-	Configure the audio latency.
+- **Buffer Graphics Commands**
 
-- **Internal Resolution** [ppsspp_internal_resolution] (**480x272**|960x544|1440x816|1920x1088|2400x1360|2880x1632|3360x1904|3840x2176|4320x2448|4800x2720)
+- **Software Skinning**
 
-	**The 'Rendering Mode' core option must be set to buffered for this to have any effect.**
+- **Hardware Tesselation**
 
-	Controls the internal resolution of the graphics, significant performance impact if your GPU is not powerful enough for certain resolutions.
+- **Texture Upscale Type** [ppsspp_texture_scaling_type] (**xbrz**|hybrid|bicubic|hybrid_bicubic)
 
-- **Confirmation Button** [ppsspp_button_preference] (**cross**|circle)
+	Choose the Texture Upscale Type.
 
-	Select whether the cross input or the circle input is the confirmation button.
+	xBRZ is overall the best option while Hybrid is a slower version of xBRZ and doesn't offers much difference, Hybrid + Bicubic is the slowest one using two effects.
 
-- **Fast Memory (Speedhack)** [ppsspp_fast_memory] (**enabled**|disabled)
-
-	This option avoids some memory accesses by caching information, however a few games may have problems when this option is enabled, most run with no problem.
-
-- **Block Transfer GPU** [ppsspp_block_transfer_gpu] (**enabled**|disabled)
-
-	This option simulates support for rendering effects not supported by current hardware, but supported by PSP hardware. Fixes multiple graphics problems in a number of games, but decreases performance on weaker GPUs (on smartphones). Disabling can greatly impact performance, and can be a great help in games that do not need this option enabled.
-
-- **Texture Scaling Level** [ppsspp_texture_scaling_level] (**1**|2|3|4|5|0)
+- **Texture Upscaling Level** [ppsspp_texture_scaling_level] (**1**|2|3|4|5|0)
 
 	With this option, you can make modifications to the texture scale level, which improves the visual at high resolutions.
 
 	All the scaling is made by CPU and results in a great performance impact. Use carefully.
 
-- **Texture Scaling Type** [ppsspp_texture_scaling_type] (**xbrz**|hybrid|bicubic|hybrid_bicubic)
+- **Texture Deposterize** [ppsspp_texture_deposterize] (**disabled**|enabled)
 
-	Choose the Texture Upscale Type.
+	Deposterize fixes small in-texture glitches that may happen when the texture is upscaled.
 
-	xBRZ is overall the best option while Hybrid is a slower version of xBRZ and doesn't offers much difference, Hybrid + Bicubic is the slowest one using two effects.
+- **Texture Shader**
+
+- **Anisotropic Filtering** [ppsspp_texture_anisotropic_filtering] (**off**|1x|2x|4x|8x|16x)
+
+	Modify the Anisotropic Filtering, which fixes the textures on the horizon that are drawn at angles resulting in a better look.
 
 - **Texture Filtering** [ppsspp_texture_filtering] (**auto**|nearest|linear|linear(FMV))
 
@@ -290,39 +309,91 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Stick to auto in case of doubt.
 
-- **Anisotropic Filtering** [ppsspp_texture_anisotropic_filtering] (**off**|1x|2x|4x|8x|16x)
+- **Smart 2D Texture Filtering**
 
-	Modify the Anisotropic Filtering, which fixes the textures on the horizon that are drawn at angles resulting in a better look.
+- **Texture Replacement**
 
-- **Texture Deposterize** [ppsspp_texture_deposterize] (**disabled**|enabled)
+### Input
 
-	Deposterize fixes small in-texture glitches that may happen when the texture is upscaled.
+- **Confirmation Button** [ppsspp_button_preference] (**cross**|circle)
 
-- **GPU Hardware T&L** [ppsspp_gpu_hardware_transform] (**enabled**|disabled)
+	Select whether the cross input or the circle input is the confirmation button.
 
-	Uses the hardware to generate lighting and shading effects. With this option disabled performance may drop a lot on weak GPUs. Bugs are rare, but if found, can be disabled for testing.
+- **Analog Circle vs Square Gate Compensation**
 
-- **Vertex Cache (Speedhack)** [ppsspp_vertex_cache] (**enabled**|disabled)
+- **Analog Deadzone**
+  
+    Additional deadzone to apply after frontend input.
 
-	Uses vertex cache to improve performance in few games, in rare cases can cause glitches in geometry. Some games have reduced performance with this option enabled. This option mostly benefits OpenGL API, doesn't need to be enabled to other backends.
+- **Analog Axis Scale**
+  
+    Additional sensitivity to apply after frontend input.
 
-- **IO Threading** [ppsspp_separate_io_thread] (**disabled**|enabled)
+### Hacks
 
-	Uses separate CPU thread for input/output of files (read data).
+- **Skip Buffer Effects**
+  
+    Faster, but nothing may draw in some games.
 
-- **Unsafe FuncReplacements** [ppsspp_unsafe_func_replacements] (**enabled**|disabled)
+- **Disable Culling**
 
-	Enable unsafe CPU function replacements.
+- **Skip GPU Readbacks**
+  
+    Some games require GPU readbacks, so be careful.
 
-	May make games playable.
+- **Lazy Texture Caching (Speedup)**
+  
+    Faster, but can cause text problems in a few games.
 
-- **Sound Speedhack** [ppsspp_sound_speedhack] (**disabled**|enabled)
+- **Spline/Bezier Curves Quality**
+  
+    Only used by some games, controls smoothness of curves.
 
-	It helps in some games, like Dead or Alive, with problems in sound speed.
+- **Lower Resolution for Effects**
+  
+    Reduces artifacts
 
-- **Internal Cheats Support** [ppsspp_cheats] (**disabled**|enabled)
+### Network
 
-	Enables internal cheats. Look at the [Internal Cheats section](#internal-cheats) for more information.
+- **Enable Networking/WLAN (Beta, may break games)**
+
+- **MAC Address Pt 1: x-:--:--:--:--:--**
+
+- **MAC Address Pt 2: -x:--:--:--:--:--**
+
+- **MAC Address Pt 3: --:x-:--:--:--:--**
+
+- **MAC Address Pt 4: --:-x:--:--:--:--**
+
+- **MAC Address Pt 5: --:--:x-:--:--:--**
+
+- **MAC Address Pt 6: --:--:-x:--:--:--**
+
+- **MAC Address Pt 7: --:--:--:x-:--:--**
+
+- **MAC Address Pt 8: --:--:--:-x:--:--**
+
+- **MAC Address Pt 9: --:--:--:--:x-:--**
+
+- **MAC Address Pt 10: --:--:--:--:-x:--**
+
+- **MAC Address Pt 11: --:--:--:--:--:x-**
+
+- **MAC Address Pt 12: --:--:--:--:--:-x**
+
+- **WLAN Channel**
+
+- **Enable Built-in PRO Ad Hoc Server**
+
+- **Change PRO Ad Hoc Server IP Address ('localhost' = multiple instances)**
+
+- **Enable UPnP (Need a few seconds to detect)**
+
+- **Port Offset ('0' = PSP Compatibility)**
+
+- **Minimum Timeout (Override in ms, '0' = default)**
+
+- **Forced First Connect (Faster connect)**
 
 ## Joypad
 
