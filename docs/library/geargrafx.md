@@ -4,7 +4,7 @@
 
 Geargrafx is an open source, cross-platform, PC Engine / TurboGrafx-16 / SuperGrafx emulator written in C++.
 
-- Accurate emulation supporting the entire HuCard PCE / SGX catalog.
+- Very accurate emulation supporting the entire HuCard PCE / SGX catalog.
 - Support for CD-ROM², Super CD-ROM² and Arcade CD-ROM² systems.
 - Backup RAM and Memory Base 128 support.
 - Multi Tap support (up to 5 players).
@@ -173,8 +173,31 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **No Sprite Limit** [geargrafx_no_sprite_limit] (**Disabled**|Enabled)
 
-    Enabling this option removes the per-line sprite limit, but may cause glitches in certain games.
-    It's best to keep this core option disabled.
+    Remove the per-line sprite limit. This reduces flickering but may cause glitches in certain games. It's best to keep this option disabled.
+
+- **Video Low-Pass Filter** [geargrafx_lowpass_filter] (**Disabled**|Enabled)
+
+    Enable a low-pass video filter to simulate the signal degradation of analog video output on CRT displays.
+
+- **Video LPF Intensity** [geargrafx_lowpass_intensity] (**100**|0 - 100)
+
+    Set the intensity of the video low-pass filter as a percentage from 0 to 100.
+
+- **Video LPF Cutoff** [geargrafx_lowpass_cutoff] (**5.0 MHz**|3.0 MHz|3.5 MHz|4.0 MHz|4.5 MHz|5.0 MHz|5.5 MHz|6.0 MHz|6.5 MHz|7.0 MHz)
+
+    Set the cutoff frequency of the video low-pass filter. Lower values produce a softer image.
+
+- **Video LPF HuC6270 5.36 MHz** [geargrafx_lowpass_speed_536] (**Disabled**|Enabled)
+
+    Apply the video low-pass filter when HuC6270 is running in 5.36 MHz dot clock mode (256px width).
+
+- **Video LPF HuC6270 7.16 MHz** [geargrafx_lowpass_speed_716] (**Enabled**|Disabled)
+
+    Apply the video low-pass filter when HuC6270 is running in 7.16 MHz dot clock mode (341px width).
+
+- **Video LPF HuC6270 10.8 MHz** [geargrafx_lowpass_speed_108] (**Enabled**|Disabled)
+
+    Apply the video low-pass filter when HuC6270 is running in 10.8 MHz dot clock mode (512px width).
 
 - **Backup RAM (restart)** [geargrafx_backup_ram] (**Enabled**|Disabled)
 
@@ -183,6 +206,10 @@ Settings with (restart) means that core has to be closed for the new setting to 
 - **Deterministic Netplay** [geargrafx_deterministic_netplay] (**Disabled**|Enabled)
 
 	When enabled, ensures deterministic emulation behavior for netplay by setting consistent reset values for memory and hardware registers. This helps prevent desyncs during netplay sessions.
+
+- **Safe VDC Defaults (Homebrew)** [geargrafx_safe_vdc_defaults] (**Disabled**|Enabled)
+
+	When enabled, sets safe default values for the VDC (Video Display Controller) registers. This can help some homebrew software run correctly.
 
 - **CD-ROM (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
@@ -203,7 +230,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **HuC6280A Audio Chip** [geargrafx_psg_huc6280a] (**Enabled**|Disabled)
 
-	Enable or disable the HuC6280A audio chip emulation. The HuC6280A provides the PSG (Programmable Sound Generator) functionality.
+	Enable the HuC6280A audio chip, as found in the SuperGrafx and CoreGrafx I. When disabled, the original HuC6280 chip from the PC Engine is used instead.
 
 - **PSG Volume** [geargrafx_psg_volume] (**100**|0 - 200)
 
