@@ -4,10 +4,7 @@
 
 Gearboy is an open source, cross-platform, Nintendo Game Boy (DMG) / Game Boy Color (GBC) emulator written in C++.
 
-- Accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
-- Accurate instruction and memory timing, passes instr_timing.gb and mem_timing.gb from blargg's tests.
-- Supported cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3 + RTC, MBC5, HuC-1 and MBC1M (multicart).
-- Accurate LCD controller emulation with correct timings and priorities including mid-scanline effects.
+- Accurate emulation supporting cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3, MBC5, MBC7, HuC-1, HuC-3, MMM01, Pocket Camera, TAMA5 and MBC1M.
 - Game Boy Color support.
 - Battery powered RAM save support.
 - Save states.
@@ -77,7 +74,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
-| Sensors           | ✕         |
+| Sensors           | ✔         |
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
@@ -131,7 +128,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *Game Boy DMG* forces original Game Boy hardware.
     - *Game Boy Advance* enables Game Boy Advance hardware.
 
-- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart)
+- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart|HuC 1|HuC 3|MMM01|Camera|MBC 7|TAMA5)
 
 	Select which Memory Bank Controller (MBC or mapper) is emulated.
 
@@ -139,9 +136,15 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *ROM Only* forces no MBC.
     - *MBC 1* forces MBC 1.
     - *MBC 2* forces MBC 2.
-    - *MBC 3* forces MBC 3 + RTC.
+    - *MBC 3* forces MBC 3.
     - *MBC 5* forces MBC 5.
     - *MBC 1 Multicart* forces MBC 1 Multicart.
+    - *HuC 1* forces HuC 1.
+    - *HuC 3* forces HuC 3.
+    - *MMM01* forces MMM01.
+    - *Camera* forces Pocket Camera.
+    - *MBC 7* forces MBC 7.
+    - *TAMA5* forces TAMA5.
 
 - **DMG Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
 
@@ -151,21 +154,69 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 	Enables color correction for Game Boy Color games to simulate the original GBC LCD screen output.
 
-- **DMG Bootrom** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
+- **DMG Bootrom (restart)** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
 
-	This option will enables/disables bootrom for Game Boy DMG model. For this to work, the `dmg_boot.bin` file must exist in Retro Arch's system directory.
+	Enable or disable the original Game Boy bootrom. For this to work, the `dmg_boot.bin` file must exist in RetroArch's system directory.
 
-- **Game Boy Color Bootrom** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
+- **GBC Bootrom (restart)** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
 
-	This option will enables/disables bootrom for Game Boy Color model. For this to work, the `cgb_boot.bin` file must exist in Retro Arch's system directory.
+	Enable or disable the Game Boy Color bootrom. For this to work, the `cgb_boot.bin` file must exist in RetroArch's system directory.
 
 - **Allow Up+Down / Left+Right** [gearboy_up_down_allowed] (**Disabled**|Enabled)
 
-	Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
+	Allow pressing, quickly alternating, or holding both left and right (or up and down) directions at the same time. This may cause movement based glitches in certain games.
 
-	This may cause movement based glitches to occur in certain games.
+- **Tilt Source (MBC7)** [gearboy_tilt_source] (**Mouse**|Sensor|Analog Stick)
 
-	It's best to keep this core option disabled.
+	Select the input source for MBC7 tilt controls.
+
+- **Sensor Sensitivity X (MBC7)** [gearboy_sensor_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using sensor input for MBC7 tilt controls.
+
+- **Sensor Sensitivity Y (MBC7)** [gearboy_sensor_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using sensor input for MBC7 tilt controls.
+
+- **Sensor Invert X (MBC7)** [gearboy_sensor_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using sensor input for MBC7 tilt controls.
+
+- **Sensor Invert Y (MBC7)** [gearboy_sensor_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using sensor input for MBC7 tilt controls.
+
+- **Mouse Sensitivity X (MBC7)** [gearboy_mouse_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using mouse input for MBC7 tilt controls.
+
+- **Mouse Sensitivity Y (MBC7)** [gearboy_mouse_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using mouse input for MBC7 tilt controls.
+
+- **Mouse Invert X (MBC7)** [gearboy_mouse_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using mouse input for MBC7 tilt controls.
+
+- **Mouse Invert Y (MBC7)** [gearboy_mouse_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using mouse input for MBC7 tilt controls.
+
+- **Analog Sensitivity X (MBC7)** [gearboy_analog_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using analog stick input for MBC7 tilt controls.
+
+- **Analog Sensitivity Y (MBC7)** [gearboy_analog_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using analog stick input for MBC7 tilt controls.
+
+- **Analog Invert X (MBC7)** [gearboy_analog_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using analog stick input for MBC7 tilt controls.
+
+- **Analog Invert Y (MBC7)** [gearboy_analog_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using analog stick input for MBC7 tilt controls.
 
 ## Joypad
 
