@@ -5,6 +5,8 @@
 Gearlynx is an open source, cross-platform, Atari Lynx emulator written in C++.
 
 - Very accurate emulation supporting the entire commercial Atari Lynx catalog.
+- Bank switching (BANK1 + AUDIN) and EEPROM support.
+- Save files (EEPROM and NVRAM).
 - Configurable low-pass audio filter.
 - Internal database for automatic rom detection and hardware selection if `Auto` options are selected.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
@@ -52,7 +54,7 @@ Frontend-level settings or features that the Gearlynx core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | ✕         |
+| Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
@@ -80,6 +82,12 @@ Frontend-level settings or features that the Gearlynx core respects.
 The Gearlynx core's library name is 'Gearlynx'
 
 The Gearlynx core saves/loads to/from these directories.
+
+**Frontend's Save directory**
+
+| File  | Description            |
+|:-----:|:----------------------:|
+| *.srm | EEPROM / NVRAM save    |
 
 **Frontend's State directory**
 
@@ -112,7 +120,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *16:9 DAR* forces 16:9 aspect ratio.
 	- *16:10 DAR* forces 16:10 aspect ratio.
 
-- **Screen Rotation** [gearlynx_rotation] (**Auto**|Left|Right)
+- **Screen Rotation** [gearlynx_rotation] (**Auto**|Left|Right|Disabled)
 
 	Rotates the screen display. This is useful since many Lynx games were designed to be played with the system held vertically.
 
