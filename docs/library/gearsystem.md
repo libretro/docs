@@ -4,8 +4,7 @@
 
 Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
 
-- Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000, and many Korean multi-carts.
+- Very accurate emulation supporting cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000, and many Korean multi-carts.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
@@ -73,7 +72,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats - Game Genie  | ✔         |
-| RetroArch Cheats - Pro Acion Replay | ✔         |
+| RetroArch Cheats - Pro Action Replay | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -124,14 +123,18 @@ The Gearsystem core has the following options that can be tweaked from the core 
 
 Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear|SG-1000 / Multivision)
+- **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear (2 ASIC)|Game Gear (2 ASIC) SMS Mode|Game Gear (1 ASIC)|Game Gear (1 ASIC) SMS Mode|SG-1000 / Multivision|SG-1000 II)
 
-	Select which hardware/model is emulated.
+	Select the console type to emulate. 'Auto' automatically detects the appropriate system based on the loaded content.
 
     - *Auto* selects the best hardware based on the rom.
     - *Master System / Mark III* forces original Master System / Mark III hardware.
-    - *Game Gear* forces Game Gear hardware.
+    - *Game Gear (2 ASIC)* forces Game Gear hardware with 2 ASIC configuration.
+    - *Game Gear (2 ASIC) SMS Mode* forces Game Gear in SMS compatibility mode (2 ASIC).
+    - *Game Gear (1 ASIC)* forces Game Gear hardware with 1 ASIC configuration.
+    - *Game Gear (1 ASIC) SMS Mode* forces Game Gear in SMS compatibility mode (1 ASIC).
     - *SG-1000 / Multivision* forces SG-1000 / Multivision hardware.
+    - *SG-1000 II* forces SG-1000 II hardware.
 
 - **Region (restart)** [gearsystem_region] (**Auto**|Master System Japan|Master System Export|Game Gear Japan|Game Gear Export|Game Gear International)
 
@@ -144,18 +147,18 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *Game Gear Export* forces Game Gear Export region.
     - *Game Gear International* forces Game Gear International region.
 
-- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|MSX|Janggun|SG-1000)
+- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|SG-1000|MSX|Janggun|Korean 2000 XOR 1F|Korean MSX 32KB 2000|Korean MSX SMS 8000|Korean SMS 32KB 2000|Korean MSX 8KB 0300|Korean 0000 XOR FF|Korean FFFF HiCom|Korean FFFE|Korean BFFC|Korean FFF3 FFFC|Korean MD FFF5|Korean MD FFF0|Jumbo Dahjee|EEPROM 93C46|Multi 4PAK All Action|Iratahack)
 
-	Select which mapper (memory bank controller) is emulated.
+	Select which mapper (memory bank controller) is emulated. 'Auto' automatically detects the appropriate mapper based on the loaded content. Only change this if a game does not work correctly with the default setting.
 
     - *Auto* selects the best mapper based on the rom.
     - *ROM* forces no mapper.
     - *SEGA* forces SEGA mapper.
     - *Codemasters* forces Codemasters mapper.
     - *Korean* forces Korean mapper.
+    - *SG-1000* forces SG-1000 mapper.
     - *MSX* forces MSX mapper.
     - *Janggun* forces Janggun mapper.
-    - *SG-1000* forces SG-1000 mapper.
 
 - **Refresh Rate (restart)** [gearsystem_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
 
@@ -193,18 +196,26 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
-	This option will enables/disables BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in RetroArch's system directory.
+	Enable or disable the Master System BIOS. For this to work, the `bios.sms` file must exist in RetroArch's system directory. When enabled it will execute as in original hardware, which may cause invalid ROMs to lock or fail to boot.
 
 - **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
 
-	This option will enables/disables BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the RetroArch's system directory.
+	Enable or disable the Game Gear BIOS. For this to work, the `bios.gg` file must exist in RetroArch's system directory. When enabled it will execute as in original hardware, which may cause invalid ROMs to lock or fail to boot.
 
 - **YM2413 (restart)** [gearsystem_ym2413] (**Auto**|Disabled)
 
-	This option will enables/disables YM2413 (OPLL) FM sound chip.
+	Enable or disable the YM2413 (OPLL) FM sound chip. 'Auto' enables the chip based on the loaded content. Some Master System games use this chip for enhanced music.
 
     - *Auto* selects the best option based on the rom.
     - *Disabled* disables YM2413.
+
+- **PSG Volume** [gearsystem_psg_volume] (**100**|0 - 200)
+
+	Set the volume of the PSG (SN76489). The value is a percentage from 0 to 200, where 100 is the default volume.
+
+- **FM Volume** [gearsystem_fm_volume] (**100**|0 - 200)
+
+	Set the volume of the YM2413 (OPLL) FM sound chip. The value is a percentage from 0 to 200, where 100 is the default volume.
 
 - **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
 
