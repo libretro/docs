@@ -19,24 +19,22 @@ RetroArch uses the database to provide several automated cataloging functions:
 
 _See also: [Importing Content](https://docs.libretro.com/guides/import-content/) and [Creating Playlists](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner)._ 
 
-RetroArch's Import Content actions "Directory Scan" and "File Scan" will do the following:
+RetroArch's Import Content actions will do the following if strict (default) or loose database check is used:
 
 1. Compute a CRC checksum of the file(s) or scan for the in-game serial number. CRC and serial number are the [keys used for matching a game file to the database](#key-field-for-matching).
-1. Search for that CRC or serial in the information of the local `.rdb` files (default location `RetroArch/databases`). If the key is not found in databases, the file will __not__ be added to a playlist. See [Validation & Rejection](#validation-and-rejection).
+1. Search for that CRC or serial in the information of the local `.rdb` files (default location `RetroArch/databases`). If the key is not found in databases, the file will __not__ be added to a playlist in strict mode. See [Validation & Rejection](#validation-and-rejection).
 3. Assign the `Game Name` (aka display name or playlist item name) that is specified as `name` within the database entry for the key (CRC/serial). The assigned `Game Name` will appear in the playlist, instead of the filename.
 4. All other associated metadata [collated in the .rdb](https://github.com/libretro/libretro-database#fields-specified-in-game-information-databases) entry for the given CRC/serial can be viewed in the Information > Database Entry for the game and will be viewable via "Explore".
 
 ### Validation and Rejection
 
-Validation here refers to checking a file or attribute against a reference, and then accepting or rejecting it based on whether it matches what is specified in the reference data (aka what is "allowed").  RetroArch's "Scan Directory" and "Scan File" automated importers are validation processes, not merely tools for adding all files to a playlist.  Part of their function is to **reject** files, not to import all files.  The database is the reference, and the ROM file is the item being validated.
+Validation here refers to checking a file or attribute against a reference, and then accepting or rejecting it based on whether it matches what is specified in the reference data (aka what is "allowed").  RetroArch's strict scan is also a validation process, not merely a tool for adding all files to a playlist.  Part of the function is to **reject** certain files.  The database is the reference, and the ROM file is the item being validated.
 
-If your file's crc or internal serial data (whichever is the key used for matching, [see below](#key-field-for-matching)) does not exist in the database, the file will be rejected by the automatic scans and will not appear in the playlist.
-
-__Bypass validation and rejection.__  To import your games into a playlist regardless of database matches, or if your files are being rejected by the automatic scan (in other words are not recognized by the database) and you wish to add them to the playlist anyway, use the [Manual Scan](https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists).
+If your file's crc or internal serial data (whichever is the key used for matching, [see below](#key-field-for-matching)) does not exist in the database, the file will be rejected by the strict scans and will not appear in the playlist. By changing the Database Check parameter to Loose, such files will still be added to playlist.
 
 ### Key Field for Matching
 
-During [Playlist / Import Scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner) ("Directory Scan" and "Scan File" in menu), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for matching varies by console typical file size (i.e. original media type).
+During [Playlist / Import Scanning](https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner), RetroArch will identify your _files_ in order to then match your file to a data entry in the database.  The key for matching varies by console original media type.
 
 - __CRC checksum__ for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.
 - __Serial Number__ for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.
@@ -65,9 +63,9 @@ The information below is for Users who are interested in figuring out the cause 
 
 The most common user problems and solutions related to the database are:
 
-- __Missed files during import scan.__ I.e. automated Directory Scan or File Scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See [Validation & Rejection](#validation-and-rejection) above.
+- __Missed files during import scan.__ I.e. default strict scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See [Validation & Rejection](#validation-and-rejection) above.
     - Solution A: [Contribute to the database](#how-to-contribute-to-databases) with data for the files/games that are not yet covered by the database.
-    - Solution B: Use the __Manual Scan__ option, which will accept all files according to the chosen settings.
+    - Solution B: Use the __Loose__ option, which will accept all files according to the chosen settings.
 - __Game Name error or incorrect information__. E.g. A game file receives a wrong title inside the RetroArch playlist/interface.
     - Solution:
       - Follow the [investigation steps](#investigating-database-issues) below to find the `.dat` file that has the erroneous information, and [contribute a correction](#how-to-contribute-to-databases).

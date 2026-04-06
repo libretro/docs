@@ -30,16 +30,16 @@ Playlists are the lists of games and other content that can be generated automat
 
 RetroArch incorporates a ROM scanning system to automatically produce playlists. Each ROM that is scanned by the playlist generator is checked against a database of ROMs that are known to be good copies.
 
-In order for content to be correctly scanned, you must:
+To ensure that scanning can use all available information:
 
-  - Have a compatible core already downloaded and installed (note: Scan Without Core Match setting removes this requirement)
+  - Have a compatible core already downloaded and installed (or enable Scan Without Core Match during scanning)
   - Update `Core Info Files` via `Online Updater`
   - Update `Databases` via `Online Updater`
   - Restart RetroArch if any of the above was just done
 
-For a normal scan, the content must match existing databases from the [libretro-database README](https://github.com/libretro/libretro-database#retroarch-database). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
+The default fully automatic scan is strict, the content CRC checksum or disc serial must match existing databases from the [libretro-database](https://github.com/libretro/libretro-database?tab=readme-ov-file#libretro-database). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
 
-There is an option to do manual scan, which does not require a database, and just needs the file names to match. Results from the manual scan will be playable (as long as the respective core supports them), but may lack thumbnails and do not appear in the Explore menu.
+Scan conditions could be relaxed ("loose scan"). If there is no database match, the content is still playable (as long as the respective core supports them), but may lack thumbnails and do not appear in the Explore menu.
 
 ### Designating which core to use
 
