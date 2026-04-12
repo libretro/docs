@@ -55,7 +55,7 @@ appman -q retroarch
 This query searches for available AppImages matching “retroarch” and displays a list of results.
 Example output:
 
-``
+```
 $ appman -q retroarch
 
  SEARCH RESULTS FOR "RETROARCH":
