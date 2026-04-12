@@ -18,7 +18,70 @@ installing RetroArch on systems running the GNU/Linux kernel.
 
 ---
 
-## Flatpak (suitable for most Linux distributions)
+## AppImage (suitable for most GNU/Linux distributions)
+
+### AM
+
+[AM](https://github.com/ivan-hc/AM) is a powerful command-line package manager for managing AppImage software. It allows users to install, update, and remove AppImages either system-wide or locally without manual setup.
+
+1. Installation
+
+There are no system packages available for AM in common repositories, so it must be installed manually.
+
+Follow the official installation instructions provided at: https://github.com/ivan-hc/AM
+
+During setup, you’ll be prompted to choose one of two installation modes:
+
+* Option 1: AM – for system-wide AppImage management (requires root privileges).
+* Option 2: appman – for local, user-level AppImage management (no root access required).
+
+Choose the option that best suits your environment and permissions.
+
+
+2. Searching for AppImages
+
+Once installation is complete, verify that AM or AppMan is working by performing a search.
+Use the appropriate command depending on your installation:
+
+
+```
+# For system-wide installation
+am -q retroarch
+
+# For user-level installation
+appman -q retroarch
+```
+
+This query searches for available AppImages matching “retroarch” and displays a list of results.
+Example output:
+
+``
+$ appman -q retroarch
+
+ SEARCH RESULTS FOR "RETROARCH":
+
+ ◆ retroarch-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+ ◆ retroarch-qt-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+ ◆ retroarch-qt : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+ ◆ retroarch : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+```
+
+3. Installing an AppImage
+
+To install your chosen AppImage, use the -i flag.
+For example, to install the RetroArch Nightly build (ideal for testing or bug reporting):
+
+`appman -i retroarch-nightly`
+
+AM or AppMan will automatically download, validate, and integrate the AppImage into your environment.
+
+4. Notes and Recommendations
+
+* Nightly builds are recommended when submitting bug reports or testing new features.
+* Stable releases are better suited for everyday use.
+* Use the same tool (am or appman) for all lifecycle tasks—installation, updates, and removal.
+
+## Flatpak (suitable for most GNU/Linux distributions)
 
 Flatpak is a distribution-agnostic packaging format with broad support
 throughout the Linux ecosystem. An official [RetroArch
