@@ -197,7 +197,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | PX68k                                                                            | [kero_src.txt](https://github.com/libretro/px68k-libretro/blob/master/doc/kero_src.txt)   |                |                                                                                          |                |
 | [QuickNES](../library/quicknes.md)                                               | [GPLv2](https://github.com/kode54/QuickNES/blob/master/COPYING)                       |                |
 | [Redream (libretro fork)](../library/redream.md)                                 | [GPLv3](https://github.com/libretro/redream/blob/master/LICENSE.txt)                      |                |
-| [REminiscence](../library/reminiscence.md)                                       | GPLv3                                                                                     |                |
+| [REminiscence](../library/reminiscence.md)                                       | (unclear open-source license)                                                             |                |
 | RemoteJoy                                                                        | [GPLv2](https://github.com/libretro/libretro-remotejoy/blob/master/LICENSE)               |                |
 | Remote RetroPad                                                                  | [MIT](https://github.com/libretro/libretro-samples/blob/master/license)                   |                |
 | [RustyNES](../library/rustynes.md)                                               | [MIT OR Apache-2.0](https://github.com/doublegate/RustyNES/blob/main/LICENSE)         |                |
