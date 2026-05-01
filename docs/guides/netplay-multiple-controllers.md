@@ -80,7 +80,7 @@ Set client computer's RetroArch Netplay to request control of the running core's
 - Navigate to **Settings** -or- **Netplay**
 - Navigate to **Network**
 - Set **Request Device 2** to _YES_
-- Set **Request Device 3** to _YES_
+- Set **Request Device 4** to _YES_
 - Ensure all other **Request Device #** are set to _NO_
 
 Client is now able to join the Host in a NetPlay game controlling controllers 2 and 4. See the [Getting Started Guide](netplay-getting-started.md) for more details.
