@@ -4,6 +4,10 @@
 
 Virtual Jaguar is a portable Jaguar emulator which is based on the source code of what used to be Potato Emulation.
 
+## BIOS
+
+BIOS files are included with the Virtual Jaguar core and can optionally be enabled with the corresponding core option
+
 ### Author/License
 
 The Virtual Jaguar core has been authored by
@@ -97,26 +101,20 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	This option will force Virtual Jaguar to use the older, less compatible yet faster blitter. Some games will not work properly with this option on.
 
-- **Doom Res Hack** [virtualjaguar_doom_res_hack] (**disabled**|enabled)
-
-	A hack that needs to be enabled for Doom to run at its correct resolution.
-
-??? note "*Doom Res Hack - Disabled*"
-    ![](../image/core/virtual_jaguar/doom_off.png)
-
-??? note "*Doom Res Hack - Enabled*"
-    ![](../image/core/virtual_jaguar/doom_on.png)
-
-- **Bios** [virtualjaguar_bios] (**disabled**|enabled)
+- **BIOS** [virtualjaguar_bios] (**disabled**|enabled)
 
 	Enables BIOS loading sequence.
 
 ??? note "*Bios - Enabled*"
     ![](../image/core/virtual_jaguar/bios.png)
 
-- **Pal (Restart)** [virtualjaguar_pal] (**disabled**|enabled)
+- **PAL (Restart)** [virtualjaguar_pal] (**disabled**|enabled)
 
 	NTSC to PAL switch. Setting this to on switches to PAL mode.
+
+- **Enable Core Options Remapping** (**disabled**|enabled)
+
+	Allows to set input mappings using the keyboard
 
 ## Controllers
 
@@ -154,6 +152,9 @@ The Virtual Jaguar core supports the following device type(s) in the controls me
 | Numpad 6                     | ![](../image/retropad/retro_r3.png)         |
 
 #### Keyboard
+
+Keyboard inputs are enabled by default. This can be changed with the corresponding core option.
+
 | User 1 Joypad Descriptors    | Keyboard Inputs                             |
 |------------------------------|---------------------------------------------|
 | Numpad 0                     | 0
@@ -175,7 +176,6 @@ A reference compatibility table can be found on the bottom of this [page](https:
 | Game           | Issue                                                   |
 |----------------|---------------------------------------------------------|
 | Cybermorph     | Graphics glitches. (1)                                  |
-| Doom           | Enable Doom core option hack for proper graphics pitch. |
 | Iron Soldier   | Hangs after selecting a stage.                          |
 | Iron Soldier 2 | Hangs after selecting a stage. Audio glitches.          |
 | Kasumi Ninja   | Graphics glitches. Missing background layers (2)        |
