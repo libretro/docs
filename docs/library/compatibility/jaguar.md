@@ -7,7 +7,6 @@ A reference compatibility table can be found here [https://icculus.org/virtualja
 | Game               | Issue                                                   |
 |--------------------|-------------------------------------------------------- |
 | Cybermorph         | Graphics glitches.                                      |
-| Doom               | Enable Doom core option hack for proper graphics pitch. |
 | Iron Soldier       | Hangs after selecting a stage.                          |
 | Iron Soldier 2     | Hangs after selecting a stage. Audio glitches.          |
 | Kasumi Ninja       | Graphics glitches. Missing background layers            |
