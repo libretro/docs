@@ -102,7 +102,7 @@
 | [Geargrafx](../library/geargrafx.md) | NEC PC Engine/SuperGrafx    |                    |
 | [Gearlynx](../library/gearlynx.md) | Atari Lynx             |                    |
 | [Gearsystem](../library/gearsystem.md) | Sega MS/GG/SG-1000     |                    |
-| Genesis Plus GX           | Sega MS/GG/MD/CD       |                    |
+| [Genesis Plus GX](../library/genesis_plus_gx.md)   | Sega MS/GG/MD/CD       |                    |
 | [Geolith](../library/geolith.md)                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
 | [gpSP](../library/gpsp.md) | Game Boy Advance       |                    |
 | Gong                      | Game                   | A clone of Pong written for libretro |
@@ -119,6 +119,7 @@
 | Jump 'n Bump              | Game engine            | A reimplementation of the engine of Jump 'n Bump, a open-source MS-DOS multiplayer video game by Brainchild Design |
 | Kronos                    | Sega Saturn/ST-V       | A port of the Kronos, which is itself a fork of Yabause emulator |
 | LowRes NX                 | Game engine            | A port of the LowRes NX fantasy console to libretro |
+| [LRPS2](https://docs.libretro.com/library/lrps2/)               | Sony PlayStation 2     |                    |
 | Lutro                     | Game engine            | An experimental Lua game framework for libretro, based on a subset of the LOVE API |
 | M2000                     | Philips P2000T         | A port of M2000, the portable Philips P2000 emulator to libretro |
 | MAME (Current)            | Arcade/Console/various | Based on MAME development branch. Full list of supported systems: http://adb.arcadeitalia.net/mame.php |
@@ -161,7 +162,6 @@
 | ParaLLEl N64              | Nintendo 64            |                    |
 | PascalPong                | Game                   | A free and basic clone of the classic Pong game, written for libretro |
 | PCem                      | IBM PC                 |                    |
-| [LRPS2](https://docs.libretro.com/library/lrps2/)               | Sony PlayStation 2     |                    |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       |                    |
 | [PD777](../library/pd777.md) | Epoch Cassette Vision |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
