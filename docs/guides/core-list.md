@@ -82,7 +82,7 @@
 | FB Alpha 2012 Neo Geo     | Neo Geo                |                    |
 | [FB Neo](../library/fbneo.md)  | Arcade/Console/various | Full list of supported systems: https://github.com/finalburnneo/FBNeo/wiki |
 | [FCEUmm](../library/fceumm.md) | Nintendo NES/Famicom   |                    |
-| FFmpeg                    | Media player           | A port of FFmpeg library which allows playback of a variety of audio and video formats |
+| [FFmpeg](../library/ffmpeg.md) | Media player      | Plays common video and audio formats through the FFmpeg libretro core |
 | fixGB                     | Game Boy/Color         |                    |
 | fixNES                    | Nintendo NES/Famicom   |                    |
 | Flycast                   | Sega Dreamcast/NAOMI   |                    |
