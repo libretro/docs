@@ -29,6 +29,8 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
+User-supplied BIOS files are supported, but not required; [OpenBIOS](https://pcsx-redux.consoledev.net/openbios/) will be used if no BIOS is provided.
+
 Required or optional firmware files go in the frontend's `system` directory.
 
 |   Filename      | Description                           |              md5sum              |
@@ -37,13 +39,14 @@ Required or optional firmware files go in the frontend's `system` directory.
 | scph5501.bin    | PS1 US BIOS - Required for US games   | 490f666e1afb15b7362b406ed1cea246 |
 | scph5502.bin    | PS1 EU BIOS - Required for EU games   | 32736f17079d0b2b7024407c39bd3050 |
 
-As a replacement for any of the BIOS files mentioned above, it is also possible to use either of these BIOSes:
+As a replacement for any of the BIOS files mentioned above, it is also possible to use either of these BIOS files:
 
 - `PSXONPSP660.bin` (MD5: c53ca5908936d412331790f4426c6c33)
 - `ps1_rom.bin` (MD5: 81bbe60ba7a3d1cea1d48c14cbcc647b)
+- `openbios.bin`
 
-The `PSXONPSP660.bin` BIOS comes from the PSP, and the `ps1_rom.bin` BIOS comes from the PS3, both are region-free.
-For Beetle PSX HW to recognize either of these BIOSes, you need to enable the "Override BIOS" option.
+The `PSXONPSP660.bin` BIOS comes from the PSP, the `ps1_rom.bin` BIOS comes from the PS3, and the `openbios.bin` BIOS comes from PCSX-Redux; all are region-free.
+For Beetle PSX HW to recognize these BIOS files, you need to enable the "Override BIOS" option.
 
 ## Extensions
 
