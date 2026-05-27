@@ -35,6 +35,13 @@ For older TVs without a "Game" picture mode, use RetroArch's `Settings` → `Lat
 
 Shaders and overlays in RetroArch may be used instead of TV picture modes to apply authentic retro display effects and decorative elements directly to the emulated image, bypassing the hardware-dependent post-processing in non-Game picture modes that introduces input lag.
 
+## Use a Smart-TV Remote to Escape RetroArch
+Sometimes you need to exit RetroArch but find yourself stranded without a gamepad—whether the battery died or the Bluetooth disconnected. Normally, you could just grab your digital media player remote and hit the Home button. But what if you’re traveling and forgot that remote at home? Without a way to exit, you'd usually be forced to hard-restart the digital media player every single time this happens. Thankfully, there is a better workaround.
+
+Essentially every modern Smart TV has HDMI-CEC hardware built into it. While HDMI-CEC Remote Control Pass-Through is designed to pass basic commands strictly only arrow or select from your TV remote directly to your media player, buttons like HOME and SETTINGS are trickier. TV manufacturers almost always hardcode these to open the TV's own built-in menus. Furthermore, because RetroArch lacks built-in autoconfig profiles for TV remotes and digital media player remotes, they will not function inside the app by default.
+
+Fortunately, you can configure many smart TVs to override this behavior and send these physical "Home" or "Settings" button presses straight through to your connected device. Once enabled, you can easily switch to home so you aren't locked in RetroArch, using nothing but your standard TV remote—saving you the hassle of a forced reboot.
+
 ## Frame rate fluctuations
 
 ### Frame rate fluctuations fix: Use RetroArch Synchronization features
