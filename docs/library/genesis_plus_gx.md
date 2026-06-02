@@ -813,6 +813,8 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 
 ## Mouse
 
+[Certain games](https://segaretro.org/Sega_Mouse#Compatible_games) supported mouse input with the Sega Mouse (known as the Mega Mouse in North America). On a real Genesis some games (e.g. Cannon Fodder, Eye of the Beholder, Rise of the Dragon) required you to plug the mouse into Control Port 2 while a standard controller was plugged into Control Port 1 *before* powering on the system. To recreate this in Genesis Plus GX, launch the game, then from the Quick Menu select Controls > Port 2 Controls and change the device type to "MD Mouse" (leave Mapped Port set to 2). Relaunch the game by selecting Restart from the Quick Menu. You can save a Remap File under Controls > Manage Remap Files so that your settings are saved even if you quit the game.
+
 | RetroMouse Inputs                                     | [MD Mouse](https://segaretro.org/Sega_Mouse)        |
 |-------------------------------------------------------|-----------------|
 | ![](../image/retromouse/retro_mouse.png) Mouse Cursor | MD Mouse Cursor |
