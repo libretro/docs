@@ -47,7 +47,7 @@ RAM
 
 ## Setup (Required!!)
 
-For the LRPS2 core to function, it requires a set of real BIOS images dumped from your Playstation 2 console in accordance with your local laws, along with the `GameIndex.yaml` compatibility database.
+For the LRPS2 core to function, it requires a set of real BIOS images dumped from your Playstation 2 console in accordance with your local laws, ~~along with the `GameIndex.yaml` compatibility database~~. The GameIndex.yaml is now embedded in the core. You can still override the internal database with an external one, so these steps can still be useful for that, but they are no longer strictly necessary.
 
 ### GameIndex.yaml
 
