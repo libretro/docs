@@ -279,6 +279,8 @@ nav:
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
+      - 'Sunplus Emulation':
+        - 'Sunplus - Native32 (Native32Emu)': 'library/native32emu.md'
       - 'Texas Instruments Emulation':
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
