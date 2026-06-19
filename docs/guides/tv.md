@@ -45,13 +45,13 @@ Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just ne
 
 Enabling this feature allows you to use your TV remote to control your Digital Media Player. Depending on your TV brand, the buttons will typically function as follows:
 
-* **Basic Navigation:** The physical **Arrows, OK, and Back/Exit** buttons.
+* **Basic Navigation:** The physical **Arrows, OK, Back, and Exit** buttons.
 * **The Menu/Options Button:** Often labeled as **`...`** or **`123`**, this button brings up the TV's on-screen overlay. It adds a virtual **"HOME"** shortcut specifically for your digital media player.
   - **Note:** This virtual shortcut is necessary because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device.
 
 ### The Problem: RetroArch Lockout
 
-While standard navigation keys like **Arrows, OK, and Back/Exit** work flawlessly in regular apps, they fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it cannot map the inputs correctly—frequently triggering a `Virtual (0/0) not configured, using fallback` error. Consequently, if your Bluetooth controller disconnects, you are left completely stranded; the remote's **Arrows and OK** buttons cannot be used to navigate to **Main Menu → Quit**, and the **Back/Exit** buttons will fail to return you to the dashboard of the Digital Media Player.
+While standard navigation keys **Arrows, OK, Back, and Exit** work flawlessly in regular apps, they fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it cannot map the inputs correctly—frequently triggering a `Virtual (0/0) not configured, using fallback` error. Consequently, if your Bluetooth controller disconnects, you are left completely stranded; the remote's **Arrows and OK** buttons cannot be used to navigate to **Main Menu → Quit**, and the **Back** or **Exit** buttons will fail to return you to the dashboard of the Digital Media Player.
 
 #### The Workaround
 
