@@ -51,7 +51,7 @@ Enabling this feature allows you to use your TV remote to control your Digital M
 
 ### The Problem: RetroArch Lockout
 
-While basic buttons like the arrows and OK key work perfectly in standard apps, they will fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it won't map the inputs correctly, resulting in a `Virtual (0/0) not configured, using fallback` error. If your Bluetooth controller disconnects, you will find yourself completely locked out of navigating the RetroArch menus.
+While standard navigation keys like **Arrows, OK, and Back/Exit** work flawlessly in regular apps, they fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it cannot map the inputs correctly—frequently triggering a `Virtual (0/0) not configured, using fallback` error. Consequently, if your Bluetooth controller disconnects, you are left completely stranded; the remote's **Arrows and OK** buttons cannot be used to navigate to **Main Menu → Quit**, and the **Back/Exit** buttons will fail to return you to the dashboard of the Digital Media Player.
 
 #### The Workaround
 
