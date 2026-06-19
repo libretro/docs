@@ -28,33 +28,16 @@ There is a To-Do list for libretro/docs *here* and you can submit suggestions or
 !!! Note "Building in Windows/msys2"
     If you are using the standard RetroArch msys2 environment, you will need to install python with the command `pacman -S python`. Next you will need to download [the `get-pip.py` script](https://bootstrap.pypa.io/get-pip.py) from the `pip` bootstrap site. Finally, execute the script with the command `python get-pip.py`.
 
-2. Install MkDocs
+2. Install dependencies
     ```
-    pip install mkdocs
-    ```
-
-3. Install MkDocs-Material
-    ```
-    pip install mkdocs-material
+    pip install -r docs/requirements.txt
     ```
 
-4. Install PyMdown Extensions
-    ```
-    pip install pymdown-extensions
-    ```
-5. Install mkdocs-git-revision-date
-    ```
-    pip install mkdocs-git-revision-date-plugin
-    ```
-6. Install mkdocs-macros
-    ```
-    pip install mkdocs-macros-plugin
-    ```
-
-7. Build the site
+3. Build the site
     ```
     mkdocs build
     ```
+
 
 8. The documentation will be built to the `site` directory; preview any changes with MkDocs' built-in dev-server before submitting a pull request
     ```

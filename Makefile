@@ -7,7 +7,7 @@ start: dependencies
 	@mkdocs serve
 
 install:
-	pip install mkdocs mkdocs-material
+	pip install -r docs/requirements.txt
 
 dependencies:
 ifndef MKDOCS_AVAILABLE

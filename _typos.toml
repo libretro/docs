@@ -1,7 +1,7 @@
 [files]
 extend-exclude = [
   ".git/",     # Version control files
-  "achive/*",  # Archive files
+  "archive/*",  # Archive files
 ]
 
 # Match Inside a Word - Case Insensitive

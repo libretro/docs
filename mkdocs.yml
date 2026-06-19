@@ -574,7 +574,7 @@ markdown_extensions:
       toc_depth: 6
 
 plugins:
-  - git-revision-date
+  - git-revision-date-localized
   - macros
   - search
 
@@ -583,11 +583,20 @@ theme:
   favicon: 'image/branding/invader.png'
   features:
     - content.action.edit
+    - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.tooltips
+    - navigation.indexes
+    - navigation.prune
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
-    - tables
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
   font:
     text: 'Noto Sans'
     code: 'Noto Sans Mono'
@@ -597,16 +606,18 @@ theme:
   logo: 'image/branding/invader.png'
   name: material
   palette:
-    - scheme: retroarch
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: slate
-      accent: deep purple
-      primary: black
+    - media: "(prefers-color-scheme: light)"
+      scheme: retroarch
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: deep purple
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   search_index_only: true
   static_templates:
     - 404.html
