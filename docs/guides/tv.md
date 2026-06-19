@@ -41,7 +41,7 @@ Shaders and overlays in RetroArch may be used instead of TV picture modes to app
 
 Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just need to turn on **HDMI-CEC Remote Control Pass-Through** in your TV’s settings (the exact name changes depending on the brand). 
 
-### **Supported Buttons via HDMI-CEC**
+### Supported Buttons via HDMI-CEC
 
 Enabling this feature allows you to use your TV remote to control your Digital Media Player. Depending on your TV brand, the buttons will typically function as follows:
 
