@@ -35,6 +35,31 @@ For older TVs without a "Game" picture mode, use RetroArch's `Settings` → `Lat
 
 Shaders and overlays in RetroArch may be used instead of TV picture modes to apply authentic retro display effects and decorative elements directly to the emulated image, bypassing the hardware-dependent post-processing in non-Game picture modes that introduces input lag.
 
+## HDMI-CEC Remote Control Pass-Through
+
+> Note: This section is for Digital Media Players only. TV remotes cannot operate on PCs at all; even basic navigation commands will not function, as standard computer graphics cards do not support HDMI-CEC communication.
+
+Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just need to turn on **HDMI-CEC Remote Control Pass-Through** in your TV’s settings (the exact name changes depending on the brand). 
+
+### **Supported Buttons via HDMI-CEC**
+
+Enabling this feature allows you to use your TV remote to control your Digital Media Player. Depending on your TV brand, the buttons will typically function as follows:
+
+* **Basic Navigation:** The physical **Arrows, OK, and Back/Exit** buttons.
+* **The Menu/Options Button:** Often labeled as **`...`** or **`123`**, this button brings up the TV's on-screen overlay. It adds a virtual **"HOME"** shortcut specifically for your digital media player.
+  - **Note:** This virtual shortcut is necessary because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device.
+
+### The Problem: RetroArch Lockout
+
+While basic buttons like the arrows and OK key work perfectly in standard apps, they will fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it won't map the inputs correctly, resulting in a `Virtual (0/0) not configured, using fallback` error. If your Bluetooth controller disconnects, you will find yourself completely locked out of navigating the RetroArch menus.
+
+#### The Workaround
+
+1. **Open the TV Menu:** Press your TV remote's Menu button to bring up the on-screen digital overlay.
+2. **Trigger the Virtual Home Button:** Select the virtual **"HOME"** shortcut from that overlay. This sends a command through the HDMI cable, forcing RetroArch to close and bringing you straight back to your streaming device's main dashboard.
+3. **Reconnect Your Controller:** Now that you are back on the main dashboard, your TV remote's arrow keys and OK button will work normally again. Use them to navigate to your device's Bluetooth settings and re-pair your gamepad.
+4. **Resume Playing:** Once your controller is connected, simply relaunch RetroArch and get back to your game.
+
 ## Frame rate fluctuations
 
 ### Frame rate fluctuations fix: Use RetroArch Synchronization features
