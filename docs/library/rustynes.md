@@ -1,4 +1,4 @@
-# RustyNES
+# Nintendo - NES / Famicom (RustyNES)
 
 ## Background
 
