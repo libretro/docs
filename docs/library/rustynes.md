@@ -1,8 +1,8 @@
-# RustyNES
+# Nintendo - NES / Famicom (RustyNES)
 
 ## Background
 
-RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) through strict lockstep timing at PPU-dot resolution, without relying on threading or standard library timing. 
+RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) through strict lockstep timing at PPU-dot resolution, without relying on threading or standard library timing.
 
 It is extremely portable and deterministic, making it a reliable choice for netplay, TAS, and accurate emulation enthusiasts.
 
@@ -24,7 +24,7 @@ Content that can be loaded by the RustyNES core have the following file extensio
 ## Databases
 
 RetroArch database(s) that are associated with the RustyNES core:
-- Nintendo - Nintendo Entertainment System
+- [Nintendo - Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20Entertainment%20System.rdb)
 
 ## Features
 
@@ -50,7 +50,7 @@ Frontend-level settings or features that the RustyNES core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| Softpatching      | ✔         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
