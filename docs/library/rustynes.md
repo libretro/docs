@@ -9,9 +9,11 @@ It is extremely portable and deterministic, making it a reliable choice for netp
 ### Author/License
 
 The RustyNES core has been authored by
+
 - DoubleGate
 
 The RustyNES core is licensed under
+
 - MIT OR Apache-2.0
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
@@ -19,11 +21,13 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 ## Extensions
 
 Content that can be loaded by the RustyNES core have the following file extensions:
+
 - .nes
 
 ## Databases
 
 RetroArch database(s) that are associated with the RustyNES core:
+
 - [Nintendo - Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Nintendo%20Entertainment%20System.rdb)
 
 ## Features
@@ -31,7 +35,7 @@ RetroArch database(s) that are associated with the RustyNES core:
 Frontend-level settings or features that the RustyNES core respects.
 
 | Feature           | Supported |
-|-------------------|-----------|
+|-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | ✔         |
@@ -39,7 +43,7 @@ Frontend-level settings or features that the RustyNES core respects.
 | Rewind            | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✕         |
-| RetroAchievements | ✔         |
+| [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✕         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
@@ -66,6 +70,8 @@ The RustyNES core's directory name is 'RustyNES'.
 No BIOS files are strictly required to use the RustyNES core.
 
 ## Joypad
+
+![](../image/controller/nes.png)
 
 | User 1 - 2 input descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
