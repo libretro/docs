@@ -1,0 +1,5608 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is the official RetroArch documentation for users and developers. Information from sources outside of this website may be dated or incorrect.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.libretro.com/library/fbneo/">
+      
+      
+        <link rel="prev" href="../dice/">
+      
+      
+        <link rel="next" href="../mame_2003/">
+      
+      
+      <link rel="icon" href="../../image/branding/invader.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Arcade (FinalBurn Neo) - Libretro Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MT11L3F6EZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MT11L3F6EZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MT11L3F6EZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <script>
+  var gtmId = 'GTM-KXPH36V';
+  if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+    gtmId = 'GTM-XXX'
+  }
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', gtmId);
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9447404270680650",
+            enable_page_level_ads: true
+       });
+  </script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+  window.googletag = window.googletag || { cmd: [] };
+  </script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finalburn-neo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <style>.md-announce a,.md-announce a:focus,.md-announce a:hover{color:currentColor}.md-announce strong{white-space:nowrap}.md-announce .twitter{margin-left:.2em;color:#00acee}</style>
+    <a href="https://www.libretro.com/index.php/retroarch-1-21-0-release/"><strong>New version released! Read the blog post now!</strong></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Libretro Docs" class="md-header__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Libretro Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arcade (FinalBurn Neo)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/understanding/" class="md-tabs__link">
+          
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../guides/install-windows/" class="md-tabs__link">
+          
+  
+    
+  
+  For Users
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/libretro-overview/" class="md-tabs__link">
+          
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/how-to-contribute/" class="md-tabs__link">
+          
+  
+    
+  
+  Contribute to the Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/privacy-policy/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Libretro Docs" class="md-nav__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    Libretro Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../start/understanding/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../guides/install-windows/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../guides/navigating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../guides/glui/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appearance & Customization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../guides/ai-service/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://www.lakka.tv/doc/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lakka Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Library: Emulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Core Library: Emulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/arcade-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Arcade Emulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/softwarelist-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with MAME Software List Emulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIOS Information Hub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../opera/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3DO Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../b2/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Acorn Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../caprice32/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Amstrad Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../minivmac/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Apple
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_8" id="__nav_3_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arcade Emulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Arcade Emulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (DICE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Arcade (FinalBurn Neo)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (FinalBurn Neo)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note-about-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note about this document
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-from-mame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference from MAME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-and-changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      License and changelog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-this-core-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building this core manually
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-romsets-for-fbneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building romsets for FBNeo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building romsets for FBNeo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-obtaining-an-xml-dat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Obtaining an XML DAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-gathering-the-ingredients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Gathering the ingredients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-building-the-romsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Building the romsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulating-consoles-and-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emulating consoles and computers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiscores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiscores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-lag-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input lag reduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      RetroAchievements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dipswitches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dipswitches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently asked questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequently asked questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-the-xxx-roms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can i find the XXX roms ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-am-i-getting-a-white-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why am i getting a white screen ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-xxx-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is XXX supported ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-run-that-romhack-i-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can i run that romhack i found ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How can i run that romhack i found ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-patched-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the "patched" folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-ips-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using IPS Patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-romdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using RomData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-run-that-unibios-i-bought-from-httpunibiosfreefr" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can i run that unibios i bought from http://unibios.free.fr/ ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-think-i-found-a-glitch-how-do-i-report-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      I think i found a glitch, how do i report it ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-run-slowly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX run slowly ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-have-choppy-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX have choppy sound ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-run-faster-in-mame2003mame2010" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX run faster in MAME2003/MAME2010 ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-launch-a-neogeo-cd-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do i launch a neogeo CD game ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cant-i-launch-killer-instinct-i-heard-its-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can't i launch Killer instinct ? I heard it's supported.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-hires-dipswitch-on-vector-games-it-seems-gone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is the hires dipswitch on vector games ? It seems gone.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-vertical-games-not-working-properly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are vertical games not working properly ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-music-high-pitched-too-fast-andor-different-from-what-i-think-it-should-be" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the music high-pitched, too fast and/or different from what i think it should be ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-a-black-screen-andor-cant-i-change-bios-in-neogeo-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i get a black screen and/or can't i change bios in neogeo games ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-some-weird-transparent-effects-in-game-xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i get some weird transparent effects in game XXX ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-favorite-combo-button-not-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my favorite combo button not available ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cant-i-enable-hardcore-mode-in-retroachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can't i enable hardcore mode in RetroAchievements ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-re-enable-cheats-every-time-i-boot-a-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i need to re-enable cheats every time i boot a game ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-the-self-tests-at-boot-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do the self-tests at boot fail ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#should-i-use-retroarchs-analog-to-digital-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Should i use retroarch's analog-to-digital feature ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-old-savestate-not-working-anymore-after-updating-my-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my old savestate not working anymore after updating my core ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-am-i-having-trouble-playing-with-a-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why am i having trouble playing with a keyboard ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-system_directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is SYSTEM_DIRECTORY ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mame_2003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (MAME 2003)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mame2003_plus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (MAME 2003-Plus)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mame_2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (MAME 2010)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../same_cdi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcade (SAME_CDI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../ardens/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Arduboy
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/jaguar/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Atari Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../beetle_cygne/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Bandai Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../gam4980/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    BBK electronic dictionary
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../gearcoleco/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    ColecoVision Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../vice/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Commodore Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../dosbox/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    DOS Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../amiarcadia/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Emerson
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../ep128emu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Enterprise Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../bk/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Elektronika
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../pd777/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Epoch Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../vecx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    GCE Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../o2em/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Magnavox Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../freeintv/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mattel Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../fmsx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Microsoft Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/ds/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Nintendo Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/pcfx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    NEC Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../mu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Palm Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../o2em/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Philips Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../rvvm/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    RISC-V Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../geolith/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SNK Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cannonball/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sega Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../px68k/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sharp Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../eightyone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sinclair Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/psx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sony Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../bluemsx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SpectraVision Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../native32emu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sunplus Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../numero/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Texas Instruments Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../theodore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Thomson Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sameduck/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MegaDuck Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../2048/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Game and Scripting Engines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../imageviewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Media
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../dummy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Special-Purpose
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../shader/introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Shader Library
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../development/libretro-overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    For Developers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../meta/how-to-contribute/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Contribute to the Docs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../support/privacy-policy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#note-about-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note about this document
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-from-mame" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference from MAME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-and-changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      License and changelog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-this-core-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building this core manually
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-romsets-for-fbneo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building romsets for FBNeo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building romsets for FBNeo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-obtaining-an-xml-dat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Obtaining an XML DAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-gathering-the-ingredients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Gathering the ingredients
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-building-the-romsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Building the romsets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulating-consoles-and-computers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emulating consoles and computers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiscores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hiscores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-lag-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input lag reduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      RetroAchievements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dipswitches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dipswitches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently asked questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequently asked questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-the-xxx-roms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can i find the XXX roms ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-am-i-getting-a-white-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why am i getting a white screen ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-xxx-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is XXX supported ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-run-that-romhack-i-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can i run that romhack i found ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How can i run that romhack i found ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-patched-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the "patched" folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-ips-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using IPS Patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-romdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using RomData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-i-run-that-unibios-i-bought-from-httpunibiosfreefr" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can i run that unibios i bought from http://unibios.free.fr/ ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-think-i-found-a-glitch-how-do-i-report-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      I think i found a glitch, how do i report it ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-run-slowly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX run slowly ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-have-choppy-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX have choppy sound ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-game-xxx-run-faster-in-mame2003mame2010" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why does game XXX run faster in MAME2003/MAME2010 ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-launch-a-neogeo-cd-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do i launch a neogeo CD game ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cant-i-launch-killer-instinct-i-heard-its-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can't i launch Killer instinct ? I heard it's supported.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-hires-dipswitch-on-vector-games-it-seems-gone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is the hires dipswitch on vector games ? It seems gone.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-vertical-games-not-working-properly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are vertical games not working properly ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-music-high-pitched-too-fast-andor-different-from-what-i-think-it-should-be" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is the music high-pitched, too fast and/or different from what i think it should be ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-a-black-screen-andor-cant-i-change-bios-in-neogeo-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i get a black screen and/or can't i change bios in neogeo games ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-some-weird-transparent-effects-in-game-xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i get some weird transparent effects in game XXX ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-favorite-combo-button-not-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my favorite combo button not available ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cant-i-enable-hardcore-mode-in-retroachievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why can't i enable hardcore mode in RetroAchievements ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-re-enable-cheats-every-time-i-boot-a-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do i need to re-enable cheats every time i boot a game ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-the-self-tests-at-boot-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do the self-tests at boot fail ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#should-i-use-retroarchs-analog-to-digital-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Should i use retroarch's analog-to-digital feature ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-old-savestate-not-working-anymore-after-updating-my-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my old savestate not working anymore after updating my core ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-am-i-having-trouble-playing-with-a-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why am i having trouble playing with a keyboard ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-system_directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is SYSTEM_DIRECTORY ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/libretro/docs/edit/master/docs/library/fbneo.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/libretro/docs/raw/master/docs/library/fbneo.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="finalburn-neo">FinalBurn Neo<a class="headerlink" href="#finalburn-neo" title="Reference link to this section">&para;</a></h1>
+<h2 id="note-about-this-document">Note about this document<a class="headerlink" href="#note-about-this-document" title="Reference link to this section">&para;</a></h2>
+<p>It mostly assumes you are using RetroArch as your libretro frontend, some specific instructions might differ if you are using another frontend.</p>
+<p>It also assumes you are already knowledgeable about arcade emulation and its quirks. If you aren't, you should be reading <a href="https://docs.libretro.com/guides/arcade-getting-started/">getting started with arcade emulation</a> first.</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Reference link to this section">&para;</a></h2>
+<p>FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development.
+It is the follow-up of the FinalBurn and FinalBurn Alpha emulators.
+The libretro core provides wide compatibility with platforms and features supported by libretro.</p>
+<h2 id="difference-from-mame">Difference from MAME<a class="headerlink" href="#difference-from-mame" title="Reference link to this section">&para;</a></h2>
+<p>FBNeo strives for accuracy, just like MAME. There are some arcade boards where one or the other will be more accurate, but for the most part they should be equally accurate.
+The main difference with MAME is that FBNeo doesn't mind including "quality of life" hacks, while MAME is mostly focused on preservation and documentation. "Quality of life" hacks include things like :</p>
+<ul>
+<li>improving original game's sound (some games like "Burger Time" have noise which was clearly unintended by their developpers, we are removing it)</li>
+<li>implementing alternative colors for games where the colors don't look right (sometimes there are controversies about which colors are right for an arcade board, like "Tropical Angel", we implement alternative colors as dipswitches)</li>
+<li>having control alternatives that didn't exist on original cabinet (play rotary stick games like twin-stick shooters, use lightguns in "Rambo 3", use simplified 8-way directional controls for "Battlezone", ...)</li>
+<li>improving the gaming experience by cutting what we deem as unnecessary aspect of emulation (you don't have to spend 20 minutes "installing" CPS-3 games, neither 100s loading Deco Cassette games)</li>
+<li>reducing hardware requirements by cutting what we deem as unnecessary corners in the emulation code</li>
+<li>supporting popular romhacks</li>
+</ul>
+<p>Note: some of those "quality of life" hacks might be doable with programming skills and lua language on MAME</p>
+<h2 id="license-and-changelog">License and changelog<a class="headerlink" href="#license-and-changelog" title="Reference link to this section">&para;</a></h2>
+<p>It's distributed under a non-commercial license, see <a href="https://github.com/finalburnneo/FBNeo/blob/master/LICENSE.md">LICENSE.md</a> and <a href="https://github.com/finalburnneo/FBNeo/blob/master/whatsnew.html">whatsnew.html</a>.</p>
+<p>There are controversies about whether libretro's patreon and retroarch's GPL license breaks FBNeo's non-commercial license or not. This is what you should know :</p>
+<ul>
+<li><strong>"Redistributions may not be sold, nor may they be used in a commercial product or activity."</strong> : By definition, a commercial activity is an activity involving the sale of goods or services. The libretro project does none of that, and it is unclear whether a patreon should be treated as a commercial activity or not when no goods or services are provided in exchange of the donations.</li>
+<li><strong>"You may not ask for donations to support your work on any project that uses the FB Neo source code."</strong> : This FBNeo port is using libretro code, not the other way around. This port is directly authored/maintained/supported by members of the FBNeo team, and none of them is receiving donations. Interestingly, if receiving donations was de facto a commercial activity, this term shouldn't be required.</li>
+<li><em>If</em> the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial. </li>
+<li>Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as they neither redistribute FBNeo nor use it as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.</li>
+<li>While GPL code can't be mixed with non-commercial code, this is a non-issue since this port doesn't contain any GPL-licensed code.</li>
+<li>Under european law, where the libretro buildbots are located, linking GPL and non-commercial softwares doesn't produce a derivative work, and doesn't extend the GPL license to the non-commercial work (source <a href="https://joinup.ec.europa.eu/collection/eupl/licence-compatibility-permissivity-reciprocity-and-interoperability">here</a>). It is unclear whether the same applies in non-EU countries or not.</li>
+</ul>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Reference link to this section">&para;</a></h2>
+<p>zip, 7z</p>
+<h2 id="building-this-core-manually">Building this core manually<a class="headerlink" href="#building-this-core-manually" title="Reference link to this section">&para;</a></h2>
+<p>From the root of the repository, run
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>make -j5 -C src/burner/libretro
+</span></code></pre></div>
+Note : <code class="language-text highlight">-j5</code> is to optimize build time on cpus with 4 cores (X+1 cores), you can rise or reduce that value to match your own, however a value too high will increase ram usage and might even cause your system to become unstable.</p>
+<p>Note : Here is a non-exhaustive list of additional parameters you might want to append to the make command line :</p>
+<ul>
+<li><strong>SUBSET=all</strong> : Build a core that supports everything. This is the default SUBSET so you don't need to append it.</li>
+<li><strong>SUBSET=neogeo</strong> : Build a core that only supports neogeo games.</li>
+<li><strong>SUBSET=cps12</strong> : Build a core that only supports CPS-1 &amp; CPS-2 games.</li>
+<li><strong>generate-files</strong> : Generate header/gamelist files and stop there.</li>
+<li><strong>clean</strong> : Remove any previously built object.</li>
+<li><strong>REGEN_HEADERS=1</strong> : This will run <strong>generate-files</strong> and <strong>clean</strong> consecutively before building the core, which is usually required when you made a change to the list of drivers you want to build, either from modifying the project's code or switching between SUBSETs. Note that make version 4.4 may be required for this to behave properly.</li>
+</ul>
+<h2 id="building-romsets-for-fbneo">Building romsets for FBNeo<a class="headerlink" href="#building-romsets-for-fbneo" title="Reference link to this section">&para;</a></h2>
+<p>You won't be able to emulate games without the romsets matching this emulator. FBNeo being an emulator under active development, a given romset might change from time to time to stay in sync with the best dump available for that game.</p>
+<p>Don't expect things to work properly if you didn't build valid romsets, and don't report issues because your romsets are invalid.</p>
+<h3 id="step-1-obtaining-an-xml-dat">Step 1: Obtaining an XML DAT<a class="headerlink" href="#step-1-obtaining-an-xml-dat" title="Reference link to this section">&para;</a></h3>
+<p>You can download the dat files for the latest version of the core from the <a href="https://github.com/libretro/FBNeo/tree/master/dats/">dats</a> directory.</p>
+<h3 id="step-2-gathering-the-ingredients">Step 2: Gathering the ingredients<a class="headerlink" href="#step-2-gathering-the-ingredients" title="Reference link to this section">&para;</a></h3>
+<p>It mostly consists of latest dumps available for MAME.
+The other romsets are usually a mix of hacks and homebrews, most of them can be found in HBMAME dumps.
+Console/computer romsets come from different sources (recently emulated systems are likely to be based on No-Intro, but older ones were mostly based on MESS, there are also a lot of hacks/homebrews you won't find in those sets).
+Having an older FBAlpha/FBNeo set among your ingredients will also help a lot.</p>
+<h3 id="step-3-building-the-romsets">Step 3: Building the romsets<a class="headerlink" href="#step-3-building-the-romsets" title="Reference link to this section">&para;</a></h3>
+<p>Refer to a <a href="https://docs.libretro.com/guides/arcade-getting-started/#optional-clrmamepro-tutorial">clrmamepro tutorial</a> for details on how to configure ClrMamePro to use your sources as "rebuild" folders.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Reference link to this section">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saves</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>States</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Rewind</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Run-Ahead</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Preemptive Frames</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Netplay</td>
+<td>✔</td>
+</tr>
+<tr>
+<td><a href="../../guides/memorymonitoring/">Memory Monitoring (achievements)</a></td>
+<td>✔</td>
+</tr>
+<tr>
+<td>RetroArch Cheats</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Native Cheats</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Controllers</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Multi-Mouse</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Rumble</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>Sensors</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>✕</td>
+</tr>
+<tr>
+<td>Subsystem</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>IPS Patch</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>RomData</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Multi-language</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapping">Mapping<a class="headerlink" href="#mapping" title="Reference link to this section">&para;</a></h2>
+<p>We don't have a tool like the MAME OSD, instead we use the libretro api to announce buttons and let the frontend customize mapping, this is done through <code class="language-text highlight">Quick Menu &gt; Controls</code>.</p>
+<p>For those who don't want to fully customize their mapping, there are 2 convenient presets you can apply by changing the "device type" for a player in this menu :</p>
+<ul>
+<li><strong>Classic</strong> : it will apply the original neogeo layout from neogeo cd gamepads for neogeo games, and use L/R as 5<sup>th</sup> and 6<sup>th</sup> button for 6 buttons games like Street Fighter II.</li>
+<li><strong>Modern</strong> : it will apply the modern neogeo layout from neogeo arcade stick pro and mini pad for neogeo games, and use R1/R2 as 5<sup>th</sup> and 6<sup>th</sup> button for 6 buttons games like Street Fighter II (because it's also their modern layout), this is really convenient with most arcade sticks.</li>
+</ul>
+<p>The following "device type" also exist, but they won't be compatible with every games :</p>
+<ul>
+<li><strong>Mouse (ball only)</strong> : it will use mouse/trackball for analog movements, buttons will stay on retropad</li>
+<li><strong>Mouse (full)</strong> : same as above, but the buttons will be on the mouse</li>
+<li><strong>Pointer</strong> : it will use "pointer" device (can be a mouse/trackball) to determine coordinates on screen, buttons will stay on retropad</li>
+<li><strong>Lightgun</strong> : it will use lightgun to determine coordinates on screen, buttons will be on the lightgun too.</li>
+<li><strong>Analog Arcade Gun</strong> : it will use the analog stick for gun games but in a different way than "Classic" and "Modern", it is particularily useful if you have a "fixed arcade gun" (arcade gun mounted on an analog control).</li>
+</ul>
+<p>The following device types are mostly WIP, they haven't been thoroughly tested and might contain major bugs (please report them) :</p>
+<ul>
+<li><strong>6-Panel</strong> : assuming you are using a 6-button arcade panel and followed the "YXL as top row and BAR as bottom row" mapping recommendation, it will map the top row then the bottom row as a general rule (with some exceptions), note that some users might be more comfortable with Classic/Modern's BAYX's assignment for 4-buttons systems like neogeo.</li>
+<li><strong>Touchscreen</strong> : a variant of the "Pointer" device type meant for mobile devices, touchscreen "tap events" are used for gameplay, "Start" and "Coin" are still assigned to your retropad overlay.</li>
+</ul>
+<h2 id="emulating-consoles-and-computers">Emulating consoles and computers<a class="headerlink" href="#emulating-consoles-and-computers" title="Reference link to this section">&para;</a></h2>
+<p>It also requires usage of specific romsets, meaning the rom must have the expected crc/size, and be packaged in an archive with a specific name (<a href="#building-romsets-for-fbneo">the instructions to build those romsets aren't different from arcade</a>).</p>
+<p>You can use specific folder's name for detection, it's the easiest and recommended method, especially if you are using RetroArch playlists or if your device is not compatible with subsystems (android and consoles) :</p>
+<ul>
+<li>CBS ColecoVision : <code class="language-text highlight">coleco</code> | <code class="language-text highlight">colecovision</code></li>
+<li>Fairchild ChannelF : <code class="language-text highlight">chf</code> | <code class="language-text highlight">channelf</code></li>
+<li>MSX 1 : <code class="language-text highlight">msx</code> | <code class="language-text highlight">msx1</code></li>
+<li>Nec PC-Engine : <code class="language-text highlight">pce</code> | <code class="language-text highlight">pcengine</code></li>
+<li>Nec SuperGrafX : <code class="language-text highlight">sgx</code> | <code class="language-text highlight">supergrafx</code></li>
+<li>Nec TurboGrafx-16 : <code class="language-text highlight">tg16</code></li>
+<li>Nintendo Entertainment System : <code class="language-text highlight">nes</code></li>
+<li>Nintendo Family Disk System : <code class="language-text highlight">fds</code></li>
+<li>Super Nintendo Entertainment System : <code class="language-text highlight">snes</code></li>
+<li>Sega GameGear : <code class="language-text highlight">gamegear</code></li>
+<li>Sega Master System : <code class="language-text highlight">sms</code> | <code class="language-text highlight">mastersystem</code></li>
+<li>Sega Megadrive : <code class="language-text highlight">megadriv</code> | <code class="language-text highlight">megadrive</code> | <code class="language-text highlight">genesis</code></li>
+<li>Sega SG-1000 : <code class="language-text highlight">sg1000</code></li>
+<li>SNK Neo-Geo Pocket : <code class="language-text highlight">ngp</code></li>
+<li>SNK Neo-Geo CD : <code class="language-text highlight">neocd</code></li>
+<li>ZX Spectrum : <code class="language-text highlight">spectrum</code> | <code class="language-text highlight">zxspectrum</code></li>
+</ul>
+<p>You can also emulate consoles by prefixing the name of the roms with <code class="language-text highlight">XXX_</code> and removing the <code class="language-text highlight">zip|7z</code> extension in the command line, or adding the <code class="language-text highlight">--subsystem XXX</code> argument, here is the list of available prefixes :</p>
+<ul>
+<li>CBS ColecoVision : <code class="language-text highlight">cv</code></li>
+<li>Fairchild ChannelF : <code class="language-text highlight">chf</code></li>
+<li>MSX 1 : <code class="language-text highlight">msx</code></li>
+<li>Nec PC-Engine : <code class="language-text highlight">pce</code></li>
+<li>Nec SuperGrafX : <code class="language-text highlight">sgx</code></li>
+<li>Nec TurboGrafx-16 : <code class="language-text highlight">tg</code></li>
+<li>Nintendo Entertainment System : <code class="language-text highlight">nes</code></li>
+<li>Nintendo Family Disk System : <code class="language-text highlight">fds</code></li>
+<li>Super Nintendo Entertainment System : <code class="language-text highlight">snes</code></li>
+<li>Sega GameGear : <code class="language-text highlight">gg</code></li>
+<li>Sega Master System : <code class="language-text highlight">sms</code></li>
+<li>Sega Megadrive : <code class="language-text highlight">md</code></li>
+<li>Sega SG-1000 : <code class="language-text highlight">sg1k</code></li>
+<li>SNK Neo-Geo Pocket : <code class="language-text highlight">ngp</code></li>
+<li>SNK Neo-Geo CD : <code class="language-text highlight">neocd</code></li>
+<li>ZX Spectrum : <code class="language-text highlight">spec</code></li>
+</ul>
+<h2 id="bios">BIOS<a class="headerlink" href="#bios" title="Reference link to this section">&para;</a></h2>
+<p>When loading a romset requiring a bios romset, it will be searched through 3 folders in that order :</p>
+<ul>
+<li>the folder of the current romset</li>
+<li>the <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/</code> folder</li>
+<li>the <code class="language-text highlight">SYSTEM_DIRECTORY/</code> folder</li>
+</ul>
+<p>The following bios romsets are required for some of the emulated arcade systems :</p>
+<table>
+<thead>
+<tr>
+<th>Romset name</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bubsys</td>
+<td>Bubble System BIOS</td>
+</tr>
+<tr>
+<td>cchip</td>
+<td>C-Chip Internal ROM</td>
+</tr>
+<tr>
+<td>decocass</td>
+<td>DECO Cassette System BIOS</td>
+</tr>
+<tr>
+<td>isgsm</td>
+<td>ISG Selection Master Type 2006 System BIOS</td>
+</tr>
+<tr>
+<td>midssio</td>
+<td>Midway SSIO Sound Board Internal ROM</td>
+</tr>
+<tr>
+<td>msx</td>
+<td>MSX1 System BIOS</td>
+</tr>
+<tr>
+<td>namcoc69</td>
+<td>Namco C69 BIOS</td>
+</tr>
+<tr>
+<td>namcoc70</td>
+<td>Namco C70 BIOS</td>
+</tr>
+<tr>
+<td>namcoc75</td>
+<td>Namco C75 BIOS</td>
+</tr>
+<tr>
+<td>neogeo</td>
+<td>Neo Geo BIOS</td>
+</tr>
+<tr>
+<td>nmk004</td>
+<td>NMK004 Internal ROM</td>
+</tr>
+<tr>
+<td>pgm</td>
+<td>PGM System BIOS</td>
+</tr>
+<tr>
+<td>skns</td>
+<td>Super Kaneko Nova System BIOS</td>
+</tr>
+<tr>
+<td>ym2608</td>
+<td>YM2608 Internal ROM</td>
+</tr>
+</tbody>
+</table>
+<p>The following bios romsets are required for some of the emulated non-arcade systems :</p>
+<table>
+<thead>
+<tr>
+<th>Romset name</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>channelf</td>
+<td>Fairchild Channel F BIOS</td>
+</tr>
+<tr>
+<td>coleco</td>
+<td>ColecoVision System BIOS</td>
+</tr>
+<tr>
+<td>dsp1</td>
+<td>SNES DSP-1</td>
+</tr>
+<tr>
+<td>dsp1b</td>
+<td>SNES DSP-1B</td>
+</tr>
+<tr>
+<td>dsp2</td>
+<td>SNES DSP-2</td>
+</tr>
+<tr>
+<td>dsp3</td>
+<td>SNES DSP-3</td>
+</tr>
+<tr>
+<td>dsp4</td>
+<td>SNES DSP-4</td>
+</tr>
+<tr>
+<td>fdsbios</td>
+<td>FDS System BIOS</td>
+</tr>
+<tr>
+<td>neocdz</td>
+<td>Neo Geo CDZ System BIOS</td>
+</tr>
+<tr>
+<td>ngp</td>
+<td>NeoGeo Pocket BIOS</td>
+</tr>
+<tr>
+<td>spectrum</td>
+<td>ZX Spectrum BIOS</td>
+</tr>
+<tr>
+<td>spec128</td>
+<td>ZX Spectrum 128 BIOS</td>
+</tr>
+<tr>
+<td>spec1282a</td>
+<td>ZX Spectrum 128 +2a BIOS</td>
+</tr>
+<tr>
+<td>st010</td>
+<td>SNES Seta ST010</td>
+</tr>
+<tr>
+<td>st011</td>
+<td>SNES Seta ST011</td>
+</tr>
+</tbody>
+</table>
+<h2 id="samples">Samples<a class="headerlink" href="#samples" title="Reference link to this section">&para;</a></h2>
+<p>Samples should be put under <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/samples</code>.</p>
+<p>Here is a list of samples currently in use :</p>
+<table>
+<thead>
+<tr>
+<th>Sample name</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ad59mc07</td>
+<td>Known as <code class="language-text highlight">equites</code> in MAME</td>
+</tr>
+<tr>
+<td>blockade</td>
+<td></td>
+</tr>
+<tr>
+<td>buckrog</td>
+<td></td>
+</tr>
+<tr>
+<td>carnival</td>
+<td></td>
+</tr>
+<tr>
+<td>cheekyms</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>circus</td>
+<td></td>
+</tr>
+<tr>
+<td>crash</td>
+<td></td>
+</tr>
+<tr>
+<td>congo</td>
+<td></td>
+</tr>
+<tr>
+<td>deathnlead</td>
+<td>Not from MAME, megadrive</td>
+</tr>
+<tr>
+<td>depthch</td>
+<td></td>
+</tr>
+<tr>
+<td>digger</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>dkongjr</td>
+<td></td>
+</tr>
+<tr>
+<td>dkong</td>
+<td></td>
+</tr>
+<tr>
+<td>donpachi</td>
+<td>Not from MAME, optional, replace OG music by HQ music, requires dipsw.</td>
+</tr>
+<tr>
+<td>elim2</td>
+<td></td>
+</tr>
+<tr>
+<td>fantasy</td>
+<td></td>
+</tr>
+<tr>
+<td>galaga</td>
+<td></td>
+</tr>
+<tr>
+<td>gaplus</td>
+<td></td>
+</tr>
+<tr>
+<td>gridlee</td>
+<td></td>
+</tr>
+<tr>
+<td>heiankyo</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>invaders</td>
+<td></td>
+</tr>
+<tr>
+<td>invds</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>invinco</td>
+<td></td>
+</tr>
+<tr>
+<td>journey</td>
+<td></td>
+</tr>
+<tr>
+<td>mario</td>
+<td></td>
+</tr>
+<tr>
+<td>mmagic</td>
+<td></td>
+</tr>
+<tr>
+<td>natodef</td>
+<td></td>
+</tr>
+<tr>
+<td>nitedrvr</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>nsub</td>
+<td></td>
+</tr>
+<tr>
+<td>paprium</td>
+<td>Not from MAME, megadrive, huge usage of disk space and ram (2.1GB)</td>
+</tr>
+<tr>
+<td>qbert</td>
+<td></td>
+</tr>
+<tr>
+<td>radarscp</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>rallyx</td>
+<td></td>
+</tr>
+<tr>
+<td>reactor</td>
+<td></td>
+</tr>
+<tr>
+<td>safarir</td>
+<td></td>
+</tr>
+<tr>
+<td>sasuke</td>
+<td></td>
+</tr>
+<tr>
+<td>seawolf</td>
+<td></td>
+</tr>
+<tr>
+<td>sfz3mix</td>
+<td>Not from MAME, optional, replace OG music by HQ music, no dipsw.</td>
+</tr>
+<tr>
+<td>sharkatt</td>
+<td></td>
+</tr>
+<tr>
+<td>sidetrac</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>sot4w</td>
+<td>Not from MAME, megadrive</td>
+</tr>
+<tr>
+<td>spacefb</td>
+<td></td>
+</tr>
+<tr>
+<td>spacfury</td>
+<td></td>
+</tr>
+<tr>
+<td>stinger</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>subroc3d</td>
+<td></td>
+</tr>
+<tr>
+<td>targ</td>
+<td></td>
+</tr>
+<tr>
+<td>thehand</td>
+<td></td>
+</tr>
+<tr>
+<td>thief</td>
+<td></td>
+</tr>
+<tr>
+<td>tr606drumkit</td>
+<td>Not from MAME</td>
+</tr>
+<tr>
+<td>turbo</td>
+<td></td>
+</tr>
+<tr>
+<td>twotiger</td>
+<td></td>
+</tr>
+<tr>
+<td>vanguard</td>
+<td></td>
+</tr>
+<tr>
+<td>xevious</td>
+<td></td>
+</tr>
+<tr>
+<td>zaxxon</td>
+<td></td>
+</tr>
+<tr>
+<td>zektor</td>
+<td></td>
+</tr>
+<tr>
+<td>zerohour</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hiscores">Hiscores<a class="headerlink" href="#hiscores" title="Reference link to this section">&para;</a></h2>
+<p>Copy <a href="https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat">hiscore.dat</a> to <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/</code> and have <code class="language-text highlight">Quick Menu &gt; Core Options &gt; Hiscores</code> enabled.</p>
+<p>It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or <code class="language-text highlight">hiscore.dat</code> might have a missing or broken entry for that romset. You can request support in the issue tracker. </p>
+<p>Runahead now works with hiscores, it'll require fairly recent version of the core AND RetroArch though (support was added after 1.10.3).</p>
+<h2 id="input-lag-reduction">Input lag reduction<a class="headerlink" href="#input-lag-reduction" title="Reference link to this section">&para;</a></h2>
+<p>This core widely supports the RetroArch input latency reduction features, with <strong>runahead single instance</strong> and <strong>preemptive frames</strong> being the recommended methods. </p>
+<p>Proper support for <strong>runahead second instance</strong> is not guaranteed because it doesn't exist in standalone FBNeo unlike the other methods.</p>
+<p>Note : There seems to be possible conflicts when rewind is active simultaneously, see <a href="https://github.com/libretro/RetroArch/issues/16374">https://github.com/libretro/RetroArch/issues/16374</a>.</p>
+<h2 id="retroachievements">RetroAchievements<a class="headerlink" href="#retroachievements" title="Reference link to this section">&para;</a></h2>
+<p>This core provides support for RetroAchievements, and some were added for popular games.</p>
+<h2 id="dipswitches">Dipswitches<a class="headerlink" href="#dipswitches" title="Reference link to this section">&para;</a></h2>
+<p>They are either directly available from <code class="language-text highlight">Quick Menu &gt; Core Options &gt; DIP Switches</code>, or from the service menu after setting its shortcut at <code class="language-text highlight">Quick Menu &gt; Core Options &gt; Diagnostic Input</code>.</p>
+<h2 id="cheats">Cheats<a class="headerlink" href="#cheats" title="Reference link to this section">&para;</a></h2>
+<p>This core supports the RetroArch cheat feature with the <code class="language-text highlight">.cht</code> files. However it is recommended to use FBNeo's native cheat support instead :</p>
+<ul>
+<li>Download the pack of cheats from <a href="https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip">here</a></li>
+<li>Uncompress <strong>all of them</strong> into the <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/cheats/</code> folder (which is <strong>NOT</strong> the same folder as the RetroArch feature with the <code class="language-text highlight">.cht</code> files)</li>
+<li>Cheats will become available through core options (<code class="language-text highlight">Quick Menu &gt; Core Options &gt; Cheat</code>, <strong>NOT</strong> <code class="language-text highlight">Quick Menu &gt; Cheats</code>) afterward.</li>
+</ul>
+<h2 id="multi-language">Multi-language<a class="headerlink" href="#multi-language" title="Reference link to this section">&para;</a></h2>
+<p>This core supports multi-language feature.</p>
+<ul>
+<li>Multi-language is based on the front-end User UI language switching</li>
+<li>Simplified Chinese and Traditional Chinese have been added.</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Reference link to this section">&para;</a></h2>
+<h3 id="where-can-i-find-the-xxx-roms">Where can i find the XXX roms ?<a class="headerlink" href="#where-can-i-find-the-xxx-roms" title="Reference link to this section">&para;</a></h3>
+<p>As far as we are concerned, you are supposed to dump your own games, so we can't help you with acquiring romsets.</p>
+<h3 id="why-am-i-getting-a-white-screen">Why am i getting a white screen ?<a class="headerlink" href="#why-am-i-getting-a-white-screen" title="Reference link to this section">&para;</a></h3>
+<p>If present, the line <code class="language-text highlight">Verify the following romsets : &lt;romset&gt; &lt;parent&gt; &lt;bios&gt;</code> gives you the list of split romsets required by the game you are trying to run. This is mainly for reference since you might not be striving to use romsets in split format. The next few lines give you the list of files it couldn't find within those romsets.</p>
+<p>Otherwise, a <code class="language-text highlight">Romset is unknown</code> message means the romset couldn't be found by its filename in our database, meaning it's either not supported at all or wrongly named.</p>
+<p>Both problems result from not reading the <a href="https://docs.libretro.com/guides/arcade-getting-started/#step-3-use-the-correct-version-romsets-for-that-emulator">arcade documentation</a>.
+Exceptionally there might be false positives due to your files being unreadable for some reason (file corruption during transfer, file permission, damaged disk drive, <a href="https://github.com/libretro/RetroArch/issues/18582">retroarch regression</a>, ...). This is usually a rabbit hole and something you should only concern yourself after using clrmamepro to verify your romsets.</p>
+<p>Rarely you could get a "Failed initializing driver" message, this is something you should report <a href="https://github.com/finalburnneo/FBNeo/issues">here</a></p>
+<h3 id="is-xxx-supported">Is XXX supported ?<a class="headerlink" href="#is-xxx-supported" title="Reference link to this section">&para;</a></h3>
+<p>You can check the <a href="https://github.com/libretro/FBNeo/tree/master/dats/">dats</a> or <a href="https://raw.githubusercontent.com/libretro/FBNeo/refs/heads/master/gamelist.txt">gamelist.txt</a> to see if a game is supported.</p>
+<p>We don't accept requests for supporting a game, and questions regarding the lack of support for a game are also regarded as requesting for its support.
+One exception to that rule would be for consoles/computers we already support, and you should make that request <a href="https://neo-source.com/index.php?topic=3656.0">here</a>.
+Games running on already emulated arcade systems will also be tolerated, the most common case for this would be romhacks of already emulated games, don't ask if you are not absolutely sure.</p>
+<h3 id="how-can-i-run-that-romhack-i-found">How can i run that romhack i found ?<a class="headerlink" href="#how-can-i-run-that-romhack-i-found" title="Reference link to this section">&para;</a></h3>
+<p>A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.</p>
+<p>For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed if you intend to use RetroAchievements and must be disabled by toggling off <code class="language-text highlight">Quick Menu &gt; Core Options &gt; Allow patched romsets</code> : </p>
+<h4 id="using-the-patched-folder">Using the "patched" folder<a class="headerlink" href="#using-the-patched-folder" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li>Put the patched version of the romset into <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/patched</code>, this folder has special privileges allowing it to ignore crcs. Sizes and names still need to match the original romset though.</li>
+<li>Optional : you could strip the patched version from any file that don't differ from the original romset.</li>
+</ul>
+<h4 id="using-ips-patches">Using IPS Patches<a class="headerlink" href="#using-ips-patches" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li>Put all IPS patch files (including: driver name directory/<strong>.dat|</strong>.ips) into the <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/ips/</code> folder.</li>
+<li>IPS Patch will become available through core options (<code class="language-text highlight">Quick Menu &gt; Core Options &gt; IPS Patch</code>) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.</li>
+<li>Note : To avoid competing with loaded games for startup privileges, IPS Patches is initially disabled by default.</li>
+</ul>
+<h4 id="using-romdata">Using RomData<a class="headerlink" href="#using-romdata" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li>Put all RomData files (including: driver name directory/**.dat) into the <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/romdata/</code> folder</li>
+<li>RomData will become available through core options (<code class="language-text highlight">Quick Menu &gt; Core Options &gt; RomData</code>) afterward. To apply them, you need to launch the game, enable them in core options, then use RetroArch's "restart" action.</li>
+</ul>
+<p>Please note that all 3 methods still require that you launch the original non-patched romset, it will be patched/replaced at runtime.</p>
+<h3 id="how-can-i-run-that-unibios-i-bought-from-httpunibiosfreefr">How can i run that unibios i bought from <a href="http://unibios.free.fr/">http://unibios.free.fr/</a> ?<a class="headerlink" href="#how-can-i-run-that-unibios-i-bought-from-httpunibiosfreefr" title="Reference link to this section">&para;</a></h3>
+<p>Use the "patched folder" method from above.</p>
+<h3 id="i-think-i-found-a-glitch-how-do-i-report-it">I think i found a glitch, how do i report it ?<a class="headerlink" href="#i-think-i-found-a-glitch-how-do-i-report-it" title="Reference link to this section">&para;</a></h3>
+<p>Write a report <a href="https://github.com/finalburnneo/FBNeo/issues">here</a> with details on the issue and your platform.
+If the issue is not self-explanatory, it is important to provide a video of the PCB (meaning real hardware), any other material (remakes, other emulators, fpga, game rips, ...) will be ignored.
+If the issue doesn't happen right from the beginning, please try to provide a savestate from right before the issue.</p>
+<h3 id="why-does-game-xxx-run-slowly">Why does game XXX run slowly ?<a class="headerlink" href="#why-does-game-xxx-run-slowly" title="Reference link to this section">&para;</a></h3>
+<p>Your hardware is probably too slow to run the game with your current settings. Try the following :</p>
+<ul>
+<li>Check if there is a speedhack dipswitch in the core options, set it to "yes".</li>
+<li>Try disabling rewind, runahead, pre-emptive frames, shaders, or any other retroarch setting known for increasing requirements.</li>
+<li>Try enabling "Threaded Video" in retroarch settings.</li>
+<li>Try changing "Max swapchain images" in retroarch settings (higher values gave a small performance benefit on my setup).</li>
+<li>Try setting a value for frameskip in core options (note : "Fixed" frameskip is recommended, the other methods don't seem to be nearly as reliable).</li>
+<li>Try lowering CPU clock in core options (note : some games don't support this feature).</li>
+<li>Try lowering audio settings in the core options.</li>
+<li>With m68k games (most boards from the late 80s and early 90s) on arm platforms, you can try enabling cyclone in core options, however this is really a last resort since some games won't work properly with this, furthermore it's causing savestates incompatibilities.</li>
+<li>If it is not enough, upgrade/overclock your hardware, or use another core.</li>
+</ul>
+<p>We won't accept requests for "making the core faster", as far as we are concerned this core has a good balance between accuracy &amp; speed, and for the most part will already run really well on low-end devices (rpi3, ...).</p>
+<h3 id="why-does-game-xxx-have-choppy-sound">Why does game XXX have choppy sound ?<a class="headerlink" href="#why-does-game-xxx-have-choppy-sound" title="Reference link to this section">&para;</a></h3>
+<p>Most likely for the same reason as above.</p>
+<h3 id="why-does-game-xxx-run-faster-in-mame2003mame2010">Why does game XXX run faster in MAME2003/MAME2010 ?<a class="headerlink" href="#why-does-game-xxx-run-faster-in-mame2003mame2010" title="Reference link to this section">&para;</a></h3>
+<p>Overall, FBNeo is slower than old MAME version, because it's more accurate, meaning graphics, sound and gameplay are more likely to be faithful to the real machine.
+This libretro port also supports various features which are usually buggy or totally missing in MAME cores (runahead, netplay, rewind, retroachievements, ...), those features might require additional resources.</p>
+<h3 id="how-do-i-launch-a-neogeo-cd-game">How do i launch a neogeo CD game ?<a class="headerlink" href="#how-do-i-launch-a-neogeo-cd-game" title="Reference link to this section">&para;</a></h3>
+<p>There are several things to know :</p>
+<ul>
+<li>You need to follow the instructions about <a href="#emulating-consoles-and-computers">emulating consoles</a></li>
+<li>You need a copy of the <code class="language-text highlight">neocdz.zip</code> and <code class="language-text highlight">neogeo.zip</code> bioses</li>
+<li>The supported format is single file MODE1/2352 cue/bin (the format where there is one .cue file with one single .bin file). Use "CDmage" to convert your dump if needed. <strong>It must not be compressed</strong></li>
+</ul>
+<p>You can convert your unsupported dumps by following this tutorial :</p>
+<ul>
+<li>Get <a href="https://www.videohelp.com/software/CDMage">CDMage 1.02.1 (beta)</a> (freeware &amp; no ads). <strong>Don't get CDMage 1.01.5, it doesn't have the "Save As" function</strong></li>
+<li>File &gt; Open &gt; select your dump (NB : always choose the .cue file if there is one)</li>
+<li>File &gt; Save As &gt; write the name of your new file</li>
+<li>Make sure you select MODE1/2352 in the second drop-down</li>
+<li>Press OK, wait for the process to finish (a few seconds on my computer), and it’s done !</li>
+</ul>
+<h3 id="why-cant-i-launch-killer-instinct-i-heard-its-supported">Why can't i launch Killer instinct ? I heard it's supported.<a class="headerlink" href="#why-cant-i-launch-killer-instinct-i-heard-its-supported" title="Reference link to this section">&para;</a></h3>
+<p>That driver was disabled, it didn't meet our quality criteria. There are no plans for fixing it at the moment.</p>
+<h3 id="where-is-the-hires-dipswitch-on-vector-games-it-seems-gone">Where is the hires dipswitch on vector games ? It seems gone.<a class="headerlink" href="#where-is-the-hires-dipswitch-on-vector-games-it-seems-gone" title="Reference link to this section">&para;</a></h3>
+<p>It was streamlined into a global <code class="language-text highlight">Video Settings &gt; Resolution</code> core option affecting all vector games at once, with new resolutions available.</p>
+<p>For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
+* for horizontal games, you'll want to use 1440x1080
+* for vertical games (tempest, tacscan), if you are running them on a vertical screen with the settings to rotate them, you'll also want to use 1440x1080
+* for those same vertical games, if you are running them at default settings on a horizontal screen, you'll want to use 1080x810</p>
+<h3 id="why-are-vertical-games-not-working-properly">Why are vertical games not working properly ?<a class="headerlink" href="#why-are-vertical-games-not-working-properly" title="Reference link to this section">&para;</a></h3>
+<p>2 settings are required when running vertical games in FBNeo :</p>
+<ul>
+<li><code class="language-text highlight">Settings &gt; Core &gt; Allow rotation</code> must be enabled  (<code class="language-text highlight">video_allow_rotate = &quot;true&quot;</code> in <code class="language-text highlight">retroarch.cfg</code>)</li>
+<li><code class="language-text highlight">Settings &gt; Video &gt; Scaling &gt; Aspect Ratio</code> should be set to <code class="language-text highlight">Core Provided</code> (<code class="language-text highlight">aspect_ratio_index = &quot;22&quot;</code> in <code class="language-text highlight">retroarch.cfg</code>)</li>
+</ul>
+<p>If you are wondering why this isn't required for the MAME core, you can find more information about it <a href="https://github.com/libretro/mame/issues/261">here</a></p>
+<p>Additionally :</p>
+<ul>
+<li>If you are playing on a vertical screen, you'll want to use the <code class="language-text highlight">Video Settings &gt; Vertical Mode</code> core option to rotate the display for your needs, it should also be possible to rotate display from <code class="language-text highlight">Settings &gt; Video &gt; Output &gt; Video Rotation</code> but that method might handle the aspect ratio incorrectly.</li>
+<li>If you are using a bezel pack, make sure it's compatible with FBNeo (apparently, some were written specifically to work with MAME's internal rotation) and to follow its official instructions. In some case it seems enabling <code class="language-text highlight">Settings &gt; On-Screen Display &gt; On-Screen Overlay &gt; Auto-Scale Overlay</code> (<code class="language-text highlight">input_overlay_auto_scale = &quot;true&quot;</code> in <code class="language-text highlight">retroarch.cfg</code>) can help.</li>
+</ul>
+<h3 id="why-is-the-music-high-pitched-too-fast-andor-different-from-what-i-think-it-should-be">Why is the music high-pitched, too fast and/or different from what i think it should be ?<a class="headerlink" href="#why-is-the-music-high-pitched-too-fast-andor-different-from-what-i-think-it-should-be" title="Reference link to this section">&para;</a></h3>
+<p>The first question you should be asking yourself is "what am i comparing this to ?", emulation is meant to be faithful to real hardware (here the original arcade board), not to some console port, remaster, other emulator, or ost.</p>
+<p>If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings. 
+By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.</p>
+<p>Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure <code class="language-text highlight">Video Settings &gt; Force 60Hz</code> isn't enabled in core options and <code class="language-text highlight">Settings &gt; Video &gt; Synchronization &gt; Sync to Exact Content Framerate</code> is enabled (<code class="language-text highlight">vrr_runloop_enable = &quot;true&quot;</code> in <code class="language-text highlight">retroarch.cfg</code>). 
+Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.</p>
+<h3 id="why-do-i-get-a-black-screen-andor-cant-i-change-bios-in-neogeo-games">Why do i get a black screen and/or can't i change bios in neogeo games ?<a class="headerlink" href="#why-do-i-get-a-black-screen-andor-cant-i-change-bios-in-neogeo-games" title="Reference link to this section">&para;</a></h3>
+<p>The <code class="language-text highlight">neogeo</code> romset is a collection of neogeo bioses, and most of them are considered optional so they won't cause a "white screen" when missing. Only <code class="language-text highlight">MVS Asia/Europe ver. 6 (1 slot)</code> is mandatory.</p>
+<p>However, having an incomplete romset can still cause various issues :</p>
+<ul>
+<li>If you are using the "Use bios set in BIOS dipswitch" as "Neo-Geo mode" and the bios set in dipswitches is missing, you'll have a black screen where you can hear some sound playing.</li>
+<li>If you are using any of the other choices available in "Neo-Geo mode" and a corresponding bios can't be found, the core will fallback to one of the available bioses.</li>
+</ul>
+<p>Obviously, none of this is supposed to ever happen if you followed the instructions about romsets as you are supposed to.</p>
+<h3 id="why-do-i-get-some-weird-transparent-effects-in-game-xxx">Why do i get some weird transparent effects in game XXX ?<a class="headerlink" href="#why-do-i-get-some-weird-transparent-effects-in-game-xxx" title="Reference link to this section">&para;</a></h3>
+<p>You probably installed some <code class="language-text highlight">.bld</code> files in the <code class="language-text highlight">SYSTEM_DIRECTORY/fbneo/blend</code> folder. Those files are meant to create such effects but some of them are very broken. I'd recommend removing them.</p>
+<h3 id="why-is-my-favorite-combo-button-not-available">Why is my favorite combo button not available ?<a class="headerlink" href="#why-is-my-favorite-combo-button-not-available" title="Reference link to this section">&para;</a></h3>
+<p>Libretro doesn't allow cores to declare more buttons and map them later, meaning the number of different "actions" available is limited by the number of buttons available on the retropad model.</p>
+<p>Removing that limitation was asked in <a href="https://github.com/libretro/RetroArch/issues/6718">https://github.com/libretro/RetroArch/issues/6718</a>, then again in <a href="https://github.com/libretro/RetroArch/issues/11273">https://github.com/libretro/RetroArch/issues/11273</a>, it's not possible to add more macros as long as this limitation exists. If you want more macros, go support those issues, preferably the later.</p>
+<p>The currently available neogeo combos were decided in <a href="https://github.com/libretro/FBNeo/issues/51">https://github.com/libretro/FBNeo/issues/51</a>, they won't be replaced, but they might totally disappear if users keep complaining about them.</p>
+<p>Note that there was also a request to add a retroarch macro mapper in <a href="https://github.com/libretro/RetroArch/issues/8209">https://github.com/libretro/RetroArch/issues/8209</a>.</p>
+<p>There is also a PR currently opened to implement this : <a href="https://github.com/libretro/RetroArch/pull/16035">https://github.com/libretro/RetroArch/pull/16035</a>.</p>
+<h3 id="why-cant-i-enable-hardcore-mode-in-retroachievements">Why can't i enable hardcore mode in RetroAchievements ?<a class="headerlink" href="#why-cant-i-enable-hardcore-mode-in-retroachievements" title="Reference link to this section">&para;</a></h3>
+<p>This feature doesn't accept achievements made with any kind of cheat, meaning unibios, cheats, and patched romsets must be disabled in core options.</p>
+<h3 id="why-do-i-need-to-re-enable-cheats-every-time-i-boot-a-game">Why do i need to re-enable cheats every time i boot a game ?<a class="headerlink" href="#why-do-i-need-to-re-enable-cheats-every-time-i-boot-a-game" title="Reference link to this section">&para;</a></h3>
+<p>It is common for arcade machines to execute self-tests at boot, and in many cases they won't boot if unexpected values have been injected into their memory, which is exactly what cheats do. Disabling cheats at boot is a safety mecanism to prevent those boot issues.</p>
+<h3 id="why-do-the-self-tests-at-boot-fail">Why do the self-tests at boot fail ?<a class="headerlink" href="#why-do-the-self-tests-at-boot-fail" title="Reference link to this section">&para;</a></h3>
+<p>Sometimes the NVRAM/EEPROM saved on your disk gets corrupted for some reason, Konami games are especially known for getting this issue <em>somewhat frequently</em>.
+NVRAM/EEPROM are saved in the <code class="language-text highlight">SAVEFILES_DIRECTORY/fbneo</code> folder, and you can get around this issue by finding the files corresponding to your game and deleting them.</p>
+<h3 id="should-i-use-retroarchs-analog-to-digital-feature">Should i use retroarch's analog-to-digital feature ?<a class="headerlink" href="#should-i-use-retroarchs-analog-to-digital-feature" title="Reference link to this section">&para;</a></h3>
+<p>You should <strong>NEVER</strong> use that feature with this core, it already converts analog to digital and digital to analog internally. Exceptionally it might not do that conversion because each of those controls are already doing their own thing, meaning you don't want that conversion either.</p>
+<h3 id="why-is-my-old-savestate-not-working-anymore-after-updating-my-core">Why is my old savestate not working anymore after updating my core ?<a class="headerlink" href="#why-is-my-old-savestate-not-working-anymore-after-updating-my-core" title="Reference link to this section">&para;</a></h3>
+<p>A core's savestates are only guaranteed to keep working as long as you NEVER update that core.
+Savestates are tied to how a game is emulated, and updating a core might significantly change how that game is emulated, breaking older savestates in the process.
+This does apply to any core, but is likely to be more frequent for actively developed multi-system emulators like FBNeo.
+You should be wary of updating your cores if this is a major concern for you.
+Note that rollback netplay with mismatching core versions can also be affected by this.</p>
+<h3 id="why-am-i-having-trouble-playing-with-a-keyboard">Why am i having trouble playing with a keyboard ?<a class="headerlink" href="#why-am-i-having-trouble-playing-with-a-keyboard" title="Reference link to this section">&para;</a></h3>
+<p>Keyboards, especially cheaper ones, are often affected by ghosting, which will prevent some key combinations from working and hinder your experience. You can test your keyboard <a href="https://www.microsoft.com/applied-sciences/projects/anti-ghosting-demo">here</a>.</p>
+<p>Additionally, keyboards are kind of unsuitable for arcade emulation, because they allow things that were impossible on real hardware, like pressing opposite directions. This commonly leads to problems while doing special moves involving opposite directions in fighting games. The FBNeo core has a core option at <code class="language-text highlight">Input Settings &gt; SOCD Mode</code> to mitigate this, and some value might work better than another for your play style.</p>
+<h3 id="where-is-system_directory">Where is SYSTEM_DIRECTORY ?<a class="headerlink" href="#where-is-system_directory" title="Reference link to this section">&para;</a></h3>
+<p>Open your <code class="language-text highlight">retroarch.cfg</code> file and look for <code class="language-text highlight">system_directory</code>, or check <code class="language-text highlight">Settings &gt; Directory &gt; System/BIOS</code>.</p>
+<h2 id="external-links">External Links<a class="headerlink" href="#external-links" title="Reference link to this section">&para;</a></h2>
+<ul>
+<li><a href="https://neo-source.com/">Official FBNeo forum</a></li>
+<li><a href="https://github.com/finalburnneo/FBNeo">Official FBNeo github repository</a></li>
+<li><a href="https://github.com/libretro/FBNeo">Libretro FBNeo github repository</a></li>
+<li><a href="https://neo-source.com/index.php?topic=3725.0">[GUIDE] Setting up RetroArch playlists with FBNeo</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLRbgg4gk_0IfsAHeGqGD-DkRzI87q7V_Q">Gameplay Videos</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 23, 2026 17:01:22 UTC">March 23, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2010–2025 Libretro. – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/libretro" target="_blank" rel="noopener" title="Libretro on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/libretro" target="_blank" rel="noopener" title="Libretro on X" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/C4amCeV" target="_blank" rel="noopener" title="RetroArch Discord server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@Libretro" target="_blank" rel="noopener" title="Libretro YouTube channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://facebook.com/libretro" target="_blank" rel="noopener" title="Libretro on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/libretro" target="_blank" rel="noopener" title="Libretro/RetroArch on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.2.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

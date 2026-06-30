@@ -1,0 +1,2274 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is the official RetroArch documentation for users and developers. Information from sources outside of this website may be dated or incorrect.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.libretro.com/guides/optimal-vsync/">
+      
+      
+        <link rel="prev" href="../kms-mode/">
+      
+      
+        <link rel="next" href="../rpi/">
+      
+      
+      <link rel="icon" href="../../image/branding/invader.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Optimal Vsync Performance - Libretro Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MT11L3F6EZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MT11L3F6EZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MT11L3F6EZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <script>
+  var gtmId = 'GTM-KXPH36V';
+  if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+    gtmId = 'GTM-XXX'
+  }
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', gtmId);
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9447404270680650",
+            enable_page_level_ads: true
+       });
+  </script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+  window.googletag = window.googletag || { cmd: [] };
+  </script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-optimal-vsync-performance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <style>.md-announce a,.md-announce a:focus,.md-announce a:hover{color:currentColor}.md-announce strong{white-space:nowrap}.md-announce .twitter{margin-left:.2em;color:#00acee}</style>
+    <a href="https://www.libretro.com/index.php/retroarch-1-21-0-release/"><strong>New version released! Read the blog post now!</strong></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Libretro Docs" class="md-header__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Libretro Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Optimal Vsync Performance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/understanding/" class="md-tabs__link">
+          
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../install-windows/" class="md-tabs__link">
+          
+  
+    
+  
+  For Users
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/libretro-overview/" class="md-tabs__link">
+          
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/how-to-contribute/" class="md-tabs__link">
+          
+  
+    
+  
+  Contribute to the Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/privacy-policy/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Libretro Docs" class="md-nav__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    Libretro Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../start/understanding/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../install-windows/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../navigating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../glui/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appearance & Customization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command-Line Interface (CLI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crtswitchres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CRT SwitchRes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input-controller-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input and Controller Drivers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../latency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Latency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../led-drivers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LED Drivers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kms-mode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux KMS Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Optimal Vsync Performance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Optimal Vsync Performance
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Step-By-Step Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../runahead/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Run Ahead
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://www.lakka.tv/doc/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lakka Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../arcade-getting-started/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/2048/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Game and Scripting Engines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/imageviewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Media
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/dummy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Special-Purpose
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../shader/introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Shader Library
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../development/libretro-overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    For Developers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../meta/how-to-contribute/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Contribute to the Docs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../support/privacy-policy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Step-By-Step Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/libretro/docs/edit/master/docs/guides/optimal-vsync.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/libretro/docs/raw/master/docs/guides/optimal-vsync.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="getting-optimal-vsync-performance">Getting Optimal Vsync Performance<a class="headerlink" href="#getting-optimal-vsync-performance" title="Reference link to this section">&para;</a></h1>
+<p>RetroArch uses <a href="../ratecontrol.pdf">Dynamic Rate Control</a> to synchronize both video and audio at the same time. Synchronizing in this way is a very demanding task timing-wise and dynamic rate control helps smooth out imperfections in timing which are guaranteed to arise. However, when Dynamic Rate Control is functioning as intended, the frame pacing and audio synchronization will be perfectly smooth. </p>
+<p>It can be disabled, but be aware that proper video/audio sync is nearly impossible to obtain in that case.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>+In order to propose improvements to this document, <a href="https://github.com/libretro/docs/tree/master/docs/guides/optimal-vsync.md">visit it's corresponding source page on github</a>. Changes are proposed using "Pull Requests."</p>
+</div>
+<h2 id="basic-configuration">Basic Configuration<a class="headerlink" href="#basic-configuration" title="Reference link to this section">&para;</a></h2>
+<p>While using RetroArch, the default settings might not be adequate, and you might experience video stuttering and/or audio crackling. For correct synchronization, <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Vertical Refresh Rate</code> must be configured for your display. It cannot be detected accurately enough by OS-provided APIs (i.e. they tend to blatantly lie). For proper behavior, an accuracy of roughly ~0.1% is needed for dynamic rate control to smooth out the drifting. This is trivial to obtain by measuring manually under normal conditions. Without dynamic rate control one would need a "perfect" measurement which obviously isn't possible without special hardware.</p>
+<p>RetroArch gives you an estimate of your display's refresh rate at <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Estimated Screen Refresh Rate</code>, which is updated in real-time using a running average over frame times. Make sure VSync is enabled and working. Also make sure you're running in full-screen for more accurate results (compositors can easily interfere with timing). Press accept button on the estimated refresh rate to configure RetroArch with the estimated rate. If the running average isn't drifting much anymore, it's probably a good result.</p>
+<p>You can also have RetroArch log the output at the end and configure things more manually. Start RetroArch directly in RGUI with <code class="language-text highlight">retroarch --verbose --menu</code>. Let it run uninterrupted for at least 4096 frames (displayed in title bar), and exit. In the log, you should see something like:</p>
+<p><div class="language-actionscript3 highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">RetroArch</span><span class="o">:</span><span class="w"> </span><span class="n">Average</span><span class="w"> </span><span class="n">monitor</span><span class="w"> </span><span class="n">Hz</span><span class="o">:</span><span class="w"> </span><span class="mf">59.869485</span><span class="w"> </span><span class="n">Hz</span><span class="o">.</span><span class="w"> </span><span class="o">(</span><span class="mf">1.347</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">deviation</span><span class="o">,</span><span class="w"> </span><span class="n">based</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="mi">2048</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">samples</span><span class="o">).</span>
+</span></code></pre></div>
+If you're unsure about the result, run this test several times and see if the results are consistent. Some systems tend to have very unreliable VSync behavior and this result will wildly fluctuate. You can use this value in <code class="language-text highlight">Vertical Refresh Rate</code> and the video and audio should ideally be exceptionally smooth without any static or 'popping' audio. If you have ensured your refresh rate is dialed in well, and this is still not the case, read on.</p>
+<h2 id="advanced-configuration-considerations">Advanced Configuration Considerations<a class="headerlink" href="#advanced-configuration-considerations" title="Reference link to this section">&para;</a></h2>
+<p>If you continue to find the audio and/or video output after the above basic configuration to be incorrect or insufficient, there are a multitude of settings and other factors, both inside of RetroArch and external to the program, that can have a significant impact on your ability to obtain smooth frame pacing and proper synchronization. Adjusting these settings in a haphazard fashion or adjusting more than one at a time can lead to skipping over a correct solution by fixing one part of the problem while simultaneously breaking another part. If instead it does work afterwards, then it can lead to an inability to determine which change actually contributed to success.</p>
+<p>The next section is an attempt at a step by step guide to configuring and diagnosing most frame pacing related settings. It is ordered starting from the most critical and directly audio/visual synchronization related settings first and continues towards settings that have other uses and effects, yet also impact synchronization, farther down. You can skip over any configuration changes you are unwilling to compromise on just for possibly improved frame pacing, or stop after any point in the process that you are satisfied with the output, of course. </p>
+<p>If you want to be able to judge the impact of a setting change by more than just 'eyeballing' the results, RetroArch provides a running statistics HUD by toggling <code class="language-text highlight">Settings-&gt;User Interface-&gt;On-Screen Display-&gt;On-Screen Notifications-&gt;Notification Visibility-&gt;Display Statistics</code>. You can also use an external program to monitor frame pacing, but keep in mind just the act of running it is possibly introducing a small amount of jitter itself.</p>
+<p>Notable internal RetroArch statistics regarding frame pacing are:</p>
+<ul>
+<li>
+<p>Core AV_INFO-&gt;FPS - The exact frame timing the core is requesting.</p>
+</li>
+<li>
+<p>Video-&gt;Refresh - What your <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Vertical Refresh Rate</code> is currently set to.</p>
+</li>
+<li>
+<p>Video-&gt;FPS - The rate at which you are currently outputting actual frames. With VRR on, this should match <code class="language-text highlight">Core AV_INFO-&gt;FPS</code>, and with VRR off, this should be very close to <code class="language-text highlight">Settings-&gt;Video-&gt;Output-Vertical Refresh Rate</code> divided by <code class="language-text highlight">Vsync Swap Interval</code> after the averaging settles. If <code class="language-text highlight">Video-&gt;FPS</code> is far above these values, possibilities include your Vsync or your VRR settings are not engaging properly, depending on which you are using, while having <code class="language-text highlight">Settings-&gt;Audio-&gt;Synchronization-&gt;Synchronization</code> disabled. If instead <code class="language-text highlight">Video-&gt;FPS</code> is substantially beneath, possibilities include Swap Interval set wrong, or your hardware not being able to keep up with the system demands. Note that neither <code class="language-text highlight">Video-&gt;FPS</code> nor <code class="language-text highlight">Core AV_INFO-&gt;FPS</code> will display 30 for 30 fps content most of the time, as internal frame doubling is performed.</p>
+</li>
+<li>
+<p>Audio-&gt;Underrun - This keeps track of the amount of time slices over a recent period that the audio buffer is near emptying. If this value settles at a percentage higher than 0%, after running for a while (and without menu access, slow motion, or fast forward having recently been used), you can use this to diagnose that the audio and video aren't in great sync, as the audio is not keeping up with the video. In this situation RetroArch will either occasionally stutter briefly to maintain sync, or if <code class="language-text highlight">Settings-&gt;Audio-&gt;Synchronization-&gt;Synchronization</code> is off, you will get static and popping audio noises.</p>
+</li>
+<li>
+<p>Audio-&gt;Blocking - The opposite of <code class="language-text highlight">Audio-&gt;Underrun</code> in practice. This time, if it settles at a percentage higher than 0%, after running for a while (and again, without menu access, slow motion, or fast forward having recently been used), it means the audio is running ahead of the video.</p>
+<p>Note that on some cores it is possible to have moderate amounts of <em>both</em> Underrun and Blocking present while your hardware is capable of performing at full core requested speed and all settings are correct, but this is more common for actual variable framerate content that tends to be more present from the 5<sup>th</sup> generation of consoles on. So it might be best to test your overall settings with an earlier generation, less complex core. </p>
+</li>
+</ul>
+<h2 id="advanced-configuration-step-by-step-guide">Advanced Configuration Step-By-Step Guide<a class="headerlink" href="#advanced-configuration-step-by-step-guide" title="Reference link to this section">&para;</a></h2>
+<ol>
+<li>
+<p>Choose one of the following synchronization methods depending on whether your screen is capable of Variable Refresh Rate (VRR) and if you want to use it:</p>
+<ul>
+<li>
+<p>For synchronization without VRR, you should set <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Vertical Refresh Rate</code> very close to an evenly divisible multiple of the core requested refresh rate, still using <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Estimated Screen Refresh Rate</code> to get a more accurate value as mentioned in the Basic Configuration section. You should end up with a value right around 60/120/180/240/etc Hz for NTSC, 50/100/150/200/etc for PAL. Uneven, but fairly common, display refresh rates like 75/90/144/165 Hz are only able to maintain smooth frame pacing and audio synchronization while <code class="language-text highlight">Variable Refresh Rate (VRR)</code> is active, which is discussed below.</p>
+<p>Setting your actual display refresh rate to 60Hz, and then configuring the real refresh rate as per the Basic Configuration section, combined with a complementary <code class="language-text highlight">Vsync Swap Interval</code> of 1, will always be the most default and thus supported mode of operation to obtain perfect frame timing. But if you want to be able to run RetroArch on your &gt;60Hz display without having to lower the actual screen refresh rate, this section explains how to do so correctly with minimized chance of issues.</p>
+<p>After you have verified the rate is set appropriately, you should check under <code class="language-text highlight">System-&gt;Video Settings-&gt;Synchronization</code> and make sure that <code class="language-text highlight">Vertical Sync (Vsync)</code> is on, and set the <code class="language-text highlight">Vsync Swap Interval</code> to either <code class="language-text highlight">Auto</code>, which will try to determine the right value for your applied refresh rate on its own, or you can manually set the value yourself. Unless you note specific issues with your system, <code class="language-text highlight">Auto</code> is likely the superior choice, as it will avoid the 'math problem' required for manual configuration and respond to changes in others settings including <code class="language-text highlight">Black Frame Insertion</code> and <code class="language-text highlight">Sync to Exact Content Framerate (G-Sync, Freesync)</code> without needing to be updated again itself. </p>
+<p>If you choose to set it manually, the value you should set it to is the value such that when you divide <code class="language-text highlight">Settings-&gt;Video-&gt;Output-Vertical Refresh Rate</code> by it, gives you a result near your 60/50Hz goal. I.e. 60Hz/1 = 60Hz, so set <code class="language-text highlight">Vsync Swap Interval</code> to 1. 120Hz/2 = 60Hz, so set <code class="language-text highlight">Vsync Swap Interval</code> to 2, 180Hz/3 = 60Hz so set <code class="language-text highlight">Vsync Swap Interval</code> to 3, and so on.</p>
+<p>Lastly, when syncing with this method to a value other than <code class="language-text highlight">Auto</code> or 1, ensure that <code class="language-text highlight">Black Frame Insertion</code> is off, and that <code class="language-text highlight">Sync to Exact Content Framerate (G-Sync, Freesync)</code> is off. These are each separate methods to sync the display and audio, and they should not be combined.</p>
+</li>
+<li>
+<p>For a VRR capable display, configuring settings is less error prone, at least inside of RetroArch, and also has a benefit of being able to sync to the exact originally intended speed of the core. <code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Vertical Refresh Rate</code> will not be in use to attempt to adjust the timing, and is not required to be set correctly, but it is still good practice.</p>
+<p>To setup RetroArch to use VRR timing, turn on <code class="language-text highlight">Sync to Exact Content Rate (G-Sync, Freesync)</code> under <code class="language-text highlight">System-&gt;Video Settings-&gt;Synchronization</code>, and verify <code class="language-text highlight">Vsync Swap Interval</code> is set to either 1 or Auto, and that <code class="language-text highlight">Black Frame Insertion</code> is off. Just as above, these settings should not be combined.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ensure <code class="language-text highlight">Settings-&gt;Audio-&gt;Synchronization-&gt;Synchronization</code> is enabled. Also in this same menu, for a non-VRR setup, <code class="language-text highlight">Maximum Timing Skew</code> will decide how far Retroarch will be willing to adjust the core requested speed to attempt to sync with your refresh and swap interval settings.</p>
+<p>For the most part, the default value will be fine, but some arcade content runs at Hz significantly farther in the middle between 50Hz and 60Hz. The older Mortal Kombat arcade machines request a rate around 54Hz, for instance. Further, if you desire to run 50Hz PAL content at 60Hz NTSC speed, you must set the maximum skew even higher. 60Hz NTSC is ~17% faster than 50Hz PAL, so you would want to set the <code class="language-text highlight">Maximum Timing Skew</code> to .17. Note that a higher maximum will not cause content that is not far from your set refresh rate to run at a less correct speed, it will only allow content that is farther away to sync so that you can obtain smooth frame pacing and audio.</p>
+</li>
+<li>
+<p>Check Display Control Panel and Other External Program Settings</p>
+<ul>
+<li>
+<p>Make sure you are not overriding application settings to force <code class="language-text highlight">Vsync</code> off. </p>
+</li>
+<li>
+<p>Check if you decided to use VRR in step 1.</p>
+<ul>
+<li>
+<p>If you aren't using VRR, and have a maximum framerate cap set (in the driver or through a third party software tool like RTSS), verify that it is at least as high as the set refresh rate of your display. You might think a 60 fps cap would be all you need for 60 fps content, but a display set to 240Hz using a swap interval of 4, still needs 240 potential vblanks per second to sync correctly to 60 actual fps.</p>
+</li>
+<li>
+<p>If you are using VRR, you must verify that it enabled at the display driver level, and on the display as well. Also you should ensure, if you have a configured maximum framerate cap, that it is set slightly above 60 at the least, not right at 60. NTSC NES/SNES request 60.1Hz for instance, and this could interfere with proper frame timing even with VRR, if you have a 60 fps framerate cap.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If your system has a strong GPU and it is available for your display driver, consider looking for a setting similar to <code class="language-text highlight">Power Management Mode</code> and configure it for <code class="language-text highlight">Prefer Maximum Performance</code>, either globally or specifically for RetroArch.</p>
+<p>Some higher powered GPU's are designed to downclock on lower loads by default, which they may see RetroArch as. If your GPU can stay in this downclocked state while maintaining full performance, there might not be any interference with smooth synchronization. However, if instead if it responds to RetroArch as a load where it constantly shifts back and forth between a high power state and a low power state, this can cause inconsistent frame times.</p>
+</li>
+<li>
+<p>Consider disabling possibly unnecessary overlays like from RTSS, Discord, or Steam. RTSS has been known with previous versions, for instance, to cause issues with Vulkan in Retroarch, even when not running, just merely by being installed! For reference: <a href="https://github.com/libretro/RetroArch/issues/9668">Vulkan Frame Pacing Stutter</a></p>
+</li>
+<li>
+<p>Active video recording or streaming software has the potential to interfere with perfect frame pacing, but if your stream or recording is important, obviously perfect frame pacing will have to become a secondary concern. Just set all other settings as appropriately as you can.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Back inside of RetroArch consider adjusting settings that can have an impact on frame pacing and synchronization.</p>
+<ul>
+<li>
+<p>Windowed mode, and even windowed full-screen mode can contribute to frame pacing issues, so <code class="language-text highlight">Settings-&gt;Video-&gt;Fullscreen Mode-&gt;Windowed Full-Screen Mode</code> can be disabled to test if this improves your frame pacing.</p>
+</li>
+<li>
+<p><code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Automatic Refresh Rate Switch</code> can be considered to be disabled, as if it changes your actual display refresh rate, in non-VRR mode this can interfere with your set Vsync Swap Interval and cause <em>large</em> mistiming, and in VRR mode, you want the display to maintain the maximum potential refresh rate so that it can be more accurate in accomodating small requested timing differences.</p>
+</li>
+<li>
+<p><code class="language-text highlight">Settings-&gt;Video-&gt;Output-&gt;Threaded Video</code> is well known to interfere with smooth frame pacing and audio sync, but can be the only choice for hardware otherwise too weak for the intended content to run at near the correct frame rate at all.</p>
+</li>
+<li>
+<p>Using a very heavy shader like an accurate CRT emulation shader, especially on a higher resolution display, can also increase performance requirements to obtain smooth synchronization.</p>
+</li>
+<li>
+<p>Your preferred renderer API of Vulkan/OpenGL/DirectX 11/etc might not interact perfectly with your system or the core you are using, and you can try an alternative.</p>
+</li>
+<li>
+<p>Core specific settings can be checked for things such as overclocks which can increase system requirements to where you might not be able to run full speed, or internal run-ahead, or frame duplication.</p>
+</li>
+<li>
+<p>Under <code class="language-text highlight">Settings-&gt;Latency</code>, <code class="language-text highlight">Frame Delay (ms)</code>, <code class="language-text highlight">Automatic Frame Delay</code>, <code class="language-text highlight">Run-Ahead to Reduce Latency</code> and <code class="language-text highlight">Run Pre-Emptive Frames</code> should be adjusted down or off if smooth frame pacing is a priority for you over latency and you continue to have issues at this point in the process.  These settings can cause inability to reach proper sync if your system can not handle the increased load or they are simply set too high even on very capable hardware.</p>
+</li>
+<li>
+<p><code class="language-text highlight">Settings-Latency-&gt;Audio Latency</code> perhaps unintuitively should be kept higher, not lower. Too low of an audio latency causes RetroArch to stutter while waiting to refill the now smaller audio buffer when <code class="language-text highlight">Settings-&gt;Audio-&gt;Synchronization-&gt;Synchronization</code> is enabled, or can cause very poor audio output when <code class="language-text highlight">Settings-&gt;Audio-&gt;Synchronization-&gt;Synchronization</code> is not set.</p>
+<p>How low you can set this to without issue can vary per content, but the default value of 64 ms was chosen for avoiding issues like this. If you still decide to push lower, keep in mind a 60Hz NTSC frame is approximately 16.66 ms long, so you might want to try a value a little longer than 2 frames, like 35ms, and then a little longer than 3 frames like 52ms, et cetera.</p>
+</li>
+<li>
+<p>Under <code class="language-text highlight">System-&gt;Video Settings-&gt;Synchronization</code>, <code class="language-text highlight">Hard GPU Sync</code>, <code class="language-text highlight">Max Swapchain Images</code>, or <code class="language-text highlight">Waitable Swapchains</code>, any of which might be available with your current renderer API, are designed to reduce latency by limiting how many frames ahead that the cpu can calculate beyond the currently displayed frame. If you are still experiencing frame pacing issues having reached this poing in the document, and care more about that than increased latency, you can disable <code class="language-text highlight">Hard GPU Sync</code>, <code class="language-text highlight">Waitable Swapchains</code>, or increase the value of <code class="language-text highlight">Max Swapchain Images</code> to give your system more performance headroom.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="further-considerations">Further Considerations<a class="headerlink" href="#further-considerations" title="Reference link to this section">&para;</a></h2>
+<p>If you've gone through all the above, there is not much more to configure settings-wise. It is possible your hardware is just not capable of running the desired content at full speed. You can try to see if an alternative core exists for your content that is perhaps designed to run on lower specification hardware than the one you were previously using. Also (though no specific offenders will be named as this can change for better or worse with any core update any given day) some content on some cores simply have somewhat poorer timing control. Odds are higher of finding this on 5<sup>th</sup> generation and beyond console cores that are dealing with content that ran at very unstable framerates on original hardware. </p>
+<p>Lastly, a couple things to keep in mind that don't fit neatly in any section above without being a large digression:</p>
+<ul>
+<li>
+<p>Most VRR displays have a feature called Low Framerate Compensation (LFC). What this means is that there is a minimum fps below which VRR can no longer actually sync, and it will compensate for this with , depending on display implementation, a combination of internal frame doubling and screen tearing. If this rate is right near the output rate, and some 240Hz+ displays are indeed coming with a LFC minimum rate directly around 60 as of this writing, you can experience significant impact on frame pacing. 30 fps content will also be below this LFC rate on a large number of VRR displays, but if it is a very stable 30 fps and the display has a good frame doubling algorithm, this might not be an issue.</p>
+<p>If you check your display specifications and believe you are experiencing LFC related issues, you might well be better served using a fixed refresh rate for RetroArch. Note that you should not have to disable VRR in your display driver or on your display, just discontinue use of <code class="language-text highlight">Sync to Exact Content Rate (G-Sync, Freesync)</code> inside Retroarch, and instead follow the instructions above for using <code class="language-text highlight">Vsync Swap Interval</code> to sync.   </p>
+</li>
+<li>
+<p>It has been noted previously that for macOS, that having more than one display active can cause interference with obtaining good frame pacing and audio synchronization. This can be extended as a possible solution to try regardless of operating system. Relatedly, it is potentially helpful if you <em>do</em> leave multiple displays active, to leave them all set to the same refresh rate.</p>
+<p>Also, running videos or other screen updating content at the same time on a secondary display is a potential source of issues. Windows 10/11 compositor handles multiple active contents like this better as of writing than in the past, but this could change at any point and there are also a multitude of other Operating Systems and devices that will have their own possible compositor issues with running multiple separate contents simultaneously.</p>
+</li>
+</ul>
+<p><strong>Thanks for reading, and have a smooth day!</strong></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2023 23:46:28 UTC">October 18, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2010–2025 Libretro. – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/libretro" target="_blank" rel="noopener" title="Libretro on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/libretro" target="_blank" rel="noopener" title="Libretro on X" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/C4amCeV" target="_blank" rel="noopener" title="RetroArch Discord server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@Libretro" target="_blank" rel="noopener" title="Libretro YouTube channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://facebook.com/libretro" target="_blank" rel="noopener" title="Libretro on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/libretro" target="_blank" rel="noopener" title="Libretro/RetroArch on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.2.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

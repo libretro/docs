@@ -1,0 +1,6624 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is the official RetroArch documentation for users and developers. Information from sources outside of this website may be dated or incorrect.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.libretro.com/library/puae/">
+      
+      
+        <link rel="prev" href="../vice/">
+      
+      
+        <link rel="next" href="../dosbox/">
+      
+      
+      <link rel="icon" href="../../image/branding/invader.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Commodore - Amiga (PUAE) - Libretro Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MT11L3F6EZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MT11L3F6EZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MT11L3F6EZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <script>
+  var gtmId = 'GTM-KXPH36V';
+  if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+    gtmId = 'GTM-XXX'
+  }
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', gtmId);
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9447404270680650",
+            enable_page_level_ads: true
+       });
+  </script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+  window.googletag = window.googletag || { cmd: [] };
+  </script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#puae" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <style>.md-announce a,.md-announce a:focus,.md-announce a:hover{color:currentColor}.md-announce strong{white-space:nowrap}.md-announce .twitter{margin-left:.2em;color:#00acee}</style>
+    <a href="https://www.libretro.com/index.php/retroarch-1-21-0-release/"><strong>New version released! Read the blog post now!</strong></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Libretro Docs" class="md-header__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Libretro Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Commodore - Amiga (PUAE)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/understanding/" class="md-tabs__link">
+          
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../guides/install-windows/" class="md-tabs__link">
+          
+  
+    
+  
+  For Users
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/libretro-overview/" class="md-tabs__link">
+          
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/how-to-contribute/" class="md-tabs__link">
+          
+  
+    
+  
+  Contribute to the Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/privacy-policy/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Libretro Docs" class="md-nav__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    Libretro Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../start/understanding/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../guides/install-windows/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../guides/navigating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../guides/glui/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appearance & Customization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../guides/ai-service/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://www.lakka.tv/doc/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lakka Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Library: Emulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Core Library: Emulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/arcade-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Arcade Emulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/softwarelist-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with MAME Software List Emulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIOS Information Hub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../opera/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3DO Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../b2/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Acorn Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../caprice32/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Amstrad Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../minivmac/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Apple
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../dice/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Arcade Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../ardens/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Arduboy
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/jaguar/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Atari Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../beetle_cygne/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Bandai Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../gam4980/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    BBK electronic dictionary
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../gearcoleco/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    ColecoVision Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_14" id="__nav_3_6_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Commodore Emulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6_14">
+            <span class="md-nav__icon md-icon"></span>
+            Commodore Emulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commodore - 8-bit (VICE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Commodore - Amiga (PUAE)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Commodore - Amiga (PUAE)
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floppies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floppies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard drives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHDLoad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-discs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compact discs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-and-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometry and timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3u-and-disk-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3U and Disk control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="M3U and Disk control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-m3u-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra M3U features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      ZIP support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floppy-drive-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floppy drive sounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipf-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPF support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joyport-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joyport control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model overriding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHDLoad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WHDLoad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overrides-at-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overrides at startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload-splash-screen-core-option-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      'WHDLoad Splash Screen' core option overrides
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Media options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-screen-display-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Screen Display options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controllers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-1-2-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      User 1 - 2 device types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-3-4-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      User 3 - 4 device types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other controllers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joypad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joypad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../dosbox/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    DOS Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../amiarcadia/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Emerson
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../ep128emu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Enterprise Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../bk/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Elektronika
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../pd777/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Epoch Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../vecx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    GCE Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../o2em/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Magnavox Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../freeintv/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mattel Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../fmsx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Microsoft Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/ds/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Nintendo Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/pcfx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    NEC Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../mu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Palm Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../o2em/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Philips Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../rvvm/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    RISC-V Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../geolith/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SNK Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cannonball/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sega Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../px68k/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sharp Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../eightyone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sinclair Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../compatibility/psx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sony Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../bluemsx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SpectraVision Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../native32emu/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sunplus Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../numero/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Texas Instruments Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../theodore/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Thomson Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sameduck/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MegaDuck Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../2048/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Game and Scripting Engines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../imageviewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Media
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../dummy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Special-Purpose
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../shader/introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Shader Library
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../development/libretro-overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    For Developers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../meta/how-to-contribute/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Contribute to the Docs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../support/privacy-policy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floppies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floppies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard drives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHDLoad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-discs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compact discs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bios" class="md-nav__link">
+    <span class="md-ellipsis">
+      BIOS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-and-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometry and timing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3u-and-disk-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      M3U and Disk control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="M3U and Disk control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-m3u-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra M3U features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      ZIP support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floppy-drive-sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floppy drive sounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipf-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPF support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joyport-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joyport control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model overriding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      WHDLoad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WHDLoad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overrides-at-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overrides at startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whdload-splash-screen-core-option-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      'WHDLoad Splash Screen' core option overrides
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using configuration files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Media options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-screen-display-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Screen Display options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controllers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-1-2-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      User 1 - 2 device types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-3-4-device-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      User 3 - 4 device types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other controllers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#joypad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Joypad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/libretro/docs/edit/master/docs/library/puae.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/libretro/docs/raw/master/docs/library/puae.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="puae">PUAE<a class="headerlink" href="#puae" title="Reference link to this section">&para;</a></h1>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Reference link to this section">&para;</a></h2>
+<p>PUAE tries to continue where E-UAE left off. PUAE versioning is based on the merged WinUAE version.</p>
+<p>The PUAE core have been authored by</p>
+<ul>
+<li>UAE Team</li>
+</ul>
+<p>The PUAE core is licensed under</p>
+<ul>
+<li><a href="https://github.com/libretro/libretro-uae/blob/master/COPYING">GPLv2</a></li>
+</ul>
+<p>A summary of the licenses behind RetroArch and its cores can be found <a href="../../development/licenses/">here</a>.</p>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Reference link to this section">&para;</a></h2>
+<p>Content that can be loaded by the PUAE core have the following file extensions:</p>
+<h3 id="floppies">Floppies<a class="headerlink" href="#floppies" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>.adf</li>
+<li>.adz</li>
+<li>.dms</li>
+<li>.fdi</li>
+<li>.ipf</li>
+<li>.raw</li>
+</ul>
+<h3 id="hard-drives">Hard drives<a class="headerlink" href="#hard-drives" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>.hdf</li>
+<li>.hdz</li>
+<li>directory</li>
+</ul>
+<h3 id="whdload">WHDLoad<a class="headerlink" href="#whdload" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>.lha</li>
+<li>.slave</li>
+<li>.info</li>
+</ul>
+<h3 id="compact-discs">Compact discs<a class="headerlink" href="#compact-discs" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>.cue</li>
+<li>.ccd</li>
+<li>.chd</li>
+<li>.nrg</li>
+<li>.mds</li>
+<li>.iso</li>
+</ul>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>.uae</li>
+<li>.m3u</li>
+<li>.zip</li>
+<li>.7z</li>
+</ul>
+<h2 id="databases">Databases<a class="headerlink" href="#databases" title="Reference link to this section">&para;</a></h2>
+<p>RetroArch database(s) that are associated with the PUAE core:</p>
+<ul>
+<li><a href="https://github.com/libretro/libretro-database/blob/master/rdb/Commodore%20-%20Amiga.rdb">Commodore - Amiga</a></li>
+</ul>
+<h2 id="bios">BIOS<a class="headerlink" href="#bios" title="Reference link to this section">&para;</a></h2>
+<p>Required or optional firmware files go in the frontend's system directory.</p>
+<p>The core has a somewhat compatible built-in AROS Kickstart, which is used as a fallback when the proper Kickstart is not found.</p>
+<p>Amiga Forever and TOSEC filenames are also accepted.</p>
+<table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Amiga Forever</th>
+<th>Description</th>
+<th>md5sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kick31034.A1000</td>
+<td>amiga-os-110-ntsc.rom</td>
+<td>Kickstart v1.1 rev 31.034 NTSC</td>
+<td>0b8442c311caa54fb12ec88eaaa9facf</td>
+</tr>
+<tr>
+<td>kick32034.A1000</td>
+<td>amiga-os-110-pal.rom</td>
+<td>Kickstart v1.1 rev 32.034 PAL</td>
+<td>1fa1f93d3d7b51271dd1356b8b2b45a9</td>
+</tr>
+<tr>
+<td>kick33180.A500</td>
+<td>amiga-os-120.rom</td>
+<td>Kickstart v1.2 rev 33.180</td>
+<td>85ad74194e87c08904327de1a9443b7a</td>
+</tr>
+<tr>
+<td>kick34005.A500</td>
+<td>amiga-os-130.rom</td>
+<td>Kickstart v1.3 rev 34.005</td>
+<td>82a21c1890cae844b3df741f2762d48d</td>
+</tr>
+<tr>
+<td>kick37175.A500</td>
+<td>amiga-os-204.rom</td>
+<td>Kickstart v2.04 rev 37.175</td>
+<td>dc10d7bdd1b6f450773dfb558477c230</td>
+</tr>
+<tr>
+<td>kick37350.A600</td>
+<td>amiga-os-205-a600.rom</td>
+<td>Kickstart v2.05 rev 37.350</td>
+<td>465646c9b6729f77eea5314d1f057951</td>
+</tr>
+<tr>
+<td>kick40063.A600</td>
+<td>amiga-os-310-a600.rom</td>
+<td>Kickstart v3.1 rev 40.063</td>
+<td>e40a5dfb3d017ba8779faba30cbd1c8e</td>
+</tr>
+<tr>
+<td>kick39106.A1200</td>
+<td>amiga-os-300-a1200.rom</td>
+<td>Kickstart v3.0 rev 39.106</td>
+<td>b7cc148386aa631136f510cd29e42fc3</td>
+</tr>
+<tr>
+<td>kick40068.A1200</td>
+<td>amiga-os-310-a1200.rom</td>
+<td>Kickstart v3.1 rev 40.068</td>
+<td>646773759326fbac3b2311fd8c8793ee</td>
+</tr>
+<tr>
+<td>kick39106.A4000</td>
+<td>amiga-os-300-a4000.rom</td>
+<td>Kickstart v3.0 rev 39.106</td>
+<td>9b8bdd5a3fd32c2a5a6f5b1aefc799a5</td>
+</tr>
+<tr>
+<td>kick40068.A4000</td>
+<td>amiga-os-310-a4000.rom</td>
+<td>Kickstart v3.1 rev 40.068</td>
+<td>9bdedde6a4f33555b4a270c8ca53297d</td>
+</tr>
+<tr>
+<td>kick34005.CDTV</td>
+<td>amiga-os-130-cdtv-ext.rom</td>
+<td>CDTV extended ROM v1.00</td>
+<td>89da1838a24460e4b93f4f0c5d92d48d</td>
+</tr>
+<tr>
+<td>kick40060.CD32</td>
+<td>amiga-os-310-cd32.rom</td>
+<td>CD32 Kickstart v3.1 rev 40.060</td>
+<td>5f8924d013dd57a89cf349f4cdedc6b1</td>
+</tr>
+<tr>
+<td>kick40060.CD32.ext</td>
+<td>amiga-os-310-cd32-ext.rom</td>
+<td>CD32 extended ROM rev 40.060</td>
+<td>bb72565701b1b6faece07d68ea5da639</td>
+</tr>
+<tr>
+<td>kick40060.CD32</td>
+<td></td>
+<td>CD32 KS + extended v3.1 rev 40.060</td>
+<td>f2f241bf094168cfb9e7805dc2856433</td>
+</tr>
+</tbody>
+</table>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Reference link to this section">&para;</a></h2>
+<p>Frontend-level settings or features that the PUAE core respect.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restart</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Screenshots</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Saves</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>States</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Rewind</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Netplay</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Core Options</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><a href="../../guides/memorymonitoring/">Memory Monitoring (achievements)</a></td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>RetroArch Cheats</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Native Cheats</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Controls</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Remapping</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Multi-Mouse</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Rumble</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Sensors</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Location</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Subsystem</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td><a href="../../guides/softpatching/">Softpatching</a></td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Disk Control</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Username</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Language</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>Crop Overscan</td>
+<td style="text-align: center;">✕</td>
+</tr>
+<tr>
+<td>LEDs</td>
+<td style="text-align: center;">✔</td>
+</tr>
+</tbody>
+</table>
+<h3 id="directories">Directories<a class="headerlink" href="#directories" title="Reference link to this section">&para;</a></h3>
+<p>The PUAE core's internal core name is 'puae'.</p>
+<p>The PUAE core saves/loads to/from these directories.</p>
+<p><strong>Frontend's Save directory</strong></p>
+<ul>
+<li>'content-name'.nvr (CD32/CDTV NVRAM)</li>
+<li><code class="language-text highlight">BootHD</code>/<code class="language-text highlight">puae_libretro.hdf</code> (Optional global boot hard drive image directory/file)</li>
+<li><code class="language-text highlight">WHDLoad</code>/<code class="language-text highlight">WHDLoad.hdf</code> (WHDLoad helper image directory/file)</li>
+<li><code class="language-text highlight">WHDSaves</code>/<code class="language-text highlight">WHDSaves.hdf</code> (WHDLoad save image directory/file)</li>
+</ul>
+<p><strong>Frontend's State directory</strong></p>
+<ul>
+<li>'content-name'.state# (State)</li>
+</ul>
+<h3 id="geometry-and-timing">Geometry and timing<a class="headerlink" href="#geometry-and-timing" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>The PUAE core's core provided FPS is dynamic, but initially by default 50 for PAL and 59.94 for NTSC</li>
+<li>The PUAE core's core provided sample rate is 44100 Hz</li>
+<li>The PUAE core's base width is 360 in LoRes, 720 in HiRes 1440 in SuperHires</li>
+<li>The PUAE core's base height is 288 for PAL single line, 576 for PAL double line, 240 for NTSC single line, 480 for NTSC double line</li>
+<li>The PUAE core's max width is 1440</li>
+<li>The PUAE core's max height is 576</li>
+<li>The PUAE core's core provided aspect ratio is automatically set based on core options</li>
+</ul>
+<h3 id="m3u-and-disk-control">M3U and Disk control<a class="headerlink" href="#m3u-and-disk-control" title="Reference link to this section">&para;</a></h3>
+<p>When you have a multi disk game, you can use a M3U playlist file to be able to change disks via RetroArch Disc Control interface.</p>
+<p>A M3U file is a simple text file with one disk per line (<a href="https://en.wikipedia.org/wiki/M3U">Wikipedia</a>).</p>
+<p>Example:</p>
+<p><code class="language-text highlight">Simpsons, The - Bart vs. The Space Mutants.m3u</code>
+<div class="language-scdoc highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Simpsons, The - Bart vs. The Space Mutants_Disk1.adf
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Simpsons, The - Bart vs. The Space Mutants_Disk2.adf
+</span></code></pre></div>
+Path can be absolute or relative to the location of the M3U file.</p>
+<p>When the game asks for it, you can change the current disk in the RetroArch "Disc Control" menu:</p>
+<ul>
+<li>Eject the current disk with "Eject Disc"</li>
+<li>Select the right disk index with "Current Disc Index"</li>
+<li>Insert the new disk with "Insert Disc"</li>
+</ul>
+<p>For games that support multiple disk drives, append "<strong>(MD)</strong>" as in "MultiDrive" to the M3U filename to insert each disk in different drives. Only possible with maximum 4 disks!</p>
+<p><strong><em>MultiDrive option is enabled by default, so the tag is not necessary, but some games require disabling it, because they can't handle multiple disk drives.</em></strong></p>
+<p>For games that require a dedicated save disk, one may be generated automatically by entering the following line in an M3U file: <code class="language-text highlight">#SAVEDISK:VolumeName</code>. <code class="language-text highlight">VolumeName</code> is optional and may be omitted. For example, this will create a blank, unlabelled disk image at disk index 5:</p>
+<p><code class="language-text highlight">Secret of Monkey Island.m3u</code>
+<div class="language-scdoc highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Secret of Monkey Island_Disk 1.adf
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Secret of Monkey Island_Disk 2.adf
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Secret of Monkey Island_Disk 3.adf
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Secret of Monkey Island_Disk 4.adf
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gh">#</span>SAVEDISK:
+</span></code></pre></div></p>
+<p>Some games require save disks to have a specific label - for example, <code class="language-text highlight">It Came from the Desert</code> will only save to a disk named <code class="language-text highlight">DSAVE</code>:</p>
+<p><code class="language-text highlight">It Came from the Desert.m3u</code>
+<div class="language-scdoc highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>It Came from the Desert_Disk 1.adf
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>It Came from the Desert_Disk 2.adf
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>It Came from the Desert_Disk 3.adf
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="gh">#</span>SAVEDISK:DSAVE
+</span></code></pre></div></p>
+<p>Although one save disk is normally sufficient, an arbitrary number of <code class="language-text highlight">#SAVEDISK:VolumeName</code> lines may be included. Save disks are located in the frontend's save directory, with the following name: <code class="language-text highlight">[M3U_FILE_NAME].save[DISK_INDEX].adf</code>.</p>
+<p>By default, RetroArch will display the filename (without extension) of each M3U entry when selecting a disk via the <code class="language-text highlight">Current Disc Index</code> drop-down menu. Custom display labels may be set for each disk using the syntax: <code class="language-text highlight">DISK_FILE|DISK_LABEL</code>. For example, the following M3U file:</p>
+<p><code class="language-text highlight">Valhalla &amp; the Fortress of Eve.m3u</code>
+<div class="language-scdoc highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Valhalla &amp; the Fortress of Eve_Disk1.adf|Game Disk
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Valhalla &amp; the Fortress of Eve_Disk2.adf|Data Disk
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Valhalla &amp; the Fortress of Eve_Disk3.adf|Level 1 Disk
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Valhalla &amp; the Fortress of Eve_Disk4.adf|Level 2 Disk
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Valhalla &amp; the Fortress of Eve_Disk5.adf|Level 3 Disk
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Valhalla &amp; the Fortress of Eve_Disk6.adf|Level 4 Disk
+</span></code></pre></div></p>
+<p>...will be shown in RetroArch's disk selection menu as:</p>
+<div class="language-actionscript3 highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">Game</span><span class="w"> </span><span class="n">Disk</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="mi">2</span><span class="o">:</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">Disk</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="mi">3</span><span class="o">:</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">Disk</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="mi">4</span><span class="o">:</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Disk</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="mi">5</span><span class="o">:</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">Disk</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="mi">6</span><span class="o">:</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">Disk</span>
+</span></code></pre></div>
+<p>If <code class="language-text highlight">DISK_LABEL</code> is intentionally left blank (i.e. <code class="language-text highlight">DISK_FILE|</code>) then only the disk index will be displayed.</p>
+<p>Save disks generated by the <code class="language-text highlight">#SAVEDISK:</code> keyword are automatically assigned the label: <code class="language-text highlight">Save Disk [SAVE_DISK_INDEX]</code>.</p>
+<h4 id="extra-m3u-features">Extra M3U features<a class="headerlink" href="#extra-m3u-features" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li><code class="language-text highlight">#SAVEDISK:&lt;label&gt;</code><ul>
+<li>Create a save disk in <code class="language-text highlight">saves</code></li>
+</ul>
+</li>
+<li><code class="language-text highlight">&lt;disk&gt;.adf|&lt;label&gt;</code><ul>
+<li>Set a friendly name (shown in "Disc Control")</li>
+</ul>
+</li>
+<li><code class="language-text highlight">&lt;disks&gt;.zip#&lt;disk&gt;.adf</code><ul>
+<li>Specify a disk inside a ZIP with multiple disks (not needed with single file ZIPs)</li>
+</ul>
+</li>
+</ul>
+<p>M3U playlist supports floppy disks, hard drives (all images are mounted at once) and compact discs.</p>
+<h3 id="zip-support">ZIP support<a class="headerlink" href="#zip-support" title="Reference link to this section">&para;</a></h3>
+<p>ZIPs are extracted to a temporary directory in <code class="language-text highlight">saves</code>, bypassing the default frontend extraction.
+The temporary directory is emptied but not removed on exit. ZIP is not repacked, which means saves and highscores are lost.</p>
+<p>This allows:</p>
+<ul>
+<li>Automatic M3U playlist generation of all files</li>
+<li>The use of zipped images in M3Us</li>
+<li>If no compatible images are found, the ZIP will be treated as a directory</li>
+</ul>
+<h3 id="floppy-drive-sounds">Floppy drive sounds<a class="headerlink" href="#floppy-drive-sounds" title="Reference link to this section">&para;</a></h3>
+<p>The core has embedded internal floppy drive samples. External sound samples have to be copied from <a href="https://github.com/libretro/libretro-uae/tree/master/sources/uae_data">https://github.com/libretro/libretro-uae/tree/master/sources/uae_data</a> into a directory named <code class="language-text highlight">uae_data</code> or <code class="language-text highlight">uae</code> in RetroArch <code class="language-text highlight">system</code> directory.</p>
+<h3 id="ipf-support">IPF support<a class="headerlink" href="#ipf-support" title="Reference link to this section">&para;</a></h3>
+<p>Most full-price commercial Amiga games had some form of custom disk format and/or copy protection. For this reason, most commercial Amiga games cannot be stored in ADF files unaltered, but there is an alternative called Interchangeable Preservation Format (IPF) which was specifically designed for this purpose.</p>
+<p>IPF support is done through CAPSIMG library. To enable it you have to put the dynamic library called <code class="language-text highlight">capsimg.dll</code> (Windows) or <code class="language-text highlight">capsimg.so</code> (Linux, macOS) in RetroArch <code class="language-text highlight">system</code> or executable directory.</p>
+<p>Compatible CAPSIMG libraries for Windows, macOS and Linux can be found at <a href="http://www.softpres.org/download">http://www.softpres.org/download</a> and <a href="https://fs-uae.net/download#plugins">https://fs-uae.net/download#plugins</a></p>
+<p>Compatible CAPSIMG libraries for Android can be found at <a href="https://github.com/rsn8887/capsimg/releases/latest">https://github.com/rsn8887/capsimg/releases/latest</a></p>
+<p>Please be aware that there are 32-bits and 64-bits versions of the library. Choose the one corresponding to your RetroArch executable.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Reference link to this section">&para;</a></h2>
+<h3 id="default-controls">Default controls<a class="headerlink" href="#default-controls" title="Reference link to this section">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>RetroPad button</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-Pad</td>
+<td>Joystick</td>
+</tr>
+<tr>
+<td>Left Analog</td>
+<td>Mouse</td>
+</tr>
+<tr>
+<td>Right Analog</td>
+<td>Mouse</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Fire button 1 / Red</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Fire button 2 / Blue</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Space</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Left mouse button</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Right mouse button</td>
+</tr>
+<tr>
+<td>Select (Short)</td>
+<td>Toggle virtual keyboard</td>
+</tr>
+<tr>
+<td>Select (Long)</td>
+<td>Toggle statusbar</td>
+</tr>
+<tr>
+<td>Select (Hold)</td>
+<td>Fast-Forward</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Keyboard key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F12</td>
+<td>Toggle statusbar</td>
+</tr>
+<tr>
+<td>RControl</td>
+<td>Switch between joystick/mouse</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtual-keyboard">Virtual keyboard<a class="headerlink" href="#virtual-keyboard" title="Reference link to this section">&para;</a></h3>
+<p>The PUAE core has a virtual keyboard that can be accessed by default through RetroPad Select.</p>
+<p>The virtual keyboard can be controlled with:</p>
+<ul>
+<li>
+<p><strong>RetroPad</strong></p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-Pad</td>
+<td>Move</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Keypress</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Toggle transparency</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Toggle CapsLock</td>
+</tr>
+<tr>
+<td>Y (Long)</td>
+<td>Quick map button</td>
+</tr>
+<tr>
+<td>Y (Very long)</td>
+<td>Quick clear button</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Press Space</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Press Return</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Keyboard</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cursors</td>
+<td>Move</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Keypress</td>
+</tr>
+<tr>
+<td>CapsLock</td>
+<td>Toggle CapsLock</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Mouse</strong></p>
+</li>
+<li><strong>Touch screen</strong></li>
+</ul>
+<p>The virtual keyboard has these additional actions:</p>
+<ul>
+<li><code class="language-text highlight">J/M</code>  = Switch between joystick/mouse</li>
+<li>
+<p><code class="language-text highlight">TRBF</code> = Toggle turbo fire</p>
+</li>
+<li>
+<p>CapsLock off:</p>
+<ul>
+<li><code class="language-text highlight">ASPR</code> = Toggle aspect ratio</li>
+<li><code class="language-text highlight">STBR</code> = Toggle statusbar</li>
+</ul>
+</li>
+<li>
+<p>CapsLock on:</p>
+<ul>
+<li><code class="language-text highlight">CROP</code> = Toggle crop mode</li>
+<li><code class="language-text highlight">SVDS</code> = Create/Insert &amp; remove save disk</li>
+</ul>
+</li>
+<li>
+<p>Reset (long press = soft reset, shifted = WHDLoad QuitKey)</p>
+</li>
+<li>Mouse controls (Left+right button, up, down, left, right)</li>
+<li>Numpad key (Toggles numbers, arrows, Return etc. to numpad variants)</li>
+</ul>
+<p>Long press for sticky keys. Stickying the third key will replace the second.</p>
+<h3 id="joyport-control">Joyport control<a class="headerlink" href="#joyport-control" title="Reference link to this section">&para;</a></h3>
+<p>Some games use mouse instead of joystick. D-Pad can be switched between joystick and mouse control in several ways:</p>
+<ul>
+<li>Use the core option: <code class="language-text highlight">Quick Menu -&gt; Options -&gt; RetroPad Joystick/Mouse</code></li>
+<li>Bring up the virtual keyboard with <code class="language-text highlight">Select</code> button, and press the key labeled <code class="language-text highlight">J/M</code></li>
+<li>Press the default keyboard shortcut <code class="language-text highlight">Right Control</code></li>
+<li>Assign <code class="language-text highlight">Switch Joystick/Mouse</code> to any RetroPad button under <code class="language-text highlight">Quick Menu -&gt; Options</code></li>
+</ul>
+<h3 id="model-overriding">Model overriding<a class="headerlink" href="#model-overriding" title="Reference link to this section">&para;</a></h3>
+<p>You can force a specific model if a game needs one (AGA games for instance) either by the "Model" core option or by file path tags.</p>
+<p>The "Model" core option at "<strong>Automatic</strong>" will default to A500 when booting floppy disks, A1200 when booting hard drives, and CD32 when booting CD images.</p>
+<p>The whole path (filename and directory) will be searched for the following tags if the model is "<strong>Automatic</strong>":</p>
+<table>
+<thead>
+<tr>
+<th>Floppy</th>
+<th>HD/LHA</th>
+<th>CD</th>
+<th>String</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A500OG)</strong>, <strong>(512K)</strong>, <strong>(512KB)</strong></td>
+<td>Amiga 500 (0.5MB Chip RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A500)</strong>, <strong>OCS</strong></td>
+<td>Amiga 500 (0.5MB Chip RAM + 0.5MB Slow RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A500+)</strong>, <strong>(A500PLUS)</strong></td>
+<td>Amiga 500+ (1MB Chip RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A600)</strong>, <strong>ECS</strong></td>
+<td>Amiga 600 (2MB Chip RAM + 8MB Fast RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A1200OG)</strong>, <strong>(A1200NF)</strong></td>
+<td>Amiga 1200 (2MB Chip RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A1200)</strong>, <strong>AGA</strong>, <strong>CD32</strong>, <strong>AmigaCD</strong></td>
+<td>Amiga 1200 (2MB Chip RAM + 8MB Fast RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A4030)</strong>, <strong>(030)</strong></td>
+<td>Amiga 4000/030 (2MB Chip RAM + 8MB Fast RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><strong>(A4040)</strong>, <strong>(040)</strong></td>
+<td>Amiga 4000/040 (2MB Chip RAM + 8MB Fast RAM)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>x</strong></td>
+<td><strong>CDTV</strong></td>
+<td>Amiga CDTV (1MB Chip RAM)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>x</strong></td>
+<td><strong>(CD32)</strong>, <strong>(CD32NF)</strong></td>
+<td>Amiga CD32 (2MB Chip RAM)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>x</strong></td>
+<td><strong>(CD32FR)</strong>, <strong>FastRAM</strong></td>
+<td>Amiga CD32 (2MB Chip RAM + 8MB Fast RAM)</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>NTSC</strong>, <strong>(USA)</strong></td>
+<td>NTSC 60Hz</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>PAL</strong>, <strong>(Europe)</strong> (!)</td>
+<td>PAL 50Hz</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+<td><strong>(MD)</strong> (!!)</td>
+<td>Insert each disk in different drives</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>x</strong></td>
+<td><strong>(CE)</strong></td>
+<td>Force CPU Cycle-exact</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(!) Additional tags: <strong>(Denmark)</strong>, <strong>(Finland)</strong>, <strong>(France)</strong>, <strong>(Germany)</strong>, <strong>(Italy)</strong>, <strong>(Spain)</strong>, <strong>(Sweden)</strong></li>
+<li>(!!) <strong>Maximum 4 disks</strong></li>
+</ul>
+<p>Example: When launching "Alien Breed 2 AGA.hdf" or "AGA/Alien Breed 2.hdf" the model will be Amiga 1200.</p>
+<p>Note: <strong>CD32</strong> and <strong>AmigaCD</strong> are a bit misleading, since they have nothing to do with actual CDs. They are for automatically selecting the appropriate model with certain WHDLoad slaves and AmigaCD-to-HDF conversions.</p>
+<h3 id="whdload_1">WHDLoad<a class="headerlink" href="#whdload_1" title="Reference link to this section">&para;</a></h3>
+<p>Pre-installed WHDLoad LHA archives can be launched directly without any kind of manual preparing and downloading.</p>
+<ul>
+<li>WHDLoad helper files (Directory or HDF) will be generated to <code class="language-text highlight">saves</code>, <code class="language-text highlight">WHDLoad.prefs</code> will be generated to <code class="language-text highlight">system</code></li>
+<li><code class="language-text highlight">WHDLoad.prefs</code> &amp; <code class="language-text highlight">WHDLoad.key</code> will be copied from <code class="language-text highlight">system</code> to the helper image</li>
+<li>Kickstarts will be copied automatically to the helper image</li>
+<li>To update <code class="language-text highlight">WHDLoad:</code> simply delete the directory or the HDF</li>
+</ul>
+<h4 id="overrides-at-startup">Overrides at startup<a class="headerlink" href="#overrides-at-startup" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li><strong>(Red)</strong> Hold fire button for launch selector<ul>
+<li>For alternate <code class="language-text highlight">.info</code> launching</li>
+</ul>
+</li>
+<li><strong>(Red+Blue)</strong> Hold fire + 2<sup>nd</sup> fire for <code class="language-text highlight">ReadMe</code> + <code class="language-text highlight">MkCustom</code><ul>
+<li>For creating default <code class="language-text highlight">CUSTOM</code> parameters</li>
+</ul>
+</li>
+</ul>
+<h4 id="whdload-splash-screen-core-option-overrides">'WHDLoad Splash Screen' core option overrides<a class="headerlink" href="#whdload-splash-screen-core-option-overrides" title="Reference link to this section">&para;</a></h4>
+<ul>
+<li><strong>(Blue)</strong> Hold 2<sup>nd</sup> fire for WHDLoad Config<ul>
+<li>Waits for user input if the slave supports splash screen configurations</li>
+</ul>
+</li>
+<li><strong>(LMB)</strong> Hold left mouse button for WHDLoad Splash<ul>
+<li>Briefly shows the splash screen while preloading (default WHDLoad behavior)</li>
+</ul>
+</li>
+<li><strong>(RMB)</strong> Hold right mouse button for WHDLoad Config+Splash<ul>
+<li>Always waits for user input at the splash screen</li>
+</ul>
+</li>
+</ul>
+<p>For more detailed history of WHDLoad support visit the <a href="https://github.com/libretro/libretro-uae#whdload">Github repository</a>.</p>
+<h3 id="using-configuration-files">Using configuration files<a class="headerlink" href="#using-configuration-files" title="Reference link to this section">&para;</a></h3>
+<p>You can pass <code class="language-text highlight">.uae</code> configuration files and they will be appended to the core option configuration.</p>
+<p>If <code class="language-text highlight">puae_libretro_[model].uae</code> exists in RetroArch <code class="language-text highlight">saves</code> it will be appended to the model preset section.</p>
+<p>If <code class="language-text highlight">puae_libretro_global.uae</code> exists in RetroArch <code class="language-text highlight">saves</code> it will be appended to the configuration.</p>
+<p>If <code class="language-text highlight">[content].uae</code> exists in RetroArch <code class="language-text highlight">saves</code> it will be appended to the configuration.</p>
+<p>The final generated configuration output is available in debug level log.</p>
+<p><strong><em>Note that the use of configuration files is no longer encouraged or necessary. The core has been modified to always use the core options as a base, so that all custom configurations will be appended to the created configuration, effectively overriding the core options. The problem with this is that changing any core option while the core is running will reset all duplicate configurations. Therefore only add configurations which will require a restart or do not exist in the core options, if you must use a custom uae. If there is an option missing that is a must have, please make an issue about it.</em></strong></p>
+<p>Example 1: You want to mount four non-RDB HDF files. You have one bootable 1000 MB file called <code class="language-text highlight">System.hdf</code> created with <code class="language-text highlight">surfaces=1</code>, and three non-bootable 2000 MB files called <code class="language-text highlight">WHDGamesA.hdf</code>, <code class="language-text highlight">WHDGamesB.hdf</code>, <code class="language-text highlight">WHDGamesC.hdf</code> created with <code class="language-text highlight">surfaces=2</code>. Your HDF files are located in the folder with absolute path <code class="language-text highlight">/emuroms/amiga/hdf/</code>. For that scenario, you should create a .uae text file with the following content:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hardfile=read-write,32,1,2,512,/emuroms/amiga/hdf/System.hdf
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>hardfile=read-write,32,2,2,512,/emuroms/amiga/hdf/WHDGamesA.hdf
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>hardfile=read-write,32,2,2,512,/emuroms/amiga/hdf/WHDGamesB.hdf
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>hardfile=read-write,32,2,2,512,/emuroms/amiga/hdf/WHDGamesC.hdf
+</span></code></pre></div></p>
+<p>Example 2: You want to mount a directory full of extracted data as a hard drive:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>filesystem2=rw,DH0:data:/emuroms/amiga/,0
+</span></code></pre></div></p>
+<p>Windows tip:</p>
+<ul>
+<li>If paths are enclosed with quotes, Windows needs double backslashes: <code class="language-text highlight">filesystem2=rw,DH0:data:&quot;c:\\emuroms\\amiga&quot;,0</code>.</li>
+</ul>
+<p>Linux tip:</p>
+<ul>
+<li>Leave the ending slash to the path to make sure UAE sees it as a directory.</li>
+</ul>
+<p>If you are using RDB HDF files, please use <code class="language-text highlight">0,0,0,512</code> instead of geometry numbers like <code class="language-text highlight">32,1,2,512</code>. The geometry will then be read from the file. This only works for RDB HDF files.</p>
+<h2 id="core-options">Core options<a class="headerlink" href="#core-options" title="Reference link to this section">&para;</a></h2>
+<p>The PUAE core has the following option(s) that can be tweaked from the core options menu. The default setting is in bold.</p>
+<ul>
+<li>
+<p><strong>Model</strong> [puae_model] (<strong>auto</strong>|A500OG|A500|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040|CDTV|CD32|CD32FR)</p>
+<p>'Automatic' switches region per file path tags.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A500OG</td>
+<td>A500 (v1.2, 0.5M Chip)</td>
+</tr>
+<tr>
+<td>A500</td>
+<td>A500 (v1.3, 0.5M Chip + 0.5M Slow)</td>
+</tr>
+<tr>
+<td>A500PLUS</td>
+<td>A500+ (v2.04, 1M Chip)</td>
+</tr>
+<tr>
+<td>A600</td>
+<td>A600 (v3.1, 2M Chip + 8M Fast)</td>
+</tr>
+<tr>
+<td>A1200OG</td>
+<td>A1200 (v3.1, 2M Chip)</td>
+</tr>
+<tr>
+<td>A1200</td>
+<td>A1200 (v3.1, 2M Chip + 8M Fast)</td>
+</tr>
+<tr>
+<td>A2000OG</td>
+<td>A2000 (v1.2, 0.5M Chip + 0.5M Slow)</td>
+</tr>
+<tr>
+<td>A2000</td>
+<td>A2000 (v3.1, 1M Chip)</td>
+</tr>
+<tr>
+<td>A4030</td>
+<td>A4000/030 (v3.1, 2M Chip + 8M Fast)</td>
+</tr>
+<tr>
+<td>A4040</td>
+<td>A4000/040 (v3.1, 2M Chip + 8M Fast)</td>
+</tr>
+<tr>
+<td>CDTV</td>
+<td>CDTV (1M Chip)</td>
+</tr>
+<tr>
+<td>CD32</td>
+<td>CD32 (2M Chip)</td>
+</tr>
+<tr>
+<td>CD32FR</td>
+<td>CD32 (2M Chip + 8M Fast)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Show Automatic Model Options</strong> [puae_model_options_display] (<strong>disabled</strong>|enabled)</p>
+<p>Show/hide default model options (Floppy/HD/CD) for 'Automatic' model.</p>
+<p>Available only when frontend 'Core Option Categories' is disabled.</p>
+</li>
+<li>
+<p><strong>Automatic Floppy</strong> [puae_model_fd] (A500OG|<strong>A500</strong>|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040)</p>
+<p>Default model when floppies are launched with 'Automatic' model. Core restart required.</p>
+</li>
+<li>
+<p><strong>Automatic HD</strong> [puae_model_hd] (A600|A1200OG|<strong>A1200</strong>|A2000|A4030|A4040)</p>
+<p>Default model when HD interface is used with 'Automatic' model. Affects WHDLoad installs and other hard drive images. Core restart required.</p>
+</li>
+<li>
+<p><strong>Automatic CD</strong> [puae_model_cd] (CDTV|<strong>CD32</strong>|CD32FR)</p>
+<p>Default model when compact discs are launched with 'Automatic' model. Core restart required.</p>
+</li>
+<li>
+<p><strong>Kickstart ROM</strong> [puae_kickstart] (<strong>auto</strong>|aros|...)</p>
+<p>'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility.</p>
+<p>Kickstart ROMs are searched from 'system'. Core restart required.</p>
+</li>
+<li>
+<p><strong>Chip RAM</strong> [puae_chipmem_size] (<strong>auto</strong>|1|2|3|4)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.5M</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1M</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.5M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2M</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Slow RAM</strong> [puae_bogomem_size] (<strong>auto</strong>|0|2|4|6|7)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.5M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1M</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1.5M</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1.8M</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Z2 Fast RAM</strong> [puae_fastmem_size] (<strong>auto</strong>|0|1|2|4|8)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1M</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4M</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8M</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Z3 Fast RAM</strong> [puae_z3mem_size] (<strong>auto</strong>|0|1|2|4|8|16|32|64|128|256|512)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1M</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4M</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8M</td>
+</tr>
+<tr>
+<td>16</td>
+<td>16M</td>
+</tr>
+<tr>
+<td>32</td>
+<td>32M</td>
+</tr>
+<tr>
+<td>64</td>
+<td>64M</td>
+</tr>
+<tr>
+<td>128</td>
+<td>128M</td>
+</tr>
+<tr>
+<td>256</td>
+<td>256M</td>
+</tr>
+<tr>
+<td>512</td>
+<td>512M</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>CPU Model</strong> [puae_cpu_model] (<strong>auto</strong>|68000|68010|68020|68030|68040|68060)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+</li>
+<li>
+<p><strong>FPU Model</strong> [puae_fpu_model] (<strong>auto</strong>|0|68881|68882|cpu)</p>
+<p>'Automatic' defaults to the current preset model. Core restart required.</p>
+</li>
+<li>
+<p><strong>CPU Speed</strong> [puae_cpu_throttle] (-900.0|<strong>0.0</strong>|10000.0)</p>
+<p>Ignored with 'Cycle-exact'.</p>
+</li>
+<li>
+<p><strong>CPU Cycle-exact Speed</strong> [puae_cpu_multiplier] (<strong>0</strong>|1|2|4|8|10|12|16)</p>
+<p>Applies only with 'Cycle-exact'.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Default</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3.546895 MHz</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7.093790 MHz (A500)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>14.187580 MHz (A1200)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>28.375160 MHz</td>
+</tr>
+<tr>
+<td>10</td>
+<td>35.468950 MHz</td>
+</tr>
+<tr>
+<td>12</td>
+<td>42.562740 MHz</td>
+</tr>
+<tr>
+<td>16</td>
+<td>56.750320 MHz</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>CPU Compatibility</strong> [puae_cpu_compatibility] (<strong>normal</strong>|compatible|<strong>memory</strong>|exact)</p>
+<p>Some games have graphic and/or speed issues without 'Cycle-exact'. 'Cycle-exact' can be forced with '(CE)' file path tag.</p>
+<p>(x86_64 defaults to <strong>memory</strong>, others to <strong>normal</strong>. 2021 core does not have 'memory' option and defaults to 'exact' instead.)</p>
+</li>
+</ul>
+<h3 id="media-options">Media options<a class="headerlink" href="#media-options" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Automatic Load Fast-Forward</strong> [puae_autoloadfastforward] (<strong>disabled</strong>|enabled|fd|hd|cd)</p>
+<p>Toggle frontend fast-forward during media access if there is no audio output. Mutes 'Floppy Sound Emulation'.</p>
+</li>
+<li>
+<p><strong>Floppy Speed</strong> [puae_floppy_speed] (<strong>100</strong>|200|400|800|0)</p>
+<p>'Turbo' removes disk rotation emulation.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Default (300RPM)</td>
+</tr>
+<tr>
+<td>200</td>
+<td>2x (600RPM)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>4x (1200RPM)</td>
+</tr>
+<tr>
+<td>800</td>
+<td>8x (2400RPM)</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Turbo</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Floppy MultiDrive</strong> [puae_floppy_multidrive] (disabled|<strong>enabled</strong>)</p>
+<p>Insert each disk in different drives. Can be forced with '(MD)' file path tag. Maximum is 4 disks due to external drive limit! Not all games support external drives! Core restart required.</p>
+</li>
+<li>
+<p><strong>Floppy Write Protection</strong> [puae_floppy_write_protection] (<strong>disabled</strong>|enabled)</p>
+<p>Set all drives read only. Changing this while emulation is running ejects and reinserts all disks. IPF images are always read only!</p>
+</li>
+<li>
+<p><strong>Floppy Write Redirect</strong> [puae_floppy_write_redirect] (<strong>disabled</strong>|enabled)</p>
+<p>Writes to a substitute disk under 'saves' instead of original disks. Works also with IPF images.</p>
+</li>
+<li>
+<p><strong>CD Speed</strong> [puae_cd_speed] (<strong>100</strong>|0)</p>
+<p>Transfer rate in CD32 is 300KB/s (double-speed), CDTV is 150KB/s (single-speed). 'Turbo' removes seek delay emulation."</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Default</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Turbo</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>CD Startup Delayed Insert</strong> [puae_cd_startup_delayed_insert] (<strong>disabled</strong>|enabled)</p>
+<p>Some games fail to load if CD32/CDTV is powered on with CD inserted. 'ON' inserts CD during boot animation.</p>
+</li>
+<li>
+<p><strong>CD32/CDTV Shared NVRAM</strong> [puae_shared_nvram] (<strong>disabled</strong>|enabled)</p>
+<p>'OFF' saves separate files per content. Starting without content uses the shared file. CD32 and CDTV use separate shared files. Core restart required.</p>
+</li>
+<li>
+<p><strong>WHDLoad Support</strong> [puae_use_whdload] (disabled|<strong>files</strong>|hdfs)</p>
+<p>Enable launching pre-installed WHDLoad installs. Creates a helper image for loading content and an empty image for saving. Core restart required.
+- 'Files' creates the data in directories
+- 'HDFs' contains the data in images</p>
+</li>
+<li>
+<p><strong>WHDLoad Theme</strong> [puae_use_whdload_theme] (<strong>default</strong>|native)</p>
+<p>AmigaOS 'system-configuration' color prefs in WHDLoad helper image. Available only with 'Files' mode. Core restart required
+- 'Default' = Black/White/DarkGray/LightGray
+- 'Native'  = Gray/Black/White/LightBlue</p>
+</li>
+<li>
+<p><strong>WHDLoad Splash Screen</strong> [puae_use_whdload_prefs] (<strong>disabled</strong>|config|splash|both)</p>
+<p>Space/Enter/Fire work as the WHDLoad Start-button. Core restart required. </p>
+<p>Override with buttons while booting:
+- 'Config': Hold 2<sup>nd</sup> fire / Blue
+- 'Splash': Hold LMB
+- 'Config + Splash': Hold RMB
+- ReadMe + MkCustom: Hold Red+Blue</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config</td>
+<td>Config (Show only if available)</td>
+</tr>
+<tr>
+<td>splash</td>
+<td>Splash (Show briefly)</td>
+</tr>
+<tr>
+<td>both</td>
+<td>Config + Splash (Wait for user input)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>WHDLoad ButtonWait</strong> [puae_use_whdload_buttonwait] (disabled|<strong>enabled</strong>)</p>
+<p>Wait for a button press on internal loading sections if the slave supports it. Core restart required.</p>
+</li>
+<li>
+<p><strong>WHDLoad NoWriteCache</strong> [puae_use_whdload_nowritecache] (<strong>disabled</strong>|enabled)</p>
+<p>Write cache requires running the core a few frames after closing content to trigger WHDLoad quit and flush cache to disk. 
+QuitKey = '$2b' = '#' = 'LCtrl + Backslash'. Core restart required.</p>
+</li>
+<li>
+<p><strong>Global Boot HD</strong> [puae_use_boot_hd] (<strong>disabled</strong>|files|hdf20|hdf40|hdf80|hdf128|hdf256|hdf512)</p>
+<p>Attach a hard disk meant for Workbench usage, not for WHDLoad! Enabling forces a model with HD interface. Changing HDF size will not replace or edit the existing HDF. Core restart required.</p>
+</li>
+<li>
+<p><strong>Cartridge</strong> [puae_cartridge] (<strong>disabled</strong>)</p>
+<p>Cartridge images go in 'system/uae/' or 'system/uae_data/'. Core restart required.</p>
+</li>
+</ul>
+<h3 id="video-options">Video options<a class="headerlink" href="#video-options" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Show Video Options</strong> [puae_video_options_display] (<strong>disabled</strong>|enabled)</p>
+<p>Available only when frontend 'Core Option Categories' is disabled.</p>
+</li>
+<li>
+<p><strong>Allow PAL/NTSC Hz Change</strong> [puae_video_allow_hz_change] (disabled|enabled|<strong>locked</strong>)</p>
+<p>Let Amiga decide the exact refresh rate when interlace mode or PAL/NTSC changes.</p>
+<p>'Locked' changes only when video standard changes.</p>
+</li>
+<li>
+<p><strong>Standard</strong> [puae_video_standard] (<strong>PAL auto</strong>|NTSC auto|PAL|NTSC)</p>
+<p>'Automatic' switches region per file path tags.</p>
+<p>Output Hz &amp; height:
+- 'PAL': 50Hz - 288px / 576px
+- 'NTSC': 60Hz - 240px / 480px</p>
+</li>
+<li>
+<p><strong>Pixel Aspect Ratio</strong> [puae_video_aspect] (<strong>auto</strong>|PAL|NTSC|1:1)</p>
+<p>Hotkey toggling disables this option until core restart.</p>
+<ul>
+<li>'PAL': 26/25 = 1.04</li>
+<li>'NTSC': 43/50 = 0.86</li>
+</ul>
+</li>
+<li>
+<p><strong>Resolution</strong> [puae_video_resolution] (<strong>auto</strong>|auto-lores|auto-superhires|lores|hires|superhires)</p>
+<p>'Automatic' uses 'High' at minimum.
+'Automatic (Low)' allows 'Low'.
+'Automatic (Super-High)' sets max size already at startup.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>auto-lores</td>
+<td>Automatic (Low)</td>
+</tr>
+<tr>
+<td>auto-superhires</td>
+<td>Automatic (Super-High)</td>
+</tr>
+<tr>
+<td>lores</td>
+<td>Low 360px</td>
+</tr>
+<tr>
+<td>hires</td>
+<td>High 720px</td>
+</tr>
+<tr>
+<td>superhires</td>
+<td>Super-High 1440px</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Line Mode</strong> [puae_video_vresolution] (<strong>auto</strong>|single|double)</p>
+<p>'Automatic' defaults to 'Single Line' and switches to 'Double Line' on interlaced screens.</p>
+</li>
+<li>
+<p><strong>Crop</strong> [puae_crop] (<strong>disabled</strong>|minimum|smaller|small|medium|large|larger|maximum|auto)</p>
+<p>Remove borders according to 'Crop Mode'.</p>
+</li>
+<li>
+<p><strong>Crop Mode</strong> [puae_crop_mode] (<strong>both</strong>|horizontal|vertical|16:9|16:10|4:3|5:4)</p>
+<p>'Horizontal + Vertical' &amp; 'Automatic' removes borders completely.</p>
+</li>
+<li>
+<p><strong>Vertical Position</strong> [puae_vertical_pos] (<strong>auto</strong>|0|-20...70)</p>
+<p>'Automatic' keeps only cropped screens centered. Positive values move upward and negative values move downward.</p>
+</li>
+<li>
+<p><strong>Horizontal Position</strong> [puae_horizontal_pos] (<strong>auto</strong>|0|-40...40)</p>
+<p>'Automatic' keeps screen centered. Positive values move right and negative values move left.</p>
+</li>
+<li>
+<p><strong>Immediate/Waiting Blits</strong> [puae_immediate_blits] (false|immediate|<strong>waiting</strong>)</p>
+<p>'Immediate Blitter' is ignored with 'Cycle-exact'.</p>
+</li>
+<li>
+<p><strong>Collision Level</strong> [puae_collision_level] (none|sprites|<strong>playfields</strong>|full)</p>
+<p>'Sprites and Playfields' is recommended.</p>
+</li>
+<li>
+<p><strong>Remove Interlace Artifacts</strong> [puae_gfx_flickerfixer] (<strong>disabled</strong>|enabled)</p>
+<p>Best suited for still screens, Workbench etc.</p>
+</li>
+<li>
+<p><strong>Frameskip</strong> [puae_gfx_framerate] (<strong>disabled</strong>|1|2)</p>
+<p>Not compatible with 'Cycle-exact'.</p>
+</li>
+<li>
+<p><strong>Color Gamma</strong> [puae_gfx_gamma] (-500|<strong>0</strong>|500)</p>
+<p>Adjust color gamma.</p>
+</li>
+<li>
+<p><strong>Color Depth</strong> [puae_gfx_colors] (16bit|<strong>24bit</strong>)</p>
+</li>
+</ul>
+<h3 id="on-screen-display-options">On-Screen Display options<a class="headerlink" href="#on-screen-display-options" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Virtual KBD Theme</strong> [puae_vkbd_theme] (<strong>auto</strong>|auto_outline|beige|beige_outline|cd32|cd32_outline|light|light_outline|dark|dark_outline)</p>
+<p>The keyboard comes up with RetroPad Select by default.</p>
+</li>
+<li>
+<p><strong>Virtual KBD Transparency</strong> [puae_vkbd_transparency] (0%|<strong>25%</strong>|50%|75%|100%)</p>
+<p>Keyboard transparency can be toggled with RetroPad A.</p>
+</li>
+<li>
+<p><strong>Virtual KBD Dimming</strong> [puae_vkbd_dimming] (0%|<strong>25%</strong>|50%|75%|100%)</p>
+<p>Dimming level of the surrounding area.</p>
+</li>
+<li>
+<p><strong>Statusbar Mode</strong> [puae_statusbar] (<strong>bottom</strong>|bottom_minimal|bottom_basic|bottom_basic_minimal|top|top_minimal|top_basic|top_basic_minimal)</p>
+<ul>
+<li>'Full': Joyports + Current image + LEDs</li>
+<li>'Basic': Current image + LEDs</li>
+<li>'Minimal': Track number + FPS hidden</li>
+</ul>
+</li>
+<li>
+<p><strong>Statusbar Startup</strong> [puae_statusbar_startup] (<strong>disabled</strong>|enabled)</p>
+<p>Show statusbar on startup.</p>
+</li>
+<li>
+<p><strong>Statusbar Messages</strong> [puae_statusbar_messages] (<strong>disabled</strong>|enabled)</p>
+<p>Show messages when statusbar is hidden.</p>
+</li>
+<li>
+<p><strong>Light Pen/Gun Pointer Color</strong> [puae_joyport_pointer_color] (disabled|black|white|red|green|<strong>blue</strong>|yellow|purple)</p>
+<p>Crosshair color for light pens and guns.</p>
+</li>
+</ul>
+<h3 id="audio-options">Audio options<a class="headerlink" href="#audio-options" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Show Audio Options</strong> [puae_audio_options_display] (<strong>disabled</strong>|enabled)</p>
+<p>Available only when frontend 'Core Option Categories' is disabled.</p>
+</li>
+<li>
+<p><strong>Stereo Separation</strong> [puae_sound_stereo_separation] (0%|10%|20%|30%|40%|50%|60%|70%|80%|90%|<strong>100%</strong>)</p>
+<p>Paula sound chip channel panning. Does not affect CD audio.</p>
+</li>
+<li>
+<p><strong>Interpolation</strong> [puae_sound_interpol] (none|<strong>anti</strong>|sinc|rh|crux)</p>
+<p>Paula sound chip interpolation type.</p>
+</li>
+<li>
+<p><strong>Filter</strong> [puae_sound_filter] (<strong>emulated</strong>|off|on)</p>
+<p>'Emulated' allows states between ON/OFF.</p>
+</li>
+<li>
+<p><strong>Filter Type</strong> [puae_sound_filter_type] (<strong>auto</strong>|standard|enhanced)</p>
+<p>'Automatic' picks the filter type for the hardware.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>standard</td>
+<td>A500</td>
+</tr>
+<tr>
+<td>enhanced</td>
+<td>A1200</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Floppy Sound Emulation</strong> [puae_floppy_sound] (100|95|90|85|<strong>80</strong>|75|70|65|60|55|50|45|40|35|30|25|20|15|10|5|0)</p>
+<p><strong><em>Values are inverted, '80' = '20% volume'</em></strong></p>
+</li>
+<li>
+<p><strong>Floppy Sound Mute Ejected</strong> [puae_floppy_sound_empty_mute] (disabled|<strong>enabled</strong>)</p>
+<p>Mute drive head clicking when floppy is not inserted.</p>
+</li>
+<li>
+<p><strong>Floppy Sound Type</strong> [puae_floppy_sound_type] (<strong>internal</strong>|A500|LOUD)</p>
+<p>External files go in <code class="language-text highlight">system/uae_data/</code> or <code class="language-text highlight">system/uae/</code>.</p>
+</li>
+<li>
+<p><strong>CD Audio Volume</strong> [puae_sound_volume_cd] (0%|5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|<strong>100%</strong>)</p>
+<p>CD volume in percent.</p>
+</li>
+</ul>
+<h3 id="input-options">Input options<a class="headerlink" href="#input-options" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Analog Stick Mouse</strong> [puae_analogmouse] (disabled|left|right|<strong>both</strong>)</p>
+<p>Default mouse control stick when remappings are empty.</p>
+</li>
+<li>
+<p><strong>Analog Stick Mouse Deadzone</strong> [puae_analogmouse_deadzone] (0|5|10|15|<strong>20</strong>|25|30|35|40|45|50)</p>
+<p>Required distance from stick center to register input.</p>
+</li>
+<li>
+<p><strong>Left Analog Stick Mouse Speed</strong> [puae_analogmouse_speed] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|<strong>1.0</strong>|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)</p>
+<p>Mouse speed for left analog stick.</p>
+</li>
+<li>
+<p><strong>Right Analog Stick Mouse Speed</strong> [puae_analogmouse_speed_right] (0.1|0.2|0.3|0.4|0.5|0.6|0.7|0.8|0.9|<strong>1.0</strong>|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2.0|2.1|2.2|2.3|2.4|2.5|2.6|2.7|2.8|2.9|3.0)</p>
+<p>Mouse speed for right analog stick.</p>
+</li>
+<li>
+<p><strong>D-Pad Mouse Speed</strong> [puae_dpadmouse_speed] (0|1|2|3|4|5|<strong>6</strong>|7|8|9|10|11|12|13|14|15|16|17|18)</p>
+<p>Mouse speed for directional pad.</p>
+</li>
+<li>
+<p><strong>Mouse Speed</strong> [puae_mouse_speed] (10|20|30|40|50|60|70|80|90|<strong>100</strong>|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300)</p>
+<p>Global mouse speed.</p>
+</li>
+<li>
+<p><strong>Physical Mouse</strong> [puae_physicalmouse] (disabled|<strong>enabled</strong>|double)</p>
+<p>'Double' requirements: raw/udev input driver and proper mouse index per port. Does not affect RetroPad emulated mice.</p>
+</li>
+<li>
+<p><strong>Keyboard Pass-through</strong> [puae_physical_keyboard_pass_through] (<strong>disabled</strong>|enabled)</p>
+<p>'ON' passes all physical keyboard events to the core. 'OFF' prevents RetroPad keys from generating keyboard events.</p>
+</li>
+<li>
+<p><strong>Keyrah Keypad Mappings</strong> [puae_keyrah_keypad_mappings] (<strong>disabled</strong>|enabled)</p>
+<p>Hardcoded keypad to joyport mappings for Keyrah hardware.</p>
+</li>
+<li>
+<p><strong>Turbo Fire</strong> [puae_turbo_fire] (<strong>disabled</strong>|enabled)</p>
+<p>Hotkey toggling disables this option until core restart.</p>
+</li>
+<li>
+<p><strong>Turbo Button</strong> [puae_turbo_fire_button] (<strong>B</strong>|A|Y|X|L|R|L2|R2)</p>
+<p>Replace the mapped button with turbo fire button.</p>
+</li>
+<li>
+<p><strong>Turbo Pulse</strong> [puae_turbo_pulse] (2|4|<strong>6</strong>|8|10|12)</p>
+<p>Frames in a button cycle.</p>
+</li>
+<li>
+<p><strong>Joystick/Mouse</strong> [puae_joyport] (<strong>joystick</strong>|mouse)</p>
+<p>Change D-Pad control between joyports. Hotkey toggling disables this option until core restart.</p>
+</li>
+<li>
+<p><strong>Joystick Port Order</strong> [puae_joyport_order] (<strong>1234</strong>|2143|3412|4321)</p>
+<p>Plug RetroPads in different ports. Useful for Arcadia system and games that use the 4-player adapter.</p>
+</li>
+<li>
+<p><strong>RetroPad Face Button Options</strong> [puae_retropad_options] (<strong>disabled</strong>|jump|rotate|rotate_jump)</p>
+<p>Rotate face buttons clockwise and/or make 2<sup>nd</sup> fire press up.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disabled</td>
+<td>B = Fire, A = 2<sup>nd</sup> fire</td>
+</tr>
+<tr>
+<td>jump</td>
+<td>B = Fire, A = Up</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>Y = Fire, B = 2<sup>nd</sup> fire</td>
+</tr>
+<tr>
+<td>rotate_jump</td>
+<td>Y = Fire, B = Up</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>CD32 Pad Face Button Options</strong> [puae_cd32pad_options] (<strong>disabled</strong>|jump|rotate|rotate_jump)</p>
+<p>Rotate face buttons clockwise and/or make blue button press up.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disabled</td>
+<td>B = Red, A = Blue</td>
+</tr>
+<tr>
+<td>jump</td>
+<td>B = Red, A = Up</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>Y = Red, B = Blue</td>
+</tr>
+<tr>
+<td>rotate_jump</td>
+<td>Y = Red, B = Up</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Show Mapping Options</strong> [puae_mapping_options_display] (disabled|<strong>enabled</strong>)</p>
+<p>Available only when frontend 'Core Option Categories' is disabled.</p>
+</li>
+<li>
+<p><strong>Toggle Virtual Keyboard</strong> [puae_mapper_vkbd] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>Toggle Statusbar</strong> [puae_mapper_statusbar] (<strong>RETROK_F12</strong>)</p>
+</li>
+<li>
+<p><strong>Switch Joystick/Mouse</strong> [puae_mapper_mouse_toggle] (<strong>RETROK_RCTRL</strong>)</p>
+</li>
+<li>
+<p><strong>Toggle Turbo Fire</strong> [puae_mapper_turbo_fire_toggle] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>Toggle Save Disk</strong> [puae_mapper_save_disk_toggle] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>Toggle Aspect Ratio</strong> [puae_mapper_aspect_ratio_toggle] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>Toggle Crop</strong> [puae_mapper_crop_toggle] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>Reset</strong> [puae_mapper_reset] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Up</strong> [puae_mapper_up] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Down</strong> [puae_mapper_down] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Left</strong> [puae_mapper_left] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Right</strong> [puae_mapper_right] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad A</strong> [puae_mapper_a] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad B</strong> [puae_mapper_b] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad X</strong> [puae_mapper_x] (<strong>RETROK_SPACE</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Y</strong> [puae_mapper_y] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Select</strong> [puae_mapper_select] (<strong>TOGGLE_VKBD</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Start</strong> [puae_mapper_start] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad L</strong> [puae_mapper_l] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad R</strong> [puae_mapper_r] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad L2</strong> [puae_mapper_l2] (<strong>MOUSE_LEFT_BUTTON</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad R2</strong> [puae_mapper_r2] (<strong>MOUSE_RIGHT_BUTTON</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad L3</strong> [puae_mapper_l3] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad R3</strong> [puae_mapper_r3] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Left Analog Up</strong> [puae_mapper_lu] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Left Analog Down</strong> [puae_mapper_ld] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Left Analog Left</strong> [puae_mapper_ll] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Left Analog Right</strong> [puae_mapper_lr] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Right Analog Up</strong> [puae_mapper_ru] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Right Analog Down</strong> [puae_mapper_rd] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Right Analog Left</strong> [puae_mapper_rl] (<strong>---</strong>)</p>
+</li>
+<li>
+<p><strong>RetroPad Right Analog Right</strong> [puae_mapper_rr] (<strong>---</strong>)</p>
+</li>
+</ul>
+<h2 id="controllers">Controllers<a class="headerlink" href="#controllers" title="Reference link to this section">&para;</a></h2>
+<p>The PUAE core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):</p>
+<h3 id="user-1-2-device-types">User 1 - 2 device types<a class="headerlink" href="#user-1-2-device-types" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>None - Input disabled.</li>
+<li><strong>Automatic</strong> - Joypad - Uses RetroPad by default and switches to CD32 Pad with CD32 content.</li>
+<li>RetroPad - Joypad - Standard one or two fire button joystick + customizable buttons with keyboard keys and hotkeys.</li>
+<li>CD32 Pad - Joypad - Standard CD32 controller with unused buttons available for RetroPad extra mappings.</li>
+<li>Analog Joystick - Joypad - Standard Analog joystick with unused buttons available for RetroPad extra mappings.</li>
+<li>Arcadia - Joypad - Arcadia cabinet joystick + keyboard arcade controls.</li>
+<li>Trojan Phazer Lightgun - Lightgun - Trojan Phazer Lightgun.</li>
+<li>Lightpen - Lightgun - Standard lightpen.</li>
+<li>Joystick - Joypad - Standard one or two fire button joystick.</li>
+<li>Keyboard - Keyboard - Keyboard input is always active. Has keymapper support.</li>
+</ul>
+<h3 id="user-3-4-device-types">User 3 - 4 device types<a class="headerlink" href="#user-3-4-device-types" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>None - Input disabled.</li>
+<li><strong>RetroPad</strong> - Joypad - Standard one or two fire button joystick + customizable buttons with keyboard keys and hotkeys.</li>
+<li>Joystick - Joypad - Standard one or two fire button joystick.</li>
+<li>Keyboard - Keyboard - Keyboard input is always active. Has keymapper support.</li>
+</ul>
+<h3 id="other-controllers">Other controllers<a class="headerlink" href="#other-controllers" title="Reference link to this section">&para;</a></h3>
+<ul>
+<li>Mouse - Enabled by default.</li>
+</ul>
+<h3 id="controller-tables">Controller tables<a class="headerlink" href="#controller-tables" title="Reference link to this section">&para;</a></h3>
+<h4 id="joypad">Joypad<a class="headerlink" href="#joypad" title="Reference link to this section">&para;</a></h4>
+<p><img alt="" src="../../image/controller/psx.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Input descriptors for Retropad</th>
+<th>RetroPad Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-Pad Up</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_up.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Down</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_down.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Left</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_left.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Right</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_right.png" /></td>
+</tr>
+<tr>
+<td>B / Fire</td>
+<td><img alt="" src="../../image/retropad/retro_b.png" /></td>
+</tr>
+<tr>
+<td>A / 2<sup>nd</sup> fire</td>
+<td><img alt="" src="../../image/retropad/retro_a.png" /></td>
+</tr>
+<tr>
+<td>Y</td>
+<td><img alt="" src="../../image/retropad/retro_y.png" /></td>
+</tr>
+<tr>
+<td>X</td>
+<td><img alt="" src="../../image/retropad/retro_x.png" /></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><img alt="" src="../../image/retropad/retro_select.png" /></td>
+</tr>
+<tr>
+<td>Start</td>
+<td><img alt="" src="../../image/retropad/retro_start.png" /></td>
+</tr>
+<tr>
+<td>L</td>
+<td><img alt="" src="../../image/retropad/retro_l1.png" /></td>
+</tr>
+<tr>
+<td>R</td>
+<td><img alt="" src="../../image/retropad/retro_r1.png" /></td>
+</tr>
+<tr>
+<td>L2</td>
+<td><img alt="" src="../../image/retropad/retro_l2.png" /></td>
+</tr>
+<tr>
+<td>R2</td>
+<td><img alt="" src="../../image/retropad/retro_r2.png" /></td>
+</tr>
+<tr>
+<td>L3</td>
+<td><img alt="" src="../../image/retropad/retro_l3.png" /></td>
+</tr>
+<tr>
+<td>R3</td>
+<td><img alt="" src="../../image/retropad/retro_r3.png" /></td>
+</tr>
+<tr>
+<td>Left Analog X</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> X</td>
+</tr>
+<tr>
+<td>Left Analog Y</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> Y</td>
+</tr>
+<tr>
+<td>Right Analog X</td>
+<td><img alt="" src="../../image/retropad/retro_right_stick.png" /> X</td>
+</tr>
+<tr>
+<td>Right Analog Y</td>
+<td><img alt="" src="../../image/retropad/retro_right_stick.png" /> Y</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Input descriptors for CD32 pad</th>
+<th>RetroPad Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-Pad Up</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_up.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Down</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_down.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Left</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_left.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Right</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_right.png" /></td>
+</tr>
+<tr>
+<td>Red</td>
+<td><img alt="" src="../../image/retropad/retro_b.png" /></td>
+</tr>
+<tr>
+<td>Blue</td>
+<td><img alt="" src="../../image/retropad/retro_a.png" /></td>
+</tr>
+<tr>
+<td>Green</td>
+<td><img alt="" src="../../image/retropad/retro_y.png" /></td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td><img alt="" src="../../image/retropad/retro_x.png" /></td>
+</tr>
+<tr>
+<td>(Select)</td>
+<td><img alt="" src="../../image/retropad/retro_select.png" /></td>
+</tr>
+<tr>
+<td>Play</td>
+<td><img alt="" src="../../image/retropad/retro_start.png" /></td>
+</tr>
+<tr>
+<td>Rewind</td>
+<td><img alt="" src="../../image/retropad/retro_l1.png" /></td>
+</tr>
+<tr>
+<td>Forward</td>
+<td><img alt="" src="../../image/retropad/retro_r1.png" /></td>
+</tr>
+<tr>
+<td>(L2)</td>
+<td><img alt="" src="../../image/retropad/retro_l2.png" /></td>
+</tr>
+<tr>
+<td>(R2)</td>
+<td><img alt="" src="../../image/retropad/retro_r2.png" /></td>
+</tr>
+<tr>
+<td>(L3)</td>
+<td><img alt="" src="../../image/retropad/retro_l3.png" /></td>
+</tr>
+<tr>
+<td>(R3)</td>
+<td><img alt="" src="../../image/retropad/retro_r3.png" /></td>
+</tr>
+<tr>
+<td>(Left Analog X)</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> X</td>
+</tr>
+<tr>
+<td>(Left Analog Y)</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> Y</td>
+</tr>
+<tr>
+<td>(Right Analog X)</td>
+<td><img alt="" src="../../image/retropad/retro_right_stick.png" /> X</td>
+</tr>
+<tr>
+<td>(Right Analog Y)</td>
+<td><img alt="" src="../../image/retropad/retro_right_stick.png" /> Y</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Input descriptors for Joystick</th>
+<th>RetroPad Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-Pad Up</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_up.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Down</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_down.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Left</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_left.png" /></td>
+</tr>
+<tr>
+<td>D-Pad Right</td>
+<td><img alt="" src="../../image/retropad/retro_dpad_right.png" /></td>
+</tr>
+<tr>
+<td>B / Fire</td>
+<td><img alt="" src="../../image/retropad/retro_b.png" /></td>
+</tr>
+<tr>
+<td>A / 2<sup>nd</sup> Fire</td>
+<td><img alt="" src="../../image/retropad/retro_a.png" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Input descriptors for Analog Joystick</th>
+<th>RetroPad Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left Analog X</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> X</td>
+</tr>
+<tr>
+<td>Left Analog Y</td>
+<td><img alt="" src="../../image/retropad/retro_left_stick.png" /> Y</td>
+</tr>
+<tr>
+<td>Fire 1</td>
+<td><img alt="" src="../../image/retropad/retro_b.png" /></td>
+</tr>
+<tr>
+<td>Fire 2</td>
+<td><img alt="" src="../../image/retropad/retro_a.png" /></td>
+</tr>
+<tr>
+<td>Fire 3</td>
+<td><img alt="" src="../../image/retropad/retro_y.png" /></td>
+</tr>
+<tr>
+<td>Fire 4</td>
+<td><img alt="" src="../../image/retropad/retro_x.png" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="keyboard">Keyboard<a class="headerlink" href="#keyboard" title="Reference link to this section">&para;</a></h4>
+<p>English layout</p>
+<table>
+<thead>
+<tr>
+<th>RetroKeyboard Special Inputs</th>
+<th>Commodore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keyboard Left Meta/Super</td>
+<td>Left Amiga</td>
+</tr>
+<tr>
+<td>Keyboard Right Meta/Super</td>
+<td>Right Amiga</td>
+</tr>
+<tr>
+<td>Keyboard Page Up</td>
+<td>Left Amiga</td>
+</tr>
+<tr>
+<td>Keyboard Page Down</td>
+<td>Right Amiga</td>
+</tr>
+<tr>
+<td>Keyboard Right Control</td>
+<td>Right Amiga</td>
+</tr>
+<tr>
+<td>Keyboard Insert</td>
+<td>Help</td>
+</tr>
+<tr>
+<td>Keyboard Home</td>
+<td>[</td>
+</tr>
+<tr>
+<td>Keyboard End</td>
+<td>]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="external-links">External Links<a class="headerlink" href="#external-links" title="Reference link to this section">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/libretro/libretro-uae">Libretro PUAE Github repository</a></li>
+<li><a href="https://github.com/libretro/libretro-uae/issues">Report Libretro PUAE core issues here</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLRbgg4gk_0IeRAk8nYYneBAHZhbPLvHEz">Gameplay Videos</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 14:09:16 UTC">March 21, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2010–2025 Libretro. – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/libretro" target="_blank" rel="noopener" title="Libretro on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/libretro" target="_blank" rel="noopener" title="Libretro on X" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/C4amCeV" target="_blank" rel="noopener" title="RetroArch Discord server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@Libretro" target="_blank" rel="noopener" title="Libretro YouTube channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://facebook.com/libretro" target="_blank" rel="noopener" title="Libretro on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/libretro" target="_blank" rel="noopener" title="Libretro/RetroArch on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.2.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

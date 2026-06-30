@@ -1,0 +1,2936 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is the official RetroArch documentation for users and developers. Information from sources outside of this website may be dated or incorrect.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.libretro.com/guides/databases/">
+      
+      
+        <link rel="prev" href="../retroarch-cloud-sync/">
+      
+      
+        <link rel="next" href="../glui/">
+      
+      
+      <link rel="icon" href="../../image/branding/invader.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Databases & Validation - Libretro Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-MT11L3F6EZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-MT11L3F6EZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-MT11L3F6EZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  <script>
+  var gtmId = 'GTM-KXPH36V';
+  if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+    gtmId = 'GTM-XXX'
+  }
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', gtmId);
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-9447404270680650",
+            enable_page_level_ads: true
+       });
+  </script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script>
+  window.googletag = window.googletag || { cmd: [] };
+  </script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#databases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <style>.md-announce a,.md-announce a:focus,.md-announce a:hover{color:currentColor}.md-announce strong{white-space:nowrap}.md-announce .twitter{margin-left:.2em;color:#00acee}</style>
+    <a href="https://www.libretro.com/index.php/retroarch-1-21-0-release/"><strong>New version released! Read the blog post now!</strong></a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Libretro Docs" class="md-header__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Libretro Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Databases & Validation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="retroarch" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/understanding/" class="md-tabs__link">
+          
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../install-windows/" class="md-tabs__link">
+          
+  
+    
+  
+  For Users
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/libretro-overview/" class="md-tabs__link">
+          
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../meta/how-to-contribute/" class="md-tabs__link">
+          
+  
+    
+  
+  Contribute to the Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/privacy-policy/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Libretro Docs" class="md-nav__button md-logo" aria-label="Libretro Docs" data-md-component="logo">
+      
+  <img src="../../image/branding/invader.png" alt="logo">
+
+    </a>
+    Libretro Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/libretro/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libretro/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../start/understanding/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../install-windows/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigating/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input-and-controls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input and Controls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../starting-a-game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting a Game
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controller-autoconfiguration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller Auto-Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-cores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Cores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Core List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change-directories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-browser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Browser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launch-content/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Launching Content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Menu Styles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import-content/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importing Content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overrides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overrides: Content/Folder/Core-Specific Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-codes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cheat/Rumble Codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libretro-overlays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Overlays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overlay-pointing-devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overlay Mouse & Lightgun
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is BIOS?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../netplay-faq/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Netplay
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retroachievements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RetroAchievements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memorymonitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memory Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disc-swapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disc Swapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../softpatching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Softpatching ROMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../accessibility/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Accessibility
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recording-and-streaming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Recording and Streaming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting-retroarch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generating-retroarch-logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating Logs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retroarch-cloud-sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RetroArch Cloud Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Databases & Validation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Databases & Validation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features-of-retroarch-database-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features of RetroArch Database Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-import-scanner-uses-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Import Scanner Uses the Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Import Scanner Uses the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-and-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and Rejection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-field-for-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Field for Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases-and-thumbnails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases and Thumbnails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-problems-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Problems and Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigating-database-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investigating Database Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-fix-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help Fix the Problem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-contribute-to-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Contribute to Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Contribute to Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-steps-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github Steps Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-scale-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small-Scale Corrections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-scale-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large-Scale Additions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../glui/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Appearance & Customization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../ai-service/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://www.lakka.tv/doc/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lakka Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../arcade-getting-started/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Emulation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/2048/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Game and Scripting Engines
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/imageviewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Media
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../library/dummy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Core Library: Special-Purpose
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../shader/introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Shader Library
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../development/libretro-overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    For Developers
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../meta/how-to-contribute/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Contribute to the Docs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../support/privacy-policy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features-of-retroarch-database-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features of RetroArch Database Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-import-scanner-uses-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Import Scanner Uses the Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the Import Scanner Uses the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-and-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and Rejection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-field-for-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Field for Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases-and-thumbnails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Databases and Thumbnails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-problems-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Problems and Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigating-database-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investigating Database Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-fix-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help Fix the Problem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-contribute-to-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Contribute to Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Contribute to Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-steps-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github Steps Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-scale-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small-Scale Corrections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-scale-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Large-Scale Additions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/libretro/docs/edit/master/docs/guides/databases.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/libretro/docs/raw/master/docs/guides/databases.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="databases">Databases<a class="headerlink" href="#databases" title="Reference link to this section">&para;</a></h1>
+<p>RetroArch uses <code class="language-text highlight">.rdb</code> <a href="https://github.com/libretro/RetroArch/blob/master/libretro-db/README.md">database format</a> files stored locally by default in folder <code class="language-text highlight">RetroArch/databases</code>.  The <code class="language-text highlight">.rdb</code> files are compiled from clrmamepro format <code class="language-text highlight">.dat</code> files stored at the <a href="https://github.com/libretro/libretro-database">libretro database repository</a>.  See the database <a href="https://github.com/libretro/libretro-database/blob/master/README.md">readme</a> for comprehensive information about the sources and functioning of the repository.  </p>
+<div class="admonition hint">
+<p class="admonition-title">Terminology Note: Game Name</p>
+<p>The term <em>Game Name</em> refers to the name displayed <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner">within the RetroArch interface and in playlists</a>, <em>not</em> to the filename of the underlying file on the computer or device.  <em>Game Name</em> in this document is synonymous with playlist item label, playlist entry, content name, and game title.</p>
+</div>
+<h2 id="features-of-retroarch-database-usage">Features of RetroArch Database Usage<a class="headerlink" href="#features-of-retroarch-database-usage" title="Reference link to this section">&para;</a></h2>
+<p>RetroArch uses the database to provide several automated cataloging functions:</p>
+<ul>
+<li><strong>Validation</strong>. Reject or accept files when using the <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#working-with-playlists">Import Scanner / Playlist Generator</a> based on whether the ROM checksum (or <a href="#key-field-for-matching">other key</a>) matches the checksum of a known verified completely intact (aka  "properly dumped") file in the database.</li>
+<li><strong>Game Naming</strong>. Assign a definitive and uniform display name for each game in a playlist regardless of filename.  RetroArch will look up the <code class="language-text highlight">name</code> field specified for the file's <a href="#key-field-for-matching">key</a> in the database.<ul>
+<li><em>Secondary</em>: <strong>Thumbnail Images</strong>. Download and display thumbnail images for games based on the uniform name assigned by the database, regardless of filename. (Thumbnails are <strong>not</strong> directly assigned by the database or by checksum association, but as a secondary effect of databased <em>game name</em> assignment if a matching thumbnail is available on the server. Also see: <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails">Flexible Name Matching Algorithm</a>.)</li>
+</ul>
+</li>
+<li><strong>Category Search ("Explore")</strong>. Allows the user to find/view games that match selected criteria, e.g. by Developer, Release Year, Genre, and other attributes/metadata.</li>
+<li><strong>Per-Game Information View</strong>. Provide an in-app viewable informational screen for each game (Game &gt; Information &gt; Database Entry).</li>
+</ul>
+<h2 id="how-the-import-scanner-uses-the-database">How the Import Scanner Uses the Database<a class="headerlink" href="#how-the-import-scanner-uses-the-database" title="Reference link to this section">&para;</a></h2>
+<p><em>See also: <a href="https://docs.libretro.com/guides/import-content/">Importing Content</a> and <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner">Creating Playlists</a>.</em> </p>
+<p>RetroArch's Import Content actions will do the following if strict (default) or loose database check is used:</p>
+<ol>
+<li>Compute a CRC checksum of the file(s) or scan for the in-game serial number. CRC and serial number are the <a href="#key-field-for-matching">keys used for matching a game file to the database</a>.</li>
+<li>Search for that CRC or serial in the information of the local <code class="language-text highlight">.rdb</code> files (default location <code class="language-text highlight">RetroArch/databases</code>). If the key is not found in databases, the file will <strong>not</strong> be added to a playlist in strict mode. See <a href="#validation-and-rejection">Validation &amp; Rejection</a>.</li>
+<li>Assign the <code class="language-text highlight">Game Name</code> (aka display name or playlist item name) that is specified as <code class="language-text highlight">name</code> within the database entry for the key (CRC/serial). The assigned <code class="language-text highlight">Game Name</code> will appear in the playlist, instead of the filename.</li>
+<li>All other associated metadata <a href="https://github.com/libretro/libretro-database#fields-specified-in-game-information-databases">collated in the .rdb</a> entry for the given CRC/serial can be viewed in the Information &gt; Database Entry for the game and will be viewable via "Explore".</li>
+</ol>
+<h3 id="validation-and-rejection">Validation and Rejection<a class="headerlink" href="#validation-and-rejection" title="Reference link to this section">&para;</a></h3>
+<p>Validation here refers to checking a file or attribute against a reference, and then accepting or rejecting it based on whether it matches what is specified in the reference data (aka what is "allowed").  RetroArch's strict scan is also a validation process, not merely a tool for adding all files to a playlist.  Part of the function is to <strong>reject</strong> certain files.  The database is the reference, and the ROM file is the item being validated.</p>
+<p>If your file's crc or internal serial data (whichever is the key used for matching, <a href="#key-field-for-matching">see below</a>) does not exist in the database, the file will be rejected by the strict scans and will not appear in the playlist. By changing the Database Check parameter to Loose, such files will still be added to playlist.</p>
+<h3 id="key-field-for-matching">Key Field for Matching<a class="headerlink" href="#key-field-for-matching" title="Reference link to this section">&para;</a></h3>
+<p>During <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner">Playlist / Import Scanning</a>, RetroArch will identify your <em>files</em> in order to then match your file to a data entry in the database.  The key for matching varies by console original media type.</p>
+<ul>
+<li><strong>CRC checksum</strong> for systems with smaller file sizes, e.g. games before the advent of disc-based consoles.</li>
+<li><strong>Serial Number</strong> for larger files like disc-based games, to avoid computing checksums on large files. Found within the ROM file. The serial is not metadata but encoded within the game's binary data, which is scanned (in applicable cases) as a byte array by RetroArch.</li>
+</ul>
+<p>Contrary to popular belief, the data used for matching is often the <em>serial number</em> encoded within a disc-game's binary data.</p>
+<p>Databases include cryptographic hashes (sha1, etc) for informational purposes to define the item specified, but only CRC checksum (or serial) not hashes are used for matching.</p>
+<h2 id="databases-and-thumbnails">Databases and Thumbnails<a class="headerlink" href="#databases-and-thumbnails" title="Reference link to this section">&para;</a></h2>
+<p>Thumbnails <em>are not</em> assigned or retrieved based on checksum, serial, or game database matching.  See separate documentation for <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#thumbnails">thumbnail handling</a> and the thumbnail <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#custom-thumbnails">matching algorithm</a>.</p>
+<p>Currently there is no <em>automatic</em> process that applies database game name changes/updates to libretro <a href="https://github.com/libretro-thumbnails/libretro-thumbnails">thumbnail repository</a> image filenames.  Therefore one of the visible consequences of a Game Name or database problem is the lack of an appropriate thumbnail display in RetroArch whenever the <code class="language-text highlight">Game Name</code> displayed in the interface doesn't match a repository thumbnail filename.</p>
+<ul>
+<li><strong>Game name error</strong>. To help fix a database error where the game name doesn't match a correctly named thumbnail in the repository, see <a href="#how-to-contribute-to-databases">How to Contribute to Databases</a>.</li>
+<li><strong>Thumbnail name error</strong>. To help fix a thumbnail in a case where a <em>correct</em> database game name doesn't match the repository thumbnail name, follow the <a href="https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md#contributions">Thumbnail Repository readme</a> and <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to">How To Contribute Thumbnails guide</a>.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Reference link to this section">&para;</a></h2>
+<p><em>See also: RetroArch documentation for <a href="https://docs.libretro.com/guides/import-content/">Import Scanning</a> and <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#retroarch-playlist-scanner">Playlist Creation/Scanning</a>.</em></p>
+<p>The information below is for Users who are interested in figuring out the cause of a database-related problem and possibly helping to fix the problem in a way that will help all users.  RetroArch is a volunteer project, and many problem situations can be improved by interested users with medium technical awareness and no programming skill needed.</p>
+<h3 id="common-problems-and-solutions">Common Problems and Solutions<a class="headerlink" href="#common-problems-and-solutions" title="Reference link to this section">&para;</a></h3>
+<p>The most common user problems and solutions related to the database are:</p>
+<ul>
+<li><strong>Missed files during import scan.</strong> I.e. default strict scan "misses" some files, meaning the files are not imported and do not appear in the playlist.  See <a href="#validation-and-rejection">Validation &amp; Rejection</a> above.<ul>
+<li>Solution A: <a href="#how-to-contribute-to-databases">Contribute to the database</a> with data for the files/games that are not yet covered by the database.</li>
+<li>Solution B: Use the <strong>Loose</strong> option, which will accept all files according to the chosen settings.</li>
+</ul>
+</li>
+<li><strong>Game Name error or incorrect information</strong>. E.g. A game file receives a wrong title inside the RetroArch playlist/interface.<ul>
+<li>Solution:</li>
+<li>Follow the <a href="#investigating-database-issues">investigation steps</a> below to find the <code class="language-text highlight">.dat</code> file that has the erroneous information, and <a href="#how-to-contribute-to-databases">contribute a correction</a>.</li>
+<li>Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.</li>
+</ul>
+</li>
+<li><strong>Outdated Local Files</strong>. I.e. an error(s) has been fixed in the libretro database but the fix has not yet been downloaded in the user's app install.<ul>
+<li>Solution: Update your RetroArch databases (Main Menu &gt; Online Updater &gt; Update databases). That will apply recent fixes/corrections to your RetroArch install.</li>
+</ul>
+</li>
+</ul>
+<h3 id="investigating-database-issues">Investigating Database Issues<a class="headerlink" href="#investigating-database-issues" title="Reference link to this section">&para;</a></h3>
+<p>Follow the steps below to find the cause of a database or game/name identification issue:</p>
+<ul>
+<li><strong>Learn about the factors that might be causing the Problem</strong><ul>
+<li>Understand the multifaceted <a href="https://github.com/libretro/libretro-database#retroarch-database">.dat system</a> and files.  Multiple different .dat files may have data for the same game.</li>
+<li>Understand <a href="#key-field-for-matching">which key field</a> RetroArch uses for identifying your file and for searching for your file's info in the database.</li>
+<li>Understand <a href="https://github.com/libretro/libretro-database#precedence">precedence</a> within the dat files in the repository.</li>
+</ul>
+</li>
+<li><strong>Verify data "on both sides"</strong><ul>
+<li><strong>Verify your file properties.</strong> Verify your game file has the appropriate <a href="#key-field-for-matching">key ID</a>: compute the crc checksum, or verify the encoded serial number with a hex editor, whichever is applicable.</li>
+<li><strong>Verify libretro databases on github</strong>. Look in the repository databases to find which <code class="language-text highlight">.dat</code> file might hold incorrect data for the game file at issue.  Even if you find a <code class="language-text highlight">.dat</code> that holds correct data for the game key (CRC or serial) in question, a different dat with <a href="https://github.com/libretro/libretro-database#precedence">precedence</a> may hold incorrect data that is over-ruling the correct data.</li>
+</ul>
+</li>
+<li><strong>Verify upstream data</strong> to find mismatches or pending corrections.  If an upstream database group (No-Intro, Redump, GameTDB, etc) is <a href="https://github.com/libretro/libretro-database#sources">responsible for the <code class="language-text highlight">.dat</code> at issue</a>, look on their websites to see whether their current information is correct or incorrect.</li>
+</ul>
+<h3 id="help-fix-the-problem">Help Fix the Problem<a class="headerlink" href="#help-fix-the-problem" title="Reference link to this section">&para;</a></h3>
+<p>After you've investigated the issue (see above), some possible actions are:</p>
+<ul>
+<li><strong>Update</strong>. Use <em>Main Menu &gt; Online Updater &gt; Update Databases</em> to download new and possibly corrected data from the libretro server.</li>
+<li><strong><a href="#how-to-contribute-to-databases">Contribute</a></strong> a correction or addition of data to fix the issue. It may be possible to create an ad hoc database or to make a new entry within an existing ad hoc database.</li>
+<li><strong>Use the <a href="https://github.com/libretro/libretro-database/issues">Issue Tracker</a></strong>.<ul>
+<li><strong>Search</strong> for existing issues on github that may hold useful advice or solutions for your problem.  Adding your new examples or insights to the discussion for the  problem may help Members/Contributors create a fix.</li>
+<li><strong>Open</strong> an Issue if a relevant one isn't already open.</li>
+<li>Open a <a href="https://github.com/libretro/libretro-database/issues">Database Issue</a> <strong>if</strong> you observe either of the following:<ul>
+<li>You see a large-scale issue affecting many data entries or entire dats.</li>
+<li>You found that Upstream Data is <em>correct</em> but libretro or RetroArch doesn't reflect it, and at leat 4 weeks have passed since the Upstream update occurred.  </li>
+</ul>
+</li>
+<li>Open a <a href="https://github.com/libretro/RetroArch/issues">RetroArch Issue</a> <strong>if</strong>: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).</li>
+</ul>
+</li>
+<li><strong>Submit Upstream Changes.</strong>  Make changes upstream (No-Intro, Redump, GameTDB, etc) by going through the channels of the upstream group responsible for the data at issue <strong>if</strong>: you found that Upstream Data is <em>Incorrect</em> and has been imported to the libretro database repository. The upstream group must make the correction to "fix it at the source", though it may be possible to create alternative data coverage instead (see below).</li>
+</ul>
+<h2 id="how-to-contribute-to-databases">How to Contribute to Databases<a class="headerlink" href="#how-to-contribute-to-databases" title="Reference link to this section">&para;</a></h2>
+<p>Like <a href="https://docs.libretro.com/guides/roms-playlists-thumbnails/#contributing-thumbnails-how-to">thumbnails</a> and <a href="https://docs.libretro.com/meta/how-to-contribute/">documentation</a>, databases are an area where users who are not programmers can contribute to RetroArch and in a way that benefits all users.</p>
+<h3 id="github-steps-overview">Github Steps Overview<a class="headerlink" href="#github-steps-overview" title="Reference link to this section">&para;</a></h3>
+<ol>
+<li>Make an account on github.com and login.</li>
+<li>Fork the libretro database repository.  Forking means copying the repository into your own working area on github.</li>
+<li>Make your changes within your fork.  For example, create a new <code class="language-text highlight">.dat</code>, or add a game entry or correction to an existing dat.<ul>
+<li>Understand the principles and <a href="https://github.com/libretro/libretro-database#header-guidelines-for-dats">header specifications</a> explained in the <a href="https://github.com/libretro/libretro-database#">database repository readme</a>.</li>
+<li>Carefully heed the existing formats observable in present <code class="language-text highlight">.dat</code> files on the repository.</li>
+</ul>
+</li>
+<li>"Commit" (save) your changes with your fork.</li>
+<li>Use the "Pull Request" button (or the Contribute &gt; Open Pull Request button) to send and propose your changes to the libretro official team members.  They will review your contribution, and in time either accept it or inform you about required changes or a reason why it isn't acceptable.</li>
+</ol>
+<h3 id="small-scale-corrections">Small-Scale Corrections<a class="headerlink" href="#small-scale-corrections" title="Reference link to this section">&para;</a></h3>
+<p>See <a href="https://github.com/libretro/libretro-database#small-scale-corrections">database repository readme</a> to learn when/where small-scare corrections are appropriate.</p>
+<p>Two methods for adding data coverage for a single game or niche of games, via Pull Request proposal on github:</p>
+<ul>
+<li><strong>Method A:</strong> Fix the dat at issue.  This is only possible if two conditions are met:<ul>
+<li>
+<ol>
+<li>The <code class="language-text highlight">.dat</code> doesn't originate from an import from upstream <em>and</em></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>The <code class="language-text highlight">.dat</code> won't receive subtractive sync over-writes in the future.</li>
+</ol>
+</li>
+<li><em>If those conditions are not met, the intended "fix" would be deleted by the next bulk import sync.</em></li>
+</ul>
+</li>
+</ul>
+<p><em>Or...</em></p>
+<ul>
+<li><strong>Method B:</strong> Edit a different dat, leaving the erroneous dat intact but moot.  This is only advisable when the correction and the error have different <a href="#key-field-for-matching">keys</a>, or if the edited/corrected database has <a href="https://github.com/libretro/libretro-database#precedence">precedence</a> over the erroneous database. If one of those conditions is <em>not</em> met, then the attempted correction would fail: it would be over-ruled in the <code class="language-text highlight">.rdb</code> compile by the erroneous dat's information.  If one of those conditions is met, you may do one of following:<ul>
+<li>Add a game data entry to an existing and appropriate ad hoc <code class="language-text highlight">.dat</code> in the repository.    </li>
+<li>Create a new ad hoc <code class="language-text highlight">.dat</code>. This is often acceptable even for a small number of games because of the multi-faceted nature of the dat system.  Some limitations may be enforced by admins, e.g. for the manageability of the build script or the repository.</li>
+</ul>
+</li>
+</ul>
+<h3 id="large-scale-additions">Large-Scale Additions<a class="headerlink" href="#large-scale-additions" title="Reference link to this section">&para;</a></h3>
+<p>See <a href="https://github.com/libretro/libretro-database#adding-a-new-database">Adding New Database</a>. Contributors are welcome to propose the addition of bulk data from their own build scripts or otherwise, via github Pull Request.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 25, 2026 11:43:52 UTC">January 25, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2010–2025 Libretro. – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/libretro" target="_blank" rel="noopener" title="Libretro on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://x.com/libretro" target="_blank" rel="noopener" title="Libretro on X" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/C4amCeV" target="_blank" rel="noopener" title="RetroArch Discord server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@Libretro" target="_blank" rel="noopener" title="Libretro YouTube channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://facebook.com/libretro" target="_blank" rel="noopener" title="Libretro on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/libretro" target="_blank" rel="noopener" title="Libretro/RetroArch on Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.2.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
