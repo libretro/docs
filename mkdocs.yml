@@ -199,6 +199,7 @@ nav:
         - 'Nintendo - NES / Famicom (Mesen)': 'library/mesen.md'
         - 'Nintendo - NES / Famicom (Nestopia)': 'library/nestopia.md'
         - 'Nintendo - NES / Famicom (QuickNES)': 'library/quicknes.md'
+        - 'Nintendo - NES / Famicom (RustyNES)': 'library/rustynes.md'
         - 'Nintendo - 3DS (Citra)': 'library/citra.md'
         - 'Nintendo - 3DS (Citra Canary/Experimental)': 'library/citra_canary.md'
         - 'Nintendo - Nintendo 64 (Mupen64Plus)': 'library/mupen64plus.md'
