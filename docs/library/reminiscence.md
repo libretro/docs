@@ -19,7 +19,7 @@ The REminiscence core has been authored by
 
 The REminiscence core is licensed under
 
-- GPLv3
+- (unclear open-source license)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
