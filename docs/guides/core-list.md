@@ -62,7 +62,6 @@
 | [DOSBox-Pure](../library/dosbox_pure.md)   | DOS                    | A port of DOSBox with a goal of simplicty and ease of use and gameplay. This core includes a streamlined workflow for launching games directly from ZIP archives with automated mapping of controls to gamepads and a native onscreen keyboard. |
 | DOSBox-SVN                | DOS                    | This core is based on DOSBox-SVN trunk and allows on-the-fly configuration and different sync methods |
 | [doukutsu-rs](../library/doukutsu-rs.md)   | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
-| DuckStation               | Sony PlayStation       |                    |
 | Dungeon Crawl Stone Soup  | Game                   | A preliminary port of the Dungeon Crawl Stone Soup strategy game |
 | EasyRPG                   | RPG Maker 2000/2003    |                    |
 | ECWolf                    | Game engine            | A port of the Wolfenstein 3D engine to libretro |
@@ -200,7 +199,7 @@
 | [Stella](https://docs.libretro.com/library/stella/)                     | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
-| SwanStation               | Sony PlayStation       | SwanStation is a fork of the Duckstation emulator |
+| SwanStation               | Sony PlayStation       | SwanStation is a fork of the DuckStation emulator |
 | [TempGBA](https://docs.libretro.com/library/tempgba/)   | Game Boy Advance       |                    |
 | [TGB Dual](https://docs.libretro.com/library/tgb_dual/) | Game Boy/Color         |                    |
 | [Theodore](https://docs.libretro.com/library/theodore/) | Thomson MO/TO          |                    |
