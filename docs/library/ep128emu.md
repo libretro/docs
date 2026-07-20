@@ -20,8 +20,9 @@ Since the emulated machines are 8-bit platforms from the 1980's, modern setups s
 
 Content that can be loaded by the ep128emu core have the following file extensions:
 
-- `.img` - Enterprise, CPC or TVC floppy disk image
+- `.img` - Enterprise, CPC or TVC floppy (or hard) disk image
 - `.dsk` - Enterprise, CPC or TVC floppy disk image
+- `.vhd` - Enterprise hard disk image
 - `.tap` - Enterprise or ZX Spectrum tape image
 - `.dtf` - Enterprise compressed file
 - `.cas` - Videoton TVC file format
@@ -104,6 +105,7 @@ Apart from disk/tape/fileIO differences, the core will adjust the emulated machi
 - if content file name contains `[req brd-rom]`, German BIOS will be used
 - if content file name contains `[req zrom]`, Hungarian language BIOS and EPDOS will be used
 - if EP128_DISK_ISDOS (or EP64_DISK_ISDOS) type is supplied via configuration file, IS-DOS (CP/M flavor for Enterprise) will be used
+- if content is a FAT12 hard disk image (with fixed disk indicator, F8) or a vhd hard disk image, updated EXOS and extra ROM image will be used
 
 ## Core options
 
@@ -139,7 +141,8 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 - Sinclair Joystick 1 - Joypad and fire button is mapped for Sinclair joystick 1. Only useful for ZX. Joystick inputs are emulated as keys: 1 (left), 2 (right), 3 (down), 4 (up), 5 (fire).
 - Sinclair Joystick 2 - Joypad and fire button is mapped for Sinclair joystick 2. Only useful for ZX. Joystick inputs are emulated as keys: 6 (left), 7 (right), 8 (down), 9 (up) ,0 (fire).
 - Protek Joystick - Joypad and fire button is mapped for Protek/AGF joystick. Only useful for ZX. Joystick inputs are emulated as keys: 5 (left), 6 (down), 7 (up), 8 (right) ,0 (fire).
-- External Joystick 3..6 - Joypad and fire button is mapped for external joystick 3..6. Only useful for Enterprise, very rarely used.
+- External Joystick 3..4 - Joypad and fire button is mapped for external joystick 3..4. External 3 and 4 are supported for Enterprise and for TVC (via a partial GameCard emulation).
+- External Joystick 5..6 - Only useful for Enterprise, very rarely used.
 
 ## Joypad
 
@@ -161,7 +164,7 @@ The emulated systems use several joystick types (all digital, with 1 fire button
 
 ## Mouse
 
-Mouse input is used for the EnterMice emulation of the Enterprise.
+Mouse input is used for the EnterMice emulation of the Enterprise and for the USB mouse emulation of TVC256++ card.
 
 ## Keyboard
 
@@ -299,6 +302,7 @@ From ep128emu_core version 1.1.0, external BIOS files are optional.
 | `exdos14isdos10uk.rom` | Enterprise 128 IS-DOS (CP/M) | f91c4a507cc6895bdd9c43df4f021df3 |
 | `brd.rom` | Enterprise 128 German language extension | 6af0402906944fd134004b85097c8524 |
 | `zt19uk.rom` | Enterprise 128 ZozoTools extension <br> For loading from DTF files | 228540b6be83ae2acd7569c8ff0f91d0 |
+| `ide12.rom` | Enterprise 128 IDE hard disk support | |
 | `tvc22_sys.rom` | Videoton TVC system BIOS <br> For TVC emulation | 8c54285f541930cde766069942bad0f2 |
 | `tvc22_ext.rom` | Videoton TVC extension BIOS <br> For TVC emulation | 5ce95a26ceed5bec73995d83568da9cf |
 | `tvcfileio.rom` | Videoton TVC Direct File I/O <br> For loading from host file (instead of disk or tape image) | a2cf86ba8e7fc58b242137fe59036832 |
@@ -350,4 +354,5 @@ Enterprise 128 has software extensions to emulate ZX Spectrum (48, 128) and Amst
 - [Original ep128emu Implementation](https://github.com/istvan-v/ep128emu)
 - [ep128.hu](http://www.ep128.hu/) - games for Enterprise
 - [enterpriseforever.com](https://enterpriseforever.com/) - Enterprise community
-- [tvc.homeserver.hu](http://tvc.homeserver.hu/) - TVC page (Hungarian only)
+- [TVC GameCard](https://github.com/dikdom/TVC-GameCard) - the GameCard extension
+- [Hard disk support for Enterprise](https://www.ep128.hu/Ep_Hardware/IDE_vezerlo.htm) - the IDE card extension
