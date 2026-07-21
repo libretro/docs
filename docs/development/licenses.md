@@ -41,6 +41,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                               | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x2010/blob/master/LICENSE.txt) | Non-commercial |
+| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | UME 2014                                                                         | [MAME (Non-commercial)](https://github.com/libretro/mame2014-libretro/blob/master/docs/license.txt)         | Non-commercial |
 
 ## Libretro
@@ -201,12 +202,12 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [SameDuck](../library/sameduck.md)                                               | [MIT](https://github.com/libretro/) | |
 | [SAME_CDI](../library/same_cdi.md)                                               | [GPLv2](https://github.com/libretro/same_cdi/blob/master/COPYING)                            |                |
 | [ScummVM](../library/scummvm.md)                                                 | [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)                          |                |
-| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | [Snes9x](../library/snes9x.md)                                                   | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2002](../library/snes9x_2002.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                               | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x2010/blob/master/LICENSE.txt) | Non-commercial |
+| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | [Stella](../library/stella.md)                                                   | [GPLv2](https://github.com/stella-emu/stella/blob/master/License.txt)                     |                |
 | TempGBA                                                                          | [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/copyright)               |                |
 | [TGB Dual](../library/tgb_dual.md)                                               | [GPLv2](https://github.com/libretro/tgbdual-libretro/blob/master/docs/COPYING-2.0.txt)    |                |
