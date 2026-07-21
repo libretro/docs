@@ -198,6 +198,7 @@
 | SquirrelJME               | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
 | [Stella](https://docs.libretro.com/library/stella/)                     | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
+| [SPMP8000Emu](../library/spmp8000emu.md) | Sunplus SPMP8000 | An emulator for the Sunplus SPMP8000 game platform used by portable game devices |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the DuckStation emulator |
 | [TempGBA](https://docs.libretro.com/library/tempgba/)   | Game Boy Advance       |                    |
