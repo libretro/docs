@@ -169,6 +169,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | Mupen64Plus GLES3                                         		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | [Native32Emu](../library/native32emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/Native32Emu/blob/master/LICENSE)           |                |
+| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | Neko Project II                                           		           |                                                                                           |                |
 | Neko Project II Kai                                                              | [MIT](https://github.com/AZO234/NP2kai/blob/master/LICENSE)                               |                |
 | [Nestopia](../library/nestopia.md)                                               | [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)                         |                |

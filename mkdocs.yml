@@ -281,6 +281,7 @@ nav:
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sunplus Emulation':
         - 'Sunplus - Native32 (Native32Emu)': 'library/native32emu.md'
+        - 'Sunplus - SPMP8000 (SPMP8000Emu)': 'library/spmp8000emu.md'
       - 'Texas Instruments Emulation':
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
