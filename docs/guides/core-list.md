@@ -147,7 +147,6 @@
 | [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
 | [Mupen64Plus-Next GLES3](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            |                    |
 | [Native32Emu](../library/native32emu.md) | Sunplus Native32 | An emulator for the Sunplus Native32 game format used by DVD player and TV chipsets |
-| [SPMP8000Emu](../library/spmp8000emu.md) | Sunplus SPMP8000 | An emulator for the Sunplus SPMP8000 game platform used by portable game devices |
 | Neko Project II           | NEC PC-98              |                    |
 | Neko Project II Kai       | NEC PC-98              |                    |
 | NeoCD                     | Neo Geo CD             |                    |

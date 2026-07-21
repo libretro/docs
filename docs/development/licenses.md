@@ -169,7 +169,6 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | Mupen64Plus GLES3                                         		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | [Native32Emu](../library/native32emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/Native32Emu/blob/master/LICENSE)           |                |
-| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | Neko Project II                                           		           |                                                                                           |                |
 | Neko Project II Kai                                                              | [MIT](https://github.com/AZO234/NP2kai/blob/master/LICENSE)                               |                |
 | [Nestopia](../library/nestopia.md)                                               | [GPLv2](https://github.com/libretro/nestopia/blob/master/COPYING)                         |                |
@@ -202,6 +201,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [SameDuck](../library/sameduck.md)                                               | [MIT](https://github.com/libretro/) | |
 | [SAME_CDI](../library/same_cdi.md)                                               | [GPLv2](https://github.com/libretro/same_cdi/blob/master/COPYING)                            |                |
 | [ScummVM](../library/scummvm.md)                                                 | [GPLv2](https://github.com/libretro/scummvm/blob/master/COPYING)                          |                |
+| [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | [Snes9x](../library/snes9x.md)                                                   | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2002](../library/snes9x_2002.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
