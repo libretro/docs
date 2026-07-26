@@ -45,6 +45,12 @@ As a replacement for any of the BIOS files mentioned above, it is also possible 
 The `PSXONPSP660.bin` BIOS comes from the PSP, the `ps1_rom.bin` BIOS comes from the PS3, and the `openbios.bin` BIOS comes from PCSX-Redux; all are region-free.
 For Beetle PSX to recognize these BIOS files, you need to enable the "Override BIOS" option.
 
+### How to obtain OpenBIOS
+* As noted on https://github.com/grumpycoders/pcsx-redux, the latest AppImage is available at https://distrib.app/pub/org/pcsx-redux/project/dev-linux-x64.
+* Extract the Appimage: `./PCSX-Redux-HEAD-x86_64.AppImage --appimage-extract`
+* Copy the `openbios.bin` file from the generated `squashfs-root/usr/share/pcsx-redux/resources` directory.
+* Place `openbios.bin` in your RetroArch System/BIOS directory.
+
 ## Extensions
 
 Content that can be loaded by the Beetle PSX core have the following file extensions:
