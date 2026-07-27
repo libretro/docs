@@ -47,7 +47,7 @@ If no compatible BIOS is found, PCSX_ReARMed will revert to use the HLE BIOS, wh
 
 ### How to obtain the OpenBIOS file
 
-Unlike the other PlayStation cores (such as Beetle PSX, Beetle PSX HW, and SwanStation), PCSX ReARMed does not include OpenBIOS built-in. If you want to use OpenBIOS (openbios.bin) with it:
+Unlike the other PlayStation cores (such as Beetle PSX, Beetle PSX HW, and SwanStation), PCSX ReARMed does not include OpenBIOS built-in. Instead, it features High-Level Emulation (HLE) BIOS, eliminating the need for an official BIOS file for most games. However, if you still want to use OpenBIOS (openbios.bin) with it:
 * As noted on https://github.com/grumpycoders/pcsx-redux, the latest AppImage is available at https://distrib.app/pub/org/pcsx-redux/project/dev-linux-x64.
 * Extract the Appimage: `./PCSX-Redux-HEAD-x86_64.AppImage --appimage-extract`
 * Copy the `openbios.bin` file from the generated `squashfs-root/usr/share/pcsx-redux/resources` directory.
