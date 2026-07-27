@@ -48,7 +48,6 @@ For Beetle PSX to recognize these BIOS files, you need to enable the "Override B
 ### How to obtain a standalone OpenBIOS file
 
 If you wish to use a specific or updated standalone version of OpenBIOS (openbios.bin) rather than the built-in fallback:
-
 * As noted on https://github.com/grumpycoders/pcsx-redux, the latest AppImage is available at https://distrib.app/pub/org/pcsx-redux/project/dev-linux-x64.
 * Extract the Appimage: `./PCSX-Redux-HEAD-x86_64.AppImage --appimage-extract`
 * Copy the `openbios.bin` file from the generated `squashfs-root/usr/share/pcsx-redux/resources` directory.
