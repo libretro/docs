@@ -200,6 +200,7 @@
 | [Stella](https://docs.libretro.com/library/stella/)                     | Atari 2600             |                    |
 | Stella 2014               | Atari 2600             |                    |
 | Super Bros War            | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
+| [Supermodel](../library/supermodel.md) | Sega Model 3 | A port of the Supermodel emulator for the Sega Model 3 arcade system |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the DuckStation emulator |
 | [TempGBA](https://docs.libretro.com/library/tempgba/)   | Game Boy Advance       |                    |
 | [TGB Dual](https://docs.libretro.com/library/tgb_dual/) | Game Boy/Color         |                    |

@@ -263,6 +263,7 @@ nav:
         - 'Sega - Saturn/ST-V (Kronos)': 'library/kronos.md'
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
         - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
+        - 'Sega - Model 3 (Supermodel)': 'library/supermodel.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sharp Emulation':
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
