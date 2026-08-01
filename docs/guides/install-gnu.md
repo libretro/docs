@@ -28,7 +28,7 @@ installing RetroArch on systems running the GNU/Linux kernel.
 
 There are no system packages available for AM in common repositories, so it must be installed manually.
 
-Follow the official installation instructions provided at: https://github.com/ivan-hc/AM
+Follow the official installation instructions provided at: [https://github.com/ivan-hc/AM](https://github.com/ivan-hc/AM)
 
 During setup, you’ll be prompted to choose one of two installation modes:
 
@@ -37,12 +37,10 @@ During setup, you’ll be prompted to choose one of two installation modes:
 
 Choose the option that best suits your environment and permissions.
 
-
 2. Searching for AppImages
 
 Once installation is complete, verify that AM or AppMan is working by performing a search.
 Use the appropriate command depending on your installation:
-
 
 ```
 # For system-wide installation
@@ -50,6 +48,7 @@ am -q retroarch
 
 # For user-level installation
 appman -q retroarch
+
 ```
 
 This query searches for available AppImages matching “retroarch” and displays a list of results.
@@ -58,24 +57,60 @@ Example output:
 ```
 $ appman -q retroarch
 
- SEARCH RESULTS FOR "RETROARCH":
+  SEARCH RESULTS FOR "RETROARCH":
 
- ◆ retroarch-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
- ◆ retroarch-qt-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
- ◆ retroarch-qt : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
- ◆ retroarch : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+  ◆ retroarch-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+  ◆ retroarch-qt-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+  ◆ retroarch-qt : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+  ◆ retroarch : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
+
 ```
 
 3. Installing an AppImage
 
-To install your chosen AppImage, use the -i flag.
-For example, to install the RetroArch Nightly build (ideal for testing or bug reporting):
+To install your chosen AppImage, use the `-i` flag followed by the specific package name. For example, you can install either the stable release (for everyday use) or the Nightly build (ideal for testing):
 
-`appman -i retroarch-nightly`
+```bash
+# For system-wide installation (Stable)
+am -i retroarch
 
-AM or AppMan will automatically download, validate, and integrate the AppImage into your environment.
+# For system-wide installation (Nightly)
+am -i retroarch-nightly
 
-4. Notes and Recommendations
+# For user-level installation (Stable)
+appman -i retroarch
+
+# For user-level installation (Nightly)
+appman -i retroarch-nightly
+```
+
+4. Updates
+
+To update RetroArch, use the `-u` (or `--update`) flag. Running the update command without specifying a package name will update all installed AppImages managed by the tool:
+
+```bash
+# Update all system-wide AppImages
+am -u
+
+# Update all user-level AppImages
+appman -u
+
+```
+
+Alternatively, you can target a specific package to update only that application. Since the [official bug report template](https://github.com/libretro/RetroArch/blob/master/.github/ISSUE_TEMPLATE/01-bug-report.yml) encourages using the latest AppImage, using `retroarch-nightly` is a great example for keeping your testing build up to date:
+
+```bash
+# For system-wide installation
+am -u retroarch-nightly
+
+# For user-level installation
+appman -u retroarch-nightly
+
+```
+
+> **Note:** Make sure to use the exact package name that you originally installed (e.g., `retroarch`, `retroarch-nightly`, `retroarch-qt`, or `retroarch-qt-nightly`).
+
+5. Notes and Recommendations
 
 * Nightly builds are recommended when submitting bug reports or testing new features.
 * Stable releases are better suited for everyday use.
@@ -97,7 +132,7 @@ installed in just three easy steps:
     flatpak --installations
     ```
 
-1. Confirm that the Flathub repository is configured as a [flatpak
+2. Confirm that the Flathub repository is configured as a [flatpak
    remote][flatpak-remote], so that packages from it may be installed. You can
    examine the flatpak remotes currently enabled on your system with this
    terminal command (shown with default output):
@@ -116,7 +151,7 @@ installed in just three easy steps:
     sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     ```
 
-1. Finally, install the RetroArch Flatpak. You have the option of making it
+3. Finally, install the RetroArch Flatpak. You have the option of making it
    available to only the current user, with this command:
 
     ``` shell
