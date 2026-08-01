@@ -97,7 +97,9 @@ appman -u
 
 ```
 
-Alternatively, you can target a specific package to update only that application. Since the [official bug report template](https://github.com/libretro/RetroArch/blob/master/.github/ISSUE_TEMPLATE/01-bug-report.yml) encourages using the latest AppImage, using `retroarch-nightly` is a great example for keeping your testing build up to date:
+
+Alternatively, you can target a specific package to update only that application. This is especially useful if you have multiple Continuous Integration (CI) AppImages of other software installed that you rarely use. Since the [official bug report template](https://github.com/libretro/RetroArch/blob/master/.github/ISSUE_TEMPLATE/01-bug-report.yml) encourages using the latest AppImage, updating just `retroarch-nightly` to test your issue on the latest build before reporting is recommended:
+
 
 ```bash
 # For system-wide installation
