@@ -279,6 +279,8 @@ nav:
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
+      - 'Dingoo Emulation':
+        - 'Dingoo - A320 (DingooEmu)': 'library/dingooemu.md'
       - 'Sunplus Emulation':
         - 'Sunplus - Native32 (Native32Emu)': 'library/native32emu.md'
         - 'Sunplus - SPMP8000 (SPMP8000Emu)': 'library/spmp8000emu.md'

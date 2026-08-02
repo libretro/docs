@@ -51,6 +51,7 @@
 | [CrocoDS](../library/crocods.md)           | Amstrad CPC            |                    |
 | Cruzes                    | Game                   | (Further information required) |
 | Daphne                    | Arcade                 |                    |
+| [DingooEmu](../library/dingooemu.md)      | Dingoo A320            | An emulator for the Dingoo A320 handheld game console powered by the Ingenic JZ4740 MIPS SoC |
 | [DeSmuME](../library/desmume.md)           | Nintendo DS            |                    |
 | [DeSmuME 2015](../library/desmume_2015.md) | Nintendo DS            |                    |
 | [DICE](../library/dice.md)                 | Arcade                 | Pre-CPU games like Pong |
