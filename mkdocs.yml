@@ -156,6 +156,8 @@ nav:
         - 'MS - DOS (DOSBox)': 'library/dosbox.md'
         - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
         - 'MS - DOS (VirtualXT)': 'library/virtualxt.md'
+      - 'Dingoo Emulation':
+        - 'Dingoo - A320 (DingooEmu)': 'library/dingooemu.md'
       - 'Emerson':
         - 'Emerson - Arcadia 2001 / Interton VC 4000 (AmiArcadia)': 'library/amiarcadia.md'
       - 'Enterprise Emulation':

@@ -18,6 +18,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Opera](../library/opera.md)                         			                       | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h)      | Non-commercial |
 | [AmiArcadia](../library/amiarcadia.md)                                           | [Non-commercial](https://amigan.1emu.net/releases/)                                       | Non-commercial |
 | [Cannonball](../library/cannonball.md)                                           | [Non-commercial](https://github.com/libretro/cannonball/blob/master/docs/license.txt)     | Non-commercial |
+| [DingooEmu](../library/dingooemu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/DingooEmu/blob/master/LICENSE)             |                |
 | [Dinothawr](../library/dinothawr.md)             			                       | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | FB Alpha                                         			                       | [Non-commercial](https://github.com/libretro/fbalpha/blob/master/src/license.txt)         | Non-commercial |
 | FB Alpha 2012                                    			                       | [Non-commercial](https://github.com/libretro/fbalpha2012/blob/master/docs/license.txt)                                        | Non-commercial |
@@ -95,6 +96,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [DeSmuME 2015](../library/desmume_2015.md)                           | [GPLv2](https://github.com/libretro/desmume2015/blob/master/desmume/COPYING)              |                |
 | [DeSmuME](../library/desmume.md)                 			           | [GPLv2](https://github.com/TASVideos/desmume/blob/master/license.txt)                     |                |
 | [DICE](../library/dice.md)             | [GPLv3](https://github.com/mittonk/dice-libretro/blob/master/LICENSE.txt)                    |                |
+| [DingooEmu](../library/dingooemu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/DingooEmu/blob/master/LICENSE)             |                |
 | [Dinothawr](../library/dinothawr.md)             			           | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
 | Dolphin                                          			           | [GPLv2](https://github.com/dolphin-emu/dolphin/blob/master/license.txt)                   |                |
 | DOSBox                                           			           | [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)                  | |
