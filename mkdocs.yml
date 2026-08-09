@@ -285,6 +285,8 @@ nav:
       - 'Sunplus Emulation':
         - 'Sunplus - Native32 (Native32Emu)': 'library/native32emu.md'
         - 'Sunplus - SPMP8000 (SPMP8000Emu)': 'library/spmp8000emu.md'
+      - 'MStar Emulation':
+        - 'MStar - Nicai (NicaiEmu)': 'library/nicaiemu.md'
       - 'Texas Instruments Emulation':
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
