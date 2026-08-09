@@ -4,7 +4,7 @@
 
 Virtual Jaguar is the actively maintained Atari Jaguar and Jaguar CD emulator for libretro, continuing the Virtual Jaguar project (originally by David Raingeard of Potato Emulation).
 
-No BIOS files are required: the Jaguar boot ROM and CD BIOS images are embedded in the core. The core supports Jaguar CD (CUE/BIN, CDI) with Memory Track saves, JagLink/CatBox network play over TCP or RetroArch netplay, a high-level BIOS that lets most commercial titles boot without a real BIOS image, save states, SRAM, cheat codes and RetroAchievements. The accurate blitter is SIMD-accelerated (SSE2 on x86, NEON on ARM); the Blitter core option can be set to 'Fast' to trade some accuracy for additional speed on lower-end hardware.
+No BIOS files are required: the Jaguar boot ROM and CD BIOS images are embedded in the core. The core supports Jaguar CD (CUE/BIN, CDI) with Memory Track saves and audio-CD / Virtual Light Machine playback, the Jaguar GameDrive (JagGD) flash cartridge, JagLink/CatBox network play over TCP or RetroArch netplay, a high-level BIOS that lets most commercial titles boot without a real BIOS image, save states, SRAM, cheat codes and RetroAchievements. Enhancement options include M68K/RISC clock scaling (overclock) for framerate-limited games, full-precision 'True Color' gouraud shading, and 2x internal resolution. The accurate blitter is SIMD-accelerated (SSE2 on x86, NEON on ARM); the Blitter core option can be set to 'Fast' to trade some accuracy for additional speed on lower-end hardware.
 
 ### Author/License
 
@@ -138,6 +138,14 @@ Options are grouped into categories, and options that do not apply to the loaded
 
 	Emulate a PAL Jaguar instead of NTSC.
 
+- **True Color (Gouraud Precision)** [virtualjaguar_true_color] (**disabled**|enabled)
+
+	Render gouraud-shaded pixels at full precision (chroma x 24-bit intensity) to reduce banding in 3D games. The game-visible 16-bit framebuffer is unchanged, so savestates, achievements and emulation behaviour are unaffected. Applies to CRY 16bpp video modes only.
+
+- **Internal Resolution (Restart Required)** [virtualjaguar_internal_resolution] (**1x (native)**|2x)
+
+	Render internally at a multiple of the Jaguar's native resolution. Applied when content is loaded; changing it mid-game takes effect on restart. The game-visible framebuffer and all emulation timing are unchanged. Combines with True Color.
+
 ### BIOS & Boot
 
 - **BIOS (Cartridges)** [virtualjaguar_bios] (**HLE**|Real)
@@ -146,6 +154,10 @@ Options are grouped into categories, and options that do not apply to the loaded
 
 ??? note "*BIOS (Cartridges) - Real*"
     ![](../image/core/virtual_jaguar/bios.png)
+
+- **Jaguar GameDrive (Restart)** [virtualjaguar_jgd] (**Auto (images over 6 MB)**|disabled|Enabled (force, for GD-locked images))
+
+	Emulate the Jaguar GameDrive (JagGD) flash cartridge: its detection/install interface and 1 MB bank switching of up to 16 MB of cart SDRAM. 'Auto' turns it on only for ROM images larger than the 6 MB cartridge window. 'Enabled' forces it on for smaller images too, for GD-locked homebrew that refuses to boot without the cart. Without it, GD-locked titles hang at boot exactly as on a stock console.
 
 ### CD-ROM
 
@@ -230,6 +242,14 @@ These options only apply to Jaguar CD content.
 
 	Charge the GPU and 68000 realistic DRAM access time for memory accesses that leave their local buses, pacing games that rely on hardware timing (Doom-class) closer to real hardware. Symmetric: each processor pays only its own access costs, so relative CPU/GPU timing is preserved. Experimental: the cost model is still being calibrated; leave disabled unless a game visibly runs too fast.
 
+- **M68K Clock Scale (Overclock)** [virtualjaguar_m68k_clock_scale] (0.5x|**1x (stock)**|1.5x|2x|3x)
+
+	Run the 68000 CPU at a multiple of its stock ~13.3 MHz. An enhancement lever, not an accuracy fix: overclocking can smooth framerate-limited games (Doom, AvP, Checkered Flag) but may break titles that rely on stock CPU timing, and underclocking is for experimentation only. Bus/DRAM costs and all timers stay at stock speed. Leave at 1x unless a specific game benefits; bug reports are only valid at 1x.
+
+- **RISC (GPU/DSP) Clock Scale (Overclock)** [virtualjaguar_risc_clock_scale] (0.5x|**1x (stock)**|1.5x|2x)
+
+	Run the GPU and DSP RISC processors at a multiple of their stock ~26.6 MHz. An enhancement lever, not an accuracy fix: extra RISC cycles can lift GPU-bound framerates. Audio sample pacing (I2S/DAC) and all timers stay at stock speed, so audio does not pitch-shift — the DSP simply gets more compute per sample. May break titles that rely on stock RISC timing. Leave at 1x unless a specific game benefits; bug reports are only valid at 1x.
+
 ## Controllers
 
 The Virtual Jaguar core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
@@ -288,6 +308,8 @@ The Virtual Jaguar core supports the following device type(s) in the controls me
 The full commercial cartridge library and every Jaguar CD title boot and run. Per-game issues are tracked on the core's [issue tracker](https://github.com/libretro/virtualjaguar-libretro/issues) rather than duplicated here, so that a single list stays current — please file a report there if a game misbehaves.
 
 Jaguar CD discs boot in both HLE and real-BIOS mode; the per-title boot matrix lives in the core repository as [`docs/cd-boot-matrix.md`](https://github.com/libretro/virtualjaguar-libretro/blob/master/docs/cd-boot-matrix.md).
+
+Audio CDs (as CUE/BIN images) play through the Jaguar CD's Virtual Light Machine. Set 'CD Boot Mode' to 'Auto' or 'Real BIOS' for audio-only discs — they have no boot stub for the HLE path.
 
 ## External Links
 
