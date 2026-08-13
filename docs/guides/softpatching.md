@@ -15,6 +15,14 @@ rom.ips2
 
 ## **Cores Compatibility**
 
+### Atari - Jaguar
+
+| Core                               | Supported |
+|------------------------------------|:---------:|
+| [Virtual Jaguar](../library/virtual_jaguar.md) | ✔         |
+
+Cartridge content only — Jaguar CD images are loaded by path and are not softpatched.
+
 ### Bandai - WonderSwan/Color
 
 | Core                                       | Supported |
