@@ -83,7 +83,7 @@ Frontend-level settings or features that the Virtual Jaguar core respects.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| [Softpatching](../guides/softpatching.md) | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
@@ -144,7 +144,15 @@ Options are grouped into categories, and options that do not apply to the loaded
 
 - **Internal Resolution (Restart Required)** [virtualjaguar_internal_resolution] (**1x (native)**|2x)
 
-	Render internally at a multiple of the Jaguar's native resolution. Applied when content is loaded; changing it mid-game takes effect on restart. The game-visible framebuffer and all emulation timing are unchanged. Combines with True Color.
+	Render internally at a multiple of the Jaguar's native resolution. At 2x, qualifying content is supersampled with real sub-pixel detail rather than merely upscaled: fractional-walk blits, scaled Object Processor sprites (including 8bpp CLUT objects), and both CRY and RGB16 direct video modes all resolve genuine extra detail. Applied when content is loaded; changing it mid-game takes effect on restart. The game-visible framebuffer and all emulation timing are unchanged — savestates and achievements are unaffected. Combines with True Color.
+
+- **Per-Title Enhancement Defaults** [virtualjaguar_pertitle_defaults] (**enabled**|disabled)
+
+	Apply known-safe enhancement presets automatically for recognized games (e.g. internal resolution or true color for titles verified to benefit). A preset only applies to options you have left at their default value — any option you change yourself always wins. Disable for stock behaviour on every title.
+
+- **Blit Memoization (Per-Title)** [virtualjaguar_blit_memo] (**Disabled**|Enabled|Verify (debug, no speedup))
+
+	Skip blits whose inputs are provably unchanged since an identical earlier blit (some titles re-render an identical scene every engine cycle while the player is idle). Output is bit-identical by construction; enabled per title via the enhancement database. Verify mode never skips — it executes every would-be skip and logs any divergence. Not available for CD content.
 
 ### BIOS & Boot
 
@@ -238,17 +246,27 @@ These options only apply to Jaguar CD content.
 
 ### Timing
 
-- **DRAM Timing (Experimental)** [virtualjaguar_dram_timing] (**disabled**|enabled)
-
-	Charge the GPU and 68000 realistic DRAM access time for memory accesses that leave their local buses, pacing games that rely on hardware timing (Doom-class) closer to real hardware. Symmetric: each processor pays only its own access costs, so relative CPU/GPU timing is preserved. Experimental: the cost model is still being calibrated; leave disabled unless a game visibly runs too fast.
+Clock speed multipliers first, then the experimental hardware-timing models they interact with.
 
 - **M68K Clock Scale (Overclock)** [virtualjaguar_m68k_clock_scale] (0.5x|**1x (stock)**|1.5x|2x|3x)
 
-	Run the 68000 CPU at a multiple of its stock ~13.3 MHz. An enhancement lever, not an accuracy fix: overclocking can smooth framerate-limited games (Doom, AvP, Checkered Flag) but may break titles that rely on stock CPU timing, and underclocking is for experimentation only. Bus/DRAM costs and all timers stay at stock speed. Leave at 1x unless a specific game benefits; bug reports are only valid at 1x.
+	Run the 68000 at a multiple of its stock ~13.3 MHz. An enhancement, not an accuracy fix: it can smooth framerate-limited games (Doom, AvP, Checkered Flag) but may break titles that depend on stock CPU timing. Timers and bus costs stay at stock speed. If an overclocked game misbehaves, try enabling the timing models below. Report bugs only at 1x.
 
 - **RISC (GPU/DSP) Clock Scale (Overclock)** [virtualjaguar_risc_clock_scale] (0.5x|**1x (stock)**|1.5x|2x)
 
-	Run the GPU and DSP RISC processors at a multiple of their stock ~26.6 MHz. An enhancement lever, not an accuracy fix: extra RISC cycles can lift GPU-bound framerates. Audio sample pacing (I2S/DAC) and all timers stay at stock speed, so audio does not pitch-shift — the DSP simply gets more compute per sample. May break titles that rely on stock RISC timing. Leave at 1x unless a specific game benefits; bug reports are only valid at 1x.
+	Run the GPU and DSP at a multiple of their stock ~26.6 MHz. An enhancement, not an accuracy fix: extra cycles can lift GPU-bound framerates. Audio pacing and timers stay at stock speed, so nothing pitch-shifts. May break titles that depend on stock RISC timing. If an overclocked game misbehaves, try enabling the timing models below. Report bugs only at 1x.
+
+- **DRAM Timing (Experimental)** [virtualjaguar_dram_timing] (**disabled**|enabled)
+
+	Charge the GPU and 68000 realistic DRAM access time once they leave their local buses, pacing hardware-timed games (Doom-class) closer to real hardware. Each processor pays only its own costs, so relative CPU/GPU timing is preserved. Still being calibrated.
+
+- **GPU Pipeline Timing (Experimental)** [virtualjaguar_gpu_pipeline_timing] (**disabled**|enabled)
+
+	Model the GPU's real instruction costs: the single external-memory gateway, the register score-board, and ALU interlocks. The emulated GPU otherwise finishes renders 2-4x faster than silicon, which makes loops paced on render completion (Doom's menus and demo, Hover Strike) run too fast. Still being calibrated.
+
+- **Blitter Bus Timing (Experimental)** [virtualjaguar_blitter_timing] (**disabled**|enabled)
+
+	Charge the 68000 the bus time each blit really takes — on hardware the blitter is the top-priority bus master and freezes the cacheless 68000 while it runs. Zero-time blits let games paced on blit completion (Doom's menus, Hover Strike) run too fast. Still being calibrated.
 
 ## Controllers
 
