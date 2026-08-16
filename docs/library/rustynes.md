@@ -14,7 +14,7 @@ The RustyNES core has been authored by
 
 The RustyNES core is licensed under
 
-- MIT OR Apache-2.0
+- GPL-3.0-or-later
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
