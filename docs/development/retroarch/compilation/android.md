@@ -135,7 +135,7 @@ Next, copy the cores, assets and overlays to an assets folder you create here:
 
 Optionally, you may want to include the assets for the front-end (menu icons, fonts, images etc), shader caches, dbs, cheats, etc... These assets can be downloaded at any time during run time via the updater but if you want to bundle them into the build you may do so by downloading bundle.zip / cheats.zip and extracting them to assets folder:
 
-        wget https://buildbot.libretro.com/assets/frontend/bundle.zip
+        wget https://buildbot.libretro.com/assets/frontend/glui_minimal_assets.zip
         unzip -n bundle.zip -d assets
         wget https://buildbot.libretro.com/assets/frontend/cheats.zip
         mkdir assets/cheats
