@@ -232,7 +232,28 @@ The Dolphin core has the following option(s) that can be tweaked from the core o
 | ![](../image/retropad/retro_left_stick.png) Y   | Analog Y            | Tilt Y      |  Tilt Y            | Nunchuk Stick Y   | Left Stick Y       | Left Stick Y           |
 | ![](../image/retropad/retro_right_stick.png) X  | C-Stick X           |             |                    | Tilt X            | Right Stick X      | Right Stick X          |
 | ![](../image/retropad/retro_right_stick.png) Y  | C-Stick Y           |             |                    | Tilt Y            | Right Stick Y      | Right Stick Y          |
+
 **NOTE:** The 'L-Analog' and 'R-Analog' inputs are half-presses of the analog L and R buttons, respectively. These inputs are required to progress in some games, such as Super Mario Sunshine.
+
+### Real Wiimote Support
+
+There are two ways a real wiimote can work with dolphin-libretro. (tested on Arch Linux):
+
+#### Bluetooth passthrough
+
+This should "just work." Enable 'bluetooth passthrough mode' in the Core Options, then sync while core is running.
+
+#### Mayflash Dolphin Bar - mode 4
+
+Using Mayflash's Dolphin Bar in passthru mode requires a special udev rule to enable direct control. You'll need to create a new file (requires elevated privileges):
+
+`/etc/udev/rules.d/69-dolphin.rules`
+
+and then add this line:
+
+`SUBSYSTEM=="hidraw", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0306", MODE="0666"`
+
+Log out and/or reboot. When you log back in, set 'continuous scanning' ON in the Core Options, and set the controller to "Real Wiimote" in the Quick Menu's 'Controls' submenu.
 
 ## Compatibility
 
