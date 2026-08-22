@@ -35,27 +35,27 @@ Multi (MESS 2016) is a snapshot of the MESS project from v0.160. The MESS projec
 UME cores are no longer in RetroArch. Multi (UME 2015) was a snapshot of the Universal Machine Emulator. This was a precursor to the MAME/MESS merger, released by David Haywood (haze). The MAME and MESS project codebases co-existed in the MESS SVN development tree before they officially merged. This allowed haze to build and release the emulator with unmodified code from both projects under the name UME.
 
 ## Use the correct version of romset for the desired emulator
-  
+
 Arcade (MAME) will be the focus of this guide, but also the old Arcade (MAME 2016), the MULTI (MESS 2015) and MULTI (UME 2015) cores had this ability (so this information is also provided for documentation purposes). As in MAME arcade emulation, each core requires its own distinct version of software list "romsets", which the emulator supports.
 
 | Emulator | Required ROM Version | Notes |
 | :---: | :---: | :---: |
 | MAME (latest version) | MAME (latest version) | or same version if not in sync with MAME upstream |
-| MAME 2016 | MAME 0.174 | RetroArch core no longer provided | 
+| MAME 2016 | MAME 0.174 | RetroArch core no longer provided |
 | MESS 2015 | MAME 0.160 | RetroArch core no longer provided |
 | UME 2015 | MAME 0.160 | RetroArch core no longer provided |
 
 !!! tip
     For best results, start with a full software list ROM collection with a version that matches the emulator you are using. Individual romset zip files may not include BIOS ROMs, "Parent" romsets, necessary audio sample files, etc.
     Matching emulator and game versions is advised for maximum compatibility, but you may find mis-matched combinations also work.
-    
+
 ---
 
 ## Running software list machines
 There are two ways of configuring Retroarch to launch software list machines and games with MAME cores.
 
   1. **Method 1 - MAME Frontend direct launch:** uses the inbuilt MAME logic and hash files to launch your games
-  2. **Method - RetroArch fontend friendly via Libretro CMD file launch:** uses an extra libretro feature to pass command line functions to the core 
+  2. **Method - RetroArch frontend friendly via Libretro CMD file launch:** uses an extra libretro feature to pass command line functions to the core
 
 ### Method 1: MAME Frontend direct launch
 
@@ -94,7 +94,7 @@ Place any .zip games and .zip bios files required here:
 "YourPath"/Games/Atari 7800/a7800/asteroid.zip
 
 !!! note
-    To place the bios file above a7800 is the way that official MAME stores the data and thus also recommended here. You could also put the bios into the a7800 folder, but that's not how official MAME does it. 
+    To place the bios file above a7800 is the way that official MAME stores the data and thus also recommended here. You could also put the bios into the a7800 folder, but that's not how official MAME does it.
 
 You may also put or even extract the bios file to their own folder within the games directory
 "YourPath"/Games/Atari 7800/a7800/a7800/7800.rom
@@ -103,7 +103,7 @@ Now launch the game: In RetroArch, choose "Load Content" and browse to asteroid.
 
 (To Do: Add note about SoftList xml specifying the game names and crc and only supporting only those specific file names. Dummy files for CD-based games.)
 
-### Method 2: RetroArch frontend friendly via Libretro CMD file launching  
+### Method 2: RetroArch frontend friendly via Libretro CMD file launching
 
 This method follows the same folder structure as above, but you can use custom naming outside of the hash file included with MAME. It utilises some custom additions to the Libretro MAME Cores. Specifically the use of text files (.cmd) to replicate sending command line actions as you can with mainline MAME.
 
@@ -117,4 +117,3 @@ To do: Other path definitions, e.g. under Windows? Maybe explain the different s
 Now launch the game: In RetroArch, choose "Load Content" and browse to asteroid.cmd, and it should launch with MAME current.
 
 To do: Cmd file example
-

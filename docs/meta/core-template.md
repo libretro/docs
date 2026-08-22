@@ -93,7 +93,7 @@ Content that can be loaded by the [Core name] core have the following file exten
 
 - .[extension]
 
-// Copy the exntension entry from the core info file and paste it here.
+// Copy the extension entry from the core info file and paste it here.
 // https://github.com/libretro/libretro-super/tree/master/dist/info)
 // Also look at the core's libretro.c/libretro.cpp file, sometimes the core info files can get out of sync
 
