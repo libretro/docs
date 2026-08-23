@@ -237,6 +237,7 @@
 | vitaQuake 2 (Zaero)       | Game engine            | (See vitaQuake 2 note) |
 | vitaQuake 3               | Game engine            | A port of the VitaQuake 3 source port of iD's ioquake3 engine to libretro |
 | vitaVoyager               | Game engine            | A port of the Lilium Voyager engine, which runs the Star Trek: Voyager - Elite Force game and is itself based on the ioquake3 |
+| [WQXEmu](../library/wqxemu.md) | Wenquxing Electronic Dictionary | Emulates NC1020, PC1000, CC800, NC2000, and NC3000 models via low-level firmware execution |
 | WASM-4                    | Game engine            | WASM-4 is a open source low-level fantasy game console for building small games with WebAssembly |
 | X Millennium              | Sharp X1               |                    |
 | XRick                     | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |

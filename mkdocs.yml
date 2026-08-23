@@ -291,6 +291,8 @@ nav:
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
+      - 'Wenquxing Emulation':
+        - 'Wenquxing - Electronic Dictionary (WQXEmu)': 'library/wqxemu.md'
       - 'MegaDuck Emulation':
         - 'Welback Holdings - Mega Duck (SameDuck)': 'library/sameduck.md'
     - 'Core Library: Game and Scripting Engines':
