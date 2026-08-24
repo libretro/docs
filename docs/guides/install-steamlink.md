@@ -73,7 +73,7 @@ Find out the IP address that SteamLink receives, which you can learn from your r
 
 FileZilla
 
-| Host  | Username  | Passoword  | Port  |
+| Host  | Username  | Password  | Port  |
 |---|---|---|---|
 | 192.168.1.5  | root  |  steamlink123 | 22  |
 
