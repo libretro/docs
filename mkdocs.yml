@@ -140,6 +140,7 @@ nav:
         - 'Atari - Lynx (Handy)': 'library/handy.md'
         - 'Atari - Lynx (Holani)': 'library/holani.md'
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
+        - 'Atari - ST/STE/TT/Falcon (hatariB)': 'library/hatarib.md'
       - 'Bandai Emulation':
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
