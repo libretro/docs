@@ -138,6 +138,7 @@ This is a list of cores that are related to each other in some way.
 ## SNES
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](../library/beetle_bsnes.md)
+- [Nintendo - SNES / SFC (bsnes)](../library/bsnes.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](../library/bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](../library/bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](../library/bsnes_mercury_performance.md)

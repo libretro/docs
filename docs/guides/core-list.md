@@ -29,7 +29,7 @@
 | [bnes](../library/bnes.md) | Nintendo NES/Famicom   |                    |
 | boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
-| bsnes                     | Nintendo SNES/SFC      |                    |
+| [bsnes](../library/bsnes.md) | Nintendo SNES/SFC      |                    |
 | [bsnes 2014 Accuracy](../library/bsnes_accuracy.md) | Nintendo SNES/SFC      |                    |
 | [bsnes 2014 Balanced](../library/bsnes_balanced.md) | Nintendo SNES/SFC      |                    |
 | [bsnes 2014 Performance](../library/bsnes_performance.md) | Nintendo SNES/SFC      |                    |
