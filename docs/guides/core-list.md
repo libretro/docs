@@ -109,6 +109,7 @@
 | GW                        | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |
 | [Handy](../library/handy.md) | Atari Lynx             |                    |
 | [Hatari](../library/hatari.md) | Atari ST/STE/TT/Falcon |                    |
+| [hatariB](../library/hatarib.md) | Atari ST/STE/TT/Falcon |                    |
 | HBMAME                    | Arcade/Console/various | HBMAME (HomeBrew MAME) is a derivative of MAME, and contains various hacks and homebrews |
 | [higan Accuracy](../library/higan_accuracy.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | [Holani](../library/holani.md) | Atari Lynx             |                    |

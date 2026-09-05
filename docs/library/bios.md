@@ -109,6 +109,7 @@ SNES/Super Famicom            | higan Accuracy     | [BIOS information](higan_ac
 SNES/Super Famicom            | Mesen-S            | [BIOS information](mesen-s.md#bios)
 Super Cassette Vision         | EmuSCV             | [BIOS information](emuscv.md#bios)
 ST/STE/TT/Falcon              | Hatari             | [BIOS information](hatari.md#bios)
+ST/STE/TT/Falcon              | hatariB            | [BIOS information](hatarib.md#bios)
 Texas Instruments TI-83       | Numero             | [BIOS information](numero.md#bios)
 Thomson - MO/TO               | Theodore           | [BIOS information](theodore.md#bios)
 Vectrex                       | vecx               | [BIOS information](vecx.md#bios)
