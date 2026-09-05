@@ -101,6 +101,7 @@ Sharp - X68000                | PX68k              | [BIOS information](px68k.md
 SNES/Super Famicom            | bsnes Accuracy     | [BIOS information](bsnes_accuracy.md#bios)
 SNES/Super Famicom            | bsnes Balanced     | [BIOS information](bsnes_balanced.md#bios)
 SNES/Super Famicom            | bsnes Performance  | [BIOS information](bsnes_performance.md#bios)
+SNES/Super Famicom            | bsnes              | [BIOS information](bsnes.md#bios)
 SNES/Super Famicom            | bsnes-mercury Acc  | [BIOS information](bsnes_mercury_accuracy.md#bios)
 SNES/Super Famicom            | bsnes-mercury Bal  | [BIOS information](bsnes_mercury_balanced.md#bios)
 SNES/Super Famicom            | bsnes-mercury Perf | [BIOS information](bsnes_mercury_performance.md#bios)

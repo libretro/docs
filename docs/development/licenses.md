@@ -79,6 +79,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Beetle VB](../library/beetle_vb.md)             			           | [GPLv2](https://github.com/libretro/beetle-vb-libretro/blob/master/COPYING)               |                |
 | [blueMSX](../library/bluemsx.md)						   | [GPLv2](https://github.com/libretro/blueMSX-libretro/blob/master/license.txt)             |                |
 | [bnes](../library/bnes.md)                                                       | [GPLv3](https://github.com/libretro/bnes-libretro/blob/master/license)                    |                |
+| [bsnes](../library/bsnes.md)                                                     | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/master/LICENSE.txt)               |                |
 | [bsnes-mercury Accuracy](../library/bsnes_mercury_accuracy.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Performance](../library/bsnes_mercury_performance.md)             | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
