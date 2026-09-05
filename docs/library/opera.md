@@ -195,6 +195,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | L                            | ![](../image/retropad/retro_l1.png)            |
 | R                            | ![](../image/retropad/retro_r1.png)            |
 
+## Mouse
+
+| RetroMouse Inputs                                     | 3DO Mouse        |
+|-------------------------------------------------------|------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | 3DO Mouse Cursor |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | 3DO Mouse Left   |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | 3DO Mouse Right  |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | 3DO Mouse Middle |
+
 ## Compatibility
 
 - [Opera Core Compatibility List](http://wiki.fourdo.com/Compatibility_List)
