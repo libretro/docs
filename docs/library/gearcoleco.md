@@ -271,32 +271,32 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 ### ADAM Keyboard
 
-ADAM uses the frontend's keyboard callback. Letters, digits, punctuation, Return, Backspace, Tab and arrow keys type normally unless reassigned to a special key. Shift, Control and Caps Lock retain their ADAM modifier functions.
+ADAM uses the frontend's keyboard callback with fixed mappings. Letters, digits, punctuation, Return, Backspace, Tab and arrow keys type normally. Shift, Control and Caps Lock retain their ADAM modifier functions.
 
-The **ADAM Keyboard** core options configure the following bindings. Select *Unassigned* to disable a binding. Available host keys include F1-F15, letters, digits, punctuation, navigation keys and keypad Enter.
+!!! important "Enable RetroArch Game Focus before typing"
+    RetroArch normally assigns keyboard shortcuts to letters, Space, Escape and function keys. For example, F1 opens its menu, F2/F4 save/load states, F toggles fullscreen, H resets, P pauses, Space toggles fast-forward, and Escape quits. ADAM needs these keys for typing and its SmartKeys.
 
-| ADAM key | Core option | Default host key |
-|----------|-------------|------------------|
-| SmartKey I | `gearcoleco_adam_key_smartkey1` | **F1** |
-| SmartKey II | `gearcoleco_adam_key_smartkey2` | **F2** |
-| SmartKey III | `gearcoleco_adam_key_smartkey3` | **F3** |
-| SmartKey IV | `gearcoleco_adam_key_smartkey4` | **F4** |
-| SmartKey V | `gearcoleco_adam_key_smartkey5` | **F5** |
-| SmartKey VI | `gearcoleco_adam_key_smartkey6` | **F6** |
-| Wild Card | `gearcoleco_adam_key_wildcard` | **F7** |
-| Undo | `gearcoleco_adam_key_undo` | **F8** |
-| ADAM Home | `gearcoleco_adam_key_home` | **F9** |
-| Move / Copy | `gearcoleco_adam_key_move` | **INSERT** |
-| Store / Fetch | `gearcoleco_adam_key_store` | **HOME** |
-| Insert | `gearcoleco_adam_key_insert` | **DELETE** |
-| Print | `gearcoleco_adam_key_print` | **END** |
-| Clear | `gearcoleco_adam_key_clear` | **PAGEUP** |
-| Delete | `gearcoleco_adam_key_delete` | **PAGEDOWN** |
-| Escape / WP | `gearcoleco_adam_key_escape` | **ESCAPE** |
+    Set **Settings > Input > Auto Enable 'Game Focus' Mode** to **Detect**, or toggle Game Focus manually (Scroll Lock by default) before typing. Gearcoleco requests keyboard input when ADAM loads, allowing automatic detection; ordinary ColecoVision startup does not request it. RetroArch's default automatic Game Focus setting is Off.
 
-Reassigning a host key clears its previous ADAM special-key binding. Assigning a normal typing key to a special key replaces that key's typing function. Changes release held ADAM keys to prevent stuck input; the frontend stores the mappings as core options.
+    Toggle Game Focus off again before using RetroArch shortcuts. If your keyboard lacks Scroll Lock, assign **Settings > Input > Hotkeys > Game Focus Toggle** to F10. Gearcoleco leaves F9-F12 and Scroll Lock unmapped in ADAM.
 
-Configure the frontend's keyboard focus and hotkeys so the selected keys reach the core. These mappings do not change the frontend's own shortcuts.
+See [RetroArch's direct keyboard input guidance](../guides/input-and-controls.md#cores-with-direct-keyboard-input) for Game Focus and frontend hotkey configuration. The core cannot suppress frontend shortcuts before Game Focus is enabled or account for arbitrary custom frontend bindings.
+
+With Game Focus enabled, the ADAM special keys are:
+
+| Host key | ADAM key |
+|----------|----------|
+| F1-F6 | SmartKey I-VI |
+| F7 | Undo |
+| F8 | Wild Card |
+| Home | ADAM Home |
+| Insert | Insert |
+| Delete | Delete |
+| Page Up | Move / Copy |
+| Page Down | Store / Fetch |
+| End | Clear |
+| Print Screen | Print |
+| Escape | Escape / WP |
 
 ## External Links
 
