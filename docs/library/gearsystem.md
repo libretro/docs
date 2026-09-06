@@ -8,11 +8,11 @@ Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
-- Light Phaser and Paddle Control support.
+- Light Phaser, Paddle Control and Sports Pad support.
 - Internal database for ROM detection.
 - Battery-backed RAM save support.
 - Game Genie and Pro Action Replay cheat support.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearsystem core has been authored by
 
@@ -109,13 +109,13 @@ The Gearsystem core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Gearsystem core's provided FPS is 60 for NTSC games and 50 for PAL games
+- The Gearsystem core's provided FPS is approximately 59.92 for NTSC games, 49.70 for PAL Master System games and 50.17 for PAL SG-1000 games
 - The Gearsystem core's provided sample rate is 44100 Hz
-- The Gearsystem core's base width is 256 for Master System / SG-1000 games and 160 for Game Gear games
-- The Gearsystem core's base height is 192 for Master System / SG-1000 games and 144 for Game Gear games
+- The Gearsystem core's base width is 256 for Master System / SG-1000 games and 160 for native Game Gear games; Game Gear SMS mode uses the Master System dimensions
+- The Gearsystem core's base height is 192 for Master System / SG-1000 games (224 in extended mode) and 144 for native Game Gear games; overscan and left-bar cropping can change the output size
 - The Gearsystem core's max width is 320
 - The Gearsystem core's max height is 288
-- The Gearsystem core's provided aspect ratio is 4:3 for Master System / SG-1000 games and 10:9 for Game Gear games
+- The Gearsystem core uses square pixels by default (4:3 at 256x192 and 10:9 at 160x144); the ['Aspect Ratio' core option](#core-options) can override this
 
 ## Core options
 
@@ -181,8 +181,8 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	Select which refresh rate will be used in emulation.
 
     - *Auto* selects the best refresh rate based on the ROM.
-    - *NTSC (60 Hz)* forces 60 Hz.
-    - *PAL (50 Hz)* forces 50 Hz.
+    - *NTSC (60 Hz)* selects NTSC timing.
+    - *PAL (50 Hz)* selects PAL timing.
 
 - **Aspect Ratio** [gearsystem_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
@@ -287,7 +287,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *1* is the lowest sensitivity.
     - *15* is the highest sensitivity.
 
+- **Sports Pad Sensitivity** [gearsystem_sports_pad_sensitivity] (**8**|1-15)
+
+    Set the sensitivity of the [Sports Pad](#sports-pad). Higher values produce faster trackball movement.
+
 ## Joypad
+
+Select the emulated controller using the frontend's port device type. *Sports Pad* is available on ports 1 and 2; *Sega Light Phaser* and *Paddle Control* are available on port 1.
 
 ![](../image/controller/gg.png)
 
@@ -304,6 +310,19 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_b.png)             | 1                        |
 | ![](../image/retropad/retro_a.png)             | 2                        |
 | ![](../image/retropad/retro_start.png)         | Pause / Start            |
+| ![](../image/retropad/retro_select.png)        | Reset                    |
+
+## Sports Pad
+
+Select *Sports Pad* as the device type for the desired port. The left analog stick controls the trackball.
+
+| RetroPad Inputs                                | Sports Pad               |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_left_stick.png)    | Trackball movement       |
+| ![](../image/retropad/retro_b.png)             | 1                        |
+| ![](../image/retropad/retro_a.png)             | 2                        |
+| ![](../image/retropad/retro_start.png)         | Pause                    |
+| ![](../image/retropad/retro_select.png)        | Reset                    |
 
 ## Light Gun
 
