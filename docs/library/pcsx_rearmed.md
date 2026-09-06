@@ -45,6 +45,24 @@ If none of the above is found, PCSX_ReARMed will search for filenames starting w
 It doesn't seem to matter whatever BIOS version is used and from what region, as long as it's from a retail PSX/PS one.
 If no compatible BIOS is found, PCSX_ReARMed will revert to use the HLE BIOS, which can have compatibility issues (e.g. memory card issues in Suikoden games, some games just going into black screens, ...).
 
+### Using OpenBIOS
+
+Unlike the other PlayStation cores (such as Beetle PSX, Beetle PSX HW, and SwanStation), PCSX ReARMed does not include OpenBIOS built-in. Instead, it features High-Level Emulation (HLE) BIOS, eliminating the need for an official BIOS file for most games. However, you can still use OpenBIOS (openbios.bin) by following the sections below.
+
+#### 1. Core configuration
+
+Make sure that you are using the default configuration:
+
+* Load a game: `Main Menu → Load Content` → Load any PlayStation game with PCSX ReARMed.
+* Navigate to: `Quick Menu → Core Options → System`.
+* Make sure that **BIOS Selection** is set to `Auto`, which will attempt to load a real BIOS file from the frontend `system` directory.
+
+#### 2. Acquiring and setting up `openbios.bin`
+- As noted on https://github.com/grumpycoders/pcsx-redux, the latest AppImage is available at https://distrib.app/pub/org/pcsx-redux/project/dev-linux-x64.
+- Extract the Appimage: `./PCSX-Redux-HEAD-x86_64.AppImage --appimage-extract`
+- Copy the `openbios.bin` file from the generated `squashfs-root/usr/share/pcsx-redux/resources` directory.
+- Place `openbios.bin` in your RetroArch System/BIOS directory.
+
 ## Extensions
 
 Content that can be loaded by the PCSX ReARMed core have the following file extensions:
