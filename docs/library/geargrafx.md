@@ -12,11 +12,12 @@ Geargrafx is an open source, cross-platform PC Engine, TurboGrafx-16, and SuperG
     * Standard Gamepad (2 buttons)
     * Avenue Pad 3 (3 buttons, auto-configured based on game)
     * Avenue Pad 6 (6 buttons)
+    * PC Engine Mouse
 - Adjustable scanline count (224p, 240p, or manual).
 - Standard RGB, Turboxray, and Kitrinx color palettes.
 - HES music ROM support.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
 
 The Geargrafx core has been authored by:
 
@@ -35,7 +36,7 @@ Geargrafx requires a BIOS file to run CD-ROM games.
 Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
-	 Any CD-ROM System BIOS will work, but some are known to be incompatible with certain games.
+	System Card 3 is recommended for standard CD-ROM games. Some games require a different System Card or the Game Express BIOS.
 
 !!! attention
 	 You can choose the BIOS to use in the core options menu.
@@ -46,6 +47,8 @@ Required or optional firmware files go in RetroArch's system directory.
 | syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
 | syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
 | gexpress.pce  | Game Express CD Card - Optional       |                                  |
+
+The **CD BIOS** option defaults to *System Card 3*. Known Game Express games automatically use `gexpress.pce`; *Force Game Express* is available for unrecognized or modified discs.
 
 ## Extensions
 
@@ -106,7 +109,10 @@ The Geargrafx core saves/loads to/from these directories.
 
 | File  | Description            |
 |:-----:|:----------------------:|
-| *.srm | Cartridge battery save |
+| *.srm | Backup RAM save        |
+| geargrafx_mb128.sav | Shared Memory Base 128 save |
+
+Memory Base 128 uses one shared save file across games when the device is enabled.
 
 **Frontend's State directory**
 
@@ -183,7 +189,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     Set the intensity of the video low-pass filter as a percentage from 0 to 100.
 
-- **Video LPF Cutoff** [geargrafx_lowpass_cutoff] (**5.0 MHz**|3.0 MHz|3.5 MHz|4.0 MHz|4.5 MHz|5.0 MHz|5.5 MHz|6.0 MHz|6.5 MHz|7.0 MHz)
+- **Video LPF Cutoff** [geargrafx_lowpass_cutoff] (**5.0 MHz**|3.0 MHz|3.5 MHz|4.0 MHz|4.5 MHz|5.5 MHz|6.0 MHz|6.5 MHz|7.0 MHz)
 
     Set the cutoff frequency of the video low-pass filter. Lower values produce a softer image.
 
@@ -220,9 +226,9 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *Super CD-ROM* forces Super CD-ROM² system.
     - *Arcade CD-ROM* forces Arcade CD-ROM² system.
 
-- **CD-ROM BIOS (restart)** [geargrafx_cdrom_bios] (**Auto**|System Card 1|System Card 2|System Card 3|Game Express)
+- **CD BIOS (restart)** [geargrafx_cdrom_bios] (**System Card 3**|System Card 2|System Card 1|Force Game Express)
 
-    Specify the BIOS file to use for CD-ROM emulation. The *Auto* setting automatically selects the appropriate BIOS based on the loaded content. You can also manually choose one for compatibility with specific games.
+    Select the System Card BIOS for standard CD-ROM games. *System Card 3* is recommended. Known Game Express games automatically use `gexpress.pce`; select *Force Game Express* only for unrecognized or modified discs.
 
 - **Preload CD-ROM (restart)** [geargrafx_cdrom_preload] (**Disabled**|Enabled)
 
@@ -378,6 +384,19 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_r1.png)         |                    |                            | VI                      |
 | ![](../image/retropad/retro_l2.png)         | Toggle Turbo II when enabled | Toggle Turbo II when enabled | Toggle Turbo II when enabled |
 | ![](../image/retropad/retro_r2.png)         | Toggle Turbo I when enabled  | Toggle Turbo I when enabled  | Toggle Turbo I when enabled  |
+
+## Mouse
+
+Select *Mouse* as the device type for a controller port. Only one mouse is active at a time; the first port configured as a mouse is used. Adjust movement with **Mouse Sensitivity**.
+
+| RetroMouse Inputs | PC Engine Mouse |
+|-------------------|-----------------|
+| Mouse movement    | Movement        |
+| Left button       | II              |
+| Right button      | I               |
+| Middle button     | Run             |
+| Button 4          | Select          |
+| Button 5          | Run             |
 
 ## External Links
 

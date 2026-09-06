@@ -7,9 +7,10 @@ Gearlynx is an open source, cross-platform Atari Lynx emulator written in C++.
 - Very accurate emulation supporting the entire commercial Atari Lynx catalog.
 - Bank switching (BANK1 + AUDIN) and EEPROM support.
 - Save files (EEPROM and NVRAM).
+- GameDrive and ElCheapoSD cartridge support.
 - Configurable low-pass audio filter.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearlynx core has been authored by:
 
@@ -41,6 +42,7 @@ Content that can be loaded by the Gearlynx core have the following file extensio
 - .lnx
 - .lyx
 - .o
+- .bin
 
 RetroArch database(s) that are associated with the Gearlynx core:
 
@@ -104,6 +106,12 @@ The Gearlynx core saves/loads to/from these directories.
 - The Gearlynx core's max height is 160
 - The Gearlynx core's provided aspect ratio is dependent on the ['Aspect Ratio' core option](#core-options).
 
+## SD cartridges
+
+GameDrive and ElCheapoSD use the loaded ROM's directory as the emulated SD card root. Place the files required by the cartridge in that directory and select the appropriate **Cartridge Hardware** option if automatic detection does not identify it.
+
+SD cartridge access requires a frontend with VFS version 3 support and a content path that identifies the ROM directory. Write operations also require frontend write support and permission to write to the content directory. These files are separate from the frontend-managed EEPROM/NVRAM `.srm` save.
+
 ## Core options
 
 The Gearlynx core has the following options that can be tweaked from the core options menu. The default setting is bolded.
@@ -119,7 +127,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *16:9 DAR* forces 16:9 aspect ratio.
 	- *16:10 DAR* forces 16:10 aspect ratio.
 
-- **Screen Rotation** [gearlynx_rotation] (**Auto**|Left|Right|Disabled)
+- **Screen Rotation** [gearlynx_rotation] (**Auto**|Left|Right|Disabled|180)
 
 	Rotates the screen display. This is useful since many Lynx games were designed to be played with the system held vertically.
 
@@ -127,6 +135,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *Left* rotates the screen 90 degrees counter-clockwise.
 	- *Right* rotates the screen 90 degrees clockwise.
 	- *Disabled* forces the screen to remain in standard horizontal orientation.
+	- *180* rotates the screen upside down.
 
 - **Console Type** [gearlynx_console_type] (**Auto**|Lynx I|Lynx II)
 
@@ -140,11 +149,15 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 	Override the cartridge EEPROM capacity and organization. *Auto* uses the cartridge header or game database. Restart or reload the content to apply changes.
 
-- **Fast Sprite Rendering** [gearlynx_fast_sprite_rendering] (**Disabled**|Enabled)
+- **Cartridge Hardware (restart)** [gearlynx_cartridge_hardware] (**Auto**|Standard|GameDrive|ElCheapoSD)
 
-	Use a simpler, faster sprite renderer. This is less accurate for mid-render interrupt effects used by some demos.
+	Override special cartridge hardware. *Auto* uses the cartridge header or game database. Restart or reload the content to apply changes.
 
-- **Audio Low-Pass Filter (Hz)** [gearlynx_lowpass_filter] (**3500**|500|1000|1500|2000|2500|3000|3500|4000|4500|5000)
+- **Legacy Sprite Renderer** [gearlynx_legacy_sprite_renderer] (**Disabled**|Enabled)
+
+	Use a simpler, faster Suzy sprite renderer. This is less accurate for mid-render interrupt effects used by some demos. It is best to keep this option disabled.
+
+- **Audio Low-Pass Filter (Hz)** [gearlynx_lowpass_filter] (**3500**|500|1000|1500|2000|2500|3000|4000|4500|5000)
 
 	Configures a low-pass audio filter to reduce high-frequency noise.
 
