@@ -246,6 +246,8 @@ nav:
       - 'Philips Emulation':
         - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
         - 'Philips - P2000T (M2000)': 'library/m2000.md'
+      - 'Picocomputer Emulation':
+        - 'Rumbledethumps - Picocomputer 6502 (RP6502)': 'library/rp6502.md'
       - 'RISC-V Emulation':
         - 'RVVM - RISC-V Virtual Machine': 'library/rvvm.md'
       - 'SNK Emulation':
