@@ -167,6 +167,7 @@
 | PCem                      | IBM PC                 |                    |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       |                    |
 | [PD777](../library/pd777.md) | Epoch Cassette Vision |                    |
+| [Picocomputer 6502](../library/rp6502.md) | Picocomputer 6502 | An open source 8-bit computer you can build |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
 | Pocket CDG                | Karaoke player         | A karaoke music player, ported to libretro |
