@@ -292,10 +292,14 @@ The bsnes core is based on the latest bsnes source and targets accurate, faithfu
 
 #### Nintendo - SNES / SFC
 
-- [Nintendo - SNES / Famicom (Beetle bsnes)](beetle_bsnes.md)
-- [Nintendo - SNES / Famicom (bsnes-jg)](bsnes-jg.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / FSC (Beetle bsnes)](beetle_bsnes.md)
+- [Nintendo - SNES / FSC (bsnes C++98 (v085))](bsnes_cplusplus98.md)
+- [Nintendo - SNES / FSC (bsnes-jg)](bsnes-jg.md)
+- [Nintendo - SNES / FSC (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
+- [Nintendo - SNES / FSC (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
+- [Nintendo - SNES / FSC (bsnes-mercury Performance)](bsnes_mercury_performance.md)
+- [Nintendo - SNES / FSC (Snes9x)](snes9x.md)
+- [Nintendo - SNES / FSC (bsnes Accuracy)](bsnes_accuracy.md)
+- [Nintendo - SNES / FSC (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / FSC (bsnes Performance)](bsnes_performance.md)
 - [Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)](mesen-s.md)
-- [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
