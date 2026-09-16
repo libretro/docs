@@ -28,6 +28,7 @@ ment = "ment"        # part of "Greg DeMent", a real person's surname (library/p
 nd = "nd"            # part of "Button 2ND" (library/numero.md)
 som = "som"          # som_msu1.sfc, a real filename (library/snes9x.md)
 hsi = "hsi"          # .hsi file extension (guides/softwarelist-getting-started.md)
+ahd = "ahd"          # Atari hard drive image extension (library/hatarib.md)
 discernable = "discernable"  # a widely-accepted alternate spelling of "discernible" (guides/rgui.md)
 alis = "alis"        # KEY_ALIS, an example keytool placeholder (development/retroarch/compilation/android.md)
 ba = "ba"            # part of the "ba4980-c-sdk" tool-repo URL slug (library/gam4980.md)
