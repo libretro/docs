@@ -62,6 +62,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Anarch](../library/anarch.md)                                                   | [CC0](https://codeberg.org/iyzsong/anarch-libretro/src/branch/master/LICENSE)             |                |
+| [AnyGM](../library/anygm.md) | [MIT](https://github.com/retrodiv/AnyGM-libretro/blob/f18d67fbe8fd164094fc1477ff7692d6ff8fc67b/LICENSE) |  |
 | [Ardens](../library/ardens.md)                                       | [MIT](https://github.com/tiberiusbrown/Ardens/blob/master/LICENSE.txt)                         |                |
 | [AmiArcadia](../library/amiarcadia.md)                               | [Non-commercial](https://amigan.1emu.net/releases/)                                       | Non-commercial |
 | [Atari800](../library/atari800.md)               			           | [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)                         |                |
