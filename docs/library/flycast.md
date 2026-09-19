@@ -66,6 +66,9 @@ Required or optional firmware files go in RetroArch's system directory.
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
 
+!!! note
+    If you load the core manually and then start the core without any content selected, this will boot Dreamcast BIOS Menu.
+
 ## Features
 
 | Feature           | Supported |
@@ -137,12 +140,6 @@ Configure region, language, BIOS and base hardware settings.
 !!! regular ""
 
 	Force use of high-level emulation BIOS.
-
-**Boot to BIOS** [flycast_boot_to_bios] (**disabled**|enabled)
-
-!!! regular ""
-
-	Boot directly into the Dreamcast BIOS menu.
 
 **Enable DSP** [flycast_enable_dsp] (**enabled**|disabled)
 
