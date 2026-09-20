@@ -245,3 +245,4 @@
 | XRick                     | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
 | YabaSanshiro              | Sega Saturn            | A port of the YabaSanshiro, which is itself a fork of Yabause emulator |
 | Yabause                   | Sega Saturn            |                    |
+| [ZEsarPCW](../library/zesarpcw.md) | Amstrad PCW 8256/8512 | Amstrad PCW 8256/8512; no external BIOS required |
