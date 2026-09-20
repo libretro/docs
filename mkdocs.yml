@@ -142,6 +142,7 @@ nav:
         - 'Atari - ST/STE/TT/Falcon (Hatari)': 'library/hatari.md'
         - 'Atari - ST/STE/TT/Falcon (hatariB)': 'library/hatarib.md'
       - 'Bandai Emulation':
+        - 'Bandai - Playdia (PlaydiaEmu)': 'library/playdiaemu.md'
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
       - 'BBK electronic dictionary':

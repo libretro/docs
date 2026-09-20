@@ -192,6 +192,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [PD777](../library/pd777.md)                                               | [MIT](https://github.com/mittonk/PD777/blob/main/LICENSE)                |                |
 | [PicoDrive](../library/picodrive.md)                                             | [MAME (Non-commercial)](https://github.com/libretro/picodrive/blob/master/COPYING)        | Non-commercial |
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
+| [PlaydiaEmu](../library/playdiaemu.md)                                           | [BSD-3-Clause](https://github.com/AloysHF/PlaydiaEmu/blob/master/LICENSE)                 |                |
 | [PokeMini](../library/pokemini.md)                                               | [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)                         |                |
 | [PPSSPP](../library/ppsspp.md)                                                   | [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)                       |                |
 | [PrBoom](../library/prboom.md)                                                   | [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)                  |                |

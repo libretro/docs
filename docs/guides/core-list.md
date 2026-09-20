@@ -169,6 +169,7 @@
 | [PD777](../library/pd777.md) | Epoch Cassette Vision |                    |
 | PicoDrive                 | Sega MS/GG/MD/CD/32X   |                    |
 | Play!                     | Sony PlayStation 2     |                    |
+| [PlaydiaEmu](../library/playdiaemu.md) | Bandai Playdia | An emulator for the Bandai Playdia interactive CD console |
 | Pocket CDG                | Karaoke player         | A karaoke music player, ported to libretro |
 | [PokeMini](../library/pokemini.md)   | Nintendo Pokemon Mini  |                    |
 | Potator                   | Watara Supervision     |                    |
