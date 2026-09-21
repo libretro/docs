@@ -324,6 +324,7 @@ nav:
       - 'MicroW8': 'library/microw8.md'
       - 'Minecraft (Craft)': 'library/craft.md'
       - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
+      - 'OpenBOR (AnyBOR)': 'library/anybor.md'
       - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
       - 'Rick Dangerous (XRick)': 'library/xrick.md'
       - 'RPG Maker Emulation':

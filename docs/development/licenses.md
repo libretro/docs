@@ -17,6 +17,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Lakka](http://www.lakka.tv/)                                                    | [Non-commercial](http://www.lakka.tv/doc/FAQ/)                                            | Non-commercial |
 | [Opera](../library/opera.md)                         			                       | [Non-commercial](https://github.com/libretro/opera-libretro/blob/master/libopera/opera_core.h)      | Non-commercial |
 | [AmiArcadia](../library/amiarcadia.md)                                           | [Non-commercial](https://amigan.1emu.net/releases/)                                       | Non-commercial |
+| [AnyBOR](../library/anybor.md) | [Non-commercial](https://github.com/retrodiv/AnyBOR-libretro/blob/ca0cc73eac6c2bc83c15b7006dffc1435620a3d0/LICENSES.md) | Non-commercial |
 | [Cannonball](../library/cannonball.md)                                           | [Non-commercial](https://github.com/libretro/cannonball/blob/master/docs/license.txt)     | Non-commercial |
 | [DingooEmu](../library/dingooemu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/DingooEmu/blob/master/LICENSE)             |                |
 | [Dinothawr](../library/dinothawr.md)             			                       | [Non-commercial](https://github.com/libretro/Dinothawr/blob/master/LICENSE)               | Non-commercial |
@@ -62,6 +63,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Anarch](../library/anarch.md)                                                   | [CC0](https://codeberg.org/iyzsong/anarch-libretro/src/branch/master/LICENSE)             |                |
+| [AnyBOR](../library/anybor.md) | [Non-commercial](https://github.com/retrodiv/AnyBOR-libretro/blob/ca0cc73eac6c2bc83c15b7006dffc1435620a3d0/LICENSES.md) | Non-commercial |
 | [Ardens](../library/ardens.md)                                       | [MIT](https://github.com/tiberiusbrown/Ardens/blob/master/LICENSE.txt)                         |                |
 | [AmiArcadia](../library/amiarcadia.md)                               | [Non-commercial](https://amigan.1emu.net/releases/)                                       | Non-commercial |
 | [Atari800](../library/atari800.md)               			           | [GPLv2](https://github.com/atari800/atari800/blob/master/COPYING)                         |                |
