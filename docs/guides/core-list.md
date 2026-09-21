@@ -5,6 +5,7 @@
 | [4DO](https://docs.libretro.com/library/opera/) | 3DO                    |                    |
 | a5200                     | Atari 5200             |                    |
 | Anarch                    | Game                   | A port of Anarch, 90s-style Doom clone shooter game |
+| [AnyBOR](../library/anybor.md) | Game engine | An OpenBOR engine port with automatic version selection, combining builds 3400 through 8020 |
 | [Ardens](../library/ardens.md) | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/) | Atari 5200             |                    |
