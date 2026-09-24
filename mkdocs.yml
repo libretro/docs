@@ -234,6 +234,7 @@ nav:
         - 'Nintendo - SNES / Famicom (Snes9x 2010)': 'library/snes9x_2010.md'
         - 'Nintendo - SNES / Famicom (Snes9x)': 'library/snes9x.md'
         - 'Nintendo - Virtual Boy (Beetle VB)': 'library/beetle_vb.md'
+        - 'Nintendo - Wii U (Cemu)': 'library/cemu.md'
       - 'NEC Emulation':
         - 'NEC - PC-FX Compatibility List': 'library/compatibility/pcfx.md'
         - 'NEC - PC-8000 / PC-8800 series (QUASI88)': 'library/quasi88.md'
@@ -284,6 +285,7 @@ nav:
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
         - 'Sony - PlayStation 2 (PCSX2)': 'library/lrps2.md'
+        - 'Sony - PlayStation 2 (PCEE2)': 'library/pcee2.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
       - 'SpectraVision Emulation':
