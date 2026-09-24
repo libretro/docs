@@ -130,7 +130,7 @@ nav:
         - 'Ardens': 'library/ardens.md'
       - 'Atari Emulation':
         - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
-        - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'
+        - 'Atari - Lynx Compatibility List': 'library/compatibility/lynx.md'
         - 'Atari - 2600 (Stella)': 'library/stella.md'
         - 'Atari - 2600 (Stella 2014)': 'library/stella2014.md'
         - 'Atari - 2600 (Stella 2023)': 'library/stella2023.md'

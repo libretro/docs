@@ -138,6 +138,262 @@ When disks are modified by saving your game, or otherwise writing to the disk, t
 - The hatariB core's maximum height is 588
 - The hatariB core's provided aspect ratio is configurable to 1.000 (square, default), 0.844 (atari colour monitor), 1.010 (atari monochrome monitor), 0.766 (NTSC TV), 0.921 (PAL TV), 0.750 (4:3)
 
+## Core options
+
+The hatariB core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+Options marked "Causes restart!!" restart the emulated machine when changed. The **TOS ROM** list also offers every `.img`, `.rom` and `.bin` found in `system/hatarib/`.
+
+#### System
+
+- **TOS ROM** [hatarib_tos] (system/tos.img|EmuTOS 1024k|**EmuTOS 192uk**|EmuTOS 192us)
+
+	Causes restart!! BIOS ROM can use built-in EmuTOS, or choose from:  system/tos.img (default)  system/hatarib/* (all .img, .rom, .bin in folder)
+
+- **Monitor** [hatarib_monitor] (Monochrome High-Resolution|**RGB Colour Low/Medium-Resolution**|VGA|TV)
+
+	Causes restart!! Monitor type. Colour, Monochrome, VGA, TV. TV scanlines effect requires doubled low/medium resolution.
+
+- **Machine Type** [hatarib_machine] (**ST**|Mega ST|STE|Mega STE|TT|Falcon)
+
+	Causes restart!! Atari computer type.
+
+- **ST Memory Size** [hatarib_memory] (256 KB|512 KB|**1 MB**|2 MB|2.5 MB|4 MB|8 MB|10 MB|14 MB)
+
+	Causes restart!! Atari ST memory size.
+
+- **Fast Floppy** [hatarib_fast_floppy] (Off|**On**)
+
+	Artificially accelerate floppy disk access, reducing load times.
+
+- **Save Floppy Disks** [hatarib_save_floppy] (Off|**On**)
+
+	Changes to floppy disks will save a copy in saves/. If turned off, changes will be lost when the content is closed.
+
+- **Floppy Savestate Safety Save** [hatarib_savestate_floppy_modify] (Off|**On**)
+
+	Disable this for netplay or run-ahead. Modified floppies are always saved during eject or content closing,  but this setting produces an extra save before/after restoring a savestate to prevent un-ejected data loss. Because netplay and run-ahead use savestates constantly, this should be turned off for those activities.
+
+- **Soft Reset** [hatarib_soft_reset] (**Off**|On)
+
+	Core Restart is full cold boot by default (power off, on), but this will change it to a warm boot (reset button).
+
+- **Cartridge ROM** [hatarib_cartridge] (**None**)
+
+	ROM image for cartridge port, list of files from system/hatarib/.
+
+- **Hard Disk** [hatarib_hardimg] (**None**)
+
+	Causes restart!! Hard drive image, list of files and directories from system/hatarib/.
+
+- **Hard Disk Type** [hatarib_hardtype] (**GemDOS**|GemDOS (Use 8-bit Filenames)|ACSI|SCSI|IDE (Auto)|IDE (Byte Swap Off)|IDE (Byte Swap On))
+
+	Causes restart!! GemDOS type will simulate a hard disk from a folder in system/hatarib/. The other types must use an image file.
+
+- **Hard Disk Boot** [hatarib_hardboot] (**Off**|On)
+
+	Boot from hard disk.
+
+- **Hard Disk Write Protect** [hatarib_hard_readonly] (Off|**On**|Auto)
+
+	Write protect the hard disk folder or image.
+
+- **EmuTOS Framerate** [hatarib_emutos_framerate] (**Default**|NTSC 60 Hz|PAL 50 Hz)
+
+	Causes restart!! For EmuTOS ROMs this can override the default framerate.
+
+- **EmuTOS 1024k Region** [hatarib_emutos_region] (**Default**|USA (NTSC)|Germany|France|United Kingdom|Spain|Italy|Sweden|Switzerland (French)|Switzerland (German)|Turkey|Finland|Norway|Denmark|Saudi Arabia|Netherlands|Czech Republic|Hungary|Poland|Russia|Greece|Multilanguage)
+
+	Causes restart!! EmuTOS 1024k can choose a default region, which sets language and keyboard.
+
+#### Input
+
+- **Joystick 1** [hatarib_joy1_port] (None|Joy 0|**Joy 1**|STE A|STE B|Parallel 1|Parallel 2)
+
+	Retropad 1 assigned Atari port.
+
+- **Joystick 2** [hatarib_joy2_port] (None|**Joy 0**|Joy 1|STE A|STE B|Parallel 1|Parallel 2)
+
+	Retropad 2 assigned Atari port.
+
+- **Joystick 3** [hatarib_joy3_port] (None|Joy 0|Joy 1|**STE A**|STE B|Parallel 1|Parallel 2)
+
+	Retropad 3 assigned Atari port.
+
+- **Joystick 4** [hatarib_joy4_port] (None|Joy 0|Joy 1|STE A|**STE B**|Parallel 1|Parallel 2)
+
+	Retropad 4 assigned Atari port.
+
+- **Mouse** [hatarib_mouse_port] (None|**Joy 0**)
+
+	Mouse connected to Joy 0 port. This can be connected at the same time as a joystick, but their inputs will overlap.
+
+- **Host Mouse Enabled** [hatarib_host_mouse] (Off|**On**)
+
+	Allow input from your own mouse device. With this disabled you can still use the retropad mouse inputs.
+
+- **Host Keyboard Enabled** [hatarib_host_keyboard] (Off|**On**)
+
+	Allow input from your own keyboard. With this disabled you can still use the onscreen keyboard or retropad mapped keys.
+
+- **Auto-Fire Rate** [hatarib_autofire] (2|3|4|5|**6**|7|8|9|10|11|12|13|14|15|16|17|18|19|20)
+
+	Frames per button press with auto-fire. (Lower number is faster.)
+
+- **Analog Stick Threshold** [hatarib_stick_threshold] (5%|10%|20%|**30%**|40%|50%|60%|70%|80%|90%|95%)
+
+	How far to tilt in a direction to activate the joystick direction, if mapped to an analog stick.
+
+- **Mouse Host Sensitivity** [hatarib_mouse_host_speed] (1|2|3|4|**5**|6|7|8|9|10)
+
+	Speed of the mouse when controlled by the host device mouse.
+
+- **Mouse Stick Speed** [hatarib_mouse_speed] (1|2|3|4|**5**|6|7|8|9|10)
+
+	Speed of the mouse when controlled by the analog sticks.
+
+- **Mouse Stick Deadzone** [hatarib_mouse_deadzone] (0%|1%|2%|3%|4%|**5%**|6%|7%|8%|9%|10%|11%|12%|13%|14%|15%|20%|25%|30%|35%|40%|45%|50%)
+
+	Dead zone for mouse analog stick control to prevent movement from controller randomness.
+
+- **On-Screen Keyboard Layout** [hatarib_osk_layout] (**US QWERTY**|German QWERTZ|French AZERTY|UK QWERTY|Spanish QWERTY|Italian QWERTY|Swedish QWERTY|Swiss French QWERTZ|Swiss German QWERTZ|Finnish QWERTY|Norwegian QWERTY|Danish QWERTY|Dutch QWERTY|Czech QWERTZ|Hungarian QWERTZ|Polish QWERTY)
+
+	Choose a language layout for the on-screen keyboard.
+
+- **On-Screen Keyboard Press Time** [hatarib_osk_press_len] (1|2|3|4|**5**|6|7|8|9|10|15|20|25|30|35|40|45|50|55|60|65|70|71)
+
+	Minimum number of frames to apply a button press from the on-screen keyboard
+
+- **On-Screen Keyboard Repeat Delay** [hatarib_osk_repeat_delay] (50 ms|75 ms|100 ms|125 ms|150 ms|175 ms|200 ms|225 ms|250 ms|275 ms|300 ms|325 ms|350 ms|375 ms|400 ms|425 ms|450 ms|475 ms|**500 ms**|550 ms|600 ms|650 ms|700 ms|750 ms|800 ms|850 ms|900 ms|950 ms|1000 ms|1100 ms|1200 ms|1300 ms|1400 ms|1500 ms|1600 ms|1700 ms|1800 ms|1900 ms|2000 ms|2200 ms|2400 ms|2600 ms|2800 ms|3000 ms|Off)
+
+	Holding a direction will repeat moves after this amount of time.
+
+- **On-Screen Keyboard Repeat Rate** [hatarib_osk_repeat_rate] (50 ms|75 ms|100 ms|125 ms|**150 ms**|175 ms|200 ms|225 ms|250 ms|275 ms|300 ms|325 ms|350 ms|375 ms|400 ms|425 ms|450 ms|475 ms|500 ms|550 ms|600 ms|650 ms|700 ms|750 ms|800 ms|850 ms|900 ms|950 ms|1000 ms|1100 ms|1200 ms|1300 ms|1400 ms|1500 ms|1600 ms|1700 ms|1800 ms|1900 ms|2000 ms|2200 ms|2400 ms|2600 ms|2800 ms|3000 ms)
+
+	Holding a direction will repeat moves at this rate after the first delay.
+
+#### Video
+
+- **Resolution Double** [hatarib_res2x] (Off|**Double Medium**|Double Low + Medium)
+
+	Doubles pixels for low and/or medium resolution,  Prevents video output size changes for resolution switch, and keeps the medium resolution PAR closer to square.
+
+- **Screen Borders** [hatarib_borders] (None|Small|**Medium**|Large|Maximum|Crop 720p (240, 480)|Crop 1080p (270, 540))
+
+	Atari ST monitors had a visible border around the main screen area, but most software does not display anything in it.
+
+- **Status Bar** [hatarib_statusbar] (Off|**On**|Drive Light)
+
+	Display the Hatari status bar at the bottom of the screen, or floppy drive light at the top right.
+
+- **Pixel Aspect Ratio** [hatarib_aspect] (**Square Pixels**|Atari Monitor|NTSC TV|PAL TV|4:3)
+
+	Reports a pixel aspect ratio appropriate for a chosen monitor type. Requires 'Core Provided' Aspect Ratio in Video > Scaling settings.
+
+- **Pause Screen Display** [hatarib_pause_osk] (**Help and Information**|Floppy Disk List|Bouncing Box|Snow|Darken|No Indicator)
+
+	The help screen is displayed at pause by default, but there are alternatives.
+
+- **Show Welcome Message** [hatarib_show_welcome] (Off|**On**)
+
+	At startup the status bar shows a welcome message for 5 seconds, if enabled.
+
+- **Boot Notification** [hatarib_boot_alert] (Off|**On**)
+
+	Show notification for reset/reboot.
+
+#### Audio
+
+- **Samplerate** [hatarib_samplerate] (11025 Hz|16000 Hz|22050 Hz|32000 Hz|44100 Hz|**48000 Hz**)
+
+	Audio samplerate.
+
+- **YM Voices Mixing** [hatarib_ymmix] (Linear|**ST Table**|Math Model)
+
+	Sound chip volume curves.
+
+- **Lowpass Filter** [hatarib_lpf] (None|Hatari STF|Hatari STE/Falcon|**Clean Lowpass**)
+
+	Reduces high frequency noise from sound output to reduce harshness.
+
+- **Highpass Filter** [hatarib_hpf] (None|**IIR Highpass**)
+
+	Removes very low frequencies to keep output waveform centred.
+
+- **MIDI Enable** [hatarib_midi] (Off|**On**)
+
+	MIDI I/O is enabled by default if you have a MIDI device set, but it can be disabled here.
+
+#### Advanced
+
+- **Drive B Enable** [hatarib_driveb] (Off|**On**)
+
+	Turn off to disconnect drive B.
+
+- **Single-Sided Drives** [hatarib_drivesides] (Single-Sided|**Double-Sided**)
+
+	Single-Sided floppy drives instead of Double-Sided.
+
+- **Write Protect Floppy Disks** [hatarib_readonly_floppy] (**Off**|On)
+
+	Write-protect all floppy disks in emulation. The emulated operating system will know that all writes are failing.
+
+- **CPU** [hatarib_cpu] (**Auto**|68000|68010|68020|68030|68040|68060)
+
+	Causes restart!! 68000 family CPU type.
+
+- **CPU Clock Rate** [hatarib_cpu_clock] (**Auto**|8 MHz|16 MHz|32 MHz)
+
+	CPU speed at boot.
+
+- **FPU** [hatarib_fpu] (**Auto**|None|68881|68882|Internal)
+
+	Causes restart!! Floating point unit used with the CPU.
+
+- **Patch TOS for Fast Boot** [hatarib_patchtos] (Off|**On**)
+
+	Boot slightly faster for some known TOS ROMs.
+
+- **Crash Timeout Reset** [hatarib_crashtime] (Off|1|2|3|4|5|6|7|8|9|**10**|11|12|13|14|15|16|17|18|19|20|25|30|35|40|45|50|55|60)
+
+	Time in seconds. If the CPU halts, nothing will happen until a hard reset. This option will automatically reset after the chosen time.
+
+- **Blitter in ST Mode** [hatarib_blitter_st] (**Off**|On)
+
+	Causes restart!! Normally the blitter requires a Mega ST.
+
+- **Video Timing** [hatarib_wakestate] (Random|Wakestate 1|Wakestate 2|**Wakestate 3**|Wakestate 4)
+
+	Specify startup timing for video output.
+
+- **CPU Prefetch Emulation** [hatarib_prefetch] (Off|**On**)
+
+	Causes restart!! Uses more CPU power, more accurate, commonly needed.
+
+- **Cycle-exact Cache Emulation** [hatarib_cycle_exact] (Off|**On**)
+
+	Causes restart!! Uses more CPU power, more accurate.
+
+- **MMU Emulation** [hatarib_mmu] (**Off**|On)
+
+	Causes restart!! For TT or Falcon. Uses more CPU power.
+
+- **Hatari Logging** [hatarib_log_hatari] (Fatal|**Error**|Warn|Info|To Do|Debug)
+
+	Hatari's internal log messages can be sent to the RetroArch logs. Requires content close and re-open.
+
+- **Performance Counters** [hatarib_perf_counters] (**Off**|On)
+
+	Display performance timing on the status bar: frame (average) + last: reset, savestate, restore (μs)
+
+- **Debug Tracing** [hatarib_tracing] (**none**|video_vbl,video_sync|cpu_disasm|cpu_all|all)
+
+	Enable INFO in Hatari Logging first.
+
+- **Debug Input Log** [hatarib_input_debug] (**Off**|On)
+
+	For debugging input, dump polled inputs to the log every frame.
+
 ## User 1 - 4 device types
 
 The hatariB core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
