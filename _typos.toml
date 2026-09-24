@@ -12,6 +12,7 @@ kernal = "kernal"  # Commodore's low-level Operating System
 gam = "gam"        # GAM4980 core name / .gam file extension
 bload = "bload"    # MSX-BASIC BLOAD command (library/bluemsx.md)
 consol = "consol"  # Atari 8-bit CONSOL_SELECT/CONSOL_START hardware register (library/atari800.md)
+trak = "trak"      # TrakBall, a real Stella controller type (library/stella.md)
 pn = "pn"          # UPnP substring (ppsspp.md, netplay-faq.md, netplay-getting-started.md)
 lod = "lod"        # GLSL textureLodOffset substring (development/shader/slang-shaders.md)
 accomodate = "accomodate"  # ACCOMODATE_POSSIBLE_DYNAMIC_LOOPS, a real CRT-Royale shader macro (shader/crt_royale.md)
