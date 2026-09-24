@@ -95,10 +95,15 @@ The Beetle Lynx core has the following option(s) that can be tweaked from the co
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Auto-rotate Screen** [lynx_rot_screen] (**enabled**/disabled)
+- **Auto-rotate Screen** [lynx_rot_screen] (**Auto**|Manual|0|90|180|270)
 
-	Virtually rotates the screen orientation and keymaps automatically for known games.
-	When disabled, screen rotation is manually adjusted by pressing the SELECT button.
+	Virtually rotate screen orientation and button mappings automatically for known games. When set to 'Manual', screen rotation is adjusted by pressing the SELECT button, otherwise a fixed rotation can be set to either 0, 90, 180 or 270 degrees counter-clockwise.
+
+- **Color Format (Restart Required)** [lynx_pix_format] (**16-Bit (RGB565)**|32-Bit (RGB8888))
+
+- **Force 60Hz** [lynx_force_60hz] (**OFF**|ON)
+
+	Force 60Hz instead of original 75Hz refresh rate, for perfectly smooth movement on 60Hz displays
 
 ## Controllers
 
