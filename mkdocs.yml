@@ -156,8 +156,10 @@ nav:
         - 'Commodore - Amiga (PUAE)': 'library/puae.md'
       - 'DOS Emulation':
         - 'MS - DOS (DOSBox)': 'library/dosbox.md'
+        - 'MS - DOS (DOSBox-core)': 'library/dosbox_core.md'
         - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
-        - 'MS - DOS (VirtualXT)': 'library/virtualxt.md'
+        - 'MS - DOS (DOSBox-SVN)': 'library/dosbox_svn.md'
+        - 'PC/XT (VirtualXT)': 'library/virtualxt.md'
       - 'Dingoo Emulation':
         - 'Dingoo - A320 (DingooEmu)': 'library/dingooemu.md'
       - 'Emerson':

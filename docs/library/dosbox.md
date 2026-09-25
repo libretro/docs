@@ -33,7 +33,7 @@ Frontend-level settings or features that the DOSBox core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✕         |
+| Restart           | ✔         |
 | Screenshots       | ✔         |
 | Saves             | -         |
 | States            | ✕         |
@@ -108,40 +108,51 @@ mididevice=mt32
 
 The DOSBox core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+The options below **Enable advanced core-options** are only shown when it is enabled. CPU cycles are set as **CPU cycles** × **CPU cycle multiplier**, plus **CPU fine cycles** × **CPU fine cycles multiplier** in the advanced options.
 
-- **Machine type** [dosbox_machine_type] (**vgaonly**|svga_s3|svga_et3000|svga_et4000|svga_paradise|hercules|cga|tandy|pcjr|ega)
+- **Enable core-options** [dosbox_use_options] (**true**|false)
 
-	Select what machine will be emulated.
+	Apply the core options below. Disable it to leave the settings to a loaded .conf file.
 
+- **Enable advanced core-options** [dosbox_adv_options] (**false**|true)
+- **Emulated machine** [dosbox_machine_type] (**svga_s3**|svga_et3000|svga_et4000|svga_paradise|vesa_nolfb|vesa_oldvbe|hercules|cga|tandy|pcjr|ega|vgaonly)
+- **Scaler** [dosbox_scaler] (**none**|normal2x|normal3x)
 - **Gamepad emulated mouse** [dosbox_emulated_mouse] (**enable**|disable)
+- **Gamepad emulated deadzone** [dosbox_emulated_mouse_deadzone] (**5%**|10%|15%|20%|25%|30%|0%)
+- **CPU core** [dosbox_cpu_core] (**auto**|dynamic|normal|simple)
 
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+	dynamic is only offered by builds that have a dynamic recompiler for their CPU.
 
-- **CPU cycles x 100000** [dosbox_cpu_cycles_0] (**0**|1|2|3|4|5|6|7|8|9)
+- **CPU type** [dosbox_cpu_type] (**auto**|386|386_slow|486|486_slow|pentium_slow|386_prefetch)
+- **CPU cycle mode** [dosbox_cpu_cycles_mode] (**fixed**)
+- **CPU cycle multiplier** [dosbox_cpu_cycles_multiplier] (**1000**|10000|100000|100)
+- **CPU cycles** [dosbox_cpu_cycles] (**1**|2|3|4|5|6|7|8|9)
+- **CPU fine cycles multiplier** [dosbox_cpu_cycles_multiplier_fine] (**100**|1|10) - advanced
+- **CPU fine cycles** [dosbox_cpu_cycles_fine] (**1**|2|3|4|5|6|7|9) - advanced
+- **Sound Blaster type** [dosbox_sblaster_type] (**sb16**|sb1|sb2|sbpro1|sbpro2|gb|none)
+- **Sound Blaster base address** [dosbox_sblaster_base] (**220**|240|260|280|2a0|2c0|2e0|300) - advanced
+- **Sound Blaster IRQ** [dosbox_sblaster_irq] (**5**|7|9|10|11|12|3) - advanced
+- **Sound Blaster DMA** [dosbox_sblaster_dma] (**1**|3|5|6|7|0) - advanced
+- **Sound Blaster High DMA** [dosbox_sblaster_hdma] (**7**|0|1|3|5|6) - advanced
+- **Sound Blaster OPL Mode** [dosbox_sblaster_opl_mode] (**auto**|cms|op12|dualop12|op13|op13gold|none) - advanced
+- **Sound Blaster OPL Provider** [dosbox_sblaster_opl_emu] (**default**|compat|fast|mame) - advanced
+- **Enable PC-Speaker** [dosbox_pcspeaker] (**false**|true)
+- **Enable Tandy Sound System** [dosbox_tandy] (**auto**|on|off) - advanced
+- **Enable Disney Sound Source** [dosbox_disney] (**false**|true) - advanced
+- **Enable IPX over UDP** [dosbox_ipx] (**false**|true)
 
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+	Only in builds with IPX networking.
 
-- **PU cycles x 10000** [dosbox_cpu_cycles_1] (**0**|1|2|3|4|5|6|7|8|9)
+## Controllers
 
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
+The DOSBox core supports 6 ports. Ports 1 and 2 can be set to one of the following device types:
 
-- **CPU cycles x 1000** [dosbox_cpu_cycles_2] (**1**|2|3|4|5|6|7|8|9|0)
+- Keyboard + Mouse
+- Gamepad
+- Joystick
+- Disconnected
 
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-- **CPU cycles x 100** [dosbox_cpu_cycles_3] (**0**|1|2|3|4|5|6|7|8|9")
-
-	CPU cycles are divided in core options to allow fine control of the desired CPU cycles. Setting this too low may cause slow gameplay, setting this too high might cause sound crackling and bad performance.
-
-## User 1 - 2 device types
-
-The DOSBox core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
-
-- None - Input disabled.
-- **Gamepad** - Joypad
-- Joystick - Analog
-- Keyboard - Keyboard - Keyboard inputs are always active. Has keymapper support.
+Ports 3 to 6 can be set to Keyboard + Mouse or Disconnected.
 
 ## Joypad
 
