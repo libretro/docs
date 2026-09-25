@@ -34,3 +34,5 @@ ba = "ba"            # part of the "ba4980-c-sdk" tool-repo URL slug (library/ga
 thq = "thq"          # THQ, a real video game publisher (library/compatibility/gba.md)
 mis = "mis"          # part of the valid "mis-matched" hyphenation (guides/softwarelist-getting-started.md)
 informations = "informations"  # only remaining match is the quick-informations.md FILENAME itself (kept as-is: many other pages link to it by this exact path); every genuine prose occurrence of this typo was fixed
+ahd = "ahd"        # .ahd hard drive image extension (library/hatarib.md)
+langage = "langage"  # EmuSCV's LANGAGE setting, spelled so by the core (library/emuscv.md)
