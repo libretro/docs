@@ -236,6 +236,8 @@ CPU and RAM specifications of the emulated DOS PC.
 
 	CPU core used for emulation. When set to "auto", the "normal" interpreter core will be used for real mode games, while the faster "dynamic" recompiler core will be used for protected mode games. The "simple" interpreter core is optimized for old real mode games.
 
+	Builds without a dynamic recompiler offer only normal and simple, with normal as the default. The dynamic entry names the recompiler the build has: x86-64 optimized, x86 optimized or generic.
+
 - **CPU type** [dosbox_core_cputype] (**auto**|386|386 (slow)|386 (prefetch queue emulation)|486|486 (slow)|pentium (slow))
 
 	Emulated CPU type. "Auto" is the fastest choice.
