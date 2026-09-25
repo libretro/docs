@@ -49,6 +49,8 @@ MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [
 
 DAT files describe the exact ROM contents that the emulator needs including filenames, file sizes, and checksums to verify contents are not incorrect or corrupt. mame2003-plus has the ability to generate an XML "DAT" file from the MAME Menu. You can also access the MAME menu by turning it on as a core option, selecting **Generate XML DAT** and then disabling the menu as a core option.
 
+A DAT for the current core is also kept in its repository: [mame2003-plus.xml](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/mame2003-plus.xml).
+
 
 ### Step 2: Finding a source for ROMs
 
