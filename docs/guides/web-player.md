@@ -25,11 +25,11 @@ You can access it from this [link](https://web.libretro.com/) using a modern int
 We can use the basic features of RetroArch.
 
 - How can I toggle Quick Menu?
- - You can either press F1 or click the Menu Toggle button which is ![Menu Toggle](../image/guides/web-player-quick-menu.jpg)
+    - You can either press F1 or click the Menu Toggle button which is ![Menu Toggle](../image/guides/web-player-quick-menu.jpg)
 - How can I go full screen?
- - You do not want to press F11 when the screen is selected, this key usually takes you to full screen, but in our scenario you need to use the Full Screen key which is ![Fullscreen button](../image/guides/web-player-fullscreen-btn.jpg).
+    - You do not want to press F11 when the screen is selected, this key usually takes you to full screen, but in our scenario you need to use the Full Screen key which is ![Fullscreen button](../image/guides/web-player-fullscreen-btn.jpg).
 - How can I delete the cache?
- - There are many methods for this, you can do CTRL + F5, right click the cursor and go to the inspect and right click on the refresh button on the top left and clear the cache, press the clear cache key ![Cleanup](../image/guides/web-player-cleanup.jpg).
+    - There are many methods for this, you can do CTRL + F5, right click the cursor and go to the inspect and right click on the refresh button on the top left and clear the cache, press the clear cache key ![Cleanup](../image/guides/web-player-cleanup.jpg).
 
 You can also click the `Help` button and read this information there.
 

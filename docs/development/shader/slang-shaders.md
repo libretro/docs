@@ -680,8 +680,8 @@ Location indices are consumed per slot, not per declaration line. Composite type
 - Scalar and vector types (`float`, `vec2`, `vec3`, `vec4`, etc.) consume 1 location.
 - Matrix types consume multiple locations. A matrix consumes one location per column (for example, `mat4` consumes 4 locations).
 - Structs consume the sum of their members' location usage.
-   - Non-matrix struct members consume 1 location each.
-   - Matrix struct members consume one location per matrix column.
+    - Non-matrix struct members consume 1 location each.
+    - Matrix struct members consume one location per matrix column.
 
 Example (`mat4` consumes locations 0, 1, 2, and 3):
 
@@ -1121,19 +1121,19 @@ There is a completely different SLANG format that was developed after RetroArch'
 While there are no slang-specific external tools, any graphics debugging or profiling tool that works with Vulkan, OpenGL, or Direct3D can be used to profile and debug slang shaders running in RetroArch. These tools allow you to inspect shader code, view intermediate render targets, analyze performance, and debug rendering issues. Some popular tools include:
 
 - **RenderDoc** (https://renderdoc.org/):
-   - A powerful, open-source graphics debugger for Vulkan, OpenGL, and Direct3D. Capture a frame in RetroArch, inspect all draw calls, view shader code, and analyze textures and framebuffers.
-   - **Getting started:** Launch RetroArch, start your content, and attach RenderDoc to the RetroArch process. Capture a frame and explore the pipeline and resources.
+    - A powerful, open-source graphics debugger for Vulkan, OpenGL, and Direct3D. Capture a frame in RetroArch, inspect all draw calls, view shader code, and analyze textures and framebuffers.
+    - **Getting started:** Launch RetroArch, start your content, and attach RenderDoc to the RetroArch process. Capture a frame and explore the pipeline and resources.
 
 - **NVIDIA Nsight Graphics** (https://developer.nvidia.com/nsight-graphics):
-   - A comprehensive tool for debugging, profiling, and analyzing graphics applications on NVIDIA GPUs. Supports Vulkan, OpenGL, and Direct3D.
-   - **Getting started:** Install Nsight Graphics, launch RetroArch through the tool, and use its frame debugging and profiling features.
+    - A comprehensive tool for debugging, profiling, and analyzing graphics applications on NVIDIA GPUs. Supports Vulkan, OpenGL, and Direct3D.
+    - **Getting started:** Install Nsight Graphics, launch RetroArch through the tool, and use its frame debugging and profiling features.
 
 - **Microsoft PIX** (https://devblogs.microsoft.com/pix/):
-   - A performance tuning and debugging tool for Direct3D applications on Windows. Useful for analyzing shaders and GPU workloads on D3D11/D3D12 backends.
-   - **Getting started:** Run RetroArch under PIX, capture a frame, and inspect shader stages and GPU timings.
+    - A performance tuning and debugging tool for Direct3D applications on Windows. Useful for analyzing shaders and GPU workloads on D3D11/D3D12 backends.
+    - **Getting started:** Run RetroArch under PIX, capture a frame, and inspect shader stages and GPU timings.
 
 - **GPUView** (https://docs.microsoft.com/en-us/windows-hardware/test/gpuview/):
-   - A system-level GPU profiler for Windows, useful for analyzing overall GPU usage and identifying bottlenecks.
+    - A system-level GPU profiler for Windows, useful for analyzing overall GPU usage and identifying bottlenecks.
 
 These tools are invaluable for diagnosing rendering issues, optimizing performance, and understanding how your shaders interact with the graphics pipeline.
 
@@ -1195,17 +1195,17 @@ This approach lets you toggle debug colors from the frontend UI, making it easy 
 There are no strict requirements for naming or formatting uniforms and samplers in slang shaders—developers are free to choose conventions that best suit their project and style. However, here are some best practices and common patterns observed in the community:
 
 - **Samplers:**
-   - Treat samplers just like any other variable.
-   - External textures (such as lookup tables or fixed images) are often referenced with ALL_CAPS (e.g., `LUT`, `NOISE_TEXTURE`) to indicate that they are fixed, unchanging blobs.
-   - Source textures, which change from frame to frame (such as `Source` or `Original`), are typically referenced with CamelCase to reflect their dynamic nature.
+    - Treat samplers just like any other variable.
+    - External textures (such as lookup tables or fixed images) are often referenced with ALL_CAPS (e.g., `LUT`, `NOISE_TEXTURE`) to indicate that they are fixed, unchanging blobs.
+    - Source textures, which change from frame to frame (such as `Source` or `Original`), are typically referenced with CamelCase to reflect their dynamic nature.
 
 - **Uniforms:**
-   - Uniforms are fixed across a single frame but may change between frames. The uniforms presented by the frontend (such as `SourceSize`, `OutputSize`, `FrameCount`) use CamelCase for this reason.
-   - Parameter uniforms (those controlled by the user or preset) are often considered 'fixed' and may be written in ALL_CAPS (e.g., `BRIGHTNESS`, `SATURATION`).
+    - Uniforms are fixed across a single frame but may change between frames. The uniforms presented by the frontend (such as `SourceSize`, `OutputSize`, `FrameCount`) use CamelCase for this reason.
+    - Parameter uniforms (those controlled by the user or preset) are often considered 'fixed' and may be written in ALL_CAPS (e.g., `BRIGHTNESS`, `SATURATION`).
 
 - **#define Usage:**
-   - It's common to use `#define` for uniforms that are referenced multiple times in a shader. This can improve readability and make it easier to update variable names in one place.
-   - However, uniforms provided by the frontend (such as `SourceSize`, `OutputSize`, etc.) do not need to be `#define`d, as their names are stable and consistent for backwards compatibility.
+    - It's common to use `#define` for uniforms that are referenced multiple times in a shader. This can improve readability and make it easier to update variable names in one place.
+    - However, uniforms provided by the frontend (such as `SourceSize`, `OutputSize`, etc.) do not need to be `#define`d, as their names are stable and consistent for backwards compatibility.
 
 Ultimately, choose naming conventions that make your shader code clear and maintainable for yourself and others. Consistency within a project is more important than following any particular global style. If you are adding or modifying someone else's shader, it's best to follow the original style rather than refactoring the entire shader or mixing styles.
 
@@ -1234,24 +1234,24 @@ By following these guidelines, you'll maximize the portability and reliability o
 When designing shaders that are meant to be used together as a multi-pass (multi-stage) effect, following best practices for organization and clarity will help both you and other users maintain, extend, and reuse your work. It is common for users to group unrelated shaders into a custom preset, but for tightly coupled multi-pass effects, consider the following guidelines:
 
 1. **Descriptive Naming:**
-   - Give every shader a descriptive name using `#pragma name`. Avoid using numbers or generic names; prefer qualitative, meaningful names (e.g., `#pragma name GaussianBlurH` and `#pragma name GaussianBlurV`).
-   - When shaders are meant to always be used together (tightly coupled), give them a matching prefix for clarity.
+    - Give every shader a descriptive name using `#pragma name`. Avoid using numbers or generic names; prefer qualitative, meaningful names (e.g., `#pragma name GaussianBlurH` and `#pragma name GaussianBlurV`).
+    - When shaders are meant to always be used together (tightly coupled), give them a matching prefix for clarity.
 
 2. **Shared Functions:**
-   - Place shared functions, macros, or utility code in a separate file with the `.inc` extension (not `.h`). Use `#include` to bring these into each shader file that needs them.
+    - Place shared functions, macros, or utility code in a separate file with the `.inc` extension (not `.h`). Use `#include` to bring these into each shader file that needs them.
 
 3. **One Stage per File:**
-   - Do not try to put multiple fragment or vertex shaders in one file. Each `.slang` file can only have one vertex stage and one fragment stage. If for some reason a frontend ever supports this, ignore it. It's a bad idea.
+    - Do not try to put multiple fragment or vertex shaders in one file. Each `.slang` file can only have one vertex stage and one fragment stage. If for some reason a frontend ever supports this, ignore it. It's a bad idea.
 
 4. **Shared Parameters:**
-   - Use includes for parameters when they are shared among shaders. This ensures consistency and reduces duplication. Consider using the menu technique below to show users what shader stages or high-level aspects of the effect the parameters relate to.
+    - Use includes for parameters when they are shared among shaders. This ensures consistency and reduces duplication. Consider using the menu technique below to show users what shader stages or high-level aspects of the effect the parameters relate to.
 
 5. **Document Pass Order:**
-   - If the shader stages need to be used in a specific order, add a comment near the top of each file or in the preset to make this explicit.
+    - If the shader stages need to be used in a specific order, add a comment near the top of each file or in the preset to make this explicit.
 
 6. **Example Preset File:**
-   - Always include an example `.slangp` preset file showing how your multi-pass shader is intended to be used.
-   - Assume that the input is gamma-corrected and the output is 8-bit SDR. If your shader operates on linear data, add a linearizing shader stage before and a gamma correction shader stage at the end. This makes it clear to users what sort of data your shader expects and produces.
+    - Always include an example `.slangp` preset file showing how your multi-pass shader is intended to be used.
+    - Assume that the input is gamma-corrected and the output is 8-bit SDR. If your shader operates on linear data, add a linearizing shader stage before and a gamma correction shader stage at the end. This makes it clear to users what sort of data your shader expects and produces.
 
 Following these practices will make your multi-pass shaders easier to understand, maintain, and integrate into larger filter chains or custom presets.
 
@@ -1425,10 +1425,10 @@ Practical guidance for Stage 3:
 - **Tone mapping policy**: If linear-light values remain near the target range, simple clamping may be acceptable. If values significantly exceed target range, use a deliberate tone mapping operator to reduce hard clipping, highlight banding, and hue distortion.
 - **Gamut compression policy**: When targeting constrained or different primaries, use gamut compression to reduce clipping artifacts. Choose rendering intent based on artistic goal (for example, preserving relationships vs preserving in-gamut accuracy).
 - **Gamut compression intents**: The four classic ICC rendering intents are a useful frame of reference:
-   - **Perceptual**: Compresses the full gamut to preserve visual relationships.
-   - **Relative colorimetric**: Preserves in-gamut values and clips out-of-gamut values relative to target white.
-   - **Saturation**: Prioritizes vividness over strict color accuracy.
-   - **Absolute colorimetric**: Preserves absolute colorimetry including white-point differences, clipping out-of-gamut values.
+    - **Perceptual**: Compresses the full gamut to preserve visual relationships.
+    - **Relative colorimetric**: Preserves in-gamut values and clips out-of-gamut values relative to target white.
+    - **Saturation**: Prioritizes vividness over strict color accuracy.
+    - **Absolute colorimetric**: Preserves absolute colorimetry including white-point differences, clipping out-of-gamut values.
 - **Output contract check**: Validate the final stage against the per-format output contract before shipping. The normative mapping for expected transfer function by final-pass format is [Output transfer-function mapping](#output-transfer-function-mapping) under [`#pragma format`](#pragma-format).
 - **Default operation order**: A stable baseline is tone mapping first, gamut compression second, then output encoding (inverse EOTF for SDR or PQ encoding for HDR).
 - **Validation checklist**: Verify neutral gradients stay neutral, highlight rolloff is smooth, saturated edges do not collapse abruptly, and behavior remains coherent when switching between SDR, scRGB, and HDR10 outputs.

@@ -47,7 +47,7 @@ Enabling this feature allows you to use your TV remote to control your Digital M
 
 * **Basic Navigation:** The physical **Arrows, OK, Back, and Exit** buttons.
 * **The Menu/Options Button:** Often labeled as **`...`** or **`123`**, this button brings up the TV's on-screen overlay. It adds a virtual **"HOME"** shortcut specifically for your digital media player.
-  - **Note:** This virtual shortcut is necessary because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device.
+    - **Note:** This virtual shortcut is necessary because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device.
 
 ### The Problem: RetroArch Lockout
 

@@ -87,13 +87,13 @@ To create an access token, navigate to the account settings via your profile pic
 Name the token after the core/repository, which will receive it. The following permissions should be set:
 
 - Projects
-  - read
+    - read
 - Source files & strings
-  - read & write
+    - read & write
 - Translations
-  - read & write
+    - read & write
 - (optional) Translation status
-  - read
+    - read
 
 > Please provide these access tokens to the core developers in a private message and delete those after successful setup. Do not share tokens publicly or store them in plain text long term!
 
@@ -110,4 +110,4 @@ Adding a language to RetroArch does not automatically enable it for the core opt
 ### Example
 
 - mgba:
-  - [Enable Indonesian, Swedish and Ukrainian localisations](https://github.com/libretro/mgba/commit/b0cdccc9ad2e5a8cd40ad4b9a3db1587d6f1560b)
+    - [Enable Indonesian, Swedish and Ukrainian localisations](https://github.com/libretro/mgba/commit/b0cdccc9ad2e5a8cd40ad4b9a3db1587d6f1560b)
