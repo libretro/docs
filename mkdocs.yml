@@ -118,16 +118,26 @@ nav:
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
       - 'Apple':
+        - 'Apple - II (AppleWin)': 'library/applewin.md'
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
         - 'Arcade (DICE)': 'library/dice.md'
+        - 'Arcade (FB Alpha 2012 CPS-1)': 'library/fbalpha2012_cps1.md'
+        - 'Arcade (FB Alpha 2012 CPS-2)': 'library/fbalpha2012_cps2.md'
+        - 'Arcade (FB Alpha 2012 CPS-3)': 'library/fbalpha2012_cps3.md'
+        - 'Arcade (FB Alpha 2012 Neo Geo)': 'library/fbalpha2012_neogeo.md'
+        - 'Arcade (FB Alpha 2012)': 'library/fbalpha2012.md'
         - 'Arcade (FinalBurn Neo)': 'library/fbneo.md'
+        - 'Arcade (HBMAME)': 'library/hbmame.md'
+        - 'Arcade (MAME 2000)': 'library/mame2000.md'
         - 'Arcade (MAME 2003)': 'library/mame_2003.md'
         - 'Arcade (MAME 2003-Plus)': 'library/mame2003_plus.md'
         - 'Arcade (MAME 2010)': 'library/mame_2010.md'
+        - 'Arcade (MAME 2015)': 'library/mame2015.md'
         - 'Arcade (SAME_CDI)': 'library/same_cdi.md'
       - 'Arduboy':
         - 'Ardens': 'library/ardens.md'
+        - 'Arduboy (Arduous)': 'library/arduous.md'
       - 'Atari Emulation':
         - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
         - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'
@@ -143,21 +153,28 @@ nav:
         - 'Atari - ST/STE/TT/Falcon (hatariB)': 'library/hatarib.md'
       - 'Bandai Emulation':
         - 'Bandai - Playdia (PlaydiaEmu)': 'library/playdiaemu.md'
+        - 'Bandai - Tamagotchi P1 (TamaLIBretro)': 'library/tamalibretro.md'
         - 'Bandai - WonderSwan/Color (Beetle Cygne)': 'library/beetle_cygne.md'
         - 'Bandai - Wonderswan Compatibility List': 'library/compatibility/wswan.md'
       - 'BBK electronic dictionary':
         - 'BBK - 4980/4988/5980 electronic dictionary': 'library/gam4980.md'
+        - 'BBK - electronic dictionaries (BBKEmu)': 'library/bbkemu.md'
       - 'ColecoVision Emulation':
         - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
         - 'ColecoVision/CreatiVision/My Vision (JollyCV)': 'library/jollycv.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Commodore Emulation':
         - 'Commodore - 8-bit (VICE)': 'library/vice.md'
+        - 'Commodore - Amiga (Amiberry)': 'library/amiberry.md'
+        - 'Commodore - Amiga (FS-UAE)': 'library/fsuae.md'
         - 'Commodore - Amiga (PUAE)': 'library/puae.md'
+        - 'Commodore - C64 (Frodo)': 'library/frodo.md'
       - 'DOS Emulation':
         - 'MS - DOS (DOSBox)': 'library/dosbox.md'
         - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
         - 'MS - DOS (VirtualXT)': 'library/virtualxt.md'
+        - 'PC (PCem)': 'library/pcem.md'
+        - 'PC (QEMU)': 'library/qemu.md'
       - 'Dingoo Emulation':
         - 'Dingoo - A320 (DingooEmu)': 'library/dingooemu.md'
       - 'Emerson':
@@ -169,6 +186,10 @@ nav:
       - 'Epoch Emulation':
         - 'Epoch - Cassette Vision (PD777)': 'library/pd777.md'
         - 'Epoch - Super Cassette Vision (EmuSCV)': 'library/emuscv.md'
+      - 'Fairchild Emulation':
+        - 'Fairchild - Channel F (FreeChaF)': 'library/freechaf.md'
+      - 'Galaksija Emulation':
+        - 'Elektronika Inženjering - Galaksija (Galaksija)': 'library/galaksija.md'
       - 'GCE Emulation':
         - 'GCE - Vectrex (vecx)': 'library/vecx.md'
       - 'Magnavox Emulation':
@@ -181,11 +202,23 @@ nav:
       - 'Mobile Emulation':
         - 'Mobile - J2ME (FreeJ2ME)': 'library/freej2me.md'
         - 'Mobile - J2ME (FreeJ2ME-Plus)': 'library/freej2me_plus.md'
+        - 'Mobile - J2ME (SquirrelJME)': 'library/squirreljme.md'
       - 'Nintendo Emulation':
+        - 'Nintendo - 3DS (Citra 2018)': 'library/citra2018.md'
+        - 'Nintendo - 3DS (Panda3DS)': 'library/panda3ds.md'
+        - 'Nintendo - DS (NooDS)': 'library/noods.md'
         - 'Nintendo - DS Compatibility List': 'library/compatibility/ds.md'
+        - 'Nintendo - Game Boy / Color (fixGB)': 'library/fixgb.md'
+        - 'Nintendo - Game Boy / Color (IroGB)': 'library/irogb.md'
+        - 'Nintendo - Game Boy / GBA / DS (SkyEmu)': 'library/skyemu.md'
         - 'Nintendo - Game Boy Advance Compatibility List': 'library/compatibility/gba.md'
         - 'Nintendo - Game Boy Color Compatibility List': 'library/compatibility/gbc.md'
+        - 'Nintendo - NES / Famicom (fixNES)': 'library/fixnes.md'
+        - 'Nintendo - NES / SNES / GB / GBA, NEC - PCE, Sega - SMS / GG, Bandai - WonderSwan (MesenCE)': 'library/mesen2.md'
         - 'Nintendo - NES Compatibility List': 'library/compatibility/nes.md'
+        - 'Nintendo - Nintendo 64 (ParaLLEl N64)': 'library/parallel_n64.md'
+        - 'Nintendo - SNES / SFC (Beetle Supafaust)': 'library/mednafen_supafaust.md'
+        - 'Nintendo - SNES / SFC (bsnes-hd beta)': 'library/bsnes_hd_beta.md'
         - 'Nintendo - SNES Compatibility List': 'library/compatibility/snes.md'
         - 'Nintendo - Game Boy / Color (Emux GB)': 'library/emux_gb.md'
         - 'Nintendo - Game Boy / Color (Gambatte)': 'library/gambatte.md'
@@ -235,6 +268,8 @@ nav:
         - 'Nintendo - SNES / Famicom (Snes9x)': 'library/snes9x.md'
         - 'Nintendo - Virtual Boy (Beetle VB)': 'library/beetle_vb.md'
       - 'NEC Emulation':
+        - 'NEC - PC Engine / SuperGrafx / CD (Beetle PCE)': 'library/mednafen_pce.md'
+        - 'NEC - PC-98 (Neko Project II)': 'library/nekop2.md'
         - 'NEC - PC-FX Compatibility List': 'library/compatibility/pcfx.md'
         - 'NEC - PC-8000 / PC-8800 series (QUASI88)': 'library/quasi88.md'
         - 'NEC - PC-98 (Neko Project II Kai)': 'library/neko_project_ii_kai.md'
@@ -242,20 +277,25 @@ nav:
         - 'NEC - PC Engine / CD (Beetle PCE FAST)': 'library/beetle_pce_fast.md'
         - 'NEC - PC Engine / SuperGrafx (Geargrafx)': 'library/geargrafx.md'
         - 'NEC - PC-FX (Beetle PC-FX)': 'library/beetle_pc_fx.md'
+      - 'Oberon Emulation':
+        - 'Oberon RISC Emulator': 'library/oberon.md'
       - 'Palm Emulation':
         - 'Palm OS (Mu)': 'library/mu.md'
       - 'Philips Emulation':
         - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
+        - 'Philips - CD-i (CDi 2015)': 'library/cdi2015.md'
         - 'Philips - P2000T (M2000)': 'library/m2000.md'
       - 'RISC-V Emulation':
         - 'RVVM - RISC-V Virtual Machine': 'library/rvvm.md'
       - 'SNK Emulation':
         - 'SNK - Neo Geo AES / MVS (Geolith)': 'library/geolith.md'
+        - 'SNK - Neo Geo CD (NeoCD)': 'library/neocd.md'
         - 'SNK - Neo Geo Pocket / Color (Beetle NeoPop)': 'library/beetle_neopop.md'
         - 'SNK - Neo Geo Pocket / Color (RACE)': 'library/race.md'
       - 'Sega Emulation':
         - 'Sega - 32X Compatibility List': 'library/compatibility/32x.md'
         - 'Sega - Dreamcast Compatibility List': 'library/compatibility/dc.md'
+        - 'Sega - Saturn (Emir)': 'library/ymir.md'
         - 'Sega - Saturn Compatibility List': 'library/compatibility/saturn.md'
         - 'Sega - Dreamcast (flycast)': 'library/flycast.md'
         - 'Sega - Dreamcast (redream)': 'library/redream.md'
@@ -274,11 +314,13 @@ nav:
         - 'Sega - Model 3 (Supermodel)': 'library/supermodel.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sharp Emulation':
+        - 'Sharp - X1 (X Millennium)': 'library/x1.md'
         - 'Sharp - X68000 (PX68k)': 'library/px68k.md'
       - 'Sinclair Emulation':
         - 'Sinclair - ZX 81 (EightyOne)': 'library/eightyone.md'
         - 'Sinclair - ZX Spectrum (Fuse)': 'library/fuse.md'
       - 'Sony Emulation':
+        - 'Sony - PlayStation 2 (ARMSX2)': 'library/armsx2.md'
         - 'Sony - Playstation Compatibility List': 'library/compatibility/psx.md'
         - 'Sony - PlayStation (Beetle PSX)': 'library/beetle_psx.md'
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
@@ -286,6 +328,7 @@ nav:
         - 'Sony - PlayStation 2 (PCSX2)': 'library/lrps2.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
+        - 'Sony - PocketStation (pokketstation)': 'library/pokketstation.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sunplus Emulation':
@@ -297,6 +340,10 @@ nav:
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':
         - 'Thomson - MO/TO (Theodore)': 'library/theodore.md'
+      - 'VM Labs Emulation':
+        - 'VM Labs - NUON (Nuance)': 'library/nuance.md'
+      - 'Watara Emulation':
+        - 'Watara - Supervision (Potator)': 'library/potator.md'
       - 'Wenquxing Emulation':
         - 'Wenquxing - Electronic Dictionary (WQXEmu)': 'library/wqxemu.md'
       - 'MegaDuck Emulation':
@@ -317,19 +364,27 @@ nav:
       - 'Doom 3 (Boom3)': 'library/boom3.md'
       - 'Dungeon Crawl Stone Soup': 'library/stone_soup.md'
       - 'Flashback (REminiscence)': 'library/reminiscence.md'
+      - 'Gong': 'library/gong.md'
       - 'Handheld Electronic (GW)': 'library/gw.md'
       - 'Jump n Bump': 'library/jumpnbump.md'
+      - 'Laserdisc (DirkSimple)': 'library/dirksimple.md'
       - 'LowRes NX': 'library/lowres_nx.md'
       - 'Lua Engine (Lutro)': 'library/lutro.md'
+      - 'McSoftServe': 'library/mcsoftserve.md'
       - 'MicroW8': 'library/microw8.md'
       - 'Minecraft (Craft)': 'library/craft.md'
       - 'Mr.Boom (Bomberman)': 'library/mr_boom.md'
+      - 'Omicron': 'library/omicron.md'
+      - 'PICO-8 (Retro8)': 'library/retro8.md'
       - 'Quake 1 (TyrQuake)': 'library/tyrquake.md'
+      - 'Quake 2 (vitaQuake 2)': 'library/vitaquake2.md'
+      - 'Quake 3 (vitaQuake 3)': 'library/vitaquake3.md'
       - 'Rick Dangerous (XRick)': 'library/xrick.md'
       - 'RPG Maker Emulation':
         - 'RPG Maker 2000/2003 (EasyRPG)': 'library/easyrpg.md'
         - 'RPG Maker XP/VX/VX Ace (mkxp-z)': 'library/mkxp-z.md'
       - 'ScummVM': 'library/scummvm.md'
+      - 'Super Bros War': 'library/superbroswar.md'
       - 'The Powder Toy': 'library/the_powder_toy.md'
       - 'TIC-80': 'library/tic80.md'
       - 'Tomb Raider (OpenLara)': 'library/openlara.md'
@@ -338,15 +393,19 @@ nav:
       - 'Vircon32': 'library/vircon32.md'
       - 'WebAssembly (WASM-4)': 'library/wasm-4.md'
       - 'Wolfenstein 3D (ECWolf)': 'library/ecwolf.md'
+      - 'Z-Machine (MojoZork)': 'library/mojozork.md'
     - 'Core Library: Media':
       - 'Imageviewer': 'library/imageviewer.md'
       - 'FFmpeg': 'library/ffmpeg.md'
       - 'Game Music Emu': 'library/game_music_emu.md'
+      - 'Internet Radio (Radio)': 'library/radio.md'
       - 'PocketCDG': 'library/pocketcdg.md'
       - 'Video Processor': 'library/video_processor.md'
     - 'Core Library: Special-Purpose':
       - 'Dummy Core': 'library/dummy.md'
+      - 'PSP RemotePlay (RemoteJoy)': 'library/remotejoy.md'
       - 'Remote RetroPad': 'library/remote_retropad.md'
+      - 'ROM Cleaner': 'library/romcleaner.md'
     - 'Shader Library':
       - 'Introduction': 'shader/introduction.md'
       - '3dfx': 'shader/3dfx.md'
