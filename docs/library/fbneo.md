@@ -178,7 +178,7 @@ When loading a romset requiring a bios romset, it will be searched through these
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
 
-`SYSTEM_DIRECTORY/fbneo/` is the recommended place: it is where the core also keeps samples, hiscore.dat and its other support files, and it is searched on every platform.
+`SYSTEM_DIRECTORY/fbneo/` is the recommended place, on every platform: it is where the core also keeps samples, hiscore.dat and its other support files, and it is where RetroArch looks for them. The core's info file lists each bios romset as `fbneo/<name>.zip`, so RetroArch's core information and firmware check report a bios in `SYSTEM_DIRECTORY/` itself as missing, although the core finds and uses it.
 
 The following bios romsets are required for some of the emulated arcade systems :
 
