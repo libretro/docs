@@ -8,6 +8,7 @@
 | [Ardens](../library/ardens.md) | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/) | Atari 5200             |                    |
+| [Azahar](../library/azahar.md) | Nintendo 3DS           | A port of the Azahar 3DS emulator to libretro, based on Citra |
 | [b2](../library/b2.md)    | Acorn BBC Micro        |                    |
 | [Beetle bsnes](../library/beetle_bsnes.md) | Nintendo SNES/SFC      |                    |
 | [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/) | Bandai WonderSwan/Color |                   |
