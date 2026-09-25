@@ -76,7 +76,7 @@ Frontend-level settings or features that the PCSX ReARMed core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
@@ -257,265 +257,271 @@ or
 
 ## Core options
 
-The PCSX ReARMed core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+The PCSX ReARMed core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Some options are only shown when an option they depend on is set.
 
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+#### System
 
-- **Frameskip** [pcsx_rearmed_frameskip] (**0**|1|2|3)
+Configure base hardware parameters: region, BIOS selection, memory cards, etc.
 
-	Choose how much frames should be skipped to improve performance at the expense of visual smoothness.
+- **Region** [pcsx_rearmed_region] (**Auto**|NTSC|PAL)
 
-- **Use BIOS** [pcsx_rearmed_bios] (**auto**|HLE)
+	Specify which region the system is from. 'NTSC' is 60 Hz while 'PAL' is 50 Hz. 'Auto' will detect the region of the currently loaded content. Games may run faster or slower than normal if the incorrect region is selected.
 
-	Allows you to use real bios file (if available) or emulated bios (HLE).
+- **BIOS Selection** [pcsx_rearmed_bios] (**Auto**|HLE)
 
-	**HLE** - Forces core to use built-in bios emulation
+	Specify which BIOS to use. 'Auto' will attempt to load a real bios file from the frontend 'system' directory, falling back to high level emulation if unavailable. 'HLE' forces high level BIOS emulation. It is recommended to use an official bios file for better compatibility.
 
-	**auto** - Tries to search for compatible bios file, falls back to use HLE if none is found.
+- **Show BIOS Name/Boot Logo** [pcsx_rearmed_show_bios_bootlogo] (**disabled**|enabled|ON, w/o PCSXtm)
 
-- **Region** [pcsx_rearmed_region] (**auto**|NTSC|PAL)
+	When using a custom BIOS file, enables the display of its file name in the OSD. Also specifies whether to show the BIOS logo when starting or selecting Reset. Warning: Enabling the logo may reduce game compatibility.
 
-	Choose what region the system is from.
+- **Memory Card 1 Type (Restart)** [pcsx_rearmed_memcard1] (**Libretro (Default)**|Game Code (Serial)|Shared Between All Games|No Memory Card)
 
-- **Enable second memory card** [pcsx_rearmed_memcard2] (**disabled**|enabled)
+	How to emulate the memory card in slot 1. 'Libretro' passes the card data to the frontend (usually saved as .srm). 'Game Code' saves it to a file named based on the serial, such as SCUS-00001_1.mcd, for compatibility with some other emulators.
 
-	Enables or disabled second memory card (Memcard 2 slot). When enabled,
-	Memcard 2 slot's save data will be loaded and saved as
-	`pcsx-card2.mcd` file in the saves directory.
-	All games will share the same second memory card.
+- **Memory Card 2 Type** [pcsx_rearmed_memcard2] (Game Code (Serial)|**Shared Between All Games**|No Memory Card)
 
-- **Emulated Mouse Sensitivity** [pcsx_rearmed_input_sensitivity] (**1.00**|0.05 - 2.00)
+	Same as above, but card in slot 2.
 
-	Adjust movement responsiveness for the emulated mouse device.
+- **CD read-ahead** [pcsx_rearmed_cd_readahead] (0|1|2|3|4|5|6|7|8|9|10|11|**12**|13|14|15|16|32|64|128|256|512|1024|333000)
 
-- **Multitap Mode (Restart)** [pcsx_rearmed_multitap] (**disabled**|port 1 only|port 2 only|both)
+	Reads the specified amount of sectors ahead of time to try to avoid later stalls. Affects both physical CD-ROM and CD images. 333000 will try to read the complete disk (requires an additional 750MB of RAM).
 
-	Sets the multitap device in either port 1 or port 2 allowing support of upto 5 players, or on both for 8 players.
+- **Dynamic Recompiler** [pcsx_rearmed_drc] (disabled|**enabled**)
 
-!!! attention
-	Multitap option works depending on the game. Setting any mode on a game that does not use multitap will make inputs not working. Leave mode at **disabled** unless supported by game and you really to play in multiplayer modes.
+	Dynamically recompile PSX CPU instructions to native instructions. Much faster than using an interpreter, but may be less accurate on some platforms.
 
-- **NegCon Twist Deadzone (percent)** [pcsx_rearmed_negcon_deadzone] (**0**|5|10|15|20|25|30)
+- **DynaRec threading** [pcsx_rearmed_drc_thread] (**Auto**|disabled|enabled)
 
-	Sets the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon). Used to eliminate drift/unwanted input.
+	Run the dynarec on another thread.
 
-!!! attention
-	Most (all?) negCon compatible titles provide in-game options for setting a 'twist' deadzone value. To avoid loss of precision, the in-game deadzone should *always* be set to zero. Any analog stick drift should instead be accounted for by configuring the 'NegCon Twist Deadzone' core option. This is particularly important when 'NegCon Twist Response' is set to 'quadratic' or 'cubic'.
+- **PSX CPU Clock Speed (%)** [pcsx_rearmed_psxclock] (**Auto**|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100)
 
-	Xbox gamepads typically require a deadzone of 15-20%. Many Android-compatible bluetooth gamepads have an internal 'hardware' deadzone, allowing the deadzone value here to be set to 0%.
+	Overclock or under-clock the PSX CPU. Should be much less than 100 (something like 57) due to some real hardware slowdowns not being emulated. Usually should be left at 'Auto', else glitches or hangs are likely.
 
-	For convenience, it is recommended to make use of the 'Options → Analog Setting 1P' menu of [Gran Turismo](https://en.wikipedia.org/wiki/Gran_Turismo_(video_game)) when calibrating the 'NegCon Twist Deadzone'. This provides a clear and precise representation of 'real' controller input values.
+#### Video
 
-- **NegCon Twist Response** [pcsx_rearmed_negcon_response] (**linear**|quadratic|cubic)
+Configure base display parameters.
 
-	Specifies the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated [neGcon Controllers](https://en.wikipedia.org/wiki/NeGcon).
+- **Dithering Pattern** [pcsx_rearmed_dithering] (disabled|**enabled**|Force)
 
-	'linear': Analog stick displacement is mapped linearly to negCon rotation angle.
-	Recommended when using racing wheel peripherals.
+	Enable emulation of the dithering technique used by the PSX to smooth out color banding artifacts. "Force" enables it even if the game turns it off. Increases performance requirements.
 
-	'quadratic': Analog stick displacement is mapped quadratically to negCon rotation angle. This allows for greater precision when making small movements with the analog stick.
-	Optimal setting for gamepads.
+- **Threaded Rendering** [pcsx_rearmed_gpu_thread_rendering] (**Auto**|disabled|enabled)
 
-	'cubic': Analog stick displacement is mapped cubically to negCon rotation angle. This allows for even greater precision when making small movements with the analog stick, but 'exaggerates' larger movements.
-	Enables precise control but difficult to use.
+	When enabled, runs GPU commands in a secondary thread. 'Auto' enables it if at least 2 CPU cores are detected.
 
-!!! attention
-	A linear response is not recommended when using standard gamepad devices. The negCon 'twist' mechanism is substantially different from conventional analog sticks; linear mapping over-amplifies small displacements of the stick, impairing fine control. A linear response is only appropriate when using racing wheel peripherals.
+- **Frameskip** [pcsx_rearmed_frameskip_type] (**disabled**|Auto|Auto (Threshold)|Fixed Interval)
 
-	In most cases, the 'quadratic' option should be selected. This provides effective compensation for the physical differences between real/emulated hardware, enabling smooth/precise analog input.
+	Skip frames to avoid audio buffer under-run (crackling). Improves performance at the expense of visual smoothness. 'Auto' skips frames when advised by the frontend. 'Auto (Threshold)' utilises the 'Frameskip Threshold (%)' setting. 'Fixed Interval' utilises the 'Frameskip Interval' setting.
 
-- **Analog axis bounds** [pcsx_rearmed_analog_axis_modifier] (**circle**|square)
+- **Frameskip Threshold (%)** [pcsx_rearmed_frameskip_threshold] (15|18|21|24|27|30|**33**|36|39|42|45|48|51|54|57|60|65|70|75|80)
 
-	Range bounds for analog axis. Square bounds help controllers with highly circular ranges that are unable to fully saturate the x and y axis at 45degree deflections.
+	When 'Frameskip' is set to 'Auto (Threshold)', specifies the audio buffer occupancy threshold (percentage) below which frames will be skipped. Higher values reduce the risk of crackling by causing frames to be dropped more frequently.
 
-- **Guncon Adjust X** [pcsx_rearmed_gunconadjustx] (**0**|-25 - 25)
-- **Guncon Adjust Y** [pcsx_rearmed_gunconadjustx] (**0**|-25 - 25)
+- **Frameskip Interval** [pcsx_rearmed_frameskip_interval] (1|2|**3**|4|5|6|7|8|9|10)
 
-	When using Guncon mode, you can override aim in emulator if shots misaligned, this applies an increment on the x or y axis.
+	Specify the maximum number of frames that can be skipped before a new frame is rendered.
 
-- **Guncon Adjust Ratio X** [pcsx_rearmed_gunconadjustratiox] (**1**|0.75 - 1.25)
-- **Guncon Adjust Ratio Y** [pcsx_rearmed_gunconadjustratioy] (**1**|0.75 - 1.25)
+- **Display Internal FPS** [pcsx_rearmed_display_fps_v2] (**disabled**|enabled|extra)
 
-	When using Guncon mode, you can override aim in emulator if shots misaligned, this applies a ratio on the x or y axis.
+	Show the internal frame rate at which the emulated system is rendering content. Note: Requires on-screen notifications to be enabled in the libretro frontend.
 
-- **Enable Vibration** [pcsx_rearmed_vibration] (**enabled**|disabled)
+- **Display Informational Notifications** [pcsx_rearmed_display_info] (disabled|**enabled**)
 
-	Enables Rumble. Look at the [Rumble section](#rumble-support) for more information.
+	Shows things like unsafe hack options that are enabled and the BIOS name that is booting.
 
-- **Enable Dithering** [pcsx_rearmed_dithering] (**enabled**|disabled)
+- **Use fractional frame rate** [pcsx_rearmed_fractional_framerate] (**Auto**|disabled|enabled)
 
-	If Off, disables the dithering pattern the PSX applies to combat color banding.
+	Instead of the exact 50 or 60 (maximum) fps for PAL/NTSC the real console runs closer to something like 49.75 and 59.81fps (varies slightly between hw versions). PCSX-ReARMed uses the former "round" framerates to better match modern displays, however that may cause audio/video desync in games like DDR and Spyro 2 (intro). With this option you can try to use fractional framerates.
 
-??? note "Enable Dithering - On"
-	![](../image/core/pcsx_rearmed/dither_on.png)
+- **Framebuffer readout** [pcsx_rearmed_alt_flip] (**Auto**|Early|Late)
 
-??? note "Enable Dithering - Off"
-	![](../image/core/pcsx_rearmed/dither_off.png)
+	Some games make changes to the framebuffer while it's being sent to the display, which is currently not emulated. However this option allows to choose if the emulator takes the video frame before the emulated PSX active display period ('Early') or after ('Late'). Normally this should be left at 'Auto'.
 
-- **Frame duping** [pcsx_rearmed_duping_enable] (**enabled**|disabled)
+- **RGB32 output** [pcsx_rearmed_rgb32_output] (**disabled**|enabled)
 
-	A speedup, redraws/reuses the last frame if there was no new data.
+	Improves color depth for true color modes (most FMVs and occasional title screens). Causes higher CPU usage due to double memory bandwidth requirement, even in 15bpp modes. Takes effect on game reload only (libretro limitation).
 
-- **Display Internal FPS** [pcsx_rearmed_display_internal_fps] (**disabled**|enabled)
+- **Hi-Res Downscaling** [pcsx_rearmed_scale_hires] (**disabled**|enabled)
 
-	Shows an on-screen frames per second counter.
+	When enabled, games that run in high resolution video modes (480i, 512i) will be downscaled to 320x240 by skipping lines and/or columns. May be useful on some devices with native 240p display resolutions that lack efficient hardware scaling.
 
-- **Threaded Rendering** [pcsx_rearmed_gpu_thread_rendering] (**disabled**|sync|async)
+- **(GPU) Slow linked list processing** [pcsx_rearmed_gpu_slow_llists] (**Auto**|disabled|enabled)
 
-	When enabled, runs GPU commands in a thread.
+	Slower but more accurate GPU linked list processing. Needed by only a few games like Vampire Hunter D. Should be autodetected in most cases.
 
-	'Sync' waits for drawing to finish before vsync.
+- **(GPU) Horizontal overscan** [pcsx_rearmed_show_overscan] (**disabled**|Auto|Hack)
 
-	'Async' will not wait unless there's another frame behind it.
+	The PSX can display graphics way into the horizontal borders, even if most screens would crop it. This option tries to display all such graphics. Note that this may result in unusual resolutions that your device might not handle well. The 'Hack' option is intended for the widescreen hacks.
 
-- **Show Bios Bootlogo(Breaks some games)** [pcsx_rearmed_show_bios_bootlogo] (**disabled**|enabled)
+- **(GPU) Screen centering** [pcsx_rearmed_screen_centering] (**Auto**|Game-controlled|Borderless|Manual)
 
-	Show the BIOS bootlogo.
+	The PSX has a feature allowing it to shift the image position on screen. Some (mostly PAL) games used this feature in a strange way making the image miscentered and causing uneven borders to appear. With 'Auto' the emulator tries to correct this miscentering automatically. 'Game-controlled' uses the settings supplied by the game. 'Manual' allows to override those values with the settings below.
 
-??? note "Skip BIOS - Off"
-	![](../image/core/beetle_psx_hw/bios.png)
+- **(GPU) Manual position X** [pcsx_rearmed_screen_centering_x] (-16 to 16 in steps of 2, **0**)
 
-- **Sound: Reverb** [pcsx_rearmed_spu_reverb] (**enabled**|disabled)
+	X offset of the frame buffer. Only effective when 'Screen centering' is set to 'Manual'.
 
-	Enable sound reverb.
+- **(GPU) Manual position Y** [pcsx_rearmed_screen_centering_y] (-16 to 16 in steps of 1, **0**)
 
-- **Sound: Interpolation** [pcsx_rearmed_spu_interpolation] (**simple**|gaussian|cubic|off)
+	Y offset of the frame buffer. Only effective when 'Screen centering' is set to 'Manual'.
 
-	Modify sound interpolation.
+- **(GPU) Manual height adjustment** [pcsx_rearmed_screen_centering_h_adj] (-64|-48|-40|-32|-24|-16|-8|-7|-6|-5|-4|-3|-2|-1|**0**)
 
-- **CD Access Method (Restart)** [pcsx_rearmed_async_cd] (**sync**|sync|async|precache)
+	Height adjustment. Only effective when 'Screen centering' is set to 'Manual'.
 
-	Select method used to read data from content disk images.
+#### GPU Plugin
 
-	'Synchronous': Mimics original hardware.
-	
-	'Asynchronous': Reduce stuttering on devices with slow storage.
-	
-	'Precache': Loads disk image into memory for faster access (**Note: CHD only**).
+Configure low-level settings of the NEON GPU plugin.
 
-- **Advanced System Options**
+- **Show Interlaced Video** [pcsx_rearmed_neon_interlace_enable_v2] (**auto**|disabled|enabled)
 
-- **XA Decoding** [pcsx_rearmed_noxadecoding] (**enabled**|disabled)
+	When enabled, games that run in high resolution video modes (480i, 512i) will produced interlaced video output. While this displays correctly on CRT televisions, it will produce artifacts on modern displays. When disabled, all video is output in progressive format. Note: there are games that will glitch is this is off.
 
-	Disables XA sound, which can sometimes improve performance.
+- **Enhanced Resolution** [pcsx_rearmed_neon_enhancement_enable] (**disabled**|enabled)
 
-- **CD Audio** [pcsx_rearmed_nocdaudio] (**enabled**|disabled)
+	Render games that do not already run in high resolution video modes (480i, 512i) at twice the native internal resolution. Improves the fidelity of 3D models at the expense of increased performance requirements. 2D elements are generally unaffected by this setting.
 
-	Disables XA sound, which can sometimes improve performance.
+- **Enh. Res. Speed Hack** [pcsx_rearmed_neon_enhancement_no_main] (**disabled**|enabled)
 
-- **SPU IRQ Always Enabled** [pcsx_rearmed_spuirq] (**disabled**|enabled)
+	('Enhanced Resolution' Hack) Improves performance but reduces compatibility and may cause rendering errors.
 
-	Compatibility tweak, should be left to off in most cases. This can be momentarily turned on at any point to try and fix some bugs.
-	
-	Few examples includes:
+- **Enh. Res. Texture Fixup** [pcsx_rearmed_neon_enhancement_tex_adj_v2] (disabled|**enabled**)
 
-	'Alien Resurrection': bug where doors can remain closed until the option is turned on.
+	('Enhanced Resolution' Hack) Solves some texturing issues in some games in Enhanced Resolution mode. May cause a small performance hit.
 
-	'Legend of Mana': audio out-of-sync bug during FMV sequences can also be fixed by momentarily switching the option on, then off when sound is normal.
-     
-- **Additional game fixes options**
+#### Audio
 
-- **Diablo Music Fix** [pcsx_rearmed_idiablofix] (**disabled**|enabled)
+Configure sound emulation: reverb, interpolation, CD audio decoding.
 
-	Fix for music randomly cuts out when pressing start or interact with somebody.
+- **Reverb Effects** [pcsx_rearmed_spu_reverb] (disabled|**enabled**)
 
-- **Parasite Eve 2/Vandal Hearts 1/2 Fix** [pcsx_rearmed_pe2_fix] (**disabled**|enabled)
+	Enable emulation of the reverb feature provided by the PSX SPU. Can be disabled to improve performance at the expense of reduced audio quality/authenticity.
 
-	Enable this to fit Parasite Eve 2 and Vandal Hearts 1/2
+- **Sound Interpolation** [pcsx_rearmed_spu_interpolation] (**Simple**|Gaussian|Cubic|disabled)
 
-- **InuYasha Sengoku Battle Fix** [pcsx_rearmed_inuyasha_fix] (**disabled**|enabled)
+	Enable emulation of the in-built audio interpolation provided by the PSX SPU. 'Gaussian' sounds closest to original hardware. 'Simple' improves performance but reduces quality. 'Cubic' has the highest performance requirements but produces increased clarity. Can be disabled entirely for maximum performance, at the expense of greatly reduced audio quality.
 
-	Enable this to fix InuYasha.
+- **CD Audio** [pcsx_rearmed_nocdaudio] (disabled|**enabled**)
 
-- **Additional core options for DynaRec (ari64) builds:**
+	Enable playback of CD (CD-DA) audio tracks. Can be disabled to improve performance in games that include CD audio, at the expense of missing music.
 
-- **Dynamic recompiler** [pcsx_rearmed_drc] (**enabled**|disabled)
+- **XA Decoding** [pcsx_rearmed_noxadecoding] (disabled|**enabled**)
 
-	Enables core to use dynamic recompiler or interpreter (slower) cpu instructions.
+	Enable playback of XA (eXtended Architecture ADPCM) audio tracks. Can be disabled to improve performance in games that include XA audio, at the expense of missing music.
 
-	When enabled, dynarec can use either one below:
+- **Threaded SPU** [pcsx_rearmed_spu_thread] (**disabled**|enabled)
 
-	Dynarec can either be **ari64** for arm 32-bit devices while **lightrec** i used for 64-bit capable devices or platforms.
+	Emulates the PSX SPU on another CPU thread. May cause audio glitches in some games.
 
-- **PSX cpu clock** [pcsx_rearmed_psxclock] (30 - 100, **default 57**)
+- **Show Input Settings** [pcsx_rearmed_show_input_settings] (**disabled**|enabled)
 
-	Overclock or underclock the PSX, default is 57.
+	Show configuration options for all input devices: analog response, Multitaps, light guns, etc. Quick Menu may need to be toggled for this setting to take effect.
 
-	Lower value = less work for the emu, may be faster in some cases.
+#### Input
 
-	Causes compatibility issues, so modify only for games that needs it, leave at default for most games.
+Configure input devices: analog response, haptic feedback, Multitaps, light guns, etc.
 
-- **Additional core options for devices using NEON-compatible CPU:**
+- **Analog Axis Bounds** [pcsx_rearmed_analog_axis_modifier] (Circle|**Square**)
 
-- **Enable interlacing mode(s)** [pcsx_rearmed_neon_interlace_enable] (**disabled**|enabled)
+	Specify range limits for the left and right analog sticks when input device is set to 'analog' or 'dualshock'. 'Square' bounds improve input response when using controllers with highly circular ranges that are unable to fully saturate the X and Y axes at 45 degree deflections.
 
-	Enables fake scanlines effect.
+- **Rumble Effects** [pcsx_rearmed_vibration] (disabled|**enabled**)
 
-- **Enhanced resolution (slow)** [pcsx_rearmed_neon_enhancement_enable] (**disabled**|enabled)
+	Enable haptic feedback when using a rumble-equipped gamepad with input device set to 'dualshock'.
 
-	Renders in double resolution at the cost of lower performance
+- **DualShock Analog Mode Toggle Key Combo** [pcsx_rearmed_analog_combo] (disabled|**L1 + R1 + Select**|L1 + R1 + Start|L1 + R1 + L3|L1 + R1 + R3|L3 + R3)
 
-	Not available for high resolution games.
+	When the input device type is DualShock, this option allows the emulated DualShock to be toggled between DIGITAL and ANALOG mode like original hardware. You can select the button combination for this.
 
-- **Enhanced resolution speed hack** [pcsx_rearmed_neon_enhancement_no_main] (**disabled**|enabled)
+- **Multitap Mode** [pcsx_rearmed_multitap] (**disabled**|Port 1|Port 2|Ports 1 and 2)
 
-	Speed hack for above option.
+	Connect a virtual PSX Multitap peripheral to either controller 'Port 1' or controller 'Port 2' for 5 player simultaneous input, or to both 'Ports 1 and 2' for 8 player input. Multitap usage requires compatible games.
 
-	Causes game glitches.
+- **NegCon Twist Deadzone** [pcsx_rearmed_negcon_deadzone] (**0%**|3%|5%|7%|10%|13%|15%|17%|20%|23%|25%|27%|30%)
 
-- **Additional core options for devices using PEOPS GPU plugin** (some options may or may not have effect or need core restart)
+	Set the deadzone of the RetroPad left analog stick when simulating the 'twist' action of emulated neGcon Controllers. Used to eliminate drift/unwanted input.
 
-- **(GPU) Odd/Even Bit Hack** [pcsx_rearmed_gpu_peops_odd_even_bit] (**disabled**|enabled)
+- **NegCon Twist Response** [pcsx_rearmed_negcon_response] (**Linear**|Quadratic|Cubic)
 
-	Needed for Chrono Chross.
+	Specify the analog response when using a RetroPad left analog stick to simulate the 'twist' action of emulated neGcon Controllers.
 
-- **(GPU) Expand Screen Width** [pcsx_rearmed_gpu_peops_expand_screen_width] (**disabled**|enabled)
+- **Mouse Sensitivity** [pcsx_rearmed_input_sensitivity] (0.05 to 2.00 in steps of 0.05, **1.00**)
 
-	Capcom fighting games.
+	Adjust responsiveness of emulated 'mouse' input devices.
 
-- **(GPU) Ignore Brightness Color** [pcsx_rearmed_gpu_peops_ignore_brightness] (**disabled**|enabled)
+- **Player 1 Lightgun Crosshair** [pcsx_rearmed_crosshair1] (**disabled**|blue|green|red|white)
 
-	Black screens in Lunar.
+	Toggle player 1's crosshair for the Guncon or Konami Gun. Only works if RGB32 output is off (video options).
 
-- **(GPU) Disable Coordinate Check** [pcsx_rearmed_gpu_peops_disable_coord_check] (**disabled**|enabled)
+- **Player 2 Lightgun Crosshair** [pcsx_rearmed_crosshair2] (**disabled**|blue|green|red|white)
 
-	Enables compatibility mode.
+	Toggle player 2's crosshair for the Guncon or Konami Gun. Only works if RGB32 output is off (video options).
 
-- **(GPU) Lazy Screen Update** [pcsx_rearmed_gpu_peops_lazy_screen_update] (**disabled**|enabled)
+- **Konami Gun X Axis Offset** [pcsx_rearmed_konamigunadjustx] (-40 to 40 in steps of 1, **0**)
 
-	Pandemonium 2
+	Apply an X axis offset to light gun input when emulating a Konami Gun (Hyper Blaster / Justifier) device. Can be used to correct aiming misalignments.
 
-- **(GPU) Old Frame Skipping** [pcsx_rearmed_gpu_peops_old_frame_skip] (**enabled**|disabled)
+- **Konami Gun Y Axis Offset** [pcsx_rearmed_konamigunadjusty] (-40 to 40 in steps of 1, **0**)
 
-	Skips every second frame.
+	Apply a Y axis offset to light gun input when emulating a Konami Gun (Hyper Blaster / Justifier) device. Can be used to correct aiming misalignments.
 
-- **(GPU) Repeated Flat Tex Triangles** [pcsx_rearmed_gpu_peops_repeated_triangles] (**disabled**|enabled)
+- **Guncon X Axis Offset** [pcsx_rearmed_gunconadjustx] (-40 to 40 in steps of 1, **0**)
 
-	Needed by Dark Forces.
+	Apply an X axis offset to light gun input when emulating a Guncon device. Can be used to correct aiming misalignments.
 
-- **(GPU) Draw Quads with Triangles** [pcsx_rearmed_gpu_peops_quads_with_triangles] (**disabled**|enabled)
+- **Guncon Y Axis Offset** [pcsx_rearmed_gunconadjusty] (-40 to 40 in steps of 1, **0**)
 
-	Better G-colors, worse textures.
+	Apply a Y axis offset to light gun input when emulating a Guncon device. Can be used to correct aiming misalignments.
 
-- **(GPU) Fake 'Gpu Busy' States** [pcsx_rearmed_gpu_peops_fake_busy_state] (**disabled**|enabled)
+- **Guncon X Axis Response** [pcsx_rearmed_gunconadjustratiox] (0.75 to 1.25 in steps of 0.01, **1.00**)
 
-	Toggle busy flag after drawing.
+	Adjust relative magnitude of horizontal light gun motion when emulating a Guncon device. Can be used to correct aiming misalignments.
 
-- **Additional core options for devices using UNAI GPU plugin** (some options may or may not have effect or need core restart)
+- **Guncon Y Axis Response** [pcsx_rearmed_gunconadjustratioy] (0.75 to 1.25 in steps of 0.01, **1.00**)
 
-- **(GPU) Enable Blending** [pcsx_rearmed_gpu_unai_blending] (**enabled**|disabled)
+	Adjust relative magnitude of vertical light gun motion when emulating a Guncon device. Can be used to correct aiming misalignments.
 
-- **(GPU) Enable Lighting** [pcsx_rearmed_gpu_unai_lighting] (**enabled**|enabled)
+#### Compatibility Fixes
 
-- **(GPU) Enable Fast Lighting** [pcsx_rearmed_gpu_unai_fast_lighting] (**disabled**|enabled)
+Configure settings/workarounds required for correct operation of specific games.
 
-- **(GPU) Enable Forced Interlace** [pcsx_rearmed_gpu_unai_ilace_force] (**disabled**|enabled)
+- **Instruction Cache Emulation** [pcsx_rearmed_icache_emulation] (**enabled**|disabled)
 
-- **(GPU) Enable Pixel Skip** [pcsx_rearmed_gpu_unai_pixel_skip] (**disabled**|enabled)
+	Enable emulation of the PSX CPU instruction cache. Improves accuracy at the expense of increased performance overheads. Required for Formula One 2001, Formula One Arcade and Formula One 99. [Interpreter only; partial on lightrec and ARM dynarecs]
 
-- **(GPU) Enable Hi-Res Downscaling** [pcsx_rearmed_gpu_unai_scale_hires] (**disabled**|enabled)
+- **Exception and Breakpoint Emulation** [pcsx_rearmed_exception_emulation] (**disabled**|enabled)
 
-	When enabled, will scale hi-res modes to 320x240, skipping unrendered pixels.
+	Enable emulation of some almost never used PSX's debug features. This causes a performance hit, is not useful for games and is intended for PSX homebrew and romhack developers only. Only enable if you know what you are doing. [Interpreter only]
+
+- **Disable Automatic Compatibility Hacks** [pcsx_rearmed_nocompathacks] (**disabled**|enabled)
+
+	By default, PCSX-ReARMed will apply auxiliary compatibility hacks automatically, based on the currently loaded content. This behaviour is required for correct operation, but may be disabled if desired.
+
+#### Speed Hacks (Advanced)
+
+Configure hacks that may improve performance at the expense of decreased accuracy/stability.
+
+- **Turbo CD** [pcsx_rearmed_cd_turbo] (**disabled**|enabled)
+
+	This makes the emulated CD-ROM extremely fast and can reduce loading times in some cases. Warning: many games were not programmed to handle such a speed. The game (or even the emulator) MAY CRASH at ANY TIME if this is enabled.
+
+- **Disable SMC Checks** [pcsx_rearmed_nosmccheck] (**disabled**|enabled)
+
+	Will cause crashes when loading, and lead to memory card failure.
+
+- **Assume GTE Registers Unneeded** [pcsx_rearmed_gteregsunneeded] (**disabled**|enabled)
+
+	May cause rendering errors.
+
+- **Disable GTE Flags** [pcsx_rearmed_nogteflags] (**disabled**|enabled)
+
+	Will cause rendering errors.
+
+- **Disable CPU/GTE Stalls** [pcsx_rearmed_nostalls] (**disabled**|enabled)
+
+	Will cause some games to run too quickly. Should be disabled in almost all cases.
 
 ## Rumble
 
@@ -524,14 +530,17 @@ Rumble only works in the PCSX ReARMed core when
 - The content being ran has rumble support.
 - The frontend being used has rumble support.
 - The joypad device being used has rumble support.
-- The ['Enable Vibration' core option](#core-options) is set to On
+- The ['Rumble Effects' core option](#core-options) is enabled
 - The corresponding user's Pad Type is set to **analog**
 
 ## Multitap
 
-Activating multitap support in compatible games can be configured by the ['Multitap 1' and 'Multitap 2' core options](#core-options).
+Activating multitap support in compatible games can be configured by the ['Multitap Mode' core option](#core-options): a multitap on port 1 or port 2 gives 5 players, on both ports 8 players.
 
-- When multitap1 and multitap2 are off, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
+- With the multitap disabled, only User 1 and 2 input works and are assigned as player 1 and player 2 respectively.
+
+!!! tip
+	If the controls do not work in a game, set **Multitap Mode** to disabled. A multitap the game does not expect can leave it reading no input at all. The device type of each port is set in Settings > Input > Port # Controls.
 
 ## Joypad
 

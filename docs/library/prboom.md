@@ -91,7 +91,7 @@ The PrBoom core saves/loads to/from these directories.
 
 ## Loading DOOM
 
-PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's or system directory.
+PrBoom can load wad, iwad, and pwad files. The PrBoom core requires data ROM ['prboom.wad'](https://github.com/libretro/libretro-prboom/blob/master/prboom.wad) inside the loaded content's directory, `SYSTEM_DIRECTORY/prboom/` or the system directory itself (searched in that order).
 
 !!! TIP
 	If you start the games by loading prboom.wad they will all share the same content name ("prboom" in this case), so the core will put the saves for every game in a single retroarch/saves/prboom/ folder and when playing Doom 2 for example you'll see Doom 1 saves, etc. which will cause confusion for the user. The games will also share the same game overrides/options files/remaps/etc. History tab will also lists each game as "prboom".	
@@ -162,7 +162,13 @@ An example folder structure would be like so:
 
 ## Music
 
-If mp3 files are detected in the game folder, PrBoom will play these tracks instead of the internal MIDI musics, see below for the required filenames for each game.
+If mp3 files with the names below are found, PrBoom plays them instead of the internal MIDI music. They are looked for, in this order, in:
+
+1. the folder of the loaded WAD
+2. `SYSTEM_DIRECTORY/prboom/`
+3. `SYSTEM_DIRECTORY/`
+
+The same search is used for `prboom.wad` and for any other WAD or DEH file a game loads. Where the frontend cannot give the core the WAD's own folder - RetroArch on tvOS is one such case - put the music in `SYSTEM_DIRECTORY/prboom/` next to `prboom.wad`.
 
 ### Doom
 

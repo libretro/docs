@@ -59,7 +59,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 
 | Core                                             			           | License                                                                                   | Non-commercial |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
-| [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
+| [3D Engine](../library/3dengine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Anarch](../library/anarch.md)                                                   | [CC0](https://codeberg.org/iyzsong/anarch-libretro/src/branch/master/LICENSE)             |                |
 | [Ardens](../library/ardens.md)                                       | [MIT](https://github.com/tiberiusbrown/Ardens/blob/master/LICENSE.txt)                         |                |
@@ -83,10 +83,10 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [bsnes-mercury Accuracy](../library/bsnes_mercury_accuracy.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Performance](../library/bsnes_mercury_performance.md)             | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
-| [bsnes Accuracy](../library/bsnes_accuracy.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
-| [bsnes Balanced](../library/bsnes_balanced.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Accuracy](../library/bsnes2014_accuracy.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Balanced](../library/bsnes2014_balanced.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md)                            | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
-| [bsnes Performance](../library/bsnes_performance.md)                             | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Performance](../library/bsnes2014_performance.md)                             | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [Caprice32](../library/caprice32.md)             			           | [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)                 |                |
 | [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/COPYING)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
