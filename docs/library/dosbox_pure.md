@@ -13,7 +13,7 @@ The DOSBox Pure core has been authored by
 
 The DOSBox Pure core is licensed under
 
-- [GPLv2](https://github.com/libretro/dosbox-libretro/blob/master/COPYING)
+- [GPLv2](https://github.com/schellingb/dosbox-pure/blob/main/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -27,16 +27,17 @@ Content that can be loaded by the DOSBox Pure core has the following file extens
 - .com _(DOS program)_
 - .bat _(DOS batch file)_
 - .iso _(CDROM image)_
+- .chd _(CDROM image)_
 - .cue _(CDROM image)_
 - .ins _(CDROM image)_
 - .img _(hard disk/floppy disk/CDROM image)_
 - .ima _(hard disk/floppy disk image)_
 - .vhd _(hard disk image)_
 - .jrc _(PCjr cartridge)_
-- .tc _(PCjr cartridge)_
 - .m3u _(playlist for multiple CDROM/floppy)
 - .m3u8 _(playlist for multiple CDROM/floppy)
 - .conf _(bootable, see [Loading of dosbox.conf files](#loading-of-dosboxconf-files))_
+- a directory _(loaded as drive C:)_
 
 RetroArch database(s) that are associated with the DOSBox Pure core:
 
@@ -75,7 +76,7 @@ Frontend-level settings or features that the DOSBox Pure core respects.
 
 ### MIDI playback with SoundFonts
 
-If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI Output` [core option](#audio-options). This sound font will then be used to play `General Midi` and `Sound Canvas` music.
+If DOSBox Pure finds one or more `.SF2` sound font files in the `system` directory of the frontend, one of them can be selected via the `Audio > MIDI Output` [core option](#audio). This sound font will then be used to play `General Midi` and `Sound Canvas` music.
 
 ###  MPU-401 MIDI device emulation through MUNT
 
@@ -97,17 +98,17 @@ Read more about [save file handling](#save-file-handling).
 
 ### Rewind support
 
-Using the [core option](#emulation-options) `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
+Using the [core option](#general) `Save States Support`, rewinding can be enabled. Keep in mind that rewind support comes at a high performance cost.
 
 ## Geometry and timing
 
 - The DOSBox Pure core's core provided FPS is dependent on the DOS application
-- The DOSBox Pure core's core provided sample rate is dependent on the 'Audio > Audio Sample Rate' [core option](#audio-options)
+- The DOSBox Pure core's core provided sample rate is dependent on the 'Audio > Audio Sample Rate' [core option](#audio)
 - The DOSBox Pure core's base width is 320
 - The DOSBox Pure core's base height is 200
 - The DOSBox Pure core's max width is 1280
 - The DOSBox Pure core's max height is 1024
-- The DOSBox Pure core's core provided aspect ratio is dependent on the DOS application and the 'Video > Aspect Ratio Correction' [core option](#video-options)
+- The DOSBox Pure core's core provided aspect ratio is dependent on the DOS application and the 'Video > Aspect Ratio Correction' [core option](#video)
 
 ## Loading content
 
@@ -165,7 +166,7 @@ The core automatically executes `DOSBOX.BAT` instead of showing the start menu i
 
 If a .conf file gets selected in the frontend, DOSBox Pure will load it directly and run its autoexec commands.
 
-Alternatively, a .conf file can get loaded automatically depending on the 'Emulation > Loading of dosbox.conf' [core option](#emulation-options). There are two modes that can be enabled:
+Alternatively, a .conf file can get loaded automatically depending on the 'General > Advanced > Loading of dosbox.conf' [core option](#general). There are two modes that can be enabled:
 - "Try 'dosbox.conf' in the loaded content (ZIP or folder)" - Will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path
 - "Try '.conf' with same name as loaded content (next to ZIP or folder)" - Will automatically load GAME.conf next to GAME.zip if it exists.
 
@@ -179,7 +180,7 @@ If the core gets loaded with a `.m3u8` file, all files listed in it will be adde
 
 You might have trouble getting stutter-free scrolling in some games (cf. [this bug report](https://github.com/schellingb/dosbox-pure/issues/128)). There are a number of things you can try to remedy this:
 
-- In `Quick Menu > Options > Emulation Options`, set `Force 60 FPS Output` to ON.
+- In `Quick Menu > Core Options > General`, set `Force Output FPS` to `On (60 FPS)`.
 - In RetroArch's settings, navigate to `Video` and set `Threaded Video` to OFF.
 - Try `Video` > `Output` > `Set Display-Reported Refresh Rate`.
 - Try setting `Video` > `Synchronization` > `Vertical Sync` to ON.
@@ -219,7 +220,7 @@ This label is not saved anywhere and needs to be reapplied on every launch so it
 
 ### Keyboard layout defaults to US
 
-The keyboard layout defaults to the US Layout (QWERTY). If you need a different layout, you can change the core option `Input Options > Advanced > Keyboard Layout`.
+The keyboard layout defaults to the US Layout (QWERTY). If you need a different layout, you can change the core option `Input > Advanced > Keyboard Layout`.
 
 ### Save file handling
 
@@ -231,189 +232,247 @@ When modifications to the file system loaded from a ZIP file happen, these modif
 
 ## Core options
 
-The DOSBox Pure core has the following options that can be tweaked from the core options menu. The default setting is bolded.
+The DOSBox Pure core has the following options that can be tweaked from the core options menu. The default setting is bolded. Some options are only shown when an option they depend on is set.
 
-Settings with (Restart) mean that core has to be closed for the new setting to be applied on next launch.
+#### General
 
-### Manage Core Options
-Save or remove option overrides for the current content.
+General settings (save states, start menu, fixed FPS).
 
-- **Save game options**
+- **Force Output FPS** [dosbox_pure_force60fps] (**Off**|On (10 FPS)|On (15 FPS)|On (20 FPS)|On (30 FPS)|On (35 FPS)|On (50 FPS)|On (60 FPS)|On (70 FPS)|On (90 FPS)|On (120 FPS)|On (144 FPS)|On (240 FPS)|On (360 FPS))
 
-	Saves current options specifically for running game.
+	Enable this to force output at a fixed rate. Try 60 FPS if you encounter screen tearing or vsync issues. Output will have frames skipped at lower rates and frames duplicated at higher rates.
 
-- **Save Content Directory Options**
-
-	Saves current options specifically for running game's content directory.
-
-- **Reset Options**
-
-	Reset all core options to default values.
-
-### Emulation Options
-Core specific settings (latency, save states, start menu).
-
-- **Force 60 FPS Output** [dosbox_pure_force60fps] (**OFF** | ON)
-
-	Enable this to force output at 60FPS. Use this if you encounter screen tearing or vsync issues.
-	
-- **Show Performance Statistics** [dosbox_pure_perfstats] (**Disabled** | Simple | Detailed information)
-
-	Enable this to show statistics about performance and framerate and check if emulation runs at full speed.
-
-- **Save States Support** [dosbox_pure_savestate]  (**Enable save states** | Enable save states with rewind | OFF)
+- **Save States Support** [dosbox_pure_savestate] (**Enable save states**|Enable save states with rewind|Disabled)
 
 	Make sure to test it in each game before using it. Complex late era DOS games might have problems. Be aware that states saved with different video, CPU or memory settings are not loadable. Rewind support comes at a high performance cost and needs at least 40MB of rewind buffer.
 
-- **Loading of dosbox.conf** [dosbox_pure_conf] (**Disabled conf support (default)** | Try 'dosbox.conf' in the loaded content (ZIP or folder) | Try '.conf' with same name as loaded content (next to ZIP or folder))
+- **Advanced > Use Strict Mode** [dosbox_pure_strict_mode] (**Off**|On)
+
+	Disable the command line, running installed operating systems and using .BAT/.COM/.EXE/DOS.YML files from the save game.
+
+- **Advanced > Loading of dosbox.conf** [dosbox_pure_conf] (**Disabled conf support (default)**|Try 'dosbox.conf' in the loaded content (ZIP or folder)|Try '.conf' with same name as loaded content (next to ZIP or folder))
 
 	DOSBox Pure is meant to be configured via core options but optionally supports loading of legacy .conf files.
 
-- **Start Menu** [dosbox_pure_menu_time] (**Show at start, shut down core 5 seconds after auto started game exit** | Show at start, shut down core 3 seconds after auto started game exit | Show at start, shut down core immediately after auto started game exit | Show at start, show again after game exit (default) | Always show menu on startup and after game exit, ignore auto start setting)
+- **Advanced > Start Menu** [dosbox_pure_menu_time] (**Show at start, show again after game ends (default)**|Show at start, exit emulator 5 seconds after auto started game ends|Show at start, exit emulator 3 seconds after auto started game ends|Show at start, exit emulator immediately after auto started game ends|Ignore auto start setting, always show menu on startup and after game ends)
 
 	Set the behavior of the start menu before and after launching a game. You can also force it to open by holding shift or L2/R2 when selecting 'Restart'.
 
-- **Advanced > Input Latency** [dosbox_pure_latency] (**Default** | Lowest latency - See CPU usage setting below! | Irregular latency - Might improve performance on low-end devices)
+- **Advanced > Menu Transparency** [dosbox_pure_menu_transparency] (10%|20%|30%|40%|50%|60%|**70%**|80%|90%|100%)
 
-	By default the core operates in a high performance mode with good input latency. There is a special mode available which minimizes input latency further requiring manual tweaking.
+	Set the transparency level of the Menu and the On-Screen Keyboard.
 
-- **Advanced > Low latency CPU usage** [dosbox_pure_auto_target] (**90%** | 50% > 100%)
+#### Input
 
-	In low latency mode when emulating DOS as fast as possible, how much time per frame should be used by the emulation. If the video is stuttering, lower this or improve render performance in the frontend (for example by disabling vsync or video processing). Use the performance statistics to easily find the maximum that still hits the emulated target framerate.
-
-### Input Options
 Keyboard, mouse and joystick settings.
 
-- **Bind Unused Buttons** [dosbox_pure_bind_unused] (**On** | Off)
+- **Use L3 Button to Show Menu** [dosbox_pure_on_screen_keyboard] (**On (Default to Menu)**|On (Default to On-Screen Keyboard)|On (Only On-Screen Keyboard While in Game)|Off)
 
-	Bind all unused controller buttons to keyboard keys. Can be remapped in the Controls section of the core settings.
+	Always bind the L3 controller button to show the menu to swap CDs/Disks and use the On-Screen Keyboard.
 
-- **Enable On Screen Keyboard** [dosbox_pure_on_screen_keyboard] (**On** | Off)
+- **Mouse Input Mode** [dosbox_pure_mouse_input] (**Auto (default)**|Virtual mouse movement|Direct controlled mouse (not supported by all games)|Touchpad mode (see description, best for touch screens)|Off (ignore mouse inputs))
 
-	 Enable the On Screen Keyboard feature which can be activated with the L3 button on the controller.
+	You can disable input handling from a mouse or a touchscreen (emulated mouse through joypad will still work). In touchpad mode use drag to move, tap to click, two finger tap to right-click and press-and-hold to drag
 
-- **Bind Mouse Wheel To Key** [dosbox_pure_mouse_wheel] (**Left-Bracket/Right-Bracket** | Comma/Period | Page-Up/Page-Down | Home/End | Delete/Page-Down | Minus/Equals | Semicolon/Quote | Numpad Minus/Plus | Numpad Divide/Multiply | Up/Down | Left/Right | Q/E | Disable)
+- **Bind Mouse Wheel To Key** [dosbox_pure_mouse_wheel] (**Left-Bracket/Right-Bracket**|Comma/Period|Page-Up/Page-Down|Home/End|Delete/Page-Down|Minus/Equals|Semicolon/Quote|Numpad Minus/Plus|Numpad Divide/Multiply|Up/Down|Left/Right|Q/E|Disable)
 
 	Bind mouse wheel up and down to two keyboard keys to be able to use it in DOS games.
 
-- **Mouse Sensitivity** [dosbox_pure_mouse_speed_factor] (**100%** | 20% to 100% in 5% increments | 100% to 500% in 10% increments)
+- **Mouse Sensitivity** [dosbox_pure_mouse_speed_factor] (20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|220%|240%|260%|280%|300%|320%|340%|360%|380%|400%|420%|440%|460%|480%|500%)
 
 	Sets the overall mouse cursor movement speed.
- 
-- **Advanced > Horizontal Mouse Sensitivity** [dosbox_pure_mouse_speed_factor_x] (**100%** | 20% to 100% in 5% increments | 100% to 500% in 10% increments)
+
+- **Advanced > Horizontal Mouse Sensitivity** [dosbox_pure_mouse_speed_factor_x] (20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|220%|240%|260%|280%|300%|320%|340%|360%|380%|400%|420%|440%|460%|480%|500%)
 
 	Experiment with this value if the mouse is too fast/slow when moving left/right.
 
-- **Advanced > Use Mouse Input** [dosbox_pure_mouse_input] (**ON** | OFF)
+- **Advanced > Action Wheel Inputs** [dosbox_pure_actionwheel_inputs] (**Right Stick, D-Pad, Mouse (Default)**|Right Stick, D-Pad|Right Stick, Mouse|Right Stick|Both Sticks, D-Pad, Mouse|Both Sticks, D-Pad|Both Sticks, Mouse|Both Sticks|Left Stick, D-Pad, Mouse|Left Stick, D-Pad|Left Stick, Mouse|Left Stick|D-Pad, Mouse|D-Pad|Mouse)
 
-	You can disable input handling from a mouse or a touchscreen (emulated mouse through joypad will still work).
+	Sets which inputs control the action wheel.
 
-- **Advanced > Automatic Game Pad Mappings** [dosbox_pure_auto_mapping] (**On (default)** | Enable with notification on game detection | Off)
+- **Advanced > Automatic Game Pad Mappings** [dosbox_pure_auto_mapping] (**On (default)**|Enable with notification on game detection|Off)
 
 	DOSBox Pure can automatically apply a gamepad control mapping scheme when it detects a game. These button mappings are provided by the Keyb2Joypad Project (by Jemy Murphy and bigjim).
 
-- **Advanced > Keyboard Layout** [dosbox_pure_keyboard_layout] (**US (default)** | UK | Belgium | Brazil | Croatia | Czech Republic | Denmark | Finland | France | Germany | Greece | Hungary | Iceland | Italy | Netherlands | Norway | Poland | Portugal | Russia | Slovakia | Slovenia | Spain | Sweden | Switzerland (German) | Switzerland (French) | Turkey)
+- **Advanced > Keyboard Layout** [dosbox_pure_keyboard_layout] (**US (default)**|UK|Belgium|Brazil|Croatia|Czech Republic|Denmark|Finland|France|Germany|Greece|Hungary|Iceland|Italy|Netherlands|Norway|Poland|Portugal|Russia|Slovakia|Slovenia|Spain|Sweden|Switzerland (German)|Switzerland (French)|Turkey)
 
-	Select the keyboard layout (will not change the On Screen Keyboard).
+	Select the keyboard layout (will not change the On-Screen Keyboard).
 
-- **Advanced > Menu Transparency** [dosbox_pure_menu_transparency] (**15%** | 10% to 100% in 10% increments)
-
-	Set the transparency level of the On Screen Keyboard and the Gamepad Mapper.
-
-- **Advanced > Joystick Analog Deadzone** [dosbox_pure_joystick_analog_deadzone] (**15%** | 0% to 35% in 5% increments)
+- **Advanced > Joystick Analog Deadzone** [dosbox_pure_joystick_analog_deadzone] (0%|5%|10%|**15%**|20%|25%|30%|35%|40%)
 
 	Set the deadzone of the joystick analog sticks. May be used to eliminate drift caused by poorly calibrated joystick hardware.
 
-- **Advanced > Enable Joystick Timed Intervals** [dosbox_pure_joystick_timed] (**On (default)** | Off)
+- **Advanced > Enable Joystick Timed Intervals** [dosbox_pure_joystick_timed] (**On (default)**|Off)
 
 	Enable timed intervals for joystick axes. Experiment with this option if your joystick drifts.
 
-### Performance Options
+#### Performance
+
 Adjust the performance of the emulated CPU.
 
-- **Emulated Performance** [dosbox_pure_cycles] (**AUTO - DOSBox will try to detect performance needs (default)** | MAX - Emulate as many instructions as possible | 8086/8088, 4.77 MHz from 1980 (315 cps) | 286, 6 MHz from 1982 (1320 cps) | 286, 12.5 MHz from 1985 (2750 cps) | 386, 20 MHz from 1987 (4720 cps) | 386DX, 33 MHz from 1989 (7800 cps) | 486DX, 33 MHz from 1990 (13400 cps) | 486DX2, 66 MHz from 1992 (26800 cps) | Pentium, 100 MHz from 1995 (77000 cps) | Pentium II, 300 MHz from 1997 (200000 cps) | Pentium III, 600 MHz from 1999 (500000 cps) | AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
+- **Emulated Performance** [dosbox_pure_cycles] (**AUTO - DOSBox will try to detect performance needs (default)**|MAX - Emulate as many instructions as possible|8086/8088, 4.77 MHz from 1980 (315 cps)|286, 6 MHz from 1982 (1320 cps)|286, 12.5 MHz from 1985 (2750 cps)|386, 20 MHz from 1987 (4720 cps)|386DX, 33 MHz from 1989 (7800 cps)|486DX, 33 MHz from 1990 (13400 cps)|486DX2, 66 MHz from 1992 (26800 cps)|Pentium, 100 MHz from 1995 (77000 cps)|Pentium II, 300 MHz from 1997 (200000 cps)|Pentium III, 600 MHz from 1999 (500000 cps)|AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
 
 	The raw performance that DOSBox will try to emulate.
 
-- **Detailed > Performance Scale** [dosbox_pure_cycles_scale] (**100%** | 20% to 200% in 5% increments)
+- **Detailed > Maximum Emulated Performance** [dosbox_pure_cycles_max] (**Unlimited**|8086/8088, 4.77 MHz from 1980 (315 cps)|286, 6 MHz from 1982 (1320 cps)|286, 12.5 MHz from 1985 (2750 cps)|386, 20 MHz from 1987 (4720 cps)|386DX, 33 MHz from 1989 (7800 cps)|486DX, 33 MHz from 1990 (13400 cps)|486DX2, 66 MHz from 1992 (26800 cps)|Pentium, 100 MHz from 1995 (77000 cps)|Pentium II, 300 MHz from 1997 (200000 cps)|Pentium III, 600 MHz from 1999 (500000 cps)|AMD Athlon, 1.2 GHz from 2000 (1000000 cps))
+
+	With dynamic CPU speed (AUTO or MAX above), the maximum emulated performance level.
+
+- **Detailed > Performance Scale** [dosbox_pure_cycles_scale] (20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|105%|110%|115%|120%|125%|130%|135%|140%|145%|150%|155%|160%|165%|170%|175%|180%|185%|190%|195%|200%)
 
 	Fine tune the emulated performance for specific needs.
 
-- **Detailed > Limit CPU Usage** [dosbox_pure_cycle_limit] (**100%** | 20% to 100% in 1% increments)
+- **Detailed > Limit CPU Usage** [dosbox_pure_cycle_limit] (50%|51%|52%|53%|54%|55%|56%|57%|58%|59%|60%|61%|62%|63%|64%|65%|66%|67%|68%|69%|70%|71%|72%|73%|74%|75%|76%|77%|78%|79%|80%|81%|82%|83%|84%|85%|86%|87%|88%|89%|90%|91%|92%|93%|94%|95%|96%|97%|98%|99%|**100%**)
 
 	When emulating DOS as fast as possible, how much time per frame should be used by the emulation. Lower this if your device becomes hot while using this core.
 
-### Video Options
+- **Advanced > Show Performance Statistics** [dosbox_pure_perfstats] (**Disabled**|Simple|Detailed information)
+
+	Enable this to show statistics about performance and framerate and check if emulation runs at full speed.
+
+#### Video
+
 Settings for the emulated graphics card and aspect ratio.
 
-- **Emulated Graphics Chip (restart required)** [dosbox_pure_machine] (**SVGA (Super Video Graphics Array) (default)** | VGA (Video Graphics Array) | EGA (Enhanced Graphics Adapter | CGA (Color Graphics Adapter) | Tandy (Tandy Graphics Adapter | Hercules (Hercules Graphics Card) | PCjr)
+- **Emulated Graphics Chip (restart required)** [dosbox_pure_machine] (**SVGA (Super Video Graphics Array) (default)**|VGA (Video Graphics Array)|EGA (Enhanced Graphics Adapter)|CGA (Color Graphics Adapter)|Tandy (Tandy Graphics Adapter)|Hercules (Hercules Graphics Card)|PCjr)
 
 	The type of graphics chip that DOSBox will emulate.
 
-- **CGA Mode** [dosbox_pure_cga] (**Early model, composite mode auto (default)** | Early model, composite mode on | Early model, composite mode off | Late model, composite mode auto | Late model, composite mode on | Late model, composite mode off)
+- **CGA Mode** [dosbox_pure_cga] (**Early model, composite mode auto (default)**|Early model, composite mode on|Early model, composite mode off|Late model, composite mode auto|Late model, composite mode on|Late model, composite mode off)
 
 	The CGA variation that is being emulated.
 
-- **Hercules Color Mode** [dosbox_pure_hercules] (**Black & white (default)** | Black & amber | Black & green)
+- **Hercules Color Mode** [dosbox_pure_hercules] (**Black & white (default)**|Black & amber|Black & green)
 
 	The color scheme for Hercules emulation.
 
-- **SVGA Mode (restart required)** [dosbox_pure_svga] (**S3 Trio64 (default)** | S3 Trio64 no-line buffer hack (reduces flickering in some games) | S3 Trio64 VESA 1.3 | Tseng Labs ET3000 | Tseng Labs ET4000 | Paradise PVGA1A)
+- **SVGA Mode (restart required)** [dosbox_pure_svga] (**S3 Trio64 (default)**|S3 Trio64 no-line buffer hack (reduces flickering in some games)|S3 Trio64 VESA 1.3|Tseng Labs ET3000|Tseng Labs ET4000|Paradise PVGA1A)
 
 	The SVGA variation that is being emulated. Try changing this if you encounter graphical glitches.
 
-- **Aspect Ratio Correction** [dosbox_pure_aspect_correction] (**Off (default)** | On)
+- **SVGA Memory (restart required)** [dosbox_pure_svgamem] (512KB|1MB|**2MB (default)**|3MB|4MB|8MB (not always recognized))
 
-	When enabled, the core's aspect ratio is set to what a CRT monitor would display.
+	The amount of memory available to the emulated SVGA card.
 
-### System Options
-Other system settings for emulated RAM and CPU.
+- **3dfx Voodoo Emulation** [dosbox_pure_voodoo] (**Enabled - 8MB memory (default)**|Enabled - 12MB memory, Dual Texture|Enabled - 4MB memory, Low Resolution Only|Disabled)
 
-- **Memory Size (restart required)** [dosbox_pure_memory_size] (**16 MB (default)** | Disable extended memory (no EMS/XMS) | 4 MB | 8 MB | 24 MB | 32 MB (unsafe) | 48 MB (unsafe) | 64 MB (unsafe) | 96 MB (unsafe) | 128 MB (unsafe) | 224 MB (unsafe))
+	Enables certain games with support for the Voodoo 3D accelerator. 3dfx Voodoo Graphics SST-1/2 emulator by Aaron Giles and the MAME team (license: BSD-3-Clause)
+
+- **3dfx Voodoo Performance** [dosbox_pure_voodoo_perf] (**Auto (default)**|Hardware OpenGL|Software Multi Threaded|Software Multi Threaded, low quality|Software Single Threaded, low quality|Software Single Threaded)
+
+	Options to tweak the behavior of the 3dfx Voodoo emulation. Switching to OpenGL requires a restart. If OpenGL is available, host-side 3D acceleration is used which can make 3D rendering much faster. Auto will use OpenGL if it is the active video driver in the frontend.
+
+- **3dfx Voodoo OpenGL Scaling** [dosbox_pure_voodoo_scale] (**1x**|2x|3x|4x|5x|6x|7x|8x)
+
+	Increase the native resolution of the rendered image.
+
+- **3dfx Voodoo Gamma Correction** [dosbox_pure_voodoo_gamma] (-10|-9|-8|-7|-6|-5|-4|-3|**-2**|-1|None|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|Disable Gamma Correction)
+
+	Change brightness of rendered 3dfx output.
+
+- **Aspect Ratio Correction** [dosbox_pure_aspect_correction] (**Off (default)**|On (single-scan)|On (double-scan when applicable)|Padded to 4:3 (single-scan)|Padded to 4:3 (double-scan when applicable))
+
+	Adjust the aspect ratio to approximate what a CRT monitor would display (works best on high resolution displays and without integer scaling).
+
+- **Overscan Border Size** [dosbox_pure_overscan] (**Off (default)**|Small|Medium|Large)
+
+	When enabled, show a border around the display. Some games use the color of the border to convey information.
+
+#### System
+
+Other hardware emulation settings for RAM, CPU and OS.
+
+- **Memory Size (restart required)** [dosbox_pure_memory_size] (Disable extended memory (no EMS/XMS)|4 MB|8 MB|**16 MB (default)**|24 MB|32 MB|48 MB|64 MB|96 MB|128 MB|224 MB|256 MB|512 MB|1024 MB)
 
 	The amount of (high) memory that the emulated machine has. You can also disable extended memory (EMS/XMS). Using more than the default is not recommended, due to incompatibility with certain games and applications.
 
-- **CPU Type (restart required)** [dosbox_pure_cpu_type] (**Auto - Mixed feature set with maximum performance and compatibility** | 386 - 386 instruction with fast memory access | 386 (slow) - 386 instruction set with memory privilege checks | 386 (prefetch) - With prefetch queue emulation (only on 'auto' and 'normal' core) | 486 (slow) - 486 instruction set with memory privilege checks | Pentium (slow) - 586 instruction set with memory privilege checks)
+- **Modem Type** [dosbox_pure_modem] (**Null Modem (Direct Serial)**|Dial-Up Modem (Hayes Standard))
 
-	Emulated CPU type. Auto is the fastest choice. Games that require specific CPU type selection:
-	386 (prefetch): X-Men: Madness in The Murderworld, Terminator 1, Contra, Fifa International Soccer 1994
-	486 (slow): Betrayal in Antara
-	Pentium (slow): Fifa International Soccer 1994, Windows 95/Windows 3.x games
+	Type of emulated modem on COM1 for netplay. With the dial-up modem, one side needs to dial any number to connect.
 
-- **Advanced > CPU Core** [dosbox_pure_cpu_core] (**Auto - Real-mode games use normal, protected-mode games use dynamic** | Dynamic - Dynamic recompilation (fast, using dynamic_x86 implementation) | Auto - Real-mode games use normal, protected-mode games use dynamic | Dynamic - Dynamic recompilation (fast, using dynrec implementation) | **Normal (interpreter)** | Simple (interpreter optimized for old real-mode games))
+- **CPU Type (restart required)** [dosbox_pure_cpu_type] (**Auto - Mixed feature set with maximum performance and compatibility**|386 - 386 instruction with fast memory access|386 (slow) - 386 instruction set with memory privilege checks|386 (prefetch) - With prefetch queue emulation (only on 'auto' and 'normal' core)|486 (slow) - 486 instruction set with memory privilege checks|Pentium (slow) - 586 instruction set with memory privilege checks)
+
+	Emulated CPU type. Auto is the fastest choice. Games that require specific CPU type selection: 386 (prefetch): X-Men: Madness in The Murderworld, Terminator 1, Contra, Fifa International Soccer 1994 486 (slow): Betrayal in Antara Pentium (slow): Fifa International Soccer 1994, Windows 95/Windows 3.x games
+
+- **Advanced > CPU Core** [dosbox_pure_cpu_core] (**Auto - Real-mode games use normal, protected-mode games use dynamic**|Dynamic - Dynamic recompilation (fast, using dynrec implementation)|Normal (interpreter)|Simple (interpreter optimized for old real-mode games))
 
 	Emulation method (DOSBox CPU core) used.
 
-### Audio Options
+- **Advanced > OS Disk Modifications (restart required)** [dosbox_pure_bootos_ramdisk] (**Keep (default)**|Discard|Save Difference Per Content)
+
+	When running an installed operating system, modifications to the C: drive will be made on the disk image by default. Setting it to 'Discard' allows the content to be closed any time without worry of file system or registry corruption. When using 'Save Difference Per Content' the disk image must never be modified again, otherwise existing differences become unusable.
+
+- **Advanced > Free Space on D: in OS (restart required)** [dosbox_pure_bootos_dfreespace] (**1GB (default)**|2GB|4GB|8GB|Discard Changes to D:|Disable D: Hard Disk (use only CD-ROM))
+
+	Controls the amount of free space available on the D: drive when running an installed operating system. If the total size of the D: drive (data + free space) exceeds 2 GB, it can't be used in earlier versions of Windows 95. WARNING: Created save files are tied to this setting, so changing this will hide all existing D: drive changes.
+
+- **Advanced > Force Normal Core in OS** [dosbox_pure_bootos_forcenormal] (**Off (default)**|On)
+
+	The normal core can be more stable when running an installed operating system. This can be toggled on and off to navigate around crashes.
+
+#### Audio
+
 MIDI, SoundBlaster and other audio settings.
 
-- **Audio Sample Rate (restart required)** [dosbox_pure_audiorate] (48000 | 44100 | 32730 | 32000 | 22050 | 16000 | 11025 | 8000 | 49716)
+- **Audio Sample Rate (restart required)** [dosbox_pure_audiorate] (**48000**|44100|32000|22050|16000|11025|8000|49716)
 
-	This should match the frontend audio output rate (Hz) setting. 49716 is for perfect OPL emulation.
+	This should match the frontend audio output rate (Hz) setting.
 
-- **SoundBlaster Settings** [dosbox_pure_sblaster_conf] (**Port 0x220, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5** | Port 0x220, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 7, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x240, IRQ 2, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x240, IRQ 5, 8-Bit DMA 3, 16-bit DMA 5 | Port 0x240, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5 | Port 0x240, IRQ 10, 8-Bit DMA 3, 16-bit DMA 7 | Port 0x280, IRQ 10, 8-Bit DMA 0, 16-bit DMA 6 | Port 0x210, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5)
+- **SoundBlaster Settings** [dosbox_pure_sblaster_conf] (**Port 0x220, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5**|Port 0x220, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5|Port 0x240, IRQ 7, 8-Bit DMA 1, 16-bit DMA 5|Port 0x240, IRQ 7, 8-Bit DMA 3, 16-bit DMA 7|Port 0x240, IRQ 2, 8-Bit DMA 3, 16-bit DMA 7|Port 0x240, IRQ 5, 8-Bit DMA 3, 16-bit DMA 5|Port 0x240, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5|Port 0x240, IRQ 10, 8-Bit DMA 3, 16-bit DMA 7|Port 0x280, IRQ 10, 8-Bit DMA 0, 16-bit DMA 6|Port 0x280, IRQ 5, 8-Bit DMA 1, 16-bit DMA 5)
 
 	Set the address, interrupt, low 8-bit and high 16-bit DMA.
 
-- **MIDI Output** [dosbox_pure_midi] (will cycle through the .ROMs or .SF2s you have installed, + frontend MIDI driver)
+- **MIDI Output** [dosbox_pure_midi] (**Frontend MIDI driver**|Disabled)
 
 	Select the .SF2 SoundFont file, .ROM file or interface used for MIDI output. To add SoundFonts or ROM files, copy them into the 'system' directory of the frontend. To use the frontend MIDI driver, make sure it's set up correctly.
 
-- **Advanced > SoundBlaster Type** [dosbox_pure_sblaster_type] (**SoundBlaster 16 (default)** | SoundBlaster Pro 2 | SoundBlaster Pro | SoundBlaster 2.0 | SoundBlaster 1.0 | GameBlaster | none)
+- **Volume > Sound Blaster** [dosbox_pure_volume_sb] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of Sound Blaster output (including Creative Music System / GameBlaster).
+
+- **Volume > MIDI Synthesizer** [dosbox_pure_volume_midi] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of MIDI output (SoundFont or MT-32).
+
+- **Volume > Adlib** [dosbox_pure_volume_adlib] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of Adlib music (FM/OPL).
+
+- **Volume > PC-Speaker** [dosbox_pure_volume_speaker] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of the PC-Speaker.
+
+- **Volume > CD-ROM Audio** [dosbox_pure_volume_cdrom] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of CD-ROM Audio output.
+
+- **Volume > Other Devices** [dosbox_pure_volume_other] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**|110%|120%|130%|140%|150%|160%|170%|180%|190%|200%|225%|250%|275%|300%|325%|350%|375%|400%|425%|450%|475%|500%)
+
+	Sets the volume of Tandy Sound System, Gravis Ultra Sound output and Disney Sound Source.
+
+- **Advanced > SoundBlaster Type** [dosbox_pure_sblaster_type] (**SoundBlaster 16 (default)**|SoundBlaster Pro 2|SoundBlaster Pro|SoundBlaster 2.0|SoundBlaster 1.0|GameBlaster|none)
 
 	Type of emulated SoundBlaster card.
 
-- **Advanced > SoundBlaster Adlib/FM Mode** [dosbox_pure_sblaster_adlib_mode] (**Auto (select based on the SoundBlaster type) (default)** | CMS (Creative Music System / GameBlaster) | OPL-2 (AdLib / OPL-2 / Yamaha 3812) | Dual OPL-2 (Dual OPL-2 used by SoundBlaster Pro 1.0 for stereo sound) | OPL-3 (AdLib / OPL-3 / Yamaha YMF262) | OPL-3 Gold (AdLib Gold / OPL-3 / Yamaha YMF262))
+- **Advanced > SoundBlaster Adlib/FM Mode** [dosbox_pure_sblaster_adlib_mode] (**Auto (select based on the SoundBlaster type) (default)**|CMS (Creative Music System / GameBlaster)|OPL-2 (AdLib / OPL-2 / Yamaha 3812)|Dual OPL-2 (Dual OPL-2 used by SoundBlaster Pro 1.0 for stereo sound)|OPL-3 (AdLib / OPL-3 / Yamaha YMF262)|OPL-3 Gold (AdLib Gold / OPL-3 / Yamaha YMF262)|Disabled)
 
 	The SoundBlaster emulated FM synth mode. All modes are Adlib compatible except CMS.
 
-- **Advanced > SoundBlaster Adlib Provider** [dosbox_pure_sblaster_adlib_emu] (**Default** | High quality Nuked OPL3)
+- **Advanced > SoundBlaster Adlib Provider** [dosbox_pure_sblaster_adlib_emu] (**Default**|High quality Nuked OPL3)
 
 	Provider for the Adlib emulation. Default has good quality and low performance requirements.
 
-- **Advanced > Enable Gravis Ultrasound (restart required)** [dosbox_pure_gus] (**Off (default)** | On)
+- **Advanced > Enable Gravis Ultrasound (restart required)** [dosbox_pure_gus] (**Off (default)**|On)
 
-	Enable Gravis Ultrasound emulation. Settings are fixed at port 0x240, IRQ 5, DMA 3. If the ULTRADIR variable needs to be different than the default 'C:\\ULTRASND' you need to issue 'SET ULTRADIR=...' in the command line or in a batch file.
+	Enable Gravis Ultrasound emulation. Settings are fixed at port 0x240, IRQ 5, DMA 3. If the ULTRADIR variable needs to be different than the default 'C:\ULTRASND' you need to issue 'SET ULTRADIR=...' in the command line or in a batch file.
+
+- **Advanced > Enable Tandy Sound Device (restart required)** [dosbox_pure_tandysound] (**Off (default)**|On)
+
+	Enable Tandy Sound Device emulation even when running without Tandy Graphics Adapter emulation.
+
+- **Advanced > Swap Stereo Channels** [dosbox_pure_swapstereo] (**Off (default)**|On)
+
+	Swap the left and the right audio channel.
 
 ## Controls
 
@@ -435,7 +494,7 @@ There is also the core option `Input > Mouse Sensitivity` to increase/decrease m
 
 ### Keyboard emulation
 
-For games that don't have automated controller mappings or are not detected successfully, by default the option `Input > Bind Unused Buttons` will assign all unused buttons on the game pad with a respective default key.
+For games that don't have automated controller mappings or are not detected successfully, the core maps generic keyboard keys to all buttons. The "Controller Mapper" screen in the start menu or the [On-screen keyboard](#on-screen-keyboard) can change any of them.
 
 If the `Device Type` on the `Controls` screen in the RetroArch menu of any port is set to `Generic Keyboard Bindings`, all buttons will be assigned with a keyboard key.
 
