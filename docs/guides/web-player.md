@@ -14,6 +14,7 @@ You can access it from this [link](https://web.libretro.com/) using a modern int
 1. Select the **Core** to run from the **first tab**(Clicking on the Core name will start running).
 *Core loading time may vary depending on the selected Core. During this time, your system's performance and actively used processes can cause your browser to crash. In this case, the option Wait or End will be displayed on your screen. In this case, click Wait, it may come out several times.*
 ![Main Screen](../image/guides/web-player-2.jpg)
+
 1. Choose your content to load by clicking **Add Content** from the **second tab**.
 *This will add your content to your browser's cache. We will be able to delete it later.*
 1.  To access the file you uploaded `Load Content> Start Directory >`

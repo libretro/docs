@@ -27,6 +27,7 @@ There are plenty of user created presets that come bundled with the RetroArch in
 ## Editing Shader Parameters
 
 You can edit shader presets or build your own using these tools:
+
 - **Shader Parameters**: Shows the list of all tweakable shader parameters, which are previewed live. If you save a **Simple Preset** all these changes can be saved without changing the shader chain
 
 ## Editing the Shader Chain
@@ -98,10 +99,12 @@ Note that if a **Simple Preset** has been automatically loaded (Global, Core, Co
 Paths can be specified as relative paths or abbreviated root paths
 
 **Abbreviated Root Path Format** E.G. 
+
 - `:/shaders/shaders_slang/stock.slang`
 - `:/` stands for the root of the Retroarch folder
 
 **Relative Format** E.G. 
+
 - `shaders_slang/stock.slang`
 - This path corresponds to the path to stock.slang relative to a preset which is saved in the shaders folder
 

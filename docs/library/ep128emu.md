@@ -7,6 +7,7 @@
 Leverage the convenience of libretro/retroarch to emulate the Z80 based home computers that the original ep128emu supports - that is, Enterprise 64/128, Videoton TVC, Amstrad CPC and ZX Spectrum. Focus is on Enterprise and TVC.
 
 The ep128emu core has been authored by:
+
 - Istvan Varga (ep128emu)
 - Zoltan Balogh (libretro core specific modifications)
 

@@ -59,6 +59,7 @@ Uploads happen, whenever `libretro_core_options.h` of that branch is changed.
 	- the name of the core (or repo)
 
 And for crowdin_translate.yml:
+
 - <0-59> <0-23>
 	- Minute and hour at which the sync will happen.
       The script will generate a random time for this, to avoid

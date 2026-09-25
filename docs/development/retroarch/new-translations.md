@@ -25,6 +25,7 @@ To add a language with the English name `XXXXX` and two-letter code `xx` (be sur
 1. Open `libretro-common/include/libretro.h`.
     1. Add a `RETRO_LANGUAGE_XXXXX` item to the `retro_language` enum just above `RETRO_LANGUAGE_LAST`, using the next available integer value.
 > Do not rearrange the elements of this list! This would break the language association for the cores!
+
 2. Open `msg_hash.h`.
     1. Check if a `MENU_ENUM_LABEL_VALUE_LANG_XXXXX` item for your language is present in the `msg_hash_enums` enum; if not, add it.
 3. Open `msg_hash.c`.
@@ -53,6 +54,7 @@ static const char *msg_hash_to_str_xx(enum msg_hash_enums msg)
    return "null";
 }
 ```
+
 4. Decide if `intl/msg_hash_xx.h` should use UTF-8 + BOM encoding. See the section below.
 5. Open `intl/msg_hash_us.h`.
     1. Check if the following block is present, where `Yyyyy` is the native name of the language and if not, add it:
@@ -62,6 +64,7 @@ MSG_HASH(
    "Xxxxx - Yyyyy"
    )
 ```
+
 6. Open `menu/menu_setting.c`.
     1. Add the following assignment to the `setting_get_string_representation_uint_user_language()` function, before `if (*msg_hash_get_uint(MSG_HASH_USER_LANGUAGE) == RETRO_LANGUAGE_ENGLISH)` statement:
 ```c
@@ -73,17 +76,20 @@ case TRANSLATION_LANG_XX:
    enum_idx = MENU_ENUM_LABEL_VALUE_LANG_XXXXX;
    break;
 ```
+
 7. Open `retroarch.c`.
     1. Add your language to `enum retro_language retroarch_get_language_from_iso(const char *iso639)`:
 ```c
 {"xx", RETRO_LANGUAGE_XXXXX},
 ```
+
 8. Open `tasks/task_translation.c`.
     1. Add the following block inside the `ai_service_get_str(enum translation_lang id)` function:
 ```c
 case TRANSLATION_LANG_XX:
    return "xx";
 ```
+
 9. Open `translation_defines.h`.
     1. Add your language to the `translation_lang` enum between `TRANSLATION_LANG_DONT_CARE` and `TRANSLATION_LANG_LAST`items:
 ```c
@@ -183,6 +189,7 @@ To make the new language usable with the RGUI menu driver:
 else if (string_is_equal(language,"xx"))
    return "Yyyyy";
 ```
+
 2. For Linux. (compatible with **[espeak](https://github.com/espeak-ng/espeak-ng)**)
     1. Open `frontend/drivers/platform_unix.c`.
     2. Go to `accessibility_unix_language_code(const char* language)` function. Check if the following block is present, where `yyy` is the [Identifier](https://github.com/espeak-ng/espeak-ng/blob/master/docs/languages.md) for the language and if not, add it before `/* default voice as fallback */`:
@@ -190,6 +197,7 @@ else if (string_is_equal(language,"xx"))
 else if (string_is_equal(language, "xx"))
    return "yyy";
 ```
+
 3. For Windows. (OS compatible)
     1. Open `frontend/drivers/platform_win32.c`.
     2. Go to `accessibility_win_language_code(const char* language)` function. Check if the following block is present, where `Yyyyy` is the [voice name](https://support.microsoft.com/en-us/windows/appendix-a-supported-languages-and-voices-4486e345-7730-53da-fcfe-55cc64300f01#WindowsVersion=Windows_10) for the language and if not, add it before `return ""`:
@@ -236,6 +244,7 @@ Instructions and recommended reading for that can be found [here](https://docs.l
 > Please **do not change** the `intl/msg_hash_xx.h` files directly!
 
 Starting from early 2023, the help texts that were located in `intl/msg_hash_xx.c` files are also included on Crowdin. If you have translation efforts in `msg_hash_xx.c` file from an earlier date, you can copy them to Crowdin, with following caveats:
+
 * Individual line breaks (\n) at the end of each line are not required, current menu drivers will break lines automatically. Line break may be used as a paragraph separator, if text is long.
 * Make sure translations still matches the current source text, as several of those were updated during the refactor.
 * Do not exceed maximum line length (500 characters).

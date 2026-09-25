@@ -146,15 +146,18 @@ To enable maximum flexibility, frontends take a hands-off approach to resizing t
 There are three high-level stages for size management in the filter chain:
 
 **Input Stage:**
+
 - The base texture is provided by the core and is represented by the `OriginalSize` uniform.
 - The input size can change from frame to frame, depending on the core's output.
 
 **Intermediate Stages:**
+
 - Each shader pass outputs to a framebuffer whose size is controlled by the preset.
 - The size can be specified as an absolute value, as a size relative to the output of the previous shader stage (or `OriginalSize` for the first stage), or as a size relative to the viewport (the area requested by the frontend, represented by `FinalViewportSize`).
 - The size of the input to a pass is represented by the `SourceSize` uniform, and the size of the output is represented by the `OutputSize` uniform.
 
 **Output Stage:**
+
 - The final output may be the last shader in the chain, provided the swapchain format matches the requested format in that shader pass (e.g., 8-bit when frontend HDR is off, 10-bit when HDR is on, *and* `scale_typeN` is not used for that shader).
 - In all cases, the final output size is represented by the `FinalViewportSize` uniform.
 
@@ -416,9 +419,11 @@ The very first line of a `.slang` file must contain a `#version` statement.
 The first process which takes place is dealing with `#include` statements. A slang file is preprocessed by scanning through the slang and resolving all `#include` statements.
 
 **Include Path Restrictions:**
+
 - Only files in the same directory as the including file, or in a child directory, may be included. Absolute paths and parent-relative paths (e.g., `../`) are not supported and have undefined behavior.
 
 **Cyclic Includes:**
+
 - Cyclic includes are not handled at all. If a file is included more than once in a dependency cycle, only the first occurrence is processed; subsequent `#include` lines for that file lead to undefined behavior. As a result, slang requires a flat, acyclic dependency structure for includes.
 
 The include process does not consider any preprocessor defines or conditional expressions. Nested includes are allowed as long as they do not form a cycle.
@@ -919,6 +924,7 @@ See also [Advanced Techniques: Vertex Precomputation](#vertex-precomputation).
 The preset format is essentially unchanged from the old .cgp and .glslp, except the new preset format is called .slangp.
 
 Below is a comprehensive example of a `.slangp` preset file. This example demonstrates:
+
 - Multiple shader passes
 - Per-pass options (filter_linear, wrap_mode, scale_type, scale_x/y, mipmap_input, float_framebuffer, etc.)
 - External lookup textures with options
@@ -984,6 +990,7 @@ Sharpness = 0.8
 ```
 
 This example shows how to:
+
 - Chain multiple shader passes, each with its own options
 - Bind external textures and control their sampling/wrapping
 - Override user parameters at the preset level
@@ -1267,6 +1274,7 @@ Each shader pass can declare a uniform sampler2D with the alias `NAMEFeedback`, 
 #### Why Use Feedback?
 
 Feedback enables effects that depend on previous frame data. Common uses include:
+
 - Motion blur
 - Temporal anti-aliasing
 - Persistence/afterglow

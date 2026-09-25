@@ -193,6 +193,7 @@ Make sure that you run the latest version of RetroArch, to generate a file name 
 Both the Flatpak and Android versions of RetroArch need adjustments to the Controller Profiles Directory to ensure essential functionality and smooth operation.
 
 **Challenges for Android and Flatpak:**
+
 - Users are unable to save custom profiles through the path: `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 - Modification Restrictions: You are not allowed to change existing autoconfig files. Files that are initially disabled have "(default-off)" in their names. Without root access, you cannot modify these files to toggle the input_vendor_id and input_product_id settings. This restriction applies to both the "(default-off)" files and the "original" autoconfig files, which are more widely used and have been set to be enabled by default. These original files must also be commented to make changes. This limitation affects both HID and non-HID files, as well as controllers with multiple autoconfig files, such as the Sony DualSense controller, which includes several Android autoconfig files.
 
@@ -200,10 +201,12 @@ Both the Flatpak and Android versions of RetroArch need adjustments to the Contr
 
 **Challenge:**
 Most Android devices are not rooted, and RetroArch's default autoconfig directory requires root access, leading to the following issues:
+
 - Restricted File Access: Users can update controller profiles via `Main Menu -> Online Updater -> Update Controller Profiles`, but cannot access these files in `/data/user/0/com.retroarch/autoconfig`. Android's security model prevents non-root users from reading certain files, making it difficult to compare updated profiles with custom-generated ones, thus hindering effective profile management and customization.
 - Modification Restrictions: Existing autoconfig files cannot be modified when necessary (refer to the base section for more details).
 
 **Resolution:**
+
 - Create the directory `/storage/emulated/0/RetroArch/autoconfig/android`.
 - In RetroArch, change the directory path under `Settings` -> `Directory` -> `Controller Profiles` from `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`.
 - This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
@@ -276,6 +279,7 @@ By applying this solution, you allow your controller to configure RetroArch, ena
 
 **Challenge:**
 The default autoconfig directory in Flatpak RetroArch also requires root access, which prevents users from:
+
 - Downloading and extracting profiles through `Main Menu` -> `Online Updater` -> `Update Controller Profiles`.
 - Saving custom profiles via `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 - Modification Restrictions: Facing similar issues as Android users if the GNU/Linux user lacks root access, as existing autoconfig files cannot be modified when necessary (refer to the base section for more details).
@@ -399,6 +403,7 @@ By carefully updating both the variable names and values, you can ensure that yo
 ### Inspect the file
 
 Without modifying anything in the original file, open it in the file in a text editor and
+
 1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
 2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
 
@@ -779,6 +784,7 @@ Note: These variable values are examples and should not be directly copied to yo
 
 ###### Shoulder buttons with analog variables
 Give each button the same label as described by the manufacturer. Additionally:
+
 - For analog shoulder buttons, use the manufacturer’s label **and** append the word **" Trigger"** at the end.
     - For example: `input_l2_axis_label = "L2 Trigger"`
 

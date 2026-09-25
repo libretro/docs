@@ -28,6 +28,7 @@ After installing Retroarch, launch the program in the usual way according to you
 To turn on the accessibility feature, do the following:
 
 -   Open Retroarch.
+
 - Press **Left Arrow**, **Down Arrow**, then **Enter**.
 -   Press **up arrow** seven times.
 -   Press **Enter** twice, or **Enter** then **Right arrow**.

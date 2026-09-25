@@ -64,6 +64,7 @@ If you don't have access to the `Core System Files Downloader` for whatever reas
 First, you will need to download the `GameIndex.yaml` file from the core's source code repository on [Github](https://github.com/libretro/ps2). [This](https://raw.githubusercontent.com/libretro/ps2/refs/heads/libretroization/bin/resources/GameIndex.yaml) is a direct link to the file, but if that link breaks in the future, the database file is typically housed in the `bin/resources` directory.
 
 Once you have the `GameIndex.yaml` database:
+
 1. Navigate to your 'system'/BIOS directory (the location of which you can find/confirm by going to settings > directory in the RetroArch menu), then create a directory named `pcsx2` (must be in all lower-case).
 2. Inside your new `pcsx2` directory, you'll make another directory named `resources` (again, all lower-case)
 3. Place the `GameIndex.yaml` inside of it. The final structure should be `system/pcsx2/resources/GameIndex.yaml`.

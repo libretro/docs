@@ -122,6 +122,7 @@ The libretro API provides a possibility to pass extra sensor inputs to cores: 3 
 ---
 ## Footnotes
 [^1]: MFi controllers are primarily supported on Apple devices, which means that the operating systems supporting this configuration would include:
+
 - iOS: Used on iPhones and iPads.
 - macOS: Used on Mac computers.
 - tvOS: Used on Apple TV devices.

@@ -59,11 +59,13 @@ If you wish to implement your own AI service, here is what you need. RetroArch s
 - `output`: comma-separated list of formats that must be provided by the service. Also lists sub-formats supported by the current RetroArchBuild.
    
 The currently supported formats are:
+
 - `sound`: raw audio to play back. (`wav`)
 - `text`: text to be read through internal text-to-speech capabilities. `subs` can be specified on top of that to explain that we are looking for short text response in the manner of subtitles.
 - `image`: image to display on top of the video feed. (`bmp`, `png`, `png-a`) All in 24-bits BGR formats.
          
 In addition, the request contains a JSON payload, formatted as such:
+
 - `image`: captured frame from the currently running content (in base64).
 - `format`: format of the captured frame (`png`, or `bmp`).
 - `coords`: array describing the coordinates of the image within the viewport space (x, y, width, height).
@@ -74,6 +76,7 @@ In addition, the request contains a JSON payload, formatted as such:
     - `<key>`: the name of a retropad input, valued 1 if pressed. Values can be: a, b, x, y, l, r, l2, r2, l3, r3, up, down, left, right, start, select.
             
 The translation component then expects a response from the AI service in the form of a JSON payload, formatted as such:
+
 - `image`: base64 representation of an image in a supported format.
 - `sound`: base64 representation of a sound byte in a supported format.
 - `text`: results from the service as a string.
