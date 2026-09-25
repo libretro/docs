@@ -303,7 +303,7 @@ nav:
         - 'Welback Holdings - Mega Duck (SameDuck)': 'library/sameduck.md'
     - 'Core Library: Game and Scripting Engines':
       - '2048': 'library/2048.md'
-      - '3D Engine': 'library/3d_engine.md'
+      - '3D Engine': 'library/3dengine.md'
       - 'Anarch': 'library/anarch.md'
       - 'Cave Story (doukutsu-rs)': 'library/doukutsu-rs.md'
       - 'Cave Story (NXEngine)': 'library/nxengine.md'
