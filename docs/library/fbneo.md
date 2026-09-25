@@ -171,11 +171,14 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 
 ## BIOS
 
-When loading a romset requiring a bios romset, it will be searched through 3 folders in that order :
+When loading a romset requiring a bios romset, it will be searched through these folders in that order :
 
+* the `SYSTEM_DIRECTORY/fbneo/patched/` folder, only when patched romsets are allowed in the core options (`fbneo-allow-patched-romsets`)
 * the folder of the current romset
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
+
+`SYSTEM_DIRECTORY/fbneo/` is the recommended place: it is where the core also keeps samples, hiscore.dat and its other support files, and it is searched on every platform.
 
 The following bios romsets are required for some of the emulated arcade systems :
 
