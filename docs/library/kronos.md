@@ -195,8 +195,6 @@ Must be enabled in core options.
 
 #### Joypad
 
-![](../image/controller/saturn.png)
-
 | User 1 - 12 Remap descriptors | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
 | A                             | ![](../image/retropad/retro_b.png)       |
@@ -208,8 +206,8 @@ Must be enabled in core options.
 | D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
 | B                             | ![](../image/retropad/retro_a.png)       |
 | Y                             | ![](../image/retropad/retro_x.png)       |
-| C                             | ![](../image/retropad/retro_l1.png)            |
-| Z                             | ![](../image/retropad/retro_r1.png)            |
+| C                             | ![](../image/retropad/retro_r1.png)            |
+| Z                             | ![](../image/retropad/retro_l1.png)            |
 | L                             | ![](../image/retropad/retro_l2.png)            |
 | R                             | ![](../image/retropad/retro_r2.png)            |
 | Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
