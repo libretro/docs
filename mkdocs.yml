@@ -590,7 +590,8 @@ markdown_extensions:
 plugins:
   - git-revision-date-localized
   - macros
-  - search
+  - search:
+      separator: '[\s\-()\[\],/]+'
 
 theme:
   custom_dir: docs/overrides/

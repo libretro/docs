@@ -71,15 +71,15 @@ Queries a configuration parameter value.
 - **Arguments:** `<param name>`
 - **Response:** `GET_CONFIG_PARAM <param name> <value>`
 - **Supported parameters:**
-  - `video_fullscreen` - Whether fullscreen is active (`true`/`false`)
-  - `savefile_directory` - Save file directory path
-  - `savestate_directory` - Save state directory path
-  - `runtime_log_directory` - Runtime log directory path
-  - `log_dir` - Log directory path
-  - `cache_directory` - Cache directory path
-  - `system_directory` - System/BIOS directory path
-  - `netplay_nickname` - Current netplay username
-  - `active_replay` - Active replay info as `identifier flags frame_counter` (requires BSV movie support)
+    - `video_fullscreen` - Whether fullscreen is active (`true`/`false`)
+    - `savefile_directory` - Save file directory path
+    - `savestate_directory` - Save state directory path
+    - `runtime_log_directory` - Runtime log directory path
+    - `log_dir` - Log directory path
+    - `cache_directory` - Cache directory path
+    - `system_directory` - System/BIOS directory path
+    - `netplay_nickname` - Current netplay username
+    - `active_replay` - Active replay info as `identifier flags frame_counter` (requires BSV movie support)
 
 ```bash
 retroarch --command "GET_CONFIG_PARAM savefile_directory"

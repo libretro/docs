@@ -29,11 +29,12 @@ You can start a game by loading its M3U file, through `Load Content` or Playlist
 
 ### Making an M3U playlist file
 You can make an M3U playlist file using a simple text editor.
+
 * Put all of your content's disc files into a single folder.
 * Create a new text file in the same folder as your content. Name it the same as your content.
 * Add the full names of each disc into the text file (including the file extension), 1 filename per row.
-  * If your discs are BIN/CUE files, only list the '.cue' files in the document.
-  * If your discs are CHD files, list the '.chd' files in the document.
+    * If your discs are BIN/CUE files, only list the '.cue' files in the document.
+    * If your discs are CHD files, list the '.chd' files in the document.
 * Save and close the text file.
 * Rename the file extension from '.txt' to '.m3u'.
 

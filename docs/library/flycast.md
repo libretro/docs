@@ -21,6 +21,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 {==
 Example (MAME ID=ikaruga)
+
 - [ROM FOLDER]/ikaruga.zip
 - [ROM FOLDER]/ikaruga/gdl-0010.chd
 ==}

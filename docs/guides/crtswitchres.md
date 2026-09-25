@@ -17,6 +17,7 @@ Other options are available. It's a simple case of getting the resolutions insta
 ### Linux
 
 Switchres can work in the following environments:
+
 - X11
 - KMS mode
 - Raspberry Pi with legacy graphics drivers
@@ -33,6 +34,7 @@ Switchres can work in the following environments:
 CRTSwitchRes now using Switchres by Calamity. This is available on both Windows and Linux.
 
 To enable CRTSwitchRes or change settings
+
 - Navigate to **Settings**
 - Navigate to **Video**
 - Navigate to **CRT SwitchRes**

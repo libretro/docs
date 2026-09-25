@@ -27,6 +27,7 @@ There are plenty of user created presets that come bundled with the RetroArch in
 ## Editing Shader Parameters
 
 You can edit shader presets or build your own using these tools:
+
 - **Shader Parameters**: Shows the list of all tweakable shader parameters, which are previewed live. If you save a **Simple Preset** all these changes can be saved without changing the shader chain
 
 ## Editing the Shader Chain
@@ -34,23 +35,23 @@ The Shader Chain which is a stack of shader passes each one pointing to a specif
 All Changes to the shader chain will force a **Full Preset** to be saved even if you have chosen to save a **Simple Preset**
 
 - **Prepend**
-  - Prepend Preset adds a preset you choose before the currently loaded shader chain
+    - Prepend Preset adds a preset you choose before the currently loaded shader chain
 
 - **Append**
-  - Append Preset adds a preset you choose after the currently loaded shader chain
+    - Append Preset adds a preset you choose after the currently loaded shader chain
 
 - **Shader Passes**: The number of shader passes to use.
 
 - For every **Shader Pass** you can configure:
-  - **Shader #N**: Path to a shader. 
-    - All shaders must be of the same type (i.e. .glsl, .slang, or .cg).
-  - **Shader #N Filter**: Hardware filter used for scaling. 
-    - **Don't Care** uses `Settings -> Video -> Bilinear Scale`.
-  - **Shader #N Scale**: Scale for this pass. 
-    - The scale factor accumulates, i.e. 2x for first pass and 2x for second pass will give you a 4x total scale.
-    - The last pass in the chain then is stretched to fullscreen using the `Settings -> Video -> Bilinear Scale` filter setting.
-    - "Don't Care" uses **source** scale mode at 1x which means this pass will have the same resolution as the previous pass.
-    - If the pass uses scaling methods which are not simple, (i.e. source scaling, different scaling factor for X/Y), the scaling factors can’t be displayed in the UI so the value shown may not be correct.
+    - **Shader #N**: Path to a shader. 
+        - All shaders must be of the same type (i.e. .glsl, .slang, or .cg).
+    - **Shader #N Filter**: Hardware filter used for scaling. 
+        - **Don't Care** uses `Settings -> Video -> Bilinear Scale`.
+    - **Shader #N Scale**: Scale for this pass. 
+        - The scale factor accumulates, i.e. 2x for first pass and 2x for second pass will give you a 4x total scale.
+        - The last pass in the chain then is stretched to fullscreen using the `Settings -> Video -> Bilinear Scale` filter setting.
+        - "Don't Care" uses **source** scale mode at 1x which means this pass will have the same resolution as the previous pass.
+        - If the pass uses scaling methods which are not simple, (i.e. source scaling, different scaling factor for X/Y), the scaling factors can’t be displayed in the UI so the value shown may not be correct.
 - **Apply Changes**: You must use this to rebuild the shader chain to see your changes after adjusting any settings in the shader passes or the number of passes with **Shader Passes**.
 ---
 
@@ -78,11 +79,11 @@ Note that if a **Simple Preset** has been automatically loaded (Global, Core, Co
 **Simple Preset Special Cases when Saving**
 
 - **Saving Over the loaded Preset:**  
-  - E.G. there are presets Preset_A, Preset_B, Preset_B references Preset_A.  Preset_B is loaded then the user chooses to save over top of Preset_B. The reference to Preset_A is used instead of creating a a new reference to Preset_B which would be a cyclical reference. All current parameter values which differ from Preset_A will all be saved.
+    - E.G. there are presets Preset_A, Preset_B, Preset_B references Preset_A.  Preset_B is loaded then the user chooses to save over top of Preset_B. The reference to Preset_A is used instead of creating a a new reference to Preset_B which would be a cyclical reference. All current parameter values which differ from Preset_A will all be saved.
 - **Saving Over the preset referenced by the loaded preset:** 
-  - E.G. there are presets Preset_A, Preset_B and Preset_C, Preset_C references Preset_B which references Preset_A. The user loads Preset_C then saves over of Preset_B. The reference path to Preset A will be used to avoid a cyclical reference chain. All current parameter values which differ from Preset_A will all be saved.
+    - E.G. there are presets Preset_A, Preset_B and Preset_C, Preset_C references Preset_B which references Preset_A. The user loads Preset_C then saves over of Preset_B. The reference path to Preset A will be used to avoid a cyclical reference chain. All current parameter values which differ from Preset_A will all be saved.
 - **Saving Over a preset further up the chain:** 
-  - E.G. there are presets Preset_A, Preset_B, Preset_C and Preset_D. Preset_D references Preset_C which references Preset_B which references Preset_A. The user loads Preset_C then saves over of Preset_A. A full preset will be saved with all the passes and parameter values to avoid a cyclical reference chain.
+    - E.G. there are presets Preset_A, Preset_B, Preset_C and Preset_D. Preset_D references Preset_C which references Preset_B which references Preset_A. The user loads Preset_C then saves over of Preset_A. A full preset will be saved with all the passes and parameter values to avoid a cyclical reference chain.
 
 ---
 ## Advanced Referencing and .params files
@@ -98,10 +99,12 @@ Note that if a **Simple Preset** has been automatically loaded (Global, Core, Co
 Paths can be specified as relative paths or abbreviated root paths
 
 **Abbreviated Root Path Format** E.G. 
+
 - `:/shaders/shaders_slang/stock.slang`
 - `:/` stands for the root of the Retroarch folder
 
 **Relative Format** E.G. 
+
 - `shaders_slang/stock.slang`
 - This path corresponds to the path to stock.slang relative to a preset which is saved in the shaders folder
 
