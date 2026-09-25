@@ -258,6 +258,8 @@ General settings (save states, start menu, fixed FPS).
 
 	Set the behavior of the start menu before and after launching a game. You can also force it to open by holding shift or L2/R2 when selecting 'Restart'.
 
+	The three "exit emulator" settings are not offered where the core is linked statically into RetroArch (consoles and the web version).
+
 - **Advanced > Menu Transparency** [dosbox_pure_menu_transparency] (10%|20%|30%|40%|50%|60%|**70%**|80%|90%|100%)
 
 	Set the transparency level of the Menu and the On-Screen Keyboard.
@@ -273,6 +275,8 @@ Keyboard, mouse and joystick settings.
 - **Mouse Input Mode** [dosbox_pure_mouse_input] (**Auto (default)**|Virtual mouse movement|Direct controlled mouse (not supported by all games)|Touchpad mode (see description, best for touch screens)|Off (ignore mouse inputs))
 
 	You can disable input handling from a mouse or a touchscreen (emulated mouse through joypad will still work). In touchpad mode use drag to move, tap to click, two finger tap to right-click and press-and-hold to drag
+
+	On Android, iOS, Switch, 3DS, Wii U and Vita the default is Touchpad mode, and Auto is labelled "Auto (virtual or direct)".
 
 - **Bind Mouse Wheel To Key** [dosbox_pure_mouse_wheel] (**Left-Bracket/Right-Bracket**|Comma/Period|Page-Up/Page-Down|Home/End|Delete/Page-Down|Minus/Equals|Semicolon/Quote|Numpad Minus/Plus|Numpad Divide/Multiply|Up/Down|Left/Right|Q/E|Disable)
 
