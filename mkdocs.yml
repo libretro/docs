@@ -52,6 +52,7 @@ nav:
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
+      - 'Turbo Fire': 'guides/turbo-fire.md'
       - 'Starting a Game': 'guides/starting-a-game.md'
       - 'Controller Auto-Configuration': 'guides/controller-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
