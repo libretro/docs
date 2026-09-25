@@ -108,6 +108,42 @@ The ROM's corresponding `db_name` is `MAME 2003-Plus.lpl` which tells the menu d
 !!! Alert
     You can omit the CRC or Serial for a manually created playlist entry by using the word `DETECT`  instead, although it may limit your ability to use netplay for this playlist entry.
 
+#### Playlist fields
+
+Besides `version` and `items`, a playlist written by RetroArch can carry these top-level fields. They hold the settings made for the playlist in `Settings > Playlists > Manage Playlists`, and all of them can be left out of a hand-made playlist:
+
+| Field | Meaning |
+|---|---|
+| `default_core_path`, `default_core_name` | The playlist's default core, used for entries whose core is `DETECT` or cannot be found. |
+| `label_display_mode` | How entry labels are shortened, for example with the text in brackets removed. |
+| `right_thumbnail_mode`, `left_thumbnail_mode` | Which thumbnails are shown for the playlist, if not the default ones. |
+| `thumbnail_match_mode` | Whether thumbnails are matched by label or by file name. |
+| `sort_mode` | How the entries are sorted. |
+| `base_content_directory` | The content directory the paths were written against, see [Portable playlists](#portable-playlists). |
+| `scan_*` | The settings of the manual scan that made the playlist, used by `Refresh Playlist`. |
+
+Each entry in `items` has:
+
+| Field | Meaning |
+|---|---|
+| `path` | Full path to the content. A file inside an archive is written as `archive.zip#file.ext`. |
+| `label` | The name shown in the menu, which is also used to find thumbnails. |
+| `core_path`, `core_name` | The core to run the entry with, or `DETECT` to use the playlist's default core or to ask. |
+| `crc32` | The content's CRC32 followed by `|crc`, or its serial followed by `|serial`, or `DETECT`. |
+| `db_name` | The database playlist the entry belongs to, such as `Nintendo - Game Boy.lpl`. It picks the thumbnails and the icon. |
+
+Other fields, such as `entry_slot`, the `subsystem_*` fields and the play time fields of the history playlist, are written by RetroArch and can be left out.
+
+### Portable playlists
+
+Playlists hold full paths, so a playlist copied to another device, or to another folder layout, points at files that are not there. **Portable Playlists** in `Settings > Playlists` fixes that:
+
+1. On every device, set `Settings > Directory > File Browser` to the folder that holds your content, for example `/storage/emulated/0/ROMs` on one and `D:\ROMs` on another, and turn on **Portable Playlists**.
+2. Playlists saved with the option on record that folder as `base_content_directory`.
+3. When such a playlist is loaded on a device whose **File Browser** folder is different, RetroArch replaces the recorded folder at the start of each entry's path with its own, converts the slashes for the platform, and saves the corrected playlist.
+
+The content has to sit in the same layout under the **File Browser** folder on every device. Only content paths are rewritten, not core paths: a core is found by its file name, so an entry keeps working wherever the same core is installed. If it is not installed, the playlist's default core is used if one is set, and RetroArch says so.
+
 ### 6-Line Playlist Format (Deprecated)
 
 !!! Warning
@@ -259,6 +295,15 @@ __About "Syncing."__ Contribution work involves changing your copy of the projec
 ### The Thumbnail Server
 
 RetroArch retrieves thumbnails from a server (https://thumbnails.libretro.com/) that is updated periodically with imports from the Libretro thumbnail repository on github. After a pull request is approved for a contribution, some time may pass before the updates are sent to the server. The final server update must occur before users will see new image contributions in RetroArch playlists.
+
+## Playlist icons
+
+The XMB menu draws each playlist with an icon from the current theme's `png` folder in the assets directory, for example `assets/xmb/monochrome/png/`. The icon file is named after the playlist:
+
+- `<playlist name>.png` is the icon for the playlist itself, for example `Nintendo - Game Boy.png` for `Nintendo - Game Boy.lpl`.
+- `<playlist name>-content.png` is the icon shown next to each of its entries, for example `Nintendo - Game Boy-content.png`.
+
+When a playlist has no icon of its own, `default.png` and `default-content.png` are used. A custom playlist gets its own icons by adding files with its name to the theme's `png` folder.
 
 ## Custom icons/logos for playlist items
 RetroArch versions later than 1.19.1 include an option for the XMB menu driver to display custom per-game icons/logos in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). The required file format and subfolder structure follows the same pattern as [custom thumbnails](#custom-thumbnails):

@@ -52,6 +52,7 @@ nav:
     - 'User Guides':
       - 'User Interface': 'guides/navigating.md'
       - 'Input and Controls': 'guides/input-and-controls.md'
+      - 'Turbo Fire': 'guides/turbo-fire.md'
       - 'Starting a Game': 'guides/starting-a-game.md'
       - 'Controller Auto-Configuration': 'guides/controller-autoconfiguration.md'
       - 'Installing Cores': 'guides/download-cores.md'
@@ -74,6 +75,7 @@ nav:
         - 'Multiple Controllers': 'guides/netplay-multiple-controllers.md'
       - 'RetroAchievements': 'guides/retroachievements.md'
       - 'Memory Monitoring': 'guides/memorymonitoring.md'
+      - 'Disc Images: CUE, CHD and M3U': 'guides/disc-images.md'
       - 'Disc Swapping': 'guides/disc-swapping.md'
       - 'Softpatching ROMs': 'guides/softpatching.md'
       - 'Accessibility':
