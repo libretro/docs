@@ -2,7 +2,7 @@
 
 ## Background
 
-PCEE2 is a libretro port of current upstream [PCSX2](https://github.com/PCSX2/pcsx2), the mature and highly compatible PlayStation 2 emulator. Unlike [LRPS2](lrps2.md), which is a hard fork of an older PCSX2, PCEE2 keeps the libretro layer separate from the emulation code and follows upstream PCSX2 releases closely. The version RetroArch shows for the core is the upstream PCSX2 version its emulation code corresponds to.
+PCEE2 is a libretro port of current upstream [PCSX2](https://github.com/PCSX2/pcsx2), the mature and highly compatible PlayStation 2 emulator. Unlike [LRPS2](lrps2.md), which is a hard fork of PCSX2, PCEE2 keeps the libretro layer separate from the emulation code and follows upstream PCSX2 releases closely. The version RetroArch shows for the core is the upstream PCSX2 version its emulation code corresponds to.
 
 It renders with Vulkan (the default), OpenGL or the software renderer. With Vulkan the core shares RetroArch's Vulkan device and hands the rendered image over directly; the other renderers hand over finished frames.
 
