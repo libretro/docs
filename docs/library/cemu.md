@@ -136,7 +136,6 @@ The Cemu core has the following option(s) that can be tweaked from the core opti
 - **GX2DrawDone Sync** [cemu_gx2drawdone_sync] (**ON**|OFF)
 - **Precompiled Shaders** [cemu_precompiled_shaders] (**Auto**|ON|OFF)
 - **Accurate Shader Multiplication** [cemu_accurate_shader_mul] (**ON**|OFF)
-- **Shader Fast Math** [cemu_shader_fast_math] (**ON**|OFF)
 
 #### Screen
 
