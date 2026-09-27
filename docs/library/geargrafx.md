@@ -6,6 +6,7 @@ Geargrafx is an open source, cross-platform PC Engine, TurboGrafx-16, and SuperG
 
 - Very accurate emulation supporting the entire HuCard PCE / SGX catalog.
 - Support for CD-ROM², Super CD-ROM² and Arcade CD-ROM² systems.
+- NEC LaserActive LD-ROM² support through MMI images on 64-bit builds.
 - Backup RAM and Memory Base 128 support.
 - Multi Tap support (up to 5 players).
 - Controllers:
@@ -25,13 +26,13 @@ The Geargrafx core has been authored by:
 
 The Geargrafx core is licensed under:
 
-- [GPLv3](https://github.com/drhelius/Geargrafx/blob/master/LICENSE)
+- [GPLv3](https://github.com/drhelius/Geargrafx/blob/main/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
 ## BIOS
 
-Geargrafx requires a BIOS file to run CD-ROM games.
+Geargrafx requires a BIOS file to run CD-ROM and LaserActive games.
 
 Required or optional firmware files go in RetroArch's system directory.
 
@@ -47,8 +48,13 @@ Required or optional firmware files go in RetroArch's system directory.
 | syscard2.pce  | CD-ROM System V2.xx - Optional        |                                  |
 | syscard1.pce  | CD-ROM System V1.xx - Optional        |                                  |
 | gexpress.pce  | Game Express CD Card - Optional       |                                  |
+| pac-n1.bin   | Japanese LaserActive PAC-N1 firmware  |                                  |
+| pce-lp1.bin  | Japanese LaserActive PCE-LP1 firmware, alternative to PAC-N1 |             |
+| pac-n10.bin  | US LaserActive PAC-N10 firmware       |                                  |
 
 The **CD BIOS** option defaults to *System Card 3*. Known Game Express games automatically use `gexpress.pce`; *Force Game Express* is available for unrecognized or modified discs.
+
+LaserActive LD-ROM² games require firmware for the selected **LaserActive Region**: `pac-n1.bin` or `pce-lp1.bin` for Japan, or `pac-n10.bin` for the US. The core tries `pac-n1.bin` first and falls back to `pce-lp1.bin` if it cannot load it. MMI images that specify an external System Card or Game Express card require that BIOS instead.
 
 ## Extensions
 
@@ -59,8 +65,11 @@ Content that can be loaded by the Geargrafx core have the following file extensi
 - .hes
 - .cue
 - .chd
+- .mmi
 
-Geargrafx supports `chd`, `cue/bin`, `cue/img`, and `cue/iso` CD-ROM images. `cue/iso + wav` is also supported for 44.1 kHz, 16-bit stereo audio tracks. MP3 and OGG audio tracks are not supported.
+Geargrafx supports `chd`, `cue/bin`, `cue/img`, and `cue/iso` CD-ROM images. CUE audio tracks can use raw BIN, WAV (44.1 kHz, 16-bit stereo), or Ogg Vorbis (44.1 kHz stereo) files. MP3 audio tracks are not supported.
+
+MMI images support NEC LaserActive LD-ROM² and compatible CD-ROM media. Loading `.mmi` files requires a 64-bit core. Load the MMI file directly; disc and side selection is available through RetroArch's disk controls.
 
 RetroArch database(s) that are associated with the Geargrafx core:
 
@@ -79,6 +88,7 @@ Frontend-level settings or features that the Geargrafx core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
+| Run-Ahead         | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
@@ -93,11 +103,17 @@ Frontend-level settings or features that the Geargrafx core respects.
 | Location          | ✕         |
 | Subsystem         | ✕         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔ (MMI only) |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✔         |
 | LEDs              | ✕         |
+
+## Disk control
+
+Disk controls select the discs or sides contained in the loaded MMI image. Eject the current disc, select another disc index, then insert it again.
+
+External image replacement and M3U playlists are not supported. Disk controls are not available for standalone CUE or CHD images.
 
 ## Directories
 
@@ -122,19 +138,20 @@ Memory Base 128 uses one shared save file across games when the device is enable
 
 ## Geometry and timing
 
-- The Geargrafx core's provided FPS is 59.82
+- The Geargrafx core's provided FPS follows the emulated video mode: approximately 59.83 FPS for 263 lines or 60.05 FPS for 262 lines
 - The Geargrafx core's provided sample rate is 44100 Hz
 - The Geargrafx core's base width depends on the video mode and overscan settings. Standard frames use 256, 341, or 512 pixels without overscan and 280, 373, or 560 pixels with overscan. Mixed-resolution frames use 1024 or 1120 pixels
-- The Geargrafx core's base height depends on the ['Scanline Start' and 'Scanline End' core options](#core-options)
-- The Geargrafx core's max width is 1120
-- The Geargrafx core's max height is 242
-- The Geargrafx core's provided aspect ratio is dependent on the ['Aspect Ratio' core option](#core-options).
+- The Geargrafx core's base height depends on the ['Scanline Count', 'Scanline Start' and 'Scanline End' core options](#core-options)
+- LaserActive uses its own horizontal and vertical overscan settings. Its base width is three times the selected picture width: 1044 pixels for the default 348-pixel crop, or 1176 pixels for the full 392-pixel width. Its default height is 240 lines; the full field includes 263 lines
+- The Geargrafx core's max width is 1176
+- The Geargrafx core's max height is 263
+- The Geargrafx core's provided aspect ratio depends on the ['Aspect Ratio' core option](#core-options) for PC Engine content and **LaserActive Aspect Ratio** for LaserActive content.
 
 ## Core options
 
 The Geargrafx core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings marked (restart) require restarting the content for the change to take effect.
 
 - **System (restart)** [geargrafx_console_type] (**Auto**|PC Engine (JAP)|SuperGrafx (JAP)|TurboGrafx-16 (USA))
 
@@ -143,7 +160,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|6:5 DAR|16:9 DAR|16:10 DAR)
 
-    Select which aspect ratio will be presented by the core.
+    Select which aspect ratio will be presented for PC Engine content. LaserActive content uses its separate **LaserActive Aspect Ratio** option.
 
     - *1:1 PAR* selects an aspect ratio that produces square pixels.
     - *4:3 DAR* forces 4:3 aspect ratio.
@@ -166,12 +183,40 @@ Settings with (restart) means that core has to be closed for the new setting to 
 - **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 30)
 
     This option will set the first scanline to be displayed. Scanline 0 is the first visible scanline.
-    This option is only available when 'Scanline Count' is set to 'Manual'.
+    This option is only used when 'Scanline Count' is set to 'Manual'.
 
 - **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 220 to 241)
 
     This option will set the last scanline to be displayed. Scanline 241 is the last visible scanline.
-    This option is only available when 'Scanline Count' is set to 'Manual'.
+    This option is only used when 'Scanline Count' is set to 'Manual'.
+
+- **LaserActive Aspect Ratio** [geargrafx_laseractive_aspect_ratio] (**4:3 DAR**|1:1 PAR|16:9 DAR|16:10 DAR)
+
+    Select the display aspect ratio for LaserActive images, independently of the PC Engine aspect ratio.
+
+- **LaserActive Vertical Overscan** [geargrafx_laseractive_framing] (**Cropped (240 lines)**|Full Field (263 lines)|Manual)
+
+    *Cropped* displays picture lines 22 through 261. *Full Field* displays all 263 lines, including blanking information. *Manual* uses the first and last line settings below.
+
+- **LaserActive First Line (Manual)** [geargrafx_laseractive_scanline_start] (**22**|values from 0 to 40)
+
+    Set the first field line displayed when **LaserActive Vertical Overscan** is *Manual*. The full field uses lines 0 through 262.
+
+- **LaserActive Last Line (Manual)** [geargrafx_laseractive_scanline_end] (**261**|values from 220 to 262)
+
+    Set the last field line displayed when **LaserActive Vertical Overscan** is *Manual*.
+
+- **LaserActive Horizontal Overscan** [geargrafx_laseractive_horizontal_framing] (**Cropped (348 pixels)**|Full Width (392 pixels)|Manual)
+
+    *Cropped* displays the centered picture from pixels 22 through 369. *Full Width* displays all 392 pixels, including side borders. *Manual* uses the first and last pixel settings below. The crop applies to both disc video and PC Engine graphics.
+
+- **LaserActive First Pixel (Manual)** [geargrafx_laseractive_pixel_start] (**22**|values from 0 to 120)
+
+    Set the left edge when **LaserActive Horizontal Overscan** is *Manual*. The full picture uses pixels 0 through 391.
+
+- **LaserActive Last Pixel (Manual)** [geargrafx_laseractive_pixel_end] (**369**|values from 271 to 391)
+
+    Set the right edge when **LaserActive Horizontal Overscan** is *Manual*, independently of the left edge.
 
 - **Color Palette** [geargrafx_palette] (**Standard RGB**|Turboxray|Kitrinx)
 
@@ -217,11 +262,11 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 	When enabled, sets safe default values for the VDC (Video Display Controller) registers. This can help some homebrew software run correctly.
 
-- **CD-ROM (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
+- **CD-ROM Model (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
-    Select the CD-ROM system type. The *Auto* setting automatically selects the appropriate CD-ROM system based on the loaded content.
+    Select the CD-ROM system type. *Auto* enables CD-ROM hardware only for CD media and selects the appropriate system based on the loaded content. An explicit model also enables CD-ROM hardware for HuCards while preserving their ROM and cartridge RAM mapping.
 
-    - *Auto* selects the best CD-ROM system based on the content.
+    - *Auto* selects the CD-ROM system based on the content and leaves CD-ROM hardware disabled for HuCards.
     - *Standard* forces standard CD-ROM² system.
     - *Super CD-ROM* forces Super CD-ROM² system.
     - *Arcade CD-ROM* forces Arcade CD-ROM² system.
@@ -232,11 +277,25 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Preload CD-ROM (restart)** [geargrafx_cdrom_preload] (**Disabled**|Enabled)
 
-    This option will preload all CD-ROM tracks in RAM. It will increase the memory usage of the core, but may improve performance.
+    Preload CUE/BIN tracks or CHD data into RAM. This increases memory usage but may improve performance. MMI media is streamed and is not affected by this option.
 
-- **HuC6280A Audio Chip** [geargrafx_psg_huc6280a] (**Enabled**|Disabled)
+- **LaserActive Region (restart)** [geargrafx_laseractive_region] (**Auto**|Japan|US)
 
-	Enable the HuC6280A audio chip, as found in the SuperGrafx and CoreGrafx I. When disabled, the original HuC6280 chip from the PC Engine is used instead.
+    Select the NEC PAC firmware region for MMI media. *Auto* uses the region recorded in the image, or the available firmware if only one region is installed. Select *Japan* or *US* explicitly when the image's region is unspecified and both firmware regions are installed.
+
+    Japanese firmware is `pac-n1.bin` or `pce-lp1.bin`; US firmware is `pac-n10.bin`.
+
+- **PSG Revision** [geargrafx_psg_huc6280a] (**Auto**|HuC6280|HuC6280A)
+
+    Select the PSG audio chip revision. *Auto* uses HuC6280A for SuperGrafx and HuC6280 for all other systems. Selecting a specific revision overrides automatic detection.
+
+- **ADPCM Clock Speed** [geargrafx_adpcm_clock_mode] (**Auto**|Manual)
+
+    *Auto* uses 32100 Hz unless the game database specifies another clock speed. The original hardware's resonator varies between units; *Auto* is recommended. *Manual* uses **ADPCM Manual Clock Speed**.
+
+- **ADPCM Manual Clock Speed** [geargrafx_adpcm_clock_speed] (**32100 Hz**|32000-32200 Hz in increments of 20)
+
+    Set the ADPCM clock speed when **ADPCM Clock Speed** is *Manual*. This option is hidden in other modes when the frontend supports conditional option visibility. Changing the default is not recommended.
 
 - **PSG Volume** [geargrafx_psg_volume] (**100**|0-200 in increments of 10)
 
@@ -276,9 +335,9 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Avenue Pad 3 Switch** [geargrafx_avenue_pad_3_switch] (**Auto**|SELECT|RUN)
 
-    Configure the button mapping for the Avenue Pad 3 controller's third button (III).
+    Configure the button mapping for the Avenue Pad 3 controller's third button (III). RetroPad X (IV) maps to the other action.
 
-    - *Auto* automatically selects the appropriate button mapping based on the game.
+    - *Auto* uses the game database to select the mapping, with RUN as the fallback.
     - *SELECT* maps button III to SELECT.
     - *RUN* maps button III to RUN.
 
@@ -379,7 +438,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_a.png)          | I                  | I                          | I                       |
 | ![](../image/retropad/retro_b.png)          | II                 | II                         | II                      |
 | ![](../image/retropad/retro_y.png)          |                    | III (mapped to Select/Run) | III                     |
-| ![](../image/retropad/retro_x.png)          |                    |                            | IV                      |
+| ![](../image/retropad/retro_x.png)          |                    | IV (opposite Select/Run mapping to III) | IV                      |
 | ![](../image/retropad/retro_l1.png)         |                    |                            | V                       |
 | ![](../image/retropad/retro_r1.png)         |                    |                            | VI                      |
 | ![](../image/retropad/retro_l2.png)         | Toggle Turbo II when enabled | Toggle Turbo II when enabled | Toggle Turbo II when enabled |
@@ -387,7 +446,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 ## Mouse
 
-Select *Mouse* as the device type for a controller port. Only one mouse is active at a time; the first port configured as a mouse is used. Adjust movement with **Mouse Sensitivity**.
+Select *Mouse* as the device type for controller port 1. Only one mouse is active at a time. Adjust movement with **Mouse Sensitivity**.
 
 | RetroMouse Inputs | PC Engine Mouse |
 |-------------------|-----------------|
