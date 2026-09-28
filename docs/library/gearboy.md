@@ -4,10 +4,11 @@
 
 Gearboy is an open source, cross-platform Nintendo Game Boy (DMG), Game Boy Color (GBC), and Super Game Boy (SGB) emulator written in C++.
 
-- Accurate emulation with support for ROM-only cartridges and MBC1, MBC1M, MBC2, MBC3, MBC5, MBC6, MBC7, HuC-1, HuC-3, MMM01, Pocket Camera, TAMA5, Wisdom Tree, M161, Sachen MMC1/MMC2, PKJD, Bung/EMS, and Poke 2-in-1 mappers.
+- Accurate emulation with support for ROM-only cartridges and MBC1, MBC1M, MBC2, MBC3, MBC5, MBC6, MBC7, HuC-1, HuC-3, MMM01, Pocket Camera, TAMA5, Wisdom Tree, M161, Sachen MMC1/MMC2, PKJD, Bung/EMS, Poke 2-in-1, Rocket Games, BHGOS, Li Cheng, NT newer, GGB81, Hitek, VF001, VF001 (SL), Sintax, NT old 1 and NT old 2 mappers.
 - Game Boy Color support.
 - Super Game Boy support, including borders and color palettes.
 - Game Link Cable support with two systems, independent controllers, configurable screens and audio, and two-ROM subsystem loading.
+- Barcode Boy support with built-in cards and custom 13-digit barcodes.
 - Battery-backed RAM save support.
 - Save states.
 - Boot ROM (BIOS) support.
@@ -35,10 +36,12 @@ Required or optional firmware files go in the frontend's system directory.
 !!! attention
 	Place boot ROM files in RetroArch's system directory, then enable the [DMG Bootrom](#core-options) or [GBC Bootrom](#core-options) core option.
 
-| Filename     | Description                        | md5sum                           |
-|:------------:|:----------------------------------:|:--------------------------------:|
-| dmg_boot.bin | Game Boy boot ROM - Optional       | 32fbbd84168d3482956eb3c5051637f5 |
-| cgb_boot.bin | Game Boy Color boot ROM - Optional | dbfce9db9deaa2567f6a84fde55f9680 |
+| Filename     | Description                        | Size       | md5sum                           |
+|:------------:|:----------------------------------:|:----------:|:--------------------------------:|
+| dmg_boot.bin | Game Boy boot ROM - Optional       | 256 bytes  | 32fbbd84168d3482956eb3c5051637f5 |
+| cgb_boot.bin | Game Boy Color boot ROM - Optional | 2304 bytes | dbfce9db9deaa2567f6a84fde55f9680 |
+
+The checksums above identify the original boot ROMs. Other boot ROM images of the corresponding sizes can also be loaded.
 
 ## Extensions
 
@@ -66,6 +69,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
+| Run-Ahead         | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
@@ -88,6 +92,8 @@ Frontend-level settings or features that the Gearboy core respects.
 | LEDs              | ✕         |
 
 Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and GameShark cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
+
+Save states, and therefore rewind and run-ahead, are unavailable while a boot ROM is executing.
 
 ### Directories
 
@@ -120,6 +126,14 @@ The Gearboy core saves/loads to/from these directories.
 - The Gearboy core's max height is 288
 - The Gearboy core's provided aspect ratio is 10:9 for a single handheld screen, 8:7 with an SGB border, 20:9 for two horizontal screens, and 5:9 for two vertical screens
 
+## Barcode Boy
+
+**Barcode Boy Mode** defaults to *Auto*, which attaches the accessory to games recognized by the ROM database. For unrecognized or patched compatible games, select *Enabled*, choose **Close Content**, then load the ROM again. **Restart** alone does not apply changes to this option.
+
+Choose a **Barcode Boy Card**, or select *Custom* and set **Barcode Boy Custom Digit 1-13** from left to right. Resume the game and press **Scan Barcode** (RetroPad R, the right shoulder button on port 1) when the game is ready to read a card. Changing the card or digits does not scan automatically.
+
+Barcode Boy uses the serial port and is disabled in Game Link Cable sessions. Frontends that support conditional option visibility hide the card selector when Barcode Boy is inactive and show the custom digits only when *Custom* is selected.
+
 ## Game Link Cable
 
 Enable **Game Link Cable Enable (restart)**, choose **Close Content**, then load the ROM again to run two independent copies of the same ROM. Controller port 1 controls Screen 1, and controller port 2 controls Screen 2. Both machines continue running when only one screen is displayed. RetroArch's **Restart** action resets the existing machine or linked pair and preserves battery memory. It does not apply changes to Game Link Cable Enable; both enabling and disabling this option require **Close Content** followed by loading the ROM again.
@@ -140,13 +154,13 @@ When loading a single ROM in linked mode, Screen 1 keeps its usual frontend-mana
 
 The two-ROM subsystem exposes both cartridges' save RAM and RTC to the frontend. Screen 1 uses `.srm` and `.rtc`; Screen 2 uses `.srm2` and `.rtc2`. The separate extensions prevent the saves from overwriting each other when both slots load the same ROM.
 
-Linked save states contain both machines, both screens, and serial transfers in progress. They use a separate format from single-player states. Save states are unavailable while a boot ROM is executing.
+Linked save states contain both machines, both screens, and serial transfers in progress. They use a separate format from single-player states.
 
 ## Core options
 
 The Gearboy core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings marked (restart) require restarting the emulated hardware. **Game Link Cable Enable is an exception: use Close Content and load the ROM again. RetroArch's Restart action alone does not change the number of machines.**
+Settings marked (restart) take effect after restarting or reloading the content. **Game Link Cable Enable and Barcode Boy Mode require Close Content followed by loading the ROM again; RetroArch's Restart action alone does not apply these two options.**
 
 - **Game Boy Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
 
@@ -156,11 +170,11 @@ Settings marked (restart) require restarting the emulated hardware. **Game Link 
     - *Game Boy DMG* forces original Game Boy hardware.
     - *Game Boy Advance* emulates Game Boy Advance hardware behavior when running Game Boy and Game Boy Color games. Game Boy Advance ROMs are not supported.
 
-- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart|HuC 1|HuC 3|MMM01|Camera|MBC 7|TAMA5|Wisdom Tree|M161|Sachen MMC1|Sachen MMC2|PKJD|Bung/EMS|Poke 2-in-1|MBC 6)
+- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart|HuC 1|HuC 3|MMM01|Camera|MBC 7|TAMA5|Wisdom Tree|M161|Sachen MMC1|Sachen MMC2|PKJD|Bung/EMS|Poke 2-in-1|MBC 6|Rocket Games|BHGOS|Li Cheng|NT newer|GGB81|Hitek|VF001|VF001 (SL)|Sintax|NT old 1|NT old 2)
 
 	Select which Memory Bank Controller (MBC or mapper) is emulated.
 
-	- *Auto* selects the best mapper based on the ROM header.
+	- *Auto* detects the mapper from the loaded ROM, including cartridge database overrides.
     - *ROM Only* forces no MBC.
     - *MBC 1* forces MBC 1.
     - *MBC 2* forces MBC 2.
@@ -181,6 +195,17 @@ Settings marked (restart) require restarting the emulated hardware. **Game Link 
 	- *Bung/EMS* forces the Bung/EMS flash cartridge mapper.
 	- *Poke 2-in-1* forces the Poke 2-in-1 mapper.
 	- *MBC 6* forces the MBC6 (Net de Get) mapper.
+	- *Rocket Games* forces the Rocket Games mapper.
+	- *BHGOS* forces the BHGOS multicart mapper.
+	- *Li Cheng* forces the Li Cheng mapper.
+	- *NT newer* forces the NT newer mapper.
+	- *GGB81* forces the GGB81 mapper.
+	- *Hitek* forces the Hitek mapper.
+	- *VF001* forces the VF001 mapper.
+	- *VF001 (SL)* forces the VF001 (SL) mapper variant.
+	- *Sintax* forces the Sintax mapper.
+	- *NT old 1* forces the NT old 1 mapper.
+	- *NT old 2* forces the NT old 2 mapper.
 
 - **Super Game Boy (restart)** [gearboy_sgb] (**Enabled**|Disabled)
 
@@ -266,6 +291,18 @@ Settings marked (restart) require restarting the emulated hardware. **Game Link 
 
 	Invert the vertical axis when using analog stick input for MBC7 tilt controls.
 
+- **Barcode Boy Mode (restart)** [gearboy_barcode_boy] (**Auto**|Disabled|Enabled)
+
+	Select whether to attach Barcode Boy. *Auto* uses ROM database detection; *Enabled* supports unrecognized or patched compatible ROMs. Game Link Cable mode always disables Barcode Boy. After changing this option, choose **Close Content** and load the ROM again.
+
+- **Barcode Boy Card** [gearboy_barcode] (**Custom**|built-in cards)
+
+	Select a built-in card for Battle Space, Family Jockey 2, Famista 3, Kattobi Road or Monster Maker, or choose *Custom* to enter a barcode. Resume the game and press **Scan Barcode** (RetroPad R) to scan the selected card.
+
+- **Barcode Boy Custom Digit 1-13** [gearboy_barcode_digit_1] through [gearboy_barcode_digit_13] (**0**|0-9)
+
+	Each option sets one digit of the custom 13-digit barcode, from left to right. These options are used when **Barcode Boy Card** is *Custom*. All digits default to 0.
+
 - **Game Link Cable Enable (restart)** [gearboy_link_enable] (**Disabled**|Enabled)
 
 	Run two linked Game Boy systems. Loading one ROM runs an independent copy on each screen. After changing this option, choose **Close Content** and load the ROM again; **Restart** alone is not sufficient. Use the [two-ROM subsystem](#game-link-cable) to load different ROMs.
@@ -288,6 +325,8 @@ Settings marked (restart) require restarting the emulated hardware. **Game Link 
 
 ## Joypad
 
+Select **Joypad Auto** or **Nintendo Game Boy** as the port device type. **Joypad Port Empty** disables the joypad buttons.
+
 The same mapping applies to both ports in linked mode. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens. Single-player mode uses port 1.
 
 ![](../image/controller/gb.png)
@@ -302,6 +341,7 @@ The same mapping applies to both ports in linked mode. Port 1 controls Screen 1 
 | Left                     | ![](../image/retropad/retro_dpad_left.png)  |
 | Right                    | ![](../image/retropad/retro_dpad_right.png) |
 | A                        | ![](../image/retropad/retro_a.png)          |
+| Scan Barcode (port 1, Barcode Boy only) | ![](../image/retropad/retro_r1.png) |
 
 ## Compatibility
 
