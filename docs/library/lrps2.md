@@ -123,6 +123,9 @@ retroarch/
 !!! Info
 	Although the `cheats_ws` folder is empty when created, a very large number of widescreen patches are already included in the core itself.
 
+!!! Info
+	Cheats go into `retroarch/system/pcsx2/cheats` named by their disc hash. For example, a patch/cheat for Ōkami US would be named `21068223.pnach`
+
 ## Extensions
 
 Content that can be loaded by the LRPS2 core have the following file extensions:
