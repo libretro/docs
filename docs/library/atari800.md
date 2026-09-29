@@ -1,9 +1,8 @@
 # Atari 8-bit computer systems and 5200 (Atari800)
 
-
 ## Background
 
-Atari 8-bit computer systems (400, 800, 600 XL, 800XL, 130XE) and 5200 game console emulator.
+Atari 8-bit computer systems (400, 800, 600XL, 800XL, 130XE, XE Game System and modern memory-expanded XL/XE machines) and 5200 game console emulator, based on [Atari800](https://atari800.github.io/) 7.0.0.
 
 The Atari800 core has been authored by
 
@@ -15,7 +14,6 @@ The Atari800 core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-
 ## Extensions
 
 Content that can be loaded by the Atari800 core have the following file extensions:
@@ -23,45 +21,54 @@ Content that can be loaded by the Atari800 core have the following file extensio
 - .xfd
 - .atr
 - .atx
-- .cdm
+- .dcm
 - .cas
 - .bin
+- .rom
+- .car
 - .a52
+- .com
 - .xex
 - .zip
+- .m3u
+
+`.m3u` playlists list several disk images for one game; RetroArch's Disk Control menu swaps between them.
 
 ## Databases
 
 RetroArch database(s) that are associated with the Atari800 core:
 
+- [Atari - 8-bit Family](https://github.com/libretro/libretro-database/blob/master/rdb/Atari%20-%208-bit%20Family.rdb)
 - [Atari - 5200](https://github.com/libretro/libretro-database/blob/master/rdb/Atari%20-%205200.rdb)
 
 ## BIOS
 
-Required or optional firmware files go in RetroArch's system directory.
+The core has AltirraOS and Altirra BASIC built in, so it runs without any BIOS files. The original Atari ROMs are more compatible with some software; the core uses them when they are in RetroArch's system directory, and the **OS ROM** and **BASIC ROM** core options choose between them and the built-in ones.
 
-|   Filename    |    Description                         |              md5sum              |
-|:-------------:|:--------------------------------------:|:--------------------------------:|
-| 5200.rom      | 5200 BIOS - Required                   | 281f20ea4320404ec820fb7ec0693b38 |
-| ATARIXL.ROM   | Atari XL/XE OS BIOS - Required         | 06daac977823773a3eea3422fd26a703 |
-| ATARIBAS.ROM  | BASIC interpreter BIOS - Required      | 0bac0c6a50104045d902df4503a4c30b |
-| ATARIOSA.ROM  | Atari 400/800 PAL BIOS - Required      | eb1f32f5d9f382db1bbfb8d7f9cb343a |
-| ATARIOSB.ROM  | BIOS for Atari 400/800 NTSC - Required | a3e8d617c95d08031fe1b20d541434b2 |
+|   Filename    |    Description                    |              md5sum              |
+|:-------------:|:---------------------------------:|:--------------------------------:|
+| 5200.rom      | 5200 BIOS - Optional              | 281f20ea4320404ec820fb7ec0693b38 |
+| ATARIXL.ROM   | Atari XL/XE OS BIOS - Optional    | 06daac977823773a3eea3422fd26a703 |
+| ATARIBAS.ROM  | BASIC interpreter BIOS - Optional | 0bac0c6a50104045d902df4503a4c30b |
+| ATARIOSA.ROM  | Atari 400/800 PAL BIOS - Optional | eb1f32f5d9f382db1bbfb8d7f9cb343a |
+| ATARIOSB.ROM  | Atari 400/800 NTSC BIOS - Optional| a3e8d617c95d08031fe1b20d541434b2 |
 
 ## Features
 
+Frontend-level settings or features that the Atari800 core respects.
+
 | Feature           | Supported |
 |-------------------|:---------:|
-| Restart           | ✕         |
+| Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | -         |
-| States            | -         |
+| Saves             | ✕         |
+| States            | ✔         |
 | Rewind            | ✕         |
 | Netplay           | ✕         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |
-| Native Cheats     | -         |
+| Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
@@ -70,133 +77,142 @@ Required or optional firmware files go in RetroArch's system directory.
 | Camera            | ✕         |
 | Location          | ✕         |
 | Subsystem         | ✕         |
-| Softpatching      | ✕         |
-| Disk Control      | ✕         |
+| [Softpatching](../guides/softpatching.md) | ✕         |
+| Disk Control      | ✔         |
 | Username          | ✕         |
-| Crop Overscan (in RetroArch's Video settings) | ✕         |
+| Language          | ✕         |
+| Crop Overscan     | ✕         |
+| LEDs              | ✕         |
 
 ### Directories
 
-The Atari800 core's directory name is 'Atari800'
+The Atari800 core's internal core name is 'Atari800'.
 
-Atari800 config settings are saved/loaded to and from .atari800.cfg in RetroArch's home directory (where RetroArch.exe is in Windows).
-
-- .atari800.cfg (Config)
-
-RetroArch.exe directory
-
-- .atari800.cfg (config)
-- .atari000.wav in exe directory (startup noise?)
-- .atari000.pcx in exe directory (screenshot)
+The core reads its BIOS files from RetroArch's system directory. With the **Uses the Atari800 legacy configuration file** core option on, it also keeps standalone Atari800's `.atari800.cfg`.
 
 ### Core provided aspect ratio
 
 Atari800's core provided aspect ratio is 4/3.
 
-### Usage
-
-Make sure you have the appropriate system files in RetroArch's system directory. Then, load a content file.
-
-The Atari800 core should boot to the 'Atari Computer - Memo Pad' screen.
-
-The Atari800 core will generate a '.atari800.cfg' config file in RetroArch's home directory and will add the required BIOS files it detects in the system directory to the config file.
-
-Now you can manually select what Atari system you want to emulate through the 'Atari System' core option.
-
-Finally, you can load any content files compatible with the system chosen through RetroArch's Load Content menu.
-
-!!! attention
-	You can set per-game core option settings by creating a game-options file through RetroArch's Core Options menu.
-
-Alternatively, you can manually configure how the Atari800 will look for and handle BIOS files.
-
-While the Atari800 core is running, you can press F1 to get into the internal emulator menu. There - emulator configuration, system rom settings.
-
-From there, You can go to the 'Emulator Configuration' section and then the System ROM settings section to configure BIOS options. (Press Enter to confirm menu selections and press Escape to go back a menu)
-
-Then press Escape a few times to go back to the 'Emulator Configuration' section and select Save Configuration File or alternatively change Save configuration file on exit from no to yes
-
-Then you can exit the emulator by pressing F9 and then try the game again or press Shift+F5 to reboot the game.
-
 ## Core options
 
-The Atari800 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+The Atari800 core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded. Settings marked (Restart) take effect when the content is restarted.
 
-- **Atari System** (**400/800 (OS B)**/800XL (64K)/130XE (128K)/5200)
+#### System
 
-<center> Choose what Atari System to emulate. </center>
+- **Atari System** [atari800_system] (Atari 400/800 (OS B)|**Atari 800XL (64K)**|Atari 130XE (128K)|Modern Atari XL/XE(320K Compy Shop)|Modern Atari XL/XE(576K)|Modern Atari XL/XE(1088K)|Atari XE Game System|Atari 5200 Super System)
+- **Internal BASIC (hold OPTION on boot) (Restart)** [atari800_internalbasic] (**OFF**|ON)
+- **400/800 OS ROM (Restart)** [atari800_os_800] (**Auto**|Rev. A NTSC|Rev. A PAL|Rev. B NTSC|AltirraOS (built-in))
+- **XL/XE OS ROM (Restart)** [atari800_os_xl] (**Auto**|AA00 Rev. 10|AA01 Rev. 11|BB00 Rev. 1|BB01 Rev. 2|BB02 Rev. 3|BB02 Rev. 3 Ver. 4|CC01 Rev. 4|BB01 Rev. 3|BB01 Rev. 4|BB01 Rev. 59|BB01 Rev. 59 alt.|AltirraOS (built-in))
+- **5200 BIOS ROM (Restart)** [atari800_os_5200] (**Auto**|Original|Rev. A|AltirraOS (built-in))
+- **BASIC ROM (Restart)** [atari800_basic_version] (**Auto**|Rev. A|Rev. B|Rev. C|Altirra BASIC (built-in))
+- **Mosaic RAM Expansion (Restart)** [atari800_mosaic] (**OFF**|16 KB (1 board)|80 KB (2 boards)|144 KB (3 boards))
+- **Axlon RAM Expansion (Restart)** [atari800_axlon] (**OFF**|128 KB|256 KB|512 KB|1 MB|2 MB|4 MB)
+- **Axlon $0F Bank Shadow (Restart)** [atari800_axlon_shadow] (**OFF**|ON)
+- **MapRAM (Restart)** [atari800_mapram] (**OFF**|ON)
+- **XEP80 80-Column Display (Restart)** [atari800_xep80] (**OFF**|Port 1|Port 2)
+- **R-Time 8 Clock (Restart)** [atari800_rtime] (OFF|**ON**)
+- **Stereo POKEY (Restart)** [atari800_pokey_stereo] (**OFF**|ON)
+- **Uses the Atari800 legacy configuration file** [atari800_cfg] (**OFF**|ON)
 
-- **Video Standard** (**NTSC**/PAL)
+#### Video
 
-<center> Awaiting description. </center>
+- **Video Standard** [atari800_ntscpal] (**NTSC**|PAL)
+- **Hi-Res Artifacting Mode** [atari800_artifacting_mode] (**None**|blue/brown 1|blue/brown 2|GTIA|CTIA)
+- **Internal resolution** [atari800_resolution] (**336x240**|320x240|384x240|384x272|384x288|400x300)
+- **Color tint/hue** [color_hue] (-1.00 to 1.00, **0.00**)
+- **Color saturation** [color_saturation] (-1.00 to 1.00, **0.00**)
+- **Color contrast** [color_contrast] (-2.00 to 2.00, **0.00**)
+- **Color brightness** [color_brightness] (-2.00 to 2.00, **0.00**)
+- **Color gamma** [color_gamma] (1.00 to 3.50, **2.35**)
+- **GTIA delay (colorburst phase)** [color_delay] (**Default**|10.00|10.50|11.00|11.50|12.00|12.50|13.00|13.50|14.00|14.50|15.00|15.50|16.00|16.50|17.00|17.50|18.00|18.50|19.00|19.50|20.00|20.50|21.00|21.50|22.00|22.50|23.00|23.50|24.00|24.50|25.00|25.50|26.00|26.50|27.00|27.50|28.00|28.50|29.00|29.50|30.00|30.50|31.00|31.50|32.00|32.50|33.00|33.50|34.00|34.50|35.00|35.50|36.00|36.50|37.00|37.50|38.00|38.50|39.00|39.50|40.00|40.50|41.00|41.50|42.00|42.50|43.00|43.50|44.00|44.50|45.00|45.50|46.00|46.50|47.00|47.50|48.00|48.50|49.00|49.50|50.00)
+- **External Palette** [external_palette] (**none**|Default|Gray|Jakub|Real|Xformer)
 
-- **Internal BASIC (hold OPTION on boot)** (**Off**/On)
+#### Input
 
-<center> Awaiting description. </center>
+- **Controller Hacks** [atari800_opt2] (**none**|Dual Stick|Swap Ports|Joy 2B+)
+- **Activate Paddle Mode** [paddle_active] (**OFF**|ON)
+- **Paddle Movement Speed** [paddle_movement_speed] (1|2|**3**|4|5|6|7|8|9)
+- **Digital Joystick Sensitivity** [pot_digital_sensitivity] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**)
+- **Analog Joystick Sensitivity** [pot_analog_sensitivity] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|60%|65%|70%|75%|80%|85%|90%|95%|**100%**)
+- **Analog Joystick Deadzone** [pot_analog_deadzone] (0%|3%|5%|7%|10%|13%|**15%**|17%|20%|23%|25%|27%|30%)
+- **Retroarch Keyboard type** [atari800_keyboard] (**poll**|callback)
+- **Atari XEGS keyboard** [atarixegs_keyboard_detached] (**attached**|detached)
+- **Virtual keyboard** [atari800_vkbd_enabled] (**OFF**|ON)
+- **Atari Keyboard Defines** [keyboard_defines] (**informational**)
+- **Joystick Autofire** [atari800_autofire] (**OFF**|While fire held|Continuous)
+- **Analog Joystick/Paddle Center** [pot_analog_center] (80|82|84|86|88|90|92|94|96|98|100|102|104|106|108|110|112|**114**|116|118|120|122|124|126|128|130|132|134|136|130|140|142|144|146|148|150)
 
-- **SIO Acceleration** (**Off**/On)
+#### Media
 
-<center> Awaiting description. </center>
+- **P: Device / Printer (Restart)** [atari800_pdevice] (OFF|**ON**)
+- **R: Device / Serial (Restart)** [atari800_rdevice] (**OFF**|ON)
+- **Slow DOS Binary Loading** [atari800_slowxex] (**OFF**|ON)
+- **SIO Acceleration** [atari800_sioaccel] (OFF|**ON**)
+- **Boot from Cassette (Reboot)** [atari800_cassboot] (**OFF**|ON)
+- **Autodetect Atari Cartridge Type (Restart)** [atari800_opt1] (**OFF**|ON)
 
-- **Boot from Cassette** (**Off**/On)
+#### On-Screen Display
 
-<center> Awaiting description. </center>
-
-- **Hi-Res Artifacting** (**Off**/On)
-
-<center> Awaiting description. </center>
-
-- **Autodetect A5200 CartType** (**Off**/On)
-
-<center> Awaiting description. </center>
-
-- **Joy hack A5200 for robotron** (**Off**/On)
-
-<center> Awaiting description. </center>
-
-- **Internal resolution** (**336x240**/320x240/384x240/384x272/384x288/400x300)
-
-<center> Awaiting description. </center>
-
-- **Retroarch Keyboard type** (**poll**/callback)
-
-<center> Awaiting description. </center>
+- **Show Atari Speed %** [atari800_show_speed] (**OFF**|ON)
+- **Show Disk/Tape Activity** [atari800_show_diskled] (OFF|**ON**)
+- **Show Sector/Block Counter** [atari800_show_sector] (**OFF**|ON)
+- **Show 1200XL LEDs** [atari800_show_1200leds] (OFF|**ON**)
 
 ## Controllers
 
 ### Device types
 
-The Atari800 core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The Atari800 core supports the following device type(s) in the controls menu:
 
-#### User 1 - 2 device types
-
-- None - Input disabled.
-- **RetroPad** - Joypad - Don't use this, switch to ATARI Joystick for joypad usage.
-- ATARI Joystick - Joypad
-- ATARI Keyboard - Keyboard - For keyboard usage
+- **ATARI Joystick** - an 8-bit computer joystick, with the console keys on the RetroPad
+- **ATARI 5200 Joystick** - the 5200's analog joystick and keypad
+- **ATARI Keyboard** - the computer keyboard
 
 ### Controller tables
 
-#### Joypad and analog device type table
+#### ATARI Joystick
 
-| User 1 Remap descriptors | RetroPad Inputs                                | ATARI Joystick          |
-|--------------------------|------------------------------------------------|-------------------------|
-| B                        | ![](../image/retropad/retro_b.png)             | KEY RETURN              |
-| Y                        | ![](../image/retropad/retro_y.png)             | VKBD ON/OFF             |
-| Select                   | ![](../image/retropad/retro_select.png)        | CONSOL_SELECT           |
-| Start                    | ![](../image/retropad/retro_start.png)         | CONSOL_START            |
-| Up                       | ![](../image/retropad/retro_dpad_up.png)       | Up                      |
-| Down                     | ![](../image/retropad/retro_dpad_down.png)     | Down                    |
-| Left                     | ![](../image/retropad/retro_dpad_left.png)     | Left                    |
-| Right                    | ![](../image/retropad/retro_dpad_right.png)    | Right                   |
-| A                        | ![](../image/retropad/retro_a.png)             | FIRE1/KEY RETURN IN GUI |
-| X                        | ![](../image/retropad/retro_x.png)             | FIRE2/KEY ESCAPE IN GUI |
-| L                        | ![](../image/retropad/retro_l1.png)            | CONSOLE_OPTION          |
-| R                        | ![](../image/retropad/retro_r1.png)            | TOGGLE_UI               |
-| L2                       | ![](../image/retropad/retro_l2.png)            | KEY SPACE               |
-| R2                       | ![](../image/retropad/retro_r2.png)            | KEY ESCAPE              |
-| L3                       | ![](../image/retropad/retro_l3.png)            |                         |
-| R3                       | ![](../image/retropad/retro_r3.png)            |                         |
+| RetroPad Inputs | ATARI Joystick |
+|---|---|
+| ![](../image/retropad/retro_dpad_up.png) | Up |
+| ![](../image/retropad/retro_dpad_down.png) | Down |
+| ![](../image/retropad/retro_dpad_left.png) | Left |
+| ![](../image/retropad/retro_dpad_right.png) | Right |
+| ![](../image/retropad/retro_b.png) | Fire 1 |
+| ![](../image/retropad/retro_a.png) | Fire 2 |
+| ![](../image/retropad/retro_y.png) | Space / Fire 3 |
+| ![](../image/retropad/retro_x.png) | Return |
+| ![](../image/retropad/retro_select.png) | Select (console key) |
+| ![](../image/retropad/retro_start.png) | Start (console key) |
+| ![](../image/retropad/retro_l1.png) | Option (console key) |
+| ![](../image/retropad/retro_l2.png) | Esc |
+| ![](../image/retropad/retro_r2.png) | Help |
+| ![](../image/retropad/retro_l3.png) | Virtual keyboard |
+
+#### ATARI 5200 Joystick
+
+| RetroPad Inputs | ATARI 5200 Joystick |
+|---|---|
+| ![](../image/retropad/retro_dpad_up.png) | Joystick up (digital) |
+| ![](../image/retropad/retro_dpad_down.png) | Joystick down (digital) |
+| ![](../image/retropad/retro_dpad_left.png) | Joystick left (digital) |
+| ![](../image/retropad/retro_dpad_right.png) | Joystick right (digital) |
+| ![](../image/retropad/retro_b.png) | Fire 1 |
+| ![](../image/retropad/retro_a.png) | Fire 2 |
+| ![](../image/retropad/retro_y.png) | Keypad # |
+| ![](../image/retropad/retro_x.png) | Keypad * |
+| ![](../image/retropad/retro_select.png) | Pause |
+| ![](../image/retropad/retro_start.png) | Start |
+| ![](../image/retropad/retro_l1.png) | Keypad 0 |
+| ![](../image/retropad/retro_r1.png) | Keypad 1 |
+| ![](../image/retropad/retro_l2.png) | Keypad 2 |
+| ![](../image/retropad/retro_r2.png) | Keypad 3 |
+| ![](../image/retropad/retro_l3.png) | Keypad 7 |
+| ![](../image/retropad/retro_r3.png) | Virtual keyboard |
+
+The left analog stick drives the 5200 joystick; the **Analog Joystick** core options set its sensitivity and deadzone.
+
 
 #### Keyboard device type table
 
@@ -240,3 +256,7 @@ The Atari800 core supports the following device type(s) in the controls menu, bo
 - [Report Libretro Atari800 Core Issues Here](https://github.com/libretro/libretro-atari800/issues)
 - [Official Atari800 Website](https://atari800.github.io/)
 - [Official Atari800 Github Repository](https://github.com/atari800/atari800)
+
+## Other Atari 5200 cores
+
+- [Atari - 5200 (a5200)](a5200.md)

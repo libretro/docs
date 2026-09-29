@@ -89,9 +89,33 @@ The Handy core has the following option(s) that can be tweaked from the core opt
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Display rotation** [handy_rot] (**None**/90/240)
+- **Video Refresh Rate** [handy_refresh_rate] (50Hz|**60Hz**|75Hz|100Hz|120Hz)
 
-	Self-explanatory. Need to restart content.
+	Set video update frequency. Internally, the Lynx renders at a variable rate from 0 to 75Hz. Frames that occur between video update events will be dropped. Higher rates may increase video smoothness (depending on actual game frame rate) but can cause tearing on 60Hz displays.
+
+- **Display Rotation** [handy_rot] (**Auto**|Disabled|Clockwise|Bottom|Anticlockwise)
+
+	Rotate the virtual console screen to achieve the correct layout of 'portrait' oriented games on a conventional (landscape) display.
+
+- **Color Depth (Restart Required)** [handy_gfx_colors] (**Thousands (16-bit)**|Millions (24-bit))
+
+	Specify number of colors to display on-screen. 24-bit significantly increases performance overheads and is not available on all platforms.
+
+- **LCD Ghosting Filter** [handy_lcd_ghosting] (**OFF**|2 Frames|3 Frames|4 Frames)
+
+	Apply an image 'ghosting' effect by blending multiple successive video frames. Mimics the display characteristics of the Lynx's LCD panel and helps to smooth the appearance of low frame rate games. Higher frame counts improve the effect at the expense of increased performance overheads.
+
+- **CPU Overclock Multiplier** [handy_overclock] (**1**|2|3|4|5|6|7|8|9|10|20|30|40|50)
+
+	Higher values can reduce slowdowns in games. WARNING: Can cause glitches and crashes.
+
+- **Frameskip** [handy_frameskip] (**OFF**|Auto|Manual)
+
+	Skip frames to avoid audio buffer under-run (crackling). Improves performance at the expense of visual smoothness. 'Auto' skips frames when advised by the frontend. 'Manual' utilizes the 'Frameskip Threshold (%)' setting.
+
+- **Frameskip Threshold (%)** [handy_frameskip_threshold] (15|18|21|24|27|30|**33**|36|39|42|45|48|51|54|57|60)
+
+	When 'Frameskip' is set to 'Manual', specifies the audio buffer occupancy threshold (percentage) below which frames will be skipped. Higher values reduce the risk of crackling by causing frames to be dropped more frequently.
 
 ## Controllers
 
