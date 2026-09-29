@@ -359,8 +359,6 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 #### Joypad and analog device type table
 
-![](../image/controller/dc.png)
-
 | User 1 - 4 input descriptors |                                             | RetroPad           |
 |------------------------------|---------------------------------------------|--------------------|
 | A                            | ![](../image/retropad/retro_b.png)      | A                  |
@@ -372,10 +370,8 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   | D-Pad Right        |
 | B                            | ![](../image/retropad/retro_a.png)      | B                  |
 | Y                            | ![](../image/retropad/retro_x.png)      | Y                  |
-| L (fierce)                   | ![](../image/retropad/retro_l1.png)           | L (fierce)         |
-| R (fierce)                   | ![](../image/retropad/retro_r1.png)           | R (fierce)         |
-| L (weak)                     | ![](../image/retropad/retro_l2.png)           | L (weak)           |
-| R (weak)                     | ![](../image/retropad/retro_r2.png)           | R (weak)           |
+| L Trigger                    | ![](../image/retropad/retro_l2.png)           | L Trigger          |
+| R Trigger                    | ![](../image/retropad/retro_r2.png)           | R Trigger          |
 | Analog X                     | ![](../image/retropad/retro_left_stick.png) X | Analog X           |
 | Analog Y                     | ![](../image/retropad/retro_left_stick.png) Y | Analog Y           |
 

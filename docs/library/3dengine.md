@@ -2,7 +2,7 @@
 
 ## Contribute to this documentation
 
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/3d_engine.md). Changes are proposed using "Pull Requests."
+In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/3dengine.md). Changes are proposed using "Pull Requests."
 
 ## Background
 

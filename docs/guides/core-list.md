@@ -8,6 +8,7 @@
 | [Ardens](../library/ardens.md) | Arduboy                | A simulator for the Arduboy FX |
 | Arduous                   | Arduboy                | A emulator for Arduboy, a handheld game console with open source software, based on the Arduino hardware platform |
 | [Atari800](https://docs.libretro.com/library/atari800/) | Atari 5200             |                    |
+| [Azahar](../library/azahar.md) | Nintendo 3DS           | A port of the Azahar 3DS emulator to libretro, based on Citra |
 | [b2](../library/b2.md)    | Acorn BBC Micro        |                    |
 | [Beetle bsnes](../library/beetle_bsnes.md) | Nintendo SNES/SFC      |                    |
 | [Beetle Cygne](https://docs.libretro.com/library/beetle_cygne/) | Bandai WonderSwan/Color |                   |
@@ -30,9 +31,9 @@
 | boom 3                    | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
 | [bsnes](../library/bsnes.md) | Nintendo SNES/SFC      |                    |
-| [bsnes 2014 Accuracy](../library/bsnes_accuracy.md) | Nintendo SNES/SFC      |                    |
-| [bsnes 2014 Balanced](../library/bsnes_balanced.md) | Nintendo SNES/SFC      |                    |
-| [bsnes 2014 Performance](../library/bsnes_performance.md) | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Accuracy](../library/bsnes2014_accuracy.md) | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Balanced](../library/bsnes2014_balanced.md) | Nintendo SNES/SFC      |                    |
+| [bsnes 2014 Performance](../library/bsnes2014_performance.md) | Nintendo SNES/SFC      |                    |
 | [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md) | Nintendo SNES/SFC      |                    |
 | bsnes-hd beta             | Nintendo SNES/SFC      |                    |
 | [bsnes-jg](../library/bsnes-jg.md) | Nintendo SNES/SFC      |                    |
