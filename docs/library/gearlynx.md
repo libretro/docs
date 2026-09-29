@@ -6,7 +6,7 @@ Gearlynx is an open source, cross-platform Atari Lynx emulator written in C++.
 
 - Very accurate emulation supporting the entire commercial Atari Lynx catalog.
 - Bank switching (BANK1 + AUDIN) and EEPROM support.
-- Save files (EEPROM and NVRAM).
+- Save files (EEPROM, NVRAM and persistent cartridge RAM).
 - GameDrive and ElCheapoSD cartridge support.
 - Configurable low-pass audio filter.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
@@ -31,9 +31,11 @@ Required firmware files go in the frontend's system directory.
 !!! attention
 	The Lynx boot ROM file is required for Gearlynx to function.
 
-| Filename     | Description                  | md5sum                           |
-|:------------:|:----------------------------:|:--------------------------------:|
-| lynxboot.img | Lynx Boot Image - Required   | fcd403db69f54290b51035d82f835e7b |
+| Filename     | Description                  | Size      | md5sum                           |
+|:------------:|:----------------------------:|:---------:|:--------------------------------:|
+| lynxboot.img | Lynx Boot Image - Required   | 512 bytes | fcd403db69f54290b51035d82f835e7b |
+
+The checksum above identifies the recommended original BIOS. Other 512-byte BIOS images can also be loaded.
 
 ## Extensions
 
@@ -43,6 +45,8 @@ Content that can be loaded by the Gearlynx core have the following file extensio
 - .lyx
 - .o
 - .bin
+
+Supported formats include LNX and LNX2 cartridge headers, headerless cartridge images and BS93 homebrew executables. LNX2 images use the `.lnx` extension.
 
 RetroArch database(s) that are associated with the Gearlynx core:
 
@@ -59,10 +63,11 @@ Frontend-level settings or features that the Gearlynx core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
+| Run-Ahead         | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -89,7 +94,7 @@ The Gearlynx core saves/loads to/from these directories.
 
 | File  | Description            |
 |:-----:|:----------------------:|
-| *.srm | EEPROM / NVRAM save    |
+| *.srm | EEPROM, NVRAM or LNX2 persistent cartridge RAM save |
 
 **Frontend's State directory**
 
@@ -104,19 +109,19 @@ The Gearlynx core saves/loads to/from these directories.
 - The Gearlynx core's base size is 160x102 in horizontal mode and 102x160 in vertical mode
 - The Gearlynx core's max width is 160
 - The Gearlynx core's max height is 160
-- The Gearlynx core's provided aspect ratio is dependent on the ['Aspect Ratio' core option](#core-options).
+- The Gearlynx core uses square pixels by default, including in vertical mode; the ['Aspect Ratio' core option](#core-options) can override this
 
 ## SD cartridges
 
 GameDrive and ElCheapoSD use the loaded ROM's directory as the emulated SD card root. Place the files required by the cartridge in that directory and select the appropriate **Cartridge Hardware** option if automatic detection does not identify it.
 
-SD cartridge access requires a frontend with VFS version 3 support and a content path that identifies the ROM directory. Write operations also require frontend write support and permission to write to the content directory. These files are separate from the frontend-managed EEPROM/NVRAM `.srm` save.
+SD cartridge access requires a frontend with VFS version 3 support and a content path that identifies the ROM directory. Write operations also require frontend write support and permission to write to the content directory. SD writes update files in that directory; these files are separate from the frontend-managed EEPROM, NVRAM or persistent cartridge RAM `.srm` save.
 
 ## Core options
 
 The Gearlynx core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings marked (restart) take effect after restarting or reloading the content.
 
 - **Aspect Ratio** [gearlynx_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
@@ -127,11 +132,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	- *16:9 DAR* forces 16:9 aspect ratio.
 	- *16:10 DAR* forces 16:10 aspect ratio.
 
+	Fixed DAR settings retain their selected display ratio when the screen is rotated. Use *1:1 PAR* to preserve square pixels in vertical games.
+
 - **Screen Rotation** [gearlynx_rotation] (**Auto**|Left|Right|Disabled|180)
 
-	Rotates the screen display. This is useful since many Lynx games were designed to be played with the system held vertically.
+	Rotates the screen display. This is useful since many Lynx games were designed to be played with the system held vertically. Directional controls are automatically remapped to follow the selected rotation.
 
-	- *Auto* automatically rotates based on the game.
+	- *Auto* uses the cartridge header or game database, with horizontal orientation as the fallback.
 	- *Left* rotates the screen 90 degrees counter-clockwise.
 	- *Right* rotates the screen 90 degrees clockwise.
 	- *Disabled* forces the screen to remain in standard horizontal orientation.
@@ -139,9 +146,9 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Console Type** [gearlynx_console_type] (**Auto**|Lynx I|Lynx II)
 
-	Select the Atari Lynx console model to emulate.
+	Select the Atari Lynx console model to emulate. Reset or reload the content after changing the model.
 
-	- *Auto* automatically selects the appropriate console type based on the game.
+	- *Auto* uses the cartridge header or game database, defaulting to Lynx II when no model is specified.
 	- *Lynx I* forces emulation of the original Lynx model.
 	- *Lynx II* forces emulation of the Lynx II model.
 
@@ -159,23 +166,23 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Audio Low-Pass Filter (Hz)** [gearlynx_lowpass_filter] (**3500**|500|1000|1500|2000|2500|3000|4000|4500|5000)
 
-	Configures a low-pass audio filter to reduce high-frequency noise.
+	Set the low-pass filter cutoff frequency to reduce high-frequency noise. Lower values produce a more muffled sound. The available range is 500-5000 Hz, with 3500 Hz as the default.
 
 - **Audio Channel 0 Volume** [gearlynx_audio_ch0_volume] (**100**|0-200 in increments of 10)
 
-	Sets the volume level for audio channel 0 (percentage).
+	Set the volume for audio channel 0: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **Audio Channel 1 Volume** [gearlynx_audio_ch1_volume] (**100**|0-200 in increments of 10)
 
-	Sets the volume level for audio channel 1 (percentage).
+	Set the volume for audio channel 1: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **Audio Channel 2 Volume** [gearlynx_audio_ch2_volume] (**100**|0-200 in increments of 10)
 
-	Sets the volume level for audio channel 2 (percentage).
+	Set the volume for audio channel 2: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **Audio Channel 3 Volume** [gearlynx_audio_ch3_volume] (**100**|0-200 in increments of 10)
 
-	Sets the volume level for audio channel 3 (percentage).
+	Set the volume for audio channel 3: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **Allow Up+Down / Left+Right** [gearlynx_up_down_allowed] (**Disabled**|Enabled)
 
@@ -186,6 +193,8 @@ Settings with (restart) means that core has to be closed for the new setting to 
 	It is best to keep this option disabled.
 
 ## Joypad
+
+Port 1 accepts **Joypad Auto** or **Lynx Pad** with the mappings below. **Joypad Port Empty** disables controller input.
 
 ![](../image/controller/lynx.png)
 
