@@ -174,6 +174,7 @@ nav:
       - 'Magnavox Emulation':
         - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
       - 'Mattel Emulation':
+        - 'Mattel - HyperScan (HyperScanEmu)': 'library/hyperscanemu.md'
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
