@@ -143,6 +143,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Handy](../library/handy.md)					    		   | [zlib](https://github.com/libretro/libretro-handy/blob/master/lynx/license.txt)                                           |                |
 | [Holani](../library/holani.md)					    		   | [GPLv3](https://github.com/LLeny/holani-retro/blob/main/LICENSE)                                           |                |
 | [Hatari](../library/hatari.md)						   | [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)                        |                |
+| [HyperScanEmu](../library/hyperscanemu.md)                                         | [BSD-3-Clause](https://github.com/AloysHF/HyperScanEmu/blob/master/LICENSE)             |                |
 | [hatariB](../library/hatarib.md)						   | [GPLv2](https://github.com/bbbradsmith/hatariB/blob/main/LICENSE)                        |                |
 | [higan Accuracy](../library/higan_accuracy.md)                                   | [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)                           |                |
 | [Imageviewer](../library/imageviewer.md)				  	   | [MIT](https://github.com/libretro/RetroArch/blob/master/cores/libretro-imageviewer/LICENSE)                                                                                       |                |

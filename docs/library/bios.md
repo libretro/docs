@@ -66,6 +66,7 @@ GameBoy Advance               | gpSP               | [BIOS information](gpsp.md#
 GameBoy Advance               | mGBA               | [BIOS information](mgba.md#bios)
 GameBoy Advance               | VBA Next           | [BIOS information](vba_next.md#bios)
 Gamecube/Wii                  | Dolphin            | [BIOS information](dolphin.md#bios)
+HyperScan                     | HyperScanEmu       | [BIOS information](hyperscanemu.md#requirements)
 Intellivision                 | FreeIntv           | [BIOS information](freeintv.md#bios)
 Lynx                          | Beetle Lynx        | [BIOS information](beetle_lynx.md#bios)
 Lynx                          | Handy              | [BIOS information](handy.md#bios)
