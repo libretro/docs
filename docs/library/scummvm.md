@@ -90,21 +90,21 @@ Playlist generation using the RetroArch Scanner is **NOT recommended** for Scumm
   These files can be used as the playlist target instead of a random game file.
   A `.scummvm` file is a plain text file which contains a single string corresponding to one of the following identifiers:
 
-  - **target**
-    This is the game identifier of each entry in the internal ScummVM Launcher list, corresponding to entries in the ScummVM configuration file (e.g., `scummvm.ini`).
-    In this case:
-    - The game must be added from the ScummVM GUI first.
-    - Hook files can be placed anywhere, since the game path is already stored in `scummvm.ini`.
-    - The game will launch with the options set in `scummvm.ini`.
+    - **target**
+      This is the game identifier of each entry in the internal ScummVM Launcher list, corresponding to entries in the ScummVM configuration file (e.g., `scummvm.ini`).
+      In this case:
+        - The game must be added from the ScummVM GUI first.
+        - Hook files can be placed anywhere, since the game path is already stored in `scummvm.ini`.
+        - The game will launch with the options set in `scummvm.ini`.
 
-  - **game ID**  
-    This is a unique identifier for any game supported by ScummVM.  
-    It is hardcoded in each engine source and may change over time, so it is **not recommended**.  
-    A list of current game IDs is available [here](https://scummvm.org/compatibility).  
-    In this case:
-    - The game will launch even if not added in the ScummVM Launcher.
-    - The hook file must be placed in the game folder.
-    - The game will launch with **default ScummVM options**, as not included in `scummvm.ini`.
+    - **game ID**  
+      This is a unique identifier for any game supported by ScummVM.  
+      It is hardcoded in each engine source and may change over time, so it is **not recommended**.  
+      A list of current game IDs is available [here](https://scummvm.org/compatibility).  
+      In this case:
+        - The game will launch even if not added in the ScummVM Launcher.
+        - The hook file must be placed in the game folder.
+        - The game will launch with **default ScummVM options**, as not included in `scummvm.ini`.
 
 - The ScummVM core can also accept as content **any file inside a valid game folder**.
   The internal detection system will attempt to autodetect the game from the parent folder and run it with **default ScummVM options**.

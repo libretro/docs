@@ -429,6 +429,7 @@ That driver was disabled, it didn't meet our quality criteria. There are no plan
 It was streamlined into a global `Video Settings > Resolution` core option affecting all vector games at once, with new resolutions available.
 
 For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
+
 * for horizontal games, you'll want to use 1440x1080
 * for vertical games (tempest, tacscan), if you are running them on a vertical screen with the settings to rotate them, you'll also want to use 1440x1080
 * for those same vertical games, if you are running them at default settings on a horizontal screen, you'll want to use 1080x810
