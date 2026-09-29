@@ -4,6 +4,8 @@
 
 An experimental libretro core for the Taylor C713 soft-serve ice cream machine, popularized by a well-known American fast food chain. Provides an accurate user experience without the need for firmware dumps.
 
+This core was released as an April Fools' Day joke in 2024.
+
 The mcsoftserve core has been authored by
 
 - Jesse Talavera

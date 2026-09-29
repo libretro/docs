@@ -4,6 +4,8 @@
 
 A utility core for removing dust and dirt from your ROM collection.
 
+This core was released as an April Fools' Day joke in 2025.
+
 The romcleaner core has been authored by
 
 - Jesse Talavera
