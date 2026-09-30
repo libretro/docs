@@ -139,6 +139,7 @@
 | MESS 2015                 | Multi (various)        | (See MAME note)    |
 | [Meteor](../library/meteor.md)                | Game Boy Advance       |                    |
 | [mGBA](../library/mgba.md)                    | Game Boy Advance       |                    |
+| [mGBA Splitscreen](../library/mgba_splitscreen.md) | Game Boy Advance (2-4 linked players) | |
 | Microw8                   | Game engine            | A port of a WebAssembly based fantasy console to libretro |
 | [Minivmac](../library/minivmac.md)            | Mac II                 | MacII variant of minivmac emulator |
 | [mkxp-z](../library/mkxp-z.md)                | RPG Maker XP/VX/VX Ace |                    |
