@@ -2,7 +2,7 @@
 
 ## Background
 
-mGBA Splitscreen is a fork of the mGBA libretro core that runs 2 to 4 linked Game Boy Advance emulator instances inside a single core. The players' screens are composited into one image (480x160 or 480x320) and their audio is mixed or taken from one player. The instances are linked over mGBA's lockstep link-cable driver, so games use their own normal multiplayer menus — no frontend netplay layer is involved.
+mGBA Splitscreen is a fork of the mGBA libretro core that runs 2 to 4 linked Game Boy Advance emulator instances inside a single core. The players' screens are composited into one image (up to 480x480 depending on the view) and their audio is mixed or taken from one player. The instances are linked over mGBA's lockstep link-cable driver, so games use their own normal multiplayer menus — no frontend netplay layer is involved.
 
 There are two ways to link players:
 
@@ -37,9 +37,11 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 ## Core options
 
 - **Players per ROM (requires reload)** – 1 to 4; shares one cartridge across players.
-- **Screen layout (restart required)** – 2x1, 1x2 or 2x2.
-- **Audio source** – player 1–4 or mixed.
-- **Four Swords link handshake assist** – off/on; eases The Legend of Zelda: Four Swords past its multiplayer handshake (matches the companion app's default of off).
+- **View layout (applies live)** – Auto, Side by side (2x1), Stacked (1x2), Quadrants (2x2), Speaker (big + strip), Focus (single screen), Overlay (big + thumbnails). The list adapts to the number of players: Quadrants appears with 3–4 players, the 1-wide grids only with 2, and a single player shows Auto only.
+- **Focused player (applies live)** – 1 to 4; the player enlarged in Speaker, Focus and Overlay views. Views and focus are per viewer — in netplay, each client can watch a different player.
+- **Audio source (applies live)** – player 1–4 or mixed.
+- **Four Swords link assist** – off/on; eases The Legend of Zelda: Four Swords past its multiplayer handshake (matches the companion app's default of off).
+- **Player outlines & badges** – on/off; a colored border (P1 red, P2 blue, P3 green, P4 orange) and a P-number tag on each player's screen, like the companion app.
 
 ## External Links
 
