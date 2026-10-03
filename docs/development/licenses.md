@@ -240,3 +240,4 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [XRick](../library/xrick.md)                                                     | [GPLv3](https://github.com/libretro/xrick-libretro/blob/master/README)                    |                |
 | [YabaSanshiro](../library/yabasanshiro.md)						   | [GPLv2](https://github.com/libretro/yabasanshiro/blob/master/yabause/COPYING)                  |                |
 | [Yabause](../library/yabause.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/master/yabause/COPYING)                  |                |
+| [ZEsarPCW](../library/zesarpcw.md) | [GPLv3](https://github.com/retrodiv/ZEsarPCW-libretro/blob/3b44002b61dd0e6f11e766e00e71c56963b9e00b/LICENSE) | No |

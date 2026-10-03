@@ -117,6 +117,7 @@ nav:
       - 'Amstrad Emulation':
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
+        - 'Amstrad - PCW (ZEsarPCW)': library/zesarpcw.md
       - 'Apple':
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
