@@ -2,7 +2,7 @@
 
 ## Background
 
-RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) through strict lockstep timing at PPU-dot resolution, without relying on threading or standard library timing.
+RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) by running from one master clock, splitting every CPU cycle into two halves and bringing the PPU up to date at each, rather than relying on per-game hacks.
 
 It is extremely portable and deterministic, making it a reliable choice for netplay, TAS, and accurate emulation enthusiasts.
 
@@ -24,6 +24,8 @@ Content that can be loaded by the RustyNES core have the following file extensio
 
 - .nes
 - .fds
+- .unf
+- .unif
 
 ## Databases
 
@@ -44,7 +46,7 @@ Frontend-level settings or features that the RustyNES core respects.
 | States            | ✔         |
 | Rewind            | ✔         |
 | Netplay           | ✔         |
-| Core Options      | ✕         |
+| Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats  | ✔         |
 | Native Cheats     | ✔         |
@@ -82,7 +84,7 @@ marked optional at the frontend level, but no FDS game will run):
 
 ![](../image/controller/nes.png)
 
-| User 1 - 2 input descriptors | RetroPad Inputs                           |
+| User 1 - 4 input descriptors | RetroPad Inputs                           |
 |------------------------------|-------------------------------------------|
 | B                            | ![](../image/retropad/retro_b.png)        |
 | A                            | ![](../image/retropad/retro_a.png)        |
