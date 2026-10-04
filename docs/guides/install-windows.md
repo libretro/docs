@@ -5,6 +5,7 @@
 ## Downloading
 
 First decide if you want a stable release or a nightly. Both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually. Both are portable installation which means the RetroArch setup is:
+
 - It's self-contained
 - It doesn't need users to guess random locations for configurations files
 - It's easy to update by just replacing files

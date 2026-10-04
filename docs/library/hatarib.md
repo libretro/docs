@@ -49,6 +49,7 @@ If using a hard disk, TOS 1.04 is recommended instead, because the operating sys
 Content that can be loaded by the hatariB core have the following file extensions:
 
 Disk images:
+
 - st
 - msa
 - dim
@@ -57,15 +58,18 @@ Disk images:
 - ctr^*^
 
 Multi-disk playlists:
+
 - m3u
 - m3u8
 
 Multi-disk archives:
+
 - zip
 - zst
 - gz
 
 Hard Drive images:
+
 - acsi
 - ahd
 - vhd
