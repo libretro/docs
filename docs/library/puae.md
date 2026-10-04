@@ -342,6 +342,14 @@ Some games use mouse instead of joystick. D-Pad can be switched between joystick
 
 You can force a specific model if a game needs one (AGA games for instance) either by the "Model" core option or by file path tags.
 
+To run a game as an Amiga 1200 instead of the default A500, for example, use one of these:
+
+- **For every game**: in `Quick Menu -> Core Options -> System`, set **Model** to `A1200`, then close and reload the content. The model only changes when the core starts.
+- **For one game**: do the same, then save the setting for that game only with `Quick Menu -> Core Options -> Manage Core Options -> Save Game Options`. Other games keep the default.
+- **With a file path tag**: leave **Model** at `Automatic` and put a tag from the table below in the file or folder name, for example rename `Alien Breed 2.adf` to `Alien Breed 2 (A1200).adf`, or move it into a folder named `AGA`. The core picks the model each time the game is loaded, without any settings to save.
+
+Each model needs its own Kickstart ROM in the system directory (see [BIOS](#bios)), for example `kick34005.A500` for the A500 and `kick40068.A1200` for the A1200, unless the built-in AROS replacement is selected in the **Kickstart ROM** core option. Without it the core shows "Kickstart ROM '...' not found!" when the content starts.
+
 The "Model" core option at "**Automatic**" will default to A500 when booting floppy disks, A1200 when booting hard drives, and CD32 when booting CD images.
 
 The whole path (filename and directory) will be searched for the following tags if the model is "**Automatic**":
@@ -400,7 +408,7 @@ For more detailed history of WHDLoad support visit the [Github repository](https
 
 ### Using configuration files
 
-You can pass `.uae` configuration files and they will be appended to the core option configuration.
+A `.uae` configuration file can be loaded as content, like a disk image, from `Load Content`. Its settings are appended to the configuration the core options produce, so anything it sets overrides them. It uses the same syntax as WinUAE configuration files.
 
 If `puae_libretro_[model].uae` exists in RetroArch `saves` it will be appended to the model preset section.
 

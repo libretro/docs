@@ -521,6 +521,17 @@ Use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
 * **Light Gun [lightgun]** - Selects mouse-controlled 'Light Gun' input (devices will use [RetroLightgun](#lightgun) inputs).
 * Touchscreen [touchscreen] - Allows the [MS Light Phaser, MD Menancer and MD Justifiers](#lightgun) device types to be controlled via touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
 
+With **Touchscreen**, the gun aims where the screen is touched, and every touch pulls the trigger (A). More fingers on the screen add a button to the trigger:
+
+| Fingers on screen | Input               |
+|:-----------------:|---------------------|
+| 1                 | Trigger (A)         |
+| 2                 | Trigger (A) + B     |
+| 3                 | Trigger (A) + Start |
+| 4                 | Trigger (A) + C     |
+
+The touchscreen is read as the gun of the port the light gun device is set on, while RetroArch's on-screen gamepad overlay sends its buttons to User 1. For games that need a light gun on one port and a pad on the other, RetroArch's own overlay light gun (`Settings > On-Screen Display > On-Screen Overlay > Overlay Lightgun`, with its **Lightgun Port** setting) can send the gun to a different port than the overlay's buttons; use it with **Light Gun** selected here.
+
 **Show Light Gun Crosshair** [genesis_plus_gx_gun_cursor]
 
 Display light gun crosshairs when using the [MD Menacer, MD Justifiers and MS Light Phaser](#lightgun) input device types.

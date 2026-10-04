@@ -267,8 +267,6 @@ Activating multitap support in compatible games can be configured by the ['6Play
 
 ## Joypad
 
-![](../image/controller/saturn.png)
-
 | RetroPad Inputs                                | User 1 - 12 input descriptors | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
 |------------------------------------------------|-------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|
 | ![](../image/retropad/retro_b.png)             | A Button                      | A Button     | A Button       | A Button                  | A Button       |                     | A Button             |
