@@ -1,5 +1,8 @@
 # Libretro open source bounties
 
+!!! Warning "Bountysource no longer operates"
+    Bountysource, the service this page describes, has stopped working: bounties can no longer be funded, claimed or paid out through it. Libretro has not chosen a replacement yet. The rest of this page is kept to explain how the bounties used to work.
+
 !!! Info "What is an Open Source Bounty?"
     Bounties are usually offered as an incentive for fixing software bugs or implementing minor features. Bounty driven development is one of the Business models for open-source software. The compensation offered for an open-source bounty is usually small. Source: [Wikipedia](https://en.wikipedia.org/wiki/Open-source_bounty)
 
