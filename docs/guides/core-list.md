@@ -121,6 +121,7 @@
 | [HBMAME](../library/hbmame.md) | Arcade/Console/various | HBMAME (HomeBrew MAME) is a derivative of MAME, and contains various hacks and homebrews |
 | [higan Accuracy](../library/higan_accuracy.md) | Nintendo SNES/SFC/Game Boy/Color |          |
 | [Holani](../library/holani.md) | Atari Lynx             |                    |
+| [HyperScanEmu](../library/hyperscanemu.md) | Mattel HyperScan | An emulator for the Mattel HyperScan console (Sunplus SPG290) |
 | Imageviewer               | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | [IroGB](../library/irogb.md) | Nintendo Game Boy      | A libretro port of the IroGB Game Boy Color emulator |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
