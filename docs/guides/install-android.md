@@ -188,7 +188,7 @@ RetroArch is available on the Google Play Store, but is outdated and thus not re
 
 Both RetroArch, and RetroArch Plus is avalaible on Play Store and. A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
-DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is avalible in F-Droid.
+DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is available in F-Droid.
 
 #### RetroArch on Play servers
 [RetroArch](https://play.google.com/store/apps/details?id=com.retroarch&hl=en): It uses the package `com.retroarch`, which supports both 32- and 64-bit ARM devices. It provides fewer cores than RetroArch Plus but is compatible with a broader range of devices.
