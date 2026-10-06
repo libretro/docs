@@ -4,7 +4,7 @@
 
 ## Background
 
-[TIC-80](https://tic.computer) is a fantasy computer for making, playing and sharing tiny games.
+[TIC-80](https://tic80.com) is a fantasy computer for making, playing and sharing tiny games.
 
 The TIC-80 core has been authored by
 
@@ -44,7 +44,7 @@ Frontend-level settings or features that the Theodore core respects.
 | Saves             | ✔         |
 | States            | ✕         |
 | Rewind            | ✕         |
-| Netplay           | [✔](https://tic.computer/play?cart=893)         |
+| Netplay           | [✔](https://tic80.com/play?cart=893)         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✕         |
 | RetroArch Cheats  | ✕         |

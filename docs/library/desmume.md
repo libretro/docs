@@ -297,7 +297,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	Rotate pointer controls
 
-	This is can be used in conjuction with RetroArch's Rotation setting.
+	This is can be used in conjunction with RetroArch's Rotation setting.
 
 - **Pointer Mode for Left Analog** [desmume_pointer_device_l] (**none**|emulated|absolute|pressed)
 

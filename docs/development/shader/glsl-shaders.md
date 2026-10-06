@@ -35,4 +35,4 @@ Like Cg shaders, there is a GLSL preset format. Instead of `.cgp` extension, `.g
 
 ## Converting from Cg shaders
 
-GLSL shaders are mostly considered a compatibility format. It is possible to compile Cg shaders into GLSL shaders automatically using our [cg2glsl script](https://github.com/libretro/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as batch conversion. Shader converstion relies on nVidia's `cgc` tool found in the `nvidia-cg-toolkit` package.
+GLSL shaders are mostly considered a compatibility format. It is possible to compile Cg shaders into GLSL shaders automatically using our [cg2glsl script](https://github.com/libretro/RetroArch/blob/master/tools/cg2glsl.py). It can convert single shaders as well as batch conversion. Shader conversion relies on nVidia's `cgc` tool found in the `nvidia-cg-toolkit` package.

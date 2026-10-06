@@ -15,7 +15,7 @@
 
 | :warning: DISCLAIMER          |
 |:---------------------------|
-| The installation steps or dowloading file parts of the project may differ over time.      |
+| The installation steps or downloading file parts of the project may differ over time.      |
 
 ## Downloading and installing
 

@@ -41,3 +41,29 @@ Use the `--help` help flag to display RetroArch's built-in CLI documentation. Yo
 
 ### retroarch --features
 If you're unsure if a particular feature is compiled in, execute `retroarch --features`
+
+## On Android
+
+Android has no `retroarch` executable to run. RetroArch is started as an activity instead, with `am start` from `adb shell` or from another app or launcher, and takes its arguments as intent extras:
+
+```
+am start -n com.retroarch/com.retroarch.browser.retroactivity.RetroActivityFuture \
+  -e ROM "/storage/emulated/0/ROMs/snes/game.sfc" \
+  -e LIBRETRO "/data/data/com.retroarch/cores/snes9x_libretro_android.so"
+```
+
+The package is `com.retroarch`, `com.retroarch.aarch64` or `com.retroarch.ra32`, depending on which RetroArch is installed; the activity name is the same in all three. The core's full path is the core directory shown in `Settings > Directory > Cores` followed by the core's file name.
+
+| Extra | Meaning |
+|---|---|
+| `ROM` | Content to load, as a full path. |
+| `LIBRETRO` | Core to load it with, as a full path. |
+| `CONFIGFILE` | Configuration file to use instead of the default `retroarch.cfg`. |
+| `QUITFOCUS` | If present (with any value), RetroArch quits instead of staying in the background when it loses focus, for example when you switch back to the launcher. |
+| `REFRESH` | Display refresh rate to ask for, in Hz, unless a display mode is chosen in the settings. |
+| `IME` | Input method (on-screen keyboard) to use. |
+| `DATADIR`, `APK`, `SDCARD`, `EXTERNAL` | The app's data, APK and storage directories. |
+
+Only `ROM` and `LIBRETRO` are needed to start a game. RetroArch works everything else out itself when it is not given: the configuration file, the directories and the input method.
+
+If RetroArch is already running with other content, starting it with a different `ROM` or `LIBRETRO` closes that and starts afresh with the new one.

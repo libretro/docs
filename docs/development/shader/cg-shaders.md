@@ -80,7 +80,7 @@ out_pos = mul(modelViewProj , pos);
 
 The `COLOR` semantic isn’t very interesting for us, but the example code in nVidias Cg documentation includes it, so we just follow along. `TEXCOORD` is the texture coordinate we get from the emulator, and generally we just pass it to the fragment shader directly. The coordinate will then be linearly interpolated across the fragments.
 
-More complex shaders can output (almost) as many variables they want, that will be linearily interpolated for free
+More complex shaders can output (almost) as many variables they want, that will be linearly interpolated for free
 to the fragment shader. We also need a fragment shader to go along with the vertex shader, and here's a basic shader that only outputs the pixel as-is. This is pretty much the result you’d get if you didn’t run any shader (fixed-function) at all.
 
 ```c
@@ -122,7 +122,7 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0, uniform input IN , float
 }
 ```
 
-Here we use `IN.texture_size` to determine the the size of the texture. Since GL maps the whole texture to the interval `[0.0, 1.0]`, `1.0 / IN.texture_size` means we get the offset for a single pixel, simple enough. Almost every shader uses this. We can calculate these offsets in vertex shader to improve performance since the coordinates are linearily interpolated anyways, but that is for another time.
+Here we use `IN.texture_size` to determine the the size of the texture. Since GL maps the whole texture to the interval `[0.0, 1.0]`, `1.0 / IN.texture_size` means we get the offset for a single pixel, simple enough. Almost every shader uses this. We can calculate these offsets in vertex shader to improve performance since the coordinates are linearly interpolated anyways, but that is for another time.
 
 ## Putting it together
 

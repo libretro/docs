@@ -30,16 +30,16 @@ Playlists are the lists of games and other content that can be generated automat
 
 RetroArch incorporates a ROM scanning system to automatically produce playlists. Each ROM that is scanned by the playlist generator is checked against a database of ROMs that are known to be good copies.
 
-In order for content to be correctly scanned, you must:
+To ensure that scanning can use all available information:
 
-  - Have a compatible core already downloaded and installed (note: Scan Without Core Match setting removes this requirement)
+  - Have a compatible core already downloaded and installed (or enable Scan Without Core Match during scanning)
   - Update `Core Info Files` via `Online Updater`
   - Update `Databases` via `Online Updater`
   - Restart RetroArch if any of the above was just done
 
-For a normal scan, the content must match existing databases from the [libretro-database README](https://github.com/libretro/libretro-database#retroarch-database). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
+The default fully automatic scan is strict, the content CRC checksum or disc serial must match existing databases from the [libretro-database](https://github.com/libretro/libretro-database?tab=readme-ov-file#libretro-database). If those conditions are met but content is still not being added automatically to a playlist, consider submitting an issue report on [github](https://www.github.com/libretro/RetroArch/issues).
 
-There is an option to do manual scan, which does not require a database, and just needs the file names to match. Results from the manual scan will be playable (as long as the respective core supports them), but may lack thumbnails and do not appear in the Explore menu.
+Scan conditions could be relaxed ("loose scan"). If there is no database match, the content is still playable (as long as the respective core supports them), but may lack thumbnails and do not appear in the Explore menu.
 
 ### Designating which core to use
 
@@ -108,6 +108,42 @@ The ROM's corresponding `db_name` is `MAME 2003-Plus.lpl` which tells the menu d
 !!! Alert
     You can omit the CRC or Serial for a manually created playlist entry by using the word `DETECT`  instead, although it may limit your ability to use netplay for this playlist entry.
 
+#### Playlist fields
+
+Besides `version` and `items`, a playlist written by RetroArch can carry these top-level fields. They hold the settings made for the playlist in `Settings > Playlists > Manage Playlists`, and all of them can be left out of a hand-made playlist:
+
+| Field | Meaning |
+|---|---|
+| `default_core_path`, `default_core_name` | The playlist's default core, used for entries whose core is `DETECT` or cannot be found. |
+| `label_display_mode` | How entry labels are shortened, for example with the text in brackets removed. |
+| `right_thumbnail_mode`, `left_thumbnail_mode` | Which thumbnails are shown for the playlist, if not the default ones. |
+| `thumbnail_match_mode` | Whether thumbnails are matched by label or by file name. |
+| `sort_mode` | How the entries are sorted. |
+| `base_content_directory` | The content directory the paths were written against, see [Portable playlists](#portable-playlists). |
+| `scan_*` | The settings of the manual scan that made the playlist, used by `Refresh Playlist`. |
+
+Each entry in `items` has:
+
+| Field | Meaning |
+|---|---|
+| `path` | Full path to the content. A file inside an archive is written as `archive.zip#file.ext`. |
+| `label` | The name shown in the menu, which is also used to find thumbnails. |
+| `core_path`, `core_name` | The core to run the entry with, or `DETECT` to use the playlist's default core or to ask. |
+| `crc32` | The content's CRC32 followed by `|crc`, or its serial followed by `|serial`, or `DETECT`. |
+| `db_name` | The database playlist the entry belongs to, such as `Nintendo - Game Boy.lpl`. It picks the thumbnails and the icon. |
+
+Other fields, such as `entry_slot`, the `subsystem_*` fields and the play time fields of the history playlist, are written by RetroArch and can be left out.
+
+### Portable playlists
+
+Playlists hold full paths, so a playlist copied to another device, or to another folder layout, points at files that are not there. **Portable Playlists** in `Settings > Playlists` fixes that:
+
+1. On every device, set `Settings > Directory > File Browser` to the folder that holds your content, for example `/storage/emulated/0/ROMs` on one and `D:\ROMs` on another, and turn on **Portable Playlists**.
+2. Playlists saved with the option on record that folder as `base_content_directory`.
+3. When such a playlist is loaded on a device whose **File Browser** folder is different, RetroArch replaces the recorded folder at the start of each entry's path with its own, converts the slashes for the platform, and saves the corrected playlist.
+
+The content has to sit in the same layout under the **File Browser** folder on every device. Only content paths are rewritten, not core paths: a core is found by its file name, so an entry keeps working wherever the same core is installed. If it is not installed, the playlist's default core is used if one is set, and RetroArch says so.
+
 ### 6-Line Playlist Format (Deprecated)
 
 !!! Warning
@@ -150,8 +186,8 @@ Maybe you want to create custom playlists not limited within game-platforms or R
 
 - Name your playlist in the scheme `My Sorting Prefix - My Playlist Name.lpl` or just `My Playlist Name.lpl`.
 - To tweak how playlists are displayed (with or without prefix) and how they are sorted (by prefix or by main name):
-  - Go to: Settings > Playlists
-  - Set options **Truncate Playlist Names** and **Sort Playlists After Name Truncation** to your liking.
+    - Go to: Settings > Playlists
+    - Set options **Truncate Playlist Names** and **Sort Playlists After Name Truncation** to your liking.
 
 ### How to set up custom playlists (Screenshots)
 
@@ -195,9 +231,9 @@ Thumbnail image files must be stored in subfolders according to this structure:
 
 - `thumbnails` directory within Retroarch folder (or in different location configured by user via Settings > Directory > Thumbnails)
     - `Playlist Name` folder with the exact same name as the playlist, except without `.lpl` at the end. For example, `Atari - 2600`
-      - `Named_Boxarts` subfolder for boxart/cover art
-      - `Named_Snaps` subfolder for in-game snapshots
-      - `Named_Titles` subfolder for in-game introductory title screens
+        - `Named_Boxarts` subfolder for boxart/cover art
+        - `Named_Snaps` subfolder for in-game snapshots
+        - `Named_Titles` subfolder for in-game introductory title screens
    
 **Example** of a Windows path to a correctly set boxart folder: `RetroArch-Win64\thumbnails\Atari - 2600\Named_Boxarts`
 
@@ -232,7 +268,7 @@ follow the steps below.
 
 ### Detailed Steps
 
-- __Fork the repository.__ Visit the github.com [libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) directory that you want to contribute to and click the fork button.  You must fork it at the level of specific console. The Fork button won't appear if you're viewing a lower level folder in the respository like "boxart" or "snaps.” _Example_. If you are doing GBA thumbnail work you should fork 
+- __Fork the repository.__ Visit the github.com [libretro thumbnail repository](https://github.com/libretro-thumbnails/libretro-thumbnails) directory that you want to contribute to and click the fork button.  You must fork it at the level of specific console. The Fork button won't appear if you're viewing a lower level folder in the repository like "boxart" or "snaps.” _Example_. If you are doing GBA thumbnail work you should fork 
 [Nintendo_-_Game_Boy_Advance](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy_Advance/).
     - **Why "Fork" your own**?  Every part RetroArch's code and materials are open and accessible on github for input from any public volunteer (via Pull Request), but only official admins have direct edit access.  Forking means copying your own copy of the project to freely draft changes in your own separate work area.  Later you’ll send your proposed changes to the official project.
     - _Warning_: You must visit and fork the _current_ github project for the libretro thumbnail repository, for example [this one for SNES](https://github.com/libretro-thumbnails/Nintendo_-_Super_Nintendo_Entertainment_System), not to be confused with the similar-looking [archived version](https://github.com/libretro/libretro-thumbnails) which is inactive.
@@ -242,13 +278,13 @@ follow the steps below.
     - +Create new File
     - Upload File.
 - __Choose "Upload File"__.  Select your new chosen image file.  In this stage you are uploading to your fork/branch of the project.
-  - __Follow all guidelines for a proper contribution.__
-    - Your choice of image file should meet the libretro thumbnail [rules in the ReadMe](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. width scaled down to 512px.
-    - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game in normal or ideal gameplay. For examples of well-chosen well-composed in-game screenshots, see the back-of-box images printed on officially published games.
-    - Name your image file correctly.
-        - If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch. (Unless your contribution is to correct an erroneous filename that doesn't match the game name database.)
-        - If uploading a new thumbnail that has no prior existing version, research the naming conventions of libretro and how the game is named in databases. Name the image file according to the game name that RetroArch assigns in the playlist.
-    - Use the correct path.  Choose the correct console system folder and thumbnail type folder in the repository.
+    - __Follow all guidelines for a proper contribution.__
+        - Your choice of image file should meet the libretro thumbnail [rules in the ReadMe](https://github.com/libretro-thumbnails/libretro-thumbnails/blob/master/README.md), e.g. width scaled down to 512px.
+        - For snaps (in-game screenshots), choose a good clear artful image that shows the art, spirit, or action of the game in normal or ideal gameplay. For examples of well-chosen well-composed in-game screenshots, see the back-of-box images printed on officially published games.
+        - Name your image file correctly.
+            - If replacing an existing image, name your new image file exactly as the previous one to guarantee that it will be matched to the relevant game name in RetroArch. (Unless your contribution is to correct an erroneous filename that doesn't match the game name database.)
+            - If uploading a new thumbnail that has no prior existing version, research the naming conventions of libretro and how the game is named in databases. Name the image file according to the game name that RetroArch assigns in the playlist.
+        - Use the correct path.  Choose the correct console system folder and thumbnail type folder in the repository.
 - __Commit.__ The "Commit" button will save your change to your copy of the repository. You should generally commit to your own _master_. 
 - __Pull Request (PR)__.  Look for the button or option for a Pull Request when you Commit, though you may wait until you have finalized multiple changes (commits) and then include them all in a single PR. A Pull Request means sending a request to the official members to take your contribution (i.e. merge your fork) into the RetroArch repository.  Admins will review your proposed changes and decide whether to accept it.  You will eventually see a confirmation that it was approved or a discussion message if changes are needed.  It may take time (even weeks or months) before an admin is able to examine the request, so please be patient.
 - __Verify that your Pull Request is active and correct.__ For example, if you made a Pull Request to contribute a Gameboy thumbnail then you can [view the request publicly listed at the official repository](https://github.com/libretro-thumbnails/Nintendo_-_Game_Boy/pulls).
@@ -259,6 +295,15 @@ __About "Syncing."__ Contribution work involves changing your copy of the projec
 ### The Thumbnail Server
 
 RetroArch retrieves thumbnails from a server (https://thumbnails.libretro.com/) that is updated periodically with imports from the Libretro thumbnail repository on github. After a pull request is approved for a contribution, some time may pass before the updates are sent to the server. The final server update must occur before users will see new image contributions in RetroArch playlists.
+
+## Playlist icons
+
+The XMB menu draws each playlist with an icon from the current theme's `png` folder in the assets directory, for example `assets/xmb/monochrome/png/`. The icon file is named after the playlist:
+
+- `<playlist name>.png` is the icon for the playlist itself, for example `Nintendo - Game Boy.png` for `Nintendo - Game Boy.lpl`.
+- `<playlist name>-content.png` is the icon shown next to each of its entries, for example `Nintendo - Game Boy-content.png`.
+
+When a playlist has no icon of its own, `default.png` and `default-content.png` are used. A custom playlist gets its own icons by adding files with its name to the theme's `png` folder.
 
 ## Custom icons/logos for playlist items
 RetroArch versions later than 1.19.1 include an option for the XMB menu driver to display custom per-game icons/logos in the playlist, instead of the default content icon, see [this example](https://github.com/libretro/RetroArch/pull/16758#issuecomment-2211771227). The required file format and subfolder structure follows the same pattern as [custom thumbnails](#custom-thumbnails):

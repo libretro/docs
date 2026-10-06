@@ -35,7 +35,7 @@ The preferred way of running RetroArch is to use Atmosphère's title takeover fe
 
 | :warning: WARNING          |
 |:---------------------------|
-| You need at least one title on the console (whether it's a digitally puchased game or a demo or a cartridge game or even an homebrew NSP). If you can pick an up to date game that's better as you won't be nagged everytime you run it.     |
+| You need at least one title on the console (whether it's a digitally purchased game or a demo or a cartridge game or even an homebrew NSP). If you can pick an up to date game that's better as you won't be nagged everytime you run it.     |
 
 Atmosphère now contains everything needed to run homebrews out of the box. To do so, simply run any game while holding the R key. Make sure to hold the key until you can actually see the homebrew menu. Select RetroArch in the list to start!
 

@@ -90,7 +90,7 @@ Coordinates in X and Y are reported as `[-0x7fff, 0x7fff]`: `-0x7fff` correspond
 ## Keyboard Input
 `RETRO_DEVICE_KEYBOARD`: The libretro API allows a core to poll the frontend for the raw current pressed state of keys. There is also a callback available which is called by the frontend in response to keyboard events. `down` is set if the key is being pressed and `false` if it is being released.
 
-Even though the frontend should try to synchronize keypresses with keycode events, cores should assume that multiple characters can be generated from a single keypress. In other words, keycode events should be treated separately from character events. Similarily if only a keycode event is generated with no corresponding character, the character should be `0`.
+Even though the frontend should try to synchronize keypresses with keycode events, cores should assume that multiple characters can be generated from a single keypress. In other words, keycode events should be treated separately from character events. Similarly if only a keycode event is generated with no corresponding character, the character should be `0`.
 
 ## Lightgun Input
 `RETRO_DEVICE_LIGHTGUN`: The libretro lightgun abstraction reports X/Y coordinates in screen space (similar to the pointer) in the range `[-0x8000, 0x7fff]` in both axes, with zero being center and `-0x8000` being out of bounds. The core an query the on/off screen state of the lightgun. It features a trigger, start/select buttons, auxiliary action buttons and a directional pad. A forced off-screen shot can be requested for auto-reloading function in some games.

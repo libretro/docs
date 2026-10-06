@@ -20,6 +20,11 @@ This is a list of cores that are related to each other in some way.
 - [FB Neo](../library/fbneo.md)
 - [SAME_CDI](../library/same_cdi.md)
 
+## Atari ST
+
+- [Atari - ST/STE/TT/Falcon (Hatari)](../library/hatari.md)
+- [Atari - ST/STE/TT/Falcon (hatariB)](../library/hatarib.md)
+
 ## ColecoVision
 
 - [Coleco - ColecoVision (Gearcoleco)](../library/gearcoleco.md)
@@ -53,6 +58,7 @@ This is a list of cores that are related to each other in some way.
 ## Lynx
 
 - [Atari - Lynx (Beetle Lynx)](../library/beetle_lynx.md)
+- [Atari - Lynx (Gearlynx)](../library/gearlynx.md)
 - [Atari - Lynx (Handy)](../library/handy.md)
 - [Atari - Lynx (Holani)](../library/holani.md)
 
@@ -122,6 +128,7 @@ This is a list of cores that are related to each other in some way.
 - [Nintendo - NES / Famicom (Mesen)](../library/mesen.md)
 - [Nintendo - NES / Famicom (Nestopia)](../library/nestopia.md)
 - [Nintendo - NES / Famicom (QuickNES)](../library/quicknes.md)
+- [Nintendo - NES / Famicom (RustyNES)](../library/rustynes.md)
 
 ## RPG Maker
 
@@ -136,13 +143,14 @@ This is a list of cores that are related to each other in some way.
 ## SNES
 
 - [Nintendo - SNES / Famicom (Beetle bsnes)](../library/beetle_bsnes.md)
+- [Nintendo - SNES / SFC (bsnes)](../library/bsnes.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](../library/bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](../library/bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](../library/bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](../library/bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](../library/bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](../library/bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](../library/bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](../library/bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](../library/bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](../library/bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](../library/higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](../library/nside_balanced.md)
 - [Nintendo - SNES / Famicom (Mesen-S)](../library/mesen-s.md)

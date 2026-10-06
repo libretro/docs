@@ -85,7 +85,7 @@ Notable internal RetroArch statistics regarding frame pacing are:
 
       - Windowed mode, and even windowed full-screen mode can contribute to frame pacing issues, so `Settings->Video->Fullscreen Mode->Windowed Full-Screen Mode` can be disabled to test if this improves your frame pacing.
 
-      - `Settings->Video->Output->Automatic Refresh Rate Switch` can be considered to be disabled, as if it changes your actual display refresh rate, in non-VRR mode this can interfere with your set Vsync Swap Interval and cause *large* mistiming, and in VRR mode, you want the display to maintain the maximum potential refresh rate so that it can be more accurate in accomodating small requested timing differences.
+      - `Settings->Video->Output->Automatic Refresh Rate Switch` can be considered to be disabled, as if it changes your actual display refresh rate, in non-VRR mode this can interfere with your set Vsync Swap Interval and cause *large* mistiming, and in VRR mode, you want the display to maintain the maximum potential refresh rate so that it can be more accurate in accommodating small requested timing differences.
 
       - `Settings->Video->Output->Threaded Video` is well known to interfere with smooth frame pacing and audio sync, but can be the only choice for hardware otherwise too weak for the intended content to run at near the correct frame rate at all.
 
@@ -101,8 +101,21 @@ Notable internal RetroArch statistics regarding frame pacing are:
 
          How low you can set this to without issue can vary per content, but the default value of 64 ms was chosen for avoiding issues like this. If you still decide to push lower, keep in mind a 60Hz NTSC frame is approximately 16.66 ms long, so you might want to try a value a little longer than 2 frames, like 35ms, and then a little longer than 3 frames like 52ms, et cetera.
 
-      - Under `System->Video Settings->Synchronization`, `Hard GPU Sync`, `Max Swapchain Images`, or `Waitable Swapchains`, any of which might be available with your current renderer API, are designed to reduce latency by limiting how many frames ahead that the cpu can calculate beyond the currently displayed frame. If you are still experiencing frame pacing issues having reached this poing in the document, and care more about that than increased latency, you can disable `Hard GPU Sync`, `Waitable Swapchains`, or increase the value of `Max Swapchain Images` to give your system more performance headroom.
+      - Under `System->Video Settings->Synchronization`, `Hard GPU Sync`, `Max Swapchain Images`, or `Waitable Swapchains`, any of which might be available with your current renderer API, are designed to reduce latency by limiting how many frames ahead that the cpu can calculate beyond the currently displayed frame. If you are still experiencing frame pacing issues having reached this point in the document, and care more about that than increased latency, you can disable `Hard GPU Sync`, `Waitable Swapchains`, or increase the value of `Max Swapchain Images` to give your system more performance headroom.
 
+
+## Maximum Timing Skew: speed and pitch against smoothness
+
+Most content does not run at exactly your display's refresh rate. `Maximum Timing Skew` (`Settings > Audio > Synchronization`, 0.05 by default) decides what RetroArch does about the difference when `Sync to Exact Content Rate` is not in use:
+
+- **Within the skew.** When the content's rate differs from the display's rate (divided by the swap interval, black frame insertion and shader subframes) by no more than the skew, as a fraction, RetroArch runs the content at the display's rate. Every frame is shown once and scrolling is smooth. The audio is resampled to match, so the game runs faster or slower than on real hardware by that difference, and the music plays higher or lower by the same amount.
+- **Beyond the skew.** RetroArch leaves the content at its own rate and logs "Timings deviate too much. Will not adjust." The game keeps its original speed and pitch, and the display repeats or skips frames to make up the difference, which shows as judder.
+
+For example, an arcade game made for 57.5 Hz is 4.2% away from a 60 Hz display (1 - 57.5 / 60 = 0.042). With the default skew of 0.05 it runs at 60 Hz: smooth, but 4.3% fast and 4.3% high in pitch. With the skew set below 0.042, for instance 0.03, it runs at its correct speed and pitch but with occasional judder. 50 Hz PAL content is 17% away from 60 Hz and is only sped up if the skew is raised to at least 0.17.
+
+Which of the two is better is a matter of taste: RetroArch's default favours smooth motion for content close to the display's rate. A display that runs at the content's own rate, or a VRR display with `Sync to Exact Content Rate`, avoids the compromise altogether.
+
+The small, continuous corrections that keep audio and video in step once the rates are matched are the job of dynamic rate control, set by `Audio Rate Control Delta` in the same menu; see [Dynamic Rate Control](../development/cores/dynamic-rate-control.md).
 
 ## Further Considerations
 

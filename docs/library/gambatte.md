@@ -111,11 +111,11 @@ The Gambatte core saves/loads to/from these directories.
 - The [core option](#core-options) `GB Colorization` enables colorization of Game Boy games, using pre-defined or user-selected color palettes.
 - When satisfied you can save the currently chosen palette per the whole core, per content-directory or per game with the usual RetroArch [override](../guides/overrides.md) mechanism.
 - During gameplay you can instantly swap color palettes.
-  - You can cycle through the available color palettes with the [L/R shoulder buttons](#joypad).
+    - You can cycle through the available color palettes with the [L/R shoulder buttons](#joypad).
   
-    (Source: Feature request in issue [182](https://github.com/libretro/gambatte-libretro/issues/182) was implemented in pull request [204](https://github.com/libretro/gambatte-libretro/pull/204) in October 2021)
-  - This is ideal for your initial browsing / exploration of the color palettes.
-  - But also if you spontanously want to change the palette in your currently running game.
+      (Source: Feature request in issue [182](https://github.com/libretro/gambatte-libretro/issues/182) was implemented in pull request [204](https://github.com/libretro/gambatte-libretro/pull/204) in October 2021)
+    - This is ideal for your initial browsing / exploration of the color palettes.
+    - But also if you spontanously want to change the palette in your currently running game.
 
 ### Custom palettes for Game Boy games
 

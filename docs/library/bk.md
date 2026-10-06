@@ -34,7 +34,7 @@ The bk core has been authored by
 
 The bk core is licensed under
 
-- [BSD](https://github.com/libretro/bk-emulator/blob/master/COPYING)
+- [HPND](https://github.com/libretro/bk-emulator/blob/master/COPYING)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 

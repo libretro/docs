@@ -24,7 +24,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ### Watching Movies with Subtitles
 
-You can open video files in the following formats(see: [Extensions](../ffmpeg/#extensions)). If your video file in these formats has a subtitle file encoded with .SSA type, these subtitle files will appear automatically. External subtitles are currently not supported. The video files you have played will be added to the Videos section in the main menu.
+You can open video files in the following formats (see: [Extensions](#extensions)). If your video file in these formats has a subtitle file encoded with .SSA type, these subtitle files will appear automatically. External subtitles are currently not supported. The video files you have played will be added to the Videos section in the main menu.
 
 ??? note "Turkish subtitles encoded 95's Ghost in the Shell"
 	![RetroArch and LibRetro do not share any copyrighted content.](../image/core/ffmpeg/subtitle.png)
@@ -37,7 +37,7 @@ Watch the video below for details:
 
 ### Listening to Music
 
-You can open audio files in the following formats (see: [Extensions](../ffmpeg/#extensions)). In the example below, you can see and listen to an mp3 file running at the lowest settings. File quality will affect sound quality. The audio files you have played will be added to the Music section in the main menu.
+You can open audio files in the following formats (see: [Extensions](#extensions)). In the example below, you can see and listen to an mp3 file running at the lowest settings. File quality will affect sound quality. The audio files you have played will be added to the Music section in the main menu.
 
 ??? note "Example"
 	<video width="320" height="240" controls>
@@ -93,7 +93,7 @@ Frontend-level settings or features that the FFmpeg core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| [Shaders](../ffmpeg/#shaders)       | ✔         |
+| [Shaders](#shaders)       | ✔         |
 | Saves             | ✕         |
 | States            | ✕         |
 | Rewind            | ✕         |
@@ -123,9 +123,9 @@ The FFmpeg core's directory name is 'FFmpeg'
 
 ### Geometry and timing
 
-- The FFmpeg core's core provided FPS is dependant on the loaded media.
-- The FFmpeg core's core provided sample rate is dependant on the loaded media.
-- The FFmpeg core's core provided aspect ratio is dependant on the loaded media.
+- The FFmpeg core's core provided FPS is dependent on the loaded media.
+- The FFmpeg core's core provided sample rate is dependent on the loaded media.
+- The FFmpeg core's core provided aspect ratio is dependent on the loaded media.
 
 ### Shaders
 

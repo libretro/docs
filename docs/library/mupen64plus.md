@@ -190,12 +190,12 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	**LLE mode is not available on all platforms**
 
-- **4:3 Resolution** (**320x240**/640x480/960x720/1280x960/1600x1200/1920x1440/2240x1680/2560x1920/2880x2160/3200x2400/3520x2640/3840x2880)
+- **4:3 Resolution** (**320x240**/ 640x480/ 960x720/ 1280x960/ 1600x1200/ 1920x1440/ 2240x1680/ 2560x1920/ 2880x2160/ 3200x2400/ 3520x2640/ 3840x2880)
 
 	Select the internal rendering resolution for 4:3 Aspect Ratio mode. The 'Aspect Ratio' core option must be set to 4:3 for this to have an effect.
 	Higher values require more computational power.
 
-- **16:9 Resolution** (**640x360**/960x540/1280x720/1920x1080/2560x1440/3840x2160/7680x4320)
+- **16:9 Resolution** (**640x360**/ 960x540/ 1280x720/ 1920x1080/ 2560x1440/ 3840x2160/ 7680x4320)
 
 	Select the internal rendering resolution for 16:9 Aspect Ratio mode. The 'Aspect Ratio' core option must be set to 16:9 or 16:9 adjusted for this to have an effect.
 	Higher values require more computational power.

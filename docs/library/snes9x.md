@@ -158,7 +158,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Reduce Slowdown (Hack, Unsafe)** [snes9x_overclock_cycles] (**disabled**|light|compatible|max)
 
-	Many games for the SNES suffered from slowdown due to the weak main CPU. This option helps allievate that at the cost of possible bugs.
+	Many games for the SNES suffered from slowdown due to the weak main CPU. This option helps alleviate that at the cost of possible bugs.
 
 	[Example video here](https://www.youtube.com/watch?v=8xA9fosum4Q)
 
@@ -455,10 +455,10 @@ Activating multitap support in compatible games can be configured by switching t
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

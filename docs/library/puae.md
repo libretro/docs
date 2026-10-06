@@ -71,6 +71,8 @@ Amiga Forever and TOSEC filenames are also accepted.
 
 | Filename           | Amiga Forever             | Description                        | md5sum                           |
 |--------------------|---------------------------|------------------------------------|----------------------------------|
+| kick31034.A1000    | amiga-os-110-ntsc.rom     | Kickstart v1.1 rev 31.034 NTSC     | 0b8442c311caa54fb12ec88eaaa9facf |
+| kick32034.A1000    | amiga-os-110-pal.rom      | Kickstart v1.1 rev 32.034 PAL      | 1fa1f93d3d7b51271dd1356b8b2b45a9 |
 | kick33180.A500     | amiga-os-120.rom          | Kickstart v1.2 rev 33.180          | 85ad74194e87c08904327de1a9443b7a |
 | kick34005.A500     | amiga-os-130.rom          | Kickstart v1.3 rev 34.005          | 82a21c1890cae844b3df741f2762d48d |
 | kick37175.A500     | amiga-os-204.rom          | Kickstart v2.04 rev 37.175         | dc10d7bdd1b6f450773dfb558477c230 |
@@ -340,6 +342,14 @@ Some games use mouse instead of joystick. D-Pad can be switched between joystick
 
 You can force a specific model if a game needs one (AGA games for instance) either by the "Model" core option or by file path tags.
 
+To run a game as an Amiga 1200 instead of the default A500, for example, use one of these:
+
+- **For every game**: in `Quick Menu -> Core Options -> System`, set **Model** to `A1200`, then close and reload the content. The model only changes when the core starts.
+- **For one game**: do the same, then save the setting for that game only with `Quick Menu -> Core Options -> Manage Core Options -> Save Game Options`. Other games keep the default.
+- **With a file path tag**: leave **Model** at `Automatic` and put a tag from the table below in the file or folder name, for example rename `Alien Breed 2.adf` to `Alien Breed 2 (A1200).adf`, or move it into a folder named `AGA`. The core picks the model each time the game is loaded, without any settings to save.
+
+Each model needs its own Kickstart ROM in the system directory (see [BIOS](#bios)), for example `kick34005.A500` for the A500 and `kick40068.A1200` for the A1200, unless the built-in AROS replacement is selected in the **Kickstart ROM** core option. Without it the core shows "Kickstart ROM '...' not found!" when the content starts.
+
 The "Model" core option at "**Automatic**" will default to A500 when booting floppy disks, A1200 when booting hard drives, and CD32 when booting CD images.
 
 The whole path (filename and directory) will be searched for the following tags if the model is "**Automatic**":
@@ -398,7 +408,7 @@ For more detailed history of WHDLoad support visit the [Github repository](https
 
 ### Using configuration files
 
-You can pass `.uae` configuration files and they will be appended to the core option configuration.
+A `.uae` configuration file can be loaded as content, like a disk image, from `Load Content`. Its settings are appended to the configuration the core options produce, so anything it sets overrides them. It uses the same syntax as WinUAE configuration files.
 
 If `puae_libretro_[model].uae` exists in RetroArch `saves` it will be appended to the model preset section.
 
@@ -435,9 +445,7 @@ If you are using RDB HDF files, please use `0,0,0,512` instead of geometry numbe
 
 ## Core options
 
-The PUAE core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
-
-Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
+The PUAE core has the following option(s) that can be tweaked from the core options menu. The default setting is in bold.
 
 - **Model** [puae_model] (**auto**|A500OG|A500|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040|CDTV|CD32|CD32FR)
 
@@ -461,7 +469,9 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Automatic Model Options** [puae_model_options_display] (**disabled**|enabled)
 
-    Show/hide default model options (Floppy/HD/CD) for 'Automatic' model. Page refresh by menu toggle required!
+    Show/hide default model options (Floppy/HD/CD) for 'Automatic' model.
+
+    Available only when frontend 'Core Option Categories' is disabled.
 
 - **Automatic Floppy** [puae_model_fd] (A500OG|**A500**|A500PLUS|A600|A1200OG|A1200|A2000OG|A2000|A4030|A4040)
 
@@ -475,9 +485,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
     Default model when compact discs are launched with 'Automatic' model. Core restart required.
 
-- **Kickstart ROM** [puae_kickstart] (**auto**|aros|kick33180.A500|kick34005.A500|kick37175.A500|kick37350.A600|kick40063.A600|kick39106.A1200|kick40068.A1200|kick39106.A4000|kick40068.A4000)
+- **Kickstart ROM** [puae_kickstart] (**auto**|aros|...)
 
-    'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility. Core restart required.
+    'Automatic' defaults to the most compatible version for the model. 'AROS' is a built-in replacement with fair compatibility.
+
+    Kickstart ROMs are searched from 'system'. Core restart required.
 
 - **Chip RAM** [puae_chipmem_size] (**auto**|1|2|3|4)
 
@@ -644,6 +656,10 @@ Settings with (Restart) means that core has to be closed for the new setting to 
     | splash | Splash (Show briefly)                 |
     | both   | Config + Splash (Wait for user input) |
 
+- **WHDLoad ButtonWait** [puae_use_whdload_buttonwait] (disabled|**enabled**)
+
+    Wait for a button press on internal loading sections if the slave supports it. Core restart required.
+
 - **WHDLoad NoWriteCache** [puae_use_whdload_nowritecache] (**disabled**|enabled)
 
     Write cache requires running the core a few frames after closing content to trigger WHDLoad quit and flush cache to disk. 
@@ -661,7 +677,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Video Options** [puae_video_options_display] (**disabled**|enabled)
 
-    Page refresh by menu toggle required!
+    Available only when frontend 'Core Option Categories' is disabled.
 
 - **Allow PAL/NTSC Hz Change** [puae_video_allow_hz_change] (disabled|enabled|**locked**)
 
@@ -777,7 +793,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Audio Options** [puae_audio_options_display] (**disabled**|enabled)
 
-    Page refresh by menu toggle required!
+    Available only when frontend 'Core Option Categories' is disabled.
 
 - **Stereo Separation** [puae_sound_stereo_separation] (0%|10%|20%|30%|40%|50%|60%|70%|80%|90%|**100%**)
 
@@ -899,7 +915,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Show Mapping Options** [puae_mapping_options_display] (disabled|**enabled**)
 
-    Page refresh by menu toggle required!
+    Available only when frontend 'Core Option Categories' is disabled.
 
 - **Toggle Virtual Keyboard** [puae_mapper_vkbd] (**---**)
 

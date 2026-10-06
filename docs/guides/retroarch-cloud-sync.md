@@ -208,6 +208,36 @@ Cloud Sync logs detailed information prefixed with `[CloudSync]`.
 - Always let sync complete before closing RetroArch
 - Check logs to identify which files are conflicting
 
+**WebDAV: "finished with failures" although the files are on the server**
+
+If the log shows `HTTP -1` for some transfers:
+
+```
+[WARN] [webdav] Failed: manifest.server: HTTP -1
+[ERROR] [CloudSync] Uploading updated manifest failed.
+```
+
+check the server's access log for those same requests. If the server recorded
+them as `201`/`204` (and `405` for `MKCOL` on an existing collection), the
+transfers did succeed and the failure is in reading the response, not in the
+upload.
+
+This happens when the connection is reused after the server has already closed
+it — Apache's default `KeepAliveTimeout` is 5 seconds, and a sync with many
+files easily spans that. On Apache, telling the server not to keep connections
+alive for this client avoids it:
+
+```apache
+BrowserMatch "libretro" nokeepalive downgrade-1.0 force-response-1.0
+```
+
+This only affects RetroArch's user agent; other clients keep HTTP/1.1 with
+keep-alive.
+
+Note that a failed manifest upload also leaves the local manifest stale, which
+shows up as spurious `Conflicting change of ...` on the following sync, so
+fixing this usually clears those too.
+
 **iCloud Drive: "Can't see files in Files.app"**
 
 This is intentional. Files are stored in a private app container to protect sync integrity. Your data is syncing correctly even though it's not visible in Files.app.

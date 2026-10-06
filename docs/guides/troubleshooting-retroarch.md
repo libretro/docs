@@ -16,7 +16,7 @@ You can also have RetroArch log the output at the end and configure things more 
 If you're unsure about the result, run this test several times and see if the results are consistent. Some systems tend to have very unreliable vsync behavior and this result will wildly fluctuate. You can use this value in `video_refresh_rate` and the video and audio should ideally be butter smooth if the game's FPS and monitor FPS are relatively close to each other. Playing a PAL game on 60 Hz monitor won't be perfect no matter what you do, however.
 
 ### Threaded video
-If your video driver has very bad performance, it is possible to run it on a thread to avoid almost all video driver overhead. Set video_threaded = true in config. Butter smooth VSync behavior in this case is impossible however, and latency might increase slighly. Use only if you cannot obtain full speed otherwise.
+If your video driver has very bad performance, it is possible to run it on a thread to avoid almost all video driver overhead. Set video_threaded = true in config. Butter smooth VSync behavior in this case is impossible however, and latency might increase slightly. Use only if you cannot obtain full speed otherwise.
 
 ### Low frame rate
 

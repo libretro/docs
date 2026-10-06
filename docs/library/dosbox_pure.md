@@ -166,6 +166,7 @@ The core automatically executes `DOSBOX.BAT` instead of showing the start menu i
 If a .conf file gets selected in the frontend, DOSBox Pure will load it directly and run its autoexec commands.
 
 Alternatively, a .conf file can get loaded automatically depending on the 'Emulation > Loading of dosbox.conf' [core option](#emulation-options). There are two modes that can be enabled:
+
 - "Try 'dosbox.conf' in the loaded content (ZIP or folder)" - Will load C:\DOSBOX.CONF automatically if it exists in the mounted ZIP or path
 - "Try '.conf' with same name as loaded content (next to ZIP or folder)" - Will automatically load GAME.conf next to GAME.zip if it exists.
 
@@ -743,5 +744,6 @@ Boppin' uses some form of joystick calibration which depends on the speed of the
 - [Official/Original DOSBox SourceForge Repository](https://sourceforge.net/projects/dosbox/)
 - [Libretro DOSBox Pure info file](https://github.com/libretro/libretro-super/blob/master/dist/info/dosbox_pure_libretro.info)
 ![#f03c15]
+
 - [Libretro DOSBox Pure GitHub Repository](https://github.com/schellingb/dosbox-pure)
 - [Report Libretro DOSBox Pure core Issues Here](https://github.com/schellingb/dosbox-pure/issues)

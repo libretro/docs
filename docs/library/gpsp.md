@@ -128,7 +128,7 @@ The gpSP core supports the following device type(s) in the controls menu, bolded
 | Koro Koro Puzzle Happy Panechu!     |The tilt sensor is not emulated. |
 | Phantasy Star Collection            |Phantasy Star 1 flickers - turn on Interframe Blending in core options to fix.|
 | Sims 2, The - Pets |Graphics glitches. Heavy flickering, black objects. |
-| Street Racing Syndicate             |Crashes afer pressing Start.|
+| Street Racing Syndicate             |Crashes after pressing Start.|
 | Super Street Fighter II Turbo/X Revival |Small graphics glitch. Selecting speed 'Turbo 1' and beyond on the character select screen makes the game speed window not fully visible. |
 | WarioWare: Twisted!                 |The tilt sensor is not emulated.|
 | Yoshi’s Universal Gravitation       |The tilt sensor is not emulated.|

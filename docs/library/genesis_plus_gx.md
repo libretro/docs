@@ -216,7 +216,7 @@ chdman createcd --input foo.cue --output foo.chd
 
 ## Playing with MD+ / MSU-MD modes
 
-Comparable to how MSU-1 modifcations can enhance SNES games; Mega Drive Plus / Genesis Plus (MD+) and MSU-MD (Mega SD flash cartridge) patches can be used to add CD quality level of audio to certain Sega Genesis and Mega Drive games via the emulated Sega CD hardware and its CDDA track functionality.
+Comparable to how MSU-1 modifications can enhance SNES games; Mega Drive Plus / Genesis Plus (MD+) and MSU-MD (Mega SD flash cartridge) patches can be used to add CD quality level of audio to certain Sega Genesis and Mega Drive games via the emulated Sega CD hardware and its CDDA track functionality.
 
 Regarding Genesis Plus GX's implementation of MD+ mode operation, all CD overlay commands (incl. cue loop commands) described in MegaSD dev manual (see referenced PDF at the end of this section) are supported except the ones that deal with opening/reading files from SD card (starting from command 1Ch) but afaik no MD+ hacks use these commands so far.
 
@@ -296,7 +296,7 @@ When running Sega CD content, specifies whether to share a single save file betw
 When running Sega CD content, specifies whether to share a single backup [ram cart](https://segaretro.org/CD_BackUp_RAM_Cart) for all games (Per-Cart) or to create a separate backup ram cart for each game (Per-Game).
 
 * **Per-Cart [per cart]** - All games share a single backup RAM cart.
-* Per-Game [per game] - Creates a seperate backrup RAM cart for each game.
+* Per-Game [per game] - Creates a separate backrup RAM cart for each game.
 
 **CD add-on (MD mode) (Requires Restart)** [genesis_plus_gx_add_on]
 
@@ -520,6 +520,17 @@ Use a mouse-controlled 'Light Gun' or 'Touchscreen' input.
 
 * **Light Gun [lightgun]** - Selects mouse-controlled 'Light Gun' input (devices will use [RetroLightgun](#lightgun) inputs).
 * Touchscreen [touchscreen] - Allows the [MS Light Phaser, MD Menancer and MD Justifiers](#lightgun) device types to be controlled via touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
+
+With **Touchscreen**, the gun aims where the screen is touched, and every touch pulls the trigger (A). More fingers on the screen add a button to the trigger:
+
+| Fingers on screen | Input               |
+|:-----------------:|---------------------|
+| 1                 | Trigger (A)         |
+| 2                 | Trigger (A) + B     |
+| 3                 | Trigger (A) + Start |
+| 4                 | Trigger (A) + C     |
+
+The touchscreen is read as the gun of the port the light gun device is set on, while RetroArch's on-screen gamepad overlay sends its buttons to User 1. For games that need a light gun on one port and a pad on the other, RetroArch's own overlay light gun (`Settings > On-Screen Display > On-Screen Overlay > Overlay Lightgun`, with its **Lightgun Port** setting) can send the gun to a different port than the overlay's buttons; use it with **Light Gun** selected here.
 
 **Show Light Gun Crosshair** [genesis_plus_gx_gun_cursor]
 
@@ -812,6 +823,8 @@ Activating multitap support in compatible games can be configured by the 4-WayPl
 | ![](../image/retropad/retro_right_stick.png) Y |                              |                    |                    |                    |                   |               | Slider X      |
 
 ## Mouse
+
+[Certain games](https://segaretro.org/Sega_Mouse#Compatible_games) supported mouse input with the Sega Mouse (known as the Mega Mouse in North America). On a real Genesis some games (e.g. Cannon Fodder, Eye of the Beholder, Rise of the Dragon) required you to plug the mouse into Control Port 2 while a standard controller was plugged into Control Port 1 *before* powering on the system. To recreate this in Genesis Plus GX, launch the game, then from the Quick Menu select Controls > Port 2 Controls and change the device type to "MD Mouse" (leave Mapped Port set to 2). Relaunch the game by selecting Restart from the Quick Menu. You can save a Remap File under Controls > Manage Remap Files so that your settings are saved even if you quit the game.
 
 | RetroMouse Inputs                                     | [MD Mouse](https://segaretro.org/Sega_Mouse)        |
 |-------------------------------------------------------|-----------------|

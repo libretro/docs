@@ -26,11 +26,12 @@ Content that can be loaded by the EasyRPG core have the following file extension
 
 - .ldb
 - .zip
+- .lzh
 - .easyrpg
 
 ### RTP files
 
-You must download the RTP2000 and RTP2003 from [here](https://www.rpgmakerweb.com/run-time-package). They are exe/zip files but can be extracted with e.g. 7zip. Create `rtp` folder in `system` folder. Put the extracted data in "rtp/2000" and "rtp/2003" to `system/rtp` accordingly.
+You must download the RTP2000 and RTP2003 from [here](https://www.rpgmakerweb.com/run-time-package). They are exe/zip files but can be extracted with e.g. 7zip. Create a `rtp` folder in the `system` folder of the frontend. Put the extracted data from the RTP2000 in "rtp/2000" and the extracted data from the RTP2003 in "rtp/2003".
 
 |   |   |   |   |   |
 |---|---|---|---|---|
@@ -87,10 +88,14 @@ The EasyRPG core saves/loads to/from these directories.
 - Save##.dyn (Additional save file data used by some games)
 - Save.lgs (Global save data used by some games)
 - easyrpg_log.txt (EasyRPG log file)
+- Arbitrary files may be created in the game directory depending on the game
 
 **Frontend's system directory**
 
 - easyrpg-player/config.ini (configuration of the engine)
+- easyrpg-player/Soundfont (soundfont files)
+- easyrpg-player/Font (font files)
+- wildmidi.cfg (wildmidi configuration file, to combine with an instruments folder)
 
 ### Geometry and timing
 

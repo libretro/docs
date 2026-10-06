@@ -26,7 +26,7 @@ Comments use a maximum column width of 80 characters, and each new line of a mul
 ```c
 /**
   * Retrieves the sensor state associated with the provided port and ID. This
-  * function pointer may be set to NULL if retreiving sensor state is not
+  * function pointer may be set to NULL if retrieving sensor state is not
   * supported.
   * 
   * @param data  The input state struct

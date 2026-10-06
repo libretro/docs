@@ -2,23 +2,21 @@
 
 ## Background
 
-Gearsystem is an open source, cross-platform, Sega Master System / Game Gear / SG-1000 / Othello Multivision emulator written in C++.
+Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1000, and Othello Multivision emulator written in C++.
 
-- Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Supported cartridges: ROM, ROM + RAM, SEGA, Codemasters, Korean, MSX + Nemesis, Janggun, SG-1000, and many Korean multi-carts.
+- Very accurate emulation with support for ROM-only cartridges and Sega, Codemasters, Korean, MSX, Janggun, SG-1000, EEPROM, and multicart mappers.
 - Automatic region detection: NTSC-JAP, NTSC-USA, PAL-EUR.
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
-- Light Phaser and Paddle Control
-- Internal database for rom detection.
-- Battery powered RAM save support.
-- Save states.
+- Light Phaser, Paddle Control and Sports Pad support.
+- Internal database for ROM detection.
+- Battery-backed RAM save support.
 - Game Genie and Pro Action Replay cheat support.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearsystem core has been authored by
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearsystem core is licensed under
 
@@ -28,9 +26,9 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Gearsystem does not require BIOS (bootrom) files to work but they can be used optionally.
+Gearsystem does not require BIOS (boot ROM) files, but they can be used optionally.
 
-When the BIOS is enabled it will execute as in original hardware, causing invalid roms to lock or preventing them to boot, depending on the BIOS file and rom region and system. If you experience issues disable the BIOS.
+When enabled, the BIOS runs as it does on original hardware. Invalid ROMs or ROMs for a different region or system may fail to boot. Disable the BIOS if this occurs.
 
 Required or optional firmware files go in the frontend's system directory.
 
@@ -70,11 +68,12 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Run-Ahead         | ✔         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats - Game Genie  | ✔         |
-| RetroArch Cheats - Pro Acion Replay | ✔         |
+| RetroArch Cheats - Pro Action Replay | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -101,7 +100,7 @@ The Gearsystem core saves/loads to/from these directories.
 
 | File  | Description            |
 |:-----:|:----------------------:|
-| *.srm | Cartridge battery save |
+| *.srm | Cartridge battery RAM or EEPROM save |
 
 **Frontend's State directory**
 
@@ -111,58 +110,82 @@ The Gearsystem core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Gearsystem core's core provided FPS is 60 for NTSC games and 50 for PAL games
-- The Gearsystem core's core provided sample rate is 44100 Hz
-- The Gearsystem core's base width is 256 for Master System / SG-1000 games and 160 for Game Gear games
-- The Gearsystem core's base height is 192 for Master System / SG-1000 games and 144 for Game Gear games
-- The Gearsystem core's max width is 256 for Master System games and 160 for Game Gear games
-- The Gearsystem core's max height is 224 for Master System games and 144 for Game Gear games
-- The Gearsystem core's core provided aspect ratio is 4:3 for Master System / SG-1000 games and 10:9 for Game Gear games
+- The Gearsystem core's provided FPS is approximately 59.92 for NTSC games, 49.70 for PAL Master System games and 50.17 for PAL SG-1000 games
+- The Gearsystem core's provided sample rate is 44100 Hz
+- The Gearsystem core's base width is 256 for Master System / SG-1000 games and 160 for native Game Gear games; Game Gear SMS mode uses the Master System dimensions
+- The Gearsystem core's base height is 192 for Master System / SG-1000 games, or 224 in Master System extended mode, and 144 for native Game Gear games
+- Overscan uses a width of 256, 284 or 320 pixels and a height of 240 lines for NTSC or 288 lines for PAL. It also applies to Game Gear SMS mode, but not native Game Gear mode
+- Left-bar cropping removes 8 pixels from Master System Mode 4 output when overscan is disabled or set to Top+Bottom
+- The Gearsystem core's max width is 320
+- The Gearsystem core's max height is 288
+- The Gearsystem core uses square pixels by default (4:3 at 256x192 and 10:9 at 160x144); the ['Aspect Ratio' core option](#core-options) can override this
 
 ## Core options
 
 The Gearsystem core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings marked (restart) take effect after restarting or reloading the content.
 
-- **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear|SG-1000 / Multivision)
+- **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear (2 ASIC)|Game Gear (2 ASIC) SMS Mode|Game Gear (1 ASIC)|Game Gear (1 ASIC) SMS Mode|SG-1000 / Multivision|SG-1000 II)
 
-	Select which hardware/model is emulated.
+	Select the console type to emulate. 'Auto' automatically detects the appropriate system based on the loaded content.
 
-    - *Auto* selects the best hardware based on the rom.
+    - *Auto* selects the best hardware based on the ROM.
     - *Master System / Mark III* forces original Master System / Mark III hardware.
-    - *Game Gear* forces Game Gear hardware.
+    - *Game Gear (2 ASIC)* forces Game Gear hardware with 2 ASIC configuration.
+    - *Game Gear (2 ASIC) SMS Mode* forces Game Gear in SMS compatibility mode (2 ASIC).
+    - *Game Gear (1 ASIC)* forces Game Gear hardware with 1 ASIC configuration.
+    - *Game Gear (1 ASIC) SMS Mode* forces Game Gear in SMS compatibility mode (1 ASIC).
     - *SG-1000 / Multivision* forces SG-1000 / Multivision hardware.
+    - *SG-1000 II* forces SG-1000 II hardware.
 
 - **Region (restart)** [gearsystem_region] (**Auto**|Master System Japan|Master System Export|Game Gear Japan|Game Gear Export|Game Gear International)
 
 	Select which region is emulated.
 
-    - *Auto* selects the best region based on the rom.
+    - *Auto* selects the best region based on the ROM.
     - *Master System Japan* forces Master System Japan region.
     - *Master System Export* forces Master System Export region.
     - *Game Gear Japan* forces Game Gear Japan region.
     - *Game Gear Export* forces Game Gear Export region.
     - *Game Gear International* forces Game Gear International region.
 
-- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|SG-1000)
+- **Mapper (restart)** [gearsystem_mapper] (**Auto**|ROM|SEGA|Codemasters|Korean|SG-1000|MSX|Janggun|Korean 2000 XOR 1F|Korean MSX 32KB 2000|Korean MSX SMS 8000|Korean SMS 32KB 2000|Korean MSX 8KB 0300|Korean 0000 XOR FF|Korean FFFF HiCom|Korean FFFE|Korean BFFC|Korean FFF3 FFFC|Korean MD FFF5|Korean MD FFF0|Jumbo Dahjee|EEPROM 93C46|Multi 4PAK All Action|Iratahack)
 
-	Select which mapper (memory bank controller) is emulated.
+	Select which mapper (memory bank controller) is emulated. 'Auto' automatically detects the appropriate mapper based on the loaded content. Only change this if a game does not work correctly with the default setting.
 
-    - *Auto* selects the best mapper based on the rom.
+    - *Auto* selects the best mapper based on the ROM.
     - *ROM* forces no mapper.
     - *SEGA* forces SEGA mapper.
     - *Codemasters* forces Codemasters mapper.
     - *Korean* forces Korean mapper.
     - *SG-1000* forces SG-1000 mapper.
+    - *MSX* forces MSX mapper.
+    - *Janggun* forces Janggun mapper.
+    - *Korean 2000 XOR 1F* forces the Korean 2000 XOR 1F mapper.
+    - *Korean MSX 32KB 2000* forces the Korean MSX 32KB 2000 mapper.
+    - *Korean MSX SMS 8000* forces the Korean MSX SMS 8000 mapper.
+    - *Korean SMS 32KB 2000* forces the Korean SMS 32KB 2000 mapper.
+    - *Korean MSX 8KB 0300* forces the Korean MSX 8KB 0300 mapper.
+    - *Korean 0000 XOR FF* forces the Korean 0000 XOR FF mapper.
+    - *Korean FFFF HiCom* forces the Korean FFFF HiCom mapper.
+    - *Korean FFFE* forces the Korean FFFE mapper.
+    - *Korean BFFC* forces the Korean BFFC mapper.
+    - *Korean FFF3 FFFC* forces the Korean FFF3 FFFC mapper.
+    - *Korean MD FFF5* forces the Korean MD FFF5 mapper.
+    - *Korean MD FFF0* forces the Korean MD FFF0 mapper.
+    - *Jumbo Dahjee* forces the Jumbo Dahjee mapper.
+    - *EEPROM 93C46* forces the EEPROM 93C46 mapper.
+    - *Multi 4PAK All Action* forces the Multi 4PAK All Action mapper.
+    - *Iratahack* forces the Iratahack mapper.
 
 - **Refresh Rate (restart)** [gearsystem_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
 
 	Select which refresh rate will be used in emulation.
 
-    - *Auto* selects the best refresh rate based on the rom.
-    - *NTSC (60 Hz)* forces 60 Hz.
-    - *PAL (50 Hz)* forces 50 Hz.
+    - *Auto* selects the best refresh rate based on the ROM.
+    - *NTSC (60 Hz)* selects NTSC timing.
+    - *PAL (50 Hz)* selects PAL timing.
 
 - **Aspect Ratio** [gearsystem_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
@@ -175,7 +198,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full (284 width)|Full (320 width))
 
-    Select which overscan (borders) will be used in emulation.
+    Select which overscan (borders) will be displayed. This applies to Master System, SG-1000 and Game Gear SMS mode; native Game Gear output remains 160x144. All enabled modes display 240 lines for NTSC or 288 lines for PAL.
 
     - *Disabled* disables overscan.
     - *Top+Bottom* enables overscan for top and bottom.
@@ -184,26 +207,38 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Hide Left Bar (SMS only)** [gearsystem_hide_left_bar] (**No**|Auto|Always)
 
-    Select when to hide the left bar in Master System games.
+    Select when to crop the leftmost 8 pixels in Master System games. This applies only when **Overscan** is *Disabled* or *Top+Bottom*.
 
     - *No* never hides the left bar.
-    - *Auto* hides the left bar when the bar is detected.
+    - *Auto* crops the left column when the game enables left-column masking.
     - *Always* always hides the left bar even if no left bar is detected.
+
+- **No Sprite Limit** [gearsystem_no_sprite_limit] (**Disabled**|Enabled)
+
+    Remove the per-line sprite limit. This reduces flickering but may cause glitches in some games.
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
-	This option will enables/disables BIOS for Master System / Mark III models. For this to work, the `bios.sms` file must exist in RetroArch's system directory.
+    Enable or disable the Master System BIOS. The `bios.sms` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot. The BIOS is not used in SG-1000 or Game Gear SMS mode.
 
 - **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
 
-	This option will enables/disables BIOS for Game Gear model. For this to work, the `bios.gg` file must exist in the RetroArch's system directory.
+    Enable or disable the Game Gear BIOS. The `bios.gg` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot. The BIOS is used only in native Game Gear mode.
 
 - **YM2413 (restart)** [gearsystem_ym2413] (**Auto**|Disabled)
 
-	This option will enables/disables YM2413 (OPLL) FM sound chip.
+	Enable or disable the YM2413 (OPLL) FM sound chip. 'Auto' enables the chip based on the loaded content. Some Master System games use this chip for enhanced music.
 
-    - *Auto* selects the best option based on the rom.
+    - *Auto* selects the best option based on the ROM.
     - *Disabled* disables YM2413.
+
+- **PSG Volume** [gearsystem_psg_volume] (**100**|0-200 in increments of 10)
+
+	Set the volume of the PSG (SN76489): 0 mutes it, 100 is the normal level and 200 doubles it.
+
+- **FM Volume** [gearsystem_fm_volume] (**100**|0-200 in increments of 10)
+
+	Set the volume of the YM2413 (OPLL) FM sound chip: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
 
@@ -215,18 +250,18 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Allow Up+Down / Left+Right** [gearsystem_up_down_allowed] (**Disabled**|Enabled)
 
-	Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
+    Enable this option to press, quickly alternate, or hold both left and right, or up and down, at the same time.
 
-	This may cause movement based glitches to occur in certain games.
+    This may cause movement-based glitches in some games.
 
-	It's best to keep this core option disabled.
+    It is best to keep this option disabled.
 
 - **Light Gun Input** [gearsystem_lightgun_input] (**Light Gun**|Touchscreen)
 
-    Select which input will be used for Light Phaser games.
+    Select the input used when controller port 1 is set to **Sega Light Phaser**.
 
-    - *Light Gun* - Selects mouse-controlled 'Light Gun' input (devices will use [RetroLightgun](#lightgun) inputs).
-    - *Touchscreen* - Selects a touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
+    - *Light Gun* uses the frontend's [RetroLightgun](#light-gun) coordinates and trigger.
+    - *Touchscreen* uses [RetroPointer](#pointer) coordinates and presses, supplied by a touchscreen or another frontend pointer device.
 
 - **Light Gun Crosshair** [gearsystem_lightgun_crosshair] (**Disabled**|Enabled)
 
@@ -242,11 +277,11 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Light Gun Crosshair Offset X** [gearsystem_lightgun_crosshair_offset_x] (**0**|-10 - 10)
 
-    Set the horizontal pixel offset of the crosshair for calibration.
+    Set the horizontal pixel offset of the Light Phaser aim relative to the displayed crosshair.
 
 - **Light Gun Crosshair Offset Y** [gearsystem_lightgun_crosshair_offset_y] (**0**|-10 - 10)
 
-    Set the vertical pixel offset of the crosshair for calibration.
+    Set the vertical pixel offset of the Light Phaser aim relative to the displayed crosshair.
 
 - **Paddle Sensitivity** [gearsystem_paddle_sensitivity] (**1**|1-15)
 
@@ -255,7 +290,13 @@ Settings with (restart) means that core has to be closed for the new setting to 
     - *1* is the lowest sensitivity.
     - *15* is the highest sensitivity.
 
+- **Sports Pad Sensitivity** [gearsystem_sports_pad_sensitivity] (**8**|1-15)
+
+    Set the sensitivity of the [Sports Pad](#sports-pad). Higher values produce faster trackball movement.
+
 ## Joypad
+
+Select the emulated controller using the frontend's port device type. **Joypad Auto** and **Master System / Game Gear Pad** use the mappings below; **Joypad Port Empty** disables input on that port. *Sports Pad* is available on ports 1 and 2; *Sega Light Phaser* and *Paddle Control* are available on port 1.
 
 ![](../image/controller/gg.png)
 
@@ -272,8 +313,23 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | ![](../image/retropad/retro_b.png)             | 1                        |
 | ![](../image/retropad/retro_a.png)             | 2                        |
 | ![](../image/retropad/retro_start.png)         | Pause / Start            |
+| ![](../image/retropad/retro_select.png)        | Reset                    |
 
-## Lightgun
+## Sports Pad
+
+Select *Sports Pad* as the device type for the desired port. The left analog stick controls the trackball.
+
+| RetroPad Inputs                                | Sports Pad               |
+|------------------------------------------------|--------------------------|
+| ![](../image/retropad/retro_left_stick.png)    | Trackball movement       |
+| ![](../image/retropad/retro_b.png)             | 1                        |
+| ![](../image/retropad/retro_a.png)             | 2                        |
+| ![](../image/retropad/retro_start.png)         | Pause                    |
+| ![](../image/retropad/retro_select.png)        | Reset                    |
+
+## Light Gun
+
+Select **Sega Light Phaser** as the device type for port 1 and set **Light Gun Input** to *Light Gun*. Configure the light-gun device in the frontend.
 
 | RetroLightgun Inputs  | [Light Phaser](https://segaretro.org/Light_Phaser)      |
 |-----------------------|---------------------------------------------------------|
@@ -282,12 +338,16 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 ## Pointer
 
+Select **Sega Light Phaser** as the device type for port 1 and set **Light Gun Input** to *Touchscreen*. Pressing the pointer acts as the trigger.
+
 | RetroPointer Inputs   | [Light Phaser](https://segaretro.org/Light_Phaser)        |
 |-----------------------|-----------------------------------------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Light Phaser Crosshair                 |
 | ![](../image/retromouse/retro_left.png) Mouse 1   | Light Phaser Trigger          |
 
 ## Mouse
+
+Select **Paddle Control** as the device type for port 1. Horizontal mouse movement turns the paddle; the left mouse button presses its button. Adjust movement with **Paddle Sensitivity**.
 
 | RetroMouse Inputs                                     | [Paddle Control](https://segaretro.org/Paddle_Control)        |
 |-------------------------------------------------------|-----------------|

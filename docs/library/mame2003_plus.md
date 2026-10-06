@@ -47,7 +47,9 @@ MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [
 
 ### Step 1: Obtaining an XML DAT
 
-DAT files describe the exact ROM contents that the emulator needs including filenames, file sizes, and checksums to verify contents are not incorrect or corrupt. mame2003-plus has the ability to generate an XML "DAT" file from the MAME Menu. You can also access the MAME menu by turning it on as a core option, selecting **Generate XML DAT** and then disabing the menu as a core option.
+DAT files describe the exact ROM contents that the emulator needs including filenames, file sizes, and checksums to verify contents are not incorrect or corrupt. mame2003-plus has the ability to generate an XML "DAT" file from the MAME Menu. You can also access the MAME menu by turning it on as a core option, selecting **Generate XML DAT** and then disabling the menu as a core option.
+
+A DAT for the current core is also kept in its repository: [mame2003-plus.xml](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/mame2003-plus.xml).
 
 
 ### Step 2: Finding a source for ROMs
@@ -264,7 +266,7 @@ Core-generated content is placed in sub-directories within `/libretro savefile d
 | --- | --- |
 | 4-way joystick emulation on 8-way joysticks | See **4-way joystick simulation** section of this doc. ```mame2003-plus_four_way_emulation = "enabled|disabled"``` |
 | Mouse Device | Set mouse device input to be read either from a mouse, a pointer (pointer, trackpad, touchscreen), or to be disabled. ``` mame2003-plus_mouse_device = "mouse|pointer|disabled"``` |
-| Show Lightgun crosshair | Toggle crosshair visibilty for lightgun games. ```mame2003-plus_crosshair_enabled = "enabled|disabled"``` |
+| Show Lightgun crosshair | Toggle crosshair visibility for lightgun games. ```mame2003-plus_crosshair_enabled = "enabled|disabled"``` |
 |Skip Disclaimer| Skip the copyright disclaimer message. ```mame2003-plus_skip_disclaimer = "disabled|enabled"``` |
 |Skip Warnings| _Advanced feature: changing from the default is not recommended in most cases._ Skip any driver warnings about emulation quality. ```mame2003-plus_skip_warnings = "disabled|enabled"``` |
 |Display MAME menu | Enable this core option to display the core's **MAME Menu** and then disable it when you have finished using the **MAME Menu**. ```mame2003-plus_display_setup = "disabled|enabled"``` |

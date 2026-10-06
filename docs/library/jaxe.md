@@ -16,7 +16,7 @@ The JAXE core is licensed under
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
-## Tecnical Info
+## Technical Info
 
 The original CHIP-8 virtual machine was designed with the following specs:
 

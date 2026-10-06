@@ -1,22 +1,23 @@
-# Coleco - ColecoVision (GearColeco)
+# Coleco - ColecoVision / ADAM (GearColeco)
 
 ## Background
 
-Gearcoleco is an open source, cross-platform, ColecoVision emulator written in C++.
+Gearcoleco is an open source, cross-platform ColecoVision and Coleco ADAM emulator written in C++.
 
 - Accurate Z80 core, including undocumented opcodes and behavior like R and MEMPTR registers.
-- Accurate TMS9918 emulation.
-- Support for ColecoVision Super Game Module (SGM) and MegaCart ROMs.
+- Accurate TMS9918 emulation and optional F18A v1.9 support.
+- Support for ColecoVision Super Game Module (SGM), MegaCart, Activision and OCM cartridges.
+- Coleco ADAM computer and cartridge modes, keyboard, Digital Data Pack and floppy disk support.
 - Support for Super Action Controller (SAC), Wheel Controller and Roller Controller.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
-The Gearcoleco core has been authored by
+The Gearcoleco core has been authored by:
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
-The Gearcoleco core is licensed under
+The Gearcoleco core is licensed under:
 
-- [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)
+- [GPLv3](https://github.com/drhelius/Gearcoleco/blob/main/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -27,11 +28,22 @@ Gearcoleco requires a BIOS file to work.
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	 Gearcoleco emulator requires a ColecoVision BIOS. In order to get it to work you must place the following file in RetroArch's system directory.
+    Gearcoleco requires a ColecoVision BIOS. Place the following file in RetroArch's system directory.
 
-| Filename          | Description                        | md5sum                           |
-|:-----------------:|:----------------------------------:|:--------------------------------:|
-| colecovision.rom  | ColecoVision BIOS - Required       | 2c66f5911e5b42b8ebe113403548eee7 |
+| Filename | Description | Size | MD5 | CRC32 |
+|:--------:|:-----------:|:----:|:---:|:-----:|
+| colecovision.rom | ColecoVision OS-7 BIOS - Required | 8192 bytes | 2c66f5911e5b42b8ebe113403548eee7 | 3aa93ef3 |
+
+The core also accepts `coleco.rom` or `os7.u2` for this same ColecoVision/ADAM OS-7 BIOS. Firmware can be placed in the system directory or its `gearcoleco` subdirectory.
+
+ADAM mode requires the OS-7 BIOS above plus both of the following raw firmware images:
+
+| Filename | Description | Size | MD5 | CRC32 |
+|:--------:|:-----------:|:----:|:---:|:-----:|
+| eos.rom | ADAM EOS - Required | 8192 bytes | 01df3140909f09aa9aac4f88890f676c | 05a37a34 |
+| writer.rom | ADAM SmartWriter - Required | 32768 bytes | 4fe4f6800076ea3d897d4285653447bd | 58d86a2a |
+
+SmartWriter may also be named `wp.rom` or `wp_r80.rom`.
 
 ## Extensions
 
@@ -41,6 +53,12 @@ Content that can be loaded by the Gearcoleco core have the following file extens
 - .cv
 - .bin
 - .rom
+- .zip
+- .ddp
+- .dsk
+- .m3u
+
+ADAM supports 256 KiB Digital Data Pack (`.ddp`) images and 160/320 KiB floppy disk (`.dsk`) images. An ADAM ZIP archive must contain exactly one valid media image. Playlists must contain only data packs or only disks; mixed media types are not supported.
 
 RetroArch database(s) that are associated with the Gearcoleco core:
 
@@ -57,10 +75,11 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Run-Ahead         | ✔         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -69,9 +88,9 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
-| Disk Control      | ✕         |
+| Disk Control      | ✔ (ADAM)  |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✔         |
@@ -79,7 +98,7 @@ Frontend-level settings or features that the Gearcoleco core respects.
 
 ### Directories
 
-The Gearcoleco core's library name is 'Gearcoleco'
+The Gearcoleco core's library name is 'Gearcoleco'.
 
 The Gearcoleco core saves/loads to/from these directories.
 
@@ -88,6 +107,10 @@ The Gearcoleco core saves/loads to/from these directories.
 | File  | Description            |
 |:-----:|:----------------------:|
 | *.srm | Cartridge battery save |
+| *.gearcoleco.ddp | ADAM data pack working copy, when writable media is enabled |
+| *.gearcoleco.dsk | ADAM disk working copy, when writable media is enabled |
+
+ADAM working-copy names include the content name, original image checksum and drive slot. The original content files are not overwritten.
 
 **Frontend's State directory**
 
@@ -97,11 +120,44 @@ The Gearcoleco core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Gearcoleco core's core provided FPS is 60 for NTSC games and 50 for PAL games
-- The Gearcoleco core's core provided sample rate is 44100 Hz
-- The Gearcoleco core's width is 256
-- The Gearcoleco core's height is 192
-- The Gearcoleco core's core provided aspect ratio is 4:3
+- The Gearcoleco core's provided FPS is approximately 59.92 for NTSC and 50.16 for PAL, in both ColecoVision and ADAM modes
+- The Gearcoleco core's provided sample rate is 44100 Hz
+- The Gearcoleco core's default resolution is 256x192 with TMS9918A and overscan disabled
+- TMS9918A overscan uses a width of 256, 284 or 320 pixels and a height of 240 lines for NTSC or 288 lines for PAL
+- F18A output uses a width of 240, 256, 480 or 512 pixels and a height of 192 or 240 lines, depending on the video mode
+- The Gearcoleco core's max width is 512
+- The Gearcoleco core's max height is 288
+- The Gearcoleco core uses square pixels by default (4:3 at 256x192); the ['Aspect Ratio' core option](#core-options) can override this
+
+## Coleco ADAM
+
+Load a `.ddp`, `.dsk`, ADAM `.zip` or `.m3u` file to start ADAM computer mode automatically. Starting the core without content also selects ADAM and opens SmartWriter when no bootable media is inserted. No-content startup requires frontend support. Cartridge files use ColecoVision by default; select *ADAM* in **Cartridge Hardware** to run a cartridge on ADAM hardware.
+
+ADAM supports NTSC and PAL timing, TMS9918A and F18A video, spinner controllers, rewind and run-ahead. The default *Auto* settings use NTSC and TMS9918A when no cartridge is loaded.
+
+### Preparing multiple drives
+
+The single optional **ADAM** subsystem (`adam`) lets you prepare several images before booting. It provides five slots, in this order:
+
+1. Cartridge
+2. Disk 1
+3. Disk 2
+4. Data Pack 1
+5. Data Pack 2
+
+Every slot is optional. Each drive accepts its own image or homogeneous M3U playlist. A cartridge alone starts cartridge mode; media or an empty setup starts computer mode.
+
+Normal content loading is sufficient for a single program or an M3U disk-swapping set. An M3U supplies alternative images for one drive; it does not automatically mount its entries in separate drives.
+
+### Inserting and changing media
+
+Select the target drive with **ADAM Disk Control Drive**, then use the frontend's disk controls to eject, add or select an image, and insert it. This also works after starting the core without content. Each drive keeps its own image list, and changing one drive leaves the others mounted. The default *Loaded media* target selects the primary content drive.
+
+Inserting media does not reset the computer. To boot a newly inserted program, request **ADAM Computer Reset**. Computer boot checks Disk 1, Disk 2, Data Pack 1 and Data Pack 2 in order and starts SmartWriter if none contains bootable media. Use disk swapping without reset when a running application requests another disk.
+
+Media is write protected by default. Set **ADAM Writable Media** to *Save-directory working copy* and reload the content to save changes in the frontend's save directory. This requires a save directory and a frontend file-system interface that supports writing; otherwise the media remains write protected.
+
+ADAM save states validate the firmware, cartridge and mounted media, and restore the image selections for all four drives. Load states with the same firmware, cartridge and media set used when saving.
 
 ## Core options
 
@@ -109,13 +165,37 @@ The Gearcoleco core has the following options that can be tweaked from the core 
 
 Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
 
+- **Cartridge Hardware (restart)** [gearcoleco_cartridge_hardware] (**ColecoVision**|ADAM)
+
+    Select the hardware used for cartridge ROMs. Disks, data packs, playlists and no-content startup always select ADAM automatically.
+
+- **ADAM Disk Control Drive** [gearcoleco_adam_disk_drive] (**Loaded media**|Disk 1|Disk 2|Data Pack 1|Data Pack 2)
+
+    Select which drive the frontend's Disk Control menu operates. *Loaded media* selects the primary content drive. Other drives remain mounted when this option changes.
+
+- **ADAM Computer Reset** [gearcoleco_adam_computer_reset] (**Idle**|Reset)
+
+    Select *Reset* to boot the computer from mounted media, or start SmartWriter if none is bootable. Mounted images are retained. The option returns to *Idle* when supported by the frontend; otherwise select *Idle* before requesting another reset. The frontend's normal Reset action retains the current boot mode, including cartridge mode.
+
+- **ADAM Writable Media (restart)** [gearcoleco_adam_writable_media] (**Disabled**|Save-directory working copy)
+
+    Select whether ADAM media is write protected or saves changes to complete working copies in the frontend's save directory. Original content files are never overwritten.
+
 - **Refresh Rate (restart)** [gearcoleco_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
 
-    Select which refresh rate will be used in emulation.
+    Select which refresh rate will be used in ColecoVision or ADAM emulation.
 
-    - *Auto* selects the best refresh rate based on the rom.
-    - *NTSC (60 Hz)* forces 60 Hz.
-    - *PAL (50 Hz)* forces 50 Hz.
+    - *Auto* uses the loaded cartridge's region, or NTSC when no cartridge is loaded.
+    - *NTSC (60 Hz)* selects NTSC timing.
+    - *PAL (50 Hz)* selects PAL timing.
+
+- **Mapper (restart)** [gearcoleco_mapper] (**Auto**|Standard|MegaCart|Activision|OCM)
+
+    Select the cartridge mapper. *Auto* detects the appropriate mapper from the loaded content. Change this only if a cartridge does not work correctly with automatic detection.
+
+- **Video Chip (restart)** [gearcoleco_video_chip] (**Auto**|TMS9918A|F18A)
+
+    Select the installed video chip for ColecoVision or ADAM. *Auto* uses TMS9918A unless the game database identifies the loaded cartridge as requiring F18A. Select *F18A* to use it with ADAM disk or data pack software.
 
 - **Aspect Ratio** [gearcoleco_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
@@ -128,7 +208,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Overscan** [gearcoleco_overscan] (**Disabled**|Top+Bottom|Full (284 width)|Full (320 width))
 
-    Select which overscan (borders) will be used in emulation.
+    Select which overscan (borders) will be used with TMS9918A. F18A uses its active logical raster without TMS overscan.
 
     - *Disabled* disables overscan.
     - *Top+Bottom* enables overscan for top and bottom.
@@ -137,28 +217,28 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Allow Up+Down / Left+Right** [gearcoleco_up_down_allowed] (**Disabled**|Enabled)
 
-    Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
+    Enable this option to press, quickly alternate, or hold both left and right, or up and down, at the same time.
 
-    This may cause movement based glitches to occur in certain games.
+    This may cause movement-based glitches in some games.
 
-    It's best to keep this core option disabled.
+    It is best to keep this option disabled.
 
 - **No Sprite Limit** [gearcoleco_no_sprite_limit] (**Disabled**|Enabled)
 
-    Enabling this will remove the sprite limit in a single line.
+    Remove the per-line sprite limit to reduce flickering.
 
-    This may cause glitches to occur in certain games.
+    This may cause glitches in some games.
 
-    It's best to keep this core option disabled.
+    It is best to keep this option disabled.
 
 - **Spinner Support** [gearcoleco_spinners] (**Disabled**|Super Action Controller|Wheel Controller|Roller Controller)
 
-    Select which controller will be used in emulation. Spinners are controlled by mouse movement. Mouse buttons are mapped to Left (Yellow) and Right (Red) buttons.
+    Select which spinner controller to emulate in ColecoVision or ADAM. Mouse movement controls the spinner. Mouse buttons map to controller 1's Left (Yellow) and Right (Red) buttons.
 
     - *Disabled* disables spinner support.
-    - *Super Action Controller* enables spinner support for Super Action Controller.
-    - *Wheel Controller* enables spinner support for Wheel Controller.
-    - *Roller Controller* enables spinner support for Roller Controller.
+    - *Super Action Controller* uses horizontal mouse movement for the spinner.
+    - *Wheel Controller* uses horizontal mouse movement for the wheel.
+    - *Roller Controller* uses both horizontal and vertical mouse movement.
 
 - **Spinner Sensitivity** [gearcoleco_spinner_sensitivity] (**1**|1-10)
 
@@ -191,6 +271,35 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | Keypad 0                            | ![](../image/retropad/retro_left_stick.png)  Left Analog X   |
 | Purple                              | ![](../image/retropad/retro_right_stick.png)  Right Analog Y  |
 | Blue                                | ![](../image/retropad/retro_right_stick.png)  Right Analog X  |
+
+### ADAM Keyboard
+
+ADAM uses the frontend's keyboard callback with fixed mappings. Letters, digits, punctuation, Return, Backspace, Tab and arrow keys type normally. Shift, Control and Caps Lock retain their ADAM modifier functions.
+
+!!! important "Enable RetroArch Game Focus before typing"
+    RetroArch normally assigns keyboard shortcuts to letters, Space, Escape and function keys. For example, F1 opens its menu, F2/F4 save/load states, F toggles fullscreen, H resets, P pauses, Space toggles fast-forward, and Escape quits. ADAM needs these keys for typing and its SmartKeys.
+
+    Set **Settings > Input > Auto Enable 'Game Focus' Mode** to **Detect**, or toggle Game Focus manually (Scroll Lock by default) before typing. Gearcoleco requests keyboard input when ADAM loads, allowing automatic detection; ordinary ColecoVision startup does not request it. RetroArch's default automatic Game Focus setting is Off.
+
+    Toggle Game Focus off again before using RetroArch shortcuts. If your keyboard lacks Scroll Lock, assign **Settings > Input > Hotkeys > Game Focus Toggle** to F10. Gearcoleco leaves F9-F12 and Scroll Lock unmapped in ADAM.
+
+See [RetroArch's direct keyboard input guidance](../guides/input-and-controls.md#cores-with-direct-keyboard-input) for Game Focus and frontend hotkey configuration. The core cannot suppress frontend shortcuts before Game Focus is enabled or account for arbitrary custom frontend bindings.
+
+With Game Focus enabled, the ADAM special keys are:
+
+| Host key | ADAM key |
+|----------|----------|
+| F1-F6 | SmartKey I-VI |
+| F7 | Undo |
+| F8 | Wild Card |
+| Home | ADAM Home |
+| Insert | Insert |
+| Delete | Delete |
+| Page Up | Move / Copy |
+| Page Down | Store / Fetch |
+| End | Clear |
+| Print Screen | Print |
+| Escape | Escape / WP |
 
 ## External Links
 

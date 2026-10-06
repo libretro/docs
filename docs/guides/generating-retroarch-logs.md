@@ -69,6 +69,7 @@ There is a range of variation in the logging systems available to Android device
 #### Generating Logs via USB Tether
 
 **Prerequisites**:
+
 * Linux, Windows or Mac PC
 * USB cable for your device
 

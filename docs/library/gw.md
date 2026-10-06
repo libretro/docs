@@ -79,7 +79,7 @@ The GW core supports the following device type(s) in the controls menu, bolded d
 
 ### User 1 - 2 device types
 
-- None - Doesn't diable input.
+- None - Doesn't disable input.
 - **Controller** - Joypad - Stay on this.
 
 ### Controller tables

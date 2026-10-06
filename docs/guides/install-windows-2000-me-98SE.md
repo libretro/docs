@@ -6,7 +6,7 @@
 
 ## Downloading and installing
 
-There are multiple ways of downloading RetroArch for your Windows 2000 / ME / 98SE operating systems. `Installer` or `Download` in [here](https://www.retroarch.com/index.php?page=platforms) both options provide you with the lastest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually.
+There are multiple ways of downloading RetroArch for your Windows 2000 / ME / 98SE operating systems. `Installer` or `Download` in [here](https://www.retroarch.com/index.php?page=platforms) both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually.
 
 ## Downloading
 

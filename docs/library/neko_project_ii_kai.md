@@ -56,12 +56,12 @@ Required or optional firmware files go in the frontend's system directory.
 | np2kai/sound.rom    | - Required                        | caf90f22197aed6f14c471c21e64658d |
 | np2kai/bios9821.rom | - Optional                        |                                  |
 | np2kai/d8000.rom    | - Optional                        |                                  |
-| np2kai/2608_BD.WAV  | YM2608 RYTHM sample - Optional    |                                  |
-| np2kai/2608_SD.WAV  | YM2608 RYTHM sample - Optional    |                                  |
-| np2kai/2608_TOP.WAV | YM2608 RYTHM sample - Optional    |                                  |
-| np2kai/2608_HH.WAV  | YM2608 RYTHM sample - Optional    |                                  |
-| np2kai/2608_TOM.WAV | YM2608 RYTHM sample - Optional    |                                  |
-| np2kai/2608_RIM.WAV | YM2608 RYTHM sample - Optional    |                                  |
+| np2kai/2608_BD.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
+| np2kai/2608_SD.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
+| np2kai/2608_TOP.WAV | YM2608 RHYTHM sample - Optional    |                                  |
+| np2kai/2608_HH.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
+| np2kai/2608_TOM.WAV | YM2608 RHYTHM sample - Optional    |                                  |
+| np2kai/2608_RIM.WAV | YM2608 RHYTHM sample - Optional    |                                  |
 
 ## Features
 

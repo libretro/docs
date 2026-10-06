@@ -2,7 +2,7 @@
 
 ## Building libretro-mame
 
-### Build environement
+### Build environment
 
 #### Windows
 

@@ -65,7 +65,7 @@ The program flow of a frontend using the libretro API can be expressed as follow
 
 #### `retro_api_version()`
 
-This function should return RETRO_API_VERSION, defined in libretro.h. It is used by the frontend to determine if ABI/API are mismatched. The ver- sion will be bumped should there be any non- compatible changes to the API. Changes to retro_* structures, as well as changes in publically visible functions and/or their arguments will warrant a bump in API version.
+This function should return RETRO_API_VERSION, defined in libretro.h. It is used by the frontend to determine if ABI/API are mismatched. The ver- sion will be bumped should there be any non- compatible changes to the API. Changes to retro_* structures, as well as changes in publicly visible functions and/or their arguments will warrant a bump in API version.
 
 #### `retro_set_*()`
 
@@ -94,7 +94,7 @@ The frontend will typically request statically known information about the core 
 
 This function will load content. If the implementation is an emulator, this would be a game ROM image, if it is a game engine, this could be packaged upassets for the game, etc. The function takes a structure that points to the path where the ROM was loaded from, as well as a memory chunk of the already loaded file.
 
-**There are two modes of loading files with libretro.** If the game engine requires to know the path of where the ROM image was loaded from, the `need_fullpath` field in `retro_system_info` must be set to true. If the path is required, the frontend will not load the file into the data/size fields, and it is up to the implementation to load the file from disk. The path might be both relative and absolute, and the implementation must check for both cases. This is useful if the ROM image is too large to load into memory at once. It is also useful if the assests consist of many smaller files, where it is necessary to know the path of a master file to infer the paths of the others.
+**There are two modes of loading files with libretro.** If the game engine requires to know the path of where the ROM image was loaded from, the `need_fullpath` field in `retro_system_info` must be set to true. If the path is required, the frontend will not load the file into the data/size fields, and it is up to the implementation to load the file from disk. The path might be both relative and absolute, and the implementation must check for both cases. This is useful if the ROM image is too large to load into memory at once. It is also useful if the assets consist of many smaller files, where it is necessary to know the path of a master file to infer the paths of the others.
 
 If `need_fullpath` is set to `false`, the frontend will load the ROM image into memory beforehand. In this mode, the path field is not guaranteed to be non-`NULL`. It should point to a valid path if the file was indeed, loaded from disk, however, it is possible that the file was loaded from `stdin`, or similar, which has no well-defined path. It is recommended that `need_fullpath` is set to `false` if possible, as it allows more features, such as soft-patching to work correctly.
 
@@ -180,3 +180,11 @@ There are several steps before your core can be available to user via the Online
     - Add at least icons playlist and content for your core in [RetroArch assets repository](https://github.com/libretro/retroarch-assets/tree/master/src/xmb/monochrome)
     - Add your games to [Libretro database](https://github.com/libretro/libretro-database).
  4. Add documentation of your core following the instructions in [libretro-docs](https://github.com/libretro/docs#adding-a-new-core).
+
+### Core file names
+
+A core's file is named `<name>_libretro` followed by the platform's library extension, for example `snes9x_libretro.so`, `snes9x_libretro.dll` or `snes9x_libretro.dylib`. Its info file is `<name>_libretro.info`, and the name must match it for RetroArch to show the core's information and to offer it in the Online Updater.
+
+On some platforms the buildbot adds an OS suffix after `_libretro`, such as `snes9x_libretro_android.so`. The suffix is optional: many cores are built without one on Android, iOS and tvOS, and they work the same. RetroArch drops everything after the last underscore unless that part is `_libretro` itself, so `snes9x_libretro.so` and `snes9x_libretro_android.so` both match `snes9x_libretro.info`. Only one suffix is removed, so a file name must not carry more than one after `_libretro`.
+
+A core without an OS suffix is therefore not a mistake, and does not need an issue or a pull request to add one.

@@ -15,6 +15,14 @@ rom.ips2
 
 ## **Cores Compatibility**
 
+### Atari - Jaguar
+
+| Core                               | Supported |
+|------------------------------------|:---------:|
+| [Virtual Jaguar](../library/virtual_jaguar.md) | ✔         |
+
+Cartridge content only — Jaguar CD images are loaded by path and are not softpatched.
+
 ### Bandai - WonderSwan/Color
 
 | Core                                       | Supported |
@@ -69,6 +77,7 @@ rom.ips2
 | [Mesen](../library/mesen.md)             | ✔         |
 | [Nestopia](../library/nestopia.md)       | ✔         |
 | [QuickNES](../library/quicknes.md)       | ✔         |
+| [RustyNES](../library/rustynes.md)       | ✔         |
 
 ### Nintendo - SNES / Famicom
 
@@ -78,10 +87,10 @@ rom.ips2
 | [bsnes-mercury Accuracy](../library/bsnes_mercury_accuracy.md)       | ✔         |
 | [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md)       | ✔         |
 | [bsnes-mercury Performance](../library/bsnes_mercury_performance.md) | ✔         |
-| [bsnes Accuracy](../library/bsnes_accuracy.md)                       | ✔         |
-| [bsnes Balanced](../library/bsnes_balanced.md)                       | ✔         |
+| [bsnes 2014 Accuracy](../library/bsnes2014_accuracy.md)                       | ✔         |
+| [bsnes 2014 Balanced](../library/bsnes2014_balanced.md)                       | ✔         |
 | [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md)                | ✔         |
-| [bsnes Performance](../library/bsnes_performance.md)                 | ✔         |
+| [bsnes 2014 Performance](../library/bsnes2014_performance.md)                 | ✔         |
 | [higan Accuracy](../library/higan_accuracy.md)                       | ✔         |
 | [nSide Balanced](../library/nside_balanced.md)                       | ✔         |
 | [Mesen-S](../library/mesen-s.md)                                     | ✔         |

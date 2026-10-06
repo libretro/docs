@@ -15,7 +15,7 @@ The FreeIntv core has been authored by
 
 The FreeIntv core is licensed under
 
-- [GPLv3](https://github.com/libretro/FreeIntv/blob/master/LICENSE)
+- [GPLv2+](https://github.com/libretro/FreeIntv/blob/master/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 

@@ -206,7 +206,7 @@ The [Core name] core saves/loads to/from these directories.
 
 ## Usage
 
-// Explain how to use the core if further explaination is needed
+// Explain how to use the core if further explanation is needed
 
 ## Core options
 

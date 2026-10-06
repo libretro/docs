@@ -129,13 +129,13 @@ Next, copy the cores, assets and overlays to an assets folder you create here:
 
     mkdir -p assets/cores
     mkdir assets/overlays
-    cp ../../../../dist/android/arm64-v8a/* assets/cores/ #replace arm64-v8a here by the  archetecture of the device you will be using. Google your phone's specs.
+    cp ../../../../dist/android/arm64-v8a/* assets/cores/ #replace arm64-v8a here by the  architecture of the device you will be using. Google your phone's specs.
     cp -r ../../../../dist/info/ assets/
     cp -r ../../../../retroarch/media/overlays/* assets/overlays/
 
 Optionally, you may want to include the assets for the front-end (menu icons, fonts, images etc), shader caches, dbs, cheats, etc... These assets can be downloaded at any time during run time via the updater but if you want to bundle them into the build you may do so by downloading bundle.zip / cheats.zip and extracting them to assets folder:
 
-        wget https://buildbot.libretro.com/assets/frontend/bundle.zip
+        wget https://buildbot.libretro.com/assets/frontend/glui_minimal_assets.zip
         unzip -n bundle.zip -d assets
         wget https://buildbot.libretro.com/assets/frontend/cheats.zip
         mkdir assets/cheats

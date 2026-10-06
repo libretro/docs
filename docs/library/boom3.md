@@ -71,7 +71,7 @@ The Boom 3 core saves/loads to/from these directories.
 
 | File                      | Description |
 |:-------------------------:|:-----------:|
-| (conten folder)/savegames/*.save      | Save        |
+| (content folder)/savegames/*.save      | Save        |
 | (content folder)/libretro.cfg | DOOM 3 Config |
 
 ### Geometry and timing

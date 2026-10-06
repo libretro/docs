@@ -118,7 +118,7 @@ For especially overlay buttons which map to analogs, it is useful to allow an im
 
 ## Let buttons light up when they are pressed
 
-When using individial overlays per button it will make sense to have buttons light up when they are pressed. To do this, the alpha value per-button will be multiplied by a factor.
+When using individual overlays per button it will make sense to have buttons light up when they are pressed. To do this, the alpha value per-button will be multiplied by a factor.
 
     overlay0_desc0_alpha_mod = 2.0 # Alpha is multiplied 2x when pressed.
 
@@ -179,7 +179,7 @@ will trigger both left and up at same time. Keyboard keys are an exception; an o
 To build some kind of menu system, one would need the ability for overlay_next to refer to any overlay. To do this, two extra things must be configured:
 
     overlay2_overlay = "some_overlay.png"
-    overlay2_name = "overview_overlay" # A name which can be referred to. Must be set if it is to be refered to.
+    overlay2_name = "overview_overlay" # A name which can be referred to. Must be set if it is to be referred to.
 
     overlay0_desc0 = "overlay_next,200,180,radial,40,40"
     overlay0_desc0_next_target = "overview_overlay" # When this overlay_next is pressed, it will go to index 2 directly, instead of the default 1.

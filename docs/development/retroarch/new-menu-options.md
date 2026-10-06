@@ -59,6 +59,6 @@ Now the menu has to be told how to display the option.
 
 # Finishing
 
-This guide only introduces the English menu labels. Translations are handled via Crowdin, after the pull request is accepted, new strings will appear for translators. New items wil be shown to users in English until translation is done.
+This guide only introduces the English menu labels. Translations are handled via Crowdin, after the pull request is accepted, new strings will appear for translators. New items will be shown to users in English until translation is done.
 
 There are several possibilities that can be done with the menu system, but most require additional functions. Help text may also be defined (a slightly longer description that can be displayed with Select button). Some of the menu code is dynamic depending on e.g. number of users, those items usually require extra care. Icon assignments are handled in the menu drivers (ozone, xmb, glui).

@@ -195,8 +195,6 @@ Must be enabled in core options.
 
 #### Joypad
 
-![](../image/controller/saturn.png)
-
 | User 1 - 12 Remap descriptors | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
 | A                             | ![](../image/retropad/retro_b.png)       |
@@ -208,8 +206,8 @@ Must be enabled in core options.
 | D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
 | B                             | ![](../image/retropad/retro_a.png)       |
 | Y                             | ![](../image/retropad/retro_x.png)       |
-| C                             | ![](../image/retropad/retro_l1.png)            |
-| Z                             | ![](../image/retropad/retro_r1.png)            |
+| C                             | ![](../image/retropad/retro_r1.png)            |
+| Z                             | ![](../image/retropad/retro_l1.png)            |
 | L                             | ![](../image/retropad/retro_l2.png)            |
 | R                             | ![](../image/retropad/retro_r2.png)            |
 | Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |
@@ -223,7 +221,7 @@ Must be enabled in core options.
 
 - Savestates work but can sometime be quite unstable
 - Enabling both multitaps at the same time causes some kind of "autofire" bug
-- Switching between windowed and fullscreen will cause issues, you need to start the core in your prefered mode and stick with it
+- Switching between windowed and fullscreen will cause issues, you need to start the core in your preferred mode and stick with it
 - It seems there are compatibility issues between RetroArch's "threaded video" setting and this core.
 
 ## External Links

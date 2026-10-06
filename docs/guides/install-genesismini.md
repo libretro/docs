@@ -2,7 +2,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kCyTlMjvzWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-==The installation steps or dowloading file parts of the project may differ over time.==
+==The installation steps or downloading file parts of the project may differ over time.==
 
 ## Sega Genesis Mini - Genesis
 

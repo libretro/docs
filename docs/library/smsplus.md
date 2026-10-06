@@ -132,7 +132,7 @@ The SMS Plus GX core supports the following device type(s) in the controls menu,
 
 ### User 1 device types
 
-- None - Doesn't diable input. There's no reason to switch to this.
+- None - Doesn't disable input. There's no reason to switch to this.
 - **RetroPad** - Joypad - Stay on this.
 - RetroPad w/Analog - Joypad - There's no reason to switch to this.
 

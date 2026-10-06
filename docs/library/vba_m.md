@@ -123,7 +123,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **Force enable RTC** [vbam_forceRTCenable] (**Off**/On)
 
-	Forces the internal real-time clock to be enabled regardless of rom. Usuable for rom patches that requires clock to be enabled (aka Pokemon).
+	Forces the internal real-time clock to be enabled regardless of rom. Usable for rom patches that requires clock to be enabled (aka Pokemon).
 
 - **Sound Interpolation** [vbam_soundinterpolation] (Off/**On**)
 

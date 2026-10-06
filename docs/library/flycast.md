@@ -21,6 +21,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 {==
 Example (MAME ID=ikaruga)
+
 - [ROM FOLDER]/ikaruga.zip
 - [ROM FOLDER]/ikaruga/gdl-0010.chd
 ==}
@@ -65,6 +66,9 @@ Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
+
+!!! note
+    If you load the core manually and then start the core without any content selected, this will boot Dreamcast BIOS Menu.
 
 ## Features
 
@@ -138,19 +142,13 @@ Configure region, language, BIOS and base hardware settings.
 
 	Force use of high-level emulation BIOS.
 
-**Boot to BIOS** [flycast_boot_to_bios] (**disabled**|enabled)
-
-!!! regular ""
-
-	Boot directly into the Dreamcast BIOS menu.
-
 **Enable DSP** [flycast_enable_dsp] (**enabled**|disabled)
 
 !!! regular ""
 
 	Enable emulation of the Dreamcast's audio DSP (digital signal processor). Improves the accuracy of generated sound, but increases performance requirements.
 
-**Force Windows CE Mode** [flycast_force_windows_ce_modee] (**disabled**|enabled)
+**Force Windows CE Mode** [flycast_force_windows_ce_mode] (**disabled**|enabled)
 
 !!! regular ""
 
@@ -180,7 +178,7 @@ Configure visual buffers & effects, display parameters, framerate/-skip and rend
 
 	The output signal type. 'TV (Composite)' is the most widely supported.	
 
-**Broadcast Standard** [flycast_brodcast] (**Default**|PAL-M (Brazil)|PAL-N (Argentina, Paraguay, Uruguay)|NTSC|PAL (World))
+**Broadcast Standard** [flycast_broadcast] (**Default**|PAL-M (Brazil)|PAL-N (Argentina, Paraguay, Uruguay)|NTSC|PAL (World))
 
 **Screen Orientation** [flycast_screen_orientation] (**Horizontal**|Vertical)	
 
@@ -289,7 +287,7 @@ Configure threaded rendering, integer division optimisations and frame skip sett
 
 !!! regular ""
 
-	Configure per-game VMU save files and on-scren VMU visibility sttings.
+	Configure per-game VMU save files and on-screen VMU visibility settings.
 
 **Per-Game VMUs** [flycast_per_content_vmus] (**disabled**|VMU A1|All VMUs)
 
@@ -362,8 +360,6 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 #### Joypad and analog device type table
 
-![](../image/controller/dc.png)
-
 | User 1 - 4 input descriptors |                                             | RetroPad           |
 |------------------------------|---------------------------------------------|--------------------|
 | A                            | ![](../image/retropad/retro_b.png)      | A                  |
@@ -375,10 +371,8 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   | D-Pad Right        |
 | B                            | ![](../image/retropad/retro_a.png)      | B                  |
 | Y                            | ![](../image/retropad/retro_x.png)      | Y                  |
-| L (fierce)                   | ![](../image/retropad/retro_l1.png)           | L (fierce)         |
-| R (fierce)                   | ![](../image/retropad/retro_r1.png)           | R (fierce)         |
-| L (weak)                     | ![](../image/retropad/retro_l2.png)           | L (weak)           |
-| R (weak)                     | ![](../image/retropad/retro_r2.png)           | R (weak)           |
+| L Trigger                    | ![](../image/retropad/retro_l2.png)           | L Trigger          |
+| R Trigger                    | ![](../image/retropad/retro_r2.png)           | R Trigger          |
 | Analog X                     | ![](../image/retropad/retro_left_stick.png) X | Analog X           |
 | Analog Y                     | ![](../image/retropad/retro_left_stick.png) Y | Analog Y           |
 

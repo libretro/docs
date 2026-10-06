@@ -1,7 +1,7 @@
 [files]
 extend-exclude = [
   ".git/",     # Version control files
-  "achive/*",  # Archive files
+  "archive/*",  # Archive files
 ]
 
 # Match Inside a Word - Case Insensitive
@@ -9,3 +9,34 @@ extend-exclude = [
 ue = "ue"          # Nestopia UE
 sav = "sav"        # .sav file extension
 kernal = "kernal"  # Commodore's low-level Operating System
+gam = "gam"        # GAM4980 core name / .gam file extension
+noo = "noo"        # NooDS core name (library/noods.md)
+wirth = "wirth"    # Niklaus Wirth, designer of Oberon (library/oberon.md)
+bload = "bload"    # MSX-BASIC BLOAD command (library/bluemsx.md)
+consol = "consol"  # Atari 8-bit CONSOL_SELECT/CONSOL_START hardware register (library/atari800.md)
+pn = "pn"          # UPnP substring (ppsspp.md, netplay-faq.md, netplay-getting-started.md)
+lod = "lod"        # GLSL textureLodOffset substring (development/shader/slang-shaders.md)
+accomodate = "accomodate"  # ACCOMODATE_POSSIBLE_DYNAMIC_LOOPS, a real CRT-Royale shader macro (shader/crt_royale.md)
+betwee = "betwee"    # betwee.mp3, a real 8.3-truncated PrBoom DOS asset filename (library/prboom.md)
+messag = "messag"    # messag.mp3, ditto
+openin = "openin"    # openin.mp3, ditto
+runnin = "runnin"    # runnin.mp3, ditto
+bumpter = "bumpter"  # Vita_Bumpter_Left.png, a real Button_Pack asset filename
+outter = "outter"    # Remote_Circle_Outter.png, ditto
+tilda = "tilda"      # Keyboard_*_Tilda.png, ditto
+sentris = "sentris"  # Sentris, a real game title (image/Button_Pack/Readme.txt)
+cruzes = "cruzes"    # Cruzes, a real (stub) core entry (guides/core-list.md)
+ment = "ment"        # part of "Greg DeMent", a real person's surname (library/prosystem.md)
+nd = "nd"            # part of "Button 2ND" (library/numero.md)
+som = "som"          # som_msu1.sfc, a real filename (library/snes9x.md)
+hsi = "hsi"          # .hsi file extension (guides/softwarelist-getting-started.md)
+updat = "updat"      # PS3UPDAT.PUP, the PS3 firmware file name (library/rpcs3.md)
+discernable = "discernable"  # a widely-accepted alternate spelling of "discernible" (guides/rgui.md)
+alis = "alis"        # KEY_ALIS, an example keytool placeholder (development/retroarch/compilation/android.md)
+ba = "ba"            # part of the "ba4980-c-sdk" tool-repo URL slug (library/gam4980.md)
+thq = "thq"          # THQ, a real video game publisher (library/compatibility/gba.md)
+mis = "mis"          # part of the valid "mis-matched" hyphenation (guides/softwarelist-getting-started.md)
+informations = "informations"  # only remaining match is the quick-informations.md FILENAME itself (kept as-is: many other pages link to it by this exact path); every genuine prose occurrence of this typo was fixed
+wizzard = "wizzard"  # WizzardSK, a real GitHub username (library/cemu.md, library/pcee2.md, library/armsx2.md, library/nuance.md)
+ahd = "ahd"          # a real Hatari option value (library/hatarib.md)
+langage = "langage"  # LANGAGE, a real EmuSCV core option name (library/emuscv.md)

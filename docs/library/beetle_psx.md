@@ -26,6 +26,8 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
+User-supplied BIOS files are supported, but not required; [OpenBIOS](https://pcsx-redux.consoledev.net/openbios/) will be used if no BIOS is provided.
+
 Required or optional firmware files go in the frontend's `system` directory.
 
 |   Filename      | Description                           |              md5sum              |
@@ -34,13 +36,14 @@ Required or optional firmware files go in the frontend's `system` directory.
 | scph5501.bin    | PS1 US BIOS - Required for US games   | 490f666e1afb15b7362b406ed1cea246 |
 | scph5502.bin    | PS1 EU BIOS - Required for EU games   | 32736f17079d0b2b7024407c39bd3050 |
 
-As a replacement for any of the BIOS files mentioned above, it is also possible to use either of these BIOSes:
+As a replacement for any of the BIOS files mentioned above, it is also possible to use either of these BIOS files:
 
 - `PSXONPSP660.bin` (MD5: c53ca5908936d412331790f4426c6c33)
 - `ps1_rom.bin` (MD5: 81bbe60ba7a3d1cea1d48c14cbcc647b)
+- `openbios.bin`
 
-The `PSXONPSP660.bin` BIOS comes from the PSP, and the `ps1_rom.bin` BIOS comes from the PS3, both are region-free.
-For Beetle PSX to recognize either of these BIOSes, you need to enable the "Override BIOS" option.
+The `PSXONPSP660.bin` BIOS comes from the PSP, the `ps1_rom.bin` BIOS comes from the PS3, and the `openbios.bin` BIOS comes from PCSX-Redux; all are region-free.
+For Beetle PSX to recognize these BIOS files, you need to enable the "Override BIOS" option.
 
 ## Extensions
 
@@ -163,7 +166,7 @@ foo (Disc 3).cue
 
 After that, you can load the `foo.m3u` file in RetroArch with the Beetle PSX core.
 
-Here's a m3u example done with Valkryie Profile
+Here's a m3u example done with Valkyrie Profile
 
 ![](../image/core/beetle_psx_hw/m3u.png)
 
@@ -271,7 +274,7 @@ or
 	To import your old memory cards from other emulators, you need to rename them to either the Libretro savedata format or the Mednafen savedata format. The Libretro (.srm) savedata format, when used with Beetle PSX, is internally identical to the Mednafen PSX (.mcr) savedata format, and can be converted between one another via renaming.
 
 !!! warning
-	Keep in mind that save states also include the state of the memory card; carelessly loading an old save state will **OVEWRITE** the memory card, potentially resulting in lost saved games.	**You can set the 'Don't overwrite SaveRAM on loading savestate' option in RetroArch's Saving settings to On to prevent this.**
+	Keep in mind that save states also include the state of the memory card; carelessly loading an old save state will **OVERWRITE** the memory card, potentially resulting in lost saved games.	**You can set the 'Don't overwrite SaveRAM on loading savestate' option in RetroArch's Saving settings to On to prevent this.**
 
 ## Core options
 

@@ -33,6 +33,12 @@ To be clear: the cores listed on this page support libretro's memory monitoring 
 
 ### Atari
 
+#### Lynx
+
+| Core                                             | Supported | Notes |
+|--------------------------------------------------|:---------:|:------|
+| [Gearlynx](https://github.com/drhelius/Gearlynx) | ✔         |       |
+
 #### 2600
 
 | Core                                                           | Supported | Notes |
@@ -231,6 +237,13 @@ To be clear: the cores listed on this page support libretro's memory monitoring 
 | Core                                                        | Supported | Notes |
 |-------------------------------------------------------------|:---------:|:------|
 | [Beetle VB](https://github.com/libretro/beetle-vb-libretro) | ✔         |       |
+
+### RPG Maker
+
+| Core                                           | Supported | Notes |
+|------------------------------------------------|:---------:|:------|
+| [EasyRPG](https://github.com/libretro/easyrpg-libretro) | ✕         |       |
+| [mkxp-z](https://github.com/mkxp-z/mkxp-z) | ✔         | Only supported on little-endian devices. |
 
 ### Sega
 

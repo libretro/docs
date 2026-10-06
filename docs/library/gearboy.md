@@ -2,22 +2,22 @@
 
 ## Background
 
-Gearboy is an open source, cross-platform, Nintendo Game Boy (DMG) / Game Boy Color (GBC) emulator written in C++.
+Gearboy is an open source, cross-platform Nintendo Game Boy (DMG), Game Boy Color (GBC), and Super Game Boy (SGB) emulator written in C++.
 
-- Accurate CPU emulation, passes cpu_instrs.gb from blargg's tests.
-- Accurate instruction and memory timing, passes instr_timing.gb and mem_timing.gb from blargg's tests.
-- Supported cartridges: ROM, ROM + RAM, MBC1, MBC2, MBC3 + RTC, MBC5, HuC-1 and MBC1M (multicart).
-- Accurate LCD controller emulation with correct timings and priorities including mid-scanline effects.
-- Sound emulation using SDL Audio and [Gb_Snd_Emu library](http://slack.net/~ant/libs/audio.html#Gb_Snd_Emu).
-- Battery powered RAM save support.
+- Accurate emulation with support for ROM-only cartridges and MBC1, MBC1M, MBC2, MBC3, MBC5, MBC6, MBC7, HuC-1, HuC-3, MMM01, Pocket Camera, TAMA5, Wisdom Tree, M161, Sachen MMC1/MMC2, PKJD, Bung/EMS, Poke 2-in-1, Rocket Games, BHGOS, Li Cheng, NT newer, GGB81, Hitek, VF001, VF001 (SL), Sintax, NT old 1 and NT old 2 mappers.
+- Game Boy Color support.
+- Super Game Boy support, including borders and color palettes.
+- Game Link Cable support with two systems, independent controllers, configurable screens and audio, and two-ROM subsystem loading.
+- Barcode Boy support with built-in cards and custom 13-digit barcodes.
+- Battery-backed RAM save support.
 - Save states.
+- Boot ROM (BIOS) support.
 - Game Genie and GameShark cheat support.
-- Bootrom (BIOS) support.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearboy core has been authored by:
 
-- [Ignacio Sanchez (drhelius)](https://github.com/drhelius)
+- [Nacho Sanchez (drhelius)](https://github.com/drhelius)
 
 The Gearboy core is licensed under:
 
@@ -27,19 +27,21 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Gearboy does not require bootrom (BIOS) files to work but they can be used optionally.
+Gearboy does not require boot ROM (BIOS) files, but they can be used optionally.
 
-When the bootrom is enabled it will execute as in original hardware, causing invalid roms to lock or forcing hardware like GB Pocket or GBA, depending on the bootrom file.
+When enabled, a boot ROM runs as it does on original hardware. Invalid ROMs may fail to boot, and the selected boot ROM may enable hardware differences for systems such as Game Boy Pocket or Game Boy Advance.
 
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	 If you’d like to use any bootrom, you can place the following files in RetroArch's system directory. Then, you need to enable [DMG Bootrom](#core-options) and/or [Game Boy Color Bootrom](#core-options) core options for these bootrom files to be used.
+	Place boot ROM files in RetroArch's system directory, then enable the [DMG Bootrom](#core-options) or [GBC Bootrom](#core-options) core option.
 
-| Filename     | Description                        | md5sum                           |
-|:------------:|:----------------------------------:|:--------------------------------:|
-| dmg_boot.bin | Game Boy boot ROM - Optional       | 32fbbd84168d3482956eb3c5051637f5 |
-| cgb_boot.bin | Game Boy Color boot ROM - Optional | dbfce9db9deaa2567f6a84fde55f9680 |
+| Filename     | Description                        | Size       | md5sum                           |
+|:------------:|:----------------------------------:|:----------:|:--------------------------------:|
+| dmg_boot.bin | Game Boy boot ROM - Optional       | 256 bytes  | 32fbbd84168d3482956eb3c5051637f5 |
+| cgb_boot.bin | Game Boy Color boot ROM - Optional | 2304 bytes | dbfce9db9deaa2567f6a84fde55f9680 |
+
+The checksums above identify the original boot ROMs. Other boot ROM images of the corresponding sizes can also be loaded.
 
 ## Extensions
 
@@ -67,7 +69,8 @@ Frontend-level settings or features that the Gearboy core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
-| Netplay           | ✕         |
+| Run-Ahead         | ✔         |
+| Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
 | RetroArch Cheats - Game Genie | ✔         |
@@ -77,16 +80,20 @@ Frontend-level settings or features that the Gearboy core respects.
 | Remapping         | ✔         |
 | Multi-Mouse       | ✕         |
 | Rumble            | ✕         |
-| Sensors           | ✕         |
+| Sensors           | ✔         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
+
+Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and GameShark cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
+
+Save states, and therefore rewind and run-ahead, are unavailable while a boot ROM is executing.
 
 ### Directories
 
@@ -100,6 +107,8 @@ The Gearboy core saves/loads to/from these directories.
 |:-----:|:----------------------:|
 | *.srm | Cartridge battery save |
 | *.rtc | Real time clock save   |
+| *.srm2 | Screen 2 cartridge battery save in linked mode |
+| *.rtc2 | Screen 2 real time clock save in linked mode |
 
 **Frontend's State directory**
 
@@ -109,65 +118,220 @@ The Gearboy core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The Gearboy core's core provided FPS is 59.7275005696
-- The Gearboy core's core provided sample rate is 44100 Hz
-- The Gearboy core's base width is 160
-- The Gearboy core's base height is 144
-- The Gearboy core's max width is 160
-- The Gearboy core's max height is 144
-- The Gearboy core's core provided aspect ratio is 10/9
+- The Gearboy core's provided FPS is 59.7275005696
+- The Gearboy core's provided sample rate is 44100 Hz
+- The Gearboy core's base size is 160x144, or 256x224 when an SGB border is displayed
+- Linked mode displays 320x144 horizontally, 160x288 vertically, or 160x144 when only one screen is selected
+- The Gearboy core's max width is 320
+- The Gearboy core's max height is 288
+- The Gearboy core's provided aspect ratio is 10:9 for a single handheld screen, 8:7 with an SGB border, 20:9 for two horizontal screens, and 5:9 for two vertical screens
+
+## Barcode Boy
+
+**Barcode Boy Mode** defaults to *Auto*, which attaches the accessory to games recognized by the ROM database. For unrecognized or patched compatible games, select *Enabled*, choose **Close Content**, then load the ROM again. **Restart** alone does not apply changes to this option.
+
+Choose a **Barcode Boy Card**, or select *Custom* and set **Barcode Boy Custom Digit 1-13** from left to right. Resume the game and press **Scan Barcode** (RetroPad R, the right shoulder button on port 1) when the game is ready to read a card. Changing the card or digits does not scan automatically.
+
+Barcode Boy uses the serial port and is disabled in Game Link Cable sessions. Frontends that support conditional option visibility hide the card selector when Barcode Boy is inactive and show the custom digits only when *Custom* is selected.
+
+## Game Link Cable
+
+Enable **Game Link Cable Enable (restart)**, choose **Close Content**, then load the ROM again to run two independent copies of the same ROM. Controller port 1 controls Screen 1, and controller port 2 controls Screen 2. Both machines continue running when only one screen is displayed. RetroArch's **Restart** action resets the existing machine or linked pair and preserves battery memory. It does not apply changes to Game Link Cable Enable; both enabling and disabling this option require **Close Content** followed by loading the ROM again.
+
+To link different ROMs, load the **2 Player Game Boy Link** subsystem (`gb_link_2p`) and select a ROM for each screen. Selecting this subsystem enables linked mode regardless of the enable option. A command-line example is:
+
+```sh
+retroarch -L gearboy_libretro.so --subsystem gb_link_2p first.gb second.gb
+```
+
+Use the core library extension for your platform (`.dylib` on macOS or `.dll` on Windows). The subsystem can also load the same ROM into both slots.
+
+Linked mode supports DMG and CGB games, including CGB fast serial and double-speed operation. Super Game Boy mode and borders are disabled while linking. Both machines run inside one core instance; this does not connect to desktop Gearboy link sessions.
+
+### Linked saves
+
+When loading a single ROM in linked mode, Screen 1 keeps its usual frontend-managed `.srm` and `.rtc` files. Screen 2 uses `<content name>.srm2` and `<content name>.rtc2` in the frontend's save directory, or alongside the ROM if no save directory is provided. Screen 2's files are restored when content loads and written when content unloads or the core shuts down. Content supplied without a path has no automatic Screen 2 battery filename.
+
+The two-ROM subsystem exposes both cartridges' save RAM and RTC to the frontend. Screen 1 uses `.srm` and `.rtc`; Screen 2 uses `.srm2` and `.rtc2`. The separate extensions prevent the saves from overwriting each other when both slots load the same ROM.
+
+Linked save states contain both machines, both screens, and serial transfers in progress. They use a separate format from single-player states.
 
 ## Core options
 
 The Gearboy core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings marked (restart) take effect after restarting or reloading the content. **Game Link Cable Enable and Barcode Boy Mode require Close Content followed by loading the ROM again; RetroArch's Restart action alone does not apply these two options.**
 
 - **Game Boy Model (restart)** [gearboy_model] (**Auto**|Game Boy DMG|Game Boy Advance)
 
 	Select which hardware/model is emulated.
 
-    - *Auto* selects the best hardware based on the rom.
+	- *Auto* selects the best hardware based on the ROM header.
     - *Game Boy DMG* forces original Game Boy hardware.
-    - *Game Boy Advance* enables Game Boy Advance hardware.
+    - *Game Boy Advance* emulates Game Boy Advance hardware behavior when running Game Boy and Game Boy Color games. Game Boy Advance ROMs are not supported.
 
-- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart)
+- **Mapper (restart)** [gearboy_mapper] (**Auto**|ROM Only|MBC 1|MBC 2|MBC 3|MBC 5|MBC 1 Multicart|HuC 1|HuC 3|MMM01|Camera|MBC 7|TAMA5|Wisdom Tree|M161|Sachen MMC1|Sachen MMC2|PKJD|Bung/EMS|Poke 2-in-1|MBC 6|Rocket Games|BHGOS|Li Cheng|NT newer|GGB81|Hitek|VF001|VF001 (SL)|Sintax|NT old 1|NT old 2)
 
 	Select which Memory Bank Controller (MBC or mapper) is emulated.
 
-    - *Auto* selects the best MBC based on the rom.
+	- *Auto* detects the mapper from the loaded ROM, including cartridge database overrides.
     - *ROM Only* forces no MBC.
     - *MBC 1* forces MBC 1.
     - *MBC 2* forces MBC 2.
-    - *MBC 3* forces MBC 3 + RTC.
+    - *MBC 3* forces MBC 3.
     - *MBC 5* forces MBC 5.
     - *MBC 1 Multicart* forces MBC 1 Multicart.
+    - *HuC 1* forces HuC 1.
+    - *HuC 3* forces HuC 3.
+    - *MMM01* forces MMM01.
+    - *Camera* forces the Pocket Camera mapper. Host-camera input is not supported.
+    - *MBC 7* forces MBC 7.
+    - *TAMA5* forces TAMA5.
+	- *Wisdom Tree* forces the Wisdom Tree mapper.
+	- *M161* forces the M161 mapper.
+	- *Sachen MMC1* forces the Sachen MMC1 mapper.
+	- *Sachen MMC2* forces the Sachen MMC2 mapper.
+	- *PKJD* forces the PKJD mapper.
+	- *Bung/EMS* forces the Bung/EMS flash cartridge mapper.
+	- *Poke 2-in-1* forces the Poke 2-in-1 mapper.
+	- *MBC 6* forces the MBC6 (Net de Get) mapper.
+	- *Rocket Games* forces the Rocket Games mapper.
+	- *BHGOS* forces the BHGOS multicart mapper.
+	- *Li Cheng* forces the Li Cheng mapper.
+	- *NT newer* forces the NT newer mapper.
+	- *GGB81* forces the GGB81 mapper.
+	- *Hitek* forces the Hitek mapper.
+	- *VF001* forces the VF001 mapper.
+	- *VF001 (SL)* forces the VF001 (SL) mapper variant.
+	- *Sintax* forces the Sintax mapper.
+	- *NT old 1* forces the NT old 1 mapper.
+	- *NT old 2* forces the NT old 2 mapper.
+
+- **Super Game Boy (restart)** [gearboy_sgb] (**Enabled**|Disabled)
+
+	Run compatible games in Super Game Boy mode. Disable this option to run them as standard Game Boy games. Linked mode always disables Super Game Boy mode.
+
+- **Super Game Boy Border** [gearboy_sgb_border] (**Enabled**|Disabled)
+
+	Display the Super Game Boy border around the game screen. Disable this option to show only the 160x144 game screen.
 
 - **DMG Palette** [gearboy_palette] (**Original**|Sharp|B/W|Autumn|Soft|Slime)
 
 	Select a color palette for Game Boy DMG games.
 
-- **DMG Bootrom** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
+- **GBC Color Correction** [gearboy_color_correction] (**Disabled**|Enabled)
 
-	This option will enables/disables bootrom for Game Boy DMG model. For this to work, the `dmg_boot.bin` file must exist in Retro Arch's system directory.
+	Enables color correction for Game Boy Color games to simulate the original GBC LCD screen output.
 
-- **Game Boy Color Bootrom** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
+- **No Sprite Limit** [gearboy_no_sprite_limit] (**Disabled**|Enabled)
 
-	This option will enables/disables bootrom for Game Boy Color model. For this to work, the `cgb_boot.bin` file must exist in Retro Arch's system directory.
+	Remove the per-line sprite limit to reduce flickering. This may cause glitches in games that rely on the hardware limit.
+
+- **DMG Bootrom (restart)** [gearboy_bootrom_dmg] (**Disabled**|Enabled)
+
+	Enable or disable the original Game Boy bootrom. For this to work, the `dmg_boot.bin` file must exist in RetroArch's system directory.
+
+- **GBC Bootrom (restart)** [gearboy_bootrom_gbc] (**Disabled**|Enabled)
+
+	Enable or disable the Game Boy Color bootrom. For this to work, the `cgb_boot.bin` file must exist in RetroArch's system directory.
 
 - **Allow Up+Down / Left+Right** [gearboy_up_down_allowed] (**Disabled**|Enabled)
 
-	Enabling this option allows pressing, quickly alternating, or holding both left and right (or up and down in some games) directions at the same time.
+	Allow pressing, quickly alternating, or holding both left and right, or up and down, at the same time. This may cause movement-based glitches in some games.
 
-	This may cause movement based glitches to occur in certain games.
+- **Tilt Source (MBC7)** [gearboy_tilt_source] (**Mouse**|Sensor|Analog Stick)
 
-	It's best to keep this core option disabled.
+	Select the input source for MBC7 tilt controls. *Analog Stick* uses the left analog stick. *Sensor* requires a frontend and device that support accelerometer input.
+
+- **Sensor Sensitivity X (MBC7)** [gearboy_sensor_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using sensor input for MBC7 tilt controls.
+
+- **Sensor Sensitivity Y (MBC7)** [gearboy_sensor_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using sensor input for MBC7 tilt controls.
+
+- **Sensor Invert X (MBC7)** [gearboy_sensor_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using sensor input for MBC7 tilt controls.
+
+- **Sensor Invert Y (MBC7)** [gearboy_sensor_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using sensor input for MBC7 tilt controls.
+
+- **Mouse Sensitivity X (MBC7)** [gearboy_mouse_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using mouse input for MBC7 tilt controls.
+
+- **Mouse Sensitivity Y (MBC7)** [gearboy_mouse_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using mouse input for MBC7 tilt controls.
+
+- **Mouse Invert X (MBC7)** [gearboy_mouse_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using mouse input for MBC7 tilt controls.
+
+- **Mouse Invert Y (MBC7)** [gearboy_mouse_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using mouse input for MBC7 tilt controls.
+
+- **Analog Sensitivity X (MBC7)** [gearboy_analog_sensitivity_x] (**5**|1-10)
+
+	Set the horizontal sensitivity when using analog stick input for MBC7 tilt controls.
+
+- **Analog Sensitivity Y (MBC7)** [gearboy_analog_sensitivity_y] (**5**|1-10)
+
+	Set the vertical sensitivity when using analog stick input for MBC7 tilt controls.
+
+- **Analog Invert X (MBC7)** [gearboy_analog_invert_x] (**Disabled**|Enabled)
+
+	Invert the horizontal axis when using analog stick input for MBC7 tilt controls.
+
+- **Analog Invert Y (MBC7)** [gearboy_analog_invert_y] (**Disabled**|Enabled)
+
+	Invert the vertical axis when using analog stick input for MBC7 tilt controls.
+
+- **Barcode Boy Mode (restart)** [gearboy_barcode_boy] (**Auto**|Disabled|Enabled)
+
+	Select whether to attach Barcode Boy. *Auto* uses ROM database detection; *Enabled* supports unrecognized or patched compatible ROMs. Game Link Cable mode always disables Barcode Boy. After changing this option, choose **Close Content** and load the ROM again.
+
+- **Barcode Boy Card** [gearboy_barcode] (**Custom**|built-in cards)
+
+	Select a built-in card for Battle Space, Family Jockey 2, Famista 3, Kattobi Road or Monster Maker, or choose *Custom* to enter a barcode. Resume the game and press **Scan Barcode** (RetroPad R) to scan the selected card.
+
+- **Barcode Boy Custom Digit 1-13** [gearboy_barcode_digit_1] through [gearboy_barcode_digit_13] (**0**|0-9)
+
+	Each option sets one digit of the custom 13-digit barcode, from left to right. These options are used when **Barcode Boy Card** is *Custom*. All digits default to 0.
+
+- **Game Link Cable Enable (restart)** [gearboy_link_enable] (**Disabled**|Enabled)
+
+	Run two linked Game Boy systems. Loading one ROM runs an independent copy on each screen. After changing this option, choose **Close Content** and load the ROM again; **Restart** alone is not sufficient. Use the [two-ROM subsystem](#game-link-cable) to load different ROMs.
+
+- **Dual Screen Placement** [gearboy_link_placement] (**Horizontal**|Vertical)
+
+	Arrange both screens side by side or one above the other. This setting changes immediately.
+
+- **Dual Screen Switch** [gearboy_link_switch] (**Disabled**|Enabled)
+
+	Swap the positions of the two screens. Controller assignments, screen selection and audio selection continue to refer to the original screen numbers.
+
+- **Dual Screen Selection** [gearboy_link_screen] (**Both Screens**|Screen 1|Screen 2)
+
+	Display both machines or only the selected screen. Both machines keep running.
+
+- **Dual Screen Audio** [gearboy_link_audio] (**Screen 1**|Screen 2|Mix)
+
+	Play audio from the selected machine, or mix both stereo outputs at half volume each.
 
 ## Joypad
 
+Select **Joypad Auto** or **Nintendo Game Boy** as the port device type. **Joypad Port Empty** disables the joypad buttons.
+
+The same mapping applies to both ports in linked mode. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens. Single-player mode uses port 1.
+
 ![](../image/controller/gb.png)
 
-| User 1 input descriptors | RetroPad Inputs                             |
+| User 1 / User 2 input descriptors | RetroPad Inputs                             |
 |--------------------------|---------------------------------------------|
 | B                        | ![](../image/retropad/retro_b.png)          |
 | Select                   | ![](../image/retropad/retro_select.png)     |
@@ -177,6 +341,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 | Left                     | ![](../image/retropad/retro_dpad_left.png)  |
 | Right                    | ![](../image/retropad/retro_dpad_right.png) |
 | A                        | ![](../image/retropad/retro_a.png)          |
+| Scan Barcode (port 1, Barcode Boy only) | ![](../image/retropad/retro_r1.png) |
 
 ## Compatibility
 

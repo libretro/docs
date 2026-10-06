@@ -57,18 +57,18 @@ libretro is released under the MIT license. RetroArch is released under the GNU 
 
 ## Gameplay videos
 
-We regularly post videos on our [second channel](https://www.youtube.com/RetroArchOfficial) to show the performance of RetroArch running on devices. This may differ from device to device as well as be effective in versions. We try to highlight this in the video descriptions and the cards shown in the video. On the cards in the video, the year the content was released, the core used in the content, the video driver, etc. you can see such informations. Below are the types of devices and their distinctive features.
+We regularly post videos on our [second channel](https://www.youtube.com/RetroArchOfficial) to show the performance of RetroArch running on devices. This may differ from device to device as well as be effective in versions. We try to highlight this in the video descriptions and the cards shown in the video. On the cards in the video, the year the content was released, the core used in the content, the video driver, etc. you can see such information. Below are the types of devices and their distinctive features.
 
 === "XBOX Series S"
 
-	- First release serie(November 10, 2020).
+	- First release series(November 10, 2020).
 	- Always latest OFW(Non-insider).
 	- Self publish and dev mode.
 	- Latest RetroArch version.
 
 === "XBOX One S"
 
-	- First release serie(August 2, 2016).
+	- First release series(August 2, 2016).
 	- Always latest OFW(Non-insider).
 	- Self publish instead dev mode.
 	- Latest RetroArch version.
@@ -77,7 +77,7 @@ We regularly post videos on our [second channel](https://www.youtube.com/RetroAr
 
 	Neither RetroArch nor LibRetro recommend hacking the device or use CFW.
 
-	- First release serie(March 3, 2017).
+	- First release series(March 3, 2017).
 	- OFW and CFW isn't latest.
 	- Title takeover instead applet mode.
 	- Nightly RetroArch version.
