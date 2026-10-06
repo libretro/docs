@@ -2,7 +2,7 @@
 
 ## Background
 
-RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) by running from one master clock, splitting every CPU cycle into two halves and bringing the PPU up to date at each, rather than relying on per-game hacks.
+RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust. It targets the highest accuracy bar (comparable to Mesen and higan) by running from one master clock, splitting every CPU cycle into two halves and bringing the PPU up to date at each, rather than relying on per-game hacks. The emulation core uses no threads and no standard-library timing (it builds as `no_std`), so its output depends only on the ROM and the input.
 
 It is extremely portable and deterministic, making it a reliable choice for netplay, TAS, and accurate emulation enthusiasts.
 
