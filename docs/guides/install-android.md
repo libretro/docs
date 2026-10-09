@@ -216,7 +216,7 @@ The Play Store releases of RetroArch has not been updated for years due to Play 
 
 ##### Install unknown apps
 
-The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), Android displays a prompt: `For your security, your phone currently isn't allowed to install unknonw apps from this source. You can change this in Settings`.
+The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), Android displays a prompt: `For your security, your phone currently isn't allowed to install unknown apps from this source. You can change this in Settings`.
 * Click the available `Settings` button in that prompt.
 * In the `Install unknown apps` menu, toggle on `Allow from this source` to permit the app to install APKs.
   - On Android versions prior to 8.0, the APK installation prompt displays a pre-checked "Allow this installation only" checkbox—uncheck it to quickly install RetroArch updates, which is especially relevant when subscribing to daily RetroArch Nightly downloads via Obtainium.
