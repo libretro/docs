@@ -195,7 +195,7 @@ The `ozone` menu driver lacks assets, impacting popular microconsoles (see [#187
 
 RetroArch is available on the Google Play Store, but is outdated and thus not recommended (see [Google Play servers issue](#google-play-servers-issue)).
 
-Both RetroArch, and RetroArch Plus is avalaible on Play Store and. A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
+Both RetroArch, and RetroArch Plus is available on Play Store and. A more detailed difference between the Play Store versions can be found in [this libretro blog post](https://www.libretro.com/index.php/retroarch-android-new-versions-for-play-store-please-read/).
 
 DeGoogle notice: Google Play requires sign-in with a Google account. Aurora Store offers a free alternative enabling anonymous downloads and updates from Google Play servers without a Google account. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is available in F-Droid.
 
