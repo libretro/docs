@@ -180,12 +180,12 @@ Settings marked (restart) require restarting the content for the change to take 
     - *240p* forces 240 scanlines.
     - *Manual* lets you set the first and last scanline manually.
 
-- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 30)
+- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 40)
 
     This option will set the first scanline to be displayed. Scanline 0 is the first visible scanline.
     This option is only used when 'Scanline Count' is set to 'Manual'.
 
-- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 220 to 241)
+- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 208 to 241)
 
     This option will set the last scanline to be displayed. Scanline 241 is the last visible scanline.
     This option is only used when 'Scanline Count' is set to 'Manual'.
