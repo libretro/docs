@@ -9,6 +9,7 @@ Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
 - Light Phaser, Paddle Control and Sports Pad support.
+- Game Gear Link Cable (Gear-to-Gear) support with two systems, independent controllers, configurable screens and audio, and two-ROM subsystem loading.
 - Internal database for ROM detection.
 - Battery-backed RAM save support.
 - Game Genie and Pro Action Replay cheat support.
@@ -82,13 +83,15 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✔         |
 | LEDs              | ✕         |
+
+Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and Pro Action Replay cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
 
 ### Directories
 
@@ -101,6 +104,7 @@ The Gearsystem core saves/loads to/from these directories.
 | File  | Description            |
 |:-----:|:----------------------:|
 | *.srm | Cartridge battery RAM or EEPROM save |
+| *.srm2 | Screen 2 cartridge battery RAM or EEPROM save in linked mode |
 
 **Frontend's State directory**
 
@@ -116,9 +120,33 @@ The Gearsystem core saves/loads to/from these directories.
 - The Gearsystem core's base height is 192 for Master System / SG-1000 games, or 224 in Master System extended mode, and 144 for native Game Gear games
 - Overscan uses a width of 256, 284 or 320 pixels and a height of 240 lines for NTSC or 288 lines for PAL. It also applies to Game Gear SMS mode, but not native Game Gear mode
 - Left-bar cropping removes 8 pixels from Master System Mode 4 output when overscan is disabled or set to Top+Bottom
+- Linked mode displays 320x144 horizontally, 160x288 vertically, or 160x144 when only one screen is selected
 - The Gearsystem core's max width is 320
 - The Gearsystem core's max height is 288
 - The Gearsystem core uses square pixels by default (4:3 at 256x192 and 10:9 at 160x144); the ['Aspect Ratio' core option](#core-options) can override this
+- Linked mode always uses square pixels: 20:9 for two horizontal screens, 5:9 for two vertical screens, and 10:9 for a single screen
+
+## Game Gear Link Cable
+
+Enable **Game Link Cable Enable (restart)**, choose **Close Content**, then load a Game Gear ROM again to run two independent copies of the same ROM. Controller port 1 controls Screen 1, and controller port 2 controls Screen 2. Both machines continue running when only one screen is displayed. RetroArch's **Restart** action resets the existing machine or linked pair and preserves battery memory. It does not apply changes to Game Link Cable Enable; both enabling and disabling this option require **Close Content** followed by loading the ROM again.
+
+To link different ROMs, load the **2 Player Game Gear Link** subsystem (`gg_link_2p`) and select a ROM for each screen. Selecting this subsystem enables linked mode regardless of the enable option. A command-line example is:
+
+```sh
+retroarch -L gearsystem_libretro.so --subsystem gg_link_2p first.gg second.gg
+```
+
+Use the core library extension for your platform (`.dylib` on macOS or `.dll` on Windows). The subsystem can also load the same ROM into both slots.
+
+Linking requires native Game Gear mode on both screens and ROMs with matching NTSC/PAL timing. When the enable option is on and the loaded content runs as Master System, SG-1000 or Game Gear SMS mode, the core runs a single system as usual; the two-ROM subsystem fails to load instead. Both machines run inside one core instance; this does not connect to desktop Gearsystem link sessions.
+
+### Linked saves
+
+When loading a single ROM in linked mode, Screen 1 keeps its usual frontend-managed `.srm` file. Screen 2 uses `<content name>.srm2` in the frontend's save directory, or alongside the ROM if no save directory is provided. Screen 2's file is restored when content loads and written when content unloads or the core shuts down. Content supplied without a path has no automatic Screen 2 save filename.
+
+The two-ROM subsystem exposes both cartridges' save RAM to the frontend. Screen 1 uses `.srm` and Screen 2 uses `.srm2`. The separate extensions prevent the saves from overwriting each other when both slots load the same ROM.
+
+Linked save states contain both machines, both screens, and link transfers in progress. They use a separate format from single-player states.
 
 ## Core options
 
@@ -294,9 +322,31 @@ Settings marked (restart) take effect after restarting or reloading the content.
 
     Set the sensitivity of the [Sports Pad](#sports-pad). Higher values produce faster trackball movement.
 
+- **Game Link Cable Enable (restart)** [gearsystem_link_enable] (**Disabled**|Enabled)
+
+    Run two linked Game Gear systems. Loading one ROM runs an independent copy on each screen. After changing this option, choose **Close Content** and load the ROM again; **Restart** alone is not sufficient. Use the [two-ROM subsystem](#game-gear-link-cable) to load different ROMs. Only native Game Gear mode supports linking; other systems run normally.
+
+- **Dual Screen Placement** [gearsystem_link_placement] (**Horizontal**|Vertical)
+
+    Arrange both screens side by side or one above the other. This setting changes immediately.
+
+- **Dual Screen Switch** [gearsystem_link_switch] (**Disabled**|Enabled)
+
+    Swap the positions of the two screens. Controller assignments, screen selection and audio selection continue to refer to the original screen numbers.
+
+- **Dual Screen Selection** [gearsystem_link_screen] (**Both Screens**|Screen 1|Screen 2)
+
+    Display both machines or only the selected screen. Both machines keep running.
+
+- **Dual Screen Audio** [gearsystem_link_audio] (**Screen 1**|Screen 2|Mix)
+
+    Play audio from the selected machine, or mix both outputs at half volume each.
+
 ## Joypad
 
 Select the emulated controller using the frontend's port device type. **Joypad Auto** and **Master System / Game Gear Pad** use the mappings below; **Joypad Port Empty** disables input on that port. *Sports Pad* is available on ports 1 and 2; *Sega Light Phaser* and *Paddle Control* are available on port 1.
+
+In linked mode, both ports accept only **Joypad Auto**, **Joypad Port Empty** and **Master System / Game Gear Pad**, with the same mapping. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens.
 
 ![](../image/controller/gg.png)
 
