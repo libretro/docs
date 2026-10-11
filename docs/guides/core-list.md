@@ -3,7 +3,7 @@
 | [2048](https://docs.libretro.com/library/2048/) | Game                   | A port of the popular puzzle game 2048 to libretro |
 | [3D Engine](../library/3dengine.md) | -                      | This is a test core; it demonstrates how to create a hardware-rendered core in a libretro context |
 | [4DO](https://docs.libretro.com/library/opera/) | 3DO                    |                    |
-| a5200                     | Atari 5200             |                    |
+| [a5200](../library/a5200.md) | Atari 5200             |                    |
 | [AmiArcadia](../library/amiarcadia.md) | Emerson Arcadia 2001/Interton VC 4000 | Emulates Signetics 2650 based systems: the Arcadia 2001, Interton VC 4000, Elektor TV Games Computer and Zaccaria/Malzak arcade machines |
 | [Amiberry](../library/amiberry.md) | Commodore Amiga        | Amiberry is a lightweight, optimized Amiga emulator based on UAE |
 | [Anarch](../library/anarch.md) | Game                   | A port of Anarch, 90s-style Doom clone shooter game |
@@ -233,7 +233,8 @@
 | [SPMP8000Emu](../library/spmp8000emu.md) | Sunplus SPMP8000 | An emulator for the Sunplus SPMP8000 game platform used by portable game devices |
 | [SquirrelJME](../library/squirreljme.md) | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
 | [Stella](https://docs.libretro.com/library/stella/)                     | Atari 2600             |                    |
-| Stella 2014               | Atari 2600             |                    |
+| [Stella 2014](../library/stella2014.md) | Atari 2600             |                    |
+| [Stella 2023](../library/stella2023.md) | Atari 2600             |                    |
 | [Super Bros War](../library/superbroswar.md) | Game engine            | A fork of Super Mario War, a fan-made multiplayer Super Mario Bros. style deathmatch game |
 | [Supermodel](../library/supermodel.md) | Sega Model 3 | A port of the Supermodel emulator for the Sega Model 3 arcade system |
 | SwanStation               | Sony PlayStation       | SwanStation is a fork of the DuckStation emulator |
@@ -241,6 +242,7 @@
 | [TempGBA](https://docs.libretro.com/library/tempgba/)   | Game Boy Advance       |                    |
 | [TGB Dual](https://docs.libretro.com/library/tgb_dual/) | Game Boy/Color         |                    |
 | [Theodore](https://docs.libretro.com/library/theodore/) | Thomson MO/TO          |                    |
+| [Tia](../library/tia.md) | Atari 2600             |                    |
 | [TIC-80](../library/tic80.md) | Game engine            | A port of the free and open source fantasy computer TIC-80 to libretro |
 | [The Powder Toy](../library/the_powder_toy.md) | Game                   | A port of the Powdertoy physics sandbox/simulation engine to libretro |
 | [TyrQuake](https://docs.libretro.com/library/tyrquake/) | Game engine            | A port of the tyrquake engine |
