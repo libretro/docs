@@ -41,3 +41,4 @@ informations = "informations"  # only remaining match is the quick-informations.
 wizzard = "wizzard"  # WizzardSK, a real GitHub username (library/cemu.md, library/pcee2.md, library/armsx2.md, library/nuance.md)
 ahd = "ahd"          # a real Hatari option value (library/hatarib.md)
 langage = "langage"  # LANGAGE, a real EmuSCV core option name (library/emuscv.md)
+sintax = "sintax"    # Sintax, a real Game Boy bootleg mapper (library/gearboy.md)
