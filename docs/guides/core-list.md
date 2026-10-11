@@ -267,6 +267,7 @@
 | [Vircon32](../library/vircon32.md) | Game engine            | A port of Vircon32 game console to libretro |
 | [Virtual Jaguar](../library/virtual_jaguar.md) | Atari Jaguar           |                    |
 | [VirtualXT](../library/virtualxt.md)           | DOS                    | Runs PC/XT class software. Mainly intended for PC booters from the 80's. |
+| Vita3K | Sony PlayStation Vita | A port of the Vita3K PlayStation Vita emulator to libretro |
 | [vitaQuake 2](../library/vitaquake2.md) | Game engine            | A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro. There is a separate core for each of the Quake 2 mission packs, 'Rogue', 'Zaero' and 'Xatrix'. |
 | vitaQuake 2 (Rogue)       | Game engine            | (See vitaQuake 2 note) |
 | vitaQuake 2 (Xatrix)      | Game engine            | (See vitaQuake 2 note) |
@@ -277,6 +278,7 @@
 | [WASM-4](../library/wasm-4.md) | Game engine            | WASM-4 is a open source low-level fantasy game console for building small games with WebAssembly |
 | [X Millennium](../library/x1.md) | Sharp X1               |                    |
 | xemu | Microsoft Xbox | A port of xemu, the original Xbox emulator, to libretro |
+| Xenia Edge | Microsoft Xbox 360 | A port of the Xenia Edge Xbox 360 emulator to libretro |
 | [XRick](../library/xrick.md) | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
 | [YabaSanshiro](../library/yabasanshiro.md) | Sega Saturn            | A port of the YabaSanshiro, which is itself a fork of Yabause emulator |
 | [Yabause](../library/yabause.md) | Sega Saturn            |                    |
