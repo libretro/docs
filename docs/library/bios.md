@@ -57,6 +57,7 @@ DS                            | DeSmuME            | [BIOS information](desmume.
 DS                            | melonDS DS         | [BIOS information](melonds_ds.md#bios)
 Elektronika - BK-0010/BK-0011 | bk                 | [BIOS information](bk.md#bios)
 Enterprise 128                | ep128emu           | [BIOS information](ep128emu.md#bios)
+FM Towns                      | Geartowns          | [BIOS information](geartowns.md#bios)
 GameBoy/GameBoy Color         | Emux GB            | [BIOS information](emux_gb.md#bios)
 GameBoy/GameBoy Color         | Gambatte           | [BIOS information](gambatte.md#bios)
 GameBoy/GameBoy Color         | Gearboy            | [BIOS information](gearboy.md#bios)
