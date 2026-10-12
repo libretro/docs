@@ -17,7 +17,7 @@ The Gearcoleco core has been authored by:
 
 The Gearcoleco core is licensed under:
 
-- [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)
+- [GPLv3](https://github.com/drhelius/Gearcoleco/blob/main/LICENSE)
 
 A summary of the licenses behind RetroArch and its cores can be found [here](../development/licenses.md).
 
@@ -75,10 +75,11 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
+| Run-Ahead         | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
-| RetroArch Cheats  | ✕         |
+| RetroArch Cheats  | ✔         |
 | Native Cheats     | ✕         |
 | Controls          | ✔         |
 | Remapping         | ✔         |
@@ -89,7 +90,7 @@ Frontend-level settings or features that the Gearcoleco core respects.
 | Location          | ✕         |
 | Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
-| Disk Control      | ✔         |
+| Disk Control      | ✔ (ADAM)  |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✔         |
@@ -119,11 +120,11 @@ ADAM working-copy names include the content name, original image checksum and dr
 
 ### Geometry and timing
 
-- The Gearcoleco core's provided FPS is approximately 59.92 for NTSC games and 50.16 for PAL games; ADAM uses NTSC timing
+- The Gearcoleco core's provided FPS is approximately 59.92 for NTSC and 50.16 for PAL, in both ColecoVision and ADAM modes
 - The Gearcoleco core's provided sample rate is 44100 Hz
-- The Gearcoleco core's base width is 256
-- The Gearcoleco core's base height is 192
-- F18A output can use a wider or taller active raster, depending on the video mode
+- The Gearcoleco core's default resolution is 256x192 with TMS9918A and overscan disabled
+- TMS9918A overscan uses a width of 256, 284 or 320 pixels and a height of 240 lines for NTSC or 288 lines for PAL
+- F18A output uses a width of 240, 256, 480 or 512 pixels and a height of 192 or 240 lines, depending on the video mode
 - The Gearcoleco core's max width is 512
 - The Gearcoleco core's max height is 288
 - The Gearcoleco core uses square pixels by default (4:3 at 256x192); the ['Aspect Ratio' core option](#core-options) can override this
@@ -131,6 +132,8 @@ ADAM working-copy names include the content name, original image checksum and dr
 ## Coleco ADAM
 
 Load a `.ddp`, `.dsk`, ADAM `.zip` or `.m3u` file to start ADAM computer mode automatically. Starting the core without content also selects ADAM and opens SmartWriter when no bootable media is inserted. No-content startup requires frontend support. Cartridge files use ColecoVision by default; select *ADAM* in **Cartridge Hardware** to run a cartridge on ADAM hardware.
+
+ADAM supports NTSC and PAL timing, TMS9918A and F18A video, spinner controllers, rewind and run-ahead. The default *Auto* settings use NTSC and TMS9918A when no cartridge is loaded.
 
 ### Preparing multiple drives
 
@@ -142,7 +145,7 @@ The single optional **ADAM** subsystem (`adam`) lets you prepare several images 
 4. Data Pack 1
 5. Data Pack 2
 
-Every slot is optional. Each drive accepts its own image or homogeneous M3U playlist. A cartridge alone starts cartridge mode; media or an empty setup starts computer mode. Older three-file subsystem launch configurations must be updated to this five-slot layout.
+Every slot is optional. Each drive accepts its own image or homogeneous M3U playlist. A cartridge alone starts cartridge mode; media or an empty setup starts computer mode.
 
 Normal content loading is sufficient for a single program or an M3U disk-swapping set. An M3U supplies alternative images for one drive; it does not automatically mount its entries in separate drives.
 
@@ -154,7 +157,7 @@ Inserting media does not reset the computer. To boot a newly inserted program, r
 
 Media is write protected by default. Set **ADAM Writable Media** to *Save-directory working copy* and reload the content to save changes in the frontend's save directory. This requires a save directory and a frontend file-system interface that supports writing; otherwise the media remains write protected.
 
-ADAM save states validate the firmware, cartridge and mounted media, and restore the image selections for all four drives. Compatible older single-drive metadata remains supported. States from experimental ADAM versions before state format 108 must be recreated.
+ADAM save states validate the firmware, cartridge and mounted media, and restore the image selections for all four drives. Load states with the same firmware, cartridge and media set used when saving.
 
 ## Core options
 
@@ -164,7 +167,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Cartridge Hardware (restart)** [gearcoleco_cartridge_hardware] (**ColecoVision**|ADAM)
 
-    Select the hardware used for cartridge ROMs. Disks, data packs, playlists and no-content startup always select ADAM automatically. The old Machine and ADAM Boot Mode options are no longer used.
+    Select the hardware used for cartridge ROMs. Disks, data packs, playlists and no-content startup always select ADAM automatically.
 
 - **ADAM Disk Control Drive** [gearcoleco_adam_disk_drive] (**Loaded media**|Disk 1|Disk 2|Data Pack 1|Data Pack 2)
 
@@ -176,15 +179,15 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **ADAM Writable Media (restart)** [gearcoleco_adam_writable_media] (**Disabled**|Save-directory working copy)
 
-    Select whether ADAM media is write protected or saves changes to complete working copies in the frontend's save directory.
+    Select whether ADAM media is write protected or saves changes to complete working copies in the frontend's save directory. Original content files are never overwritten.
 
 - **Refresh Rate (restart)** [gearcoleco_timing] (**Auto**|NTSC (60 Hz)|PAL (50 Hz))
 
-    Select which refresh rate will be used in emulation.
+    Select which refresh rate will be used in ColecoVision or ADAM emulation.
 
-    - *Auto* selects the best refresh rate based on the loaded ROM.
+    - *Auto* uses the loaded cartridge's region, or NTSC when no cartridge is loaded.
     - *NTSC (60 Hz)* selects NTSC timing.
-    - *PAL (50 Hz)* selects PAL timing for ColecoVision cartridges. ADAM always uses NTSC timing.
+    - *PAL (50 Hz)* selects PAL timing.
 
 - **Mapper (restart)** [gearcoleco_mapper] (**Auto**|Standard|MegaCart|Activision|OCM)
 
@@ -192,7 +195,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Video Chip (restart)** [gearcoleco_video_chip] (**Auto**|TMS9918A|F18A)
 
-    Select the installed video chip. *Auto* uses TMS9918A unless the game database identifies the content as requiring F18A.
+    Select the installed video chip for ColecoVision or ADAM. *Auto* uses TMS9918A unless the game database identifies the loaded cartridge as requiring F18A. Select *F18A* to use it with ADAM disk or data pack software.
 
 - **Aspect Ratio** [gearcoleco_aspect_ratio] (**1:1 PAR**|4:3 DAR|16:9 DAR|16:10 DAR)
 
@@ -222,7 +225,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **No Sprite Limit** [gearcoleco_no_sprite_limit] (**Disabled**|Enabled)
 
-    Remove the per-line sprite limit.
+    Remove the per-line sprite limit to reduce flickering.
 
     This may cause glitches in some games.
 
@@ -230,12 +233,12 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Spinner Support** [gearcoleco_spinners] (**Disabled**|Super Action Controller|Wheel Controller|Roller Controller)
 
-    Select which spinner controller to emulate. Mouse movement controls the spinner. Mouse buttons map to the Left (Yellow) and Right (Red) buttons.
+    Select which spinner controller to emulate in ColecoVision or ADAM. Mouse movement controls the spinner. Mouse buttons map to controller 1's Left (Yellow) and Right (Red) buttons.
 
     - *Disabled* disables spinner support.
-    - *Super Action Controller* enables spinner support for Super Action Controller.
-    - *Wheel Controller* enables spinner support for Wheel Controller.
-    - *Roller Controller* enables spinner support for Roller Controller.
+    - *Super Action Controller* uses horizontal mouse movement for the spinner.
+    - *Wheel Controller* uses horizontal mouse movement for the wheel.
+    - *Roller Controller* uses both horizontal and vertical mouse movement.
 
 - **Spinner Sensitivity** [gearcoleco_spinner_sensitivity] (**1**|1-10)
 

@@ -28,17 +28,17 @@ Set up **Input Devices** while the game is loaded:
 - Connect two controllers
 - Start SNES Super Bomberman 2 game
 - Set **Inputs** for each controller 1 and 2:
-  - Navigate to **Settings**
-  - Navigate to **Inputs**
-  - Navigate to **Port 1 Binds**
-  - Ensure **Device Index** is set to *_Controller Name 1_
-  - Return to **Inputs** configuration menu
-  - Navigate to **Port 2 Binds**
-  - Ensure **Device Index** is set to *_Controller Name 2_
-  - Set **Device Type** to _MultiTap_
-    - _MultiTap_ is only available when SNES core is loaded. This plugs in a virtual SNES MultiTap into the SNES so more than two controllers can connect to the SNES.
+    - Navigate to **Settings**
+    - Navigate to **Inputs**
+    - Navigate to **Port 1 Binds**
+    - Ensure **Device Index** is set to *_Controller Name 1_
+    - Return to **Inputs** configuration menu
+    - Navigate to **Port 2 Binds**
+    - Ensure **Device Index** is set to *_Controller Name 2_
+    - Set **Device Type** to _MultiTap_
+        - _MultiTap_ is only available when SNES core is loaded. This plugs in a virtual SNES MultiTap into the SNES so more than two controllers can connect to the SNES.
 
-    \* Controller Name 1 and 2 are unique to the computer and to the controllers connected to it (_e.g._, PS4 controller shows as "Wireless Controller \#1")
+      \* Controller Name 1 and 2 are unique to the computer and to the controllers connected to it (_e.g._, PS4 controller shows as "Wireless Controller \#1")
 
 #### Configure Host's Requested Devices
 
@@ -63,15 +63,15 @@ Set up **Input Devices** while the game is loaded:
 - Connect two controllers
 - Start SNES Super Bomberman 2 game
 - Set **Inputs** for each controller 1 and 2:
-  - Navigate to **Settings**
-  - Navigate to **Inputs**
-  - Navigate to **Port 1 Binds**
-  - Ensure **Device Index** is set to *_Controller Name 1_
-  - Return to **Inputs** configuration menu
-  - Navigate to **Port 2 Binds**
-  - Ensure **Device Index** is set to *_Controller Name 2_
+    - Navigate to **Settings**
+    - Navigate to **Inputs**
+    - Navigate to **Port 1 Binds**
+    - Ensure **Device Index** is set to *_Controller Name 1_
+    - Return to **Inputs** configuration menu
+    - Navigate to **Port 2 Binds**
+    - Ensure **Device Index** is set to *_Controller Name 2_
 
-    \* Controller Name 1 and 2 are unique to the computer and to the controllers connected to it (_e.g._, PS4 controller shows as "Wireless Controller \#1")
+      \* Controller Name 1 and 2 are unique to the computer and to the controllers connected to it (_e.g._, PS4 controller shows as "Wireless Controller \#1")
 
 #### Configure Client's Requested Devices
 

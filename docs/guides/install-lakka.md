@@ -77,6 +77,7 @@ Installing Lakka on your device is as simple as installing any other operating s
 4. Select **Install Lakka**.
 5. Use the **up/down** arrows to select the drive to install.
 *Observe the warnings on the screen. If you continue the targeted drive will be wiped out.*
+
 6. Select Yes in confirmation alerts.
 7. After the installation, you will return to the Main menu. **Remove the USB** and **select Reboot**.
 

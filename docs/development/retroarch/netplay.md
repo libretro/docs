@@ -172,18 +172,21 @@ are running the same software and brings the client to synchronization, and
 then an exchange of input packets.
 
 The handshake procedure (this part is done by both server and client):
+
 1. Send connection header
 2. Receive and verify connection header
 3. Send nickname
 4. Receive nickname
 
 For the client:
+
 5. Send PASSWORD if applicable
 4. Receive INFO
 5. Send INFO
 6. Receive SYNC
 
 For the server:
+
 5. Receive PASSWORD if applicable
 6. Send INFO
 7. Receive INFO

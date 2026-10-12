@@ -94,6 +94,7 @@ These settings files are created as above with the `Quick Menu -> Save Game Over
 ### Input Remaps
 
 Input remaps use the same logic as core/directory/game overrides and use the `.rmp` extension. They can be adjusted and saved from:
+
 - `Quick Menu -> Controls -> Save Core Remap File`
 - `Quick Menu -> Controls -> Save Content Directory Remap File`
 - `Quick Menu -> Controls -> Save Game Remap File`

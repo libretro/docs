@@ -93,11 +93,11 @@ It is also worth to change `display_name`, to immediately see if the match went 
 Managing Controllers with Identical Configurations. Up to nine alternative variables can be used for the following purposes:
 
 - **`linuxraw`: Managing Controllers with Identical Configurations**:
-  - **Device Index (input_device)**: You can use `input_device_alt1`, `input_device_alt2`, `input_device_alt3`, up to `input_device_alt9`. For names available on both USB and Bluetooth, input_vendor_id should be utilized; for USB-specific names, use input_vendor_id_alt1, and for Bluetooth-specific names, use input_vendor_id_alt2.
+    - **Device Index (input_device)**: You can use `input_device_alt1`, `input_device_alt2`, `input_device_alt3`, up to `input_device_alt9`. For names available on both USB and Bluetooth, input_vendor_id should be utilized; for USB-specific names, use input_vendor_id_alt1, and for Bluetooth-specific names, use input_vendor_id_alt2.
 - **`android`, `sdl2`, and `udev`: Managing Controllers with Identical Configurations that has different input_vendor_id/input_product_id**:
-  - This applies to controllers like the Sony DualShock v1 and v2 for the `android`, `sdl2`, and `udev` controller drivers. Always use `input_vendor_id` and `input_product_id` for the most recent controller models, as they are more likely still available on the market. RetroArch version 1.19.1 and earlier cannot utilize _alt autoconfig variables, so using `input_vendor_id` for the latest controller ensures connectivity in RetroArch. Use `..._alt*` variables for older controllers.
-  - **Vendor ID (input_vendor_id)**: Options include `input_vendor_id_alt1`, `input_vendor_id_alt2`, `input_vendor_id_alt3`, up to `input_vendor_id_alt9`.
-  - **Product ID (input_product_id)**: Options include `input_product_id_alt1`, `input_product_id_alt2`, `input_product_id_alt3`, up to `input_product_id_alt9`.
+    - This applies to controllers like the Sony DualShock v1 and v2 for the `android`, `sdl2`, and `udev` controller drivers. Always use `input_vendor_id` and `input_product_id` for the most recent controller models, as they are more likely still available on the market. RetroArch version 1.19.1 and earlier cannot utilize _alt autoconfig variables, so using `input_vendor_id` for the latest controller ensures connectivity in RetroArch. Use `..._alt*` variables for older controllers.
+    - **Vendor ID (input_vendor_id)**: Options include `input_vendor_id_alt1`, `input_vendor_id_alt2`, `input_vendor_id_alt3`, up to `input_vendor_id_alt9`.
+    - **Product ID (input_product_id)**: Options include `input_product_id_alt1`, `input_product_id_alt2`, `input_product_id_alt3`, up to `input_product_id_alt9`.
 
 ### Similarities in input variable generation between linuxraw and udev.
 
@@ -193,6 +193,7 @@ Make sure that you run the latest version of RetroArch, to generate a file name 
 Both the Flatpak and Android versions of RetroArch need adjustments to the Controller Profiles Directory to ensure essential functionality and smooth operation.
 
 **Challenges for Android and Flatpak:**
+
 - Users are unable to save custom profiles through the path: `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 - Modification Restrictions: You are not allowed to change existing autoconfig files. Files that are initially disabled have "(default-off)" in their names. Without root access, you cannot modify these files to toggle the input_vendor_id and input_product_id settings. This restriction applies to both the "(default-off)" files and the "original" autoconfig files, which are more widely used and have been set to be enabled by default. These original files must also be commented to make changes. This limitation affects both HID and non-HID files, as well as controllers with multiple autoconfig files, such as the Sony DualSense controller, which includes several Android autoconfig files.
 
@@ -200,10 +201,12 @@ Both the Flatpak and Android versions of RetroArch need adjustments to the Contr
 
 **Challenge:**
 Most Android devices are not rooted, and RetroArch's default autoconfig directory requires root access, leading to the following issues:
+
 - Restricted File Access: Users can update controller profiles via `Main Menu -> Online Updater -> Update Controller Profiles`, but cannot access these files in `/data/user/0/com.retroarch/autoconfig`. Android's security model prevents non-root users from reading certain files, making it difficult to compare updated profiles with custom-generated ones, thus hindering effective profile management and customization.
 - Modification Restrictions: Existing autoconfig files cannot be modified when necessary (refer to the base section for more details).
 
 **Resolution:**
+
 - Create the directory `/storage/emulated/0/RetroArch/autoconfig/android`.
 - In RetroArch, change the directory path under `Settings` -> `Directory` -> `Controller Profiles` from `/data/user/0/com.retroarch/autoconfig` (root) to `/storage/emulated/0/RetroArch/autoconfig`.
 - This adjustment allows the autoconfig files to be saved in `/storage/emulated/0/RetroArch/autoconfig/android` when using `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`.
@@ -214,9 +217,9 @@ Your controller will use the Controller Profile directory `/data/user/0/com.retr
 * **DPAD**: Essential for navigating menus.
 * **OK**: Necessary for applying settings, such as navigating to `Settings -> Input -> RetroPad Binds -> Port 1 Controls`, and selecting `Set All Controls` and `Save Controller Profile`.
 * **Back**: Needed to return to `Main Menu -> Quit` after configuring `Settings -> Directory -> Controller Profiles`, ensuring the settings are saved to retroarch.cfg. Workaround if you have access to another controller: Temporarily connect another controller with a functioning autoconfig "Back" button and adjust the Controller Profiles directory:
-  - `Settings -> Directory -> Controller Profiles`.
-  - `Main Menu -> Quit` -- ensuring the settings are saved to retroarch.cfg.
-  - Disconnect the controller from BlueTooth.
+    - `Settings -> Directory -> Controller Profiles`.
+    - `Main Menu -> Quit` -- ensuring the settings are saved to retroarch.cfg.
+    - Disconnect the controller from BlueTooth.
 
 While these issues are not problematic for typical Android devices like smartphones and tablets, which offer touchscreen navigation, they become significant on Google TV (an Android-based OS used by Chromecast) where a touchscreen is unavailable. Additionally, Chromecast's voice remote control lacks autoconfiguration and is incompatible with RetroArch navigation. Even controllers with touchpads are ineffective, as the touchpad button does not function (as observed with PS4/PS5 controllers), and the cursor remains invisible due to a known [bug](https://github.com/libretro/RetroArch/issues/16853).
 
@@ -225,14 +228,14 @@ While these issues are not problematic for typical Android devices like smartpho
 To resolve this issue, follow these steps:
 
 - **Create a Custom Configuration File:**
-  - Create the file `retroarch.cfg` in the directory `/storage/emulated/0/Android/com.retroarch/files/retroarch.cfg` with the following line:
+    - Create the file `retroarch.cfg` in the directory `/storage/emulated/0/Android/com.retroarch/files/retroarch.cfg` with the following line:
 ```
 joypad_autoconfig_dir = /storage/emulated/0/RetroArch/autoconfig/
 ```
 
 - **Set Up a Fallback Configuration:**
-  - Identify the Product ID and Vendor ID of your controller: Ensure that the directory /storage/emulated/0/RetroArch/autoconfig/ remains empty, then restart RetroArch. This action will compel RetroArch to enter fallback mode, displaying a message like "[Controller name] ([Vendor ID]/[Product ID]) not configured, using fallback". Record the four-digit numbers for both IDs.
-  - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings (don't forget to replace `input_vendor_id = "[Vendor ID]"` and `input_product_id = "[Product ID]"` with the values of your controller:
+    - Identify the Product ID and Vendor ID of your controller: Ensure that the directory /storage/emulated/0/RetroArch/autoconfig/ remains empty, then restart RetroArch. This action will compel RetroArch to enter fallback mode, displaying a message like "[Controller name] ([Vendor ID]/[Product ID]) not configured, using fallback". Record the four-digit numbers for both IDs.
+    - Create a file named `fallback.cfg` in the directory `/storage/emulated/0/RetroArch/autoconfig/android/` with the following configuration settings (don't forget to replace `input_vendor_id = "[Vendor ID]"` and `input_product_id = "[Product ID]"` with the values of your controller:
 ```
 input_driver = "android"
 input_device = "Fallback device"
@@ -265,10 +268,10 @@ input_r_y_minus_axis = "-3"
 ```
 
 - **Launch RetroArch:**
-  - Start the RetroArch application.
+    - Start the RetroArch application.
 
 - **Button Testing:**
-  - Test the controller buttons to identify which ones correspond to the "OK" and "Back" functions. This will allow you to navigate and temporarily reconfigure RetroArch.
+    - Test the controller buttons to identify which ones correspond to the "OK" and "Back" functions. This will allow you to navigate and temporarily reconfigure RetroArch.
 
 By applying this solution, you allow your controller to configure RetroArch, enabling navigation to Settings -> Input -> RetroPad Binds -> Port 1 Controls and the selection of Set All Controls and Save Controller Profile. This setup also permits the saving of autoconfig files in the directory /storage/emulated/0/RetroArch/autoconfig/android.
 
@@ -276,6 +279,7 @@ By applying this solution, you allow your controller to configure RetroArch, ena
 
 **Challenge:**
 The default autoconfig directory in Flatpak RetroArch also requires root access, which prevents users from:
+
 - Downloading and extracting profiles through `Main Menu` -> `Online Updater` -> `Update Controller Profiles`.
 - Saving custom profiles via `Settings -> Input -> RetroPad Binds -> Port 1 Controls -> Save Controller Profile`.
 - Modification Restrictions: Facing similar issues as Android users if the GNU/Linux user lacks root access, as existing autoconfig files cannot be modified when necessary (refer to the base section for more details).
@@ -301,40 +305,40 @@ By implementing these changes, you'll be able to create and save custom controll
 When using RetroArch, not all controller buttons are automatically mapped through the "Set All Controls" option. Some buttons—such as menu toggles, screenshot triggers, or other special functions—must be configured separately. Here’s a step-by-step guide to ensure all your controller buttons work as desired.
 
 1. Identify special buttons on your controller
-  - Look for buttons on your physical controller not automatically mapped by Retroarch.
-  - Examples include
-    - *Menu Toggle* (virtually all controllers have them)
-    - Additional special buttons may be found on some controllers. For example, the *Capture* (screenshot) and the "Home" button on Nintendo Switch Pro Controller.
+    - Look for buttons on your physical controller not automatically mapped by Retroarch.
+    - Examples include
+        - *Menu Toggle* (virtually all controllers have them)
+        - Additional special buttons may be found on some controllers. For example, the *Capture* (screenshot) and the "Home" button on Nintendo Switch Pro Controller.
 3. Assign hotkeys in Retroarch
-  - Launch Retroarch.
-  - Navigate to: `Settings` → `Input` → `Hotkeys`.
-  - Select the special function you want to assign (e.g., *Menu Toggle*, *Screenshot*).
-  - Press the desired button on your controller to bind it.
-  - Exit Retroarch properly to save the settings:
-    - On most platforms, just closing Retroarch saves the config.
-    - On Android, explicitly quit via `Main Menu` → `Quit` to ensure settings are saved.
+    - Launch Retroarch.
+    - Navigate to: `Settings` → `Input` → `Hotkeys`.
+    - Select the special function you want to assign (e.g., *Menu Toggle*, *Screenshot*).
+    - Press the desired button on your controller to bind it.
+    - Exit Retroarch properly to save the settings:
+        - On most platforms, just closing Retroarch saves the config.
+        - On Android, explicitly quit via `Main Menu` → `Quit` to ensure settings are saved.
 
 4. Transfer hotkey assignments to your controller autoconfig file
-  - Open your main `retroarch.cfg` file.
-  - Find and copy the hotkey assignment lines, for example:
+    - Open your main `retroarch.cfg` file.
+    - Find and copy the hotkey assignment lines, for example:
     ```
     input_menu_toggle_btn = "[w]"
     input_screenshot_btn = "[x]"
     ```
-    *(Replace `[w]` and `[x]` with your actual button values.)*
-  - Open your controller’s autoconfig file, typically found at:
+      *(Replace `[w]` and `[x]` with your actual button values.)*
+    - Open your controller’s autoconfig file, typically found at:
     ```
     retroarch/autoconfig/[platform]/[controller-name].cfg
     ```
-  - Append the copied hotkey lines to the bottom of the autoconfig file.
+    - Append the copied hotkey lines to the bottom of the autoconfig file.
 5. Add labels. They will be visible in `Settings` → `Input` → `Hotkeys`.
-  - Add variable names. Complement the variables that you just added to the autoconfig file with the corresponding label variables ([variable name]+"_label") at the absolute bottom of the file, for example:
+    - Add variable names. Complement the variables that you just added to the autoconfig file with the corresponding label variables ([variable name]+"_label") at the absolute bottom of the file, for example:
     ```
     input_menu_toggle_btn_label = "[y]"
     input_screenshot_btn_label = "[z]"
     ```
-    *(Replace `[y]` and `[z]` with the appropriate label values described below.)*
-  - Add the corresponding variable label values. Refer to the manufacturer’s official labeling for each button, but avoid using all capital letters unless the name is an abbreviation. Use standard capitalization with an initial capital letter to improve readability. Also, do not add the word “button” if it is already part of the official name. For instance, Nintendo refers to the “HOME button” on the Switch Pro Controller, but you should label it simply as “Home.” Similarly, the menu toggle label for Sony PlayStation controllers is “PS.” This approach balances clarity and respect for official naming.
+      *(Replace `[y]` and `[z]` with the appropriate label values described below.)*
+    - Add the corresponding variable label values. Refer to the manufacturer’s official labeling for each button, but avoid using all capital letters unless the name is an abbreviation. Use standard capitalization with an initial capital letter to improve readability. Also, do not add the word “button” if it is already part of the official name. For instance, Nintendo refers to the “HOME button” on the Switch Pro Controller, but you should label it simply as “Home.” Similarly, the menu toggle label for Sony PlayStation controllers is “PS.” This approach balances clarity and respect for official naming.
 6. Save the autoconfig file.
 7. Restart RetroArch and navigate to `Settings` → `Input` → `Hotkeys` to confirm that they look as intended.
 
@@ -354,8 +358,8 @@ input_r2_axis_label = "ZR"
 To address this bug in RetroArch on other controllers or drivers, you need to manually edit the RetroArch config file to set the correct analog axis mappings for L2 and R2. Here's how to find the proper axis values:
 
 * Install and run jstest available for GNU/Linux (`sudo apt-get install joystick` for Debian-like distros), and Windows.
-  - In GNU/Linux: `jstest /dev/input/js0`
-  - In GNU/Linux virtual machines using QEMU, js0 is designated for the mouse, so you need to use js1 by running the command: `jstest /dev/input/js1`
+    - In GNU/Linux: `jstest /dev/input/js0`
+    - In GNU/Linux virtual machines using QEMU, js0 is designated for the mouse, so you need to use js1 by running the command: `jstest /dev/input/js1`
 * Slowly press L2 and R2 to identify which axis numbers change
 * Note the axis numbers that correspond to L2 and R2
 * In the autoconfig file, set:
@@ -399,6 +403,7 @@ By carefully updating both the variable names and values, you can ensure that yo
 ### Inspect the file
 
 Without modifying anything in the original file, open it in the file in a text editor and
+
 1. Make sure that you have mapped all buttons, and that none of them have duplicated values.
 2. Each button should have a variable that ends with `_btn`, or `_axis`, not both. So for example, if you find both `input_a_axis`, and `input_a_btn`, it's incorrect. This may happen if your OS does not support the controller.
 
@@ -417,7 +422,7 @@ If you are happy with your profile, you can submit it to RetroArch so that other
 
 1. Edit the autoconfig file for your joypad manually to include the input descriptors (please see the [Input descriptors](#input-descriptors) section below)
 2. [Submit your profile to our joypad profile repository](https://github.com/libretro/retroarch-joypad-autoconfig) by filing a pull request (PR).
-   - To help us track potential bugs if the autconfig does not work as expected in all RetroArch releases (Flatpak package via Flathub, AppImage via retroarch.com, etc) and their gamepad driver (sdl2, udev, etc), please include a bullet point at the beginning of your PR Comment when submitting a PR. This bullet should specify the RetroArch version you used to generate the autoconfig. Additionally, please add further bullet points to outline what has been added. For example: `* Generated the autoconfig file[s] with RetroArch Flathub's release version x.xx.x`
+    - To help us track potential bugs if the autconfig does not work as expected in all RetroArch releases (Flatpak package via Flathub, AppImage via retroarch.com, etc) and their gamepad driver (sdl2, udev, etc), please include a bullet point at the beginning of your PR Comment when submitting a PR. This bullet should specify the RetroArch version you used to generate the autoconfig. Additionally, please add further bullet points to outline what has been added. For example: `* Generated the autoconfig file[s] with RetroArch Flathub's release version x.xx.x`
 
 ### Default-off configs
 When developing controller configurations, it's essential to anticipate and mitigate potential conflicts. These issues often arise in the following situations:
@@ -779,8 +784,9 @@ Note: These variable values are examples and should not be directly copied to yo
 
 ###### Shoulder buttons with analog variables
 Give each button the same label as described by the manufacturer. Additionally:
+
 - For analog shoulder buttons, use the manufacturer’s label **and** append the word **" Trigger"** at the end.
-  - For example: `input_l2_axis_label = "L2 Trigger"`
+    - For example: `input_l2_axis_label = "L2 Trigger"`
 
 ###### Analog sticks
 The term "Analog" is included in the variable values for the analog inputs to clearly indicate that these inputs are analog in nature.

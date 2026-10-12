@@ -171,11 +171,14 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 
 ## BIOS
 
-When loading a romset requiring a bios romset, it will be searched through 3 folders in that order :
+When loading a romset requiring a bios romset, it will be searched through these folders in that order :
 
+* the `SYSTEM_DIRECTORY/fbneo/patched/` folder, only when patched romsets are allowed in the core options (`fbneo-allow-patched-romsets`)
 * the folder of the current romset
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
+
+`SYSTEM_DIRECTORY/fbneo/` is the recommended place, on every platform: it is where the core also keeps samples, hiscore.dat and its other support files, and it is where RetroArch looks for them. The core's info file lists each bios romset as `fbneo/<name>.zip`, so RetroArch's core information and firmware check report a bios in `SYSTEM_DIRECTORY/` itself as missing, although the core finds and uses it.
 
 The following bios romsets are required for some of the emulated arcade systems :
 
@@ -429,6 +432,7 @@ That driver was disabled, it didn't meet our quality criteria. There are no plan
 It was streamlined into a global `Video Settings > Resolution` core option affecting all vector games at once, with new resolutions available.
 
 For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
+
 * for horizontal games, you'll want to use 1440x1080
 * for vertical games (tempest, tacscan), if you are running them on a vertical screen with the settings to rotate them, you'll also want to use 1440x1080
 * for those same vertical games, if you are running them at default settings on a horizontal screen, you'll want to use 1080x810

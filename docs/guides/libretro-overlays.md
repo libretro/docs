@@ -33,6 +33,7 @@ An example of a touchscreen overlay, demonstrated with the Dinothawr core:
 Overlays require at least one image (`.png`) and a configuration file (`.cfg`) in order to activate them.
 
 **Notes:**
+
 - The configuration file should have the exact same name as the first image file (the only image file if your overlay only has one image).
 - Do not use spaces in the filename.
 - These files should be placed together in the libretro `overlay` folder.
@@ -65,6 +66,7 @@ To be written
 ## Per-Game Overlays via RetroArch CFG Files
 
 The first time you set up a per-game overlay:
+
 1. Ensure that these two options are set in retroarch.cfg: `game_specific_options = "true"` and `auto_overrides_enable = "true"`
 2. The first time you load content with these settings, RetroArch will create a settings override directory structure and a `.opts` configuration file which you can use as a template to correctly name and locate your overlay configuration files.
 3. If the automatically-generated file is named `Dinothawr.opts`, you would name your per-game override `Dinothawr.cfg`.
