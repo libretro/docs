@@ -209,6 +209,8 @@ nav:
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
+        - 'Microsoft - Xbox (xemu)': 'library/xemu.md'
+        - 'Microsoft - Xbox 360 (Xenia Edge)': 'library/xenia_edge.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Mobile Emulation':
         - 'Mobile - J2ME (FreeJ2ME)': 'library/freej2me.md'
@@ -345,6 +347,7 @@ nav:
         - 'Sony - PlayStation 3 (RPCS3)': 'library/rpcs3.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
+        - 'Sony - PlayStation Vita (Vita3K)': 'library/vita3k.md'
         - 'Sony - PocketStation (pokketstation)': 'library/pokketstation.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
