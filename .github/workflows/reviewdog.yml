@@ -1,0 +1,22 @@
+name: Reviewdog Suggester
+
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+  pull-requests: write  # required for PR annotations and code suggestions
+
+jobs:
+  reviewdog:
+    name: Spell Check with Reviewdog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Spell Check Repo with Reviewdog
+        uses: reviewdog/action-suggester@v1
+        with:
+          tool_name: typos
