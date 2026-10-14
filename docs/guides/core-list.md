@@ -189,6 +189,7 @@
 | [PCem](../library/pcem.md) | IBM PC                 |                    |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       |                    |
 | [PD777](../library/pd777.md) | Epoch Cassette Vision |                    |
+| [Picocomputer 6502](../library/rp6502.md) | Picocomputer 6502 | An open source 8-bit computer you can build |
 | [PicoDrive](../library/picodrive.md) | Sega MS/GG/MD/CD/32X   |                    |
 | [Play!](../library/play.md) | Sony PlayStation 2     |                    |
 | [PlaydiaEmu](../library/playdiaemu.md) | Bandai Playdia | An emulator for the Bandai Playdia interactive CD console |

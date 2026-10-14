@@ -190,6 +190,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [PCSX ReARMed](../library/pcsx_rearmed.md)                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
 | PCSX ReARMed [Interpreter]                                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
 | [PD777](../library/pd777.md)                                               | [MIT](https://github.com/mittonk/PD777/blob/main/LICENSE)                |                |
+| [Picocomputer 6502](../library/rp6502.md)                                        | [BSD-3-Clause](https://github.com/picocomputer/rp6502/blob/main/LICENSE)                  |                |
 | [PicoDrive](../library/picodrive.md)                                             | [MAME (Non-commercial)](https://github.com/libretro/picodrive/blob/master/COPYING)        | Non-commercial |
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
 | [PlaydiaEmu](../library/playdiaemu.md)                                           | [BSD-3-Clause](https://github.com/AloysHF/PlaydiaEmu/blob/master/LICENSE)                 |                |
