@@ -86,6 +86,14 @@ To be clear: the cores listed on this page support libretro's memory monitoring 
 | [JollyCV](https://github.com/libretro/jollycv)          | ✔         |       |
 | [SMS Plus GX](https://github.com/libretro/smsplus-gx)   | ✕         |       |
 
+### Fujitsu
+
+#### FM Towns
+
+| Core                                               | Supported | Notes |
+|----------------------------------------------------|:---------:|:------|
+| [Geartowns](https://github.com/drhelius/Geartowns) | ✔         |       |
+
 ### GCE
 
 #### Vectrex

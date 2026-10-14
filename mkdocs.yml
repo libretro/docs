@@ -197,6 +197,8 @@ nav:
         - 'Epoch - Super Cassette Vision (EmuSCV)': 'library/emuscv.md'
       - 'Fairchild Emulation':
         - 'Fairchild - Channel F (FreeChaF)': 'library/freechaf.md'
+      - 'Fujitsu Emulation':
+        - 'Fujitsu - FM Towns (Geartowns)': 'library/geartowns.md'
       - 'Galaksija Emulation':
         - 'Elektronika Inženjering - Galaksija (Galaksija)': 'library/galaksija.md'
       - 'GCE Emulation':

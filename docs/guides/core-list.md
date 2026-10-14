@@ -114,6 +114,7 @@
 | [Geargrafx](../library/geargrafx.md) | NEC PC Engine/SuperGrafx    |                    |
 | [Gearlynx](../library/gearlynx.md) | Atari Lynx             |                    |
 | [Gearsystem](../library/gearsystem.md) | Sega MS/GG/SG-1000     |                    |
+| [Geartowns](../library/geartowns.md) | Fujitsu FM Towns       |                    |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)   | Sega MS/GG/MD/CD       |                    |
 | [Geolith](../library/geolith.md)                   | SNK Neo Geo AES/MVS    | Highly accurate emulator for the Neo Geo AES and MVS Cartridge Systems |
 | [gpSP](../library/gpsp.md) | Game Boy Advance       |                    |

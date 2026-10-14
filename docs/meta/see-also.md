@@ -55,6 +55,10 @@ This is a list of cores that are related to each other in some way.
 
 - [Elektronika - BK-0010/BK-0011 (bk)](../library/bk.md)
 
+## FM Towns
+
+- [Fujitsu - FM Towns (Geartowns)](../library/geartowns.md)
+
 ## Lynx
 
 - [Atari - Lynx (Beetle Lynx)](../library/beetle_lynx.md)
