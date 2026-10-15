@@ -6,7 +6,7 @@ These shaders attempt to reproduce aspects and characteristics of cathode ray tu
     + ![crt-aperture](../image/shader/crt/crt-aperture.png)
 
 ## crt-blurpi
-  * A lightweight shader designed to run full speed on Raspberry Pi hardware (hence, the name) and on low-res screens (640x480 or less). It cheats a little by rendering scanlines that match your screen resolution instead of the game resolution, to avoid painful aliasing/Moiré efects on low res screens. Comes in **sharp** and **soft** flavors; use the sharp variant when using integer scaling for best results, and the soft variant otherwise.
+  * A lightweight shader designed to run full speed on Raspberry Pi hardware (hence, the name) and on low-res screens (640x480 or less). It cheats a little by rendering scanlines that match your screen resolution instead of the game resolution, to avoid painful aliasing/Moiré effects on low res screens. Comes in **sharp** and **soft** flavors; use the sharp variant when using integer scaling for best results, and the soft variant otherwise.
     + ![crt-caligari](../image/shader/crt/crt-blurPi.png)
 
 ## crt-caligari
@@ -51,7 +51,7 @@ These shaders attempt to reproduce aspects and characteristics of cathode ray tu
 
 ## crt-pi
   * A nice-looking shader designed to run full speed on all Raspberry Pi models at 4:3 aspect and 1080p, though RPi1 and Zero models may need overclocking to achieve this, and some settings may be too demanding on some models. Aside from RPi hardware, this is just an all-around good shader for weak/mobile GPUs.
-   
+
 
 ## crt-potato
   * An attempt to reproduce the very demanding effects of the popular Kurozumi variation of CRT-Royale through a simple lookup texture. It does not capture much of the nuances of the demanding shader it tries to copy, but it runs very fast and comes with **-Warm** and **-Cool** flavors, which describe their warmer and cooler white points, respectively.
