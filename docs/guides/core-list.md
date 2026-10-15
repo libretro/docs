@@ -69,7 +69,6 @@
 | [DOSBox-Pure](../library/dosbox_pure.md)   | DOS                    | A port of DOSBox with a goal of simplicity and ease of use and gameplay. This core includes a streamlined workflow for launching games directly from ZIP archives with automated mapping of controls to gamepads and a native onscreen keyboard. |
 | [DOSBox-SVN](../library/dosbox_svn.md)     | DOS                    | This core is based on DOSBox-SVN trunk and allows on-the-fly configuration and different sync methods |
 | [doukutsu-rs](../library/doukutsu-rs.md)   | Game engine            | An open-source reimplementation of the Cave Story engine compatible with all official (and some unofficial) releases of Cave Story |
-| [Dungeon Crawl Stone Soup](../library/stone_soup.md) | Game                   | A preliminary port of the Dungeon Crawl Stone Soup strategy game |
 | [EasyRPG](../library/easyrpg.md) | RPG Maker 2000/2003    | EasyRPG Player is a game interpreter to play RPG Maker 2000, 2003 and EasyRPG games |
 | [ECWolf](../library/ecwolf.md) | Game engine            | A port of the Wolfenstein 3D engine to libretro |
 | [EightyOne](../library/eightyone.md) | Sinclair ZX 81         | A work-in-progress port of EightyOne (a.k.a. THE Sinclair Emulator) to libretro |
@@ -118,7 +117,6 @@
 | [HBMAME](../library/hbmame.md) | Arcade/Console/various | HBMAME (HomeBrew MAME) is a derivative of MAME, and contains various hacks and homebrews |
 | [higan Accuracy](../library/higan_accuracy.md) | Nintendo SNES/SFC/Game Boy/Color | higan Accuracy is based on version 105 of the higan emulator suite's SNES/SFC emulator |
 | [Holani](../library/holani.md) | Atari Lynx             | This core's primary goal is to get closer to the Lynx hardware and provide a better emulation experience than the current Handy ports |
-| [Imageviewer](../library/imageviewer.md) | Imageviewer            | A basic core for viewing still images in a libretro frontend |
 | [IroGB](../library/irogb.md) | Nintendo Game Boy      | A libretro port of the IroGB Game Boy Color emulator |
 | Ishiiruka                 | Nintendo GameCube/Wii  |                    |
 | [JAXE](../library/jaxe.md) | CHIP-8/S-CHIP/XO-CHIP  | JAXE is a fully-featured, cross platform XO-CHIP/S-CHIP/CHIP-8 emulator written in C |
@@ -149,7 +147,6 @@
 | [mGBA](../library/mgba.md)                    | Game Boy Advance       | An advanced, mature and actively developed Game Boy Advance emulator, ported to libretro |
 | [Microw8](../library/microw8.md) | Game engine            | A port of a WebAssembly based fantasy console to libretro |
 | [Minivmac](../library/minivmac.md)            | Mac II                 | MacII variant of minivmac emulator |
-| [mkxp-z](../library/mkxp-z.md)                | RPG Maker XP/VX/VX Ace | Open-source cross-platform player for (some) RPG Maker XP / VX / VX Ace games |
 | [MojoZork](../library/mojozork.md) | Infocom Z-Machine      | A Z-Machine emulator for playing text-based interactive fiction |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | [Mr.Boom](../library/mr_boom.md) | Game                   | A clone of the classic Bomberman series |
@@ -181,7 +178,6 @@
 | [PCem](../library/pcem.md) | IBM PC                 | A port of the PCem IBM/PC emulator to libretro |
 | [PCSX ReARMed](https://docs.libretro.com/library/pcsx_rearmed/) | Sony PlayStation       | A port of the PCSX-ReARMed fork to libretro |
 | [PD777](../library/pd777.md) | Epoch Cassette Vision | Epoch Cassette Vision emulator, with libretro interface |
-| [Picocomputer 6502](../library/rp6502.md) | Picocomputer 6502 | An open source 8-bit computer you can build |
 | [PicoDrive](../library/picodrive.md) | Sega MS/GG/MD/CD/32X   | A fast and portable emulator for many Sega game consoles, ported to libretro |
 | [Play!](../library/play.md) | Sony PlayStation 2     | A port of Play!, a portable PlayStation 2 emulator, to libretro |
 | [PlaydiaEmu](../library/playdiaemu.md) | Bandai Playdia | An emulator for the Bandai Playdia interactive CD console |
@@ -210,7 +206,6 @@
 | [RPCS3](../library/rpcs3.md) | Sony PlayStation 3 | A port of the RPCS3 PlayStation 3 emulator to libretro |
 | Rustation                 | Sony PlayStation       |                    |
 | [RustyNES](../library/rustynes.md) | Nintendo NES/Famicom | A cycle-accurate NES emulator written in Rust |
-| [RVVM](../library/rvvm.md) | RISC-V Virtual Machine | A port of the RVVM (RISC-V Virtual Machine) to libretro |
 | [SameBoy](../library/sameboy.md)   | Game Boy/Color         | A port of the highly accurate Game Boy emulator, SameBoy, to libretro |
 | [SameDuck](../library/sameduck.md) | Mega Duck (Cougar Boy) | An adaptation of SameBoy to play Mega Duck games |
 | [SAME CDI](../library/same_cdi.md) | Philips CDi            | SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME, which only includes the Philips CD-i driver |
@@ -247,7 +242,6 @@
 | [vecx](../library/vecx.md)         | GCE/MB Vectrex         | A port of the vecx Vectrex emulator to libretro |
 | [VeMUlator](https://docs.libretro.com/library/vemulator/) | SEGA Visual Memory Unit | A port of VeMUlator, a SEGA Dreamcast VMU emulator originally developed for Android |
 | [VICE x64](../library/vice.md)     | Commodore C64          | The VICE x64 (fast) Commodore 64 emulator, isolated and ported to libretro |
-| [VICE x64dtv](../library/vice.md)  | Commodore C64DTV       | DTV2 PAL/NTSC, DTV3 PAL/NTSC, HUMMER NTSC |
 | [VICE x64sc](../library/vice.md)   | Commodore C64          | The VICE x64sc (accurate) Commodore 64 emulator, isolated and ported to libretro |
 | [VICE x128](../library/vice.md)    | Commodore C128         | The VICE x128 Commodore 64 emulator, isolated and ported to libretro |
 | [VICE xcbm2](../library/vice.md)   | Commodore CBM-II 6x0/7x0 | The VICE xCBM-II emulator, isolated and ported to libretro |
@@ -274,4 +268,3 @@
 | [XRick](../library/xrick.md) | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
 | [YabaSanshiro](../library/yabasanshiro.md) | Sega Saturn            | A port of the YabaSanshiro, which is itself a fork of Yabause emulator |
 | [Yabause](../library/yabause.md) | Sega Saturn            | A port of the Yabause Sega Saturn emulator to libretro |
-| [ZEsarPCW](../library/zesarpcw.md) | Amstrad PCW 8256/8512 | Amstrad PCW 8256/8512; no external BIOS required |
