@@ -1,6 +1,8 @@
-# Nintendo - SNES / Famicom (bsnes Accuracy)
+# Nintendo - SNES / Famicom (bsnes 2014 Accuracy)
 
 ## Background
+
+This page is about bsnes 2014 Accuracy, the bsnes v094 core whose file is named `bsnes2014_accuracy_libretro`. The current bsnes is a separate core, documented on the [bsnes](bsnes.md) page.
 
 bsnes is a Super Nintendo emulator that began development on 2004-10-14. It focuses on accuracy and clean code above all else. It never uses speed or compatibility hacks. As a result, the minimum system requirements are greater than with other emulators. bsnes comes in three different profiles (accuracy, balanced and performance) which contain minor differences in the PPU (graphics) emulation.
 
@@ -12,11 +14,11 @@ Please check the [compatibility section](#compatibility) for more information.
 
 ### Author/License
 
-The bsnes Accuracy core has been authored by
+The bsnes 2014 Accuracy core has been authored by
 
 - byuu
 
-The bsnes Accuracy core is licensed under
+The bsnes 2014 Accuracy core is licensed under
 
 - [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)
 
@@ -24,7 +26,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## Extensions
 
-Content that can be loaded by the bsnes Accuracy core have the following file extensions:
+Content that can be loaded by the bsnes 2014 Accuracy core have the following file extensions:
 
 - .sfc
 - .smc
@@ -32,7 +34,7 @@ Content that can be loaded by the bsnes Accuracy core have the following file ex
 
 ## Databases
 
-RetroArch database(s) that are associated with the bsnes Accuracy core:
+RetroArch database(s) that are associated with the bsnes 2014 Accuracy core:
 
 - [Nintendo - Super Nintendo Entertainment System](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.rdb)
 - [Nintendo - Super Nintendo Entertainment System Hacks](https://github.com/libretro/libretro-database/blob/master/rdb/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System%20Hacks.rdb)
@@ -43,7 +45,7 @@ RetroArch database(s) that are associated with the bsnes Accuracy core:
 Required or optional firmware files go in the frontend's system directory.
 
 !!! attention
-	The bsnes Accuracy core uses split ROMS for [special chip games](https://en.wikipedia.org/wiki/List_of_Super_NES_enhancement_chips#List_of_Super_NES_games_that_use_enhancement_chips).
+	The bsnes 2014 Accuracy core uses split ROMS for [special chip games](https://en.wikipedia.org/wiki/List_of_Super_NES_enhancement_chips#List_of_Super_NES_games_that_use_enhancement_chips).
 
 Notable DSP1/DSP1B Games:
 
@@ -90,7 +92,7 @@ Notable Cx4 Games:
 
 ## Features
 
-Frontend-level settings or features that the bsnes Accuracy core respects.
+Frontend-level settings or features that the bsnes 2014 Accuracy core respects.
 
 | Feature           | Supported |
 |-------------------|:---------:|
@@ -121,9 +123,9 @@ Frontend-level settings or features that the bsnes Accuracy core respects.
 
 ### Directories
 
-The bsnes Accuracy core's internal core name is 'bsnes'
+The bsnes 2014 Accuracy core's internal core name is 'bsnes'
 
-The bsnes Accuracy core saves/loads to/from these directories.
+The bsnes 2014 Accuracy core saves/loads to/from these directories.
 
 **Frontend's Save directory**
 
@@ -135,9 +137,9 @@ The bsnes Accuracy core saves/loads to/from these directories.
 
 ### Geometry and timing
 
-- The bsnes Accuracy core's core provided FPS is 60.0988118623 for NTSC games and 50.0069789082 for PAL games.
-- The bsnes Accuracy core's core provided sample rate is 32040.5 Hz
-- The bsnes Accuracy core's core provided aspect ratio is 4/3
+- The bsnes 2014 Accuracy core's core provided FPS is 60.0988118623 for NTSC games and 50.0069789082 for PAL games.
+- The bsnes 2014 Accuracy core's core provided sample rate is 32040.5 Hz
+- The bsnes 2014 Accuracy core's core provided aspect ratio is 4/3
 
 ## Super GameBoy
 
@@ -187,7 +189,7 @@ There's documentation for loading MSU-1 games in standalone higan [here](https:/
 
 ## Controllers
 
-The bsnes Accuracy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
+The bsnes 2014 Accuracy core supports the following device type(s) in the controls menu, bolded device types are the default for the specified user(s):
 
 ### User 1 device types
 
@@ -250,15 +252,15 @@ Activating multitap support in compatible games can be configured by switching t
 
 ## Compatibility
 
-The bsnes Accuracy core fully emulates all SNES games that have ever been officially released.
+The bsnes 2014 Accuracy core fully emulates all SNES games that have ever been officially released.
 
 ## External Links
 
 - [Official higan Website](https://byuu.org/)
 - [Official higan Upstream Downloads](https://byuu.org/emulation/higan/)
-- [Libretro bsnes Accuracy Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/bsnes_accuracy_libretro.info)
-- [Libretro bsnes Accuracy Github Repository](https://github.com/libretro/bsnes-libretro)
-- [Report Libretro bsnes Accuracy Core Issues Here](https://github.com/libretro/bsnes-libretro/issues)
+- [Libretro bsnes 2014 Accuracy Core info file](https://github.com/libretro/libretro-core-info/blob/master/bsnes2014_accuracy_libretro.info)
+- [Libretro bsnes 2014 Accuracy Github Repository](https://github.com/libretro/bsnes-libretro)
+- [Report Libretro bsnes 2014 Accuracy Core Issues Here](https://github.com/libretro/bsnes-libretro/issues)
 
 ### See also
 
@@ -269,9 +271,9 @@ The bsnes Accuracy core fully emulates all SNES games that have ever been offici
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
 - [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
@@ -285,9 +287,9 @@ The bsnes Accuracy core fully emulates all SNES games that have ever been offici
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

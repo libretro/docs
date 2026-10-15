@@ -285,11 +285,11 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 	With the internal setting, DeSmuME will use its internal noise sample for microphone input which works for many games that want you to blow on the mic.
 
-	With the sample setting, you can supply your own microphone sample for microphone input. **This may not work currently in the DeSmuME core**.
+	With the sample setting, standalone DeSmuME plays a sample file of your choice as microphone input. **The DeSmuME 2015 core cannot load a sample file, so this setting gives silence.** Use internal or random instead.
 
 	With the random setting, DeSmuME will use random whitenoise for microphone input which will work for games that require blowing but which don't work with the internal noise sample.
 
-	With the physical setting, you can use your default recording device for microphone input. **This may not work currently in the DeSmuME core**.
+	With the physical setting, standalone DeSmuME uses your default recording device for microphone input. **The DeSmuME 2015 core does not read a recording device, so this setting also gives silence.**
 
 ## Controllers
 

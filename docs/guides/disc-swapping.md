@@ -25,15 +25,16 @@ If you don't or can't use a playlist, you can append a disk image to the list on
 
 Multi-CD images are typically handled with an .m3u playlist file. In this case, you can swap disks by cycling through the `Disc Index` setting.
 
-You can start a game by loading its M3U file, through `Load Content` or Playlists (This will have to be added manually to your Playlists, as scanning for content will not do so).
+You can start a game by loading its M3U file, through `Load Content` or Playlists. A content scan adds the M3U file to the playlist as one entry for the game, instead of one entry per disc (see [Disc Images](disc-images.md#multi-disc-games-in-playlists)).
 
 ### Making an M3U playlist file
 You can make an M3U playlist file using a simple text editor.
+
 * Put all of your content's disc files into a single folder.
 * Create a new text file in the same folder as your content. Name it the same as your content.
 * Add the full names of each disc into the text file (including the file extension), 1 filename per row.
-  * If your discs are BIN/CUE files, only list the '.cue' files in the document.
-  * If your discs are CHD files, list the '.chd' files in the document.
+    * If your discs are BIN/CUE files, only list the '.cue' files in the document.
+    * If your discs are CHD files, list the '.chd' files in the document.
 * Save and close the text file.
 * Rename the file extension from '.txt' to '.m3u'.
 

@@ -34,7 +34,7 @@ There are controversies about whether libretro's patreon and retroarch's GPL lic
 
 * **"Redistributions may not be sold, nor may they be used in a commercial product or activity."** : By definition, a commercial activity is an activity involving the sale of goods or services. The libretro project does none of that, and it is unclear whether a patreon should be treated as a commercial activity or not when no goods or services are provided in exchange of the donations.
 * **"You may not ask for donations to support your work on any project that uses the FB Neo source code."** : This FBNeo port is using libretro code, not the other way around. This port is directly authored/maintained/supported by members of the FBNeo team, and none of them is receiving donations. Interestingly, if receiving donations was de facto a commercial activity, this term shouldn't be required.
-* *If* the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial. 
+* *If* the libretro project was a commercial activity, it would still be unclear how it does affect this port. Our win32 standalone builds use the directx api, which belongs to a commercial company. Using the libretro api, which would belong to a commercial activity, wouldn't be any different. Furthermore, in all likeliness, there would still be alternative libretro frontends that don't belong to the libretro project and are not commercial.
 * Actually, alternative commercial libretro frontends already exist, and we consider we are not concerned as long as they neither redistribute FBNeo nor use it as some mean of advertisement. In this scenario, only a manual installation of the core by the user will be considered legal and supported.
 * While GPL code can't be mixed with non-commercial code, this is a non-issue since this port doesn't contain any GPL-licensed code.
 * Under european law, where the libretro buildbots are located, linking GPL and non-commercial software doesn't produce a derivative work, and doesn't extend the GPL license to the non-commercial work (source [here](https://joinup.ec.europa.eu/collection/eupl/licence-compatibility-permissivity-reciprocity-and-interoperability)). It is unclear whether the same applies in non-EU countries or not.
@@ -171,11 +171,14 @@ You can also emulate consoles by prefixing the name of the roms with `XXX_` and 
 
 ## BIOS
 
-When loading a romset requiring a bios romset, it will be searched through 3 folders in that order :
+When loading a romset requiring a bios romset, it will be searched through these folders in that order :
 
+* the `SYSTEM_DIRECTORY/fbneo/patched/` folder, only when patched romsets are allowed in the core options (`fbneo-allow-patched-romsets`)
 * the folder of the current romset
 * the `SYSTEM_DIRECTORY/fbneo/` folder
 * the `SYSTEM_DIRECTORY/` folder
+
+`SYSTEM_DIRECTORY/fbneo/` is the recommended place, on every platform: it is where the core also keeps samples, hiscore.dat and its other support files, and it is where RetroArch looks for them. The core's info file lists each bios romset as `fbneo/<name>.zip`, so RetroArch's core information and firmware check report a bios in `SYSTEM_DIRECTORY/` itself as missing, although the core finds and uses it.
 
 The following bios romsets are required for some of the emulated arcade systems :
 
@@ -285,13 +288,13 @@ Here is a list of samples currently in use :
 
 Copy [hiscore.dat](https://github.com/libretro/FBNeo/raw/master/metadata/hiscore.dat) to `SYSTEM_DIRECTORY/fbneo/` and have `Quick Menu > Core Options > Hiscores` enabled.
 
-It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or `hiscore.dat` might have a missing or broken entry for that romset. You can request support in the issue tracker. 
+It doesn't guarantee hiscores will work for a specific game though, sometimes a driver could just be missing the necessary support code for this feature, or `hiscore.dat` might have a missing or broken entry for that romset. You can request support in the issue tracker.
 
 Runahead now works with hiscores, it'll require fairly recent version of the core AND RetroArch though (support was added after 1.10.3).
 
 ## Input lag reduction
 
-This core widely supports the RetroArch input latency reduction features, with **runahead single instance** and **preemptive frames** being the recommended methods. 
+This core widely supports the RetroArch input latency reduction features, with **runahead single instance** and **preemptive frames** being the recommended methods.
 
 Proper support for **runahead second instance** is not guaranteed because it doesn't exist in standalone FBNeo unlike the other methods.
 
@@ -349,7 +352,7 @@ Games running on already emulated arcade systems will also be tolerated, the mos
 
 A lot of romhacks are supported natively, so your romhack might already be supported under a specific romset name.
 
-For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed if you intend to use RetroAchievements and must be disabled by toggling off `Quick Menu > Core Options > Allow patched romsets` : 
+For the unsupported romhacks, there are 3 methods, but those romhacks are not allowed if you intend to use RetroAchievements and must be disabled by toggling off `Quick Menu > Core Options > Allow patched romsets` :
 
 #### Using the "patched" folder
 
@@ -410,7 +413,7 @@ There are several things to know :
 
 * You need to follow the instructions about [emulating consoles](#emulating-consoles-and-computers)
 * You need a copy of the `neocdz.zip` and `neogeo.zip` bioses
-* The supported format is single file MODE1/2352 cue/bin (the format where there is one .cue file with one single .bin file). Use "CDmage" to convert your dump if needed. **It must not be compressed**
+* The supported format is single file MODE1/2352 cue/bin (the format where there is one .cue file with one single .bin file). Use "CDMage" to convert your dump if needed. **It must not be compressed**
 
 You can convert your unsupported dumps by following this tutorial :
 
@@ -429,6 +432,7 @@ That driver was disabled, it didn't meet our quality criteria. There are no plan
 It was streamlined into a global `Video Settings > Resolution` core option affecting all vector games at once, with new resolutions available.
 
 For best visual results, it's recommended to match your screen's height, some examples using a 1080p screen :
+
 * for horizontal games, you'll want to use 1440x1080
 * for vertical games (tempest, tacscan), if you are running them on a vertical screen with the settings to rotate them, you'll also want to use 1440x1080
 * for those same vertical games, if you are running them at default settings on a horizontal screen, you'll want to use 1080x810
@@ -451,10 +455,10 @@ Additionally :
 
 The first question you should be asking yourself is "what am i comparing this to ?", emulation is meant to be faithful to real hardware (here the original arcade board), not to some console port, remaster, other emulator, or ost.
 
-If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings. 
+If you are comparing this to FBNeo standalone, you must be warned that the libretro port is using different default audio settings.
 By default standalone has 44100 samplerate and both interpolations off, and that's what you should set in core options if you want the same audio output.
 
-Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Video Settings > Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`). 
+Last but not least, you might also want to make sure you are running the game at the correct speed, most crt games don't run at 60Hz and if you want the proper refresh rate to be emulated you'll need to make sure `Video Settings > Force 60Hz` isn't enabled in core options and `Settings > Video > Synchronization > Sync to Exact Content Framerate` is enabled (`vrr_runloop_enable = "true"` in `retroarch.cfg`).
 Please note that it'll likely cause frame duping if your hardware is not compatible with VRR (Variable Refresh Rate), in which case you'll have to make a choice between animation smoothness and correct refresh rate.
 
 ### Why do i get a black screen and/or can't i change bios in neogeo games ?

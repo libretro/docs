@@ -84,7 +84,9 @@ The Citra Shaders should be in ../saves/Citra/shaders/opengl/transferable
 
 **Frontend's Save directory**
 
-- [Citra System and Save files](https://citra-emu.org/wiki/user-directory/)
+- `Citra/` - Citra's user directory: the 3DS system files (`sysdata/`, `nand/`), save data (`sdmc/`) and the shader cache. System files dumped from a 3DS go here, not in standalone Citra's user directory.
+
+This is where the **Savegame location** core option (`citra_use_libretro_save_path`) puts them by default, "LibRetro Default". When the frontend has no save directory, `Citra/` is created in the system directory instead. With "Citra Default" the core uses standalone Citra's [user directory](https://citra-emu.org/wiki/user-directory/).
 
 ### Geometry and timing
 

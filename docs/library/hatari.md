@@ -167,9 +167,151 @@ The Hatari core has the following option(s) that can be tweaked from the core op
 
 Settings with (Restart) means that core has to be closed for the new setting to be applied on next launch.
 
-- **Internal resolution** [Hatari_resolution] (**640x480**|832x576|832x588|800x600|960x720|1024x768|1024x1024)
+#### System
 
-	Set the internal resolution.
+- **Machine Type** [hatari_machinetype] (**ST**|Mega ST|STE|Mega STE|TT|Falcon)
+
+	Select the Atari machine to emulate. Requires restarting content.
+
+- **DSP Emulation (Falcon)** [hatari_dsp_type] (**None**|Dummy|Emulated)
+
+	Select how the Falcon DSP is emulated. Requires restarting content.
+
+- **Blitter (ST/STE)** [hatari_blitter] (**OFF**|ON)
+
+	Enable Blitter emulation. Requires restarting content.
+
+- **Fast Boot** [hatari_fastboot] (**OFF**|ON)
+
+	Patch TOS and memory-valid system variables for a faster boot. Requires restarting content.
+
+- **Patch Timer-D** [hatari_timerd] (**OFF**|ON)
+
+	Patch Timer-D, roughly doubling ST emulation speed. Requires restarting content.
+
+#### CPU / FPU
+
+- **CPU Type** [hatari_cpu_level] (**68000**|68010|68020|68030|68040|68060)
+
+	Select the emulated 680x0 CPU level. Requires restarting content.
+
+- **CPU Clock** [hatari_cpu_clock] (**8 MHz**|16 MHz|32 MHz)
+
+	Select the emulated CPU clock speed. Requires restarting content.
+
+- **Prefetch Mode** [hatari_cpu_compatible] (OFF|**ON**)
+
+	Use a more compatible (but slower) CPU prefetch mode. Requires restarting content.
+
+- **Cycle Exact CPU** [hatari_cpu_cycle_exact] (OFF|**ON**)
+
+	Use cycle exact CPU emulation. Requires restarting content.
+
+- **CPU Data Cache** [hatari_cpu_data_cache] (OFF|**ON**)
+
+	Emulate the CPU data cache on CPUs that support it (>=68030). Requires restarting content.
+
+- **24-bit Addressing** [hatari_cpu_addr24] (OFF|**ON**)
+
+	Use 24-bit instead of 32-bit addressing mode. Requires restarting content.
+
+- **FPU Type** [hatari_fpu_type] (**None**|68881|68882|Internal (CPU))
+
+	Select the emulated FPU. Requires restarting content.
+
+- **Software FPU** [hatari_fpu_softfloat] (**OFF**|ON)
+
+	Use full software FPU emulation instead of the faster core. Requires restarting content.
+
+- **MMU Emulation** [hatari_mmu] (**OFF**|ON)
+
+	Enable MMU emulation. Requires restarting content.
+
+#### ROM
+
+- **Patch TOS** [hatari_patch_tos] (OFF|**ON**)
+
+	Apply Hatari's compatibility patches to the loaded TOS image. Requires restarting content.
+
+#### Memory
+
+- **ST-RAM Size** [hatari_memory_size] (512 KB|**1 MB**|2 MB|2.5 MB|4 MB|8 MB|10 MB|14 MB)
+
+	Amount of ST-RAM to emulate. Requires restarting content.
+
+- **TT-RAM Size** [hatari_ttram_size] (**Disabled**|4 MB|8 MB|16 MB|32 MB|64 MB|128 MB|256 MB|512 MB|1024 MB)
+
+	Amount of 32-bit TT-RAM to emulate in addition to ST-RAM. Requires restarting content.
+
+#### Floppy Disks
+
+- **Auto Insert Disk B** [hatari_auto_insert_disk_b] (OFF|**ON**)
+
+	When a disk is inserted into drive A, automatically look for and insert a matching disk B image (e.g. 'game_a.st' -> 'game_b.st').
+
+- **Fast Floppy Access** [hatari_fast_floppy] (**OFF**|ON)
+
+	Speed up floppy disk controller emulation. Can break programs relying on accurate FDC timing.
+
+- **Floppy Write Protection** [hatari_floppy_write_protection] (**Off**|On|Auto)
+
+	Write protect floppy disk image contents. 'Auto' checks the host file's write permissions.
+
+- **Drive A Enabled** [hatari_drive_a_enable] (**ON**|OFF)
+
+	Enable emulated floppy drive A.
+
+- **Drive A Heads** [hatari_drive_a_heads] (Single Sided|**Double Sided**)
+
+	Number of heads for drive A.
+
+- **Drive B Enabled** [hatari_drive_b_enable] (**ON**|OFF)
+
+	Enable emulated floppy drive B.
+
+- **Drive B Heads** [hatari_drive_b_heads] (Single Sided|**Double Sided**)
+
+	Number of heads for drive B.
+
+#### Atari Screen
+
+- **Monitor Type** [hatari_monitor_type] (Monochrome|**RGB / Color**|VGA (TT/Falcon)|TV (Falcon))
+
+	Select the emulated monitor type. Requires restarting content for full effect.
+
+- **Video Timing (ST/STE)** [hatari_video_timing] (Random|WS1|WS2|**WS3 (default)**|WS4)
+
+	Wakeup state used for MMU/GLUE video timing emulation on ST/STE.
+
+- **Show Screen Borders** [hatari_borders] (ON|**OFF**)
+
+	Show ST/STE screen borders (needed by some overscan demos).
+
+- **Spec512 Palette Threshold** [hatari_spec512_threshold] (Disabled|**1**|4|16|64|128|192|256|512)
+
+	Number of palette changes per line above which Spec512-style images are detected. 'Disabled' turns off Spec512 support.
+
+- **Aspect Ratio Correction (TT/Falcon)** [hatari_aspect_correct] (**ON**|OFF)
+
+	Correct the monitor aspect ratio for TT/Falcon video modes.
+
+#### Devices
+
+- **Joystick Port 0** [hatari_joystick_port0] (**Disabled**|Emulated with keyboard|RetroPad)
+
+	Select how ST joystick port 0 is controlled.
+
+- **Joystick Port 1** [hatari_joystick_port1] (Disabled|Emulated with keyboard|**RetroPad**)
+
+	Select how ST joystick port 1 is controlled.
+
+- **Joystick Autofire** [hatari_joystick_autofire] (**OFF**|ON)
+
+	Enable autofire on the emulated joystick ports.
+
+- **Joystick Button 2 = Jump** [hatari_joystick_jump_fire2] (**ON**|OFF)
+
+	Map the second RetroPad fire button to Up (jump), for games that use it as a shortcut.
 
 ## Controllers
 

@@ -68,8 +68,8 @@ The most common user problems and solutions related to the database are:
     - Solution B: Use the __Loose__ option, which will accept all files according to the chosen settings.
 - __Game Name error or incorrect information__. E.g. A game file receives a wrong title inside the RetroArch playlist/interface.
     - Solution:
-      - Follow the [investigation steps](#investigating-database-issues) below to find the `.dat` file that has the erroneous information, and [contribute a correction](#how-to-contribute-to-databases).
-      - Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
+        - Follow the [investigation steps](#investigating-database-issues) below to find the `.dat` file that has the erroneous information, and [contribute a correction](#how-to-contribute-to-databases).
+        - Depending on the source of the data, an upstream change within a database group's system may be required, but it is also possible to create ad hoc database coverage on the libretro github.
 - __Outdated Local Files__. I.e. an error(s) has been fixed in the libretro database but the fix has not yet been downloaded in the user's app install.
     - Solution: Update your RetroArch databases (Main Menu > Online Updater > Update databases). That will apply recent fixes/corrections to your RetroArch install.
  
@@ -95,10 +95,10 @@ After you've investigated the issue (see above), some possible actions are:
 - __Use the [Issue Tracker](https://github.com/libretro/libretro-database/issues)__.
     - __Search__ for existing issues on github that may hold useful advice or solutions for your problem.  Adding your new examples or insights to the discussion for the  problem may help Members/Contributors create a fix.
     - __Open__ an Issue if a relevant one isn't already open.
-      - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
-        - You see a large-scale issue affecting many data entries or entire dats.
-        - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at least 4 weeks have passed since the Upstream update occurred.  
-      - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).
+        - Open a [Database Issue](https://github.com/libretro/libretro-database/issues) __if__ you observe either of the following:
+            - You see a large-scale issue affecting many data entries or entire dats.
+            - You found that Upstream Data is _correct_ but libretro or RetroArch doesn't reflect it, and at least 4 weeks have passed since the Upstream update occurred.  
+        - Open a [RetroArch Issue](https://github.com/libretro/RetroArch/issues) __if__: you see a problem with RetroArch's scanning behavior or validation, while the databases appear correct and match your file's properties (crc and serial within the game's binary data viewable with a hex editor).
 - __Submit Upstream Changes.__  Make changes upstream (No-Intro, Redump, GameTDB, etc) by going through the channels of the upstream group responsible for the data at issue __if__: you found that Upstream Data is _Incorrect_ and has been imported to the libretro database repository. The upstream group must make the correction to "fix it at the source", though it may be possible to create alternative data coverage instead (see below).
  
 ## How to Contribute to Databases

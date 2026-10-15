@@ -75,30 +75,71 @@ The frame buffer size depends on the RESOLUTION and DISPLAY options, so there is
 
 Load any supported content file. Content type will be autodetected, and if possible, started.
 
-The core also starts with no content at all, on a screen that reports the state of the emulated machine. This is the same screen a real console shows without a cartridge.
+The core also starts with no content at all. It then shows the BIOS test screen, *VIDEO GAME TEST DISPLAY* with its balloons, as a real console does without a cartridge. If *GAME NOT LOADED* appears in green in the top right corner, a content file was given but could not be loaded.
 
 ## Core options
 
 The EmuSCV core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-- CONSOLE (**AUTO**|EPOCH|YENO|EPOCHLADY) - which machine to emulate. YENO is the French console, which runs at 50 Hz with a proportionally slower CPU. EPOCHLADY emulates the same machine as EPOCH, with its own logo and keypad artwork. AUTO uses EPOCH.
+- CONSOLE (**AUTO**|EPOCH|YENO|EPOCHLADY) - which machine to emulate. YENO is the French console, which runs slower than the Japanese ones, as was common at the time because of the 60 Hz / 50 Hz difference. EPOCHLADY emulates the same machine as EPOCH, with its own logo and keypad artwork. AUTO uses EPOCH.
 - DISPLAY (**AUTO**|EMUSCV|EPOCH|YENO) - the visible area. EPOCH and YENO reproduce the framing of each real console, edge artefacts included. EMUSCV is a third framing, chosen by the author rather than taken from hardware, which trims those artefacts across the whole game library; it is the default.
 - PIXELASPECT (**AUTO**|RECTANGULAR|SQUARE) - the console's pixels are not square. RECTANGULAR reproduces their real shape, SQUARE draws them square.
-- RESOLUTION (**AUTO**|LOW|MEDIUM|HIGH) - internal render scale. AUTO is fixed when the core is built, so its value depends on the platform.
+- RESOLUTION (**AUTO**|LOW|MEDIUM|HIGH) - internal render scale. It only changes how sharp the overlays are, not the emulated picture. AUTO times the drawing when a game loads and picks the highest resolution the machine can afford.
 - PALETTE (**AUTO**|STANDARD|OLDNTSC) - colour table. OLDNTSC uses the warmer set an early NTSC set would show.
 - FPS (**AUTO**|EPOCH60|YENO50) - frame rate, when it needs to be forced independently of the console setting.
-- DISPLAYFULLMEMORY (**AUTO**|YES|NO) - draws the whole video memory instead of the area a television would show, borders included.
+- DISPLAYFULLMEMORY (**AUTO**|YES|NO) - draws the whole drawn area, borders included, instead of what a television showed.
 - DISPLAYINPUTS (**AUTO**|YES|NO) - overlays the state of the two controllers.
-- LANGAGE (**AUTO**|JP|FR|EN) - language of the core's own screens.
+- KEYBOARDATSTART (**AUTO**|YES|NO) - shows the console keypad overlay as soon as a game is loaded, so a player does not have to know that SELECT opens it. Only YES shows it; AUTO and NO keep it hidden until SELECT is pressed.
+- LANGUAGE (**AUTO**|JP|FR|EN) - reserved for a later version, for cartridge labels and manuals. It has no effect yet.
 - CHECKBIOS (**AUTO**|YES|NO) - whether to verify the BIOS checksum before starting.
 
 ## Control device types
 
 ## Joypad
 
+Each console controller carries a joystick and two buttons. Both controllers are
+emulated, on ports 1 and 2.
+
+| RetroPad | Console |
+|---|---|
+| D-Pad, left analog stick, right analog stick | Joystick |
+| A (right face button), R1 | Right button |
+| B (bottom face button), L1 | Left button |
+| Start | Both buttons at once, and the EN key of the keypad |
+| Select | Shows and hides the console keypad |
+
+The face buttons are named after the RetroPad, and pads label them differently: A is the
+button on the right, B the one at the bottom, X at the top and Y on the left. On a
+PlayStation pad, A and B are Circle and Cross; on an Xbox pad, B and A.
+
+Start is there to make starting a game easier. The console has no start button, yet many
+games say "press START", and what actually starts a game varies from one to the next. So
+Start presses both fire buttons and the keypad's EN key at once, which gets every game
+past its title screen. X, Y, L2, R2, L3 and R3 are declared so that they can be remapped,
+but the core does not use them.
+
 ## Keyboard
 
-The console has a numeric keypad, which the core reaches through an on-screen overlay. SELECT opens and closes it.
+The console has a numeric keypad, which the core reaches through an on-screen overlay.
+SELECT opens and closes it.
+
+```
+  POWER    7   8   9
+  RESET    4   5   6
+           1   2   3
+  PAUSE    0   CL  EN
+```
+
+The D-Pad moves the cursor. A or R1 press the selected key and leave the overlay open;
+B or L1 press it and close the overlay; Start presses EN and closes it. While the
+overlay is shown the pad drives the keypad, not the game, so it has to be closed to
+play again.
+
+Holding RESET keeps the console in reset with a blue screen, as the real machine does,
+until the key is released.
+
+A PC keyboard works as well: `0` to `9` (top row or numeric keypad), `Enter` for EN,
+`Backspace` or `Delete` for CL, `F12` for POWER, `F11` for RESET and `F9` for PAUSE.
 
 ## BIOS
 
@@ -107,7 +148,6 @@ EmuSCV require a Super Cassette Vision BIOS to run.
 There is only one version of the BIOS that can use different names:
 
 - upd7801g.s01 (standard)
-- upd7801.s01
 - upd7801g.bin
 - upd7801g.bios
 - bios.rom
