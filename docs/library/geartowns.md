@@ -304,11 +304,11 @@ Settings marked (restart) take effect after reloading the content.
 
 - **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns Marty (80386SX 16 MHz))
 
-	The FM Towns model to emulate. Auto picks the machine and RAM the game database names for the game, and the FM Towns (Model 1/2) for other content. It is recommended to leave this option on Auto. RetroArch's 'Save Game Options' keeps a choice for one game.
+	The FM Towns model to emulate. Auto picks the machine, CPU speed and RAM the game database names for the game, and the FM Towns (Model 1/2) for other content. It is recommended to leave this option on Auto. RetroArch's 'Save Game Options' keeps a choice for one game.
 
 - **CPU Speed (restart)** [geartowns_cpu_clock] (**Auto**|16 MHz|20 MHz|25 MHz|33 MHz|40 MHz|50 MHz|66 MHz|100 MHz)
 
-	Auto runs the CPU at the model's original clock. Devices keep their real timing at any speed. Some software may not expect a faster CPU.
+	Auto runs the CPU at the model's original clock, or at the speed the game database names when Model is on Auto. Devices keep their real timing at any speed. Some software may not expect a faster CPU.
 
 - **Main RAM (restart)** [geartowns_main_ram] (**Auto**|1 MB|2 MB|4 MB|6 MB|8 MB|10 MB|12 MB|16 MB|20 MB|24 MB|26 MB)
 
