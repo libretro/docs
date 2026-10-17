@@ -8,7 +8,7 @@ Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in
 - 80386 dynamic recompiler (dynarec) on supported platforms.
 - CD-ROM drive emulation with `cue/bin`, `iso` and `chd` images, `m3u` disc playlists and disc swapping.
 - Physical CD-ROM disc support through the frontend.
-- Two floppy drives with `d77`, `d88`, `hdm`, `xdf` and `img` images, also inside `zip` archives, `m3u` playlists, blank save disks and persistent disk changes.
+- Two floppy drives with `d77`, `d88`, `hdm`, `xdf`, `img` and raw `bin` images, also inside `zip` archives, `m3u` playlists, blank save disks and persistent disk changes.
 - Battery-backed CMOS shared by all content, or saved per game.
 - Controllers:
     * Original FM Towns gamepad (2 buttons)
@@ -95,11 +95,12 @@ Content that can be loaded by the Geartowns core have the following file extensi
 - .hdm
 - .xdf
 - .img
+- .bin
 - .m3u
 
 Geartowns supports `chd`, `iso` and `cue/bin` CD-ROM images. Load the `cue` file, not a `bin` track. CUE audio tracks can use raw BIN, WAV (44.1 kHz, 16-bit stereo) or Ogg Vorbis files. Physical CD-ROM discs can be loaded with the frontend's **Load Disc** option where supported.
 
-Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, also inside `zip` archives. A `zip` archive must hold exactly one floppy image. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
+Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. A `zip` archive must hold exactly one floppy image. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
 
 ## Features
 
@@ -176,7 +177,7 @@ Some software asks for a blank user or save disk. Enable **Save Disk** to add a 
 
 The FM Towns keeps its settings in 8 KB of battery-backed CMOS: the boot device, Towns OS settings and the OAK/2 kana-kanji user dictionary. By default the core keeps one CMOS for all content in the save directory, as on the real machine, so settings made by one program are seen by the others. The CMOS is saved a few seconds after it changes, on restart and when the content is closed. Set **CMOS** to *Per Game* to keep a separate CMOS in each content's `.srm` save file instead.
 
-A new CMOS starts with the stock OAK/2 user dictionary that Towns OS boot disks install. Some games, such as Kyuukyoku Tiger, need it and stop at the Towns OS logo without it. Delete the CMOS file to start again with a new CMOS.
+A new CMOS starts with the stock OAK/2 user dictionary that Towns OS boot disks install. Some games, such as Kyuukyoku Tiger, need it and stop at the Towns OS logo without it. On models with two floppy drives it also starts with Towns OS single-drive mode off, so floppy games such as Rance 2 find their second disk in drive B; a shared CMOS file from an older core version is updated once to match. Delete the CMOS file to start again with a new CMOS.
 
 Save states include the CMOS. Loading a state also brings back the CMOS it was made with, and with the shared CMOS that is saved to the shared file.
 
