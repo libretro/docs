@@ -81,7 +81,7 @@ The Handy core saves/loads to/from these directories.
 
 - The Handy core's core provided FPS is 75
 - The Handy core's core provided sample rate is 22050 Hz
-- The Handy core's core provided aspect ratio is dependent on the ['Display rotation' core option](#core-options/). When set to None, the aspect ratio will be 80/51. When set to 90 or 240, the aspect ratio will be 51/80.
+- The Handy core's core provided aspect ratio is dependent on the ['Display rotation' core option](#core-options). When set to None, the aspect ratio will be 80/51. When set to 90 or 240, the aspect ratio will be 51/80.
 
 ## Core options
 

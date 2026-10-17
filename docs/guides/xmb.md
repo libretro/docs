@@ -27,7 +27,7 @@ By default, no thumbnails are displayed. Up to 2 can be enabled: The primary thu
 
 Thumbnails can be enabled in `Settings> User Interface> Appearance`, toggling the `Primary Thumbnail` and/or `Secondary Thumbnail` option. Thumbnails can be boxart, a title screen screenshot, or a gameplay screenshot.
 
-![XMB with 'Boxart' thumbnails enabled](./image/retroarch/xmb/thumbnails1.png)
+![XMB with 'Boxart' thumbnails enabled](../image/retroarch/xmb/thumbnails1.png)
 
 ## Themes
 
@@ -40,5 +40,5 @@ XMB has a number of styles built-in. They can be changed in the `Settings > User
 
 * XMB also has a selection of icon sets to choose from (`Icon Theme`).
 
-![XMB with an alternative background color, background animation, and icon set](./image/retroarch/xmb/theme_alt.png)
+![XMB with an alternative background color, background animation, and icon set](../image/retroarch/xmb/theme_alt.png)
 *XMB with an alternative background color, background animation, and icon set.*

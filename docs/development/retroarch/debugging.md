@@ -10,7 +10,7 @@ If you find any recurrent crashes you can start the retroarch_debug.exe executab
 The [GNU Debugger](https://www.gnu.org/software/gdb/) is the most widely available debugging tool for many platforms.
 
 !!! note "Windows users"
-    This guide assumes you have already installed the MSYS2/MinGW environment as detailed [here](../../compilation/windows/) and that you are running in the appropriate "MSYS2 MinGW" (32 or 64-bit) shell (not "MSYS2 MSYS").
+    This guide assumes you have already installed the MSYS2/MinGW environment as detailed [here](compilation/windows.md) and that you are running in the appropriate "MSYS2 MinGW" (32 or 64-bit) shell (not "MSYS2 MSYS").
 
 If you observe a crash with RetroArch and would like to get more information, navigate to the folder where your RetroArch installation is and run:
 

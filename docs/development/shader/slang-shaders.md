@@ -38,7 +38,7 @@ The fundamental issue is that GLSL shaders are dependent on the runtime GL versi
 
 Fortunately, there is now a forward looking and promising solution to our problems. Vulkan GLSL is a GLSL dialect designed for Vulkan and SPIR-V intermediate representation. We can use whatever GLSL version we want when writing shaders, as it is decoupled from the GL runtime.
 
-In runtime, we can have a vendor-neutral mature compiler, [https://github.com/KhronosGroup/glslang](glslang) which compiles our Vulkan GLSL to SPIR-V. Using [https://github.com/KhronosGroup/SPIRV-Cross](SPIRV-Cross), we can then do reflection on the SPIR-V binary to deduce our filter chain layout.
+In runtime, we can have a vendor-neutral mature compiler, [glslang](https://github.com/KhronosGroup/glslang) which compiles our Vulkan GLSL to SPIR-V. Using [SPIRV-Cross](https://github.com/KhronosGroup/SPIRV-Cross), we can then do reflection on the SPIR-V binary to deduce our filter chain layout.
 
 We can also disassemble back to our desired GLSL dialect in the GL backend based on which GL version we're running, which effectively means we can completely sidestep all our current problems with a pure GLSL based shading system.
 
@@ -112,7 +112,7 @@ We have a way to query the resolution of individual textures to allow highly con
 
 This diagram shows a filter chain where a shader pass can take multiple inputs: the original input texture, the output from a previous pass, and feedback from a previous frame. The feedback input allows the shader to use data from the last frame, enabling effects like motion blur, persistence, or ghosting. Each pass can combine these inputs to produce its output, which is then used by subsequent passes or rendered to the backbuffer.
 
-For practical guidance on using feedback and history in shaders, see [Advanced Techniques: Practical Guide to Feedback and History](#advanced-techniques-practical-guide-to-feedback-and-history).
+For practical guidance on using feedback and history in shaders, see [Advanced Techniques: Practical Guide to Feedback and History](#practical-guide-to-feedback-and-history).
 
 ### Texture Clamping and Wrap Modes
 

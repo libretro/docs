@@ -81,7 +81,7 @@ The vecx core supports one controller setting:
 
 * RetroPad
 
-| vecx      | [RetroPad](RetroPad)                                           |
+| vecx      | [RetroPad](../guides/input-and-controls.md#what-is-a-retropad)                                           |
 |-----------|----------------------------------------------------------------|
 | 2         | ![RetroPad_B](../image/retropad/retro_b.png)               |
 | 4         | ![RetroPad_Y](../image/retropad/retro_y.png)               |

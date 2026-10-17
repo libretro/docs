@@ -242,6 +242,7 @@ nav:
         - 'Nintendo - Game Boy Advance (gpSP)': 'library/gpsp.md'
         - 'Nintendo - Game Boy Advance (Meteor)': 'library/meteor.md'
         - 'Nintendo - Game Boy Advance (mGBA)': 'library/mgba.md'
+        - 'Nintendo - Game Boy Advance (mGBA Splitscreen)': 'library/mgba_splitscreen.md'
         - 'Nintendo - Game Boy Advance (TempGBA)': 'library/tempgba.md'
         - 'Nintendo - Game Boy Advance (VBA Next)': 'library/vba_next.md'
         - 'Nintendo - Game Boy Advance (VBA-M)': 'library/vba_m.md'
