@@ -101,7 +101,7 @@ Content that can be loaded by the Geartowns core have the following file extensi
 
 Geartowns supports `chd`, `iso` and `cue/bin` CD-ROM images. Load the `cue` file, not a `bin` track. CUE audio tracks can use raw BIN, WAV (44.1 kHz, 16-bit stereo) or Ogg Vorbis files. Physical CD-ROM discs can be loaded with the frontend's **Load Disc** option where supported.
 
-Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, HxC `mfm` bitstream images such as MAME's copy-protected originals, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. Changes to an `mfm` disk are kept in a `d77` working copy. A `zip` archive must hold exactly one floppy image. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
+Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, HxC `mfm` bitstream images such as MAME's copy-protected originals, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. Changes to an `mfm` disk are kept in a `d77` working copy. A `zip` archive with several floppy images, such as MAME's multi-disk sets, lists each one as a separate disk control entry in file name order, like an `m3u` playlist. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
 
 ## Features
 
