@@ -101,7 +101,7 @@ Content that can be loaded by the Geartowns core have the following file extensi
 
 Geartowns supports `chd`, `iso` and `cue/bin` CD-ROM images. Load the `cue` file, not a `bin` track. CUE audio tracks can use raw BIN, WAV (44.1 kHz, 16-bit stereo) or Ogg Vorbis files. Physical CD-ROM discs can be loaded with the frontend's **Load Disc** option where supported.
 
-Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, HxC `mfm` bitstream images such as MAME's copy-protected originals, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. Changes to an `mfm` disk are kept in a `d77` working copy. A `zip` archive with several floppy images, such as MAME's multi-disk sets, lists each one as a separate disk control entry in file name order, like an `m3u` playlist. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
+Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, HxC `mfm` bitstream images such as MAME's copy-protected originals, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. Changes to an `mfm` disk are kept in a `d77` working copy. A `zip` archive with several floppy images, such as MAME's multi-disk sets, lists each one as a separate disk control entry in file name order, like an `m3u` playlist, and starts from the first disk with an FM Towns boot sector. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
 
 ## Features
 
@@ -155,7 +155,7 @@ Each drive keeps its own disk. When the selected entry belongs to another drive,
 
 When content is opened again, the disk RetroArch remembers is used for CD-ROM entries. Floppy disk content always starts from its first disk.
 
-Load an `m3u` playlist to add several CD-ROM or floppy images to the disk control list. Playlists can mix CD-ROM and floppy images; when they do, the first image of the other media type is also inserted at startup. Enable **Floppy MultiDrive** to also insert the following floppy disk into drive 2.
+Load an `m3u` playlist to add several CD-ROM or floppy images to the disk control list. Playlists can mix CD-ROM and floppy images; when they do, the first image of the other media type is also inserted at startup. Enable **Floppy MultiDrive** to also insert the floppy disk that follows the boot floppy into drive 2, wrapping to the start of the list.
 
 Custom labels for the disk control list can be set with `DISK_FILE|DISK_LABEL`. A blank label (`DISK_FILE|`) shows only the disk index. A `#SAVEDISK:DiskName` line adds a formatted blank 2HD save disk; `DiskName` is optional and is stored as the D77 disk name, not as a volume label on the disk. Save disks are created in the frontend's save directory as `[M3U_FILE_NAME].save[N].d77` and labelled `Save Disk N`, counting from 0.
 
