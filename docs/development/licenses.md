@@ -131,6 +131,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [GAM4980](../library/gam4980.md)                                                 | [GPLv3](https://codeberg.org/iyzsong/gam4980/raw/branch/master/COPYING)                   |                |
 | [Gambatte](../library/gambatte.md)                                               | [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)                |                |
 | [Game Music Emu](../library/game_music_emu.md)            		           | [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)                     |                |
+| [GameTank](../library/gametank.md)                                               | [MIT](https://github.com/SundownerSport/gametank-libretro/blob/main/LICENSE)              |                |
 | [Gearboy](../library/gearboy.md)                                                 | [GPLv3](https://github.com/drhelius/Gearboy/blob/master/LICENSE)                          |                |
 | [Gearcoleco](../library/gearcoleco.md)                                           | [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)                       |                |
 | [Geargrafx](../library/geargrafx.md)                                           | [GPLv3](https://github.com/drhelius/Geargrafx/blob/master/LICENSE)                       |                |
