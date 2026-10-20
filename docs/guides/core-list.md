@@ -109,6 +109,7 @@
 | [GAM4980](../library/gam4980.md) | BBK 4980/4988/5980 electronic dictionary |
 | [Gambatte](../library/gambatte.md) | Game Boy/Color         |                    |
 | [Game Music Emu](../library/game_music_emu.md) | Music player           | A port of Game Music Emu which allows playback of a wide variety of video game music formats |
+| [GameTank](../library/gametank.md) | Clydeware GameTank     |                    |
 | [Gearboy](../library/gearboy.md) | Game Boy/Color         |                    |
 | [Gearcoleco](../library/gearcoleco.md) | Coleco ColecoVision    |                    |
 | [Geargrafx](../library/geargrafx.md) | NEC PC Engine/SuperGrafx    |                    |

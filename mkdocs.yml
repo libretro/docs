@@ -166,6 +166,8 @@ nav:
       - 'BBK electronic dictionary':
         - 'BBK - 4980/4988/5980 electronic dictionary': 'library/gam4980.md'
         - 'BBK - electronic dictionaries (BBKEmu)': 'library/bbkemu.md'
+      - 'Clydeware Emulation':
+        - 'Clydeware - GameTank (GameTank)': 'library/gametank.md'
       - 'ColecoVision Emulation':
         - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
         - 'ColecoVision/CreatiVision/My Vision (JollyCV)': 'library/jollycv.md'
