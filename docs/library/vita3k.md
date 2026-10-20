@@ -90,7 +90,14 @@ The Vita3K core's library name is 'Vita3K'.
 
 - `vita3k/PSP2UPDAT.PUP`, `vita3k/PSP2UPDAT_PREINST.PUP`, `vita3k/PSP2UPDAT_FONT.PUP` (firmware packages)
 - `vita3k/data/`, `vita3k/shaders-builtin/` (the core's data files)
-- `vita3k/ux0/` (the emulated memory card: installed games, updates, DLC and saves)
+- `vita3k/ux0/` (the emulated memory card)
+    - `ux0/app/<title ID>/` (an installed game)
+    - `ux0/patch/<title ID>/` (its installed update)
+    - `ux0/addcont/<title ID>/<DLC ID>/` (its installed DLC)
+    - `ux0/user/00/savedata/<title ID>/` (its saves)
+    - `ux0/user/00/trophy/` (trophies)
+- `vita3k/cache/pkg/` (the persistent cache of a game run directly with a cache: the parts of the game, its update and DLC that were read)
+- `vita3k/cache/shaders/<title ID>/` (a game's shader cache)
 
 ## Core options
 
