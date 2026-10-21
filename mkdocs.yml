@@ -124,6 +124,7 @@ nav:
         - 'Apple - II (AppleWin)': 'library/applewin.md'
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
+        - 'Arcade (Daphne HypseusHW)': 'library/hypseushw.md'
         - 'Arcade (DICE)': 'library/dice.md'
         - 'Arcade (FB Alpha 2012 CPS-1)': 'library/fbalpha2012_cps1.md'
         - 'Arcade (FB Alpha 2012 CPS-2)': 'library/fbalpha2012_cps2.md'
