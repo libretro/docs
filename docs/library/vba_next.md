@@ -83,6 +83,9 @@ The VBA Next core saves/loads to/from these directories.
 
 - 'content-name'.srm (Cartridge battery save)
 
+!!! tip "Converting saves to .sav"
+    This core's `.srm` is the libretro VBA format (always 139,264 bytes), not the plain `.sav` most other emulators and flash carts use. [GBA 4gz, 4gs and sav Converter](https://thysbelon.github.io/gbaconv-web/) converts it to `.sav` and back, in the browser.
+
 **Frontend's State directory**
 
 - 'content-name'.state# (State)
