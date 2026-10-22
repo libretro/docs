@@ -13,7 +13,7 @@ This is probably the most straightforward way to install RetroArch.
 
 ## Download
 
-You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down until you see the **Steam Link** section.
+You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/platforms.html) and scroll down until you see the **Steam Link** section.
 
 ## Getting USB Ready
 

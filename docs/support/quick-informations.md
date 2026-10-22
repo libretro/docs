@@ -18,7 +18,7 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 
 === "Help"
 
-	- [F.A.Q](https://www.retroarch.com/?page=faq)
+	- [F.A.Q](https://www.retroarch.com/faq.html)
 	- [Libretro Documentation](https://docs.libretro.com/)
 	- [Lakka Doc](http://www.lakka.tv/doc/Home/)
 	- [Facebook Group](https://www.facebook.com/groups/retroarch/)
