@@ -1,5 +1,8 @@
 # Sega - Saturn/ST-V (Kronos)
 
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
+
 ## Background
 
 Kronos is a fork of [Yabause](yabause.md). [It uses compute shaders](https://www.libretro.com/index.php/kronos-2-1-2-progress-report-sega-saturn-emulator/) and as such requires OpenGL 4.3. It emulates both the Sega Saturn and its arcade board version, the Sega Titan Video (ST-V).

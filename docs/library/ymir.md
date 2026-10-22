@@ -1,5 +1,8 @@
 # Sega - Saturn (Emir)
 
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
+
 ## Background
 
 A port of the Ymir Sega Saturn emulator to libretro. Ymir is a work-in-progress Saturn emulator focused on accuracy and compatibility. It features software rendering, SH2 emulation with optional cache emulation, and a modern codebase. A young but rapidly maturing alternative to Beetle Saturn.

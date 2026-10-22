@@ -1,5 +1,8 @@
 # PlayStation (Beetle PSX)
 
+!!! tip "Quick start"
+	New to PlayStation emulation? The [PlayStation setup guide](https://www.retroarch.com/ps1.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
+
 ## Background
 
 Beetle PSX is a port/fork of Mednafen's PSX module to the libretro API. It can be compiled in C++98 mode. Beetle PSX currently runs on Linux, OSX and Windows.

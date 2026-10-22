@@ -1,5 +1,8 @@
 # Sega - Saturn (Beetle Saturn)
 
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QTIRtZ9q5PM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Background
