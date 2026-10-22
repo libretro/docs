@@ -1,3 +1,8 @@
+---
+title: "Sega Saturn and ST-V (Kronos) Core"
+description: "Kronos core documentation: Saturn and ST-V BIOS files, the OpenGL 4.3 requirement, core options and known issues."
+---
+
 # Sega - Saturn/ST-V (Kronos)
 
 !!! tip "Quick start"

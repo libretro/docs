@@ -1,3 +1,8 @@
+---
+title: "Sega Saturn (Beetle Saturn) Core"
+description: "Beetle Saturn core documentation: Saturn BIOS files, disc images and multi-disc games, core options, controllers and supported features."
+---
+
 # Sega - Saturn (Beetle Saturn)
 
 !!! tip "Quick start"

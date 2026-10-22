@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on macOS"
+description: "How to download, install and update RetroArch on macOS from the stable or nightly .dmg."
+---
+
 # Downloading, Installing and Updating RetroArch for macOS
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/H2Fv29vMpcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

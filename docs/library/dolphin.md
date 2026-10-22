@@ -1,3 +1,8 @@
+---
+title: "GameCube and Wii (Dolphin) Core"
+description: "Dolphin core documentation: system files, optional BIOS, OpenGL, Vulkan and Direct3D 11 renderers, core options and GameCube and Wii controls."
+---
+
 # Nintendo Gamecube/Wii (Dolphin)
 
 !!! tip "Quick start"

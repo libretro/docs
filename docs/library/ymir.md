@@ -1,3 +1,8 @@
+---
+title: "Sega Saturn (Emir) Core"
+description: "Emir core documentation: a libretro port of the accuracy-focused Ymir Saturn emulator, with its core options for system, video, audio and CD emulation."
+---
+
 # Sega - Saturn (Emir)
 
 !!! tip "Quick start"

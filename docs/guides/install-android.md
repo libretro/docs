@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on Android"
+description: "How to download, install and update RetroArch on Android by side-loading the APK, and why the Google Play release is not recommended."
+---
+
 # Downloading, Installing and Updating RetroArch for Android devices.
 
 ## Non-Google Play sources

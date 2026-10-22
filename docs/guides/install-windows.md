@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on Windows 7 and Later"
+description: "How to download, install and update RetroArch on Windows 7, 8, 10 and 11, from a stable release or a nightly build."
+---
+
 # Downloading, Installing and Updating RetroArch for Windows 7 and Later
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hu-TW02bhhY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

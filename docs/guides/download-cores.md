@@ -1,3 +1,8 @@
+---
+title: "Installing Cores in RetroArch"
+description: "How to download and update RetroArch cores with the Core Downloader, or through the package manager with the Ubuntu PPA."
+---
+
 # Cores
 
 Cores are essentially other programs and games that run through RetroArch. RetroArch requires cores to run any content.

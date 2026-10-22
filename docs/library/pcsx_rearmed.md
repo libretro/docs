@@ -1,3 +1,8 @@
+---
+title: "PlayStation (PCSX ReARMed) Core"
+description: "PCSX ReARMed core documentation: PlayStation BIOS files, supported formats, core options, controls and features of the ARM-optimised PS1 core."
+---
+
 # Sony - PlayStation (PCSX ReARMed)
 
 !!! tip "Quick start"

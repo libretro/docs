@@ -1,3 +1,8 @@
+---
+title: "PlayStation (Beetle PSX) Core"
+description: "Beetle PSX core documentation: BIOS files, disc image setup, core options, controllers and features of the Mednafen-based PS1 core."
+---
+
 # PlayStation (Beetle PSX)
 
 !!! tip "Quick start"
