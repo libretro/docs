@@ -1,4 +1,4 @@
-# Sony - PlayStation (LRPS2)
+# Sony - PlayStation 2 (LRPS2)
 
 !!! tip "Quick start"
 	New to PlayStation 2 emulation? The [PlayStation 2 setup guide](https://www.retroarch.com/ps2.html) on retroarch.com covers what you need and how to get your first game running.
