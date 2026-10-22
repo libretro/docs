@@ -1,3 +1,8 @@
+---
+title: "Beetle Supafaust – Nintendo SNES / SFC core for RetroArch"
+description: "RetroArch Beetle Supafaust core (Nintendo SNES / SFC): core options. A port of Mednafen's Supafaust SNES emulator to libretro."
+---
+
 # Nintendo - SNES / SFC (Beetle Supafaust)
 
 ## Background

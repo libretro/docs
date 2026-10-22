@@ -1,3 +1,8 @@
+---
+title: "higan Accuracy – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch higan Accuracy core (Nintendo SNES / Famicom): BIOS files, core options and controls. A port of higan v106's Super Famicom emulation core to libretro."
+---
+
 # Nintendo - SNES / Famicom (higan Accuracy)
 
 ## Background

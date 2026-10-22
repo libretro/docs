@@ -1,5 +1,5 @@
 ---
-title: "Sega Saturn (Emir) Core"
+title: "Emir – Sega Saturn core for RetroArch"
 description: "Emir core documentation: a libretro port of the accuracy-focused Ymir Saturn emulator, with its core options for system, video, audio and CD emulation."
 ---
 

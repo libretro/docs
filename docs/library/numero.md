@@ -1,3 +1,8 @@
+---
+title: "Numero – Texas Instruments TI-83 core for RetroArch"
+description: "RetroArch Numero core (Texas Instruments TI-83): BIOS files, core options and controls. Numero is a libretro core for emulating the TI-83 family of graphing calculators."
+---
+
 # Texas Instruments TI-83 (Numero)
 
 ![](../image/core/numero/preview.gif)

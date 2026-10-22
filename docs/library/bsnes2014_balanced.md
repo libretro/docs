@@ -1,3 +1,8 @@
+---
+title: "bsnes 2014 Balanced – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes 2014 Balanced core (Nintendo SNES / Famicom): BIOS files and controls. This page is about bsnes 2014 Balanced, the bsnes v094 core whose file is named bsnes2014_balanced_libretro."
+---
+
 # Nintendo - SNES / Famicom (bsnes 2014 Balanced)
 
 ## Background

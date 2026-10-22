@@ -1,3 +1,8 @@
+---
+title: "Geargrafx – NEC PC Engine / SuperGrafx core for RetroArch"
+description: "RetroArch Geargrafx core (NEC PC Engine / SuperGrafx): BIOS files, core options and controls. Geargrafx is an open source, cross-platform PC Engine, TurboGrafx-16, and SuperGrafx emulator written in…"
+---
+
 # NEC - PC Engine / SuperGrafx (Geargrafx)
 
 ## Background

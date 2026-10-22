@@ -1,3 +1,8 @@
+---
+title: "ClownMDEmu core for RetroArch"
+description: "RetroArch ClownMDEmu core: core options and controls. A highly-portable Sega Mega Drive emulator that aims to be as fast as possible without sacrificing accuracy."
+---
+
 # ClownMDEmu
 
 ## Background

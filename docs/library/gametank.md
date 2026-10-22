@@ -1,3 +1,8 @@
+---
+title: "GameTank – Clydeware GameTank core for RetroArch"
+description: "RetroArch GameTank core (Clydeware GameTank): BIOS files, core options and controls. The GameTank is an 8-bit console designed by Clyde Shaffer."
+---
+
 # Clydeware - GameTank (GameTank)
 
 ## Background

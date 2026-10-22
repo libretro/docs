@@ -1,3 +1,8 @@
+---
+title: "bsnes 2014 Performance – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes 2014 Performance core (Nintendo SNES / Famicom): BIOS files and controls. This page is about bsnes 2014 Performance, the bsnes v094 core whose file is named…"
+---
+
 # Nintendo - SNES / Famicom (bsnes 2014 Performance)
 
 ## Background

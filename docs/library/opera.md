@@ -1,3 +1,8 @@
+---
+title: "Opera – The 3DO Company 3DO core for RetroArch"
+description: "RetroArch Opera core (The 3DO Company 3DO): BIOS files, core options and controls. Opera is an open-source, low-level emulator for the 3DO Game Console."
+---
+
 # The 3DO Company - 3DO (Opera)
 
 ## Background

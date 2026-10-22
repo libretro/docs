@@ -1,5 +1,5 @@
 ---
-title: "PlayStation 2 (LRPS2) Core"
+title: "LRPS2 – Sony PlayStation 2 core for RetroArch"
 description: "LRPS2 core documentation: system requirements, PS2 BIOS setup, renderers including ParaLLEl-GS, core options and supported features."
 ---
 

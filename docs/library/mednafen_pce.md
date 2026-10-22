@@ -1,3 +1,8 @@
+---
+title: "Beetle PCE – NEC PC Engine / SuperGrafx / CD core for RetroArch"
+description: "RetroArch Beetle PCE core (NEC PC Engine / SuperGrafx / CD): core options and controls. A PC Engine (PCE) core forked from Mednafen's PCE-Accurate emulator, this core is a bit slower than the Fast…"
+---
+
 # NEC - PC Engine / SuperGrafx / CD (Beetle PCE)
 
 ## Background

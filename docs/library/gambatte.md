@@ -1,3 +1,8 @@
+---
+title: "Gambatte – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch Gambatte core (Nintendo Game Boy / Color): BIOS files, core options and controls. Gambatte is an accuracy-focused, open-source, cross-platform Game Boy Color emulator written in C++."
+---
+
 # Nintendo - Game Boy / Color (Gambatte)
 
 ## Background

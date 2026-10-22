@@ -1,3 +1,8 @@
+---
+title: "NooDS – Nintendo DS core for RetroArch"
+description: "RetroArch NooDS core (Nintendo DS): core options. Unofficial libretro port of NooDS, the speedy DS emulator"
+---
+
 # Nintendo - DS (NooDS)
 
 ## Background

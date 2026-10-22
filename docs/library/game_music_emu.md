@@ -1,3 +1,8 @@
+---
+title: "Game Music Emu core for RetroArch"
+description: "RetroArch Game Music Emu core: controls. Multi-purpose video game console music player."
+---
+
 # Game Music Emu
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vxbRDG2TTIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

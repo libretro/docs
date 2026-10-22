@@ -1,3 +1,8 @@
+---
+title: "Cannonball core for RetroArch"
+description: "RetroArch Cannonball core: core options and controls. This is an OutRun game engine recreation written by Chris White in 2014."
+---
+
 # Cannonball
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ILGQqmpbg6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,3 +1,8 @@
+---
+title: "Yabause – Sega Saturn core for RetroArch"
+description: "RetroArch Yabause core (Sega Saturn): BIOS files, core options and controls. Yabause is a Sega Saturn emulator that is both open-source and written with portability in mind."
+---
+
 # Sega - Saturn (Yabause)
 
 !!! tip "Quick start"

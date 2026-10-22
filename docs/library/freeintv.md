@@ -1,3 +1,8 @@
+---
+title: "FreeIntv – Mattel Intellivision core for RetroArch"
+description: "RetroArch FreeIntv core (Mattel Intellivision): BIOS files. FreeIntv is a libretro emulation core for the Mattel Intellivision designed to be compatible with joypads from the SNES era forward even…"
+---
+
 # Mattel - Intellivision (FreeIntv)
 
 ## Background

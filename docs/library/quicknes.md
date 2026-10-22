@@ -1,3 +1,8 @@
+---
+title: "QuickNES – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch QuickNES core (Nintendo NES / Famicom): core options and controls. Nes_Emu, the core NES emulator library used by QuickNES, began as a very simple NES emulator sometime in 2004."
+---
+
 # Nintendo - NES / Famicom (QuickNES)
 
 ## Background

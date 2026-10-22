@@ -1,3 +1,8 @@
+---
+title: "Xenia Edge – Microsoft Xbox 360 core for RetroArch"
+description: "RetroArch Xenia Edge core (Microsoft Xbox 360): BIOS files, core options and controls. A port of Xenia Edge, an Xbox 360 emulator, to libretro."
+---
+
 # Microsoft - Xbox 360 (Xenia Edge)
 
 ## Background

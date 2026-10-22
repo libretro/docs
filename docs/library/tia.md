@@ -1,3 +1,8 @@
+---
+title: "Tia – Atari 2600 core for RetroArch"
+description: "RetroArch Tia core (Atari 2600): core options and controls. Tia is an Atari 2600 core written from scratch in C89 - not a port of another emulator."
+---
+
 # Atari - 2600 (Tia)
 
 ## Background

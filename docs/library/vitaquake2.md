@@ -1,3 +1,8 @@
+---
+title: "vitaQuake 2 – Quake II core for RetroArch"
+description: "RetroArch vitaQuake 2 core (Quake II): core options and controls. A port of the VitaQuake 2 source port of iD's Quake 2 engine to libretro."
+---
+
 # Quake II (vitaQuake 2)
 
 ## Background

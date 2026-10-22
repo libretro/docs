@@ -1,3 +1,8 @@
+---
+title: "Citra 2018 – Nintendo 3DS core for RetroArch"
+description: "RetroArch Citra 2018 core (Nintendo 3DS): core options and controls. A port of the Citra 3DS emulator to libretro."
+---
+
 # Nintendo - 3DS (Citra 2018)
 
 ## Background

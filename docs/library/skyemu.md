@@ -1,3 +1,8 @@
+---
+title: "SkyEmu – Nintendo Game Boy/GBA/NDS core for RetroArch"
+description: "RetroArch SkyEmu core (Nintendo Game Boy/GBA/NDS): core options. SkyEmu is a multi-system emulator, supporting Game Boy, Game Boy Color and Nintendo DS cores."
+---
+
 # Nintendo - Game Boy/GBA/NDS (SkyEmu)
 
 ## Background

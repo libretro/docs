@@ -1,3 +1,8 @@
+---
+title: "Beetle SuperGrafx – NEC PC Engine SuperGrafx core for RetroArch"
+description: "RetroArch Beetle SuperGrafx core (NEC PC Engine SuperGrafx): BIOS files, core options and controls. Standalone port of Mednafen PCE Fast to libretro."
+---
+
 # NEC - PC Engine SuperGrafx (Beetle SuperGrafx)
 
 ## Background

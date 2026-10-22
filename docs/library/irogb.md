@@ -1,3 +1,8 @@
+---
+title: "IroGB – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch IroGB core (Nintendo Game Boy / Color): core options and controls. A libretro port of the IroGB Game Boy Color emulator."
+---
+
 # Nintendo - Game Boy / Color (IroGB)
 
 ## Background

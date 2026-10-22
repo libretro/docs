@@ -1,3 +1,8 @@
+---
+title: "Gearlynx – Atari Lynx core for RetroArch"
+description: "RetroArch Gearlynx core (Atari Lynx): BIOS files, core options and controls. Gearlynx is an open source, cross-platform Atari Lynx emulator written in C++."
+---
+
 # Atari - Lynx (Gearlynx)
 
 ## Background

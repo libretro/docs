@@ -1,3 +1,8 @@
+---
+title: "ZEsarPCW – Amstrad PCW core for RetroArch"
+description: "RetroArch ZEsarPCW core (Amstrad PCW): core options. ZEsarPCW emulates the Amstrad PCW 8256 and 8512."
+---
+
 <!-- zesarpcw-publisher: page -->
 # Amstrad - PCW (ZEsarPCW)
 

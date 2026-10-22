@@ -1,3 +1,8 @@
+---
+title: "doukutsu-rs core for RetroArch"
+description: "RetroArch doukutsu-rs core: core options and controls. Doukutsu-rs (often abbreviated d-rs) is a modern and accurate re-implementation of the Cave Story Engine designed to be a drop-in replacement…"
+---
+
 # doukutsu-rs
 
 *This article primarily outlines the retroarch-specific features of this core. For a general feature-list and how-to for d-rs, please see the readme in the [Upstream Repository](https://github.com/doukutsu-rs/doukutsu-rs/).*

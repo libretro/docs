@@ -1,3 +1,8 @@
+---
+title: "Native32Emu – Native32 core for RetroArch"
+description: "RetroArch Native32Emu core (Native32): BIOS files and controls. Native32 is a game format developed by Sunplus for DVD player and TV chipsets (circa 2005–2011)."
+---
+
 # Native32 (Native32Emu)
 
 ## Background

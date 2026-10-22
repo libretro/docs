@@ -1,3 +1,8 @@
+---
+title: "Gong core for RetroArch"
+description: "RetroArch Gong core: core options and controls. A clone of Pong written for libretro."
+---
+
 # Gong
 
 ## Background

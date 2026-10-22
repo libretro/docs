@@ -1,3 +1,8 @@
+---
+title: "RustyNES – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch RustyNES core (Nintendo NES / Famicom): controls. RustyNES is a cycle-accurate Nintendo Entertainment System (NES) and Famicom emulator written entirely in pure Rust."
+---
+
 # Nintendo - NES / Famicom (RustyNES)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "xemu – Microsoft Xbox core for RetroArch"
+description: "RetroArch xemu core (Microsoft Xbox): BIOS files, core options and controls. A port of xemu, the original Xbox emulator, to libretro."
+---
+
 # Microsoft - Xbox (xemu)
 
 ## Background

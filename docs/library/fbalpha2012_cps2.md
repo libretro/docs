@@ -1,3 +1,8 @@
+---
+title: "FB Alpha 2012 CPS-2 – Arcade core for RetroArch"
+description: "RetroArch FB Alpha 2012 CPS-2 core (Arcade): core options. Based on a snapshot of the Final Burn Alpha codebase from circa 2012, 'FB Alpha 2012 CPS-2' is compatible with FB Alpha v0.2.97.28 ROM sets."
+---
+
 # Arcade (FB Alpha 2012 CPS-2)
 
 ## Background

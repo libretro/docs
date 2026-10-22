@@ -1,3 +1,8 @@
+---
+title: "TIC-80 core for RetroArch"
+description: "RetroArch TIC-80 core: BIOS files, core options and controls. TIC-80 is a fantasy computer for making, playing and sharing tiny games."
+---
+
 # TIC-80
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cC-bitICk3w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

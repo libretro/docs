@@ -1,3 +1,8 @@
+---
+title: "PUAE core for RetroArch"
+description: "RetroArch PUAE core: BIOS files, core options and controls. PUAE tries to continue where E-UAE left off."
+---
+
 # PUAE
 
 ## Background

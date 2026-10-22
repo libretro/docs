@@ -1,3 +1,8 @@
+---
+title: "DOSBox Pure – DOS core for RetroArch"
+description: "RetroArch DOSBox Pure core (DOS): core options and controls. DOSBox Pure is a fork of the multiplatform MS-DOS emulator, DOSBox."
+---
+
 # DOS (DOSBox Pure)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rHkIz4-SewI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

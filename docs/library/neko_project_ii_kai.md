@@ -1,3 +1,8 @@
+---
+title: "Neko Project II Kai – NEC PC-98 core for RetroArch"
+description: "RetroArch Neko Project II Kai core (NEC PC-98): BIOS files, core options and controls. NP2kai is a PC-9801 series core."
+---
+
 # NEC - PC-98 (Neko Project II Kai)
 
 ## Background

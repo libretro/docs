@@ -1,3 +1,8 @@
+---
+title: "bsnes-mercury Accuracy – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes-mercury Accuracy core (Nintendo SNES / Famicom): BIOS files, core options and controls. bsnes-mercury is a fork of higan, aiming to restore some useful features that have been…"
+---
+
 # Nintendo - SNES / Famicom (bsnes-mercury Accuracy)
 
 ## Background

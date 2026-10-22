@@ -1,3 +1,8 @@
+---
+title: "TGB Dual – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch TGB Dual core (Nintendo Game Boy / Color): core options and controls. TGB Dual is an open source (GPLv2) GB/GBC emulator with game link cable support."
+---
+
 # Nintendo - Game Boy / Color (TGB Dual)
 
 ## Background

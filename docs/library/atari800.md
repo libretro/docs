@@ -1,3 +1,8 @@
+---
+title: "Atari800 – Atari 8-bit computer systems and 5200 core for RetroArch"
+description: "RetroArch Atari800 core (Atari 8-bit computer systems and 5200): BIOS files, core options and controls. Atari 8-bit computer systems (400, 800, 600XL, 800XL, 130XE, XE Game System and modern…"
+---
+
 # Atari 8-bit computer systems and 5200 (Atari800)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Omicron core for RetroArch"
+description: "RetroArch Omicron core: core options. Omicron is an open source game engine for Java built on libGDX and inspired by fantasy consoles: a small API for drawing, sound and input, with no resource…"
+---
+
 # Omicron
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Mesen-S – Nintendo SNES / SFC / Game Boy / Color core for RetroArch"
+description: "RetroArch Mesen-S core (Nintendo SNES / SFC / Game Boy / Color): BIOS files, core options and controls. Mesen-S is a cross-platform SNES emulator for Windows & Linux built in C++ and C#."
+---
+
 # Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)
 
 ## Background

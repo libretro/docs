@@ -1,3 +1,8 @@
+---
+title: "ARMSX2 – Sony PlayStation 2 core for RetroArch"
+description: "RetroArch ARMSX2 core (Sony PlayStation 2): core options. A libretro port of ARMSX2, a PlayStation 2 emulator forked from PCSX2 and aimed at ARM64 platforms."
+---
+
 # Sony - PlayStation 2 (ARMSX2)
 
 ## Background

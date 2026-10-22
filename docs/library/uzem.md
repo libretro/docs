@@ -1,3 +1,8 @@
+---
+title: "Uzem – Uzebox core for RetroArch"
+description: "RetroArch Uzem core (Uzebox): core options and controls. Uzem is the official emulator for the Uzebox (A retro-minimalist 8-bit open source game console)."
+---
+
 # Uzebox (Uzem)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/q_MkxvdeGsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,3 +1,8 @@
+---
+title: "DeSmuME 2015 – Nintendo DS core for RetroArch"
+description: "RetroArch DeSmuME 2015 core (Nintendo DS): core options and controls. Port of Desmume to libretro based on Desmume SVN circa 2015."
+---
+
 # Nintendo - DS (DeSmuME 2015)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Potator – Watara Supervision core for RetroArch"
+description: "RetroArch Potator core (Watara Supervision): core options. The Potator core has been authored by"
+---
+
 # Watara - Supervision (Potator)
 
 ## Background

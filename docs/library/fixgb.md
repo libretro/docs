@@ -1,3 +1,8 @@
+---
+title: "fixGB – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch fixGB core (Nintendo Game Boy / Color): core options. A preliminary Game Boy emulator written as a learning experience, this core still supports many of the games and features that are…"
+---
+
 # Nintendo - Game Boy / Color (fixGB)
 
 ## Background

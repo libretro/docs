@@ -1,3 +1,8 @@
+---
+title: "Beetle bsnes – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch Beetle bsnes core (Nintendo SNES / Famicom): controls. Standalone port of Mednafen bSNES to libretro, itself a old fork of bsnes 0.59."
+---
+
 # Nintendo - SNES / Famicom (Beetle bsnes)
 
 ## Background

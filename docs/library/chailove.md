@@ -1,3 +1,8 @@
+---
+title: "ChaiLove core for RetroArch"
+description: "RetroArch ChaiLove core: core options and controls. ChaiLove is a framework for making 2D games with ChaiScript."
+---
+
 # ChaiLove
 
 ## Background

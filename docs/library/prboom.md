@@ -1,3 +1,8 @@
+---
+title: "PrBoom – Doom core for RetroArch"
+description: "RetroArch PrBoom core (Doom): BIOS files, core options and controls. Port of prboom to libretro - plays Doom, Doom II, Final Doom and other Doom IWAD mods."
+---
+
 # Doom (PrBoom)
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4qNr0DZWrQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

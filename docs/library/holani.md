@@ -1,3 +1,8 @@
+---
+title: "Holani – Atari Lynx core for RetroArch"
+description: "RetroArch Holani core (Atari Lynx): BIOS files and controls. Holani is a cycle-stepped Atari Lynx video game system emulator that can be used as a libretro core."
+---
+
 # Atari - Lynx (Holani)
 
 ## Background

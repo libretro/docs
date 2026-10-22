@@ -1,3 +1,8 @@
+---
+title: "The Powder Toy core for RetroArch"
+description: "RetroArch The Powder Toy core: setup and supported features. Based upon the SDL version: https://github.com/ThePowderToy/The-Powder-Toy"
+---
+
 # The Powder Toy
 
 ## Background

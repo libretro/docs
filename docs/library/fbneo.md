@@ -1,3 +1,8 @@
+---
+title: "FinalBurn Neo core for RetroArch"
+description: "RetroArch FinalBurn Neo core: BIOS files. FinalBurn Neo (also referred to as FBNeo or FBN) is a multi-system emulator (Arcade, consoles and computers) under active development."
+---
+
 # FinalBurn Neo
 
 ## Note about this document

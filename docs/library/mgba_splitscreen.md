@@ -1,3 +1,8 @@
+---
+title: "mGBA Splitscreen – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch mGBA Splitscreen core (Nintendo Game Boy Advance): core options. mGBA Splitscreen is a fork of the mGBA libretro core that runs 2 to 4 linked Game Boy Advance emulator instances inside a…"
+---
+
 # Nintendo - Game Boy Advance (mGBA Splitscreen)
 
 ## Background

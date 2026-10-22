@@ -1,3 +1,8 @@
+---
+title: "SPMP8000Emu – SPMP8000 core for RetroArch"
+description: "RetroArch SPMP8000Emu core (SPMP8000): BIOS files and controls. SPMP8000 is a game platform developed by Sunplus for portable game devices."
+---
+
 # SPMP8000 (SPMP8000Emu)
 
 ## Background

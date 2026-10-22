@@ -1,3 +1,8 @@
+---
+title: "Daphne HypseusHW – Arcade core for RetroArch"
+description: "RetroArch Daphne HypseusHW core (Arcade): BIOS files, core options and controls. HypseusHW plays laserdisc arcade games such as Dragon's Lair, Space Ace and Cliff Hanger."
+---
+
 # Arcade (Daphne HypseusHW)
 
 ## Background

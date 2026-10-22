@@ -1,5 +1,5 @@
 ---
-title: "PlayStation (Beetle PSX) Core"
+title: "Beetle PSX – PlayStation core for RetroArch"
 description: "Beetle PSX core documentation: BIOS files, disc image setup, core options, controllers and features of the Mednafen-based PS1 core."
 ---
 

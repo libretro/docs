@@ -1,3 +1,8 @@
+---
+title: "MAME 2003-Plus core for RetroArch"
+description: "RetroArch MAME 2003-Plus core: BIOS files and core options. MAME 2003-Plus (also referred to as MAME 2003+ and mame2003-plus) is a libretro multi-arcade system emulator core which prioritizes 1)…"
+---
+
 # MAME 2003-Plus
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Galaksija – Elektronika Inženjering Galaksija core for RetroArch"
+description: "RetroArch Galaksija core (Elektronika Inženjering Galaksija): core options and controls. Galaksija (Galaxy) was a low-cost home computer released in 1983 in the former Yugoslav countries as a…"
+---
+
 # Elektronika Inženjering - Galaksija (Galaksija)
 
 ## Background

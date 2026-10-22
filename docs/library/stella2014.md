@@ -1,3 +1,8 @@
+---
+title: "Stella 2014 – Atari 2600 core for RetroArch"
+description: "RetroArch Stella 2014 core (Atari 2600): core options and controls. A port of Stella, the Atari 2600 VCS emulator, forked from the main Stella codebase around 2014 (Stella 3.9.3)."
+---
+
 # Atari - 2600 (Stella 2014)
 
 ## Background

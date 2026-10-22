@@ -1,3 +1,8 @@
+---
+title: "ep128emu – Enterprise 64/128 core for RetroArch"
+description: "RetroArch ep128emu core (Enterprise 64/128): BIOS files, core options and controls. Leverage the convenience of libretro/retroarch to emulate the Z80 based home computers that the original ep128emu…"
+---
+
 # Enterprise - 64/128 (ep128emu)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vpqkDRUgwpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

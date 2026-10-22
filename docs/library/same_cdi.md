@@ -1,3 +1,8 @@
+---
+title: "SAME_CDI – Arcade core for RetroArch"
+description: "RetroArch SAME_CDI core (Arcade): BIOS files, core options and controls. SAME CDi is a S(ingle) A(rcade) M(achine) E(mulator) for libretro, forked from MAME libretro, which is in turn a fork of MAME."
+---
+
 # Arcade (SAME_CDI) *WIP*
 
 ## Background

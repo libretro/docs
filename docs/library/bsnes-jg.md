@@ -1,3 +1,8 @@
+---
+title: "bsnes-jg – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes-jg core (Nintendo SNES / Famicom): BIOS files, core options and controls. bsnes-jg is a cycle accurate emulator for the Super Famicom/Super Nintendo Entertainment System, including…"
+---
+
 # Nintendo - SNES / Famicom (bsnes-jg)
 
 ## Background

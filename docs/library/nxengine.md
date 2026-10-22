@@ -1,3 +1,8 @@
+---
+title: "NXEngine – Cave Story core for RetroArch"
+description: "RetroArch NXEngine core (Cave Story): controls. NXEngine is a open source reproduction of the Cave Story game engine."
+---
+
 # Cave Story (NXEngine)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/whm7SmNhziI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

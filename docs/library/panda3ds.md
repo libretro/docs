@@ -1,3 +1,8 @@
+---
+title: "Panda3DS – Nintendo 3DS core for RetroArch"
+description: "RetroArch Panda3DS core (Nintendo 3DS): core options. Panda3DS is an HLE, red-panda-themed Nintendo 3DS emulator."
+---
+
 # Nintendo - 3DS (Panda3DS)
 
 ## Background

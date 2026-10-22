@@ -1,3 +1,8 @@
+---
+title: "Frodo – Commodore C64 core for RetroArch"
+description: "RetroArch Frodo core (Commodore C64): core options. The Frodo core has been authored by"
+---
+
 # Commodore - C64 (Frodo)
 
 ## Background

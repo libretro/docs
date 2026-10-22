@@ -1,3 +1,8 @@
+---
+title: "Beetle NeoPop – SNK Neo Geo Pocket / Color core for RetroArch"
+description: "RetroArch Beetle NeoPop core (SNK Neo Geo Pocket / Color): core options and controls. Beetle/Mednafen NGP is a SNK Neo Geo Pocket (Color) video game system emulator based on NeoPop."
+---
+
 # SNK - Neo Geo Pocket / Color (Beetle NeoPop)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "EmuSCV – Super Cassette Vision core for RetroArch"
+description: "RetroArch EmuSCV core (Super Cassette Vision): BIOS files, core options and controls. Super Cassette Vision is a home video game console made by EPOCH CO. and released in Japan on July 17, 1984."
+---
+
 # Super Cassette Vision (EmuSCV)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UZbd3gxj2XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,3 +1,8 @@
+---
+title: "PCEE2 – Sony PlayStation 2 core for RetroArch"
+description: "RetroArch PCEE2 core (Sony PlayStation 2): BIOS files, core options and controls. PCEE2 is a libretro port of current upstream PCSX2, the mature and highly compatible PlayStation 2 emulator."
+---
+
 # Sony - PlayStation 2 (PCEE2)
 
 ## Background

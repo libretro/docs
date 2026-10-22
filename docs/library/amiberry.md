@@ -1,3 +1,8 @@
+---
+title: "Amiberry – Commodore Amiga core for RetroArch"
+description: "RetroArch Amiberry core (Commodore Amiga): BIOS files, core options and controls. Amiberry is a lightweight, optimized Amiga emulator based on UAE."
+---
+
 # Commodore - Amiga (Amiberry)
 
 ## Background

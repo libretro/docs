@@ -1,3 +1,8 @@
+---
+title: "FFmpeg core for RetroArch"
+description: "RetroArch FFmpeg core: core options and controls. Video/music player implemented in libretro."
+---
+
 # FFmpeg
 
 ## Background

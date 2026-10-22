@@ -1,3 +1,8 @@
+---
+title: "BBK Electronic Dictionary – BBKEmu core for RetroArch"
+description: "RetroArch BBK Electronic Dictionary core (BBKEmu): core options. BBKEmu is an emulator for BBK electronic dictionary game platform."
+---
+
 # BBKEmu (BBK Electronic Dictionary)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "HyperScanEmu – HyperScan core for RetroArch"
+description: "RetroArch HyperScanEmu core (HyperScan): controls. The HyperScan is a 2006 Mattel home console built around the Sunplus SPG290 SoC (S+Core 7 CPU)."
+---
+
 # HyperScan (HyperScanEmu)
 
 ## Background

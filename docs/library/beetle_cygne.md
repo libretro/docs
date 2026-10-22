@@ -1,3 +1,8 @@
+---
+title: "Beetle Cygne – Bandai WonderSwan/Color core for RetroArch"
+description: "RetroArch Beetle Cygne core (Bandai WonderSwan/Color): controls. Standalone port of Mednafen WonderSwan to libretro, itself a fork of Cygne."
+---
+
 # Bandai - WonderSwan/Color (Beetle Cygne)
 
 ## Background

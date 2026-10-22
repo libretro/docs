@@ -1,3 +1,8 @@
+---
+title: "Retro8 – PICO-8 core for RetroArch"
+description: "RetroArch Retro8 core (PICO-8): core options. A port of the Retro8 open-source reimplementation of the PICO-8 fantasy console to libretro."
+---
+
 # PICO-8 (Retro8)
 
 ## Background

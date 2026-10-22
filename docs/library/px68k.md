@@ -1,3 +1,8 @@
+---
+title: "PX68k – Sharp X68000 core for RetroArch"
+description: "RetroArch PX68k core (Sharp X68000): BIOS files, core options and controls. The X68000 (エックスろくまんはっせん Ekkusu Rokuman Hassen) is a home computer created by Sharp, first released in March, 1987, sold…"
+---
+
 # Sharp - X68000 (PX68k)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/D01IPu5tgWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

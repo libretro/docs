@@ -1,3 +1,8 @@
+---
+title: "VirtualXT – PC/XT core for RetroArch"
+description: "RetroArch VirtualXT core (PC/XT): BIOS files and core options. VirtualXT is a Turbo PC/XT emulator that runs on modern hardware and operating systems."
+---
+
 # PC/XT (VirtualXT)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "vitaQuake 3 – Quake III: Arena core for RetroArch"
+description: "RetroArch vitaQuake 3 core (Quake III: Arena): core options and controls. A port of the VitaQuake 3 source port of iD's ioquake3 engine to libretro."
+---
+
 # Quake III: Arena (vitaQuake 3)
 
 ## Background

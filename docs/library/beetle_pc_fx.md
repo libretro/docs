@@ -1,3 +1,8 @@
+---
+title: "Beetle PC-FX – NEC PC-FX core for RetroArch"
+description: "RetroArch Beetle PC-FX core (NEC PC-FX): BIOS files, core options and controls. Beetle PC-FX is a port of Mednafen PC-FX video game system emulator for the NEC PC-FX."
+---
+
 # NEC - PC-FX (Beetle PC-FX)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "hatariB – Atari ST/STE/TT/Falcon core for RetroArch"
+description: "RetroArch hatariB core (Atari ST/STE/TT/Falcon): BIOS files, core options and controls. hatariB is an Atari ST/STE/TT/Falcon system emulator that can be used as a libretro core."
+---
+
 # Atari - ST/STE/TT/Falcon (hatariB)
 
 See the [hatariB documentation](https://github.com/bbbradsmith/hatariB/blob/main/README.md) on GitHub for more in-depth information.

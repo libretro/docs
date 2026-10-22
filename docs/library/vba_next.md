@@ -1,3 +1,8 @@
+---
+title: "VBA Next – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch VBA Next core (Nintendo Game Boy Advance): BIOS files, core options and controls. VBA Next is a Game Boy Advance emulator based on VBA-M 2011 with backported patches for performance and…"
+---
+
 # Nintendo - Game Boy Advance (VBA Next)
 
 ## Background

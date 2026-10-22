@@ -1,3 +1,8 @@
+---
+title: "Geartowns – Fujitsu FM Towns core for RetroArch"
+description: "RetroArch Geartowns core (Fujitsu FM Towns): BIOS files, core options and controls. Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in C++."
+---
+
 # Fujitsu - FM Towns (Geartowns)
 
 ## Background

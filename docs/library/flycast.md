@@ -1,3 +1,8 @@
+---
+title: "Flycast – Sega Dreamcast/NAOMI core for RetroArch"
+description: "RetroArch Flycast core (Sega Dreamcast/NAOMI): BIOS files, core options and controls. Flycast is a multi-platform Sega Dreamcast, NAOMI, Atomiswave and System SP emulator."
+---
+
 # Sega - Dreamcast/NAOMI (Flycast)
 
 ## Background

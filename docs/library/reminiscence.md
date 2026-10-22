@@ -1,3 +1,8 @@
+---
+title: "REminiscence – Flashback core for RetroArch"
+description: "RetroArch REminiscence core (Flashback): controls. Stuart Carnie has ported REminiscence ,Gregory Montoir’s Flashback emulator, over to libretro!"
+---
+
 # Flashback (REminiscence)
 
 ==First, make sure these steps are permissible in your locale. RetroArch and LibRetro do not share any copyrighted content.==

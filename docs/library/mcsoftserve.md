@@ -1,3 +1,8 @@
+---
+title: "McSoftServe core for RetroArch"
+description: "RetroArch McSoftServe core: core options. An experimental libretro core for the Taylor C713 soft-serve ice cream machine, popularized by a well-known American fast food chain."
+---
+
 # McSoftServe
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "WQXEmu – Wenquxing core for RetroArch"
+description: "RetroArch WQXEmu core (Wenquxing): core options and controls. Wenquxing (文曲星) is a series of Chinese electronic dictionaries manufactured by BESTA."
+---
+
 # Wenquxing (WQXEmu)
 
 ## Background

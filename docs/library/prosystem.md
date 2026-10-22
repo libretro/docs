@@ -1,3 +1,8 @@
+---
+title: "ProSystem – Atari 7800 core for RetroArch"
+description: "RetroArch ProSystem core (Atari 7800): BIOS files, core options and controls. ProSystem is an Atari 7800 emulator."
+---
+
 # Atari - 7800 (ProSystem)
 
 ## Background

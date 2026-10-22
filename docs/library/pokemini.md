@@ -1,3 +1,8 @@
+---
+title: "PokeMini – Nintendo Pokémon Mini core for RetroArch"
+description: "RetroArch PokeMini core (Nintendo Pokémon Mini): BIOS files, core options and controls. PokeMini is an emulator for the Pokémon Mini handheld console."
+---
+
 # Nintendo - Pokémon Mini (PokeMini)
 
 ## Background

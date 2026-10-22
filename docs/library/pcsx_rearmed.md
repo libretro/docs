@@ -1,5 +1,5 @@
 ---
-title: "PlayStation (PCSX ReARMed) Core"
+title: "PCSX ReARMed – Sony PlayStation core for RetroArch"
 description: "PCSX ReARMed core documentation: PlayStation BIOS files, supported formats, core options, controls and features of the ARM-optimised PS1 core."
 ---
 

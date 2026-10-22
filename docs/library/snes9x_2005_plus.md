@@ -1,3 +1,8 @@
+---
+title: "Snes9x 2005 Plus – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch Snes9x 2005 Plus core (Nintendo SNES / Famicom): core options and controls. Port of SNES9x 1.43 for libretro."
+---
+
 # Nintendo - SNES / Famicom (Snes9x 2005 Plus)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Radio – Internet Radio core for RetroArch"
+description: "RetroArch Radio core (Internet Radio): core options. Streams internet radio stations over the network, and plays local MP3 and WAV files."
+---
+
 # Internet Radio (Radio)
 
 ## Background

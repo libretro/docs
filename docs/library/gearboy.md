@@ -1,3 +1,8 @@
+---
+title: "Gearboy – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch Gearboy core (Nintendo Game Boy / Color): BIOS files, core options and controls. Gearboy is an open source, cross-platform Nintendo Game Boy (DMG), Game Boy Color (GBC), and Super Game Boy…"
+---
+
 # Nintendo - Game Boy / Color (Gearboy)
 
 ## Background

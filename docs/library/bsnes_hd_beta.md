@@ -1,3 +1,8 @@
+---
+title: "bsnes-hd beta – Nintendo SNES / SFC core for RetroArch"
+description: "RetroArch bsnes-hd beta core (Nintendo SNES / SFC): core options. bsnes HD Beta is based on the latest code from the bsnes emulator, but it serves as a test-bed for some additional features that are…"
+---
+
 # Nintendo - SNES / SFC (bsnes-hd beta)
 
 ## Background

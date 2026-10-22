@@ -1,3 +1,8 @@
+---
+title: "Boom3 – Doom 3 core for RetroArch"
+description: "RetroArch Boom3 core (Doom 3): BIOS files, core options and controls. Boom 3[^1] is a Doom 3 and Doom 3: Resurrection Of Evil GPL source port, known to work on Windows and Linux."
+---
+
 # Doom 3 (Boom3)
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uS7veurg0ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

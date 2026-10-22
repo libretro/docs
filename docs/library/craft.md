@@ -1,3 +1,8 @@
+---
+title: "Craft – Minecraft core for RetroArch"
+description: "RetroArch Craft core (Minecraft): core options and controls. A simple Minecraft clone written in C using modern OpenGL (shaders)."
+---
+
 # Minecraft (Craft)
 
 ## Background

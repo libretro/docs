@@ -1,3 +1,8 @@
+---
+title: "VBA-M – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch VBA-M core (Nintendo Game Boy Advance): BIOS files, core options and controls. VBA-M is a Game Boy Advance emulator with the goal to improve upon VisualBoyAdvance by integrating the best…"
+---
+
 # Nintendo - Game Boy Advance (VBA-M)
 
 ## Background

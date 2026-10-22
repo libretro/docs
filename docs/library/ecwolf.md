@@ -1,3 +1,8 @@
+---
+title: "ECWolf core for RetroArch"
+description: "RetroArch ECWolf core: BIOS files, core options and controls. ECWolf is a port of the Wolfenstein 3D engine based of Wolf4SDL."
+---
+
 # Wolfenstein 3D/Spear of Destiny/Super 3D Noah’s Ark (ECWolf) *WIP*
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1my0auvYH-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

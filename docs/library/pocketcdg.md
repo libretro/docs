@@ -1,3 +1,8 @@
+---
+title: "PocketCDG core for RetroArch"
+description: "RetroArch PocketCDG core: controls. A MP3 karaoke music player."
+---
+
 # PocketCDG
 
 ==You have to provide both .cdg and .mp3 file. RetroArch and LibRetro do not share any copyrighted content.==

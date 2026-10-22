@@ -1,3 +1,8 @@
+---
+title: "Beetle GBA – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch Beetle GBA core (Nintendo Game Boy Advance): BIOS files, core options and controls. Standalone port of Mednafen GBA to libretro, itself a fork of VBA-M, itself a fork of Visual Boy Advance."
+---
+
 # Nintendo - Game Boy Advance (Beetle GBA)
 
 ## Background

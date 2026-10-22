@@ -1,3 +1,8 @@
+---
+title: "DirkSimple – Laserdisc arcade game core for RetroArch"
+description: "RetroArch DirkSimple core (Laserdisc arcade game): core options and controls. A player of laserdisc arcade games."
+---
+
 # Laserdisc arcade game (DirkSimple)
 
 ## Background

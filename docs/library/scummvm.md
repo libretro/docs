@@ -1,3 +1,8 @@
+---
+title: "ScummVM core for RetroArch"
+description: "RetroArch ScummVM core: core options. ScummVM allows you to play classic graphic point-and-click adventure games, text adventure games, and RPGs, as long as you already have the game data files."
+---
+
 
 # ScummVM
 

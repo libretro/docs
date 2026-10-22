@@ -1,3 +1,8 @@
+---
+title: "NeoCD – SNK Neo Geo CD core for RetroArch"
+description: "RetroArch NeoCD core (SNK Neo Geo CD): core options. A rewrite of the original NeoCD emulator for SNK's NeoGeo CD console, ported to libretro."
+---
+
 # SNK - Neo Geo CD (NeoCD)
 
 ## Background

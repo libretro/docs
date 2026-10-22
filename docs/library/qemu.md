@@ -1,3 +1,8 @@
+---
+title: "QEMU core for RetroArch"
+description: "RetroArch QEMU core: core options. A port of the QEMU emulator to libretro."
+---
+
 # QEMU
 
 ## Background

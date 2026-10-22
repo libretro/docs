@@ -1,3 +1,8 @@
+---
+title: "Neko Project II – NEC PC-98 core for RetroArch"
+description: "RetroArch Neko Project II core (NEC PC-98): core options. An emulator for NEC's PC-9801 (aka PC-98) personal computer platform, ported to libretro."
+---
+
 # NEC - PC-98 (Neko Project II)
 
 ## Background

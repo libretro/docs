@@ -1,3 +1,8 @@
+---
+title: "ParaLLEl N64 – Nintendo Nintendo 64 core for RetroArch"
+description: "RetroArch ParaLLEl N64 core (Nintendo Nintendo 64): core options and controls. An N64 emulator based originally on Mupen64Plus, but with extensive changes that have caused the codebases to diverge…"
+---
+
 # Nintendo - Nintendo 64 (ParaLLEl N64)
 
 ## Background

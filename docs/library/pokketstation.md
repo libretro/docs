@@ -1,3 +1,8 @@
+---
+title: "pokketstation – Sony PocketStation core for RetroArch"
+description: "RetroArch pokketstation core (Sony PocketStation): core options. An open-source Sony PocketStation emulator core, written in portable C."
+---
+
 # Sony - PocketStation (pokketstation)
 
 ## Background

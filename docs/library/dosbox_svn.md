@@ -1,3 +1,8 @@
+---
+title: "DOSBox-SVN – DOS core for RetroArch"
+description: "RetroArch DOSBox-SVN core (DOS): core options and controls. DOSBox-SVN is a port of DOSBox SVN trunk (0.74-SVN) to libretro."
+---
+
 # DOS (DOSBox-SVN)
 
 ## Background

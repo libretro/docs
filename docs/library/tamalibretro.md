@@ -1,3 +1,8 @@
+---
+title: "TamaLIBretro – Bandai Tamagotchi P1 core for RetroArch"
+description: "RetroArch TamaLIBretro core (Bandai Tamagotchi P1): core options and controls. A port of the TamaLIB emulator for first-generation Tamagotchi handhelds to libretro."
+---
+
 # Bandai - Tamagotchi P1 (TamaLIBretro)
 
 ## Background

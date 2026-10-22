@@ -1,3 +1,8 @@
+---
+title: "nSide Balanced – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch nSide Balanced core (Nintendo SNES / Famicom): BIOS files, core options and controls. A fork of higan v106 that reimplements the Balanced profile."
+---
+
 # Nintendo - SNES / Famicom (nSide Balanced)
 
 ## Background

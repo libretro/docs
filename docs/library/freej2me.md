@@ -1,3 +1,8 @@
+---
+title: "FreeJ2ME – Mobile J2ME core for RetroArch"
+description: "RetroArch FreeJ2ME core (Mobile J2ME): BIOS files, core options and controls. FreeJ2ME is an emulator for J2ME (Java 2 Micro Edition), the platform the games on pre-smartphone mobile phones were…"
+---
+
 # Mobile - J2ME (FreeJ2ME)
 
 ## Background

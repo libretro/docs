@@ -1,3 +1,8 @@
+---
+title: "Mesen – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch Mesen core (Nintendo NES / Famicom): BIOS files, core options and controls. Mesen is a high-accuracy NES and Famicom emulator and NSF player for Windows and Linux."
+---
+
 # Nintendo - NES / Famicom (Mesen)
 
 ## Background

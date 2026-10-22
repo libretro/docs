@@ -1,3 +1,8 @@
+---
+title: "PlaydiaEmu – Playdia core for RetroArch"
+description: "RetroArch PlaydiaEmu core (Playdia): BIOS files, core options and controls. The Playdia is a Japanese interactive CD console released by Bandai in 1994."
+---
+
 # Playdia (PlaydiaEmu)
 
 ## Background

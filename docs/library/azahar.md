@@ -1,3 +1,8 @@
+---
+title: "Azahar – Nintendo 3DS core for RetroArch"
+description: "RetroArch Azahar core (Nintendo 3DS): core options. A port of the Azahar 3DS emulator to libretro."
+---
+
 # Nintendo - 3DS (Azahar)
 
 ## Background

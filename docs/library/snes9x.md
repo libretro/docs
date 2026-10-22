@@ -1,3 +1,8 @@
+---
+title: "Snes9x – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch Snes9x core (Nintendo SNES / Famicom): BIOS files, core options and controls. Port of upstream mainline up-to-date Snes9x, a portable Super Nintendo Entertainment System emulator to…"
+---
+
 # Nintendo - SNES / Famicom (Snes9x)
 
 ## Background

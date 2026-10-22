@@ -1,3 +1,8 @@
+---
+title: "TempGBA – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch TempGBA core (Nintendo Game Boy Advance): BIOS files and controls. TempGBA is a Gameboy Advance emulator."
+---
+
 # Nintendo - Game Boy Advance (TempGBA)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Beetle PCE FAST – NEC PC Engine / CD core for RetroArch"
+description: "RetroArch Beetle PCE FAST core (NEC PC Engine / CD): BIOS files, core options and controls. Beetle/Mednafen PCE FAST is a libretro port of Mednafen PCE Fast with the PC Engine SuperGrafx module…"
+---
+
 # NEC - PC Engine / CD (Beetle PCE FAST)
 
 ## Background

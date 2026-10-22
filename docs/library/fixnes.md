@@ -1,3 +1,8 @@
+---
+title: "fixNES – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch fixNES core (Nintendo NES / Famicom): core options. An alpha-stage emulator written as a learning experience, fixNES is a good, simple core for learning how NES emulators are written, but…"
+---
+
 # Nintendo - NES / Famicom (fixNES)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Arduous – Arduboy core for RetroArch"
+description: "RetroArch Arduous core (Arduboy): core options. Arduboy emulator implemented as a libretro core."
+---
+
 # Arduboy (Arduous)
 
 ## Background

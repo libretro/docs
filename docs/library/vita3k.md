@@ -1,3 +1,8 @@
+---
+title: "Vita3K – Sony PlayStation Vita core for RetroArch"
+description: "RetroArch Vita3K core (Sony PlayStation Vita): BIOS files, core options and controls. A port of Vita3K, the experimental PlayStation Vita emulator, to libretro."
+---
+
 # Sony - PlayStation Vita (Vita3K)
 
 ## Background

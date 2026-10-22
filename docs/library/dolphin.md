@@ -1,5 +1,5 @@
 ---
-title: "GameCube and Wii (Dolphin) Core"
+title: "Dolphin – Nintendo Gamecube/Wii core for RetroArch"
 description: "Dolphin core documentation: system files, optional BIOS, OpenGL, Vulkan and Direct3D 11 renderers, core options and GameCube and Wii controls."
 ---
 

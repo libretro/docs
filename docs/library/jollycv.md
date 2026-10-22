@@ -1,3 +1,8 @@
+---
+title: "JollyCV – ColecoVision/CreatiVision/My Vision core for RetroArch"
+description: "RetroArch JollyCV core (ColecoVision/CreatiVision/My Vision): BIOS files and core options. JollyCV is a multi-emulator supporting ColecoVision (including Super Game Module), CreatiVision, and My…"
+---
+
 # ColecoVision/CreatiVision/My Vision (JollyCV)
 
 ## Background

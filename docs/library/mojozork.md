@@ -1,3 +1,8 @@
+---
+title: "MojoZork – Infocom Z-Machine core for RetroArch"
+description: "RetroArch MojoZork core (Infocom Z-Machine): core options and controls. A Z-Machine emulator for playing text-based interactive fiction."
+---
+
 # Infocom Z-Machine (MojoZork)
 
 ## Background

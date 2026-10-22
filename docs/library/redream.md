@@ -1,3 +1,8 @@
+---
+title: "Redream – Sega Dreamcast core for RetroArch"
+description: "RetroArch Redream core (Sega Dreamcast): BIOS files and controls. Redream is a work-in-progress SEGA Dreamcast emulator written in C for Mac, Linux and Windows."
+---
+
 # Sega - Dreamcast (Redream)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Emux – CHIP-8 core for RetroArch"
+description: "RetroArch Emux core (CHIP-8): core options and controls. Emux is a cross-platform emulator project with a goal of emulating multiple kinds of machines related to gaming, such as consoles or arcades."
+---
+
 # CHIP-8 (Emux)
 
 **This core currently doesn't start so this documentation will remain incomplete until it is fixed.**

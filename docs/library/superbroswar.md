@@ -1,3 +1,8 @@
+---
+title: "Super Bros War core for RetroArch"
+description: "RetroArch Super Bros War core: core options. A fan-made multiplayer style deathmatch game."
+---
+
 # Super Bros War
 
 ## Background

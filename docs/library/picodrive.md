@@ -1,3 +1,8 @@
+---
+title: "PicoDrive – Sega MS/MD/CD/32X core for RetroArch"
+description: "RetroArch PicoDrive core (Sega MS/MD/CD/32X): BIOS files, core options and controls. PicoDrive is an open-source Sega 8/16 bit and 32X emulator which was written having ARM-based handheld devices in…"
+---
+
 # Sega - MS/MD/CD/32X (PicoDrive)
 
 ## Background

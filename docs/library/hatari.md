@@ -1,3 +1,8 @@
+---
+title: "Hatari – Atari ST/STE/TT/Falcon core for RetroArch"
+description: "RetroArch Hatari core (Atari ST/STE/TT/Falcon): BIOS files, core options and controls. Hatari is an Atari ST/STE/TT/Falcon system emulator that can be used as a libretro core."
+---
+
 # Atari - ST/STE/TT/Falcon (Hatari)
 
 ## Background

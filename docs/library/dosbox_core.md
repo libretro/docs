@@ -1,3 +1,8 @@
+---
+title: "DOSBox-core – DOS core for RetroArch"
+description: "RetroArch DOSBox-core core (DOS): BIOS files, core options and controls. DOSBox-core is a libretro core of DOSBox that is kept up to date with DOSBox SVN trunk."
+---
+
 # DOS (DOSBox-core)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "bsnes 2014 Accuracy – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes 2014 Accuracy core (Nintendo SNES / Famicom): BIOS files and controls. This page is about bsnes 2014 Accuracy, the bsnes v094 core whose file is named bsnes2014_accuracy_libretro."
+---
+
 # Nintendo - SNES / Famicom (bsnes 2014 Accuracy)
 
 ## Background

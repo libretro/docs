@@ -1,3 +1,8 @@
+---
+title: "Dungeon Crawl Stone Soup core for RetroArch"
+description: "RetroArch Dungeon Crawl Stone Soup core: controls. Dungeon Crawl Stone Soup is a free roguelike game of exploration and treasure-hunting in dungeons filled with dangerous and unfriendly monsters in…"
+---
+
 # Dungeon Crawl Stone Soup
 
 ## Background

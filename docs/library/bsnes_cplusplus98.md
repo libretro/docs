@@ -1,3 +1,8 @@
+---
+title: "Nintendo - SNES / Famicom (bsnes C++98 (v085)) core for RetroArch"
+description: "RetroArch Nintendo - SNES / Famicom (bsnes C++98 (v085)) core: controls. bsnes c++98 is a special fork from around v085 that's been backported to work with older compilers."
+---
+
 # Nintendo - SNES / Famicom (bsnes C++98 (v085))
 
 ## Background

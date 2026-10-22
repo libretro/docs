@@ -1,3 +1,8 @@
+---
+title: "AppleWin – Apple II core for RetroArch"
+description: "RetroArch AppleWin core (Apple II): core options and controls. Apple II - AppleWin emulator."
+---
+
 # Apple II (AppleWin)
 
 ## Background

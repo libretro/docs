@@ -1,3 +1,8 @@
+---
+title: "RACE – SNK Neo Geo Pocket / Color core for RetroArch"
+description: "RetroArch RACE core (SNK Neo Geo Pocket / Color): core options and controls. RACE is a Neo Geo Pocket (NGP) and Neo Geo Pocket Color (NGPC) emulator for multiple platforms."
+---
+
 # SNK - Neo Geo Pocket / Color (RACE)
 
 ## Background

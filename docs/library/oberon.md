@@ -1,3 +1,8 @@
+---
+title: "Oberon RISC Emulator core for RetroArch"
+description: "RetroArch Oberon RISC Emulator core: core options and controls. An emulator for the Oberon RISC machine, ported to libretro."
+---
+
 # Oberon RISC Emulator
 
 ## Background

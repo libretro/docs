@@ -1,3 +1,8 @@
+---
+title: "ROM Cleaner core for RetroArch"
+description: "RetroArch ROM Cleaner core: core options. A utility core for removing dust and dirt from your ROM collection."
+---
+
 # ROM Cleaner
 
 ## Background

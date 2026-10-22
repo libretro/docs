@@ -1,3 +1,8 @@
+---
+title: "bsnes – Nintendo SNES / SFC core for RetroArch"
+description: "RetroArch bsnes core (Nintendo SNES / SFC): BIOS files, core options and controls. bsnes is a Super Nintendo Entertainment System and Super Famicom emulator focused on accuracy, performance…"
+---
+
 # Nintendo - SNES / SFC (bsnes)
 
 ## Background

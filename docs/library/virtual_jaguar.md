@@ -1,3 +1,8 @@
+---
+title: "Virtual Jaguar – Atari Jaguar core for RetroArch"
+description: "RetroArch Virtual Jaguar core (Atari Jaguar): BIOS files, core options and controls. Virtual Jaguar is the actively maintained Atari Jaguar and Jaguar CD emulator for libretro, continuing the…"
+---
+
 # Atari - Jaguar (Virtual Jaguar)
 
 ## Background

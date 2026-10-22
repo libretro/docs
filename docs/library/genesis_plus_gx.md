@@ -1,3 +1,8 @@
+---
+title: "Genesis Plus GX – Sega MS/GG/MD/CD core for RetroArch"
+description: "RetroArch Genesis Plus GX core (Sega MS/GG/MD/CD): BIOS files, core options and controls. Genesis Plus GX is an open-source Sega 8/16 bit emulator developed by Eke-Eke which focuses on accuracy and…"
+---
+
 # Sega - MS/GG/MD/CD (Genesis Plus GX)
 
 ## Background

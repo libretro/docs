@@ -1,3 +1,8 @@
+---
+title: "Stella 2023 – Atari 2600 core for RetroArch"
+description: "RetroArch Stella 2023 core (Atari 2600): core options and controls. A port of Stella 6.6, the Atari 2600 VCS emulator, kept at its 2023 state."
+---
+
 # Atari - 2600 (Stella 2023)
 
 ## Background

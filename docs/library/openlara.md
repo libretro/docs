@@ -1,3 +1,8 @@
+---
+title: "OpenLara – Tomb Raider core for RetroArch"
+description: "RetroArch OpenLara core (Tomb Raider): core options and controls. A new work-in-progress Tomb Raider game engine ported to libretro."
+---
+
 # Tomb Raider (OpenLara)
 
 ==First, make sure these steps are permissible in your locale. RetroArch and LibRetro do not share any copyrighted content.==

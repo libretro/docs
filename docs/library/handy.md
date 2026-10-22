@@ -1,3 +1,8 @@
+---
+title: "Handy – Atari Lynx core for RetroArch"
+description: "RetroArch Handy core (Atari Lynx): BIOS files, core options and controls. Handy is an Atari Lynx video game system emulator that can be used as a libretro core."
+---
+
 # Atari - Lynx (Handy)
 
 ## Background

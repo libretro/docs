@@ -1,3 +1,8 @@
+---
+title: "Supermodel – Sega Model 3 core for RetroArch"
+description: "RetroArch Supermodel core (Sega Model 3): BIOS files, core options and controls. Supermodel is an emulator for the Sega Model 3 arcade hardware (1996–1998), which powered titles such as Virtua…"
+---
+
 # Sega - Model 3 (Supermodel)
 
 ## Background

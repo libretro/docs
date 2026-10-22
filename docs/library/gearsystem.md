@@ -1,3 +1,8 @@
+---
+title: "Gearsystem – Sega MS/GG core for RetroArch"
+description: "RetroArch Gearsystem core (Sega MS/GG): BIOS files, core options and controls. Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1000, and Othello Multivision emulator…"
+---
+
 # Sega - MS/GG (Gearsystem)
 
 ## Background

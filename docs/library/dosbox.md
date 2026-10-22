@@ -1,3 +1,8 @@
+---
+title: "DOSBox – DOS core for RetroArch"
+description: "RetroArch DOSBox core (DOS): core options and controls. DOSBox is a multiplatform DOS-emulator"
+---
+
 # DOS (DOSBox)
 
 ## Background

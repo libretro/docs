@@ -1,5 +1,5 @@
 ---
-title: "Sega Saturn and ST-V (Kronos) Core"
+title: "Kronos – Sega Saturn/ST-V core for RetroArch"
 description: "Kronos core documentation: Saturn and ST-V BIOS files, the OpenGL 4.3 requirement, core options and known issues."
 ---
 

@@ -1,3 +1,8 @@
+---
+title: "EasyRPG – RPG Maker 2000/2003 core for RetroArch"
+description: "RetroArch EasyRPG core (RPG Maker 2000/2003): controls. EasyRPG Player is a game interpreter to play RPG Maker 2000, 2003 and EasyRPG games."
+---
+
 # RPG Maker 2000/2003 (EasyRPG)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PujdH2H_nm0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

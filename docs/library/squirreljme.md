@@ -1,3 +1,8 @@
+---
+title: "SquirrelJME – Java ME core for RetroArch"
+description: "RetroArch SquirrelJME core (Java ME): core options. A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro."
+---
+
 # Java ME (SquirrelJME)
 
 ## Background

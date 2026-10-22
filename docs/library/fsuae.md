@@ -1,3 +1,8 @@
+---
+title: "FS-UAE – Commodore Amiga core for RetroArch"
+description: "RetroArch FS-UAE core (Commodore Amiga): core options. A port of the FS-UAE Amiga emulator to libretro."
+---
+
 # Commodore - Amiga (FS-UAE)
 
 ## Background

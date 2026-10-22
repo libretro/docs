@@ -1,3 +1,8 @@
+---
+title: "bnes – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch bnes core (Nintendo NES / Famicom): controls. A port of bNES v083 to libretro."
+---
+
 # Nintendo - NES / Famicom (bnes)
 
 ## Background

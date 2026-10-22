@@ -1,3 +1,8 @@
+---
+title: "Citra – Nintendo 3DS core for RetroArch"
+description: "RetroArch Citra core (Nintendo 3DS): core options and controls. Citra is an experimental open-source Nintendo 3DS emulator/debugger written in C++."
+---
+
 # Nintendo - 3DS (Citra)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "FreeChaF – Fairchild ChannelF core for RetroArch"
+description: "RetroArch FreeChaF core (Fairchild ChannelF): core options. A lightweight Fairchild ChannelF / Video Entertainment System designed for libretro."
+---
+
 # Fairchild - ChannelF (FreeChaF)
 
 ## Background

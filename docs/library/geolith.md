@@ -1,3 +1,8 @@
+---
+title: "Geolith – SNK Neo Geo AES / MVS / CD / CDZ core for RetroArch"
+description: "RetroArch Geolith core (SNK Neo Geo AES / MVS / CD / CDZ): BIOS files and core options. Geolith is a highly accurate Neo Geo AES/MVS/CD/CDZ emulator written in ISO C11."
+---
+
 # SNK - Neo Geo AES / MVS / CD / CDZ (Geolith)
 
 ## Background

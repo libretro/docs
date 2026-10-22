@@ -1,3 +1,8 @@
+---
+title: "GearColeco – Coleco ColecoVision / ADAM core for RetroArch"
+description: "RetroArch GearColeco core (Coleco ColecoVision / ADAM): BIOS files and core options. Gearcoleco is an open source, cross-platform ColecoVision and Coleco ADAM emulator written in C++."
+---
+
 # Coleco - ColecoVision / ADAM (GearColeco)
 
 ## Background

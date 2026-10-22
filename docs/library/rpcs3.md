@@ -1,3 +1,8 @@
+---
+title: "RPCS3 – Sony PlayStation 3 core for RetroArch"
+description: "RetroArch RPCS3 core (Sony PlayStation 3): BIOS files, core options and controls. A port of the RPCS3 PlayStation 3 emulator to libretro."
+---
+
 # Sony - PlayStation 3 (RPCS3)
 
 ## Background

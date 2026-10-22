@@ -1,3 +1,8 @@
+---
+title: "gpSP – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch gpSP core (Nintendo Game Boy Advance): BIOS files and controls. gpSP is a Game Boy Advance emulator based on notaz' fork of gpSP with additional codebase improvements."
+---
+
 # Nintendo - Game Boy Advance (gpSP)
 
 ## Background

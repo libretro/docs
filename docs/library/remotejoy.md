@@ -1,3 +1,8 @@
+---
+title: "RemoteJoy – PSP RemotePlay core for RetroArch"
+description: "RetroArch RemoteJoy core (PSP RemotePlay): core options. An old, experimental libretro core designed to stream inputs to/from a Playstation Portable console."
+---
+
 # PSP RemotePlay (RemoteJoy)
 
 ## Background

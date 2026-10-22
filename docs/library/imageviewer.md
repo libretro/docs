@@ -1,3 +1,8 @@
+---
+title: "Imageviewer core for RetroArch"
+description: "RetroArch Imageviewer core: controls. View images"
+---
+
 # Imageviewer
 
 ## Background

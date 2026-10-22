@@ -1,3 +1,8 @@
+---
+title: "Vircon32 core for RetroArch"
+description: "RetroArch Vircon32 core: BIOS files and controls. Vircon32 is a virtual game console, inspired by classic 16 & 32 bit systems as well as the arcade era."
+---
+
 # Vircon32
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TcicKIQWKgU?si=KxTmymq5osyN0tGt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

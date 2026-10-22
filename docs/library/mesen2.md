@@ -1,3 +1,8 @@
+---
+title: "MesenCE core for RetroArch"
+description: "RetroArch MesenCE core: core options and controls. A port of MesenCE to the libretro API."
+---
+
 # Nintendo - NES / FC / FDS / SNES / SFC / GB / GBC / GBA / NEC - PCE / PCE-CD / Sega - SMS / GG / Bandai - Wswan (MesenCE)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "SMS Plus GX – Sega MS/GG core for RetroArch"
+description: "RetroArch SMS Plus GX core (Sega MS/GG): BIOS files, core options and controls. SMS Plus is an open-source Sega Master System and Game Gear emulator written by Charles MacDonald."
+---
+
 # Sega - MS/GG (SMS Plus GX)
 
 ## Background

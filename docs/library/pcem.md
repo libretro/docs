@@ -1,3 +1,8 @@
+---
+title: "PCem – PC core for RetroArch"
+description: "RetroArch PCem core (PC): core options. A port of the PCem IBM/PC emulator to libretro."
+---
+
 # PC (PCem)
 
 ## Background

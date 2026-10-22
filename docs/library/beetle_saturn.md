@@ -1,5 +1,5 @@
 ---
-title: "Sega Saturn (Beetle Saturn) Core"
+title: "Beetle Saturn – Sega Saturn core for RetroArch"
 description: "Beetle Saturn core documentation: Saturn BIOS files, disc images and multi-disc games, core options, controllers and supported features."
 ---
 

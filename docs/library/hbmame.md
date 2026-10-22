@@ -1,3 +1,8 @@
+---
+title: "HBMAME – Arcade core for RetroArch"
+description: "RetroArch HBMAME core (Arcade): core options and controls. 'HBMAME' is compatible with HBMAME latest ROM sets."
+---
+
 # Arcade (HBMAME)
 
 ## Background

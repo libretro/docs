@@ -1,3 +1,8 @@
+---
+title: "Dinothawr core for RetroArch"
+description: "RetroArch Dinothawr core: core options and controls. Dinothawr is a block pushing puzzle game on slippery surfaces."
+---
+
 # Dinothawr
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XajGfVaRdFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

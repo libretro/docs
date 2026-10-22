@@ -1,3 +1,8 @@
+---
+title: "Cemu – Nintendo Wii U core for RetroArch"
+description: "RetroArch Cemu core (Nintendo Wii U): core options and controls. A port of the Cemu Wii U emulator to libretro."
+---
+
 # Nintendo - Wii U (Cemu)
 
 ## Background

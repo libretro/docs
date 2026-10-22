@@ -1,3 +1,8 @@
+---
+title: "Nestopia – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch Nestopia core (Nintendo NES / Famicom): BIOS files, core options and controls. Nestopia is a cycle accurate emulator for the NES/Famicom."
+---
+
 # Nintendo - NES / Famicom (Nestopia)
 
 ## Background

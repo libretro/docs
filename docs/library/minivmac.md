@@ -1,3 +1,8 @@
+---
+title: "minivmac – Macintosh core for RetroArch"
+description: "RetroArch minivmac core (Macintosh): BIOS files, core options and controls. Minivmac is the build system for Mini vMac, a miniature Macintosh emulator."
+---
+
 # Macintosh (minivmac)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UQOs0RnQjWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
