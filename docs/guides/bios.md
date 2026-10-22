@@ -1,3 +1,8 @@
+---
+title: "BIOS Files for RetroArch Cores"
+description: "What BIOS files are, which RetroArch cores need them, and where to put the BIOS files you dumped from your own hardware."
+---
+
 # BIOS
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VoZPbBp6sco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

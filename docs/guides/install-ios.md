@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on iOS"
+description: "How to install and run RetroArch on iOS, including the App Store release."
+---
+
 # Downloading, Installing and Running RetroArch on iOS
 
 ## Installation

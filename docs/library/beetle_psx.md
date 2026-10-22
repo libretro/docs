@@ -1,4 +1,12 @@
+---
+title: "PlayStation (Beetle PSX) Core"
+description: "Beetle PSX core documentation: BIOS files, disc image setup, core options, controllers and features of the Mednafen-based PS1 core."
+---
+
 # PlayStation (Beetle PSX)
+
+!!! tip "Quick start"
+	New to PlayStation emulation? The [PlayStation setup guide](https://www.retroarch.com/ps1.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 ## Background
 

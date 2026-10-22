@@ -42,7 +42,7 @@ MAME 2003-Plus began with the game drivers from MAME 0.78, meaning that 95% or m
 !!! question "What is a romset?"
     Arcade games are packaged as zip files, most of which are composed of more than one individual 'ROM' files. That is why some resources inaccurately refer to an individual arcade game as a ROM (like people use to describe a zipped game cartridge ROM) while other resources refer to an individual game as a **ROM set**, **ROMset**, or **romset**.
 
-MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [MAME menu](#MAME-menu).
+MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [MAME menu](#mame-menu).
 
 
 ### Step 1: Obtaining an XML DAT

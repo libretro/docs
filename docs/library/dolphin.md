@@ -1,4 +1,12 @@
+---
+title: "GameCube and Wii (Dolphin) Core"
+description: "Dolphin core documentation: system files, optional BIOS, OpenGL, Vulkan and Direct3D 11 renderers, core options and GameCube and Wii controls."
+---
+
 # Nintendo Gamecube/Wii (Dolphin)
+
+!!! tip "Quick start"
+	New to GameCube and Wii emulation? The [GameCube and Wii setup guide](https://www.retroarch.com/gamecube.html) on retroarch.com covers what you need and how to get your first game running.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ayv-zf04HsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

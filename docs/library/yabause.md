@@ -1,5 +1,8 @@
 # Sega - Saturn (Yabause)
 
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
+
 ## Background
 
 Yabause is a Sega Saturn emulator that is both open-source and written with portability in mind. It is software rendered. Without any update for years it seems upstream is now dead.

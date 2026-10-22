@@ -140,12 +140,12 @@ Memory Base 128 uses one shared save file across games when the device is enable
 
 - The Geargrafx core's provided FPS follows the emulated video mode: approximately 59.83 FPS for 263 lines or 60.05 FPS for 262 lines
 - The Geargrafx core's provided sample rate is 44100 Hz
-- The Geargrafx core's base width depends on the video mode and overscan settings. Standard frames use 256, 341, or 512 pixels without overscan and 280, 373, or 560 pixels with overscan. Mixed-resolution frames use 1024 or 1120 pixels
+- The Geargrafx core's base width depends on the video mode and overscan settings. Standard frames use 256, 341, or 512 pixels without overscan and 280, 373, or 560 pixels with overscan. With overscan set to *Auto*, the width follows the area displayed by the game, from 256, 320, or 512 pixels up to the overscan width. Mixed-resolution frames use 1024 or 1120 pixels, or up to 1120 pixels with *Auto*
 - The Geargrafx core's base height depends on the ['Scanline Count', 'Scanline Start' and 'Scanline End' core options](#core-options)
 - LaserActive uses its own horizontal and vertical overscan settings. Its base width is three times the selected picture width: 1044 pixels for the default 348-pixel crop, or 1176 pixels for the full 392-pixel width. Its default height is 240 lines; the full field includes 263 lines
 - The Geargrafx core's max width is 1176
 - The Geargrafx core's max height is 263
-- The Geargrafx core's provided aspect ratio depends on the ['Aspect Ratio' core option](#core-options) for PC Engine content and **LaserActive Aspect Ratio** for LaserActive content.
+- The Geargrafx core's provided aspect ratio depends on the ['Aspect Ratio' core option](#core-options) for PC Engine content and **LaserActive Aspect Ratio** for LaserActive content. With *Dot Clock PAR*, the aspect ratio is recalculated whenever the width or the dot clock changes.
 
 ## Core options
 
@@ -158,7 +158,7 @@ Settings marked (restart) require restarting the content for the change to take 
     Select the console type to emulate. *Auto* detects the appropriate console type based on the loaded content.
     Many US games will not start if a Japanese system is detected.
 
-- **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|6:5 DAR|16:9 DAR|16:10 DAR)
+- **Aspect Ratio** [geargrafx_aspect_ratio] (**1:1 PAR**|4:3 DAR|6:5 DAR|16:9 DAR|16:10 DAR|Dot Clock PAR)
 
     Select which aspect ratio will be presented for PC Engine content. LaserActive content uses its separate **LaserActive Aspect Ratio** option.
 
@@ -167,10 +167,15 @@ Settings marked (restart) require restarting the content for the change to take 
     - *6:5 DAR* forces 6:5 aspect ratio.
     - *16:9 DAR* forces 16:9 aspect ratio.
     - *16:10 DAR* forces 16:10 aspect ratio.
+    - *Dot Clock PAR* shapes pixels like a CRT based on the active dot clock: 8:7 at 5.36 MHz, 6:7 at 7.16 MHz, and 4:7 at 10.8 MHz. Proportions stay correct when the image width changes, so this is the recommended choice when **Overscan** is set to *Auto*.
 
-- **Overscan** [geargrafx_overscan] (**Disabled**|Enabled)
+- **Overscan** [geargrafx_overscan] (**Disabled**|Enabled|Auto)
 
-    This option enables/disables overscan (borders). Overscan width is dependent on the content.
+    Select how the horizontal borders are shown.
+
+    - *Disabled* shows a fixed 256, 341, or 512 pixel window depending on the dot clock. Games that display a wider image are cut at the edges.
+    - *Enabled* widens the window to 280, 373, or 560 pixels to include the borders.
+    - *Auto* crops the image to the area displayed by the game, removing the borders. The width ranges from 256, 320, or 512 pixels up to the *Enabled* width, so it changes between games. Use *Dot Clock PAR* in **Aspect Ratio** to keep correct proportions.
 
 - **Scanline Count** [geargrafx_scanline_count] (**224p**|240p|Manual)
 
@@ -180,12 +185,12 @@ Settings marked (restart) require restarting the content for the change to take 
     - *240p* forces 240 scanlines.
     - *Manual* lets you set the first and last scanline manually.
 
-- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 30)
+- **Scanline Start (Manual)** [geargrafx_scanline_start] (**3**|values from 0 to 40)
 
     This option will set the first scanline to be displayed. Scanline 0 is the first visible scanline.
     This option is only used when 'Scanline Count' is set to 'Manual'.
 
-- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 220 to 241)
+- **Scanline End (Manual)** [geargrafx_scanline_end] (**241**|values from 208 to 241)
 
     This option will set the last scanline to be displayed. Scanline 241 is the last visible scanline.
     This option is only used when 'Scanline Count' is set to 'Manual'.

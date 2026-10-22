@@ -8,6 +8,7 @@ Gearlynx is an open source, cross-platform Atari Lynx emulator written in C++.
 - Bank switching (BANK1 + AUDIN) and EEPROM support.
 - Save files (EEPROM, NVRAM and persistent cartridge RAM).
 - GameDrive and ElCheapoSD cartridge support.
+- ComLynx link cable support with two to four systems, independent controllers, configurable screens and audio, and multi-ROM subsystem loading.
 - Configurable low-pass audio filter.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
 - Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
@@ -76,13 +77,15 @@ Frontend-level settings or features that the Gearlynx core respects.
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
+
+Achievements are supported in single-player mode and disabled in linked sessions. Save states, and therefore rewind, run-ahead and netplay, are also unavailable in linked sessions.
 
 ### Directories
 
@@ -95,6 +98,7 @@ The Gearlynx core saves/loads to/from these directories.
 | File  | Description            |
 |:-----:|:----------------------:|
 | *.srm | EEPROM, NVRAM or LNX2 persistent cartridge RAM save |
+| *.srm2, *.srm3, *.srm4 | Screen 2, 3 and 4 saves in linked mode |
 
 **Frontend's State directory**
 
@@ -110,12 +114,35 @@ The Gearlynx core saves/loads to/from these directories.
 - The Gearlynx core's max width is 160
 - The Gearlynx core's max height is 160
 - The Gearlynx core uses square pixels by default, including in vertical mode; the ['Aspect Ratio' core option](#core-options) can override this
+- Linked mode places the screens side by side, stacked, or in a two-column grid. Each cell uses the largest screen size among the linked systems: for example, two horizontal screens side by side use 320x102 and four screens in a grid use 320x204. Selecting a single screen uses that system's size
+- Linked mode's max width and height are 640
+- In linked mode, fixed DAR settings apply to each screen and *1:1 PAR* keeps square pixels across the whole layout
 
 ## SD cartridges
 
 GameDrive and ElCheapoSD use the loaded ROM's directory as the emulated SD card root. Place the files required by the cartridge in that directory and select the appropriate **Cartridge Hardware** option if automatic detection does not identify it.
 
 SD cartridge access requires a frontend with VFS version 3 support and a content path that identifies the ROM directory. Write operations also require frontend write support and permission to write to the content directory. SD writes update files in that directory; these files are separate from the frontend-managed EEPROM, NVRAM or persistent cartridge RAM `.srm` save.
+
+## ComLynx Link Cable
+
+Enable **ComLynx Link Cable Enable (restart)**, select the number of systems with **Link Players (restart)**, choose **Close Content**, then load the ROM again to run independent copies of the same ROM. Controller ports 1 to 4 control the corresponding screens. All linked systems continue running when only one screen is displayed. RetroArch's **Restart** action resets every linked system. It does not apply changes to ComLynx Link Cable Enable or Link Players; changing these options requires **Close Content** followed by loading the ROM again.
+
+To link different ROMs, load the **2 Player Lynx Link** (`lynx_link_2p`), **3 Player Lynx Link** (`lynx_link_3p`) or **4 Player Lynx Link** (`lynx_link_4p`) subsystem and select a ROM for each screen. Selecting a subsystem enables linked mode regardless of the enable option, and its player count overrides **Link Players**. A command-line example is:
+
+```sh
+retroarch -L gearlynx_libretro.so --subsystem lynx_link_2p first.lnx second.lnx
+```
+
+Use the core library extension for your platform (`.dylib` on macOS or `.dll` on Windows). The subsystem can also load the same ROM into several slots.
+
+Linked mode emulates standard ComLynx; Turbo ComLynx is not supported. All linked systems run inside one core instance; this does not connect to desktop Gearlynx link sessions.
+
+### Linked saves
+
+When loading a single ROM in linked mode, Screen 1 keeps its usual frontend-managed `.srm` file. Screens 2 to 4 use `<content name>.srm2`, `.srm3` and `.srm4` in the frontend's save directory, or alongside the ROM if no save directory is provided. These files are restored when content loads and written when content unloads or the core shuts down. Content supplied without a path has no automatic save filename for screens 2 to 4.
+
+The multi-ROM subsystems expose every cartridge's save memory to the frontend. Screen 1 uses `.srm` and screens 2 to 4 use `.srm2`, `.srm3` and `.srm4`. The separate extensions prevent the saves from overwriting each other when several slots load the same ROM.
 
 ## Core options
 
@@ -192,13 +219,39 @@ Settings marked (restart) take effect after restarting or reloading the content.
 
 	It is best to keep this option disabled.
 
+- **ComLynx Link Cable Enable (restart)** [gearlynx_link_enable] (**Disabled**|Enabled)
+
+	Run two to four linked Lynx systems using standard ComLynx. Loading one ROM runs an independent copy on each screen. After changing this option, choose **Close Content** and load the ROM again; **Restart** alone is not sufficient. Use a [Player Lynx Link subsystem](#comlynx-link-cable) to load different ROMs. Save states and achievements are disabled when linking. Turbo ComLynx is not supported.
+
+- **Link Players (restart)** [gearlynx_link_players] (**2**|3|4)
+
+	Choose how many linked systems run when loading a single ROM. Subsystem loading determines the player count independently. After changing this option, choose **Close Content** and load the ROM again.
+
+- **Linked Screen Placement** [gearlynx_link_placement] (**Grid**|Horizontal|Vertical)
+
+	Arrange the screens side by side, one above the other, or in a two-column grid. This setting changes immediately.
+
+- **Linked Screen Switch** [gearlynx_link_switch] (**Disabled**|Enabled)
+
+	Reverse the order of the screens. Controller assignments, screen selection and audio selection continue to refer to the original screen numbers.
+
+- **Linked Screen Selection** [gearlynx_link_screen] (**All Screens**|Screen 1|Screen 2|Screen 3|Screen 4)
+
+	Display all linked systems or only the selected screen. All systems keep running. Selecting a screen that is not running displays all screens.
+
+- **Linked Screen Audio** [gearlynx_link_audio] (**Screen 1**|Screen 2|Screen 3|Screen 4|Mix)
+
+	Play audio from the selected system, or mix all linked systems at equal volume. Selecting a screen that is not running plays Screen 1.
+
 ## Joypad
 
-Port 1 accepts **Joypad Auto** or **Lynx Pad** with the mappings below. **Joypad Port Empty** disables controller input.
+Ports 1 to 4 accept **Joypad Auto** or **Lynx Pad** with the mappings below. **Joypad Port Empty** disables controller input.
+
+Single-player mode uses port 1. In linked mode, each port controls the screen with the same number, including after switching or hiding screens.
 
 ![](../image/controller/lynx.png)
 
-| User 1 input descriptors | RetroPad Inputs                             |
+| User 1-4 input descriptors | RetroPad Inputs                           |
 |--------------------------|---------------------------------------------|
 | B                        | ![](../image/retropad/retro_b.png)          |
 | Pause                    | ![](../image/retropad/retro_start.png)      |

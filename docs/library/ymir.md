@@ -1,4 +1,12 @@
+---
+title: "Sega Saturn (Emir) Core"
+description: "Emir core documentation: a libretro port of the accuracy-focused Ymir Saturn emulator, with its core options for system, video, audio and CD emulation."
+---
+
 # Sega - Saturn (Emir)
+
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 ## Background
 

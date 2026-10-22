@@ -182,7 +182,7 @@ Load a SGB-supported GB.mdGBC rom.
 ## MSU-1
 
 !!! attention
-	MSU-1 support in this core is complex. **Use the [Snes9x core](../library/snes9x#msu-1-support) for simplified and easily accessible MSU-1 support.**
+	MSU-1 support in this core is complex. **Use the [Snes9x core](snes9x.md#msu-1-support) for simplified and easily accessible MSU-1 support.**
 
 MSU-1 support can be used by loading a correct .bml file.
 

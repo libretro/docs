@@ -1,4 +1,12 @@
+---
+title: "PlayStation (Beetle PSX HW) Core"
+description: "Beetle PSX HW core documentation: hardware renderers, enhancements such as PGXP and higher internal resolution, BIOS files, core options and controllers."
+---
+
 # PlayStation (Beetle PSX HW)
+
+!!! tip "Quick start"
+	New to PlayStation emulation? The [PlayStation setup guide](https://www.retroarch.com/ps1.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 ## Background
 

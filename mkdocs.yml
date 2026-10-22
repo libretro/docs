@@ -9,7 +9,7 @@ repo_name: 'libretro/docs'
 repo_url: 'https://github.com/libretro/docs'
 edit_uri: 'edit/master/docs'
 copyright: >2
-  Copyright &copy; 2010–2025 Libretro. –
+  Copyright &copy; 2010–2026 Libretro. –
   <a href="#__consent">Change cookie settings</a>
 nav:
   - 'About': 'index.md'
@@ -119,10 +119,12 @@ nav:
       - 'Amstrad Emulation':
         - 'Amstrad - CPC (Caprice32)': 'library/caprice32.md'
         - 'Amstrad - CPC (CrocoDS)': 'library/crocods.md'
+        - 'Amstrad - PCW (ZEsarPCW)': library/zesarpcw.md
       - 'Apple':
         - 'Apple - II (AppleWin)': 'library/applewin.md'
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
       - 'Arcade Emulation':
+        - 'Arcade (Daphne HypseusHW)': 'library/hypseushw.md'
         - 'Arcade (DICE)': 'library/dice.md'
         - 'Arcade (FB Alpha 2012 CPS-1)': 'library/fbalpha2012_cps1.md'
         - 'Arcade (FB Alpha 2012 CPS-2)': 'library/fbalpha2012_cps2.md'
@@ -142,10 +144,14 @@ nav:
         - 'Arduboy (Arduous)': 'library/arduous.md'
       - 'Atari Emulation':
         - 'Atari - Jaguar Compatibility List': 'library/compatibility/jaguar.md'
-        - 'Atari - Lynx Compatibility List:': 'library/compatibility/lynx.md'
+        - 'Atari - Lynx Compatibility List': 'library/compatibility/lynx.md'
         - 'Atari - 2600 (Stella)': 'library/stella.md'
+        - 'Atari - 2600 (Stella 2014)': 'library/stella2014.md'
+        - 'Atari - 2600 (Stella 2023)': 'library/stella2023.md'
+        - 'Atari - 2600 (Tia)': 'library/tia.md'
         - 'Atari - 7800 (ProSystem)': 'library/prosystem.md'
-        - 'Atari - 5200 (Atari800)': 'library/atari800.md'
+        - 'Atari - 5200 (a5200)': 'library/a5200.md'
+        - 'Atari - 8-bit / 5200 (Atari800)': 'library/atari800.md'
         - 'Atari - Jaguar (Virtual Jaguar)': 'library/virtual_jaguar.md'
         - 'Atari - Lynx (Beetle Lynx)': 'library/beetle_lynx.md'
         - 'Atari - Lynx (Gearlynx)': 'library/gearlynx.md'
@@ -161,6 +167,8 @@ nav:
       - 'BBK electronic dictionary':
         - 'BBK - 4980/4988/5980 electronic dictionary': 'library/gam4980.md'
         - 'BBK - electronic dictionaries (BBKEmu)': 'library/bbkemu.md'
+      - 'Clydeware Emulation':
+        - 'Clydeware - GameTank (GameTank)': 'library/gametank.md'
       - 'ColecoVision Emulation':
         - 'ColecoVision (Gearcoleco)': 'library/gearcoleco.md'
         - 'ColecoVision/CreatiVision/My Vision (JollyCV)': 'library/jollycv.md'
@@ -173,8 +181,10 @@ nav:
         - 'Commodore - C64 (Frodo)': 'library/frodo.md'
       - 'DOS Emulation':
         - 'MS - DOS (DOSBox)': 'library/dosbox.md'
+        - 'MS - DOS (DOSBox-core)': 'library/dosbox_core.md'
         - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
-        - 'MS - DOS (VirtualXT)': 'library/virtualxt.md'
+        - 'MS - DOS (DOSBox-SVN)': 'library/dosbox_svn.md'
+        - 'PC/XT (VirtualXT)': 'library/virtualxt.md'
         - 'PC (PCem)': 'library/pcem.md'
         - 'PC (QEMU)': 'library/qemu.md'
       - 'Dingoo Emulation':
@@ -190,6 +200,8 @@ nav:
         - 'Epoch - Super Cassette Vision (EmuSCV)': 'library/emuscv.md'
       - 'Fairchild Emulation':
         - 'Fairchild - Channel F (FreeChaF)': 'library/freechaf.md'
+      - 'Fujitsu Emulation':
+        - 'Fujitsu - FM Towns (Geartowns)': 'library/geartowns.md'
       - 'Galaksija Emulation':
         - 'Elektronika Inženjering - Galaksija (Galaksija)': 'library/galaksija.md'
       - 'GCE Emulation':
@@ -197,9 +209,12 @@ nav:
       - 'Magnavox Emulation':
         - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
       - 'Mattel Emulation':
+        - 'Mattel - HyperScan (HyperScanEmu)': 'library/hyperscanemu.md'
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
+        - 'Microsoft - Xbox (xemu)': 'library/xemu.md'
+        - 'Microsoft - Xbox 360 (Xenia Edge)': 'library/xenia_edge.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Mobile Emulation':
         - 'Mobile - J2ME (FreeJ2ME)': 'library/freej2me.md'
@@ -231,6 +246,7 @@ nav:
         - 'Nintendo - Game Boy Advance (gpSP)': 'library/gpsp.md'
         - 'Nintendo - Game Boy Advance (Meteor)': 'library/meteor.md'
         - 'Nintendo - Game Boy Advance (mGBA)': 'library/mgba.md'
+        - 'Nintendo - Game Boy Advance (mGBA Splitscreen)': 'library/mgba_splitscreen.md'
         - 'Nintendo - Game Boy Advance (TempGBA)': 'library/tempgba.md'
         - 'Nintendo - Game Boy Advance (VBA Next)': 'library/vba_next.md'
         - 'Nintendo - Game Boy Advance (VBA-M)': 'library/vba_m.md'
@@ -289,6 +305,8 @@ nav:
         - 'Magnavox - Odyssey2 / Philips Videopac+ (O2EM)': 'library/o2em.md'
         - 'Philips - CD-i (CDi 2015)': 'library/cdi2015.md'
         - 'Philips - P2000T (M2000)': 'library/m2000.md'
+      - 'Picocomputer Emulation':
+        - 'Rumbledethumps - Picocomputer 6502 (RP6502)': 'library/rp6502.md'
       - 'RISC-V Emulation':
         - 'RVVM - RISC-V Virtual Machine': 'library/rvvm.md'
       - 'SNK Emulation':
@@ -329,11 +347,12 @@ nav:
         - 'Sony - PlayStation (Beetle PSX)': 'library/beetle_psx.md'
         - 'Sony - PlayStation (Beetle PSX HW)': 'library/beetle_psx_hw.md'
         - 'Sony - PlayStation (PCSX ReARMed)': 'library/pcsx_rearmed.md'
-        - 'Sony - PlayStation 2 (PCSX2)': 'library/lrps2.md'
+        - 'Sony - PlayStation 2 (LRPS2)': 'library/lrps2.md'
         - 'Sony - PlayStation 2 (PCEE2)': 'library/pcee2.md'
         - 'Sony - PlayStation 3 (RPCS3)': 'library/rpcs3.md'
         - 'Sony - PlayStation 2 (Play!)': 'library/play.md'
         - 'Sony - PlayStation Portable (PPSSPP)': 'library/ppsspp.md'
+        - 'Sony - PlayStation Vita (Vita3K)': 'library/vita3k.md'
         - 'Sony - PocketStation (pokketstation)': 'library/pokketstation.md'
       - 'SpectraVision Emulation':
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
@@ -593,7 +612,6 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - meta
-  - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret:
@@ -651,6 +669,11 @@ markdown_extensions:
       permalink: true
       permalink_title: Reference link to this section
       toc_depth: 6
+
+validation:
+  links:
+    absolute_links: warn
+    anchors: warn
 
 plugins:
   - git-revision-date-localized

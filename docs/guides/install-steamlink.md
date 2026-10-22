@@ -13,7 +13,7 @@ This is probably the most straightforward way to install RetroArch.
 
 ## Download
 
-You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/index.php?page=platforms) and scroll down until you see the **Steam Link** section.
+You can find a cores bundle with RetroArch by clicking [here](https://www.retroarch.com/platforms.html) and scroll down until you see the **Steam Link** section.
 
 ## Getting USB Ready
 
@@ -73,7 +73,7 @@ Find out the IP address that SteamLink receives, which you can learn from your r
 
 FileZilla
 
-| Host  | Username  | Passoword  | Port  |
+| Host  | Username  | Password  | Port  |
 |---|---|---|---|
 | 192.168.1.5  | root  |  steamlink123 | 22  |
 

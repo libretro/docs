@@ -1,4 +1,12 @@
+---
+title: "PlayStation (PCSX ReARMed) Core"
+description: "PCSX ReARMed core documentation: PlayStation BIOS files, supported formats, core options, controls and features of the ARM-optimised PS1 core."
+---
+
 # Sony - PlayStation (PCSX ReARMed)
+
+!!! tip "Quick start"
+	New to PlayStation emulation? The [PlayStation setup guide](https://www.retroarch.com/ps1.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Up5ylMKFxZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

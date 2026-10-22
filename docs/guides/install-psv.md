@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on PlayStation Vita"
+description: "How to download and install RetroArch on a PlayStation Vita with HENkaku custom firmware."
+---
+
 # Downloading and Installing RetroArch for PlayStation Vita
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QKTpZgfc-d8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

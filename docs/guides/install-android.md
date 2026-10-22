@@ -135,7 +135,7 @@ You must follow the [installation notes](#installation-notes) for this process.
 #### From RetroArch.com Downloads
 ___
 
-1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
+1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) and select **Download Stable** or **Download Nightly**.
 2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
 3. Select Install.
 

@@ -36,7 +36,7 @@ If your joypad is not recognized by RetroArch even after updating the profiles, 
 
 1. To avoid other controllers from interfering with your mapping when starting RetroArch, follow these steps: Disconnect all joypads by unplugging their cables or disconnecting them from any wireless connections.
 2. Connect the controller intended for autoconfiguration. Ensure your system supports the selected connectivity method. If your joypad supports both wired and wireless connections and the initial attempt (e.g., via USB) fails, try the alternative option (e.g., Bluetooth). For example, the Nintendo Switch Pro Controller does not support USB connection on Linux 5.15 and older but does support Bluetooth.
-3. For Android, run the [Android](#android) steps first.
+3. For Android, run the [Android](#android-configuration) steps first.
 4. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Set All Controls`. If automatic mapping fails for any button (e.g., due to lack of driver support), the process will be interrupted. In case of interruption, manually map the remaining buttons, starting from the one that caused the interruption and continuing through the rest of the list.
 5. Use `Settings` -> `Input` -> `RetroPad Binds` -> `Port 1 Controls` -> `Save Controller Profile`
 6. The new profile file (also known as the autoconfig file) will be saved to your disk: [Controller profile directory]/[Controller driver]/[Device index].cfg.
@@ -613,7 +613,7 @@ input_device_alt1 = "DualSense Wireless Controller"
 ```
 
 ## Troubleshooting
-If your joypad is not configured properly, you should [generate a RetroArch log](/docs/guides/generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
+If your joypad is not configured properly, you should [generate a RetroArch log](generating-retroarch-logs.md). Your log will show if a profile has been matched for your pad and the path of the corresponding profile.
 
 ## Joypad auto-configuration file
 

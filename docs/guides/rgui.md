@@ -71,7 +71,7 @@ Configuring keyboard input is currently not supported. To configure keyboard bin
 
 ### Thumbnails
 
-RGUI thumbnail support requires the use of playlist files and thumbnail image packs: See [ROMs, Playlists, and Thumbnails](../guides/roms-playlists-thumbnails/).
+RGUI thumbnail support requires the use of playlist files and thumbnail image packs: See [ROMs, Playlists, and Thumbnails](roms-playlists-thumbnails.md).
 
 To view existing playlists choose `Playlists` from the main menu or the `Load Content` menu. Select a playlist, and while browsing its contents use the RetroPad **Y button** (or **Spacebar** on PC) to toggle the full-screen thumbnail associated with the currently highlighted entry:
 

@@ -29,6 +29,12 @@ Cartridge content only — Jaguar CD images are loaded by path and are not softp
 |--------------------------------------------|:---------:|
 | [Beetle Cygne](../library/beetle_cygne.md) | ✔         |
 
+### Clydeware - GameTank
+
+| Core                               | Supported |
+|------------------------------------|:---------:|
+| [GameTank](../library/gametank.md) | ✔         |
+
 ### Coleco - ColecoVision
 
 | Core                               | Supported |

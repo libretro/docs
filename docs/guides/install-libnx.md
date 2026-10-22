@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on Nintendo Switch"
+description: "How to download, install and update RetroArch on a Nintendo Switch running Atmosphère custom firmware, from stable or nightly builds."
+---
+
 # Downloading, Installing and Updating RetroArch for Switch
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8onZ4H8h3iE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

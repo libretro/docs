@@ -1,4 +1,12 @@
-# Sony - PlayStation (LRPS2)
+---
+title: "PlayStation 2 (LRPS2) Core"
+description: "LRPS2 core documentation: system requirements, PS2 BIOS setup, renderers including ParaLLEl-GS, core options and supported features."
+---
+
+# Sony - PlayStation 2 (LRPS2)
+
+!!! tip "Quick start"
+	New to PlayStation 2 emulation? The [PlayStation 2 setup guide](https://www.retroarch.com/ps2.html) on retroarch.com covers what you need and how to get your first game running.
 
 <iframe width="845" height="475" src="https://www.youtube.com/embed/f-DxgSIGNlg" title="RetroArch - LRPS2 - How to get into the PS2 startup screen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -123,6 +131,9 @@ retroarch/
 
 !!! Info
 	Although the `cheats_ws` folder is empty when created, a very large number of widescreen patches are already included in the core itself.
+
+!!! Info
+	Cheats go into `retroarch/system/pcsx2/cheats` named by their disc hash. For example, a patch/cheat for Ōkami US would be named `21068223.pnach`
 
 ## Extensions
 
