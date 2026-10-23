@@ -96,6 +96,7 @@ nav:
       - 'Playlists and Thumbnails': 'guides/roms-playlists-thumbnails.md'
       - 'XMB Menu Map': 'guides/xmb-menu-map.md'
     - 'Advanced':
+      - 'ArmSoM CM5': 'guides/armsom-cm5.md'
       - 'AI Service': 'guides/ai-service.md'
       - 'Command-Line Interface (CLI)': 'guides/cli-intro.md'
       - 'CRT SwitchRes': 'guides/crtswitchres.md'
