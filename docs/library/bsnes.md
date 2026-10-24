@@ -310,6 +310,7 @@ The bsnes core is based on the latest bsnes source and targets accurate, faithfu
 - [Nintendo - SNES / FSC (bsnes-mercury Performance)](bsnes_mercury_performance.md)
 - [Nintendo - SNES / FSC (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / FSC (Snes9x 2002)](snes9x_2002.md)
+- [Nintendo - SNES / FSC (Snes9x 2005 Plus)](snes9x_2005_plus.md)
 - [Nintendo - SNES / FSC (Snes9x 2005)](snes9x_2005.md)
 - [Nintendo - SNES / FSC (Snes9x 2010)](snes9x_2010.md)
 - [Nintendo - SNES / FSC (Snes9x)](snes9x.md)
