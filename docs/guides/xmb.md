@@ -36,9 +36,19 @@ XMB has a number of styles built-in. They can be changed in the `Settings > User
 * The background color can be changed: Scroll through `Color Theme` to select a color.
 
 * The animated background "wallpaper" can also be changed (`Shader Pipeline`), the default being a PlayStation-style animated ribbon.
-	* XMB can even show different wallpapers depending on the playlist selected: [Follow this guide](https://github.com/libretro/Lakka-LibreELEC/wiki/Dynamic-Wallpapers) using [these files](https://github.com/libretro/retroarch-assets/tree/master/wallpapers).
+	* XMB can even show different wallpapers depending on the playlist selected, see [Dynamic backgrounds](#dynamic-backgrounds) below.
 
 * XMB also has a selection of icon sets to choose from (`Icon Theme`).
 
 ![XMB with an alternative background color, background animation, and icon set](../image/retroarch/xmb/theme_alt.png)
 *XMB with an alternative background color, background animation, and icon set.*
+
+### Dynamic backgrounds
+
+XMB can show a different background for each tab of the horizontal menu, for example one per system playlist.
+
+1. Enable `Settings > User Interface > Appearance > Dynamic Background`.
+2. Point `Settings > Directory > Dynamic Backgrounds` to a folder with the images.
+3. Name each image after the title XMB shows in the top-left corner when that tab is selected, with a `.png` extension, for example `Nintendo - Super Nintendo Entertainment System.png` for the SNES playlist.
+
+Ready-made sets, named this way, are in the [wallpapers folder of retroarch-assets](https://github.com/libretro/retroarch-assets/tree/master/wallpapers); each set has a subfolder per resolution. A tab without a matching image keeps the regular background (`Background Image`, or the color theme's). If an animated `Shader Pipeline` covers the image, set it to `Off`.
