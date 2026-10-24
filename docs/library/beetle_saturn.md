@@ -1,4 +1,12 @@
+---
+title: "Beetle Saturn – Sega Saturn core for RetroArch"
+description: "Beetle Saturn core documentation: Saturn BIOS files, disc images and multi-disc games, core options, controllers and supported features."
+---
+
 # Sega - Saturn (Beetle Saturn)
+
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QTIRtZ9q5PM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -266,8 +274,6 @@ The Beetle Saturn core supports the following device type(s) in the controls men
 Activating multitap support in compatible games can be configured by the ['6Player Adaptor on Port 1' and '6Player Adaptor on Port 2' core options](#core-options).
 
 ## Joypad
-
-![](../image/controller/saturn.png)
 
 | RetroPad Inputs                                | User 1 - 12 input descriptors | Control Pad  | 3D Control Pad | Arcade Racer              | Mission Stick  | Twin-Stick          | Dual Mission Sticks  |
 |------------------------------------------------|-------------------------------|--------------|----------------|---------------------------|----------------|---------------------|----------------------|

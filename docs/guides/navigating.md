@@ -2,7 +2,7 @@
 
 Navigating on RetroArch is as easy as you can imagine. Depending on the device you have, the control scheme is determined automatically. For example, if you are going to use it on a computer, the basic key combinations of the keyboard will apply. You move with the arrow keys and select with the *Enter* key, and you return with the *Backspace* key. If you plug a controller, you can also move with the D-Pad buttons.
 
-The default [GUI](GUI) for RetroArch is [Ozone](ozone.md). While the "skin" may differ on certain platforms, basic layout and navigation remains broadly the same.
+The default [GUI](gui.md) for RetroArch is [Ozone](ozone.md). While the "skin" may differ on certain platforms, basic layout and navigation remains broadly the same.
 
 ## PC
 

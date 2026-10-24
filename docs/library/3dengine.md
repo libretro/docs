@@ -1,8 +1,13 @@
+---
+title: "3D Engine core for RetroArch"
+description: "RetroArch 3D Engine core: core options and controls. A tech demo for libretro GL with additional features (camera/location/etc)."
+---
+
 # 3D Engine
 
 ## Contribute to this documentation
 
-In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/3d_engine.md). Changes are proposed using "Pull Requests."
+In order to propose improvements to this document, [visit its corresponding source page on github](https://github.com/libretro/docs/tree/master/docs/library/3dengine.md). Changes are proposed using "Pull Requests."
 
 ## Background
 

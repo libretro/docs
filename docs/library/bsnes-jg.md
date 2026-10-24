@@ -1,3 +1,8 @@
+---
+title: "bsnes-jg – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch bsnes-jg core (Nintendo SNES / Famicom): BIOS files, core options and controls. bsnes-jg is a cycle accurate emulator for the Super Famicom/Super Nintendo Entertainment System, including…"
+---
+
 # Nintendo - SNES / Famicom (bsnes-jg)
 
 ## Background
@@ -307,10 +312,10 @@ The bsnes-jg core is compatible with all officially released SNES/SFC titles.
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)
 - [Nintendo - SNES / Famicom (Snes9x 2002)](snes9x_2002.md)
 - [Nintendo - SNES / Famicom (Snes9x 2005 Plus)](snes9x_2005_plus.md)
@@ -323,10 +328,10 @@ The bsnes-jg core is compatible with all officially released SNES/SFC titles.
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)

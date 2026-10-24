@@ -28,4 +28,4 @@ The Quick Menu provides access to many core-specific settings and options while 
 The most important function exclusive to the Quick Menu (aside from `Resume Content`) is `Close Content`. This safely 'shuts off' the emulated system and its content, returning the user to RetroArch's main menu without having to quit RetroArch completely.
 
 ### Disc Control
-Another "exclusive" function that appears with certain cores is swapping discs using the `Disc Control` option: See [Disc Swapping](./disc-swapping).
+Another "exclusive" function that appears with certain cores is swapping discs using the `Disc Control` option: See [Disc Swapping](disc-swapping.md).

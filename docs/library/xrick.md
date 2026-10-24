@@ -1,3 +1,8 @@
+---
+title: "XRick – Rick Dangerous core for RetroArch"
+description: "RetroArch XRick core (Rick Dangerous): BIOS files, core options and controls. XRick is an open source implementation of the game “Rick Dangerous”."
+---
+
 # Rick Dangerous (XRick)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V09CwrlFgA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

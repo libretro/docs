@@ -1,3 +1,8 @@
+---
+title: "QUASI88 – NEC PC-8000 / PC-8800 series core for RetroArch"
+description: "RetroArch QUASI88 core (NEC PC-8000 / PC-8800 series): BIOS files, core options and controls. QUASI88 is an emulator by Showzoh Fukunaga licensed under the BSD 3-Clause license."
+---
+
 # NEC PC-8000 / PC-8800 series (QUASI88)
 
 ## Background

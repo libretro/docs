@@ -1,3 +1,8 @@
+---
+title: "TyrQuake – Quake 1 core for RetroArch"
+description: "RetroArch TyrQuake core (Quake 1): core options and controls. Libretro port of Tyrquake (Quake 1 engine)."
+---
+
 # Quake 1 (TyrQuake)
 
 ## Background

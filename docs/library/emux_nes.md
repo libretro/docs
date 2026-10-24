@@ -1,3 +1,8 @@
+---
+title: "Emux NES – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch Emux NES core (Nintendo NES / Famicom): controls. Emux is a cross-platform emulator project with a goal of emulating multiple kinds of machines related to gaming, such as consoles or…"
+---
+
 # Nintendo - NES / Famicom (Emux NES)
 
 ## Background

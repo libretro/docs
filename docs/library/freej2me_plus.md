@@ -1,3 +1,8 @@
+---
+title: "FreeJ2ME-Plus – Mobile J2ME core for RetroArch"
+description: "RetroArch FreeJ2ME-Plus core (Mobile J2ME): BIOS files, core options and controls. FreeJ2ME-Plus is a fork of FreeJ2ME aimed at compatibility: it adds a Mascot Capsule v3 and an M3G (JSR-184)…"
+---
+
 # Mobile - J2ME (FreeJ2ME-Plus)
 
 ## Background

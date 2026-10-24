@@ -1,4 +1,12 @@
+---
+title: "Kronos – Sega Saturn/ST-V core for RetroArch"
+description: "Kronos core documentation: Saturn and ST-V BIOS files, the OpenGL 4.3 requirement, core options and known issues."
+---
+
 # Sega - Saturn/ST-V (Kronos)
+
+!!! tip "Quick start"
+	New to Sega Saturn emulation? The [Sega Saturn setup guide](https://www.retroarch.com/saturn.html) on retroarch.com covers what you need, which core to pick and how to get your first game running.
 
 ## Background
 
@@ -195,8 +203,6 @@ Must be enabled in core options.
 
 #### Joypad
 
-![](../image/controller/saturn.png)
-
 | User 1 - 12 Remap descriptors | RetroPad Inputs                              |
 |-------------------------------|----------------------------------------------|
 | A                             | ![](../image/retropad/retro_b.png)       |
@@ -208,8 +214,8 @@ Must be enabled in core options.
 | D-Pad Right                   | ![](../image/retropad/retro_dpad_right.png)    |
 | B                             | ![](../image/retropad/retro_a.png)       |
 | Y                             | ![](../image/retropad/retro_x.png)       |
-| C                             | ![](../image/retropad/retro_l1.png)            |
-| Z                             | ![](../image/retropad/retro_r1.png)            |
+| C                             | ![](../image/retropad/retro_r1.png)            |
+| Z                             | ![](../image/retropad/retro_l1.png)            |
 | L                             | ![](../image/retropad/retro_l2.png)            |
 | R                             | ![](../image/retropad/retro_r2.png)            |
 | Analog X                      | ![](../image/retropad/retro_left_stick.png) X  |

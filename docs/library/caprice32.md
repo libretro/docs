@@ -1,3 +1,8 @@
+---
+title: "Caprice32 – Amstrad CPC core for RetroArch"
+description: "RetroArch Caprice32 core (Amstrad CPC): core options and controls. Caprice32 is a software emulator of the Amstrad CPC 8bit home computer series running on Linux and Windows."
+---
+
 # Amstrad - CPC (Caprice32)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "AmiArcadia – Arcadia 2001 / Interton VC 4000 core for RetroArch"
+description: "RetroArch AmiArcadia core (Arcadia 2001 / Interton VC 4000): BIOS files, core options and controls. AmiArcadia is an emulator for Signetics 2650 CPU-based systems."
+---
+
 # Arcadia 2001 / Interton VC 4000 (AmiArcadia)
 
 ## Background

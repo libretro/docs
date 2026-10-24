@@ -1,3 +1,8 @@
+---
+title: "Flycast – Sega Dreamcast/NAOMI core for RetroArch"
+description: "RetroArch Flycast core (Sega Dreamcast/NAOMI): BIOS files, core options and controls. Flycast is a multi-platform Sega Dreamcast, NAOMI, Atomiswave and System SP emulator."
+---
+
 # Sega - Dreamcast/NAOMI (Flycast)
 
 ## Background
@@ -21,6 +26,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 {==
 Example (MAME ID=ikaruga)
+
 - [ROM FOLDER]/ikaruga.zip
 - [ROM FOLDER]/ikaruga/gdl-0010.chd
 ==}
@@ -65,6 +71,9 @@ Required or optional firmware files go in RetroArch's system directory.
 
 !!! attention
     All bios files need to be in a directory named 'dc' in RetroArch's system directory.
+
+!!! note
+    If you load the core manually and then start the core without any content selected, this will boot Dreamcast BIOS Menu.
 
 ## Features
 
@@ -137,12 +146,6 @@ Configure region, language, BIOS and base hardware settings.
 !!! regular ""
 
 	Force use of high-level emulation BIOS.
-
-**Boot to BIOS** [flycast_boot_to_bios] (**disabled**|enabled)
-
-!!! regular ""
-
-	Boot directly into the Dreamcast BIOS menu.
 
 **Enable DSP** [flycast_enable_dsp] (**enabled**|disabled)
 
@@ -362,8 +365,6 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 
 #### Joypad and analog device type table
 
-![](../image/controller/dc.png)
-
 | User 1 - 4 input descriptors |                                             | RetroPad           |
 |------------------------------|---------------------------------------------|--------------------|
 | A                            | ![](../image/retropad/retro_b.png)      | A                  |
@@ -375,10 +376,8 @@ The Flycast core supports the following device type(s) in the controls menu, bol
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   | D-Pad Right        |
 | B                            | ![](../image/retropad/retro_a.png)      | B                  |
 | Y                            | ![](../image/retropad/retro_x.png)      | Y                  |
-| L (fierce)                   | ![](../image/retropad/retro_l1.png)           | L (fierce)         |
-| R (fierce)                   | ![](../image/retropad/retro_r1.png)           | R (fierce)         |
-| L (weak)                     | ![](../image/retropad/retro_l2.png)           | L (weak)           |
-| R (weak)                     | ![](../image/retropad/retro_r2.png)           | R (weak)           |
+| L Trigger                    | ![](../image/retropad/retro_l2.png)           | L Trigger          |
+| R Trigger                    | ![](../image/retropad/retro_r2.png)           | R Trigger          |
 | Analog X                     | ![](../image/retropad/retro_left_stick.png) X | Analog X           |
 | Analog Y                     | ![](../image/retropad/retro_left_stick.png) Y | Analog Y           |
 

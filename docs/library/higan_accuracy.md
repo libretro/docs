@@ -1,3 +1,8 @@
+---
+title: "higan Accuracy – Nintendo SNES / Famicom core for RetroArch"
+description: "RetroArch higan Accuracy core (Nintendo SNES / Famicom): BIOS files, core options and controls. A port of higan v106's Super Famicom emulation core to libretro."
+---
+
 # Nintendo - SNES / Famicom (higan Accuracy)
 
 ## Background
@@ -182,7 +187,7 @@ Load a SGB-supported GB.mdGBC rom.
 ## MSU-1
 
 !!! attention
-	MSU-1 support in this core is complex. **Use the [Snes9x core](../library/snes9x#msu-1-support) for simplified and easily accessible MSU-1 support.**
+	MSU-1 support in this core is complex. **Use the [Snes9x core](snes9x.md#msu-1-support) for simplified and easily accessible MSU-1 support.**
 
 MSU-1 support can be used by loading a correct .bml file.
 
@@ -331,10 +336,10 @@ Incompatible with ROM hacks made to take advantage of emulator quirks, much like
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / Famicom (Mesen-S)](mesen-s.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)

@@ -1,3 +1,8 @@
+---
+title: "Mesen – Nintendo NES / Famicom core for RetroArch"
+description: "RetroArch Mesen core (Nintendo NES / Famicom): BIOS files, core options and controls. Mesen is a high-accuracy NES and Famicom emulator and NSF player for Windows and Linux."
+---
+
 # Nintendo - NES / Famicom (Mesen)
 
 ## Background
@@ -132,7 +137,7 @@ Custom color palettes for the NES can be generated with either of these tools.
 !!! attention
 	There is more HD pack documentation at the [official Mesen documentation](https://www.mesen.ca/docs/hdpacks/#using-hd-packs).
 
-To use HD packs, first make sure to turn on the [Enable HD Packs core option](#core-options.)
+To use HD packs, first make sure to turn on the [Enable HD Packs core option](#core-options)
 
 First, create a folder named 'HdPacks' in RetroArch's System directory.
 

@@ -1,3 +1,8 @@
+---
+title: "Bomberman – Mr.Boom core for RetroArch"
+description: "RetroArch Bomberman core (Mr.Boom): core options and controls. Mr.Boom is an up to 8 player Bomberman clone ported to the libretro API."
+---
+
 # Mr.Boom (Bomberman)
 
 ## Background

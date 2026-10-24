@@ -1,3 +1,8 @@
+---
+title: "mGBA – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch mGBA core (Nintendo Game Boy Advance): BIOS files, core options and controls. mGBA is an emulator for running Game Boy Advance games."
+---
+
 # Nintendo - Game Boy Advance (mGBA)
 
 ## Background

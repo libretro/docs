@@ -1,3 +1,8 @@
+---
+title: "Beetle VB – Nintendo Virtual Boy core for RetroArch"
+description: "RetroArch Beetle VB core (Nintendo Virtual Boy): core options and controls. Port of Mednafen VB to libretro."
+---
+
 # Nintendo - Virtual Boy (Beetle VB)
 
 ## Background

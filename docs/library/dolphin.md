@@ -1,4 +1,12 @@
+---
+title: "Dolphin – Nintendo Gamecube/Wii core for RetroArch"
+description: "Dolphin core documentation: system files, optional BIOS, OpenGL, Vulkan and Direct3D 11 renderers, core options and GameCube and Wii controls."
+---
+
 # Nintendo Gamecube/Wii (Dolphin)
+
+!!! tip "Quick start"
+	New to GameCube and Wii emulation? The [GameCube and Wii setup guide](https://www.retroarch.com/gamecube.html) on retroarch.com covers what you need and how to get your first game running.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ayv-zf04HsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -47,8 +55,10 @@ current source code. We provide two methods: one using *Git* and one without.
 2. After downloading/extracting the code, navigate into the resulting source tree folder.
 The `Sys` folder you need is located in *Data/Sys*.
 This is the folder we will need to move/copy.
+
 3. *Find RetroArch's system folder path*
 If you didn't change its default location, the `system` folder is located at the top level of your RetroArch installation folder. Whether you moved it or not, you can find the location of your `system` folder (along with any other folders RetroArch uses) by going to Settings > Directory or by locating the *system_directory* line in the RetroArch configuration file (usually `retroarch.cfg`).
+
 4. In the `RETROARCH_SYSTEM_FOLDER`, create a new folder named *dolphin-emu* and move/copy the `Sys` folder into it.
 
 When everything is set up properly, the `Sys` folder path should look something like this:

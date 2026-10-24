@@ -1,3 +1,8 @@
+---
+title: "EightyOne – ZX81 core for RetroArch"
+description: "RetroArch EightyOne core (ZX81): core options and controls. 81-libretro is an work in progress port of the EightyOne (a.k.a."
+---
+
 # ZX81 (EightyOne) *WIP*
 
 ## Background
@@ -318,4 +323,4 @@ The EightyOne core supports the following device type(s) in the controls menu, b
 - [Libretro EightyOne Core info file](https://github.com/libretro/libretro-super/blob/master/dist/info/81_libretro.info)
 - [Libretro EightyOne Github Repository](https://github.com/libretro/81-libretro)
 - [Report Libretro EightyOne Core Issues Here](https://github.com/libretro/81-libretro/issues)
-- [Official EightyOne Sourceforge Repository]((https://sourceforge.net/projects/eightyone-sinclair-emulator/))
+- [Official EightyOne Sourceforge Repository](https://sourceforge.net/projects/eightyone-sinclair-emulator/)

@@ -1,3 +1,8 @@
+---
+title: "JAXE – XO-CHIP/CHIP-8 core for RetroArch"
+description: "RetroArch JAXE core (XO-CHIP/CHIP-8): BIOS files, core options and controls. A fully-featured, cross platform XO-CHIP/S-CHIP/CHIP-8 emulator written in C."
+---
+
 # XO-CHIP/CHIP-8 (JAXE) *WIP*
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DA032CSJLSE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 

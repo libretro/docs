@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on Android"
+description: "How to download, install and update RetroArch on Android by side-loading the APK, and why the Google Play release is not recommended."
+---
+
 # Downloading, Installing and Updating RetroArch for Android devices.
 
 ## Non-Google Play sources
@@ -8,7 +13,8 @@ You must follow the [installation notes](#installation-notes) for this process.
 
 #### From RetroArch.com Downloads
 ___
-1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/?page=platforms) and select **Download Stable** or **Download Nightly**.
+
+1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) and select **Download Stable** or **Download Nightly**.
 2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
 3. Select Install.
 
@@ -56,6 +62,7 @@ To install RetroArch from non-Google Play sources (F-Droid, retroarch.com, etc),
 If Google Play Protect still blocks the app installation even after you entered the correct password in Method 1 (a common issue on older Android versions), you'll need to temporarily disable Play Protect to proceed.
 
 Disable Google Play Protect:
+
 * Open the Play Store app first
 * Tap your profile icon
 * Select Play Protect

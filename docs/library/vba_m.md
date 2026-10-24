@@ -1,3 +1,8 @@
+---
+title: "VBA-M – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch VBA-M core (Nintendo Game Boy Advance): BIOS files, core options and controls. VBA-M is a Game Boy Advance emulator with the goal to improve upon VisualBoyAdvance by integrating the best…"
+---
+
 # Nintendo - Game Boy Advance (VBA-M)
 
 ## Background
@@ -89,6 +94,9 @@ The VBA-M core saves/loads to/from these directories.
 | File  | Description            |
 |:-----:|:----------------------:|
 | *.srm | Cartridge battery save |
+
+!!! tip "Converting saves to .sav"
+    This core's `.srm` is the libretro VBA format (always 139,264 bytes), not the plain `.sav` most other emulators and flash carts use. [GBA 4gz, 4gs and sav Converter](https://thysbelon.github.io/gbaconv-web/) converts it to `.sav` and back, in the browser.
 
 **Frontend's State directory**
 

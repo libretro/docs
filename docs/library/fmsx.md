@@ -1,3 +1,8 @@
+---
+title: "fMSX – MSX core for RetroArch"
+description: "RetroArch fMSX core (MSX): BIOS files, core options and controls. This is a port of Marat Fayzullin's fMSX 6.0 (21-Feb-2021) to the libretro API. fMSX is a program that emulates MSX, MSX2, and MSX2+…"
+---
+
 # MSX (fMSX)
 
 ## Background

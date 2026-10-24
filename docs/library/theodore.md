@@ -1,3 +1,8 @@
+---
+title: "Theodore – Thomson MO/TO core for RetroArch"
+description: "RetroArch Theodore core (Thomson MO/TO): BIOS files, core options and controls. Theodore is a Thomson MO/TO system emulator based on Daniel Coulom's DCTO8D/DCTO9P/DCMO5 emulators."
+---
+
 # Thomson - MO/TO (Theodore)
 
 ## Background

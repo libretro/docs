@@ -12,6 +12,7 @@ _Note: This first half of this section is written for users who cannot submit co
 [As part of mame2003 we have an 'automated port' of the MAME 0.141 controls.dat project information](https://github.com/libretro/mame2003-plus-libretro/blob/master/src/controls.c). It address many, but not all games supported by mame2003-plus.
 
 Therefore in many cases adding new control labels can be as simple as adding the existing controls.dat metadata to a driver declaration. However as part of that process the controls.dat metadata needs to be checked in two ways before it can be added:
+
 1. From the user perspective: are the control names actually correct
 2. From the coder perspective: does the switch logic in the controls.dat naming function work as intended
 
@@ -149,6 +150,7 @@ GAMEC( 1994, stoneba2, stonebal, stonebal, stonebal, stonebal, ROT0, "Art and Ma
 The purpose of the NVRAM bootstrap functionality is to create a good user experience the first time a game is booted. When the behavior of a game on its first boot is impossible for a new user to tell from a crash, then a bootstrap is in order.
 
 More specifically, the conditions for adding a bootstrap are:
+
 * It is not clear what the user needs to do to get into the game **or**
 * It is not reasonably possible for the user to get into the game using a SNES controller or arcade control panel
 

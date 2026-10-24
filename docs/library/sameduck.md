@@ -1,3 +1,8 @@
+---
+title: "SameDuck – Mega Duck / Cougar Boy core for RetroArch"
+description: "RetroArch SameDuck core (Mega Duck / Cougar Boy): BIOS files, core options and controls. An adaptation of SameDuck to play Mega Duck games."
+---
+
 # Mega Duck / Cougar Boy (SameDuck)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TAb45kwAgek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,3 +1,8 @@
+---
+title: "GW – Handheld Electronic core for RetroArch"
+description: "RetroArch GW core (Handheld Electronic): controls. A libretro core for Game & Watch simulators."
+---
+
 # Handheld Electronic (GW)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eBp1ntWZ07Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

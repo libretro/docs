@@ -1,3 +1,8 @@
+---
+title: "VaporSpec core for RetroArch"
+description: "RetroArch VaporSpec core: BIOS files and controls. A virtual game platform with capabilities similar to 80s game consoles."
+---
+
 # VaporSpec
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1cnNNu-LXq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

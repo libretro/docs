@@ -1,3 +1,8 @@
+---
+title: "BlastEm – Sega MD/CD core for RetroArch"
+description: "RetroArch BlastEm core (Sega MD/CD): BIOS files. BlastEm is an open-source Sega 16 bit emulator focused on accuracy and portability."
+---
+
 # Sega - MD/CD (BlastEm)
 
 ## Background

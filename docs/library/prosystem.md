@@ -1,3 +1,8 @@
+---
+title: "ProSystem – Atari 7800 core for RetroArch"
+description: "RetroArch ProSystem core (Atari 7800): BIOS files, core options and controls. ProSystem is an Atari 7800 emulator."
+---
+
 # Atari - 7800 (ProSystem)
 
 ## Background
@@ -90,6 +95,32 @@ The ProSystem core saves/loads to/from these directories.
 - The ProSystem core's core provided max width is 320
 - The ProSystem core's core provided max height is 292
 - The ProSystem core's core provided aspect ratio is 4/3
+
+## Core options
+
+The ProSystem core has the following option(s) that can be tweaked from the core options menu. The default setting is bolded.
+
+#### Video
+
+- **Color Depth (Restart)** [prosystem_color_depth] (**Thousands (16-bit)**|Millions (24-bit))
+
+	Specifies number of colors to display on-screen. 24-bit may increase performance overheads on some platforms.
+
+#### Audio
+
+- **Audio Filter** [prosystem_low_pass_filter] (**OFF**|ON)
+
+	Enables a low pass audio filter to soften the 'harsh' sound produced by the Atari 7800's TIA chip.
+
+- **Audio Filter Level** [prosystem_low_pass_range] (5%|10%|15%|20%|25%|30%|35%|40%|45%|50%|55%|**60%**|65%|70%|75%|80%|85%|90%|95%)
+
+	Specifies the cut-off frequency of the low pass audio filter. A higher value increases the perceived 'strength' of the filter, since a wider range of the high frequency spectrum is attenuated.
+
+#### Input
+
+- **Dual Stick Controller** [prosystem_gamepad_dual_stick_hack] (**OFF**|ON)
+
+	Maps Player 2's joystick to the right analog stick of Player 1's RetroPad. Enables dual stick control in supported games (e.g. Robotron: 2084, T:ME Salvo).
 
 ## Controllers
 

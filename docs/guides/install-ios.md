@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on iOS"
+description: "How to install and run RetroArch on iOS, including the App Store release."
+---
+
 # Downloading, Installing and Running RetroArch on iOS
 
 ## Installation
@@ -76,11 +81,11 @@ When you first start RetroArch, you'll notice that you're missing images. You'll
 
 - From the main menu, choose "Online Updater"
 - Choose:
-  - Update Core Info Files
-  - Update Assets
-  - Update Databases
-  - Update Overlays
-  - Update GLSL Shaders
+    - Update Core Info Files
+    - Update Assets
+    - Update Databases
+    - Update Overlays
+    - Update GLSL Shaders
 
 ### Adding Content
 

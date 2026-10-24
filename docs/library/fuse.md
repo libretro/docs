@@ -1,3 +1,8 @@
+---
+title: "Fuse – ZX Spectrum core for RetroArch"
+description: "RetroArch Fuse core (ZX Spectrum): BIOS files, core options and controls. The Free Unix Spectrum Emulator (Fuse): an emulator of the 1980s home computer and various clones for Unix, Mac OS X and…"
+---
+
 # ZX Spectrum (Fuse)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "DICE core for RetroArch"
+description: "RetroArch DICE core: BIOS files, core options and controls. DICE is a Discrete Integrated Circuit Emulator."
+---
+
 # DICE
 
 ## Background

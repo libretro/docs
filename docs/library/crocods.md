@@ -1,3 +1,8 @@
+---
+title: "CrocoDS – Amstrad CPC core for RetroArch"
+description: "RetroArch CrocoDS core (Amstrad CPC): core options and controls. Based on Win-CPC."
+---
+
 # Amstrad - CPC (CrocoDS)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "DeSmuME – Nintendo DS core for RetroArch"
+description: "RetroArch DeSmuME core (Nintendo DS): BIOS files, core options and controls. DeSmuME is a Nintendo DS emulator http://desmume.org"
+---
+
 # Nintendo - DS (DeSmuME)
 
 ## Background

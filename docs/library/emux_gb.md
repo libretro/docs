@@ -1,3 +1,8 @@
+---
+title: "Emux GB – Game Boy/Game Boy Color core for RetroArch"
+description: "RetroArch Emux GB core (Game Boy/Game Boy Color): BIOS files and controls. Emux is a cross-platform emulator project with a goal of emulating multiple kinds of machines related to gaming, such as…"
+---
+
 # Game Boy/Game Boy Color (Emux GB) *WIP*
 
 ## Background

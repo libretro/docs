@@ -1,3 +1,8 @@
+---
+title: "Mesen-S – Nintendo SNES / SFC / Game Boy / Color core for RetroArch"
+description: "RetroArch Mesen-S core (Nintendo SNES / SFC / Game Boy / Color): BIOS files, core options and controls. Mesen-S is a cross-platform SNES emulator for Windows & Linux built in C++ and C#."
+---
+
 # Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)
 
 ## Background
@@ -298,10 +303,10 @@ The Mesen-S core fully emulates all SNES, GB, and GBC games that have ever been 
 - [Nintendo - SNES / Famicom (bsnes-mercury Accuracy)](bsnes_mercury_accuracy.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Balanced)](bsnes_mercury_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes-mercury Performance)](bsnes_mercury_performance.md)
-- [Nintendo - SNES / Famicom (bsnes Accuracy)](bsnes_accuracy.md)
-- [Nintendo - SNES / Famicom (bsnes Balanced)](bsnes_balanced.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Balanced)](bsnes2014_balanced.md)
 - [Nintendo - SNES / Famicom (bsnes C++98 (v085))](bsnes_cplusplus98.md)
-- [Nintendo - SNES / Famicom (bsnes Performance)](bsnes_performance.md)
+- [Nintendo - SNES / Famicom (bsnes 2014 Performance)](bsnes2014_performance.md)
 - [Nintendo - SNES / Famicom (higan Accuracy)](higan_accuracy.md)
 - [Nintendo - SNES / Famicom (nSide Balanced)](nside_balanced.md)
 - [Nintendo - SNES / Famicom (Snes9x)](snes9x.md)

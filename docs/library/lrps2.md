@@ -1,4 +1,12 @@
-# Sony - PlayStation (LRPS2)
+---
+title: "LRPS2 – Sony PlayStation 2 core for RetroArch"
+description: "LRPS2 core documentation: system requirements, PS2 BIOS setup, renderers including ParaLLEl-GS, core options and supported features."
+---
+
+# Sony - PlayStation 2 (LRPS2)
+
+!!! tip "Quick start"
+	New to PlayStation 2 emulation? The [PlayStation 2 setup guide](https://www.retroarch.com/ps2.html) on retroarch.com covers what you need and how to get your first game running.
 
 <iframe width="845" height="475" src="https://www.youtube.com/embed/f-DxgSIGNlg" title="RetroArch - LRPS2 - How to get into the PS2 startup screen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -64,6 +72,7 @@ If you don't have access to the `Core System Files Downloader` for whatever reas
 First, you will need to download the `GameIndex.yaml` file from the core's source code repository on [Github](https://github.com/libretro/ps2). [This](https://raw.githubusercontent.com/libretro/ps2/refs/heads/libretroization/bin/resources/GameIndex.yaml) is a direct link to the file, but if that link breaks in the future, the database file is typically housed in the `bin/resources` directory.
 
 Once you have the `GameIndex.yaml` database:
+
 1. Navigate to your 'system'/BIOS directory (the location of which you can find/confirm by going to settings > directory in the RetroArch menu), then create a directory named `pcsx2` (must be in all lower-case).
 2. Inside your new `pcsx2` directory, you'll make another directory named `resources` (again, all lower-case)
 3. Place the `GameIndex.yaml` inside of it. The final structure should be `system/pcsx2/resources/GameIndex.yaml`.
@@ -122,6 +131,9 @@ retroarch/
 
 !!! Info
 	Although the `cheats_ws` folder is empty when created, a very large number of widescreen patches are already included in the core itself.
+
+!!! Info
+	Cheats go into `retroarch/system/pcsx2/cheats` named by their disc hash. For example, a patch/cheat for Ōkami US would be named `21068223.pnach`
 
 ## Extensions
 
@@ -236,6 +248,7 @@ The current standalone development version is reported to be compatible with app
 ## Libretro PS2 cores
 
 - [PlayStation 2 (Play!)](play.md)
+- [PlayStation 2 (PCEE2)](pcee2.md)
 
 
 [^2]: Overscan cropping available via Core Options instead of frontend settings

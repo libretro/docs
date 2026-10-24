@@ -1,3 +1,8 @@
+---
+title: "Meteor – Nintendo Game Boy Advance core for RetroArch"
+description: "RetroArch Meteor core (Nintendo Game Boy Advance): controls. Meteor is a Gameboy Advance emulator."
+---
+
 # Nintendo - Game Boy Advance (Meteor)
 
 ## Background

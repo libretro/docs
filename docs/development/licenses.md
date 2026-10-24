@@ -59,7 +59,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 
 | Core                                             			           | License                                                                                   | Non-commercial |
 |----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------|
-| [3D Engine](../library/3d_engine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
+| [3D Engine](../library/3dengine.md)             			           | [GPLv3](https://github.com/libretro/libretro-3dengine/blob/master/license)                |                |
 | [2048](../library/2048.md)                       			           | [Public Domain](https://github.com/libretro/libretro-2048/blob/master/COPYING)            |                |
 | [Anarch](../library/anarch.md)                                                   | [CC0](https://codeberg.org/iyzsong/anarch-libretro/src/branch/master/LICENSE)             |                |
 | [Ardens](../library/ardens.md)                                       | [MIT](https://github.com/tiberiusbrown/Ardens/blob/master/LICENSE.txt)                         |                |
@@ -83,10 +83,10 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [bsnes-mercury Accuracy](../library/bsnes_mercury_accuracy.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Balanced](../library/bsnes_mercury_balanced.md)                   | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
 | [bsnes-mercury Performance](../library/bsnes_mercury_performance.md)             | [GPLv3](https://github.com/libretro/bsnes-mercury/blob/master/LICENSE)                    |                |
-| [bsnes Accuracy](../library/bsnes_accuracy.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
-| [bsnes Balanced](../library/bsnes_balanced.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Accuracy](../library/bsnes2014_accuracy.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Balanced](../library/bsnes2014_balanced.md)                                   | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [bsnes C++98 (v085)](../library/bsnes_cplusplus98.md)                            | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
-| [bsnes Performance](../library/bsnes_performance.md)                             | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
+| [bsnes 2014 Performance](../library/bsnes2014_performance.md)                             | [GPLv3](https://github.com/libretro/bsnes-libretro/blob/libretro/COPYING)                 |                |
 | [Caprice32](../library/caprice32.md)             			           | [GPLv2](https://github.com/ColinPitrat/caprice32/blob/master/COPYING.txt)                 |                |
 | [ChaiLove](../library/chailove.md)               			           | [MIT](https://github.com/libretro/libretro-chailove/blob/master/COPYING)                        |                |
 | [Citra](../library/citra.md)                     			           | [GPLv2](https://github.com/citra-emu/citra/blob/master/license.txt)                       |                |
@@ -131,11 +131,13 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [GAM4980](../library/gam4980.md)                                                 | [GPLv3](https://codeberg.org/iyzsong/gam4980/raw/branch/master/COPYING)                   |                |
 | [Gambatte](../library/gambatte.md)                                               | [GPLv2](https://github.com/libretro/gambatte-libretro/blob/master/COPYING)                |                |
 | [Game Music Emu](../library/game_music_emu.md)            		           | [GPLv3](https://github.com/libretro/libretro-gme/blob/master/LICENSE)                     |                |
+| [GameTank](../library/gametank.md)                                               | [MIT](https://github.com/SundownerSport/gametank-libretro/blob/main/LICENSE)              |                |
 | [Gearboy](../library/gearboy.md)                                                 | [GPLv3](https://github.com/drhelius/Gearboy/blob/master/LICENSE)                          |                |
 | [Gearcoleco](../library/gearcoleco.md)                                           | [GPLv3](https://github.com/drhelius/Gearcoleco/blob/master/LICENSE)                       |                |
 | [Geargrafx](../library/geargrafx.md)                                           | [GPLv3](https://github.com/drhelius/Geargrafx/blob/master/LICENSE)                       |                |
 | [Gearlynx](../library/gearlynx.md)                                               | [GPLv3](https://github.com/drhelius/Gearlynx/blob/master/LICENSE)                         |                |
 | [Gearsystem](../library/gearsystem.md)                                           | [GPLv3](https://github.com/drhelius/Gearsystem/blob/master/LICENSE)                       |                |
+| [Geartowns](../library/geartowns.md)                                             | [GPLv3](https://github.com/drhelius/Geartowns/blob/main/LICENSE)                          |                |
 | [Genesis Plus GX](../library/genesis_plus_gx.md)          		           | [Non-commercial](https://github.com/libretro/Genesis-Plus-GX/blob/master/LICENSE.txt)     | Non-commercial |
 | [Geolith](../library/geolith.md)                                                 | [BSD-3-Clause, MIT](https://github.com/libretro/geolith-libretro/blob/master/LICENSE)     |                |
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |
@@ -143,6 +145,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Handy](../library/handy.md)					    		   | [zlib](https://github.com/libretro/libretro-handy/blob/master/lynx/license.txt)                                           |                |
 | [Holani](../library/holani.md)					    		   | [GPLv3](https://github.com/LLeny/holani-retro/blob/main/LICENSE)                                           |                |
 | [Hatari](../library/hatari.md)						   | [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)                        |                |
+| [HyperScanEmu](../library/hyperscanemu.md)                                         | [BSD-3-Clause](https://github.com/AloysHF/HyperScanEmu/blob/master/LICENSE)             |                |
 | [hatariB](../library/hatarib.md)						   | [GPLv2](https://github.com/bbbradsmith/hatariB/blob/main/LICENSE)                        |                |
 | [higan Accuracy](../library/higan_accuracy.md)                                   | [GPLv3](https://gitlab.com/higan/higan/blob/master/LICENSE.txt)                           |                |
 | [Imageviewer](../library/imageviewer.md)				  	   | [MIT](https://github.com/libretro/RetroArch/blob/master/cores/libretro-imageviewer/LICENSE)                                                                                       |                |
@@ -190,8 +193,10 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [PCSX ReARMed](../library/pcsx_rearmed.md)                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
 | PCSX ReARMed [Interpreter]                                                       | [GPLv2](https://github.com/libretro/pcsx_rearmed/blob/master/COPYING)                     |                |
 | [PD777](../library/pd777.md)                                               | [MIT](https://github.com/mittonk/PD777/blob/main/LICENSE)                |                |
+| [Picocomputer 6502](../library/rp6502.md)                                        | [BSD-3-Clause](https://github.com/picocomputer/rp6502/blob/main/LICENSE)                  |                |
 | [PicoDrive](../library/picodrive.md)                                             | [MAME (Non-commercial)](https://github.com/libretro/picodrive/blob/master/COPYING)        | Non-commercial |
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
+| [PlaydiaEmu](../library/playdiaemu.md)                                           | [BSD-3-Clause](https://github.com/AloysHF/PlaydiaEmu/blob/master/LICENSE)                 |                |
 | [PokeMini](../library/pokemini.md)                                               | [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)                         |                |
 | [PPSSPP](../library/ppsspp.md)                                                   | [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)                       |                |
 | [PrBoom](../library/prboom.md)                                                   | [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)                  |                |
@@ -239,3 +244,4 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [XRick](../library/xrick.md)                                                     | [GPLv3](https://github.com/libretro/xrick-libretro/blob/master/README)                    |                |
 | [YabaSanshiro](../library/yabasanshiro.md)						   | [GPLv2](https://github.com/libretro/yabasanshiro/blob/master/yabause/COPYING)                  |                |
 | [Yabause](../library/yabause.md)						   | [GPLv2](https://github.com/libretro/yabause/blob/master/yabause/COPYING)                  |                |
+| [ZEsarPCW](../library/zesarpcw.md) | [GPLv3](https://github.com/retrodiv/ZEsarPCW-libretro/blob/3b44002b61dd0e6f11e766e00e71c56963b9e00b/LICENSE) | No |

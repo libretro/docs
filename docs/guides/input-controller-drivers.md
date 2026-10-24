@@ -12,7 +12,7 @@ RetroArch makes use of two input systems in order to support the full range of i
 - **Pointer device** indicates if it is possible for the core to query the absolute coordinates of the pointer, as opposed to the default (relative) mouse. Certain cores may only support one or the other.
 - **Lightgun device** indicates if it is possible for the core to query a specific lightgun device, which has a different button set compared to a RetroPad. A few platforms support physical lightguns natively, or lightguns may appear as pointer devices.
 - **Rumble support** indicates if the driver can pass on haptic feedback (vibration) signals.
-- **Autoconfig support** indicates if the driver can read the controller vendor/product identifiers and apply an automatic mapping for [RetroPad](../../guides/input-and-controls/#what-is-a-retropad).
+- **Autoconfig support** indicates if the driver can read the controller vendor/product identifiers and apply an automatic mapping for [RetroPad](input-and-controls.md#what-is-a-retropad).
 
 The listing below is not complete, but on the rest of the platforms, there is usually only 1 valid driver.
 
@@ -51,10 +51,10 @@ Multi-mouse support for X11 was added after RetroArch 1.20.0 and requires that R
 
 | Controller driver | Conditions | Rumble support | Autoconfig support |
 |-------------------|------------|----------------|--------------------|
-| `udev` | Access to the udev interface (see below) | Yes | Yes (+[physical ID support](../../guides/controller-autoconfiguration/#physical-identifier-customization)) |
+| `udev` | Access to the udev interface (see below) | Yes | Yes (+[physical ID support](controller-autoconfiguration.md#physical-identifier-customization)) |
 | `sdl2` | - | Yes | Yes |
 | `linuxraw` | - | No | Yes |
-| `parport` | [Special adapter](../../development/retroarch/input/parallel-port-controllers/) on physical parallel port | No | No |
+| `parport` | [Special adapter](../development/retroarch/input/parallel-port-controllers.md) on physical parallel port | No | No |
 | `hid` | Only if enabled during compilation | Yes | Yes |
 
 ### udev drivers
@@ -122,6 +122,7 @@ The libretro API provides a possibility to pass extra sensor inputs to cores: 3 
 ---
 ## Footnotes
 [^1]: MFi controllers are primarily supported on Apple devices, which means that the operating systems supporting this configuration would include:
+
 - iOS: Used on iPhones and iPads.
 - macOS: Used on Mac computers.
 - tvOS: Used on Apple TV devices.

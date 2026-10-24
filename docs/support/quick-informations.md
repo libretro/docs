@@ -18,7 +18,7 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 
 === "Help"
 
-	- [F.A.Q](https://www.retroarch.com/?page=faq)
+	- [F.A.Q](https://www.retroarch.com/faq.html)
 	- [Libretro Documentation](https://docs.libretro.com/)
 	- [Lakka Doc](http://www.lakka.tv/doc/Home/)
 	- [Facebook Group](https://www.facebook.com/groups/retroarch/)
@@ -30,7 +30,6 @@ It is {{ unit.stable }}. You can find it here [here](http://buildbot.libretro.co
 	- [Patreon](https://www.patreon.com/libretro)
 	- [YouTube Membership](https://www.youtube.com/channel/UCjAimkVp-G_o6HK5MXujk9A/join)
 	- [Liberapay](https://liberapay.com/Libretro/donate)
-	- [BountySource](https://salt.bountysource.com/checkout/amount?team=libretro)
  	- [Service status](https://mnt.gds.im/status/retroarch)
 
 === "Video"

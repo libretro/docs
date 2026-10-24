@@ -1,3 +1,8 @@
+---
+title: "bk – Elektronika BK-0010/BK-0011(M) core for RetroArch"
+description: "RetroArch bk core (Elektronika BK-0010/BK-0011(M)): BIOS files, core options and controls. A port of the PDP11 emulator to libretro."
+---
+
 # Elektronika - BK-0010/BK-0011(M) (bk)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "SameBoy – Nintendo Game Boy / Color core for RetroArch"
+description: "RetroArch SameBoy core (Nintendo Game Boy / Color): BIOS files, core options and controls. SameBoy is an extremely accurate open source Gameboy (DMG) and Gameboy Color (CGB) emulator, written in…"
+---
+
 # Nintendo - Game Boy / Color (SameBoy)
 
 ## Background

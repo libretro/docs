@@ -1,3 +1,8 @@
+---
+title: "LowRes NX core for RetroArch"
+description: "RetroArch LowRes NX core: controls. A port of the LowRes NX fantasy console to libretro."
+---
+
 # LowRes NX
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YSSrGT9P_b8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

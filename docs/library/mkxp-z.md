@@ -1,3 +1,8 @@
+---
+title: "mkxp-z – RPG Maker XP/VX/VX Ace core for RetroArch"
+description: "RetroArch mkxp-z core (RPG Maker XP/VX/VX Ace): BIOS files, core options and controls. Open-source cross-platform player for (some) RPG Maker XP / VX / VX Ace games."
+---
+
 # RPG Maker XP/VX/VX Ace (mkxp-z)
 
 ## Background

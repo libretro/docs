@@ -1,3 +1,8 @@
+---
+title: "PPSSPP – Sony PlayStation Portable core for RetroArch"
+description: "RetroArch PPSSPP core (Sony PlayStation Portable): core options and controls. A fast and portable PSP emulator written in C++."
+---
+
 # Sony - PlayStation Portable (PPSSPP)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KYt6oXA1Bws" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,12 +1,12 @@
 # Nintendo SNES Core Compatibility
 
-## bsnes Accuracy
+## bsnes 2014 Accuracy
 
-The bsnes Accuracy core fully emulates all SNES games that have ever been officially released.
+The bsnes 2014 Accuracy core fully emulates all SNES games that have ever been officially released.
 
 Same with bsnes-mercury Accuracy
 
-## bsnes Balanced
+## bsnes 2014 Balanced
 
 | Game                     | Issue                                                                          |
 |--------------------------|--------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@ Same with bsnes-mercury Accuracy
 
 Same with bsnes-mercury Balanced
 
-## bsnes Performance
+## bsnes 2014 Performance
 
 | Game                                             | Issue                                                                          |
 |--------------------------------------------------|--------------------------------------------------------------------------------|

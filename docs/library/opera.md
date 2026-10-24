@@ -1,3 +1,8 @@
+---
+title: "Opera – The 3DO Company 3DO core for RetroArch"
+description: "RetroArch Opera core (The 3DO Company 3DO): BIOS files, core options and controls. Opera is an open-source, low-level emulator for the 3DO Game Console."
+---
+
 # The 3DO Company - 3DO (Opera)
 
 ## Background
@@ -194,6 +199,15 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 | C                            | ![](../image/retropad/retro_a.png)             |
 | L                            | ![](../image/retropad/retro_l1.png)            |
 | R                            | ![](../image/retropad/retro_r1.png)            |
+
+## Mouse
+
+| RetroMouse Inputs                                     | 3DO Mouse        |
+|-------------------------------------------------------|------------------|
+| ![](../image/retromouse/retro_mouse.png) Mouse Cursor | 3DO Mouse Cursor |
+| ![](../image/retromouse/retro_left.png) Mouse 1       | 3DO Mouse Left   |
+| ![](../image/retromouse/retro_right.png) Mouse 2      | 3DO Mouse Right  |
+| ![](../image/retromouse/retro_middle.png) Mouse 3     | 3DO Mouse Middle |
 
 ## Compatibility
 

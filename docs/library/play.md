@@ -1,3 +1,8 @@
+---
+title: "Play! – Sony PlayStation 2 core for RetroArch"
+description: "RetroArch Play! core (Sony PlayStation 2): core options and controls. A PS2 emulator for Android, iOS, Windows, MacOS and Linux, written in C++."
+---
+
 # Sony - PlayStation 2 (Play!)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/smbhFWfkgMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -132,4 +137,5 @@ Play! core is still experimental but promising. Some games are already [playable
 ## Libretro PS2 cores
 
 - [PlayStation 2 (LRPS2)](lrps2.md)
+- [PlayStation 2 (PCEE2)](pcee2.md)
 

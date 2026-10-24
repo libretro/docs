@@ -1,3 +1,8 @@
+---
+title: "Install RetroArch on Windows 7 and Later"
+description: "How to download, install and update RetroArch on Windows 7, 8, 10 and 11, from a stable release or a nightly build."
+---
+
 # Downloading, Installing and Updating RetroArch for Windows 7 and Later
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hu-TW02bhhY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -5,6 +10,7 @@
 ## Downloading
 
 First decide if you want a stable release or a nightly. Both options provide you with the latest RetroArch, the only difference is that one is a self extracting installer, and the other one an archive you have to extract manually. Both are portable installation which means the RetroArch setup is:
+
 - It's self-contained
 - It doesn't need users to guess random locations for configurations files
 - It's easy to update by just replacing files

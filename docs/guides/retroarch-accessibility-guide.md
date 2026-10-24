@@ -17,7 +17,7 @@ This user guide is to aid users of screen readers who are newcomers to Retroarch
 
 ## Download Retroarch
 
-To download Retroarch, go to [Retroarch's download page](https://www.retroarch.com/?page=platforms) and choose the download for your system. Windows users should choose the 64-bit installer version, unless they have an old computer with a 32-bit operating system. Mac users should download the version under the “Apple macOS / OSX” heading; iOS and tvOS users are encouraged to install from the App Store. Linux users should see if version 1.8.2 or higher is in their package manager, and get that and the cores through APT, Pacman, DNF, and so on, or compile it yourself. For Android and game consoles, accessibility features are not implemented.
+To download Retroarch, go to [Retroarch's download page](https://www.retroarch.com/platforms.html) and choose the download for your system. Windows users should choose the 64-bit installer version, unless they have an old computer with a 32-bit operating system. Mac users should download the version under the “Apple macOS / OSX” heading; iOS and tvOS users are encouraged to install from the App Store. Linux users should see if version 1.8.2 or higher is in their package manager, and get that and the cores through APT, Pacman, DNF, and so on, or compile it yourself. For Android and game consoles, accessibility features are not implemented.
 
 ## Open the Program
 
@@ -28,6 +28,7 @@ After installing Retroarch, launch the program in the usual way according to you
 To turn on the accessibility feature, do the following:
 
 -   Open Retroarch.
+
 - Press **Left Arrow**, **Down Arrow**, then **Enter**.
 -   Press **up arrow** seven times.
 -   Press **Enter** twice, or **Enter** then **Right arrow**.
@@ -173,4 +174,4 @@ Other gaming resources for people who are blind include:
 
 ## Getting More Help
 
-If you run into an error in Retroarch itself, not cores or games, or a problem with the accessibility service, please check the [Retroarch Issues page](https://github.com/libretro/RetroArch/issues), and if you cannot find it, create a [Github account](https://github.com) and submit one of your own. If you’d like general help with using retroarch, join its [Discord server](https://www.retroarch.com/?page=discord) and ask your questions there.
+If you run into an error in Retroarch itself, not cores or games, or a problem with the accessibility service, please check the [Retroarch Issues page](https://github.com/libretro/RetroArch/issues), and if you cannot find it, create a [Github account](https://github.com) and submit one of your own. If you’d like general help with using retroarch, join its [Discord server](https://www.retroarch.com/discord.html) and ask your questions there.

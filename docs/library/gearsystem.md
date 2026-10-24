@@ -1,3 +1,8 @@
+---
+title: "Gearsystem – Sega MS/GG core for RetroArch"
+description: "RetroArch Gearsystem core (Sega MS/GG): BIOS files, core options and controls. Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1000, and Othello Multivision emulator…"
+---
+
 # Sega - MS/GG (Gearsystem)
 
 ## Background
@@ -9,6 +14,7 @@ Gearsystem is an open source, cross-platform Sega Master System, Game Gear, SG-1
 - Accurate VDP emulation, including timing and VDP specifics for SMS, SMS2, GG and TMS9918 modes.
 - Support for YM2413 (OPLL) FM sound chip.
 - Light Phaser, Paddle Control and Sports Pad support.
+- Game Gear Link Cable (Gear-to-Gear) support with two systems, independent controllers, configurable screens and audio, and two-ROM subsystem loading.
 - Internal database for ROM detection.
 - Battery-backed RAM save support.
 - Game Genie and Pro Action Replay cheat support.
@@ -68,6 +74,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Saves             | ✔         |
 | States            | ✔         |
 | Rewind            | ✔         |
+| Run-Ahead         | ✔         |
 | Netplay           | ✔         |
 | Core Options      | ✔         |
 | [Memory Monitoring (achievements)](../guides/memorymonitoring.md) | ✔         |
@@ -81,13 +88,15 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Sensors           | ✕         |
 | Camera            | ✕         |
 | Location          | ✕         |
-| Subsystem         | ✕         |
+| Subsystem         | ✔         |
 | [Softpatching](../guides/softpatching.md) | ✔         |
 | Disk Control      | ✕         |
 | Username          | ✕         |
 | Language          | ✕         |
 | Crop Overscan     | ✔         |
 | LEDs              | ✕         |
+
+Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and Pro Action Replay cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
 
 ### Directories
 
@@ -99,7 +108,8 @@ The Gearsystem core saves/loads to/from these directories.
 
 | File  | Description            |
 |:-----:|:----------------------:|
-| *.srm | Cartridge battery save |
+| *.srm | Cartridge battery RAM or EEPROM save |
+| *.srm2 | Screen 2 cartridge battery RAM or EEPROM save in linked mode |
 
 **Frontend's State directory**
 
@@ -112,16 +122,42 @@ The Gearsystem core saves/loads to/from these directories.
 - The Gearsystem core's provided FPS is approximately 59.92 for NTSC games, 49.70 for PAL Master System games and 50.17 for PAL SG-1000 games
 - The Gearsystem core's provided sample rate is 44100 Hz
 - The Gearsystem core's base width is 256 for Master System / SG-1000 games and 160 for native Game Gear games; Game Gear SMS mode uses the Master System dimensions
-- The Gearsystem core's base height is 192 for Master System / SG-1000 games (224 in extended mode) and 144 for native Game Gear games; overscan and left-bar cropping can change the output size
+- The Gearsystem core's base height is 192 for Master System / SG-1000 games, or 224 in Master System extended mode, and 144 for native Game Gear games
+- Overscan uses a width of 256, 284 or 320 pixels and a height of 240 lines for NTSC or 288 lines for PAL. It also applies to Game Gear SMS mode, but not native Game Gear mode
+- Left-bar cropping removes 8 pixels from Master System Mode 4 output when overscan is disabled or set to Top+Bottom
+- Linked mode displays 320x144 horizontally, 160x288 vertically, or 160x144 when only one screen is selected
 - The Gearsystem core's max width is 320
 - The Gearsystem core's max height is 288
 - The Gearsystem core uses square pixels by default (4:3 at 256x192 and 10:9 at 160x144); the ['Aspect Ratio' core option](#core-options) can override this
+- Linked mode always uses square pixels: 20:9 for two horizontal screens, 5:9 for two vertical screens, and 10:9 for a single screen
+
+## Game Gear Link Cable
+
+Enable **Game Link Cable Enable (restart)**, choose **Close Content**, then load a Game Gear ROM again to run two independent copies of the same ROM. Controller port 1 controls Screen 1, and controller port 2 controls Screen 2. Both machines continue running when only one screen is displayed. RetroArch's **Restart** action resets the existing machine or linked pair and preserves battery memory. It does not apply changes to Game Link Cable Enable; both enabling and disabling this option require **Close Content** followed by loading the ROM again.
+
+To link different ROMs, load the **2 Player Game Gear Link** subsystem (`gg_link_2p`) and select a ROM for each screen. Selecting this subsystem enables linked mode regardless of the enable option. A command-line example is:
+
+```sh
+retroarch -L gearsystem_libretro.so --subsystem gg_link_2p first.gg second.gg
+```
+
+Use the core library extension for your platform (`.dylib` on macOS or `.dll` on Windows). The subsystem can also load the same ROM into both slots.
+
+Linking requires native Game Gear mode on both screens and ROMs with matching NTSC/PAL timing. When the enable option is on and the loaded content runs as Master System, SG-1000 or Game Gear SMS mode, the core runs a single system as usual; the two-ROM subsystem fails to load instead. Both machines run inside one core instance; this does not connect to desktop Gearsystem link sessions.
+
+### Linked saves
+
+When loading a single ROM in linked mode, Screen 1 keeps its usual frontend-managed `.srm` file. Screen 2 uses `<content name>.srm2` in the frontend's save directory, or alongside the ROM if no save directory is provided. Screen 2's file is restored when content loads and written when content unloads or the core shuts down. Content supplied without a path has no automatic Screen 2 save filename.
+
+The two-ROM subsystem exposes both cartridges' save RAM to the frontend. Screen 1 uses `.srm` and Screen 2 uses `.srm2`. The separate extensions prevent the saves from overwriting each other when both slots load the same ROM.
+
+Linked save states contain both machines, both screens, and link transfers in progress. They use a separate format from single-player states.
 
 ## Core options
 
 The Gearsystem core has the following options that can be tweaked from the core options menu. The default setting is bolded.
 
-Settings with (restart) means that core has to be closed for the new setting to be applied on next launch.
+Settings marked (restart) take effect after restarting or reloading the content.
 
 - **System (restart)** [gearsystem_system] (**Auto**|Master System / Mark III|Game Gear (2 ASIC)|Game Gear (2 ASIC) SMS Mode|Game Gear (1 ASIC)|Game Gear (1 ASIC) SMS Mode|SG-1000 / Multivision|SG-1000 II)
 
@@ -195,7 +231,7 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Overscan** [gearsystem_overscan] (**Disabled**|Top+Bottom|Full (284 width)|Full (320 width))
 
-    Select which overscan (borders) will be used in emulation.
+    Select which overscan (borders) will be displayed. This applies to Master System, SG-1000 and Game Gear SMS mode; native Game Gear output remains 160x144. All enabled modes display 240 lines for NTSC or 288 lines for PAL.
 
     - *Disabled* disables overscan.
     - *Top+Bottom* enables overscan for top and bottom.
@@ -204,10 +240,10 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Hide Left Bar (SMS only)** [gearsystem_hide_left_bar] (**No**|Auto|Always)
 
-    Select when to hide the left bar in Master System games.
+    Select when to crop the leftmost 8 pixels in Master System games. This applies only when **Overscan** is *Disabled* or *Top+Bottom*.
 
     - *No* never hides the left bar.
-    - *Auto* hides the left bar when the bar is detected.
+    - *Auto* crops the left column when the game enables left-column masking.
     - *Always* always hides the left bar even if no left bar is detected.
 
 - **No Sprite Limit** [gearsystem_no_sprite_limit] (**Disabled**|Enabled)
@@ -216,11 +252,11 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Master System BIOS (restart)** [gearsystem_bios_sms] (**Disabled**|Enabled)
 
-    Enable or disable the Master System BIOS. The `bios.sms` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot.
+    Enable or disable the Master System BIOS. The `bios.sms` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot. The BIOS is not used in SG-1000 or Game Gear SMS mode.
 
 - **Game Gear BIOS (restart)** [gearsystem_bios_gg] (**Disabled**|Enabled)
 
-    Enable or disable the Game Gear BIOS. The `bios.gg` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot.
+    Enable or disable the Game Gear BIOS. The `bios.gg` file must exist in the frontend's system directory. When enabled, it runs as it does on original hardware, so invalid ROMs may fail to boot. The BIOS is used only in native Game Gear mode.
 
 - **YM2413 (restart)** [gearsystem_ym2413] (**Auto**|Disabled)
 
@@ -231,11 +267,11 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **PSG Volume** [gearsystem_psg_volume] (**100**|0-200 in increments of 10)
 
-	Set the volume of the PSG (SN76489). The value is a percentage from 0 to 200, where 100 is the default volume.
+	Set the volume of the PSG (SN76489): 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **FM Volume** [gearsystem_fm_volume] (**100**|0-200 in increments of 10)
 
-	Set the volume of the YM2413 (OPLL) FM sound chip. The value is a percentage from 0 to 200, where 100 is the default volume.
+	Set the volume of the YM2413 (OPLL) FM sound chip: 0 mutes it, 100 is the normal level and 200 doubles it.
 
 - **3D Glasses** [gearsystem_glasses] (**Both Eyes / OFF**|Left Eye|Right Eye)
 
@@ -255,10 +291,10 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Light Gun Input** [gearsystem_lightgun_input] (**Light Gun**|Touchscreen)
 
-    Select which input will be used for Light Phaser games.
+    Select the input used when controller port 1 is set to **Sega Light Phaser**.
 
-    - *Light Gun* - Selects mouse-controlled Light Gun input (devices will use [RetroLightgun](#light-gun) inputs).
-    - *Touchscreen* - Selects a touchscreen input (devices will use [RetroPointer](#pointer) inputs instead).
+    - *Light Gun* uses the frontend's [RetroLightgun](#light-gun) coordinates and trigger.
+    - *Touchscreen* uses [RetroPointer](#pointer) coordinates and presses, supplied by a touchscreen or another frontend pointer device.
 
 - **Light Gun Crosshair** [gearsystem_lightgun_crosshair] (**Disabled**|Enabled)
 
@@ -274,11 +310,11 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
 - **Light Gun Crosshair Offset X** [gearsystem_lightgun_crosshair_offset_x] (**0**|-10 - 10)
 
-    Set the horizontal pixel offset of the crosshair for calibration.
+    Set the horizontal pixel offset of the Light Phaser aim relative to the displayed crosshair.
 
 - **Light Gun Crosshair Offset Y** [gearsystem_lightgun_crosshair_offset_y] (**0**|-10 - 10)
 
-    Set the vertical pixel offset of the crosshair for calibration.
+    Set the vertical pixel offset of the Light Phaser aim relative to the displayed crosshair.
 
 - **Paddle Sensitivity** [gearsystem_paddle_sensitivity] (**1**|1-15)
 
@@ -291,9 +327,31 @@ Settings with (restart) means that core has to be closed for the new setting to 
 
     Set the sensitivity of the [Sports Pad](#sports-pad). Higher values produce faster trackball movement.
 
+- **Game Link Cable Enable (restart)** [gearsystem_link_enable] (**Disabled**|Enabled)
+
+    Run two linked Game Gear systems. Loading one ROM runs an independent copy on each screen. After changing this option, choose **Close Content** and load the ROM again; **Restart** alone is not sufficient. Use the [two-ROM subsystem](#game-gear-link-cable) to load different ROMs. Only native Game Gear mode supports linking; other systems run normally.
+
+- **Dual Screen Placement** [gearsystem_link_placement] (**Horizontal**|Vertical)
+
+    Arrange both screens side by side or one above the other. This setting changes immediately.
+
+- **Dual Screen Switch** [gearsystem_link_switch] (**Disabled**|Enabled)
+
+    Swap the positions of the two screens. Controller assignments, screen selection and audio selection continue to refer to the original screen numbers.
+
+- **Dual Screen Selection** [gearsystem_link_screen] (**Both Screens**|Screen 1|Screen 2)
+
+    Display both machines or only the selected screen. Both machines keep running.
+
+- **Dual Screen Audio** [gearsystem_link_audio] (**Screen 1**|Screen 2|Mix)
+
+    Play audio from the selected machine, or mix both outputs at half volume each.
+
 ## Joypad
 
-Select the emulated controller using the frontend's port device type. *Sports Pad* is available on ports 1 and 2; *Sega Light Phaser* and *Paddle Control* are available on port 1.
+Select the emulated controller using the frontend's port device type. **Joypad Auto** and **Master System / Game Gear Pad** use the mappings below; **Joypad Port Empty** disables input on that port. *Sports Pad* is available on ports 1 and 2; *Sega Light Phaser* and *Paddle Control* are available on port 1.
+
+In linked mode, both ports accept only **Joypad Auto**, **Joypad Port Empty** and **Master System / Game Gear Pad**, with the same mapping. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens.
 
 ![](../image/controller/gg.png)
 
@@ -326,6 +384,8 @@ Select *Sports Pad* as the device type for the desired port. The left analog sti
 
 ## Light Gun
 
+Select **Sega Light Phaser** as the device type for port 1 and set **Light Gun Input** to *Light Gun*. Configure the light-gun device in the frontend.
+
 | RetroLightgun Inputs  | [Light Phaser](https://segaretro.org/Light_Phaser)      |
 |-----------------------|---------------------------------------------------------|
 | ![](../image/retromouse/retro_mouse.png) Gun Crosshair | Light Phaser Crosshair |
@@ -333,12 +393,16 @@ Select *Sports Pad* as the device type for the desired port. The left analog sti
 
 ## Pointer
 
+Select **Sega Light Phaser** as the device type for port 1 and set **Light Gun Input** to *Touchscreen*. Pressing the pointer acts as the trigger.
+
 | RetroPointer Inputs   | [Light Phaser](https://segaretro.org/Light_Phaser)        |
 |-----------------------|-----------------------------------------------------------|
 | ![](../image/retromouse/retro_mouse.png) or ![](../image/Button_Pack/Gestures/Gesture_Finger_Front.png) Pointer Position | Light Phaser Crosshair                 |
 | ![](../image/retromouse/retro_left.png) Mouse 1   | Light Phaser Trigger          |
 
 ## Mouse
+
+Select **Paddle Control** as the device type for port 1. Horizontal mouse movement turns the paddle; the left mouse button presses its button. Adjust movement with **Paddle Sensitivity**.
 
 | RetroMouse Inputs                                     | [Paddle Control](https://segaretro.org/Paddle_Control)        |
 |-------------------------------------------------------|-----------------|

@@ -1,3 +1,8 @@
+---
+title: "Emux SMS – Sega Master System core for RetroArch"
+description: "RetroArch Emux SMS core (Sega Master System): BIOS files and controls. Emux is a cross-platform emulator project with a goal of emulating multiple kinds of machines related to gaming, such as…"
+---
+
 # Sega - Master System (Emux SMS)
 
 ## Background

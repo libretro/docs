@@ -1,3 +1,8 @@
+---
+title: "Mu – Palm OS core for RetroArch"
+description: "RetroArch Mu core (Palm OS): BIOS files, core options and controls. Mu is the first Palm OS emulator capable of actually playing Palm games."
+---
+
 # Palm OS (Mu)
 
 ## Background

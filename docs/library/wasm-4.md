@@ -1,3 +1,8 @@
+---
+title: "WASM-4 – WebAssembly core for RetroArch"
+description: "RetroArch WASM-4 core (WebAssembly): BIOS files, core options and controls. WASM-4 is a low-level fantasy game console for building small games with WebAssembly."
+---
+
 # WebAssembly (WASM-4)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/34FXmvWVH-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,3 +1,8 @@
+---
+title: "melonDS – Nintendo DS core for RetroArch"
+description: "RetroArch melonDS core (Nintendo DS): BIOS files and controls. An up-and-coming Nintendo DS emulator by Arisotura, ported to libretro."
+---
+
 # Nintendo - DS (melonDS)
 
 ## Background

@@ -1,3 +1,8 @@
+---
+title: "Mupen64Plus-Next – Nintendo 64 core for RetroArch"
+description: "RetroArch Mupen64Plus-Next core (Nintendo 64): core options and controls. Mupen64Plus-Next for libretro is an up-to-date port of Mupen64Plus, a Nintendo 64 emulator."
+---
+
 # Nintendo 64 (Mupen64Plus-Next)
 
 ## Background

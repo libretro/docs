@@ -1,3 +1,8 @@
+---
+title: "MAME 2003-Plus core for RetroArch"
+description: "RetroArch MAME 2003-Plus core: BIOS files and core options. MAME 2003-Plus (also referred to as MAME 2003+ and mame2003-plus) is a libretro multi-arcade system emulator core which prioritizes 1)…"
+---
+
 # MAME 2003-Plus
 
 ## Background
@@ -42,12 +47,14 @@ MAME 2003-Plus began with the game drivers from MAME 0.78, meaning that 95% or m
 !!! question "What is a romset?"
     Arcade games are packaged as zip files, most of which are composed of more than one individual 'ROM' files. That is why some resources inaccurately refer to an individual arcade game as a ROM (like people use to describe a zipped game cartridge ROM) while other resources refer to an individual game as a **ROM set**, **ROMset**, or **romset**.
 
-MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [MAME menu](#MAME-menu).
+MAME 2003-Plus has the ability to generate an XML "DAT" file directly from the [MAME menu](#mame-menu).
 
 
 ### Step 1: Obtaining an XML DAT
 
 DAT files describe the exact ROM contents that the emulator needs including filenames, file sizes, and checksums to verify contents are not incorrect or corrupt. mame2003-plus has the ability to generate an XML "DAT" file from the MAME Menu. You can also access the MAME menu by turning it on as a core option, selecting **Generate XML DAT** and then disabling the menu as a core option.
+
+A DAT for the current core is also kept in its repository: [mame2003-plus.xml](https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/mame2003-plus.xml).
 
 
 ### Step 2: Finding a source for ROMs

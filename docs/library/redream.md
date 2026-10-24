@@ -1,3 +1,8 @@
+---
+title: "Redream – Sega Dreamcast core for RetroArch"
+description: "RetroArch Redream core (Sega Dreamcast): BIOS files and controls. Redream is a work-in-progress SEGA Dreamcast emulator written in C for Mac, Linux and Windows."
+---
+
 # Sega - Dreamcast (Redream)
 
 ## Background
@@ -103,8 +108,6 @@ The Redream core saves/loads to/from these directories.
 
 ## Joypad
 
-![](../image/controller/dc.png)
-
 | User 1 - 4 input descriptors | RetroPad Inputs                               |
 |------------------------------|-----------------------------------------------|
 | A                            | ![](../image/retropad/retro_b.png)            |
@@ -115,7 +118,7 @@ The Redream core saves/loads to/from these directories.
 | D-Pad Left                   | ![](../image/retropad/retro_dpad_left.png)    |
 | D-Pad Right                  | ![](../image/retropad/retro_dpad_right.png)   |
 | B                            | ![](../image/retropad/retro_a.png)            |
-| Y                            | ![](../image/retropad/retro_a.png)            |
+| Y                            | ![](../image/retropad/retro_x.png)            |
 | L                            | ![](../image/retropad/retro_l2.png)           |
 | R                            | ![](../image/retropad/retro_r2.png)           |
 | Analog X                     | ![](../image/retropad/retro_r3.png)           |

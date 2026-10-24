@@ -1,3 +1,8 @@
+---
+title: "blueMSX – MSX/SVI/ColecoVision/SG-1000 core for RetroArch"
+description: "RetroArch blueMSX core (MSX/SVI/ColecoVision/SG-1000): BIOS files, core options and controls. blueMSX is a cycle accurate emulator that emulates all generations of MSX computers as well as SVI…"
+---
+
 # MSX/SVI/ColecoVision/SG-1000 (blueMSX)
 
 ## Background

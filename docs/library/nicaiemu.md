@@ -1,3 +1,8 @@
+---
+title: "NicaiEmu – Nicai core for RetroArch"
+description: "RetroArch NicaiEmu core (Nicai): BIOS files, core options and controls. Nicai is a game format developed by MStar for feature phones (circa 2005–2011)."
+---
+
 # Nicai (NicaiEmu)
 
 ## Background

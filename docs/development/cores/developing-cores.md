@@ -176,7 +176,15 @@ There are several steps before your core can be available to user via the Online
  1. Add your Libretro core info to [libretro-super repository](https://github.com/libretro/libretro-super/tree/master/dist/info)
     - As a test, place info file to `libretro_info_path`, load core, and validate if information shows up correctly: Information / Core Information
  2. Add [.gitlab-ci.yml](https://github.com/search?q=org%3Alibretro+.gitlab-ci.yml&type=commits) to the root directory of your source code so it can be added to Libretro CI/CD.
- 3. If you want your core to be compatible with [RetroArch's playlist](/guides/roms-playlists-thumbnails) :
+ 3. If you want your core to be compatible with [RetroArch's playlist](../../guides/roms-playlists-thumbnails.md) :
     - Add at least icons playlist and content for your core in [RetroArch assets repository](https://github.com/libretro/retroarch-assets/tree/master/src/xmb/monochrome)
     - Add your games to [Libretro database](https://github.com/libretro/libretro-database).
  4. Add documentation of your core following the instructions in [libretro-docs](https://github.com/libretro/docs#adding-a-new-core).
+
+### Core file names
+
+A core's file is named `<name>_libretro` followed by the platform's library extension, for example `snes9x_libretro.so`, `snes9x_libretro.dll` or `snes9x_libretro.dylib`. Its info file is `<name>_libretro.info`, and the name must match it for RetroArch to show the core's information and to offer it in the Online Updater.
+
+On some platforms the buildbot adds an OS suffix after `_libretro`, such as `snes9x_libretro_android.so`. The suffix is optional: many cores are built without one on Android, iOS and tvOS, and they work the same. RetroArch drops everything after the last underscore unless that part is `_libretro` itself, so `snes9x_libretro.so` and `snes9x_libretro_android.so` both match `snes9x_libretro.info`. Only one suffix is removed, so a file name must not carry more than one after `_libretro`.
+
+A core without an OS suffix is therefore not a mistake, and does not need an issue or a pull request to add one.

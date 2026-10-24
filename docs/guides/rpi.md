@@ -17,7 +17,7 @@ A RetroArch binary on Raspberry Pi may be created in several flavors. The major 
 
 - 32/64 bit OS. Only Pi 3 and 4 have a choice, older models can only use 32 bit OS. RetroArch can be compiled for both.
 - legacy or open source GL drivers (64-bit and Pi 4 does not have a choice). This can be set in `raspi-config`. Open source drivers (mesa) are recommended, see later for the legacy driver instructions.
-- GUI environment (X11 or Wayland) or special terminal based setup (KMS). Distributions that have no windowing environment, such as the "lite" versions of Raspberry Pi OS, may still run RetroArch using [KMS mode](../kms-mode).
+- GUI environment (X11 or Wayland) or special terminal based setup (KMS). Distributions that have no windowing environment, such as the "lite" versions of Raspberry Pi OS, may still run RetroArch using [KMS mode](kms-mode.md).
 - audio driver in use: alsa or PulseAudio. If `pactl list cards` produces a list of sound devices, PA is in use, otherwise use alsa.
 - GPU memory: while it has no effect on compilation, at least 128 MB is recommended for Pi 0..3, for Pi 4 the default 76 MB is OK.
 
@@ -120,7 +120,7 @@ For Pi 4 to enable 4K 60 Hz refresh, a line is needed in `config.txt`:
 
     hdmi_enable_4kp60=1
 
-[LED driver](../led-drivers/#sysled-driver) may also be enabled.
+[LED driver](led-drivers.md#sysled-driver) may also be enabled.
 
 ## Legacy GL drivers and dispmanx
 

@@ -1,3 +1,8 @@
+---
+title: "Jump 'n Bump core for RetroArch"
+description: "RetroArch Jump 'n Bump core: BIOS files, core options and controls. This is a game for the whole family."
+---
+
 # Jump 'n Bump
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YHrocZPWiH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

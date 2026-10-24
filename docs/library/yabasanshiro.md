@@ -1,3 +1,8 @@
+---
+title: "Yabause – Sega Saturn core for RetroArch"
+description: "RetroArch Yabause core (Sega Saturn): BIOS files. YabaSanshiro is a fork of Yabause."
+---
+
 # Sega - Saturn (Yabause)
 
 ## Background

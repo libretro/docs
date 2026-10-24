@@ -1,3 +1,8 @@
+---
+title: "O2EM – Magnavox Odyssey2 / Philips Videopac+ core for RetroArch"
+description: "RetroArch O2EM core (Magnavox Odyssey2 / Philips Videopac+): BIOS files, core options and controls. O2EM is an open source multi-platform Odyssey2 / Videopac+ emulator."
+---
+
 # Magnavox - Odyssey2 / Philips Videopac+ (O2EM)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JvxqCJS0hyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

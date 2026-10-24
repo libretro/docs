@@ -1,3 +1,8 @@
+---
+title: "Video Processor core for RetroArch"
+description: "RetroArch Video Processor core: controls. Libretro core for V4L2 capture devices"
+---
+
 # Video Processor
 
 ## Background

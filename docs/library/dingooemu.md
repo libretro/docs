@@ -1,3 +1,8 @@
+---
+title: "DingooEmu – Dingoo A320 core for RetroArch"
+description: "RetroArch DingooEmu core (Dingoo A320): BIOS files, core options and controls. The Dingoo A320 is a handheld game console developed by Dingoo Digital Technology, featuring an Ingenic JZ4740 MIPS SoC…"
+---
+
 # Dingoo A320 (DingooEmu)
 
 ## Background
