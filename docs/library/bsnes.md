@@ -297,6 +297,7 @@ The bsnes core is based on the latest bsnes source and targets accurate, faithfu
 
 #### Nintendo - SNES / SFC
 
+- [Nintendo - NES / FC / FDS / SNES / SFC / GB / GBC / GBA / NEC - PCE / PCE-CD / Sega - SMS / GG / Bandai - Wswan (MesenCE)](mesen2.md)
 - [Nintendo - SNES / FSC (Beetle bsnes)](beetle_bsnes.md)
 - [Nintendo - SNES / FSC (Beetle Supafaust)](mednafen_supafaust.md)
 - [Nintendo - SNES / FSC (bsnes 2014 Accuracy)](bsnes2014_accuracy.md)
