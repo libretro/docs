@@ -20,103 +20,93 @@ installing RetroArch on systems running the GNU/Linux kernel.
 
 ## AppImage (suitable for most GNU/Linux distributions)
 
-### AM
+## AppImage (suitable for most GNU/Linux distributions)
 
-[AM](https://github.com/ivan-hc/AM) is a powerful command-line package manager for managing AppImage software. It allows users to install, update, and remove AppImages either system-wide or locally without manual setup.
+### AM/AppMan
 
-1. Installation
+[AM](https://github.com/ivan-hc/AM) (and its user-level counterpart `AppMan`) is a command-line package manager for managing AppImages, maintained alongside the [Portable Linux Apps](https://portable-linux-apps.github.io/) catalog. Both tools are installed via the main `AM` repository installer.
 
-There are no system packages available for AM in common repositories, so it must be installed manually.
+#### 1. Setup AM or AppMan
 
-Follow the official installation instructions provided at: [https://github.com/ivan-hc/AM](https://github.com/ivan-hc/AM)
+There are no system packages available for AM in common repositories, so it must be installed manually by following the official setup guide: [https://github.com/ivan-hc/AM](https://github.com/ivan-hc/AM).
 
-During setup, you’ll be prompted to choose one of two installation modes:
+During setup, select your preferred installation mode:
 
-* Option 1: AM – for system-wide AppImage management (requires root privileges).
-* Option 2: appman – for local, user-level AppImage management (no root access required).
+* **Option 1: AM** – System-wide installation (requires root privileges).
+* **Option 2: AppMan** – Local user-level installation (no root access required).
 
-Choose the option that best suits your environment and permissions.
 
-2. Searching for AppImages
+#### 2. Managing RetroArch with AM/AppMan
 
-Once installation is complete, verify that AM or AppMan is working by performing a search.
-Use the appropriate command depending on your installation:
+##### AM/AppMan web catalog
 
-```
-# For system-wide installation
+The web catalog serves as a browser interface for discovering packages and obtaining initial installation commands:
+
+1. Open your browser and navigate to [`https://portable-linux-apps.github.io/`](https://portable-linux-apps.github.io/).
+2. Search for **"RetroArch"** in the search bar (or go directly to [`https://portable-linux-apps.github.io/?s=RetroArch`](https://portable-linux-apps.github.io/?s=RetroArch)).
+3. Select your preferred variant (`retroarch`, `retroarch-nightly`, `retroarch-qt`, or `retroarch-qt-nightly`).
+4. Click the **"Install"** button on the application entry page to reveal the terminal command.
+5. Copy and run the generated installation command in your terminal.
+
+##### AM/AppMan CLI management
+
+All package lifecycle tasks—searching, installing, updating, and maintaining the tool itself—are managed directly via the terminal.
+
+**Searching Packages:**
+Search for available RetroArch packages in the repository database:
+
+```bash
+# System-wide
 am -q retroarch
 
-# For user-level installation
+# User-level
 appman -q retroarch
 
 ```
 
-This query searches for available AppImages matching “retroarch” and displays a list of results.
-Example output:
-
-```
-$ appman -q retroarch
-
-  SEARCH RESULTS FOR "RETROARCH":
-
-  ◆ retroarch-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
-  ◆ retroarch-qt-nightly : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
-  ◆ retroarch-qt : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
-  ◆ retroarch : RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.
-
-```
-
-3. Installing an AppImage
-
-To install your chosen AppImage, use the `-i` flag followed by the specific package name. For example, you can install either the stable release (for everyday use) or the Nightly build (ideal for testing):
+**Installing Packages:**
+Install your chosen package variant:
 
 ```bash
-# For system-wide installation (Stable)
+# System-wide installation (Stable)
 am -i retroarch
 
-# For system-wide installation (Nightly)
-am -i retroarch-nightly
+# System-wide installation (Qt Nightly)
+am -i retroarch-qt-nightly
 
-# For user-level installation (Stable)
+# User-level installation (Stable)
 appman -i retroarch
 
-# For user-level installation (Nightly)
-appman -i retroarch-nightly
+# User-level installation (Qt Nightly)
+appman -i retroarch-qt-nightly
+
 ```
 
-4. Updates
+**Updating Packages & Tools:**
+Keep RetroArch packages and the package manager scripts updated:
 
-To update RetroArch, use the `-u` (or `--update`) flag. Running the update command without specifying a package name will update all installed AppImages managed by the tool:
-
+* **Update all installed AppImages:**
 ```bash
-# Update all system-wide AppImages
-am -u
-
-# Update all user-level AppImages
-appman -u
+am -u      # System-wide
+appman -u  # User-level
 
 ```
 
 
-Alternatively, you can target a specific package to update only that application. This is especially useful if you have multiple Continuous Integration (CI) AppImages of other software installed that you rarely use. Since the [official bug report template](https://github.com/libretro/RetroArch/blob/master/.github/ISSUE_TEMPLATE/01-bug-report.yml) encourages using the latest AppImage, updating just `retroarch-nightly` to test your issue on the latest build before reporting is recommended:
-
-
+* **Update a specific RetroArch package:**
 ```bash
-# For system-wide installation
-am -u retroarch-nightly
-
-# For user-level installation
-appman -u retroarch-nightly
+am -u retroarch-qt-nightly     # System-wide
+appman -u retroarch-qt-nightly # User-level
 
 ```
 
-> **Note:** Make sure to use the exact package name that you originally installed (e.g., `retroarch`, `retroarch-nightly`, `retroarch-qt`, or `retroarch-qt-nightly`).
 
-5. Notes and Recommendations
+#### 3. Notes and Recommendations
 
 * Nightly builds are recommended when submitting bug reports or testing new features.
 * Stable releases are better suited for everyday use.
-* Use the same tool (am or appman) for all lifecycle tasks—installation, updates, and removal.
+* Use the same tool (`am` or `appman`) for all lifecycle tasks—installation, updates, and removal.
+
 
 ## Flatpak (suitable for most GNU/Linux distributions)
 
