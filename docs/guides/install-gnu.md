@@ -20,8 +20,6 @@ installing RetroArch on systems running the GNU/Linux kernel.
 
 ## AppImage (suitable for most GNU/Linux distributions)
 
-## AppImage (suitable for most GNU/Linux distributions)
-
 ### AM/AppMan
 
 [AM](https://github.com/ivan-hc/AM) (and its user-level counterpart `AppMan`) is a command-line package manager for managing AppImages, maintained alongside the [Portable Linux Apps](https://portable-linux-apps.github.io/) catalog. Both tools are installed via the main `AM` repository installer.
