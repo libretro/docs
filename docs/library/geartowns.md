@@ -4,11 +4,12 @@
 
 Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in C++.
 
-- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG and HG, and FM Towns Marty emulation with configurable CPU speed and RAM.
+- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG, HG and HR, and FM Towns Marty emulation with configurable CPU speed and RAM.
 - 80386 dynamic recompiler (dynarec) on supported platforms.
 - CD-ROM drive emulation with `cue/bin`, `iso` and `chd` images, `m3u` disc playlists and disc swapping.
 - Physical CD-ROM disc support through the frontend.
 - Two floppy drives with `d77`, `d88`, `hdm`, `xdf`, `img`, HxC `mfm` and raw `bin` images, also inside `zip` archives, `m3u` playlists, blank save disks and persistent disk changes.
+- SCSI hard disks on IDs 0-6 with raw `hdd`, `h0`-`h6` and `hdm` images and MAME hard disk CHDs, alone or in `m3u` playlists, with their changes kept in working copies.
 - Battery-backed CMOS shared by all content, or saved per game.
 - Controllers:
     * Original FM Towns gamepad (2 buttons)
@@ -57,7 +58,7 @@ The FM Towns II UX needs its own set, MAME's `fmtownsux`, in `geartowns/fmtownsu
 | fmt_dic.rom   | Dictionary ROM - Required  | 512 KB   | 8fa4e553f28cfc0c30a0a1e589799942 |
 | mytownsux.rom | Serial ROM - Optional      | 32 bytes | 1a15f6c1b58ec7e5f850118610a787a7 |
 
-The FM Towns II HG has no dump of its own. It runs on the FM Towns II HR set, MAME's `fmtownshr`, from the same generation, in `geartowns/fmtownshr/` or as `geartowns/fmtownshr.zip`:
+The FM Towns II HR needs its own set, MAME's `fmtownshr`, in `geartowns/fmtownshr/` or as `geartowns/fmtownshr.zip`. The FM Towns II HG, from the same generation, has no dump of its own and runs on it too:
 
 | Filename      | Description                    | Size     | md5sum                           |
 |:-------------:|:------------------------------:|:--------:|:--------------------------------:|
@@ -98,10 +99,14 @@ Content that can be loaded by the Geartowns core have the following file extensi
 - .mfm
 - .bin
 - .m3u
+- .hdd
+- .h0, .h1, .h2, .h3, .h4, .h5, .h6
 
 Geartowns supports `chd`, `iso` and `cue/bin` CD-ROM images. Load the `cue` file, not a `bin` track. CUE audio tracks can use raw BIN, WAV (44.1 kHz, 16-bit stereo) or Ogg Vorbis files. Physical CD-ROM discs can be loaded with the frontend's **Load Disc** option where supported.
 
 Floppy disk images can be `d77`, `d88`, `hdm`, `xdf` or `img` files, HxC `mfm` bitstream images such as MAME's copy-protected originals, or `bin` files holding a raw floppy image, also inside `zip` archives. Raw images may carry an `E5` filler tail, and a 2HD image cut short at a track boundary loads with the missing tracks blank. Changes to an `mfm` disk are kept in a `d77` working copy. A `zip` archive with several floppy images, such as MAME's multi-disk sets, lists each one as a separate disk control entry in file name order, like an `m3u` playlist, and starts from the first disk with an FM Towns boot sector. Zipped CD-ROM images are not supported; use `chd` or `cue/bin`. Multi-disk `d77`/`d88` images expose each disk as a separate disk control entry.
+
+Hard disk images are raw 512-byte sectors, the format other FM Towns emulators share. An `h0` to `h6` image goes to that SCSI ID; an `hdd` image, and an `hdm` image over 8 MB, to the first free one. An `hdm` image of 8 MB or less is a floppy disk. MAME hard disk CHDs load too, to the first free ID; a `chd` without hard disk geometry is a CD-ROM.
 
 ## Features
 
@@ -111,7 +116,7 @@ Frontend-level settings or features that the Geartowns core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | ✔ (CMOS and floppy disks) |
+| Saves             | ✔ (CMOS, floppy and hard disks) |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Run-Ahead         | ✔         |
@@ -141,6 +146,8 @@ Keyboard input is not synchronized in netplay. Netplay peers must start with the
 
 States keep the machine and the identity of the inserted disks, but not the contents of the floppy disks. Loading a state or rewinding does not undo what a game wrote to a floppy disk. When a state was made with another disk in a drive, or with a disk in a drive that is now empty, the core inserts that disk from the disk control list and loads the state; if the disk is not in the list, the state does not load. States are about 3 MB with the default 2 MB of RAM and grow with the **Main RAM** option.
 
+Hard disks work differently: loading a state, rewinding or run-ahead takes back what was written to a hard disk since that point, as long as the writes are among the last 32 MB per disk. When they aren't, or the state was made in another session, the state loads and a message says the hard disk changed since.
+
 States saved by the Geartowns desktop application can't be loaded by the core.
 
 ## Starting without content
@@ -155,7 +162,7 @@ Each drive keeps its own disk. When the selected entry belongs to another drive,
 
 When content is opened again, the disk RetroArch remembers is used for CD-ROM entries. Floppy disk content always starts from its first disk.
 
-Load an `m3u` playlist to add several CD-ROM or floppy images to the disk control list. Playlists can mix CD-ROM and floppy images; when they do, the first image of the other media type is also inserted at startup. Enable **Floppy MultiDrive** to also insert the floppy disk that follows the boot floppy into drive 2, wrapping to the start of the list.
+Load an `m3u` playlist to add several CD-ROM or floppy images to the disk control list. Playlists can mix CD-ROM and floppy images; when they do, the first image of the other media type is also inserted at startup. Hard disk lines attach the disk to a SCSI ID instead; hard disks aren't in the disk control list and can't be swapped. Enable **Floppy MultiDrive** to also insert the floppy disk that follows the boot floppy into drive 2, wrapping to the start of the list.
 
 Custom labels for the disk control list can be set with `DISK_FILE|DISK_LABEL`. A blank label (`DISK_FILE|`) shows only the disk index. A `#SAVEDISK:DiskName` line adds a formatted blank 2HD save disk; `DiskName` is optional and is stored as the D77 disk name, not as a volume label on the disk. Save disks are created in the frontend's save directory as `[M3U_FILE_NAME].save[N].d77` and labelled `Save Disk N`, counting from 0.
 
@@ -173,6 +180,14 @@ Geartowns never writes to the original floppy images. When a game writes to a fl
 Delete the working copy to return to the original disk image.
 
 Some software asks for a blank user or save disk. Enable **Save Disk** to add a formatted blank 2HD disk named "Save Disk" to the disk control list, or add a `#SAVEDISK:` line to an `m3u` playlist. Save disks are created in the save directory, and games write to them directly.
+
+## Hard disks
+
+Load a hard disk image as content to boot from it, or list it in an `m3u` playlist with the CD-ROM a game installs from or runs with. A bootable CD boots before the disk; set **Boot Device** to the disk's SCSI ID to boot it with the CD in the drive. The 1F/2F and later models have a SCSI interface built in; the Model 1/2 gets its SCSI card while a hard disk is loaded, and the Marty has none. With only a hard disk, **Model** on Auto picks the Model 1/2, and **Main RAM** on Auto gives at least 4 MB while a hard disk is loaded, which Towns OS V2.1 needs to start from one. A CD-ROM game the database knows keeps its own RAM instead, unless **Boot Device** is a hard disk or the game runs from one.
+
+Geartowns never writes to the original hard disk image. The first time the machine writes to it, the image is copied to the save directory as `<image name>.save.<extension>` (`.save.hdd`, raw, for a CHD), and from then on that working copy is used and updated. Changes are written a few seconds after the machine stops writing and when the content is closed. Delete the working copy to return to the original image. The first write to a large image copies all of it, which takes a moment.
+
+Towns OS keeps its hard disk drive setup in the CMOS, not on the disk, and only uses the partitions that have a drive letter there. With **Assign Drive Letters** enabled, the default, every power-on and restart gives the partitions of each loaded hard disk that have none the free drive letters from D:, so a disk installed on another model or emulator boots; letters already set are kept. Disabled, such a disk stops with a message that the boot drive is not registered until it is added: boot the Towns OS V2.1 CD with the disk loaded, open Drive Configuration in TownsMENU's Settings menu, click the disk's SCSI ID, choose Add Drive and Execute, then restart without the CD.
 
 ## CMOS
 
@@ -204,12 +219,13 @@ Subfolders and MAME zips there are searched too, and the system directory itself
 
 | File                              | Description              |
 |:---------------------------------:|:------------------------:|
-| `<model>.geartowns.cmos`          | Shared CMOS, one per model (`model1_2`, `1f_2f`, `10f_20f`, `cx`, `ux`, `ug`, `hg`, `marty`) |
+| `<model>.geartowns.cmos`          | Shared CMOS, one per model (`model1_2`, `1f_2f`, `10f_20f`, `cx`, `ux`, `ug`, `hg`, `hr`, `marty`) |
 | *.srm                             | Per game CMOS            |
 | `<image name>.<CRC32>.geartowns.d77` | Floppy disk working copy |
 | `<image name>.<CRC32>.<N>.geartowns.d77` | Working copy of disk N when an earlier disk of the same image is identical |
 | `<content name>.save.d77`         | Save disk                |
 | `<m3u name>.save<N>.d77`          | Playlist save disk       |
+| `<image name>.save.<extension>`   | Hard disk working copy   |
 
 **Frontend's State directory**
 
@@ -304,7 +320,7 @@ Settings marked (restart) take effect after reloading the content.
 
 	Add a blank 2HD floppy disk to the disk control list for software that asks for a user or save disk. It is stored in the save directory.
 
-- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns Marty (80386SX 16 MHz))
+- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns II HR (80486SX 20 MHz)|FM Towns Marty (80386SX 16 MHz))
 
 	The FM Towns model to emulate. Auto picks the machine, CPU speed and RAM the game database names for the game, the FM Towns II HG for 1.44 MB floppy disks, and the FM Towns (Model 1/2) for other content. It is recommended to leave this option on Auto. RetroArch's 'Save Game Options' keeps a choice for one game.
 
@@ -312,9 +328,21 @@ Settings marked (restart) take effect after reloading the content.
 
 	Auto runs the CPU at the model's original clock, or at the speed the game database names when Model is on Auto. Devices keep their real timing at any speed. Some software may not expect a faster CPU.
 
-- **Main RAM (restart)** [geartowns_main_ram] (**Auto**|1 MB|2 MB|4 MB|6 MB|8 MB|10 MB|12 MB|16 MB|20 MB|24 MB|26 MB)
+- **Main RAM (restart)** [geartowns_main_ram] (**Auto**|1 MB|2 MB|4 MB|6 MB|8 MB|10 MB|12 MB|16 MB|20 MB|24 MB|26 MB|28 MB)
 
-	Auto uses the model's original RAM, or the RAM the game database names when Model is on Auto. A size the model doesn't offer uses its next size up, or its largest. Some software needs more than 2 MB. Save states grow with it.
+	Auto uses the model's original RAM, or the RAM the game database names when Model is on Auto. A size the model doesn't offer uses its next size up, or its largest. Some software needs more than 2 MB. Save states grow with it. The RAM size only changes when the content is loaded again; a restart keeps the running size, so achievement and cheat addresses stay valid.
+
+- **FPU (restart)** [geartowns_fpu] (**Auto**|None|80387 or 487SX)
+
+	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model. The UX, UG and Marty have no socket for it. A few games need one, and some run different code with one fitted.
+
+- **Boot Device (restart)** [geartowns_boot_device] (**Auto**|CD-ROM|Floppy 1|Floppy 2|Hard Disk ID 0|Hard Disk ID 1|Hard Disk ID 2|Hard Disk ID 3|Hard Disk ID 4)
+
+	Holds the system ROM's boot keys at power-on and on every restart: C+D for the CD-ROM, F+0 or F+1 for a floppy drive, H+0 to H+4 for a SCSI hard disk, released at the first read from a disk. The 1F/2F and later models read them; the Model 1/2 and Marty ROMs don't. Auto boots as usual, the CD first, so a hard disk boots with a bootable CD in the drive only when it is chosen here.
+
+- **Assign Drive Letters (restart)** [geartowns_drive_letters] (**Enabled**|Disabled)
+
+	Towns OS keeps hard disk drive letters in the CMOS, not on the disk. When enabled, each restart gives free letters to the partitions the CMOS doesn't list yet, so disks set up elsewhere boot. When disabled, register them yourself in Towns OS.
 
 - **Clock Start (restart)** [geartowns_rtc] (**Host time**|Fixed date)
 
