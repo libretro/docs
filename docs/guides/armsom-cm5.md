@@ -78,6 +78,8 @@ input_player1_left = "left"
 input_player1_right = "right"
 input_player1_a = "x"
 input_player1_b = "z"
+input_player1_l = "q"
+input_player1_r = "w"
 input_player1_start = "enter"
 input_player1_select = "rshift"
 input_menu_toggle = "f1"
@@ -233,10 +235,169 @@ On the HDMI desktop, double-click **RetroArch (Source Build)**. If XFCE asks whe
 
 The serial console is used here to create the files, not to display the graphical interface. Launch the icon from the active XFCE desktop; do not run RetroArch as root to work around display or permission errors.
 
-The launcher and recovery steps were tested on October 27, 2026, on the native Debian 12 XFCE image with `xdg-user-dir` absent. The desktop user was `armsom`; opening the menu and relaunching by double-clicking the icon were verified. After installing the menu assets and enabling mouse input, the official launcher icon, mouse pointer, mouse menu selection, and keyboard back navigation were also verified.
+### Create a Falling game shortcut
+
+**RetroArch (Source Build)** opens the main menu because its command includes `--menu`. To start the test game directly, create a separate **Falling - NES Demo** launcher that specifies both the Nestopia core and `Falling.nes`.
+
+After completing the core and game download steps, run this block as the desktop user:
+
+```bash
+(
+set -eu
+test "$(id -u)" -ne 0
+retroarch_bin="$HOME/.local/retroarch-upstream/bin/retroarch"
+retroarch_config="$HOME/retroarch-source-validation/config/retroarch.cfg"
+retroarch_icon="$HOME/.local/retroarch-upstream/share/pixmaps/com.libretro.RetroArch.svg"
+core="$HOME/retroarch-source-validation/core-package/extracted/usr/lib/aarch64-linux-gnu/libretro/nestopia_libretro.so"
+game="$HOME/retroarch-source-validation/content/Falling.nes"
+test -x "$retroarch_bin"
+test -r "$retroarch_config"
+test -r "$retroarch_icon"
+test -r "$core"
+test -r "$game"
+
+desktop_dir="$HOME/Desktop"
+if command -v xdg-user-dir >/dev/null 2>&1; then
+  desktop_dir="$(xdg-user-dir DESKTOP)"
+elif [ -r "$HOME/.config/user-dirs.dirs" ]; then
+  . "$HOME/.config/user-dirs.dirs"
+  desktop_dir="${XDG_DESKTOP_DIR:-$desktop_dir}"
+fi
+mkdir -p "$desktop_dir" "$HOME/.local/share/applications"
+launcher="$HOME/.local/share/applications/falling-source.desktop"
+
+cat > "$launcher" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Falling - NES Demo
+Comment=Play Falling with the source-built RetroArch
+Exec="$retroarch_bin" --config "$retroarch_config" -L "$core" "$game"
+Icon=$retroarch_icon
+Terminal=false
+Categories=Game;Emulator;
+StartupNotify=false
+EOF
+
+cp "$launcher" "$desktop_dir/falling-source.desktop"
+chmod +x "$desktop_dir/falling-source.desktop"
+)
+```
+
+Double-click **Falling - NES Demo** on the HDMI desktop. Allow the launcher to run if XFCE asks, then press **Enter** to start the game and use **Left / Right** to move. Press **F1** for the RetroArch menu or **Esc** twice to exit. The **RetroArch (Source Build)** icon remains the separate main-menu entry.
+
+The launcher and recovery steps were tested on October 27, 2026, on the native Debian 12 XFCE image with `xdg-user-dir` absent. The desktop user was `armsom`; opening the menu and relaunching by double-clicking the icon were verified. After installing the menu assets and enabling mouse input, the official launcher icon, mouse pointer, mouse menu selection, and keyboard back navigation were also verified. The separate Falling launcher was verified by double-clicking its desktop icon, starting the game, and checking display, keyboard controls, and HDMI audio.
+
+## Add two more homebrew games
+
+[GBAtris 1.0](https://github.com/jtsiomb/gbatris) is a falling-block game for the Game Boy Advance, distributed by its author with source and a prebuilt ROM. [Snake 2.0](https://github.com/reini1305/gb_snake/releases/tag/2.0) is a Game Boy game with a prebuilt release ROM. These examples use a prebuilt Debian mGBA core; the RetroArch frontend remains the source-built executable from this guide.
+
+GBAtris is published under GPL-3.0-or-later; keep its source archive, `COPYING`, and the music attribution in its `README.md`. Snake uses the MIT license and a separate sound-driver notice; keep its source archive, `LICENSE`, and `sound/LICENSE.TXT`. The downloads below retain these files.
+
+### Install the core dependency and download the games
+
+Install the additional packages with sudo, then run the remaining blocks as the desktop user. Downloading and extracting the core avoids installing a second RetroArch frontend.
+
+```bash
+sudo apt-get -o Dpkg::Use-Pty=0 install -y --no-install-recommends unzip libinih1
+```
+
+Check that the board's date and time are correct if HTTPS reports that a certificate is not yet valid. Correct time synchronization before retrying the download.
+
+Use a new `core-package/mgba` directory so the package wildcard matches one file. The tested Debian ARM64 mGBA package version was `0.10.1+dfsg-1+deb12u1`.
+
+```bash
+(
+set -eu
+mkdir -p "$HOME/retroarch-source-validation/core-package/mgba"
+cd "$HOME/retroarch-source-validation/core-package/mgba"
+apt-get download libretro-mgba
+dpkg-deb -x libretro-mgba_*.deb extracted
+ldd extracted/usr/lib/aarch64-linux-gnu/libretro/mgba_libretro.so
+
+mkdir -p "$HOME/retroarch-source-validation/content/extra-games"
+cd "$HOME/retroarch-source-validation/content/extra-games"
+curl -fL --connect-timeout 15 --max-time 90 https://nuclear.mutantstargoat.com/sw/gbatris/gbatris-1.0.zip -o gbatris-1.0.zip
+unzip -q -o gbatris-1.0.zip
+curl -fL --connect-timeout 15 --max-time 90 https://github.com/reini1305/gb_snake/releases/download/2.0/snake.gb -o snake.gb
+curl -fL --connect-timeout 15 --max-time 90 https://github.com/reini1305/gb_snake/archive/refs/tags/2.0.zip -o gb-snake-2.0-source.zip
+unzip -q -o gb-snake-2.0-source.zip
+echo '607ba9f6ad2a3b7af9863bc8ee979fe77c77619119c22e8ab04cfa4729255c67  gbatris-1.0/gbatris.gba' | sha256sum -c -
+echo '94f66ec5063b33bea89ed80ed05334e1655bcc71114d2c9a33a953aa368bb049  snake.gb' | sha256sum -c -
+)
+```
+
+Both ROM checks must report `OK`. The core's `ldd` output must not contain `not found`.
+
+### Create both game icons
+
+This block creates separate **GBAtris - Falling Blocks** and **Snake - Game Boy** icons on the desktop and in the application menu. Both commands specify the mGBA core and their game file, so double-clicking starts the game directly.
+
+```bash
+(
+set -eu
+test "$(id -u)" -ne 0
+desktop_dir="$HOME/Desktop"
+if command -v xdg-user-dir >/dev/null 2>&1; then
+  desktop_dir="$(xdg-user-dir DESKTOP)"
+elif [ -r "$HOME/.config/user-dirs.dirs" ]; then
+  . "$HOME/.config/user-dirs.dirs"
+  desktop_dir="${XDG_DESKTOP_DIR:-$desktop_dir}"
+fi
+mkdir -p "$desktop_dir" "$HOME/.local/share/applications"
+retroarch_bin="$HOME/.local/retroarch-upstream/bin/retroarch"
+retroarch_config="$HOME/retroarch-source-validation/config/retroarch.cfg"
+retroarch_icon="$HOME/.local/retroarch-upstream/share/pixmaps/com.libretro.RetroArch.svg"
+mgba_core="$HOME/retroarch-source-validation/core-package/mgba/extracted/usr/lib/aarch64-linux-gnu/libretro/mgba_libretro.so"
+test -x "$retroarch_bin"
+test -r "$retroarch_config"
+test -r "$retroarch_icon"
+test -r "$mgba_core"
+
+create_game_launcher() {
+  title="$1"
+  slug="$2"
+  game="$3"
+  test -r "$game"
+  launcher="$HOME/.local/share/applications/$slug-source.desktop"
+  cat > "$launcher" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=$title
+Comment=Play with the source-built RetroArch
+Exec="$retroarch_bin" --config "$retroarch_config" -L "$mgba_core" "$game"
+Icon=$retroarch_icon
+Terminal=false
+Categories=Game;Emulator;
+StartupNotify=false
+EOF
+  cp "$launcher" "$desktop_dir/$slug-source.desktop"
+  chmod +x "$desktop_dir/$slug-source.desktop"
+}
+create_game_launcher "GBAtris - Falling Blocks" gbatris "$HOME/retroarch-source-validation/content/extra-games/gbatris-1.0/gbatris.gba"
+create_game_launcher "Snake - Game Boy" snake "$HOME/retroarch-source-validation/content/extra-games/snake.gb"
+)
+```
+
+Exit any running RetroArch instance before opening another game. If XFCE asks whether to trust a new launcher, allow it to run.
+
+### Quick keyboard reference
+
+| Game | Start | Move | Main action | Pause / resume | Exit |
+| --- | --- | --- | --- | --- | --- |
+| Falling | Enter | Left / Right | Move the character | P | Esc twice |
+| GBAtris | Enter | Left / Right; Down to fall faster | X to rotate; Z or Up to drop | P | Esc twice |
+| Snake | Enter | Arrow keys | Steer toward apples; avoid collisions | P | Esc twice |
+
+In GBAtris, **Right Shift** starts a new game and **Q / W** toggles music. In Snake, **Right Shift** changes the number of apples before starting. The **RetroArch (Source Build)** icon opens the main menu: use arrows to navigate, **Enter** to confirm, and **Backspace** to go back.
+
+For all games, **P** pauses/resumes RetroArch, **F1** opens the menu, **F2 / F4** saves/loads a state, and **Esc** twice exits. Test each desktop icon, play the game, check HDMI audio, exit, and reopen it before treating the installation as complete.
 
 ## Tested functionality
 
 The source-built frontend was tested with Falling and the Nestopia core: display output, keyboard input, HDMI audio, menu navigation, pause/resume, save/load states, and exiting and relaunching worked. Rendering used the native Mali-G52 EGL/OpenGL ES driver. No RetroArch source changes were needed.
+
+On October 27, 2026, GBAtris 1.0 and Snake 2.0 were also tested with the Debian mGBA core: direct desktop launch, keyboard gameplay, HDMI audio, exit, and reopening through their individual desktop icons worked. GBAtris pause/resume was checked as well.
 
 These results apply to the image, revision, and core described above. Reboot recovery, long-term stability, and other cores have not been verified.
