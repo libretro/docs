@@ -141,6 +141,89 @@ After exiting the game, you can launch the menu separately:
   --config "$HOME/retroarch-source-validation/config/retroarch.cfg" --menu
 ```
 
+## Create a desktop shortcut
+
+Run this section as the same regular user who is logged into the XFCE desktop. A launcher created in root's home directory will not appear on another user's desktop. The executable and configuration must also be accessible to that desktop user.
+
+If you followed the guide as a regular user, skip the recovery subsection and proceed to **Create the launcher**.
+
+### Recover an installation made as root
+
+If your shell prompt starts with `root@`, then `~` and `$HOME` refer to `/root`. For the native image's `armsom` desktop account, the following commands copy the existing installation and runtime data into that user's home, update the runtime paths, and set ownership. They leave the original files in `/root` in place.
+
+Run this block **as root**. It stops if either destination already exists; in that case, inspect the existing installation instead of overwriting it. These paths assume the desktop account is `armsom`.
+
+```bash
+(
+set -eu
+test ! -e /home/armsom/.local/retroarch-upstream
+test ! -e /home/armsom/retroarch-source-validation
+cp -a /root/.local/retroarch-upstream /home/armsom/.local/
+cp -a /root/retroarch-source-validation /home/armsom/
+sed -i 's|/root/retroarch-source-validation/|/home/armsom/retroarch-source-validation/|g' /home/armsom/retroarch-source-validation/config/retroarch.cfg
+chown -R armsom:armsom /home/armsom/.local/retroarch-upstream /home/armsom/retroarch-source-validation
+runuser -u armsom -- /home/armsom/.local/retroarch-upstream/bin/retroarch --version
+id armsom
+)
+```
+
+Then switch to the desktop user:
+
+```bash
+su - armsom
+```
+
+### Create the launcher
+
+Run this block in the regular user's Bash shell. It creates both a desktop icon and an application-menu entry. It uses `xdg-user-dir` when available, otherwise reads the user's configured desktop directory, falling back to `~/Desktop`. Installing `xdg-user-dirs` is not required.
+
+```bash
+(
+set -eu
+if [ "$(id -u)" -eq 0 ]; then
+  printf '%s\n' 'Run this block as the user logged into the XFCE desktop, not root.' >&2
+  exit 1
+fi
+
+retroarch_bin="$HOME/.local/retroarch-upstream/bin/retroarch"
+retroarch_config="$HOME/retroarch-source-validation/config/retroarch.cfg"
+test -x "$retroarch_bin"
+test -r "$retroarch_config"
+
+desktop_dir="$HOME/Desktop"
+if command -v xdg-user-dir >/dev/null 2>&1; then
+  desktop_dir="$(xdg-user-dir DESKTOP)"
+elif [ -r "$HOME/.config/user-dirs.dirs" ]; then
+  . "$HOME/.config/user-dirs.dirs"
+  desktop_dir="${XDG_DESKTOP_DIR:-$desktop_dir}"
+fi
+mkdir -p "$desktop_dir" "$HOME/.local/share/applications"
+
+cat > "$HOME/.local/share/applications/retroarch-source.desktop" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RetroArch (Source Build)
+Comment=Open the RetroArch graphical menu
+Exec="$retroarch_bin" --config "$retroarch_config" --menu
+Icon=applications-games
+Terminal=false
+Categories=Game;Emulator;
+StartupNotify=false
+EOF
+
+cp "$HOME/.local/share/applications/retroarch-source.desktop" "$desktop_dir/retroarch-source.desktop"
+chmod +x "$desktop_dir/retroarch-source.desktop"
+printf 'Created: %s\n' "$desktop_dir/retroarch-source.desktop"
+)
+```
+
+On the HDMI desktop, double-click **RetroArch (Source Build)**. If XFCE asks whether to trust the launcher, choose **Mark Executable** or the equivalent launch option. RetroArch opens its graphical menu without a terminal window. Press **Esc** twice to exit, then double-click the icon to open it again.
+
+The serial console is used here to create the files, not to display the graphical interface. Launch the icon from the active XFCE desktop; do not run RetroArch as root to work around display or permission errors.
+
+The launcher and recovery steps were tested on October 27, 2026, on the native Debian 12 XFCE image with `xdg-user-dir` absent. The desktop user was `armsom`; opening the menu and relaunching by double-clicking the icon were verified.
+
 ## Tested functionality
 
 The source-built frontend was tested with Falling and the Nestopia core: display output, keyboard input, HDMI audio, menu navigation, pause/resume, save/load states, and exiting and relaunching worked. Rendering used the native Mali-G52 EGL/OpenGL ES driver. No RetroArch source changes were needed.
