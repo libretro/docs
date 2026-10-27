@@ -15,7 +15,13 @@ sudo apt-get -o Dpkg::Use-Pty=0 install -y --no-install-recommends \
   libasound2-dev libudev-dev libx11-dev libxext-dev libxinerama-dev \
   libxrandr-dev libxxf86vm-dev libfreetype6-dev zlib1g-dev libssl-dev \
   retroarch-assets libretro-core-info
+
+test -r /usr/share/libretro/assets/ozone/png/icons/pointer.png
+test -r /usr/share/libretro/assets/ozone/regular.ttf
+test -d /usr/share/libretro/info
 ```
+
+Wait for package installation to finish successfully before continuing. The checks above must succeed: the Ozone menu needs its icons, pointer texture, and font. Missing assets can produce blank icons or a square mouse pointer.
 
 ## Download the source
 
@@ -81,10 +87,13 @@ input_pause_toggle = "p"
 input_exit_emulator = "escape"
 quit_press_twice = "true"
 menu_driver = "ozone"
+menu_mouse_enable = "true"
 core_info_cache_enable = "false"
 config_save_on_exit = "false"
 assets_directory = "/usr/share/libretro/assets"
 libretro_info_path = "/usr/share/libretro/info"
+libretro_directory = "$HOME/retroarch-source-validation/core-package/extracted/usr/lib/aarch64-linux-gnu/libretro"
+rgui_browser_directory = "$HOME/retroarch-source-validation/content"
 savefile_directory = "$HOME/retroarch-source-validation/runtime/saves"
 savestate_directory = "$HOME/retroarch-source-validation/runtime/states"
 system_directory = "$HOME/retroarch-source-validation/runtime/system"
@@ -187,8 +196,10 @@ fi
 
 retroarch_bin="$HOME/.local/retroarch-upstream/bin/retroarch"
 retroarch_config="$HOME/retroarch-source-validation/config/retroarch.cfg"
+retroarch_icon="$HOME/.local/retroarch-upstream/share/pixmaps/com.libretro.RetroArch.svg"
 test -x "$retroarch_bin"
 test -r "$retroarch_config"
+test -r "$retroarch_icon"
 
 desktop_dir="$HOME/Desktop"
 if command -v xdg-user-dir >/dev/null 2>&1; then
@@ -206,7 +217,7 @@ Type=Application
 Name=RetroArch (Source Build)
 Comment=Open the RetroArch graphical menu
 Exec="$retroarch_bin" --config "$retroarch_config" --menu
-Icon=applications-games
+Icon=$retroarch_icon
 Terminal=false
 Categories=Game;Emulator;
 StartupNotify=false
@@ -222,7 +233,7 @@ On the HDMI desktop, double-click **RetroArch (Source Build)**. If XFCE asks whe
 
 The serial console is used here to create the files, not to display the graphical interface. Launch the icon from the active XFCE desktop; do not run RetroArch as root to work around display or permission errors.
 
-The launcher and recovery steps were tested on October 27, 2026, on the native Debian 12 XFCE image with `xdg-user-dir` absent. The desktop user was `armsom`; opening the menu and relaunching by double-clicking the icon were verified.
+The launcher and recovery steps were tested on October 27, 2026, on the native Debian 12 XFCE image with `xdg-user-dir` absent. The desktop user was `armsom`; opening the menu and relaunching by double-clicking the icon were verified. After installing the menu assets and enabling mouse input, the official launcher icon, mouse pointer, mouse menu selection, and keyboard back navigation were also verified.
 
 ## Tested functionality
 
