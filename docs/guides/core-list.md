@@ -286,4 +286,5 @@
 | [XRick](../library/xrick.md) | Game engine            | A port of the XRick, an open-source clone of the Rick Dangerous engine |
 | [YabaSanshiro](../library/yabasanshiro.md) | Sega Saturn            | A port of the YabaSanshiro, which is itself a fork of Yabause emulator |
 | [Yabause](../library/yabause.md) | Sega Saturn            |                    |
+| [zcdi](../library/zcdi.md) | Philips CDi            | Emulates the Philips CD-i Mono-I board and supports the 22ER9141 Digital Video Cartridge |
 | [ZEsarPCW](../library/zesarpcw.md) | Amstrad PCW 8256/8512 | Amstrad PCW 8256/8512; no external BIOS required |
