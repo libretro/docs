@@ -10,6 +10,7 @@ Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in
 - Physical CD-ROM disc support through the frontend.
 - Two floppy drives with `d77`, `d88`, `hdm`, `xdf`, `img`, HxC `mfm` and raw `bin` images, also inside `zip` archives, `m3u` playlists, blank save disks and persistent disk changes.
 - SCSI hard disks on IDs 0-6 with raw `hdd`, `h0`-`h6` and `hdm` images and MAME hard disk CHDs, alone or in `m3u` playlists, with their changes kept in working copies.
+- An IC memory card per content or shared by all content, kept in the save directory.
 - Battery-backed CMOS shared by all content, or saved per game.
 - Controllers:
     * Original FM Towns gamepad (2 buttons)
@@ -116,7 +117,7 @@ Frontend-level settings or features that the Geartowns core respects.
 |-------------------|:---------:|
 | Restart           | ✔         |
 | Screenshots       | ✔         |
-| Saves             | ✔ (CMOS, floppy and hard disks) |
+| Saves             | ✔ (CMOS, floppy, hard disks and IC memory card) |
 | States            | ✔         |
 | Rewind            | ✔         |
 | Run-Ahead         | ✔         |
@@ -144,7 +145,7 @@ Keyboard input is not synchronized in netplay. Netplay peers must start with the
 
 ## Save states
 
-States keep the machine and the identity of the inserted disks, but not the contents of the floppy disks. Loading a state or rewinding does not undo what a game wrote to a floppy disk. When a state was made with another disk in a drive, or with a disk in a drive that is now empty, the core inserts that disk from the disk control list and loads the state; if the disk is not in the list, the state does not load. States are about 3 MB with the default 2 MB of RAM and grow with the **Main RAM** option.
+States keep the machine and the identity of the inserted disks, but not the contents of the floppy disks. Loading a state or rewinding does not undo what a game wrote to a floppy disk. When a state was made with another disk in a drive, or with a disk in a drive that is now empty, the core inserts that disk from the disk control list and loads the state; if the disk is not in the list, the state does not load and the drives stay as they were. A drive that was empty when the state was made is emptied. States are about 3 MB with the default 2 MB of RAM and grow with the **Main RAM** option.
 
 Hard disks work differently: loading a state, rewinding or run-ahead takes back what was written to a hard disk since that point, as long as the writes are among the last 32 MB per disk. When they aren't, or the state was made in another session, the state loads and a message says the hard disk changed since.
 
@@ -164,7 +165,7 @@ When content is opened again, the disk RetroArch remembers is used for CD-ROM en
 
 Load an `m3u` playlist to add several CD-ROM or floppy images to the disk control list. Playlists can mix CD-ROM and floppy images; when they do, the first image of the other media type is also inserted at startup. Hard disk lines attach the disk to a SCSI ID instead; hard disks aren't in the disk control list and can't be swapped. Enable **Floppy MultiDrive** to also insert the floppy disk that follows the boot floppy into drive 2, wrapping to the start of the list.
 
-Custom labels for the disk control list can be set with `DISK_FILE|DISK_LABEL`. A blank label (`DISK_FILE|`) shows only the disk index. A `#SAVEDISK:DiskName` line adds a formatted blank 2HD save disk; `DiskName` is optional and is stored as the D77 disk name, not as a volume label on the disk. Save disks are created in the frontend's save directory as `[M3U_FILE_NAME].save[N].d77` and labelled `Save Disk N`, counting from 0.
+Custom labels for the disk control list can be set with `DISK_FILE|DISK_LABEL`. On a `zip` with several floppy images, each entry shows the label followed by the image name. A blank label (`DISK_FILE|`) shows only the disk index. A `#SAVEDISK:DiskName` line adds a formatted blank 2HD save disk; `DiskName` is optional and is stored as the D77 disk name, not as a volume label on the disk. Save disks are created in the frontend's save directory as `[M3U_FILE_NAME].save[N].d77` and labelled `Save Disk N`, counting from 0.
 
 `Game.m3u`
 ```
@@ -185,9 +186,17 @@ Some software asks for a blank user or save disk. Enable **Save Disk** to add a 
 
 Load a hard disk image as content to boot from it, or list it in an `m3u` playlist with the CD-ROM a game installs from or runs with. A bootable CD boots before the disk; set **Boot Device** to the disk's SCSI ID to boot it with the CD in the drive. The 1F/2F and later models have a SCSI interface built in; the Model 1/2 gets its SCSI card while a hard disk is loaded, and the Marty has none. With only a hard disk, **Model** on Auto picks the Model 1/2, and **Main RAM** on Auto gives at least 4 MB while a hard disk is loaded, which Towns OS V2.1 needs to start from one. A CD-ROM game the database knows keeps its own RAM instead, unless **Boot Device** is a hard disk or the game runs from one.
 
-Geartowns never writes to the original hard disk image. The first time the machine writes to it, the image is copied to the save directory as `<image name>.save.<extension>` (`.save.hdd`, raw, for a CHD), and from then on that working copy is used and updated. Changes are written a few seconds after the machine stops writing and when the content is closed. Delete the working copy to return to the original image. The first write to a large image copies all of it, which takes a moment.
+Geartowns never writes to the original hard disk image. The first time the machine writes to it, the image is copied to the save directory as `<image name>.save.<extension>` (`.save.hdd`, raw, for a CHD), and from then on that working copy is used and updated. Changes are written a few seconds after the machine stops writing and when the content is closed. Delete the working copy to return to the original image. The first write to a large image copies all of it, which takes a moment. Two hard disk images with the same name can't be loaded together, and a working copy whose size doesn't match its image is not used; the content doesn't load until it is renamed or deleted.
 
 Towns OS keeps its hard disk drive setup in the CMOS, not on the disk, and only uses the partitions that have a drive letter there. With **Assign Drive Letters** enabled, the default, every power-on and restart gives the partitions of each loaded hard disk that have none the free drive letters from D:, so a disk installed on another model or emulator boots; letters already set are kept. Disabled, such a disk stops with a message that the boot drive is not registered until it is added: boot the Towns OS V2.1 CD with the disk loaded, open Drive Configuration in TownsMENU's Settings menu, click the disk's SCSI ID, choose Add Drive and Execute, then restart without the CD.
+
+## IC memory card
+
+Every model has a slot for a battery-backed SRAM card, which Towns OS uses as a drive. Set **IC Memory Card** to *Per Game* for a card named after the content, `<content name>.icm`, or to *Shared* for one card, `geartowns.icm`, for all content. Both are kept in the save directory. A missing card is created blank with **IC Memory Card Size**; an existing card keeps its size. Card images are raw, a whole number of KB up to 64 MB. Changes are written a few seconds after the machine stops writing and when the content is closed.
+
+To use the card in Towns OS V2.1, add `DEVICE=\SYS\TICM.SYS /U0` to `CONFIG.SYS`; the driver shows the card's drive letter at boot. Format the card with `TICMFMT E: /S1024`, the size in KB. That driver uses at most 8 MB of a card, and on the UX and the Marty cards larger than 2 MB lose data in transfers that cross from their second 1 MB bank into the third.
+
+A card that starts with an `IPL4` boot sector boots before the CD-ROM on every model. Save states don't hold the card: loading one, rewinding or run-ahead takes back what was written to the card since that point, and a message says when it can't.
 
 ## CMOS
 
@@ -223,9 +232,12 @@ Subfolders and MAME zips there are searched too, and the system directory itself
 | *.srm                             | Per game CMOS            |
 | `<image name>.<CRC32>.geartowns.d77` | Floppy disk working copy |
 | `<image name>.<CRC32>.<N>.geartowns.d77` | Working copy of disk N when an earlier disk of the same image is identical |
+| `<zip name>.<CRC32>.<M>.<N>.geartowns.d77` | Working copy of disk N of `zip` member M when an earlier member holds the same disk |
 | `<content name>.save.d77`         | Save disk                |
 | `<m3u name>.save<N>.d77`          | Playlist save disk       |
 | `<image name>.save.<extension>`   | Hard disk working copy   |
+| `<content name>.icm`              | Per game IC memory card  |
+| `geartowns.icm`                   | Shared IC memory card    |
 
 **Frontend's State directory**
 
@@ -336,13 +348,21 @@ Settings marked (restart) take effect after reloading the content.
 
 	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model. The UX, UG and Marty have no socket for it. A few games need one, and some run different code with one fitted.
 
-- **Boot Device (restart)** [geartowns_boot_device] (**Auto**|CD-ROM|Floppy 1|Floppy 2|Hard Disk ID 0|Hard Disk ID 1|Hard Disk ID 2|Hard Disk ID 3|Hard Disk ID 4)
+- **Boot Device (restart)** [geartowns_boot_device] (**Auto**|CD-ROM|Floppy 1|Floppy 2|Hard Disk ID 0|Hard Disk ID 1|Hard Disk ID 2|Hard Disk ID 3|Hard Disk ID 4|IC Memory Card)
 
-	Holds the system ROM's boot keys at power-on and on every restart: C+D for the CD-ROM, F+0 or F+1 for a floppy drive, H+0 to H+4 for a SCSI hard disk, released at the first read from a disk. The 1F/2F and later models read them; the Model 1/2 and Marty ROMs don't. Auto boots as usual, the CD first, so a hard disk boots with a bootable CD in the drive only when it is chosen here.
+	Holds the system ROM's boot keys at power-on and on every restart: C+D for the CD-ROM, F+0 or F+1 for a floppy drive, H+0 to H+4 for a SCSI hard disk, I+C+M for the IC memory card, released at the first read from a disk. The 1F/2F and later models read them; the Model 1/2 and Marty ROMs don't. Auto boots as usual, the CD first, so a hard disk boots with a bootable CD in the drive only when it is chosen here. A memory card that starts with a boot sector boots ahead of the CD on every model.
 
 - **Assign Drive Letters (restart)** [geartowns_drive_letters] (**Enabled**|Disabled)
 
 	Towns OS keeps hard disk drive letters in the CMOS, not on the disk. When enabled, each restart gives free letters to the partitions the CMOS doesn't list yet, so disks set up elsewhere boot. When disabled, register them yourself in Towns OS.
+
+- **IC Memory Card (restart)** [geartowns_memory_card] (**Off**|Per Game|Shared)
+
+	Puts an IC memory card in the slot, kept in the save directory. 'Per Game' uses a card named after the content, 'Shared' one card for all content. A missing card is created blank with the size below; Towns OS formats it with TICMFMT once CONFIG.SYS loads TICM.SYS.
+
+- **IC Memory Card Size (restart)** [geartowns_memory_card_size] (64 KB|128 KB|256 KB|512 KB|**1 MB**|2 MB|4 MB|8 MB|16 MB|32 MB|64 MB)
+
+	Size of a new blank IC memory card. An existing card keeps its size. The UG reaches the first 1 MB of a card, the Model 1/2, 1F/2F and 10F/20F the first 16 MB.
 
 - **Clock Start (restart)** [geartowns_rtc] (**Host time**|Fixed date)
 
