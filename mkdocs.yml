@@ -124,6 +124,8 @@ nav:
       - 'Apple':
         - 'Apple - II (AppleWin)': 'library/applewin.md'
         - 'Apple - Macintosh (minivmac)': 'library/minivmac.md'
+      - 'Aquaplus':
+        - 'Aquaplus - P/ECE (piece-emu)': 'library/piece.md'
       - 'Arcade Emulation':
         - 'Arcade (Daphne HypseusHW)': 'library/hypseushw.md'
         - 'Arcade (DICE)': 'library/dice.md'
