@@ -60,13 +60,16 @@ Required or optional firmware files go in the frontend's system directory.
 | np2kai/itf.rom      | - Required                        | e9fc3890963b12cf15d0a2eea5815b72 |
 | np2kai/sound.rom    | - Required                        | caf90f22197aed6f14c471c21e64658d |
 | np2kai/bios9821.rom | - Optional                        |                                  |
-| np2kai/d8000.rom    | - Optional                        |                                  |
+| np2kai/d8000.rom    | IDE BIOS - Optional, see below    |                                   |
 | np2kai/2608_BD.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
 | np2kai/2608_SD.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
 | np2kai/2608_TOP.WAV | YM2608 RHYTHM sample - Optional    |                                  |
 | np2kai/2608_HH.WAV  | YM2608 RHYTHM sample - Optional    |                                  |
 | np2kai/2608_TOM.WAV | YM2608 RHYTHM sample - Optional    |                                  |
 | np2kai/2608_RIM.WAV | YM2608 RHYTHM sample - Optional    |                                  |
+
+!!! note
+	With `d8000.rom` present, floppy disk images (.fdi, .hdm, .d88 and others) can sit on a black screen for several minutes before booting. If that happens, rename or remove `d8000.rom`. Hard disk images still boot without it. See [NP2kai issue #90](https://github.com/AZO234/NP2kai/issues/90).
 
 ## Features
 
