@@ -120,6 +120,10 @@ Disk controls select the discs or sides contained in the loaded MMI image. Eject
 
 External image replacement and M3U playlists are not supported. Disk controls are not available for standalone CUE or CHD images.
 
+## Cheats
+
+RetroArch cheats use the `AAAAAA:VV` format with a physical address, for example `1F0DB1:09` writes `$09` to work RAM `$0DB1`. Join several codes with `+`.
+
 ## Directories
 
 The Geargrafx core's library name is 'Geargrafx'.
@@ -182,7 +186,7 @@ Settings marked (restart) require restarting the content for the change to take 
     - *Enabled* widens the window to 280, 373, or 560 pixels to include the borders.
     - *Auto* crops the image to the area displayed by the game, removing the borders. The width ranges from 256, 320, or 512 pixels up to the *Enabled* width, so it changes between games. Use *Dot Clock PAR* in **Aspect Ratio** to keep correct proportions.
 
-- **Scanline Count** [geargrafx_scanline_count] (**224p**|240p|Manual)
+- **Scanline Count** [geargrafx_scanline_count] (**240p**|224p|Manual)
 
     Select which scanline count will be used in emulation.
 
@@ -272,6 +276,10 @@ Settings marked (restart) require restarting the content for the change to take 
 
 	When enabled, sets safe default values for the VDC (Video Display Controller) registers. This can help some homebrew software run correctly.
 
+- **CPU Overclock (Not Recommended)** [geargrafx_cpu_overclock] (**100% (Default)**|105%-200% in increments of 5|225%|250%|275%|300%)
+
+    It is not recommended to change the default value (100%). Overclocking is not accurate and can break game logic, timing and music. Only use it to reduce slowdown in games that need it.
+
 - **CD-ROM Model (restart)** [geargrafx_cdrom_type] (**Auto**|Standard|Super CD-ROM|Arcade CD-ROM)
 
     Select the CD-ROM system type. *Auto* enables CD-ROM hardware only for CD media and selects the appropriate system based on the loaded content. An explicit model also enables CD-ROM hardware for HuCards while preserving their ROM and cartridge RAM mapping.
@@ -285,9 +293,21 @@ Settings marked (restart) require restarting the content for the change to take 
 
     Select the System Card BIOS for standard CD-ROM games. *System Card 3* is recommended. Known Game Express games automatically use `gexpress.pce`; select *Force Game Express* only for unrecognized or modified discs.
 
+- **CD-ROM Speed (Not Recommended)** [geargrafx_cdrom_speed] (**1x (Default)**|2x|3x|4x|6x)
+
+    It is not recommended to change the default value (1x). Faster CD-ROM reads are not accurate and can break games, cutscenes and audio sync. Only use it to reduce loading times in games that need it.
+
 - **Preload CD-ROM (restart)** [geargrafx_cdrom_preload] (**Disabled**|Enabled)
 
     Preload CUE/BIN tracks or CHD data into RAM. This increases memory usage but may improve performance. MMI media is streamed and is not affected by this option.
+
+- **Fast Forward CD-ROM Loads** [geargrafx_cdrom_fast_forward] (**Disabled**|Enabled)
+
+    Run at maximum speed while the drive reads data and the game shows a still, silent screen. Normal speed returns as soon as the picture changes or sound plays. Only the pacing changes, emulation stays the same. Needs a frontend that supports fast-forward override, the option is hidden otherwise.
+
+- **Fast Forward CD-ROM Loads Notification** [geargrafx_cdrom_fast_forward_notification] (**Enabled**|Disabled)
+
+    Show a message when a CD-ROM load starts running at maximum speed. Hidden when the frontend doesn't support fast-forward override.
 
 - **LaserActive Region (restart)** [geargrafx_laseractive_region] (**Auto**|Japan|US)
 

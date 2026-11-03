@@ -160,7 +160,7 @@ Select the target drive with **ADAM Disk Control Drive**, then use the frontend'
 
 Inserting media does not reset the computer. To boot a newly inserted program, request **ADAM Computer Reset**. Computer boot checks Disk 1, Disk 2, Data Pack 1 and Data Pack 2 in order and starts SmartWriter if none contains bootable media. Use disk swapping without reset when a running application requests another disk.
 
-Media is write protected by default. Set **ADAM Writable Media** to *Save-directory working copy* and reload the content to save changes in the frontend's save directory. This requires a save directory and a frontend file-system interface that supports writing; otherwise the media remains write protected.
+Media is write protected by default. Set **ADAM Writable Media** to *Save-directory working copy* and reload the content to save changes in the frontend's save directory. This requires a save directory and a frontend file-system interface that supports writing; otherwise the media remains write protected. Changes are saved about 3 seconds after the last write, when the drive is ejected and when the content is closed.
 
 ADAM save states validate the firmware, cartridge and mounted media, and restore the image selections for all four drives. Load states with the same firmware, cartridge and media set used when saving.
 

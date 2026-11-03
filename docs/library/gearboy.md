@@ -45,8 +45,12 @@ Required or optional firmware files go in the frontend's system directory.
 |:------------:|:----------------------------------:|:----------:|:--------------------------------:|
 | dmg_boot.bin | Game Boy boot ROM - Optional       | 256 bytes  | 32fbbd84168d3482956eb3c5051637f5 |
 | cgb_boot.bin | Game Boy Color boot ROM - Optional | 2304 bytes | dbfce9db9deaa2567f6a84fde55f9680 |
+| SGB1.sfc     | Super Game Boy BIOS - Optional     | 256 KiB    | b15ddb15721c657d82c5bab6db982ee9 |
+| SGB2.sfc     | Super Game Boy 2 BIOS - Optional   | 512 KiB    | 8ecd73eb4edf7ed7e81aef1be80031d5 |
 
 The checksums above identify the original boot ROMs. Other boot ROM images of the corresponding sizes can also be loaded.
+
+The Super Game Boy BIOS is the SNES cartridge ROM. Gearboy reads its default palette and border from it in Super Game Boy mode, and shows that border until the game sends its own. `SGB1.sfc` can be any of the three Super Game Boy revisions (Japan, Rev 1 or Rev 2; the checksum above is one of them) and `SGB2.sfc` is Super Game Boy 2 (Japan). Other files are ignored, and `SGB1.sfc` is tried first. It is not used in linked mode.
 
 ## Extensions
 
@@ -96,7 +100,7 @@ Frontend-level settings or features that the Gearboy core respects.
 | Crop Overscan     | ✕         |
 | LEDs              | ✕         |
 
-Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and GameShark cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
+Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and GameShark cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem. Several codes can be joined with `+` in one cheat entry.
 
 Save states, and therefore rewind and run-ahead, are unavailable while a boot ROM is executing.
 
@@ -216,6 +220,10 @@ Settings marked (restart) take effect after restarting or reloading the content.
 
 	Run compatible games in Super Game Boy mode. Disable this option to run them as standard Game Boy games. Linked mode always disables Super Game Boy mode.
 
+- **Super Game Boy for All Games (restart)** [gearboy_sgb_all_games] (**Disabled**|Enabled)
+
+	When enabled and an SGB BIOS (`SGB1.sfc` or `SGB2.sfc`) is in the system directory, regular Game Boy (DMG) games also run in Super Game Boy mode, using the BIOS default palette and border. Game Boy Color games are not affected.
+
 - **Super Game Boy Border** [gearboy_sgb_border] (**Enabled**|Disabled)
 
 	Display the Super Game Boy border around the game screen. Disable this option to show only the 160x144 game screen.
@@ -332,7 +340,7 @@ Settings marked (restart) take effect after restarting or reloading the content.
 
 Select **Joypad Auto** or **Nintendo Game Boy** as the port device type. **Joypad Port Empty** disables the joypad buttons.
 
-The same mapping applies to both ports in linked mode. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens. Single-player mode uses port 1.
+The same mapping applies to both ports in linked mode. Port 1 controls Screen 1 and port 2 controls Screen 2, including after swapping or hiding screens. Single-player mode uses port 1, and ports 2 to 4 control players 2 to 4 in Super Game Boy multiplayer games.
 
 ![](../image/controller/gb.png)
 

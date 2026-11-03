@@ -96,7 +96,7 @@ Frontend-level settings or features that the Gearsystem core respects.
 | Crop Overscan     | ✔         |
 | LEDs              | ✕         |
 
-Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and Pro Action Replay cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem.
+Achievements are supported in single-player mode and disabled in linked sessions. In linked mode, the same enabled Game Genie and Pro Action Replay cheat entries apply to both Screen 1 and Screen 2, including when using the two-ROM subsystem. Several codes can be joined with `+` in one cheat entry.
 
 ### Directories
 
