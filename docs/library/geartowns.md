@@ -340,7 +340,7 @@ Settings marked (restart) take effect after reloading the content.
 
 	Run at maximum speed while the drive reads data and the game shows a still, silent screen. Normal speed returns as soon as the picture changes or sound plays. Only the pacing changes, emulation stays the same. Needs a frontend that supports fast-forward override, the option is hidden otherwise.
 
-- **Fast Forward CD-ROM Loads Notification** [geartowns_cdrom_fast_forward_notification] (Disabled|**Enabled**)
+- **Fast Forward CD-ROM Loads Notification** [geartowns_cdrom_fast_forward_notification] (**Enabled**|Disabled)
 
 	Show a message when a CD-ROM load starts running at maximum speed. Hidden when the frontend doesn't support fast-forward override.
 
