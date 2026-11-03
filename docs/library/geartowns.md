@@ -336,6 +336,10 @@ Settings marked (restart) take effect after reloading the content.
 
 	How fast the drive reads sectors. Auto reads at the speed of the model's drive: 2x on the FM Towns II ME and MF/Fresh in high-speed mode, 1x on the rest. Faster speeds reduce loading times, but some software may not expect a faster drive.
 
+- **Fast Forward CD-ROM Loads** [geartowns_cdrom_fast_forward] (**Disabled**|Enabled)
+
+	Run at maximum speed while the drive reads data and the game shows a still, silent screen. Normal speed returns as soon as the picture changes or sound plays. Only the pacing changes, emulation stays the same. Needs a frontend that supports fast-forward override, the option is hidden otherwise.
+
 - **Disk Control Floppy Drive** [geartowns_floppy_drive] (**Floppy 1**|Floppy 2)
 
 	Select the floppy drive that the frontend's disk control ejects and inserts floppy disks into.
