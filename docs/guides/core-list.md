@@ -125,6 +125,7 @@
 | [JollyCV](../library/jollycv.md) | ColecoVision/CreatiVision/My Vision      | JollyCV is a multi-emulator supporting ColecoVision (including Super Game Module support), CreatiVision, and My Vision |
 | [Jump 'n Bump](../library/jumpnbump.md) | Game engine            | A reimplementation of the engine of Jump 'n Bump, a open-source MS-DOS multiplayer video game by Brainchild Design |
 | [Kronos](../library/kronos.md) | Sega Saturn/ST-V       | A port of the Kronos, which is itself a fork of Yabause emulator |
+| [linuxloader](../library/linuxloader.md) | Sega Lindbergh | A libretro core for Sega Lindbergh games, built on Linux Loader |
 | [LowRes NX](../library/lowres_nx.md) | Game engine            | A port of the LowRes NX fantasy console to libretro |
 | [LRPS2](../library/lrps2.md)               | Sony PlayStation 2     | A hard fork/derivative of the mature and highly-compatible PCSX2 Playstation 2 emulator to libretro |
 | [Lutro](../library/lutro.md) | Game engine            | An experimental Lua game framework for libretro, based on a subset of the LOVE API |
@@ -172,6 +173,7 @@
 | [Omicron](../library/omicron.md) | Game engine            | Omicron is an open source game engine for Java built on libGDX and inspired by fantasy consoles: a small API for drawing, sound and input, with no resource... |
 | [OpenLara](../library/openlara.md) | Game engine            | A port of the OpenLara free/open re-implementation of the engine used by the original Tomb Raider series |
 | OpenTyrian                | Game                   | A port of the OpenTyrian clone of the classic Tyrian shmup, ported to libretro |
+| [openMSX](../library/openmsx.md) | MSX/MSX2/MSX2+/turbo R | openMSX, the MSX emulator that aims for perfection, as a libretro core |
 | [Opera](https://docs.libretro.com/library/opera/)               | 3DO                    | A port and continuation of the 4DO emulator, which itself is a fork of the FreeDO 3DO emulator, to libretro |
 | [Panda3DS](../library/panda3ds.md) | Nintendo 3DS           | Panda3DS is an HLE, red-panda-themed Nintendo 3DS emulator |
 | [ParaLLEl N64](../library/parallel_n64.md) | Nintendo 64            | An N64 emulator based originally on Mupen64Plus, but with extensive changes that have caused the codebases to diverge significantly |
