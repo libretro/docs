@@ -216,6 +216,7 @@ nav:
         - 'Mattel - Intellivision (FreeIntv)': 'library/freeintv.md'
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
+        - 'Microsoft - MSX/MSX2/MSX2+/turbo R (openMSX)': 'library/openmsx.md'
         - 'Microsoft - Xbox (xemu)': 'library/xemu.md'
         - 'Microsoft - Xbox 360 (Xenia Edge)': 'library/xenia_edge.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
@@ -337,6 +338,7 @@ nav:
         - 'Sega - Saturn (Yabause)': 'library/yabause.md'
         - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
         - 'Sega - Model 3 (Supermodel)': 'library/supermodel.md'
+        - 'Sega - Lindbergh (linuxloader)': 'library/linuxloader.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sharp Emulation':
         - 'Sharp - X1 (X Millennium)': 'library/x1.md'
