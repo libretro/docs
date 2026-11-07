@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+     id="wallpaper1" width="320" height="240" version="1.1" viewBox="0 0 320 240">
+  <g id="layer1" style="display: inline;">
+    <rect	id="rect1" width="300" height="220" x="10" y="10"
+          style="opacity: 1; fill: none; stroke: red; stroke-width: 1; stroke-linecap: round; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0;" />
+    <rect	id="rect2" width="320" height="240" x="0" y="0"
+          style="opacity: 1; fill: none; stroke: red; stroke-width: 1; stroke-linecap: round; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0;" />
+  </g>
+</svg>
