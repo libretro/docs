@@ -22,7 +22,7 @@ The [Core name] core has been authored by:
 
 The [Core name] core is licensed under:
 
-- [License](URL)
+- [License](#)
 
 - // Add [Core name]
 - // Add [License] and (URL), use the core info file, the licenses doc or google for license info
@@ -101,7 +101,7 @@ RetroArch database(s) that are associated with the [Core name] core:
 
 - // Fill in the [Core name]
 
-- [Database name](URL)
+- [Database name](#)
 
 - // Add database entries from the core info file here and add (URL) from libretro-database repo
 - // https://github.com/libretro/libretro-super/tree/master/dist/info

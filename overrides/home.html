@@ -16,7 +16,7 @@
 
     .tx-container {
         padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), rgb(122, 86, 194) 99%,#fff 99%)
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), rgb(122, 86, 194) 99%, var(--md-default-bg-color) 99%);
     }
 
     .tx-hero {
@@ -74,7 +74,7 @@
     }
 
     .feature-item {
-        font-family: 'Lato', sans-serif;
+        font-family: inherit;
         font-weight: 300;
         box-sizing: border-box;
         padding: 0 15px;
@@ -82,7 +82,7 @@
     }
 
     .feature-item h2 {
-        color: #333;
+        color: var(--md-default-fg-color);
         font-weight: 300;
         font-size: 25px;
         white-space: nowrap;
@@ -99,7 +99,7 @@
         line-height: 1.8em;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        color: #111;
+        color: var(--md-default-fg-color);
         margin: 0 0 10px;
         display: block;
     }
@@ -161,7 +161,7 @@
         }
 
         .feature-item:hover {
-            background-color: #526cfe47;
+            background-color: var(--md-accent-fg-color--transparent, rgba(82, 108, 254, 0.15));
             border-radius: 3px;
         }
     }
@@ -179,7 +179,7 @@
         margin-right: auto;
         margin-left: auto;
         margin-top: 15px;
-        font-family: 'Lato', sans-serif;
+        font-family: inherit;
         font-size: 23px;
         font-weight: 300;
         padding-bottom: 10px;
@@ -222,7 +222,7 @@
     <div class="md-grid md-typeset">
       <div class="tx-hero">
         <div class="tx-hero__image">
-          <img src="img/bg2.png" draggable="false">
+          <img src="img/bg2.png" draggable="false" alt="RetroArch Logo" width="272" height="272">
         </div>
         <div class="tx-hero__content">
           <h1> RetroArch </h1>
@@ -230,7 +230,7 @@
           <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
             Get started
           </a>
-          <a href="https://www.retroarch.com/platforms.html" title="{{ lang.t('source.link.title') }}" class="md-button">
+          <a href="https://www.retroarch.com/platforms.html" title="Download RetroArch" class="md-button">
             Download
           </a>
         </div>

@@ -1,3 +1,4 @@
 /site
 .DS_Store
 .venv
+.cache/

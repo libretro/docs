@@ -560,6 +560,10 @@ nav:
     - 'Quick information': 'support/quick-informations.md'
     - 'Developing Cores': 'tech/developing-cores.md'
 
+not_in_nav: |
+  library/nestopia_ue.md
+  library/pcsx2.md
+
 extra:
   adsense: "ca-pub-9447404270680650"
   analytics:
@@ -572,9 +576,6 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
     title: Cookie consent
-  font:
-    text: 'Noto Sans'
-    code: 'Noto Sans Mono'
   i18n:
     prev: 'Previous'
     next: 'Next'
@@ -615,6 +616,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - meta
+  - tables
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret:
@@ -661,6 +663,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
   - pymdownx.tasklist:
       clickable_checkbox: false
       custom_checkbox: true
@@ -685,15 +688,19 @@ plugins:
       separator: '[\s\-()\[\],/]+'
 
 theme:
-  custom_dir: docs/overrides/
+  custom_dir: overrides
   favicon: 'image/branding/invader.png'
   features:
     - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.tabs.link
     - content.tooltips
+    - navigation.footer
     - navigation.indexes
+    - navigation.path
     - navigation.prune
     - navigation.tabs
     - navigation.tabs.sticky
