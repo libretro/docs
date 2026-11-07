@@ -92,6 +92,8 @@ Frontend-level settings or features that the Gearlynx core respects.
 
 Achievements are supported in single-player mode and disabled in linked sessions. Save states, and therefore rewind, run-ahead and netplay, are also unavailable in linked sessions.
 
+RetroArch cheats use the `AAAA:VV` format with a RAM address, for example `0050:05` writes `$05` to RAM `$0050`. Join several codes with `+`. In linked mode, the same enabled cheat entries apply to both systems.
+
 ### Directories
 
 The Gearlynx core's library name is 'Gearlynx'.
