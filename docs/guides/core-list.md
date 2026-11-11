@@ -170,6 +170,7 @@
 | [NXEngine](../library/nxengine.md) | Game engine            | An open-source reimplementation of the Cave Story / Doukutsu engine |
 | [O2EM](../library/o2em.md) | Magnavox Odyssey2/Philips Videopac+ | A port of the O2EM Odyssey 2 / VideoPac emulator to libretro |
 | [Oberon](../library/oberon.md) | Oberon RISC machine    | An emulator for the Oberon RISC machine, ported to libretro |
+| [Odin](../library/odin.md) | Sega Hikaru/Gaelco PowerVR | Odin, the low-level emulator of the SEGA Hikaru arcade board and of Gaelco's PowerVR boards |
 | [Omicron](../library/omicron.md) | Game engine            | Omicron is an open source game engine for Java built on libGDX and inspired by fantasy consoles: a small API for drawing, sound and input, with no resource... |
 | [OpenLara](../library/openlara.md) | Game engine            | A port of the OpenLara free/open re-implementation of the engine used by the original Tomb Raider series |
 | OpenTyrian                | Game                   | A port of the OpenTyrian clone of the classic Tyrian shmup, ported to libretro |

@@ -339,6 +339,7 @@ nav:
         - 'Sega - Saturn (YabaSanshiro)': 'library/yabasanshiro.md'
         - 'Sega - Model 3 (Supermodel)': 'library/supermodel.md'
         - 'Sega - Lindbergh (linuxloader)': 'library/linuxloader.md'
+        - 'Sega - Hikaru / Gaelco PowerVR (Odin)': 'library/odin.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
       - 'Sharp Emulation':
         - 'Sharp - X1 (X Millennium)': 'library/x1.md'
