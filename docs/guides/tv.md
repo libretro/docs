@@ -51,13 +51,13 @@ Enabling this feature allows you to use your TV remote to control your Digital M
 
 ### The Problem: RetroArch Lockout
 
-While standard navigation keys **Arrows, OK, Back, and Exit** work flawlessly in regular apps, they fail inside RetroArch. Because the app lacks a configuration profile for your specific TV remote, it cannot map the inputs correctly—frequently triggering a `Virtual (0/0) not configured, using fallback` error. Consequently, if your Bluetooth controller disconnects, you are left completely stranded; the remote's **Arrows and OK** buttons cannot be used to navigate to **Main Menu → Quit**, and the **Back** or **Exit** buttons will fail to return you to the dashboard of the Digital Media Player.
+While basic navigation buttons (**Arrows, OK, Back, and Exit**) on the **TV remote** work flawlessly via HDMI-CEC for navigating menus inside RetroArch, pressing **Back** or **Exit** will not exit the app or return you to the Digital Media Player dashboard, unlike standard streaming apps. In addition, the `Main Menu → Quit` option does not exist in RetroArch Android releases. Consequently, if your Bluetooth gamepad controller disconnects, pressing the basic navigation buttons will no longer exit the app—making this the exact scenario where using the TV remote's virtual home button workaround becomes essential.
 
 #### The Workaround
 
 1. **Open the TV Menu:** Press your TV remote's Menu button to bring up the on-screen digital overlay.
 2. **Trigger the Virtual Home Button:** Select the virtual **"HOME"** shortcut from that overlay. This sends a command through the HDMI cable, forcing RetroArch to close and bringing you straight back to your streaming device's main dashboard.
-3. **Reconnect Your Controller:** Now that you are back on the main dashboard, your TV remote's arrow keys and OK button will work normally again. Use them to navigate to your device's Bluetooth settings and re-pair your gamepad.
+3. **Reconnect Your Gamepad:** Now that you are back on the main dashboard, navigate to your device's Bluetooth settings and re-pair your gamepad.
 4. **Resume Playing:** Once your controller is connected, simply relaunch RetroArch and get back to your game.
 
 ## Frame rate fluctuations
