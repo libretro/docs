@@ -45,7 +45,7 @@ Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just ne
 
 Enabling this feature allows you to use your TV remote's standard buttons to control your Digital Media Player. Depending on your TV brand, these buttons will typically function as follows:
 
-* **In-App Navigation:** The physical **Arrows, OK, Back, and Exit** buttons are passed through to RetroArch for menu navigation.
+- **In-App Navigation:** The physical **Arrows, OK, Back, and Exit** buttons are passed through to RetroArch for menu navigation. *(Note: Because HDMI-CEC remotes register as standard system navigation keys rather than a game controller, they work automatically for menu navigation without needing a RetroArch controller autoconfig profile, though they also cannot be remapped like a gamepad.)*
 * **TV System Overlay (Menu/Options Button):** Often labeled as **`...`** or **`123`**, this button brings up the **TV's own on-screen overlay** (independent of RetroArch). This overlay provides a virtual **"HOME"** shortcut specifically for your digital media player.
   - **Note:** This virtual shortcut relies entirely on the TV's system interface because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device. Because of this, the virtual shortcut is often overlooked when users instinctively press the physical HOME button out of habit.
 
