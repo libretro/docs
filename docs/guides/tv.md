@@ -65,8 +65,3 @@ While **In-App Navigation** buttons (**Arrows, OK, Back, and Exit**) on the **TV
 ### Frame rate fluctuations fix: Use RetroArch Synchronization features
 
 The Settings → Video → Synchronization menu in RetroArch provides several options to reduce screen tearing and stuttering by aligning frame output with the display’s refresh rate. These options—Vertical Sync (VSync) (default: On), Hard GPU Sync (default: Off), and Adaptive VSync (default: Off)—offer software-level synchronization that approximates some of the benefits of Variable Refresh Rate (VRR) found in many gaming TVs. This is necessary because RetroArch does not support native HDMI signaling to automatically enable VRR on compatible displays.
-
-## Frame rate fluctuations
-
-### Frame rate fluctuations fix: Use RetroArch Synchronization features
-The Settings → Video → Synchronization menu in RetroArch provides several options to reduce screen tearing and stuttering by aligning frame output with the display’s refresh rate. These options—Vertical Sync (VSync) (default: On), Hard GPU Sync (default: Off), and Adaptive VSync (default: Off)—offer software-level synchronization that approximates some of the benefits of Variable Refresh Rate (VRR) found in many gaming TVs. This is necessary because RetroArch does not support native HDMI signaling to automatically enable VRR on compatible displays.
