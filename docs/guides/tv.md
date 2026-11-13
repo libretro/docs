@@ -37,9 +37,11 @@ Shaders and overlays in RetroArch may be used instead of TV picture modes to app
 
 ## HDMI-CEC Remote Control Pass-Through
 
-> Note: This section is for Digital Media Players only. TV remotes cannot operate on PCs at all; even basic navigation commands will not function, as standard computer graphics cards do not support HDMI-CEC communication.
+> Note: This section applies only to Digital Media Players. TV remotes cannot operate on PCs at all; even basic navigation commands will not function, as standard computer graphics cards do not support HDMI-CEC communication.
 
-Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just need to turn on **HDMI-CEC Remote Control Pass-Through** in your TV’s settings (the exact name changes depending on the brand). 
+Most modern Smart TVs and Digital Media Players include built-in HDMI-CEC hardware, though budget or older models on either side may lack this feature. Both the TV and the Digital Media Player must support HDMI-CEC for remote control pass-through to work. 
+
+To set it up, enable **HDMI-CEC Remote Control Pass-Through** in your TV’s settings (the exact name varies by brand) and ensure HDMI-CEC is also turned on in your Digital Media Player's system settings.
 
 ### Supported Buttons via HDMI-CEC
 
