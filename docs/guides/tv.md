@@ -43,22 +43,28 @@ Most modern Smart TVs include built-in HDMI-CEC hardware. To use it, you just ne
 
 ### Supported Buttons via HDMI-CEC
 
-Enabling this feature allows you to use your TV remote to control your Digital Media Player. Depending on your TV brand, the buttons will typically function as follows:
+Enabling this feature allows you to use your TV remote's standard buttons to control your Digital Media Player. Depending on your TV brand, these buttons will typically function as follows:
 
-* **Basic Navigation:** The physical **Arrows, OK, Back, and Exit** buttons.
-* **The Menu/Options Button:** Often labeled as **`...`** or **`123`**, this button brings up the TV's on-screen overlay. It adds a virtual **"HOME"** shortcut specifically for your digital media player.
-    - **Note:** This virtual shortcut is necessary because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device.
+* **In-App Navigation:** The physical **Arrows, OK, Back, and Exit** buttons are passed through to RetroArch for menu navigation.
+* **TV System Overlay (Menu/Options Button):** Often labeled as **`...`** or **`123`**, this button brings up the **TV's own on-screen overlay** (independent of RetroArch). This overlay provides a virtual **"HOME"** shortcut specifically for your digital media player.
+  - **Note:** This virtual shortcut relies entirely on the TV's system interface because the physical **HOME** button on your remote is hardwired directly to the TV's own operating system and cannot communicate with your streaming device. Because of this, the virtual shortcut is often overlooked when users instinctively press the physical HOME button out of habit.
 
-### The Problem: RetroArch Lockout
+### Exiting RetroArch Without a Gamepad
 
-While basic navigation buttons (**Arrows, OK, Back, and Exit**) on the **TV remote** work flawlessly via HDMI-CEC for navigating menus inside RetroArch, pressing **Back** or **Exit** will not exit the app or return you to the Digital Media Player dashboard, unlike standard streaming apps. In addition, the `Main Menu → Quit` option does not exist in RetroArch Android releases. Consequently, if your Bluetooth gamepad controller disconnects, pressing the basic navigation buttons will no longer exit the app—making this the exact scenario where using the TV remote's virtual home button workaround becomes essential.
+While **In-App Navigation** buttons (**Arrows, OK, Back, and Exit**) on the **TV remote** work flawlessly via HDMI-CEC for navigating menus inside RetroArch, pressing **Back** or **Exit** will not exit the app or return you to the Digital Media Player dashboard, unlike standard streaming apps. In addition, the `Main Menu → Quit` option does not exist in RetroArch Android releases. Consequently, if your Bluetooth gamepad controller disconnects, you cannot exit RetroArch using the **In-App Navigation** buttons—making this the exact scenario where using the **TV System Overlay (Menu/Options Button)** workaround becomes essential.
 
 #### The Workaround
 
-1. **Open the TV Menu:** Press your TV remote's Menu button to bring up the on-screen digital overlay.
-2. **Trigger the Virtual Home Button:** Select the virtual **"HOME"** shortcut from that overlay. This sends a command through the HDMI cable, forcing RetroArch to close and bringing you straight back to your streaming device's main dashboard.
+1. **Open the TV Menu:** Press your remote's **TV System Overlay (Menu/Options Button)** to bring up the on-screen digital overlay.
+2. **Trigger the Virtual Home Button:** Use the same **In-App Navigation** buttons (**Arrows** and **OK**) to navigate inside that overlay and select the virtual **"HOME"** shortcut. This sends a command through the HDMI cable, forcing RetroArch to close and bringing you straight back to your streaming device's main dashboard.
 3. **Reconnect Your Gamepad:** Now that you are back on the main dashboard, navigate to your device's Bluetooth settings and re-pair your gamepad.
 4. **Resume Playing:** Once your controller is connected, simply relaunch RetroArch and get back to your game.
+
+## Frame rate fluctuations
+
+### Frame rate fluctuations fix: Use RetroArch Synchronization features
+
+The Settings → Video → Synchronization menu in RetroArch provides several options to reduce screen tearing and stuttering by aligning frame output with the display’s refresh rate. These options—Vertical Sync (VSync) (default: On), Hard GPU Sync (default: Off), and Adaptive VSync (default: Off)—offer software-level synchronization that approximates some of the benefits of Variable Refresh Rate (VRR) found in many gaming TVs. This is necessary because RetroArch does not support native HDMI signaling to automatically enable VRR on compatible displays.
 
 ## Frame rate fluctuations
 
