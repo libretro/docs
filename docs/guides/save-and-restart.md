@@ -1,3 +1,5 @@
+<!-- Scope: Basic saving and restarting procedures only. Do not add general settings or retroarch.cfg options here. -->
+
 # Save and Restart
 
 > **Note:** The automatic saving methods in this guide assume the default value (**ON**) is enabled for **Settings** → **Configuration** → **Save Configuration on Quit**.
@@ -6,9 +8,10 @@
 
 ### Manual Save (All Platforms)
 
-To manually save your configuration at any time:
+To manually save your configuration at your discretion:
 
-* Navigate to **Main Menu** → **Configuration File** → **Save Current Configuration**.
+- Navigate to **Main Menu** → **Configuration File** → **Save Current Configuration**.
+
 
 ### Automatic Save on Exit
 
@@ -18,8 +21,10 @@ To manually save your configuration at any time:
 
 To trigger an automatic configuration save on Android (any release), exit RetroArch so the configuration flushes to disk:
 
-* **Android (Mobile/Tablet):** Close RetroArch completely from the system **Overview** / **Recents** screen.
-* **Android TV:** Return to the Android TV home dashboard by pressing the **HOME** button (or activating the virtual home button).
+- **Android (Mobile/Tablet):** Close RetroArch completely from the system **Overview** / **Recents** screen.
+
+- **Android TV:** Return to the Android TV home dashboard by pressing the **HOME** button (or activating the virtual home button).
+
   > **Tip:** To verify that the configuration file was written, immediately reopen RetroArch after returning to the home dashboard. RetroArch will display the confirmation notification: `Saved config to ".../retroarch.cfg"`.
 
 #### Desktop
@@ -29,8 +34,61 @@ To trigger an automatic configuration save on Android (any release), exit RetroA
 Use any of the following methods:
 
 1. Navigate to **Main Menu** → **Quit RetroArch**.
+
 2. Navigate to **Main Menu** → **Restart**.
 3. Close the RetroArch application window.
+
+---
+
+## Export Config
+
+### Mobile and TV
+
+#### Android-Based OSes (Android and Android TV)
+
+Because Google tightened Android's storage security model in Android 14 and 15 to block standard file managers and Storage Access Framework (SAF) prompts from accessing `Android/data/`, users cannot directly copy `retroarch.cfg` via standard GUI file managers without root, Shizuku, or PC-linked tools.
+
+##### Built-in Workaround (No External Tools Required)
+
+Use RetroArch's built-in export option to write a timestamped copy of your configuration to shared storage, which remains accessible to standard file managers:
+
+1. Navigate to **Main Menu** → **Configuration File** → **Save New Configuration**.
+
+2. RetroArch will generate a file at `/storage/emulated/0/RetroArch/config/RetroArch-MMDD-HHMMSS.cfg`.
+
+##### Android (Mobile/Tablet) Limitations
+
+Android's application sandbox restricts direct ADB access to internal private app data directories (`/data/user/0/...` or `/data/data/...`) on standard user builds. Even with USB debugging enabled, your user account does not have permission to read files inside another app's private internal storage.
+
+##### Android TV (via ADB)
+
+Android TV devices run 32-bit RetroArch builds, which use either the package name `com.retroarch` (official `RetroArch.apk` or F-Droid APK) or `com.retroarch.ra32` (`com.retroarch.ra32`).
+
+Once paired and connected to your device via ADB, pull the active configuration file from external app storage using the command matching your installed APK:
+
+- **`RetroArch.apk` or F-Droid APK (`com.retroarch`):**
+
+  ```bash
+  adb pull /storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg
+
+```
+
+* **`RetroArch_ra32.apk` (`com.retroarch.ra32`):**
+```bash
+adb pull /storage/emulated/0/Android/data/com.retroarch.ra32/files/retroarch.cfg
+
+```
+
+
+
+### Desktop
+
+#### GNU/Linux
+
+On GNU/Linux, RetroArch stores its configuration in standard user-accessible directories, allowing you to copy `retroarch.cfg` directly using any file manager or terminal:
+
+* **Standard / Native packages:** `~/.config/retroarch/retroarch.cfg`
+* **Flatpak:** `~/.var/app/org.libretro.RetroArch/config/retroarch/retroarch.cfg`
 
 ---
 
