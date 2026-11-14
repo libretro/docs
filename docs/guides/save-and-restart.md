@@ -64,6 +64,8 @@ Android's application sandbox restricts direct ADB access to internal private ap
 
 Android TV devices run 32-bit RetroArch builds, which use either the package name `com.retroarch` (official `RetroArch.apk` or F-Droid APK) or `com.retroarch.ra32` (`com.retroarch.ra32`).
 
+Because Google's storage restrictions block standard GUI file managers and Storage Access Framework (SAF) prompts from opening or copying files inside `Android/data/`, you cannot extract the configuration file via an on-device file browser. Instead, you must pull it over ADB.
+
 Once paired and connected to your device via ADB, pull the active configuration file from external app storage using the command matching your installed APK:
 
 - **`RetroArch.apk` or F-Droid APK (`com.retroarch`):**
