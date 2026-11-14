@@ -63,7 +63,7 @@ Android TV devices run 32-bit RetroArch builds, which use either the package nam
 
 Because Google's storage restrictions block standard GUI file managers and Storage Access Framework (SAF) prompts from opening or copying files inside `Android/data/`, you cannot extract the configuration file via an on-device file browser. Instead, you must pull it over ADB.
 
-Once paired and connected to your device via ADB, pull the active configuration file from external app storage using the command matching your installed APK:
+Once connected to your device via USB and the ADB debugging authorization request is accepted on screen, pull the active configuration file from external app storage using the command matching your installed APK:
 
 - **`RetroArch.apk` or F-Droid APK (`com.retroarch`):**
 
