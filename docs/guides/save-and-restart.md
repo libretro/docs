@@ -2,8 +2,6 @@
 
 # Save and Restart
 
-> **Note:** The automatic saving methods in this guide assume the default value (**ON**) is enabled for **Settings** → **Configuration** → **Save Configuration on Quit**.
-
 ## Save Config
 
 ### Manual Save (All Platforms)
@@ -12,20 +10,19 @@ To manually save your configuration at your discretion:
 
 - Navigate to **Main Menu** → **Configuration File** → **Save Current Configuration**.
 
+### Automatic Save on Quit
 
-### Automatic Save on Exit
+> **Note:** The automatic saving methods in this guide assume the default value (**ON**) is enabled for **Settings** → **Configuration** → **Save Configuration on Quit**.
 
 #### Mobile and TV
 
 ##### Android and Android TV
 
-To trigger an automatic configuration save on Android (any release), exit RetroArch so the configuration flushes to disk:
+To trigger an automatic configuration save on Android (any release) and Android TV, you don't need to completely close the app—returning to the system dashboard or switching away flushes the configuration to disk:
 
-- **Android (Mobile/Tablet):** Close RetroArch completely from the system **Overview** / **Recents** screen.
-
-- **Android TV:** Return to the Android TV home dashboard by pressing the **HOME** button (or activating the virtual home button).
-
-  > **Tip:** To verify that the configuration file was written, immediately reopen RetroArch after returning to the home dashboard. RetroArch will display the confirmation notification: `Saved config to ".../retroarch.cfg"`.
+* **Android (Mobile/Tablet) and Android TV:** Return to the home screen or dashboard by pressing the **HOME** button, activating the virtual home button, or switching to another app.
+> **Tip:** To verify that the configuration file was written, immediately reopen RetroArch after returning to the app. RetroArch will display the confirmation notification: `Saved config to ".../retroarch.cfg"`.
+* **Android (Mobile/Tablet) alternative:** You can also close RetroArch completely from the system **Overview** / **Recents** screen to ensure an immediate flush.
 
 #### Desktop
 
