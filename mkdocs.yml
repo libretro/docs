@@ -90,6 +90,7 @@ nav:
       - 'Interface Styles':
         - 'GLUI Interface': 'guides/glui.md'
         - 'Ozone Interface': 'guides/ozone.md'
+        - 'pix16 Interface': 'guides/pix16.md'
         - 'RGUI Interface': 'guides/rgui.md'
         - 'XMB Interface': 'guides/xmb.md'
       - 'Creating a Theme': 'guides/themes.md'
