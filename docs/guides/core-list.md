@@ -112,6 +112,7 @@
 | [gpSP](../library/gpsp.md) | Game Boy Advance       | A port of the lightweight gpSP Game Boy Advance emulator to libretro |
 | [Gong](../library/gong.md) | Game                   | A clone of Pong written for libretro |
 | [GW](../library/gw.md) | Handheld Electronic    | A simulator of various Game and Watch-style handheld electronic games |
+| [hakuX-lr](../library/hakux-lr.md) | Microsoft Xbox | An original Xbox emulator based on hakuX |
 | [Handy](../library/handy.md) | Atari Lynx             | A port of the venerable Handy Atari Lynx emulator to libretro |
 | [Hatari](../library/hatari.md) | Atari ST/STE/TT/Falcon | Hatari emulator for libretro |
 | [hatariB](../library/hatarib.md) | Atari ST/STE/TT/Falcon | Emulates the Atari ST family of computer hardware, including STE, TT, and Falcon |

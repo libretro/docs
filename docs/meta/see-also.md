@@ -198,3 +198,8 @@ This is a list of cores that are related to each other in some way.
 
 - [d-rs](../library/doukutsu-rs.md)
 - [NXEngine](../library/nxengine.md)
+
+## Xbox
+
+- [Microsoft - Xbox (hakuX-lr)](../library/hakux-lr.md)
+- [Microsoft - Xbox (xemu)](../library/xemu.md)
