@@ -20,7 +20,34 @@ installing RetroArch on systems running the GNU/Linux kernel.
 
 ## AppImage (suitable for most GNU/Linux distributions)
 
-### AM/AppMan
+All RetroArch AppImage releases are distributed on the [Libretro Buildbot](https://buildbot.libretro.com/) as `.7z` archives containing both the `.AppImage` executable (e.g., `RetroArch-Linux-x86_64.AppImage`) and a pre-configured portable home directory (`RetroArch-Linux-x86_64.AppImage.home`). Keeping both in the same directory ensures each build stores its settings locally, allowing you to configure releases separately and easily isolate a stable gaming environment from a testing one.
+
+Four AppImage variants are available:
+- **RetroArch** (`RetroArch.7z`) — Stable release with the standard interface.
+- **RetroArch Nightly** (`RetroArch.7z`) — Daily development build with the latest features and fixes.
+- **RetroArch Qt** (`RetroArch_Qt.7z`) — Stable release bundled with Qt libraries to enable the desktop WIMP (windowed) menu interface.
+- **RetroArch Qt Nightly** (`RetroArch_Qt.7z`) — Daily development build with the desktop Qt interface enabled.
+
+Each variant is available for the following architectures:
+* `x86_64` — 64-bit PCs (standard for modern hardware)
+* `x86` — 32-bit PCs (for older hardware)
+
+### Manual Installation
+
+To install the Nightly build (recommended):
+1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) from a Linux web browser and select **AppImage** (or **AppImage (Qt)** for the Qt interface variant). This downloads the `x86_64` RetroArch Nightly archive.
+2. Extract `RetroArch.7z` (or `RetroArch_Qt.7z`).
+3. Open the `RetroArch-Linux-x86_64` directory.
+4. Run `RetroArch-Linux-x86_64.AppImage` to launch RetroArch.
+
+To install the Stable release:
+1. Visit the [stable archive](https://buildbot.libretro.com/stable/).
+2. Open the latest version-numbered directory, then open `linux/x86_64/`.
+3. Download `RetroArch.7z` or `RetroArch_Qt.7z`, extract it, and run the `.AppImage` file inside.
+
+> **32-bit (`x86`) systems:** Download Nightly builds from the [`x86` nightly archive](https://buildbot.libretro.com/nightly/linux/x86/), or select `linux/x86/` instead of `linux/x86_64/` in the Stable release steps above.
+
+### Installation via AM/AppMan
 
 [AM](https://github.com/ivan-hc/AM) (and its user-level counterpart `AppMan`) is a command-line package manager for managing AppImages, maintained alongside the [Portable Linux Apps](https://portable-linux-apps.github.io/) catalog. Both tools are installed via the main `AM` repository installer.
 
