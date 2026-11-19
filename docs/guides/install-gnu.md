@@ -35,7 +35,7 @@ Each variant is available for the following architectures:
 ### Manual Installation
 
 To install the Nightly build (recommended):
-1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) from a Linux web browser and select **AppImage** (or **AppImage (Qt)** for the Qt interface variant). This downloads the `x86_64` RetroArch Nightly archive.
+1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) from a Linux web browser and select **Download (AppImage)** (or **Download (AppImage) [Qt version]** for the Qt interface variant). This downloads the `x86_64` RetroArch Nightly archive.
 2. Extract `RetroArch.7z` (or `RetroArch_Qt.7z`).
 3. Open the `RetroArch-Linux-x86_64` directory.
 4. Run `RetroArch-Linux-x86_64.AppImage` to launch RetroArch.
