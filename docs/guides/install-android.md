@@ -128,15 +128,16 @@ To sideload successfully:
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
 #### From RetroArch.com Downloads
-___
+
+Android APKs can be downloaded directly from the buildbot archive:
+- **Nightly builds:** [Android Nightly](https://buildbot.libretro.com/nightly/android/)
+- **Stable builds:** Available in the [stable archive](https://buildbot.libretro.com/stable/) inside the version-numbered directory, followed by the `android/` subdirectory.
+
+##### Manual Installation
 
 1. Visit the retroarch.com [Downloads page](https://www.retroarch.com/platforms.html) and select **Download Stable** or **Download Nightly**.
 2. Open the downloaded APK (via a file manager if your browser does not prompt you when the download is completed).
 3. Select Install.
-
-**From Buildbot Archives**
-
-All [stable](https://buildbot.libretro.com/stable/CURRENTVERSIONNUMBER/android/) and [nightly](https://buildbot.libretro.com/nightly/android/) bundles are available via BuildBot If you need a specific architecture or build for testing.
 
 ##### Installation via Obtainium
 "Obtainium allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available." - Obtainium
