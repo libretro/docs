@@ -122,16 +122,6 @@ To sideload successfully:
 * The first time you attempt to install an APK via an app (e.g. via any file manager, or Obtainium), enable the [install unknown apps](#install-unknown-apps) permission for it. This step is straightforward, and most Android users can complete it without consulting the detailed instructions.
 * If Play Protect warnings appear on Android, follow the installation notes for [allowing APK installations blocked by Google Play Protect](#allowing-apk-installations-blocked-by-google-play-protect). This step is more complex and should be read carefully to ensure success on all Android devices.
 
-##### RetroArch.com
-
-###### Manual Downloads
-
-## Non-Google Play sources
-
-### Installation via Side-loading
-Side-loading means installing manually downloaded APK files on Android (outside official stores).<br />
-You must follow the [installation notes](#installation-notes) for this process.
-
 #### From RetroArch.com Downloads
 ___
 
