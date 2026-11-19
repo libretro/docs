@@ -142,6 +142,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Geolith](../library/geolith.md)                                                 | [BSD-3-Clause, MIT](https://github.com/libretro/geolith-libretro/blob/master/LICENSE)     |                |
 | [gpSP](../library/gpsp.md)                                                       | [GPLv2](https://github.com/libretro/gpsp/blob/master/COPYING)                             |                |
 | [GW](../library/gw.md)                                                           | [zlib](https://github.com/libretro/gw-libretro/blob/master/LICENSE)                       |                |
+| [hakuX-lr](../library/hakux-lr.md) | [GPLv3+](https://github.com/portare-ch/hakuX-lr/blob/master/COPYING) | |
 | [Handy](../library/handy.md)					    		   | [zlib](https://github.com/libretro/libretro-handy/blob/master/lynx/license.txt)                                           |                |
 | [Holani](../library/holani.md)					    		   | [GPLv3](https://github.com/LLeny/holani-retro/blob/main/LICENSE)                                           |                |
 | [Hatari](../library/hatari.md)						   | [GPLv2](https://github.com/libretro/hatari/blob/master/readme.txt)                        |                |

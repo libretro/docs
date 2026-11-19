@@ -217,6 +217,7 @@ nav:
       - 'Microsoft Emulation':
         - 'Microsoft - MSX (fMSX)': 'library/fmsx.md'
         - 'Microsoft - MSX/MSX2/MSX2+/turbo R (openMSX)': 'library/openmsx.md'
+        - 'Microsoft - Xbox (hakuX-lr)': 'library/hakux-lr.md'
         - 'Microsoft - Xbox (xemu)': 'library/xemu.md'
         - 'Microsoft - Xbox 360 (Xenia Edge)': 'library/xenia_edge.md'
         - 'MSX/SVI/ColecoVision/SG-1000 (blueMSX)': 'library/bluemsx.md'
