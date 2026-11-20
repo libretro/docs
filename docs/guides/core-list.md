@@ -157,6 +157,7 @@
 | [Mupen64Plus-Next](https://docs.libretro.com/library/mupen64plus/)          | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
 | [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
 | [Mupen64Plus-Next GLES3](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
+| [n64emu](../library/n64emu.md) | Nintendo 64 | An cycle-based Nintendo 64 focusing on game/homebrew emulation accuracy. |
 | [Native32Emu](../library/native32emu.md) | Sunplus Native32 | An emulator for the Sunplus Native32 game format used by DVD player and TV chipsets |
 | [CoolbarEmu](../library/coolbaremu.md) | Coolbar/CBE | An emulator for Coolbar/CBE applications on feature phones |
 | [Neko Project II](../library/nekop2.md) | NEC PC-98              | An emulator for NEC's PC-9801 (aka PC-98) personal computer platform, ported to libretro |

@@ -116,6 +116,7 @@ This is a list of cores that are related to each other in some way.
 ## N64
 
 - [Nintendo - Nintendo 64 (Mupen64Plus)](../library/mupen64plus.md)
+- [Nintendo - Nintendo 64 (n64emu)](../library/n64emu.md)
 
 ## NDS
 
