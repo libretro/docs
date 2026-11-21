@@ -66,6 +66,13 @@ This is a list of cores that are related to each other in some way.
 - [Atari - Lynx (Handy)](../library/handy.md)
 - [Atari - Lynx (Holani)](../library/holani.md)
 
+## J2ME
+
+- [Mobile - J2ME (FreeJ2ME)](../library/freej2me.md)
+- [Mobile - J2ME (FreeJ2ME-Plus)](../library/freej2me_plus.md)
+- [Mobile - J2ME (nano_j2me)](../library/nano_j2me.md)
+- [Mobile - J2ME (SquirrelJME)](../library/squirreljme.md)
+
 ## MSX
 
 - [Microsoft - MSX (fMSX)](../library/fmsx.md)
