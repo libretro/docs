@@ -242,6 +242,7 @@ nav:
         - 'Nintendo - SNES / SFC (Beetle Supafaust)': 'library/mednafen_supafaust.md'
         - 'Nintendo - SNES / SFC (bsnes-hd beta)': 'library/bsnes_hd_beta.md'
         - 'Nintendo - SNES Compatibility List': 'library/compatibility/snes.md'
+        - 'Nintendo - Game Boy / Color (Boytacean)': 'library/boytacean.md'
         - 'Nintendo - Game Boy / Color (Emux GB)': 'library/emux_gb.md'
         - 'Nintendo - Game Boy / Color (Gambatte)': 'library/gambatte.md'
         - 'Nintendo - Game Boy / Color (SameBoy)': 'library/sameboy.md'
