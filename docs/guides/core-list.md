@@ -34,6 +34,7 @@
 | [blueMSX](../library/bluemsx.md) | MSX/SVI/ColecoVision/SG-1000 | A port of the blueMSX emulator to libretro |
 | [boom 3](../library/boom3.md) | Game engine            | A port of the Doom 3 engine to libretro. There is a separate core for it's expansion pack 'Resurrection of Evil'. |
 | boom 3 xp                 | Game engine            | (See boom 3 note)  |
+| [Boytacean](../library/boytacean.md) | Nintendo Game Boy/Color | A Game Boy and Game Boy Color emulator written in Rust, with a focus on performance and safety |
 | [bsnes](../library/bsnes.md) | Nintendo SNES/SFC      | bsnes libretro core is based on the latest source code from the bsnes emulator, which is known for its high accuracy and faithful reproduction of the SNES/SFC console |
 | [bsnes 2014 Accuracy](../library/bsnes2014_accuracy.md) | Nintendo SNES/SFC      | bsnes 2014 Accuracy is based on version 094 of the bsnes emulator with some accuracy improvements backported from later versions |
 | [bsnes 2014 Balanced](../library/bsnes2014_balanced.md) | Nintendo SNES/SFC      | bsnes 2014 Balanced is based on version 094 of the bsnes emulator with some accuracy improvements backported from later versions |
