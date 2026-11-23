@@ -177,6 +177,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Mr.Boom](../library/mr_boom.md)                          		           | [MIT](https://github.com/libretro/mrboom-libretro/blob/master/LICENSE)                    |                |
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | Mupen64Plus GLES3                                         		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
+| [My386](../library/my386.md)                                                     | [zlib](https://codeberg.org/my386/my386/src/branch/develop/LICENSE)                       |                |
 | [Native32Emu](../library/native32emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/Native32Emu/blob/master/LICENSE)           |                |
 | [CoolbarEmu](../library/coolbaremu.md)                                               | [BSD-3-Clause](https://github.com/AloysHF/CoolbarEmu/blob/master/LICENSE)              |                |
 | Neko Project II                                           		           |                                                                                           |                |

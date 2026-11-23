@@ -188,6 +188,7 @@ nav:
         - 'MS - DOS (DOSBox Pure)': 'library/dosbox_pure.md'
         - 'MS - DOS (DOSBox-SVN)': 'library/dosbox_svn.md'
         - 'PC/XT (VirtualXT)': 'library/virtualxt.md'
+        - 'PC/AT (My386)': 'library/my386.md'
         - 'PC (PCem)': 'library/pcem.md'
         - 'PC (QEMU)': 'library/qemu.md'
       - 'Dingoo Emulation':
