@@ -121,7 +121,7 @@ Now, for easy access, we can bind the AI Service command to a key. To do this:
 
 ## Use controllers
 
-Retroarch not only works with keyboards. One can, if their headphones have a long enough chord, or their controller has a headphone jack, play games, and use the AI Service, right from a game controller. Usually, all one has to do is plug in a controller, and retroarch automatically configures and works with it. Sometimes, though, Retroarch’s control mappings are not to the user’s liking, some some reconfiguration is in order.
+Retroarch not only works with keyboards. One can, if their headphones have a long enough chord, or their controller has a headphone jack, play games, and use the AI Service, right from a game controller. Usually, all one has to do is plug in a controller, and retroarch automatically configures and works with it. Sometimes, though, Retroarch’s control mappings are not to the user’s liking, some reconfiguration is in order.
 
 
 ### Map controls
