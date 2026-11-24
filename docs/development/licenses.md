@@ -179,6 +179,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | Mupen64Plus GLES3                                         		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | [My386](../library/my386.md)                                                     | [zlib](https://codeberg.org/my386/my386/src/branch/develop/LICENSE)                       |                |
 | [Native32Emu](../library/native32emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/Native32Emu/blob/master/LICENSE)           |                |
+| nano_j2me | [MIT](https://github.com/lucinhu/nano_j2me/blob/main/LICENSE), [OFL 1.1](https://github.com/lucinhu/nano_j2me/blob/main/docs/licenses/Liberation-Fonts-OFL.txt), [Apache-2.0](https://github.com/lucinhu/nano_j2me/blob/main/docs/licenses/AMR-Apache-2.0.txt) | |
 | [CoolbarEmu](../library/coolbaremu.md)                                               | [BSD-3-Clause](https://github.com/AloysHF/CoolbarEmu/blob/master/LICENSE)              |                |
 | Neko Project II                                           		           |                                                                                           |                |
 | Neko Project II Kai                                                              | [MIT](https://github.com/AZO234/NP2kai/blob/master/LICENSE)                               |                |
