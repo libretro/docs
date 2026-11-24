@@ -68,7 +68,7 @@ Several options can be added as a doublecheck. If the necessary libraries are in
 - `--enable-kms` and `--enable-egl` for libraries necessary for KMS mode
 
 In case of RPi 2 and 3 with 32-bit OS, NEON support can be explicitly enabled, by adding `CFLAGS='-mfpu=neon'` in front of `./configure` and `--enable-neon` to the options. In RetroArch, this has effect on the audio resampling algorithm compilation.
-In all platforms, code optimization can be triggered by adding adding `CFLAGS='-march=native'` in front of .configure. This also means resulting binary may not be executable on an other Pi model.
+In all platforms, code optimization can be triggered by adding `CFLAGS='-march=native'` in front of .configure. This also means resulting binary may not be executable on an other Pi model.
 
 ## Compiling and first updates
 
