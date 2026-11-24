@@ -57,7 +57,7 @@ When problems arise with RetroArch, it is helpful for the developers and other v
 1. A description of the problem: What did you expect to happen, and what happened instead?
 2. The version of RetroArch you are using
 3. The hardware and operating system that you are using
-4. If the problem occurs while using a core: What is the the core name, its version, and the name of the game or media you were playing?
+4. If the problem occurs while using a core: What is the core name, its version, and the name of the game or media you were playing?
 5. RetroArch log files recorded when the problem occurs
 
 See: Generating RetroArch Logs
