@@ -135,7 +135,7 @@ Analog sticks are also able to control the menu. If needed, additional hotkeys c
 
 ### Hotkey controls
 
-Hotkey binds can be configured at `Settings` → `Input` → `Hotkeys` . If you map `Enable Hotkeys` to a key, it will require that key to be held in order to trigger any hotkeys. This can be useful in avoiding keyboard mapping conflicts between RetroArch and cores cores that use the keyboard for input.
+Hotkey binds can be configured at `Settings` → `Input` → `Hotkeys` . If you map `Enable Hotkeys` to a key, it will require that key to be held in order to trigger any hotkeys. This can be useful in avoiding keyboard mapping conflicts between RetroArch and cores that use the keyboard for input.
 
 !!! Tip
     Hotkeys can also be mapped to controller buttons.
