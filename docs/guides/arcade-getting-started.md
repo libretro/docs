@@ -108,7 +108,7 @@ Last but not least, most of the arcade cores have no real maintainer and are mos
 * keeps adding support for new games
 
 #### FinalBurn Alpha 2012
-* has split cores for optimized memory usage if you are using a device with very very limited memory (wii, nds, ...)
+* has split cores for optimized memory usage if you are using a device with very limited memory (wii, nds, ...)
 * has fixed romsets
 * is an older version of FinalBurn Neo, and as such should be faster while being less accurate and supporting less games, the libretro integration isn't as good either
 * should only be considered as an alternative on ultra low-power devices
