@@ -193,6 +193,7 @@
 | [Pocket CDG](../library/pocketcdg.md) | Karaoke player         | A karaoke music player, ported to libretro |
 | [PokeMini](../library/pokemini.md)   | Nintendo Pokemon Mini  | A port of the homebrew PokeMini emulator, which emulates the Pokemon-Mini handheld console, to libretro |
 | [pokketstation](../library/pokketstation.md) | Sony PocketStation     | An open-source Sony PocketStation emulator core, written in portable C |
+| [POM2](../library/pom2.md) | Apple II               | An Apple II emulator aimed at the real machine: ][ to //c Plus, NTSC and PAL, copy-protected WOZ disks, Mockingboard, netplay |
 | [Potator](../library/potator.md) | Watara Supervision     |                    |
 | [PPSSPP](../library/ppsspp.md) | PlayStation Portable   | A port of the excellent and advanced Playstation Portable (PSP) emulator PPSSPP to libretro |
 | [PrBoom](../library/prboom.md) | Game engine            | A port of the PrBoom source port of iD's classic Doom engine |
