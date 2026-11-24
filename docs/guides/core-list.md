@@ -159,6 +159,7 @@
 | [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
 | [Mupen64Plus-Next GLES3](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
 | [My386](../library/my386.md) | PC/AT (80386) | A self-contained 386SX/DX PC/AT emulator with built-in firmware and SvarDOS. |
+| [nano_j2me](../library/nano_j2me.md) | J2ME | A native C99 J2ME runtime with M3G 3D, MIDI/MP3/AMR/MPEG-4 media and manual save states |
 | [n64emu](../library/n64emu.md) | Nintendo 64 | An cycle-based Nintendo 64 emulator focusing on game/homebrew emulation accuracy. |
 | [Native32Emu](../library/native32emu.md) | Sunplus Native32 | An emulator for the Sunplus Native32 game format used by DVD player and TV chipsets |
 | [CoolbarEmu](../library/coolbaremu.md) | Coolbar/CBE | An emulator for Coolbar/CBE applications on feature phones |
