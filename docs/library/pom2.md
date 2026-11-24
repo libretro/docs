@@ -247,6 +247,10 @@ Joystick, paddles, keyboard and mouse.
 
     The ][ and ][+ have no lowercase. Many //e games expect Caps Lock.
 
+- **Game pad profiles** [pom2_pad_profile] (**Automatic**|Off)
+
+    A known keyboard game gets its keys on the RetroPad (the controls menu names them). A game that plays with a joystick keeps the D-pad and B/A on the joystick, and gets only its other keys. Applies when port 1 is the Apple II joystick.
+
 - **AppleMouse in slot 4 (restart)** [pom2_mouse] (**Absent**|Installed)
 
     Needs mouse_341-0270-c.bin in system/pom2. The //c has its mouse built in.
