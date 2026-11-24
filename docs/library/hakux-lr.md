@@ -9,7 +9,7 @@ description: "Requirements, installation, disc formats and saves for the hakuX-l
 
 ## Requirements
 
-Use 64-bit RetroArch and a GPU driver with Vulkan 1.2 or later. In RetroArch, set **Settings → Drivers → Video** to **vulkan**, save the configuration, and restart.
+Use 64-bit RetroArch and a Vulkan 1.1 or newer GPU driver with timeline semaphore support. Vulkan 1.1 drivers must expose `VK_KHR_timeline_semaphore`. In RetroArch, set **Settings → Drivers → Video** to **vulkan**, save the configuration, and restart.
 
 | Platform | CPU backend | Additional requirements |
 | --- | --- | --- |
