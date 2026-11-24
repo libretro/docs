@@ -122,7 +122,7 @@ float4 main_fragment ( uniform sampler2D s0 : TEXUNIT0, uniform input IN , float
 }
 ```
 
-Here we use `IN.texture_size` to determine the the size of the texture. Since GL maps the whole texture to the interval `[0.0, 1.0]`, `1.0 / IN.texture_size` means we get the offset for a single pixel, simple enough. Almost every shader uses this. We can calculate these offsets in vertex shader to improve performance since the coordinates are linearly interpolated anyways, but that is for another time.
+Here we use `IN.texture_size` to determine the size of the texture. Since GL maps the whole texture to the interval `[0.0, 1.0]`, `1.0 / IN.texture_size` means we get the offset for a single pixel, simple enough. Almost every shader uses this. We can calculate these offsets in vertex shader to improve performance since the coordinates are linearly interpolated anyways, but that is for another time.
 
 ## Putting it together
 
