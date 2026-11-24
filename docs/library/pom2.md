@@ -307,6 +307,11 @@ The POM2 core supports the following device type(s) in the controls menu, bolded
 - **None (keyboard typed directly)**
 - Keyboard (for netplay)
 
+### User 4 device types
+
+- **None (mouse read with port 1)**
+- Mouse (for netplay)
+
 The keyboard types into the machine directly (the keyboard callback), on the host's layout. Port 3's "Keyboard (for netplay)" reads it as a device instead, on a US layout.
 
 ## Joypad
