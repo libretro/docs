@@ -188,7 +188,7 @@ and the connection will drop frequently.
 The recommended way to use the emulated Wi-Fi LAN connection is with a wired LAN connection between the computers.
 
 ### What is a MAC address?
-Every Nintendo DS (and every device capable of Wi-Fi) comes with an identifier built-in in its firmware called a "MAC address".
+Every Nintendo DS (and every device capable of Wi-Fi) comes with an identifier built into its firmware called a "MAC address".
 For three or more Nintendo DS consoles to connect in a local Wi-Fi multiplayer network,
 all three need to have different MAC addresses.
 You can see the emulated console's MAC address in a game with Nintendo WFC
