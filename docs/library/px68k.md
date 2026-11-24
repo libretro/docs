@@ -266,7 +266,7 @@ Settings with (Restart) means that core has to be closed for the new setting to 
 
 - **MIDI Output (Restart)** [px68k_midi_output] (disabled|**enabled**)
 
-	Enables the software MIDI. If disabled, it will use internal OPM for music, otherwise it will try use use midi software synthesizers configured. Due to missing bus-error handling in the CPU cores, its not recommended to disable this option.
+	Enables the software MIDI. If disabled, it will use internal OPM for music, otherwise it will try use midi software synthesizers configured. Due to missing bus-error handling in the CPU cores, its not recommended to disable this option.
 
 - **MIDI Output Type (Restart)** [px68k_midi_output_type] (LA|**GM**|GS|XG)
 
