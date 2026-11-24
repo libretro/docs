@@ -370,6 +370,8 @@ nav:
         - 'Sunplus - SPMP8000 (SPMP8000Emu)': 'library/spmp8000emu.md'
       - 'Coolbar Emulation':
         - 'Coolbar (CoolbarEmu)': 'library/coolbaremu.md'
+      - 'SnowFish Emulation':
+        - 'SnowFish (SnowFishEmu)': 'library/snowfishemu.md'
       - 'Texas Instruments Emulation':
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':

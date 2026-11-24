@@ -227,6 +227,7 @@
 | [Snes9x 2005](https://docs.libretro.com/library/snes9x_2005/)           | Nintendo SNES/SFC      | Snes9x 2005 is a fork of the classic and popular SNES emulator Snes9x from circa 2005 |
 | [Snes9x 2005 Plus](https://docs.libretro.com/library/snes9x_2005_plus/) | Nintendo SNES/SFC      | Snes9x 2005 Plus is a fork of the classic and popular SNES emulator Snes9x from circa 2005, but with a more accurate sound core backported from later versions |
 | [Snes9x 2010](https://docs.libretro.com/library/snes9x_2010/)           | Nintendo SNES/SFC      | Snes9x 2010 is a fork of the classic and popular SNES emulator Snes9x from circa 2010, with some additional hacks and fixes backported |
+| [SnowFishEmu](../library/snowfishemu.md) | SnowFish/SFA | An emulator for SnowFish/SFA feature-phone applications (.app packages) |
 | [SPMP8000Emu](../library/spmp8000emu.md) | Sunplus SPMP8000 | An emulator for the Sunplus SPMP8000 game platform used by portable game devices |
 | [SquirrelJME](../library/squirreljme.md) | Java ME                | A port of the SquirrelJME Java ME 8 Virtual Machine emulator to libretro |
 | [Stella](https://docs.libretro.com/library/stella/)                     | Atari 2600             | A port of Stella, the multi-platform Atari 2600 VCS emulator, to libretro |

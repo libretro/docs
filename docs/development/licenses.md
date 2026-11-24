@@ -221,6 +221,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [Snes9x 2005](../library/snes9x_2005.md)                                         | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2005 Plus](../library/snes9x_2005_plus.md)                               | [Non-commercial](https://github.com/libretro/snes9x/blob/master/docs/snes9x-license.txt)  | Non-commercial |
 | [Snes9x 2010](../library/snes9x_2010.md)                                         | [Non-commercial](https://github.com/libretro/snes9x2010/blob/master/LICENSE.txt) | Non-commercial |
+| [SnowFishEmu](../library/snowfishemu.md)                                        | [BSD-3-Clause](https://github.com/AloysHF/SnowFishEmu/blob/master/LICENSE)              |                |
 | [SPMP8000Emu](../library/spmp8000emu.md)                                         | [BSD-3-Clause](https://github.com/jiangxincode/SPMP8000Emu/blob/master/LICENSE)           |                |
 | [Stella](../library/stella.md)                                                   | [GPLv2](https://github.com/stella-emu/stella/blob/master/License.txt)                     |                |
 | TempGBA                                                                          | [GPLv2](https://github.com/libretro/TempGBA-libretro/blob/master/copyright)               |                |
