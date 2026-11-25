@@ -188,6 +188,7 @@ This is a list of cores that are related to each other in some way.
 - [Sony - PlayStation (Beetle PSX HW)](../library/beetle_psx_hw.md)
 - [Sony - PlayStation (Beetle PSX)](../library/beetle_psx.md)
 - [Sony - PlayStation (PCSX ReARMed)](../library/pcsx_rearmed.md)
+- [Sony - PlayStation (Riverhorse)](../library/riverhorse.md)
 
 ## TG-16
 

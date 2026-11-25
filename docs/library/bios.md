@@ -92,6 +92,7 @@ PC-FX                         | Beetle PC-FX       | [BIOS information](beetle_p
 PlayStation                   | Beetle PSX         | [BIOS information](beetle_psx.md#bios)
 PlayStation                   | Beetle PSX HW      | [BIOS information](beetle_psx_hw.md#bios)
 PlayStation                   | PCSX ReARMed       | [BIOS information](pcsx_rearmed.md#bios)
+PlayStation                   | Riverhorse         | [BIOS information](riverhorse.md#bios)
 Pokémon Mini                  | PokeMini           | [BIOS information](pokemini.md#bios)
 PSP                           | PPSSPP             | [BIOS information](ppsspp.md#setup-required)
 RPG Maker 2000/2003           | EasyRPG            | [BIOS information](easyrpg.md#rtp-files)
