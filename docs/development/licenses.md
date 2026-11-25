@@ -201,6 +201,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [PocketCDG](../library/pocketcdg.md)                                             | [MIT](https://github.com/libretro/libretro-pocketcdg/blob/master/LICENSE)                 |                |
 | [PlaydiaEmu](../library/playdiaemu.md)                                           | [BSD-3-Clause](https://github.com/AloysHF/PlaydiaEmu/blob/master/LICENSE)                 |                |
 | [PokeMini](../library/pokemini.md)                                               | [GPLv3](https://github.com/libretro/PokeMini/blob/master/LICENSE)                         |                |
+| [POM2](../library/pom2.md)                                                       | [GPLv3](https://github.com/habib256/pom2/blob/main/LICENSE)                               |                |
 | [PPSSPP](../library/ppsspp.md)                                                   | [GPLv2](https://github.com/hrydgard/ppsspp/blob/master/LICENSE.TXT)                       |                |
 | [PrBoom](../library/prboom.md)                                                   | [GPLv2](https://github.com/libretro/libretro-prboom/blob/master/COPYING)                  |                |
 | [ProSystem](..//library/prosystem.md)                                            | [GPLv2](https://github.com/libretro/prosystem-libretro/blob/master/License.txt)           |                |

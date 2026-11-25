@@ -9,6 +9,8 @@ This is a list of cores that are related to each other in some way.
 
 ## Apple
 
+- [Apple - II (AppleWin)](../library/applewin.md)
+- [Apple - II (POM2)](../library/pom2.md)
 - [Apple - Macintosh (minivmac)](../library/minivmac.md)
 
 ## Arcade
