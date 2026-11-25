@@ -122,7 +122,7 @@ The POM2 core saves/loads to/from these directories.
 
 | File | Description |
 |---|---|
-| pom2/disks/... | A private writable copy of each disk the game writes to; the original image is never written |
+| pom2/disks/&lt;game&gt;/&lt;disk&gt; | A private writable copy of each disk the game writes to, named after the content and the disk file; the original image is never written |
 
 **Frontend's State directory**
 
