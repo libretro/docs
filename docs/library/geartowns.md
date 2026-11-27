@@ -9,21 +9,22 @@ description: "RetroArch Geartowns core (Fujitsu FM Towns): BIOS files, core opti
 
 Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in C++.
 
-- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG, HG, HR, UR, ME, MA, MX and MF/Fresh, and FM Towns Marty emulation with configurable CPU speed and RAM.
-- 80386 dynamic recompiler (dynarec) on supported platforms.
+- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG, HG, HR, UR, ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS, and FM Towns Marty emulation with configurable CPU speed and RAM.
+- CPU dynamic recompiler (dynarec) on supported platforms.
 - CD-ROM drive emulation with `cue/bin`, `iso` and `chd` images, `m3u` disc playlists and disc swapping.
 - Physical CD-ROM disc support through the frontend.
 - Two floppy drives with `d77`, `d88`, `hdm`, `xdf`, `img`, HxC `mfm` and raw `bin` images, also inside `zip` archives, `m3u` playlists, blank save disks and persistent disk changes.
 - SCSI hard disks on IDs 0-6 with raw `hdd`, `h0`-`h6` and `hdm` images and MAME hard disk CHDs, alone or in `m3u` playlists, with their changes kept in working copies.
 - An IC memory card per content or shared by all content, kept in the save directory.
 - Battery-backed CMOS shared by all content, or saved per game.
+- FMT-402 MIDI card with built-in MT-32 and General MIDI synths, or the frontend's MIDI output.
 - Controllers:
     * Original FM Towns gamepad (2 buttons)
     * FM Towns Marty gamepad (2 buttons and Zoom)
     * 6 button gamepad
     * FM Towns mouse, also from an analog stick
-- FM Towns keyboard support.
-- Supported platforms (libretro): Windows, Linux, macOS, Android, iOS, tvOS and Raspberry Pi.
+- FM Towns keyboard support with an in-core keyboard mapper, kept per game.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation 3, Nintendo GameCube, Nintendo WiiU, Nintendo Switch, Nintendo Switch 2, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Geartowns core has been authored by:
 
@@ -37,7 +38,7 @@ A summary of the licenses behind RetroArch and its cores can be found [here](../
 
 ## BIOS
 
-Geartowns requires the FM Towns system ROMs to work. Content does not load if a required ROM is missing, and the message lists the missing files.
+Geartowns requires the FM Towns system ROMs to work. Content does not load without a complete set for the machine, and the message names the machine.
 
 Place the ROMs in a `geartowns` folder inside the frontend's system directory, in a subfolder of it such as `geartowns/fmtowns/`, or as the MAME set `geartowns/fmtowns.zip`. The system directory itself is searched the same way when the `geartowns` folder has no set for the machine.
 
@@ -74,7 +75,7 @@ The FM Towns II HR needs its own set, MAME's `fmtownshr`, in `geartowns/fmtownsh
 | fmt_dic.rom   | Dictionary ROM - Required      | 512 KB   | 8fa4e553f28cfc0c30a0a1e589799942 |
 | mytownshr.rom | Serial ROM - Optional          | 32 bytes | 72a96dabf0f9e5fe0bb47b08fa456815 |
 
-The FM Towns II MF/Fresh needs the V10 set, MAME's FM Towns II Fresh TV set `fmtownsftv`, in `geartowns/fmtownsftv/` or as `geartowns/fmtownsftv.zip`. The MX runs on it too, as do the ME and MA, which have no dump of their own, and the HG and UR without the HR set:
+The FM Towns II MF/Fresh needs the V10 set, MAME's FM Towns II Fresh TV set `fmtownsftv`, in `geartowns/fmtownsftv/` or as `geartowns/fmtownsftv.zip`. The MX runs on it too, as do the ME, MA, EA, Fresh E, HC and Fresh FS, which have no dump of their own, and the HG and UR without the HR set:
 
 | Filename       | Description                    | Size     | md5sum                           |
 |:--------------:|:------------------------------:|:--------:|:--------------------------------:|
@@ -83,7 +84,7 @@ The FM Towns II MF/Fresh needs the V10 set, MAME's FM Towns II Fresh TV set `fmt
 | fmt_fnt.rom    | Font ROM - Required            | 256 KB   | b91300e55b70227ce98b59c5f02fa8dd |
 | fmt_dic.rom    | Dictionary ROM - Required      | 512 KB   | 8fa4e553f28cfc0c30a0a1e589799942 |
 | fmt_f20.rom    | 20-dot Font ROM - Optional     | 512 KB   | ac0c7021e9bf48ca84b51ab651169a88 |
-| mytownsftv.rom | Serial ROM - Optional          | 32 bytes |                                  |
+| mytownsftv.rom | Serial ROM - Optional          | 32 bytes | 8a1fcc2c90b207d194a0f02b3093722e |
 
 MAME's FM Towns II MX set `fmtownsmx`, in `geartowns/fmtownsmx/` or as `geartowns/fmtownsmx.zip`, holds the same V10 ROMs in one file and is used the same way:
 
@@ -92,9 +93,30 @@ MAME's FM Towns II MX set `fmtownsmx`, in `geartowns/fmtownsmx/` or as `geartown
 | fmtownsiimxbios.m79 | OS, font, system, 20-dot font and dictionary ROMs - Required | 2 MB     | 2f7d2e474054889bd1e7524f06dd0467 |
 | mytownsmx.rom       | Serial ROM - Optional                                        | 32 bytes | b49dbab8ab2bfa387bf81ad519ea0cdf |
 
-The FM Towns Marty needs its own set: MAME's `fmtmarty` (`mrom.m36` and `mrom.m37`, 2 MB each) in `geartowns/fmtmarty/` or as `geartowns/fmtmarty.zip`, or the Marty 2 files (`fmt_sys.rom`, `fmt_dos.rom`, `fmt_fnt.rom`, `fmt_dic.rom` and `mar_ex0.rom`-`mar_ex3.rom`, the 2 MB extension ROM).
+The FM Towns Marty needs its own set, MAME's `fmtmarty`, in `geartowns/fmtmarty/` or as `geartowns/fmtmarty.zip`:
 
-Each set is recognized by its system ROM. Modified or unknown ROMs and sets dumped from other FM Towns models also load, but the core shows a warning. The Free FM Towns Project replacement ROMs are recognized. A blank ROM is used if `FMT_F20.ROM` is not found, and a serial ROM is generated if `MYTOWNS.ROM`, `mytownsux.rom`, `mytownshr.rom` or `mytownsftv.rom` is not found.
+| Filename | Description                                                             | Size | md5sum                           |
+|:--------:|:-----------------------------------------------------------------------:|:----:|:--------------------------------:|
+| mrom.m36 | OS ROM and extension ROMs 0-2 - Required                                | 2 MB | 6618519b2c104cf9b7e71a48381b44a9 |
+| mrom.m37 | Extension ROM 3, font, 20-dot font, dictionary and system ROMs - Required | 2 MB | 75a5c7afb4bc8221bab8cf24db417950 |
+
+MAME's Marty 2 set `fmtmarty2`, in `geartowns/fmtmarty2/` or as `geartowns/fmtmarty2.zip`, runs the Marty too. It holds the same ROMs as separate files, without the 20-dot font:
+
+| Filename      | Description                | Size     | md5sum                           |
+|:-------------:|:--------------------------:|:--------:|:--------------------------------:|
+| fmt_sys.rom   | System ROM - Required      | 256 KB   | 8053958d759487f7765d740ef3fd529f |
+| fmt_dos.rom   | OS ROM - Required          | 512 KB   | 3f3dde5dd766b4921e5c7265df14f93d |
+| fmt_fnt.rom   | Font ROM - Required        | 256 KB   | b91300e55b70227ce98b59c5f02fa8dd |
+| fmt_dic.rom   | Dictionary ROM - Required  | 512 KB   | 8fa4e553f28cfc0c30a0a1e589799942 |
+| mar_ex0.rom   | Extension ROM 0 - Required | 512 KB   | 4f43e0a04fa5eb609ad93d6498fc3ee1 |
+| mar_ex1.rom   | Extension ROM 1 - Required | 512 KB   | 62c7f3fe1827af995d0c82c664611954 |
+| mar_ex2.rom   | Extension ROM 2 - Required | 512 KB   | a260bc140b96ee43445ca026d0cb452b |
+| mar_ex3.rom   | Extension ROM 3 - Required | 512 KB   | 655fc5f6f661c6b28c8b877dd2e26ad1 |
+| mytownsm2.rom | Serial ROM - Optional      | 32 bytes |                                  |
+
+Each set is recognized by its system ROM. Modified or unknown ROMs and sets dumped from other FM Towns models also load, but the core shows a warning. The Free FM Towns Project replacement ROMs are recognized. A blank ROM is used if `FMT_F20.ROM` is not found, and a serial ROM is generated if `MYTOWNS.ROM`, `mytownsux.rom`, `mytownsm2.rom`, `mytownsftv.rom`, `mytownshr.rom` or `mytownsmx.rom` is not found.
+
+MAME zips need to be non-merged sets. In split sets, `fmtownshr.zip` and `fmtownsftv.zip` lack `fmt_dos.rom`, which they share with the Model 1/2 set; add it from `fmtowns`. A merged `fmtowns.zip` loads as the Model 1/2 set only.
 
 ## Extensions
 
@@ -159,13 +181,15 @@ Keyboard input is not synchronized in netplay. Netplay peers must start with the
 
 States keep the machine and the identity of the inserted disks, but not the contents of the floppy disks. Loading a state or rewinding does not undo what a game wrote to a floppy disk. When a state was made with another disk in a drive, or with a disk in a drive that is now empty, the core inserts that disk from the disk control list and loads the state; if the disk is not in the list, the state does not load and the drives stay as they were. A drive that was empty when the state was made is emptied. States are about 3 MB with the default 2 MB of RAM and grow with the **Main RAM** option.
 
+A state loads only on the same machine, including its RAM size and whether it has a MIDI card.
+
 Hard disks work differently: loading a state, rewinding or run-ahead takes back what was written to a hard disk since that point, as long as the writes are among the last 32 MB per disk. When they aren't, or the state was made in another session, the state loads and a message says the hard disk changed since.
 
 States saved by the Geartowns desktop application can't be loaded by the core.
 
 ## Starting without content
 
-The core can start without content. The BIOS waits for a boot disk; add a CD-ROM or floppy image with **Disc Control > Append Disc** and insert it.
+The core can start without content. The BIOS waits for a boot disk; add a CD-ROM or floppy image with **Disc Control > Load New Disc** and insert it.
 
 ## Disk control
 
@@ -202,6 +226,8 @@ Geartowns never writes to the original hard disk image. The first time the machi
 
 Towns OS keeps its hard disk drive setup in the CMOS, not on the disk, and only uses the partitions that have a drive letter there. With **Assign Drive Letters** enabled, the default, every power-on and restart gives the partitions of each loaded hard disk that have none the free drive letters from D:, so a disk installed on another model or emulator boots; letters already set are kept. Disabled, such a disk stops with a message that the boot drive is not registered until it is added: boot the Towns OS V2.1 CD with the disk loaded, open Drive Configuration in TownsMENU's Settings menu, click the disk's SCSI ID, choose Add Drive and Execute, then restart without the CD.
 
+Hard disks run at the real machine's pace. **Fast Hard Disk Timing** shortens their bus phases and transfers, so the machine waits about a quarter of the time for the disk.
+
 ## IC memory card
 
 Every model has a slot for a battery-backed SRAM card, which Towns OS uses as a drive. Set **IC Memory Card** to *Per Game* for a card named after the content, `<content name>.icm`, or to *Shared* for one card, `geartowns.icm`, for all content. Both are kept in the save directory. A missing card is created blank with **IC Memory Card Size**; an existing card keeps its size. Card images are raw, a whole number of KB up to 64 MB. Changes are written a few seconds after the machine stops writing and when the content is closed.
@@ -209,6 +235,21 @@ Every model has a slot for a battery-backed SRAM card, which Towns OS uses as a 
 To use the card in Towns OS V2.1, add `DEVICE=\SYS\TICM.SYS /U0` to `CONFIG.SYS`; the driver shows the card's drive letter at boot. Format the card with `TICMFMT E: /S1024`, the size in KB. That driver uses at most 8 MB of a card, and on the UX and the Marty cards larger than 2 MB lose data in transfers that cross from their second 1 MB bank into the third.
 
 A card that starts with an `IPL4` boot sector boots before the CD-ROM on every model. Save states don't hold the card: loading one, rewinding or run-ahead takes back what was written to the card since that point, and a message says when it can't.
+
+## MIDI
+
+A few games and music tools play their music through a MIDI card, on a Roland MT-32 or a General MIDI (GS) module. **MIDI Card** fits an FMT-402. *Auto*, the default, fits it only for the software that needs it; other games with MIDI music offer it in their own options once a card is fitted. The Marty has no slot for one. With a card fitted, many games take their music tempo from it, even without MIDI music.
+
+**MIDI Out** chooses where the music plays. *Built-in Synth* needs files that are not included with the core, in the frontend's system directory:
+
+- **MT-32**: the control and PCM ROMs of an MT-32 or CM-32L in `geartowns/mt32`, or directly in the system directory. They are recognized by their contents, whatever their names. **Built-in MT-32 Model** picks the unit when there are several.
+- **General MIDI**: a sound bank (a SoundFont file, `.sf2` or `.sf3`) in `geartowns/soundfonts`. With several, the first one by name is used.
+
+The core creates the two folders. A game whose synth has no files plays on the other one. *External Port* sends the music to the frontend's MIDI output instead, set in *Settings > Audio > MIDI*; the core's volume options don't change it.
+
+**MIDI Game Music** on *Auto* takes the kind of music from the game database, or from what the game sends. Choose *General MIDI* or *MT-32* for a game it gets wrong.
+
+Loading a state sends the instruments again, and the music goes on from the next note. MIDI music is silent while fast forwarding and rewinding.
 
 ## CMOS
 
@@ -233,14 +274,16 @@ The Geartowns core saves/loads to/from these directories.
 | geartowns/FMT_FNT.ROM | Font ROM        |
 | geartowns/FMT_DIC.ROM | Dictionary ROM  |
 | geartowns/FMT_F20.ROM | 20-dot Font ROM |
+| geartowns/mt32/       | MT-32 or CM-32L ROMs |
+| geartowns/soundfonts/ | General MIDI sound banks |
 
-Subfolders and MAME zips there are searched too, and the system directory itself when the `geartowns` folder has no set for the machine.
+The subfolders and MAME zips directly inside `geartowns` are searched too, and the system directory itself when the `geartowns` folder has no set for the machine.
 
 **Frontend's Save directory**
 
 | File                              | Description              |
 |:---------------------------------:|:------------------------:|
-| `<model>.geartowns.cmos`          | Shared CMOS, one per model (`model1_2`, `1f_2f`, `10f_20f`, `cx`, `ux`, `ug`, `hg`, `hr`, `marty`) |
+| `<model>.geartowns.cmos`          | Shared CMOS, one per model (`model1_2`, `1f_2f`, `10f_20f`, `cx`, `ux`, `ug`, `hg`, `hr`, `ur`, `me`, `ma`, `mx`, `mf_fresh`, `hc`, `marty`) |
 | *.srm                             | Per game CMOS            |
 | `<image name>.<CRC32>.geartowns.d77` | Floppy disk working copy |
 | `<image name>.<CRC32>.<N>.geartowns.d77` | Working copy of disk N when an earlier disk of the same image is identical |
@@ -250,6 +293,7 @@ Subfolders and MAME zips there are searched too, and the system directory itself
 | `<image name>.save.<extension>`   | Hard disk working copy   |
 | `<content name>.icm`              | Per game IC memory card  |
 | `geartowns.icm`                   | Shared IC memory card    |
+| `<content name>.keys`             | Keyboard mapper changes  |
 
 **Frontend's State directory**
 
@@ -306,7 +350,15 @@ Settings marked (restart) take effect after reloading the content.
 
 - **16-bit PCM Volume** [geartowns_pcm16_volume] (**100**|0-200)
 
-	Volume of the 16-bit PCM of the FM Towns II ME, MA, MX and MF/Fresh, as a percentage.
+	Volume of the 16-bit PCM of the FM Towns II ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS, as a percentage.
+
+- **Built-in MT-32 Volume** [geartowns_mt32_volume] (**100**|0-200)
+
+	Volume of Geartowns's own MT-32, as a percentage. An external MIDI port keeps its own volume.
+
+- **Built-in General MIDI Volume** [geartowns_gm_volume] (**100**|0-200)
+
+	Volume of Geartowns's own General MIDI synth, as a percentage. An external MIDI port keeps its own volume.
 
 - **Allow Opposing Directions** [geartowns_up_down_allowed] (**Disabled**|Enabled)
 
@@ -328,13 +380,17 @@ Settings marked (restart) take effect after reloading the content.
 
 	Adjust how fast the analog stick moves the FM Towns mouse. Shown when **Analog Stick Mouse** is enabled.
 
+- **Keyboard Layout** [geartowns_keyboard_layout] (**Host (US)**|Japanese positions)
+
+	How keyboard keys type on the FM Towns keyboard. *Host (US)* types the character a US keyboard shows on each key. *Japanese positions* types the FM Towns key in the same place on a Japanese keyboard, for kana typing by position. See [Keyboard](#keyboard).
+
 - **Preload CD-ROM (restart)** [geartowns_cdrom_preload] (**Disabled**|Enabled)
 
 	Preload all CD-ROM tracks into RAM. This increases memory usage but may improve performance.
 
 - **CD-ROM Read Speed** [geartowns_cdrom_speed] (**Auto**|1x|2x|4x|8x)
 
-	How fast the drive reads sectors. Auto reads at the speed of the model's drive: 2x on the FM Towns II ME, MA, MX and MF/Fresh in high-speed mode, 1x on the rest. Faster speeds reduce loading times, but some software may not expect a faster drive.
+	How fast the drive reads sectors. Auto reads at the speed of the model's drive: 2x on the FM Towns II ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS in high-speed mode, 1x on the rest. Faster speeds reduce loading times, but some software may not expect a faster drive.
 
 - **Fast Forward CD-ROM Loads** [geartowns_cdrom_fast_forward] (**Disabled**|Enabled)
 
@@ -356,7 +412,7 @@ Settings marked (restart) take effect after reloading the content.
 
 	Add a blank 2HD floppy disk to the disk control list for software that asks for a user or save disk. It is stored in the save directory.
 
-- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns II HR (80486SX 20 MHz)|FM Towns II UR (80486SX 20 MHz)|FM Towns II ME (80486SX 25 MHz)|FM Towns II MA (80486SX 33 MHz)|FM Towns II MX (80486DX2 66 MHz)|FM Towns II MF / Fresh (80486SX 33 MHz)|FM Towns Marty (80386SX 16 MHz))
+- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns II HR (80486SX 20 MHz)|FM Towns II UR (80486SX 20 MHz)|FM Towns II ME (80486SX 25 MHz)|FM Towns II MA (80486SX 33 MHz)|FM Towns II MX (80486DX2 66 MHz)|FM Towns II MF / Fresh (80486SX 33 MHz)|FM Towns II EA / Fresh T (80486SX 33 MHz)|FM Towns II Fresh E / ES / ET (80486DX2 66 MHz)|FM Towns II HC (Pentium 90 MHz)|FM Towns II Fresh FS / FT (Am486DX4 100 MHz)|FM Towns Marty (80386SX 16 MHz))
 
 	The FM Towns model to emulate. Auto picks the machine, CPU speed and RAM the game database names for the game, the FM Towns II HG for 1.44 MB floppy disks, and the FM Towns (Model 1/2) for other content. It is recommended to leave this option on Auto. RetroArch's 'Save Game Options' keeps a choice for one game.
 
@@ -370,11 +426,27 @@ Settings marked (restart) take effect after reloading the content.
 
 - **FPU (restart)** [geartowns_fpu] (**Auto**|None|80387 or 487SX)
 
-	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR, ME, MA and MF/Fresh, built in on the MX. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model but the MX, whose FPU can't be removed. The UX, UG, UR and Marty have no socket for it. A few games need one, and some run different code with one fitted.
+	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR, ME, MA, MF/Fresh and EA, built in on the MX, Fresh E, HC and Fresh FS. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model but the MX, Fresh E, HC and Fresh FS, whose FPU can't be removed. The UX, UG, UR and Marty have no socket for it. A few games need one, and some run different code with one fitted.
 
 - **Speed Mode (restart)** [geartowns_speed_mode] (**Auto**|Compatible|High Speed)
 
 	The FM Towns II models, except the UX, run in compatible or high-speed mode. High speed cuts memory waits and turns on the 486 cache and the 2x CD-ROM where fitted. The system ROM sets the mode at reset from the CMOS, where TownsMENU saves it. Auto uses high speed when Model is on Auto and the game database picks a 486 model, otherwise it keeps the CMOS setting, compatible on a new CMOS. Some software misbehaves in high-speed mode.
+
+- **MIDI Card (restart)** [geartowns_midi_card] (**Auto**|None|FMT-402)
+
+	An FMT-402 MIDI card. Auto fits it only for the games that need one. Other games with MIDI music offer it in their own options with a card fitted. A card changes the music tempo source of many games, with or without MIDI. The Marty has no slot for it. See [MIDI](#midi).
+
+- **MIDI Out** [geartowns_midi] (**Built-in Synth**|External Port)
+
+	Where the music sent to the MIDI card plays. *Built-in Synth* plays MT-32 music on an MT-32 from your own ROMs in `geartowns/mt32` (or the system directory), and General MIDI music on a sound bank (.sf2 or .sf3) in `geartowns/soundfonts`; a game plays on the other one when its own is missing. *External Port* sends it to the port in *Settings > Audio > MIDI*.
+
+- **MIDI Game Music** [geartowns_midi_music] (**Auto**|General MIDI|MT-32)
+
+	The kind of music the game sends to the MIDI card. Auto takes it from the game database, or from what the game sends.
+
+- **Built-in MT-32 Model** [geartowns_mt32_model] (**Auto**|MT-32 (old)|MT-32 (new)|CM-32L)
+
+	The unit the built-in MT-32 plays, when its ROMs are there. Auto plays a CM-32L first, then an MT-32.
 
 - **Boot Device (restart)** [geartowns_boot_device] (**Auto**|CD-ROM|Floppy 1|Floppy 2|Hard Disk ID 0|Hard Disk ID 1|Hard Disk ID 2|Hard Disk ID 3|Hard Disk ID 4|IC Memory Card)
 
@@ -383,6 +455,10 @@ Settings marked (restart) take effect after reloading the content.
 - **Assign Drive Letters (restart)** [geartowns_drive_letters] (**Enabled**|Disabled)
 
 	Towns OS keeps hard disk drive letters in the CMOS, not on the disk. When enabled, each restart gives free letters to the partitions the CMOS doesn't list yet, so disks set up elsewhere boot. When disabled, register them yourself in Towns OS.
+
+- **Fast Hard Disk Timing** [geartowns_hard_disk_fast_timing] (**Disabled**|Enabled)
+
+	Shortens hard disk bus phases and transfers, so the machine waits about a quarter of the time for the disk when it loads, saves or installs. When disabled, hard disks run at the machine's pace.
 
 - **IC Memory Card (restart)** [geartowns_memory_card] (**Off**|Per Game|Shared)
 
@@ -404,7 +480,7 @@ Settings marked (restart) take effect after reloading the content.
 
 	Use dynamic recompilation. Most games will run faster but some games may run slower.
 
-	The core falls back to the interpreter if the frontend can't run generated code. This option is not available on iOS and tvOS.
+	The core falls back to the interpreter if the frontend can't run generated code. This option is not available on platforms without dynarec support, such as iOS and tvOS.
 
 ## Joypad
 
@@ -447,35 +523,49 @@ Without a mouse, enable **Analog Stick Mouse** to move the FM Towns mouse with a
 
 ## Keyboard
 
-The host keyboard is mapped to the FM Towns keyboard by key position. Letters, numbers, cursor keys, the numeric keypad, Shift, Left Ctrl, Alt, Tab, Space, Enter, Backspace, Insert, Delete and Home map to the FM Towns keys with the same names.
+Letters, numbers, cursor keys, the numeric keypad, Shift, Ctrl, Alt, Tab, Space, Enter, Backspace, Insert, Delete and Home map to the FM Towns keys with the same names.
+
+With **Keyboard Layout** at *Host (US)*, the default, letter, digit and symbol keys type what a US keyboard shows on them. When the FM Towns keeps that character on the other shift, the core presses or lifts the FM Towns SHIFT for that key: `Shift+2` types `@`, `'` types `'`, `Shift+;` types `:` and `Shift+-` types `_`. Every ASCII character but `` ` `` and `~` can be typed. RetroArch reports keys by their place on the keyboard, so on other layouts the keys type what the US key in the same place shows.
+
+With *Japanese positions*, each key types the FM Towns key in the same place on a Japanese keyboard:
+
+| Host key           | FM Towns key  |
+|--------------------|---------------|
+| = (equals)         | ^             |
+| [ (left bracket)   | @             |
+| ] (right bracket)  | [             |
+| \\ (backslash)     | ¥             |
+| ' (quote)          | :             |
+
+No host key types the FM Towns `]` key with *Japanese positions* until the [keyboard mapper](#keyboard-mapper) gives it one.
 
 !!! attention
 	Outside *Game Focus* mode, RetroArch does not pass keys bound to hotkeys or to RetroPad buttons to the core. With the default bindings this includes F1-F9, F11, Enter, Space, Escape, the cursor keys and many letters. Enable *Game Focus* (Scroll Lock by default) before typing, or set *Settings > Input > Auto Game Focus* to *Detect*. On keyboards without Scroll Lock, bind *Game Focus* to another key in *Settings > Input > Hotkeys*.
 
-Keys that map to a different FM Towns key:
+Other keys that map to a different FM Towns key, in both layouts:
 
 | Host key           | FM Towns key  |
 |--------------------|---------------|
 | F1 - F15           | PF1 - PF15    |
 | Escape / Pause     | BREAK         |
 | ` (backquote)      | ESC           |
-| = (equals)         | ^             |
-| [ (left bracket)   | @             |
-| ] (right bracket)  | [             |
-| \\ (backslash)     | ¥             |
-| # (UK keyboards)   | ]             |
-| ' (quote)          | :             |
+| \\ (ISO, left of Z)| _             |
 | Caps Lock          | CAPS          |
 | Page Up            | PREVIOUS      |
 | Page Down          | NEXT          |
 | Print Screen       | COPY          |
 | Right Alt          | Kana/Kanji    |
-| Right Ctrl         | KATAKANA      |
 | Left Super         | NO CONVERT    |
 | Right Super        | CONVERT       |
 | Menu               | HIRAGANA      |
 
-The FM Towns HALF/FULL, PF16-PF20, keypad 000 and dictionary keys have no host key in the libretro core. On keyboards without a `#` key, map `#` to a button with RetroArch's keyboard mapping to reach the FM Towns `]` key.
+The FM Towns HALF/FULL, PF16-PF20, keypad 000 and dictionary keys have no host key by default.
+
+### Keyboard mapper
+
+Press Ctrl+F1 (Cmd+F1 on macOS) to stop the machine and show its keyboard. Click an FM Towns key with the mouse or a touch screen, then press the host key that should drive it; click the **x** on a host key to remove it. Press the same keys again, or click **Close**, to go back to the game. Ctrl+F2 (Cmd+F2 on macOS) turns the game's changes off and on. RetroArch keeps F1 and F2 for itself outside *Game Focus* mode.
+
+The changes are kept per game in a `<content name>.keys` file in the save directory, which can be edited by hand. The [Geartowns README](https://github.com/drhelius/Geartowns#key-files) lists its key names.
 
 ## External Links
 

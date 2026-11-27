@@ -21,9 +21,10 @@ Geargrafx is an open source, cross-platform PC Engine, TurboGrafx-16, and SuperG
     * PC Engine Mouse
 - Adjustable scanline count (224p, 240p, or manual).
 - Standard RGB, Turboxray, and Kitrinx color palettes.
+- VCE black and white mode, which can be disabled to keep colors like on an RGB modded console.
 - HES music ROM support.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Nintendo Switch 2, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
 
 The Geargrafx core has been authored by:
 
@@ -235,6 +236,10 @@ Settings marked (restart) require restarting the content for the change to take 
 - **Color Palette** [geargrafx_palette] (**Standard RGB**|Turboxray|Kitrinx)
 
     Select the color palette used by the video encoder.
+
+- **Black & White Mode** [geargrafx_black_and_white] (**Enabled**|Disabled)
+
+    Show games that turn on the VCE black and white mode in grayscale, like on a composite TV. Disable it to keep the colors, like on an RGB modded console.
 
 - **No Sprite Limit** [geargrafx_no_sprite_limit] (**Disabled**|Enabled)
 
