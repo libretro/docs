@@ -9,7 +9,7 @@ description: "RetroArch Geartowns core (Fujitsu FM Towns): BIOS files, core opti
 
 Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in C++.
 
-- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG, HG, HR, UR, ME, MA, MX, MF/Fresh and HC, and FM Towns Marty emulation with configurable CPU speed and RAM.
+- FM Towns Model 1/2, 1F/2F, 10F/20F, FM Towns II CX, UX, UG, HG, HR, UR, ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS, and FM Towns Marty emulation with configurable CPU speed and RAM.
 - CPU dynamic recompiler (dynarec) on supported platforms.
 - CD-ROM drive emulation with `cue/bin`, `iso` and `chd` images, `m3u` disc playlists and disc swapping.
 - Physical CD-ROM disc support through the frontend.
@@ -75,7 +75,7 @@ The FM Towns II HR needs its own set, MAME's `fmtownshr`, in `geartowns/fmtownsh
 | fmt_dic.rom   | Dictionary ROM - Required      | 512 KB   | 8fa4e553f28cfc0c30a0a1e589799942 |
 | mytownshr.rom | Serial ROM - Optional          | 32 bytes | 72a96dabf0f9e5fe0bb47b08fa456815 |
 
-The FM Towns II MF/Fresh needs the V10 set, MAME's FM Towns II Fresh TV set `fmtownsftv`, in `geartowns/fmtownsftv/` or as `geartowns/fmtownsftv.zip`. The MX runs on it too, as do the ME, MA and HC, which have no dump of their own, and the HG and UR without the HR set:
+The FM Towns II MF/Fresh needs the V10 set, MAME's FM Towns II Fresh TV set `fmtownsftv`, in `geartowns/fmtownsftv/` or as `geartowns/fmtownsftv.zip`. The MX runs on it too, as do the ME, MA, EA, Fresh E, HC and Fresh FS, which have no dump of their own, and the HG and UR without the HR set:
 
 | Filename       | Description                    | Size     | md5sum                           |
 |:--------------:|:------------------------------:|:--------:|:--------------------------------:|
@@ -350,7 +350,7 @@ Settings marked (restart) take effect after reloading the content.
 
 - **16-bit PCM Volume** [geartowns_pcm16_volume] (**100**|0-200)
 
-	Volume of the 16-bit PCM of the FM Towns II ME, MA, MX, MF/Fresh and HC, as a percentage.
+	Volume of the 16-bit PCM of the FM Towns II ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS, as a percentage.
 
 - **Built-in MT-32 Volume** [geartowns_mt32_volume] (**100**|0-200)
 
@@ -390,7 +390,7 @@ Settings marked (restart) take effect after reloading the content.
 
 - **CD-ROM Read Speed** [geartowns_cdrom_speed] (**Auto**|1x|2x|4x|8x)
 
-	How fast the drive reads sectors. Auto reads at the speed of the model's drive: 2x on the FM Towns II ME, MA, MX, MF/Fresh and HC in high-speed mode, 1x on the rest. Faster speeds reduce loading times, but some software may not expect a faster drive.
+	How fast the drive reads sectors. Auto reads at the speed of the model's drive: 2x on the FM Towns II ME, MA, MX, MF/Fresh, EA, Fresh E, HC and Fresh FS in high-speed mode, 1x on the rest. Faster speeds reduce loading times, but some software may not expect a faster drive.
 
 - **Fast Forward CD-ROM Loads** [geartowns_cdrom_fast_forward] (**Disabled**|Enabled)
 
@@ -412,7 +412,7 @@ Settings marked (restart) take effect after reloading the content.
 
 	Add a blank 2HD floppy disk to the disk control list for software that asks for a user or save disk. It is stored in the save directory.
 
-- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns II HR (80486SX 20 MHz)|FM Towns II UR (80486SX 20 MHz)|FM Towns II ME (80486SX 25 MHz)|FM Towns II MA (80486SX 33 MHz)|FM Towns II MX (80486DX2 66 MHz)|FM Towns II MF / Fresh (80486SX 33 MHz)|FM Towns II HC (Pentium 90 MHz)|FM Towns Marty (80386SX 16 MHz))
+- **Model (restart)** [geartowns_model] (**Auto**|FM Towns (Model 1/2) (80386DX 16 MHz)|FM Towns 1F/2F (80386DX 16 MHz)|FM Towns 10F/20F (80386DX 16 MHz)|FM Towns II CX (80386DX 16 MHz)|FM Towns II UX (80386SX 16 MHz)|FM Towns II UG (80386SX 20 MHz)|FM Towns II HG (80386DX 20 MHz)|FM Towns II HR (80486SX 20 MHz)|FM Towns II UR (80486SX 20 MHz)|FM Towns II ME (80486SX 25 MHz)|FM Towns II MA (80486SX 33 MHz)|FM Towns II MX (80486DX2 66 MHz)|FM Towns II MF / Fresh (80486SX 33 MHz)|FM Towns II EA / Fresh T (80486SX 33 MHz)|FM Towns II Fresh E / ES / ET (80486DX2 66 MHz)|FM Towns II HC (Pentium 90 MHz)|FM Towns II Fresh FS / FT (Am486DX4 100 MHz)|FM Towns Marty (80386SX 16 MHz))
 
 	The FM Towns model to emulate. Auto picks the machine, CPU speed and RAM the game database names for the game, the FM Towns II HG for 1.44 MB floppy disks, and the FM Towns (Model 1/2) for other content. It is recommended to leave this option on Auto. RetroArch's 'Save Game Options' keeps a choice for one game.
 
@@ -426,7 +426,7 @@ Settings marked (restart) take effect after reloading the content.
 
 - **FPU (restart)** [geartowns_fpu] (**Auto**|None|80387 or 487SX)
 
-	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR, ME, MA and MF/Fresh, built in on the MX and HC. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model but the MX and HC, whose FPU can't be removed. The UX, UG, UR and Marty have no socket for it. A few games need one, and some run different code with one fitted.
+	The math coprocessor: an 80387 card on the 386 models, a 487SX card on the HR, ME, MA, MF/Fresh and EA, built in on the MX, Fresh E, HC and Fresh FS. Auto fits one when the game database names one for the game and Model is on Auto, otherwise it keeps the model's original, none on every emulated model but the MX, Fresh E, HC and Fresh FS, whose FPU can't be removed. The UX, UG, UR and Marty have no socket for it. A few games need one, and some run different code with one fitted.
 
 - **Speed Mode (restart)** [geartowns_speed_mode] (**Auto**|Compatible|High Speed)
 
