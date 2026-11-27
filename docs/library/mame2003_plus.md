@@ -182,7 +182,7 @@ MAME 2003-Plus natively supports analog and digital controls.
 
 In the same way that content-aware core options only appear when they are relevant to the current game, MAME 2003-Plus has added support for content-aware control names. In other words, when remapping Street Fighter 2 controls, the libretro frontend can display the control names that were printed on the real arcade control panel like `Jump`, `Strong Punch` and `Forward Kick` instead of a generic labels like `Up`, `Button 1`, `Button 2`, etc.
 
-Because support for control names is relatively new and is derived from the third-party **controls.dat** project, control names need to be verified by a human being before they are activated. As of end end of 2018, dozens of games have these active control names, but hundreds more need to be double-checked before being enabled. [Coders, and users who are willing to learn basic github commands, are invited to join in this effort](https://github.com/libretro/mame2003-plus-libretro/wiki/Submitting-Button-Names).
+Because support for control names is relatively new and is derived from the third-party **controls.dat** project, control names need to be verified by a human being before they are activated. As of end of 2018, dozens of games have these active control names, but hundreds more need to be double-checked before being enabled. [Coders, and users who are willing to learn basic github commands, are invited to join in this effort](https://github.com/libretro/mame2003-plus-libretro/wiki/Submitting-Button-Names).
 
 -----------
 

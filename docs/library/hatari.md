@@ -136,7 +136,7 @@ szTosImageFileName = /storage/system/tos.img
 
 ### Long Winded Start
 
-- The TOS image (TOS stands for THE Operating System, cool huh) Consider TOS like a bios image used for other consoles, it needs adding to the the “/storage/system” directory. The one the retroarch Hatari documents mention is the US TOS version 1.02 this was an Atari ST OS and is probably the most compatible version for playing games, if you want to learn more about the different TOS versions and which hardware systems they correspond to (ST, STE, TT & FALCON) here is a good link; [http://www.atarimania.com/atari-st-tt-falcon.html9](http://www.atarimania.com/atari-st-tt-falcon.html9).
+- The TOS image (TOS stands for THE Operating System, cool huh) Consider TOS like a bios image used for other consoles, it needs adding to the “/storage/system” directory. The one the retroarch Hatari documents mention is the US TOS version 1.02 this was an Atari ST OS and is probably the most compatible version for playing games, if you want to learn more about the different TOS versions and which hardware systems they correspond to (ST, STE, TT & FALCON) here is a good link; [http://www.atarimania.com/atari-st-tt-falcon.html9](http://www.atarimania.com/atari-st-tt-falcon.html9).
 
 - I found Hatari would kick out this error when loading a game without the config set up “Can not load TOS file J’/usr/bin/TOS” This is because it was looking for the tos.img in the /usr/bin directory of Lakka, this is a read only location so we can not just drop the TOS image there, this is what the config file is needed for. This section tells Hatari to look for TOS in the location specified.
 
