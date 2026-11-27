@@ -211,6 +211,7 @@
 | [REminiscence](../library/reminiscence.md) | Game engine            | A port of the REminiscence engine, a reimplementation of the engine used by Delphine Software's Flashback |
 | [RemoteJoy](../library/remotejoy.md) | PSP remote play        | An old, experimental libretro core designed to stream inputs to/from a Playstation Portable console |
 | [Retro8](../library/retro8.md) | Game engine            | A port of the Retro8 open-source reimplementation of the PICO-8 fantasy console to libretro |
+| [Riverhorse](../library/riverhorse.md) | Sony PlayStation       | A PlayStation emulator focused on accuracy, with software and hardware (OpenGL, OpenGL ES, Vulkan) renderers, PGXP and upscaling |
 | [ROM Cleaner](../library/romcleaner.md) | -                      | A utility core for removing dust and dirt from your ROM collection |
 | [RPCS3](../library/rpcs3.md) | Sony PlayStation 3 | A port of the RPCS3 PlayStation 3 emulator to libretro |
 | Rustation                 | Sony PlayStation       |                    |
