@@ -24,7 +24,7 @@ Geargrafx is an open source, cross-platform PC Engine, TurboGrafx-16, and SuperG
 - VCE black and white mode, which can be disabled to keep colors like on an RGB modded console.
 - HES music ROM support.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Nintendo Switch 2, Emscripten, Classic Mini systems (NES, SNES, C64, etc.), OpenDingux, RetroFW and QNX.
 
 The Geargrafx core has been authored by:
 

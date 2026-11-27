@@ -16,7 +16,7 @@ Gearlynx is an open source, cross-platform Atari Lynx emulator written in C++.
 - ComLynx link cable support with two to four systems, independent controllers, configurable screens and audio, and multi-ROM subsystem loading.
 - Configurable low-pass audio filter.
 - Internal database for automatic ROM detection and hardware selection when `Auto` is selected.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation Vita, PlayStation 3, Nintendo 3DS, Nintendo GameCube, Nintendo Wii, Nintendo WiiU, Nintendo Switch, Nintendo Switch 2, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Gearlynx core has been authored by:
 

@@ -24,7 +24,7 @@ Geartowns is an open source, cross-platform Fujitsu FM Towns emulator written in
     * 6 button gamepad
     * FM Towns mouse, also from an analog stick
 - FM Towns keyboard support with an in-core keyboard mapper, kept per game.
-- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation 3, Nintendo GameCube, Nintendo WiiU, Nintendo Switch, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
+- Supported platforms (libretro): Windows, Linux, macOS, Raspberry Pi, Android, iOS, tvOS, webOS, PlayStation 3, Nintendo GameCube, Nintendo WiiU, Nintendo Switch, Nintendo Switch 2, Emscripten, Classic Mini systems (NES, SNES, C64, ...), OpenDingux, RetroFW and QNX.
 
 The Geartowns core has been authored by:
 
