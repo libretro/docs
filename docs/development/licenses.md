@@ -175,6 +175,7 @@ See below for a summary of the licenses behind RetroArch and its cores:
 | [mkxp-z](../library/mkxp-z.md)                                                   | [GPLv2](https://github.com/mkxp-z/mkxp-z/blob/dev/COPYING)                                |                |
 | mpv                                                                              | [GPLv3](https://github.com/libretro/libretro-mpv/blob/master/LICENSE)                     |                |
 | [Mr.Boom](../library/mr_boom.md)                          		           | [MIT](https://github.com/libretro/mrboom-libretro/blob/master/LICENSE)                    |                |
+| [MrpEmu](../library/mrpemu.md)                                                     | [GPLv3](https://github.com/AloysHF/MrpEmu/blob/master/LICENSE)                             |                |
 | Mupen64Plus                                               		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | Mupen64Plus GLES3                                         		           | [GPLv3](https://github.com/libretro/mupen64plus-libretro/blob/master/LICENSE)             |                |
 | [My386](../library/my386.md)                                                     | [zlib](https://codeberg.org/my386/my386/src/branch/develop/LICENSE)                       |                |

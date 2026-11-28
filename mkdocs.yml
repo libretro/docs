@@ -373,6 +373,8 @@ nav:
         - 'Coolbar (CoolbarEmu)': 'library/coolbaremu.md'
       - 'SnowFish Emulation':
         - 'SnowFish (SnowFishEmu)': 'library/snowfishemu.md'
+      - 'MRP Emulation':
+        - 'MRP (MrpEmu)': 'library/mrpemu.md'
       - 'Texas Instruments Emulation':
         - 'Texas Instruments - TI-83 (Numero)': 'library/numero.md'
       - 'Thomson Emulation':

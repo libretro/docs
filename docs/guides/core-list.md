@@ -154,6 +154,7 @@
 | [MojoZork](../library/mojozork.md) | Infocom Z-Machine      | A Z-Machine emulator for playing text-based interactive fiction |
 | mpv                       | Media player           | An port of MPV media player to libretro |
 | [Mr.Boom](../library/mr_boom.md) | Game                   | A clone of the classic Bomberman series |
+| [MrpEmu](../library/mrpemu.md) | Sky-mobi MRP (mythroad) | An emulator for Sky-mobi mythroad (MRP) feature-phone applications (.mrp packages) |
 | [Mu](../library/mu.md) | Palm OS                | An emulator for the Palm m515 OS ported to libretro |
 | [Mupen64Plus-Next](https://docs.libretro.com/library/mupen64plus/)          | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
 | [Mupen64Plus-Next GLES2](https://docs.libretro.com/library/mupen64plus/)    | Nintendo 64            | An up-to-date port of the Mupen64Plus N64 emulator, ported to libretro |
